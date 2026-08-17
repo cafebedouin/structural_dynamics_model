@@ -269,6 +269,29 @@ evaluated and did not trip. Whether a ruling whose recorded basis needed correct
 explicit re-affirmation is the operator's call (an OQ-252 instance: rulings carry no back-reference
 to what they license). **Executor's default recommendation: the ruling stands.**
 
+## The defect this audit kept committing (corrected conclusion)
+
+Four claims here were wrong or unsupported when written: `:450`'s *"zero output change"*, the
+discrimination record anchored to another writer's commit, *"the carve-outs are fine"*, and *"no
+recorded finding cites this"*. Two are true sentences that would be read as stronger claims; two
+are **unverified properties asserted as checked** — and of those, both turned out false (two of
+four carve-outs were file-keyed; a second recorded finding existed).
+
+**What all four share: the second side was never run.** Plant-and-restore, the consumer grep, a
+rebase-survival test, the per-id check of what the excess conjunct blocked — each a single
+command, each skipped at the moment the claim was written.
+
+That is the same category as this audit's own one-sided FNL control, which it classified as *not*
+a routing failure — correctly, since the rule reached the instance and was merely applied late.
+**So the failure that actually recurred is the one this audit diagnosed and proposed nothing
+for.** Bound-probe got a gate row; gating-count got a same-pass clause; control-written-after-the-
+probe got a diagnosis and no fix, and it is the one still firing.
+
+**Recorded so the close does not land on the routing story alone:** the recurring defect in this
+arc is **verification order in prose**, not rules in files. Rules-in-files was the visible story
+because it produced artifacts; verification-order produced none, which is why it kept recurring.
+Not converted into apparatus — the fix is ordering.
+
 ## Residue
 
 Substrate changed by this audit:

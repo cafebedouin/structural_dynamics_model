@@ -90,13 +90,20 @@ SCAN_SUFFIXES = {".pl", ".py", ".sh"}
 # That is the trade, stated: each reason must say why the region cannot hold one.
 SKIP_PARTS: dict[str, str] = {
     ".git": "VCS internals — not source.",
-    ".claude": "MACHINE-LOCAL. `.claude/*` is gitignored apart from settings.json, and "
-               "`.claude/worktrees/` holds OTHER INSTANCES' checkouts — not this tree's "
-               "source. NOTE (2026-08-17): the first repo-wide sweep found "
-               "`.claude/worktrees/oq-48-recalibration/` carrying UN-REPAIRED copies of "
-               "all four engine sites. Left untouched (another instance's working state), "
-               "but a merge FROM any worktree owes its own sweep — this exclusion is "
-               "exactly where a repaired defect can walk back in.",
+    ".claude": "MACHINE-LOCAL, and STRUCTURALLY SAFE — not an acknowledged hole. "
+               "`.claude/*` is gitignored apart from settings.json; `.claude/worktrees/` "
+               "holds worktree checkouts. A merge FROM a worktree writes to ENGINE paths "
+               "(prolog/, python/, ...), which are scanned — so merged content lands in "
+               "scope and this row catches it there. The exclusion can therefore never "
+               "hide a live call site; it only skips duplicate copies. Do not try to "
+               "'close' it by scanning worktrees: that would double-report every file. "
+               "(2026-08-17: the first repo-wide sweep flagged "
+               "`.claude/worktrees/oq-48-recalibration/` with pre-repair copies of the "
+               "four engine sites. Checked, not assumed — that branch is FULLY MERGED "
+               "into main with 0 commits ahead and last activity 2026-06-18, i.e. a stale "
+               "checkout of main's own history, not divergent work. No coordination "
+               "exposure, nothing to merge, no message owed. Pruning it is the operator's "
+               "call.)",
     "testsets": "CORPUS DATA. Story files author facts; they do not call the engine. "
                 "A .pl here is a data pack, not a call site.",
     "archives": "ARCHIVED corpora and point-in-time audit probes. Per audits/README.md, "
@@ -268,8 +275,26 @@ FIXTURES = [
 # BSC-QUOTED-SHAPES-END
 
 
+# Sentinels bound a REGION, not its CONTENTS — the plant-and-restore check proves the
+# boundary holds today, but nothing stops the region growing until it is a de-facto
+# file-keyed skip (operator, 2026-08-17). So cap it. Currently 2 + 31 = 33 lines.
+MAX_SELF_QUOTE_LINES = 45
+
+
 def selftest() -> list[str]:
     fails = []
+    # The carve-out must stay small enough to remain a carve-out.
+    own = Path(__file__).read_text(encoding="utf-8")
+    n_quoted = len(_quoted_shape_lines(own))
+    if n_quoted > MAX_SELF_QUOTE_LINES:
+        fails.append(
+            f"SELFTEST self-quote region has grown to {n_quoted} lines "
+            f"(cap {MAX_SELF_QUOTE_LINES}) — a bounded carve-out is turning into a "
+            f"file-keyed skip. Shrink it or de-literalise the quoted shapes.")
+    if n_quoted == 0:
+        fails.append(
+            "SELFTEST self-quote sentinels missing — the fixtures would self-fire, and "
+            "a maintainer's likely 'fix' is a file-keyed skip. Restore the markers.")
     for label, text, path, expect in FIXTURES:
         got = bool(scan_text(text, path))
         if got != expect:

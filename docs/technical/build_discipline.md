@@ -655,6 +655,38 @@ protect. Welfare-reading / false_natural_law (OQ-30) is the live case: a bound p
 manufactures false natural-law witnesses on the constraints `false_natural_law` was designed
 to intercept.
 
+### INCIDENCE LEDGER (the accumulator — append here, do not start a second list)
+
+The same-pass prior-art grep (`audits/README.md`) has no meaning without somewhere to
+accumulate. This is that place, and it is deliberately attached to the rule rather than kept
+as a separate artifact that would drift. **Append a row when this rule produces or catches a
+defect; the count is the evidence for whether the documentation channel works for this rule
+class.**
+
+| date | surface | site | how found |
+|---|---|---|---|
+| 2026-05-30 | rule authored, with worked example | `build_discipline.md:601` | — |
+| 2026-08-17 | engine | `diagnostic_summary.pl:424` (latent) | gate row, first sweep |
+| 2026-08-17 | engine | `diagnostic_summary.pl:450` (latent, masked by an unrelated conjunct) | gate row, first sweep |
+| 2026-08-17 | engine | `routing_sink.pl:120` (latent) | gate row, first sweep |
+| 2026-08-17 | test | `test_reading_totality.pl:139` (weaker-assertion) | gate row, first sweep |
+| 2026-08-17 | Python | `fcr_ablation.py:75` (LIVE — inflated a reported %) | gate row, first sweep |
+| 2026-08-17 | audit artifact | `audits/2026-06-21_oq138_.../fcr_ablation.pl:23` | OQ-298 consumer enumeration |
+| 2026-08-17 | reasoning | an instance re-derived this rule as a "new" tripwire | operator challenge |
+
+**Reading as of 2026-08-17 — six defect sites across five surface kinds (engine, test, Python,
+audit artifact, reasoning) plus one confirmed re-discovery, from a rule that had a worked
+example naming the exact query form AND inline annotations at two sibling sites.** That is
+strong enough to quote: **for this rule class the documentation channel is dead**, and the
+mechanism (gate row `bound selector`, `python/bound_selector_check.py`) is what works. Note the
+last row is the one a counter alone would have missed — undetected re-discovery is
+indistinguishable from novel finding, which is why the grep is a *step* and not a habit.
+
+**Caveat against over-reading:** every 2026-08-17 row was found by one sweep on one day, so
+this is a stock measurement, not a rate. It says the rule failed to reach code that was written
+over ~3 months; it does not yet say anything about the rate at which new violations appear now
+that the gate exists. That second number needs rows dated after the gate landed.
+
 ---
 
 ## The shared root: build for the corpus you want, not the one you have

@@ -13528,11 +13528,28 @@ expensive later and cheap now).**
 
 **FORCING FUNCTION for the owed re-run (an owed re-run with none dies quietly).** Kill
 condition, both directions: re-run `python3 python/fcr_ablation.py` post-fix and diff against
-`7ca977c4`'s reported table. If the tangled_rope asymmetry survives → close `resolved`,
-replace the superseded table above with post-fix figures, and the recorded finding stands with
-its FCR percentages corrected. If it does NOT survive → the recorded finding is **withdrawn**,
-and every document citing it needs the sweep this entry's enumeration already scoped. Until one
-of those happens this OQ stays open and the ⚠ marker above stays in place.
+`7ca977c4`'s reported table. If the tangled_rope asymmetry survives → close `resolved` and the
+recorded finding stands with its FCR percentages corrected. If it does NOT survive → the
+recorded finding is **withdrawn**, and every document citing it needs the sweep this entry's
+enumeration already scoped.
+
+**CLOSE CHECKLIST — the ⚠ markers are a STEP of the close, not a note beside it.** Once the
+re-run lands, a marker saying *"pending"* about a corrected figure is stale in the direction
+that matters: the next reader cannot tell a live warning from a forgotten one, and it outlives
+its referent exactly the way the frozen figures would have outlived the fix. So closing this OQ
+is not done until all four are cleared:
+
+1. [ ] Replace the superseded table in this entry with post-fix figures; delete the ⚠ line.
+2. [ ] `python/fcr_ablation.py` — the `%% SUPERSEDED-PENDING-RE-RUN` block in the call-site
+       comment: replace pre-fix/post-fix pairs with the confirmed post-fix values.
+3. [ ] `KNOWN_STATE.md` 2026-08-17 entry — the pre-fix figures quoted there.
+4. [ ] `audits/2026-06-21_oq138_fsm_route_conversion/DEFERRED_CLAUSE_EVIDENCE.md` — its
+       appended correction block quotes the same table (that file is point-in-time, so
+       APPEND the resolution; do not rewrite the correction).
+
+**Verification that the clearing happened:** `/usr/bin/grep -rn "SUPERSEDED-PENDING-RE-RUN"`
+must return only row 4's historical mention. A non-empty result anywhere else means the close
+is incomplete.
 
 **Cross-refs:** OQ-296 (the consumer surface), OQ-278 (why the rule did not route), BD-P3.
 

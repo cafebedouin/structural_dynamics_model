@@ -164,6 +164,37 @@ an over-permissive query is conservative — but a bound-arg NONZERO is an artif
 2026-05-30, whose worked example is this exact query),
 the denominator gloss hid a bigger fact than the finding it was supporting.
 
+**THE SESSION'S ACTUAL RECURRING DEFECT — and it is NOT the routing story this entry otherwise
+tells (operator correction, 2026-08-17; recorded because the routing framing is the one a later
+reader would otherwise inherit).**
+
+Four claims in this session were wrong or unsupported when made: *"wrong query, zero output
+change"* (`:450`), *"RED at dcde9591"* as a durable record, *"the carve-outs are fine"*, and
+*"no recorded finding cites this"* (before OQ-298's enumeration ran). It is tempting — and I did
+frame it this way — to call these *true sentences read as stronger claims*. **That framing is a
+notch generous and it fits only two of them.** `the carve-outs are fine` was not a true sentence
+read strongly: it was **an unverified property asserted as checked, and two of the four
+carve-outs turned out to be false.** Same for the consumer claim.
+
+**What all four share is narrower and more useful: the second side was never run.** No
+plant-and-restore on the carve-outs. No grep for consumers. No test of whether the anchor
+survived a rebase. No per-id check of what the excess conjunct actually blocked. **Each was
+cheap — every one took a single command when it was finally run — and each was skipped at the
+moment the claim was written, not later.**
+
+**This is the same category as the one-sided FNL control earlier in the arc, which this audit
+correctly classified as NOT a routing failure** (the rule reached the instance; it was applied
+late). So the defect that actually recurred four or five times this session is the one the
+audit *diagnosed and then proposed nothing for*. The score is uneven and worth stating plainly:
+bound-probe got a gate row; gating-count got a same-pass clause in `audits/README.md`;
+**control-written-after-the-probe got a diagnosis and no fix, and it is the one still firing.**
+
+**The conclusion the record should carry: this session's recurring defect is VERIFICATION ORDER
+IN PROSE, not rules in files.** Rules-in-files was the visible story because it produced
+artifacts (a promoted rule, a gate row, three OQs). Verification-order produced no artifact,
+which is precisely why it kept recurring and why it would otherwise close unrecorded. Deliberately
+NOT converted into more apparatus here — the fix is ordering, and naming it is the intervention.
+
 **COVERAGE REVIEW (operator asked: "probably already in docs/technical/ and CLAUDE.md but review
 anyway"). Answer: docs/technical/ YES — BOTH rules. CLAUDE.md: NEITHER.**
 - `build_discipline.md:601` **Pattern 3 — Bound-probe bypasses clause-order**, dated **2026-05-30**,
