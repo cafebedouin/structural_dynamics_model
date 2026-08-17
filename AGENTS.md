@@ -369,7 +369,12 @@ Override hierarchy:
    **RETIRED 2026-06-17 (OQ-128).** The natural_law overwrite
    (`resolve_modal_signature_conflict(_, natural_law, mountain)`, `signature_detection.pl:867`) is gone —
    the engine ROUTES disagreement, it does not RECLASSIFY (only review reclassifies). The DETECTOR
-   (`natural_law_signature`/`constraint_signature(C,natural_law)`) survives as a router input.
+   (`natural_law_signature`/`constraint_signature(C,natural_law)`) survives as a router input —
+   **but it fires ZERO times, by construction, on every corpus** (OQ-113; re-witnessed 2026-08-17):
+   `has_viable_alternatives/2`'s two clauses bind arg 2 to the head literals `true`/`unknown`, so the
+   `HasAlternatives == false` leg can never be met. "Survives as a router input" means WIRED, not
+   FIRING — ~20 consumers read that constant zero (roster + hazards: OQ-296). Do not read a
+   `natural_law` branch as reachable without checking OQ-296 first.
 2. **Constructed sub-signatures:** three variants keyed by ε level.
 3. Metric type passes through unchanged if no signature fires.
 
