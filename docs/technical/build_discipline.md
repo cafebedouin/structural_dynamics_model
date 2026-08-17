@@ -2072,6 +2072,60 @@ identity-controlled comparator. Single-story reads (the control's own 7-seat vec
 identity-bearing substrates (GAP-31's discharge condition) are exempt — the trap is
 specifically pooling across stories that cannot share a seat.
 
+## A static clause-coverage read is a HYPOTHESIS, not a witness — 2 for 2 wrong in one session
+
+**The move:** *"I enumerated the clauses of `p/3`; every one with first argument X returns Y,
+therefore the predicate is total / the branch is unreachable / the outcome is forced."* It reads
+like verification — it names a file, a line range, and an exhaustive set — and it is checkable
+without running anything, which is exactly why it gets reached for.
+
+**The witnessed failure rate (2026-08-17, OQ-285, `audits/2026-08-17_oq285_mode3_measurement_arm/`):
+two such claims in one session, both wrong, both corrected by RUNNING the predicate rather than
+reading it harder.**
+
+1. **"`derive_directionality_for_stakeholder/3` is registered `total_on_domain`
+   (`reading_registry.pl:110`), so the FAILS branch is structurally unreachable, machine-checked."**
+   Wrong. The predicate is partial: a malformed `exit_options` atom under a **well-formed** role
+   fails at `stakeholder_seats.pl:76`, *inside* the `->` then-branch, so the canonical-power
+   fallback at `:79` never sees it. The registration is true only contingent on the authored atom
+   vocabulary — a fact about the corpus (0 malformed atoms in 19,414 agent seats), not the
+   predicate.
+2. **"Every reachable `resolve_modal_signature_conflict/3` clause with first argument `unknown`
+   returns `unknown`."** Wrong twice over. `integrate_signature_with_modal/3`
+   (`signature_detection.pl:812-814`) does not call that predicate at all — it calls
+   `resolve_with_perspectival_check/4`, whose `false_ci_rope` clause at `:846` **cuts before** the
+   `resolve_modal_signature_conflict/3` clause being read at `:946`. And two reachable paths do map
+   `unknown` to a real type (`:843-845` via `piton_candidate/1`; `:939` via the fallthrough at
+   `:862-863`). **29 live seats take them**, against a claimed 0.
+
+**Why this codebase specifically.** Three mechanisms make the source order you read differ from the
+dispatch order that runs, and all three are idiomatic here: **cuts** (position-encoded cascade
+priority — the comment at `signature_detection.pl:839` says so explicitly), **if-then-else
+branches** whose else-arm is not reached from inside the then-arm (failure mode 1 above), and a
+**dispatch/wrapper layer that intercepts before the predicate you are reading** (failure mode 2).
+A clause table read top-to-bottom encodes none of them. See also
+`swipl_load_path_and_probe_gotchas.md` §13 for the parse-level sibling (`:` at priority 600 makes
+goal-template probes pass vacuously).
+
+**Rule: a claim about which clauses can fire is discharged by EXERCISING the entry point the
+consumer actually calls, not by enumerating the clauses of the predicate you believe it reaches.**
+Concretely, and cheaply — the OQ-285 form is the template: split the consumer's own call chain at
+the boundary in question, emit both halves per item over the corpus, and cross-tabulate the
+transition. There the split was `dr_type_with_d/4` at `integrate_signature_with_modal/3`, giving a
+4-cell table (`metric unknown|real × final unknown|real`) that answered in one run what the clause
+read got backwards. **And the zero cell in that table owes its own control** — an ablation lever
+(`false_summit_override_target`) supplied one at real-corpus strength: 0 → 4 → 0.
+
+**Corollary — a `total_on_domain` registration is not a totality proof.** It is a checked claim
+about the *current corpus*: the OQ-137 suite verifies exactly-one-solution per domain key over the
+loaded testsets, so a predicate that is total only because no adversarial input has been authored
+registers green. Read every such registration as *"total on the data we have"* and say so when
+citing it. **Latent, not live** is the right label for the gap it leaves.
+
+**Cheapest discriminating question, when the full split is too expensive:** *what would I have to
+run to make this claim false?* If the answer is "nothing — it's true by the clause list", the claim
+is about the clause list and should be stated at that altitude, not as a claim about behaviour.
+
 ## Cross-sibling comparison disambiguates authored-field calls (the corpus as its own control)
 
 When a per-item call about an authored field is ambiguous in one file — is this beneficiary value

@@ -124,6 +124,49 @@ to compare)"*. That text is now at `stakeholder_seats.pl:252`. One-line fix.
 `test_seat_totality.pl`. Machine-local and gitignored, so not a repository fork — but it is the
 Pattern-2 shape, and a future instance grepping the tree will find two versions of that test.
 
+## 9. The residual-signature monitor guards a CONSTRAINT-level domain over a SEAT-level exposure · **latent, 0 live**
+
+Found by asking whether §2.1's one-way valve is designed (`WRITEUP.md` §2.1: it is not — demotion
+is designed in and guarded to zero). The guard that keeps it at zero has a narrower domain than the
+thing it certifies.
+
+`residual_signature_firing/1` (`signature_detection.pl:1028-1032`) is the monitored surface behind
+`_prolog_residual_signature_gate()` (`python/run_pipeline.py:840-861`, called at `:1043`), which
+fails the pipeline loud and reopens OQ-225 on any residual fire. It computes:
+
+```prolog
+residual_signature_firing(C) :-
+    constraint_indexing:default_context(Ctx),          % <- ONE canonical context
+    constraint_signature(C, Sig),
+    drl_core:metric_based_type_indexed(C, Ctx, MT),
+    residual_signature_pattern(MT, Sig).
+```
+
+But the demotion it guards happens **per seat**, through `dr_type_with_d/4` with a seat-specific
+`D` and the seat's own authored context — not at `default_context`. The two domains genuinely
+diverge:
+
+```
+seats whose SEAT-level metric type differs from the constraint default-context type:   559
+...of which match a residual pattern the constraint-level monitor CANNOT see:            0
+CONTROL: same join on a KNOWN-PRESENT (metric,signature) pair:                          15  (>0 ✓)
+```
+
+**559 seats sit outside the monitor's domain.** Today none of them lands on a residual pattern, so
+the gate is not currently wrong — but its zero is a statement about 247 default-context evaluations,
+not about the 1333 seats where the demotion can actually occur. A residual pattern reachable only at
+a non-default seat coordinate would demote silently while the gate stayed green and OQ-225 stayed
+closed.
+
+This is the Pattern-5 shape (*a gate whose domain is smaller than the exposure it certifies*) rather
+than a live defect. The positive control is included above because a `0` here is exactly the reading
+that means nothing without one: the same join fires 15× on a known-present pair.
+
+**Fix shape:** extend `residual_signature_firing/1` to quantify over `stakeholder_agent_seats/2`
+with each seat's own context and `D`, or state at the clause that the monitor is default-context
+only and that seat-level residual exposure is unguarded. Either is small; which one is right depends
+on whether OQ-225's fire-time ruling is meant to be seat-indexed, which is a ruling, not a fix.
+
 ---
 
 ## Suggested disposition
@@ -138,6 +181,7 @@ Pattern-2 shape, and a future instance grepping the tree will find two versions 
 | 6 | live coverage loss | no | `commentary_census.pl` bucket carries `NReal/NSeats` |
 | 7 | doc drift | no | fix on sight |
 | 8 | housekeeping | no | remove the worktree |
+| 9 | latent — guard domain < exposure | **yes** — is OQ-225's fire-time ruling seat-indexed? | OQ-296, or a clause-level scope statement |
 
 Items 1, 3, 4, 6, 7 are inside the *Fix simple errors* threshold. **None was fixed in this
 session**, because OQ-285's gate says "No code" and items 1 and 5 are output-changing — the

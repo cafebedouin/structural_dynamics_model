@@ -1,0 +1,44 @@
+=== sums asserted in WRITEUP.md / FINDINGS_INCIDENTAL.md ===
+  OK  group split 0+0+152+0 == total unknown tokens                  152 == 152
+  OK  group (iii) by signature 103+40+9 == 152                       152 == 152
+  OK  A1 cells 152+29+0+1152 == agent seats                          1333 == 1333
+  OK  2x2 has_unk 16+41+0+0+3 == 60                                  60 == 60
+  OK  2x2 no_unk 111+40+15+4+0 == 170                                170 == 170
+  OK  2x2 tot 127+81+15+4+3 == constraints                           230 == 230
+  OK  2x2 unkSeats 40+103+0+0+9 == 152                               152 == 152
+  OK  per-constraint 170+58+2 == 230                                 230 == 230
+  OK  affected 58+2 == 60                                            60 == 60
+  OK  cross-leg agent seats 1355+3186+3802+4549+6522                 19414 == 19414
+  OK  imm-hole seats 198+570+452+551+663                             2434 == 2434
+  OK  (power,exit) cells 15 mixed + 15 typed + 0 unk == 30           30 == 30
+  OK  full-coord cells 40+19+248 == 307                              307 == 307
+  OK  twin shared-name hist 332+52+5+2+1 == 392                      392 == 392
+  OK  always-unknown support 18*1 + 1*2 == 20 seats                  20 == 20
+
+=== percentages asserted (rounded to 1dp) ===
+  OK  hole abstention rate 44/193                                    22.8 == 22.8
+  OK  non-hole abstention rate 108/1140                              9.5 == 9.5
+  OK  hole share of live unknowns 44/152                             28.9 == 28.9
+  OK  descends(unknown) share 12/70                                  17.1 == 17.1
+  OK  signature constructed_high has_unk 16/127                      12.6 == 12.6
+  OK  signature false_ci_rope has_unk 41/81                          50.6 == 50.6
+
+=== dedup: incidental findings must be 9 DISTINCT items ===
+  OK  item numbers are 1..9 with no repeats                          [1, 2, 3, 4, 5, 6, 7, 8, 9] == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  OK  item titles are distinct                                       9 == 9
+      1. `descent_status/2` reports `descends(unknown)` on 12 live constraints — SHIPPI
+      2. `effective_immutability/3` silent table hole — CORPUS-WIDE
+      3. `is_real_type/1` is a blacklist of one
+      4. No dedup on the seat vector
+      5. Frame fork between the two seat consumers
+      6. `plural(RealTypes)` carries no absence marker
+      7. Comment pin drift
+      8. Housekeeping — stale worktree
+      9. The residual-signature monitor guards a CONSTRAINT-level domain over a SEAT-le
+
+=== cross-document consistency ===
+  OK  WRITEUP says 9 findings (matches the file)                     2 == 2
+  OK  '21,414' appears only in the correction note                   1 == 1
+  OK  no UNMARKED 'OQ-295 is next free' assertion                    [] == []
+
+RESULT: ALL CHECKS PASS

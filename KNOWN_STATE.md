@@ -45,6 +45,49 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-17 — [tripwire] A static clause-coverage read is a hypothesis, not a witness — 2 for 2 wrong in one session; and `total_on_domain` is not a totality proof
+**Files:** docs/technical/build_discipline.md, prolog/signature_detection.pl, prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/drl_core.pl, python/run_pipeline.py
+**Tier:** tripwire
+
+**The warning.** *"I enumerated the clauses; every one with first argument X returns Y, therefore
+the branch is unreachable"* reads like verification and is not. Two such claims were made and both
+falsified in one session (2026-08-17, OQ-285 review,
+`audits/2026-08-17_oq285_mode3_measurement_arm/`) — corrected by **running** the entry point, not by
+reading harder. Full entry, mechanisms, and the discharge template:
+`build_discipline.md` → *A static clause-coverage read is a HYPOTHESIS, not a witness*.
+
+1. `derive_directionality_for_stakeholder/3` is registered `total_on_domain`
+   (`reading_registry.pl:110`) and is nonetheless **partial**: a malformed `exit_options` under a
+   *well-formed* role fails at `stakeholder_seats.pl:76` inside the `->` then-branch, so the
+   canonical-power fallback at `:79` never sees it. Latent, not live (0 malformed atoms in 19,414
+   agent seats across five legs).
+2. *"Every reachable `resolve_modal_signature_conflict/3` clause with first arg `unknown` returns
+   `unknown`"* — wrong twice. `integrate_signature_with_modal/3`
+   (`signature_detection.pl:812-814`) calls **`resolve_with_perspectival_check/4`**, whose
+   `false_ci_rope` clause at `:846` **cuts before** the clause being read at `:946`; and two
+   reachable paths (`:843-845` piton refinement, `:939` CI-rope via the `:862-863` fallthrough) map
+   `unknown` to a real type on **29 live seats**.
+
+**Why here specifically:** cuts as position-encoded cascade priority, if-then-else else-arms
+unreachable from inside the then-arm, and a wrapper layer that intercepts before the predicate you
+are reading. Source order ≠ dispatch order, and a clause table encodes none of the three.
+
+**Discharge template (cheap):** split the *consumer's own* call chain at the boundary in question,
+emit both halves per item over the corpus, cross-tabulate. `seat_dump.pl` in the audit dir is the
+worked example — it answered in one run what the clause read got backwards, and its zero cell got an
+ablation-lever control (0 → 4 → 0).
+
+**Corollary — `total_on_domain` means "total on the data we have."** The OQ-137 suite checks
+exactly-one-solution per domain key over the *loaded* corpus, so a predicate total only because no
+adversarial input was authored registers green. Cite such registrations at that altitude.
+
+**Related, same session:** `residual_signature_firing/1` (`signature_detection.pl:1028-1032`) — the
+monitor behind `_prolog_residual_signature_gate()` (`run_pipeline.py:840-861`) — evaluates at
+`default_context` while the demotion it guards happens per seat; 559 seats sit outside its domain
+(0 currently on a residual pattern). Filed as incidental item 9 in the audit dir, unminted.
+
+---
+
 ## 2026-08-15 — [correction-key] Two standing rules migrated out of closed OQs (OQ-34 MI-threshold visibility, OQ-54 axis-irreducibility); general rules are the ones the file-keyed channel cannot carry
 **Files:** prompts/constraint_story_generation_prompt_json.md, prompts/uke_scope_v2_json.md, agent/story_generator_base.py, agent/generate_kernel_corpus.py, agent/c-orchestrator.py, prolog/cs_kernel_registry.pl, python/enhanced_report.py, ISSUES.md
 **Tier:** correction-key

@@ -42,7 +42,9 @@ a consumer-visible global-section claim naming the absence token as the type (in
 | `witness_demotion_control.txt` | its baseline / planted / restored output | §2 |
 | `phase1c_twin_intersection.txt` | twin-leg id, seat-name and coordinate intersections + parser control | §4 |
 | `witness_totality_suite.txt` | OQ-137 reading-totality suite, corpus-loaded | `RECON.md` item 2 |
-| `FINDINGS_INCIDENTAL.md` | 8 findings outside OQ-285's scope, as a minting proposal | items 1–2 go to the operator ahead of the disposition |
+| `witness_item9_monitor_domain.txt` | residual-monitor domain vs seat-level exposure, with positive control | §2.1's guarded-zero claim; incidental item 9 |
+| `arithmetic_selfcheck.py` / `.txt` | machine re-check of every total, percentage and dedup claim in this directory | that the tables in this document add up |
+| `FINDINGS_INCIDENTAL.md` | 9 findings outside OQ-285's scope, as a minting proposal | items 1–2 go to the operator ahead of the disposition |
 
 ---
 
@@ -131,10 +133,33 @@ Measured per seat, splitting `dr_type_with_d/4` at `integrate_signature_with_mod
       signature=coupling_invariant_rope    unknown -> rope     4
 ```
 
-**The signature layer can only *reduce* abstention, never create it.** 181 seats arrive at it with
-an `unknown` modal type; 29 leave with a real one; 0 real types are demoted. So the abstention is
-determined **entirely** by `classify_from_metrics/6` falling through its cascade at
-`drl_core.pl:459`.
+**On this corpus at this config the signature layer only *reduces* abstention, never creates it.**
+181 seats arrive at it with an `unknown` modal type; 29 leave with a real one; 0 real types are
+demoted. So the abstention is determined **entirely** by `classify_from_metrics/6` falling through
+its cascade at `drl_core.pl:459`.
+
+**That one-way behaviour is a corpus-and-config fact, NOT an architectural invariant — stated
+carefully because the shorter version is wrong.** Demotion is designed in, ruled, and deliberately
+guarded:
+
+- `residual_route/2` under the committed lever `residual_signature_override_enabled = 0`
+  (`config.pl:508`) maps a **real** modal type to `unknown` — e.g.
+  `resolve_modal_signature_conflict(mountain, coordination_scaffold, Result)`
+  (`signature_detection.pl:955`). The *guard* is what creates the demotion path; flipping the lever
+  to 1 restores the legacy manufacture instead.
+- Those seven clauses are the OQ-138 "residual seven", **ruled ABSTAIN-guard by the operator
+  2026-07-14** after the whole `resolve_modal_signature_conflict` table was converted clause by
+  clause from overwrite to route (FSM, FCR-9, constructed-3, FNL convert; CI-rope keep). The
+  direction is the accumulated residue of seven independent rulings plus the OQ-37 honest-`unknown`
+  convention — not a stated valve contract.
+- The zero is *monitored*: `residual_signature_firing/1` (`signature_detection.pl:1028-1040`) feeds
+  `_prolog_residual_signature_gate()` (`python/run_pipeline.py:840-861`, called at `:1043`), which
+  fails the pipeline loud and reopens **OQ-225** on any future fire.
+
+Measured here: **0 seats match any of the seven residual `(metric_type, signature)` pairs**
+(`phase0_group_split.txt`), and the constraint-level monitor also reads 0. So "one-way valve" is a
+correct description of today's behaviour and an **incorrect** description of the design. Anyone
+citing §2.1 downstream must carry the config condition with it.
 
 This **corrects the plan that authorised the audit**, which asserted that every reachable clause
 with an `unknown` first argument returns `unknown`. Two reachable paths do not:
@@ -188,6 +213,22 @@ A reason token joined on signature would fire on **111 `constructed_high_extract
 with no abstention to explain**, and `false_ci_rope` is a coin flip. The `unknown`-signature row is
 **absent**: 0 stakeholder-bearing constraints carry it, so the "genuinely reasonless
 sub-population" is not a sub-population of anything.
+
+### 2.3.1 This table is what kills the signature arm, and §2.1's falsification does not touch it
+
+**Stated explicitly, because a reader who notices Check 1 collapsed may conclude the arm is back.**
+It is not. The two are independent:
+
+- §2.1's original claim ("no reachable clause maps `unknown` to a real type") was a **static read of
+  clause coverage**. It was falsified. It was also **never load-bearing** — it offered a *mechanism*
+  story on top of a result that had already been measured.
+- This 2×2 was **measured**, not read: per-constraint outcomes joined to per-constraint signatures
+  over all 230 stakeholder-bearing constraints. Nothing in it depends on which clauses are reachable,
+  what the cuts do, or whether `resolve_with_perspectival_check/4` intercepts.
+
+**The signature-join arm dies on non-correlation** — 12.6% vs 50.6% base rates, and the
+`unknown`-signature row absent because 0 of those 26 constraints are stakeholder-bearing — **not on
+the clause enumeration.** Had Check 1 been right, the arm would still be dead, and by this table.
 
 **Cite §1's group-(iii) breakdown and this table as ONE observation, not two.** The 103 / 40 / 9
 sub-path counts in §1 are byte-identical to the `unkSeats` column here because they *are*
@@ -324,6 +365,38 @@ whatsoever. §3 measured that directly and found **zero at any usable support** 
 turned up, it would be a missing rule-table row, not blindness. So realistically: nothing in the
 current corpus revives (A).
 
+### 6.1 THE MOST IMPORTANT PARAGRAPH IN THIS DOCUMENT — three instruments were wrong and the verdict did not move, and that is a WARNING, not a strength
+
+OQ-285's brief says: *"Say what would change your recommendation. If nothing would, say that, and
+treat it as a warning about the recommendation rather than a strength."* This audit produced the
+**empirical** version of that test without meaning to. Three instruments were falsified in the
+course of writing it — a static clause-read (§2.1), a regex that reported a **false absence** and
+would have retired the twin-leg arm on a broken scan (§4), and an arithmetic total (§1) — and
+recommendation (D) held through all three.
+
+**The honest reading is the second one, and it should be said in the writeup rather than left for
+the reader.** A verdict insensitive to its own instruments being wrong is a verdict that was not
+resting on them. Concretely: **this document has a thin load-bearing core and a large corroborating
+periphery.** Exactly two measurements carry (D):
+
+1. **§2.3's 2×2** — the signature does not correlate with abstention (12.6% / 50.6%).
+2. **§4's seat-level intersection** — 8 seats share a full authored coordinate across four legs.
+
+Everything else — §1's group split, §2.1's mechanism, §2.2's control, §3's uniformity test, §5, §7 —
+is corroboration. Corroboration is by definition not load-bearing, so its being wrong moves nothing.
+**That is why the verdict survived, and it is not evidence the verdict is right.**
+
+**The inference that actually follows.** Three of roughly six instruments in the periphery were
+wrong on first construction — a ~50% first-pass error rate. The two core measurements were built by
+the same process, in the same session, by the same instance, and **neither has been independently
+re-derived.** The correction record does not validate them; it is the best available *estimate of
+their error rate*, and that estimate is bad.
+
+**So the concrete ask for the Claude-web check (step 2 of the OQ-285 gate) is narrow, not general.**
+Do not audit this document. **Re-derive §2.3 and §4 from the substrate, independently.** If both
+survive an outside re-derivation, (D) is earned. If either falls, (D) falls with it — and no amount
+of the surviving periphery will hold it up.
+
 ## 7. The false-absence sub-rule (c), instantiated against OQ-285 itself
 
 `seat_perceived_vs_real/4` (`stakeholder_seats.pl:160-169`, registered at
@@ -374,7 +447,7 @@ disposition after the Claude-web check (OQ-285 gate step 2).
 - **Owed if that census ever runs:** instrument `classify_from_metrics/6`'s exit point directly.
   Copying §1's sub-path labels across would re-emit `constraint_signature/2` under a new column name
   and manufacture the correlation §2.3 refutes.
-- **`FINDINGS_INCIDENTAL.md`** holds 8 findings outside this OQ's scope, as a minting proposal.
+- **`FINDINGS_INCIDENTAL.md`** holds 9 findings outside this OQ's scope, as a minting proposal.
   **Items 1 and 2 are live wrong output shipping today** and go to the operator ahead of the OQ-285
   disposition; they do not depend on anything OQ-285 resolves. Next free OQ label is **OQ-296**
   (OQ-295 was taken by the surfacing entry, commit `2caaf77b`) — the plan's "next free OQ-295" is

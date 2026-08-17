@@ -1,0 +1,10 @@
+# Incidental item 9 — residual_signature_firing/1 domain vs seat-level exposure
+# cd prolog && swipl -g "[stack], corpus_loader:load_all_testsets, <join>, halt" -t "halt(1)"
+# Corpus: testsets/ (273 files loaded)
+
+constraints with a default-context metric type:                                        247
+residual_signature_firing/1 (constraint-level monitor):                                  0
+
+seats whose SEAT-level metric type differs from the constraint default-context type:   559
+...of which match a residual pattern the constraint-level monitor CANNOT see:            0
+CONTROL: same join on a KNOWN-PRESENT (metric,signature) pair:                           15  (must be > 0)
