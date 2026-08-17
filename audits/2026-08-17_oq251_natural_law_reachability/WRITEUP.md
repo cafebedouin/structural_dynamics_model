@@ -165,6 +165,70 @@ HEAD it fires on 3 of 21 claim-bearing constraints and declines on the other 18 
 in both directions, neither planted. maxwell's decline is in distribution for that record, so the
 non-firing carries information.
 
+## The finding under the finding — the certification was never earned
+
+*(Raised by the operator at close, on reading the bisect table; verified here.)*
+
+At bisect points 1 and 2, `has_viable_alternatives` reads `false` — but that is the **era catch-all
+default** (`has_viable_alternatives(_, false).`), not authored evidence. Clause 1 requires BOTH
+`affects_constraint(I, C)` AND `intent_viable_alternative(I, _, _)`. Measured on substrate:
+
+```
+intent_viable_alternative authored by:
+  prolog/testsets                          0 of  276 files
+  prolog/archives/datasets/kernel_v1       0 of 1106 files
+  prolog/archives/datasets/original_v6     0 of 3380 files
+  prolog/archives/datasets/kernel_v2_test2 0 of   62 files
+                                        -----------------
+                                           0 of 4762
+```
+
+The only occurrences repo-wide are three fixtures in `tests/test_cs_pattern_detection.pl` and a
+handful in `archives/datasets/original_v1/` — the latter **unqualified v3.1-era facts**
+(`intent_viable_alternative(...)`, no `narrative_ontology:` prefix), which would not reach the
+predicate `has_viable_alternatives/2` reads even if that archive were loaded (code-read on module
+semantics, not a run).
+
+maxwell authors 4 `affects_constraint` facts, so it gets *halfway* through clause 1 and dies on the
+empty table. **The paradigm genuine law's `natural_law` certification rode a fail-open default for
+its entire life.** And the accepted casualty is the same: `thermal_dissipation_constraint` authors
+**neither** `intent_viable_alternative` nor any `affects_constraint` fact.
+
+**This re-reads OQ-43/OQ-44's ledger.** The disposition (FAIL-CLOSED) is unchanged and correct —
+Pattern 5 working as the statute says. What changes is the description: *"un-certification
+ACCEPTED"* reads as a real certification traded away for honesty. Nothing was traded away.
+`HasAlternatives == false` had never once been satisfied by data, so the fail-close did not **cost**
+a certification — it **revealed** that none had been earned. Anyone citing that ledger as a
+cost-of-fail-closing is citing an event that did not occur. Correction filed at OQ-43.
+
+**Corollary, routed to OQ-296 (operator's question, not the executor's).** The signature is
+repairable per story — authoring `has_viable_alternatives(maxwell_demon_impossibility, false)`
+would re-certify the paradigm case. Whether it *should*, and whether a signature satisfiable only by
+explicit authorship is measuring structure or declaration after all, is an operator call. It arrives
+at OQ-251's original worry from the opposite direction. **Q1's answer holds either way** — no path
+exists at HEAD regardless of what the repair would mean.
+
+## Defects in the plan (not in its execution) — logged as such per the operator
+
+Three plan instructions were refused and substituted. Two were **plan bugs that three review rounds
+did not catch**, and both would have produced a wrong or unlicensed result if followed:
+
+1. **P5's `asserta` injection is unexecutable.** `has_viable_alternatives/2` is **static** — no
+   `:- dynamic` anywhere in `signature_detection.pl`. The plan's entire shadowing-trap paragraph
+   (asserta-vs-assertz clause ordering, and the `probe_harness:with_overlay/3` caveat) was solving
+   the wrong problem one level up; staticness blocks both routes. Substituted: profile-slot
+   substitution + a scratch-tree HEAD counterfactual, which together are strictly stronger (the
+   latter exercises the real producer clause on the real corpus).
+2. **P4b's outcome table could not distinguish its own outcome A from a dead detector.** As
+   written, "FNL does not fire, compliance result shows why → record as designed behaviour" accepts
+   a 0-firing detector as confirmation. On kernel_v1 FNL fires **0/1106**, so the pasted control was
+   one-sided and licensed nothing. Repaired by re-running on the live leg (3 firings / 18 declines
+   of 21 claim-bearers) — a naturally-arising two-sided record. A future plan of this shape should
+   require the detector's discrimination record *before* accepting a non-firing as designed.
+3. **Step 6's `resolve_corpus_dir/2` expectation was wrong for `f600599b`** (0 hits; it predates the
+   2026-06-04 landing), and `corpus_constraint/1` does not exist there at all. Harmless — the design
+   already specified an absolute path — but the plan asserted a substrate fact that was false.
+
 ## For the operator (E5 — surfaced, not decided)
 
 The 2026-07-25 gate-2 ruling for `non_agent_beneficiary(entropic_universe_hypothesis)` had its
@@ -186,8 +250,11 @@ Substrate changed by this audit:
   cites refreshed, each target re-verified at edit time. Comment-only; OQ-113 suite 3/3 green
   post-edit.
 - `ISSUES.md` — OQ-251 → resolved (its own two-blocker paragraph corrected in place, marked);
-  OQ-248 disposition cross-ref; OQ-266 evidence line; **OQ-296 minted** (the consumer surface).
-- `KNOWN_STATE.md` — dated entry.
+  OQ-248 disposition cross-ref; OQ-266 evidence line; **OQ-296 minted** (the consumer surface);
+  **OQ-43** casualty-ledger re-read (the fail-open finding); **OQ-252** third instance + correction
+  of its "two days" bullet to six days and a different commit; **OQ-276** standing prohibition —
+  a `Fired:` bit is not apparatus corroboration and this writeup's `live` may not be cited as such.
+- `KNOWN_STATE.md` — dated entry (three tripwires).
 - `python/linter.py` — **NOT edited**, logged only, per plan step 18.
 
 No engine-behavior change anywhere in this audit: every `.pl` edit is comment-only (0 non-comment

@@ -772,6 +772,59 @@ with ~20 consumers reading a constant zero and at least two of them (`container_
 
 ---
 
+## POST-CLOSE ADDENDUM (operator-raised at review; run 2026-08-17 after the first two commits)
+
+**Question:** at bisect points 1 and 2 `has_viable_alternatives` reads `false` — is that authored
+evidence, or the era catch-all default?
+
+```
+$ grep -n "intent_viable_alternative\|affects_constraint" \
+    prolog/archives/datasets/kernel_v1/maxwell_demon_impossibility.pl
+42:    narrative_ontology:affects_constraint/2,                  <- declaration
+276:narrative_ontology:affects_constraint(maxwell_demon_impossibility, szilard_information_thermodynamic_equivalence).
+277:narrative_ontology:affects_constraint(maxwell_demon_impossibility, bennett_computational_entropy_cost).
+278:narrative_ontology:affects_constraint(maxwell_demon_impossibility, quantum_measurement_entropy_coupling).
+279:narrative_ontology:affects_constraint(maxwell_demon_impossibility, universe_arrow_of_time).
+   -> intent_viable_alternative: NOT AUTHORED
+```
+
+maxwell satisfies clause 1's FIRST conjunct (4 `affects_constraint` facts) and dies on the second.
+Corpus-wide authorship of that second field:
+
+```
+prolog/testsets                            0 of  276 files
+prolog/archives/datasets/kernel_v1         0 of 1106 files
+prolog/archives/datasets/original_v6       0 of 3380 files
+prolog/archives/datasets/kernel_v2_test2   0 of   62 files
+                                        ---------------------
+                                           0 of 4762
+```
+
+Repo-wide, `intent_viable_alternative` facts exist in only two places: three fixtures in
+`prolog/tests/test_cs_pattern_detection.pl`, and `archives/datasets/original_v1/` — the latter
+**unqualified v3.1-era data packs** (`intent_viable_alternative(us_revolution_cycle, …)`, file head
+shows bare `entity(...)`/no `narrative_ontology:` prefixes anywhere), which would assert into the
+file's own module and never reach `narrative_ontology:intent_viable_alternative/3`. That last point
+is a **code-read on module semantics, not a run** — original_v1 was not loaded.
+
+**The accepted casualty, checked:**
+
+```
+$ grep -n "intent_viable_alternative" .../kernel_v2_test2/pl/thermal_dissipation_constraint.pl
+>>> intent_viable_alternative: NOT AUTHORED
+$ grep -n "^narrative_ontology:affects_constraint" .../thermal_dissipation_constraint.pl
+>>> affects_constraint: no FACTS either
+```
+
+**Verdict.** Every `natural_law` certification that ever existed rode the catch-all default. The
+OQ-43/OQ-44 fail-close did not **cost** maxwell or thermal a certification they had earned — it
+**revealed** that `HasAlternatives == false` had never once been satisfied by data. Disposition
+unchanged (FAIL-CLOSED is right, and is Pattern 5 working); the *description* "un-certification
+accepted" names an event that did not occur. Filed as a correction at OQ-43; the
+repairable-only-by-authorship corollary routed to OQ-296 as an operator question.
+
+---
+
 ## GATE EVALUATION (Phase 4 preamble)
 
 | Hypothesis | Test | Result |

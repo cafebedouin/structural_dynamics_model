@@ -121,6 +121,23 @@ and its kill condition did not trip. Whether that warrants an explicit re-affirm
 `non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call (OQ-252 instance).
 Default recommendation: **the ruling stands.** Surfaced at the site and in OQ-251/OQ-248.
 
+**CORRECTION-KEY — every `natural_law` certification that ever existed rode a FAIL-OPEN DEFAULT, so
+OQ-43/OQ-44's "un-certification accepted" describes an event that did not occur.** (Operator-raised
+at close; verified.) `has_viable_alternatives/2` clause 1 needs BOTH `affects_constraint/2` AND
+`intent_viable_alternative/3`. The latter is authored by **0 of 4,762 story files** — testsets
+0/276, kernel_v1 0/1106, original_v6 0/3380, kernel_v2_test2 0/62. (The only repo-wide occurrences
+are 3 fixtures in `test_cs_pattern_detection.pl` and some **unqualified v3.1-era** facts in
+`archives/datasets/original_v1/` that could not reach `narrative_ontology:intent_viable_alternative/3`
+even if loaded — code-read.) maxwell authors 4 `affects_constraint` facts, reaches the second
+conjunct, and dies on the empty table; at bisect points 1–2 its `false` is the era catch-all
+`has_viable_alternatives(_, false).`. The ledger's named casualty
+`thermal_dissipation_constraint` authors **neither** field. **So the fail-close did not COST a
+certification, it REVEALED that none was ever earned.** The FAIL-CLOSED disposition is unchanged and
+correct — this is Pattern 5 working. What is wrong is the *description*, and anyone citing the
+casualty ledger as a cost-of-fail-closing is citing a non-event. Correction filed at OQ-43;
+consequence (repairable only by explicit authorship ⇒ "structure or declaration?" from the other
+side) routed to OQ-296 as an operator question.
+
 **TRIPWIRE 3 — a dirty→clean transition in `git status` does NOT mean "stale index stat"; another
 instance may have just committed.** This audit made that mistake on itself and recorded "no
 concurrent writer" in its own log: `git status --porcelain` showed ` M KNOWN_STATE.md` etc., a
@@ -132,6 +149,17 @@ just committed it." No damage here (engine tree byte-identical across the two co
 the only write-set overlap was `KNOWN_STATE.md`, edited after and anchored on the new content,
 committed clean, checker 0 problems), but the *inference* was exactly the kind this entry's
 TRIPWIRE 1 is about, made by the instance correcting it. Correction block: top of the audit log.
+
+**Operator's diagnosis (2026-08-17), recorded because it locates the weak link precisely:** the
+plan's sequencing constraint was *"check with the operator if unclear"* — **which is not a check.**
+And the inference ran backwards: a dirty→clean transition is *affirmative evidence of a writer*, not
+of its absence. **PROPOSED, NOT BUILT (needs a ruling — it touches committed apparatus):** a
+standing pre-flight probe replacing the prose instruction — stamp `git rev-parse HEAD` at session
+start, re-read before the first write, and fail loud if it moved. Home would be
+`.claude/settings.json` (SessionStart + PreToolUse), which is versioned project apparatus, so this
+is above the fix-simple-errors threshold and is flagged rather than implemented. A cheaper variant
+needing no hook: add the HEAD stamp to the audit-log template alongside the prereg md5, so the
+comparison is forced at close even when nobody thought to check at start.
 
 Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (WRITEUP.md, audit_log.md,
 PREREGISTRATION.md md5 `f7336ee7…` recorded above the first result line, two probe `.pl` files).

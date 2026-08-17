@@ -1283,6 +1283,34 @@ certification (signature → `ambiguous`; NL→mountain override dropped; `persp
 red). NL certs return when the intent layer or an authored alternatives table exists. Witnesses:
 `audits/2026-06-11_oq44_policy_close/`.
 
+**RE-READ OF THE CASUALTY LEDGER (2026-08-17, OQ-251 audit) — the fifth instance's disposition is
+right, but its "un-certification accepted" language describes a different event than it supposes.**
+
+`has_viable_alternatives/2` clause 1 requires BOTH `affects_constraint(I, C)` AND
+`intent_viable_alternative(I, _, _)`. Measured on substrate, `intent_viable_alternative` is authored
+by **0 of 4,762 story files** — testsets 0/276, kernel_v1 0/1106, original_v6 0/3380 (and
+kernel_v2_test2 0/62). The only occurrences repo-wide are three fixtures in
+`tests/test_cs_pattern_detection.pl` and a handful in `archives/datasets/original_v1/`, which are
+**unqualified v3.1-era facts** (`intent_viable_alternative(...)`, no `narrative_ontology:` prefix)
+and so would not reach the predicate even if that archive were loaded — code-read, not a run.
+
+**Consequence.** Every `natural_law` certification that ever existed rode the **catch-all default**,
+never authored evidence:
+- `maxwell_demon_impossibility` — authors 4 `affects_constraint` facts, so it gets *halfway* through
+  clause 1 and dies on the empty `intent_viable_alternative` table; at points 1 and 2 of the OQ-251
+  bisect its `false` is the era default `has_viable_alternatives(_, false).`
+- `thermal_dissipation_constraint` — the ledger's named accepted casualty — authors **neither**
+  `intent_viable_alternative` nor any `affects_constraint` fact. It inherited the default too.
+
+**So the fail-close did not cost these constraints a certification they had earned; it revealed the
+certification was never earned.** The disposition (FAIL-CLOSED) is unchanged and correct — this is
+Pattern 5 working exactly as the statute says. What changes is the *description*: "un-certification
+ACCEPTED", read naturally, says a real certification was traded away for honesty. On this evidence
+nothing was traded away, because `HasAlternatives == false` had never once been satisfied by data.
+Anyone citing the casualty ledger as a cost-of-fail-closing is citing an event that did not occur.
+Witness: `audits/2026-08-17_oq251_natural_law_reachability/`; see also OQ-113 (range) and OQ-296
+(consumer surface).
+
 **Origin (compressed; full history in git).** Named the class — gates satisfied by data-absence
 reading as positive findings — across five instances: G6 fabricated defaults (OQ-41), empty
 `intent_*` consumers (OQ-36/OQ-37), `get_metric_average` 0.5, the NL `BeneficiaryCount == 0` gate
@@ -2575,6 +2603,18 @@ discrimination record is on the live leg at HEAD: 3 firings / 21 claim-bearers, 
 naturally arising both ways. (The first control run, on kernel_v1 alone, was 0-firing and therefore
 ONE-SIDED; it licensed nothing and was re-run.)
 
+**THE FINDING UNDER THE FINDING (added at close, operator-raised).** At bisect points 1 and 2
+maxwell's `false` is the **era catch-all default**, not authored evidence.
+`intent_viable_alternative` is authored by **0 of 4,762 story files** across all corpora; maxwell
+authors 4 `affects_constraint` facts so it reaches clause 1's second conjunct and dies on the empty
+table. **The paradigm genuine law's historical `natural_law` certification rode a fail-open default
+and was never earned.** Same for the accepted casualty: `thermal_dissipation_constraint` authors
+neither field. This re-reads OQ-43/OQ-44's ledger — the fail-close did not cost a certification, it
+revealed one that never existed (correction filed at OQ-43). The disposition stands; the
+*description* was wrong. Corollary routed to OQ-296: the signature is repairable only by explicit
+authorship, which reopens "structure or declaration?" from the other side — an operator question,
+not an executor call, and it does not disturb Q1.
+
 **Kill-condition disposition → OQ-248.** Did not trip: no path exists, so the antecedent ("a path
 EXISTS and maxwell still fails it") is false. The 2026-07-25 gate-2 ruling stands as ruled.
 
@@ -2656,6 +2696,31 @@ licensed were never re-checked:
   sat red-for-the-wrong-reason until 2026-07-25.
 - **Two days.** OQ-70 (`72ec2cdd`, 2026-06-05) removed the `claimed_natural/2` source that the
   gate-2 pass for `non_agent_beneficiary(entropic_universe_hypothesis)` (2026-06-03) had rested on.
+
+**THIRD INSTANCE + a correction to the second (2026-08-17, OQ-251 resolved).**
+
+*Correction to the "two days" bullet above:* the premise-expiring commit was **`8b5a34b8`
+(2026-06-11), not OQ-70/`72ec2cdd`** — bisect-witnessed; `natural_law` still fires at `8b5a34b8^`.
+So the gap was **six days**, and to a different ruling. The pattern this entry names is
+*strengthened*, not weakened: the expiring premise was harder to see than the record supposed,
+because the evidence that looked like a witness (a "single-variable isolation") actually spanned
+126 commits and could not name a commit at all.
+
+**Third instance — a live one, and it is exactly this entry's shape.** The 2026-07-25 gate-2
+re-ruling had its *stated evidential basis* corrected post-hoc by the OQ-251 audit. Its substance
+(the narrative/omega-aboutness discriminator) is untouched and its kill condition was evaluated and
+did not trip, so nothing mechanical fires — which is precisely why a back-reference would be needed:
+**no gate goes red when a ruling's recorded basis is corrected but its conclusion survives.** The
+`Licenses:` line that ruling carries (the convention's first forward instance) named
+`non_agent_beneficiary(entropic_universe_hypothesis)` and is what made the dependent findable at
+all; what is missing is the *reverse* direction — the registry entry carries no pointer back to the
+ruling, so a reader arriving at the entry cannot tell its basis was amended.
+
+**Operator question raised and NOT decided by the executor (E5):** whether a ruling whose recorded
+basis needed correcting, but whose conclusion survives, requires an explicit re-affirmation of what
+it licenses. Executor's default recommendation: the ruling stands. Surfaced at the site
+(`prolog/narrative_ontology.pl`), in OQ-251, and in OQ-248. Witness:
+`audits/2026-08-17_oq251_natural_law_reachability/`.
   The entry then operated as certified for ~7 weeks on a void basis.
 
 Neither was a mistake at the time. Both are the same STRUCTURAL gap: **a ruling records what it
@@ -10569,8 +10634,19 @@ operator's value ruling); the rate itself is Ω_E (mechanically computed).
 **Priority:** 5
 **Deps:**
 
+**STANDING PROHIBITION (operator, 2026-08-17) — a `Fired:` bit is NOT apparatus corroboration and
+must never be cited as such.** The readout is now **9L / 0l / 0n**: nine `live`, and still not one
+decline in the instrument's entire history. That is not weak evidence that the ritual pays for
+itself; it is **not evidence at all**, by this project's own 2026-08-11 ruling. Concretely, and
+forward-facing: the `Fired: live` on
+`audits/2026-08-17_oq251_natural_law_reachability/WRITEUP.md` — an audit that *itself* spent its
+length correcting one-sided instruments — may **not** be cited later as evidence the verification
+ritual works. Nor may any other bit, until a `no` exists. Anyone reaching for the rate as support
+for keeping the apparatus is committing the error this OQ was minted to name. The rate is a
+*pending* measurement, not a result.
+
 **FINDING 2026-08-13 — the instrument has NO DISCRIMINATION RECORD, and `no` is close to
-structurally unreachable.** The readout stands at **4L / 0l / 0n**. By the operator's own
+structurally unreachable.** The readout stands at **4L / 0l / 0n** (9L / 0l / 0n as of 2026-08-17). By the operator's own
 2026-08-11 ruling, *an instrument with no decline in its record licenses nothing* — and this
 instrument is the apparatus's own falsifier, so a falsifier that has never fired in the
 falsifying direction is the exact shape it exists to catch. Two mechanisms, both structural
@@ -13178,6 +13254,24 @@ declared dark at the site the way `routing_sink.pl:22` already does — that mod
 since it calls itself a socketed router input and is therefore honest as it stands. Until then, any
 prevalence statistic, typology axis, or cluster-space vector computed over natural-law
 certifications is reading a constant and cannot say so.
+
+**THE OPERATOR QUESTION THIS OQ INHERITS (added 2026-08-17; raised by the operator at close, not by
+the executor).** `natural_law_signature/1` is repairable *per story* — authoring
+`has_viable_alternatives(maxwell_demon_impossibility, false)` (or powering the intent layer) would
+make the paradigm case certify again. Two questions follow, and both are the operator's:
+1. **Should the paradigm case assert it?** The engine cannot derive `false` from anything; only an
+   author can put it there.
+2. **If the only way to satisfy the signature is explicit authorship, is it measuring structure or
+   declaration after all?** OQ-251 concluded the detector has not drifted to measuring declaration
+   *because it measures nothing* — but that answer is about the current state, not about what the
+   repair would make it. A signature satisfiable only by fiat is the shape OQ-251's original worry
+   named, arrived at from the other direction.
+
+This does not reopen Q1 (no path exists at HEAD, whatever the repair would mean) and it does not
+reopen OQ-113's fork-(b) ruling. It is the *meaning* question sitting on top of both, and it is why
+this OQ's disposition axis is `blocked_on_human`: make-honest, retire, and declare-dark are three
+different answers to "what is this detector FOR," and GAP-08 §7 (the author-independent immovability
+signal) is the capability that would make the question moot by supplying a non-authored `false`.
 
 **Falsifier / kill condition:** if a re-run finds `constraint_signature(_, natural_law)` firing on
 ANY corpus at HEAD, this OQ's premise is void and OQ-113's range finding has regressed — HALT and
