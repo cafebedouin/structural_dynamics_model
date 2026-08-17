@@ -1,0 +1,31 @@
+=== PARSER CONTROL (two-sided, on files whose answer is known) ===
+  known-POSITIVE  ai_risk_prioritization__existential_risk_reading.pl     facts=8 (must be >0)
+  known-NEGATIVE  none available: every file carrying the declaration also carries a fact
+
+testsets_haiku     files   960   stakeholder-bearing   494  (51.5%)
+testsets_flash     files   960   stakeholder-bearing   748  (77.9%)
+testsets_kimi      files  1005   stakeholder-bearing   987  (98.2%)
+testsets_sonnet    files  1001   stakeholder-bearing  1000  (99.9%)
+
+four-way matched ids (GAP-35 population):             957
+four-way matched AND stakeholder-bearing in ALL four:  392
+
+pairwise matched ∩ stakeholder-bearing in BOTH legs:
+  testsets_haiku   x testsets_flash     395
+  testsets_haiku   x testsets_kimi      487
+  testsets_haiku   x testsets_sonnet    493
+  testsets_flash   x testsets_kimi      730
+  testsets_flash   x testsets_sonnet    744
+  testsets_kimi    x testsets_sonnet    939
+
+=== 1C-b  IS THERE A MATCHED *SEAT* ACROSS LEGS, OR ONLY A MATCHED CONSTRAINT? ===
+  four-way matched ∩ stakeholder-bearing constraints: 392
+  identical SEAT-NAME set in all four legs:            0
+  identical (name,power,exit) set in all four legs:    0
+  ≥1 seat NAME shared by all four legs:                60
+  shared-name-count histogram (n_shared -> n_constraints): {0: 332, 1: 52, 2: 5, 3: 2, 5: 1}
+
+=== 1C-c  the residual: seats sharing a NAME across all four legs ===
+  four-way name-matched SEATS (the ceiling on any paired seat design): 73
+  of those, with an IDENTICAL (role,power,time,exit,scope) coordinate: 8
+  -> this is the entire population available to hold position fixed while varying author

@@ -1,0 +1,27 @@
+agent seats: 1333   constraints: 230
+
+=== A1  what the signature LAYER does, measured per seat (not read off clauses) ===
+     metric_type = classify_from_metrics/6 output; type_token = post-signature token
+  metric unknown -> final unknown  (signature left it)        152
+  metric unknown -> final REAL     (signature RESCUED it)      29
+  metric REAL    -> final unknown  (signature DEMOTED it)       0
+  metric REAL    -> final REAL                               1152
+
+=== A2  rescues and demotions, by signature ===
+  RESCUE  metric unknown -> real: 29
+      signature=false_ci_rope                    unknown -> piton          25
+      signature=coupling_invariant_rope          unknown -> rope           4
+  DEMOTE  metric real -> unknown: 0
+
+=== A3  the 2x2: does the constraint's signature discriminate abstention? ===
+     (per CONSTRAINT, all 230 stakeholder-bearing — not conditioned on the outcome)
+  signature                        has_unk  no_unk   tot    rate  unkSeats
+  constructed_high_extraction           16     111   127   12.6%        40
+  false_ci_rope                         41      40    81   50.6%       103
+  coupling_invariant_rope                0      15    15    0.0%         0
+  false_summit_mountain                  0       4     4    0.0%         0
+  false_natural_law                      3       0     3  100.0%         9
+  TOTAL                                 60     170   230               152
+
+  seat-level signature homogeneity within a constraint: uniform
+  constraints whose signature is `none`/unknown: 0

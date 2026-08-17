@@ -1,0 +1,23 @@
+=== 1B-a  per-constraint distribution of unknown seats (agent seats only) ===
+  none (0 unknown)        170 / 230    73.9%
+  some-but-not-all         58 / 230    25.2%
+  all seats unknown         2 / 230     0.9%
+  affected constraints: 60; unknown seats 152; mean unknown/affected 2.53; corpus mean seats/constraint 5.80
+
+=== 1B-b  is `unknown` a pure function of the seat coordinate? ===
+    (immutability-hole seats EXCLUDED per the plan)
+    population after exclusion: 1140 seats, 230 constraints, 108 unknown
+  coordinate = (power, exit)  [the plan's pair]: 30 distinct values | MIXED (types under some constraints, not others) 15 | always-unknown 0 | always-typed 15
+      seats sitting on a MIXED coordinate: 779/1140 (68.3%); of the 108 unknown seats, 108 (100.0%) sit on one
+  coordinate = full authored coordinate (role,power,time,exit,scope): 307 distinct values | MIXED (types under some constraints, not others) 40 | always-unknown 19 | always-typed 248
+      seats sitting on a MIXED coordinate: 404/1140 (35.4%); of the 108 unknown seats, 88 (81.5%) sit on one
+  coordinate = derived d alone: 19 distinct values | MIXED (types under some constraints, not others) 9 | always-unknown 0 | always-typed 10
+      seats sitting on a MIXED coordinate: 661/1140 (58.0%); of the 108 unknown seats, 108 (100.0%) sit on one
+
+=== 1B-c  the same test WITHOUT the immutability-hole exclusion (sensitivity) ===
+  coordinate = (power, exit): 31 distinct values | MIXED (types under some constraints, not others) 18 | always-unknown 0 | always-typed 13
+      seats sitting on a MIXED coordinate: 984/1333 (73.8%); of the 152 unknown seats, 152 (100.0%) sit on one
+
+=== 1B-d  do the immutability-hole seats drive the unknowns? ===
+  imm_hole=true : unknown   44 /  193  (22.8%)
+  imm_hole=false: unknown  108 / 1140  (9.5%)

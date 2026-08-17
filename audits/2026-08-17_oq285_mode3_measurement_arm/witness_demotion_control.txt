@@ -1,0 +1,20 @@
+=== BASELINE (committed config: false_summit_override_target=mountain) ===
+  baseline
+    metric unknown -> final REAL     (RESCUE)  29
+    metric REAL    -> final unknown  (DEMOTE)  0
+    metric unknown -> final unknown  (kept)    152
+    metric REAL    -> final REAL               1152
+
+=== PLANTED (false_summit_override_target=unknown) ===
+  planted
+    metric unknown -> final REAL     (RESCUE)  29
+    metric REAL    -> final unknown  (DEMOTE)  4
+    metric unknown -> final unknown  (kept)    152
+    metric REAL    -> final REAL               1148
+
+=== RESTORED (must equal baseline) ===
+  restored
+    metric unknown -> final REAL     (RESCUE)  29
+    metric REAL    -> final unknown  (DEMOTE)  0
+    metric unknown -> final unknown  (kept)    152
+    metric REAL    -> final REAL               1152

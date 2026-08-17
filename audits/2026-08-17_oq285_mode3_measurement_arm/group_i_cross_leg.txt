@@ -1,0 +1,15 @@
+=== SCANNER CONTROL (two-sided, synthetic — an authored decoy, so a FLOOR) ===
+  fails(payer   ,moderate ,trapped ) = False expected False OK
+  fails(payer   ,moderate ,BOGUS   ) = True  expected True  OK
+  fails(BOGUS   ,BOGUS    ,trapped ) = True  expected True  OK
+  fails(BOGUS   ,moderate ,trapped ) = False expected False OK
+
+leg                              seats   agent  badRole  badPow  badExit  FAILS
+testsets                          1545    1355        0       0        0      0
+testsets_haiku                    3774    3186        0       0        0      0
+testsets_flash                    4144    3802        0       0        0      0
+testsets_kimi                     5252    4549        0       0        0      0
+testsets_sonnet                   7331    6522        0       0        0      0
+archives/datasets/kernel_v1          0       0        0       0        0      0
+
+  total agent seats scanned across the five live legs: 19414

@@ -1,0 +1,13 @@
+=== CONTROL: the table transcription must reject a known-missing pair and accept a known-present one ===
+  covered('generational','constrained') -> True  (must be True)
+  covered('generational','analytical')  -> False   (must be False)
+  covered('civilizational','analytical')-> True (must be True)
+  covered('historical','analytical')    -> True     (must be True)
+
+leg                              seats   agent    hole   hole%
+testsets                          1545    1355     198    14.6
+testsets_haiku                    3774    3186     570    17.9
+testsets_flash                    4144    3802     452    11.9
+testsets_kimi                     5252    4549     551    12.1
+testsets_sonnet                   7331    6522     663    10.2
+archives/datasets/kernel_v1          0       0       0       -
