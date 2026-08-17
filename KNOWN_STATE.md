@@ -45,6 +45,87 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-17 — [tripwire] OQ-251 RESOLVED: maxwell's `natural_law` loss was `8b5a34b8`, NOT OQ-70 — a single-variable isolation over a 126-commit span cannot name a commit
+**Files:** prolog/narrative_ontology.pl, prolog/signature_detection.pl, prolog/tests/test_oq113_dead_natural_law.pl, prolog/drl_core.pl, prolog/routing_sink.pl, python/container_typology_analysis.py, python/extract_corpus_data.py, python/linter.py, audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md, ISSUES.md
+**Tier:** tripwire
+
+**TRIPWIRE 1 — a controlled comparison can be right about WHAT it measured and still not license
+WHICH CAUSE.** `GATE2_REWITNESS.md`'s A-vs-C isolation (era engine vs HEAD, same `kernel_v1`
+corpus) correctly established *engine regime, not corpus*. It then named **OQ-70 / `72ec2cdd`** as
+the cause. That span contains **126 commits including both candidate commits**, so it could never
+discriminate them — the attribution was an inference the isolation did not license, and it
+propagated into `prolog/narrative_ontology.pl` (the gate-2 ruling's stated basis), into OQ-251's
+own framing, and into OQ-251's "over-determined by TWO independent blockers" claim. **Before
+attributing a behavior change to a commit, bisect it.** The tell is a comparison whose two arms are
+separated by more than one change.
+
+**The correction, behaviorally witnessed** (three-point bisect, `git archive` scratch trees, corpus
+byte-identical at every point — maxwell md5 `9178deb2…` at all three commits *and* the live
+worktree, no churn in-window):
+
+| point | commit | `has_viable_alternatives` | `constraint_signature(maxwell, S)` |
+|---|---|---|---|
+| 1 | `f600599b` (pre-both) | `false` | `[natural_law]` |
+| 2 | `8b5a34b8^` = `a4297632` (**post-`72ec2cdd`**) | `false` | `[natural_law]` |
+| 3 | `8b5a34b8` (post-fail-close) | `unknown` | `[coupling_invariant_rope]` |
+
+Binding commit: **`8b5a34b8`** (2026-06-11, OQ-43/OQ-44 fail-close). Point 1 REPRODUCES arm C, so
+the apparatus was validated against a known result before anything downstream was read. Two further
+independent kills of the old attribution: `claimed_natural/2` was never on the `natural_law` path
+(both producers gate on `natural_law_signature/1`; era-wide its only executable consumer is
+`false_natural_law/2` — the arrow runs the *other* way, clause 3 calls `natural_law_signature`); and
+maxwell authors an explicit story-level claim at `:114`, so `claimed_natural` source 1 fires
+regardless and removing source 2 was **inert for maxwell** even on the claims side.
+
+**TRIPWIRE 2 — `drl_core:natural_law_without_beneficiary/1` is NOT the `natural_law` signature
+atom, and a `grep natural_law` sweep silently conflates them.** Different predicate, different
+module, never reads the signature; and it is **LIVE** (30 firings on kernel_v1, 0 on the live leg —
+two-sided, so its live-leg zero is a corpus property, not a dead path). Its ~15 consumers are OUT
+of scope for any "the natural_law detector is dead" claim. Folding them in inflates the finding by
+roughly double. Scoping guard recorded in OQ-296's body.
+
+**LANDED (all comment-only; 0 non-comment lines changed across the three `.pl` files; OQ-113
+regression suite 3/3 green before AND after; live `signature_detection.pl` md5 unchanged
+`1c58deb9…`).** Commit `1b63ba09`: `narrative_ontology.pl` registry-note attribution corrected and
+marked AS a correction + kill-condition disposition added; `GATE2_REWITNESS.md` dated **Correction**
+block appended (original point-in-time, not rewritten); three drifted cites refreshed, each target
+re-verified at edit time (`signature_detection.pl` `:112`→`:117`, `boltzmann_compliance.pl`
+`:580`→`:607`; `test_oq113_dead_natural_law.pl` `:359`→`signature_detection.pl:378`).
+
+**Q1/Q2 verdicts.** Q1: **no path** — `natural_law_signature/1` is unsatisfiable **BY
+CONSTRUCTION** (both `has_viable_alternatives/2` clauses bind arg 2 to a head literal, `true` /
+`unknown`; runtime `listing/1`, static, non-multifile; two-sided control — authoring the only input
+clause 1 reads yields `true`, never `false`). Exactly ONE conjunct blocks maxwell;
+`BeneficiaryCount == 0` **passes**, so OQ-251's two-blocker text was wrong. Q2: the scope was ruled
+three times (OQ-70 claims-side only; OQ-43/OQ-44 fail-close with casualty accepted; OQ-113 fork (b)
+documented-not-changed) — chosen, never a side effect. **OQ-248's kill condition evaluated, did NOT
+trip.**
+
+**Promotion test: NO CLAUDE.md promotion.** Verified by direct read, not assumed: CLAUDE.md's OQ-70
+paragraph (`:898-905`) is entirely about FNL prevalence and `claimed_natural` source 2 — it makes no
+`natural_law`-certification attribution and stays correct. (My probes confirm it: FNL fires 0/1106
+on kernel_v1 post-fix.) Tripwire 1's general shape is close enough to existing build_discipline
+material that promoting it would be over-promotion; it lives here.
+
+**Also found, filed not fixed:** `python/linter.py:684,719` `MISSING_NL_PROFILE` promises a remedy
+that cannot work (the binding conjunct is one it never mentions) and cites a stale mechanism
+(`get_metric_average` no longer "defaults to 0.5" — OQ-44 disposition (1), `966d53c8`, made it the
+`unknown` sentinel). `domain_priors:should_be_natural_law/1` is dead in both senses — 0 firings on
+both corpora and 0 consumers repo-wide. One OQ-266 red (`gm_reverse_natural_fires`, `:427-429`) is
+dead-by-range, **not** fixture rot, so refreshing fixtures will leave it red. **OQ-296 minted** for
+the ~20-consumer surface.
+
+**FOR THE OPERATOR (E5, surfaced not decided):** the 2026-07-25 gate-2 ruling's *stated evidential
+basis* was corrected post-hoc. Its substance (narrative/omega-aboutness discriminator) is untouched
+and its kill condition did not trip. Whether that warrants an explicit re-affirmation of
+`non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call (OQ-252 instance).
+Default recommendation: **the ruling stands.** Surfaced at the site and in OQ-251/OQ-248.
+
+Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (WRITEUP.md, audit_log.md,
+PREREGISTRATION.md md5 `f7336ee7…` recorded above the first result line, two probe `.pl` files).
+
+---
+
 ## 2026-08-17 — [tripwire] A static clause-coverage read is a hypothesis, not a witness — 2 for 2 wrong in one session; and `total_on_domain` is not a totality proof
 **Files:** docs/technical/build_discipline.md, prolog/signature_detection.pl, prolog/stakeholder_seats.pl, prolog/reading_registry.pl, prolog/drl_core.pl, python/run_pipeline.py
 **Tier:** tripwire

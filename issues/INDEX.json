@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "e6b019e88c8ac1357bab4b6bbcda72107167f285",
+    "store_version": "1b63ba0917f865794cc68a5fe1e4ccb0f2299a61",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-15T01:30:05"
+    "generated_at": "2026-08-17T03:34:21"
   },
-  "issues_sha": "047bc91005b48752acdc5f550fb0de5e7493d177079f31984098ca54d96c9ebe",
-  "n_entries": 295,
+  "issues_sha": "165391c089623fa1046e4d62007717a1382d7934fedd90e28207800195d89cf6",
+  "n_entries": 296,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 149,
+    "resolved": 150,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
@@ -1141,9 +1141,12 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-43",
+        "OQ-44",
         "OQ-66",
         "OQ-70",
-        "OQ-251"
+        "OQ-251",
+        "OQ-252"
       ]
     },
     {
@@ -1172,19 +1175,6 @@
         "OQ-66",
         "OQ-94",
         "OQ-138"
-      ]
-    },
-    {
-      "id": "OQ-251",
-      "status": "open",
-      "priority": 2,
-      "summary": "Post-OQ-70, is there ANY path by which a paradigm natural law certifies `natural_law`? (and did OQ-70 intend that scope?)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-70",
-        "OQ-113",
-        "OQ-248"
       ]
     },
     {
@@ -1263,6 +1253,8 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": [
+        "OQ-113",
+        "OQ-251",
         "OQ-261"
       ]
     },
@@ -1588,6 +1580,23 @@
         "OQ-34",
         "OQ-54",
         "OQ-117"
+      ]
+    },
+    {
+      "id": "OQ-296",
+      "status": "open",
+      "priority": 3,
+      "summary": "~20 consumers read a `natural_law` detector that fires zero times by construction, and at least two turn that constant zero into plausible non-zero output",
+      "deps": [
+        "splits_from OQ-251",
+        "blocked_on_human disposition-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-43",
+        "OQ-44",
+        "OQ-113",
+        "OQ-251"
       ]
     }
   ],
@@ -3888,6 +3897,26 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-234"
+      ]
+    },
+    {
+      "id": "OQ-251",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Post-OQ-70, is there ANY path by which a paradigm natural law certifies `natural_law`? (and did OQ-70 intend that scope?)",
+      "deps": [
+        "gates OQ-248",
+        "splits_from OQ-113"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-43",
+        "OQ-44",
+        "OQ-70",
+        "OQ-113",
+        "OQ-248",
+        "OQ-252",
+        "OQ-296"
       ]
     },
     {

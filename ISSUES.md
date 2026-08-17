@@ -2370,6 +2370,24 @@ as the single-variable isolation:
 | C | `f600599b` | `kernel_v1` (1106) | `natural_law` | mountain | mountain-0.95 |
 
 Same corpus, different engine, opposite answer ⇒ **corpus regime REFUTED, engine regime CONFIRMED.**
+
+**KILL-CONDITION DISPOSITION 2026-08-17 (OQ-251 resolved): EVALUATED, DID NOT TRIP.** The condition
+was "OQ-251 finds a path to `natural_law` certification DOES exist post-OQ-70 and maxwell still
+fails it." No path exists — `natural_law_signature/1` is unsatisfiable **by construction** — so the
+antecedent is false and the 2026-07-25 gate-2 narrative basis stands as ruled. Witness:
+`audits/2026-08-17_oq251_natural_law_reachability/`.
+**CORRECTION to the arm table above, and to what it licenses.** The A-vs-C isolation's *finding*
+(engine regime, not corpus) is CONFIRMED — reproduced by the OQ-251 bisect, and the corpus is
+byte-identical across all points. What it does NOT license is the *attribution* built on it:
+`f600599b`..HEAD spans 126+ commits, so A-vs-C could never discriminate `72ec2cdd` from
+`8b5a34b8`. The binding commit is **`8b5a34b8`** (OQ-43/OQ-44 fail-close), not OQ-70 — `natural_law`
+still fires at `8b5a34b8^`. Bisect point 1 REPRODUCES arm C, so the arm-C measurement itself is
+independently re-witnessed. See OQ-251's resolution note and the appended Correction block in
+`GATE2_REWITNESS.md`.
+**E5 surfaced for the operator, not decided:** this ruling's stated evidential basis was corrected
+post-hoc; whether that warrants an explicit re-affirmation of
+`non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call (OQ-252 instance).
+Executor's default recommendation: the ruling stands.
 Hypothesis "wrong when recorded" is refuted on substance and survives only as mis-transcribed digits
 (recorded 0.990/0.031; measured in-era 0.95/0.1557, where 0.95 is the saturation ceiling and 0.1557
 is that shape's entropy — identical in all three arms because it is a property of the shape, not the
@@ -2492,11 +2510,81 @@ cannot be exercised and reads as though it can.
 
 **Ω-type:** Ω_E (empirical — a detector-coverage measurement), with an Ω_C rider on ruling scope.
 
-**Status:** open
+**Status:** resolved — 2026-08-17. **Q1: NO path exists** — `natural_law_signature/1` is
+unsatisfiable BY CONSTRUCTION, blocked by exactly ONE conjunct. **Q2: the scope was RULED, three
+times, and never by OQ-70** — this OQ's own premise was a mis-attribution, corrected below.
+OQ-248's kill condition EVALUATED, DID NOT TRIP. Consumer surface split out as **OQ-296**.
+Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (WRITEUP.md + audit_log.md);
+correction commit `1b63ba09`.
 **Priority:** 2
+**Deps:** gates OQ-248, splits_from OQ-113
 **Origin:** OQ-248 gate-2 re-witness, 2026-07-25.
 **Files:** `prolog/signature_detection.pl` (`natural_law_signature`, `claimed_natural/2`),
 `prolog/archives/datasets/kernel_v1/maxwell_demon_impossibility.pl` (the paradigm case).
+
+**RESOLUTION (2026-08-17).**
+
+**Q1 — no path, and the honest framing is OQ-113's.** `has_viable_alternatives/2` has exactly two
+clauses and both bind arg 2 to a **literal in the head** (`true`, `unknown`); no callee binds it, so
+the range is `{true, unknown}` **by construction**, not merely unauthored. Runtime `listing/1`: 2
+clauses, static, non-multifile. Two-sided control: authoring the only input clause 1 reads yields
+`[true]`, unauthored yields `[unknown]`, restore clean — the `true` branch is demonstrably
+reachable and `false` is emitted by neither. Corpus corroboration: range `[unknown]` on kernel_v1,
+0 `false`. No OQ-113 regression.
+
+**Q2 — ruled, deliberately, three times.** OQ-70 (`72ec2cdd`) scoped itself claims-side only (its
+ISSUES entry and commit body name only `claimed_natural` source 2 + `appears_as_rope`'s sibling;
+every witness is an FCR/FNL count; `natural_law` certification is never mentioned). OQ-43/OQ-44
+(`8b5a34b8`) ruled the un-certification "FAIL-CLOSED, output-changing, un-certification accepted"
+with its casualty named. OQ-113 (2026-06-18) then ruled fork (b), documented-not-changed. Chosen,
+on the record. **E3 did not trip; no new operator ruling needed for Q2's scope question.**
+
+**CORRECTION to this entry's own text (marked as a correction, close-honesty rule).** Two claims
+above, both inherited from `GATE2_REWITNESS.md`, are FALSE:
+
+1. *"Cause established by single-variable isolation … OQ-70's class fix (`72ec2cdd`) … Maxwell's
+   certification rode exactly that source."* **Wrong.** A three-point behavioral bisect over the
+   byte-identical kernel_v1 corpus pins **`8b5a34b8`** (2026-06-11, OQ-43/OQ-44 fail-close):
+   fires at `f600599b`, **still fires at `8b5a34b8^` = `a4297632` (post-`72ec2cdd`)**, absent at
+   `8b5a34b8`. Point 1 reproduces GATE2 arm C, validating the apparatus. Three independent kills:
+   (i) `claimed_natural/2` was never on the `natural_law` path — both producers gate on
+   `natural_law_signature/1`, and era-wide its only executable consumer is `false_natural_law/2`
+   (the arrow runs the other way: `claimed_natural` clause 3 *calls* `natural_law_signature`);
+   (ii) the era-vs-HEAD isolation spanned **126 commits** including both candidates and could never
+   discriminate them; (iii) maxwell authors an explicit story-level claim at `:114`, so source 1
+   fires regardless — removing source 2 was **inert for maxwell** even on the claims side.
+2. *"maxwell's non-firing is over-determined by TWO independent blockers"* (the OQ-113 interaction
+   paragraph). **Wrong — ONE blocker.** Per-conjunct evaluation at HEAD: `BeneficiaryCount == 0`
+   **passes** (value `0`), as do all other conjuncts and the producer's `emerges_naturally` guard;
+   only `HasAlternatives == false` fails (`unknown`). Confirmed end-to-end twice — slot
+   substitution on maxwell's real profile fires, and a HEAD scratch tree with that one line
+   reverted re-certifies maxwell through the full producer path (30 kernel_v1 certs).
+
+**Consumer surface — worse than this entry supposed, split out as OQ-296.** The detector has not
+drifted to measuring authorial declaration; it measures **nothing**:
+`constraint_signature(_, natural_law)` = 0 on both corpora while 273/273 and 1106/1106 constraints
+carry *some* signature. ~20 consumers read that constant zero; at least two convert it into
+plausible non-zero output. **Scoping guard for anyone picking this up:**
+`drl_core:natural_law_without_beneficiary/1` is a DIFFERENT predicate that never reads the
+signature atom and is LIVE (30 firings on kernel_v1, 0 live-leg — two-sided) — its ~15 consumers
+are OUT of scope.
+
+**P4b (FNL on the reference genuine law): no false positive.** FNL does not fire on maxwell; the
+claim IS read (`explicit_mountain_claim`) and the Boltzmann gate holds (`compliant(0)`). Its
+discrimination record is on the live leg at HEAD: 3 firings / 21 claim-bearers, declines on 18 —
+naturally arising both ways. (The first control run, on kernel_v1 alone, was 0-firing and therefore
+ONE-SIDED; it licensed nothing and was re-run.)
+
+**Kill-condition disposition → OQ-248.** Did not trip: no path exists, so the antecedent ("a path
+EXISTS and maxwell still fails it") is false. The 2026-07-25 gate-2 ruling stands as ruled.
+
+**FLAGGED FOR THE OPERATOR (E5 — surfaced, not decided).** That gate-2 ruling's *stated evidential
+basis* was corrected post-hoc by this audit. Its substance (the narrative/omega-aboutness
+discriminator) is untouched and the kill condition did not trip. Whether a ruling whose recorded
+basis needed correcting warrants an explicit re-affirmation of
+`non_agent_beneficiary(entropic_universe_hypothesis)` is the operator's call — an **OQ-252**
+instance (rulings carry no back-reference to what they license). Executor's default
+recommendation: **the ruling stands.** Surfaced at the site in `prolog/narrative_ontology.pl`.
 
 **The finding that raised it.** `maxwell_demon_impossibility` is the project's reference genuine
 law — self-enforcing physics, ε=0.08, suppression=0.02, `emerges_naturally`, zero perspectival gap,
@@ -10117,6 +10205,17 @@ defects compound:
    table and then SUCCEEDS — `halt` exits 0 regardless, so even a runner that checks the exit
    code reads green. The suite is not in any gate, so nothing ever read even the text.
 
+**Evidence line added 2026-08-17 (OQ-251 audit) — at least one red is NOT fixture rot and cannot
+be fixed by rebuilding fixtures.** `cs_test_case("gm_reverse_natural_fires", …)` (`:427-429`)
+expects `cs_grounding_mismatch(test_gm_reverse_natural, extraction, natural_law)` to succeed, which
+routes through `signature_detection:constraint_signature(C, natural_law)`. That signature is
+**dead-by-range** (OQ-113; re-witnessed at HEAD 2026-08-17), so the case can never pass. Witnessed
+directly rather than inferred: the fixture reads `[ambiguous]`, `has_viable_alternatives = unknown`,
+and the test goal FAILS. Note the fixture *cannot* be repaired by authoring
+`intent_viable_alternative` either — that yields `true`, which still fails `== false`. So the
+rebuild in the Resolution below must either drop this case or re-target it; refreshing fixtures
+alone will leave it red. Witness: `audits/2026-08-17_oq251_natural_law_reachability/`.
+
 **Resolution:** rebuild as self-contained UID-keyed fixtures (template:
 `test_cs_drift_engine.pl` setup/cleanup), make the goal fail (or `halt(1)`) when Failed > 0,
 and re-witness 37/37 — or, if some cases are obsolete against the v6 taxonomy, disposition
@@ -13008,6 +13107,82 @@ taxonomy is reproducible, on the corpus it was built from. A low rate is not aut
 retirement argument (*Unwired ≠ worthless*, and a redraw occupying a new seat is the mechanism
 working, not identity decaying) — but it would bound how hard any incidence figure computed
 over pattern assignments, including OQ-276's `Fired:` catch rate, can be leaned on.
+
+---
+
+## OQ-296 — ~20 consumers read a `natural_law` detector that fires zero times by construction, and at least two turn that constant zero into plausible non-zero output
+
+**Ω-type:** Ω_E (mechanical — the roster and the zeros are measured), with an Ω_C rider on the
+disposition (make-honest vs retire vs leave-declared-dark is a design choice, not a measurement).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-251, blocked_on_human disposition-ruling
+**Origin:** OQ-251 resolution, 2026-08-17 — pre-authorized by the operator at plan review to be
+minted regardless of how OQ-251's hypotheses resolved.
+**Files:** `python/container_typology_analysis.py`, `python/extract_corpus_data.py`,
+`python/linter.py`, `python/axiom_reachability.py`, `python/shared/maxent.py`,
+`python/cluster_space_phase4.py`, `python/cluster_space_phase5.py`,
+`python/audits/cluster_space_audit.py`, `python/audits/g_orbit_proximity_probe.py`,
+`python/audits/audit3_synthesis.py`, `python/reports/queries/classification_audit.py`,
+`prolog/routing_sink.pl`, `prolog/diagnostic_summary.pl`, `prolog/signature_mapper.pl`,
+`prolog/abductive_helpers.pl`, `prolog/maxent_classifier.pl`, `prolog/cs_pattern_detection.pl`,
+`prolog/context_profile_mining.pl`, `prolog/domain_priors.pl`, `prolog/signature_detection.pl`.
+
+**The measurement.** `signature_detection:constraint_signature(_, natural_law)` fires **0** times
+on both live legs measured — `testsets/` n=273 and `archives/datasets/kernel_v1` n=1106 — while
+**273/273 and 1106/1106** constraints carry *some* signature. This is not corpus contingency:
+`natural_law_signature/1` is unsatisfiable **by construction** (OQ-113, re-witnessed at HEAD
+2026-08-17 — `has_viable_alternatives/2`'s two clauses bind arg 2 to the head literals `true` and
+`unknown`; `false` is emitted by neither). Full roster and per-site classification:
+`audits/2026-08-17_oq251_natural_law_reachability/audit_log.md` → Phase 3 step 13.
+
+**Why this is a new question and not a re-opening of OQ-113.** OQ-113 ruled fork (b) — *document*
+builder-unreachability, do not change the logic — and routed the residual capability to GAP-08 §7.
+That ruling is about the **detector**. This OQ is about the **~20 readers** of its constant zero,
+which OQ-113 did not enumerate and which was not before the operator at OQ-43/OQ-44 either. A
+consumer can be made honest without powering anything.
+
+**The two that matter most (spot-verified by direct read, not inherited):**
+1. `python/container_typology_analysis.py:151-157` — `natural_law_pct = sd.get("natural_law", 0)/n`
+   feeds the `formalization` axis. The `formal_nl` disjunct can never fire and the
+   `textual_combined` sum is silently mountain-only, yet the axis still emits a plausible label.
+   Build Discipline Pattern 6 (success-shaped absorption) on a reported surface.
+2. `python/extract_corpus_data.py:145` — `is_constructed = sig not in ('natural_law',)` is **True
+   corpus-wide**, so the flag carries no information while looking like it does.
+
+**And one wrong-reason advisory, logged not fixed (operator, plan review 2026-08-17):**
+`python/linter.py:684,719` `MISSING_NL_PROFILE` tells authors that adding
+`accessibility_collapse`/`resistance` will let `natural_law_signature` certify. It cannot — the
+binding conjunct is `HasAlternatives == false`, which the advisory never mentions. Its stated
+mechanism is also stale: `get_metric_average` no longer "defaults to 0.5" (OQ-44 disposition (1),
+commit `966d53c8`, made it the `unknown` sentinel).
+
+**SCOPING GUARD — do not fold this predicate in.** `drl_core:natural_law_without_beneficiary/1`
+(`prolog/drl_core.pl:334`) is a **different predicate in a different module** that never reads the
+signature atom, and it is **LIVE**: 30 firings on kernel_v1, 0 on the live leg — two-sided, so its
+live-leg zero is a corpus property, not a dead path. Its ~15 consumers (`drl_core:391,427`,
+`maxent_classifier:182,186,201`, `omega1_audit`, `invertibility_analysis:123`,
+`python/shared/maxent.py:39,58`, `python/boolean_independence.py`,
+`python/check_logic_symbolic_drift.py`) are **OUT OF SCOPE**. Folding them in inflates the finding;
+this is the single easiest mistake to make here.
+
+**One genuinely dead pair found in passing:** `domain_priors:should_be_natural_law/1` is dead in
+both senses — 0 firings on both corpora AND 0 consumers repo-wide (exported at `domain_priors.pl:6`,
+defined at `:100`, called nowhere). Adjudicate per *Unwired ≠ worthless* (what product would it
+yield?), not on wiring grounds.
+
+**What resolution would change.** Every consumer either (a) carries the provenance bit so a reader
+can tell "measured zero" from "cannot fire", (b) is retired with an old-vs-new diff, or (c) is
+declared dark at the site the way `routing_sink.pl:22` already does — that module is the model here,
+since it calls itself a socketed router input and is therefore honest as it stands. Until then, any
+prevalence statistic, typology axis, or cluster-space vector computed over natural-law
+certifications is reading a constant and cannot say so.
+
+**Falsifier / kill condition:** if a re-run finds `constraint_signature(_, natural_law)` firing on
+ANY corpus at HEAD, this OQ's premise is void and OQ-113's range finding has regressed — HALT and
+re-witness before touching any consumer. (`prolog/tests/test_oq113_dead_natural_law.pl` is the
+standing regression, 3/3 green at close.)
 
 ---
 
