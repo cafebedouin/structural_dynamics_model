@@ -595,6 +595,24 @@ bit with the value so absence and success stop collapsing to one token at the re
 Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, return `unknown` not
 `0.5`, fail-closed-on-absence.
 
+**A BOUND selecting argument bypasses clause-order cuts — census unbound, or the count is
+manufactured (`BD-P3`; NAMED, deliberately takes NO index here — see the citation freeze).**
+`findall(C, constraint_signature(C, natural_law), Cs)` does **not** answer "the engine assigns
+`natural_law`"; earlier lock clauses fail to *unify* on the wrong atom, so their cuts never
+execute and the query falls through. It answers "satisfies that clause body in isolation." **Rule:
+any `findall`/`forall`/`aggregate_all` over a cut-ordered predicate with the *selecting* argument
+bound is suspect — re-run unbound with `once/1` + post-filter by equality.** Asymmetry worth
+knowing, because it says when you need not re-run: the bound form is **over-permissive**, so a
+bound-arg **zero is conservative and trustworthy**, while a bound-arg **nonzero is an artifact
+until checked**. Witnessed twice on the same predicate and the same atom — 2026-05-30 (bound 1 vs
+real 0) and 2026-08-17 (`constraint_signature(C, ambiguous)` 276 vs real 0, which inflated a
+denominator and concealed that **67% of kernel_v1 signatures resolve to `unknown`**). **This is
+promoted precisely because it was invisible from here:** `build_discipline.md` publishes it at its
+index 3, this file's index 3 is the vacated grave, and the only prior mention of "bound-probe" in
+this file is inside the citation freeze — naming the collision, never teaching the rule. Full
+mechanism, worked example, diagnostic: `build_discipline.md` → *Pattern 3*. (Provenance:
+KNOWN_STATE 2026-08-17; evidence filed on OQ-278.)
+
 **Diagnostics are not exempt — every probe needs a positive control.** An empty grep, a `findall`
 of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
 dispatch / queried wrong / never ran." This holds for *reasoning*, not just shell: "X appears

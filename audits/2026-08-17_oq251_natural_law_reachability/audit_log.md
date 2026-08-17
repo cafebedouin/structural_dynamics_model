@@ -877,6 +877,19 @@ than the `natural_law` zero, and one my sentence would have hidden from the next
 (Cross-check that the census is sane: `false_natural_law = 3` on the live leg matches the FNL
 discrimination record recorded earlier in this log.)
 
+**AND IT WAS ALREADY DOCUMENTED — this is a RE-DISCOVERY, not a discovery** (coverage review run
+2026-08-17 at the operator's request). `build_discipline.md:601` **Pattern 3 — Bound-probe bypasses
+clause-order**, dated **2026-05-30**, whose worked example is `constraint_signature(C, natural_law)`
+— the exact query form, on the exact predicate, with the exact fix. Also already documented:
+`build_discipline.md:1669` *"A gating count is not a finding without its composition"*, which
+specifies the half that was actually missed — the breakdown is computed **in the same pass** as the
+count, *"never as a follow-on when someone doubts the headline."* This audit computed it as a
+follow-on when the operator doubted the headline. **Neither rule was in `CLAUDE.md`** (its sole
+"bound-probe" occurrence is inside the citation freeze, naming the colliding index and never the
+rule; its index 3 is the vacated grave) — so the rule that would have prevented the error was
+unreachable from the always-loaded file. Repair: BD-P3 promoted to `CLAUDE.md` as a NAMED,
+unnumbered rule; evidence filed on OQ-278.
+
 **Standing tripwire, filed into OQ-296:** use `once/1` with the second argument UNBOUND for any
 `constraint_signature/2` census; read a bound-arg nonzero as an artifact until checked. Corrections
 landed at OQ-296, GAP-08, and the WRITEUP.

@@ -11422,6 +11422,33 @@ collided.** The entry stays full-bodied because the live half is the P4 collisio
 **Priority:** 3
 **Deps:** blocked_on_human oq278-p4-index-ruling
 
+**EVIDENCE 2026-08-17 — the vacated index has a MEASURED COST, and it is on the index already
+ruled settled.** The index-3 demotion left `CLAUDE.md` with an empty grave at 3 while
+`build_discipline.md` continues to publish **BD-P3 (bound-probe bypasses clause-order)** there. The
+ruling settled *which mechanism owns the number*; it did not ask **whether the always-loaded file
+still teaches the mechanism that lost it.** It does not. `CLAUDE.md`'s only occurrence of
+"bound-probe" was inside this entry's own CITATION FREEZE — naming the collision, never stating the
+rule.
+
+**Consequence, witnessed on an instance rather than argued:** the OQ-251 executor, working with
+`CLAUDE.md` auto-loaded, ran `constraint_signature(C, ambiguous)` with the selecting argument
+BOUND, got **276** where the real cascade gives **0**, and published a denominator gloss that
+concealed a larger finding (**67% of kernel_v1 signatures resolve to `unknown`**). It was caught by
+operator challenge, not by the discipline. BD-P3 has documented that exact query — same predicate,
+same `natural_law` example — since **2026-05-30**. A rule two months old, in the detail doc, on a
+vacated index, did not reach the instance that needed it.
+
+**What this contributes to the P4 ruling (the live half):** it is a data point that
+*vacate-and-leave-empty* is not cost-free even when the demotion itself is right. The index-3
+demotion was correct on its four converging lines — but "the number is retired" and "the mechanism
+that held the number is still reachable from the always-loaded file" are separate questions, and
+only the first was asked. **Whatever P4 is ruled, the ruling should state where each displaced
+mechanism is taught, not only which index it loses.** Interim repair already landed (2026-08-17):
+BD-P3 promoted into `CLAUDE.md` as a **NAMED, explicitly unnumbered** rule, which sidesteps this
+freeze entirely rather than pre-empting it — if P4's ruling later renumbers, a named rule needs no
+migration. Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (addendum 3),
+KNOWN_STATE 2026-08-17 TRIPWIRE 5.
+
 **Bundle with OQ-277 DISSOLVED 2026-08-12** at that OQ's close: this entry's live half (the P4
 index collision) never depended on the cross-coding. **The successor question lands here rather
 than as a new entry** — *does our own six-pattern taxonomy reproduce against itself?* That is the

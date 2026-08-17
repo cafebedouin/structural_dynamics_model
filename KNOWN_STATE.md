@@ -160,7 +160,35 @@ so bypasses their cuts: `constraint_signature(C, ambiguous)` returns **276** on 
 Real distribution: **kernel_v1 is 739/1106 `unknown` (67%)**; live is 26/276 `unknown` with
 `constructed_high_extraction` 142 dominant. **The zeros survive and are strengthened** — a zero from
 an over-permissive query is conservative — but a bound-arg NONZERO is an artifact until checked, and
+(coverage review below: this tripwire is a RE-DISCOVERY of `build_discipline.md` Pattern 3, dated
+2026-05-30, whose worked example is this exact query),
 the denominator gloss hid a bigger fact than the finding it was supporting.
+
+**COVERAGE REVIEW (operator asked: "probably already in docs/technical/ and CLAUDE.md but review
+anyway"). Answer: docs/technical/ YES — BOTH rules. CLAUDE.md: NEITHER.**
+- `build_discipline.md:601` **Pattern 3 — Bound-probe bypasses clause-order**, dated **2026-05-30**,
+  whose worked example is `constraint_signature(C, natural_law)` — the exact query form. TRIPWIRE 5
+  above is a **re-discovery**, not a discovery.
+- `build_discipline.md:1669` **"A gating count is not a finding without its composition"** names the
+  error precisely, *and* specifies the half that was missed: the breakdown is computed **in the same
+  pass** as the count, "**never as a follow-on when someone doubts the headline**." The 67%-unknown
+  breakdown was computed exactly as a follow-on when the operator doubted the headline — textbook,
+  including the timing.
+- **CLAUDE.md carried neither.** Its only occurrence of "bound-probe" is inside the CITATION FREEZE
+  (naming the colliding index, never teaching the rule); its index 3 is the vacated grave. **The rule
+  that would have prevented the error was unreachable from the always-loaded file**, which is why the
+  instance made it. **Repair landed:** BD-P3 promoted into CLAUDE.md as a **NAMED, explicitly
+  unnumbered** rule — sidesteps the OQ-278 freeze (a named rule needs no migration whatever P4 is
+  ruled) — carrying the over-permissive asymmetry (bound zero conservative / bound nonzero artifact)
+  that BD-P3 itself does not state. Evidence filed on OQ-278: **vacate-and-leave-empty is not
+  cost-free even when the demotion is right** — "the number is retired" and "the mechanism is still
+  taught" are separate questions, and only the first was asked.
+- **Deliberately NOT promoted:** the gating-count rule. Its general form is already always-loaded in
+  the governing stance ("Distrust the aggregate… a count… can read as success while concealing the
+  opposite"), so promoting the specific rule would be the over-promotion CLAUDE.md warns against.
+  **Flagged for the operator instead:** the **same-pass** clause is the operative half, and the
+  governing stance does not carry it — distrusting a count does not tell you to compute its
+  composition before it becomes a headline.
 
 **TRIPWIRE 3 — a dirty→clean transition in `git status` does NOT mean "stale index stat"; another
 instance may have just committed.** This audit made that mistake on itself and recorded "no
