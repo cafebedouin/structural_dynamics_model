@@ -271,7 +271,7 @@ class PrologError(RuntimeError):
 # Helpers
 # ---------------------------------------------------------------------------
 
-def salient_stderr(stderr: str, limit: int = 800) -> str:
+def salient_stderr(stderr: str, limit: int = 800, tail: int = 8) -> str:
     """Pick the diagnostically useful slice of SWI-Prolog stderr.
 
     A head-slice of this stream is all noise: SWI emits hundreds of load-time
@@ -284,10 +284,14 @@ def salient_stderr(stderr: str, limit: int = 800) -> str:
 
     Prefer the ERROR lines (the root cause is the first one); fall back to the
     tail of the stream, never the head.
+
+    *tail* is how many trailing lines the fallback keeps. The 8-line default is
+    right for an ordinary goal failure and WRONG for a death-by-signal: see
+    run_prolog, which widens it (2026-08-17).
     """
     lines = stderr.splitlines()
     errors = [ln for ln in lines if ln.lstrip().startswith("ERROR")]
-    picked = "\n".join(errors) if errors else "\n".join(lines[-8:]).strip()
+    picked = "\n".join(errors) if errors else "\n".join(lines[-tail:]).strip()
     if not picked:
         return "(no stderr)"
     return picked if len(picked) <= limit else picked[:limit] + " ...[truncated]"
@@ -320,9 +324,26 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.
         timeout=timeout,
     )
     if result.returncode != 0:
+        # rc < 0 means the process was KILLED BY A SIGNAL (rc=-11 = SIGSEGV).
+        # SWI-Prolog's crash handler then prints a banner plus the full Prolog
+        # stack DEEPEST-FRAME-FIRST, and not one of those lines starts with
+        # "ERROR" — so the ordinary 8-line tail keeps only the shallow
+        # `$toplevel:run_init_goal/2 ... $c_call_prolog/0` frames and discards
+        # exactly the frames that name the crashing predicate. Witnessed
+        # 2026-08-17: a giant_comp SIGSEGV (pid 402110, kernel-confirmed) whose
+        # captured slice was diagnostically empty — the crash site is
+        # unrecoverable after the fact because stderr is not persisted.
+        # Widen the window on signal deaths only; the ERROR-line path and the
+        # ordinary-failure tail are untouched.
+        signalled = result.returncode < 0
+        detail = salient_stderr(
+            result.stderr,
+            limit=6000 if signalled else 800,
+            tail=120 if signalled else 8,
+        )
         raise PrologError(
-            f"Prolog goal '{goal}' failed (rc={result.returncode}): "
-            f"{salient_stderr(result.stderr)}"
+            f"Prolog goal '{goal}' failed (rc={result.returncode}"
+            f"{', KILLED BY SIGNAL' if signalled else ''}): {detail}"
         )
     return result
 
