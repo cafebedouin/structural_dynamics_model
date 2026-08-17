@@ -85,3 +85,39 @@ in hand and the blast radius is 3, not 41.
 - FCR/constructed full-pipeline (vs [stack]) routed verdicts — the [stack] ablation shows the unmask
   direction; the report-surface color (yellow vs red) needs a pipeline ablation run, same as the FSM
   step-3 witness. Cheap follow-up, not blocking the partition ruling.
+
+---
+
+## CORRECTION — 2026-08-17 (appended; the original above is point-in-time and is NOT rewritten)
+
+**This document's FCR figures rode a bound-selector query.** `fcr_ablation.pl:23` in this
+directory reads:
+
+```prolog
+findall(C, (corpus_loader:corpus_constraint(C),
+            signature_detection:constraint_signature(C, false_ci_rope)), Fs0),
+```
+
+Binding the second argument skips the earlier lock clauses' cuts (they fail to *unify* on the
+wrong atom, so their cuts never execute), so the query answers *"satisfies the `false_ci_rope`
+clause body"*, not *"the engine assigns `false_ci_rope`"*. The form is **over-permissive**: it
+admits constraints the engine actually assigns **`false_natural_law`**, the one clause ahead of
+`false_ci_rope` in the cascade.
+
+**Measured inflation at `dcde9591`** (bound vs true cascade): live `testsets` 86 vs 85;
+`testsets_flash` 354 vs 350; `testsets_haiku` 240 vs 234; `testsets_sonnet` 400 vs 395;
+`testsets_kimi` 147 vs 144; `kernel_v1` 273 vs 273. Every over-counted id is `false_natural_law`
+on every leg.
+
+**What this does and does not impair.** Any count or rate in this writeup derived from that
+`findall` is inflated. Conclusions driven by the *hook ablation* itself
+(`fcr_override_enabled` 1→0, the 12 changed seats) rest on a different measurement and are not
+directly implicated — **but that is a hypothesis, not a re-check.** This document is
+point-in-time and is not being re-run here.
+
+**Correct form** (unbound + post-filter, or `once/1` for a census):
+`constraint_signature(C, Sig), Sig == false_ci_rope`.
+
+Provenance: OQ-298 (the disposition and the owed re-run), OQ-296, gate row `bound selector`
+(`python/bound_selector_check.py`, which found this class), KNOWN_STATE 2026-08-17.
+Live sites were repaired in that change; this file is a record and keeps its original text.

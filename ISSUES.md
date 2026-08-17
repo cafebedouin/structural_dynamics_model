@@ -13471,11 +13471,17 @@ coincidence.
 **WHY THIS IS NOT AN OFF-BY-ONE (the disposition, per the operator).** The question is what
 CONSUMED the count, and the two consumers differ completely:
 
-- **`diagnostic_summary.pl:450` — insulated, zero output change.** Its P6
-  `fcr_zero_excess_coupling` pattern ANDs the FCR check with `excess_extraction < 0.05`. Every
-  over-counted id carries excess 0.13–0.28 (or none), so the second conjunct blocked all of
-  them on all three legs measured. The query was wrong and the output was right. Witnessed
-  per-id in `audits/2026-08-17_oq251_natural_law_reachability/audit_log.md`.
+- **`diagnostic_summary.pl:450` — LATENT, MASKED BY AN UNRELATED CONJUNCT. Not "harmless."**
+  Its P6 `fcr_zero_excess_coupling` pattern ANDs the FCR check with
+  `excess_extraction < 0.05`; every over-counted id carries excess 0.13–0.28 (or none), so the
+  second conjunct blocked all of them on all three legs measured — zero output change *today*.
+  **That is an accident, and the phrasing matters:** nothing ties the `0.05` threshold to the
+  bound-selector defect, nothing guarantees it stays at `0.05`, and nothing would have flagged
+  the site if the threshold moved. Written as "wrong query, no output change" it reads as
+  *harmless* and the next reader treats a masked defect as a non-defect. The accurate
+  disposition is **a live defect whose blast radius happens to be zero under the current value
+  of an unrelated parameter.** Witnessed per-id in
+  `audits/2026-08-17_oq251_natural_law_reachability/audit_log.md`.
 - **`fcr_ablation.py` — NOT insulated.** `fcr_detected = sum(r["fcr"] for r in rows)` (`:213`)
   is printed as **`**FCR detected**: N (X%)`** (`:282`). The inflation is fully expressed in a
   reported percentage, on precisely the two legs (flash, haiku) whose comparison is the
@@ -13494,6 +13500,39 @@ Resolution = re-run the ablation post-fix and diff the two reports.
 re-run reproduces the wrong number), but the pre-fix figures are frozen in the table above, in
 a comment at the call site, and in `dcde9591` — so the fix erases nothing needed to audit
 downstream. This is the operator's sequencing constraint honoured: loud fix, not a quiet one.
+
+**⚠ THE TABLE ABOVE IS SUPERSEDED-PENDING-RE-RUN, NOT CURRENT.** Every figure in it is a
+PRE-FIX measurement retained for audit. Do not cite any of them as a present-tense fact. They
+become current only when the post-fix re-run lands and this line is replaced with its result.
+
+**CONSUMER ENUMERATION (the same-pass grep, run 2026-08-17 — this is the part that is
+expensive later and cheap now).**
+
+- **LIVE producers using a bound query: 1, now fixed.** `python/fcr_ablation.py`. Repo-wide
+  sweep is GREEN, so there is no second live producer.
+- **Recorded findings riding a bound FCR query: TWO, not one.**
+  1. Commit **`7ca977c4`** (from `python/fcr_ablation.py`). Its `FCR detected: N (X%)` figures
+     are wrong on flash/haiku. Its headline — *"Flash loses ~9pp tangled_rope, Haiku ~2pp"* —
+     rides the TYPE columns, so it is **probably** unaffected; that is a hypothesis and the
+     re-run is owed.
+  2. **`audits/2026-06-21_oq138_fsm_route_conversion/DEFERRED_CLAUSE_EVIDENCE.md`** — found by
+     this enumeration and NOT previously known. Its probe
+     `audits/2026-06-21_oq138_fsm_route_conversion/fcr_ablation.pl:23` uses
+     `findall(C, (corpus_constraint(C), constraint_signature(C, false_ci_rope)), Fs0)` — the
+     same bound form, on the same atom. A dated correction note has been appended to that
+     writeup (the file itself is point-in-time and is not rewritten).
+- **CHECKED AND CLEAN, not assumed:** `python/audits/scaffold_piton_gate_audit.py` also reports
+  "FCR base rate" figures, but sources them from the SERIALIZED `signature` field of the
+  pipeline JSON (`r.get("signature")`, `:184`/`:230`) — i.e. the real cascade winner, written by
+  `json_report`. Different shape, not a Prolog query. Its numbers are unaffected.
+
+**FORCING FUNCTION for the owed re-run (an owed re-run with none dies quietly).** Kill
+condition, both directions: re-run `python3 python/fcr_ablation.py` post-fix and diff against
+`7ca977c4`'s reported table. If the tangled_rope asymmetry survives → close `resolved`,
+replace the superseded table above with post-fix figures, and the recorded finding stands with
+its FCR percentages corrected. If it does NOT survive → the recorded finding is **withdrawn**,
+and every document citing it needs the sweep this entry's enumeration already scoped. Until one
+of those happens this OQ stays open and the ⚠ marker above stays in place.
 
 **Cross-refs:** OQ-296 (the consumer surface), OQ-278 (why the rule did not route), BD-P3.
 
@@ -13532,6 +13571,21 @@ under the **OQ-278 citation freeze** and are cited by index across the record. A
 (safe now), or sequence the whole job behind OQ-278's P4 ruling. **That choice is the ruling
 this OQ wants.**
 
+**⚠ A PARTIAL INDEX FAILS OPEN IN A WAY A MISSING ONE DOES NOT (operator, 2026-08-17 — this
+changes which ruling is cheap).** If the ruling is "restructure the ~54 unfrozen headings now,"
+the result is a map covering *most* rules, and the failure mode becomes: **grep your situation,
+find nothing, conclude no rule exists.** That is strictly worse than today, where nobody expects
+a map and a miss prompts a manual read. Today's state is honestly incomplete; a partial index is
+*dishonestly* complete.
+
+**So the partial option is only admissible with a STATED COVERAGE BOUNDARY at the top of the
+index** — e.g. *"Covers all headings except the pattern taxonomy (P1–P6), which is frozen pending
+OQ-278; a miss here does NOT mean no rule exists — read the pattern list directly."* Without that
+line, the partial option inherits the fail-open and the all-or-nothing option (sequence behind
+P4) becomes the cheaper ruling despite being slower. **The boundary line is the whole cost
+difference between the two options, and it should be priced into the ruling rather than
+discovered after.**
+
 **Falsifier:** if re-discoveries keep appearing after action-first headings land, documentation
 routing is dead for this corpus and the action-keyed delivery channel (OQ-297's declined hook,
 one level up) is justified on evidence rather than intuition.
@@ -13563,11 +13617,30 @@ rule inline, or (b) carries a pointer to the file/section that teaches it. Grep-
 expensive as `bound_selector_check`.
 
 **THE DISCRIMINATION PAIR IS AVAILABLE — DO NOT SPEND IT** (per *when a defect is found, its
-before-commit is a free negative control*). The checker should FIRE at **`a8c09564`** (where
-"bound-probe" is named only inside the freeze) and DECLINE at **`17062781`** (where the named
-rule landed). That is a naturally-arising positive and negative, neither authored to be found —
-top of the discrimination ladder. Whoever builds this: run it at both SHAs and record the pair
-before adding any fixture.
+before-commit is a free negative control*). A naturally-arising positive and negative, neither
+authored to be found — top of the discrimination ladder.
+
+**Recorded as CONTENT, not as two SHAs** (operator, 2026-08-17: a checker built months from now
+may not run cleanly on an old tree, and its author would have no way to distinguish a genuine
+DECLINE from a dependency failure — so the SHAs alone are not a usable record):
+
+- **EXPECTED FIRE.** At `a8c09564`, `CLAUDE.md` contains exactly ONE occurrence of the string
+  `bound-probe`, on the line beginning *"still publishes \*bound-probe\* there, and index 4 has"*
+  — inside the CITATION FREEZE paragraph, which names the mechanism as the occupant of a
+  colliding index. There is **no** statement of the rule and **no** pointer to
+  `build_discipline.md` for it anywhere in that file. A correct checker reports `bound-probe` as
+  a NAMED-BUT-UNTAUGHT mechanism.
+- **EXPECTED DECLINE.** At `17062781`, `CLAUDE.md` contains a second occurrence: a named,
+  unnumbered rule beginning *"A BOUND selecting argument bypasses clause-order cuts"*, which
+  states the rule inline AND ends with a pointer — *"Full mechanism, worked example, diagnostic:
+  `build_discipline.md` → \*Pattern 3\*"*. A correct checker reports it as taught.
+- **SANITY GUARD so a dependency failure cannot masquerade as a decline:** at BOTH SHAs the
+  checker must report a NON-ZERO total of mechanism names examined. A run that examines zero
+  names and therefore finds zero problems is a broken run, not a clean one (Pattern 5) — assert
+  the denominator before believing the numerator.
+
+Verify the pair by content first (`git show <sha>:CLAUDE.md | grep -c 'bound-probe'` → 1 then 2);
+the SHAs are convenience pointers to that content, not the record itself.
 
 **Deliberately not built in the same pass that built `bound_selector_check`** — one gate row per
 witnessed defect; building a second on the strength of an argument rather than a firing is the

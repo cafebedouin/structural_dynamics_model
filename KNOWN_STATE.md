@@ -204,10 +204,32 @@ of which 11 were the predicate's own clause HEADS (definitions, not calls) and i
 fixtures (self-fire). An introduced instrument inherits the discipline; the count was fixed before
 it was believed. Both carve-outs are now selftest rows (11 fixtures: 4 violation shapes, 7 negative
 controls incl. clause-head and comment-line).
+**`test_reading_totality.pl:139` — the repair did NOT go red, and that is the informative
+outcome.** This is the one site where the repair changes *what is proven* rather than *what is
+queried*, so it carries its own discrimination event. Measured:
+
+```
+ALL solutions (unbound) for tst_rt_unauthored = [unknown]
+once/1 cascade winner                          = unknown
+OLD bound form                                 = succeeds
+```
+
+**Newly-proven fact, worth writing down because the test's name now implies it and nothing
+established it before:** the engine genuinely lands on `unknown` for `tst_rt_unauthored` — a
+single solution, the honest-abstain fallback, reached as the real cascade winner rather than
+merely satisfiable. The old bound form passed *only because nothing earlier fires on that
+fixture*, which is contingent on the fixture, not guaranteed by anything. **Forward value of the
+strengthened form:** if a future schema or clause change made an earlier lock fire on
+`tst_rt_unauthored`, the old form would still have passed (wrongly, proving only that the
+fallback body is satisfiable) while the new form goes red. The test was not masking a defect
+today; it was incapable of detecting one tomorrow.
+
 **Repairs, all unbound + post-filter:** `diagnostic_summary.pl:424` (latent),
-`diagnostic_summary.pl:450` (**wrong query, ZERO output change** — its P6 pattern ANDs with
-`excess_extraction < 0.05` and every over-counted id carries excess 0.13–0.28, witnessed per-id on
-3 legs), `routing_sink.pl:120` (latent), `test_reading_totality.pl:139` (the bound form was the
+`diagnostic_summary.pl:450` (**LATENT, MASKED BY AN UNRELATED CONJUNCT — not "harmless"**: its P6
+pattern ANDs with `excess_extraction < 0.05` and every over-counted id carries excess 0.13–0.28,
+witnessed per-id on 3 legs, so blast radius is zero *today*. Nothing ties that threshold to this
+defect and nothing guarantees it stays at 0.05; written as "no output change" it reads as harmless
+and the next reader treats a masked defect as a non-defect), `routing_sink.pl:120` (latent), `test_reading_totality.pl:139` (the bound form was the
 WEAKER assertion — `unknown` is the LAST clause, so binding it proved only that the fallback body
 is satisfiable), `python/fcr_ablation.py:75` (**NOT insulated → OQ-298**).
 

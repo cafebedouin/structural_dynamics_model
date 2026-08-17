@@ -80,7 +80,10 @@ OVERLAY_TEMPLATE = """\
                %% sonnet 400->395, testsets 86->85, kernel_v1 273->273.
                %% ANY RECORDED FINDING FROM A PRE-2026-08-17 RUN OF THIS SCRIPT RODE
                %% THE WRONG COLUMN on the flash/haiku legs — see OQ-298 before citing
-               %% commit 7ca977c4's asymmetry result.
+               %% commit 7ca977c4's asymmetry result. The figures above are
+               %% SUPERSEDED-PENDING-RE-RUN: pre-fix measurements kept for audit,
+               %% not present-tense facts. They become current only when the
+               %% post-fix re-run lands (OQ-298 kill condition).
                (   once(signature_detection:constraint_signature(C, Sig0)),
                    Sig0 == false_ci_rope
                ->  FCR = 1
