@@ -94,3 +94,22 @@ GATE: GREEN   (full re-run, all 19 rows ✓, 2026-08-17 post-stub)
 ## Phase 2 — PREREGISTRATION.md frozen
 
 md5 at freeze (logged above the first Phase-3/4 result line): `1a9f61469525ac481acc6fae47a85aea`
+
+## Phase 3 — pre-fix RED witness (the naturally-arising positive half)
+
+`tests/test_dispatch_bound_call.pl` at pre-fix HEAD (a558a53b + test file):
+
+```
+% [14/17] dispatch_bound_ca.._rope_over_scaffold .. **FAILED
+%   test bound_call_cannot_manufacture_rope_over_scaffold: failed
+% [15/17] dispatch_bound_ca..iguous_over_unknown .. **FAILED
+%   test bound_call_cannot_manufacture_ambiguous_over_unknown: failed
+% (5 anchor/control tests passed: engine_assigns_scaffold_at_overlap_metrics,
+%  rope_body_holds_in_isolation_control, engine_assigns_unknown_on_bare_story,
+%  bound_call_with_engine_type_succeeds, bound_unknown_matches_engine_on_bare_story)
+ERROR: 2 tests failed
+```
+
+Interactive pre-fix witness (same fixture, this session):
+engine_first=scaffold / bound_rope=SUCCEEDS_over_accept;
+sig_first=unknown / bound_ambiguous=SUCCEEDS_276_artifact.
