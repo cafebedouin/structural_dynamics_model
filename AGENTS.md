@@ -305,6 +305,16 @@ guard: `prolog/tests/test_axiom_diff.pl` (corpus-independent).
 The cascade is implemented as ordered clauses in `classify_from_metrics/6`. The
 order of clauses in `drl_core.pl` IS the priority.
 
+**Rule 4b — dispatch clauses use fresh-variable heads + unify-after-cut (2026-08-17).**
+`classify_from_metrics/6`, `constraint_signature/2`, and `classify_by_signature/3` bind
+their output AFTER the cut, never in the head, so a bound call means "the engine
+assigns" rather than "this clause body holds in isolation" (build_discipline Pattern 7).
+Do not rewrite a head back to the atom form — gate row `dispatch head`
+(`python/dispatch_head_check.py`) and `prolog/tests/test_dispatch_bound_call.pl` both go
+red on the revert. New dispatch predicates use the same idiom; an atom-headed one is
+flagged by the gate row until declared or converted. Witnesses:
+`audits/2026-08-17_bound_dispatch_hardening/`.
+
 ### The chi formula
 
 ```
@@ -420,9 +430,10 @@ misfire). **For a SEAT-SPLIT signature** (FCR, OQ-138 2026-06-21 — false_ci_ro
 seats and disturb the carve-out. Build seat-aware instead: a `*_routed/1` predicate keyed on the stable
 dispatch GATES + the dr_type OUTCOME (NOT a `metric_based_type_indexed` proxy — it diverges from the live
 ModalType; the cross-corpus generality sweep catches this) AND keyed on the **UNBOUND cascade winner**
-(`constraint_signature(C,Sig), Sig==<sig>` — a bound-arg `constraint_signature(C,<sig>)` trips on the DETECTOR
-even when a higher-priority signature shadows it, §1 gotcha; it wrongly caught an FCR seat in
-`constructed_routed`); `converted_at_seat/2` (signature-level for non-split, seat-level for split) feeding
+(`constraint_signature(C,Sig), Sig==<sig>` — under the PRE-2026-08-17 atom heads a bound-arg
+`constraint_signature(C,<sig>)` tripped on the DETECTOR even when a higher-priority signature shadowed it,
+§1 gotcha, and wrongly caught an FCR seat in `constructed_routed`; the 2026-08-17 head conversion (Rule 4b)
+makes the bound form honest, but keep the unbound+`==` shape — it is regime-independent); `converted_at_seat/2` (signature-level for non-split, seat-level for split) feeding
 `signature_grade`/`signature_severity`; and `seat_overrides/2`
 (`abductive_helpers`) threaded through `probe_signature/3`+P1/P7 instead of removing the row from
 `known_override_signature/1`. **For a LEVER-GLOBAL conversion** (FNL, OQ-138 2026-07-03,
