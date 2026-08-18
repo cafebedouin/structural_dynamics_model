@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "6e0b7d7f0e016073076c7742f71c519a554fbcd1",
+    "store_version": "8f4fa5584eda4e8ab4f89a2194d6a38b05535b13",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T18:27:55"
+    "generated_at": "2026-08-18T18:37:10"
   },
-  "issues_sha": "7115358ff2ba58d7e433605a65abdb3b449ea457355df329b51bba91f1011be6",
+  "issues_sha": "c999e360dfbeda2e6c076d577f60e2b30da33bb70df7853589c9b06d45adb03b",
   "n_entries": 320,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 154,
+    "resolved": 155,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 127,
+    "open": 126,
     "partial": 8
   },
   "active": [
@@ -1926,19 +1926,6 @@
         "OQ-25",
         "OQ-44",
         "OQ-296"
-      ]
-    },
-    {
-      "id": "OQ-320",
-      "status": "open",
-      "priority": 4,
-      "summary": "`project_orientation.md` §5.5 is titled, statused, and cross-referenced for `observers_not_humans_v5` while v6 is the current artifact",
-      "deps": [
-        "splits_from OQ-311"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-311"
       ]
     }
   ],
@@ -4534,6 +4521,17 @@
         "OQ-317",
         "OQ-318",
         "OQ-319"
+      ]
+    },
+    {
+      "id": "OQ-320",
+      "status": "resolved",
+      "priority": "–",
+      "summary": "A doc edit updated §5.5's body and left its heading: commit `2a52e1f0` made `project_orientation.md` §5.5 internally inconsistent, and it read as ordinary staleness",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-311"
       ]
     }
   ]

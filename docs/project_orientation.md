@@ -230,24 +230,13 @@ The project's papers form a coherent trajectory. Listed in intellectual-developm
 
 ---
 
-### 5.5 `observers_not_humans_v5.md`
-
-> **[STALE HEADING, flagged 2026-08-18 — OQ-320.]** The current version is **v6**
-> (`docs/observers_not_humans_v6.md`), which carries a marked §2.3 correction of
-> 2026-08-18. This section is still titled and statused for v5, and its Summary below
-> was updated with v6 content on 2026-08-18 without the heading being rewritten — so
-> the section is currently **internally inconsistent** and that inconsistency was
-> introduced by that edit. Rewriting §5.5 to v6 (and re-checking the `:430–526`
-> pin and the `v2–v4 superseded` line at the end of this file) is **OQ-320**, filed
-> rather than folded into the OQ-311 withdrawal because it is a different claim.
+### 5.5 `observers_not_humans_v6.md`
 
 **Summary:** Argues that DR's load-bearing claims are structural (apply to any system whose internal states update differentially under position-relative net flows), not anthropocentric. The paper *proposes* universality class as the right physics analogy — different microscopic dynamics flowing to the same coarse-grained orbit structure — but v6 §2.3 already downgraded it ("does not show universality-class invariance corpus-wide"), and the 2026-08-18 correction **withdrew the type-concentration evidence** that was offered for the surviving narrower version. Range-robustness (Jaccard 0.697–0.833 over six functional forms) survives; whether the advantage tracks the `tangled_rope` label or the geometric condition is **open at OQ-311 Item 2**. Treat "universality class" as a proposed framing with its quantitative support open, not a result. Proposes a cross-class validation program (RL agents, animal data, embodied AI). Includes pre-registered falsification protocol for AI agent systems. Documents the negative association between parametric fragility (Arakelov height) and epistemic opacity (FCR/FSM detection): χ² = 10.01, p = 0.0016, Cramér's V = 0.055 — the two diagnostics index opposite failure modes.
 
-**Relationship to apparatus:** v5 (current) corrects v4's mechanism account of the sign-flip: replaced flow-asymmetry derivation with structural-role routing description grounded in `prolog/config.pl` and `prolog/constraint_indexing.pl:430–526`. Perfect threshold separation at d_zero ≈ 0.1642, N=3,314. The fragility/opacity cross-tab is in `docs/results/fragility_cross_tab.md`.
+**Relationship to apparatus:** **v6 (current)** carries a marked §2.3 correction dated 2026-08-18 (OQ-311): the type-concentration claim is **withdrawn as unwitnessed**, range-robustness survives. v5 had corrected v4's mechanism account of the sign-flip, replacing the flow-asymmetry derivation with a structural-role routing description grounded in `prolog/config.pl` and the directionality/role machinery in `prolog/constraint_indexing.pl` — **cite by predicate**: `derive_directionality/3`, `derive_directionality_at/4`, `beneficiary_victim_directionality/3`, and the `power_role_heuristic/4` facts (currently ~`:405–485`). *(The former `:430–526` pin was wrong at both ends — verified 2026-08-18: it began 25 lines after `derive_directionality/3` and ran ~40 lines past the last `power_role_heuristic/4` into the unrelated `exit_modulation/2` table, with both boundaries landing mid-clause. OQ-320.)* Perfect threshold separation at **d_zero ≈ 0.1642** — **verified at HEAD 2026-08-18** by deriving it from live config rather than recalling it: `d_zero = d0 − ln(U/−L)/k = 0.50 − ln(7.5)/6.00 = 0.164183` from `sigmoid_lower −0.20`, `sigmoid_upper 1.50`, `sigmoid_midpoint 0.50`, `sigmoid_steepness 6.00`. The **N=3,314 is corpus-bound**, not a live count: it is the corpus of `docs/results/tangled_rope_sign_flip.md` (chimera-era `original_v6` lineage), and the live leg is a different order of magnitude — never cite it as current. The fragility/opacity cross-tab is in `docs/results/fragility_cross_tab.md`.
 
-**Status:** ~~Current version is v5. Prior versions (v2–v4) in `docs/` are superseded.~~
-**[stale 2026-08-18 — OQ-320]** Current version is **v6**; v2–v5 are superseded, and
-v6 §2.3 carries a 2026-08-18 correction withdrawing the type-concentration claim.
+**Status:** Current version is **v6**. Prior versions (v2–v5) in `docs/` are superseded. v6 §2.3 carries a marked correction dated 2026-08-18 withdrawing the type-concentration claim (OQ-311); H0's scope is open at OQ-311 Item 2.
 
 ---
 
@@ -509,7 +498,7 @@ The following files in `docs/` were not listed in the task brief and may be rele
 - `docs/logic.md` — Formal classification rules and thresholds. UTF-8 encoding was repaired in Feb 2026 (prior versions had mojibake from double-encoded characters). This is the formal spec document; `config.pl` should match it.
 - `audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
 - `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v5.md` and `when_consensus_isnt_coherence.md`.
-- `docs/observers_not_humans_v2.md` through `v5.md` — Superseded by v6 **[corrected 2026-08-18 — OQ-320; this line said "v2 through v4 — superseded by v5"]**.
+- `docs/observers_not_humans_v2.md` through `v5.md` — Superseded by v6.
 
 **Draft/working documents** (may be incomplete or superseded):
 - `docs/sheaf_presheaf_bridge_paper.md` — An earlier draft version of `when_splitting_isnt_solving.md` (labeled "Draft Skeleton — v0.5"); `when_splitting_isnt_solving.md` is the canonical version.

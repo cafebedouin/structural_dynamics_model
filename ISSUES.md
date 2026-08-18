@@ -14924,49 +14924,57 @@ n=279), or they are declared one-shot historical analyses and the artifact is ma
 current state — live-looking output, dead input, no consumer — is the one state that should not
 persist.
 
-## OQ-320 — `project_orientation.md` §5.5 is titled, statused, and cross-referenced for `observers_not_humans_v5` while v6 is the current artifact
+## OQ-320 — A doc edit updated §5.5's body and left its heading: commit `2a52e1f0` made `project_orientation.md` §5.5 internally inconsistent, and it read as ordinary staleness
 
-**Ω-type:** Ω_E (mechanical — which file is current is a matter of fact about the repo).
+**Ω-type:** Ω_E (mechanical — which file is current, and where a predicate lives, are matters of fact).
 
-**Status:** open
-**Priority:** 4
-**Deps:** splits_from OQ-311
+**Status:** resolved — 2026-08-18, commit `git log --grep="OQ-320 closed"` (cited by message,
+not hash: a commit cannot contain its own hash, and the first attempt here cited one that an
+amend immediately orphaned). §5.5 retitled and restatused to **v6**;
+both riding pins verified (one repaired, one confirmed); the `[STALE HEADING]` marker **removed**
+in the same change that repaired its defect.
+
 **Origin:** 2026-08-18, operator review of the OQ-311 Item 1 close. Flagged as out-of-scope
-residue during that work and filed here rather than left in chat, where it would have died with
-the session.
-**Files:** `docs/project_orientation.md` (§5.5 heading :233, Status line :239, superseded-list
-line near :501), `docs/observers_not_humans_v6.md`
+residue during that work and filed rather than left in chat, where it would have died with the
+session.
 
-**The finding.** `docs/observers_not_humans_v6.md` has existed since 2026-05-28 (commit
-`e5f805ab`) and carries a marked §2.3 correction dated 2026-08-18. `project_orientation.md` — the
-canonical operational reference, and the file a fresh instance is pointed at first — still calls
-the paper **v5** in three places: the §5.5 heading, the "**Status:** Current version is v5. Prior
-versions (v2–v4) … are superseded" line, and the file-index line "`v2.md` through `v4.md` —
-Superseded by v5". The `**Relationship to apparatus:**` paragraph also opens "v5 (current)".
+**THE DEFECT CLASS, which is the point of this entry and not a footnote.** This was **not**
+ordinary drift. OQ-311's occasion was drift — a pin that moved because code moved, with no author
+and no date. **This one has a named author and a dated commit.** `2a52e1f0` (the OQ-311 Item 1
+close) rewrote §5.5's **Summary** paragraph with v6 content — correctly, since the
+universality-class line needed the withdrawal — and left the **heading**, the **Status** line, the
+`v5 (current)` opener, and the file-index line all naming v5. The section was left asserting v6
+findings under a v5 title. **A cold reader would have read that as staleness the repo accumulated,
+not as damage one edit did**, and would have priced it accordingly — which is exactly why the
+tracker has to say otherwise. *An edit that updates a body and leaves its heading is a distinct
+failure from a pin that drifts, and it is invisible as such unless named at the time.*
 
-**Why it is filed separately from OQ-311 rather than folded into it.** Different claim. OQ-311's
-withdrawal is about whether §2.3's type-concentration evidence exists; this is about which
-revision of the paper the orientation doc points at. Conflating them would put a doc-currency
-chore inside a withdrawal and make both harder to cite.
+**Both riding pins were checked, not assumed** — the reason they were bundled here rather than
+left for a third pass:
+- **`prolog/constraint_indexing.pl:430–526` — WRONG AT BOTH ENDS, repaired.** It began 25 lines
+  *after* `derive_directionality/3` (:405) and ran ~40 lines *past* the last
+  `power_role_heuristic/4` (:485) into the unrelated `exit_modulation/2` table; both boundaries
+  landed mid-clause. Re-cited **by predicate** (`derive_directionality/3`,
+  `derive_directionality_at/4`, `beneficiary_victim_directionality/3`, `power_role_heuristic/4`).
+- **`d_zero ≈ 0.1642` — VERIFIED at HEAD**, by deriving it from live config rather than recalling
+  it: `0.50 − ln(1.50/0.20)/6.00 = 0.164183`, from `sigmoid_lower −0.20`, `sigmoid_upper 1.50`,
+  `sigmoid_midpoint 0.50`, `sigmoid_steepness 6.00`.
+- **`N=3,314` — corpus-bound, now labelled as such.** It is the corpus of
+  `docs/results/tangled_rope_sign_flip.md` (chimera-era `original_v6` lineage), not a live count;
+  the live leg is a different order of magnitude. Marked never-cite-as-current.
 
-**Self-implicating note, recorded because it changes what a reader should expect.** The OQ-311
-Item 1 close (commit `2a52e1f0`) rewrote §5.5's **Summary** paragraph with v6 content — correctly,
-since the universality-class line needed the withdrawal — but left the heading and status naming
-v5. So the section is now **internally inconsistent, and that edit is what made it so**: v6 content
-under a v5 heading. A `[STALE HEADING]` marker was placed at the site 2026-08-18 pointing here, so
-the inconsistency is visible rather than silent, but the marker is not the repair.
+**Marker removal was an explicit close condition, discharged.** The `[STALE HEADING]` block placed
+at the site on 2026-08-18 was load-bearing but carried **no expiry**. A marker that outlives its OQ
+becomes furniture, and worse: the next reader meets a flagged inconsistency pointing at a
+resolution they cannot find — **the same shape as the `docs/open_questions.md` pointer that
+outlived its tracker** and cost OQ-311 a residue bullet. The marker was therefore removed in the
+same commit that repaired the defect, never in a follow-up. **Standing rule this entry
+establishes: a marker minted to make a defect visible names its removal as a close condition of
+the OQ it points at, in the OQ, at minting time.**
 
-**Two pins to re-check in the same pass, not assumed.** §5.5 cites
-`prolog/constraint_indexing.pl:430–526` and "Perfect threshold separation at d_zero ≈ 0.1642,
-N=3,314". Both predate the 2026-06-05 reset and neither was verified during the OQ-311 work — the
-line pin especially, since OQ-311's whole occasion was a code pin that had drifted **three** times
-(`drl_core.pl` rope bypass :356 → :384 → :432). **Cite by predicate; verify before trusting.**
-
-**What resolution would change.** §5.5 is retitled and restatused to v6 with the superseded list
-corrected to "v2–v5 superseded by v6", the two pins above are verified or re-cited by predicate,
-and the `[STALE HEADING]` marker is removed — a marker that outlives its defect becomes furniture.
-Cheap, no run, no ruling.
-
+**Residue: none.** The one surviving `OQ-320` mention in `project_orientation.md` is a deliberate
+*pin-history* note (recording that `:430–526` was wrong and why the citation is now by predicate),
+not a marker — it has no defect to outlive.
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
