@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""bound_selector_check.py — BD-P3 made mechanical.
+"""bound_selector_check.py — the bound-selector rule made mechanical.
 
 A call to a CUT-ORDERED dispatch predicate with the *selecting* argument BOUND to a
 literal atom does not ask "what does the engine assign?" — earlier clauses fail to
@@ -14,7 +14,7 @@ The bound form is OVER-PERMISSIVE. Consequences worth keeping straight:
 Rule (docs/technical/build_discipline.md -> *Bound-probe bypasses clause-order*): query
 UNBOUND and post-filter by equality, or use once/1 for a census.
 
-WHY THIS EXISTS AS A GATE ROW RATHER THAN A DOCUMENTED RULE. BD-P3 was written
+WHY THIS EXISTS AS A GATE ROW RATHER THAN A DOCUMENTED RULE. The rule was written
 2026-05-30 with `constraint_signature(C, <bound-atom>)` as its worked example, AND the
 author of signature_detection.pl annotated the correct form inline at :1771 and :1790.
 Documentation routing therefore got the strongest treatment available to it and still
@@ -228,7 +228,7 @@ def live_sweep() -> tuple[list[str], int]:
                 continue
             problems.append(
                 f"{rel}:{lineno}: bound selector `{atom}` on a cut-ordered "
-                f"predicate — query unbound + post-filter (BD-P3). | {line}"
+                f"predicate — query unbound + post-filter (build_discipline Pattern 7). | {line}"
             )
     if scanned == 0:
         # An empty sweep is a broken sweep, not a clean one (Pattern 5).

@@ -155,8 +155,8 @@ arm's instrument (A3).
 Full corpus regen under the new schema; `perspectives[]` retired from the schema;
 `reading_diff` re-pointed (stakeholder cells / computed seats); the A/B pair corpora
 archived under `prolog/archives/datasets/` with manifests (control arm preserved
-permanently). Old-vs-new output diff per Build Discipline Pattern 3 before any
-standalone is deleted.
+permanently). Old-vs-new output diff per the build-discipline witness rule
+*prove before you replace* before any standalone is deleted.
 
 ---
 

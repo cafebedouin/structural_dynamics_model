@@ -42,7 +42,7 @@ gate). Those are GAP-08's declared-absence substrate.
    outside `intent_engine.pl`; `report_generator.pl:22` imports intent_engine
    `except([classify_interval/3])` and substitutes its own pattern-only version.
 
-## Witness (Pattern 3: destructive-replace owes the diff)
+## Witness (*prove before you replace*: a destructive replace owes the diff)
 
 - `suite_baseline_f3f1e99f.txt` — full validation suite at baseline (exit 0, GOOD,
   1325 lines, 5 `[INTENT]` lines all OPEN/no_gradient_data).

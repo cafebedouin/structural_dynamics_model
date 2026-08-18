@@ -4963,7 +4963,7 @@ RETIRE ruled + landed: `structural_coercive_intent` top verdict deleted (range-d
 and consumerless — report_generator.pl:22 imports intent_engine except classify_interval/3);
 capture-as-design ratified as the piton intension (constraint_captured/1), kill condition recorded
 in the OQ-106 close arming GAP-08 revival; option (ii) declined (OQ-36 misread risk). Witness
-(Pattern 3): full suite before/after byte-identical on substantive lines (5 [INTENT] lines); GAP-08
+(*prove before you replace*): full suite before/after byte-identical on substantive lines (5 [INTENT] lines); GAP-08
 stale residual paragraph updated to the 2026-06-11 fail-closed ruling. Worktree oq106-retire from
 `f3f1e99f`; evidence audits/2026-06-12_oq106_retire/.
 
@@ -6139,7 +6139,7 @@ CLAUDE.md Architecture Invariants + OQ-02; the OQ-25 ε-coherence load guard →
 `config_validation_wiring.md`; kernel-linkage join → memory `project_kernel_linkage_join` +
 bulk runbook; perturb()/stability-band/191-param sweep → memory (`project_sweep_primitive`,
 `project_stability_band`, `project_perturbable_parameter_surface`) + OQ-29/OQ-30; bound-probe
-Pattern 3 → `build_discipline.md` + `signature_detection_wiring.md`; OQ-43 satisfy-on-absence →
+Pattern 3 [now Pattern 7 — OQ-278, 2026-08-17] → `build_discipline.md` + `signature_detection_wiring.md`; OQ-43 satisfy-on-absence →
 CLAUDE.md Build Discipline #5; the NL-gate "diagnostic-decline ≠ classification-changing"
 correction and the "demotion_pass.py is engine-blind — route verification through perturb.py,
 not its static buckets" caveat live in git history and OQ-30/OQ-33.

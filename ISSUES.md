@@ -347,7 +347,7 @@ only via explicit `corpus_path` overlay.
 
 **Settled empirical finding (re-witnessed 2026-06-25, all three live legs; probes in `audits/2026-06-25_oq18_temporal_reduction/` — `oq18_flipped_probe.pl` + `oq18_divergence_probe.pl` + `oq18_metric_trend_flip.pl` + `oq18_realized_probe3.pl`, live positive control on every leg):** the endpoint reduction genuinely diverges from the faithful least-squares slope (86/97 · 890/954 · 639/949 series; per-neighbor max |Δrate| 0.0011/0.0057/0.0067), and the `cs_drift_mismatch` gate consults non-monotone contributors (gate-live 3/56/10; realized-flippable 0/29/6) — **but 0 serialized `cs_drift_mismatch` verdicts actually flip** under the faithful velocity on any leg (max faithful SUM 0.006745/0.007851/0.004333 < Thresh 0.01; closest headroom = `0.01 − 0.007851 = 0.00215` on `testsets_haiku`). `metric_trend`→`scaffold_suppression_escalating` diverges on 0/1/17 serialized verdicts (haiku: `nicene_creed` Δ=0.08 vs fit 0.0207). So the gates are **exposed but not currently corrupting**.
 
-**Resolution (behavior-preserving):** (1) `metric_delta/5`, `metric_trend/3`, `drift_velocity/3` annotated at their definitions with reduction-kind + faithful-source pointer + the witnessed flip-status/falsifier (NOT "safe-as-gate" — that label was falsified). (2) `drift_acceleration/3` + `compute_acceleration/2` deleted (zero callers, first-3-points reduction, misleading name); faithful full-series acceleration logged as a declared absence in `docs/design/design_gaps.md`. (3) Deferred items routed: OQ-184 (faithful-velocity rebuild, output-changing, carries the sum-level kill-condition tripwire) and OQ-183 (the net-change-vs-sustained-trend semantic seat). **Falsifier (carried, not closed-over):** the first serialized `cs_drift_mismatch` verdict whose faithful `network_drift_velocity` sum crosses `network_drift_velocity_threshold` — at which point OQ-184 must land; the 0.00215 haiku headroom is the reason to prioritize it. Witness: load+positive-control (broken-edit fails load), pipeline clean-vs-edited byte-identical modulo `pipeline_run_at` (faithful Pattern-3 diff — literal cross-run byte-identity is impossible, the manifest stamps a run timestamp), report renders, probe re-runs + raw output in `audits/2026-06-25_oq18_temporal_reduction/`.
+**Resolution (behavior-preserving):** (1) `metric_delta/5`, `metric_trend/3`, `drift_velocity/3` annotated at their definitions with reduction-kind + faithful-source pointer + the witnessed flip-status/falsifier (NOT "safe-as-gate" — that label was falsified). (2) `drift_acceleration/3` + `compute_acceleration/2` deleted (zero callers, first-3-points reduction, misleading name); faithful full-series acceleration logged as a declared absence in `docs/design/design_gaps.md`. (3) Deferred items routed: OQ-184 (faithful-velocity rebuild, output-changing, carries the sum-level kill-condition tripwire) and OQ-183 (the net-change-vs-sustained-trend semantic seat). **Falsifier (carried, not closed-over):** the first serialized `cs_drift_mismatch` verdict whose faithful `network_drift_velocity` sum crosses `network_drift_velocity_threshold` — at which point OQ-184 must land; the 0.00215 haiku headroom is the reason to prioritize it. Witness: load+positive-control (broken-edit fails load), pipeline clean-vs-edited byte-identical modulo `pipeline_run_at` (a faithful old-vs-new diff per the *prove before you replace* witness rule — literal cross-run byte-identity is impossible, the manifest stamps a run timestamp), report renders, probe re-runs + raw output in `audits/2026-06-25_oq18_temporal_reduction/`.
 
 ---
 
@@ -856,7 +856,7 @@ UNBOUND query form used (Sig not pre-bound):
 findall(K-C-Sig, (member(K, UnwitnessedKernels), cs_kernel_id(C, K),
                   constraint_signature(C, Sig)), Triples)
 ```
-Pattern 3 self-check: `behavioral_competence_reading → false_summit_mountain` (not natural_law).
+Pattern 7 self-check: `behavioral_competence_reading → false_summit_mountain` (not natural_law).
 One verbatim result: `federation_membership_kernel-integration_reading-false_natural_law`.
 
 Signature distribution (51 readings across 20 kernels):
@@ -942,7 +942,7 @@ findall(K-C-Sig, (member(K, Kernels), cs_kernel_id(C, K),
 ```
 The bound form `findall(C, constraint_signature(C, false_natural_law), Cs)` bypasses lock cuts
 and over-counts — live demo: `behavioral_competence_reading` appears bound but resolves to
-`false_summit_mountain` under the unbound query. See `docs/technical/build_discipline.md` Pattern 3.
+`false_summit_mountain` under the unbound query. See `docs/technical/build_discipline.md` Pattern 7.
 
 **SURFACE-2 PRIMITIVE BUILT + HYPOTHESIS WITNESSED (2026-05-31).**
 Tool: `python/sweeps/surface2_lock_sweep.py` (one swipl process, corpus loaded once, in-memory
@@ -4431,7 +4431,9 @@ invariant = a cited path exists AND is git-tracked OR is allowlisted-ephemeral; 
 inside the repo root is NEVER allowlisted (it IS the OQ-104 signature). Census
 (`audits/2026-06-18_oq104_citation_checker/`): 1224 citations over 85 audit dirs;
 untracked-pending 35 (all descriptive refs to regenerable `outputs/` artifacts — copy-into-audit
-rejected as Pattern-3, allowlist forbidden); missing-pending-M 66, every survivor classified, no
+rejected as Pattern-3 [AMBIGUOUS — OQ-278: neither claimant's mechanism fits; copying a file
+into an audit dir is closer to Pattern 2, and the index is the only information present], allowlist
+forbidden); missing-pending-M 66, every survivor classified, no
 live broken citation. Controls 25/25 incl. rot-flip. Gating split (2026-06-26): danger iff the
 untracked path does NOT start with top-level `outputs/` → `untracked-frozen-evidence` (GATING,
 7th `run` line in `scripts/gate.sh`, base rate zero today) vs `untracked-regenerable`
@@ -13578,7 +13580,7 @@ artifact drifts from the first and needs its own staleness check — apparatus, 
 that says don't answer an apparatus question with more apparatus.
 
 **The proposal instead: make the headings action-first so the map IS a grep.** *"Before running
-a query with a bound selector — …"* rather than *"Pattern 3 — Bound-probe bypasses
+a query with a bound selector — …"* rather than *"Pattern 7 — Bound-probe bypasses
 clause-order."* Then a `doc_pattern_check`-style row regenerates the index from the headings,
 and the headings are the thing under version pressure rather than a derived file nobody updates.
 

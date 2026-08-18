@@ -22,4 +22,4 @@ state. OPEN-1 closes as already-conformant.
 
 (Contrast OPEN-2, same audit table: `epistemic_access_check/2` DID count the authored
 table — extended 2026-06-12 to count `constraint_stakeholder/7` seats alongside it;
-positive controls + Pattern-3 pipeline identity in `b3_open2_*.out`.)
+positive controls + old-vs-new pipeline identity in `b3_open2_*.out`.)

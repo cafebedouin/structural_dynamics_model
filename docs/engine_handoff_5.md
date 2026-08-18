@@ -212,9 +212,10 @@ paste counts.*
 
 ---
 
-## Pattern 3 — bound-probe / query-binding-bypasses-cut
+## Pattern 7 — bound-probe / query-binding-bypasses-cut
 
-`docs/technical/build_discipline.md` Pattern 3. Witnessed by live count-delta.
+`docs/technical/build_discipline.md` Pattern 7 (it was Pattern 3 until OQ-278 renumbered it
+2026-08-17). Witnessed by live count-delta.
 
 **Self-check (run this before any signature-membership census):**
 ```prolog
@@ -325,7 +326,7 @@ correct for "numeric params swept by demotion_pass.py."
 
 `ISSUES.md OQ-33` (fabricated-default front; blocks Surface 3) ·
 `ISSUES.md OQ-30` (20 unwitnessed kernels; Surface-2 routing; updated this session) ·
-`docs/technical/build_discipline.md` Pattern 3 (bound-probe) + Pattern 4 (fabricated
+`docs/technical/build_discipline.md` Pattern 7 (bound-probe) + Pattern 4 (fabricated
 default) · `python/sweeps/perturb.py` (Surface-1 primitive, 191 params) ·
 `python/sweeps/proof_of_life_surface2.py` (Surface-2 proof-of-life; design template for
 the primitive) · `python/sweeps/proof_of_life_surface3.py` (Surface-3 proof-of-life;

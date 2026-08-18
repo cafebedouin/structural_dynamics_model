@@ -223,8 +223,8 @@ forall(member(C, Cs),
 
 Rules that make it faithful:
 - **`Sig` must be UNBOUND** — `constraint_signature(C, false_natural_law)` with the atom
-  bound bypasses the lock cuts and lies about clause order (Pattern 3 /
-  build_discipline.md). One solution via `->` matches what the pipeline records.
+  bound bypasses the lock cuts and lies about clause order (Pattern 7 /
+  build_discipline.md; it was Pattern 3 there until OQ-278 renumbered it 2026-08-17). One solution via `->` matches what the pipeline records.
 - **Enumerate ids via `corpus_loader:corpus_constraint/1`** (the authoritative membership
   registry, available since 2026-06-04 — same enumeration the export now uses). The older
   `constraint_metric/3` setof recipe still works (testset ids are 1:1 with files; `atom(C)`

@@ -1080,7 +1080,8 @@ one of its 4 call sites is dead, so it never executes on any live path (full gre
 path) but is genuine duplicate clutter — two producers for one capability, with canonicity now a
 *checked fact* (this entry + KNOWN_STATE 2026-06-25) rather than a memory. **Deleting it is NOT a
 one-line behavior-preserving cleanup:** it touches 2 `use_module` directives + 3 dead call sites across
-3 files, so it needs its own old-vs-new diff-witness (Build Discipline Pattern 3). Per operator ruling
+3 files, so it needs its own old-vs-new diff-witness (the build-discipline witness rule
+*prove before you replace*). Per operator ruling
 (OQ-182 plan, Step 2) the fork is **log-only** here, not bundled onto the OQ-182 gate-flip commit.
 
 **What closing the gap would require:** mint a dedicated output-neutral cleanup OQ that removes

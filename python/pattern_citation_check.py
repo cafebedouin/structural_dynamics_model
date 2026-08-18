@@ -78,10 +78,13 @@ Per the cross-sibling rule, an out-of-file read GENERATES a hypothesis; only an 
 RULES it. `unrecoverable` rows are labelled `[AMBIGUOUS — OQ-278]` in the repair step, never
 guessed.
 
-POSITIVE CONTROL (rides every run, `--selftest`): the probe must find two hits it is KNOWN to
-have — the `FINDINGS.md:23` wrong label (OQ-278's third sighting) and the `:1015` bound-probe
-cross-reference — and must DECLINE on a planted non-taxonomy `P3` in the Prolog conflict-catalog
-shape. A one-sided control (plant-and-find) would show only that the probe CAN fire.
+POSITIVE CONTROLS (ride every run, `--selftest`): the probe must find three hits it is KNOWN to
+have, one per recoverable mechanism — the oq93 `FINDINGS.md` fabricated-default label, the oq290
+`riders_BEFORE.md` recap-as-witness label, the oq251 `audit_log.md` bound-probe reference — and
+must DECLINE on a naturally-arising non-taxonomy `P3` in the Prolog conflict-catalog shape. A
+one-sided control (plant-and-find) would show only that the probe CAN fire. All three anchors are
+point-in-time artifacts nothing is licensed to edit; the earlier `design_gaps.md` anchor was on
+this instrument's own repair list and went red the day the repair landed.
 
 Usage:
     python3 python/pattern_citation_check.py --check     # gate mode (displaced consumers); default-less
@@ -128,9 +131,13 @@ AUDIT = REPO / "audits/2026-08-14_oq278_index_collision"
 # (b) discussion OF the collision, correct as written and never repaired (`KNOWN_STATE.md`'s
 # 2026-08-14/17 entries, `ISSUES.md`'s OQ-278-adjacent prose, the oq251 audit log, and
 # `AGENTS.md`'s how-to-read-the-historical-record line, which must NAME the old index); (c) this
-# file's own prose, which names mechanisms rather than citing indices — one row (the
-# decoded-`.jpg` note) is a recovery false positive that merely sits near an index token.
-# So a residual count after repair is expected and is declared residue, not backlog.
+# file's own prose and control anchors, which name mechanisms rather than citing indices (two
+# of those four rows are recovery false positives: a decoded-`.jpg` note and a negative-control
+# comment that merely sit near an index token). So a residual count after repair is expected and
+# is declared residue, not backlog. NOTE for a future editor: this file is IN its own sweep on
+# purpose — editing its prose can move its own count and red the gate, and updating the number in
+# the same change is the discipline working, not noise. Excluding it would hide the one file most
+# likely to carry a stale index citation.
 DISPLACED = {
     "destructive-replace": {
         "state": "vacated",
@@ -138,17 +145,13 @@ DISPLACED = {
         "oq": "OQ-278",
         "what": "demoted from a defect pattern to a witness rule; index 3 vacated, never reused",
         "repair": "name the surviving witness rule ('prove before you replace'); no index",
-        "consumers": {
-            "ISSUES.md": 1,
-            "KNOWN_STATE.md": 1,
-            "audits/2026-06-07_stakeholder_layer_migration/MIGRATION_PLAN.md": 1,
-            "audits/2026-06-11_oq109_phase_b/b3_open1_discharge.md": 1,
-            "audits/2026-06-12_oq106_retire/README.md": 1,
-            "audits/2026-06-18_oq104_citation_checker/FINDINGS.md": 1,
-            "docs/design/the_perturbation_move.md": 1,
-            "docs/the_perturbation_principle.md": 1,
-            "docs/design/design_gaps.md": 1,
-        },
+        # ALL NINE REPAIRED 2026-08-17, in the same change that retired this list. The entries
+        # are gone rather than zeroed: a zero would be a standing assertion that the detector
+        # keeps looking at nine named files, which is not what is being claimed. What IS claimed
+        # is the empty dict below — no live citation anywhere names this member by index — and
+        # that claim is re-derived from the corpus on every run, so a tenth appearing anywhere
+        # reds as UNSWEPT CONSUMER with no allowlist to hide in.
+        "consumers": {},
     },
     "bound-probe": {
         "state": "renumbered 3 -> 7",
@@ -156,16 +159,20 @@ DISPLACED = {
         "oq": "OQ-278",
         "what": "peer member (R1b' = B1'), moved off the vacated index 3 to index 7 in BOTH documents",
         "repair": "cite index 7 (or the mechanism name); index 3 is a grave in both documents",
+        # POST-REPAIR RESIDUE, 2026-08-17. The live citations (`ISSUES.md`'s two self-check
+        # pointers, both engine handoffs, the probe-gotchas rule, `bound_selector_check.py`'s
+        # runtime message, `gate.sh`'s comment) now cite index 7. What remains NAMES the old
+        # index on purpose and is correct as written: prose explaining the renumbering, the
+        # dated KNOWN_STATE entries that recorded it, a completed audit log, a SHA-pinned
+        # fixture quote in OQ-300, and two rows of this file's own prose. Residue, not backlog.
         "consumers": {
             "AGENTS.md": 1,
-            "ISSUES.md": 4,
+            "ISSUES.md": 1,
             "KNOWN_STATE.md": 6,
             "audits/2026-08-17_oq251_natural_law_reachability/audit_log.md": 2,
-            "docs/engine_handoff_5.md": 2,
-            "docs/engine_handoff_6.md": 1,
+            "docs/engine_handoff_5.md": 1,
             "docs/technical/swipl_load_path_and_probe_gotchas.md": 1,
-            "python/bound_selector_check.py": 2,
-            "python/pattern_citation_check.py": 2,
+            "python/pattern_citation_check.py": 4,
         },
     },
 }
@@ -424,28 +431,43 @@ def sweep():
 # --- controls ---------------------------------------------------------------
 
 def selftest():
-    """Two-sided: must FIND two known hits; must DECLINE on a planted foreign-namespace P3."""
+    """Two-sided: must FIND three known hits, one per recoverable mechanism; must DECLINE on a
+    naturally-arising foreign-namespace P3.
+
+    EVERY POSITIVE IS ANCHORED ON A POINT-IN-TIME ARTIFACT, and that is a correction, not a
+    preference. The original anchor for the second control was `docs/design/design_gaps.md`'s
+    cross-wired citation — which OQ-278's repair pass then REPAIRED, turning the control red for
+    the best possible reason and leaving the run unable to write a label set. A control pinned to
+    a site on its own instrument's repair list retires itself the day the instrument works. So
+    the anchors are now records nothing is licensed to edit: a dated audit finding, a frozen
+    `_BEFORE` snapshot, and a completed audit log.
+    """
     failures = []
     rows = sweep()
-    idx = {(r["file"], r["line"]): r for r in rows}
 
-    # (1) known positive: OQ-278's third sighting — a WRONG label in an incident record.
-    hit = [r for r in rows
-           if r["file"] == "audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md"
-           and r["namespace"] == "taxonomy-candidate"]
-    if not hit:
-        failures.append("selftest FAILED: known positive (oq93 FINDINGS.md 'Pattern 4') not found")
-    elif not any(r["mechanism_slug"] == "fabricated-default" for r in hit):
-        failures.append(f"selftest FAILED: oq93 FINDINGS.md recovered "
-                        f"{[r['mechanism_slug'] for r in hit]}, expected fabricated-default")
+    def want(path, mech, note):
+        hit = [r for r in rows if r["file"] == path and r["namespace"] == "taxonomy-candidate"]
+        if not hit:
+            failures.append(f"selftest FAILED: known positive ({note}) not found")
+        elif not any(r["mechanism_slug"] == mech for r in hit):
+            failures.append(f"selftest FAILED: {path} recovered "
+                            f"{[r['mechanism_slug'] for r in hit]}, expected {mech}")
 
-    # (2) known positive, opposite mechanism: the three cross-wired citations.
-    xw = [r for r in rows if r["file"] == "docs/design/design_gaps.md"
-          and r["namespace"] == "taxonomy-candidate"]
-    if not xw:
-        failures.append("selftest FAILED: known positive (design_gaps.md 'Pattern 3') not found")
+    # (1) fabricated-default — OQ-278's third sighting, a dated audit finding. Retroactively
+    #     CORRECT since R2 = C2 put fabricated-default at index 4 in both documents.
+    want("audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md", "fabricated-default",
+         "oq93 FINDINGS.md 'Pattern 4'")
 
-    # (3) NEGATIVE control — a foreign-namespace P3 in the Prolog conflict-catalog shape must
+    # (2) recap-as-witness — a frozen `_BEFORE` snapshot, never edited by construction.
+    want("python/audits/oq290_frontload_check/riders_BEFORE.md", "recap-as-witness",
+         "oq290 riders_BEFORE.md 'Pattern 4'")
+
+    # (3) bound-probe — the DISPLACED member, in a completed audit log. Its rows deliberately
+    #     name the old index (they narrate the renumbering), so they are not repair targets.
+    want("audits/2026-08-17_oq251_natural_law_reachability/audit_log.md", "bound-probe",
+         "oq251 audit_log.md 'Pattern 3'")
+
+    # (4) NEGATIVE control — a foreign-namespace P3 in the Prolog conflict-catalog shape must
     #     NOT be classified as a taxonomy candidate. Drawn from the population, not planted:
     #     prolog/diagnostic_summary.pl's own catalog.
     cat = [r for r in rows if r["file"] == "prolog/diagnostic_summary.pl"]
@@ -532,8 +554,12 @@ def main(argv):
                 print(f"  {e}")
             print(f"pattern_citation_check: RED — {len(errors)} displaced-consumer problem(s)")
             return 1
-        parts = [f"'{slug}' ({b['state']}): {sum(b['consumers'].values())} citation(s) across "
-                 f"{len(b['consumers'])} files" for slug, b in sorted(DISPLACED.items())]
+        parts = []
+        for slug, b in sorted(DISPLACED.items()):
+            n = sum(b["consumers"].values())
+            parts.append(f"'{slug}' ({b['state']}): SWEPT CLEAN, 0 remaining" if not n else
+                         f"'{slug}' ({b['state']}): {n} declared citation(s) across "
+                         f"{len(b['consumers'])} files")
         print(f"pattern_citation_check: GREEN — declared consumers of displaced members — "
               f"{'; '.join(parts)}; selftest {3 + len(DISPLACED)}/{3 + len(DISPLACED)}")
         return 0
@@ -543,7 +569,7 @@ def main(argv):
         for f in failures:
             print(f"  {f}")
         print(f"sweep selftest: {'RED' if failures else 'GREEN'} "
-              f"(2 positives + 1 naturally-arising negative)")
+              f"(3 positives, one per mechanism + 1 naturally-arising negative)")
         return 1 if failures else 0
 
     if "--sweep" not in argv:

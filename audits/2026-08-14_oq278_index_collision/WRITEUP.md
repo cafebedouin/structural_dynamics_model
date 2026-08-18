@@ -12,7 +12,10 @@ the entry: the blast radius of the 2026-08-11 vacating is **9 stale citations, n
 the stale-pointer count goes 3 → 9, and two namespaces were discovered by the sweep's own false
 positives. **Fired a second time on 2026-08-14** when the gate mode built from §4.6 disagreed
 with §4.6 on 7 of 9 sites: the hand list was right and the sweep's own regexes were wrong (see
-§3(c)), so `LABEL_SET.tsv` had been shipping under-recovered rows.
+§3(c)), so `LABEL_SET.tsv` had been shipping under-recovered rows. **Fired a third time on
+2026-08-17** (§2.1, §7.6): the published census was stale at its own commit rather than by later
+drift, and a positive control pinned to a site on its own repair list went red the day the repair
+landed.
 
 **Evidence map**
 
@@ -20,7 +23,7 @@ with §4.6 on 7 of 9 sites: the hand list was right and the sweep's own regexes 
 |---|---|
 | `PREREGISTRATION.md` | R1a/R1b/R2/R4 branch conditions, registered **before** this sweep ran. Also carries two corrections to the plan's evidence. |
 | `python/pattern_citation_check.py` | the re-runnable sweep, **moved to `python/` 2026-08-14** when the gate mode was added (a scanner here plus one in `python/` would be Pattern 2 on this audit's own subject). `--sweep` writes the label set; `--check` is the gate row `vacated cites`; `--selftest` runs two known positives + one naturally-arising negative. |
-| `LABEL_SET.tsv` | 750 machine rows, one per candidate, `mechanism_slug`-keyed; 49 are taxonomy citations. **The artifact OQ-294 consumes.** Regenerate with `--sweep`; byte-identical across runs. |
+| `LABEL_SET.tsv` | **789** machine rows at the 2026-08-17 close, one per candidate, `mechanism_slug`-keyed; **48** are taxonomy citations. **The artifact OQ-294 consumes.** Regenerate with `--sweep`; byte-identical across runs. The census is a *point-in-time* count of a line-keyed sweep over tracked files — see §2.1 before citing any figure here as stable. |
 | §4 below | the hand-adjudicated table — every taxonomy-sense row read in context, not accepted on report. It is the **reference** the machine sweep is checked against, and it won that check (§3(c)). |
 
 ---
@@ -76,18 +79,71 @@ OQ-278 and the plan both name four senses. The sweep found seven, and **two of t
 discovered by the sweep's own false positives** — which is the honest way to report them.
 Counts at the final run:
 
-| namespace | rows | how it was found |
-|---|---|---|
-| `oq277-frozen-prereg` | 339 | **not ambiguous**: a local defined namespace pinned verbatim by the md5-frozen prereg, precisely so the out-of-harness coder could not read it by reference |
-| `other-unclassified` | 112 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
-| `oq278-subject` | 99 | OQ-278's own body and this audit — subject, not citation |
-| `paper-publication` | 51 | the six paper versions PUBLISH the list; definitional restatements, not consumers |
-| **`taxonomy-candidate`** | **49** | the actual citation population — §4 |
-| `analysis-enumeration` | 49 | essays, uke transform outputs, recon reports, protocols and analysis scripts numbering **their own** findings |
-| `decompose-manifest-candidate` | 18 | `"candidate_pattern": "Interpretive Capture (Pattern 3)"` — the DR engine's own vocabulary |
-| `prolog-variable` | 15 | a Prolog variable literally named `P3` |
-| `prolog-conflict-catalog` | 9 | `diagnostic_summary.pl:374`'s independent `P1`–`P10` EXPECTED CONFLICT CATALOG |
-| **`cwc-claim-row`** | **9** | **found as a false positive:** `CWC:P3` is a *concealment paper claim row*, guarded by `python/claim_cite_check.py` |
+| namespace | rows (2026-08-14) | rows (2026-08-17 close) | how it was found |
+|---|---|---|---|
+| `oq277-frozen-prereg` | 339 | 339 | **not ambiguous**: a local defined namespace pinned verbatim by the md5-frozen prereg, precisely so the out-of-harness coder could not read it by reference |
+| `other-unclassified` | 112 | 135 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
+| `oq278-subject` | 99 | 115 | OQ-278's own body and this audit — subject, not citation |
+| `paper-publication` | 51 | 51 | the six paper versions PUBLISH the list; definitional restatements, not consumers |
+| **`taxonomy-candidate`** | **49** | **48** | the actual citation population — §4 |
+| `analysis-enumeration` | 49 | 49 | essays, uke transform outputs, recon reports, protocols and analysis scripts numbering **their own** findings |
+| `decompose-manifest-candidate` | 18 | 18 | `"candidate_pattern": "Interpretive Capture (Pattern 3)"` — the DR engine's own vocabulary |
+| `prolog-variable` | 15 | 15 | a Prolog variable literally named `P3` |
+| `prolog-conflict-catalog` | 9 | 9 | `diagnostic_summary.pl:374`'s independent `P1`–`P10` EXPECTED CONFLICT CATALOG |
+| **`cwc-claim-row`** | **9** | **10** | **found as a false positive:** `CWC:P3` is a *concealment paper claim row*, guarded by `python/claim_cite_check.py` |
+| | **750** | **789** | |
+
+### 2.1 The published census was stale at its own commit — attributed by ROW IDENTITY, not by count
+
+**A census that grew against its published figure has two available explanations, and one of
+them is already witnessed on this exact instrument** (§3(d): the sweep read its own output and
+reported 671 → 1421 as discovery). So the delta was reconciled by row key `(file, line)` before
+the new figures were published, not after — the reverse order would launder a possible
+self-consumption artifact into the record, in the pass whose job is repairing the record.
+
+The benign explanation held, and it is worse than the plan assumed. **The 750 figure was already
+stale when it was committed:** the `LABEL_SET.tsv` landing in the *same commit* (`fd73ec9e`) held
+**755** rows, and `c06bcb26` took it to **761** without touching the census. The 750 belongs to
+an earlier intra-session run, and the files that grew between the run and the commit are the
+ones the sweep scans and this session was editing — `ISSUES.md`, `KNOWN_STATE.md`, and this audit's
+own `WRITEUP.md`/`PREREGISTRATION.md`. **A line-keyed census of tracked files invalidates itself as
+it is written**, which is the same lesson §3(d)'s corollary drew for the md5 pin.
+
+Attribution of the two subsequent deltas, per file, by row key:
+
+```
+fd73ec9e -> c06bcb26   (755 -> 761, net +6)
+  ISSUES.md +1  KNOWN_STATE.md +2  PREREGISTRATION.md +3  WRITEUP.md +0
+  — all four are files c06bcb26 itself edited.
+
+c06bcb26 -> 2026-08-17 pre-repair   (761 -> 805, net +44)
+  ISSUES.md +16  KNOWN_STATE.md +6  audits/README.md +2  scripts/gate.sh +2
+  audits/2026-08-17_oq251_.../{PREREGISTRATION,WRITEUP,audit_log,probe_p4_conjuncts} +15
+  python/bound_selector_check.py +3
+  — every delta file was either edited by one of the five commits since, or created by them.
+  No unattributed growth; the self-consumption shape is not present (and the fixpoint holds:
+  two consecutive `--sweep` runs are byte-identical).
+
+2026-08-17 pre-repair -> close   (805 -> 789)
+  the §4.6 repairs remove the nine `destructive-replace` index citations and the live
+  `bound-probe` ones; the residue is prose that names the old index on purpose.
+```
+
+**How the figures above were made honest, given that this file is itself scanned.** Publishing a
+census inside the corpus it counts has no fixed point *unless the last edit adds no countable
+token* — so: all prose landed first, then `--sweep`, then **only the numerals** were patched (a
+digit carries no `Pattern N`/`PN`), then `--sweep` again to confirm the row count had not moved.
+789 rows before the patch and 789 after, and two consecutive runs against a settled tree are
+byte-identical. **No md5 is stamped here on purpose** — the label set is line-keyed, so editing
+this file moves its own rows and any content hash would invalidate itself as it was written,
+which is §3(d)'s corollary (*pin the PRODUCER, never the artifact's content*) applied to the very
+file that recorded it. **The generalisable rule: a self-counting document is
+correct only at a fixed point, and reaching one requires the last write to be token-free.**
+
+**Consequence for OQ-294:** its stated precondition — *"`--sweep` must leave the file
+byte-identical"* — did not hold at the time it was written, because the committed TSV was not the
+product of a run against the committed tree. It holds now, and the durable form of the
+precondition is *regenerate, then compare* — never *assume unchanged*.
 
 **The `CWC:P3` false positive is direct empirical support for Step 0's namespacing.** This
 sweep — written by someone who had just read `claim_cite_check.py`'s warning that *"Their `A2`s
@@ -246,8 +302,10 @@ immutable and cannot be repaired, so they are outside the label set by design �
 
 ## 5. Recovery rate
 
-Of the 49 taxonomy-sense rows the machine now classifies, **29 recover to a mechanism, 8 are
-`inferred`, 12 `unrecoverable`** — and the hand pass in §4 recovers more than the machine does,
+Of the 48 taxonomy-sense rows the machine classifies at the close, **23 recover to a mechanism,
+12 are `inferred`, 13 `unrecoverable`** (at the 2026-08-14 run: 49 rows, 29/8/12 — the recovered
+count falls because the repairs removed index citations, which is the ruling working)
+— and the hand pass in §4 recovers more than the machine does,
 which is why §4 rather than the TSV is the reference for the ruling. **Content recovery works;
 date-based recovery does not exist.** The machine/hand gap is itself the finding of §3(c) and
 is now bounded rather than assumed: the `--check` row fails if the two disagree on the vacated
@@ -268,3 +326,73 @@ slug.
 **Not ruled here.** R1a, R1b, R2 and R4 are the operator's, and their branches were registered
 in `PREREGISTRATION.md` before this sweep ran precisely so the ruling is not made against an
 account written with a direction.
+
+---
+
+## 7. The repair pass (2026-08-17, after R2 = C2 and R1b′ = B1′ landed)
+
+**Re-adjudicated against the new numbering before anything was touched**, per the plan's
+instruction not to blind-repair.
+
+### 7.1 The four §4.4 "wrong labels" are all RETROACTIVELY CORRECT — zero edits
+
+C2 put `fabricated-default` at index 4 in **both** documents, so every one of them now reads
+right, each verified in context rather than assumed:
+
+| site | text | verdict |
+|---|---|---|
+| `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md:23` | *"the 0.0 fallback is a fabricated default (Pattern 4)"* | names the mechanism explicitly — correct |
+| `prolog/coercion_projection.pl:86` | *"a fabricated default (Pattern 4)"* | correct |
+| `docs/design/the_perturbation_move.md:116` | *"the `Supp=0.5` fallback, Pattern 4"* | correct |
+| `python/omega_resolver.py:820, 830` | *"aborts loudly + classified on any mismatch (Build Discipline Pattern 4/5)"* | 4 = fabricated-default, 5 = absence-satisfies-the-gate — correct, and the §4.5 cross-wiring dissolves with the collision |
+
+**The wrong-label class emptied itself.** This is the corroboration the ruling filed as
+corroboration and explicitly not as ground — recorded here so the record shows it was checked,
+not assumed.
+
+### 7.2 The principle that decided what gets edited: CLAIMS are point-in-time, POINTERS are navigation
+
+§4.4's rows are *claims* — a dated finding about what a defect was — and a dated audit's claims
+are not retro-edited even when wrong. §4.6's rows are *pointers*: navigation to a mechanism's
+home. A pointer that no longer resolves is broken navigation, not preserved history, and
+repairing it preserves the record rather than rewriting it. Every repair below **names the
+mechanism** where the index used to be, so the original sense survives the repair — which is also
+why the repaired rows drop out of the sweep: the stale index token is the thing removed.
+
+### 7.3 All nine §4.6 stale pointers repaired; the manifest block retired
+
+`ISSUES.md:350`, `KNOWN_STATE.md`, `MIGRATION_PLAN.md:158`, `b3_open1_discharge.md:25`,
+`oq106_retire/README.md:45`, `oq104_citation_checker/FINDINGS.md:55`, `design_gaps.md`,
+`the_perturbation_move.md:137`, `the_perturbation_principle.md:276` — each now names the
+surviving witness rule (*prove before you replace*) or the plain mechanism (*old-vs-new diff*,
+*faith-merge*) instead of a vacated index. `pattern_citation_check.DISPLACED`'s
+`destructive-replace` block is now `{}` — **swept clean**, re-derived from the corpus each run
+rather than asserted, so a tenth appearing anywhere reds with no allowlist to hide in.
+
+### 7.4 The DISPLACED member's live citations moved to index 7
+
+The second stale class, created by this ruling rather than the earlier one and declared in
+commit 0 before the move: `ISSUES.md`'s two self-check pointers, `engine_handoff_5.md`'s section
+and cross-refs, `engine_handoff_6.md:383`, `swipl_load_path_and_probe_gotchas.md:226`,
+`bound_selector_check.py`'s docstring and its **runtime message** (which printed `BD-P3` at users),
+and `scripts/gate.sh`'s comment. **16 rows across 7 files remain declared as residue, not
+backlog** — prose that names the old index on purpose: the explanations of the renumbering, the
+dated `KNOWN_STATE` entries that recorded it, the oq251 audit log, a SHA-pinned fixture quote in
+OQ-300, and this instrument's own prose.
+
+### 7.5 `ISSUES.md:4433` marked `[AMBIGUOUS — OQ-278]`, never guessed
+
+*"copy-into-audit rejected as Pattern-3, allowlist forbidden"* — neither claimant's mechanism
+fits (copying a file into an audit dir is closer to Pattern 2), so the index is the only
+information present. Labelled, per the three-valued confidence rule.
+
+### 7.6 A control retired itself by working — and it was re-anchored, not deleted
+
+The sweep's second positive control was pinned to `docs/design/design_gaps.md`'s cross-wired
+citation, which is **on this instrument's own repair list**. Repairing it turned the control red
+for the best possible reason and blocked the sweep from writing a label set at all. **A control
+pinned to a site its own instrument is meant to repair retires itself the day the instrument
+works.** All three positives are now anchored on artifacts nothing is licensed to edit — a dated
+audit finding (`fabricated-default`), a frozen `_BEFORE` snapshot (`recap-as-witness`), and a
+completed audit log (`bound-probe`) — one per recoverable mechanism, which is strictly more
+coverage than the two it replaced.

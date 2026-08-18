@@ -273,7 +273,8 @@ signature.
 - `perturb.py` (the reflexive axis) is, by its own docstring, *the single primitive that unifies the
   type-stability sweep family* — which is itself an instance of the principle recognizing itself: the
   bespoke sweeps were all the same move, so one primitive serves (collapsing them onto it is the
-  in-progress consolidation, `build_discipline.md` Pattern 3 / faith-merge).
+  in-progress consolidation, and it owes the old-vs-new diff `build_discipline.md`'s
+  *prove before you replace* requires — a faith-merge otherwise).
 
 ### 7.1 — The recurrence claim is itself an invariance claim, and §6 binds it
 

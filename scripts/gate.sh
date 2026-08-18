@@ -24,18 +24,20 @@ run "omega selftest" python3 python/omega_resolver.py selftest
 run "omega index"    python3 python/omega_resolver.py index --check
 run "spec enums"     python3 python/spec_enum_check.py --check
 # Canonicity of the build-discipline taxonomy (OQ-278). CLAUDE.md and
-# docs/technical/build_discipline.md publish the same numbered list and have disagreed at
-# indices 3 and 4 since 220739b8 (2026-05-30) — undetected for 151 commits, because the
-# member COUNTS converged at the exact commit the contents diverged. Compares names per
-# index; collisions 3 and 4 are allowlisted with their state, so a silent resolution goes
-# red too. Selftest (6 controls) rides --check, so this is one row, not two.
+# docs/technical/build_discipline.md publish the same numbered list and disagreed at indices
+# 3 and 4 from 220739b8 (2026-05-30) until the 2026-08-17 ruling — undetected for 151 commits,
+# because the member COUNTS converged at the exact commit the contents diverged. Compares
+# names per index. The collision and spine-lag allowlists are now EMPTY, which is the strong
+# state: nothing exempted, so any divergence is a new fork. Selftest (7 controls) rides
+# --check, so this is one row, not two.
 run "doc patterns"   python3 python/doc_pattern_check.py --check
-# BD-P3 made mechanical (2026-08-17). A bound SELECTOR on a cut-ordered dispatch predicate
-# skips earlier clauses' cuts and answers "satisfies that clause body", not "the engine
-# assigns it" — over-permissive, so a bound ZERO is safe and a bound NONZERO is an artifact.
-# This is a gate row rather than a documented rule because the rule WAS documented (BD-P3,
-# 2026-05-30, with this exact worked example) and inline-annotated at two sibling sites, and
-# still left 5 bound-selector call sites — one of them feeding a reported FCR percentage.
+# The bound-selector rule made mechanical (2026-08-17). A bound SELECTOR on a cut-ordered
+# dispatch predicate skips earlier clauses' cuts and answers "satisfies that clause body",
+# not "the engine assigns it" — over-permissive, so a bound ZERO is safe and a bound NONZERO
+# is an artifact. This is a gate row rather than a documented rule because the rule WAS
+# documented (build_discipline Pattern 7, written 2026-05-30 with this exact worked example)
+# and inline-annotated at two sibling sites, and still left 5 bound-selector call sites —
+# one of them feeding a reported FCR percentage.
 # Discrimination record: RED (5 sites) at dcde9591, GREEN after the repairs in this change.
 run "bound selector" python3 python/bound_selector_check.py --check
 # Unswept consumers of a DISPLACED taxonomy member (OQ-278) — one manifest block per member,

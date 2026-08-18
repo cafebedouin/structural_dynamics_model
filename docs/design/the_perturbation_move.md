@@ -134,8 +134,8 @@ stability band in `enhanced_report.py` (E5) and the sensitivity sweeps are its c
 `ε`-stability rule (`design_discipline.md` §7) is the same control for the one authored primitive.
 Per its own docstring `perturb.py` is *the single primitive that unifies the type-stability sweep
 family* — the move recognizing that the bespoke sweeps were already the same move (the consolidation
-that collapses them onto it is the in-progress half; see `build_discipline.md` Pattern 3 /
-faith-merge). See `docs/technical/perturb_substrate.md`.
+that collapses them onto it is the in-progress half; the consolidation owes the old-vs-new
+diff `build_discipline.md`'s *prove before you replace* requires — a faith-merge otherwise). See `docs/technical/perturb_substrate.md`.
 
 ---
 

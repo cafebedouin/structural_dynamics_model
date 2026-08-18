@@ -380,7 +380,7 @@ generator and the other the engine.
    NL-gate fix. Confirm it still reproduces or record what moved. The temporal path and
    signature behavior both changed this session.
 2. **The 3 declined NL certs (5→2)** — re-run the NL signature census (unbound + post-filter,
-   Pattern 3 self-check) and confirm 2, not 5. Identify the 3 declined and confirm each has an
+   Pattern 7 self-check) and confirm 2, not 5. Identify the 3 declined and confirm each has an
    authored `constraint_beneficiary` fact (the reason they were false-naturals).
 3. **The 268-row correction and +642 set move** — re-run against the fixed `classify_at_time`;
    confirm the count and, critically, the SET delta (6542→7184), not just the pair count (79).
