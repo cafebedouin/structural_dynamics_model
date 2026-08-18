@@ -57,6 +57,22 @@ run "dispatch head"  python3 python/dispatch_head_check.py --check
 # rather than a fourth note (operator, 2026-08-14). Declaration-based: red on a NEW consumer,
 # red on a silent repair that does not retire its manifest entry in the same change.
 run "displaced cites" python3 python/pattern_citation_check.py --check
+# OQ-68 made mechanical (2026-08-18). A cross-module `other:pred(...)` call reaches past
+# other's export list; SWI permits it unconditionally, so an internal signature change fails
+# SILENTLY at every bypass site and the blast radius is not enumerable without a sweep. This
+# is a gate row rather than a documented rule because the corpus-schema half is opt-in in
+# exactly the way reading_registry registration and the spec_enum sentinels are: a new
+# predicate is unguarded until someone remembers it, and TWO members had already fallen out
+# undetected (flat_control_of/2 declared nowhere engine-side; has_sunset_clause/1 :- dynamic
+# but never :- multifile) — held correct only by every writing testset self-declaring.
+# Arm C additionally BUYS BACK the typo detector that `:- multifile` silences: once a
+# predicate is multifile, SWI stops warning on redefinition, and that warning was doing the
+# job by accident. Standing run scans the default leg (1.4s); --full does all five (13s).
+# Discrimination record: arm B fires at dc12bf5a^ and declines at dc12bf5a, differing by
+# exactly {story_provenance/8, story_seed/3} — the pair that commit repaired — with three
+# constant fires on both sides. Arms A and C verified red-capable by plant-and-restore on
+# the live tree. Full record + the ruling: python/module_boundary_check.py docstring.
+run "module bounds"  python3 python/module_boundary_check.py --check
 run "claim cites"    python3 python/claim_cite_check.py --check
 run "claim cites st" python3 python/claim_cite_check.py --selftest
 run "known_state"    python3 python/known_state_status.py --check
