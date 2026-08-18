@@ -13733,6 +13733,48 @@ interpreter version with the effect under test, which is the same single-variabl
 error OQ-251 was closed on. Related: `docs/technical/swipl_load_path_and_probe_gotchas.md`
 §16 (version pin + which witnesses are stamped to which version).
 
+**The gdb / core-dump route is BLOCKED, and not for the reason the prereg states (added
+2026-08-18).** The prereg files "naming the crashing static function" as out of scope
+because `swi-prolog-nox-dbgsym` "needs an interactive `sudo apt install` — operator
+action." That is not the binding constraint. Verified on this machine 2026-08-18:
+
+1. **No dbgsym package exists to install.** `apt-cache policy swi-prolog-nox-dbgsym`
+   returns nothing; the PPA we run from
+   (`ppa.launchpadcontent.net/swi-prolog/stable/ubuntu noble/main`) publishes no dbgsym,
+   and no ddebs source is configured. `apt-cache search swi-prolog` lists 10 packages,
+   none of them `-dbg`/`-dbgsym`. Ubuntu's own `swi-prolog-nox 9.0.4+dfsg-3.1ubuntu4`
+   (noble/universe) would have a ddeb, but that is a DIFFERENT, older build than the one
+   that crashed.
+2. **The prereg's `.gnu_debuglink` hash is stale.** It names
+   `3d54da59530c9f6a780ae566ccc0d393e641de24.debug`; the installed binary's build-id is
+   now `c1d498fd0e1a6134341d083b73ede33f4d5f119c`. The round-1 binary was **purged**
+   2026-08-18 01:55:39, so symbols for the binary that actually segfaulted are
+   unobtainable — round 1 cannot be retro-debugged at any price.
+3. **`gdb` is not installed** (candidate `15.1-1ubuntu1~24.04.1`, one `sudo apt install`
+   away — this part genuinely is operator action).
+4. **Core dumps are silently discarded, which is the real trap.** `ulimit -c` is 0; and
+   raising it does not help, because `/proc/sys/kernel/core_pattern` is
+   `|/wsl-capture-crash %t %E %p %s` and **`/wsl-capture-crash` does not exist**.
+   Positive control run 2026-08-18: a deliberate `kill -SIGSEGV` under
+   `ulimit -c unlimited` printed `Segmentation fault (core dumped)` and **left no core
+   anywhere** (`/tmp`, `/var/lib/apport/coredump/` empty since 2022, no `coredumpctl`).
+   The shell's "(core dumped)" is success-shaped output for a core that was piped into a
+   missing binary — Pattern 6, at the OS layer.
+
+**Sequencing consequence for round 2 (this is the operative part).** Do NOT start with the
+debugger. Cheapest-first:
+(a) **Re-run a round-1-equivalent arm on 10.0.2.** The crash may simply be gone — round 1
+    ran on the pre-upgrade interpreter (see the entry above), so this single arm can moot
+    arm F and the whole symbol question.
+(b) **If it still crashes, fix core capture BEFORE running arms A–D**, not after: at
+    7/100, a round-2 run without working cores burns 150 executions per arm and preserves
+    nothing analyzable. Needs `ulimit -c unlimited` plus a `core_pattern` that writes a
+    file (`/etc/sysctl.d/` persists it — `wsl.conf` has `systemd=true`).
+(c) Only then is `gdb` worth installing, and even then it yields addresses/offsets, not
+    function names, until a symbol-bearing swipl exists — which means building from source
+    (arm F's original idea) or moving to the distro package. Both are real spends; neither
+    is unblocked by an `apt install`.
+
 ---
 
 ## OQ-302 — boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577
