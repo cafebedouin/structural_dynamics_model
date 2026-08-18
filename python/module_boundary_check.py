@@ -442,11 +442,12 @@ def _scan_args(text: str, open_paren: int, values: bool):
     Quote- and nesting-aware: this is the half the naive parser got wrong — a comma inside
     a quoted string, or a fact spanning several lines, both inflate a line-based count.
 
-    KNOWN DEFECT, deliberately preserved here and fixed in the next commit: neither `[`
-    nor `]` sets `saw`, so a term whose arguments are ALL bracket structures
-    (`adjacent_pairs([], [])`) scans as 0 — a predicate recorded at an arity it does not
-    have. Preserved in THIS commit because this commit's whole claim is that nothing
-    changed; corrected, with its own before/after witness, in the next.
+    `saw` distinguishes `foo()` (arity 0) from `foo(X)` (arity 1) — an empty argument list
+    from a one-argument one. It must therefore be set by BRACKETS as well as by bare tokens:
+    a term whose arguments are all bracket structures (`adjacent_pairs([], [])`) is a real
+    2-argument term, and reading it as 0 records a predicate at an arity it does not have —
+    the fabricated-census-row shape this file's own qualified_refs() docstring warns about.
+    23 engine sites scanned that way before this was fixed.
     """
     i, n, depth, in_q = open_paren + 1, len(text), 1, None
     start, out, count, saw = i, [], 1, False
@@ -461,10 +462,12 @@ def _scan_args(text: str, open_paren: int, values: bool):
         if c in ("'", '"'):
             in_q = c; saw = True; i += 1; continue
         if c in "([{":
-            depth += 1
+            depth += 1; saw = True
         elif c in ")]}":
             depth -= 1
-            if depth == 0:
+            if depth != 0:
+                saw = True
+            else:
                 if not saw:
                     return [] if values else 0
                 if values:
@@ -929,6 +932,20 @@ FIXTURES = [
     ("allowlist row grammar accepts a well-formed row",
      lambda: bool(ROW.match("narrative_ontology:constraint_victim/2  ROLE=corpus-schema  "
                             "written by testsets")),
+     True),
+    ("bracket-only arguments are ARGUMENTS, not an empty list (phantom /0 control)",
+     lambda: arity_at("adjacent_pairs([], []).", len("adjacent_pairs")),
+     2),
+    ("...and the empty argument list is still 0 (two-sided against that fix)",
+     lambda: arity_at("clear_kb().", len("clear_kb")),
+     0),
+    ("an ALL-bracket nested term keeps its true arity (the first rewrite read 3 here)",
+     lambda: arity_at("context([],[],[],[]).", len("context")),
+     4),
+    ("the two scan modes agree by construction (one grammar, not two parsers)",
+     lambda: all(len(split_args(t, t.index("("))) == arity_at(t, t.index("("))
+                 for t in ["f()", "f(a)", "f([], [])", "f('x, y')", "f(a, [b, c], d)",
+                           "f(context([],[],[],[]))", "f(g(h(1,2)), [x|Y])"]),
      True),
     ("allowlist row grammar REJECTS a reasonless row",
      lambda: bool(ROW.match("narrative_ontology:constraint_victim/2  ROLE=corpus-schema")),
