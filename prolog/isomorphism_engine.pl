@@ -40,9 +40,25 @@ calculate_profile_distance(
     Distance is sqrt(D2) / 2.5. % Normalized to [0,1]
 
 %% cluster_by_signature(+Signature, -Cluster)
-%  Finds all constraints sharing a specific structural signature.
+%  Finds all CORPUS constraints the engine assigns a specific structural signature.
+%
+%  REWRITTEN 2026-08-17 (audits/2026-08-17_bound_dispatch_hardening/, Phase 3b).
+%  The old body — findall over constraint_signature(C, Sig) with Sig bound and C
+%  UNBOUND — was wrong under BOTH head regimes: pre-conversion it was a bound-probe
+%  (build_discipline Pattern 7: each lock clause tested in isolation); post-conversion
+%  (fresh-variable heads + unify-after-cut) clause 1's cut fires on the first
+%  GENERATED C and prunes the whole enumeration (probe witnessed: 0 of the 26
+%  engine-assigned `unknown` members returned). Correct shape: enumerate the corpus
+%  denominator (corpus_constraint/1, the authoritative membership per CLAUDE.md),
+%  compute the engine's own assignment per member, compare. Dormant at rewrite time
+%  (no callers); probe witness in the audit dir's audit_log.md.
 cluster_by_signature(Sig, Cluster) :-
-    findall(C, signature_detection:constraint_signature(C, Sig), Cluster).
+    findall(C,
+            ( corpus_loader:corpus_constraint(C),
+              once(signature_detection:constraint_signature(C, S0)),
+              S0 == Sig
+            ),
+            Cluster).
 
 %% generate_cross_domain_index(-Index)
 %  The "Pattern Search" entry point.

@@ -40,6 +40,16 @@ run "doc patterns"   python3 python/doc_pattern_check.py --check
 # one of them feeding a reported FCR percentage.
 # Discrimination record: RED (5 sites) at dcde9591, GREEN after the repairs in this change.
 run "bound selector" python3 python/bound_selector_check.py --check
+# DEFINITION-SITE sibling of the row above (2026-08-17, bound-dispatch audit). Flags any
+# engine predicate whose heads carry the bound-probe shape (>= 2 same-position output
+# atoms + cuts); keyed to where the invariant lives, so it catches contract-level bound
+# selectors no call-site regex can see, and stops firing on a predicate once converted
+# to fresh-variable heads + unify-after-cut. Red on an UNDECLARED new member and on a
+# CONVERTED predicate firing again (revert detection). Membership registry + reasons in
+# the checker. Discrimination record: fired on pre-fix classify_from_metrics/6 +
+# constraint_signature/2, declined on dr_type/3 and on both post-fix
+# (audits/2026-08-17_bound_dispatch_hardening/).
+run "dispatch head"  python3 python/dispatch_head_check.py --check
 # Unswept consumers of a DISPLACED taxonomy member (OQ-278) — one manifest block per member,
 # with the state that says WHY its citations are stale: `destructive-replace` was vacated
 # (2026-08-11), `bound-probe` was renumbered 3 -> 7 (2026-08-17). build_discipline.md's

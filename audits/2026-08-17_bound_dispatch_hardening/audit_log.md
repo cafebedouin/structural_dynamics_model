@@ -154,3 +154,15 @@ end-anchor re-pinned to the new terminal clause text (verified GREEN post-edit).
   registry itself is UNCHANGED per prereg scope guard).
 - **Kill condition: NOT triggered** — no unbound-path result changed anywhere
   (six-leg + end-to-end zero-diff, check_stack at baseline).
+
+## Phase 3 step 3 + 3b
+
+- Gate row `dispatch head` wired (scripts/gate.sh, after `bound selector`); full gate
+  GREEN with the new row.
+- **3b: the plan's premise was WRONG in an instructive way, and the probe caught it.**
+  cluster_by_signature's findall runs with C UNBOUND, so post-conversion clause-1's
+  cut prunes the whole generator — probe witnessed 0 of 26 engine-assigned `unknown`
+  members returned (NOT "correct by construction" as the plan expected). Disposition
+  executed as REPAIR (dormant predicate, no callers, zero risk): enumerate
+  corpus_constraint/1 + once + post-filter, site comment records both failure regimes.
+  Probe re-run: MATCH on unknown (26/26), false_ci_rope (85/85), natural_law (0/0).
