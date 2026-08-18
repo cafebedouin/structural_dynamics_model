@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "dde95d9006590689285e06973d687f29574d81d8",
+    "store_version": "4e82275ff0054631aa7e59f91b5270f436263580",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T11:57:05"
+    "generated_at": "2026-08-18T14:42:04"
   },
-  "issues_sha": "8f396c6c389458e90d0a08bd1082b8a960e9599ff1e2c74495a2e39385fc4c6c",
-  "n_entries": 311,
+  "issues_sha": "a62ba44b907860cf0c0ac994aa53a59f0c7c040d1a23cc74116af0625164c08c",
+  "n_entries": 312,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 119,
+    "open": 120,
     "partial": 8
   },
   "active": [
@@ -1831,6 +1831,22 @@
         "OQ-22",
         "OQ-25",
         "OQ-67"
+      ]
+    },
+    {
+      "id": "OQ-312",
+      "status": "open",
+      "priority": 5,
+      "summary": "`formalization` is a scalar axis, but formalization is gauge-relative: a Lean certificate is adequate to the consumer gauge and degenerate to the extender gauge",
+      "deps": [
+        "bundled_with OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-285",
+        "OQ-296",
+        "OQ-310",
+        "OQ-311"
       ]
     }
   ],
