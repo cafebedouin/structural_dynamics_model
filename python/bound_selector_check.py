@@ -113,6 +113,14 @@ SKIP_PARTS: dict[str, str] = {
               "A probe here is a record. Live probes belong in prolog/ or python/.",
     "outputs": "Generated artifacts, gitignored. Not source.",
     "node_modules": "Vendored third-party code.",
+    ".venv": "PYTHON VIRTUALENV — installed third-party packages, gitignored "
+             "(`.gitignore:21`), reconstructible from pyproject.toml. Cannot hold a "
+             "live call site by construction: nothing here is repo source, and no "
+             "engine predicate is defined or called from site-packages — a bound "
+             "selector there would be a third party's code, not ours. Added "
+             "2026-08-18 after a dependency install pushed the scan 12263 -> 13474 "
+             "files and the gate past its 2-minute budget; .venv alone contributes "
+             "~9,019 .py/.pl/.sh files of pure noise.",
 }
 
 # Sentinel-bounded regions inside THIS file where the violating shape is QUOTED by

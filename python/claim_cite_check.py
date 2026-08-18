@@ -118,7 +118,9 @@ PIN_INLINE = "PIN-RECORD-INLINE"
 SECTION_RE = re.compile(r"`CWC`\s*§([0-9]+(?:\.[0-9]+)?)")
 
 SCAN_SUFFIXES = {".md", ".sh", ".py", ".pl", ".txt", ".json"}
-SKIP_DIRS = {".git", "node_modules", "__pycache__", ".claude"}
+# .venv added 2026-08-18: installed third-party packages, gitignored, ~9,019 scannable
+# files. No repo claim or citation can live in site-packages, so this cannot hide one.
+SKIP_DIRS = {".git", "node_modules", "__pycache__", ".claude", ".venv"}
 
 
 def digest_of(label, cwc_path=CWC):
