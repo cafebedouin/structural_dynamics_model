@@ -2991,6 +2991,15 @@ fingerprint-frozen corpus, both exit 0 with mtime advanced, `per_constraint` md5
 - Arity/shape safety for the wide corpus predicates → **OQ-308**. This close makes the blast
   radius *enumerable*, not *safe*.
 - A latent defect found by the sweep, recorded not fixed → **OQ-307**.
+- **Declared side effect of the multifile close, witnessed on all five legs.** Counts are
+  unchanged everywhere (`has_sunset_clause` 11/14/8/16/23, `flat_control_of` 28/0/0/0/0,
+  identical before and after), but on the four twin legs — which have **zero**
+  `flat_control_of/2` writers — the predicate went from **undefined** (a call threw
+  `existence_error`) to **defined-but-empty** (a call fails silently). No consumer exists, so
+  nothing observes it today; the direction is nonetheless loud → quiet, against the
+  fail-closed default, and is noted at the declaration site so a future consumer does not read
+  "empty" as "no flat control exists". The alternative — leaving it undeclared — is the 1/28
+  row-loss defect this close exists to remove, so the declaration stands.
 ---
 
 ## OQ-69 — Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)

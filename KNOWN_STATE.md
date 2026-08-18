@@ -114,6 +114,19 @@ modules, so every call through it looked like a bypass — the first live run re
 third argument the rule discards, and no `constraint_claim(_, theater_ratio)` fact exists in
 any leg — so `type_5_piton_as_snare` has never fired, and would throw on `TR` if it did.
 
+**Five-leg witness, and one declared side effect.** The engine-change rule was discharged by
+comparing load counts on all five legs against `5c37b3e4`. Counts are identical on both sides
+(`corpus` 279/960/960/1005/1001; `has_sunset_clause` 11/14/8/16/23; `flat_control_of`
+28/0/0/0/0). But the four twin legs have **zero** `flat_control_of/2` writers, so there the
+predicate went from **undefined** (call throws `existence_error`) to **defined-but-empty**
+(call fails silently). Nothing consumes it, so nothing observes it — but the direction is loud
+→ quiet, and a future consumer must not read the empty result as "no flat control exists".
+Noted at the declaration site in `narrative_ontology.pl`. Two probe lessons worth carrying:
+the first version of this probe was non-total and died on exactly this undefined case while
+printing nothing a grep would catch, and the second labelled everything `defined` because
+`St0=UNDEFINED` binds a *variable*, not an atom — a capitalised-atom slip that made the label
+unable to fail. The shipped probe carries its own red-capability control.
+
 **Also witnessed (invocation, not a defect):** a bare `./scripts/gate.sh` reports a FALSE RED
 on `gap surfaces` — `ModuleNotFoundError: No module named 'pandas'`, because the row shells out
 to `python/query.py` and `gate.sh` calls bare `python3`. Run it as

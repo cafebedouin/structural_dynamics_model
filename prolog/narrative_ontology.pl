@@ -116,6 +116,14 @@
                              % NOTE: no engine consumer exists (checked 2026-08-18: zero
                              % non-corpus references). Declared for load-correctness, NOT
                              % wired — an authored field awaiting a reader, tracked as such.
+                             % CONSEQUENCE, witnessed across all five legs: on the four twin
+                             % legs (0 writers) this predicate was UNDEFINED before this
+                             % declaration, so a call threw existence_error; it is now
+                             % defined-but-empty and a call FAILS SILENTLY. Nothing observes
+                             % that today (no consumer), but the direction is loud -> quiet,
+                             % against the fail-closed default. A future consumer must treat
+                             % an empty result as "no data authored on this leg", NOT as
+                             % "no flat control exists" — the two are the same token here.
     has_sunset_clause/1.
 
 :- dynamic
