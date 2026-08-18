@@ -131,6 +131,15 @@ EXEMPT: dict[str, str] = {
     # (empty at introduction — the four known sites are being REPAIRED, not exempted.
     #  An exemption is for a site where the bound form is provably correct, e.g. a
     #  predicate whose registry entry says the selector is the FIRST clause.)
+    "prolog/tests/test_dispatch_bound_call.pl:ambiguous":
+        "2026-08-17 head conversion: constraint_signature/2 now has fresh-variable "
+        "heads + unify-after-cut, so a bound call means 'engine assigns' — and this "
+        "unit's job is to ASSERT exactly that (it was RED against the pre-conversion "
+        "heads). If the conversion is reverted, gate row `dispatch head` "
+        "(dispatch_head_check.py MUST-NOT-FIRE) and this unit both go red.",
+    "prolog/tests/test_dispatch_bound_call.pl:unknown":
+        "Same conversion, same unit — the bound-unknown call asserts the honest "
+        "bound-call semantics on the converted predicate.",
 }
 
 # A bound selector = a lowercase atom (Prolog) or a quoted atom (Python-embedded

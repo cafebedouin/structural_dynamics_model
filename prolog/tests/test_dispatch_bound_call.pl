@@ -11,9 +11,10 @@
    Discrimination record (the before-commit free pair): at pre-fix HEAD the two
    over_accept tests are RED — bound calls succeed on types the engine does not assign
    (witnessed in-session: engine_first=scaffold yet bound rope SUCCEEDS; sig_first=unknown
-   yet bound ambiguous SUCCEEDS, the constraint_signature(C, ambiguous) 276-vs-0 artifact
-   of 2026-08-17). At the fix commit they are GREEN. Runs recorded in the audit dir's
-   audit_log.md.
+   yet bound ambiguous SUCCEEDS — the 276-vs-0 bound-ambiguous artifact of 2026-08-17).
+   At the fix commit they are GREEN. Runs recorded in the audit dir's audit_log.md.
+   The two bound calls below are EXEMPT in bound_selector_check.py by design: post-
+   conversion a bound call IS "engine assigns", and asserting that is this unit's job.
 
    Fixture: bdh_synth_overlap authors ONLY a constraint_beneficiary (multifile), making
    the scaffold body AND the rope body both true at the metrics below — the engine's

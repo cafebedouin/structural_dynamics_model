@@ -364,13 +364,21 @@ coordination_dead(C) :-
 classify_from_metrics(_C, _BaseEps, _Chi, Supp, _Context, _Type) :-
     \+ number(Supp), !, fail.
 
-classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
+% FRESH-VARIABLE HEADS + UNIFY-AFTER-CUT (2026-08-17, the dr_type/3 idiom;
+% audits/2026-08-17_bound_dispatch_hardening/). Every clause head below binds Type
+% AFTER its cut, never in the head — so a caller with Type pre-bound cannot skip an
+% earlier clause's commitment: the cascade runs in authored order and the bound atom
+% is compared against the engine's own answer. Reverting any head to the atom form
+% re-arms the bound-probe shape (build_discipline Pattern 7); gate row
+% `dispatch head` (python/dispatch_head_check.py) goes RED on that revert.
+classify_from_metrics(C, BaseEps, _Chi, Supp, Context, Type) :-
     config:param(mountain_suppression_ceiling, SuppCeil),
     Supp =< SuppCeil,
     config:param(mountain_extractiveness_max, MaxX),
     BaseEps =< MaxX,
     emerges_naturally(C),
-    constraint_indexing:effective_immutability_for_context(Context, mountain), !.
+    constraint_indexing:effective_immutability_for_context(Context, mountain), !,
+    Type = mountain.
 
 % v7.0: Piton pre-check — dead coordination + high theater overrides extraction-based
 % classification.  Fires before snare gate when coordination vitality is explicitly
@@ -378,16 +386,17 @@ classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
 % Does NOT check Chi or suppression: a dead-coordination constraint with high theater
 % is a piton regardless of extraction level.  Epsilon > 0.10 floor retained to prevent
 % zero-extraction mountains from misclassifying.
-classify_from_metrics(C, BaseEps, _Chi, _Supp, _Context, piton) :-
+classify_from_metrics(C, BaseEps, _Chi, _Supp, _Context, Type) :-
     coordination_dead(C),
     config:param(piton_epsilon_floor, EpsFloor),
     BaseEps > EpsFloor,
     config:param(theater_metric_name, TheaterMetricName),
     effective_theater_ratio(C, TheaterMetricName, TR),
     config:param(piton_theater_floor, TRFloor),
-    TR >= TRFloor, !.
+    TR >= TRFloor, !,
+    Type = piton.
 
-classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
+classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type) :-
     \+ natural_law_without_beneficiary(C),            % Block snare for natural laws
     config:param(snare_chi_floor, ChiFloor),
     Chi >= ChiFloor,
@@ -395,9 +404,10 @@ classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
     BaseEps >= EpsFloor,
     config:param(snare_suppression_floor, SuppFloor),
     Supp >= SuppFloor,
-    snare_immutability_check(Context), !.
+    snare_immutability_check(Context), !,
+    Type = snare.
 
-classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
+classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, Type) :-
     config:param(scaffold_extraction_ceil, MaxX),
     Chi =< MaxX,
     narrative_ontology:has_coordination_function(C),
@@ -410,9 +420,10 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
     \+ narrative_ontology:constraint_captured(C),
     scaffold_temporality_check(C),
     config:param(theater_metric_name, TheaterMetricName),
-    \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !.
+    \+ (narrative_ontology:constraint_metric(C, TheaterMetricName, TR), TR > 0.70), !,
+    Type = scaffold.
 
-classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
+classify_from_metrics(C, BaseEps, Chi, _Supp, Context, Type) :-
     config:param(rope_chi_ceiling, ChiCeil),
     Chi =< ChiCeil,
     % v6.0: When Chi =< 0, agent is a net beneficiary — skip base extraction gate.
@@ -421,9 +432,10 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
     (Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
     (   constraint_indexing:effective_immutability_for_context(Context, rope)
     ;   emerges_naturally(C)  % Domain-invariant: bypass power-indexed immutability
-    ), !.
+    ), !,
+    Type = rope.
 
-classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+classify_from_metrics(C, BaseEps, Chi, Supp, _Context, Type) :-
     \+ natural_law_without_beneficiary(C),            % Block tangled_rope for natural laws
     config:param(tangled_rope_chi_floor, ChiFloor),
     config:param(tangled_rope_chi_ceil, ChiCeil),
@@ -435,9 +447,10 @@ classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
     Supp >= MinS,
     requires_active_enforcement(C),
     narrative_ontology:has_coordination_function(C),
-    narrative_ontology:has_asymmetric_extraction(C), !.
+    narrative_ontology:has_asymmetric_extraction(C), !,
+    Type = tangled_rope.
 
-classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
+classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, Type) :-
     config:param(piton_extraction_ceiling, XCeil),
     Chi =< XCeil,
     config:param(piton_epsilon_floor, EpsFloor),
@@ -445,18 +458,21 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     config:param(theater_metric_name, TheaterMetricName),
     effective_theater_ratio(C, TheaterMetricName, TR),
     config:param(piton_theater_floor, TRFloor),
-    TR >= TRFloor, !.
+    TR >= TRFloor, !,
+    Type = piton.
 
 % Naturalized: high structural extraction (ε > rope ceiling) compressed below
 % detection threshold (χ < tangled_rope floor) by power scaling.  This is the
 % primary substrate for false_summit rhetoric — see dr_claim_mismatch/4 Type 1.
-classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, naturalized) :-
+classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, Type) :-
     config:param(rope_epsilon_ceiling, EpsCeil),
     BaseEps > EpsCeil,
     config:param(tangled_rope_chi_floor, ChiFloor),
-    Chi < ChiFloor, !.
+    Chi < ChiFloor, !,
+    Type = naturalized.
 
-classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
+classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, Type) :-
+    Type = unknown.
 
 % ============================================================================
 % CANONICAL TYPE DETERMINATION (INDEXED)

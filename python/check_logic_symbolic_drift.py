@@ -75,7 +75,9 @@ def extract_classify_span(drl_core_text: str) -> str:
     if start == -1:
         raise SystemExit("FATAL: classify_from_metrics/6 not found in drl_core.pl")
     # Terminal clause is the catch-all unknown; anchor on it so we include every clause.
-    end_anchor = "classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown)."
+    # 2026-08-17 head transformation (bound-dispatch hardening): the terminal clause
+    # is now a fresh-variable head + unify-after-cut, not an atom-headed fact.
+    end_anchor = "classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, Type) :-\n    Type = unknown."
     end = drl_core_text.find(end_anchor, start)
     if end == -1:
         raise SystemExit(

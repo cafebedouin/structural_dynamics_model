@@ -113,3 +113,44 @@ ERROR: 2 tests failed
 Interactive pre-fix witness (same fixture, this session):
 engine_first=scaffold / bound_rope=SUCCEEDS_over_accept;
 sig_first=unknown / bound_ambiguous=SUCCEEDS_276_artifact.
+
+## Phase 3/4 — conversion landed; witnesses (all same-session)
+
+Transformation applied per frozen prereg (md5 1a9f61469525ac481acc6fae47a85aea):
+classify_from_metrics/6 (9 heads + terminal), constraint_signature/2 (6 locks),
+classify_by_signature/3 (5 locks + terminal, ambiguous catch-all KEPT). Bodies and
+clause order untouched. Same-change consumer update: check_logic_symbolic_drift.py
+end-anchor re-pinned to the new terminal clause text (verified GREEN post-edit).
+
+- **dispatch_bound_call GREEN post-fix** (17/17 pass incl. the two tests RED pre-fix)
+  — the RED/GREEN before-commit pair is complete.
+- **Checker 4th discrimination run:** `dispatch_head_check --check` GREEN — 70 hits
+  (was 73), all three converted predicates now silent under MUST-NOT-FIRE entries.
+- **Six-leg clean-vs-edited pairs: per_constraint IDENTICAL on all six**
+  (testsets 279, haiku 960, flash 960, kimi 1005, sonnet 1001, kernel_v1 1106;
+  manifest normalized for pipeline_run_at/code_commit/code_dirty; leg-dir md5
+  fingerprints stable around BOTH halves of every pair; exit 0 + fresh outputs
+  enforced by classify_corpus's raw-freshness refusal; pair_diff_output.txt).
+  Per prereg: **output-preserving on the witness set, semantics-changing by
+  construction** — zero diff means no witnessed disagreement REACHED per_constraint;
+  the 311 live manufactured cells (RECON §5) live on the is_X surface, which
+  per_constraint does not consume (dr_type routes through unbound calls).
+- **Paired timings (clean → edited s):** testsets 13.33→13.29; haiku 61.76→63.57;
+  flash 70.17→71.85; kimi 64.33→65.82; sonnet 83.36→84.76; kernel_v1 61.49→61.49.
+  Worst pair +2.9% — indexing loss not material at corpus scale.
+- **End-to-end run_pipeline pre/post:** exit 0 both; 42.93s → 39.61s wall;
+  per_constraint 0/279 rows differ; manifest (normalized) same; output mtime advanced.
+- **golden_file_check: NOT RUNNABLE** — no baseline artifact exists in this working
+  tree (outputs/ gitignored; never generated here). Substitute witness: the pre/post
+  full-pipeline per_constraint diff above carries the dr_type vector (perspectives
+  map) for every corpus story — 0 rows differ. Recorded, not silently skipped.
+- **check_stack pre/post byte-compare** (pre-fix via scoped stash): identical except
+  two "Redefined global predicate" lines change POSITION (load-order noise, same
+  lines). 0 new findings.
+- **load_warning_gate:** 3 warnings, 3 allowlisted, 0 unexpected.
+- **Full gate GREEN** (one intermediate red: the legacy bound_selector_check regex
+  fired on the new unit's deliberate bound calls + one block-comment prose line —
+  resolved by rephrasing the prose and TWO reasoned EXEMPT entries; the CUT_ORDERED
+  registry itself is UNCHANGED per prereg scope guard).
+- **Kill condition: NOT triggered** — no unbound-path result changed anywhere
+  (six-leg + end-to-end zero-diff, check_stack at baseline).

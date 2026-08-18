@@ -72,15 +72,22 @@
 % Boltzmann-derived: False Natural Law (v5.1)
 % Intercepts constraints that claim naturality but fail Boltzmann independence.
 % Checked BEFORE natural_law to catch "physics-washed" constraints.
-constraint_signature(C, false_natural_law) :-
-    false_natural_law(C, _), !.
+% FRESH-VARIABLE HEADS + UNIFY-AFTER-CUT (2026-08-17, the dr_type/3 idiom;
+% audits/2026-08-17_bound_dispatch_hardening/). Sig binds AFTER each cut, never in
+% the head, so a bound call cannot skip an earlier lock's commitment (the shape behind
+% the constraint_signature(C, ambiguous) 276-vs-0 artifact). Reverting a head to the
+% atom form re-arms build_discipline Pattern 7; gate row `dispatch head` goes RED.
+constraint_signature(C, Sig) :-
+    false_natural_law(C, _), !,
+    Sig = false_natural_law.
 
 % Boltzmann-derived: False CI_Rope (v5.1)
 % Intercepts constraints that appear to be ropes from metrics but fail
 % Boltzmann structural tests. The "coordination-washed" analogue of FNL.
 % Checked BEFORE CI_Rope to catch constraints that would falsely certify.
-constraint_signature(C, false_ci_rope) :-
-    false_ci_rope(C, _), !.
+constraint_signature(C, Sig) :-
+    false_ci_rope(C, _), !,
+    Sig = false_ci_rope.
 
 % Metric-derived: False Summit Mountain (v6.9; agency gate June 2026)
 % Intercepts constraints that meet all mountain metric thresholds but have
@@ -101,8 +108,9 @@ constraint_signature(C, false_ci_rope) :-
 % which is empty corpus-wide (0 facts) — that gate was dormant-over-empty-table,
 % satisfied by absence; it now counts agent beneficiaries (see
 % count_power_beneficiaries). See ISSUES.md OQ on the satisfy-on-absence class.
-constraint_signature(C, false_summit_mountain) :-
-    false_summit_mountain(C, _), !.
+constraint_signature(C, Sig) :-
+    false_summit_mountain(C, _), !,
+    Sig = false_summit_mountain.
 
 % Boltzmann-derived: Natural Law via Emergence (v6.1)
 % Intercepts before CI_Rope for natural laws with incidental beneficiaries.
@@ -111,16 +119,18 @@ constraint_signature(C, false_summit_mountain) :-
 % Without this, constraints like P!=NP (which have constraint_beneficiary
 % declarations for perspectival analysis) would be intercepted by CI_Rope
 % and misclassified as rope.
-constraint_signature(C, natural_law) :-
+constraint_signature(C, Sig) :-
     domain_priors:emerges_naturally(C),
     get_constraint_profile(C, Profile),
-    natural_law_signature(Profile), !.
+    natural_law_signature(Profile), !,
+    Sig = natural_law.
 
 % Boltzmann-derived: Coupling-Invariant Rope (v5.1)
 % Certifies true coordination mechanisms with full Boltzmann invariance.
 % Checked before profile-based classification for positive certification.
-constraint_signature(C, coupling_invariant_rope) :-
-    coupling_invariant_rope(C, _), !.
+constraint_signature(C, Sig) :-
+    coupling_invariant_rope(C, _), !,
+    Sig = coupling_invariant_rope.
 
 % Honest abstain on absent authored metrics (2026-06-08, audit
 % 2026-06-08_coordination_washing_clean_pass). Missing metric vectors used to
@@ -134,8 +144,9 @@ constraint_signature(C, coupling_invariant_rope) :-
 % any metric it consumes is the `unknown` absence sentinel, emit the honest
 % `unknown` signature instead of a default-fabricated verdict. The cut guards the
 % fallback clause below so classify_by_signature never sees `unknown`.
-constraint_signature(C, unknown) :-
-    \+ profile_metrics_authored(C), !.
+constraint_signature(C, Sig) :-
+    \+ profile_metrics_authored(C), !,
+    Sig = unknown.
 
 % Profile-based classification (v3.2 original pipeline)
 constraint_signature(C, Signature) :-
@@ -320,11 +331,16 @@ compute_variance(Vals, Variance) :-
    4. Otherwise: ambiguous
    ================================================================ */
 
-classify_by_signature(Profile, _, natural_law) :-
-    natural_law_signature(Profile), !.
+% Fresh-variable heads + unify-after-cut here too (same change, same rationale);
+% the terminal ambiguous catch-all is KEPT — removing it is a semantics change
+% outside the 2026-08-17 pass.
+classify_by_signature(Profile, _, Sig) :-
+    natural_law_signature(Profile), !,
+    Sig = natural_law.
 
-classify_by_signature(Profile, _, coordination_scaffold) :-
-    coordination_scaffold_signature(Profile), !.
+classify_by_signature(Profile, _, Sig) :-
+    coordination_scaffold_signature(Profile), !,
+    Sig = coordination_scaffold.
 
 % OQ-90 (2026-06-11): the profile-path piton_signature dispatch is RETIRED. piton is
 % now an FCR-branch refinement keyed on computed capture (narrative_ontology:piton_candidate/1
@@ -336,22 +352,26 @@ classify_by_signature(Profile, _, coordination_scaffold) :-
 
 % Constructed constraint sub-signatures (extraction-aware):
 % Low extraction (ε ≤ rope_chi_ceiling): enforcement exists but extraction is low → rope-like
-classify_by_signature(Profile, Extraction, constructed_low_extraction) :-
+classify_by_signature(Profile, Extraction, Sig) :-
     constructed_constraint_signature(Profile),
     config:param(rope_chi_ceiling, RopeChi),
-    Extraction =< RopeChi, !.
+    Extraction =< RopeChi, !,
+    Sig = constructed_low_extraction.
 
 % High extraction (ε ≥ snare_epsilon_floor): high extraction construct → snare-like
-classify_by_signature(Profile, Extraction, constructed_high_extraction) :-
+classify_by_signature(Profile, Extraction, Sig) :-
     constructed_constraint_signature(Profile),
     config:param(snare_epsilon_floor, SnareEps),
-    Extraction >= SnareEps, !.
+    Extraction >= SnareEps, !,
+    Sig = constructed_high_extraction.
 
 % Mid extraction (between rope_chi_ceiling and snare_epsilon_floor): genuinely tangled
-classify_by_signature(Profile, _, constructed_constraint) :-
-    constructed_constraint_signature(Profile), !.
+classify_by_signature(Profile, _, Sig) :-
+    constructed_constraint_signature(Profile), !,
+    Sig = constructed_constraint.
 
-classify_by_signature(_, _, ambiguous).
+classify_by_signature(_, _, Sig) :-
+    Sig = ambiguous.
 
 /* ================================================================
    SIGNATURE 1: NATURAL LAW
