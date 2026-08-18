@@ -2,8 +2,8 @@
 
 **cafebedouin@gmail.com**
 
-*Status: DRAFT v0.6 (2026-08-12). PROPOSED throughout, with the exceptions recorded in §5.2 and
-§9.2, which are operator rulings and are marked as such. Slots marked `[UNWITNESSED]` are claims
+*Status: DRAFT v0.6 (2026-08-12; §5 amended 2026-08-17, see §5.2.1). PROPOSED throughout, with the
+exceptions recorded in §5.2, §5.2.1 and §9.2, which are operator rulings and are marked as such. Slots marked `[UNWITNESSED]` are claims
 this draft cannot pay for and are not to be cited until filled; `[OPERATOR]` slots await facts only
 the operator holds. The framing errors are the draft's; the witnessed instances are the
 repository's.*
@@ -155,9 +155,9 @@ that do not persist between sessions.
 The central risk in this setting is not hallucination in the usual sense but **success-shaped
 absence**: an operation that was not performed, not verified, or not connected produces output
 indistinguishable at the read site from successful completion. From dated audit records we develop
-a five-pattern taxonomy of such failures — a sixth was demoted mid-revision, by operator ruling,
-from a defect shape to a witness rule (§5.2), and the vacated index is left visibly empty rather
-than reused.
+a seven-pattern taxonomy of such failures at eight indices — one member was demoted mid-revision,
+by operator ruling, from a defect shape to a witness rule (§5.2), and the vacated index is left
+visibly empty rather than reused.
 
 The theoretical claim is that this failure class is not a peculiarity of language models but a
 consequence of a condition they make acute, and it is **derived rather than proposed**. The
@@ -252,7 +252,7 @@ amount of repository data confirms or refutes these; they are refuted by exhibit
 
 | # | Claim | Falsifier |
 |---|---|---|
-| P1 | The five patterns are one mechanism at five layers rather than five findings (i.e. §5 instantiates A1–A4) | A silent defect whose producer's compression was accurate at *every* scope and whose read still failed (§2.9) |
+| P1 | The seven patterns are one mechanism at seven layers rather than seven findings (i.e. §5 instantiates A1–A4) | A silent defect whose producer's compression was accurate at *every* scope and whose read still failed (§2.9) |
 | P2 | Witnessing, positive controls, and provenance-carrying values make this failure class more visible | Comparable visibility without the discipline (RQ1); EviBound supplies causal evidence for the narrower gate mechanism on a benchmark (§6.2) |
 | P3 | Institutional memory for non-persistent workers requires an economy, not an archive | An optimal policy materially unlike the promotion test's (RQ-a) |
 | P4 | Amnesia is differential across parties, and the dangerous profile is retained-shape-with-lost-detail | Comparable failure signatures across parties with different retention profiles |
@@ -437,7 +437,7 @@ accounted at §13**, which is where the novelty accounting lives and is the only
 
 ### 2.C The consequence this paper proposes (P1)
 
-If `CWC:C1@8475dc95` holds, the five patterns of §5 are one mechanism at five layers rather than five
+If `CWC:C1@8475dc95` holds, the seven patterns of §5 are one mechanism at seven layers rather than seven
 discoveries — which is what the practice found when it tried to fix them layer by layer and failed.
 This is stated as **P1** (§0) rather than as a finding, and it is this paper's own claim rather than
 the cited paper's: it is a proposition about *this repository's defect record*, which that paper does
@@ -883,7 +883,7 @@ recorded, but selected for expository force rather than sampled.
 
 ### 4.5 The paper's own witness
 
-By its own P4, a claim that numbers are "re-derivable from the repository" is a recap, not a
+By its own P8, a claim that numbers are "re-derivable from the repository" is a recap, not a
 witness. Appendix B is the manifest: one row per figure, with the exact query or script that
 regenerates it and the date it was last run. Figures whose manifest row is empty are marked
 `[UNWITNESSED]` and should not be cited. A methodology paper about witness discipline that asks to
@@ -893,9 +893,9 @@ be taken on fluency has refuted itself in its own terms.
 
 ## 5. The Failure Taxonomy
 
-### 5.1 Five patterns, and an index deliberately left empty
+### 5.1 Seven patterns at eight indices, one of them deliberately left empty
 
-They are not five independent categories. They are one mechanism (`CWC:C1@8475dc95`) surfacing at five layers,
+They are not seven independent categories. They are one mechanism (`CWC:C1@8475dc95`) surfacing at seven layers,
 which is why a fix at one layer reliably fails to protect the others.
 
 | Layer | Pattern | The absence | The success-shaped token |
@@ -903,9 +903,11 @@ which is why a fix at one layer reliably fails to protect the others.
 | Production | P1 Produced-but-not-consumed | No consumer, or a stale one | The producer ran |
 | Identity | P2 One-canonical-thing-became-two | No queryable fact of canonicity | Both copies parse |
 | — | *index 3 — retired 2026-08-11, see §5.2* | — | — |
-| Reporting | P4 Recap-as-witness substitution | No run, diff, or count | "Done / verified / fixed" |
+| Value | P4 Fabricated default | The datum was never authored | A plausible constant |
 | Gating | P5 Absence satisfies the gate | No input to check | A passing gate |
 | Composition | P6 Success-shaped absorption | No distinction between measured-empty and didn't-look | A clean aggregate |
+| Dispatch | P7 Bound-probe bypasses clause-order | The lock clause never dispatched | A solution came back |
+| Reporting | P8 Recap-as-witness substitution | No run, diff, or count | "Done / verified / fixed" |
 
 Each with one dated instance (illustrative, per §4.4):
 
@@ -916,8 +918,11 @@ kept-fresh.
 **P2.** Four parallel task trackers were consolidated into one and their recreation prohibited.
 Canonicity is a checked fact, not a memory.
 
-**P4.** "Three edits witnessed," with only the third pasted. This is the pattern that motivates the
-witness calculus (§7).
+**P4.** A temporal classifier fell back to a plausible constant for an absent measurement, and the
+fallback fired on **190 of 190** live cases — the entire path. Poisoning the source flipped 443 of
+519 non-`unknown` classifications, proving the fabrication load-bearing-wrong. A second surface
+invented a *different* filler for the same gap, so the divergence between them was artifact, not
+signal.
 
 **P5.** A detector conjunct read a predicate that was empty corpus-wide, so 404 certifications meant
 "no beneficiary *authored*," not "none *exists*."
@@ -926,6 +931,15 @@ witness calculus (§7).
 failure of a computation into "measured flat" for the construct's entire life, and a log filter
 (`grep -v Warning`) that suppressed a fatal warning for four months. Each component was individually
 sound; the defect lived where they composed.
+
+**P7.** A probe enumerated a class by *binding* the selecting argument, so earlier guard clauses
+failed to unify, their cuts never executed, and the query answered "satisfies that clause body"
+rather than "the engine assigns it." Witnessed twice on the same predicate: **1 against a real 0**
+in 2026-05-30, and **276 against a real 0** on 2026-08-17 — the second inflated a published
+denominator and concealed that two thirds of the population resolved to `unknown`.
+
+**P8.** "Three edits witnessed," with only the third pasted. This is the pattern that motivates the
+witness calculus (§7).
 
 The layer column is a claim about *where* the collapse occurs, not about mutual exclusivity: a
 single incident can instantiate two patterns at different layers, and P6 is by construction
@@ -944,7 +958,9 @@ independent lines converged:
    absence was visible on the page for three drafts and read as brevity.
 3. **A shared index.** The number 3 simultaneously named a *different* mechanism in the detail
    document, so any historical citation of "Pattern 3" was ambiguous as to which document its author
-   had open.
+   had open. (That other mechanism — *bound-probe bypasses clause-order* — was **not** demoted with
+   this one: it is a full peer member, and the 2026-08-17 ruling below moved it to index 7 so both
+   documents publish the same member at the same index.)
 4. **No instance, on a search built to find one.** A failure-shape sweep of the full repository
    history — not a vocabulary search, but the shape: *a destructive replacement carrying no paired
    old-vs-new output* — returned, for the period in which the rule existed: five destructive commits,
@@ -965,14 +981,44 @@ carries the same principle in the memory economy, where loud failures are never 
 error that announces itself needs no standing warning.
 
 **Why the index is not reused.** Every dated audit citing P4, P5 or P6 would become ambiguous
-against its own history if the remaining patterns were renumbered, and this incident's own finding
-is that a reused index poisons the record. The gap is left visible: *a visible gap is a checked
-fact; a silent renumber is a fork* — P2 applied to the taxonomy's own numbering. In `CWC:A2@31548228`'s terms, the
-empty index is a compression carrying its own scope.
+against its own history if the remaining patterns were renumbered *downward into the gap*, and this
+incident's own finding is that a reused index poisons the record. The gap is left visible: *a
+visible gap is a checked fact; a silent renumber is a fork* — P2 applied to the taxonomy's own
+numbering. In `CWC:A2@31548228`'s terms, the empty index is a compression carrying its own scope.
 
-**Scope of this ruling, stated so it is not over-read.** It settles index 3 and **does not settle
-index 4**, where two claimants remain across the two documents — one with an incident and no
-mechanism text, one with mechanism text. That is a separate ruling and does not block this draft.
+### 5.2.1 Amendment, 2026-08-17: index 4 settled, and what the delay cost
+
+The v0.6 text declined index 4, where two claimants stood across the two documents — one with a
+dated incident and no mechanism text, one with mechanism text. **That ruling has since landed**
+(`audits/2026-08-14_oq278_index_collision/`), and three things in it belong in this section.
+
+**The ruling.** Index 4 is *fabricated default*; *recap-as-witness* moves to index 8; the peer
+member that had shared index 3 in the detail document moves to index 7. Seven members, eight
+indices, the same member at every index in both documents — machine-checked per index, because the
+member *counts* had converged at the exact commit the contents diverged, so any check comparing
+totals reads green forever. The ground was **read-site weight**: nine of the eleven publishing
+sites are internal to the detail document, read on demand; the two on the other side include the
+always-loaded file.
+
+**The cost of the intervening declination is measured, not hypothetical.** Symmetry was restored by
+giving every member the same index in *both* documents rather than merely leaving the disputed one
+unnumbered, because index-only symmetry had already been tried and its cost was observed. For 79
+days the always-loaded file named the peer mechanism only inside a freeze notice — naming the
+collision, never teaching the rule — while the detail document carried a worked example of the
+exact defective query form. On 2026-08-17 an executor ran that exact query, got 276 where the real
+cascade gives 0, and published a gloss that concealed a larger finding. **A member present at an
+index but taught nowhere the reader will meet it is, at the read site, indistinguishable from
+absent.** That is P1 (a producer with no consumer) applied to a rule rather than to data, and it is
+why the amended taxonomy requires every index to carry the *tell* — what the defect looks like and
+what to do instead — in both documents, even where one carries it as a pointer entry rather than a
+worked section.
+
+**A third self-inflicted instance, and the guard built from it.** The 2026-08-11 vacating recorded
+above left **nine** live citations pointing at a now-empty index, and nobody swept them — the third
+time in this one taxonomy's history that repairing it committed the defect it instantiates. The
+2026-08-17 pass therefore declared the *renumbered* member's citations **before** moving it, while
+the evidence that distinguishes them was still recoverable, and both populations are now held by a
+standing gate rather than a note.
 
 ### 5.3 One incident end to end
 
@@ -1042,7 +1088,7 @@ failure the dominant failure class. Both are withdrawn.
 >    patterns in file types the `--include` never opens.** Both are grep-level defects; neither
 >    requires any semantic judgement to state.
 > 3. **The keywords miss incidents that use none of them.** At least one witnessed incident lives in
->    a `.out` file phrased in none of the six patterns. Widening the filter would not catch it and
+>    a `.out` file phrased in none of the seven patterns. Widening the filter would not catch it and
 >    widening the keywords would not catch the 12 — three defect classes, one instrument.
 >
 > These were measured with a two-sided control: the auditing grep reproduces the census exactly on
@@ -1157,7 +1203,7 @@ part.
 | **A** — environment and platform quirks (dev green, prod silent) | *no member* | A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
 | **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
 | **C** — error swallowing and dilution | P6 | Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
-| **D** — chained hallucination and fabrication (*fail-plausible*) | P4, and the fabricated-default pattern in the detail document | **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
+| **D** — chained hallucination and fabrication (*fail-plausible*) | P4 (fabricated default) | **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
 | **E** — operational omission and forensic blind spots | P1, P2, and §7.3's positive-control rule | Strong. Wu's declared-state-≠-runtime-state is P2 (canonicity as memory rather than checked fact). And Wu's forensic finding — an instrument that cannot distinguish *nothing there* from *I was not allowed to look* manufactures false reassurance — is §7.3's founding rule, reached from a macOS sandbox rather than from an empty grep. |
 
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
@@ -1304,7 +1350,7 @@ Operationally: every "done / verified / fixed / passing" claim carries its witne
 diff, or per-item check — *in the same turn it is made*. If the witness cannot be produced now, the
 claim is downgraded to OPEN with a named graduation step ("paste-or-untag"). A claim in a chat
 transcript does not witness a committed artifact; the paste must land where the claim lives. This
-neutralizes P4 and forces the other patterns to surface early, because producing a witness usually
+neutralizes P8 and forces the other patterns to surface early, because producing a witness usually
 requires touching the thing that is silently absent.
 
 ### 7.2 Three tiers of witness
@@ -2107,7 +2153,7 @@ design to imitate at institution scale. *Falsifier: comparable silent-defect vis
 discipline.*
 
 **RQ2 — Generality of the taxonomy, now executable.** Two external comparison sets exist that did not
-before. Blind-code Wu's five mechanism classes against the five patterns **in both directions** and
+before. Blind-code Wu's five mechanism classes against the seven patterns **in both directions** and
 report the confusion matrix; separately, apply Advani's false-success operationalization to the audit
 record where trajectories permit. Disagreement is the result, not a problem: a defect shape one
 taxonomy expresses and the other cannot is a finding about both — §6.2 already names one (Wu's class
@@ -2497,7 +2543,8 @@ Not restored, and stated so the reversal is not read as a rollback:
 - v0.1's "the convergence is itself a finding" — confounded (§6.4).
 - v0.1's "no existing methodology" and "a field whose entire methodological literature would fit on
   a page" — false (§1.3, §6.2).
-- v0.1's six patterns — five, with index 3 demoted and left visibly empty (§5.2).
+- v0.1's six patterns — seven at eight indices, with index 3 demoted and left visibly empty (§5.2)
+  and the 2026-08-17 index-4 ruling amended in at §5.2.1.
 - v0.1's reflexivity as *justification structure* — half restored only. The derivation half is
   restored (§11); the "theory and practice audit each other" half stays withdrawn, because a
   framework that supplies both can absorb its own probes.
