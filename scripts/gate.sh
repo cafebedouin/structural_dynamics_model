@@ -92,7 +92,8 @@ run "displaced cites" "$PY" python/pattern_citation_check.py --check
 # writers (the OQ-66 shape), and "no consumer exists" is both the mitigation and the thing that
 # stops being true silently. Arm C additionally BUYS BACK the typo detector that `:- multifile` silences: once a
 # predicate is multifile, SWI stops warning on redefinition, and that warning was doing the
-# job by accident. Standing run scans the default leg (1.4s); --full does all five (13s).
+# job by accident. Standing run scans the default leg (1.35s); --full does all five
+# (14.4s) -- both re-measured 2026-08-18 under .venv over a 279/960/960/1005/1001 corpus.
 # Discrimination record: arm B fires at dc12bf5a^ and declines at dc12bf5a, differing by
 # exactly {story_provenance/8, story_seed/3} — the pair that commit repaired — with three
 # constant fires on both sides. Arms A and C verified red-capable by plant-and-restore on

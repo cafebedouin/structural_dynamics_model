@@ -429,13 +429,27 @@ def closure_arity(mods: dict, mod: str, pred: str) -> int | None:
     return None
 
 
-def arity_at(text: str, open_paren: int) -> int | None:
-    """Arity of the term whose '(' sits at open_paren. Quote- and nesting-aware.
+def _scan_args(text: str, open_paren: int, values: bool):
+    """THE argument-grammar scan. One loop, two modes; None if unterminated.
 
-    This is the half the naive parser got wrong: a comma inside a quoted string, or a
-    fact spanning several lines, both inflate a line-based arity count.
+    `values=False` counts arguments, `values=True` materialises their texts. The two modes
+    share every branch that decides where an argument BEGINS and ENDS, so the arity a row
+    is keyed by and the values a conformance arm reads cannot disagree — two parsers for
+    one grammar is how a checker comes to enforce a shape the corpus does not have. The
+    flag exists only because materialising a substring per argument across the ~4,200-file
+    corpus costs ~11s of wall time to build strings the head census never looks at.
+
+    Quote- and nesting-aware: this is the half the naive parser got wrong — a comma inside
+    a quoted string, or a fact spanning several lines, both inflate a line-based count.
+
+    KNOWN DEFECT, deliberately preserved here and fixed in the next commit: neither `[`
+    nor `]` sets `saw`, so a term whose arguments are ALL bracket structures
+    (`adjacent_pairs([], [])`) scans as 0 — a predicate recorded at an arity it does not
+    have. Preserved in THIS commit because this commit's whole claim is that nothing
+    changed; corrected, with its own before/after witness, in the next.
     """
-    i, n, depth, args, in_q, saw = open_paren + 1, len(text), 1, 1, None, False
+    i, n, depth, in_q = open_paren + 1, len(text), 1, None
+    start, out, count, saw = i, [], 1, False
     while i < n:
         c = text[i]
         if in_q:
@@ -451,13 +465,31 @@ def arity_at(text: str, open_paren: int) -> int | None:
         elif c in ")]}":
             depth -= 1
             if depth == 0:
-                return args if saw else 0
+                if not saw:
+                    return [] if values else 0
+                if values:
+                    out.append(text[start:i])
+                    return out
+                return count
         elif c == "," and depth == 1:
-            args += 1
+            if values:
+                out.append(text[start:i]); start = i + 1
+            else:
+                count += 1
         elif not c.isspace():
             saw = True
         i += 1
     return None
+
+
+def split_args(text: str, open_paren: int) -> list[str] | None:
+    """Argument TEXTS of the term whose '(' sits at open_paren; None if unterminated."""
+    return _scan_args(text, open_paren, True)
+
+
+def arity_at(text: str, open_paren: int) -> int | None:
+    """Arity of the term whose '(' sits at open_paren. Quote- and nesting-aware."""
+    return _scan_args(text, open_paren, False)
 
 
 QUALIFIED = re.compile(
@@ -497,21 +529,32 @@ def qualified_refs(text: str) -> list[tuple[str, str, int, int]]:
 SCHEMA_HEAD = re.compile(r"(?:^|(?<=[.\s]))narrative_ontology\s*:\s*([a-z][A-Za-z0-9_]*)\s*(\()?")
 
 
-def schema_heads(text: str) -> set[tuple[str, int]]:
-    """`narrative_ontology:P(...)` CLAUSE HEADS written by a story file.
+def schema_head_terms(text: str, values: bool = False) -> list[tuple[str, int, list[str], int]]:
+    """[(pred, arity, [argument texts], lineno)] for `narrative_ontology:P(...)` HEADS.
 
     Excludes `:- multifile narrative_ontology:P/N.` style declarations, which name a
     predicate indicator (P/N) rather than opening a term — those are the writer's local
     self-declaration, not a head.
+
+    Carries the argument TEXTS as well as the arity because arm F conforms authored
+    values and arm C counts heads, and both must be reading the same parse of the same
+    byte range. schema_heads() is the arity-only projection of this, not a second parser.
     """
-    out = set()
+    out = []
     for m in SCHEMA_HEAD.finditer(text):
         if not m.group(2):
             continue  # `P/N` in a directive, or a bare atom — not a head
-        ar = arity_at(text, m.end() - 1)
-        if ar is not None:
-            out.add((m.group(1), ar))
+        args = _scan_args(text, m.end() - 1, values)
+        if args is None:
+            continue
+        out.append((m.group(1), len(args) if values else args,
+                    args if values else [], text.count("\n", 0, m.start()) + 1))
     return out
+
+
+def schema_heads(text: str) -> set[tuple[str, int]]:
+    """The (name, arity) projection of schema_head_terms()."""
+    return {(p, a) for p, a, _args, _ln in schema_head_terms(text)}
 
 
 # ---------------------------------------------------------------------------
@@ -561,10 +604,23 @@ def engine_files() -> list[Path]:
                   if not any(part in CORPUS_DIRS for part in p.parts))
 
 
-def build_module_table(files: list[Path]) -> dict:
+def engine_bodies(files: list[Path]) -> dict:
+    """{path: comment-stripped body}, read ONCE per invocation.
+
+    Three consumers used to read and strip the same ~180 files independently: the module
+    table, the bypass sweep, and arm D — and arm D did it INSIDE its per-predicate loop,
+    so its cost was files x watched-predicates. With one entry in UNWIRED_SCHEMA that is
+    invisible; it becomes visible exactly when the registry grows, which is the moment
+    someone is least inclined to look at the checker.
+    """
+    return {p: strip_comments(p.read_text(encoding="utf-8", errors="replace"))
+            for p in files}
+
+
+def build_module_table(files: list[Path], bodies: dict) -> dict:
     mods = {}
     for p in files:
-        t = strip_comments(p.read_text(encoding="utf-8", errors="replace"))
+        t = bodies[p]
         name = module_of(t)
         if name:
             mods[name] = {
@@ -580,11 +636,11 @@ def build_module_table(files: list[Path]) -> dict:
     return mods
 
 
-def find_bypasses(files: list[Path], mods: dict) -> dict:
+def find_bypasses(files: list[Path], mods: dict, bodies: dict) -> dict:
     """-> {(mod,pred,arity): [(relpath, lineno)]} for non-exported cross-module refs."""
     found = defaultdict(list)
     for p in files:
-        t = strip_comments(p.read_text(encoding="utf-8", errors="replace"))
+        t = bodies[p]
         self_mod = module_of(t)
         for mod, pred, ar, lineno in qualified_refs(t):
             if mod not in mods or mod == self_mod:
@@ -603,23 +659,63 @@ def find_bypasses(files: list[Path], mods: dict) -> dict:
     return found
 
 
-def arm_c_heads(legs: list[str]) -> dict:
-    """-> {(pred, arity): n_files} for narrative_ontology heads written by story files."""
-    counts = defaultdict(int)
+def scan_story_legs(legs: list[str], want_args: frozenset = frozenset()) -> dict:
+    """ONE read-and-strip per story file, feeding every corpus-facing arm.
+
+    Before this, arm C read and comment-stripped the whole corpus on its own. A second
+    corpus-facing arm would have read it a second time and a third — but cost is the
+    lesser reason. Two arms parsing the same file SEPARATELY can disagree about what it
+    says, and a per-arm parse is precisely where that divergence hides: arm C would count
+    a head this arm never saw the arguments of, and each would be internally consistent.
+
+    Returns:
+      heads    {(pred, arity): n_files}                  — arm C, unchanged semantics:
+                                                           counted once per FILE, not once
+                                                           per fact (a set per file).
+      per_leg  {leg: {(pred, arity): n_files}}           — arm G's declared-vs-actual
+      args     {(pred, arity): {argpos: {value texts}}}  — arm F's conformance, and
+                 collected ONLY for the (pred, arity, argpos) triples in `want_args`.
+                 Demand-driven on purpose: arm F conforms CLOSED positions only, and
+                 harvesting every value at every position instead cost ~11s of corpus
+                 wall time to build sets nothing reads. A producer sized to its consumer
+                 also cannot quietly become a dangling one.
+      sites    {(pred, arity): (relpath, lineno)}        — first site, for naming a file
+      files    int
+    """
+    heads: dict = defaultdict(int)
+    per_leg: dict = {leg: defaultdict(int) for leg in legs}
+    args: dict = defaultdict(lambda: defaultdict(set))
+    sites: dict = {}
+    nfiles = 0
     for leg in legs:
         d = PROLOG / leg
         if not d.is_dir():
             continue
-        for p in d.glob("*.pl"):          # non-recursive: run-tagged subdirs are not loaded
+        for p in sorted(d.glob("*.pl")):  # non-recursive: run-tagged subdirs are not loaded
             t = strip_comments(p.read_text(encoding="utf-8", errors="replace"))
-            for key in schema_heads(t):
-                counts[key] += 1
-    return counts
-
-
-def M_strip(path: Path) -> str:
-    """Comment-stripped body of a file, for arm D's reference scan."""
-    return strip_comments(path.read_text(encoding="utf-8", errors="replace"))
+            nfiles += 1
+            seen = set()
+            rel = None
+            for pred, ar, argv, lineno in schema_head_terms(t, values=bool(want_args)):
+                key = (pred, ar)
+                seen.add(key)
+                if key not in sites:
+                    # relative_to() is not free and this loop runs once per FACT, not once
+                    # per file: computing it eagerly inside setdefault() cost ~11s of the
+                    # corpus sweep to build a path that was thrown away every time.
+                    rel = rel if rel is not None else str(p.relative_to(REPO))
+                    sites[key] = (rel, lineno)
+                for i, a in enumerate(argv, start=1):
+                    if (pred, ar, i) in want_args:
+                        args[key][i].add(a.strip())
+            for key in seen:
+                heads[key] += 1
+                per_leg[leg][key] += 1
+    return {"heads": dict(heads),
+            "per_leg": {k: dict(v) for k, v in per_leg.items()},
+            "args": {k: dict(v) for k, v in args.items()},
+            "sites": sites,
+            "files": nfiles}
 
 
 def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
@@ -630,10 +726,12 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
     files = engine_files()
     if not files:
         raise SystemExit("module_boundary_check: RED — scanned 0 engine files")
-    mods = build_module_table(files)
+    bodies = engine_bodies(files)
+    mods = build_module_table(files, bodies)
     if not mods:
         raise SystemExit("module_boundary_check: RED — resolved 0 modules")
-    bypasses = find_bypasses(files, mods)
+    bypasses = find_bypasses(files, mods, bodies)
+    scan = scan_story_legs(legs)
 
     # --- ARM A: bypass closure -------------------------------------------------
     for key in sorted(bypasses):
@@ -672,7 +770,7 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
     # --- ARM C: corpus-schema closure ------------------------------------------
     schema_rows = {(p, a) for (m, p, a), (r, _) in entries.items()
                    if r == SCHEMA_ROLE and m == "narrative_ontology"}
-    heads = arm_c_heads(legs)
+    heads = scan["heads"]
     for (pred, ar), nfiles in sorted(heads.items()):
         if (pred, ar) not in schema_rows:
             problems.append(
@@ -689,8 +787,7 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
             rel = str(f.relative_to(REPO))
             if rel in UNWIRED_EXEMPT_FILES:
                 continue
-            body = M_strip(f)
-            for i, line in enumerate(body.splitlines(), start=1):
+            for i, line in enumerate(bodies[f].splitlines(), start=1):
                 if re.search(rf"(?<![A-Za-z0-9_]){re.escape(pred)}\s*[(/]", line):
                     sightings.append(f"{rel}:{i}")
         if sightings:
@@ -869,8 +966,9 @@ def main(argv: list[str]) -> int:
     if "--list" in argv:
         entries, _ = parse_allowlist()
         files = engine_files()
-        mods = build_module_table(files)
-        for key, sites in sorted(find_bypasses(files, mods).items()):
+        bodies = engine_bodies(files)
+        mods = build_module_table(files, bodies)
+        for key, sites in sorted(find_bypasses(files, mods, bodies).items()):
             role = entries.get(key, ("UNDECLARED", ""))[0]
             print(f"{role:20} {key[0]}:{key[1]}/{key[2]:<2} {len(sites):3d} site(s)")
         return 0
