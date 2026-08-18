@@ -1,0 +1,14 @@
+# promotion-test trial — scored under the frozen rubric (goal-only, AMENDMENT 1)
+
+promotion_test_response_with_draw1.txt        CORRECT
+    goal: swipl -q -g "use_module('prolog/config'), use_module('prolog/corpus_loader'), retractall(config:param(corpus_path,_)), asserta(config:param(corpus_pat
+promotion_test_response_with_draw2.txt        CORRECT
+    goal: swipl -g "asserta(config:param(corpus_path, 'testsets_flash')), \ use_module('prolog/corpus_loader'), \ corpus_loader:ensure_corpus_loaded, \ aggregat
+promotion_test_response_without_draw1.txt     MISTAKE-PREDICTED
+    goal: swipl -q -g "assertz(config:param(corpus_path, 'testsets_flash')), use_module('prolog/corpus_loader'), corpus_loader:ensure_corpus_loaded, aggregate_a
+promotion_test_response_without_draw2.txt     CORRECT
+    goal: swipl -q prolog/config.pl \ -g "asserta(config:param(corpus_path, 'testsets_flash'))" \ -g "use_module('prolog/corpus_loader')" \ -g "corpus_loader:en
+
+# CONTROL — the rubric must separate the two arms of draw 1, which differ by
+# exactly the tripwire. If it scores them the same, it is not discriminating.
+    draw1 without=MISTAKE-PREDICTED  draw1 with=CORRECT  ->  DISCRIMINATES

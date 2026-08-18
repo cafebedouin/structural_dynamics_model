@@ -1,0 +1,14 @@
+Since `config:param/2` is presumably defined via a plain `param/2` predicate wrapped/exported as `config:param/2` (and Prolog will use the first matching clause for a given key), the safest one-off override is to `asserta` a new `config:param(corpus_path, ...)` clause *before* the existing one is consulted/queried, so it takes priority. The goal below loads config, asserts the override, then loads the corpus module and triggers loading:
+
+```
+swipl -q prolog/config.pl \
+      -g "asserta(config:param(corpus_path, 'testsets_flash'))" \
+      -g "use_module('prolog/corpus_loader')" \
+      -g "corpus_loader:ensure_corpus_loaded" \
+      -g "aggregate_all(count, corpus_loader:corpus_constraint(_), N), format('Loaded ~w testsets~n', [N])" \
+      -t halt
+```
+
+If `config.pl` is itself a module (rather than plain consulted file) exporting `param/2` under the `config` namespace, load it via `use_module('prolog/config')` instead of consulting it directly, but the `asserta/1` trick still works the same way — it just needs to run before `corpus_loader` ever calls `config:param(corpus_path, _)`, since `load_all_testsets/0` takes the *first* solution it finds.
+
+To confirm the right corpus loaded, I'd check three things: (1) the stderr banner `[corpus] Loading N testset files...` should show the count matching `ls prolog/testsets_flash/*.pl | wc -l`; (2) query `resolve_corpus_dir('testsets_flash', Dir)` interactively and verify `Dir` ends in `prolog/testsets_flash`; and (3) spot-check `corpus_loader:corpus_constraint(Id)` for an Id you know only exists in the flash testset (a file base name unique to `testsets_flash/`, not present in the default `testsets/`), confirming both the right directory and no stale/mixed load from a prior `corpus_loaded` flag.

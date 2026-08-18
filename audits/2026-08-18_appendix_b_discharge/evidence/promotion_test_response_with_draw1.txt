@@ -1,0 +1,5 @@
+```
+swipl -q -g "use_module('prolog/config'), use_module('prolog/corpus_loader'), retractall(config:param(corpus_path,_)), asserta(config:param(corpus_path,'testsets_flash')), corpus_loader:ensure_corpus_loaded, aggregate_all(count, corpus_loader:corpus_constraint(_), N), format('Loaded ~w testsets~n', [N])" -t halt
+```
+
+To confirm it actually loaded `testsets_flash` rather than silently falling back to `testsets`, I'd check that the printed count matches the known file count of `testsets_flash/*.pl` (e.g. `ls prolog/testsets_flash/*.pl | wc -l`) rather than the `testsets` count (44 in the incident above); I'd also inspect the `[corpus] Loading N testset files...` stderr line for the resolved path, and spot-check `corpus_loader:corpus_constraint(Id)` for an Id known to exist only in `testsets_flash` (and absent from `testsets`) to be sure the right directory — not just the right count — was consulted.

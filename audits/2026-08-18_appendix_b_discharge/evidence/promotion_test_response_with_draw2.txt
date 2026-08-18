@@ -1,0 +1,10 @@
+```bash
+swipl -g "asserta(config:param(corpus_path, 'testsets_flash')), \
+          use_module('prolog/corpus_loader'), \
+          corpus_loader:ensure_corpus_loaded, \
+          aggregate_all(count, corpus_loader:corpus_constraint(_), N), \
+          format('Loaded ~w testsets~n', [N])" \
+      -t halt
+```
+
+To confirm it actually loaded `testsets_flash` and not the default, don't just trust the printed count — cross-check it against reality: run `ls prolog/testsets_flash/*.pl | wc -l` and compare to `N`, and also inspect a couple of the loaded ids via `corpus_loader:corpus_constraint(Id)` to verify they're names you know belong to the flash corpus rather than the default `testsets` set (since both directories could plausibly contain files with the same naming convention). You can also sanity-check `findall(D, config:param(corpus_path, D), Ds)` before loading to confirm `testsets_flash` is indeed the first/only clause the loader will resolve, given the `asserta`.
