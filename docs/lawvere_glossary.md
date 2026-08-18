@@ -28,7 +28,7 @@ Each entry maps a predicate or concept across three vocabularies:
 |---------------------|-------------------|-------------|-------|-------|
 | Presheaf evaluation | `dr_type/3` — drl_core.pl:333 | Constraint classification | STRICT | Maps (constraint, context) → type; NOT a sheaf |
 | Stalk computation | `classify_from_metrics/6` — drl_core.pl:252 | Threshold cascade | STRICT | Evaluates presheaf at a single context |
-| Metric-level stalk | `metric_based_type_indexed/3` — drl_core.pl:356 | Raw metric classification | STRICT | Pre-signature stalk value |
+| Metric-level stalk | `metric_based_type_indexed/3` — `drl_core.pl`, cite by predicate (was pinned :356; :479–483 at OQ-22 2026-06-28; :532 at 2026-08-18 — it drifts) | Raw metric classification | STRICT | Pre-signature stalk value |
 | Temporal stalk | `dr_type_at/4` — drl_modal_logic.pl:269 | Historical classification | STRUCTURAL | Presheaf indexed by time + context |
 | Cross-stalk query (∃) | `snare_immutability_check/1` — drl_core.pl:188 | Mutability gate | STRUCTURAL | Existential quantifier over site points |
 | Signature integration | `integrate_signature_with_modal/3` — structural_signatures.pl | Override application | LOOSE | Post-composition modifying presheaf values |

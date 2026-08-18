@@ -37,7 +37,7 @@ testify to the ordering of pre-edit reads. This log lands AFTER commit `5d548413
 ## Prereg freeze
 
     $ md5sum PREREGISTRATION.md
-    <recorded below, at the position it was frozen>
+    3f53bb8e0daf2cba1fdd5c22f746163d  PREREGISTRATION.md
 
 No run is funded by this audit, so the md5 witnesses the authored-and-frozen state only;
 the first result line that would sit below it does not exist yet by design.

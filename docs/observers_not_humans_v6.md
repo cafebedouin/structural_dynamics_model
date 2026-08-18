@@ -2,7 +2,9 @@
 
 **cafebedouin@gmail.com**
 
-*Revision 6. Corrects §2.3's interpretation of the alternative-functions robustness test. The empirical numbers reproduce (Jaccard 0.685–0.828 across six functional forms); the interpretation was overstated corpus-wide. Sign-flip is load-bearing specifically when Hub 1 spans the snare gate and only within the tangled_rope constraint family, not universally. The Jaccard advantage concentrates 14.6× more in tangled_rope (+0.21) than snare+rope (+0.014). This correction resolves §2.3 and §3.3 as one finding viewed at two resolutions — the institutional sign-flip mechanism and the [+,+,−,+] chi pattern are the same structural phenomenon. The rope-gate bypass (drl_core.pl:356) is flagged as an open assumption (OQ-01). Jaccard range corrected to 0.697–0.833 (from published v5 claim of 0.685–0.828) to reflect full-corpus rerun. See witness files: `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`, `docs/open_questions.md` OQ-01 and OQ-05.*
+*Revision 6. Corrects §2.3's interpretation of the alternative-functions robustness test. The empirical numbers reproduce (Jaccard 0.685–0.828 across six functional forms); the interpretation was overstated corpus-wide. ~~Sign-flip is load-bearing specifically when Hub 1 spans the snare gate and only within the tangled_rope constraint family, not universally.~~ **[withdrawn 2026-08-18 — see §2.3]** ~~The Jaccard advantage concentrates 14.6× more in tangled_rope (+0.21) than snare+rope (+0.014).~~ **[withdrawn 2026-08-18 — see §2.3]** This correction resolves §2.3 and §3.3 as one finding viewed at two resolutions — the institutional sign-flip mechanism and the [+,+,−,+] chi pattern are the same structural phenomenon. The rope-gate bypass (~~drl_core.pl:356~~ → `drl_core.pl:432`, `classify_from_metrics/6` rope clause) is flagged as an open assumption (OQ-01, resolved 2026-06-18). **[pointer repaired 2026-08-18 — see §2.3]** Jaccard range corrected to 0.697–0.833 (from published v5 claim of 0.685–0.828) to reflect full-corpus rerun. See witness files: ~~`outputs/alt_power_transform_results.json`~~ → tracked at `python/alt_power_transform_results_3k.json`, ~~`outputs/range_sweep_results.json`~~ **[withdrawn 2026-08-18 — see §2.3]** (never satisfiable — see §2.3), ~~`docs/open_questions.md`~~ → `ISSUES.md` OQ-01 and OQ-05 (both resolved 2026-06-18).*
+
+*[Withdrawal, 2026-08-18.* The revision note above is **corrected, not merely updated**. **Withdrawn:** the type-concentration claim — "+0.21 in tangled_rope vs +0.014 in snare+rope", the 14.6× figure, and "concentrates in a single constraint family" — together with its named witness `outputs/range_sweep_results.json`. That file was produced by `python/sweeps/range_sweep.py`, which computes only global arm-level Jaccard and has never, in any version, stratified by type; the citation was never satisfiable. Corroborating: 2,245 + 1,169 = 3,414 exceeds the 3,380-constraint corpus. Withdrawn as **unwitnessed, not refuted**. **Survives:** range-robustness, Jaccard 0.697–0.833 over six functional forms, witness re-pointed to the tracked `python/alt_power_transform_results_3k.json` (the `outputs/` path is gitignored and gone). **Open:** H0's scope, at **OQ-311 Item 2** — whether the advantage tracks the `tangled_rope` label or the geometric condition, which are not the same set. OQ-01 closed 2026-06-18, ratifying the bypass *and* falsifying the motivating A3 collapse as a `prolog_v5` artifact. Tracker is `ISSUES.md` (`docs/open_questions.md` was deleted 2026-06-04); the bypass is `drl_core.pl:432` in the `classify_from_metrics/6` rope clause `:426–436` — cite by predicate. Full evidence: `audits/2026-08-18_oq311_universality_class/`.]*
 
 ---
 
@@ -10,11 +12,11 @@
 
 One marked correction: §2.3 (The transformation law's basis: universality class, not derivational rigidity).
 
-The alternative-functions robustness result reproduces (Jaccard 0.685–0.828 remains within the spectrum produced by the full-corpus rerun at 0.697–0.833), but its interpretation was overstated at the corpus level. V5 stated: "any transformation function that respects two qualitative properties — bounded sensitivity at extremes (saturation) and sign reversal at structural dominance (sign-flip) — produces the same qualitative orbit structure." This suggests sign-flip carries universal load. The corrected interpretation: sign-flip is load-bearing only in the tangled_rope regime where Hub 1 spans the snare gate. The corpus-wide Jaccard advantage (≈+0.086) is a weighted average of tangled_rope (+0.21, 2,245 constraints) and snare+rope (+0.014, 1,169 constraints) — a 14.6× concentration in one family.
+The alternative-functions robustness result reproduces (Jaccard 0.685–0.828 remains within the spectrum produced by the full-corpus rerun at 0.697–0.833), but its interpretation was overstated at the corpus level. V5 stated: "any transformation function that respects two qualitative properties — bounded sensitivity at extremes (saturation) and sign reversal at structural dominance (sign-flip) — produces the same qualitative orbit structure." This suggests sign-flip carries universal load. ~~The corrected interpretation: sign-flip is load-bearing only in the tangled_rope regime where Hub 1 spans the snare gate. The corpus-wide Jaccard advantage (≈+0.086) is a weighted average of tangled_rope (+0.21, 2,245 constraints) and snare+rope (+0.014, 1,169 constraints) — a 14.6× concentration in one family.~~ **[withdrawn 2026-08-18 — see §2.3]**
 
 This has a structural consequence: §3.3's non-monotonic [+,+,−,+] chi pattern and §2.3's sign-flip robustness are not two independent empirical findings. They are the same mechanism — institutional sign-flip at structural beneficiary positions — viewed at two resolutions. The institutional observers sitting below d_zero (producing the [+,+,−,+] pattern) are exactly the observers whose constraints show sign-flip robustness under alternative transforms.
 
-The rope-gate bypass at `prolog/drl_core.pl:356` is flagged as a conditional assumption. The H0 confirmation ("sign-flip is load-bearing") depends on treating this bypass as given; whether it is intentional modeling or an artifact is OQ-01, and its resolution would clarify the mechanism's theoretical status.
+The rope-gate bypass at ~~`prolog/drl_core.pl:356`~~ `prolog/drl_core.pl:432` (`classify_from_metrics/6` rope clause, `:426–436`) **[pointer repaired 2026-08-18 — see §2.3]** is flagged as a conditional assumption. The H0 confirmation ("sign-flip is load-bearing") depends on treating this bypass as given; whether it is intentional modeling or an artifact is OQ-01, and its resolution would clarify the mechanism's theoretical status.
 
 All other sections of v5 are carried forward unchanged and remain authoritative.
 
@@ -84,11 +86,77 @@ The Cultural Cognition / δ-band work in DR v6.11 reaches toward the opacity dim
 
 **[Revision in v6: The alternative-functions robustness result reproduces empirically but was overstated as a universality-class claim. Sign-flip is load-bearing specifically in the tangled_rope regime, not corpus-wide. This correction links §2.3 and §3.3 as one finding. The rope-gate bypass is flagged as an open assumption.]**
 
+**[Correction, 2026-08-18: the v6 revision above fused two claims. One has a witness and
+survives; the other never had the witness it names and is WITHDRAWN. Read this block before
+the section below, which is left standing so the withdrawn claim remains findable.]**
+
+**What survives — robustness to functional form.** Six functional forms produce orbit
+structures with Jaccard **0.697–0.833** against the sigmoid baseline. This reproduces, and its
+witness is recoverable at HEAD. The v6 text cites `outputs/alt_power_transform_results.json`;
+`outputs/` is gitignored and that path is gone, but a **tracked** copy of the same run survives
+at **`python/alt_power_transform_results_3k.json`** — cite that path. Its seven entries (the
+sigmoid baseline at Jaccard 1.0 by definition, plus the six variants) give min 0.6966 and max
+0.8327, which is the published range. That file reports its own corpus size as `"total": 3380`,
+uniform across all seven entries; **3,380 is quoted here as what the witness reports**, not as a
+live measurement.
+
+**What is withdrawn — the type-concentration claim.** Specifically: *"+0.21 in the tangled_rope
+subset (N=2,245)"*, *"+0.014 in snare+rope combined (N=1,169)"*, the *"14.6-fold difference"*,
+and the sentence *"the robustness concentrates in a single constraint family: tangled_rope."*
+Two grounds. **They are independent, and the first is sufficient on its own** — a reader who
+disputes the arithmetic of the second does not thereby recover the claim:
+
+- **(i) The named witness could not have contained those numbers.** §2.3 cites
+  `outputs/range_sweep_results.json`, produced by `python/sweeps/range_sweep.py`. That script
+  computes only global, arm-level Jaccard: it compares two whole presheaf id sets and returns
+  one scalar, and its output dict carries exactly `arm_a_jacs`, `arm_b_jacs`, `mean_ab_gap`,
+  `max_span_drop_a`, `max_span_drop_b`. No code path subsets either id set by constraint type or
+  by any geometric condition, and **no version of the script in its history ever did** — the
+  output dict is byte-identical across all four commits that touch it. The citation was
+  therefore never satisfiable. (The script does print a per-*variant* table labelling which
+  type-gates each transformation's own χ range spans; that is a property of the function, not a
+  stratification of the corpus, and it is not the cited output.) The script also postdates this
+  paper's §2.3 commit by one day. **This ground stands regardless of any count.**
+- **(ii) The published subset sizes are arithmetically impossible — corroborating.** 2,245 +
+  1,169 = **3,414**, which exceeds every corpus in play: 3,380 (the `original_v6` file count, the
+  measured `corpus_constraint/1` count, and the results JSON's own `"total"`) and 3,314 (the
+  corpus of `docs/results/tangled_rope_sign_flip.md`). Independently of any corpus total, that
+  tracked census gives rope 55 + snare 571 = **626**, against a published 1,169.
+
+Withdrawn as **unwitnessed, not as refuted.** The concentration may well be true; nothing here
+shows it false. What is gone is the evidence that was offered for it. Whether the advantage
+tracks the `tangled_rope` **label** or the **geometric condition** §2.3 also names — and these
+are not the same set — is an open question, pre-registered but unfunded at **OQ-311 Item 2**.
+
+**What this does to H0.** The corrected H0 — *"sign-flip is load-bearing when Hub 1 spans snare
+gate AND rope-gate bypass behavior is treated as given"* — is now doubly unsupported. OQ-01
+closed 2026-06-18 and did both halves at once: it **ratified the bypass as intentional** modeling
+content with no guard (discharging the AND clause, as §2.3 anticipated), *and* it **falsified the
+motivating Arm A3 presheaf collapse** as a `prolog_v5` ε/d-distribution artifact — on the
+post-reset twins, haiku 0.904 / flash 0.897, with the no-sign-flip B3 control drifting **more**
+than A3. OQ-22's close (2026-06-28) repeats the attribution. So the conditional was satisfied by
+a resolution that removed the evidence the conditional was protecting. **H0's scope is OPEN**,
+routed to OQ-311 Item 2.
+
+**What is untouched.** The `[+,+,−,+]` chi pattern, the 62.4% institutional negative-chi rate,
+the chi-vs-type gap (62.4% chi-based vs 0.3% type-based) and the 1,401/844 threshold separation
+all rest on `docs/results/tangled_rope_sign_flip.md`, which is tracked and unaffected by any of
+the above. **§3.3 stands.** The N=2,245 figure is legitimate where it appears as that census's
+`tangled_rope` count; what is withdrawn is its use as a Jaccard-advantage subset size.
+
+**Pointer repairs** (stated, not silently applied). `docs/open_questions.md` was consolidated
+into **`ISSUES.md`** on 2026-06-04 and deleted; cite `ISSUES.md`. The rope-gate bypass pinned at
+`drl_core.pl:356` is now `drl_core.pl:432`, inside the `classify_from_metrics/6` rope clause at
+`:426–436` — **cite it by predicate, not by line**, since it has drifted twice already. OQ-01 and
+OQ-05 are both resolved (2026-06-18); OQ-22 resolved 2026-06-28.
+
+**Evidence for this correction:** `audits/2026-08-18_oq311_universality_class/`.
+
 V1 of this paper claimed the DR transformation function (sigmoid f(d)) was forced by its postulates in the way the Lorentz transformation is forced by the invariance of c. This was wrong, and the alternative-functions test in DR v6.11 is the giveaway. Six functional forms — sigmoid, square root, quadratic, piecewise linear, step function, and two sign-flip-removing controls — produce orbit structures with Jaccard 0.685–0.828 against the sigmoid baseline. The full-corpus rerun (3,380 constraints, testsets_3000) produces Jaccard 0.697–0.833, confirming the empirical range with minor variation consistent with corpus-snapshot drift. If the postulates uniquely forced the sigmoid, alternatives should fail sharply. They do not. They produce qualitatively similar orbit structure with quantitatively different parameters.
 
 The right physics analogy is **universality class**, not Lorentz invariance. In statistical mechanics, microscopically different systems flow to the same coarse-grained behavior because they share a symmetry/dimensionality class — the Ising model, binary alloys, and liquid-vapor critical phenomena exhibit the same critical exponents not because their microscopic dynamics are uniquely forced, but because they share enough symmetry properties that the renormalization-group flow takes them to the same fixed point. The microscopic details get washed out; the macroscopic invariants survive.
 
-The DR analog has a more precise formulation than v5 stated. **The alternative-functions result does not show universality-class invariance corpus-wide.** Instead, the robustness concentrates in a single constraint family: tangled_rope. When the corrected Arm A/B controlled sweep isolates sign-flip — varying only whether f(d) crosses zero, keeping range and smoothness matched throughout the sweep — the Jaccard advantage of the sign-flip-present variant reaches **+0.21 in the tangled_rope subset** (N=2,245, T4 gap) but only **+0.014 in snare+rope combined** (N=1,169) — a **14.6-fold difference**. The corpus-wide +0.086–+0.13 Jaccard advantage observed across the full robustness run is a weighted average obscuring this concentration. Witness: `outputs/range_sweep_results.json` (Arm A1–A3, Arm B1–B3), `outputs/alt_power_transform_results.json` (full corpus).
+The DR analog has a more precise formulation than v5 stated. **The alternative-functions result does not show universality-class invariance corpus-wide.** ~~Instead, the robustness concentrates in a single constraint family: tangled_rope.~~ **[withdrawn 2026-08-18 — see the correction block at the head of this section; the paragraph is left standing so the withdrawn claim stays findable]** When the corrected Arm A/B controlled sweep isolates sign-flip — varying only whether f(d) crosses zero, keeping range and smoothness matched throughout the sweep — ~~the Jaccard advantage of the sign-flip-present variant reaches **+0.21 in the tangled_rope subset** (N=2,245, T4 gap) but only **+0.014 in snare+rope combined** (N=1,169) — a **14.6-fold difference**.~~ *[withdrawn 2026-08-18: `outputs/range_sweep_results.json` is produced by a script that computes no per-type stratification, so this citation was never satisfiable; and 2,245 + 1,169 = 3,414 exceeds the corpus.]* The corpus-wide +0.086–+0.13 Jaccard advantage observed across the full robustness run is a weighted average obscuring this concentration. Witness: ~~`outputs/range_sweep_results.json` (Arm A1–A3, Arm B1–B3)~~ **[withdrawn 2026-08-18 — see §2.3]** (never satisfiable — it computes no per-type stratification), ~~`outputs/alt_power_transform_results.json`~~ → tracked at `python/alt_power_transform_results_3k.json` (full corpus). **[pointer repaired 2026-08-18 — see §2.3]**
 
 Sign-flip carries the weight of the robustness result not because it is universally load-bearing, but because it is the *mechanism underlying the most common constraint type in this corpus*. The hypotheses tested were:
 - **H0:** sign-flip is load-bearing universally (OVERSTATED in v5)
@@ -122,13 +190,13 @@ This is the metrics-as-routing principle (`docs/metrics_as_routing.md`) applied 
 
 **Critically, this correction resolves what v5 presented as two independent empirical findings into one.** The [+,+,−,+] non-monotonic chi pattern discussed in §3.3 and the institutional sign-flip driving the alternative-functions robustness are not separate phenomena: they are the same mechanism viewed at two resolutions. The constraints where institutional observers sit below d_zero (producing negative chi and the [+,+,−,+] pattern) are precisely the constraints where sign-flip drives the Jaccard advantage in robustness testing. The framework's quantitative robustness to alternative transforms is a precise diagnostic of this single structural pattern's stability, not evidence of universality class at the corpus level.
 
-**Conditional assumption: the rope-gate bypass.** One technical detail undergirds the sign-flip mechanism. The rope-gate classification in `prolog/drl_core.pl:356` includes the clause:
+**Conditional assumption: the rope-gate bypass.** One technical detail undergirds the sign-flip mechanism. The rope-gate classification in ~~`prolog/drl_core.pl:356`~~ `prolog/drl_core.pl:432`, inside the `classify_from_metrics/6` rope clause at `:426–436` **[pointer repaired 2026-08-18 — see §2.3]**, includes the clause:
 
 ```prolog
 (Chi =< 0 -> true ; config:param(rope_epsilon_ceiling, EpsCeil), BaseEps =< EpsCeil),
 ```
 
-This routes constraints with negative chi to rope classification regardless of base extractiveness. Whether this clause encodes intentional modeling content — the interpretation that a position with negative chi is a net beneficiary for whom epsilon magnitude no longer distinguishes rope from extraction — or is an implementation artifact whose theoretical status was never isolated is an open question (OQ-01 in `docs/open_questions.md`). The corrected H0 confirmation reads: "sign-flip is load-bearing when Hub 1 spans snare gate AND rope-gate bypass behavior is treated as given." That AND clause is the conditional assumption. If OQ-01 resolves by establishing the bypass as intentional, the mechanism's theoretical status is clarified and the conditional confirmation can be stated without qualification. If OQ-01 resolves by identifying the bypass as an artifact requiring a guard (e.g., "only bypass when chi < −threshold_magnitude, not at all negative values"), the A3 compression results shift and the framework's characterization of the mechanism may strengthen. Currently, the bypass is treated as given.
+This routes constraints with negative chi to rope classification regardless of base extractiveness. Whether this clause encodes intentional modeling content — the interpretation that a position with negative chi is a net beneficiary for whom epsilon magnitude no longer distinguishes rope from extraction — or is an implementation artifact whose theoretical status was never isolated is an open question (OQ-01 in ~~`docs/open_questions.md`~~ `ISSUES.md` **[pointer repaired 2026-08-18 — see §2.3]**; **resolved 2026-06-18** — the bypass was ratified as intentional, and the motivating A3 collapse was falsified as a `prolog_v5` artifact; see the correction block at the head of §2.3). The corrected H0 confirmation reads: "sign-flip is load-bearing when Hub 1 spans snare gate AND rope-gate bypass behavior is treated as given." That AND clause is the conditional assumption. If OQ-01 resolves by establishing the bypass as intentional, the mechanism's theoretical status is clarified and the conditional confirmation can be stated without qualification. If OQ-01 resolves by identifying the bypass as an artifact requiring a guard (e.g., "only bypass when chi < −threshold_magnitude, not at all negative values"), the A3 compression results shift and the framework's characterization of the mechanism may strengthen. Currently, the bypass is treated as given.
 
 The consequence for the universality-class claim follows directly. What v4 stated as a claim about flow-tracking can now be stated more precisely: the framework predicts the [+, +, −, +] chi pattern in any corpus where institutional-equivalent positions are assigned structural roles placing d_institutional below d_zero, bounded by the rope-gate bypass behavior. Whether RL agents, animal coalitions, or other non-human systems occupy positions that generate role assignments below and above d_zero is the empirical question. The framework does not need to take a position on the underlying physics of agency — it needs only to be a useful routing instrument with a routing structure that replicates in non-human systems. The §5.5 protocol tests whether it does.
 
@@ -359,4 +427,6 @@ External references that would need to be added in a later draft:
 
 ---
 
-*Revision 6. Marked correction to §2.3: the alternative-functions robustness result reproduces empirically (Jaccard 0.697–0.833 in full-corpus rerun) but its interpretation was overstated corpus-wide. Sign-flip is load-bearing specifically in tangled_rope under the condition that Hub 1 spans the snare gate and the rope-gate bypass is treated as given (OQ-01). The empirical concentration (14.6× higher Jaccard advantage in tangled_rope than snare+rope) resolves §2.3 and §3.3 as one finding, not two independent findings. All other sections carried forward from v5. Witness files: `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`, `docs/open_questions.md` OQ-01/OQ-05. Conceptual development in conversation with Claude (Anthropic). Next step pending empirical results from §5.5 protocol and resolution of OQ-01.*
+*Revision 6. Marked correction to §2.3: the alternative-functions robustness result reproduces empirically (Jaccard 0.697–0.833 in full-corpus rerun) but its interpretation was overstated corpus-wide. ~~Sign-flip is load-bearing specifically in tangled_rope under the condition that Hub 1 spans the snare gate and the rope-gate bypass is treated as given (OQ-01).~~ **[withdrawn 2026-08-18 — see §2.3]** ~~The empirical concentration (14.6× higher Jaccard advantage in tangled_rope than snare+rope) resolves §2.3 and §3.3 as one finding, not two independent findings.~~ **[withdrawn 2026-08-18 — see §2.3]** All other sections carried forward from v5. Witness files: ~~`outputs/alt_power_transform_results.json`~~ → tracked at `python/alt_power_transform_results_3k.json`, ~~`outputs/range_sweep_results.json`~~ **[withdrawn 2026-08-18 — see §2.3]** (never satisfiable — see §2.3), ~~`docs/open_questions.md`~~ → `ISSUES.md` OQ-01/OQ-05 (both resolved 2026-06-18). Conceptual development in conversation with Claude (Anthropic). Next step pending empirical results from §5.5 protocol and resolution of OQ-01.*
+
+*[Withdrawal, 2026-08-18.* The revision note above is **corrected, not merely updated**. **Withdrawn:** the type-concentration claim — "+0.21 in tangled_rope vs +0.014 in snare+rope", the 14.6× figure, and "concentrates in a single constraint family" — together with its named witness `outputs/range_sweep_results.json`. That file was produced by `python/sweeps/range_sweep.py`, which computes only global arm-level Jaccard and has never, in any version, stratified by type; the citation was never satisfiable. Corroborating: 2,245 + 1,169 = 3,414 exceeds the 3,380-constraint corpus. Withdrawn as **unwitnessed, not refuted**. **Survives:** range-robustness, Jaccard 0.697–0.833 over six functional forms, witness re-pointed to the tracked `python/alt_power_transform_results_3k.json` (the `outputs/` path is gitignored and gone). **Open:** H0's scope, at **OQ-311 Item 2** — whether the advantage tracks the `tangled_rope` label or the geometric condition, which are not the same set. OQ-01 closed 2026-06-18, ratifying the bypass *and* falsifying the motivating A3 collapse as a `prolog_v5` artifact. Tracker is `ISSUES.md` (`docs/open_questions.md` was deleted 2026-06-04); the bypass is `drl_core.pl:432` in the `classify_from_metrics/6` rope clause `:426–436` — cite by predicate. Full evidence: `audits/2026-08-18_oq311_universality_class/`.]*
