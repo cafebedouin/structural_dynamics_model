@@ -1784,3 +1784,68 @@ if a reader is ever written, it owes a control on a compound value.
 **Do not read the OQ-118 Limb-3 close as answering the temperature question corpus-wide.** It was
 answered on one 28-story cell where temperature is *constant*, plus a mechanism attribution. This
 GAP is the scope of what remains unanswerable.
+
+## GAP-38 — No domain-prior expectation checking: the authored category→signature table was retired dead in both senses
+
+**Declared:** 2026-08-18 (OQ-296 D3 retirement, `audits/2026-08-18_oq296_consumer_honesty/`).
+**Drives:** OQ-316 (the `category_of/2` disposition), OQ-317 (the GAP-08 §7 sunset).
+
+**The absent capability:** an *expectation check* on the signature layer — a declared statement of
+what signature a constraint of a given domain category OUGHT to receive, against which the engine's
+actual verdict could be compared. `should_be_natural_law/1` / `expected_signature/2` /
+`validate_signature/2` were an implementation of exactly that, and were retired 2026-08-18 rather
+than repaired. This entry exists so the capability is a **declared absence** and not a silent one,
+and so the authored content survives the code.
+
+**BOTH deadnesses, stated — the routing_sink dark-declaration model does not cover consumer-less
+code, which is why this is a gap entry and not a site comment:**
+
+1. **0 firings.** `should_be_natural_law/1` fired **0** times on the live leg (n=279). It requires
+   `expected_signature(Cat, natural_law)`, i.e. `Cat ∈ {physical_natural, formal_logic}`, and
+   `category_of/2` returns `unknown_novel` on every constraint of every corpus measured
+   (279/279 live, 1106/1106 kernel_v1 — see OQ-316).
+2. **0 consumers.** All 17 references to the three predicates repo-wide were inside
+   `domain_priors.pl` itself. Control for that sweep: the same grep shape returns 9 external hits
+   for the sibling `category_of/2`, which was therefore KEPT. The trio was exported at
+   `domain_priors.pl:5-7` and called nowhere.
+
+**The authored table, preserved verbatim** (this is the content worth keeping — a considered
+mapping from domain kind to expected signature, and the only place the project ever wrote one
+down):
+
+```prolog
+%% expected_signature(?Category, ?Signature)
+expected_signature(physical_natural,  natural_law).
+expected_signature(formal_logic,      natural_law).
+expected_signature(election_cycle,    constructed_constraint).
+expected_signature(statutory_formal,  constructed_constraint).
+expected_signature(extractive_market, constructed_constraint).
+expected_signature(narrative_history, constructed_constraint).
+expected_signature(unknown_novel,     ambiguous).
+```
+
+**Why the table could not work at HEAD, in three layers** (measured 2026-08-18; note the
+retirement was NOT a judgement that the idea is worthless — per *Unwired ≠ worthless* — but that
+this implementation could not deliver it):
+
+- **5 of 7 rows are unreachable by construction.** `category_of/2` has only two clauses and can
+  emit only `physical_natural` or `unknown_novel`. The categories `formal_logic`, `election_cycle`,
+  `statutory_formal`, `extractive_market`, `narrative_history` were `domain_registry`-era values;
+  that module was deleted Feb 2026 (OQ-96) and nothing replaced its classifier.
+- **6 of 7 are unreachable on any authored corpus.** Adding `physical_natural`, which is reachable
+  by dispatch — a planted `constraint_claim(_, natural_law | physical_law)` yields it — but whose
+  claim vocabulary is authored **0 times across all five live legs and kernel_v1** (~5,311 files).
+- **The one live row is the least informative one.** Every constraint routes
+  `unknown_novel → ambiguous`, so the check could only ever have said "expected ambiguous".
+  Worse, `constructed_constraint` — the expectation for four of the seven rows — is **not in the
+  live signature vocabulary at all** (the live cascade emits `constructed_high_extraction` /
+  `constructed_low_extraction`), so even a repaired `category_of/2` would have compared against an
+  atom the engine no longer produces.
+
+**What would have to exist to revive it:** a working domain classifier (OQ-316 — either restore one
+or author the claim vocabulary), AND a re-derivation of the expectation table against the *current*
+signature vocabulary. Reviving the predicates alone would reproduce the dead state.
+
+**Do not re-mint a similar surface without reading this entry first.** The failure here was not the
+idea but a table that outlived both its classifier and its target vocabulary while continuing to
+export cleanly.

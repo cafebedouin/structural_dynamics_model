@@ -2,11 +2,14 @@
     get_prior/3,
     is_known_domain/1,
     flag_novelty/1,
-    expected_signature/2,
-    should_be_natural_law/1,
-    validate_signature/2,
     category_of/2
 ]).
+
+% RETIRED 2026-08-18 (OQ-296 D3): expected_signature/2, should_be_natural_law/1
+% and validate_signature/2 were removed — dead in BOTH senses (0 firings AND 0
+% consumers repo-wide). The authored 7-row expectation table is preserved
+% verbatim in docs/design/design_gaps.md as a declared-absent capability, so the
+% content survives the code. See that entry before re-minting anything similar.
 
 % OQ-96 (2026-06-10; CLOSED 2026-06-11 with the OQ-93 shim retirement):
 % `:- use_module(domain_registry).` REMOVED — the module was deleted
@@ -95,29 +98,6 @@ category_of(ID, physical_natural) :-
     (narrative_ontology:constraint_claim(ID, natural_law) ;
      narrative_ontology:constraint_claim(ID, physical_law)), !.
 category_of(_, unknown_novel).
-
-%% should_be_natural_law(+ID)
-should_be_natural_law(ID) :-
-    category_of(ID, Cat),
-    expected_signature(Cat, natural_law).
-
-%% expected_signature(?Category, ?Signature)
-expected_signature(physical_natural,  natural_law).
-expected_signature(formal_logic,      natural_law).
-expected_signature(election_cycle,    constructed_constraint).
-expected_signature(statutory_formal,  constructed_constraint).
-expected_signature(extractive_market, constructed_constraint).
-expected_signature(narrative_history, constructed_constraint).
-expected_signature(unknown_novel,     ambiguous).
-
-%% validate_signature(+ID, +Detected)
-validate_signature(ID, Detected) :-
-    category_of(ID, Cat),
-    expected_signature(Cat, Expected),
-    (   Detected = Expected
-    ->  format('[VALIDATION] ~w: ~w matches ~w~n', [ID, Detected, Cat])
-    ;   format('[VALIDATION] ~w: Expected ~w, got ~w~n', [ID, Expected, Detected])
-    ).
 
 %% ============================================================================
 %% 3. INTERNAL HELPERS
