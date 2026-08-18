@@ -32,3 +32,15 @@ covering their members. Four were real and were fixed: a `__pycache__` directory
 itself (added, so the map is closed under its own rule). **This is the fourth instrument in
 this pass whose own control caught it before its number was believed** — see the WRITEUP's
 finding 5. The count above is from the corrected matcher.
+
+=== 7. POST-DEFECT-6 RE-VERIFICATION (2026-08-18, after the membership filter landed) ===
+Every figure published in the paper re-computed against the FILTERED numerator:
+  incidence      83/185 = 44.9% -> published 45%              OK
+  monthly series 36/98=36.7%  26/45=57.8%  16/20=80.0%        OK
+  precision      13/83 = 15.7%                                OK
+  delta          +11 dirs, 0 removed, 10 into numerator, 0 lost OK
+  partition      185 == 185, numerator non-members dropped: 1 (README.md)
+
+No published number moved. The membership filter removed a phantom member that had
+entered only after the audit-index row was appended, so the pre-filter figures used
+for the paper were already correct; the filter makes them REPRODUCIBLE by a re-runner.
