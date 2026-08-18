@@ -13830,6 +13830,22 @@ nobody had named.
   and is obtainable today. **Consequence: `valgrind` is the better route than gdb+core** —
   it reports the invalid read/write at the moment it happens, needs neither a core dump
   (which this box discards, see above) nor dbgsym.
+  **CORRECTION, tested the same day — the "nearest-exported + offset" half of the claim
+  immediately above is FALSE; do not rely on it.** Two-sided test against a live swipl
+  (2026-08-18): forward lookup WORKS — `info address PL_next_solution` → `0x…583`,
+  `PL_halt` → `0x…ca0`, so the 822 exported symbols are real and usable. **Reverse lookup
+  does not.** `info symbol $pc` returns *"No symbol matches $pc"*, and a live backtrace
+  renders every engine frame as `?? () from libswipl.so.10` (gdb reports
+  *"Shared library is missing debugging information"* and does NOT fall back to
+  nearest-symbol inside a stripped library). Since giant_comp would crash in interpreter
+  internals — static, not exported — the realistic yield is **library + load-base offset,
+  no function name**. That is what the prereg said in the first place: **its "out of scope"
+  verdict on naming the crashing static function STANDS, and the bullet above overstated
+  the improvement.** What valgrind still genuinely buys, and why it is worth having anyway:
+  the error KIND (invalid read/write of size N, use-after-free, uninitialised value) at the
+  moment of occurrence, with no core and no dbgsym — diagnostic even while unnamed. Naming
+  the frame still needs a symbol-bearing swipl: source build (arm F's original idea) or the
+  distro package.
 - **`ptrace_scope = 1` blocks attaching to a hung process — and hangs are 6 of the 7
   round-1 failures, i.e. the DOMINANT mode.** Witnessed 2026-08-18: `gdb -p <pid>` against
   a non-child returned *"ptrace: Inappropriate ioctl for device. No stack."* So the whole
