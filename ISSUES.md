@@ -7895,6 +7895,24 @@ Declared-absence twin: **GAP-22** (`docs/design/design_gaps.md`).
 
 **Resolution (2026-07-02; commits `5d052990` + close commit; evidence `audits/2026-07-02_oq195_general_n_gap/`).** The proof doc delivers: Lemma 1 (H¹ = C(n,2) − Σ C(nᵢ,2) = engine's pair count); **Theorem A** (min nonzero = n−1, so {1..n−2} forbidden at every n); **Theorem B** (exact band decomposition by largest agreement bloc, self-similar recursion); an unconditional band-floor lemma; **Theorem C** (inter-band gap iff n ≥ j+3+C(j+1,2), every value in the gap forbidden); **Theorem D** (type-token bound T=7, derived from code not assumed — top truncation live in the STAKEHOLDER frame, where authored seat counts reach 12; operator's pre-check reshaped the scope from caveat-closure to live law). Machine-verified n ≤ 40 under pre-registered BLOCKING criteria — **per-band architecture** (plan-review catch: the band union is invariant under dropping the parts-constraint, so a union check cannot verify the classification; the unconstrained classifier was run as a discriminating control: identical unions, mismatched bands at 38/39 n) — plus record-match, negative controls, Theorem-C iff (zero exceptions). Engine witness `prolog/tests/test_h1_spectrum.pl` 23/23 (exhaustive n=2–4; constructive all ≤7-bloc partitions n=5–12; OQ-51 filter at n=12; two negative controls). Propagation landed: v8 §3.4/§9.6/Appendix; v7 dated amendment note (band values seat-count-conditioned); v6.13.1 changelog item-6 pointer; `grothendieck_cohomology.pl` both range comments rewritten. **Line-drift note:** the flag everywhere cited as `grothendieck_cohomology.pl:158` actually lived at ll.167–182 — cite by predicate (`cohomological_obstruction/3` header), never that line. Successor build: **OQ-207** (stakeholder-frame H¹ wiring). The old 4-name band census (manifest `2026-06-30T00:08:22Z`) was evidence-so-far, superseded by the theorem; re-pin by manifest if ever reused.
 
+
+**Open theory note (2026-08-18, NO witness — conjecture only, recorded so it is not re-derived
+from scratch).** Theorems A–C give the forbidden band as a **counting** fact about partitions
+(H¹ = C(n,2) − Σ C(nᵢ,2); min nonzero = n−1). It may instead be derivable as a **symmetry**
+consequence, which would be a strictly stronger result. The framing comes from the
+effective-field-theory rebuild of fluid dynamics, where a fluid is *defined* by having the
+unlimited parcel-swap symmetry — any two parcels exchange at zero energy cost — and a solid by
+lacking it (exchange costs a rupture). The gauge is the same construction one level up: H¹ = 0 is
+free exchange of gauge positions over the one content-seat (a global section exists, the positions
+glue); H¹ > 0 is exchange-with-rupture (manifest obstruction). If the forbidden band follows from
+the structure of that swap symmetry rather than from counting, then `sheaf_status`'s four values
+are a **phase** classification and the gap is a symmetry constraint — which is what a forbidden
+band in an order parameter means in physics, and is a much stronger claim than a combinatorial
+identity. **Unwitnessed and possibly empty:** the disanalogy to check first is that a physical
+swap symmetry is a group (invertible) while the axis-boundary audit is deliberately
+one-directional, so the honest formalism may remain the presheaf/sheaf one already in place, in
+which case this note retires. Provenance and the distinction-check: OQ-311 Origin.
+
 ---
 
 ## OQ-196 — Value-adjudicate the held-out static-orphan remainder (M=170)
@@ -10616,6 +10634,29 @@ pooled sub-vector of the fiat family carries H¹ = (#rope)·(#scaffold) exactly 
 types are story-derived with no cross-story identity, so pooled H¹ inherits bloc
 structure through its construction (the standard-#2 shape at the H¹ layer). Witness:
 `audits/2026-08-07_oq261_forced_gluing/posthoc_symmetric_read_probe_output.txt`.
+
+
+**Open theory note (2026-08-18, NO witness — conjecture only, on the SHAPE a churn-robust
+observable would have).** Standard #2 says pooled ratios inherit unit churn through unit-built
+denominators, and candidate #7 extends that to pooled H¹. Both are stated as prohibitions; neither
+says what a *permitted* corpus-level observable looks like. The effective-field-theory literature
+on fluids supplies a candidate shape via the **strong/weak symmetry** distinction (Lucas et al.,
+2024): a conservation law that holds exactly globally but fluctuates locally is *weakly* broken,
+and the observable that survives coarse-graining is not a local share but the **slow relaxation
+mode** of that weakly-broken charge. This project has the same pair already — the OQ-137
+reading-totality gate is a **strong** statement (exactly-one on the declared domain,
+machine-enforced by `tests/test_reading_totality.pl`), while per-story reading identity is
+**weakly** conserved (2/6–6/6 same-input redraw stability, file-structure-dependent, no global
+floor). If the analogy holds, the churn-robust observable is a slow-mode quantity over the weakly
+broken reading charge, not a ratio — which would turn standard #2 from a prohibition into a
+construction rule. **Load-bearing disanalogy to settle FIRST, and it may kill this outright:**
+renormalization needs a blocking map — a semigroup of coarse-graining transformations commuting
+with the observable — and GAP-31 says seats are story-local with no cross-story identity, so
+blocking is *undefined* here. This project has an aggregation ladder (reading → story → kernel →
+corpus), not a scale parameter. Candidate #7's own witness is what that costs: pooled H1 measured
+its pooling convention rather than the seat set (15/16 `real_closure`), which is not noise but
+manufacture. **So: no slow-mode observable may be proposed before a blocking map is either
+constructed or declared absent.** Provenance and the full distinction-check: OQ-311 Origin.
 
 ---
 
@@ -13775,6 +13816,31 @@ debugger. Cheapest-first:
     (arm F's original idea) or moving to the distro package. Both are real spends; neither
     is unblocked by an `apt install`.
 
+**Two corrections to (c), from the tooling survey later the same day (2026-08-18).** Both
+make the picture BETTER than the paragraph above states, and one of them is a hard blocker
+nobody had named.
+
+- **Symbols are only half-missing, so "addresses not names" was too pessimistic.** The
+  `swipl` executable is stripped and exports **8** dynamic symbols — but the engine core
+  lives in `libswipl.so.10` (`/usr/lib/swi-prolog/lib/x86_64-linux/`), which exports
+  **822**. Anything crashing inside the Prolog engine therefore symbolizes to a real
+  function name from the dynamic symtab, with no dbgsym at all. The residue is exactly the
+  prereg's wording: `static` functions are not in the dynamic symtab, so a static resolves
+  as *nearest-exported-symbol + offset*. That is a large improvement over a bare address
+  and is obtainable today. **Consequence: `valgrind` is the better route than gdb+core** —
+  it reports the invalid read/write at the moment it happens, needs neither a core dump
+  (which this box discards, see above) nor dbgsym.
+- **`ptrace_scope = 1` blocks attaching to a hung process — and hangs are 6 of the 7
+  round-1 failures, i.e. the DOMINANT mode.** Witnessed 2026-08-18: `gdb -p <pid>` against
+  a non-child returned *"ptrace: Inappropriate ioctl for device. No stack."* So the whole
+  live-inspection route (gdb attach, `eu-stack`, `py-spy dump`) is closed until
+  `kernel.yama.ptrace_scope=0` is set (or the tool is run under `sudo`). **This matters more
+  than the core-dump fix**: a hang produces no core by definition, so cores were never the
+  instrument for 6/7 of the failures — attach was, and attach is off. Fix it in the same
+  sysctl pass as `core_pattern`, BEFORE arms A–D.
+- Not worth installing here: **`perf`** — `linux-tools-6.18.33.2-microsoft-standard-WSL2`
+  does not exist in any configured source, so `perf` cannot match this WSL2 kernel.
+
 ---
 
 ## OQ-302 — boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577
@@ -14187,6 +14253,122 @@ rule. A killed rule retires a sentence from §7.4 and returns the eleven instanc
 description rather than a prediction. Either is worth more than the current state, which is a
 confident sentence with no test.
 
+
+
+---
+
+## OQ-311 — The universality-class claim in observers_not_humans §2.3 stratifies by TYPE LABEL while the mechanism it names is a GEOMETRIC CONDITION — and its conditional's evidentiary basis was withdrawn by OQ-01's close
+
+**Ω-type:** Ω_E (whether the sign-flip advantage tracks the gate-spanning condition or the
+`tangled_rope` label is a matter of fact about a corpus; the doc-currency half is a matter of
+fact about two dated documents).
+
+**Status:** open
+**Priority:** 2
+**Deps:** bundled_with OQ-05, bundled_with OQ-22
+**Origin:** 2026-08-18, from an operator question about whether the effective-field-theory
+rebuild of fluid dynamics (symmetry-first definition of a fluid; Wilsonian relevant/irrelevant
+flow) has purchase here. It does not import as physics, but its central move — *a class is fixed
+by which symmetry is broken, not by what the substance is* — reads directly onto a claim the
+project already makes and once already corrected.
+**Files:** `docs/observers_not_humans_v6.md` (§2.3, §3.3, and both revision notes),
+`prolog/drl_core.pl` (rope clause 378–387, bypass at :384), `prolog/config.pl`
+(`rope_epsilon_ceiling`, :264), `docs/logic.md` (§rope boundary note).
+
+### Item 1 — the doc-currency half (cheap, no corpus run, do this first)
+
+`observers_not_humans_v6.md` was authored **2026-05-28**. Its §2.3 is the paper's
+universality-class section, and it rests its corrected H0 on an explicit conditional:
+
+> "The corrected H0 confirmation reads: *sign-flip is load-bearing when Hub 1 spans snare gate
+> AND rope-gate bypass behavior is treated as given.* That AND clause is the conditional
+> assumption. If OQ-01 resolves by establishing the bypass as intentional, the mechanism's
+> theoretical status is clarified and the conditional confirmation can be stated without
+> qualification. … Currently, the bypass is treated as given."
+
+**OQ-01 closed 2026-06-18 — and satisfied the antecedent while withdrawing the basis.** The
+bypass *was* ratified as intentional modeling content, no guard. But the same close records:
+"The motivating Arm A3 presheaf collapse was **falsified** as a property of the clause on the
+post-reset twins (haiku 0.904 / flash 0.897; **no-sign-flip B3 drifts MORE than A3**) — a
+`prolog_v5` ε/d-distribution artifact." OQ-22's close (2026-06-28, Verdict B) repeats the
+attribution: "OQ-01 link: A3 collapse was a `prolog_v5` artifact."
+
+So the paper's conditional now reads as satisfied by a resolution that removed the evidence the
+conditional was protecting. §2.3 has absorbed neither half. Three further residues, all verified
+2026-08-18:
+
+- **The witnesses are gone.** §2.3 cites `outputs/alt_power_transform_results.json` and
+  `outputs/range_sweep_results.json` (as does OQ-05's resolution note). Neither exists —
+  `outputs/` is gitignored and the corpus was reset 2026-06-05. Every number in §2.3
+  (Jaccard 0.685–0.828 / 0.697–0.833, +0.21 vs +0.014, N=2,245 / N=1,169, "3,380 constraints,
+  testsets_3000") is `original_v6` chimera-era and re-derivable only under an archive
+  `corpus_path` overlay.
+- **Stale tracker pointer.** §2.3 twice cites `docs/open_questions.md` for OQ-01/OQ-05. That
+  tracker was consolidated into `ISSUES.md` 2026-06-04 and deleted (Pattern 2).
+- **Line drift.** §2.3 pins the bypass at `drl_core.pl:356`; OQ-01's resolution pins the rope
+  clause at 378–387 with the bypass at :384. Cite the clause by predicate, not the line.
+
+**Item 1's deliverable is a dated correction note in `observers_not_humans_v6.md`** (the paper's
+own convention — v6 already carries marked-correction blocks), not a silent edit. It needs no
+run and is the item to do even if item 2 is never funded.
+
+### Item 2 — the stratification (the real question, needs an archive overlay)
+
+§2.3's finding is stated two ways that are **confounded in the reported result**:
+
+- as a **type label** — "the robustness concentrates in a single constraint family:
+  `tangled_rope`"; 14.6× (+0.21 at N=2,245 vs +0.014 at N=1,169);
+- as a **geometric condition** — "Hub 1 spans the snare gate," institutional beneficiaries below
+  `d_zero` and powerless victims above, i.e. the χ span crosses the sign-flip zero.
+
+These are not the same set. There are gate-spanning constraints that classify as something other
+than `tangled_rope`, and `tangled_rope` constraints whose Hub 1 does not span. The reported
+stratification cannot tell which one carries the advantage, because it only ever cut on the label.
+
+**Why this is the live question and not a tidying exercise.** If the *condition* carries it, the
+framework has a genuine class — a population defined by a structural property, in which
+robustness to functional form is a real invariant, and `tangled_rope` is merely its most common
+label in this corpus. If the *label* carries it, then §2.3's robustness is a property of this
+corpus's type mix, the "universality class" framing is unearned, and the structural claim in §3
+loses its main quantitative support. Note that OQ-22 already supplies the machinery and the
+adjacent result: it defines and censuses the span-within-one-band condition per leg
+(testsets 5/109, haiku 23/960, flash 100/960, kernel_v1 49/1106) and establishes that the χ→type
+map is **per-constraint, never the config partition** — which is exactly the map a
+condition-stratified cut has to be computed against.
+
+**Pre-registration sketch (author in full before any spend).** Two arms over the same corpus and
+the same variant set: (A) stratify the sign-flip Jaccard advantage on the gate-spanning condition,
+ignoring type; (B) stratify on the `tangled_rope` label, ignoring the condition. Cross-tabulate to
+get the four cells, and pre-commit what each pattern means — the discriminating cells are
+*gate-spanning ∧ ¬tangled_rope* and *tangled_rope ∧ ¬gate-spanning*, and a design that cannot
+populate both is not a discriminating probe (`build_discipline.md` → *The relocating confound*).
+Pre-declare the minimum cell N; the twin legs' condition counts above suggest the off-diagonal
+cells may be small, and **a design that cannot populate them is a declared UNANSWERABLE, not a
+result to ship** (*A positive control demonstrates DISCRIMINATION, not detection*).
+
+### Sequencing constraint a cold reader would otherwise get wrong
+
+**Do not run item 2 against the live `testsets/` leg.** The §2.3 numbers are `original_v6`
+(3,380 stories, chimera-era: ID reuse across runs, OQ-25 / v7 §5.11); the live leg is the
+post-2026-06-05 rebuild and is a deliberately sparse singleton — an engine-regime question
+witnessed only there is under-witnessed. Reproducing or contradicting §2.3 requires
+`asserta`-overlaying `corpus_path` to `archives/datasets/original_v6` (plain `assertz` is
+**silently ignored** — the default clause wins), and any re-run must name BOTH the corpus and the
+code state, since the sigmoid/χ path has moved since May 2026 (the legacy χ = ε × π path is now
+fully drained, OQ-67). Sign-flip behaviour is *engine*-sensitive, so also exercise the twin legs
+— which is where OQ-01 falsified A3 in the first place. Cross-corpus counts are per-generation,
+never expected prevalence (OQ-22 scope note).
+
+### What resolution changes
+
+Item 1 makes a framework paper's central section current with two closes that postdate it, and
+either restates or retires its headline. Item 2 either promotes "universality class" from analogy
+to a claim with a named defining condition — which is what would license the §5.5 cross-class
+protocol to look for the *condition* in RL/animal/embodied populations rather than for a type
+label that will not transfer — or withdraws the quantitative support for the structural claim. A
+third possibility worth pre-declaring: the advantage tracks *neither* cleanly on the archive,
+which routes to the engine-regime question (which ε/d distributions re-enter the collapse band)
+that OQ-22 sharpened and discharged as an existence claim only.
 
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
