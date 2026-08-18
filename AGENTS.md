@@ -1188,6 +1188,11 @@ These rules are absolute. Violating them silently changes the system's semantics
 - Synthesize `stakeholder_gain_flow/2` / `fixing_cost_class/2` from metrics or defaults
   anywhere (fabrication ban, OQ-92; `data_repair.pl` is the named door). Authored-or-absent,
   fail-closed; capture is `narrative_ontology:constraint_captured/1`, computed positively.
+  **And treat `constraint_captured/1` as a NAME-IDENTITY join, not a flag (OQ-190, 2026-08-17):**
+  it matches `stakeholder_gain_flow`'s receiver against the `constraint_stakeholder` roster *by
+  name*, and gates `drl_core.pl` scaffold + `signature_detection.pl:1220/1378/1477` + the maxent
+  mirror — so it is on the `dr_type` path, and both its authored sources score 1/6 positive
+  draw-stable. A change that widens or loosens the match changes classification.
 - Reintroduce grid injection/imputation in ANY form: the DR-AUDIT grid shim was RETIRED
   2026-06-11 (OQ-93 ruling (b); the `grid_shim_enabled` flag no longer exists) — the leveled
   grid is authored-or-absent (`coercion_grid` block in story JSON, compiled by
