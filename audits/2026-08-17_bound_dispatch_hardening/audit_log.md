@@ -88,3 +88,9 @@ re-issue at Phase 5, and an evidence map. Effective baseline for Phase 4 compari
 ```
 GATE: GREEN   (full re-run, all 19 rows ✓, 2026-08-17 post-stub)
 ```
+
+## Phase 1 complete (committed a76c21dd — RECON.md has the full read-only findings)
+
+## Phase 2 — PREREGISTRATION.md frozen
+
+md5 at freeze (logged above the first Phase-3/4 result line): `1a9f61469525ac481acc6fae47a85aea`
