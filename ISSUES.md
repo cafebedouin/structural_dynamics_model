@@ -13391,6 +13391,19 @@ minted regardless of how OQ-251's hypotheses resolved.
 > **Surviving Ω, relocated and sharpened (held at GAP-08 §7 and OQ-317):** *does the
 > author-independent immovability signal produce a non-authored `false`, or bottom out in authored
 > inputs one layer down?* If the latter, §7 re-creates this problem with more machinery.
+>
+> ### One datum about the apparatus itself, recorded because it is only observable under pressure
+> At close, an attempt to memorialize this session's method lessons in the memory feedback channel
+> pushed it to **34/33** and turned the `apparatus` gate row RED. The cap did its job: it forced a
+> curation call at exactly the moment a session that had gone well was inclined to memorialize
+> itself, and the honest answer was that **the lessons were already written down in better form** —
+> at the sites they govern (`boolean_independence.py`'s `bool()` coercion, the
+> `container_typology_analysis.py` stale-input stamp), in the KNOWN_STATE correction-key entry the
+> PreToolUse hook delivers to whoever edits those files, and in this close note. The entry was
+> dropped rather than seated by retiring an incumbent: the new rules have no track record, the 33
+> incumbents were each judged worth a slot, and none was verifiably stale — so the burden sat on the
+> candidate, the same direction as OQ-317's sunset. Small evidence that the 33-cap is calibrated
+> (OQ-276/OQ-290 read this channel).
 **Files:** `python/container_typology_analysis.py`, `python/extract_corpus_data.py`,
 `python/linter.py`, `python/axiom_reachability.py`, `python/shared/maxent.py`,
 `python/cluster_space_phase4.py`, `python/cluster_space_phase5.py`,
