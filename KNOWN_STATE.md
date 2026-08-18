@@ -127,6 +127,21 @@ printing nothing a grep would catch, and the second labelled everything `defined
 `St0=UNDEFINED` binds a *variable*, not an atom — a capitalised-atom slip that made the label
 unable to fail. The shipped probe carries its own red-capability control.
 
+**Breadth leg.** `classify_corpus('archives/datasets/kernel_v1', ...)` at HEAD completes clean
+at **1106/1106** (`per_constraint` == glob == `manifest.n_constraints`), so all five of its
+built-in refusals — zero-glob, load-completeness, single-model fingerprint, raw freshness,
+seen==classified — passed with the swapped accessors on the load chain, at ten times the
+default leg's size and with an older corpus's reading-sets. The canonical
+`outputs/pipeline_output.json` was not touched. **Declared residue: this is a COMPLETENESS
+witness, not a diff** — no baseline breadth run was made, so the claim is "the swaps do not
+break at n=1106", not "output is identical there". The identity claim rests on the default
+leg's byte-identical `per_constraint`. Two gotchas for whoever runs the next one:
+`classify_corpus` calls `run_prolog` with the hardcoded default `timeout=300` and kernel_v1
+needs more (raise it in a throwaway driver, not in `run_pipeline.py`); and a first attempt
+reported `[exited with code 0]` while the Python underneath had raised `TimeoutExpired` — the
+`| tail` in the invocation swallowed the exception status, success-shaped absorption at the
+shell boundary.
+
 **Also witnessed (invocation, not a defect):** a bare `./scripts/gate.sh` reports a FALSE RED
 on `gap surfaces` — `ModuleNotFoundError: No module named 'pandas'`, because the row shells out
 to `python/query.py` and `gate.sh` calls bare `python3`. Run it as

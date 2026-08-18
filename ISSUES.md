@@ -2991,6 +2991,11 @@ fingerprint-frozen corpus, both exit 0 with mtime advanced, `per_constraint` md5
 - Arity/shape safety for the wide corpus predicates → **OQ-308**. This close makes the blast
   radius *enumerable*, not *safe*.
 - A latent defect found by the sweep, recorded not fixed → **OQ-307**.
+- **Breadth witness is COMPLETENESS, not identity.** `classify_corpus` on
+  `archives/datasets/kernel_v1` completes at 1106/1106 with all its refusals passing, but no
+  baseline breadth run was made — so "the swaps do not break at n=1106" is witnessed, and
+  "output is identical there" is not. The identity claim rests on the default leg's
+  byte-identical `per_constraint` (n=279) plus the wrappers being single-clause bare lookups.
 - **Declared side effect of the multifile close, witnessed on all five legs.** Counts are
   unchanged everywhere (`has_sunset_clause` 11/14/8/16/23, `flat_control_of` 28/0/0/0/0,
   identical before and after), but on the four twin legs — which have **zero**
