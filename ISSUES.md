@@ -13875,6 +13875,84 @@ schema predicate acquires its first consumer, forcing that decision at the momen
 it does not, and cannot, check per-leg expectations — that is this OQ's job.
 
 
+## OQ-309 — `formalization` is a scalar axis, but formalization is gauge-relative: a Lean certificate is adequate to the consumer gauge and degenerate to the extender gauge
+
+**Ω-type:** Ω_C (the named resolution is a shape decision — whether the axis is one label or a
+gauge-indexed pair — not a measurement).
+
+**Status:** open
+**Priority:** 5
+**Deps:** bundled_with OQ-296
+**Origin:** 2026-08-18, operator-supplied observation about proof assistants; recorded because it
+complicates a *published* claim (`docs/cultural_containers_sketch_v5.md` §"the
+environment-conditional stability of mathematics") rather than an unwritten one.
+**Files:** `python/container_typology_analysis.py:143-161` (the axis),
+`docs/cultural_containers_sketch_v5.md:37,45,117-121` (the axis definition and the mathematics
+demonstration), `docs/design/v8_seat_gauge_orientation_design_spec.md` (the vocabulary this
+would be stated in).
+
+**The observation.** Lean certifies a theorem well enough to *use*, not well enough to *build
+on*. An extender needs the shape of a proof — why it works, where it is tight, what it would
+take to push it — and that is exactly what formalization discards. So the same body of work
+supports abstraction for consumers and demands detail from extenders.
+
+**Why this is a DR question and not a remark about mathematics.** It is the seat/gauge/orientation
+structure exactly: one **content-seat** (the body of work), several **gauge positions** over it
+(consumer, extender), and the Lean certificate as an **orientation** — the audited face — that is
+adequate to one gauge and degenerate to another. Disagreement across gauge positions over a single
+content-seat is the thing H¹ counts, and the framework's standing ruling is that such an
+obstruction is not to be sheafified away. "Is this proof adequate?" is therefore a *contentful*
+question in the Coupling Theorem's sense (the situation does not settle it), and a single scalar
+label for it is the no-seat pose applied to the formalization axis.
+
+**The engine surface.** `compute_axes` emits one of `formal | textual | informal | none` per
+domain, from `mountain_pct` / `natural_law_pct` / `mean_extractiveness`. There is no gauge index
+anywhere in it. Under this OQ's reading the quantity of interest is not the label but the **gap
+between the consumer-gauge and extender-gauge readings of the same kernel** — a container can be
+`formal` for consumers and near-`informal` for extenders simultaneously, and that spread is
+invisible by construction.
+
+**What it does to the published claim.** The sketch currently reads proof assistants as a clean
+**bandwidth extension** — mathematics recalibrating to environmental acceleration, "not a failure
+of the architecture." The wrinkle says it may instead be a bandwidth **trade**: verification
+bandwidth rises for the consumer gauge while transmission bandwidth for the extender gauge falls.
+If so the diagnosis needs a qualifier, because a trade accumulates operational gap in the very
+population that maintains the kernel, and the marked-revision container's stability argument runs
+through that population. This is a change to a published claim, so the amendment itself is an
+operator ruling, not a drive-by edit.
+
+**What is witnessed as of this entry (2026-08-18), and what is not.**
+- Witnessed: the axis is scalar (`container_typology_analysis.py:143-161`, read directly); the
+  sketch's mathematics section reads formalization as bandwidth extension (lines 117-121, read
+  directly); no prior OQ tracks the question (word-bounded grep over `ISSUES.md` for
+  `Lean|Buzzard|Scholze|Tao|formaliz|proof assistant|cultural.container` returns 8 hits, all
+  unrelated senses of "formalization" — positive controls: the same machinery returns 297 for
+  `\bseat\b` in `ISSUES.md` and 15 on `cultural_containers_sketch_v5.md`, so the empty result is a
+  fact about the file and not about the probe).
+- NOT witnessed, and required before any of this is published: (a) the **Tao attribution**. The
+  claim as received was that Tao "has made roughly this point about verification giving correctness
+  without understanding" — the hedge is the operator's own. The sketch cites Hales, Buzzard and
+  Scholze to specific episodes; a Tao citation must be located to that standard or dropped. Treat
+  as a sub-Ω_E: the resolution operation is finding the source, not thinking harder. (b) Whether
+  the consumer/extender spread is **detectable on this corpus at all**. The containers axes are
+  computed from constraint-story distributions, and no authored field distinguishes a consumer
+  reading from an extender reading of the same kernel; if none can, the honest outcome is a
+  declared absence in `design_gaps.md`, not a new axis.
+
+**First workable move (does not need the ruling).** Check whether any existing authored field
+separates the two gauges — `cs_reading_relation` edges within a kernel family are the obvious
+candidate, since sibling readings of one kernel are exactly "the same content-seat foregrounded
+differently." If they do, the two-gauge read is measurable and the axis-shape question becomes
+live; if they do not, this closes as GAP-nn (declared absence) and the sketch gets a scope
+qualifier rather than a new axis.
+
+**SCOPING GUARD — do not fold this into OQ-296.** OQ-296 concerns the `formal_nl` disjunct being
+*dead* (`natural_law_pct` is a constant zero by construction, so `textual_combined` is silently
+mountain-only). That is a defect: the axis does not compute what it says. This OQ is the opposite
+kind of question — whether the axis, computing correctly, is the *right shape*. Fixing OQ-296 does
+not touch this, and resolving this does not repair OQ-296. Same function, two questions; they share
+a file and nothing else.
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
