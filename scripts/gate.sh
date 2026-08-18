@@ -38,11 +38,13 @@ run "doc patterns"   python3 python/doc_pattern_check.py --check
 # still left 5 bound-selector call sites — one of them feeding a reported FCR percentage.
 # Discrimination record: RED (5 sites) at dcde9591, GREEN after the repairs in this change.
 run "bound selector" python3 python/bound_selector_check.py --check
-# Unswept consumers of a VACATED taxonomy member (OQ-278). build_discipline.md:1392/:2558
-# have fired three times on this one taxonomy, so this is an instrument rather than a fourth
-# note (operator, 2026-08-14). Declaration-based: the 9 stale citations cannot be repaired
-# until OQ-278's R2, so they are declared — red on a TENTH, red on a silent repair.
-run "vacated cites"  python3 python/pattern_citation_check.py --check
+# Unswept consumers of a DISPLACED taxonomy member (OQ-278) — one manifest block per member,
+# with the state that says WHY its citations are stale: `destructive-replace` was vacated
+# (2026-08-11), `bound-probe` was renumbered 3 -> 7 (2026-08-17). build_discipline.md's
+# consumer-sweep rules have fired three times on this one taxonomy, so this is an instrument
+# rather than a fourth note (operator, 2026-08-14). Declaration-based: red on a NEW consumer,
+# red on a silent repair that does not retire its manifest entry in the same change.
+run "displaced cites" python3 python/pattern_citation_check.py --check
 run "claim cites"    python3 python/claim_cite_check.py --check
 run "claim cites st" python3 python/claim_cite_check.py --selftest
 run "known_state"    python3 python/known_state_status.py --check

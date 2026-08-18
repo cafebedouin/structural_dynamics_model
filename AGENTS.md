@@ -680,11 +680,11 @@ prohibition gate is not buildable — the convention is the guard.
 python3 python/doc_pattern_check.py --check          # gate: index->name agreement, per index
 python3 python/doc_pattern_check.py --list           # both extractions + the manifest
 python3 python/doc_pattern_check.py --pairwise REV   # manifest-free agreement at a git rev
-python3 python/pattern_citation_check.py --check     # gate: unswept consumers of a VACATED member
+python3 python/pattern_citation_check.py --check     # gate: unswept consumers of a DISPLACED member
 python3 python/pattern_citation_check.py --sweep     # regenerate the OQ-278 label set
 ```
 
-Both run in `scripts/gate.sh` (`doc patterns`, `vacated cites`). Three things that bite:
+Both run in `scripts/gate.sh` (`doc patterns`, `displaced cites`). Three things that bite:
 
 - **Never store the pattern NAMES in either checker.** The manifests hold *locations* and
   *states*; agreement is computed from the documents. An authored copy of the taxonomy inside the

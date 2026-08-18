@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
-"""pattern_citation_check — sweep pattern-index citations; GATE the unswept consumers of a
-vacated taxonomy member.
+"""pattern_citation_check — sweep pattern-index citations; GATE the unswept consumers of any
+taxonomy member whose index MOVED.
 
 Two jobs, one classifier, one canonical location. Built as the OQ-278 archaeology sweep inside
 `audits/2026-08-14_oq278_index_collision/`, then MOVED here (2026-08-14) rather than copied,
 when the gate mode was added — a scanner in an audit dir plus a scanner in `python/` is
 Pattern 2 on this file's own subject.
 
-    --check     GATE MODE. The vacated-consumer instrument. See VACATED below.
+    --check     GATE MODE. The displaced-consumer instrument. See DISPLACED below.
     --sweep     writes the audit's `LABEL_SET.tsv` (the artifact OQ-294 consumes)
     --selftest  the sweep's controls alone
+
+TWO DISPLACEMENT STATES, NOT ONE (2026-08-17). A member can leave an index two ways and both
+strand the same citations: *vacated* (`destructive-replace`, demoted 2026-08-11 — the index is
+now a grave) and *renumbered* (`bound-probe`, moved 3 -> 7 by OQ-278 R1b'/R2 — the index is now
+someone else's, or a grave). The manifest holds one block per displaced member so a reader can
+tell WHY a citation is stale, which decides how it is repaired: a vacated member's citations get
+the surviving rule named, a renumbered member's get the new index.
 
 WHY THE GATE MODE EXISTS — three strikes, so an instrument rather than a fourth note
 ------------------------------------------------------------------------------------
@@ -77,7 +84,7 @@ cross-reference — and must DECLINE on a planted non-taxonomy `P3` in the Prolo
 shape. A one-sided control (plant-and-find) would show only that the probe CAN fire.
 
 Usage:
-    python3 python/pattern_citation_check.py --check     # gate mode (vacated consumers); default-less
+    python3 python/pattern_citation_check.py --check     # gate mode (displaced consumers); default-less
     python3 python/pattern_citation_check.py --sweep     # write LABEL_SET.tsv + print the summary
     python3 python/pattern_citation_check.py --selftest  # the sweep's controls alone
 """
@@ -90,39 +97,75 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 AUDIT = REPO / "audits/2026-08-14_oq278_index_collision"
 
-# --- the vacated-consumer manifest (the gate's actual subject) ---------------
+# --- the displaced-consumer manifest (the gate's actual subject) -------------
 #
-# WHY THIS EXISTS. `build_discipline.md:1392` ("a correction landed in PROSE is not landed
-# until every instrument encoding the same assumption is checked") and `:2558` ("a correction
-# is not done until the old value's consumers are swept") have now fired THREE times on this
-# one taxonomy. Three instances of one failure mode wants an instrument, not a fourth note
-# (operator, 2026-08-14).
+# WHY THIS EXISTS. `build_discipline.md` ("a correction landed in PROSE is not landed until
+# every instrument encoding the same assumption is checked" / "a correction is not done until
+# the old value's consumers are swept") has now fired THREE times on this one taxonomy. Three
+# instances of one failure mode wants an instrument, not a fourth note (operator, 2026-08-14).
 #
-# The 2026-08-11 ruling DEMOTED AND VACATED `destructive-replace` from index 3. Nine live
-# citations still cite it as a member. They are NOT repaired here — the repair is Step 4,
-# after OQ-278's R2, because "append the slug in place" is invalidated if the ruling
-# renumbers. So they are DECLARED, exactly as `doc_pattern_check.DECLARED_SPINE_LAG` declares
-# the unrepaired spine table: green today, red on a TENTH, red when one is silently repaired.
+# ONE BLOCK PER DISPLACED MEMBER. `destructive-replace` was demoted and its index VACATED
+# (2026-08-11); `bound-probe` was RENUMBERED off that same index (3 -> 7) by R1b'/R2. Both
+# strand citations, for different reasons, and the reason decides the repair — so the state is
+# recorded, not just the count. Declared exactly as `doc_pattern_check.DECLARED_SPINE_LAG`
+# declares the unrepaired spine table: green today, red on a NEW consumer, red when one is
+# silently repaired without retiring its entry.
+#
+# WHY bound-probe IS DECLARED *BEFORE* THE RENUMBERING LANDS (2026-08-17). The 2026-08-11
+# vacating created nine stale pointers and nobody swept — the entry's own third self-inflicted
+# instance. Renumbering `bound-probe` without capturing its consumers first would be the
+# fourth, produced by the commit that closes the entry. Mechanism recovery is what distinguishes
+# these citations and it gets harder once index 3 resolves to `bound-probe` in neither document,
+# so the population is captured while it is still cheap.
 #
 # Counts are per FILE, not per line: line numbers drift under ordinary editing and a
 # line-keyed manifest would go red on churn instead of on substance.
-VACATED = {
-    "slug": "destructive-replace",
-    "declared": "2026-08-11",
-    "oq": "OQ-278",
-    "what": "demoted from a defect pattern to a witness rule; index 3 vacated, never reused",
-    "repair_blocked_on": "OQ-278 R2 (Step 4) — renumbering would invalidate an in-place slug",
-}
-DECLARED_STALE_CONSUMERS = {
-    "ISSUES.md": 1,
-    "KNOWN_STATE.md": 1,
-    "audits/2026-06-07_stakeholder_layer_migration/MIGRATION_PLAN.md": 1,
-    "audits/2026-06-11_oq109_phase_b/b3_open1_discharge.md": 1,
-    "audits/2026-06-12_oq106_retire/README.md": 1,
-    "audits/2026-06-18_oq104_citation_checker/FINDINGS.md": 1,
-    "docs/design/the_perturbation_move.md": 1,
-    "docs/the_perturbation_principle.md": 1,
-    "docs/design/design_gaps.md": 1,
+#
+# NOT EVERY DECLARED ROW IS A REPAIR TARGET, and the manifest deliberately does not try to say
+# which — a count is checkable, a disposition is a judgment. Three sub-populations live in the
+# `bound-probe` block: (a) live citations that must gain the new index (`ISSUES.md:859,945`,
+# `engine_handoff_5/6`, `swipl_load_path_and_probe_gotchas.md:226`, `bound_selector_check.py`);
+# (b) discussion OF the collision, correct as written and never repaired (`KNOWN_STATE.md`'s
+# 2026-08-14/17 entries, `ISSUES.md`'s OQ-278-adjacent prose, the oq251 audit log); (c) this
+# file's own prose, which names mechanisms rather than citing indices — one row (the
+# decoded-`.jpg` note) is a recovery false positive that merely sits near an index token.
+# So a residual count after repair is expected and is declared residue, not backlog.
+DISPLACED = {
+    "destructive-replace": {
+        "state": "vacated",
+        "declared": "2026-08-11",
+        "oq": "OQ-278",
+        "what": "demoted from a defect pattern to a witness rule; index 3 vacated, never reused",
+        "repair": "name the surviving witness rule ('prove before you replace'); no index",
+        "consumers": {
+            "ISSUES.md": 1,
+            "KNOWN_STATE.md": 1,
+            "audits/2026-06-07_stakeholder_layer_migration/MIGRATION_PLAN.md": 1,
+            "audits/2026-06-11_oq109_phase_b/b3_open1_discharge.md": 1,
+            "audits/2026-06-12_oq106_retire/README.md": 1,
+            "audits/2026-06-18_oq104_citation_checker/FINDINGS.md": 1,
+            "docs/design/the_perturbation_move.md": 1,
+            "docs/the_perturbation_principle.md": 1,
+            "docs/design/design_gaps.md": 1,
+        },
+    },
+    "bound-probe": {
+        "state": "renumbered 3 -> 7",
+        "declared": "2026-08-17",
+        "oq": "OQ-278",
+        "what": "peer member (R1b' = B1'), moved off the vacated index 3 to index 7 in BOTH documents",
+        "repair": "cite index 7 (or the mechanism name); index 3 is a grave in both documents",
+        "consumers": {
+            "ISSUES.md": 4,
+            "KNOWN_STATE.md": 6,
+            "audits/2026-08-17_oq251_natural_law_reachability/audit_log.md": 2,
+            "docs/engine_handoff_5.md": 2,
+            "docs/engine_handoff_6.md": 1,
+            "docs/technical/swipl_load_path_and_probe_gotchas.md": 1,
+            "python/bound_selector_check.py": 2,
+            "python/pattern_citation_check.py": 2,
+        },
+    },
 }
 
 # The two definitional documents are the SUBJECT, not citations. Excluded from the label set.
@@ -416,42 +459,45 @@ def selftest():
     return failures, rows
 
 
-def stale_consumers(rows):
-    """file -> count of live citations that still cite the VACATED mechanism as a member.
+def stale_consumers(rows, slug):
+    """file -> count of live citations that still cite a DISPLACED mechanism as a member.
 
     A row counts only if it is a taxonomy citation (namespace `taxonomy-candidate`, so the
     pinned/subject/foreign-namespace populations are already excluded) AND its recovered
-    mechanism is the vacated slug. Discussion OF the vacating lives in `oq278-subject` and in
-    the two definitional documents, none of which reach here — which is what keeps this from
-    firing on its own paper trail.
+    mechanism is exactly this slug. Discussion OF the displacement lives in `oq278-subject`
+    and in the two definitional documents, none of which reach here — which is what keeps this
+    from firing on its own paper trail.
     """
     found = {}
     for r in rows:
-        if r["namespace"] == "taxonomy-candidate" and r["mechanism_slug"] == VACATED["slug"]:
+        if r["namespace"] == "taxonomy-candidate" and r["mechanism_slug"] == slug:
             found[r["file"]] = found.get(r["file"], 0) + 1
     return found
 
 
-def run_vacated_check(rows, declared=None):
-    """Return a list of error strings (empty = green)."""
-    declared = DECLARED_STALE_CONSUMERS if declared is None else declared
-    found = stale_consumers(rows)
+def run_displaced_check(rows, declared=None):
+    """Return a list of error strings (empty = green), across every displaced member."""
+    declared = DISPLACED if declared is None else declared
     errors = []
-    for path in sorted(set(found) | set(declared)):
-        f, d = found.get(path, 0), declared.get(path, 0)
-        if f == d:
-            continue
-        if d == 0:
-            errors.append(f"UNSWEPT CONSUMER: {path} cites the VACATED '{VACATED['slug']}' "
-                          f"({f}x) and is not in the manifest — a correction landed in prose "
-                          f"without sweeping its consumers ({VACATED['oq']})")
-        elif f == 0:
-            errors.append(f"DECLARED CONSUMER GONE: {path} no longer cites "
-                          f"'{VACATED['slug']}' — either the repair landed (retire the manifest "
-                          f"entry in the SAME change) or the detector stopped seeing it")
-        else:
-            errors.append(f"COUNT CHANGED: {path} cites '{VACATED['slug']}' {f}x, "
-                          f"manifest says {d}x")
+    for slug, block in sorted(declared.items()):
+        state, oq = block["state"], block["oq"]
+        want = block["consumers"]
+        found = stale_consumers(rows, slug)
+        for path in sorted(set(found) | set(want)):
+            f, d = found.get(path, 0), want.get(path, 0)
+            if f == d:
+                continue
+            if d == 0:
+                errors.append(f"UNSWEPT CONSUMER: {path} cites '{slug}' ({state}) {f}x and is "
+                              f"not in the manifest — a correction landed in prose without "
+                              f"sweeping its consumers ({oq})")
+            elif f == 0:
+                errors.append(f"DECLARED CONSUMER GONE: {path} no longer cites '{slug}' "
+                              f"({state}) — either the repair landed (retire the manifest entry "
+                              f"in the SAME change) or the detector stopped seeing it")
+            else:
+                errors.append(f"COUNT CHANGED: {path} cites '{slug}' ({state}) {f}x, "
+                              f"manifest says {d}x")
     return errors
 
 
@@ -465,22 +511,29 @@ def main(argv):
                 print(f"  {f}")
             print("pattern_citation_check: RED (sweep controls)")
             return 1
-        # Control that the manifest can go red at all: a phantom entry must be reported.
-        if not run_vacated_check(rows, declared={**DECLARED_STALE_CONSUMERS,
-                                                 "docs/NOT_A_REAL_FILE.md": 1}):
-            print("  selftest FAILED: phantom manifest entry did not turn the check red")
-            print("pattern_citation_check: RED (selftest)")
-            return 1
-        errors = run_vacated_check(rows)
+        # Control that EVERY block can go red at all: one phantom entry per displaced member,
+        # asserted separately. A single phantom would leave a second block's plumbing
+        # unwitnessed while the row still printed GREEN — a control that fires for one member
+        # licenses nothing about the other.
+        for slug in DISPLACED:
+            phantom = {s: (dict(b, consumers={**b["consumers"], "docs/NOT_A_REAL_FILE.md": 1})
+                           if s == slug else b)
+                       for s, b in DISPLACED.items()}
+            if not run_displaced_check(rows, declared=phantom):
+                print(f"  selftest FAILED: phantom manifest entry under '{slug}' did not turn "
+                      f"the check red")
+                print("pattern_citation_check: RED (selftest)")
+                return 1
+        errors = run_displaced_check(rows)
         if errors:
             for e in errors:
                 print(f"  {e}")
-            print(f"pattern_citation_check: RED — {len(errors)} vacated-consumer problem(s)")
+            print(f"pattern_citation_check: RED — {len(errors)} displaced-consumer problem(s)")
             return 1
-        n = sum(DECLARED_STALE_CONSUMERS.values())
-        print(f"pattern_citation_check: GREEN — {n} declared unswept consumer(s) of the VACATED "
-              f"'{VACATED['slug']}' across {len(DECLARED_STALE_CONSUMERS)} files, repair blocked "
-              f"on {VACATED['repair_blocked_on']}; selftest 4/4")
+        parts = [f"'{slug}' ({b['state']}): {sum(b['consumers'].values())} citation(s) across "
+                 f"{len(b['consumers'])} files" for slug, b in sorted(DISPLACED.items())]
+        print(f"pattern_citation_check: GREEN — declared consumers of displaced members — "
+              f"{'; '.join(parts)}; selftest {3 + len(DISPLACED)}/{3 + len(DISPLACED)}")
         return 0
 
     failures, rows = selftest()
