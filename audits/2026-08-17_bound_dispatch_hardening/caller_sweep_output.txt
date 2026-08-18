@@ -1,0 +1,253 @@
+CALLER_SWEEP: 90 predicates, 599 files scanned, 74 with 0 bound-last-atom call sites
+
+== subsystem_available/1 (abductive_helpers.pl): 19 bound call site(s)
+   prolog/abductive_triggers.pl:75  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:126  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:177  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:231  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:342  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:427  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:452  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:455  atom=cohomology  | subsystem_available(cohomology),
+   prolog/abductive_triggers.pl:522  atom=fpn  | subsystem_available(fpn),
+   prolog/abductive_triggers.pl:574  atom=fpn  | subsystem_available(fpn),
+   prolog/abductive_triggers.pl:627  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:692  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:760  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:761  atom=cohomology  | subsystem_available(cohomology),
+   prolog/abductive_triggers.pl:762  atom=indexed_maxent  | subsystem_available(indexed_maxent),
+   prolog/abductive_triggers.pl:818  atom=cohomology  | subsystem_available(cohomology),
+   prolog/abductive_triggers.pl:892  atom=cohomology  | (   subsystem_available(cohomology),
+   prolog/abductive_triggers.pl:945  atom=maxent  | subsystem_available(maxent),
+   prolog/abductive_triggers.pl:946  atom=cohomology  | subsystem_available(cohomology),
+
+== classify_from_metrics/6 (drl_core.pl): 13 bound call site(s)
+   prolog/drl_core.pl:135  atom=mountain  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, mountain), !.
+   prolog/drl_core.pl:142  atom=snare  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare), !.
+   prolog/drl_core.pl:149  atom=scaffold  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, scaffold), !.
+   prolog/drl_core.pl:156  atom=rope  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, rope), !.
+   prolog/drl_core.pl:163  atom=tangled_rope  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, tangled_rope), !.
+   prolog/drl_core.pl:170  atom=piton  | classify_from_metrics(C, BaseEps, Chi, Supp, Context, piton), !.
+   prolog/genuine_findings_query.pl:80  atom=mountain  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, mountain) -> format('MATCHES_MOUNTAIN: true~n') ; format('
+   prolog/genuine_findings_query.pl:81  atom=snare  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, snare) -> format('MATCHES_SNARE: true~n') ; format('MATCHE
+   prolog/genuine_findings_query.pl:82  atom=scaffold  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, scaffold) -> format('MATCHES_SCAFFOLD: true~n') ; format('
+   prolog/genuine_findings_query.pl:83  atom=rope  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, rope) -> format('MATCHES_ROPE: true~n') ; format('MATCHES_
+   prolog/genuine_findings_query.pl:84  atom=tangled_rope  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, tangled_rope) -> format('MATCHES_TANGLED_ROPE: true~n') ; 
+   prolog/genuine_findings_query.pl:85  atom=piton  | (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, piton) -> format('MATCHES_PITON: true~n') ; format('MATCHE
+   python/check_logic_symbolic_drift.py:78  atom=unknown  | end_anchor = "classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown)."
+
+== test/1 (config_validation.pl): 7 bound call site(s)
+   prolog/signature_detection.pl:761  atom=s  | 'FALSE CI_ROPE signature for ~w: Appears to be rope (~w) but fails ~d Boltzmann structural test(s): ~w. Coupling score=~
+   python/generate_constraint_pl.py:346  atom=perspectival_gap  | f"test(perspectival_gap) :-\n"
+   python/generate_constraint_pl.py:357  atom=extraction_signature  | f"test(extraction_signature) :-\n"
+   python/generate_constraint_pl.py:371  atom=invariance_check  | f"test(invariance_check) :-\n"
+   python/generate_constraint_pl.py:385  atom=mountain_threshold_validation  | f"test(mountain_threshold_validation) :-\n"
+   python/generate_constraint_pl.py:393  atom=nl_profile_validation  | f"test(nl_profile_validation) :-\n"
+   python/generate_constraint_pl.py:404  atom=piton_threshold  | f"test(piton_threshold) :-\n"
+
+== constraint_signature/2 (signature_detection.pl): 7 bound call site(s)
+   python/bound_selector_check.py:251  atom=natural_law  | "foo :- signature_detection:constraint_signature(C, natural_law), !.", _PL, True),
+   python/bound_selector_check.py:253  atom=false_ci_rope  | "bar :- catch(signature_detection:constraint_signature(C, false_ci_rope), _, fail).",
+   python/bound_selector_check.py:256  atom=false_ci_rope  | "q = '( signature_detection:constraint_signature(C, false_ci_rope)'", _PY, True),
+   python/bound_selector_check.py:264  atom=natural_law  | "%   - detector : constraint_signature(C, natural_law) — a SOCKETED router input",
+   python/bound_selector_check.py:269  atom=false_ci_rope  | "constraint_signature(C, false_ci_rope) :-\n    false_ci_rope(C, _), !.", _PL, False),
+   python/bound_selector_check.py:271  atom=natural_law  | "    constraint_signature(C, natural_law) :-", _PL, False),
+   python/bound_selector_check.py:273  atom=natural_law  | "helper(C) :- once(constraint_signature(C, natural_law)).", _PL, True),
+
+== cs_verdict/2 (cs_pattern_detection.pl): 6 bound call site(s)
+   prolog/tests/test_cs_pattern_detection.pl:174  atom=false_marked_revision  | (cs_verdict(test_false_marked_revision, false_marked_revision)),
+   prolog/tests/test_cs_pattern_detection.pl:186  atom=false_interpretive_accretion  | (cs_verdict(test_false_interp_accretion, false_interpretive_accretion)),
+   prolog/tests/test_cs_pattern_detection.pl:206  atom=false_anchored_fixity_brittle  | (cs_verdict(test_false_af_brittle, false_anchored_fixity_brittle)),
+   prolog/tests/test_cs_pattern_detection.pl:222  atom=false_implicit_practice  | (cs_verdict(test_false_implicit, false_implicit_practice)),
+   prolog/tests/test_cs_pattern_detection.pl:250  atom=false_natural_law_constraint  | (cs_verdict(test_naturalized_mountain, false_natural_law_constraint)),
+   agent/validate_naturalization_gap.py:287  atom=false_natural_law_constraint  | f"( cs_verdict({constraint_id}, false_natural_law_constraint) "
+
+== composition_rule/3 (drl_composition.pl): 5 bound call site(s)
+   prolog/dirac_classification.pl:235  atom=piton  | behavior: composition_rule(piton, _, piton) contaminates
+   prolog/dirac_classification.pl:440  atom=rope  | - composition_rule(rope, rope, rope) = commuting coordination
+   prolog/dirac_classification.pl:441  atom=snare  | - composition_rule(rope, snare, snare) = extraction dominance
+   prolog/dirac_classification.pl:442  atom=mountain  | - composition_rule(mountain, _, mountain) = Casimir invariant
+   prolog/dirac_classification.pl:444  atom=piton  | - composition_rule(piton, _, piton) = degenerate contamination
+
+== epistemic_access_check/2 (boltzmann_compliance.pl): 3 bound call site(s)
+   prolog/boltzmann_compliance.pl:95  atom=true  | (   epistemic_access_check(C, true)
+   prolog/boltzmann_compliance.pl:577  atom=false  | epistemic_access_check(C, false), !.
+   prolog/purity_scoring.pl:49  atom=true  | epistemic_access_check(C, true),
+
+== claimed_natural/2 (signature_detection.pl): 3 bound call site(s)
+   python/audits/oq49_override_remeasure.py:73  atom=explicit_mountain_claim  | -> ( signature_detection:claimed_natural(C, explicit_mountain_claim)
+   python/audits/oq49_override_remeasure.py:75  atom=natural_law_signature_match  | ; signature_detection:claimed_natural(C, natural_law_signature_match)
+   python/audits/oq49_override_remeasure.py:93  atom=explicit_mountain_claim  | ( signature_detection:claimed_natural(pc_oq49_synthetic, explicit_mountain_claim)
+
+== classify_deltas/2 (grothendieck_cohomology.pl): 2 bound call site(s)
+   prolog/grothendieck_cohomology.pl:714  atom=monotone_ascending  | (   classify_deltas(Deltas, monotone_ascending)
+   prolog/grothendieck_cohomology.pl:716  atom=monotone_descending  | ;   classify_deltas(Deltas, monotone_descending)
+
+== is_mountain/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:32  atom=mountain  | with_psych_metric(C, drl_core:is_mountain(C, Context, mountain)).
+
+== is_piton/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:57  atom=piton  | with_psych_metric(C, drl_core:is_piton(C, Context, piton)).
+
+== is_rope/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:37  atom=rope  | with_psych_metric(C, drl_core:is_rope(C, Context, rope)).
+
+== is_scaffold/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:52  atom=scaffold  | with_psych_metric(C, drl_core:is_scaffold(C, Context, scaffold)).
+
+== is_snare/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:47  atom=snare  | with_psych_metric(C, drl_core:is_snare(C, Context, snare)).
+
+== is_tangled_rope/3 (drl_core.pl): 1 bound call site(s)
+   prolog/psych_bridge.pl:42  atom=tangled_rope  | with_psych_metric(C, drl_core:is_tangled_rope(C, Context, tangled_rope)).
+
+== write_json_number/2 (json_report.pl): 1 bound call site(s)
+   prolog/tests/test_purity_absence.pl:109  atom=unknown  | with_output_to(string(N), json_report:write_json_number(current_output, unknown)),
+
+== fpn_band/2 (abductive_helpers.pl): 0 bound call site(s)
+
+== seat_overrides/2 (abductive_helpers.pl): 0 bound call site(s)
+
+== stress_indicator/3 (abductive_triggers.pl): 0 bound call site(s)
+
+== expected_power_divergence/4 (boltzmann_compliance.pl): 0 bound call site(s)
+
+== restricted_classify/7 (constraint_indexing.pl): 0 bound call site(s)
+
+== classify_isomorphism_level/2 (context_profile_mining.pl): 0 bound call site(s)
+
+== cell_short/2 (covering_analysis.pl): 0 bound call site(s)
+
+== sigma_label/2 (covering_analysis.pl): 0 bound call site(s)
+
+== cs_terminal_attractor/4 (cs_drift_engine.pl): 0 bound call site(s)
+
+== stance_member_provenance/3 (cs_kernel_registry.pl): 0 bound call site(s)
+
+== cs_grounding_contradiction/2 (cs_pattern_detection.pl): 0 bound call site(s)
+
+== source_class/2 (data_repair.pl): 0 bound call site(s)
+
+== compute_verdict/4 (diagnostic_summary.pl): 0 bound call site(s)
+
+== ds_subsystem_available/1 (diagnostic_summary.pl): 0 bound call site(s)
+
+== expected_conflict_pattern/6 (diagnostic_summary.pl): 0 bound call site(s)
+
+== mismatch_source/2 (diagnostic_summary.pl): 0 bound call site(s)
+
+== describe_freedom/4 (dirac_classification.pl): 0 bound call site(s)
+
+== gauge_fixed/3 (dirac_classification.pl): 0 bound call site(s)
+
+== score_to_separability/2 (dirac_classification.pl): 0 bound call site(s)
+
+== type_to_dirac_class/4 (dirac_classification.pl): 0 bound call site(s)
+
+== category_of/2 (domain_priors.pl): 0 bound call site(s)
+
+== infer_category_from_priors/2 (domain_priors.pl): 0 bound call site(s)
+
+== has_purity_drift/2 (drl_boltzmann_analysis.pl): 0 bound call site(s)
+
+== purity_to_cut_priority/2 (drl_boltzmann_analysis.pl): 0 bound call site(s)
+
+== qualify_action/5 (drl_boltzmann_analysis.pl): 0 bound call site(s)
+
+== raw_urgency/4 (drl_boltzmann_analysis.pl): 0 bound call site(s)
+
+== transformation_type/6 (drl_composition.pl): 0 bound call site(s)
+
+== dr_action/3 (drl_core.pl): 0 bound call site(s)
+
+== dr_claim_mismatch/4 (drl_core.pl): 0 bound call site(s)
+
+== counterfactual_world/4 (drl_counterfactual.pl): 0 bound call site(s)
+
+== estimate_impact_indexed/5 (drl_counterfactual.pl): 0 bound call site(s)
+
+== ep_band/2 (fpn_report.pl): 0 bound call site(s)
+
+== gate_description/2 (gap_diagnostic.pl): 0 bound call site(s)
+
+== threshold_boundary/3 (gap_diagnostic.pl): 0 bound call site(s)
+
+== action_band/2 (giant_component_analysis.pl): 0 bound call site(s)
+
+== find_crossing/3 (giant_component_analysis.pl): 0 bound call site(s)
+
+== would_cross_threshold/5 (giant_component_analysis.pl): 0 bound call site(s)
+
+== chi_subband/2 (invertibility_analysis.pl): 0 bound call site(s)
+
+== predict_rope_snare/4 (invertibility_analysis.pl): 0 bound call site(s)
+
+== predict_rope_tangled/4 (invertibility_analysis.pl): 0 bound call site(s)
+
+== predict_snare_tangled/4 (invertibility_analysis.pl): 0 bound call site(s)
+
+== predict_three_type/4 (invertibility_analysis.pl): 0 bound call site(s)
+
+== single_loss_check/4 (invertibility_analysis.pl): 0 bound call site(s)
+
+== boltzmann_label/2 (json_report.pl): 0 bound call site(s)
+
+== live_index_label/3 (json_report.pl): 0 bound call site(s)
+
+== categorize_coupling/5 (logical_fingerprint.pl): 0 bound call site(s)
+
+== count_to_topology/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== extraction_zone/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== purity_zone/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== structural_property_holds/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== structural_void/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== suppression_zone/2 (logical_fingerprint.pl): 0 bound call site(s)
+
+== threshold_boundary/5 (maxent_classifier.pl): 0 bound call site(s)
+
+== entropy_interpretation/2 (maxent_report.pl): 0 bound call site(s)
+
+== drift_severity/3 (metric_drift_events.pl): 0 bound call site(s)
+
+== purity_decline_signal/2 (metric_drift_events.pl): 0 bound call site(s)
+
+== ep_base_severity/2 (network_dynamics.pl): 0 bound call site(s)
+
+== characterize_family/2 (orbit_report.pl): 0 bound call site(s)
+
+== status_kind/2 (probe_oq197_controls.pl): 0 bound call site(s)
+
+== completeness_to_confidence/2 (report_generator.pl): 0 bound call site(s)
+
+== generate_scenario_for_omega/5 (report_generator.pl): 0 bound call site(s)
+
+== omega_severity/2 (report_generator.pl): 0 bound call site(s)
+
+== resolve_omega_source/4 (report_generator.pl): 0 bound call site(s)
+
+== detector_state/2 (routing_sink.pl): 0 bound call site(s)
+
+== appears_as_rope/2 (signature_detection.pl): 0 bound call site(s)
+
+== capture_disposition/2 (signature_detection.pl): 0 bound call site(s)
+
+== classify_by_signature/3 (signature_detection.pl): 0 bound call site(s)
+
+== converted_at_seat/2 (signature_detection.pl): 0 bound call site(s)
+
+== determine_pure_subtype/2 (signature_detection.pl): 0 bound call site(s)
+
+== has_viable_alternatives/2 (signature_detection.pl): 0 bound call site(s)
+
+== resolve_with_perspectival_check/4 (signature_detection.pl): 0 bound call site(s)
+
+== signature_diagnostic_severity/3 (signature_detection.pl): 0 bound call site(s)
+
+== signature_grade/2 (signature_detection.pl): 0 bound call site(s)
+
+== predicted_terminal_state/3 (transition_paths.pl): 0 bound call site(s)
