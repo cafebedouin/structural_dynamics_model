@@ -4880,12 +4880,46 @@ model/prompt_commit to sweep at; (ii) the genuine story-level rate is **17/253 =
 exhibiting both outcomes is a well-defined 28-story target; (iv) the haiku numbers reproduce OQ-136
 exactly (16/28; 17/74 at `22843cdf`) but that is the **same** stratum, not independent replication,
 and the `*_contradictions` limb is now explainable **with no stability claim at all**.
-**Sweep design owed (blocked_on_human), narrowed:** if run, target the haiku/`22843cdf` 28-story
-stratum on presence/absence attribution, not corpus-wide value stability. Two cheaper items first:
-(a) restate OQ-136's `q6_unmeasured` arithmetic over a story-only denominator; (b) whether
-`*_contradictions` artifacts belong in `n_constraints` at all is a separate live question. Full
-enumeration: `audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5 + §8. Until the sweep is ruled,
-OQ-305 must not re-adjudicate OQ-136.
+**SWEEP RULING (operator, 2026-08-17): RE-RESERVE — do not spend. The precursor did the sweep's
+job, on a larger n than the sweep would have had.** The reserve was un-reserved because nothing live
+witnessed OQ-136's generation-path assertion; the story-level stratification now witnesses it
+directly (57% in one model×prompt_commit cell, 0% across five strata and 225 stories) at zero spend.
+A temp sweep confirming that generation path matters would not move OQ-136's disposition, and one
+disconfirming temperature would not either, since model+prompt already accounts for the variance.
+**The corpus-wide design is dead regardless:** 60% of the phenomenon has no `six_questions` block to
+populate.
+
+**The gating free check RAN, and returns a THIRD state — not "clean", not "aliased", but
+UNRECORDED** (`limb3_temperature_aliasing.out`). `story_provenance/8` arg 8 (`SamplingParams`) is the
+only temperature carrier in substrate, and **only 31 of 279 stories carry an actual temperature
+value** (24 at `temperature=0.2`, 7 at `temperature=1.0`); 173 say `unspecified`, 44 record
+`max_tokens` only, 26 have no provenance. **The haiku/`22843cdf` cell — the one cell exhibiting both
+outcomes — is `max_tokens=16384`, i.e. temperature is not recorded for it at all.** So the aliasing
+question is Ω_E-**unanswerable from this corpus** for the cell that matters; declared, not papered
+over. Two things nonetheless close it:
+1. **Where temperature IS observable, it separates nothing.** Sampling params vary *within*
+   `claude-sonnet-4-5` (0.2 vs unspecified) and *within* `claude-sonnet-5` (three values); absence
+   in those cells is **0–1 regardless**. Across all 31 temperature-bearing stories: **0 absences.**
+2. **A positive mechanism, measured, that discriminates AGAINST temperature.** Over the full haiku
+   stratum (n=28): files WITH `founding_problem_status` are median 39,072 B / 96 facts /
+   **12/12 carry `constraint_stakeholder` facts**; files WITHOUT are median 27,564 B / 58 facts /
+   **0/16 carry them**. The split is **categorical and non-overlapping** (absent max 32,788 B < present
+   min 34,470 B; absent max 64 facts < present min 84). Two distinct fact families go missing
+   *together*, in an all-or-nothing pattern — a **whole-block emission failure**, consistent with
+   truncation under `max_tokens` + adaptive thinking or with a schema-branch miss. Temperature would
+   produce a graded continuum with partial emission; it produces neither. (Honest caveat: file SIZE
+   is downstream of the missing block and is not independent evidence — the discriminating facts are
+   the *categorical* 0/16-vs-12/12 split and the *co-missing* families.) This upgrades OQ-136's
+   few-file hand-read to a full-stratum measurement and **is already owned by OQ-202**, which was
+   minted for exactly this gap.
+
+**Limb 3 therefore closes RESOLVED-BY-CORPUS, not resolved-by-spend; the ~$1.5–2 reserve is
+released and does not carry forward.** Re-escalation scope, if it ever comes: a *within-cell* temp
+sweep on the 28-story haiku stratum only — a fraction of the original price and actually targeted —
+and only if OQ-202's emission fix fails to account for the stratum. Full enumeration:
+`audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5 + §8. Until OQ-202 disposes the stratum,
+OQ-305 must not re-adjudicate OQ-136. The denominator finding is routed OUT of this entry to
+**OQ-306** — it is larger than the verdict question.
 **Side product delivered by OQ-190:** the `reading_diff` re-point's cohort-one gate is now
 satisfiable — `constraint_stakeholder` is dense on the live corpus (236/279) and `reading_diff.pl`
 was un-stranded onto the live stakeholder-seat schema (`01cff6a7`).
@@ -7644,6 +7678,63 @@ OQ-304 for anything needing an actual presence-grade number** — before that la
 be dispositioned as premise-identified, not premise-tested.
 
 **Cross-refs:** OQ-190 (parent), OQ-304 (supplies the grade numbers), OQ-118, OQ-52, OQ-136.
+
+---
+
+## OQ-306 — `n_constraints` silently includes non-stories: 26 axiom meta-files in the 279 denominator, and the stratum GREW 9 → 26 while reading stable
+
+**Ω-type:** Ω_E (a census — which corpus members are stories) + a small Ω_C tail (whether
+`*_contradictions` artifacts should live in `testsets/` at all is an operator call).
+
+**Status:** open — filed 2026-08-17 from the OQ-190 close, routed OUT of OQ-118 Limb 3 because it is
+larger than the verdict question.
+**Priority:** 1
+**Deps:** splits_from OQ-190
+
+**Origin.** OQ-190's Limb-3 precursor found that **26 of the live corpus's 43
+`founding_problem_status` absences are not stories.** Every `prolog/testsets/*_contradictions.pl`
+file carries exactly one predicate — `narrative_ontology:cs_axiom_contradiction` — and nothing else:
+no `six_questions`, no `base_properties`, no stakeholders, no `story_provenance`. All 26 are
+enumerated by `corpus_loader:corpus_constraint/1` (membership is by FILENAME) and all 26 appear in
+`per_constraint`, so they sit inside `manifest.n_constraints = 279`.
+
+**Why this is bigger than the bucket it was found in.** Every corpus rate computed against that
+denominator is off by **~10%** — not just `q6_unmeasured`. A rate over "the corpus" silently means a
+rate over 253 stories plus 26 artifacts that could never have satisfied the numerator.
+
+**The growth is the defect's real shape, and it is the reason it survived.** The stratum was **9**
+when OQ-136 measured it (2026-07-02) and is **26** now. An artifact stratum that grows silently
+inside a denominator **gets worse while looking stable** — every individual rate stays
+well-formed, nothing goes red, and historical corpus rates stop being comparable to current ones
+*even when both were computed correctly at their own time*. That is precisely the shape OQ-190 was
+filed to enumerate: a population that silently includes non-members.
+
+**Known-but-unconsolidated, which is the other half of why it persisted.** The artifact kind is
+documented in at least four places — `ISSUES.md:608` ("9 `*_contradictions` stories excluded,
+surfaced as 'not in node set'"), `:4038` ("axiom meta-files"), `:5345` ("pl-only (NO_JSON)"),
+`:6208` ("exactly 5 `*_contradictions` ids in `pipeline_output` lack `orbit_data`") — each a
+*local* exclusion by a *different* consumer, with no single fact saying "these are not stories."
+Build Discipline Pattern 2 in its census form: canonicity of the story population is a memory, not a
+checked fact.
+
+**What resolves it.**
+1. A census: which `testsets/` members are stories and which are not, by a checkable predicate
+   (a fact family test, not a filename convention — `*_contradictions` is a naming habit, and
+   Pattern-2 says a scheme that *cannot* collide beats one that *happens not to*).
+2. A ruling on the denominator: does `n_constraints` count stories, corpus members, or both
+   separately? The manifest currently reports one number for two populations.
+3. Sweep the consumers that compute rates against `n_constraints` / `corpus_constraint/1` and state,
+   per consumer, which population it *meant*. The four local exclusions above are the seed list.
+4. A guard so the stratum cannot grow silently again — the growth, not the presence, is what makes
+   this recur.
+
+**Control burden.** A story/non-story classifier is an instrument and owes a two-sided control:
+naturally-arising members are available on both sides (any `*_contradictions` file as the FIRE; any
+ordinary reading file as the DECLINE), so this sits at the top rung — no authored decoy needed.
+
+**Cross-refs:** OQ-190 (parent), OQ-136 and OQ-202 (the `q6_unmeasured` arithmetic that must be
+restated over a story-only denominator; OQ-202 also owns the provenance-stamping gap), OQ-118
+Limb 3 (where this was found), OQ-305.
 
 ---
 

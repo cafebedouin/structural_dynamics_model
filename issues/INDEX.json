@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "3427805fd408d5d78b63a7c148a6ed4f4aea8e90",
+    "store_version": "228e8a0f810b6ca7d21f348b2d1811f4fcb45d67",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-17T23:32:00"
+    "generated_at": "2026-08-17T23:37:41"
   },
-  "issues_sha": "630ff7cc439e40985dae41e7a3cabcc362c234313945b4cfa65acffae3f9f08f",
-  "n_entries": 305,
+  "issues_sha": "e4f26aae0d158fcd0922479c2e44caead3512015c7b25edbe3c0e6d2392c069b",
+  "n_entries": 306,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 115,
+    "open": 116,
     "partial": 7
   },
   "active": [
@@ -105,7 +105,8 @@
         "OQ-202",
         "OQ-203",
         "OQ-204",
-        "OQ-305"
+        "OQ-305",
+        "OQ-306"
       ]
     },
     {
@@ -1737,6 +1738,27 @@
         "OQ-207",
         "OQ-255",
         "OQ-304"
+      ]
+    },
+    {
+      "id": "OQ-306",
+      "status": "open",
+      "priority": 1,
+      "summary": "`n_constraints` silently includes non-stories: 26 axiom meta-files in the 279 denominator, and the stratum GREW 9 → 26 while reading stable",
+      "deps": [
+        "splits_from OQ-190"
+      ],
+      "cross_refs": [
+        "OQ-136",
+        "OQ-190",
+        "OQ-202"
+      ],
+      "mentioned_in": [
+        "OQ-118",
+        "OQ-136",
+        "OQ-190",
+        "OQ-202",
+        "OQ-305"
       ]
     }
   ],

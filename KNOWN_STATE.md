@@ -82,7 +82,18 @@ against live controls): `constraint_beneficiary` does **not** reach `constraint_
 reads the roster), `disappearance_verdict` does **not** reach `q6_cell` (q6 reads
 `founding_problem_status` only), and **neither verdict atom reaches `dr_type`**.
 
-**Limb-3 addendum (operator ruled the same day: YES accepted, spend-go approved IN PRINCIPLE,
+**Limb-3 CLOSED resolved-by-corpus (operator re-reserved 2026-08-17; the ~$1.5–2 reserve is
+RELEASED and does not carry forward).** The gating aliasing check returned a third state:
+`story_provenance/8` arg 8 carries an actual temperature for only **31 of 279** stories, and the
+haiku/`22843cdf` cell — the sole cell with both outcomes — records `max_tokens=16384` only, so the
+question is Ω_E-**unanswerable** there. It closes anyway on a measured mechanism: over the full
+28-file haiku stratum, files with `founding_problem_status` are 12/12 carrying
+`constraint_stakeholder` (median 96 facts) and files without are **0/16** (median 58) — categorical,
+**non-overlapping**, two fact families co-missing. A whole-block emission failure (truncation or
+schema-branch miss), not a temperature continuum. Owned by **OQ-202**, already open. Re-escalation
+scope if ever: a within-cell temp sweep on those 28 files only.
+
+**Limb-3 addendum (the earlier same-day ruling: YES accepted, spend-go approved IN PRINCIPLE,
 DO NOT SPEND — the reserved design targets verdict *value* stability, OQ-136 needs *presence*
 attribution).** The required free Ω_E precursor ran: **26 of the live corpus's 43
 `founding_problem_status` absences are not stories.** Every `*_contradictions` file carries exactly
@@ -106,8 +117,12 @@ machine consumers already filter absence, so the reach is to human readers only.
 on the frozen cohort in every draw-slice — the six stories share no actor name — so cohort zero
 cannot re-witness contamination-network claims in EITHER direction. Use a live or twin leg.
 
-**Routed:** OQ-118 Limb 3 escalated to a spend-go, then narrowed by the incidence recon (see that
-entry);
+**Routed:** OQ-118 Limb 3 escalated to a spend-go, then CLOSED resolved-by-corpus (see above);
+**OQ-306** — `n_constraints` silently includes 26 non-stories, so every corpus rate against that
+denominator is off by ~10%, and the stratum **grew 9 → 26** while reading stable, which makes
+historical rates non-comparable to current ones even when each was correct at its own time. The
+general shape is now a build-discipline section (*A denominator that silently admits non-members
+gets worse while reading stable*);
 OQ-304 (re-score the frozen draws at presence/cardinality grade — Ω_E, zero spend, converts the 221
 grade-unmeasured rows); OQ-305 (20 resolved OQs closed on a quoted cast-presence count).
 

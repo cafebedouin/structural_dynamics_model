@@ -1,0 +1,58 @@
+TEMPERATURE ALIASING CHECK — is sampling_params constant across the strata?
+==============================================================================
+story_provenance/8 arg 8 = SamplingParams (the only temperature carrier in substrate)
+
+model                            prompt     sampling_params           n  absent
+NO_PROVENANCE                    NO_PROVENA NO_PROVENANCE            26      26
+claude-haiku-4-5-20251001        22843cdf   max_tokens=16384         28      16
+claude-sonnet-4-5-20250929       22843cdf   unspecified              35       1
+claude-sonnet-4-5-20250929       8080348c   unspecified              35       0
+claude-sonnet-5                  8080348c   unspecified              67       0
+claude-sonnet-4-5-20250929       046e0a40   temperature=0.2           5       0
+claude-sonnet-5                  8080348c   max_tokens=16384          5       0
+claude-sonnet-5                  685ed7cf   unspecified              36       0
+claude-sonnet-5                  685ed7cf   temperature=0.2          13       0
+gemini-2.5-flash                 22843cdf   max_tokens=16384         11       0
+claude-sonnet-5                  8080348c   temperature=0.2           6       0
+kimi-k3                          8080348c   max_tokens=32000          5       0
+claude-sonnet-4-20250514         046e0a40   temperature=1.0           7       0
+
+--- distinct sampling_params values across the whole corpus ---
+   'unspecified'            173 stories
+   'max_tokens=16384'       44 stories
+   'NO_PROVENANCE'          26 stories
+   'temperature=0.2'        24 stories
+   'temperature=1.0'        7 stories
+   'max_tokens=32000'       5 stories
+
+--- per-model sampling_params spread ---
+   NO_PROVENANCE                        ['NO_PROVENANCE']
+   claude-haiku-4-5-20251001            ['max_tokens=16384']
+   claude-sonnet-4-20250514             ['temperature=1.0']
+   claude-sonnet-4-5-20250929           ['temperature=0.2', 'unspecified']
+   claude-sonnet-5                      ['max_tokens=16384', 'temperature=0.2', 'unspecified']
+   gemini-2.5-flash                     ['max_tokens=16384']
+   kimi-k3                              ['max_tokens=32000']
+
+VERDICT:
+  sampling_params varies WITHIN 2 model(s): ['claude-sonnet-4-5-20250929', 'claude-sonnet-5']
+  -> temperature is separable within those cells from data already on disk.
+
+==============================================================================
+ALTERNATIVE MECHANISM: is the haiku absence a TRUNCATION signature, not a temperature one?
+==============================================================================
+(CLAUDE.md: max_tokens with adaptive thinking silently truncates; OQ-136's hand-read found
+ the prose PLANS the seats while the fact layer was never emitted — a truncation shape.)
+
+HAS founding_problem_status  n=12
+   file bytes   median   39072   min   34470  max   49644
+   n_facts      median      96   min      84  max     128
+   has stakeholder facts: 12/12
+   file ends on a clause terminator: 0/12
+
+ABSENT  n=16
+   file bytes   median   27564   min   25057  max   32788
+   n_facts      median      58   min      55  max      64
+   has stakeholder facts: 0/16
+   file ends on a clause terminator: 0/16
+

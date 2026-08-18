@@ -1779,6 +1779,50 @@ the substrate.
 
 ---
 
+## A denominator that silently admits non-members gets WORSE while reading STABLE (2026-08-17)
+
+The sibling of the rule above, on the other side of the fraction. That one says a gating count needs
+its composition; this one says **the denominator needs its membership** — and that the failure has a
+time dimension the numerator's does not.
+
+**Witnessed (OQ-190 → OQ-306).** `prolog/testsets/*_contradictions.pl` files carry exactly one
+predicate (`narrative_ontology:cs_axiom_contradiction`) — no `six_questions`, no `base_properties`,
+no `story_provenance`. Corpus membership is by FILENAME (`corpus_loader:corpus_constraint/1`), so
+all of them land in `manifest.n_constraints`. Every corpus rate computed against that denominator is
+off by the artifact share, because those members **could never have satisfied the numerator**.
+
+**The part that makes it a pattern rather than an instance: the stratum GREW, 9 → 26, across
+thirteen months, and nothing anywhere went red.** Each individual rate stayed well-formed. The
+manifest kept reporting one honest-looking number. And the consequence is worse than a constant
+bias: **historical rates stop being comparable to current ones even when both were computed
+correctly at their own time.** A constant contaminant is a calibration error you can back out; a
+*growing* one silently rewrites the meaning of a time series. This is why "we already know about
+those files" was not protection — knowing the members exist says nothing about their share.
+
+**Why it survives review.** The artifact kind was documented in **four** places, each a *local*
+exclusion by a *different* consumer — `ISSUES.md:608` ("excluded, surfaced as 'not in node set'"),
+`:4038` ("axiom meta-files"), `:5345` ("pl-only (NO_JSON)"), `:6208` (5 of them lack `orbit_data`) —
+and **no single fact anywhere said "these are not stories."** Every consumer that noticed re-derived
+the exclusion privately and moved on. That is Pattern 2 (one-canonical-thing-became-two) in its
+census form: **canonicity of the POPULATION is a memory, not a checked fact.** Four private
+work-arounds read, collectively, as coverage; they are four independent chances to get it wrong.
+
+**Rule.** A denominator that will be published or gated names its **membership predicate**, and that
+predicate is a checked fact — a fact-family test, not a filename convention (`*_contradictions` is a
+naming habit; a scheme that *cannot* admit a non-member beats one that *happens not to* today). And
+because the failure mode is growth, **the guard is on the share over time, not on the presence**: a
+one-time cleanup fixes the instance and leaves the pattern armed.
+
+**Diagnostic, cheap:** for the population behind any published rate, count members that lack the
+numerator's *precondition* — the field, block, or fact family the numerator requires. If that count
+is non-zero, the rate has a denominator problem; if it has **changed since the last time the rate was
+published**, every cross-time comparison of that rate is invalid.
+
+**Tell in prose:** a rate quoted "over the corpus" when the corpus contains more than one kind of
+thing. Ask *which* population, and whether the manifest reports one number for two.
+
+---
+
 ## "Redundant / safe to remove" on a shared edge or field needs a per-consumer reachability witness
 
 When a datum (an edge type, an authored field) is read by N consumers and you want to remove it,

@@ -19,7 +19,8 @@ returned 0 and was defective (§3); the documentary control passed on a self-ref
 the one claim the prereg requires it to flag (§3); and the verdict bucket produced a live dependent
 that flips OQ-118 Limb 3 from reserved to spend-go (§5); and the free precursor the ruling
 required found that **26 of 43 absences are not stories at all** — 60% of the phenomenon the
-reserved design was about to be spent on is a denominator artifact (§8).
+reserved design was about to be spent on is a denominator artifact (§8), which closed the reserve
+without spending it and spawned OQ-306.
 
 **Prior art** (`docs/technical/build_discipline.md`, grepped this pass): no hit for
 `constraint_captured`, `shared_agent_link`, `agent_beneficiary`, `has_mandatrophy_declaration`,
@@ -43,7 +44,8 @@ reserved design was about to be spent on is a denominator artifact (§8).
 | `conclusion_invariance_reach.out` | the §(b) instrument run on the frozen draw-slices | §4: the fallback branch, witnessed |
 | `dispositions.md` | the frozen rule applied to every row | §3–§6 |
 | `absence_agreement_exposure.tsv` | per-field split of stable cells into positive vs absence-agreement, all 38 scored fields | §7: the conflation's full reach; the apparatus controls are 18/18 genuine `PRESENT` |
-| `limb3_incidence_recon.out` | live-corpus `founding_problem_status` absence by model × prompt_commit | §8: 26/43 absences are non-story artifacts; the sweep target is one 28-story stratum |
+| `limb3_incidence_recon.out` | live-corpus `founding_problem_status` absence by model × prompt_commit | §8: 26/43 absences are non-story artifacts → OQ-306 |
+| `limb3_temperature_aliasing.out` | sampling_params by stratum + the 28-file haiku emission split | §8a: temperature unrecorded in the deciding cell; block-emission mechanism discriminates against it |
 | `python/audits/oq190_blast_radius.py` | the re-runnable sweep; `--selftest` = 12 controls | all census claims |
 | `prolog/probe_oq190_edge_admission.pl` | the edge-admission pruner | `derivation_graph.tsv` |
 
@@ -211,7 +213,19 @@ The honest answer is the second one. **Clearing was never attempted in this arc.
 
 So the census population *is* "rows the sweep hit," and a row in it by name-match is by construction
 not absent from the name surface. **`cleared = 0` therefore reports that no row was tested for
-clearing, not that no row would clear.** The decline arms show the instrument *can* decline on
+clearing, not that no row would clear.**
+
+**447 is a floor for a SECOND and INDEPENDENT reason — vocabulary under-coverage — and a reader must
+not assume the clearing gap covers it.** RECON step 1 took `cohort_stability.FIELDS` as the declared
+single source of truth for the authored field vocabulary, on the strength of
+`cohort_sigma_seat_eval.py:32` importing it. That list turned out to **under-cover its own subject**:
+`gain_flow` and `fixing_cost` are the authored sources of `constraint_captured/1` and
+`piton_candidate/1` — the name-identity edges that put the cast radius on the classification path —
+yet they sit outside the frozen cast-9 (in `FIELDS` they are top-level entries bucketed `sigma`).
+The census therefore may under-enumerate **wherever else the authored surface exceeds `FIELDS`**,
+and nothing in this arc bounds that. The two gaps are independent: clearing was never *attempted*,
+and the vocabulary was never *verified complete against the schema*. Closing either leaves the other
+open. The decline arms show the instrument *can* decline on
 constructed and on natural negatives; they do not show it declined on this population, because it
 was never asked to. Anyone citing the 447 should read it as *"447 not shown safe,"* never as
 *"447 shown unsafe."*
@@ -331,13 +345,62 @@ is new is the share — the stratum has grown **9 → 26** and now dominates the
    OQ-136 measured, not independent replication. The `*_contradictions` limb, meanwhile, is now
    explainable **with no stability claim at all**: those files could never have carried the field.
 
-**Recommendation carried to the operator (the sweep design is the operator's ruling, not this
-audit's).** If a sweep is run, the target is the **haiku @ `22843cdf` 28-story stratum**, and the
-question is presence/absence attribution within it, not value stability across the corpus. Before
-even that, two cheaper things are available: (a) OQ-136's `q6_unmeasured` arithmetic should be
-restated over the story-only denominator, since 26/26 of its provenance-less limb is a denominator
-artifact rather than a generation-path finding about stories; (b) whether `*_contradictions`
-artifacts belong in `n_constraints` at all is a separate live question this audit does not rule on.
+### 8a. The gating aliasing check: a THIRD state — temperature is UNRECORDED, not constant
+
+The sweep ruling made one free check the gate: is temperature constant across the seven strata?
+Run: `limb3_temperature_aliasing.out`. The answer is neither branch.
+
+`story_provenance/8` arg 8 (`SamplingParams`) is the only temperature carrier in substrate, and
+**only 31 of 279 stories carry an actual temperature value** (24 `temperature=0.2`, 7
+`temperature=1.0`). 173 record `unspecified`, 44 record `max_tokens` only, 26 have no provenance at
+all. **The haiku @ `22843cdf` cell — the one cell exhibiting both outcomes — is `max_tokens=16384`:
+temperature is not recorded for it.** So for the cell that matters the aliasing question is
+**Ω_E-unanswerable from this corpus.** Declared as a verdict, not carried as a caveat.
+
+Two findings close it anyway, and the second is the stronger:
+
+**(i) Where temperature IS observable, it separates nothing.** Sampling params vary *within*
+`claude-sonnet-4-5` (0.2 vs unspecified) and *within* `claude-sonnet-5` (three values), and absence
+in those cells is 0–1 either way. Across all 31 temperature-bearing stories: **0 absences.**
+
+**(ii) A positive mechanism, measured over the full stratum, that discriminates against
+temperature.** Splitting all 28 haiku files:
+
+| | n | median bytes | median facts | carry `constraint_stakeholder` |
+|---|---|---|---|---|
+| **has** `founding_problem_status` | 12 | 39,072 | 96 | **12/12** |
+| **absent** | 16 | 27,564 | 58 | **0/16** |
+
+The split is **categorical and non-overlapping**: absent max 32,788 B < present min 34,470 B; absent
+max 64 facts < present min 84. Two distinct fact families — stakeholders and the verdict atoms —
+go missing **together**, all-or-nothing. That is a **whole-block emission failure**, consistent with
+truncation under `max_tokens` + adaptive thinking, or with a schema-branch miss. A temperature
+mechanism would produce a graded continuum with partial emission; it produces neither.
+
+*Honest caveat on what carries the weight:* file size is downstream of the missing block and is
+**not** independent evidence. The discriminating facts are the **categorical** 0/16-vs-12/12 split
+and the **co-missing** families — a per-field sampling outcome does not remove two whole fact
+families from 16 files while leaving 12 complete with no overlap.
+
+This upgrades OQ-136's few-file hand-read to a full-stratum measurement, and the mechanism **is
+already owned by OQ-202** ("Generation authoring gap: haiku + contradictions paths under-emit the
+fact layer"), open since 2026-07-02. Nothing new needs minting for it.
+
+**Ruling recorded: RE-RESERVE — Limb 3 closes resolved-by-corpus, not resolved-by-spend.** The
+~$1.5–2 reserve is released and does not carry forward. Re-escalation scope if it ever comes: a
+*within-cell* temp sweep on the 28-story haiku stratum only, and only if OQ-202's emission fix fails
+to account for the stratum.
+
+### 8b. The denominator finding is routed OUT — it is larger than the verdict question
+
+26 non-stories inside `n_constraints = 279` means **every corpus rate computed against that
+denominator is off by ~10%**, not merely `q6_unmeasured`. And the stratum was **9** when OQ-136
+measured it and is **26** now: an artifact stratum that grows silently inside a denominator **gets
+worse while looking stable**, so historical corpus rates are not comparable to current ones even
+when both were computed correctly at their own time. Filed as **OQ-306** with its own census, its own
+denominator ruling, a consumer sweep, and a growth guard — the growth, not the presence, is what
+makes it recur. It is the same shape OQ-190 was filed to enumerate: a population that silently
+includes non-members.
 
 ## 9. Residue — what changed in substrate, and what is handed off
 

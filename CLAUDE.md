@@ -495,6 +495,22 @@ discipline*. And **a pre-2026-08-17 `Pattern 3`/`P3` in the record means the mec
 index** — *bound-probe* (now 7) or the vacated *destructive-replace*; their swept population is
 declared in the `displaced cites` gate row, and an undeclared new one turns it red.
 
+**A denominator that silently admits non-members gets WORSE while reading STABLE (2026-08-17).**
+The sibling of *a gating count needs its composition*, on the other side of the fraction. Corpus
+membership is by FILENAME (`corpus_loader:corpus_constraint/1`), so `manifest.n_constraints` counts
+anything in `testsets/` — including 26 `*_contradictions.pl` axiom meta-files that carry one
+predicate and no story blocks, making every rate over that denominator off by ~10% (OQ-306). **The
+pattern is the GROWTH, not the presence:** the stratum went 9 → 26 with nothing going red, and a
+*growing* contaminant silently rewrites a time series rather than biasing it constantly — historical
+rates stop being comparable to current ones even when each was correct when computed. It survived
+because four consumers each excluded it *locally* and no single fact said "these are not stories"
+(Pattern 2 in its census form: canonicity of the POPULATION is a memory). **Rule: a published or
+gated denominator names a checked membership predicate — a fact-family test, not a filename
+convention — and the guard is on the share OVER TIME.** Diagnostic: count members lacking the
+numerator's precondition; if that count *changed* since the rate was last published, every
+cross-time comparison is invalid. Detail: `build_discipline.md` → *A denominator that silently
+admits non-members*.
+
 **1. Produced-but-not-consumed (the dangling wire).** Data is generated and written, and nothing
 reads it back into the thing that needs it (unread `*_sensitivity_results.json`;
 `kernel_grouping.json` not stamped into the `.pl` files). **Rule: a producer is not done until
