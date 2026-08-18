@@ -45,6 +45,99 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — [tripwire] The OS upgrade moved Python 3.10 → 3.12 and stranded every third-party package; `scripts/gate.sh` calls bare `python3`, so the gate now runs the EMPTY interpreter while the work runs in `.venv`
+**Files:** scripts/gate.sh, pyproject.toml, python/check_gap_status_surfaces.py, python/orbit_characterization.py, python/idea_site_exploration.py, python/audits/bc_coupling_audit.py, agent/c-orchestrator.py
+**Tier:** tripwire
+
+**Symptom, and why it under-reports.** `./scripts/gate.sh` shows ONE red for this
+(`gap surfaces  ModuleNotFoundError: No module named 'pandas'`). That single row badly
+understates the blast radius, because most affected tools are not gate rows — the gate is
+green on 21 rows while the import base is missing. Discriminating witness (2026-08-18):
+
+    $ python3      python/check_gap_status_surfaces.py   → ModuleNotFoundError: pandas
+    $ .venv/bin/python python/check_gap_status_surfaces.py → 3/3 human surfaces … (self-test OK)
+
+Same file, same arguments, opposite verdicts. **The red is interpreter selection, not
+content.**
+
+**Cause.** The jammy→noble upgrade (2026-08-18 ~01:55–02:50, same window as the swipl
+package swap — see the sibling entry) moved the system interpreter from **3.10 to 3.12**.
+Residue that shows it: `python/__pycache__/` holds **81 `cpython-310.pyc` next to 37
+`cpython-312.pyc`**. Everything pip-installed against 3.10 was stranded. Import sites now
+unsatisfiable under system `python3`: **scipy ×25, anthropic ×20, numpy ×17, sklearn ×7,
+networkx ×3, pandas ×2** (`python/` + `agent/`). The `anthropic` count matters most — that
+is the whole generation path (`agent/c-orchestrator.py`), so a topic run under system
+`python3` fails at import, not mid-run.
+
+**Current state — repair is PARTIAL and operator-owned; do not "finish" it unasked.** A
+`.venv` (3.12.3) exists and carries pandas, numpy, scipy, sklearn, anthropic, jinja2. Two
+are still missing there: **`networkx` and `matplotlib`** (consumers:
+`python/orbit_characterization.py`, `python/idea_site_exploration.py`,
+`python/audits/bc_coupling_audit.py`). `pyproject.toml` is modified-uncommitted in the same
+direction (`requires-python` 3.10→3.12, a `[build-system]` block, `[tool.setuptools]
+packages = []`, poetry stanza dropped) with a matching `structural_dynamics_model.egg-info/`
+— i.e. an in-flight `pip install -e .`. **That is operator in-flight work: adjudicate it
+before assuming the tree is clean, and never sweep it into an unrelated commit.**
+
+**The standing decision this leaves OPEN (genuinely the operator's seat, not self-resolvable).**
+`scripts/gate.sh` hardcodes bare `python3` at **21 call sites**. Until someone rules which
+interpreter is canonical, the gate does not measure the environment the work runs in. Three
+options, none taken here: activate `.venv` before invoking the gate; point the gate at
+`.venv/bin/python`; or install the deps system-wide. **Until it is ruled, a `gap surfaces`
+red is not evidence about gap surfaces — check which interpreter produced it before
+recording any gate result as a witness.**
+
+---
+
+## 2026-08-18 — [tripwire] swipl is 10.0.2, not 9.2.9 — and every witness between 2026-06-25 and 2026-08-18 has an UNPINNED interpreter; Mercury was evaluated and rejected, deliberately without an OQ
+**Files:** docs/technical/swipl_load_path_and_probe_gotchas.md, docs/trajectory_implementation_notes.md, prolog/giant_component_analysis.pl, audits/2026-08-17_giant_comp_segv_hang/PREREGISTRATION.md, audits/2026-08-17_bound_dispatch_hardening/WRITEUP.md, ISSUES.md
+**Tier:** tripwire
+
+**Standing answer, so the question stops costing a search.** "Which OQ is looking into the
+Mercury extensions for swipl?" was asked 2026-08-18 and cost a full-repo sweep to answer,
+because the ruling lived only in a machine-local plan file
+(`~/.claude/plans/if-it-is-recon-mossy-beacon.md`, "the Mercury salvage") and a session
+transcript — **the word `Mercury` had zero occurrences in tracked substrate** outside corpus
+stories about the planet and the metal. Now landed in three places, routing table in
+`swipl_load_path_and_probe_gotchas.md` **§16**:
+
+- **Mercury port: evaluated 2026-08-17, REJECTED, and it gets NO OQ by operator ruling**
+  ("an OQ whose resolution is 'no' is a record without a reader"). Three grounds, none
+  version-dependent: the dynamic database *is* the architecture (`asserta` overlays,
+  `probe_harness`, `cache_registry`, MaxEnt fitted state); the REPL probe methodology has no
+  Mercury equivalent (this file's §§2–7 are the workflow it deletes); the LLM co-dev loop
+  degrades. Conceded in the same assessment: `build_discipline.md` is largely a
+  hand-maintained substitute for a static mode/determinism checker. **Do not re-propose
+  pre-beta; do not mint the OQ.** Full text: `audits/2026-08-17_bound_dispatch_hardening/`
+  WRITEUP.md → *Applicability verdicts* (appended 2026-08-18 — the plan owed this line and
+  it had not landed).
+- **The salvage routes to existing OQs:** SSU (`=>`) and `:- det/1` → **OQ-303**, both
+  already carrying a scoped NEGATIVE verdict (SSU's fail-loud never fires against a
+  catch-all; `det/1` is wrong for legitimately-semidet MaxEnt reads). Incremental tabling →
+  **OQ-166**. All three verified working on 10.0.2 with two-sided controls, 2026-08-18 —
+  availability was never the blocker.
+
+**The tripwire (this is the silent-mistake half).** `swipl --version` is now
+**10.0.2** (`swi-prolog-nox 10.0.2-1-gb8d8f931a-nobleppa2`, installed 2026-08-18 02:50:43
+per `/var/log/dpkg.log`, replacing `10.0.2-0-jammyppa2` removed 01:55:39 in an OS upgrade).
+Four documents stamp reproducibility claims to **SWI 9.2.9** (`ISSUES.md` OQ-182 P95,
+`docs/trajectory_implementation_notes.md:23`, `audits/2026-06-25_oq182_trajectory_revive/`
+×2). Those are correct as point-in-time records and must NOT be rewritten — but citing any
+of them as "the version we run" is now wrong. Worse: **`/var/log/dpkg.log` is unrotated and
+begins 2026-08-18, so the 9.2.9 → 10.0.2 transition point is unrecoverable** — every witness
+taken between 2026-06-25 and 2026-08-18, *including the entire 2026-08-17 bound-dispatch
+audit*, has an unpinned interpreter. Not a reason to distrust them; a reason that a
+version-sensitive result from that window owes a re-run rather than an argument.
+
+**Live consequence — OQ-301 arm F.** Its stated prerequisite ("a source-built swipl 9.3.x")
+is **satisfied** by the system 10.0.2; no source build needed. The flip side matters more:
+round 1's 7/100 giant_comp failure rate was measured on the older interpreter, so arms A–D
+now measure a **different system**. Re-run a round-1-equivalent baseline on 10.0.2 before
+reading A–D against round 1's rate, or the comparison confounds interpreter version with the
+effect under test — the same single-variable-isolation error OQ-251 closed on.
+
+---
+
 ## 2026-08-18 — [tripwire] OQ-68 resolved by write-ownership: accessors where the module asserts, declared bypass where it only hosts — and a corpus-schema predicate is defended by the CENTRAL `:- multifile`, never by its writers
 **Files:** prolog/narrative_ontology.pl, prolog/maxent_classifier.pl, prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/corpus_loader.pl, prolog/constraint_indexing.pl, prolog/grothendieck_cohomology.pl, prolog/context_profile_report.pl, prolog/maxent_diagnostic.pl, prolog/abductive_helpers.pl, prolog/module_boundary_allowlist.txt, python/module_boundary_check.py, scripts/gate.sh, ISSUES.md, AGENTS.md
 **Tier:** tripwire

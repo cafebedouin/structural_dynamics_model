@@ -464,3 +464,98 @@ pass as a complete run. Working chain (validated 2026-08-09, OQ-262 Phase D):
 (`run_cs_corpus_analysis`'s internal testset consult is also redundant under this chain
 — `corpus_loader` is canonical.) Fixing the header/load graph is tracked on OQ-269; do
 not cite a header-chain run of this file as a witness until it lands.
+
+---
+
+## 16. Which swipl we run, and the standing verdict on Mercury / SSU / `det/1` / tabling
+
+**Read this before proposing a language change, a Mercury port, or "let's use SSU."**
+The question recurs — it was asked and answered on 2026-08-17, and the answer was not
+findable afterward because the word *Mercury* existed nowhere in tracked substrate
+(searched 2026-08-18: 0 hits outside corpus stories about the planet and the metal).
+This section exists so the next asker lands here.
+
+### The version pin (re-check, don't trust this line)
+
+    $ swipl --version
+    SWI-Prolog version 10.0.2 for x86_64-linux
+    $ dpkg -l | grep swi-prolog
+    ii  swi-prolog-nox  10.0.2-1-gb8d8f931a-nobleppa2
+
+Installed **2026-08-18 02:50:43** (`/var/log/dpkg.log`), replacing `10.0.2-0-jammyppa2`
+(removed 01:55:39) during an operator OS upgrade. **Two consequences:**
+
+1. **`9.2.9` appears in older witnesses and is now WRONG as a description of the running
+   system** — `ISSUES.md:7323` (OQ-182 P95), `docs/trajectory_implementation_notes.md:23`,
+   `audits/2026-06-25_oq182_trajectory_revive/` ×2. Those stay as point-in-time records
+   (the reproducibility claims are stamped to the version they ran on, which is correct);
+   do **not** rewrite them, and do **not** cite them as "the version we run."
+2. **The 9.2.9 → 10.0.2 transition point is NOT recoverable** — `/var/log/dpkg.log` is
+   unrotated and its history begins mid-2026-08-18. So for any witness taken between
+   2026-06-25 and 2026-08-18, *including the whole 2026-08-17 bound-dispatch audit*, the
+   interpreter version is **unpinned**. If a result from that window ever turns out to be
+   version-sensitive, it owes a re-run, not an argument.
+
+### Mercury — evaluated 2026-08-17, REJECTED, and deliberately has no OQ
+
+Full reasoning: `audits/2026-08-17_bound_dispatch_hardening/WRITEUP.md` → *Applicability
+verdicts*. Summary: Mercury's static type/mode/determinism system targets exactly the
+defect class `build_discipline.md` documents by hand — that much was conceded — but the
+port dies on three architectural facts, **none of which any swipl version changes**: the
+dynamic database *is* the architecture (`asserta` config overlays, `probe_harness`,
+`cache_registry`, MaxEnt's corpus-fitted state); the interactive probe methodology has no
+Mercury equivalent (§§2–7 of this file are the workflow it would delete); and the LLM
+co-development loop degrades on a language every model has seen far less of.
+
+**There is no Mercury OQ and that is a ruling, not an omission** — "an OQ whose resolution
+is 'no' is a record without a reader" (operator, 2026-08-17). Do not mint one; do not
+re-propose the port pre-beta. What the question *legitimately* routes to is the salvage
+below.
+
+### The salvage: what swipl already gives us, and where each one is tracked
+
+All three verified working on 10.0.2 (2026-08-18, two-sided — the negative half is the
+half that carries information):
+
+| Feature | Positive | **Negative control (the informative half)** |
+|---|---|---|
+| SSU `=>` | matching call succeeds | non-matching call **raises** `existence_error(matching_rule, …)` — does not fail silently |
+| `:- det(F/A)` | expected success passes | unexpected failure **raises** `determinism_error((>)/2, det, fail, property)` |
+| `:- table … as incremental` | answers computed | retracting a fact **changes the answer with no manual abolish** (`[3,2]` → `[2]`) |
+
+Reproduce with `swipl_feature_probe.pl` (recipe in this section's git history; it is ~40
+lines and cheaper to rewrite than to keep — see *Nobody reads a hammer's changelog*).
+
+**Where each is tracked — this is the answer to "which OQ is looking at the Mercury
+extensions":**
+
+- **SSU (`=>`) and `det/1` → `OQ-303`** (bound-dispatch rollout), and both already carry a
+  *scoped negative verdict* from the pilot, so read it before proposing either:
+  - **SSU is not the tool for catch-all-bearing dispatch.** A catch-all clause always
+    matches, so SSU's fail-loud property never fires. Adopting it requires *removing*
+    catch-alls — a rulings-level semantics change. The pilot's fresh-variable-head +
+    unify-after-cut transformation is what actually retired the bound-probe class
+    (build-discipline **Pattern 7**), and it did so without touching clause semantics for
+    unbound callers.
+  - **`det/1` is the wrong tool for the MaxEnt reads.** Semidet is *legitimate* there
+    (contexts the fit doesn't cover). The real hazard is the `catch`+default arms
+    (`HNorm = 0.0`, `ShadowType = unknown`) — OQ-303(d), needs its own census first.
+- **Incremental tabling → `OQ-166`** (replace hand-rolled memo caches with
+  `:- table … as incremental`, retiring `cache_registry:clear_all_caches/0`). Open,
+  Priority 2, nothing shipped. **Output-affecting on the hottest path**
+  (`classify_at_context`), so OQ-02's LCO history applies: zero-diff witness first.
+  Now confirmed available on the installed interpreter — availability was never the
+  blocker, the witness is.
+- **A newer interpreter as such → `OQ-301` arm F.** That arm was written as needing "a
+  source-built swipl 9.3.x" to test whether the giant_comp SIGSEGV/hang is fixed
+  upstream. **The system swipl is now 10.0.2, so arm F's stated prerequisite is
+  satisfied and the source build is unnecessary.** Note the flip side, which is the
+  cheaper finding: round 1's 7/100 failures were measured on the *old* interpreter, so
+  arms A–D are now measuring a **different system** than round 1 did. Re-run the round-1
+  baseline arm on 10.0.2 before reading the A–D results against round 1's rate, or the
+  comparison silently confounds interpreter version with the thing under test. OQ-301 is
+  `blocked_on_human giantcomp-round2-return`.
+
+**Not covered by any OQ, and correctly so:** `must_be/2` typed wrappers at `unknown`-vs-
+number read sites. That is not a language-adoption question, it is the existing
+fail-closed rule; add them at the site when the site is being edited anyway.

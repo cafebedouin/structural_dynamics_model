@@ -87,6 +87,27 @@ No fcr_ablation-shape correction owed.
 - **`bound_selector_check` retirement:** PROPOSED, executable once the `dispatch head`
   row has fired in anger once, with a reason string naming that row as cover →
   OQ-303(c). Registry unchanged this pass (verified: 1 entry, 2 reasoned exemptions).
+- **Mercury (the port that framed this audit) — REJECTED, added 2026-08-18.** This line
+  was owed by the plan ("Non-goals: Mercury port (rejected, recorded in writeup
+  context)") and did not land; it is appended here rather than back-dated. The audit
+  began as a Mercury question (2026-08-17 session): Mercury's static type/mode/
+  determinism system targets exactly this project's documented defect class, and the
+  assessment conceded that `build_discipline.md` is in large part a hand-maintained
+  substitute for such a checker. The port was rejected on three grounds, none of which a
+  newer swipl changes: (1) **the dynamic database IS the architecture** — `asserta`
+  `config:param` overlays, `probe_harness:with_overlay`, `cache_registry`, MaxEnt's
+  corpus-fitted state, the run-tag glob are all assert/retract, and Mercury has no
+  dynamic database; (2) **the interactive probe methodology dies** — Mercury is
+  compile-and-run, so the whole gotchas §§2–7 workflow (in-session sweeps, retract/
+  re-assert probes, `swipl -g` one-liners) has no equivalent, and for a research engine
+  the probing is half the work product; (3) **the LLM co-development loop degrades** —
+  every model's Mercury exposure is a fraction of its Prolog exposure, so generation,
+  bug-spotting, and cold-read handoff all get worse. Cost: months of re-verification
+  across five legs plus archives for zero new analytical capability, mid-alpha, with the
+  corpus rebuild itself deferred. **Do not re-propose pre-beta.** Operator also ruled
+  that the port gets no OQ of its own ("an OQ whose resolution is 'no' is a record
+  without a reader") — which is why this writeup, not ISSUES.md, is its home. The
+  salvage is everything above: the fresh-variable-head + unify-after-cut transformation.
 
 ## Timing (the class-B rollout price instrument)
 

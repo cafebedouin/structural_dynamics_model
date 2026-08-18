@@ -6874,6 +6874,14 @@ discipline. **Output-affecting on the hottest path** (`classify_at_context`) —
 says zero-diff witness first** (prose caution, not a blocking edge). **Nothing shipped.** Drained from
 OQ-69. **Priority provisional — operator to rule.**
 
+**Availability confirmed, 2026-08-18 — the blocker is the witness, not the interpreter.**
+`:- table … as incremental` verified working on the installed **swipl 10.0.2** with a
+two-sided control (retracting a fact changed the answer with no manual abolish). This is
+the third of the three **Mercury**-adjacent swipl features surveyed on 2026-08-17; the
+other two (SSU `=>`, `:- det/1`) are on OQ-303, and the Mercury port itself was evaluated
+and **rejected** — see `docs/technical/swipl_load_path_and_probe_gotchas.md` §16 for the
+version pin, the probe, and the full routing table.
+
 ## OQ-167 — Output write-path anchoring (complete swipl location-independence)
 
 **Ω-type:** Ω_E (mechanical — anchor writes the way reads are anchored).
@@ -13712,6 +13720,19 @@ action). At marking time the working tree carried an uncommitted `python/run_pip
 modification of unknown ownership — adjudicate it before assuming the tree is clean for the
 re-run.
 
+**Interpreter update changes this OQ's shape (added 2026-08-18).** The system swipl is now
+**10.0.2** (`swi-prolog-nox 10.0.2-1-gb8d8f931a-nobleppa2`, installed 2026-08-18 02:50:43
+per `/var/log/dpkg.log`). **Arm F's stated prerequisite — "a source-built swipl 9.3.x" — is
+therefore SATISFIED, and the source build is unnecessary.** But the cheaper and more
+important consequence runs the other way: **round 1's 7/100 failure rate was measured on
+the older interpreter**, and the 9.2.9 → 10.0.2 transition point is not recoverable
+(`/var/log/dpkg.log` is unrotated, beginning 2026-08-18). So arms A–D now measure a
+DIFFERENT system than round 1 did. **Re-run a round-1-equivalent baseline arm on 10.0.2
+before reading A–D against round 1's rate** — otherwise the comparison confounds
+interpreter version with the effect under test, which is the same single-variable-isolation
+error OQ-251 was closed on. Related: `docs/technical/swipl_load_path_and_probe_gotchas.md`
+§16 (version pin + which witnesses are stamped to which version).
+
 ---
 
 ## OQ-302 — boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577
@@ -13776,6 +13797,25 @@ future narrowing of that row's scope cannot silently uncover the retired entry.
 `catch`+default MaxEnt reads (`HNorm = 0.0`, `ShadowType = unknown`) — `det/1` is the
 wrong tool (semidet is legitimate for contexts the fit doesn't cover). Named here so the
 writeup's OPEN is routed; needs its own census before any fix.
+
+**Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
+is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,
+single-sided unification, or **`:- det/1`** determinism declarations. The framing OQ does
+not exist by ruling: the **Mercury port itself was evaluated 2026-08-17 and REJECTED**
+(kills the dynamic-DB architecture, the REPL probe methodology, and the LLM co-dev loop —
+none of it version-dependent), and the operator ruled it gets no OQ, because "an OQ whose
+resolution is 'no' is a record without a reader." Full reasoning:
+`audits/2026-08-17_bound_dispatch_hardening/WRITEUP.md` → *Applicability verdicts*;
+version pin + feature probe + the whole routing table:
+`docs/technical/swipl_load_path_and_probe_gotchas.md` §16. **Both salvage features already
+carry a scoped NEGATIVE verdict from the pilot — read it before proposing either:** SSU's
+fail-loud property never fires on catch-all-bearing dispatch (the catch-all always
+matches), so adopting it requires removing catch-alls, a rulings-level semantics change;
+and `det/1` is the wrong tool for the legitimately-semidet MaxEnt reads, where the real
+hazard is the catch+default arms at (d). The transformation that actually retired the
+bound-probe class was fresh-variable-head + unify-after-cut, not either of these.
+Availability is confirmed, not blocking: SSU, `det/1`, and incremental tabling all
+verified working (two-sided) on the installed **swipl 10.0.2**, 2026-08-18.
 
 ---
 
