@@ -33,6 +33,18 @@ Raw run: `census_checker_run1_HEAD_9a5d8526.txt` (90 hits, 124 files, 0 read err
 exit 0). Note: 0 read errors is itself uncontrolled in this run — the Phase-3 gate
 wrapper adds a syntax-error fixture that must produce DHC_READERR.
 
+### 1b. CENSUS CORRECTION (2026-08-17, same session — marked on close, not silently rewritten)
+
+The Phase-3 wrapper's selftest (zero-cuts fixture) caught a walker bug in run 1:
+`sub_term_cut(!)` as a clause head UNIFIES with any unbound variable, so every
+non-ground clause counted as cut-bearing. Fixed with an `==` check
+(prolog/dispatch_head_check.pl, `body_has_cut/1`); census re-run at HEAD `e16f9c0f`:
+**90 → 73 members** (17 cut-free predicates dropped — out of criterion; corrected run
+archived as `census_checker_run2_cutfix_HEAD_e16f9c0f.txt`, drop list is the diff of
+the two files). Both targets, all hand-table members, and all §4 adjudicated findings
+SURVIVE the correction (none of the 17 dropped rows appears in §§2–4). The run-1
+`cut_clauses=` counts are unreliable; membership below refers to run 2.
+
 ## 2. Checker vs hand table (Phase-1.2)
 
 **Independence caveat (operator, stated before the diff was read):** the checker's shape

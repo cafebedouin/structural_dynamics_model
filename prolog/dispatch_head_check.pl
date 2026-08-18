@@ -124,19 +124,19 @@ strip_module_head(H, H).
 non_predicate_functor((:-)).
 non_predicate_functor((-->)).
 
-body_has_cut(B) :- \+ \+ sub_term_cut(B).
-
-sub_term_cut(!) :- !.
-sub_term_cut(B) :-
-    compound(B),
-    \+ blocked_cut_scope(B),
-    arg(_, B, A),
-    sub_term_cut(A), !.
-
 % A cut inside \+/1 or findall-family etc. is still "a cut in the body" for shape
 % purposes — do not over-engineer transparency; the criterion needs "commits with
-% cuts", and any textual ! in the body satisfies it. No scopes blocked.
-blocked_cut_scope(_) :- fail.
+% cuts", and any textual ! in the body satisfies it.
+% MUST use ==, never unification: sub_term_cut(!) as a clause HEAD would unify with
+% every unbound VARIABLE in a body, counting all non-ground clauses as cut-bearing
+% (caught by the wrapper selftest's zero-cuts fixture, 2026-08-17).
+body_has_cut(B) :- sub_term_cut(B), !.
+
+sub_term_cut(B) :- B == (!), !.
+sub_term_cut(B) :-
+    compound(B),
+    arg(_, B, A),
+    sub_term_cut(A), !.
 
 %% shape_hit(+Clauses, -Hit)
 %  For each predicate: last-arg position; >= 2 clauses with an atom there; and at
