@@ -14,7 +14,7 @@ OQ-311 Item 2, pre-registered here and unfunded. H0's scope is OPEN.
 `prolog/archives/datasets/original_v6` (measured `corpus_constraint/1` = **3,380**), plus
 git-history and tracked-artifact reads at HEAD `d9687381` → close `ec860a2e`. No engine behavior
 changed; no Jaccard sweep was run — that is Item 2 spend.
-**Fired:** **live** — a published headline is withdrawn, its two propagation sites amended, and a
+**Fired:** live — a published headline is withdrawn, its two propagation sites amended, and a
 dead corpus path that made `range_sweep.py` throw `corpus_empty` at HEAD is repaired.
 **Evidence map:**
 - `audit_log.md` — HEAD stamp pair, the declared commit-ordering deviation, prereg md5.

@@ -44,4 +44,43 @@ the first result line that would sit below it does not exist yet by design.
 
 ## HEAD stamp — CLOSE
 
-    (recorded at close, below)
+    $ git rev-parse HEAD
+    2a52e1f0db229bdaf4ead0f88a3a0931b753d626   # 2a52e1f0
+
+**Comparison of the pair.** OPEN `d9687381` != CLOSE `2a52e1f0` — the stamps DIFFER, so the
+question "was there a concurrent writer?" is answered by diff, not inference. The three
+intervening commits are all this audit's own:
+
+    $ git log --format='%h %an %s' d9687381..HEAD
+    2a52e1f0 cafebedouin OQ-311 Item 1: withdraw §2.3's type-concentration claim; ...
+    ec860a2e cafebedouin OQ-311 audit dir: audit_log + evidence, landed BEFORE the doc edits
+    5d548413 cafebedouin range_sweep.py: repair dead corpus path + mark the unstratified-output site
+
+**Blast radius on this audit's own read-set: none.** No commit in that range was authored by
+another writer, so no file this audit read was changed under it. Recorded as DETECTION, not
+prevention — this workflow has no lock file, and a clean result here is a different thing from
+never having looked.
+
+## Post-close amendment (recorded rather than silently applied)
+
+After commit `2a52e1f0`, `scripts/gate.sh` went RED on the `apparatus` row: the `Fired:` line in
+`WRITEUP.md` was written `**Fired:** **live** — ...` with the token bolded, and the checker's
+`FIRED_RE` requires a bare `live|latent|no` immediately after the label. It matched `FIRED_ANY_RE`
+but not `FIRED_RE`, so it registered as a **malformed** bit rather than a live one — which is why
+the tally read 14 bits over 64 writeups when it had read 14 over 63 before the audit dir existed.
+Corrected to `**Fired:** live — ...`; the row then reads 14L/1l/0n of 15 bits, GREEN.
+
+Worth noting as the instrument working: a malformed catch bit is exactly the failure the
+apparatus row exists to catch, and it caught it on its author.
+
+## Verification summary (all steps, pasted witnesses in WRITEUP.md §4)
+
+    V1 issues_status --check      319 parsed, 0 malformed
+    V2 omega check / index        0 problems; index fresh (319 rows); selftest 10/10
+    V3 audit_writeup_gate --check OK (189 dirs, 21 enforced, 0 problems); selftest 8 controls
+    V4 scripts/gate.sh            GATE: GREEN (24 rows; python env row read first)
+    V5 load check                 N = 3380 measured -> branch N < 3,414 -> ground (ii) survives
+                                  discrimination: repaired exit 0 / pre-repair exit 2 corpus_empty
+    V6 propagation sweep          v6 7 -> 15 (property gate, per line); lawvere 1 -> 0; else 0
+                                  control: BRE 0 vs ERE 7
+    V7 readback                   withdrawn numbers present and marked, not deleted

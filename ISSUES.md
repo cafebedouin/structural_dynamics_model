@@ -14381,8 +14381,11 @@ flow) has purchase here. It does not import as physics, but its central move —
 by which symmetry is broken, not by what the substance is* — reads directly onto a claim the
 project already makes and once already corrected.
 **Files:** `docs/observers_not_humans_v6.md` (§2.3, §3.3, and both revision notes),
-`prolog/drl_core.pl` (rope clause 378–387, bypass at :384), `prolog/config.pl`
-(`rope_epsilon_ceiling`, :264), `docs/logic.md` (§rope boundary note).
+`prolog/drl_core.pl` (`classify_from_metrics/6` rope clause **:426–436**, bypass at **:432** —
+was pinned 378–387/:384; **cite by predicate, it drifts**), `prolog/config.pl`
+(`rope_epsilon_ceiling`, :264), `docs/logic.md` (§rope boundary note),
+`python/sweeps/range_sweep.py` (:24 corpus path; :259 results dict),
+`docs/project_orientation.md` (:235), `docs/lawvere_glossary.md` (:31).
 
 ### Item 1 — the doc-currency half (cheap, no corpus run, do this first)
 
@@ -14406,20 +14409,65 @@ So the paper's conditional now reads as satisfied by a resolution that removed t
 conditional was protecting. §2.3 has absorbed neither half. Three further residues, all verified
 2026-08-18:
 
-- **The witnesses are gone.** §2.3 cites `outputs/alt_power_transform_results.json` and
-  `outputs/range_sweep_results.json` (as does OQ-05's resolution note). Neither exists —
-  `outputs/` is gitignored and the corpus was reset 2026-06-05. Every number in §2.3
-  (Jaccard 0.685–0.828 / 0.697–0.833, +0.21 vs +0.014, N=2,245 / N=1,169, "3,380 constraints,
-  testsets_3000") is `original_v6` chimera-era and re-derivable only under an archive
-  `corpus_path` overlay.
+- **~~The witnesses are gone.~~ CORRECTED 2026-08-18 — this bullet was half wrong, and the
+  other half is understated.** §2.3 cites two witness files, and they fail in *different* ways:
+  - `outputs/alt_power_transform_results.json` — the `outputs/` path is gitignored and gone,
+    **but a TRACKED copy of the same run survives at `python/alt_power_transform_results_3k.json`**
+    (`git ls-files` hit). It holds the numbers: seven entries (sigmoid baseline at Jaccard 1.0 plus
+    six variants), min **0.6966** / max **0.8327** = the published 0.697–0.833, `"total": 3380`
+    uniform across all seven. **Range-robustness is witnessed and survives.**
+  - `outputs/range_sweep_results.json` — gone, **and it was never satisfiable in the first place.**
+    This is the stronger finding and it replaces the "gone" framing entirely: the file is produced
+    by `python/sweeps/range_sweep.py`, whose whole persisted output is
+    `{arm_a_jacs, arm_b_jacs, mean_ab_gap, max_span_drop_a, max_span_drop_b}`. `jaccard_stats()`
+    takes two **whole** presheaf id sets and returns one scalar; **no code path subsets either by
+    type or by any geometric condition**, and the output dict is **byte-identical across all four
+    commits** in the file's history. It could not have contained "+0.21 in tangled_rope" at any
+    point in time. (Caveat recorded honestly: the atoms `rope`/`snare` *do* appear in that script,
+    as a per-**variant** f(d) profile table computed from no corpus data — a property of the
+    transformation, not a stratification of the corpus.)
 - **Stale tracker pointer.** §2.3 twice cites `docs/open_questions.md` for OQ-01/OQ-05. That
   tracker was consolidated into `ISSUES.md` 2026-06-04 and deleted (Pattern 2).
-- **Line drift.** §2.3 pins the bypass at `drl_core.pl:356`; OQ-01's resolution pins the rope
-  clause at 378–387 with the bypass at :384. Cite the clause by predicate, not the line.
+- **Line drift.** §2.3 pins the bypass at `drl_core.pl:356`; OQ-01's resolution pinned the rope
+  clause at 378–387 with the bypass at :384. **At HEAD 2026-08-18 the clause is `:426–436` with
+  the bypass at `:432`** — a third position. Cite the clause by predicate
+  (`classify_from_metrics/6`), never the line.
+- **THIRD RESIDUE, added 2026-08-18 — the published subset sizes are arithmetically impossible.**
+  2,245 + 1,169 = **3,414**, which exceeds every corpus in play: **3,380** (the `original_v6` file
+  count, the results JSON's own `"total"`, **and** the measured `corpus_constraint/1` count — the
+  file-count/constraint-count identity is witnessed, not assumed) and **3,314** (the corpus of the
+  tracked `docs/results/tangled_rope_sign_flip.md`). Independently of any corpus total, that census
+  gives **rope 55 + snare 571 = 626** against a published 1,169. This ground is *corroborating*; the
+  never-satisfiable-citation ground above is independently sufficient.
+- **The corpus is fully recoverable, and `range_sweep.py` could not run at HEAD.**
+  `prolog/archives/prolog_v5` → `prolog/archives/datasets/original_v6` is a **byte-identical rename
+  in all 3,380 cases** (3,380 of 3,380 lines are R100), so `original_v6` **is** the §2.3 corpus — a
+  future reader need not re-derive that. `range_sweep.py:24` still named the dead path and threw
+  `corpus_empty`; **repaired 2026-08-18** (commit `5d548413`), witnessed both ways — repaired path
+  exit 0 / "Loaded 3380 testsets successfully", pre-repair path exit 2 / `corpus_empty`.
 
 **Item 1's deliverable is a dated correction note in `observers_not_humans_v6.md`** (the paper's
 own convention — v6 already carries marked-correction blocks), not a silent edit. It needs no
 run and is the item to do even if item 2 is never funded.
+
+**ITEM 1 LANDED 2026-08-18** — `audits/2026-08-18_oq311_universality_class/` (`Fired: live`).
+Commits `5d548413` (path repair), `ec860a2e` (audit log + evidence), `2a52e1f0` (the correction).
+The deliverable turned out to be **a withdrawal, not a currency update**: §2.3 fused two claims and
+only one has a witness. **Range-robustness survives** (Jaccard 0.697–0.833, witness re-pointed to
+the tracked `python/alt_power_transform_results_3k.json`); **the type-concentration claim is
+WITHDRAWN as unwitnessed, not refuted** — the concentration may be true, and whether it is, is
+exactly Item 2. Withdrawn text is left standing, struck and dated, never deleted. Landed sites:
+`observers_not_humans_v6.md` (§2.3 block `:89–153`, both revision notes, six further stale sites
+marked), `project_orientation.md:235`, `lawvere_glossary.md:31`, `python/sweeps/range_sweep.py`.
+
+**Two propagation NEGATIVES, verified 2026-08-18** (recorded so they are not re-chased):
+`docs/when_consensus_isnt_coherence.md:29` needs **no change** — it cites only the witnessed census
+numbers (62.4% / 0.3% / 62.1pp / N=2,245), not the concentration claim. The framework papers
+(`deferential_realism_paper_v7`/`v8`/`v6.13.1`) are clean; the verifying sweep covers `docs/` and
+`essays/` whole, which is a **superset** of that named negative — all **24** tracked
+`deferential_realism_paper*` files are under `docs/`, **0** outside. **`2,245` is deliberately NOT
+in the sweep pattern**: it is cited legitimately from the tracked census, so sweeping on it would
+generate noise a future reader would have to re-clear. The discriminating token is `1,169`.
 
 ### Item 2 — the stratification (the real question, needs an archive overlay)
 
@@ -14445,8 +14493,36 @@ adjacent result: it defines and censuses the span-within-one-band condition per 
 map is **per-constraint, never the config partition** — which is exactly the map a
 condition-stratified cut has to be computed against.
 
-**Pre-registration sketch (author in full before any spend).** Two arms over the same corpus and
-the same variant set: (A) stratify the sign-flip Jaccard advantage on the gate-spanning condition,
+**PRE-REGISTRATION AUTHORED IN FULL, 2026-08-18, AND UNFUNDED** —
+`audits/2026-08-18_oq311_universality_class/PREREGISTRATION.md` (frozen, md5 `3f53bb8e…`).
+**Item 2's next forward move is NOT the run.** It is resolving the conflation the prereg opens
+with: §2.3 states the geometric condition **two ways that are not the same set** — "Hub 1 spans the
+snare gate" (χ span crosses `snare_chi_floor`) vs "institutional below `d_zero`, powerless above"
+(χ span crosses **zero**) — and this OQ glosses both as "the gate-spanning condition". Declare one
+as operative or run both as separate arms; **never silently pick**. Then the **tool must be BUILT**:
+no script in the repo computes a stratified Jaccard and none ever did, so this is construction, not
+a re-run (spec in prereg §5 — partition `load_presheaf_set`'s id set before `jaccard_stats`, with
+type from `run_pipeline.classify_corpus` and χ span from `python/audits/oq22_starvation_census.py`).
+**Gated behind: an operator spend-go.** Item 1 was deliberately executed prereg-first so a rebuilt
+sweep is not silently judged by whether it lands near the withdrawn +0.21/+0.014 — that would be
+the relocating confound aimed at our own prior.
+
+**Design feasibility established 2026-08-18 (PROXY — not a result).**
+`evidence/feasibility_crosstab.py` cross-tabs χ-span-crosses-**zero** × modal-type-`tangled_rope`
+over the committed OQ-22 census TSVs. Both discriminating off-diagonal cells populate on
+`testsets_haiku` (571 / 40) and `kernel_v1` (228 / 150); `testsets_flash` is degenerate
+(¬cond∧TR = 0) and `testsets` likewise. **Caveats that make this a floor for design and nothing
+else:** wrong corpus (never touches `original_v6`, whose occupancy is UNMEASURED), wrong code state
+(TSVs at `bbbf2c6`, before OQ-67 drained the legacy χ path), the zero-crossing reading (one of the
+two the prereg must first disambiguate — do **not** read this as pre-registering it), and **no
+Jaccard computed at all**. **Tie-rule finding:** modal type needs a tie rule, and the cell *counts*
+move with it (kernel_v1 ¬cond∧TR = 150/155/160 under exclude/first/any_tr) while the occupancy
+*verdict* is STABLE across 3 rules × 2 type columns on all four legs. Only the verdict is claimed.
+If `original_v6` proves flash-like, Item 2 is **UNANSWERABLE** on that corpus — a legitimate
+terminal result the prereg pre-commits to, not a failure to work around.
+
+**Pre-registration sketch (superseded by the full prereg above; retained as the seed).** Two arms
+over the same corpus and the same variant set: (A) stratify the sign-flip Jaccard advantage on the gate-spanning condition,
 ignoring type; (B) stratify on the `tangled_rope` label, ignoring the condition. Cross-tabulate to
 get the four cells, and pre-commit what each pattern means — the discriminating cells are
 *gate-spanning ∧ ¬tangled_rope* and *tangled_rope ∧ ¬gate-spanning*, and a design that cannot

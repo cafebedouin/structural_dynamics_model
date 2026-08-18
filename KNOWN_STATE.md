@@ -45,6 +45,53 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — OQ-311 Item 1: §2.3's type-concentration claim withdrawn as unwitnessed; range-robustness survives
+**Files:** docs/observers_not_humans_v6.md, python/sweeps/range_sweep.py, docs/project_orientation.md, docs/lawvere_glossary.md, ISSUES.md
+**Tier:** landed
+
+`observers_not_humans_v6.md` §2.3 fused two claims; only one had a witness. Commits `5d548413`,
+`ec860a2e`, `2a52e1f0`; `audits/2026-08-18_oq311_universality_class/` (`Fired: live`).
+
+**Withdrawn (unwitnessed, NOT refuted):** "+0.21 in tangled_rope (N=2,245) vs +0.014 in snare+rope
+(N=1,169)", the 14.6× figure, "concentrates in a single constraint family". Two independent grounds.
+**(i), sufficient alone:** the cited witness `outputs/range_sweep_results.json` is produced by
+`python/sweeps/range_sweep.py`, whose entire output is
+`{arm_a_jacs, arm_b_jacs, mean_ab_gap, max_span_drop_a, max_span_drop_b}` — `jaccard_stats()` takes
+two *whole* presheaf id sets and returns one scalar, no code path subsets either by type or
+condition, and the dict is **byte-identical across all four commits** in the file's history. The
+citation was never satisfiable. **(ii), corroborating:** 2,245 + 1,169 = 3,414 > 3,380 (file count =
+JSON `"total"` = **measured** `corpus_constraint/1`) and > 3,314; the tracked census gives rope 55 +
+snare 571 = 626 vs a published 1,169. **Survives:** Jaccard 0.6966–0.8327 over six forms, witness
+re-pointed from the gone `outputs/` path to the tracked `python/alt_power_transform_results_3k.json`.
+H0's scope OPEN at OQ-311 Item 2 (prereg authored in full, **unfunded**, gated on operator spend-go).
+
+**`range_sweep.py` repaired:** `:24` named `archives/prolog_v5`, deleted, so the sweep threw
+`corpus_empty` at HEAD. Repaired to `archives/datasets/original_v6`, justified by a **byte-identical
+rename in all 3,380 cases** (3,380/3,380 R100). Load check discriminates: repaired exit 0 / "Loaded
+3380", pre-repair exit 2 / `corpus_empty`.
+
+**Two method notes worth more than the finding.** (1) **A count gate on a marked correction is the
+wrong instrument.** The marking principle *requires* the block to quote the withdrawn sentences, so
+the sweep count necessarily rises (7 → 15) and a count gate fails against its own baseline — with
+the obvious fix being to delete the quotes, exactly what the correction forbids. A **property**
+gate (every hit inside or adjacent to a dated marker, checked *per line*) caught six stale sites a
+"15 > 7, pass" would have shipped. Count gates are meaningful only where the expected value is zero.
+(2) **The sweep pattern used alternation, so under BRE `|` is a literal and the whole sweep returns
+clean** — a false negative across every file. Demonstrated same-pattern/same-file: **BRE 0, ERE 7**.
+Use `-E`, and pin `/usr/bin/grep`.
+
+**Also repaired, kept separate from the withdrawal** (different predicate, different claim):
+`lawvere_glossary.md:31` pinned `metric_based_type_indexed/3` at `drl_core.pl:356`; it is `:532` at
+HEAD, and OQ-22 pinned it at `:479–483` on 2026-06-28 — three positions, which is the argument for
+citing by predicate. The rope-clause bypass moved likewise: `:356` → `:384` → **`:432`**
+(`classify_from_metrics/6` clause `:426–436`).
+
+**Promotion test: NO PROMOTION.** Each failure here is **loud**, not silent — a dead corpus path
+throws `corpus_empty` (exit 2), and a withdrawn claim is visible in the paper. The standing
+tripwires this rides on are already always-loaded in CLAUDE.md (cite-the-manifest-not-a-memorized-
+count; `asserta` not `assertz` for `corpus_path`; pin `/usr/bin/grep` in any script computing a
+reported count). Bias to history.
+
 ## 2026-08-18 — TRIPWIRE: `prolog/testsets/` carries no literal file count anywhere; the four static legs may
 **Files:** CLAUDE.md, AGENTS.md, ISSUES.md, docs/project_orientation.md
 **Tier:** tripwire
