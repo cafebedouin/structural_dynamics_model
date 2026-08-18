@@ -14924,6 +14924,49 @@ n=279), or they are declared one-shot historical analyses and the artifact is ma
 current state — live-looking output, dead input, no consumer — is the one state that should not
 persist.
 
+## OQ-320 — `project_orientation.md` §5.5 is titled, statused, and cross-referenced for `observers_not_humans_v5` while v6 is the current artifact
+
+**Ω-type:** Ω_E (mechanical — which file is current is a matter of fact about the repo).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-311
+**Origin:** 2026-08-18, operator review of the OQ-311 Item 1 close. Flagged as out-of-scope
+residue during that work and filed here rather than left in chat, where it would have died with
+the session.
+**Files:** `docs/project_orientation.md` (§5.5 heading :233, Status line :239, superseded-list
+line near :501), `docs/observers_not_humans_v6.md`
+
+**The finding.** `docs/observers_not_humans_v6.md` has existed since 2026-05-28 (commit
+`e5f805ab`) and carries a marked §2.3 correction dated 2026-08-18. `project_orientation.md` — the
+canonical operational reference, and the file a fresh instance is pointed at first — still calls
+the paper **v5** in three places: the §5.5 heading, the "**Status:** Current version is v5. Prior
+versions (v2–v4) … are superseded" line, and the file-index line "`v2.md` through `v4.md` —
+Superseded by v5". The `**Relationship to apparatus:**` paragraph also opens "v5 (current)".
+
+**Why it is filed separately from OQ-311 rather than folded into it.** Different claim. OQ-311's
+withdrawal is about whether §2.3's type-concentration evidence exists; this is about which
+revision of the paper the orientation doc points at. Conflating them would put a doc-currency
+chore inside a withdrawal and make both harder to cite.
+
+**Self-implicating note, recorded because it changes what a reader should expect.** The OQ-311
+Item 1 close (commit `2a52e1f0`) rewrote §5.5's **Summary** paragraph with v6 content — correctly,
+since the universality-class line needed the withdrawal — but left the heading and status naming
+v5. So the section is now **internally inconsistent, and that edit is what made it so**: v6 content
+under a v5 heading. A `[STALE HEADING]` marker was placed at the site 2026-08-18 pointing here, so
+the inconsistency is visible rather than silent, but the marker is not the repair.
+
+**Two pins to re-check in the same pass, not assumed.** §5.5 cites
+`prolog/constraint_indexing.pl:430–526` and "Perfect threshold separation at d_zero ≈ 0.1642,
+N=3,314". Both predate the 2026-06-05 reset and neither was verified during the OQ-311 work — the
+line pin especially, since OQ-311's whole occasion was a code pin that had drifted **three** times
+(`drl_core.pl` rope bypass :356 → :384 → :432). **Cite by predicate; verify before trusting.**
+
+**What resolution would change.** §5.5 is retitled and restatused to v6 with the superseded list
+corrected to "v2–v5 superseded by v6", the two pins above are verified or re-cited by predicate,
+and the `[STALE HEADING]` marker is removed — a marker that outlives its defect becomes furniture.
+Cheap, no run, no ruling.
+
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —

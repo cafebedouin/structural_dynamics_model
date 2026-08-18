@@ -232,11 +232,22 @@ The project's papers form a coherent trajectory. Listed in intellectual-developm
 
 ### 5.5 `observers_not_humans_v5.md`
 
+> **[STALE HEADING, flagged 2026-08-18 — OQ-320.]** The current version is **v6**
+> (`docs/observers_not_humans_v6.md`), which carries a marked §2.3 correction of
+> 2026-08-18. This section is still titled and statused for v5, and its Summary below
+> was updated with v6 content on 2026-08-18 without the heading being rewritten — so
+> the section is currently **internally inconsistent** and that inconsistency was
+> introduced by that edit. Rewriting §5.5 to v6 (and re-checking the `:430–526`
+> pin and the `v2–v4 superseded` line at the end of this file) is **OQ-320**, filed
+> rather than folded into the OQ-311 withdrawal because it is a different claim.
+
 **Summary:** Argues that DR's load-bearing claims are structural (apply to any system whose internal states update differentially under position-relative net flows), not anthropocentric. The paper *proposes* universality class as the right physics analogy — different microscopic dynamics flowing to the same coarse-grained orbit structure — but v6 §2.3 already downgraded it ("does not show universality-class invariance corpus-wide"), and the 2026-08-18 correction **withdrew the type-concentration evidence** that was offered for the surviving narrower version. Range-robustness (Jaccard 0.697–0.833 over six functional forms) survives; whether the advantage tracks the `tangled_rope` label or the geometric condition is **open at OQ-311 Item 2**. Treat "universality class" as a proposed framing with its quantitative support open, not a result. Proposes a cross-class validation program (RL agents, animal data, embodied AI). Includes pre-registered falsification protocol for AI agent systems. Documents the negative association between parametric fragility (Arakelov height) and epistemic opacity (FCR/FSM detection): χ² = 10.01, p = 0.0016, Cramér's V = 0.055 — the two diagnostics index opposite failure modes.
 
 **Relationship to apparatus:** v5 (current) corrects v4's mechanism account of the sign-flip: replaced flow-asymmetry derivation with structural-role routing description grounded in `prolog/config.pl` and `prolog/constraint_indexing.pl:430–526`. Perfect threshold separation at d_zero ≈ 0.1642, N=3,314. The fragility/opacity cross-tab is in `docs/results/fragility_cross_tab.md`.
 
-**Status:** Current version is v5. Prior versions (v2–v4) in `docs/` are superseded.
+**Status:** ~~Current version is v5. Prior versions (v2–v4) in `docs/` are superseded.~~
+**[stale 2026-08-18 — OQ-320]** Current version is **v6**; v2–v5 are superseded, and
+v6 §2.3 carries a 2026-08-18 correction withdrawing the type-concentration claim.
 
 ---
 
@@ -498,7 +509,7 @@ The following files in `docs/` were not listed in the task brief and may be rele
 - `docs/logic.md` — Formal classification rules and thresholds. UTF-8 encoding was repaired in Feb 2026 (prior versions had mojibake from double-encoded characters). This is the formal spec document; `config.pl` should match it.
 - `audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
 - `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v5.md` and `when_consensus_isnt_coherence.md`.
-- `docs/observers_not_humans_v2.md` through `v4.md` — Superseded by v5.
+- `docs/observers_not_humans_v2.md` through `v5.md` — Superseded by v6 **[corrected 2026-08-18 — OQ-320; this line said "v2 through v4 — superseded by v5"]**.
 
 **Draft/working documents** (may be incomplete or superseded):
 - `docs/sheaf_presheaf_bridge_paper.md` — An earlier draft version of `when_splitting_isnt_solving.md` (labeled "Draft Skeleton — v0.5"); `when_splitting_isnt_solving.md` is the canonical version.

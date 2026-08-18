@@ -6,6 +6,15 @@ Executing it requires an explicit operator spend-go. Item 2 stays OPEN until the
 **Frozen:** this file is never retro-edited. If it is amended after a first run, the
 new md5 is logged at its position in `audit_log.md`; that history is the honest record.
 
+**AMENDMENT 1 — 2026-08-18, BEFORE ANY RUN (no results exist to amend against).**
+§4 and §5.5 amended to close a live free parameter: the original text anchored the minimum-cell-N
+floor to the feasibility table without naming the modal-type tie rule those figures were computed
+under, and left the rule to the receiver. Since the cell counts move with the rule, a receiver
+picking a different one would move the UNANSWERABLE boundary — the exact degree of freedom a
+prereg exists to close. **The floor is now evaluated under all three rules with the minimum
+governing**, and the feasibility figures are quoted per rule. Both md5s are logged in
+`audit_log.md`. Caught in review by the operator; recorded rather than silently applied.
+
 ---
 
 ## 0. Receiver's licence to refuse — read before anything else
@@ -102,16 +111,36 @@ if the run stops there.
 as `insufficient` and its advantage is **not** computed (no point estimate, not even a
 caveated one).
 
+**THE FLOOR IS EVALUATED UNDER ALL THREE TIE RULES, AND THE MINIMUM GOVERNS.** A cell clears
+the floor only if it holds ≥ 30 under **`exclude` AND `first` AND `any_tr`** (defined in §5.5).
+This is the operative rule for the occupancy determination and therefore for the UNANSWERABLE
+call in §3 — it is **not** left to the receiver to pick.
+
+*Why it is fixed here rather than declared by the receiver.* §5.5 asks the receiver to declare
+a tie rule for *reporting*, which is fine for reporting and **not** fine for a gate: the cell
+counts move with the rule (kernel_v1 TF = 150 / 155 / 160 under exclude / first / any_tr), so a
+receiver free to pick the rule is free to move the UNANSWERABLE boundary — the exact undeclared
+degree of freedom this document exists to close. Taking the minimum makes the gate conservative
+and rule-independent: it can only ever declare UNANSWERABLE more readily than a single-rule
+reading would, never less. If the three rules disagree about whether a cell clears the floor,
+**report that disagreement** — it is itself a finding about how label-dependent the stratum is,
+and it is exactly the kind of thing a single-rule run would silently absorb.
+
 Anchor for that floor is the feasibility table in `evidence/feasibility_crosstab.tsv`, which
 is a **proxy on other corpus legs at a different code state** — it is a floor for *design*,
 never a predicted result. What it establishes is only that both off-diagonals are populated
-on at least some legs (haiku and kernel_v1: yes; testsets and flash: no, flash degenerately
-so with TF = 0 under every tie rule tested).
+on at least some legs. **Stated with the rule named, because the counts are rule-dependent:**
+under `exclude`, haiku TF = 40 and kernel_v1 TF = 150; under `first`, 48 and 155; under
+`any_tr`, 48 and 160. `testsets` and `testsets_flash` fail on **every** rule (flash
+degenerately, TF = 0 under all three). The occupancy **verdict** — which legs populate both
+off-diagonals — is stable across all 3 rules × 2 type columns on all four legs; only the
+counts move. That stability is why a min-across-rules gate is workable rather than paralysing.
 
 **The floor is on the `original_v6` occupancy, which is unmeasured.** If `original_v6`
 turns out flash-like — TF empty — the answer is UNANSWERABLE on this corpus (§3), and that
 is a legitimate terminal result, not a failure to be worked around by lowering the floor.
-**Do not lower the floor after seeing the occupancy.**
+**Do not lower the floor after seeing the occupancy, and do not switch tie rules after seeing
+it either** — both are the same move wearing different clothes.
 
 ---
 
@@ -142,12 +171,22 @@ The extension is small and is specified exactly so it is not redesigned on the f
    directions before use: every id in the presheaf set has a `(type, condition)` entry, and
    report any id that does not rather than dropping it silently. An unjoined id is a
    Pattern-6 absorption waiting to happen.
-5. **Modal type needs a declared tie rule.** `mtype_vec` is per-position; reducing it to one
-   label requires a rule for ties. Declare it in advance and report the counts under at
-   least two rules — the feasibility probe showed cell **counts** move with the rule
-   (kernel_v1 TF: 150 / 155 / 160 under exclude / first / any_tr) even where the occupancy
-   **verdict** does not. Also declare `mtype_vec` vs `ftype_vec` (metric vs post-signature
-   type) and say why; §2.3's "constraint family" is ambiguous between them.
+5. **Modal type needs a tie rule, and the three are named here.** `mtype_vec` is per-position;
+   reducing it to one label requires a rule for ties. The three swept in the feasibility probe,
+   and the only three this prereg recognises:
+   - **`exclude`** — a tied constraint is dropped from the cross-tab entirely.
+   - **`first`** — first occurrence among the tied maxima, in positional order.
+   - **`any_tr`** — counts as `tangled_rope` if `tangled_rope` is among the tied maxima.
+
+   **Report all three.** The cell **counts** move with the rule (kernel_v1 TF: 150 / 155 / 160)
+   even where the occupancy **verdict** does not. **The §4 floor gate is evaluated under all
+   three and the minimum governs** — that is not the receiver's choice to make; §4 is
+   authoritative and this item does not override it. Declaring a single rule for *narrative*
+   convenience is permitted; declaring one for the *gate* is not.
+
+   Also declare `mtype_vec` vs `ftype_vec` (metric vs post-signature type) and say why; §2.3's
+   "constraint family" is ambiguous between them, and the feasibility sweep showed the choice
+   matters more for kernel_v1 (TF 150 vs 118 under `exclude`) than for haiku (40 vs 41).
 
 ---
 

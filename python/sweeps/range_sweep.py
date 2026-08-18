@@ -260,14 +260,37 @@ if __name__ == '__main__':
     print(f'  Max span-drop Arm B: {max_drop_b:.4f}')
 
     # Write results.
-    # 2026-08-18 marker: this script computes UNSTRATIFIED, arm-level Jaccard only —
-    # there is no per-type or per-condition breakdown anywhere in it. It is therefore NOT
-    # the source of any per-type number, and in particular cannot have produced the
-    # "+0.21 in tangled_rope / +0.014 in snare+rope" figures that
-    # docs/observers_not_humans_v6.md §2.3 cites to outputs/range_sweep_results.json.
-    # That citation was never satisfiable; the claim is withdrawn (OQ-311 Item 1,
-    # audits/2026-08-18_oq311_universality_class/). A stratified sweep is OQ-311 Item 2
-    # and does not yet exist.
+    #
+    # ---- 2026-08-18 marker: THIS SCRIPT PRODUCES NO PER-TYPE NUMBER ----------------
+    # jaccard_stats() takes two WHOLE presheaf id sets from load_presheaf_set() and
+    # returns one scalar. Nothing here partitions either id set by constraint type or
+    # by any geometric condition, so the output below is UNSTRATIFIED, arm-level
+    # Jaccard only. This is not merely true of the current file: the results_out dict
+    # is byte-identical across ALL FOUR commits in this file's history (cdfbe999,
+    # ae10e7ea, 72d713db, 15cca7ed) — no version ever emitted a per-type key.
+    #
+    # WHAT WILL LOOK LIKE STRATIFICATION AND IS NOT (read this before concluding the
+    # withdrawal below was sloppy): the atoms 'rope' / 'snare' / 'TR' DO appear in this
+    # file, in the block printing 'f(d) PROFILES:' and assigning span_str (currently
+    # ~:100 and ~:125-131, but LOCATE IT BY THOSE STRINGS, not by line — these numbers
+    # drifted once already inside the very commit that wrote this marker). That is the
+    # per-VARIANT f(d) profile table. For each
+    # transformation variant it computes chi_min/chi_max from that VARIANT's own L/U at
+    # a fixed eps=0.70 and labels which type-gates the variant's chi range spans
+    # ('rope->TR->snare', '*** STARVED ***', ...). It is a property of the
+    # transformation function, printed to stdout, computed from NO CORPUS DATA AT ALL.
+    # A grep for type atoms hits it; a claim that this script "never mentions the
+    # types" would be false. The claim that survives contact with the file is the
+    # narrower one above: no partition of a per-constraint id set.
+    #
+    # CONSEQUENCE: docs/observers_not_humans_v6.md §2.3 cited
+    # outputs/range_sweep_results.json as the witness for "+0.21 in tangled_rope
+    # (N=2,245) / +0.014 in snare+rope (N=1,169)". This script cannot emit numbers of
+    # that shape and never could, so that citation was never satisfiable. The claim is
+    # WITHDRAWN as unwitnessed (not refuted) — OQ-311 Item 1,
+    # audits/2026-08-18_oq311_universality_class/. A stratified sweep is OQ-311 Item 2:
+    # it must be BUILT (spec in that dir's PREREGISTRATION.md §5), not re-run.
+    # -------------------------------------------------------------------------------
     results_out = {
         'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
         'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},

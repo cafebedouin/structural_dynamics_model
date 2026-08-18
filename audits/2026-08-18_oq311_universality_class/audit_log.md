@@ -37,7 +37,29 @@ testify to the ordering of pre-edit reads. This log lands AFTER commit `5d548413
 ## Prereg freeze
 
     $ md5sum PREREGISTRATION.md
-    3f53bb8e0daf2cba1fdd5c22f746163d  PREREGISTRATION.md
+    3f53bb8e0daf2cba1fdd5c22f746163d  PREREGISTRATION.md      # v1, as first authored
+
+**AMENDMENT 1 — logged at its position, 2026-08-18, BEFORE ANY RUN.**
+
+    $ md5sum PREREGISTRATION.md
+    75838ba0985c4be8e30cfab161a20ea2  PREREGISTRATION.md      # v2, after Amendment 1
+
+**What changed and why.** v1 anchored §4's minimum-cell-N floor to the feasibility table without
+naming the **modal-type tie rule** those figures were computed under, and §5.5 left the rule for
+the receiver to declare. The cell counts move with the rule (kernel_v1 TF = 150 / 155 / 160 under
+exclude / first / any_tr), so a receiver free to pick would have been free to move the
+UNANSWERABLE boundary — a live free parameter inside a document whose whole purpose is to close
+them. Frozen with a live free parameter is worse than unfrozen.
+
+v2: the floor is evaluated under **all three** tie rules with the **minimum governing**; the three
+rules are named and defined in §5.5; the feasibility figures are quoted **per rule**; and §5.5 is
+made explicitly non-overriding of §4 so the two cannot be read as conflicting.
+
+**No results exist to amend against** — no run has been funded or executed, so this amendment
+cannot have been influenced by an outcome. That is the cleanest position an amendment can occupy,
+and it is why the ordering is worth logging rather than asserting.
+
+Caught in operator review of the completed work, not by the authoring pass.
 
 No run is funded by this audit, so the md5 witnesses the authored-and-frozen state only;
 the first result line that would sit below it does not exist yet by design.

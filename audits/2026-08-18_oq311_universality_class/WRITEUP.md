@@ -252,6 +252,25 @@ Verified: **24** tracked `deferential_realism_paper*` files, **0** outside `docs
 §5.5 cross-class protocol rewrite. **Item 2 stays OPEN with its prereg authored and its spend-go
 unclaimed.**
 
+**Filed as OQ-320, out of scope here.** `docs/project_orientation.md` §5.5 is titled, statused, and
+cross-referenced for `observers_not_humans_v5` while **v6** is the current artifact. The correction
+above rewrote that section's *Summary* with v6 content and left the heading naming v5 — so **this
+work made the section internally inconsistent**, and a `[STALE HEADING]` marker was placed at the
+site pointing at OQ-320 so the inconsistency is visible rather than silent. Filed rather than fixed
+because it is a different claim (which revision is current, not whether §2.3's evidence exists), and
+filed rather than left in chat because a next step spoken in conversation is a handoff that did not
+happen. OQ-320 also carries two unverified §5.5 pins to re-check in the same pass.
+
+**Prereg Amendment 1 (2026-08-18, before any run).** Operator review caught a **live free parameter
+inside the frozen document**: §4 anchored the minimum-cell-N floor to the feasibility table without
+naming the modal-type tie rule those figures came from, and §5.5 left the rule to the receiver.
+Since the counts move with the rule, a receiver picking a different one could move the UNANSWERABLE
+boundary — precisely the freedom a prereg exists to remove. Amended so **the floor is evaluated
+under all three rules with the minimum governing**, the three rules are defined, and the
+feasibility figures are quoted per rule. Both md5s are logged at their positions in `audit_log.md`
+(v1 `3f53bb8e…`, v2 `75838ba0…`). No results existed to amend against, which is the cleanest
+position an amendment can occupy. **Frozen with a live free parameter is worse than unfrozen.**
+
 **Next forward move (Item 2), and what it is gated behind.** Gated on an **operator spend-go**.
 The first task is not the run: it is resolving the §1 conflation in `PREREGISTRATION.md` — "Hub 1
 spans the snare gate" (χ span crosses `snare_chi_floor`) and "institutional below `d_zero`,
