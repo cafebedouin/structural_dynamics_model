@@ -1,0 +1,35 @@
+# V5 LOAD CHECK — raw capture (not a transcription)
+# Confirms the repaired corpus_path in range_sweep.py resolves, AND measures
+# the file-count / constraint-count identity that ground (ii) rides on.
+# Pass/fail here is ONLY 'it loads at all' (no corpus_empty). N is MEASURED.
+# The sweep itself is NOT run — that is OQ-311 Item 2 spend.
+
+$ cd prolog && swipl -l stack.pl -g "..." 2>&1 | grep -v Warning | tail
+
+Usage:      run_scenario('file.pl', interval_id).
+====================================================
+[corpus] Loading 3380 testset files...
+[corpus] Loaded 3380 testsets successfully.
+MEASURED corpus_constraint/1 count N = 3380
+BRANCH: N < 3414 -> ground (ii) SURVIVES
+
+# Warnings from the archive corpus load were filtered by an explicit pattern
+# (^Warning and its continuation lines), NOT by a blanket 'grep -v Warning' —
+# see build_discipline Pattern 6.
+#
+# Exit status of the swipl load run: 0  (0 = loaded; a corpus_empty throw would be nonzero)
+
+## DISCRIMINATION CONTROL for the load check
+# 'It loaded' licenses nothing unless the check could have declined. The
+# defect's own before-state is the naturally-arising negative (build_discipline
+# -> 'When a defect is found, its BEFORE-COMMIT is a free negative control'):
+# the pre-repair path is right there in the parent commit.
+
+$ swipl -l stack.pl -g "asserta(config:param(corpus_path,'archives/prolog_v5')), corpus_loader:load_all_testsets, halt"   # the PRE-REPAIR path
+ERROR: [Thread main] -g 
+: Unknown error term: corpus_empty('/home/scott/bin/structural_dynamics_model/prolog/archives/prolog_v5/*.pl')
+
+  exit status: 2  (nonzero = the check DECLINED on the pre-repair path)
+#
+# -> The load check DISCRIMINATES: exit 0 + 'Loaded 3380' on the repaired path,
+#    exit 2 + corpus_empty on the pre-repair path. The pass is informative.

@@ -1,0 +1,45 @@
+
+SENSITIVITY SWEEP — does the feasibility verdict depend on the tie rule?
+tie_rule	leg	column	cond_and_notTR	notcond_and_TR	both_offdiag
+exclude	testsets	mtype_vec	77	0	False
+exclude	testsets	ftype_vec	77	0	False
+exclude	testsets_haiku	mtype_vec	571	40	True
+exclude	testsets_haiku	ftype_vec	563	41	True
+exclude	testsets_flash	mtype_vec	773	0	False
+exclude	testsets_flash	ftype_vec	766	0	False
+exclude	kernel_v1	mtype_vec	228	150	True
+exclude	kernel_v1	ftype_vec	229	118	True
+first	testsets	mtype_vec	84	0	False
+first	testsets	ftype_vec	84	0	False
+first	testsets_haiku	mtype_vec	616	48	True
+first	testsets_haiku	ftype_vec	608	49	True
+first	testsets_flash	mtype_vec	835	0	False
+first	testsets_flash	ftype_vec	828	0	False
+first	kernel_v1	mtype_vec	433	155	True
+first	kernel_v1	ftype_vec	433	123	True
+any_tr	testsets	mtype_vec	83	0	False
+any_tr	testsets	ftype_vec	83	0	False
+any_tr	testsets_haiku	mtype_vec	598	48	True
+any_tr	testsets_haiku	ftype_vec	590	49	True
+any_tr	testsets_flash	mtype_vec	834	0	False
+any_tr	testsets_flash	ftype_vec	827	0	False
+any_tr	kernel_v1	mtype_vec	276	160	True
+any_tr	kernel_v1	ftype_vec	276	123	True
+
+VERDICT STABILITY per leg (across 3 tie rules x 2 type columns = 6 settings):
+  testsets         both_offdiag_populated = {False}  -> STABLE
+  testsets_haiku   both_offdiag_populated = {True}  -> STABLE
+  testsets_flash   both_offdiag_populated = {False}  -> STABLE
+  kernel_v1        both_offdiag_populated = {True}  -> STABLE
+
+NOTE: the tie rule "first" reproduces the OQ-311 plan's recon figures exactly
+      (kernel_v1 433/155, haiku 616/48, flash notcond_and_TR=0), identifying
+      which rule that recon used. The counts move with the rule; the FEASIBILITY
+      VERDICT does not. Only the verdict is claimed.
+leg	n_scored	n_skipped_modal_tie	n_skipped_unparseable	cond_and_TR	cond_and_notTR	notcond_and_TR	notcond_and_notTR	both_offdiag_populated
+testsets	94	7	8	7	77	0	10	False
+testsets_haiku	885	75	0	168	571	40	106	True
+testsets_flash	890	70	0	115	773	0	2	False
+kernel_v1	871	235	0	398	228	150	95	True
+
+DESIGN-FEASIBILITY ONLY — proxy corpus, proxy code state, no Jaccard measured.

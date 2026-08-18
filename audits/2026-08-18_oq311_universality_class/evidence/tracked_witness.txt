@@ -1,0 +1,46 @@
+# WHAT SURVIVES — the range-robustness half, with a TRACKED witness
+#
+# CLAIM WITNESSED: the six-functional-form robustness result reproduces, and its
+# witness is recoverable at HEAD. OQ-311's residue bullet "the witnesses are gone"
+# is HALF WRONG: one of the two named witnesses is tracked and holds the numbers.
+#
+# §2.3 names two witness files, both under the gitignored outputs/:
+#   outputs/alt_power_transform_results.json  -> gone from outputs/, but a TRACKED
+#                                                copy exists at python/ (below)
+#   outputs/range_sweep_results.json          -> gone, AND never satisfiable
+#                                                (see range_sweep_output_keys.txt)
+
+## The tracked witness exists
+$ git ls-files python/alt_power_transform_results_3k.json
+python/alt_power_transform_results_3k.json
+$ ls -l outputs/alt_power_transform_results.json 2>&1   (the path §2.3 names)
+ls: cannot access 'outputs/alt_power_transform_results.json': No such file or directory
+
+## Its own reported corpus size, quoted verbatim (NOT substituted from the load check)
+$ grep -o "\"total\": [0-9]*" python/alt_power_transform_results_3k.json | sort -u
+"total": 3380
+
+## Its Jaccard values — reproducing the paper's published 0.697-0.833
+$ python -c "..." (dump variant -> jaccard_vs_sigmoid)
+  sigmoid                  sign_flip=True  total=3380  jaccard_vs_sigmoid=1.0
+  piecewise_linear         sign_flip=True  total=3380  jaccard_vs_sigmoid=0.782
+  piecewise_no_flip        sign_flip=False total=3380  jaccard_vs_sigmoid=0.7542
+  sqrt_flip                sign_flip=True  total=3380  jaccard_vs_sigmoid=0.8327
+  quadratic_flip           sign_flip=True  total=3380  jaccard_vs_sigmoid=0.8296
+  step_flip                sign_flip=True  total=3380  jaccard_vs_sigmoid=0.6966
+  sigmoid_shifted          sign_flip=False total=3380  jaccard_vs_sigmoid=0.7535
+
+  variants excluding the sigmoid baseline: n=6
+  min = 0.6966   max = 0.8327
+  -> rounds to the published range 0.697-0.833
+
+## Reading rule applied in the correction block
+# The block cites 3,380 in the "what survives" half as a QUOTATION of this file's
+# own "total" field — a report of what the witness says, not a live measurement.
+# It is therefore never substituted from the V5 load check, even though that check
+# independently returned the same number. Keeping the two accountings distinct is
+# what lets a later reader tell a quotation from a measurement.
+#
+# Six functional forms are named in the paper; this file carries seven entries —
+# the sigmoid baseline (jaccard 1.0 by definition) plus six variants. The range
+# 0.697-0.833 is over the six, excluding the baseline.

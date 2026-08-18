@@ -1,0 +1,75 @@
+# PROPAGATION SWEEP — baseline, taken BEFORE any documentation edit (HEAD d9687381)
+#
+# Pattern targets the stale artefacts of the withdrawn claim and its dead pointers:
+#   14\.6                  the concentration factor
+#   1,169                  the published snare+rope subset size
+#   range_sweep_results    the never-satisfiable witness path
+#   open_questions\.md     the tracker deleted 2026-06-04 (Pattern 2)
+#   drl_core\.pl:356       the drifted code pin
+
+## V6a — POSITIVE CONTROL FOR THE SWEEP ITSELF: -E is mandatory.
+#
+# The pattern uses alternation. Under BRE (grep's default) `|` is a LITERAL
+# character, so the whole pattern matches nothing and the sweep returns clean —
+# banking a false negative across every file. The sweep's own discrimination is
+# therefore witnessed before its result is read: same pattern, same target file,
+# with and without -E.
+
+$ /usr/bin/grep -cn  "14\.6|1,169|range_sweep_results|open_questions\.md|drl_core\.pl:356" docs/observers_not_humans_v6.md   # BRE
+0
+$ /usr/bin/grep -cEn "14\.6|1,169|range_sweep_results|open_questions\.md|drl_core\.pl:356" docs/observers_not_humans_v6.md   # ERE
+7
+
+# -> BRE 0, ERE 7. The probe discriminates; a clean BRE run would have been a
+#    didn't-look wearing a measured-empty's clothes.
+#
+# NOTE: the plan predicted this demo would read 0 vs 4. Measured here as 0 vs 7.
+# The demonstration's point is unchanged (0 vs nonzero); the recorded value is
+# the measured one. /usr/bin/grep is pinned, not bare grep, per build_discipline.
+
+## V6b — BASELINE sweep result, repo-wide, before any edit
+$ /usr/bin/grep -rEn "14\.6|1,169|range_sweep_results|open_questions\.md|drl_core\.pl:356" docs/ essays/ \
+    | /usr/bin/grep -vE "^docs/observers_not_humans_v[2-5]\.md"
+
+docs/lawvere_glossary.md:31:| Metric-level stalk | `metric_based_type_indexed/3` — drl_core.pl:356 | Raw metric classification | STRICT | Pre-signature stalk value |
+docs/observers_not_humans_v6.md:5:*Revision 6. Corrects §2.3's interpretation of the alternative-functions robustness test. The empirical numbers reproduce (Jaccard 0.685–0.828 across six functional forms); the interpretation was overstated corpus-wide. Sign-flip is load-bearing specifically when Hub 1 spans the snare gate and only within the tangled_rope constraint family, not universally. The Jaccard advantage concentrates 14.6× more in tangled_rope (+0.21) than snare+rope (+0.014). This correction resolves §2.3 and §3.3 as one finding viewed at two resolutions — the institutional sign-flip mechanism and the [+,+,−,+] chi pattern are the same structural phenomenon. The rope-gate bypass (drl_core.pl:356) is flagged as an open assumption (OQ-01). Jaccard range corrected to 0.697–0.833 (from published v5 claim of 0.685–0.828) to reflect full-corpus rerun. See witness files: `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`, `docs/open_questions.md` OQ-01 and OQ-05.*
+docs/observers_not_humans_v6.md:13:The alternative-functions robustness result reproduces (Jaccard 0.685–0.828 remains within the spectrum produced by the full-corpus rerun at 0.697–0.833), but its interpretation was overstated at the corpus level. V5 stated: "any transformation function that respects two qualitative properties — bounded sensitivity at extremes (saturation) and sign reversal at structural dominance (sign-flip) — produces the same qualitative orbit structure." This suggests sign-flip carries universal load. The corrected interpretation: sign-flip is load-bearing only in the tangled_rope regime where Hub 1 spans the snare gate. The corpus-wide Jaccard advantage (≈+0.086) is a weighted average of tangled_rope (+0.21, 2,245 constraints) and snare+rope (+0.014, 1,169 constraints) — a 14.6× concentration in one family.
+docs/observers_not_humans_v6.md:17:The rope-gate bypass at `prolog/drl_core.pl:356` is flagged as a conditional assumption. The H0 confirmation ("sign-flip is load-bearing") depends on treating this bypass as given; whether it is intentional modeling or an artifact is OQ-01, and its resolution would clarify the mechanism's theoretical status.
+docs/observers_not_humans_v6.md:91:The DR analog has a more precise formulation than v5 stated. **The alternative-functions result does not show universality-class invariance corpus-wide.** Instead, the robustness concentrates in a single constraint family: tangled_rope. When the corrected Arm A/B controlled sweep isolates sign-flip — varying only whether f(d) crosses zero, keeping range and smoothness matched throughout the sweep — the Jaccard advantage of the sign-flip-present variant reaches **+0.21 in the tangled_rope subset** (N=2,245, T4 gap) but only **+0.014 in snare+rope combined** (N=1,169) — a **14.6-fold difference**. The corpus-wide +0.086–+0.13 Jaccard advantage observed across the full robustness run is a weighted average obscuring this concentration. Witness: `outputs/range_sweep_results.json` (Arm A1–A3, Arm B1–B3), `outputs/alt_power_transform_results.json` (full corpus).
+docs/observers_not_humans_v6.md:125:**Conditional assumption: the rope-gate bypass.** One technical detail undergirds the sign-flip mechanism. The rope-gate classification in `prolog/drl_core.pl:356` includes the clause:
+docs/observers_not_humans_v6.md:131:This routes constraints with negative chi to rope classification regardless of base extractiveness. Whether this clause encodes intentional modeling content — the interpretation that a position with negative chi is a net beneficiary for whom epsilon magnitude no longer distinguishes rope from extraction — or is an implementation artifact whose theoretical status was never isolated is an open question (OQ-01 in `docs/open_questions.md`). The corrected H0 confirmation reads: "sign-flip is load-bearing when Hub 1 spans snare gate AND rope-gate bypass behavior is treated as given." That AND clause is the conditional assumption. If OQ-01 resolves by establishing the bypass as intentional, the mechanism's theoretical status is clarified and the conditional confirmation can be stated without qualification. If OQ-01 resolves by identifying the bypass as an artifact requiring a guard (e.g., "only bypass when chi < −threshold_magnitude, not at all negative values"), the A3 compression results shift and the framework's characterization of the mechanism may strengthen. Currently, the bypass is treated as given.
+docs/observers_not_humans_v6.md:362:*Revision 6. Marked correction to §2.3: the alternative-functions robustness result reproduces empirically (Jaccard 0.697–0.833 in full-corpus rerun) but its interpretation was overstated corpus-wide. Sign-flip is load-bearing specifically in tangled_rope under the condition that Hub 1 spans the snare gate and the rope-gate bypass is treated as given (OQ-01). The empirical concentration (14.6× higher Jaccard advantage in tangled_rope than snare+rope) resolves §2.3 and §3.3 as one finding, not two independent findings. All other sections carried forward from v5. Witness files: `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`, `docs/open_questions.md` OQ-01/OQ-05. Conceptual development in conversation with Claude (Anthropic). Next step pending empirical results from §5.5 protocol and resolution of OQ-01.*
+
+## Per-file baseline tally
+      7 docs/observers_not_humans_v6.md
+      1 docs/lawvere_glossary.md
+
+## V6c — scope, exclusions, and coverage relation
+#
+# EXCLUDED FROM THE PATTERN, deliberately: `2,245`.
+#   docs/when_consensus_isnt_coherence.md:29 and docs/results/tangled_rope_sign_flip.md
+#   both cite 2,245 LEGITIMATELY, from the tracked census (tangled_rope = 2245, 67.7%
+#   of a 3,314 corpus). It is a witnessed number, not part of the withdrawn claim.
+#   Sweeping on it would emit noise that a future reader would have to re-chase and
+#   re-clear. The withdrawn pairing is "+0.21 at N=2,245 vs +0.014 at N=1,169"; the
+#   1,169 half is unique to the withdrawn claim and is the discriminating token.
+#
+# EXCLUDED BY THE FILTER: docs/observers_not_humans_v2-v5.md — prior revisions are
+#   point-in-time artefacts and are not corrected (plan §2).
+#
+# COVERAGE RELATION (stated because a recorded negative whose verifying command has
+# NARROWER scope than the claim is not reproducible):
+#   The plan records a named negative — "deferential_realism_paper v7/v8/v6.13.1
+#   return 0 hits". The command above does not name those files; it sweeps docs/ and
+#   essays/ whole. That is a SUPERSET of the named negative iff every
+#   deferential_realism_paper* file lives under docs/. Verified:
+$ git ls-files | grep -c "deferential_realism_paper"
+24
+$ git ls-files | grep "deferential_realism_paper" | grep -vc "^docs/"
+0
+$ git ls-files | grep "deferential_realism_paper" | sed "s|/[^/]*$||" | sort -u
+docs
+docs/v8/foundations
+
+# -> all such files are under docs/ (one nested deeper), 0 outside. The
+#    repo-wide sweep therefore reproduces and subsumes the named negative.

@@ -1,0 +1,26 @@
+# R100 rename witness — prolog_v5 -> archives/datasets/original_v6
+# Taken at HEAD d9687381. Establishes that original_v6 IS the corpus §2.3 cites.
+
+$ git log --diff-filter=R --name-status --oneline -- "prolog/archives/*" | grep -i prolog_v5 | head -10
+R100	prolog/archives/prolog_v5/a_level_grading_inflation.pl	prolog/archives/datasets/original_v6/a_level_grading_inflation.pl
+R100	prolog/archives/prolog_v5/abel_ruffini_theorem.pl	prolog/archives/datasets/original_v6/abel_ruffini_theorem.pl
+R100	prolog/archives/prolog_v5/absorbing_markov_chains.pl	prolog/archives/datasets/original_v6/absorbing_markov_chains.pl
+R100	prolog/archives/prolog_v5/abstraction_boundary_overrun.pl	prolog/archives/datasets/original_v6/abstraction_boundary_overrun.pl
+R100	prolog/archives/prolog_v5/academic_citation_metrics_as_career_incentive.pl	prolog/archives/datasets/original_v6/academic_citation_metrics_as_career_incentive.pl
+R100	prolog/archives/prolog_v5/academic_fashion_modernism_2026.pl	prolog/archives/datasets/original_v6/academic_fashion_modernism_2026.pl
+R100	prolog/archives/prolog_v5/academic_journal_peer_review_gatekeeping.pl	prolog/archives/datasets/original_v6/academic_journal_peer_review_gatekeeping.pl
+R100	prolog/archives/prolog_v5/academic_peer_review_gatekeeping.pl	prolog/archives/datasets/original_v6/academic_peer_review_gatekeeping.pl
+R100	prolog/archives/prolog_v5/academic_publishing_peer_review.pl	prolog/archives/datasets/original_v6/academic_publishing_peer_review.pl
+R100	prolog/archives/prolog_v5/academic_tenure_system.pl	prolog/archives/datasets/original_v6/academic_tenure_system.pl
+
+$ ... | wc -l   (total R100 rename lines)
+3380
+
+$ ... | grep -c "^R100"   (how many are byte-identical)
+3380
+
+$ ls prolog/archives/datasets/original_v6/*.pl | wc -l
+3380
+
+$ ls prolog/archives/prolog_v5 2>&1   (the dead path range_sweep.py:24 named)
+ls: cannot access 'prolog/archives/prolog_v5': No such file or directory

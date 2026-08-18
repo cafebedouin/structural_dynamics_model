@@ -1,0 +1,70 @@
+# GROUND (ii) of the §2.3 withdrawal — the arithmetic contradiction
+#
+# CLAIM WITNESSED: the two published subset sizes sum to more constraints than
+# exist in any corpus in play, so they cannot both be subsets of one corpus.
+#
+#     2,245  (published "tangled_rope subset")
+#   + 1,169  (published "snare+rope combined")
+#   -------
+#     3,414
+#
+# Ground (ii) is CORROBORATING, not load-bearing. Ground (i) — that the named
+# producer cannot emit per-type numbers at all — is independently sufficient and
+# stands regardless of every count below.
+
+## Corpus count 1 — original_v6 .pl FILE count on disk
+$ ls prolog/archives/datasets/original_v6/*.pl | wc -l
+3380
+
+## Corpus count 2 — the witness JSON's own per-variant "total"
+$ grep -c "\"total\": 3380" python/alt_power_transform_results_3k.json
+7
+$ grep -o "\"total\": [0-9]*" python/alt_power_transform_results_3k.json | sort -u
+"total": 3380
+# -> uniform 3380 across all seven variant entries; no other value present.
+
+## Corpus count 3 — the tracked sign-flip census's own corpus total
+$ grep -n "total corpus" docs/results/tangled_rope_sign_flip.md
+75:| total corpus | 3314 | 100% |
+
+## MEASURED — the file-count / constraint-count identity ground (ii) rides on
+# The block asserts 3,380 as a CONSTRAINT count; the disk figure is a FILE count.
+# Plan step V5 required this be measured, not assumed. Command and raw output:
+$ cd prolog && swipl -l stack.pl -g "( retract(config:param(corpus_path,_)) -> true ; true ),
+    asserta(config:param(corpus_path,'archives/datasets/original_v6')),
+    corpus_loader:load_all_testsets,
+    aggregate_all(count, corpus_loader:corpus_constraint(_), N),
+    format(\"MEASURED corpus_constraint/1 count N = ~w~n\",[N]), halt"
+
+  [corpus] Loaded 3380 testsets successfully.
+  MEASURED corpus_constraint/1 count N = 3380
+
+## PRE-DECLARED BRANCH (plan V5), resolved
+#
+#   N < 3,414  -> ground (ii) survives unchanged.        <-- TAKEN
+#   N >= 3,414 -> the contradiction dissolves; drop ground (ii); ground (i) still
+#                 carries the verdict unchanged.
+#
+# MEASURED N = 3,380, so N < 3,414 and ground (ii) survives.
+#
+# NO DIVERGENCE TO RECORD. The measured constraint count (3,380) equals both the
+# .pl file count (3,380) and the witness JSON's own per-variant "total" (3,380).
+# The file-count-vs-constraint-count identity that the block's arithmetic assumes
+# is therefore WITNESSED, not assumed — this is the informative outcome the
+# "measure, do not assert" instruction was written to preserve.
+#
+# Note the branch is over-determined here: 3,414 exceeds BOTH 3,380 and the
+# alternative corpus figure 3,314, so the contradiction holds on either accounting.
+
+## SECONDARY CORROBORATOR — independent of N, survives either branch
+# The published 'snare+rope combined (N=1,169)' is contradicted directly by the
+# tracked census's own per-type table, without any appeal to a corpus total:
+$ grep -nE "^\| (rope|snare|tangled_rope|total corpus) " docs/results/tangled_rope_sign_flip.md | head -5
+71:| tangled_rope | 2245 | 67.7% |
+73:| rope | 55 | 1.7% |
+74:| snare | 571 | 17.2% |
+75:| total corpus | 3314 | 100% |
+85:| tangled_rope | 2245 | 0.0% | 62.4% | 0.0% | 62.4% |
+
+#   rope 55 + snare 571 = 626, against a published 1,169 — a factor of 1.87.
+#   This corroborator depends on no corpus total and survives both V5 branches.

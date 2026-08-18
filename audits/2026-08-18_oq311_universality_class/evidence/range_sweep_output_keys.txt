@@ -1,0 +1,146 @@
+# range_sweep.py output surface — GROUND (i) of the §2.3 withdrawal
+# Pre-repair text pulled from HEAD d9687381 (before commit 5d548413).
+#
+# CLAIM WITNESSED: `python/sweeps/range_sweep.py` computes only global, arm-level
+# Jaccard. It contains no per-type or per-condition partition of the corpus, and no
+# version of it ever did. Therefore observers_not_humans_v6.md §2.3's citation of
+# `outputs/range_sweep_results.json` for the per-type figures "+0.21 in the
+# tangled_rope subset (N=2,245)" and "+0.014 in snare+rope (N=1,169)" was NEVER
+# SATISFIABLE — the named producer cannot emit numbers of that shape.
+
+## 1. The results_out dict — the script's entire persisted output surface
+$ git show d9687381:python/sweeps/range_sweep.py | sed -n "258,269p"
+    # Write results
+    results_out = {
+        'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
+        'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
+        'mean_ab_gap': mean_gap,
+        'max_span_drop_a': max_drop_a,
+        'max_span_drop_b': max_drop_b,
+    }
+    with open(OUT_DIR / 'range_sweep_results.json', 'w') as f:
+        json.dump(results_out, f, indent=2)
+    print()
+    print('Results written to outputs/range_sweep_results.json')
+
+## 2. Where Jaccard is actually computed — over whole id sets, never a partition
+$ git show d9687381:python/sweeps/range_sweep.py | grep -n "jaccard\|load_presheaf_set"
+75:def load_presheaf_set(path):
+84:def jaccard_stats(base_set, var_set):
+136:    base_set = load_presheaf_set(BASELINE)
+146:                var_set = load_presheaf_set(out_path)
+159:        var_set = load_presheaf_set(out_path)
+191:        jac, inter, sp, ps = jaccard_stats(base_set, var_set)
+205:        jac, inter, sp, ps = jaccard_stats(base_set, var_set)
+
+# jaccard_stats(base_set, var_set) takes two FULL presheaf id sets from
+# load_presheaf_set() and returns one scalar. There is no code path that
+# subsets either argument by constraint type or by any geometric condition.
+
+## 3. CAVEAT RECORDED HONESTLY — the words "rope"/"snare" DO appear in the file.
+# A naive grep for those atoms hits, and reporting "no mentions" would have been a
+# false claim. The hits are at :96 and :118-135 and are a per-VARIANT f(d) profile
+# table: for each transformation variant they compute chi_min/chi_max from that
+# VARIANT's L/U parameters at a FIXED eps=0.70, then label which type-gates the
+# variant's chi range spans ('rope->TR->snare', '*** STARVED ***', ...).
+#
+# That is a property of the transformation function, printed to stdout, computed
+# from no corpus data at all. It is NOT a stratification of constraints by type.
+# The distinction is the whole finding, so it is recorded rather than smoothed over.
+$ git show d9687381:python/sweeps/range_sweep.py | sed -n "116,135p"
+        chi_max = f_max * 0.70
+        flip_str = 'YES' if flip else 'NO '
+        SNARE = 0.66
+        TR_FL = 0.40
+        if chi_max >= SNARE:
+            span_str = 'rope->TR->snare'
+        elif chi_max * 1.2 >= SNARE:
+            span_str = 'rope->TR->snare(glo)'
+        elif chi_max >= TR_FL:
+            span_str = 'rope->TR'
+        else:
+            span_str = '*** STARVED ***'
+        row = '%-28s  ' % name[:28]
+        row += '  '.join('%6.3f' % v for v in vals)
+        row += '  %6.3f %6.3f  %s  %.2f   [%.3f,%.3f] %s' % (
+            L, U, flip_str, span, chi_min, chi_max, span_str)
+        print(row)
+    print()
+
+    # Load baseline
+
+## 4. NO VERSION EVER STRATIFIED — all four commits in the file's history
+$ for c in cdfbe999 ae10e7ea 72d713db 15cca7ed; do git show $c:python/sweeps/range_sweep.py | sed -n "/results_out = {/,/^    }/p"; done
+--- cdfbe999 ---
+    results_out = {
+        'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
+        'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
+        'mean_ab_gap': mean_gap,
+        'max_span_drop_a': max_drop_a,
+        'max_span_drop_b': max_drop_b,
+    }
+--- ae10e7ea ---
+    results_out = {
+        'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
+        'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
+        'mean_ab_gap': mean_gap,
+        'max_span_drop_a': max_drop_a,
+        'max_span_drop_b': max_drop_b,
+    }
+--- 72d713db ---
+    results_out = {
+        'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
+        'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
+        'mean_ab_gap': mean_gap,
+        'max_span_drop_a': max_drop_a,
+        'max_span_drop_b': max_drop_b,
+    }
+--- 15cca7ed ---
+    results_out = {
+        'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
+        'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
+        'mean_ab_gap': mean_gap,
+        'max_span_drop_a': max_drop_a,
+        'max_span_drop_b': max_drop_b,
+    }
+# All four are byte-identical. The output surface never had a per-type key.
+
+## 5. POSITIVE CONTROL for the per-type-jaccard probe used above.
+# An empty grep is a fact about the search until the search is shown to fire.
+$ echo "jaccard_by_type = {}" | grep -cEi "jaccard.*(type|tangled|snare|subset)|(type|tangled|snare|subset).*jaccard"
+1
+# -> 1. The probe fires on the shape it is looking for.
+$ for c in <the four commits>; do ... same probe ...; done
+cdfbe999: hits = 0
+ae10e7ea: hits = 0
+72d713db: hits = 0
+15cca7ed: hits = 0
+# -> 0 at every commit, from a probe demonstrated to return 1 on a match.
+
+## 6. The script also POSTDATES the v6 paper (supplementary; ground (i) does not need it)
+# CORRECTION to the recon note in the plan, which said the script "first appears at
+# ae10e7ea". It does not. ae10e7ea (2026-06-02) is where the now-dead
+# 'archives/prolog_v5' path was INTRODUCED, during the corpus rebuild. The file
+# first appears one commit earlier.
+$ git log --follow --format="%h %ad %s" --date=short -- python/sweeps/range_sweep.py
+5d548413 2026-08-18 range_sweep.py: repair dead corpus path + mark the unstratified-output site
+15cca7ed 2026-06-25 OQ-51 build (Commit 2): `unknown` is N/A on the product-site H1 (separate surface)
+72d713db 2026-06-16 paths: add canonical python/paths.py (depth-agnostic); fix 3 hardcoded-abspath bugs
+ae10e7ea 2026-06-02 corpus rebuild: live testsets → 772 constraints; archive testsets_3000 → archives/prolog_v5
+cdfbe999 2026-05-29 Repo reorg, initial
+
+$ git log --follow --format="%h %ad %s" --date=short -- docs/observers_not_humans_v6.md | tail -2
+e5f805ab 2026-05-28 Draft v6 of observers_not_humans paper: §2.3 correction
+4bf62b3c 2026-05-02 Observers Not Humans essay, various version and a few runs on trust and other ideas.
+
+# range_sweep.py first appears 2026-05-29 (cdfbe999); v6's §2.3 correction is
+# 2026-05-28 (e5f805ab). The script postdates the paper by one day.
+
+# Guard against reading cdfbe999 ('Repo reorg, initial') as the repo root — it is not:
+$ git rev-list --max-parents=0 HEAD --format="%h %ad %s" --date=short | head -2
+commit 41db1d0b51c2aff954aadd055735f43610175a9c
+41db1d0b 2026-01-12 Initial commit
+$ git rev-list --count cdfbe999   (commits preceding it)
+218
+# -> 218 commits precede cdfbe999, so 'first appears there' is a real authoring
+#    date, not an artifact of everything appearing at a root commit.
