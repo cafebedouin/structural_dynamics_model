@@ -1,0 +1,18 @@
+REVIEW ASSESSMENT
+
+STRENGTHS:
+The recurring devices (the cold-motion under Praskovya's ribs, firing only twice; the "believed it the way one believes the sky is up" self-deception; the water/stagnation and water/stone images doing distinct work) are genuinely earned through scarcity rather than repetition-as-emphasis. The institutional-complicity mechanism — doctor, healer, elder, each honestly calibrated and each foreclosed from the one question that matters — is dramatized through concrete scene rather than asserted, particularly in the Struve section's flat diagnostic itemization.
+
+BIGGEST WEAKNESS:
+The story never names what is actually being done to Marfa Osipovna — poisoning is the only reading the accumulated evidence (the grey nail-beds, "fed with his own hand," the pot aphorism, the servant-girl parallel, the second wife's cough) supports, but the prose keeps this at the level of implication so consistent it stops feeling like ambiguity and starts feeling like a withheld answer the reader is clearly meant to supply. That is a subtler problem than vagueness — it's over-legibility masquerading as restraint.
+
+INVARIANT FALSIFIER:
+LOST. The pattern the text assembles — same grey hands, same household gesture of a husband feeding a wife too weak to feed herself, same illness recurring in the next wife, the znakharka's own converging suspicion stated almost outright ("Some fevers come from the pot, not the marsh") — resolves to a knowable, recoverable true value: Foma Silovich is poisoning his wives, and a more suspicious relative or a doctor willing to ask what he fed her with his own hand could have caught it. The story spends enormous care establishing *why* no one asks the question (professional cost, institutional trust, the impossibility of standing outside the sanctuary-frame), but the underlying fact being obscured is not actually unknowable in kind — it's a legible crime that legible caution could have surfaced. This is precisely the falsifier the contract names: a correctable failure of vigilance against a threat that is, in fact, legible to the reader from the assembled clues. The passage where this collapses most clearly is the servant-girl section's "two households this year, not one" — the arithmetic there is Praskovya doing exactly the vigilance-math the contract says must have nowhere to stand, and she does successfully locate it; she simply chooses not to act on what she's found. Choosing silence over a legible threat is a different invariant than the threat being fundamentally untestable.
+
+BREAK:
+The text sets up "mysterious wasting illness in an oppressive marriage" and the reader's trained expectation (per the target_prior) is that this resolves as metaphor for emotional/psychological violence — that no literal poisoning is intended, only symbolic harm. Instead the story pushes hard toward literal, physical, gothic poisoning-by-husband as the actual mechanism. This does meet the target_prior's break — it refuses the metaphor-reading and insists on the literal register. But the break is undercut by the invariant loss above: having broken the metaphor expectation, the story then supplies enough hard physical evidence (recurring symptom pattern across two households, husband's hand as vector, healer's converging diagnosis) that the "literal" answer becomes a solvable mystery rather than an unauditable sanctuary. The break lands; the floor it's supposed to stand on does not.
+
+READINESS:
+Close in prose quality but structurally unsound at the level the contract cares about — this needs a strategy pass focused on de-solving the poisoning, not another polish pass.
+
+ROUTE: STRATEGY

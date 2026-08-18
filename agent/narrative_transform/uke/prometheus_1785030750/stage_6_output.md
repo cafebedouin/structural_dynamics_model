@@ -1,0 +1,24 @@
+STRATEGY BRIEF
+
+IMPLIED AUTHOR: A close, retrospective witness-narrator who trusts bodily sensation over abstraction — gate-wood, current, loess color, well-smell — and who is suspicious of his own eloquence even as he deploys it. This author's discipline is refusing false comfort: the strongest passages (gate-silence, Marn Kohl's flat "Good that the water's back") work precisely because they deny resolution rather than supply it. The implied author should distrust any sentence where Sethrei sounds too clear about his own growth, and should let physical detail carry judgment the narration itself is too compromised to render.
+
+AUDIENCE: Readers of literary/quiet-fantasy fiction attentive to systems of power told through domestic and agricultural texture (comparable to Le Guin's political short fiction or Ursula-adjacent water-rights fables) — an audience that wants the system to remain unbroken and finds the interest in *how* co-optation feels from inside, not in whether justice occurs.
+
+SCOPE: 3,269 words currently. Target range: 3,800–4,600 words. This is a short story; the deepening needed is not more plot but more friction in the last third — no new episodes, no world-building expansion, just refusal to let existing beats resolve as cleanly as they currently do. Stay well under the 11,468-word ceiling; this piece should stay tight.
+
+CREATIVE DEEPENING: The material's richest available move is already present but under-inhabited: the gap between being *heard* and being *absorbed*. Ren's line "This is not a punishment beyond its season" and the final folding-in of the spring into Ordinate language are the story's real climax — not the confrontation at the Reckoning. The deepening available is to let Sethrei's final insight cost him something concrete (standing, ease with Ila, his own certainty about whether he won) rather than letting him arrive at diagnosis and then gracefully decline to finish the thought. The Marn Kohl thread is under-exploited as a structural counterweight — his flatness could recur once more, right at the end, to refuse Sethrei's near-closure a final time.
+
+FLINCH POINTS:
+1. The "stone in deep water" paragraph (letting the co-optation insight go "before it's gone from sight"): This is doing dignifying work — granting Sethrei the full analytical clarity of a defeated man while also crediting him with the wisdom of not dwelling on it. Honesty requires either that he sit in the discomfort without a graceful exit, or that the narration undercut his exit as self-serving (he lets it go because looking further would cost him the version of the ending he needs).
+
+2. "I have stopped asking her to confirm it with me before she trusts it herself" (closing Ila relationship): This asserts repair as accomplished fact. Honesty requires showing this costs something still — Ila's trust in him remains provisional, or the scene shows distance rather than resolution, since he never actually reckons with having initially chosen silence (not reporting her) before circumstance forced disclosure.
+
+3. Marn Kohl's arc ends with his flat "no ledger anywhere says his hands moved it there" and then the story moves on to Sethrei's closing image without returning to him. Honesty requires the ending's final beat acknowledge — through Marn's continued unrecorded presence, not through Sethrei's reflection on him — that the resolution the reader is being handed is Sethrei's resolution, not the valley's.
+
+PATTERN CHECK: Concern. The story's structural resolution (assimilation, not destruction) is correct and should not change — the invariant holds and the target_prior is honored. But the *emotional* resolution is currently flinching toward the pipeline's default of quiet, dignified acceptance: Sethrei ends up self-aware, reconciled with his daughter, and gracefully declining further anger, all in the space of two paragraphs. The system should absorb the rebellion, as it does — but Sethrei should not be allowed to feel this absorption as manageable insight. The pressure test calls for the ending to sit closer to the discomfort of Marn's flatness and further from Sethrei's composed clarity.
+
+---
+
+Ω_E: Strategy pass complete. Governing tension identified as insight-without-cost in final third; structural invariant confirmed intact and preserved as directive, not flagged for revision.
+Ω_C: Three flinch points named, none prescribing solutions; scope set at 3,800–4,600 words against 11,468-word ceiling, comfortably feasible for craft passes to deepen rather than expand.
+Ω_P: Next pass (craft/rewrite) should target the final three sections specifically — Ordinate recitation through closing image — leaving earlier sections (gate-silence, Ren's tally-board scene, coalition-building) largely intact as load-bearing strengths.

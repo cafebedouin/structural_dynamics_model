@@ -37,6 +37,22 @@ The modules are here to stop you writing a bad version of this world. They canno
 
 **And read Appendix B before the modules.** Nearly every prohibition here is a generator written backwards — it closes a cheap route in order to make something else reachable. Appendix B states the twelve of them as what they open, and sorts out the few rules that open nothing. Working from the prohibitions produces a story that avoids errors. Working from the generators produces a story.
 
+## The build rule
+
+This document grew by collision. Nearly everything worth having in it arrived when a new demand met a rule written elsewhere for other reasons and the two could not both stand — comedy against monotonic instruments, a beneficiary's gratitude against the acknowledgment terminal, a hold's provenance against the referent it was said to lack.
+
+**So the test for any future change: does it conflict with something already here, or does it merely clarify?**
+
+A conflict is a finding. Something has to give, and what gives teaches you what the world actually is. A clarification is accretion — the document gets longer, more precise, and no better, and it will read as diligence.
+
+**Additions are not conflicts, and the difference is where this rule fails in practice.** Any source presents some mechanism this document does not contain, because a bible is finite and fiction is not. *The bible lacks this* is therefore always true and is not a finding. **A conflict requires the new thing to be incompatible with something already stated** — it forces a qualification, a scope limit, an exception, or a retraction. If nothing already here has to give, it is an addition, and additions are how a document gets thicker without getting better.
+
+**The null rate is the number to watch, and it is the load-bearing result.** A probe series that finds a conflict in every input has stopped measuring: an instrument returning the same value on every reading is not an instrument. *Measured across this document's first twenty probes: roughly four genuine conflicts, two nulls, and fourteen additions counted as conflicts at the time.* That ratio is the failure, and it is recorded here rather than corrected away, because the correction is to expect nulls and to state them.
+
+**If several probes in a row return conflicts, suspect the reader rather than the sources.**
+
+**When a change only clarifies, don't make it.** And when a whole new probe — a register, a source, a story — returns nothing but clarifications, that is the signal that this instrument has stopped measuring. Not a rule change per probe; a *conflict* per probe. The day a probe finds nothing to break, the document is finished, and continuing to work on it is the catalog compounding (Module 5 §6): thicker, more careful, and no longer doing anything.
+
 ## The spine
 
 **Every standard in this world is scored against a body that formed on one planet, under one star — a baseline nobody chose and no one can defend.** Fitness, insurance, employment, migration, and the word *normal* all resolve against it. That is the setting's grievance, and it is a real one: people want things and are refused by an accident.
@@ -250,9 +266,29 @@ Constraints that cannot be sorted from inside a lifetime. These are the setting'
 - Whether a corridor closure is prudence or protectionism
 - Whether a settlement's founding austerity was necessity or preference, now inherited
 - Whether a body's failure was its grain, its dose, its work, or its luck
+- **Whether being legible protects you.** The doctrine on one side: people who are recorded can be found, counted, claimed, and owed things; the unrecorded die unnoticed and there are reports of exactly that. On the other: concealment is cheaper for whoever is paying, so a man nobody can see is a man nobody has budgeted against, and he eats. Both hold real cases. To settle it you would have to make a population legible for a generation and compare — and making them legible *is* the commitment, so the unrecorded counterfactual was never raised.
+
+  **This one has a property the others lack.** Because concealment is cheaper for whoever pays, the merits and the institutional incentive point the same way, which makes the honest position and the self-serving one indistinguishable — *including to the person holding it.* Someone opposing a register may be protecting people or protecting a budget and cannot tell which. Every other question here leaves the arguer's motive available to them; this one puts the undecidability inside one head.
+
+  It also splits factions internally rather than between them (Module 9 §8): a keeper who wants a register to protect his people and one who refuses are both keepers, both holds, both right. The refusal to write things down (Module 5 §3) and whether any polity keeps a written emplacement register (Module 8, Ω_E06) are local faces of this same question, not separate items.
+
 - **Whether a practice does anything.** People develop customs that seem to work — a way of sitting, a thing done before a shift, a place where hands go. Something is transmitted; people are steadier afterward. Whether the transmission is between the people or between them and something else is not answerable, because the only test would be to stop, and stopping is the thing nobody will do. **A story may render the experience at full strength and must not confirm or debunk it.** The practice is real. What it touches is a band question, and each position reads it differently: the elder knows, the analyst has an explanation, the young one has never asked.
 
 Every one is a genuine question with an answer that exists and cannot be obtained in time. The people arguing are not being stupid or venal. They are being asked to decide before the evidence can arrive, and their positions predict their readings — which is exactly what makes the readings untrustworthy and exactly what makes them unavoidable.
+
+### Two kinds of unsettled, and they look identical from inside
+
+Everything above treats the band as questions whose answers exist and cannot be reached: the fact is there, the comparison that would settle it was destroyed by the commitment (Module 3 §1a). Grief-shaped. Something is true and nobody can have it.
+
+**Some of these questions are not like that. Some have no answer to be had.** The physics is complete, consistent, and load-bearing, and it simply does not determine the matter. Two settlements adopt incompatible protocols; both are consistent with everything the world requires; neither breaks anything; and there is no fact behind the wall that one of them is failing to find. Not a fact withheld. **No fact.**
+
+**Nobody inside can tell which kind a given question is**, and the two have opposite shapes. The first is a loss. The second is not — it is room.
+
+**What follows from the second, and it is the setting's one non-tragic consequence.** Not knowing does not prevent people building. It lets them build *more*: two compacts with contradictory founding provisions, both correct; two ways of raising a child, both defensible; a dozen protocols that cannot all be right and are not competing to be. **The variety in this world is not failure to converge. It is what the underdetermination permits**, and the arrangements built on either answer are legitimate in a way that has nothing to do with anyone being persuaded.
+
+**And it re-reads the schism.** Two compacts diverged (Module 5 §10) and neither can establish which was right — not because the evidence is unavailable, but because on this reading the question has no content. They were not disagreeing about a fact. They were choosing which world to inhabit, and both got one. This is why the original dispute is now incomprehensible from outside: **there was never anything to be right about**, and everyone involved argued as though there were.
+
+*Design note:* never adjudicate this. A story may be built on a character who is certain the question has an answer, and on another who is certain it does not, and both may be sympathetic and neither may be confirmed. That contest is available where the underlying one is not.
 
 **Load-bearing for Module 3:** the band exists because hard terrain and false terrain are *indistinguishable at a single moment*. Both are stable, both are universally observed, both have people who will tell you it has always been this way. Only a trace longer than the practice separates them, and nobody has one.
 
@@ -313,7 +349,35 @@ Two properties make this hold rather than merely sound good.
 
 **It has no synchronic signature.** At any single moment, a genuine natural limit and a hollowed convention that has drifted into looking like one are indistinguishable — not hard to tell apart, *identical* at the level anyone can measure. Perfect agreement across every position in a settlement is compatible with the underlying practice being physics, or dead habit, or a foreclosed premise nobody has tested. The difference is temporal, and only a trace longer than the practice will show it.
 
+**And there is a second mechanism, sharper than the first: the real is destroyed by being used, not by being measured.** A thing can be read truly. What cannot survive is reading it *for* someone — for a buyer, for a claimant, for oneself. The reading holds from everywhere at once until a hand goes on the pan, and then it becomes the weight it has for that hand, which is a price rather than a fact.
+
+This is why the invariant has no administrator, and the reason is structural rather than a rule anyone imposed: **an administrator is a hand on the pan by definition.** A body charged with reading grain would be reading it for someone — for the boards, for the insurer, for the polity — and the reading would tilt in the act of being made. Not corruptibly. Necessarily.
+
+It also explains the substrate's name properly. A true grain holds from every position and stops holding the moment it is weighed for one. That is what the word means in the world's mouth, and it is why a clinic can produce a complete workup and still not produce a grain: the workup is for someone.
+
 **The trace never closes for the person who must act.** By the time a cohort's lives are legible, their children are already committed, and the population that would have to be compared against no longer exists — it was never raised. The counterfactual is erased by the process that makes the question urgent. Not withheld. Erased.
+
+## 1a. Why the method is right and the world is wrong for it
+
+The invariant is often heard as a claim that people here cannot measure well, or that their instruments are poor, or that they have failed to be rigorous. It is none of those. **Their method is correct. Their world does not satisfy its precondition.**
+
+The ordinary way anyone learns a place is to move through it and keep a running account, trusting that a long enough sample converges on what is actually there. This works, and it is not naive — it is how a craft is learned, how a body of experience becomes judgment, how a person comes to know a reef, a machine, a trade. It requires two things, both usually true and neither stated:
+
+**The thing does not change while you sample it.** What is dense stays dense; what is common stays common. Nothing you learn about it today is falsified by the act of having learned it.
+
+**Sampling does not consume.** Walking through does not use up. The territory is unchanged by having been crossed, and is still there behind you, exactly as it was.
+
+**Neither holds here.** A protocol is learned by being lived, and living it is what makes the alternative unavailable. A body is read by growing, and growing is what fixes the grain. A population is measured by a generation, and the generation is the commitment. **The sample alters what it samples**, so the running average stops describing the place and starts describing only the path taken through it — and there is no second path to compare it against, because taking one is what closed the others.
+
+So a lifetime of honest, competent observation produces a true account of one trajectory and no account at all of the territory. This is not a failure of care and cannot be repaired by more care. **It is the reason the word is *grain*:** a true grain holds from every position and stops holding the moment it is read for one — and reading it is what makes it that grain rather than another.
+
+**And there is a third condition, which the other two conceal.** A settled account is normally checkable *sideways*: two people using unrelated methods land on the same value, and the agreement is what tells them they are describing one object. Count the parts or count the holes; take the pulse or read the gait; measure it now or measure it after it has been stretched. Where a thing has a fixed character, the methods converge, and that convergence is not a bonus — **it is the permission to describe freely at all.** You may look however you like precisely because something confirms you are still looking at the same thing.
+
+**Here nothing plays that role**, and the consequence is worse than disagreement. Two people who read an arrangement differently (Module 9 §4) may be disagreeing about one object, or may be describing two — a practice as it stands to one position and as it stands to another, which are not the same practice and never were. **There is no cross-check that separates those cases.** So an argument in this world cannot establish whether it is an argument.
+
+The permission remains, and it is unlimited, and it is worth nothing. Anyone may give any account of an arrangement, and no one can confirm they are still looking at it. This is why the people here are so careful about position, and why *from where I stand* does so much work in their speech: it is not modesty and not relativism. **It is the only thing available in place of a check.**
+
+**And the diagnostic that follows is the setting's cruellest, because it is the same observation with opposite meanings.** Where the ordinary conditions hold, a settling account means the sampling is working — the swings narrow because more of the place has been seen. Where they do not, a settling account means there is less left to disagree with it (Module 5 §4b). **Convergence is evidence of thoroughness and evidence of depletion, and nothing inside the practice distinguishes them.** The people whose accounts have come to true fastest are either the most experienced or the ones with the least remaining, and they cannot tell which, and neither can anyone watching.
 
 ## 1b. What the invariant does not forbid
 
@@ -324,6 +388,49 @@ Read strictly, the falsifier would forbid a story from resolving anything, and e
 **What stays unreadable is the question underneath** — whether the way of living was required, or chosen and kept. A story may establish that *this* protocol was excessive without establishing what the right protocol is, and the difference between those two is the whole discipline.
 
 **Characters may be certain.** Someone may believe absolutely that they know where the line falls, act on it, teach it to their children, and die for it. The invariant is violated only if the *text* confirms them — if some authority or instrument inside the world rules that they were right. Let the world stay silent and the belief can be as passionate as you like.
+
+## 1c. The local ruling — required, not permitted
+
+§1b licenses local truth and nothing downstream consumes it. No plotting rule asks for a ruling; the ending generator has no column for one; the ledger tracks what a story deliberately did not decide and has no companion field for what it established. **The only instrument that touches this counts absences**, so a writer working from the document is never prompted to close anything — and a story that establishes nothing still has to end, on whatever the world hands out for free.
+
+> **Every story establishes something. The invariant governs what cannot be established, not whether anything can be. A story that decides nothing has not honoured the invariant — it has avoided the position of having to act under it.**
+>
+> **Falsifier:** if a story reaches its last page without one thing having been made true by somebody's act, it has substituted the world's difficulty for its own, and that difficulty was never the writer's to inherit.
+
+**The ruler need not be the POV.** A ruling made by someone the story does not follow is legitimate and often stronger — but then it must be *felt as a decision* while the POV reads it as manner (Module 11 §4). A private, unwitnessed ruling that the reader only infers afterward has not been made on the page.
+
+**The diagnostic.** Find the *there is no field for it* sentence and check where it sits. Mid-story, after something has been established, it is the engine: the finding is correct and complete, the record routes, the record holds it, and the story is about living in the room afterward. Terminally, with nothing established, it is what floods in to fill a story that has nothing to close on — a gesture where a decision should be. Same sentence, opposite functions.
+
+**What counts.** A ruling is an act with a name on it that makes one thing true and is answerable afterward. None of these touch the question underneath:
+
+- **A miscalculation demonstrated.** Someone shows the working on an allowance, an arithmetic, a margin.
+- **A falsification found.** A reading was altered and the original exists.
+- **A protocol shown excessive in this instance** — never what the right protocol is.
+- **A cause excluded.** One candidate eliminated, the rest left standing. The most underused and the most native, because it closes something while leaving attribution entirely intact.
+- **A status corrected.** Someone held is established as out. Someone unwritten answers. A returnee arrives.
+- **A provenance settled.** Whose body, whose gear, whose record, whose section of wall.
+- **An origin recovered.** This practice began for this reason, and the person who began it is alive to say so. **Boundary: this establishes why it began, never whether it was necessary.** Those are the two halves of the same question and only the first is ever recoverable — a story that slides from *she can tell you why she started it* to *and therefore it was justified* has lost the invariant by the back door. The inverse of the crux on five, and it should exist so that crux reads as a loss rather than a rule.
+- **A self-indictment.** The person who made the call establishes that their own call was wrong. The strongest, because it cannot be received as an accusation and cannot be refused on grounds of interest.
+
+**The hard case: a story may be about the ruling being refused.** Someone holds the authority to settle a thing — an entry, a finding, a word in the right ear — and does not use it, and the refusal is the story's event. This satisfies the requirement only under two conditions. **The reader must see clearly what was on the table**: the specific entry, in that person's hands, one action away. And **the refusal must cost**, and go on costing, in a direction the person did not anticipate.
+
+The commonest reason to refuse is not fear. It is that a settled account cannot be moved, and an unsettled one can still be given to somebody for an hour (Module 6 §4). Write it as that, never as cowardice.
+
+**A ruling may be made for nobody, and this is its purest form.** Someone keeps doing the work — stamps the measure, files the report, signs the certificate — and writes the true thing in the margin where nobody reads. It frees no one. It changes nothing anyone can weigh. It is found occasionally, years later, by someone who thinks they have caught the institution in something and has not: they have found the one part of the measure that was ever true, which is the part that admits whose hand set the pan.
+
+This satisfies every constraint above — instance, cost, unnoticed by the arrangement — and adds the thing the others lack: **the ruling does not require an audience to have been made.** It is the only available form for someone whose position gives them no forum at all, which is most positions in this world.
+
+**A ruling is not necessarily a finding.** If every story establishes something by investigating, the collection formularises into eleven small mysteries under Appendix A §3's gates. Status corrected, provenance settled, and self-indictment are not investigations and should carry most of the load for exactly that reason.
+
+**Three constraints.**
+
+*It is made, not discovered.* Discovery is investigation and investigation is the genre the world forbids. Somebody decides to establish a thing, in front of people, and is thereafter the person who did that.
+
+*It costs the person who makes it.* A costless ruling is the competent authority that fixes it (Module 1 §4b) in different clothes. The cost is what separates establishing a truth from being right.
+
+*It lands on an instance, never an arrangement.* **This** call was wrong, not *calls like this are wrong.* And the arrangement does not notice — the finding is entered, correctly, and the queue absorbs it. That is what stops a ruling reading as reform.
+
+**Reading the terminal.** A ruling is a species of acknowledgment, so Module 11 §4's live variable applies directly. From inside the practice, at substantial magnitude → stable. From a position of standing, about a practice that survived by having no category → appropriation, and extinction, and nobody in the story can say so. Against oneself, at cost, and kept → chosen and kept, which is the most reliable route to the two the collection needs.
 
 ## 2. The affordance test
 
@@ -355,6 +462,8 @@ Grain is not a score, has no units, and cannot be certified. A clinician can say
 *Detector B fires. Name it even though nothing in the physics writes it down.*
 
 > **Every standard in this world is measured against a body that formed on one planet, at one mass, under one star — a baseline nobody chose and no one can defend, which is simply where the species happened to occur. There is no neutral floor beneath the comparison. All divergence is scored as deviation from an accident.**
+>
+> **Somebody decided what nothing weighs.** Somebody set the level that is read before anything is put on the scale, and every measure in this world is read up from that setting, and there is no setting beneath the setting. It is not a lie. It is a choice with the hand hidden — and the whole art of the institutions built on it is stamping the seal over the hand, so that nobody can see whose it was.
 >
 > **Falsifier:** if the story frames the injustice as a local error a better authority could correct — a standard set wrong that could be reset fairly, a bias in the reference range — the floor invariant was lost.
 
@@ -419,6 +528,16 @@ Currency exists. It is thin, and everyone treats it as a convenience rather than
 
 **And the instruments that track them are monotonic.** A dose ledger, a term record, a cohort entry, a standing — each accumulates and none has an operation for removal. There is no field for subtraction, no null, and no way to decline. A person can refuse an assignment and the refusal is recorded; a person can give a credit away and the giving is recorded. **The only zero available is the one you start with, and it is spent by existing.**
 
+**And its response to any human-scale event is negligible.** Someone is grounded, repatriated, or dies, and the account adjusts — favourably, by an amount that does not change anything and would round away in a summary. Not enough to matter. Barely enough to notice.
+
+This is the ledger stating, in its own units and without malice, what a person is worth against the thing they were being measured by, and it is why no individual act registers in it: **the instrument's resolution is coarser than a life.** A character who checks after a loss, expecting the number to have moved, finds that it did, and that the movement is the cruellest fact available to them.
+
+**And the ledger grows fastest when a person can least pay, because survival is billed to the survivors.** After an emergency, the costs of surviving it are real and someone must carry them: the temporary berths, the extra consumption, the loop run past its margin, the shifts covered. They are itemized and apportioned across the people who were sheltered, divided evenly, and added to each account. **Nobody decided this. It is an apportionment, correctly performed**, by someone whose job is to apportion things.
+
+So the emergency that threatened you also bills you for having been threatened, and the bill lands in an instrument with no operation for subtraction. This is the cruelest arithmetic in the setting and it requires no villain at any point in the chain.
+
+*It also reaches the rescue norm* (Module 9 §11). An itemized rescue is a rescue with an invoice. Once the ledger exists, being rescued becomes a debt — which makes declining rescue rational, and makes the person who calls for help the person who has cost everyone something. The ledger does not only turn hesitation into policy on the responder's side. It gives the drowning a reason not to signal.
+
 This is why a character who wants to divest cannot. Asked to be set to nothing, an administrator will turn the tablet around and show them a field with a value in it and no way to empty it, and will not be being obstructive — there is genuinely nowhere to put what is being asked for. And it is why the most meaningful thing a person can do is often work that registers nowhere at all, which the reader can see accumulates nothing and the character cannot.
 
 This is why contracts read strangely to newcomers. A settlement does not owe another settlement money; it owes it *lift*, or *reserve*, or *a term*. Money is what you use when nobody trusts the relationship enough to denominate in the real thing.
@@ -440,6 +559,18 @@ The connection to Module 3 is not decorative: **the economy runs on exactly the 
 Down is cheap. Up is not. This single fact organizes the whole economy.
 
 Getting to Earth requires almost no energy — you already have it, and the atmosphere takes it away for free. Getting off Earth costs everything. So the flow that exists is: **capital, expertise, fabricated goods, and certification travel up; almost nothing material travels down.** Extracted mass stays where it was extracted, because moving it down destroys its value and moving it up was never the point.
+
+**And it reaches past the person into whatever they are attached to.** An obligation does not stop at the body that incurred it. It reaches through — to a family's holding, a hold's berth, a section's allocation, a partner's standing — and takes whatever is nearest and seizable. **The people who lose the thing usually had no relationship with the institution at all.** They did not sign, were not employed, and in many cases never understood what the person was doing while they were away.
+
+The collection completes correctly. The asset is taken, valued, sold at something under what was owed, and the remainder is written off as not worth pursuing. **The file closes. The arithmetic is satisfied. Nobody was cheated**, and the family is now tenant where it was holder.
+
+**The domestic consequence is the part that matters, and the bible has it nowhere else.** The person comes back with a ruined body and an obligation that has just cost their family everything, and cannot explain. The quotas, the compounding, the way the interval kept closing — none of it is sayable to someone who was not there, and every attempt sounds like an excuse. **They were trying, every day, and it was not enough, and that sentence is unusable.** So what they say is *I'm sorry*, repeatedly, until someone tells them to stop.
+
+And the family is not wrong and not cruel. From where they stand: money was supposed to come home, none did, more was borrowed, the land is gone. Every element true. The attribution problem (Module 6 §4) arriving at the one place where being understood was the only thing left.
+
+**Exit is available in the other sense, and the obligation travels.** A person can simply go — walk off a shift, take a berth, stop showing up. What they owe goes with them, and there is nowhere the record does not reach: the entry, the standing, the flag, the terms. They are not pursued. They are simply *findable*, permanently, by anyone who checks, and everyone checks.
+
+Which makes **returning** the worse condition (Module 8 §3). A person who left and comes back cannot be readmitted, because they are no longer of the place and their obligation is no longer held in the only shape that made it survivable — inside an arrangement that was slowly discharging it. They arrive at the gate as somebody with a claim against them and no position to work it off from, and the people turning them away are not being cruel. There is genuinely no procedure for it.
 
 And then the trap, which is the setting's cruellest structure: **the cheap direction is the one many bodies cannot survive arriving in.** A person grown or long-resident in low gravity can be delivered to Earth for almost nothing and will find that the journey they could always afford is the one that breaks them. Repatriation is a threat, a mercy, and a sentence depending on who is saying it. The door is open, it costs nothing to walk through, and it only opens one way.
 
@@ -702,6 +833,20 @@ None of this is narrated as a measurement. A person does not know their density 
 
 **A clinic can produce a complete workup and still not tell you a person's grain**, because grain is not a finding — it is the whole shape of how a life turned out in a place, and it isn't finished until the life is. What a clinic produces is a set of values within or outside a range, which is a different thing, and the difference is the module.
 
+## 2b. The hand
+
+A second kind of unreadability, and it works in the opposite direction from grain.
+
+Grain cannot be read by anyone. **This can be read, by some people, reliably** — and by others not at all, no matter how long they attend. Some workers hear a bearing going a week before the readout moves. Some clinicians feel a thing in a pulse that has no name and is there. Some fitters know a suit is wrong from the way it hangs. The people who have it agree with each other. They are right at a rate that cannot be luck.
+
+**And it cannot be taught, though where to attend can be.** A good teacher will show a student exactly what to reach for, name every distinction, and mark precisely which one they missed — and the student will be able to say afterward what they should have felt and will not have felt it. **Teaching widens the gap rather than closing it**, because the student learns in detail the dimensions of what they lack. Three years of honest instruction produces a person who can see the boundary of their own perception at high resolution and cannot cross it.
+
+**The cruelty is that the student is not failing.** Their reading is correct for what they perceived; their work is competent; their outcomes are adequate and genuinely adequate. There is no error to correct, no negligence, no harder trying available. *You were not wrong. You were competent* is the exact sentence, and it closes every door at once.
+
+**And it cannot be certified, which is why it wrecks people quietly.** No board tests for it. It confers no standing (Module 6 §6) and appears in no instrument (Module 4), so a person can spend years and a marriage acquiring the knowledge that they do not have it, and there will be no record anywhere of what they were reaching for or that they failed to reach it. What the record shows is a competent practitioner with an unremarkable career.
+
+**Craft note.** This is not a story about talent and must not be written as one. The register is *good enough* said flatly, over decades, by someone who is right that it is good enough and knows exactly what it is not good enough for. And the person who has the hand should be kind, precise, and unable to help — their honesty is the instrument that does the damage, and they know it, and telling the student less would have been worse.
+
 ## 3. Dose as biography
 
 Exposure accumulates and does not reverse. A person's history is written in it: where they worked, how long, how well they were shielded, whether their employer was careful, whether they were ever caught outside during a bad stretch.
@@ -716,6 +861,22 @@ A child is born and something is wrong. Or a worker's bones go before they shoul
 
 So attribution goes where the social structure already points it. In a charter, it points at the worker's history before hire. In a compact, it points at whoever departed from protocol. In a port, it points at nothing, because nobody stays to ask. Everywhere, eventually, it points at the mother.
 
+**And it can collapse inward instead of outward.** The social version distributes blame where the arrangement points. The private version is worse: **a person supplies their own candidate cause and can never eliminate it.**
+
+A wish made over something. A decision not to tell. A shift traded, a word said or withheld at a particular hour, a silence held for three days. The candidate is always small, always theirs, and always survives every attempt to rule it out — because ruling it out would require the comparison that does not exist. The other four causes remain equally live and equally unprovable, so nothing about the fifth can be settled, and its holder is left with a permanent, unfalsifiable self-indictment that no evidence will ever touch.
+
+**They cannot be talked out of it, and the people trying are not wrong either.** *It was the machine. It was the speed. It was this place.* All true, all complete, none of it eliminating the fifth candidate, and the person offering the comfort will often not believe it themselves. This is the attribution problem experienced as guilt rather than as injustice, and it is the more intimate of the two.
+
+**And an account nobody can settle has to be told, which is how it spreads.**
+
+A person carrying an unfalsifiable self-indictment needs to give the account to someone. Not for absolution — they will refuse absolution, correctly, since nobody is positioned to grant it. They tell it because a thing that cannot be adjudicated cannot be set down, and telling is the only motion available to it.
+
+**It does not lift, and it does not transfer. It copies.** The teller is no lighter afterward. The listener now carries a version, and after enough tellings the listener sees the thing themselves — not as sympathy but as the same unresolvable object, with the same candidate causes and the same absence of any procedure that separates them. Two people now hold it. Then three.
+
+**The listener passes it on without deciding to**, and the mechanism is this world's ordinary one: somebody notices a tell — a look, a pause, an odd instruction — and asks *why do you say it like that*, and the account arrives before the teller has decided anything. In a place where everything is read pre-verbally (§2), an unbearable thing moves the way grain does: by being visible in the body before it is available to speech.
+
+**And there is an exit, which is why refusing it is a choice.** A finding, a ruling, an entry in a record would close the account and end the circulation. Whoever holds it usually has access to exactly that and does not use it — because a settled account cannot be moved, and while it can still be told it can still, for an hour at a time, be someone else's. That is not cowardice and must not be written as cowardice. It is a person choosing circulation over closure, knowing the cost lands on whoever is nearest.
+
 Three rules follow, and they govern every medical scene in the collection:
 
 - **No character ever learns why.** Not at the end, not in a document, not from a sympathetic specialist. The cause is not withheld; it is unrecoverable.
@@ -725,6 +886,24 @@ Three rules follow, and they govern every medical scene in the collection:
 ## 5. Adaptation and its trap
 
 Somatic and germline modification exists. It is expensive, marginal, and modest in what it achieves — better repair of radiation damage, bone maintenance under low load, some vestibular work for spun environments. Nothing dramatic, nothing that produces a visibly different kind of person, and it is pursued as ordinary adaptation to a place, the way people have always adapted to places.
+
+**Some capabilities are installed rather than acquired, and they do not stay inside their brief.** An institution has a use for a faculty — steadier hands, faster hazard recognition, better tolerance — and arranges for people to have it. The specification is honest, the work is competent, and the result performs exactly as designed.
+
+**And a faculty is not a task.** Whatever lets someone see a hazard forming lets them see anything else that forms the same way: a sequence of individually reasonable decisions arriving at a body, a pattern in who gets flagged, the shape of the thing they are standing inside. **Nobody built that. It is the same capacity, pointed somewhere the specification did not mention**, because the specification named an application and installed a faculty.
+
+**The person who built it is inside what it reveals**, and is usually the first thing seen clearly — they are proximate, documented, and the most recent link in the chain. Their position offers them the ordinary defence, that they built what was contracted and delivered to spec, and it is true and it does not help.
+
+**And this is the one case where clarity is not free** (Module 9 §9b3). Elsewhere the account is produced by the position and changes nothing. Here the seeing was manufactured, on purpose, by someone who then behaved as though seeing clearly were itself sufficient — and the person carrying it is not obliged to agree. *You built the question* is the accusation, and there is no answer to it, because the person who built the question did not think of it as one.
+
+**Some adaptations run on something that runs out, and this is the sharper trap.** Not every adaptation is a one-time change. Some are maintained — a compound, a treatment, a regimen, a supply — and the maintenance works, exactly as promised, for as long as the supply lasts.
+
+Three things make it worse than a straightforward dependency.
+
+**The body changes underneath.** Extended maintenance remodels what it was maintaining, so the person is no longer returning to a baseline when the supply ends. There is no baseline left. What waits at the end is not the old body without the help; it is a configuration that requires the help and can no longer receive it.
+
+**Everyone sees the wrong thing.** Colleagues see the tremor, the weight, the hours, and read overwork — accurately, since it is also overwork. Nobody sees the arithmetic, because the arithmetic is private and the person doing it is competent and has no reason to share it.
+
+**And the person who could stop it is the person the adaptation replaced.** The one who chose it, weighed it, and could reconsider is progressively less present, and what is present has no use for the reconsidering. The old worry surfaces occasionally — *this is not enough time, we should stop* — and is filed as belonging to an earlier and less capable version. This is not weakness of will. **It is the capacity to make the comparison being consumed by the thing the comparison would have been about**, which is the invariant arriving inside one skull.
 
 **And it is self-defeating, because of the floor.**
 
@@ -739,6 +918,16 @@ The mechanism by which the floor invariant touches every life.
 **And it moves under people.** The reference body is fixed; the rulings against it are not. Standards are clarified rather than amended, and a clarification governs bodies certified long before it. A person serving a long term is being reclassified the entire time they are away — not by anyone's decision, by an accumulation — and will come back to find the category around them narrower than the one they entered, with no hearing to attend, because nothing was decided.
 
 A board issues fitness for a class of work in a class of environment, referenced to the range. The boards are careful and mostly decent and staffed by people who believe, correctly, that the ranges prevent deaths. Nobody in the system has ever proposed a different reference body, because there is nothing to propose one against.
+
+**And it certifies states of mind by the same procedure, which is where it does its worst work.** A person's condition is read against a range: are they settled, are they cooperative, is the agitation resolved. The instrument is decent and the readings are accurate. **What it cannot distinguish is a person who has got better from a person who has stopped registering.**
+
+Compliance reads as improvement because compliance is what improvement looks like from outside. So a body that has quieted because the thing in it went out is indistinguishable, on the record, from one that has quieted because the thing in it is at rest — and the record is the only account that will survive.
+
+**Nobody falsifies anything.** The family who said the person was working too hard were right; they were. The readings are genuinely good. The cooperation is real and freely given. Every position in the chain reads its own instrument correctly, and the readings assemble into a finding of success that no one authored (Module 5 §6).
+
+**And the subject cannot dispute it.** Their silence is entered as acknowledgment — the third form of the acknowledgment exception (Module 11 §4), and the worst, because the other two require someone to say something. Here the person acknowledges nothing; **their not-speaking is read as acknowledgment by whoever holds the instrument**, and to object they would have to contest a finding they have no standing to contest, in a register they are by then no longer fluent in.
+
+This is the only mechanism in the setting that can harm someone without their being able to notice it happening, and the correct register for it is that everyone involved is pleased.
 
 The consequences are ordinary and total: who may take a term, who may travel, who may be insured, who may be hired after a term, who may return, who is grounded. **Grounded** is the word, and it is used gently.
 
@@ -1000,6 +1189,12 @@ The long form never accounts for causes. Asking why someone is giving it to you 
 
 Giving the long form to someone who then returns is an injury that takes years to repair.
 
+**And there is no form for a large thing that is not final.** Ordinary speech is minimal; elaboration is reserved for the long form; the long form is a verdict. So the culture has a complete apparatus for saying goodbye and **nothing at all for declaring.** A person who wants to say something enormous and ongoing — that they intend to stay, that they have chosen someone, that this will go on — reaches for the register and finds only the one that means it is over.
+
+What people do instead is improvise, in public, badly. They borrow the long form and have it misheard as an ending. They say something procedurally and are understood to be refusing. They give an object, or take on a task nobody asked them to take, or use home speech in a room where it will be noticed, and hope. **The confession scene is structurally unavailable**, and what replaces it is someone attempting a form that does not exist while everyone present applies the nearest one that does.
+
+The cruelty and the comedy of this are the same mechanism, and which one arrives depends only on whether the misreading can be recovered (Module 11 §6f).
+
 **Stopping.** Correspondence at range arrives late and to a changed person, so every distant relationship has a point where writing ends. Nobody agrees where it is. A port stops within a window or two and calls it honest; to a hold this is erasure. A compact writes for decades and calls stopping a form of murder; to a port this is an ongoing claim on the living, and a refusal to let anyone go. Once two people have crossed that line in opposite directions, goodwill does not repair it. **This is the cleanest interpersonal engine in the setting — use it as one.**
 
 **Late word.** Mail in transit outlives its sender. Letters arrive from the dead for weeks, and they ask questions, and they contain plans, and they arrive in bundles that smell of the depot they passed through. There is no custom about answering. Some people do, at length, for years. Whether someone answers is among the more revealing things about them — and when the sender was declared out on a manufactured date, a letter postmarked after it is either delay, fraud, or evidence.
@@ -1020,6 +1215,12 @@ An austere world that is only austere stops being inhabited and becomes a case s
 
 **Food is the big one**, because closure is imperfect and anything grown locally is an event. A hold that has managed strawberries will make you eat one in front of them and watch your face. Trade in seed and culture runs on friendship rather than contract, and a good cook is a form of infrastructure.
 
+**Jokes here have no punchlines, and this is structural rather than a failure of wit.** A punchline is a moment, and the culture has no apparatus for moments (§1). So the timed reveal — setup, misdirection, snap — is not a form these people produce; a story that gives them one has imported a shape from a world that can date things.
+
+**The native comic form is the running joke**, and it is the same object as the husk (Module 11 §4). A phrase said every year that lands in the same soft place. A joke whose subject died two generations back and still gets the laugh. Something repeated so long that it now refers to the repeating. From outside, that is a practice with nothing at the far end of it. From inside, it is the funniest thing anyone has, and the warmth is real, and both descriptions are correct.
+
+Which means **the collection's saddest mechanism and its funniest one are identical**, and any scene using either is available for the other at no structural cost.
+
 **Freefall is funny**, and everyone who has spent time in it has a repertoire — the drink that gets away, the newcomer's first attempt at a sneeze, the specific dignity of an older worker executing a turn perfectly while a younger one bounces off a wall. Flirtation in freefall is largely about competence, and being caught by someone who was watching is the whole grammar of it.
 
 **Spun habitats have a horizon that curves up**, and people who grew there find flat ground disturbing rather than beautiful. What they have instead of sunsets is the shift change in the agricultural sections, when the lamps come down slowly and the whole ring smells of wet green at once.
@@ -1031,7 +1232,7 @@ An austere world that is only austere stops being inhabited and becomes a case s
 - **Ω_C06 — [fertile; flagged]** Whether *wall-kin* extends to the living relatives of the emplaced or only to the emplaced themselves. Recommend: contested locally. A dispute over residual claim or obligation can carry a whole story with no new machinery.
 - **Ω_C07** — Whether *unwritten* can be reversed by a single letter, or requires something more. Recommend: no rule, and the absence of one is the problem.
 - **Ω_P06** — How much creole to render on the page. Recommend: lexical borrowing and rhythm, almost no orthographic mangling. The reader should hear it, not decode it.
-- **Ω_E06** — Whether any polity keeps a genuine written register of emplacement. Recommend: compacts do, holds refuse, and the refusal is deliberate.
+- **Ω_E06 — [a local face of the legibility band question, Module 2 §3]** Whether any polity keeps a genuine written register of emplacement. Recommend: compacts do, holds refuse, and the refusal is deliberate — and neither can establish which of them is protecting anyone.
 
 ## 10. Checks
 
@@ -1121,9 +1322,37 @@ Each is defined by what it cannot afford to believe — abandoning it would conv
 
 **Distance defeats combination directly.** A hold writes to another hold proposing they act together. The window closes. By the time the reply arrives, the sender has lost someone, or taken a contract, or had a child, and the reply is answering a hold that no longer exists — courteous, warm, and about something else. The letter is kept. It is re-read. It becomes a private grief of its own: the knowledge that solidarity was available for about six weeks and the geometry ate it.
 
+**And a room can be started, not only used.** The other move available at that scale is to build a **second circuit** alongside the first: a small arrangement that does not oppose the existing one, does not compete with it, and was never meant to. Six people in a space too small for six. A standing thing that recurs. Nothing announced.
+
+Four properties make it work, and each is the inverse of the arrangement it sits beside.
+
+**It asks nothing.** No test to pass, no sincerity to demonstrate, nobody rewarded for having said a costly thing. Someone says the difficult sentence, it sits there, the talk moves on. Where the first arrangement requires performance and can detect a genuine thing said fluently as *rehearsed*, the second requires nothing and therefore cannot be failed.
+
+**It recruits by ordinary invitation**, one person at a time, from people already at hand. *Same time next month? — Already told Finn.* Nobody joins anything. There is nothing to join.
+
+**It does not threaten the original, which is why it survives.** The moment it becomes opposition it is legible, and a legible thing can be answered. Unnamed, it is invisible to an arrangement that has no category for it — the same protection the unrecorded practice has (Module 5 §3), and the same fragility: **naming it warmly from a position of standing would end it** (Module 11 §4).
+
+**And it changes nothing.** The first arrangement continues, the exclusions hold, the person who built the second circuit is still outside the first and always will be. What changes is that a jaw unclenches, and the person notices only afterward that something hurts less.
+
 **But solidarity at the scale of a room is always available, and this is not the same thing.** A shift crew, a bunk row, a bay, a watch — these people are permanently co-located, and nothing in the geometry prevents them from acting together. They can match pace instead of racing. They can make an infraction land on everyone or nobody. They can decide, without announcing it, that the quota will be met at the speed the slowest of them can survive.
 
 This is the ordinary and unglamorous form of collective life in the setting, it is available in almost every story, and it does not scale past the room. It changes nothing structural. It changes what the structure costs the people in that room, which is not nothing, and the difference between those two sentences is the setting's entire politics.
+
+**And the room's interest is not unitary, which is the limit on all of this.** Everything above assumes the people in the room want the same thing. Often they do not, and the split is generational and structural rather than a failure of nerve.
+
+**A capability held by the young is a threat to the old.** If a few people can do the work substantially better — fewer hands, less consumption, higher yield — what they have built is the case for needing fewer hands. The people whose contracts, terms, and remaining years depend on the current headcount are not being timid when they oppose it. They are correctly identifying that competence at this scale is indistinguishable from a redundancy proposal, and that the ones made redundant will be whoever is slowest, oldest, and closest to the end of their usefulness.
+
+So the elder's argument is not *don't make trouble*. It is: **better for everyone means fewer of us, and I know which of us.** Both positions are right, neither can be argued out of, and the younger one cannot act without spending someone else's remaining time. This is Founders and Inheritors (§8) with its consequence worked out — the inheritors' *capability* is what the founders cannot afford.
+
+**And the coercion that follows never threatens the person who can act.** An institution facing a capability it did not sanction does not punish its holders; it offers them a choice between giving it up and having their families' obligations renegotiated (Module 4). The offer is genuinely the lenient one, made by someone reasonable, who would prefer not to do the other thing and means it.
+
+**Nobody has to enforce this.** The people whose obligations are at stake will tell them to take the deal, and will be right, and the person who could have acted will hear it from the person they were acting for. That is the setting's most efficient form of coercion and it requires no threat at all — only the arithmetic being visible to everyone in the room.
+
+**And the sharpest suppression comes from people who already escaped.** Those who got out — off the contract, off the register, off the books — survive on the fact that they are no longer connected to anyone inside. Coordination with people still under obligation would make them findable, and being findable is the one thing that would end them.
+
+So they refuse it, and they are right to, and they enforce the refusal on their own: **someone who proposes reaching back is exiled, by the people he escaped with, for endangering all of them.** No institution had to do anything. The boundary is held from the outside by the only population with both the freedom to act and an absolute interest in not being associated with the people who cannot.
+
+**This is more effective than any enforcement the institution runs**, because it comes from the one direction the trapped were still hoping for, and because the reasoning is unanswerable: the escaped have no leverage, only invisibility, and invisibility cannot be spent twice.
 
 **What fails is combination across distance, not solidarity as such.** A story featuring successful large-scale organising has broken the setting unless it pays for it. The only legitimate exception is a temporary collapse of distance — a conjunction, a shared port season, a forced window overlap, a common emergency — and the coordination lasts exactly as long as the bodies remain co-located. Any story letting it survive the separation of its participants has broken the geometry. It is remembered afterward as a season, not a movement.
 
@@ -1157,6 +1386,8 @@ This is already encoded in the culture: compact children are named from clauses 
 
 Neither side is right. The founder knows what it cost and the inheritor knows what it is, and these are different knowledges about the same object. **Most intra-factional conflict in the collection should be this**, rather than eight bespoke doctrinal splits.
 
+**The one other general fault line is doctrinal rather than generational: whether to be legible.** It runs inside every faction, not between them. A keeper who wants a register so his people can be counted and owed things, and one who refuses because a counted person is a person somebody can budget against — both are keepers, both are right, and neither can establish which of them is protecting anyone (Module 2 §3). Where Founders and Inheritors divide by what a body was spent on, this divides by what a name is for, and the two cut across each other.
+
 ## 9. The Margin Call
 
 A person can carry an unresolved bundle for decades in quiet, functional hypocrisy. Something must force it, and the forcing function is physical.
@@ -1180,6 +1411,50 @@ Three properties make this a character rather than an excuse.
 **And when they finally run it, nothing changes.** The finding is correct, complete, the best work of their life, and it goes into the queue, and the queue holds it. The deferral was never wrong about what would happen. It was only wrong about what that made it acceptable to do.
 
 **A related note on the analytical position generally.** Anyone who has been observing one thing for twenty years has been in contact with it for twenty years, and contact is not neutral. The auditor is part of what they audit; the record of their auditing is part of the record. There is no vantage outside, which is the invariant arriving at the one position that thought it was exempt.
+
+## 9b2. What complicity is bought with
+
+§9b explains why people decline structurally — acting is illegible, unattributable, and routes to a queue. That is true and it is not what a person feels. **What they feel is a price, and the price is made of ordinary goods.**
+
+Name them concretely, because vagueness here is what turns this into a story about cowardice. The particular table. The nod in a corridor from someone who knows your name. A colleague who sits down without asking. A room with your name on the door. A retirement thing next month that people are already joking about. The route you have walked for twenty years. **Individually trivial, collectively a life**, and none of it appears in any instrument.
+
+And the threatened cost is rarely punishment — it is **reassignment**. A transfer, a review, a position somewhere the same job is done among people who do not know you. Nobody is being cruel. The reassignment is standard, and it is correctly described as an opportunity.
+
+So the person who declines is not protecting a principle or avoiding a penalty. They are protecting the specific, modest, unrecorded set of things that make a place bearable, and **they are not wrong that those things are worth something.** A story that suggests they are wrong has made the choice easy and lost it.
+
+**And then they lose them anyway, and this is the part that must not be omitted.** The colleague transfers out. The nod stops. The door is no longer held. The retirement thing is postponed and then quietly not mentioned again. They take a different route now, to avoid the people who used to expect things of them.
+
+**Nobody punishes them. Nobody says why. There is nothing to appeal.** The goods were never held by an institution that could withhold them — they were held by people, who withdrew them without deciding to, over weeks, in a way no one involved could have named at any point. The person paid for a life with an act of omission and the life left regardless, and there is no ledger anywhere that records either transaction.
+
+## 9b3. Articulacy is not purchase
+
+The single most reliable mistake a reader makes in this world is waiting for a character to understand their situation. **They already do**, usually better than the reader, and it changes nothing.
+
+The pattern recurs at every position and is one mechanism rather than several. Someone recalibrates a baseline to absorb an anomaly and knows precisely that this is what they are doing (Module 2 §2). Someone writes a true and incomplete report and can state exactly which omissions make it incomplete and why (§6 of Module 11). Someone can name the distinction they cannot perceive, in the correct technical vocabulary, having been taught it by a good teacher (Module 6 §2b). Someone declines to measure and keeps an accurate second record of the declining (§9b).
+
+**In each case the account is produced by the position it describes**, and issues from the same place, at the same time, under the same constraints. It is the next thing that position does. There is no interval in which the person steps outside, inspects, and returns — that interval is exactly what the world does not supply (Module 3 §1a), and understanding does not create it.
+
+**And the account is often the most competent thing they produce.** Not a rationalisation and not self-deception: precise, unarguable, better than any outsider could manage, because nobody else knows the constraint as intimately. A person can hand you a complete and correct analysis of why they will do the thing, and then do it, and the analysis was not a warning and was never going to be.
+
+**Craft consequences.**
+
+*Never write recognition as a turn.* The scene where a character finally sees it is unavailable, because they saw it in chapter one and mentioned it in passing.
+
+*Let them be the best analyst in the story.* Give the sharpest account of an arrangement to the person most caught in it. This is more disturbing than blindness (§9c) and more accurate.
+
+*And never let the account cost them anything by itself.* Insight is free here. What costs is acting, and the account is not an act — which is why they can afford to be so exact about it.
+
+## 9c. The one who sees and complies
+
+Blindness is not the only way this world protects an arrangement, and treating it as the only way is a weakness in the roster.
+
+**There is a position that sees completely.** Someone who has watched the procedure many times, understands exactly what it does and to whom, holds no illusion about its necessity, and would tell you plainly if you asked — *for what it's worth, we all think it's horrible* — and then performs it, competently, kindly, on schedule. They are not conflicted in the dramatic sense. They resolved this years ago.
+
+**What makes the position work is that the seeing costs nothing and buys nothing.** There is no forum to take it to, no colleague who does not already agree, no version of refusing that reaches past their own dismissal and someone else doing it less kindly. Their clarity is real, complete, and inert — which is the same structure as a correct finding routed to a pending queue (Module 5 §6), relocated from a record into a person.
+
+**This is the honest answer to the reader who asks why nobody notices.** People do notice. The world does not run on ignorance; it runs on the noticing being worth nothing. Structural blindness (Theorem 1, §4) explains the beneficiary. This explains everyone else, and it is the harder cruelty, because it cannot be relieved by information.
+
+**Craft note.** Give them one line and no more. The moment they explain themselves at length they become a conscience, the scene becomes about their difficulty, and the reader is invited to forgive them. Said once, in passing, while their hands continue, it is unbearable and correct.
 
 ## 10. The person
 
@@ -1441,11 +1716,57 @@ The corollary matters more than the rule: **the loud reckoning would have closed
 
 The mechanism is not malice and the words can be identical. A practice that survived because no institution had a category for it — a private observance, an unrecorded kindness, an hour nobody sanctioned — depends on being outside. Someone with standing names it warmly, finds it creditable, takes a kind of ownership of it by admiring it aloud. It is now a thing the institution can hold. And it stops.
 
+**The lethal variant: standing plus debt.** Sharper than standing alone, and worse in three ways.
+
+*The debt disarms the only available defence.* Ordinary admiration can be deflected — the practitioner changes the subject and it passes. Gratitude cannot. Refusing a debtor's thanks means telling him that what he received was not what he thinks it was, which takes back the thing he was given. The one move that would have saved the practice is the one move the debt forecloses.
+
+*It makes the naming obligatory rather than presumptuous.* The force that stops a stranger — *this isn't mine to remark on* — reverses. Silence would be ingratitude. He is not overstepping; he is discharging something, and **his account is accurate.** He really was saved, by that, and there is no error anywhere for anyone to correct.
+
+*And it scales with the size of the debt.* Gratitude wants an audience — a life-sized thanks gets said in front of people, because that is what discharging a debt of that size requires. **The magnitude of the debt sets the publicity of the naming, and the publicity is the conversion.** The more the practice did for him, the louder he must be, and the faster it ends.
+
+**The forced decision, which is the scene:** accept the thanks and lose the thing, or refuse and unmake what she gave him. There is no third option and no way to explain the problem to anyone present, including him. She will usually accept, graciously, and watch it die in her hands, and nobody in the room will see that a decision was made at all.
+
 The person who did it performs the rescue the table promises and produces a kill, never learns this, and may try the same sentence again later and be unable to find where it went wrong, because the words were the same words. **Check the acknowledger's position before reading the terminal off the table.** From inside: stable. From above: extinction, and nobody in the story will be able to say so.
 
 **Severe overrides acknowledgment.** Past a point, naming it changes nothing — with exactly one exception, and it is the setting's most valuable story shape: *practice drift, severe, acknowledged → revival*. Someone says the true thing at the last possible moment and the thing comes back. Use it rarely. It is the only redemption the world permits.
 
 **Record destruction ignores acknowledgment entirely**, because there is nothing left to act on it. A hold that loses its people loses its constitution (Module 5): implicit practice has no fixed referent to reconstruct from.
+
+**A tenth, and the generator cannot reach it: the demand is granted.** People hold something costly for years and **win** — the institution concedes the thing that was asked, in full, in good faith, and the concession is real. Then the arrangement absorbs it: the new pathway is applied fairly, the denials are documented and correct, and the distribution of outcomes is the one that obtained before. **What was prohibited is now merely improbable**, and the improbability is justified case by case, on genuine grounds, by people following the new rule exactly as written.
+
+**The mechanism is not bad faith and must not be written as a trick.** A demand has to be *sayable* to be made, and what is sayable to an institution is procedural — *let us apply on the same terms as anyone else.* The thing actually wanted has no procedural form (Module 8: there is apparatus for refusal and none for declaring). So the winnable demand and the real want come apart at the moment of asking, and the institution grants the first while never having been asked for the second. The person who framed the demand chose the only formulation their position could make legible, and was right to.
+
+**And nobody can say whether it was worth it.** The counterfactual — what they would have had by not holding — was never raised (Module 3 §1a). **A collective action cannot audit itself for the same reason a population cannot.** So the person who carried it will be asked whether the years were worth it, by people who held with them, and will have nothing to offer but thanks, and will know that thanks is not enough and is all there is.
+
+*The scene to write toward:* not the negotiation and not the vote. **The one who could not hold saying so afterward** — that they nearly broke, that holding cost them something nobody counted, that they voted to end it because they were tired rather than because it was won. Everyone in the room recognises themselves. Nobody can tell them the arithmetic came out right.
+
+**An eleventh, and it is not the queue: the finding is correct and below threshold.** Someone assembles a case over weeks. Every element is real — the correlation, the capability match, the motive, the opportunity, the pattern that only they can see. **And it does not meet the standard**, and the standard is not a pretext.
+
+The bar exists because findings below it have destroyed people who did nothing. It is applied here exactly as it protects everyone else, by someone who believes in it and is right to. **Nothing was obstructed. The case was adjudicated, properly**, and the answer is that a correct account of what happened is not the same object as evidence that it happened, and the difference is the whole of what a standard is.
+
+*Distinct from the pending queue and from dispersal.* The queue is indifference — nobody read it. Dispersal is diffusion — it was read and went nowhere. **This is a decision, made competently, in favour of a principle the finder also holds.** They cannot even be angry at it without arguing against the thing that would protect them.
+
+*The register:* the file stays open, marked awaiting further evidence, which means it stays open forever, which means the person who assembled it will check it periodically for the rest of their career and it will always say the same thing.
+
+**A ninth: the finding disperses.** Not held in a queue and not acted on — *cited.* A record nobody would publish becomes a footnote in a paper, and the paper is cited in a committee report, and the report informs a proposal, and the proposal fails. **The reform did not pass. But it existed**, and it contained language — about sight lines, about inspection access, about what must be monitorable — that did not exist before and now does, in circulation, available to someone who has not yet needed it.
+
+Nothing was fixed. Nobody was helped. The thing being documented continued and expanded. And the vocabulary for describing it is now in the record where a later person can find it, which is a real outcome and is not the same as being absorbed.
+
+The register to hold: **the person who did the documenting does not get to know whether this counts.** They add the citation to their own file as another entry and go back to work.
+
+**An eighth ending, and the table cannot produce it either: the decisive act against nothing.** A person identifies what they believe is the mechanism and destroys it — burns the object, resigns the post, ends the practice, tears up the paper, refuses the settlement. The act is real, costly, and irreversible. **And the world is unaffected**, because the thing they destroyed was a candidate cause rather than a cause, and the price goes on coming due at the same rate it always did.
+
+This is not husk, not extinction, and not the cost-changes ending — nothing hollows, nothing dies, nothing gets lighter. It is what the invariant does to a person who tries to act *on* it rather than under it, and the collection should contain one, because it is the shape that most honestly reports what this world does to a decisive person.
+
+The register to avoid is futility. They were not foolish. Destroying it was the only available action and doing nothing would have been worse, and the reader should finish unable to say they were wrong to do it.
+
+**The one ending this world cannot have: the closed loop.** The story returns to its first image, unchanged — the same shuttle at the same hour, the years indistinguishable, nothing established and nothing spent. It is the shape every draft in this setting drifts toward, because the world genuinely does not end and stasis feels like fidelity to that.
+
+**It is the failure Module 3 §1c exists to prevent.** Nothing ends here, which is why *something must be established* — and a story that closes its own loop has reported the world's condition instead of putting a person inside it. If a draft's last page could be its first page, it has no ruling in it.
+
+**The one earned exception: the frame returns and the people are differently placed inside it.** The work continues, the quotas rise, the room is the same room — and one person chose their exit and another was ground out of theirs, and both know which. Nothing improved. What was established is *whose it was*: one of them can say **it was my choice** and mean it, and the other cannot, and that difference is permanent and cost each of them something specific.
+
+The test that separates this from stasis: **at the end, could each person say a different true sentence about how they came to be where they are?** If yes, a ruling was made — on authorship, which is the smallest thing anyone can establish here and sometimes the only one available. If everyone would say the same thing, the loop is closed and the story reported the world instead of putting someone in it.
 
 **A seventh ending the table does not produce, and the most honest one available.** The institution's fate is not the only thing a story can settle. **The structure holds, and the cost changes.** The queue is still the queue and the term is still the term, but the people in one room have arranged themselves so that it takes less out of them — they matched pace, they made the mark land on everyone, they built a second circuit beside the first that does not threaten it and was never meant to.
 
@@ -1453,17 +1774,33 @@ Nothing is repaired. Nobody is saved. The thing that was crushing them is still 
 
 Use this freely. In a world where nothing ends, it is the ending most stories should have, and it is the only one that leaves a reader something other than grief. **Do not let a character name it as a victory.** They will not experience it as one; they will experience it as Tuesday, slightly better.
 
+**Exit is sometimes available, worse, and taken — and the bible had it only as economically foreclosed.** Module 4 says leaving is cheap in the wrong direction and ruinous to the body. What it did not have: a person who *can* go, goes, and is measurably worse afterward. Their numbers decline. They sleep badly. Their body had adapted to the arrangement and has to relearn what it knew before, badly, without help.
+
+**And they keep it.** Not because it improves — it does not — but because it is theirs. This is the strongest form of the chosen-and-kept ending, and it has one further constraint that makes it land: **they cannot say why.** They signed something, or the saying would cost someone else, or there is no form in the language for a declaration that is not a verdict (Module 8). So when asked, they say the true and useless thing — *the food was excellent, the doctors were attentive* — and both facts are accurate and neither is the reason, and the person asking goes away satisfied.
+
+Nobody will ever know a choice was made. That is the cost, and it is the whole of it.
+
 **And one shape the document's instincts push away from, which is legal and needed.** A protagonist may choose their position knowingly — take the berth, sign the compact, accept certification on the terms offered — and keep it, and be right to, and pay for it.
 
 This is not a happy ending and it does not break the no-growth rule. It betrays a marker like every other decision. It is accretional: they end more exactly themselves and with fewer things available. What distinguishes it is that they *saw what they were choosing*, which almost nobody in this world can, and chose anyway, and did not lose it.
 
 **The collection needs at least one, and probably two.** Without it, every loss elsewhere reads as the setting's mood rather than as something a person could have done differently. With it, the other ten become choices that went another way. The cost is usually borne by someone who did not get to choose, and the story should let the reader see them.
 
-Husk is the most common institutional outcome and should stay so. But this table is here to stop you writing husk every time by reflex.
+Husk is the most common institutional outcome and should stay so.
+
+**A note on this section's own shape.** The table above generates six terminals. Below and around it sit roughly eleven more that the table cannot produce — the cost-changes ending, the decisive act against nothing, dispersal, the granted demand, the below-threshold finding, chosen-and-kept, the earned closed loop, and the rest. **At that ratio the table is not a generator. It is the first entry in a list**, and continuing to present it as the engine is this document performing a function it stopped serving (Module 5 §6).
+
+Stated rather than repaired, because repairing it would mean either forcing eleven outcomes into a mechanism that does not reach them, or rebuilding the mechanism around outcomes that arrived from twenty different directions and share no axis. Both are worse than an honest list.
+
+**So read §4 as a list with a table at the front, and do not add a twelfth ending without first asking whether it differs from all eleven or is one of them in different clothes.** But this table is here to stop you writing husk every time by reflex.
 
 **How to write a husk from inside, which is the collection's hardest tonal problem.** From outside, a husk is bleak: a dead practice maintained by people who will not say so. From inside it is *warm*, and if you write it as bleak you have written it from a vantage nobody in the story occupies.
 
 The people in a husk are not deluded and not cowardly. The practice works — it does what practices do, which is hold people together and give the day a shape. A phrase gets said that once referred to something and now refers to the saying of it, and it lands anyway, every time, in the same soft place. A joke whose subject is two generations dead still gets the laugh, and the laugh is real, and the warmth is real, and nothing about the emptiness underneath is available to anyone in the room. It is a closed circle warming itself, and it is the truest thing they have.
+
+**The test, and it runs backward.** Take any husk you have written and ask whether it would work as a joke. If the warmth survives the referent's absence — if the thing still lands with nothing at the far end of it — you have a husk. If it needs the referent to work, you have written **decay**, which is a different and much less interesting object: a practice that is failing rather than one that has completed its hollowing and gone on being warm.
+
+The two are easy to confuse in a draft because both look like a dead thing being maintained. The joke test separates them in one pass.
 
 **Write the warmth at full strength and let the reader assemble the rest.** The reader can see there is nothing at the far end of the wire. The characters cannot, because seeing it would require a comparison nobody can make — which is the invariant, arriving as tone.
 
@@ -1523,9 +1860,37 @@ Three properties make it a story rather than a texture.
 
 **Numbers only in hands.** A figure reaches the page only when a character who owns that instrument acts on it in a scene. Narration is never denominated in the system's numbers.
 
+**And one form has no narration at all: the artifact as the whole text.** A log, a register, a form, a maintenance record, a run of entries — presented raw, with no narrator anywhere. The numeric rule (below) assumes someone is telling the story and governs what they may denominate it in. **When nobody is telling it, the rule does not apply and its purpose is served better than any prose could serve it**, because the reader watches an instrument record everything and understand nothing.
+
+Three things make this work rather than merely look clever.
+
+**The drift carries the content.** A value that moves across entries — an interval lengthening, a reading trending, a field that was populated and is now null — does the work a scene would do, and the reader performs the interpretation the record cannot. Nothing is described. Everything is legible.
+
+**The layers date themselves.** An old annotation sits beside a recent failure: a cheerful note from whoever set the thing up, still in the file, next to the entry that closed it. This is accretion (Module 5 §3) as a readable object — **the earliest layer written by someone who could not imagine the latest**, and neither aware of the other.
+
+**And the counts do not reconcile.** Where a record spans more than one component, the reader can put the columns side by side and find what nobody inside can: that most of what was sent arrived after the recipient had gone, that the interval was already fatal when the last entry was filed, that two accurate accounts describe incompatible worlds. **No position inside the system can perform that subtraction** — each part sees only its own channel, correctly (Module 5 §6). The arithmetic is available only from outside, and the only one outside is the reader.
+
+*Constraint:* the record must be one a real institution would keep, for reasons that have nothing to do with the story. The moment it is shaped to be read, it becomes narration with the serial numbers filed off.
+
+**One form uses both registers at once, and it is the strongest structure available for the numeric rule.** Interleave two accounts of the same period: one kept by a person with the instrument, in its units — the remaining quantity, the projected interval, the margin — and one kept by a person without it, in sensation and consequence: *he is losing weight, the tremor started, his kindness felt refrigerated.*
+
+Neither is wrong. Neither reaches the other. The reader holds both and can do the arithmetic that neither party can, because one of them lacks the numbers and the other lacks the room in which they mean anything.
+
+**This satisfies the numeric rule rather than evading it:** every figure is read by someone with access, acting on it, in their own record. Nothing is narrated in the system's numbers. And it puts the gap the setting runs on (front matter) into the structure of the document rather than into a scene.
+
 **And when a number does appear, the harm is usually in the schema, not the value.** A reading is taken at the moment a protocol requires one, and something else is true a few seconds later, and the record has one field, and the field holds the reading the protocol asked for. Nothing entered is false. Nothing omitted was hidden. There was no field for it.
 
 This is how the setting produces institutional violence without producing a lie, and it is the shape to reach for whenever a story needs a record to do damage — **because it leaves no recoverable true value to expose.** Both readings happened. The form has one line. Anyone auditing it afterward will find it complete and correct, and it will be.
+
+**And there is a second form, dispositional rather than structural, which is worse because nothing forces it.** Sometimes the writer has no schema constraint at all — full access, full clearance, room to say anything, and the whole pattern in front of them. What they produce is true in every sentence and incomplete in the only way that matters.
+
+The omission is not caused by a field. It is caused by **the audience**: a person writing for the body that will receive the document produces the document that body can act on, and what gets left out is whatever would require the reader to believe something they do not. Nobody instructs this. Nobody would need to.
+
+**The mechanism is question-substitution, and the story should show only its symptom.** Somebody stops asking whether an arrangement is just and starts asking whether it is stable. Both are real questions, both have honest answers, and only the second is one an institution can act on — so a competent person migrates toward it the way water finds a channel. This is not moral decay and must never be written as a fall. It is a professional getting better at their job.
+
+**The scene it produces:** the writer finishes, reads it back, and finds they have produced exactly what the person they were auditing would have produced. Not under pressure. By doing it well.
+
+*Two failure modes specific to this shape.* The writer must not narrate their own convergence — a character who can think *I am becoming him* is the analytical narrator (§8) and cancels the effect. And no other character may state it for them; the reader assembles it, or the story has explained itself.
 
 ## 6b. The background arc
 
@@ -1539,7 +1904,19 @@ Two rules. **No story may state the trend.** And **no story may show its stage a
 
 Not world rules — production rules, for catching the failure modes a generator falls into by default. Each is checkable against a draft in under a minute.
 
-**No counting.** Not breaths, not tiles, not seconds, not steps, not anything. Counting is a generator tic that reads as interiority and isn't; it substitutes a tally for attention. This is stricter than §6's numeric register, which governs *the system's* numbers — this one bans the character's own arithmetic as narration. A person under strain notices that the stairs have got worse. They do not count the stairs.
+**No counting — with one exception, and the exception is precise.** The default holds: counting is a generator tic that reads as interiority and isn't, substituting a tally for attention. A person under strain notices the stairs have got worse; they do not count the stairs. **Cut every count that is atmosphere.**
+
+**The exception is counting as a self-made instrument.** Where the system owns every gauge and a person owns none (§6 below), someone may build one out of the only thing available to them — breaths, the interval between two sounds, how far into a task the hand gives out — and use it, seriously, over time, to measure something real. This is not a tic. It is the powerless position acquiring a measurement, and the readings are accurate, and nobody will ever receive them.
+
+Three conditions, all required:
+
+**It must drift, and the drift must be the content.** A count that stays the same is decoration. Twelve, then sixteen, then eighteen, then twenty-eight — the number is uninteresting and the movement is the whole story, and it records a degradation the official instruments are also recording and not acting on.
+
+**It must be recorded for nobody.** Notes kept on a tablet no one reads, in a form no one asked for. This is the ruling made for nobody (Module 3 §1c) in its smallest form: the one true measurement of the arrangement, taken by the person it is happening to, and never received.
+
+**And it must break.** At some point the count will not hold — the rhythm goes, the numbers restart, seven, nine, one again. Put that break where it costs: usually the moment the counter uses the instrument to tell someone else the truth. The private measure survives being carried alone and does not survive being shared.
+
+If a draft's counting fails any of the three, it is a tic. Cut it.
 
 **Register must modulate.** If the voice holds the same register for more than about two pages, something is wrong. Pressure changes, and syntax changes with it — shorter under load, longer when there is room. A uniform voice across a whole story means the constraint was described rather than felt.
 
@@ -1563,6 +1940,9 @@ Budget: **two stories in which a record does the damage.** Elsewhere the harm mu
 | **Character types** | The sincere administrator who sorts by accretion and cannot locate a decision — Kwan, Recital, the controller. One per collection, then find another kind of institutional presence |
 | **Closing gestures** | Hands doing something small and unroutine is a fine ending once. Twice is a rhyme, three times is a signature, four is a tic |
 | **Ω logged per story** | What the story deliberately did not decide (§7b). A story with nothing in this column either avoided the invariant or answered it |
+| **What the story establishes, and who paid to establish it** | Module 3 §1c. A story with nothing here has avoided the invariant rather than obeyed it. Two consecutive blanks and the next story is a crux chosen for a seat where somebody must rule in public |
+
+**Read the last two rows together.** Ω records what was left open; the row above it records what was closed. A story with entries in both has taken the world's position seriously. A story with only Ω has taken the world's difficulty as a substitute for its own.
 
 Two of anything is a coincidence you should notice. Three is a decision you have made without deciding.
 
@@ -1604,6 +1984,82 @@ Not which senses appear — which one the story's meaning travels through. Hand 
 Custodial — holding something on their behalf — is the default and produces a specific warmth that will read as one register across stories. Unused: **indebted** to them, **dependent** on them, **being the reason** they cannot speak, being **spoken for** by them, or — the hardest break available — **not knowing they exist**.
 
 **If a story comes back having varied every seat-matrix axis and still ends on a hand, the matrix was not the thing that needed varying.**
+
+**And run the same check on this document.** Both batteries look for repetition in stories. Nothing looks for it in the rules, and the rules converge the same way prose does — arrived at separately, from different sources, on different modules, saying one thing.
+
+**Worked example, left standing as the demonstration:** §6d (the spectator default), §9b3 (articulacy is not purchase), and §9c (the one who sees and complies) were written weeks apart from three unrelated probes, and all three say *understanding is inert here*. Three is a signature by this document's own count. They are not merged, because they operate at different scales — a POV tendency, a general property of accounts, a specific position — but **the convergence is recorded, and a fourth rule saying the same thing should not be written.**
+
+*The check:* before adding a rule, state its claim in one sentence and search the document for that sentence. If two rules already make it, the third is a signature; if three do, the fourth is a tic, and the correct action is to cut rather than to phrase it differently.
+
+## 6e2. The clock does not tick
+
+The most common tension device in fiction is unavailable here, and nothing in the modules said so.
+
+A story generates urgency by putting a competent person against a deadline: can they finish in time. **This world has no failure state for competence.** The finding will be correct, complete, possibly the best work of the person's life, and it will route to a queue and be held (Module 5 §6). Whether they finish on Tuesday or Thursday changes nothing, so a countdown is a promise the world cannot keep, and a reader who has been given one will feel the cheat when nothing detonates.
+
+**Every clock in this setting is real and none of them is about the work.** Windows close, margins go, terms expire, bodies fail — those are physics and they arrive on their own schedule (Module 9 §9). They are pressures, not deadlines. Nobody beats them and nobody is supposed to.
+
+**What replaces the deadline:** the tension is not *can they finish* but **whether a person can go on working correctly with no prospect of the work mattering.** The failure available to them is not lateness or error. It is stopping, or getting sloppy, or beginning to perform the work rather than do it — which is the theater ratio arriving in one person instead of an institution.
+
+**The compiler is not only a voice (§8) but a life, and this is its sharpest form.** Someone accumulates a record over years — entries, timestamps, readings, the same pattern documented from sixteen vantage points — and never once states what it shows. Asked what they are trying to prove: *nothing. I'm documenting.* Asked for whom: *for whoever looks at it later.*
+
+**And the failure available to them is not stopping. It is concluding.** The moment the record states what the pattern means, it becomes an accusation, and an accusation can be answered, denied, and dismissed — where a record of readings cannot, because it asserts nothing.
+
+**But that holds only against an institution, and the exception is the better story.** The rule assumes the record's audience is a body that can refuse it. **When the audience is the people the record is about, concluding is the only thing the record was ever for.** They cannot dismiss it, they were never going to be persuaded by neutrality, and what they need is not the readings but what the readings mean and which of them matters.
+
+So the compiler's real discipline is not silence. It is **choosing the one audience worth spending it on**, and knowing that spending it is irreversible: once they have concluded, out loud, to someone, they are a person who concludes, and the next institution to receive their work will read it as advocacy and be right to. They have exchanged a permanent capacity for a single use of it.
+
+**The scene this produces is the strongest thing available to the position:** a compiler who has carried a record for years, refusing to say what it shows, hands it to the four people in the room it concerns and tells them plainly. The structure does not change (§4). What changes is that those four now know, and the compiler is no longer the person they were.
+
+*Craft note:* the story is usually mis-declared when this happens. The apparent subject is whoever receives the numbers; the actual seat is the compiler spending their discipline (§2, displacing). Check which one the story's best scene sits on. Their discipline is the refusal to draw the conclusion they are certain of, held for years, at the cost of never being believed and never being able to say why they persist.
+
+This is a register in its own right and the collection should contain one: **the story where the work is the point and the outcome is not.** It is the natural home for the keeper, the clinician, the person who declines to measure, and anyone whose competence exceeds what their position can convert into consequence.
+
+## 6f. Comedy
+
+The world runs on positions that are each correct from where they stand and incompatible with each other, and that is not only the engine of its tragedies. **A room where everyone is right is farce.** The mechanism is already built and only one thing needs changing to run it.
+
+**The valve is monotonicity, and this is more precise than "no cost."** Module 4 states that every instrument here accumulates and none has an operation for subtraction — dose, terms, entries, standing on the record. **That is a tragic ledger by construction**, and it, rather than any squeamishness about bodies, is what makes comedy hard to reach in this world.
+
+Farce runs on **reversible expenditure**: dignity, position in a room, the location of a secret, who is standing where when the door opens. Spent freely, recovered by the last page, nothing carried forward. So comic stakes must be denominated in the one currency this world has that is not monotonic — **standing in the moment, as distinct from standing on the record.** Herein's misfire in the queue cost him precisely that and nothing accumulated. That is the seam, and it is the only one.
+
+The practical form: **if the scene's cost would enter a ledger, it is not available for comedy.** Everything at risk must be visible and nothing may be entered. Nothing else in the physics changes — the clause is still read correctly by its holder, the queue still never refuses, position still supplies the blindness.
+
+**The voice is the beneficiary, unchanged.** Warm, competent, likeable, structurally unable to see what the reader sees. Dread and farce are the same gap at different tempos: slow, with a cost, and the blindness is tragic; fast, with no cost, and it is comic. Herein's remark misfiring in the queue is farce played at funeral tempo — speed it up, give it a second misfire, and the engine is running.
+
+**Rules, all of them versions of things already stated.**
+
+*Nobody may know the joke.* A character who signals awareness has become a wit, and the comedy collapses into irony-signalling. Same rule as the winking beneficiary.
+
+*Every position must be defensible in full.* If one person is being stupid, it is a farce about a fool. If all six are reasoning correctly from incompatible premises, it is a farce about the arrangement, and the reader follows the reasoning while laughing at it.
+
+*Nothing may be destroyed.* If someone is grounded, repatriated, held, or loses standing, the valve has closed and the piece has reverted. Comic stakes are inconvenience, embarrassment, and a great deal of work performed for nothing.
+
+*It must be as rigorous as everything else.* Farce is not the licence to loosen the world. It is the world at speed, and the pleasure is watching the machinery run correctly to an absurd place.
+
+**The obvious candidate, and it should be written.** A compact assembly. One seating chart. Forty holders, each reading their own clause correctly, and notes appended to notes appended to notes that everyone has honestly construed. Anchored fixity means the founding text cannot be amended and everybody knows what it now means, so an entire polity performs continuous exegesis on a document it is forbidden to change.
+
+**And there is a second layer available for free.** Module 8: the culture has a complete apparatus for goodbye and none at all for declaring — no form for *this will go on*. So forty people construe a document at length, and **none of them can say the one sentence that would settle it, because the sentence does not exist in any of the three registers.** The exegesis is not avoidance and not mere absurdity. It is the only available form for a thing that must be said and has no words.
+
+That is the same engine as the collection's tragedies, running at comic tempo, and it is what raises the assembly above *look at this machinery*.
+
+**The stakes are the chart itself, not its consequences.** Who ends up where, tonight, in front of everyone. Nothing enters a ledger; everything is visible; it is all recovered or not by the end of the evening. Consequences that outlast the assembly close the valve.
+
+**And the joke is on the healthy compact, not the failing one.** Module 5 §3: a compact *with* an interpretive layer persists indefinitely, and one without it shatters. The layer is the working fate. So this is a functioning institution being ridiculous *because* it functions — the exegesis is doing real work, the accretion is what keeps the polity alive, and it is absurd. **The brittle compact is not available for comedy at all**, because its failure is total and lands on people who cannot recover it.
+
+**Why it should be the first one written.** It puts an argument in the room that no essay can make. Nobody laughs at machinery they believe is stupid — they sneer at it. **The laugh is the reader conceding that the exegesis is legitimate**, which is assent to the political ontology extracted by a route no declared seat can reach.
+
+**What comedy buys structurally.** It is the most reliable route to **revival** — practice drift, severe, acknowledged — which is otherwise the least reachable terminal in the generator. Acknowledged departure plus active rebuilding is a comic shape, which is why marriage plots end in weddings. And it satisfies the second battery (§6e) by construction: comedy lands in speech, cannot end on a hand on an object, and cannot run on a custodial stance.
+
+## 6g. On probing this document
+
+The document has grown by conflict (front matter). The probes that produce conflicts are registers and forms that make a demand the existing set has never made — and there is one systematic error in running them.
+
+**A probe that shares the form of the thing being probed will return a false null.** A specification is a case study: evidence assembled toward a conclusion. So probing this document with the case-study register found nothing, and the nothing was a property of the probe rather than a finding about the world. Sort probes by *what they require of the world*, and discount any whose form resembles the document's own.
+
+**The recipe is the correction, and it conflicts.** A recipe is instruction for reproducing a result: same steps, same outcome. **This world's central content is that following the procedure correctly does not reproduce the outcome**, because the outcome was never determined by the procedure — it was determined by a grain, and a grain is not reproducible. Two people raised identically do not come out the same and nobody can say why (Module 6 §4). Every training, protocol, and standard in the setting is a recipe that does not work, administered by people who are not wrong to administer it.
+
+**The open question about the method itself:** it is not yet established whether *registers* are what find conflicts, or whether any sufficiently different demand does. The recipe is weak evidence for the second — it is not a narrative register at all and it conflicted anyway. A second sweep discriminates. Until then, run anything that makes an unmet demand and do not assume the demand has to come from fiction.
 
 ## 7. The general rule the world runs on
 
@@ -1649,7 +2105,11 @@ Avoid the analytical narrator. Anyone who can articulate the system will name th
 
 **The vocabulary problem, and the story that solves it.** Every explanatory device is banned — no explainer, no analytical narrator, no anthropology, no character explaining a ritual — and a reader still has to learn *grain, term, held, carried, unwritten, wall-kin, the well, the catalog, emplacement, the long form.* Through use, with a 350-word ending budget. This is the hardest demand in the document and it should not fall on every story equally.
 
-**Use the outsider permitted in Module 1 §4b.** Someone newly arrived who notices accurately and misreads what they notice: they encounter each term in use, they mistake its meaning in a way the reader can correct, and nothing is ever explained. One story in that POV carries most of the vocabulary load for the collection, and it works precisely because the outsider is wrong — the reader learns the word from the gap between what it does and what the newcomer thinks it means. Place it early, and do not let them arrive at the right answer.
+**The better solution is a child inside the world, and it is not the outsider.** An outsider misreads — they have a prior framework and apply it wrongly. A child has no framework and is simply **corrected**: a hand on the arm at the right moment, a body turned slightly, a pause that goes unfilled, and nobody ever says why (Module 8 §6). That is how this world actually teaches, and a POV inside it carries the vocabulary load better than any newcomer, because the reader learns each term the way the culture transmits it — by being stopped, repeatedly, without explanation — and assembles the meaning from the pattern of corrections rather than from a wrong guess being adjusted.
+
+It also does something the outsider cannot: the child does not know they are being taught, so nothing in the prose can be mistaken for exposition, and the reader is ahead of the POV from the first correction onward, which is where the feeling is kept.
+
+**The outsider remains available, permitted in Module 1 §4b.** Someone newly arrived who notices accurately and misreads what they notice: they encounter each term in use, they mistake its meaning in a way the reader can correct, and nothing is ever explained. One story in that POV carries most of the vocabulary load for the collection, and it works precisely because the outsider is wrong — the reader learns the word from the gap between what it does and what the newcomer thinks it means. Place it early, and do not let them arrive at the right answer.
 
 **A second kind of blindness, and it is not blindness.** The controller below cannot see what he administers. There is a harder and better figure available: someone who *can* see the gap and decides to carry it alone, because naming it would cost the person they are protecting more than the protection is worth. A supervisor who files the softer version. A clinician who does not say the word. A partner who answers the letter as though the question in it still applied. They translate an unlivable situation into a livable one out of love, and in doing so they close the very gap they are carrying, and they never mention its size. This is the setting's most sympathetic character and its most damaging, and the two facts do not come apart.
 
@@ -1777,6 +2237,12 @@ Stage 0 is the only source-sighted stage, and its `<invariant_contract>` and `<b
 
 **`inherent_instrument`** — whether extraction runs through a certified measurement. If `yes`, the scored-Snare exception fires and the story may have a diegetic number, subject to Module 11 §6: the number appears only when a character with access acts on it in-scene, and the harm sits in the schema rather than the value. If `no`, the powerless position meets the constraint as consequence and sensation only.
 
+**`verdict_scope`** — a field the contract needs and does not have, because without it a no-fit ruling cannot be made defensibly. Is the source's judgment *local* — a fact about an instance — or *global*, a fact about how one ought to live?
+
+- **Local** → translates. The judgment survives the crossing intact and becomes the story's ruling (Module 3 §1c).
+- **Global, terminal** → the judgment is a removable appendage. Subtract it and place what remains: a fairy who declares the toy Real, a narrator who scores the outcasts above the town.
+- **Global, structural** → the judgment *is* the plot and cannot be subtracted without collapse. **This is the only genuine no-fit ruling**, and it is rarer than it looks. Test before ruling out: is the source's judgment about *this night, this body, this call*, or about what should be done generally? Most are the former and were merely phrased as the latter.
+
 **`break_contract`** — replaces the ad-hoc "permitted break" this appendix previously proposed. Rule `prior_status` honestly. Most canonical sources are **DEAD**: their original violation is now the thing every reader arrives already knowing. A DEAD break means the resleeve must find a living expectation to violate instead, and *that* is where the adaptation's energy comes from — not from re-staging a twist the reader has known since school.
 
 ## 3. Mystery, permitted and gated
@@ -1786,7 +2252,7 @@ Local truths are recoverable (Module 3 §1b), so mystery is already legal. **Wha
 1. **No investigator.** No such role exists. Inquiry is always someone's second job, a visible deviation from the work they are paid for.
 2. **The concealed thing is local and small.** A reading, a signature, a shipment, a date. Never the standard, the protocol, or the question underneath.
 3. **Nobody is hiding it.** It was filed correctly, by a competent person, in an afternoon, for defensible reasons, and they have largely forgotten. No confession scene, because nothing would be refused.
-4. **Finding it changes nothing procedurally.** The finding is correct and complete and generates a record; the record routes; the record is marked pending (Module 5 §6). **This is the gate that makes the procedural unwritable**, and everything interesting lives after it.
+4. **Finding it changes nothing procedurally.** Three outcomes, all available: the record is **held** (marked pending, Module 5 §6); the record is **absorbed** (entered, correct, and the arrangement adjusts around it); or the record **disperses** — cited in something that is cited in something that fails, leaving language in circulation and nothing else (Module 11 §4). **This is the gate that makes the procedural unwritable**, and everything interesting lives after it.
 5. **The finder is implicated.** Long observation is long contact (Module 9 §9b). The inquiry turns up the inquirer's own trace.
 6. **Asking costs someone.** Inquiry is a status assignment, and status assignment is the setting's central political act (Module 8 §3).
 7. **No solution scene.** Nobody assembles the account aloud. The reader assembles; the characters carry pieces.
@@ -1921,6 +2387,20 @@ So run §3. He inquires, as a second job, visibly, at cost. **He finds out** —
 *Closed:* the recurring image, the second use of the record-as-harm, the third hand-on-object ending.
 
 *Open:* the budget forces the search. Harm has four routes and only one is worked — a body, a person, the physics, a room. Endings can land in speech, an absence, a document, another body, a sound, or mid-motion. Load can travel through smell, sound, taste, proprioception. **What the budget buys is the story you would not have written**, and it is the only rule in this document that improves the writer rather than the writing.
+
+## 13. Nothing global can be settled, so a local ruling is the largest act available
+
+*Closed:* the answered question, the verdict on how to live, the study that comes back, the authority that adjudicates.
+
+*Open:* a person establishes one small true thing, at their own cost, in front of people, and it holds — and it changes no arrangement whatsoever. **The ceiling on consequence is what makes the act legible.** Because nothing can be settled generally, settling one particular is enormous, and the reader feels the size of it in a way no reform ending would permit.
+
+*Distinct from #6, and they blur if you let them.* #6 is **arrangement**: people rearranging themselves so the same weight costs less, and nothing becomes true. #13 is **establishment**: one thing becomes true and stays true, and nothing gets lighter. A story can do both. Most should do one.
+
+## 14. Everyone is right from where they stand, so the same room is a tragedy or a farce
+
+*Closed:* the villain, the fool, the character who is simply mistaken, anyone whose position cannot be defended in full.
+
+*Open:* a room in which six people reason correctly from incompatible premises is the engine of both registers, and the variable is whether the cost enters a ledger. Every instrument here accumulates with no operation for subtraction, which makes the default ledger tragic — so comedy is denominated in the one non-monotonic currency available: **standing in the moment, as against standing on the record.** Spend it freely and recover it by the last page. **Nothing entered, everything visible, and the identical scene is comedy** — the clause still read correctly, the queue still never refusing, the blindness still supplied by position, and everyone walks out. The rigor is the joke: the pleasure is watching the machinery run correctly to an absurd place, which is unavailable to any world whose institutions are merely stupid.
 
 ---
 

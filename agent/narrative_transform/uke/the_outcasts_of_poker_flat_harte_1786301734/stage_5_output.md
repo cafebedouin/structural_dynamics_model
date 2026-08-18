@@ -1,0 +1,69 @@
+# DISCOVERY REPORT
+
+## EMERGENT ELEMENTS
+
+The three constraint axes name the same phenomenon the prose already lives inside: **measurement produces knowledge but not power over outcomes**. The engine calls this "measurement_authority_decoupling," "arbitrary_selection_under_competence_signaling," and "unaudited_reserve_asymmetry." The story's actual mechanism is simpler and more exact than any of these labels: the true-weight scale is perfectly, provably accurate, and utterly inert. It has no causal path to the decisions made in its name.
+
+**How the gap manifests in prose:** The narrator occupies exactly the seat the engine calls "powerless/moderate" — close enough to the instrument to know its perfection, far enough from the room where decisions are ratified to know she has no leverage. "It has never once decided anything. It only ever tells you what a thing weighs. Somebody else decides, afterward, in a room with no scale in it at all, what that weight is worth keeping." This sentence *is* the perspectival gap collapsed into a single observation — the narrator doesn't need the engine's H^1 band to know it; she has already lived the divergence and named it plainly. That's unusual and strong: the story doesn't dramatize confusion about the gap, it dramatizes clear-eyed knowledge of it with no remedy available.
+
+**Institutional seat carrier:** Voss and the captain. The story is scrupulous about *not* letting us inside them — Voss's face at the culling is described only externally ("the same face he reads the true-weight with every dawn"), which is exactly right: it refuses the reader the institutional interiority that would resolve the gap into either villainy or tragedy. This is the story declining to smooth over H^1>0 by picking a side.
+
+**Where the axis is most alive:** the culling scene. Duvray is measurably sound — hands, punctuality, evenness of work, all instruments the narrator has — and is selected anyway, with the same flat voice used for a water-weight reading. This is "arbitrary_selection_under_competence_signaling" enacted almost diagrammatically, but earned dramatically because Duvray has been built up beforehand as a specific, steady, minor presence (the water-skin hauling), not an abstraction.
+
+**Where present but underdeveloped:** the reserve-cask asymmetry (Thess's keys, the lock a quarter-turn off true, the ledger not matching the cask level). This thread is introduced with real texture — the quarter-turn detail is excellent, physical, specific — but resolves into nothing. The narrator notices and "does nothing further," which is thematically honest but leaves the *unaudited_reserve_asymmetry* axis inert as plot: it never returns, never intersects with Duvray's culling, never gets weighed (literally) against anything. It's the least dramatized of the three constraint threads relative to its narrative real estate.
+
+**Farro** carries a second, quieter register of the same gap: she counts against a total she can't fully see ("counting the hold against the ration, the manifest against what actually reaches her hand"), and she has already paid for speaking once. Her arc (extra fish under the biscuit, helping provision the boat) is the story's answer to "what remains possible inside the constraint" — small, illegal, deniable generosity — done without commentary, which is the story's best instinct.
+
+## LATENT POTENTIAL
+
+**Frankl question — what meaning is available in the constraint that the story hasn't yet found:** The narrator's answer is the over-poured water skin: an unmeasured, unaudited act of care performed *using the very apparatus of measurement she knows to be powerless*. This is close to the story's real thesis but is delivered as a single gesture near the end rather than built as a throughline. The story could go further: what if the narrator's entire post — reading the true-weight — becomes the site where she starts *quietly recalibrating*, not the scale's accuracy, but where the excess goes? The ending gestures at this ("the little more nobody would ever total") but doesn't let it cost her anything or become a practice. Right now it's a single defiance, not a discipline. There's real latent potential in exploring whether she does this again, whether it's sustainable, whether Voss's flat competence has ever included a version of the same small mercy nobody accounts for.
+
+**Sarah Predecessor (the quartermaster's mate who "went to the sack"):** Farro's one line about her — "She had *sûreté* till the shoal. Then she didn't." — implies a previous full cycle of exactly what happens to Duvray, but it's mentioned and dropped. This is a compressed echo that the story trusts the reader to feel without elaboration, which mostly works, but it also means the narrator's current position (installed *into that dead woman's job*) is under-inhabited. She stands at the scale that another culled woman used to stand at. That's a haunting fact the prose touches once and moves past.
+
+**The Wasserstein/orbit data (engine-side) point at something the prose has already intuited without needing the machinery**: that "institutional" and "analytical/powerless" seats produce genuinely different *types*, not different opinions about the same type — rope vs. snare, not more-rope vs. less-rope. The story's cleanest formal move is refusing to let the narrator ever occupy the institutional seat even briefly (she never gets a scene inside Voss's or the captain's reasoning) — this is correct and should probably be protected rather than "fixed."
+
+**World implications not exploited:** the House that cut the mid-route cistern and stretched forty days' stores over sixty is a shadow economic actor mentioned once, in a subordinate clause, and never returns. It is the actual origin point of the scarcity that makes everything else possible — the ship's internal cruelty is downstream of an offstage commercial decision. This is a huge structural fact treated as incidental texture. It's good discipline (not moralizing outward) but also unclaimed potential: the story is "about" a closed system when actually a name for the system's author (the House) is sitting right there in the text.
+
+## STRONGEST WRITING
+
+- The opening paragraph's tactile precision: "the brass holds the night's chill long after the deck timbers have started to breathe with the first heat" — this is the story's best sentence-level work, doing double duty as physical detail and as the emotional logic of the whole piece (cold truth persisting into a warming, indifferent world).
+
+- "I have decided I prefer it. It is the only ache on this ship that means exactly what it says." — the thematic key delivered as a throwaway personal preference, not an announcement. Exactly the right register.
+
+- Farro's dipper-counting passage: "her lips move, small, almost nothing, over the dipper before she drinks, like she's saying a private grace, except I've watched her mouth long enough now to know it isn't a grace. It's numbers." This is the single best piece of characterization in the story — an entire epistemic position rendered through a physical tic, correcting itself mid-sentence from the narrator's first (wrong) guess to the truer one.
+
+- The culling scene's restraint: "He said Duvray's name like he was reading the weight of the water. Same voice. Same flat competence." — the whole engine-flagged perspectival gap in eleven words.
+
+- "Nobody flinched saying it... Not one person on that deck, myself included, made a sound that wasn't already part of the ordinary noise of a ship going about its ordinary morning." The self-implication ("myself included") is what keeps this passage from being merely accusatory — it's the story's ethical center of gravity.
+
+- The closing movement — hand flat on the empty scale, "It has never once lied to me. It was not lying now... It had also never once, in all the mornings I have stood here, told anybody a single thing about whether they'd be kept." This is the thesis restated in its purest form, earned by everything preceding it, and it resists false comfort or false despair in the same breath.
+
+## ANCHOR CHECK
+
+The "twenty-two pounds, four ounces" reading, the "forty days' stores... stretched... over sixty," and "three days' water... and the little more nobody would ever total" are numeric but are not escalation-countdown devices — they don't descend toward zero or tally toward an inevitability the plot is organized around. They function as *evidence of precision's impotence* (the whole point is that the number is exact and irrelevant), which is different from the anchor pattern. No countdown, no descending score, no "the math is simple" framing appears in the text.
+
+**None found** — scanned the water-weight readings, the forty/sixty-day store figures, the three-days'-water allotment, and the "finger's width over the ration mark" — all function as instruments of the theme (precision without power) rather than as pipeline-style inevitability arithmetic.
+
+## INVARIANT PROBE
+
+This is the important finding. **Everything of value in this world is, in principle, readable by a better instrument or a fairer authority — and the story knows it, and says so directly, twice.** "It has never once decided anything. It only ever tells you what a thing weighs." The scale is not hiding a truth measurement can't reach; it is delivering the truth perfectly and the truth simply doesn't govern outcomes. There is no invariant here in the sense of an unrecoverable real — Duvray's soundness is fully legible (steadiness of hands, punctuality, evenness of work — all named, all confirmed by the narrator's own testimony). The gap is not epistemic, it's *executive*: someone with the same information the narrator has simply chooses not to act on it, and nothing in the world prevents that choice from being cost-free to the chooser.
+
+This matters for the strategy pass: the story should not be pushed toward inventing an unmeasurable soul-quality or hidden virtue in Duvray that the scale "misses" — that would falsify what's actually strong here. The honest, harder truth the story has already found is worse than an invariant: the information was never the bottleneck. Authority was. If there's a real "invariant" candidate at all, it's something much smaller and more human — the *specific, uncounted* extra water in the skin, and Farro's fish under the biscuit — acts of care that exist nowhere in any manifest, ledger, or true-weight reading, and are real precisely *because* no instrument on the ship, however fair, is designed to register them. That's the one place the story locates something structurally unrecoverable: not a hidden fact, but a form of care that only exists by refusing to be counted. It's thin and mostly implicit — worth naming for the strategy pass as the seed of a genuine invariant, not yet a load-bearing one.
+
+## SCOPE ASSESSMENT
+
+Current word count: **2,303** (computed). This reads as a tight short story, essentially complete at its current scale — closer to overlong-flash than undercooked-novella. The piece has a clear five-beat structure (establish scale/post → establish Farro/ration counting → establish reserve asymmetry → culling → aftermath/repetition) and each beat is proportionate.
+
+What expansion would require: either (a) developing the reserve-cask thread into an actual second plot line with consequence (currently a loose thread), or (b) giving the narrator's predecessor ("she went to the sack") enough weight to function as a structural rhyme with Duvray's ending, which would mean adding a scene or two of the narrator inhabiting that inheritance more consciously. Either expansion risks diluting the story's controlled flatness of affect, which is doing real work.
+
+What compression would sacrifice: the ration-mark/Farro material and the reserve-cask material are the two candidates for cutting if the piece needed to tighten further around the culling and its aftermath. Cutting either would lose one of the two "witnesses" to the extraction structure (Farro sees the ration gap; the narrator sees the reserve gap) — losing both would flatten the perspectival texture the engine's reports identify as the story's real strength.
+
+---
+
+### Omega Log
+
+- Ω_E: Does the reserve-cask thread (Thess's keys, the quarter-turn lock, the ledger mismatch) resolve anywhere in a version of this text I haven't seen, or is it confirmed dead-end within these 2,303 words? Confirmed dead-end on re-read — worth flagging for strategy as underused rather than assuming intentional restraint.
+- Ω_C: Is the "over-poured water skin" gesture meant to read as a one-time act of defiance or the seed of an ongoing private practice? The text is ambiguous by design ("I don't know if it will matter to him at all") — a creative decision for the strategy pass, not an error to fix.
+- Ω_C: Should Voss ever be given a single moment of interior access, or does the story's power depend entirely on withholding that? I read the withholding as load-bearing; flagging as a judgment call rather than settled fact.
+- Ω_P: The predecessor mate ("she went to the sack... good with a needle, sound as a bell") is mentioned once and never returned to. Whether this is a missed opportunity or correct restraint is a preference call — I lean toward "latent potential" but a reasonable author could leave it exactly as is.
+- Ω_P: Whether the House's offstage decision (cutting the mid-route cistern) should remain a single subordinate-clause mention or be given more presence is a scope/tone judgment, not a correctness issue — noting it as available territory, not a flaw.

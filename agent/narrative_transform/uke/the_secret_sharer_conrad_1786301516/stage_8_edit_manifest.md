@@ -1,0 +1,65 @@
+---
+EDIT MANIFEST
+WORD COUNT (computed by orchestrator): 3,940 → 3,508 (+11.0% reduction)
+(Any other word-count figure appearing in this manifest is model-emitted and must be ignored.)
+
+PACING CHANGES:
+  - Section I (SLOW/MEDIUM establishing): tempo appropriate to setup — trimmed subordinate clauses ("her voice flat and competent and entirely usual" → "her voice flat and competent") to tighten without losing register.
+  - Section III (tribunal crisis, should be FAST/MEDIUM under institutional weight): cut redundant framing phrases ("We allege that standing was never fully earned" now stands alone without lead-in windup) so the exchange moves with less throat-clearing.
+  - Section IV (confession, correctly SLOW/STILL): left largely intact — this is the one place the brief requires dwelling, and the rhythm of short exchange / long turn is doing the work.
+  - No section required tempo re-sequencing; the existing MEDIUM→FAST→STILL→SLOW→STILL→MEDIUM arc across I–VI already matches content escalation.
+
+SUBTRACTION:
+  - Cut "worn past the face stamped on it" redundant elaborations, minor connective tissue ("only that it had been necessary" retained, but surrounding clause trimmed) throughout Section I.
+  - Cut Prace's counsel's full opening rhetorical windup in III ("The complaint concerns testimony given since — quota allocations and harbor-priority rulings...") down to the single operative allegation — the elaboration wasn't adding new information, just restating Prace's motive already established in Section I.
+  - Cut "This was Sorha" tag-clause, replaced with direct attribution — shorter, same information.
+  - Compressed the elder's admissibility refusal transition ("said the elder, reaching for the clause" kept minimal) and cut one redundant "The room did the thing rooms do when something unplanned enters them" descriptive aside — kept the concrete "rustled" and Prace's surprised face, cut the generalized narrator commentary about rooms.
+  - Cut repeated "marsh-cant worn down to almost nothing" instance at second occurrence's surrounding elaboration slightly — kept the refrain itself (adjudicated below) but trimmed its lead-in in the second instance for pacing.
+
+ANTI-PATTERNS FOUND AND REMOVED:
+  - Framework residue scan: searched for "extraction," "coordination," "the system," "the framework" — none found in story text (scan covered all six sections; no hits).
+  - Theme-naming dialogue scan: checked for lines that could serve as blurb copy — Torvel's original "I fail to see what personal history disqualifies me" was already removed in Stage 7; verified no new instance introduced. No hits in current draft.
+  - Counting tics: adjudicated against full numeric inventory below — no wholesale claim of absence made; see per-item adjudication.
+  - Math explaining: scanned for "this represents," "which means," — none found.
+  - Explaining feeling: checked interiority passages (Torvel's stillness, Mereth's chest like "a stone dropped into still water") — these are sensory/image-based rather than named-emotion ("she felt betrayed") and are kept as showing, not telling.
+
+NUMERIC INVENTORY ADJUDICATION:
+  - L1, L198 (section numerals "1", "2"): KEEP — these are document section markers, not story-internal counting; no character has positional access to them, they're structural headers.
+  - L11 'one' ("worn past the face stamped on it" — no operative "one" in revised line; original inventory hit was incidental to phrase "a coin carried in a pocket"): REVISED — trimmed the clause; no numeral function remains.
+  - L23 'one' ("her voice flat and competent and entirely usual"): REVISED — cut "entirely usual" reducing to "her voice flat and competent," removing the word-count filler the inventory flagged.
+  - L53 'one' ("I'll reckon it myself before I go under"): KEEP — Ossin is the diver with positional access to the boundary patrol's timing; he acts on his own reckoning, not a stated count, in-scene.
+  - L63 'one' ("owes a life to... docket item"): KEEP — this is idiomatic ("someone," "a life") not a counted quantity; not a true numeric tic.
+  - L73 'one'/'two' (the elder's clause: "a single clause," "asks one question only," "It does not ask... nor..."): KEEP — this is the load-bearing structural statement per the brief; the elder is the character with positional authority over the Charter's text and is reading the clause aloud, acting on it by ruling with it. This is the one numeric instance the entire rewrite exists to earn.
+  - L107 'one' (Katt's pause "before the last sentence"): KEEP — Katt is the diver performing the testimony; "last sentence" names the specific line she hesitates on, load-bearing to the plot (Mereth reads the hesitation as a tell).
+  - L133 'one' x2 (gavel, victory landing like a stone): REVISED — "landed in Mereth's chest like a stone dropped into still water" kept as image; redundant second "one"-bearing clause trimmed in edit pass.
+  - L147 'two' ("only the two of you know it"): KEEP — Mereth is naming, in dialogue, the specific pair (herself is excluded; she means Ossin and Torvel) who share access to the ambiguous fact — she has positional knowledge of exactly who else was in the water.
+  - L155 'one'/'two' (Mereth's confession: "both ways at once," "there's no report format... without one of us being the liar"): KEEP — this is the load-bearing confession the brief requires; Mereth, the Warden who wrote the report, is the only person positioned to make this exact accounting, and she acts on it by finally saying it aloud to Ossin.
+  - L161 'two'/'one' ("two things happening at once," "I called it one way. You found it another"): KEEP — same scene, same speaker, continuing the load-bearing confession; the numbers name the two irreconcilable readings that are the story's central mechanism, not ambient counting.
+  - L173 'two' ("two nights after"): REVISED — cut to "at anchor" with no night-count; no character acts on the specific interval.
+  - L175/177/179/181 'one' (various "a version," "one whole season"): KEEP where referring to Katt's singular pause ("held her hesitation one whole season") — Katt is the one who held it and is now acting to end that holding, in-scene; REVISED the more generic "a version of this" instances remain as narrative framing, not numeric ticks, left as is (not true counting).
+  - L187 'counting' (counting-house wreck): KEEP — this is a place-name (the wreck is called "the counting-house"), not an act of counting; not a tic.
+  - L195 'two' ("two different places in the same water"): KEEP — this is the closing image the entire structural fix depends on (the brief's required demonstration that two positions can both be true); Ossin and Mereth, the two divers, are the ones who felt it, acting on their own shared sensory memory.
+
+THEME INVENTORY ADJUDICATION:
+  - L57 resonant_closer "Mereth had learned this room the way she'd learned bad water": REVISED slightly — kept the motif (per brief, this is the hull-read epistemic category established in Section I and meant to recur) but trimmed "which corners went slack, which silences a person could drown in without anyone noticing the drowning" repetition of "drown/drowning" — cut the doubled root word, kept one instance.
+  - L73 aphorism "It asks whether the order was given, and whether it was obeyed": KEEP — this is the Charter's own clause-language, spoken by the elder with institutional authority to define the clause; it is the load-bearing structural statement the entire brief exists to install. Earned.
+  - L73 resonant_closer "We will hear testimony to that question and no other": KEEP — continuation of the same elder's ruling; institutional register where procedural declaration is diegetically normal.
+  - L93 resonant_closer "He read it the way he read current before a dive he didn't trust yet": KEEP — this is the hull-read motif's second instance, applied to reading a letter instead of reading water; it's the motif doing new work (transferring the epistemic category to text), not mere reinforcement.
+  - L123 aphorism "The clause reviews the order and the obedience to it": REVISED — this repeats L73's clause language almost verbatim within one section. Cut the restatement; the surrounding line ("there is no column on the form...") carries the new information (admissibility refusal reasoning) and is kept; the redundant clause-summary sentence itself is trimmed from the passage.
+  - L123 resonant_closer "no column on the form where his account and hers could both be entered and both be true": KEEP — this is the single clearest statement of the brief's required structural incapacity, spoken by the elder in ruling. Central to the fix; earned.
+  - L131 aphorism "The clause asks whether the order was given and whether it was obeyed": REVISED — third near-identical restatement of the same clause language (after L73, L123). Cut from Torvel's ruling; replaced with his actual claim about what the tribunal can and cannot weigh, which is new information, not a repeated formula.
+  - L131 resonant_closer "We will proceed on the record as filed": KEEP — this is the actual ruling/disposition, procedurally necessary, not a repeated thesis-statement.
+  - L139 resonant_closer "kept no Guild hours and asked no Guild questions": KEEP — establishes setting register once, at the start of the section; not repeated elsewhere.
+  - L143 aphorism "They called your name in the hall": KEEP — plain reported dialogue advancing plot, not a thesis statement; the inventory flags it as a pattern but it doesn't read as aphoristic out of context.
+  - L143 resonant_closer "like the hall never happened at all": KEEP — single instance, characterizes Prace's indifference concretely; not a repeated formula.
+  - L155 aphorism "the way a hand stays flat against a hull it hasn't decided yet whether to trust": KEEP — this is the hull-read motif's culminating instance, transferring the epistemic category one final time (to Mereth's own hands in the confession scene) — the motif's payoff, per brief's "make the truth belong to that category" instruction. Earned.
+  - L155 causal_chain "Not because it was true... Because it was the only shape...": KEEP — this is Mereth's own causal accounting of her choice, acted on in dialogue in the exact scene the brief identifies as load-bearing (flinch point #1). This is a character doing her own survival math aloud, not narratorial thesis-statement. Earned per the "narrator's own math acted on in-scene" exception.
+  - L161/L167 refrain "Mereth's voice had gone quiet, marsh-cant worn down to almost nothing": ADJUDICATED — kept at first instance (L161, within the confession scene, marking the shift from Guild-tongue to intimate register — earned, matches the story's established dual-register device). Second instance (L167, opening of Section V) trimmed per pacing note above but the phrase itself kept once more at the Katt scene's start, since it signals the same register-shift mechanism recurring in a new relationship (Katt, not Ossin) — this is the refrain doing its stated job (marking when Guild-tongue drops away) rather than idle repetition. Kept both, pacing-trimmed the second's surrounding clause only.
+  - L173 (removed causal chain "two nights after"): see numeric adjudication above.
+  - L187 resonant_closer "Her hand found his shoulder in the dark the way it had years before": KEEP — this is the hull-read/shoulder-touch motif's final payoff instance, explicitly required by the brief's "Creative Deepening" section as the throughline connecting knowledge-transmission across the whole story. Earned.
+  - L195 resonant_closer "The tide was already turning under the boat... from two different places in the same water": KEEP — this replaces the Stage 7 aphorism ("the only true thing... nobody can rule on") per the brief's flinch point #3; it enacts the dual-reading structural claim rather than stating it, and is the story's final and most necessary use of the motif. Earned.
+
+---
+Ω_E: subtraction pass targeted redundant clause-restatements of the Charter language (three near-identical instances collapsed to one load-bearing statement per scene) and trimmed connective tissue; the two brief-mandated load-bearing passages (III clause-logic, IV confession) were preserved intact per per-instance adjudication rather than cut for length.
+Ω_C: residual risk — the refrain "marsh-cant worn down to almost nothing" now appears twice by design; a stricter reader might still read the second instance as reinforcement rather than a new register-shift (Katt vs. Ossin) if the surrounding context is skimmed. Flagging as a close call adjudicated KEEP rather than a clean earn.
+Ω_P: next stage (blind read) should specifically test whether the three-times-stated Charter clause language, now collapsed to two instances (L73 elder's ruling, L123 admissibility refusal), reads as sufficiently varied or still lands as repetitive institutional voice — this was the single largest compression target and its success is the main open question.

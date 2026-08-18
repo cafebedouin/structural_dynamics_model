@@ -1,0 +1,922 @@
+POLARIS IT SOLUTIONS
+Product & System Map
+Version 2.23  ·  June 2026
+
+Mission
+Polaris is a standards body. The specifications are the product. The certification model is the revenue path. Build the standard openly, prove it in the field, teach it.
+Architecture Doctrine
+Linux is not a compromise. Every sovereign machine with a defined sovereign function runs Ubuntu LTS ? not as a concession, but as the correct choice for the job. Ubuntu 26.04 LTS (Resolute Raccoon) is the current baseline across all Polaris OS configurations.
+The Sovereign Gradient ? Collaboration Scale (v2.20)
+How many components a concern resolves into is not a global constant; it is set by collaboration scale ? personal ? small firm ? large firm. This gradient is the corpus?s hidden parameter, named here as doctrine because it silently governs the structure already built. At personal scale (Preparedness), nothing precipitates: the discipline depends on nothing but Power (at Keystone-1, Power collapses to a good UPS), needs no central identity provider because there is no collective to authenticate, and carries its own data on the Backup Brain ? a one-legged stool with Power as the floor. Cross into multi-person collaboration and Identity and Data become load-bearing, because they must now be shared, access-controlled, and audited across people; that crossing is the moment a concern earns its own spec. Identity is not a pillar that was always present and finally noticed ? it precipitates out when the firm crosses from personal to collective (the UniFi case shows the same from the other side: identity is explicit on the wire there because UniFi solves a multi-user access problem). Power is the one scale-invariant ? under everything at every scale, which is why the continuity / runway basis keeps wanting to promote it to the diagonal. The gradient governs when Keystone is finally allowed to fork: not at -1 or -2, where its concerns share fate; watch at large-firm / Keystone-MAX scale, where custody-of-identity and custody-of-data may develop different operational signatures.
+Two Boundaries ? Privacy and Privilege (v2.20)
+There is not one boundary in the corpus but two, and they buy different things. The wire ? the Maxwell demarc ? buys privacy: cross inside it and metadata stops leaking, intrafirm collaboration becomes possible, control becomes local. The trust root ? Keystone ? buys privilege: a stricter classification that lives only on the root, gated by the sovereign session and walled off from the merely-private store by the NER tripwire. The two are different cuts. Sovereignty is therefore a property a thing has by what it is ? its classification ? not by where it sits: the wire is necessary for privacy but never sufficient for privilege. Nextcloud proves this from the inside (fully inside the wire, fully private, still not privileged sovereign data); the social server proves it from the outside (outside the wire, never sovereign). The classes nest ? public ? private ? privileged ? each inner ring more protected and more fused to the root. What Polaris keeps sovereign is the privileged tier and the methods: classification, not location.
+Data as a Classification Axis ? Fusion to the Root (v2.20)
+?Data? is not a single component and was never a single leg to fork; it is a classification axis whose tiers precipitate to different homes. Live custody distributes by classification; backup lineage centralizes at the root. Fusion-to-the-trust-root is monotonic in classification: privileged data is maximally fused ? live store, backup lineage, and identity all on Keystone, and it fails closed with the root (when Keystone is down, access to privileged matter is supposed to be gone ? correct behavior, not a weakness); private data is backup-fused only ? its live store sits off-root on the Sovereign Cloud Server and is required to degrade gracefully through an outage; non-sovereign data is unfused ? it may live in the cloud, governed only by the CLD-DNS exit-hinge. The privileged and private tiers thus carry opposite availability requirements, and that divergent contingency signature is exactly what licensed the Nextcloud split ? the shared-fate test (see the multi-basis refinement under Cross-Reference Doctrine) predicts the split already made. This monotonic binding of recovery to the root is the operational form of the sovereign gradient. Resolved, not to be reopened before large-firm scale: Identity does not fork from Keystone ? it shares fate with the privileged tier (same trust tier, custody model, recovery root, backup lineage, power tier, enclave). The backup routine is the committed, expensive thing; identity is cheap to carry on top of it, and the routine is never run twice. Lightening Keystone by forking auth would move the trivial leg and leave the heavy one in place.
+The OS Configuration Stack (v2.17)
+OS Config
+Doc Class
+Target Hardware
+Status
+Polaris Preparedness Desktop
+OS-PREP-DESKTOP-001
+Radar (Edge T1), Backup Brain
+Spec Complete
+Polaris Preparedness Live OS
+OS-PREP-LIVE-001
+Bugout Boot Drive ? any x86 UEFI hardware
+Spec Complete
+
+Polaris Sovereign Desktop
+OS-SOVEREIGN-DESKTOP-001
+Strongarm (Edge T2), Perceval (Edge MAX)
+Spec Complete
+Polaris Sovereign Server
+OS-SOVEREIGN-SERVER-001
+Keystone-1/2/MAX, SAIA-1/2/MAX
+Spec Complete
+Polaris Sovereign AI
+OS-SOVEREIGN-AI-001
+Strongarm, Perceval, SAIA (all tiers)
+Spec Complete
+??  OS-PREP-LIVE-001 is now a standalone spec ? not a section of OS-PREP-DESKTOP-001. It references the desktop spec as upstream baseline but is independently distributable. Deployment model: public quarterly image releases, roll-your-own builds supported via open-source Image Factory tooling.
+Spec Status Summary ? v2.23
+Spec
+Version
+Status
+Next Action
+NET-MAXWELL-001
+v1.7
+Spec Complete
+Complete
+PWR-PRONTO-001
+v1.5
+Spec Complete
+Hardware validation pending (FP5139 vs LTC3780 bench test; cold-weather threshold; GaN compatibility matrix)
+OS-PREP-DESKTOP-001
+v1.0
+Spec Complete
+Complete
+PPC-NOMAD-001
+v1.0
+Spec Complete
+Cert PPC-NOMAD-CERT-01 (Modules A?D) authored at v2.12. Remaining: field/bench validation; OTG-by-SKU qualification; debloat package list finalization.
+OS-SOVEREIGN-SERVER-001
+v1.0
+Spec Complete
+Engineering review + spoke-tightening
+NET-KEYSTONE-001
+v1.2
+Spec Complete
+v1.2 ? key broker realized (v1.1, §9.7?§9.8, Module H); Keystone-MAX tier folded in (v1.2, §11.1). Engineering review + spoke-tightening; remaining work is reference-implementation only (keystone-keybroker, keystone-wireguard) ? §13.
+NET-SAIA-001
+v1.0
+Spec Complete
+Engineering review + spoke-tightening
+OS-SOVEREIGN-AI-001
+v1.0
+Spec Complete
+Engineering review + spoke-tightening
+MFP-SOVEREIGN-001
+v1.0
+Spec Complete
+Engineering review + spoke-tightening
+OS-PREP-LIVE-001
+v1.0
+Spec Complete
+Complete ? v1.1 issued (MeshCore subsystem added; discipline corrected). Hardware spec in PPC-COLDBOOT-001 v1.0.
+GIC-MESHCORE-001 (Romeo + Juliet)
+v1.0
+Spec Complete
+Complete. Cert: GIC-MESHCORE-CERT-01.
+GIC-MESHTASTIC-001 (Scout + Base Camp)
+v1.0
+Spec Complete
+Complete. Cert: GIC-MESHTASTIC-CERT-01.
+PPC-COLDBOOT-001 (Bugout Boot Drive + Backup Brain)
+v1.0
+Spec Complete
+Complete. Cert: PPC-COLDBOOT-CERT-01.
+NET-STRONGARM-001
+v1.1
+Spec Complete
+Hardware cert executable against OS-SOVEREIGN-DESKTOP-001 v1.1.
+NET-PERCEVAL-001
+v1.1
+Spec Complete
+Hardware cert executable against OS-SOVEREIGN-DESKTOP-001 v1.1.
+NET-SOHONET-001 (Network Tier 1 ? SOHO)
+v1.0
+Draft
+Engineering review; bench NET-SOHONET-CERT-01 on reference hardware.
+NET-UNIFI-001 (Network Tier 2 ? UniFi)
+v1.0
+Draft
+Engineering review; keystone-unifi.yml + keystone-radius.yml authoring. Module C full cert unblocked (v2.21 ? NET-KEYSTONE-001 v1.1 key broker realized).
+OS-DAILYDRIVER-001 (Daily Driver + Daily Carry)
+v1.0
+Draft
+NET-KEYSTONE-001 v1.1 key broker realized (v2.21) ? Modules B/C unblocked. Remaining: Windows secure key delivery bench validation (Critical); polaris-endpoint-agent; DD MDM payload library.
+PWR-INTEGRAL-001 (Hammerhead + Smooth Operator)
+v2.0
+Spec Complete
+HDPLEX bench validation pending (Critical ? both tiers); polaris-power-agent pending
+PWR-SOLAR-001 (Tier 1 solar generators, Classes A/B/C)
+v1.1
+Spec Complete
+Bench validation pending (72-hr dark/auto-off, Pronto PD handshake, Keystone-1 ATX ride-through, MeanWell feed); local code verification for Fixed-Fed Permanent path
+PWR-PRONTISSIMO-001 (macro DC reservoir ? Smooth Operator machines)
+v1.1
+Draft
+Setpoint cascade reconciliation with PWR-INTEGRAL-001 (Critical); cascade bench (Module B); DCW20 deep-verify; Bus Alpha PD source selection
+OS-SOVEREIGN-DESKTOP-001
+v1.1
+Spec Complete
+Complete ? registered v2.8. v1.2 cloud-cohabitation amendment scoped (see OS-DAILYDRIVER-001 §10)
+NET-RADAR-001 (Radar hardware spec)
+v1.0
+Spec Complete
+Complete ? reference platform ASUS NUC 15 Pro (Tall); formal hardware floor defined. Cert: NET-RADAR-CERT-01.
+Keystone-MAX architecture (folded ? NET-KEYSTONE-001 v1.2 §11.1)
+v1.2
+Folded
+Folded into NET-KEYSTONE-001 v1.2 §11.1 (v2.23). The shared-fate test resolved the gradient?s ?watch at MAX? to no fork ? MAX is Keystone. Maxwell is the MAX gateway; the §9 fleet-monitoring deferral resolves against MON §4.1.
+CLD-CIRCUIT-001 (Cloud Tier ? Internet & Bandwidth)
+v1.0-RC1
+Release Candidate
+Engineering review: pin numeric thresholds (A-02/A-03 latency-jitter-loss bounds, minimum sovereign-egress upstream, capacity-pause headroom, per-leg MTU octets); build BGP diversity-audit tooling; then promote to Spec Complete. Cert: CLD-CIRCUIT-CERT-01.
+CLD-PLATFORM-001 (Cloud Tier ? Comprehensive Platform)
+v1.0
+Draft
+Engineering review: pin per-platform Module B posture baselines, exit-fidelity benchmark by data class, federation-seam enforcement proof; then promote. Cert: CLD-PLATFORM-CERT-01.
+CLD-DNS-001 (Cloud Tier ? Domain & DNS · Beginning)
+v1.0
+Draft
+Rev. 2 (review-hardened): tiering trigger, change-integrity (§3.5), DS/KSK rollover, subdomain-delegation now pinned in-spec. Engineering review pins the remaining numeric thresholds (DMARC dwell, DNS-resilience magnitudes, DS/KSK cadence) + domain-inventory template; then promote. Cert: CLD-DNS-CERT-01.
+CLD-SAAS-001 (Cloud Tier ? Application SaaS)
+v1.0
+Draft
+v1.0 (Draft, rev. 2 ? review-hardened). Application-SaaS exposure mapping; receives the CLD-PLATFORM-001 Module D seam; enrolls senders into the CLD-DNS-001 SPF/DKIM regime. Five exposure axes (sees / retains / shares / where-it-lives / can-you-exit); discovery-first inventory; least-exposure containment; one-way SSO seam. Engineering review: exposure-map template, shadow-SaaS discovery tooling, privileged/regulated rubric; then promote. Cert: CLD-SAAS-CERT-01.
+CLD-DEVICE-001 (Cloud Tier ? Device Management / MDM)
+v1.0
+Draft
+v1.0 Draft registered (v2.17) ? the Middle?s last sibling. Enforce-and-attest; consumes OS-DAILYDRIVER-001 Module A as the fleet-enforceable payload baseline (homes the DD MDM payload library here, Module B); owns the iCloud-of-sovereign-data exclusion (CLD-PLATFORM-001 §2.3, B-05) and the shadow-SaaS discovery-telemetry marker set fed to CLD-SAAS-001 (Module D). Two cloud IdPs ? Entra / Google; Apple a managed endpoint, never a directory. One-way federation seam and the enclave boundary (plane enforces, Keystone holds custody) tested by negative (B-06 / C-04). Every cert line sovereign-protecting; cloud-side hygiene noted, not certified. Engineering review: per-OS payload library, discovery-marker set, containment rubric; then promote. Cert: CLD-DEVICE-CERT-01.
+CLD-HYBRID-001 (Cloud Tier ? Hybrid Architecture · End)
+v1.0
+Draft
+v1.0 Draft registered (v2.18) ? the End, the integrative capstone. Sovereignty as conscious containment, not autarky. Derivative: writes no new mechanism; proves the Beginning + Middle boundaries lock together under load. HYB-CERT-01 four quadrants ? Perimeter & Transport Lock, Identity Demarcation, Shard-Control & Data-Transit, and Fail-Closed Under Load (the only non-derivative surface). Key-release authority corrected to Keystone (live sovereign session AND attested posture; MDM an input, never sufficient ? B-03 negative leg). Module E gates Mission-Go on input maturity ? amber until inputs reach Spec Complete; principal amber NET-KEYSTONE-001 v1.1 cleared (v2.21 ? now Spec Complete); Module E now gated on OS-DAILYDRIVER-001 reaching Spec Complete. Cert: CLD-HYBRID-CERT-01.
+MON-SOVEREIGN-001 (Sovereign Monitoring & Telemetry)
+v1.0
+Draft
+v1.0 Draft authored (v2.21). The records-vs-senders telemetry contract: event envelope (§3.1), category registry (§3.2, consolidating the Keystone §10.1 categories + the v1.1 key-broker categories + AI-observability + cloud-seam), cross-correlation (§3.3), the fleet-monitor + ingestion-coordinator roles (§4), the AI-observability axis (§5), atomic audit/vector serialization across power faults (§5.1), and the recorded-never-crossed cloud-telemetry seam (§6). Inherited by Keystone et al. exactly as the OS baseline is. Cert MON-SOVEREIGN-CERT-01 (A?E). Engineering review: ratify the framework pin (recommended: Polaris-native + OCSF/ECS export mapping; §2.3 neutral) and the correlation_id format; then promote Draft ? Spec Complete. Cert: MON-SOVEREIGN-CERT-01.
+NET-SOVCLOUD-001 (Sovereign Cloud Server ? Nextcloud)
+v1.0
+Draft
+v1.0 Draft authored (v2.22). Storage non-fate-share AND its network corollary ? office-reachable off the Keystone gateway at sub-MAX (refines ?same sovereign peripheral zone?; principal review item). Local LUKS2+TPM2 unlock so it serves under a Keystone outage; Keystone holds recovery custody + escrow, not the live-store key. Break-glass two-mode; DLP wall via the NER ruleset (data_classification, NOT cloud_polish). Cert NET-SOVCLOUD-CERT-01 (Platform / Custody & Backup Seam / Collaboration-Surface Containment / Break-Glass / Power). Review: ratify network placement, codename, register data_classification in MON §3.2. Cert: NET-SOVCLOUD-CERT-01.
+CLD-SOCIAL-001 (Social / Public Compute Server · Hybrid)
+v1.0
+Draft
+v1.0 Draft authored (v2.22), re-scoped to public compute. The former social server split: this is the public-compute half (Matrix + bridges, transcoded media, interactive courseware engine, public search, analytics, status); CLD-BROADCAST-001 is the static half. Containment by sacrifice ? the designed blast radius; a compromise costs only public, ephemeral data. Third edge of the federation seam load-bearing (zero Authentik federation, distinct public identity schema, isolated user DB). Bridges are CLD-SAAS exposure. Cloud-seam telemetry; privileged-marker tripwire ? data_classification, raised out-of-band with no write to the root. Cert CLD-SOCIAL-CERT-01 (A?D).
+CLD-BROADCAST-001 (Static Broadcast Node · Hybrid)
+v1.0
+Draft
+v1.0 Draft authored (v2.22) ? NEW, the static half of the social split. Zero-compute, zero-identity public publishing (brochure, docs, spec archive, RSS, read-only JSON, asset CDN). Containment by absence; cloud-seam telemetry (not a sovereign sender); public CA, not sovereign PKI. Cert CLD-BROADCAST-CERT-01 (A?D). Review: BY51 hardware pin; static build pipeline; CDN. Cert: CLD-BROADCAST-CERT-01.
+Certification Model
+Every spec is written with pass/fail criteria and measurable thresholds. Self-builders use the published specs. Certification is a paid engagement. Ongoing integrator relationships are recurring revenue.
+Cross-Reference Doctrine
+Every device has a job. Every spec is a node in a network. No component is specified more than once. Drift is eliminated at the spoke-tightening pass. The spoke-tightening pass happens after all six new Draft specs have received their first engineering reviews ? not before.
+Multi-basis refinement (registered v2.19; made operative v2.20). The corpus is one spec-space readable in more than one basis, and the bases are of two kinds doing two different jobs. A partitioning basis sorts every component into exactly one cell ? the mission basis (Preparedness / Sovereign / Cloud) and the technical basis (Power / Compute / Communications, the three-legged stool) are partitioning bases, and a spec that lands in two cells tests for drift. A scoring basis assigns every component a coordinate rather than a cell ? the continuity / runway basis (time-to-failure and shed order, the basis in which Power becomes the diagonal and the industry?s neglect of it is exposed as a basis artifact) and the exposure basis (what a spec bets on about the world ? invariant / fragile / convex, the SAIA-box-vs-SAIA-pattern split) are scoring bases, and an empty region tests for a coverage gap. The two kinds must not be confused: a drift test run on a scoring basis returns nonsense. Spoke-tightening seats every component spec in one cell of each partitioning basis. But the multi-basis check only flags a two-cell spec; the shared-fate test decides what the flag means, and there are three outcomes, not two. (1) Shared fate ? the modes carry the same trust tier, custody model, recovery root, backup lineage, power tier, and enclave ? is not a mixture at all but a correctly-fused axis; leave it (Keystone identity + privileged data ? fusing them is coherence, and a split would manufacture a divergence reality does not contain). (2) Divergent fate ? the modes fail, scale, recover, or get-trusted differently, so binding them forces a compromise on at least one ? is genuine drift; resolve it into modes (Keystone?s collaboration plane wanted to not fate-share with the trust root, so the Sovereign Cloud Server split out; the privileged-vs-private opposite-availability requirement is the signature that licensed it). (3) Divergent fate that must nonetheless bind under stress, because binding-under-load is the whole point of the component, is a genuine capstone; keep it and certify the binding (CLD-HYBRID?s fail-closed-under-load; CLD-PLATFORM, MON-SOVEREIGN float above the grid by design and are not drift). One check, one test, three outcomes ? the governor that keeps spoke-tightening from either missing a real mixture or shattering a coherent axis into atoms. A claim that survives more than one basis is basis-independent, which is what a certification ultimately warrants. The picture sharpens as the corpus is walked through each basis in turn.
+
+
+Power Protection & Backup ? Tier Architecture
+Tier
+Name
+Best Suited For
+Status
+Notes
+Level 0
+Pronto (PWR-PRONTO-001)
+Maxwell, Radar (Edge T1), Nomad
+Spec Complete
+Pure DC inline buffer. LiFePO4 4S. 0ms switchover. FAA legal. Open-source. BOM: $85?135.
+Tier 1
+PWR-SOLAR (PWR-SOLAR-001 v1.1)
+Class A: Nomad, Scout, Romeo, Base Camp, Juliet, Radar · Class B: Keystone-1/SAIA-1, closets · Class B/C: sovereign stack runtime extension
+Spec Complete
+Certified configurations, not products. Class A (Field, pure DC ~288Wh) / B (Closet, 1kWh AC) / C (Stack Anchor, 2.5?5kWh; Mobile Shuttle or Fixed-Fed modes). Fixed-Fed electrician package included. Cert: PWR-SOLAR-CERT-01.
+Tier 2
+Hammerhead (PWR-INTEGRAL-001 v2.0)
+Strongarm (Edge T2), Keystone-2
+Spec Complete
+48V LFP. Unregulated bus. ~$550 BOM.
+Tier 3
+Smooth Operator (PWR-INTEGRAL-001 v2.0)
+Perceval (Edge MAX), Keystone-MAX
+Spec Complete
+36V LFP. Victron MPPT. Solar cold-start. ~$950?1000 BOM.
+Macro
+Prontissimo (PWR-PRONTISSIMO-001 v1.1)
+Keystone-MAX, Perceval (Smooth Operator machines only)
+Draft
+DC-coupled macro reservoir & solar booster. DCW20 engine, 48V LFP ballast, 54.0V bus, passive grid failover. Sovereign build alternative to PWR-SOLAR Class C.
+?
+Conventional PSU + Sinewave UPS
+Keystone-1, SAIA-1/2/MAX
+N/A
+Pure sinewave mandatory. Modified sinewave prohibited with GaN and GPU PSUs.
+Companion Device Table
+Device
+Companion(s)
+Power Tier
+OS Config
+Notes
+Nomad
+Bugout Boot Drive, Scout or Romeo
+Level 0 (Pronto) + Tier 1 Solar (Class A)
+Stock Android
+Spec Complete ? PPC-NOMAD-001 v1.0.
+Scout
+Nomad
+Tier 1 Solar (Class A)
+Meshtastic firmware
+
+Romeo
+Nomad
+Tier 1 Solar (Class A)
+MeshCore firmware
+
+Base Camp
+Radar (Edge T1) via WiFi AP
+Tier 1 Solar (Class A)
+Meshtastic firmware
+
+Juliet
+Radar (Edge T1) via MeshCore
+Tier 1 Solar (Class A min / Class B backbone)
+MeshCore firmware
+
+Radar (Edge T1)
+Bugout Boot Drive, Base Camp or Juliet
+Pronto (Level 0) + Tier 1 Solar (Class A)
+OS-PREP-DESKTOP-001
+Spec Complete ? NET-RADAR-001 v1.0.
+Bugout Boot Drive
+Radar (Edge T1) or standalone
+Host-powered via USB
+OS-PREP-LIVE-001
+NEW v2.3: Standalone spec. Quarterly image releases.
+Backup Brain
+Strongarm or Perceval
+Tier 2/3 per companion
+OS-PREP-DESKTOP-001
+
+Maxwell
+Pronto (Level 0)
+Level 0 ? Pronto
+OPNsense (NET-MAXWELL-001)
+Spec Complete v1.7.
+Strongarm (Edge T2)
+Backup Brain
+Tier 2 ? Hammerhead
+OS-SOVEREIGN-DESKTOP-001 + OS-SOVEREIGN-AI-001
+Spec Complete ? NET-STRONGARM-001 v1.1.
+Perceval (Edge MAX)
+Backup Brain
+Tier 3 ? Smooth Operator (+ Prontissimo optional)
+OS-SOVEREIGN-DESKTOP-001 + OS-SOVEREIGN-AI-001
+Spec Complete ? NET-PERCEVAL-001 v1.1.
+Keystone-1
+SAIA-1 via sovereign peripheral zone
+Conventional + sinewave UPS
+OS-SOVEREIGN-SERVER-001
+Spec Complete ? NET-KEYSTONE-001 v1.2.
+Keystone-2
+SAIA-2 via sovereign peripheral zone
+Tier 2 ? Hammerhead
+OS-SOVEREIGN-SERVER-001
+Spec Complete ? NET-KEYSTONE-001 v1.2.
+Keystone-MAX
+SAIA-MAX + Maxwell (gateway)
+Tier 3 ? Smooth Operator (+ Prontissimo optional)
+OS-SOVEREIGN-SERVER-001
+Maxwell required at MAX scale.
+SAIA-1/2/MAX
+Keystone (respective tier)
+Conventional + sinewave UPS
+OS-SOVEREIGN-SERVER-001 + OS-SOVEREIGN-AI-001
+Spec Complete ? NET-SAIA-001 v1.0. Non-functional without Keystone.
+Sovereign MFP
+Keystone (all tiers)
+Sovereign peripheral zone
+Brother firmware (hardened)
+Spec Complete ? MFP-SOVEREIGN-001 v1.0.
+
+Discipline 1 ? Polaris Preparedness
+Public-facing. Self-deployable by non-engineers. Community support model. Three hardware sections (GIC, PPC, Power) plus the OS configuration layer.
+GIC ? Grid Independent Comms
+Product
+Status
+Spec
+Cert Type
+Notes
+Scout
+Spec Complete
+GIC-MESHTASTIC-001 v1.0
+Hardware cert
+Meshtastic pocket node. Personal carry / tree mount. Cert: GIC-MESHTASTIC-CERT-01 Module B.
+Base Camp
+Spec Complete
+GIC-MESHTASTIC-001 v1.0
+Hardware cert
+Fixed Meshtastic relay. Portable. Cabin, RV, base of operations. Pronto + Tier 1 Solar. Cert: GIC-MESHTASTIC-CERT-01 Module C.
+Romeo
+Spec Complete
+GIC-MESHCORE-001 v1.0
+Hardware cert
+MeshCore operator node. Backpack carry. Primary client: Nomad. Cert: GIC-MESHCORE-CERT-01 Module D.
+Juliet
+Spec Complete
+GIC-MESHCORE-001 v1.0
+Hardware cert
+MeshCore backbone relay. RDUmesh / Tar Heel Backhaul. Solar-continuous. Cert: GIC-MESHCORE-CERT-01 Module C.
+PPC ? Portable Preparedness Compute
+Product
+Status
+Spec
+Cert Type
+Notes
+Nomad (PPC-NOMAD-001)
+Spec Complete
+PPC-NOMAD-001 v1.0
+Hardware cert
+Stock Android, Moto G Power reference. ADB provisioning from Preparedness Desktop. Full APK payload specified.
+Bugout Boot Drive
+Spec Complete
+PPC-COLDBOOT-001 v1.0
+Hardware cert
+Hardware, commissioning, vault architecture, and cert for Bugout Boot Drive and Backup Brain. OS: OS-PREP-LIVE-001 (Bugout) and OS-PREP-DESKTOP-001 (Backup Brain). Cert: PPC-COLDBOOT-CERT-01.
+Backup Brain
+Written
+PPC-COLDBOOT-001 v1.0
+Hardware cert
+Hardware, commissioning, vault, and maintenance. Spec: PPC-COLDBOOT-001 v1.0. OS: OS-PREP-DESKTOP-001. Cert: PPC-COLDBOOT-CERT-01 Module D.
+Polaris Preparedness Desktop
+Spec Complete
+OS-PREP-DESKTOP-001 v1.0
+OS config cert
+Ubuntu 26.04 LTS. TPM2 auto-unlock. Full offline library. Upstream baseline for Bugout Boot Drive.
+Radar ? Sovereign Edge T1
+Spec Complete
+NET-RADAR-001 v1.0
+Hardware cert
+Runs Preparedness Desktop. Bugout Boot Drive factory. Mesh node manager. Hardware floor defined ? NET-RADAR-001 v1.0 (reference: ASUS NUC 15 Pro Tall).
+Power ? Preparedness Tier
+Product
+Status
+Spec
+Cert Type
+Notes
+Pronto ? Level 0 (PWR-PRONTO-001)
+Spec Complete
+PWR-PRONTO-001 v1.5
+Hardware cert
+Pure DC inline buffer. LiFePO4 4S. FAA legal. Open-source. BOM: $85?135.
+Tier 1 ? PWR-SOLAR Portable Solar Generators
+Spec Complete
+PWR-SOLAR-001 v1.1
+Config cert
+Certified configurations (Classes A/B/C). References: Anker C300 DC / C1000 / F2600+BP2600; DELTA Pro 3 (Fixed-Fed). Fixed-Fed Electrician Design Package (§12 + Appendix A). Cert: PWR-SOLAR-CERT-01.
+Hammerhead (PWR-INTEGRAL-001 v2.0)
+Spec Complete
+PWR-INTEGRAL-001 v2.0
+Hardware cert
+48V LFP. ~$550 BOM.
+Smooth Operator (PWR-INTEGRAL-001 v2.0)
+Spec Complete
+PWR-INTEGRAL-001 v2.0
+Hardware cert
+36V LFP. Victron MPPT. Solar cold-start. ~$950?1000 BOM.
+Prontissimo ? Macro DC Reservoir
+Draft
+PWR-PRONTISSIMO-001 v1.1
+Hardware cert
+DC-coupled solar booster for Smooth Operator machines. DCW20 engine, 48V LFP ballast, 54.0V bus. Pronto family, macro member. Cert: PWR-PRONTISSIMO-CERT-01.
+Comms & Coordination (Preparedness)
+Registered v2.19, application layer on OS-PREP-DESKTOP-001 / Radar (section-vs-spec deferred to spoke-tightening). Basic comms and coordination live here, in the public-facing discipline, not on Keystone: an offline-first local wiki (the editable counterpart to the offline library), a text chat client, Element, and Thunderbird to a privacy-mail provider (Proton or other ? provider unsettled; the trust tier is decoupled from the posture by CLD-DNS?s provider-agnostic mail regime). Element is the one client: a local Matrix homeserver on Radar bridges Meshtastic / MeshCore into local rooms, so the near-term Matrix is grid-independent and on-site ? Matrix enters the corpus through the Preparedness door, not the Cloud door. The layer degrades gracefully into GIC mesh transport when the grid is gone. The public-facing Matrix Social Media Server (CLD-SOCIAL-001, Discipline 3) is the deferrable second homeserver, not this one. Open items: Radar local-homeserver registration; mail-provider tier; the bridge set.
+
+
+Discipline 2 ? Sovereign IT & Premise Solutions
+Integrator-deployed. Certification-backed. Every spec written with pass/fail criteria and measurable thresholds. As of v2.7, the Preparedness discipline is fully spec-complete ? including the five-spec power stack (Pronto, PWR-SOLAR, Hammerhead, Smooth Operator; Prontissimo in Draft). As of v2.8, the Sovereign IT spec set covers the full server, AI, OS, edge, and peripheral stack ? including OS-SOVEREIGN-DESKTOP-001 v1.1 (Spec Complete, registered v2.8). The Sovereign Edge hardware tier is complete as of v2.9 ? NET-STRONGARM-001 v1.1, NET-PERCEVAL-001 v1.1, and NET-RADAR-001 v1.0 all Spec Complete. As of v2.21 the NET-KEYSTONE-001 v1.1 key broker is realized and MON-SOVEREIGN-001 (the observability & telemetry contract) is authored Greenfield ? Draft. The remaining gates in this discipline are OS-DAILYDRIVER-001 (Draft ? key broker now realized; Modules B/C unblocked, Windows key-delivery bench remaining), MON-SOVEREIGN-001 (Draft ? framework pin at engineering review), and ? with the Keystone-MAX tier now folded into NET-KEYSTONE-001 v1.2 (§11.1) ? only OS-DAILYDRIVER-001 reaching Spec Complete remains.
+Edge Compute
+Product
+Status
+Spec
+Cert Type
+Notes
+Radar ? Sovereign Edge T1
+Spec Complete
+NET-RADAR-001 v1.0
+Hardware cert
+Dual-discipline device. Reference platform ASUS NUC 15 Pro (Tall); formal hardware floor defined.
+Strongarm ? Sovereign Edge T2
+Spec Complete
+NET-STRONGARM-001 v1.1 + OS-SOVEREIGN-DESKTOP-001 v1.1
+Hardware cert
+GPU workstation. RTX Pro 4000 (recommended) or RTX Pro 2000. Hammerhead required. Companion: Backup Brain. OS config: OS-SOVEREIGN-DESKTOP-001 v1.1 (Spec Complete) ? OS cert executable.
+Perceval ? Sovereign Edge MAX
+Spec Complete
+NET-PERCEVAL-001 v1.1 + OS-SOVEREIGN-DESKTOP-001 v1.1
+Hardware cert
+Dual GPU. RTX Pro 4000 + RTX Pro 2000. 40GB VRAM heterogeneous pipeline-parallel. Smooth Operator required. Companion: Backup Brain. OS config: OS-SOVEREIGN-DESKTOP-001 v1.1 (Spec Complete) ? OS cert executable.
+Daily Driver + Daily Carry (OS-DAILYDRIVER-001)
+Draft
+OS-DAILYDRIVER-001 v1.0
+Posture cert
+Windows/macOS/iOS/Android only ? Linux endpoints certify under OS-PREP-DESKTOP-001 / OS-SOVEREIGN-DESKTOP-001. Module A standalone posture (top-of-funnel, co-designed with MDM spec); Modules B/C sovereign access envelope (Keystone required). Blocked on NET-KEYSTONE-001 v1.1 amendment.
+Network
+Product
+Status
+Spec
+Cert Type
+Notes
+Prosumer Wi-Fi Router ? Network Tier 1
+Draft
+NET-SOHONET-001 v1.0
+Config cert
+Home / small office. ASUS dual-WAN class on Asuswrt-Merlin + LTE failover bridge. Three-zone segmentation, DNAT DNS interception, static ARP binding. Pronto recommended at the edge. Draft ? pending engineering review.
+Business Class Networking ? Network Tier 2
+Draft
+NET-UNIFI-001 v1.0
+Config cert
+Firm-grade UniFi, 5?20 staff. Controller hosted on Keystone (keystone-unifi.yml); UDM consoles prohibited. Identity = Keystone Authentik via FreeRADIUS 802.1X; UniFi Identity disabled. Office fabric only ? sovereign peripheral zone stays on its own switch per NET-KEYSTONE-001 §7.2. Sovereign service lane provisions key-broker + telemetry paths. Draft ? pending engineering review.
+Maxwell ? Sovereign Gateway (NET-MAXWELL-001)
+Spec Complete
+NET-MAXWELL-001 v1.7
+Hardware cert
+OPNsense on fanless SFF N100. Intel X520-DA2 dual 10G SFP+ + 4× Intel i226-V 2.5GbE. Ed25519 shutdown advisory. Companion: Pronto.
+Servers ? Keystone Sovereign Core
+Charter (v2.20, negative scoping): Keystone is identity, security, file custody, backup, audit root, and time authority ? the sovereign trust root, nothing more. Collaborative application services ? groupware, real-time comms, wiki, chat ? are explicitly out of scope for Keystone and home on the Sovereign Cloud Server (NET-SOVCLOUD-001) beside it. firm_files (client-privileged matter, tight ACL) remains Keystone?s; OneDrive/SharePoint-class working collaboration is the Cloud server?s. Keystone holds the keys and the backup lineage for that server; it does not host the collaboration plane. Per the classification doctrine (Architecture Doctrine ? Data as a Classification Axis), Keystone is custodian of the privileged tier and of identity, which share fate, and holds the backup lineage for all tiers ? including the private tier whose live store sits off-root on NET-SOVCLOUD-001. Identity does not fork from Keystone before large-firm scale: the backup routine is the committed thing and identity is cheap to carry on it.
+Product
+Status
+Spec
+Cert Type
+Notes
+Keystone-1
+Spec Complete
+NET-KEYSTONE-001 v1.2
+Hardware cert
+Small firm (1?5 staff). i5 10th Gen+. 32?64GB RAM. Conventional PSU + sinewave UPS. OS: OS-SOVEREIGN-SERVER-001.
+Keystone-2
+Spec Complete
+NET-KEYSTONE-001 v1.2
+Hardware cert
+Mid-size firm (5?20 staff). i5-13600K. 64GB RAM. Hammerhead (Tier 2, ~8hr runtime). OS: OS-SOVEREIGN-SERVER-001.
+Keystone-MAX
+Spec Complete
+NET-KEYSTONE-001 v1.2 (MAX tier folded in, §11.1)
+Hardware cert
+Large firm (20+ staff). Xeon/Ryzen Pro/Threadripper Pro. ECC RAM. Maxwell as gateway. Smooth Operator required.
+Servers ? Sovereign Cloud (Nextcloud)
+NET-SOVCLOUD-001 (Greenfield, registered v2.19). The Sovereign Cloud Server ? a Nextcloud appliance on its own chassis beside Keystone, inside the wire: the sovereign substitute for Google / Microsoft, run as a parallel privileged side channel rather than a replacement. Talk for internal privileged voice and text (what we design for); Files / Calendar / Deck / office docs for OneDrive/SharePoint-class working collaboration. NET- by the CLD-CIRCUIT demarc precedent ? intranetwork, inside the demarc ? despite the ?Cloud? name; codename deferred. Tiered to mirror Keystone (Cloud-1/2/MAX), same power tiers, same sovereign peripheral zone. Inherits OS-SOVEREIGN-SERVER-001; consumes Keystone Authentik by one-way SSO; data backed up into Keystone?s rotation chain. Departs from the SAIA pattern in two recorded ways. Storage is not fate-shared: a side channel that goes dark when Keystone is down is not a side channel, so the Cloud server keeps a local primary store (authoritative working data, not a re-pushable cache) while Keystone holds the keys and the backup lineage, not the live bytes. A break-glass side door is warranted but break-glass, never standing ? sealed local accounts for Authentik-unreachable; offline key escrow (Shamir-split or safe) for key-custody-gone, logged loud into sovereign_audit on Keystone?s return; the circular-recovery negative test (CLD-DNS A-02) is the template. A Hetzner mirror, if built, forks: encrypted cold-backup target stays sovereign; warm logged-in failover leaves the wire and becomes a Hybrid-zone resident. Data-classification wall: client-privileged matter stays in firm_files on Keystone, never the Cloud server; the legal-entity NER ruleset is pointed at Nextcloud as a DLP tripwire so privileged markers in the collaboration store fire quarantine. Cert NET-SOVCLOUD-CERT-01 (Platform / Identity Integration / Custody & Backup Seam / Collaboration-Surface Containment ? federation OFF, Talk internal-only, no public link sharing except governed / Power). Engineering review: codename; escrow shape; Hetzner-mirror fork; the DLP wall as a cert line; Companion / Power-tier table placement. Doctrine anchor (v2.20): the storage-not-fate-shared rule and the data-classification wall are instances of the corpus classification doctrine (Architecture Doctrine ? Data as a Classification Axis). The Cloud server holds the private tier ? backup-fused only, live store off-root, required to degrade gracefully through a Keystone outage; the privileged tier stays on the root and fails closed with it. The opposite availability requirement of the two tiers is the divergent-fate signature that licensed this split.
+Servers ? SAIA Sovereign AI Appliance
+On-premise AI inference. Hard dependency on Keystone ? non-functional without it. All tiers run OS-SOVEREIGN-SERVER-001 + OS-SOVEREIGN-AI-001.
+Product
+Status
+Spec
+Cert Type
+Notes
+SAIA-1
+Spec Complete
+NET-SAIA-001 v1.0
+Hardware cert
+RTX Pro 4000 Blackwell 24GB GDDR7 ECC. SOEYi U320 Phoenix. 1?5 concurrent users. FP4 validation mandatory at commissioning.
+SAIA-2
+Spec Complete
+NET-SAIA-001 v1.0
+Hardware cert
+2× RTX Pro 4000. Load-balanced (not tensor-parallel). 5?20 users.
+SAIA-MAX
+Draft
+NET-SAIA-001 v1.0
+Hardware cert
+2 x RTX Pro 6000 48GB 20+ users.
+Servers ? OS & AI Layer
+Spec
+Status
+Version
+Covers
+Notes
+OS-SOVEREIGN-SERVER-001
+Spec Complete
+v1.0
+Ubuntu Server 26.04 LTS hardening baseline, Docker service layer, LUKS2+TPM2, AIDE, nftables ? shared by Keystone and SAIA
+Patched: FIDO2 boot loop fix, Nginx host/container conflict, ZFS/Docker race condition fix, AppArmor network blindspot fix, AIDE section added.
+OS-SOVEREIGN-AI-001
+Spec Complete
+v1.0
+vLLM, Qdrant, FastAPI+LlamaIndex, PaddleOCR, spaCy NER, OpenWebUI, cloud polish gate, governance framework
+Patched: dnsmasq+ipset for cloud polish endpoint, vLLM model weight caching on Scratch NVMe (not SMB at runtime).
+Sovereign-Connected Peripherals
+Product
+Status
+Spec
+Cert Type
+Notes
+Sovereign MFP
+Spec Complete
+MFP-SOVEREIGN-001 v1.0
+Config cert
+Brother Industries. Scan to scan_quarantine on Keystone only. WiFi/USB disabled. CUPS print via Keystone. Four-tier device selection (L6915DW default). Patched: LDAP carve-out, Bates logging clarification.
+Fabrication (3D printer / CNC / laser)
+Greenfield
+Spec needed
+Config cert
+Job file storage: sovereign only.
+Peripherals (IP cameras, access control, IoT)
+Greenfield
+Placeholder
+Config cert
+Common doctrine applies.
+
+Discipline 3 ? Cloud Migrations & Support
+The cloud section tells a story with a beginning, middle, and end. Cert model: before doc (assessment) ? implementation ? after doc with checklist ? timestamped posture cert. The Beginning (Internet, Bandwidth & Naming) carries two foundations ? CLD-CIRCUIT-001 v1.0-RC1 (circuits) and CLD-DNS-001 v1.0 Draft (domain custody, zone integrity, mail trust). The Middle (Platform & SaaS) is closed to draft: all three siblings stand Draft-or-better ? CLD-PLATFORM-001 v1.0 Draft (the comprehensive platform ? choose-and-commit), CLD-SAAS-001 v1.0 Draft (application SaaS ? map-and-contain), and CLD-DEVICE-001 v1.0 Draft (device management / MDM ? enforce-and-attest). The End (Hybrid Architecture ? the sovereign-cloud trust boundary) is now drafted: CLD-HYBRID-001 v1.0 Draft (the integration gate ? conscious containment, not autarky) operationalizes the boundary the Beginning and Middle define, proving it locks together and fails closed under load. Its certification (Mission-Go) stays gated on input maturity, and Migration Services remains the End?s last Greenfield component. All three sides of the Cloud triad now have their defining spec drafted; the discipline is structurally complete pending input maturity and the spoke-tightening pass. v2.19 adds an End-zone resident outside the wire ? the Matrix Social Media Server (CLD-SOCIAL-001, bridges to Discord / Telegram), the productization of the Stage-2 community bridge, reclassified from sovereign comms to social engagement and held Greenfield (build deprioritized, doctrine kept); sovereign comms moves inside the wire onto Nextcloud Talk (NET-SOVCLOUD-001, Discipline 2).
+Beginning ? Internet, Bandwidth & Naming
+Product
+Status
+Spec
+Notes
+Dual WAN Architecture
+Release Candidate
+CLD-CIRCUIT-001 v1.0-RC1
+Formalized by CLD-CIRCUIT-001. Dual-WAN failover inherits NET-SOHONET-001 §3 (failover-not-load-balance, ping-watchdog, ?180 s failback); power-protected via Pronto (§2). Tiered pairing T1/T2/T3; failover + degraded-mode hard-pause tests in CLD-CIRCUIT-CERT-01.
+Circuit Options
+Release Candidate
+CLD-CIRCUIT-001 v1.0-RC1
+Assessment & certification by access-technology category (fiber / cable / 5G / LEO / satellite-text), technical + continuity axes. Carrier choices are point-in-time assessment inputs, never Polaris rankings (§1.3 / §4). Diversity is physical ? BGP ASN + plant/backhaul independence (B-03).
+Domain & Registrar Custody
+v1.0 Draft
+CLD-DNS-001 v1.0 Draft
+The registrar is the one un-diversifiable vendor ? client-held custody, separation of duties, circular-recovery negative test (A-02), registrar-lock floor + risk-tiered registry lock. Email and business-critical apps forbidden at the registrar; DNS / basic web / SSL permitted.
+DNS, Zone & Mail Trust
+v1.0 Draft
+CLD-DNS-001 v1.0 Draft
+Zone integrity (DNSSEC, CAA) and mail trust (SPF / DKIM, DMARC at enforcement, MTA-STS). Multi-domain: every owned name hardened; non-senders + defensive registrations null-MX + reject. The domain is the hinge CLD-PLATFORM-001's exit swings on.
+Middle ? Platform & SaaS
+Product
+Status
+Spec
+Notes
+Platform Selection
+v1.0 Draft
+CLD-PLATFORM-001 v1.0 Draft
+Comprehensive platform the firm commits to: Microsoft 365 vs Google Workspace. Choose-and-commit selection, tenant posture & exit. Continuity via portability not redundancy; one-way federation seam. Separated from application SaaS (CLD-SAAS-001).
+Platform Support
+v1.0 Draft
+CLD-PLATFORM-001 (recert layer)
+Folded into CLD-PLATFORM-001 as the recurring-recertification layer ? re-run standing, re-verify Module B posture, re-rehearse the Module C exit on interval. Not a separate doc.
+SaaS Audit
+v1.0 Draft
+CLD-SAAS-001 v1.0 Draft
+Application-SaaS exposure mapping (QuickBooks Online et al.) ? for law / medical, the whole conversation. Separated from the comprehensive platform; receives the CLD-PLATFORM-001 Module D seam; enrolls senders into the CLD-DNS-001 SPF/DKIM regime. Now v1.0 (Draft, rev. 2 ? review-hardened): five exposure axes (sees / retains / shares / where-it-lives / can-you-exit), discovery-first inventory, least-exposure containment, the one-way SSO seam, and sender + subdomain-delegation enrollment. Cert: CLD-SAAS-CERT-01.
+Device Management (MDM)
+Draft
+CLD-DEVICE-001 v1.0 Draft
+Intune / Jamf / Android Enterprise / Apple MDM. Enforce-and-attest: consumes OS-DAILYDRIVER-001 Module A as the fleet-enforceable payload baseline; owns Apple / iCloud device handling and the iCloud-of-sovereign-data exclusion (CLD-PLATFORM-001 §2.3); feeds CLD-SAAS-001 the shadow-SaaS discovery-telemetry marker set. Two cloud IdPs (Entra / Google); Apple a managed endpoint, never a directory. One-way federation seam; plane enforces enclave/container preconditions, Keystone holds custody. Cert CLD-DEVICE-CERT-01 (A?D); cert lines sovereign-protecting, cloud-side hygiene noted not certified.
+End ? Hybrid Architecture
+Product
+Status
+Spec
+Notes
+Sovereign Stack Integration
+Draft
+CLD-HYBRID-001 v1.0 Draft
+The trust boundary, operationalized. Derivative integration gate (HYB-CERT-01, Modules A?D) proving transport, identity, and shard containment lock together and fail closed under load; Module E gates Mission-Go on input maturity. Drafted v2.18; the award stays amber until inputs reach Spec Complete ? principal amber NET-KEYSTONE-001 v1.1 cleared v2.21, now gated on OS-DAILYDRIVER-001.
+Migration Services / Intercloud Transitions (racked ? next thread)
+Greenfield
+Scope needed
+Lift-and-shift, hybrid, and full-sovereign paths.
+Social Media Server
+Draft
+CLD-SOCIAL-001 (public compute) + CLD-BROADCAST-001 (static) ? both v1.0 Draft (v2.22)
+Matrix homeserver outside the wire, bridges to Discord / Telegram. Social engagement, not sovereign comms ? the reclassification that retires Stage 2?s ?Matrix maintains the sovereign comms principle.? Build deprioritized; doctrine kept. CLD-HYBRID composes a negative containment test (no sovereign identity / data); bridges are CLD-SAAS exposure surfaces. Near-term Matrix is the Preparedness local homeserver on Radar; this is its public sibling. Self-hosted-vs-managed deferred. Cert: CLD-SOCIAL-CERT-01.
+
+Cross-Discipline Dependencies (v2.23)
+Dependency
+From
+To
+Notes
+OS baseline inheritance
+OS-PREP-DESKTOP-001
+OS-PREP-LIVE-001
+Live OS inherits application stack and hardening baseline from desktop spec. Application versions not re-specified in Live OS.
+OS baseline inheritance
+OS-PREP-DESKTOP-001
+OS-SOVEREIGN-DESKTOP-001 v1.1
+Sovereign Desktop v1.1 extends Preparedness Desktop with dev/design and inference tooling.
+OS baseline inheritance
+OS-SOVEREIGN-SERVER-001
+NET-KEYSTONE-001, NET-SAIA-001
+All Keystone and SAIA hardening, Docker config, LUKS2, AIDE, nftables in OS-SOVEREIGN-SERVER-001. Hardware specs reference, not re-specify.
+AI service layer
+OS-SOVEREIGN-AI-001
+NET-SAIA-001, OS-SOVEREIGN-DESKTOP-001 v1.1
+vLLM, Qdrant, RAG pipeline, anonymization gate specified once in OS-SOVEREIGN-AI-001. Applied to SAIA and Sovereign Desktop edge deployments.
+Identity authority
+NET-KEYSTONE-001 (Authentik)
+NET-SAIA-001, MFP-SOVEREIGN-001
+SAIA and MFP depend on Keystone Authentik. Non-functional without Keystone.
+NTP authority
+NET-KEYSTONE-001 (chrony)
+NET-SAIA-001, NET-MAXWELL-001
+Keystone is authoritative time source. Maxwell Ed25519 replay protection depends on clock sync.
+Ed25519 shutdown advisory
+NET-KEYSTONE-001 (polaris-power-agent)
+NET-MAXWELL-001
+Shutdown advisory spec in NET-KEYSTONE-001 Section 8. Maxwell verifies against baked-in public key.
+Physical document pipeline
+MFP-SOVEREIGN-001
+NET-KEYSTONE-001 (scan_quarantine) ? OS-SOVEREIGN-AI-001 (ingestion)
+Paper enters sovereign boundary at MFP. Routes through Keystone scan_quarantine. Enters AI ingestion pipeline after human review.
+Sovereign rotation chain
+NET-KEYSTONE-001 (backup architecture)
+NET-SAIA-001 (saia_backups dataset)
+SAIA backup integrity derives entirely from Keystone?s rotation chain. SAIA has no independent backup chain.
+Maxwell as Keystone-MAX gateway
+NET-MAXWELL-001
+NET-KEYSTONE-001 (MAX tier)
+At MAX scale, Maxwell is network perimeter. Keystone-MAX does not run OPNsense. These roles do not overlap.
+Model weight custody
+NET-KEYSTONE-001 (models dataset)
+OS-SOVEREIGN-AI-001 (vLLM), NET-SAIA-001
+Keystone is authoritative custody for model weights. vLLM reads from Scratch NVMe cache (pushed by integrator rsync). Not from SMB at runtime.
+Image factory
+OS-PREP-DESKTOP-001 (Radar)
+OS-PREP-LIVE-001
+Radar makes Bugout Boot Drives. Live OS quarterly images built on Radar or equivalent clean build host.
+Solar array doctrine
+PWR-SOLAR-001 (§6.4?6.5, §12, Appendix A)
+PWR-PRONTISSIMO-001, PWR-INTEGRAL-001
+CIGS preference, MC4/PV fusing, Voc math, Fixed-Fed fork, and the Electrician Design Package specified once in PWR-SOLAR-001. Inherited, never re-specified.
+Setpoint cascade
+PWR-INTEGRAL-001 (MeanWell trims, internal bank float)
+PWR-PRONTISSIMO-001 §5
+54.0V bus vs ~51.5V MeanWell trim = passive source priority. No setpoint changes alone ? every change is a new row in both build records.
+Enclave key broker
+NET-KEYSTONE-001 v1.1 (realized v2.21)
+OS-DAILYDRIVER-001 §3.5, §5.5
+Key broker service, POLARIS-KEY-RELEASE-V1 schema (mirrors §8.3 Ed25519 advisory pattern incl. 60-second replay window and NTP dependency), sovereign_audit event categories, sub-MAX WireGuard service. Critical blocker for DD Modules B/C.
+Hybrid endpoint threat model (canonical)
+OS-DAILYDRIVER-001 §2
+OS-SOVEREIGN-DESKTOP-001 v1.2 (pending amendment)
+Canonical statement of the cloud-scraper threat model. Sovereign desktops pressed into cloud service inherit §2 doctrine via the scoped v1.2 cloud-cohabitation amendment.
+Circuit failover & power inheritance
+NET-SOHONET-001 §3 / §2
+CLD-CIRCUIT-001
+Dual-WAN failover logic, ping-watchdog timing, ?180 s failback, and the Pronto power companion are specified once in NET-SOHONET-001; the Cloud circuit layer inherits, never re-specifies. Demarc rule: NET- = the intranetwork the firm owns; CLD- = the internetwork beyond the demarc.
+Continuity dependency map
+OS-DAILYDRIVER-001 (cloud profile)
+CLD-CIRCUIT-001 Module C
+Which cloud functions degrade on primary loss, and the remote sovereign-access / CGNAT reachability constraints, derive from OS-DAILYDRIVER-001. Cloud-provider / SaaS dependency-chain mapping is scoped to forthcoming Cloud identity / SaaS specs; Module C records only the circuit ? cloud seam.
+Platform exit hinge
+CLD-DNS-001
+CLD-PLATFORM-001 (Module C)
+Independent domain custody ? registrar held apart from the platform, zone custodied by the firm ? is the precondition for the platform exit. Repointing mail between platforms is possible only because the platform does not hold the domain.
+Platform-record seam
+CLD-PLATFORM-001
+CLD-DNS-001
+The platform is a record source (DKIM keys, MX, SPF includes); the firm publishes them in its own custodied zone. The platform never becomes the zone's custodian.
+Federation seam (one-way)
+OS-DAILYDRIVER-001 §3.1
+CLD-PLATFORM-001 §3.4
+Cloud / sovereign identity-separation promoted to discipline doctrine: cloud platform identity never federates into the sovereign authority (Authentik). Negative test cert B-02.
+Platform dependency chain
+CLD-CIRCUIT-001 Module C
+CLD-PLATFORM-001 Module D
+The circuit spec records only the circuit ? cloud seam and points up; Module D resolves the pointer (identity ? edge / CDN ? service) and records the seam sideways to CLD-SAAS-001.
+Mail-sender enrollment
+CLD-DNS-001
+CLD-SAAS-001 (forthcoming)
+Every SaaS that sends as the firm's domain is enrolled in the SPF / DKIM regime owned by CLD-DNS-001; CLD-SAAS-001 maps the senders.
+Payload baseline (MDM enforcement)
+OS-DAILYDRIVER-001 §4 / §8 Module A
+CLD-DEVICE-001 Module B
+The Module A standalone posture is the fleet-enforceable MDM payload baseline; CLD-DEVICE ships the per-OS payloads (homes the DD MDM payload library) so a fleet under them inherits Module A by construction ? attested, not re-audited.
+Federation seam (management layer)
+CLD-PLATFORM-001 §3.4 / OS-DAILYDRIVER-001 §3.1
+CLD-DEVICE-001 §3.4 (C-04)
+The one-way seam carried to the management plane: enrollment identity is cloud identity (Entra / Google), never sovereign; MDM identity cannot authenticate a sovereign service. Two cloud IdPs only ? Apple is a managed endpoint, never a directory. Negative test C-04.
+Enclave-precondition handoff
+CLD-DEVICE-001 (Module B / §3.3)
+NET-KEYSTONE-001 (§9.1 custody)
+The plane enforces enclave / container preconditions (FDE, execution-ban, telemetry baseline) and quarantines; Keystone holds all sovereign custody above all and releases keys only to polaris-endpoint-agent against Authentik. The plane never reads or brokers the key. Negative test B-06.
+iCloud-of-sovereign-data exclusion
+CLD-PLATFORM-001 §2.3
+CLD-DEVICE-001 (B-05)
+Apple device / iCloud handling handed to the device layer; iCloud Backup / Drive excluded from any sovereign-data path by supervised payload; Managed Apple IDs federate to Entra / Google, never Keystone.
+Shadow-SaaS discovery telemetry
+CLD-DEVICE-001 (Module D)
+CLD-SAAS-001 §3.1
+The device/browser marker set ? authentication callbacks, anomalous vendor-DNS resolution ? is CLD-DEVICE?s deliverable, named by CLD-SAAS-001 §3.1 and fed sideways to its shadow-SaaS inventory. Markers produced here; sizing and containment of what they surface is CLD-SAAS?s.
+Integration gate (derivative capstone)
+Beginning + Middle + sovereign core
+CLD-HYBRID-001 (HYB-CERT-01 A?D)
+The End operationalizes the boundary the Beginning and Middle define. It writes no new mechanism ? every test is a composition or negative test attributed to its owning spec, run together and under load. The seam is the only surface it owns.
+Mission-Go input-maturity gate
+CLD-HYBRID-001 Module E
+All input specs (NET-KEYSTONE-001 v1.1 principal)
+A derivative capstone inherits the maturity of its weakest input; Mission-Go holds amber until every input reaches Spec Complete. This spec?s dependency map is its work plan ? its Open Items are other specs? readiness.
+Key-release authority (corrected)
+NET-KEYSTONE-001 v1.1 + CLD-DEVICE-001 §3.3
+CLD-HYBRID-001 B-02 / B-03
+Keystone is the authority: the broker releases only on a live MFA-verified Authentik session AND attested posture. MDM attestation is a necessary input, never sufficient ? the B-03 negative leg proves attested-posture-without-session releases nothing. Preserves CLD-DEVICE-001 B-06.
+Fail-closed under load
+CLD-CIRCUIT-001 Module C + PWR-INTEGRAL-001 / PWR-PRONTISSIMO-001
+CLD-HYBRID-001 Module D
+Under circuit failover (degraded-mode hard pause) and power-runtime expiry (polaris-power-agent advisory), the boundary fails closed ? tunnel sovereign-only or drops, enclaves unmount, key leases expire rather than extend. The capstone?s own composition proof (D-03), owned here.
+Inversion-gate ledger
+OS-SOVEREIGN-AI-001 (cloud-polish gate)
+CLD-HYBRID-001 C-02
+Outbound allowlisted-polish requests audited in sovereign_audit (anonymize ? authorize ? local-escrow). HYB reads the ledger, never re-specifies the chain; where it is unspecified upstream, recorded as OS-SOVEREIGN-AI-001?s spoke-tightening item. Endpoint vendor-neutral.
+Sovereign collaboration identity (one-way)
+NET-KEYSTONE-001 (Authentik)
+NET-SOVCLOUD-001 (Nextcloud)
+Cloud server consumes Keystone Authentik by one-way SSO; sovereign identity never federates back. Break-glass sealed local accounts when Authentik is unreachable ? break-glass, never standing.
+Collaboration backup & key custody (no fate-share)
+NET-KEYSTONE-001 (rotation chain + key custody)
+NET-SOVCLOUD-001 (Nextcloud)
+Unlike SAIA (derivative cache, fate-shares), the Cloud server holds authoritative working data: local primary store, Keystone holds keys + backup lineage only. Key-custody-gone answered by offline escrow, not a hot key. Circular-recovery template: CLD-DNS A-02.
+Privileged-data wall (DLP tripwire)
+OS-SOVEREIGN-AI-001 (legal-entity NER ruleset)
+NET-SOVCLOUD-001 (Nextcloud) ? NET-KEYSTONE-001 (firm_files)
+The NER ruleset built for AI ingestion does double duty as a DLP tripwire on the collaboration store: client-privileged matter stays in firm_files on Keystone; privileged markers surfacing in Nextcloud fire quarantine. Owed a cert line (spoke-tightening).
+Preparedness comms degrade to mesh
+OS-PREP-DESKTOP-001 (comms layer) + Radar local Matrix homeserver
+GIC-MESHTASTIC-001 / GIC-MESHCORE-001
+Element is the one client; the Radar homeserver bridges Meshtastic / MeshCore into local rooms. Grid up: Element / Proton. Grid down: GIC mesh. The mesh transport is specified once in GIC, never re-specified by the comms layer.
+Social-server containment (negative)
+CLD-SOCIAL-001 / CLD-BROADCAST-001 (public zone)
+CLD-HYBRID-001 (composes test); CLD-SAAS-001 (bridge exposure)
+The social server sits in the Hybrid zone outside the wire; the End gate proves sovereign identity and data never reach it (negative test), and the Discord / Telegram bridges are mapped as CLD-SAAS exposure surfaces. The third edge of the one-way federation seam.
+Public-zone telemetry (cloud-seam)
+CLD-BROADCAST-001 / CLD-SOCIAL-001
+MON-SOVEREIGN-001
+Public-zone nodes never emit into sovereign_audit (the absolute cut). MON records the cloud_seam, never crosses. The drafts? public-node ? Keystone telemetry was corrected to this. New v2.22.
+Static vs public-compute boundary
+CLD-BROADCAST-001
+CLD-SOCIAL-001
+No component twice: static publishing (docs, spec files, asset CDN, RSS, read-only JSON) on Broadcast; public compute (Matrix, media, courseware engine, search) on Social. Social references / indexes Broadcast; never re-hosts. New v2.22.
+Privileged-marker DLP tripwire
+OS-SOVEREIGN-AI-001 NER ruleset
+NET-SOVCLOUD-001 / CLD-SOCIAL-001
+The legal-entity NER ruleset does double duty as DLP / containment tripwire. Emits data_classification (NOT cloud_polish) ? quarantine on the private tier, out-of-band breach alarm on the public surface. Category owed registration in MON §3.2. New v2.22.
+Audit-schema contract (inheritance)
+MON-SOVEREIGN-001
+Keystone, SAIA, Maxwell, agents, endpoints
+The record shape ? event envelope, category registry, cross-correlation ? specified once in MON-SOVEREIGN-001 and inherited, never re-specified, exactly as the hardening baseline is inherited from OS-SOVEREIGN-SERVER-001. Keystone §10.1 enumerates its categories; MON defines their field-level shape. New v2.21.
+Telemetry store / publisher / time
+NET-KEYSTONE-001
+MON-SOVEREIGN-001
+Records-vs-senders: Keystone is root + publisher (sovereign_audit store §10, §9.6 Grafana, chrony NTP §8.3); MON owns the contract those carry and re-specifies none of them. The v1.1 key-broker categories (§10.1) take their normative shape in MON §3.2. New v2.21.
+
+Open Items (v2.23)
+Items carried from v2.3 plus new items arising from the Draft spec session. v2.8 adds the OS-DAILYDRIVER-001 / NET-KEYSTONE-001 v1.1 key-broker thread and closes the Sovereign Desktop and GIC v1.1 items. v2.21 realizes the NET-KEYSTONE-001 v1.1 key-broker amendment (now Spec Complete) and promotes MON-SOVEREIGN-001 Greenfield ? Draft ? the body contracts as the blocked / amber scaffolding is struck.
+
+Item
+Priority
+Status
+Notes
+Spoke-tightening integration pass
+Critical
+Partial
+Cross-reference all six v2.3 Draft specs against each other and against Maxwell/Nomad/PrepDesktop. Resolve all open items that cross spec boundaries. Server/AI/network/peripheral OS layer complete. OS pass unblocked ? OS-SOVEREIGN-DESKTOP-001 v1.1 Spec Complete; OS-layer synchronization executed in v2.8 (doc IDs, statuses, OS-SOVEREIGN-AI-001 A-04 correction, inheritance seams). Hardware validation pending for PWR-PRONTO-001 and PPC-NOMAD-001. PWR-INTEGRAL-001 HDPLEX bench validation (Critical) and polaris-power-agent (High) are the primary open items in the power architecture stream. NET-STRONGARM-001 and NET-PERCEVAL-001 hardware certs now executable against OS-SOVEREIGN-DESKTOP-001 v1.1.
+Cloud Beginning / Middle pins (CLD-DNS-001, CLD-PLATFORM-001)
+High
+Open
+CLD-PLATFORM-001: per-platform Module B posture baselines (incl. the B-07 drift watch-list), exit-fidelity benchmark by data class, federation-seam enforcement proof. CLD-DNS-001 (rev. 2): tiering trigger / change-integrity / DS-KSK / subdomain-delegation pinned in-spec; remaining numeric pins are DMARC dwell, DNS-resilience magnitudes, DS/KSK cadence, domain-inventory template. No design blockers ? promote both Draft ? Spec Complete after engineering review.
+Cloud End (Hybrid Architecture, drafted) + Migration Services
+Medium
+Open
+CLD-SAAS-001 (application-SaaS exposure; receives Module D seam; enrolls senders into CLD-DNS-001 SPF/DKIM) and CLD-DEVICE-001 (MDM; consumes OS-DAILYDRIVER-001 Module A; owns Apple / iCloud device handling) remain Greenfield. End (Hybrid Architecture / sovereign-cloud trust boundary) held as deep water. Update (v2.16): CLD-SAAS-001 advanced to v1.0 (Draft, rev. 2 ? review-hardened); CLD-DEVICE-001 is now the last Greenfield Middle sibling. End still deep water. Update (v2.17): CLD-DEVICE-001 advanced to v1.0 (Draft) ? the Middle is now closed, all three siblings Draft-or-better. CLD-DEVICE-001 is no longer the last Greenfield Middle sibling; the End (Hybrid Architecture) is the only deep water left. The Device?s plane-enforces / Keystone-holds-custody and one-way-federation seams are the trust-boundary vocabulary the End will operationalize; the End remains held until the Draft specs clear their first engineering reviews (spoke-tightening sequencing). Update (v2.18): the End?s trust-boundary spec is drafted ? CLD-HYBRID-001 v1.0 (Draft), the integrative capstone, advancing the ?Sovereign Stack Integration? row Greenfield ? Draft. All three sides of the Cloud triad now have their defining spec drafted; the discipline is structurally complete pending input maturity. The derivative cert (Mission-Go) stays amber until every input reaches Spec Complete ? principal amber NET-KEYSTONE-001 v1.1 (now on the critical path of three specs). ?Migration Services? is the End?s last Greenfield component, still spec-needed. The spoke-tightening pass (doctrine preamble, cross-tightening) still waits on the Draft specs? first engineering reviews. Update (v2.23): the NET-KEYSTONE-001 v1.1 amendment and MON-SOVEREIGN-001 are done; the public ring is drafted; Keystone-MAX is folded into NET-KEYSTONE-001 v1.2. Migration Services is now the End?s last component and is racked as the next thread ? the intercloud-transitions manual: cloud-to-cloud and cloud-to-sovereign migration, including the Nextcloud onboarding path (off OneDrive / SharePoint onto NET-SOVCLOUD-001 with the DLP wall running during the move). It is the procedural counterpart to CLD-HYBRID-001?s architectural containment: HYBRID proves the boundary holds; Migration Services is how a firm crosses boundaries without breaking the seam mid-flight. Scope at thread open: cloud-to-cloud + cloud-to-sovereign, both.
+polaris-power-agent ? author and publish
+High
+Open
+Keystone power monitoring daemon. Ed25519 signing. Victron VE.Direct. Graceful shutdown. Publish in sovereign-stack repository.
+Sovereign-stack git repository ? structure and publish
+High
+Open
+Build scripts, AppArmor profiles, nftables templates, ZFS dataset provisioning script, Docker Compose files, AIDE config, polaris-power-agent, polaris-endpoint-agent, Image Factory tooling.
+OS-SOVEREIGN-DESKTOP-001
+High
+Closed ? v2.8
+Delivered as OS-SOVEREIGN-DESKTOP-001 v1.1 (Spec Complete). v1.2 cloud-cohabitation amendment scoped per OS-DAILYDRIVER-001 §10.
+NET-RADAR-001 ? Radar hardware spec
+High
+Closed ? v2.9
+Delivered as NET-RADAR-001 v1.0 (Spec Complete). Reference platform ASUS NUC 15 Pro (Tall); formal hardware floor defined ? supersedes the informal NUC 12/13+ / T480+ note. Remaining bench items carried in NET-RADAR-001 §5 (Pronto 19V compatibility, PWR-SOLAR co-deployment, Image Factory tooling).
+Keystone-MAX architecture (folded ? NET-KEYSTONE-001 v1.2 §11.1)
+High
+Folded
+Resolved v2.23 ? folded into NET-KEYSTONE-001 v1.2 §11.1. Maxwell enters as the MAX gateway (referenced, not re-specified); the NET-MAXWELL-001 §9 fleet-monitoring deferral is resolved against MON-SOVEREIGN-001 §4.1 (Maxwell a sender, MON consolidates, Keystone publishes).
+Polaris legal entity NER ruleset (spaCy)
+High
+Open
+Custom spaCy rules for matter numbers, Bates patterns, bar numbers. Publish in sovereign-stack repo.
+Embedding model selection benchmark
+High
+Open
+Formal evaluation: nomic-embed-text vs BGE-M3 against representative legal document corpus.
+FastAPI + LlamaIndex reference implementation
+High
+Open
+RAG orchestration reference container. Primary integrator build artifact for AI service layer.
+Image Factory ? publish open source build tooling
+High
+Open
+lb/cubic build script, grub.cfg, casper.conf, polaris-memwipe.service, udev rules, Firefox policies.json for OS-PREP-LIVE-001.
+GIC spec v1.1 ? pass/fail cert criteria
+Medium
+Closed ? v2.8
+Superseded ? pass/fail criteria delivered in GIC-MESHCORE-001 v1.0 (GIC-MESHCORE-CERT-01) and GIC-MESHTASTIC-001 v1.0 (GIC-MESHTASTIC-CERT-01). GIC v1.1 retired at v2.6.
+Tier 1 Solar Generator certified configuration
+Medium
+Closed ? v2.7
+Delivered as PWR-SOLAR-001 v1.1 (renamed from PWR-TIER1-001). Spec-level bench items tracked in PWR-SOLAR-001 §13 and PWR-PRONTISSIMO-001 §12.
+Power bench validation pass ? PWR-SOLAR-001 / PWR-PRONTISSIMO-001
+High
+Open
+72-hour dark and auto-off tests (PWR-SOLAR Module B); Pronto PD handshake (cross-spec with PWR-PRONTO GaN matrix); Keystone-1 ATX ride-through (Module D); MeanWell feed test (Module E); Prontissimo setpoint reconciliation with PWR-INTEGRAL-001 (Critical) and cascade Module B against a production Smooth Operator build.
+OS-DAILYDRIVER-001 ? Spec Complete gate
+Critical
+Draft
+v1.0 Draft (DD-CERT-01 Modules A/B/C; MDM co-design per §4.4). NET-KEYSTONE-001 v1.1 key broker realized v2.21 ? Modules B/C unblocked. Remaining: Windows secure key delivery bench validation (Critical); polaris-endpoint-agent; DD MDM payload library.
+NET-KEYSTONE-001 v1.1 ? key broker (realized v2.21)
+Resolved
+Done
+Realized in v2.21. NET-KEYSTONE-001 v1.1 authored: §9.7 broker (POLARIS-KEY-RELEASE-V1 + signed correlation_id), §9.8 sub-MAX WireGuard, §10.1 audit categories, cert Module H. The schema contract over the new categories is owned by MON-SOVEREIGN-001 (inherited, not re-specified). Remaining is reference-implementation only ? keystone-keybroker, keystone-wireguard ? tracked in NET-KEYSTONE-001 §13. No longer blocks OS-DAILYDRIVER-001.
+Network Tier 3 interior switching ? vendor selection
+Medium
+Open
+Maxwell (NET-MAXWELL-001) is the Tier 3 perimeter; interior switching/AP vendor to be selected ? UGREEN vs Grandstream evaluation pending source material. Outcome becomes NET-[vendor]-001 or a NET-MAXWELL-001 companion section. Sovereign peripheral switch requirements per NET-KEYSTONE-001 §7.2 apply regardless of vendor.
+Sovereign monitoring stack ? MON-SOVEREIGN-001 (promoted)
+High
+Promoted ? Greenfield
+Promoted to a scoped forthcoming spec, MON-SOVEREIGN-001 (Discipline 2, Sovereign IT) ? own doc, not a section of the End (resolved: it observes all three eras? sovereign-side emissions, so chaining it to the trust-boundary work would under-scope and entangle it). Owns the audit-schema contract (uniform, machine-readable, cross-correlatable requirement; framework ? OCSF or other ? an engineering-review pin, not a spec constant), the fleet-monitor + ingestion-coordinator roles, hardware alert trigger tables, the quarterly release manifest, an AI-observability axis (token-consumption profiles, vector-query latency, RAG-pipeline health), and atomic state/vector serialization across power faults. Keystone stays root and publisher (sovereign_audit store, §9.6 dashboard, NTP authority); this spec owns the contract ? records-vs-senders (CLD-DNS / CLD-SAAS) applied to telemetry. Consumes polaris-endpoint-agent + polaris-power-agent telemetry and Prometheus :9100. Sovereign-side only: records the seam to cloud telemetry, never crosses the sovereign?cloud boundary. Keystone cross-reference add (contract pointer) flagged for its next v1.x ? a reference, not a rewrite. Carry forward prior monitoring open items under this spec.
+Cloud-discipline doctrine preamble
+Medium
+Registered
+Named spoke-tightening deliverable (Copilot?s find, triaged): the one-sentence arc ? Beginning establishes / Middle negotiates / End operationalizes the sovereign boundary between the firm and the cloud ? seeded as the preamble?s spine. A preamble, not a new era. Drafting deferred to the spoke-tightening pass, per the rule that doctrine drift resolves after the new Draft specs receive their first engineering reviews. Register-only this pass.
+Considered & declined (this pass)
+Recorded
+Closed
+Two reviewer framings recorded declined with reasons so they are not re-raised. (1) Telemetry as a fourth era ? a ?Core? god-layer above Beginning / Middle / End (Gemini) ? declined: violates the demarcation and one-component-one-spec rules, and an observability plane reading across the sovereign?cloud boundary would itself be the federation seam the corpus never builds; observability is a property each discipline emits, consolidated by MON-SOVEREIGN-001 in Sovereign IT, not a fourth side of the triad. (2) OCSF as a hard mandate ? declined as over-specification: the spec fixes what must be true (uniform, machine-readable, cross-correlatable audit); the schema choice is an engineering-review pin, consistent with the spec-says-what / review-says-how rule (cf. CLD-DNS-001 §8 numbers-belong-to-review; the declined 30-day cron in CLD-SAAS-001 rev. 2).
+Comms realignment ? NET-SOVCLOUD-001 spec authoring
+High
+Greenfield
+Authored v2.22 ? NET-SOVCLOUD-001 v1.0 Draft + cert NET-SOVCLOUD-CERT-01 (A?E). Remaining: ratify the sub-MAX network placement (office-reachable off the Keystone gateway; reconcile with NET-KEYSTONE-001 §7 / NET-UNIFI-001); assign codename; data_classification now registered in MON §3.2 (v2.23); populate Companion / Power-tier map cells. The social split is authored too ? CLD-BROADCAST-001 (static) + CLD-SOCIAL-001 (public compute), both Draft. Preparedness comms layer (section-vs-spec; Radar local homeserver; mail-provider tier) remains.
+Sovereign Cloud break-glass / escrow + recovery root
+Critical
+Open
+The side door is the decision with teeth. Settle the escrow shape (sealed local accounts for Authentik-unreachable; offline key escrow ? Shamir-split or safe ? for key-custody-gone), the loud-logging path on Keystone?s return, and the Hetzner-mirror fork (encrypted cold-backup stays sovereign vs warm failover becomes Hybrid resident). Recovery-root negative test on the CLD-DNS A-02 template: prove the break-glass path does not depend on what it recovers from. Break-glass, never standing.
+firm_files / Nextcloud DLP wall as cert line
+High
+Open
+Collaboration surfaces are leak surfaces. Make ?prevent internal ACP leaks? a control, not a hope: point the legal-entity NER ruleset at Nextcloud as a DLP tripwire (privileged markers fire quarantine), and write it as a NET-SOVCLOUD-CERT-01 line. One artifact (the NER ruleset) doing two jobs ? AI ingestion gate and the firm_files / Nextcloud wall.
+Multi-basis spoke-tightening method
+Medium
+Registered
+See Cross-Reference Doctrine. Seat every component spec in one cell in both the mission basis (Prep / Sovereign / Cloud) and the technical basis (Power / Compute / Comms); a spec that refuses is drift or capstone. Continuity / runway and exposure bases noted for later. Develop into a spoke-tightening checklist when the corpus is walked basis-by-basis; not operative this pass. A long way from the finish line.
+
+Stage Sequencing
+Stage
+Activity
+Output
+Notes
+1 ? Build the Standard
+Write and publish specs openly. Complete certification checklists.
+Published specs + cert checklists. This document is the table of contents.
+Open methodology ? anyone can verify. The specs do the marketing.
+2 ? Community
+Discord (bridged to Matrix). The bridge demonstrates the methodology.
+Community of builders working from published specs. Feedback loop into refinement.
+Discord meets people where they are. The Matrix bridge is social engagement in the Hybrid zone (CLD-SOCIAL-001), outside the wire ? not a sovereign-comms claim. Sovereign comms lives inside the wire, on Nextcloud Talk (NET-SOVCLOUD-001).
+3 ? Prove the Standard
+Execute real-world deployments. Produce before/after docs. Earn certifications.
+Certified deployments. Timestamped posture docs. Evidence base.
+Every deployment is proof. Open methodology means clients and competitors can verify every claim.
+4 ? Teach and Expand
+Courseware, certification program, revenue. Expand to new domains.
+Recurring revenue from certs and courseware. Expanded product map.
+Business model matures here, downstream of legitimacy.
+Polaris IT Solutions  ?  Product & System Map  ?  Version 2.23  ?  June 2026
+Three disciplines. Nineteen specs complete. Preparedness Power stack complete ? PWR-SOLAR-001 v1.1 issued; PWR-PRONTISSIMO-001 v1.1 drafted. OS configuration layer complete ? OS-SOVEREIGN-DESKTOP-001 v1.1 registered at v2.8. Sovereign Edge hardware tier complete ? NET-RADAR-001 v1.0 registered at v2.9; Strongarm and Perceval power architecture aligned to PWR-INTEGRAL-001 v2.0 (no conventional ATX PSU ? DC-ATX sole source). Remaining spec gates: OS-DAILYDRIVER-001 (Draft ? blocked on NET-KEYSTONE-001 v1.1 amendment), PWR-PRONTISSIMO-001 (Draft), NET-SOHONET-001 and NET-UNIFI-001 (Draft ? engineering review), Network Tier 3 interior switching selection. Bench validation pending: Pronto, Nomad, Integral, Solar, Prontissimo, Daily Driver key delivery, Perceval heterogeneous pipeline-parallel. Discipline 3 (Cloud Migrations & Support) advances at v2.18 ? the Beginning carries two foundations (CLD-CIRCUIT-001 v1.0-RC1 circuits; CLD-DNS-001 v1.0 Draft domain & DNS), the Middle is closed to draft across all three siblings (CLD-PLATFORM-001 comprehensive platform; CLD-SAAS-001 application SaaS; CLD-DEVICE-001 device management / MDM ? all v1.0 Draft), and the End is now drafted (CLD-HYBRID-001 v1.0 Draft ? the integration gate, conscious containment not autarky; certification gated on input maturity, Migration Services the last Greenfield End component). All three sides of the Cloud triad now have their defining spec drafted; the discipline is structurally complete pending input maturity and the spoke-tightening pass. Spec count: nineteen Spec Complete + one Release Candidate + five Draft. v2.19 ? Communications promoted to first-class. Keystone descoped to the sovereign trust root (identity, security, file custody, backup); the Sovereign Cloud Server (NET-SOVCLOUD-001, Nextcloud ? the privileged side-channel substitute for Google / Microsoft) and the Matrix Social Media Server (CLD-SOCIAL-001, Hybrid zone) newly registered Greenfield; a Preparedness comms & coordination layer added (wiki, chat, Element, Thunderbird ? privacy mail; Element the one client, Radar the local mesh-bridging homeserver). The ?structurally complete? claim is retired ? new Greenfield in all three disciplines. A multi-basis refinement to spoke-tightening registered (mission basis × technical basis; the eigen-test as drift detector). Spec count carried: nineteen Spec Complete + one Release Candidate + five Draft, plus two newly registered Greenfield (NET-SOVCLOUD-001, CLD-SOCIAL-001). v2.20 ? doctrine finalized; the map turns from expanding to tightening. The multi-basis refinement made operative (partitioning bases test for drift, scoring bases for coverage; the shared-fate test with three outcomes ? fuse / split / capstone). The sovereign gradient named (collaboration scale governs when a concern precipitates into its own spec; Power the one scale-invariant). Two boundaries named (the wire buys privacy, the trust root buys privilege ? sovereignty is classification, not location; public ? private ? privileged). Data named as a classification axis with fusion-to-root monotonic (privileged fails closed with the root; private degrades gracefully off-root on NET-SOVCLOUD-001; non-sovereign unfused). No component moved; Identity confirmed fused to Keystone, not forked before large-firm scale. Spec count unchanged: nineteen Spec Complete + one Release Candidate + five Draft, plus two Greenfield (NET-SOVCLOUD-001, CLD-SOCIAL-001) and MON-SOVEREIGN-001. v2.21 ? first tightening pass. NET-KEYSTONE-001 ? v1.1 (key broker realized; still Spec Complete) and MON-SOVEREIGN-001 ? Draft (the observability & telemetry contract, records-vs-senders, inherited like the OS baseline). Unblock cascade cleared: OS-DAILYDRIVER-001 Modules B/C and NET-UNIFI-001 Module C unblocked; CLD-HYBRID-001 Module E principal amber cleared (now gated on OS-DAILYDRIVER-001). Spec count reconciled: the headline five Draft tracked only the cloud-discipline drafts ? the true set is ten (adding NET-SOHONET-001, NET-UNIFI-001, OS-DAILYDRIVER-001, PWR-PRONTISSIMO-001, and MON-SOVEREIGN-001). So nineteen Spec Complete + one Release Candidate + ten Draft, plus two Greenfield (NET-SOVCLOUD-001, CLD-SOCIAL-001). v2.22 ? the public ring drafted in full. NET-SOVCLOUD-001 Greenfield ? Draft (Sovereign Cloud Server). The former CLD-SOCIAL-001 split into CLD-BROADCAST-001 (NEW ? static publishing, containment by absence) and CLD-SOCIAL-001 (re-scoped ? public compute, containment by sacrifice), both Draft. Three corrections carried across the ring: cloud-seam telemetry (no public node writes to sovereign_audit), data_classification not cloud_polish for the DLP signal (one registration owed in MON §3.2), and the third edge of the federation seam as Social?s load-bearing wall. Spec count: the two registered Greenfields cleared, CLD-BROADCAST-001 added ? nineteen Spec Complete + one Release Candidate + thirteen Draft, zero registered Greenfield. Non-spec greenfield remains: the Keystone-MAX architecture doc, Migration Services, and the Fabrication / Peripherals placeholders. Next: OS-DAILYDRIVER-001 ? with NET-KEYSTONE-001 v1.1 realized, the Daily Driver?s Modules B/C are unblocked; bring it to Spec Complete (Windows key-delivery bench), which also clears CLD-HYBRID-001 Module E. v2.23 ? Keystone and Monitoring finished; this thread closes. NET-KEYSTONE-001 ? v1.2 (Keystone-MAX folded into §11.1, the standalone arch-doc item retired ? MAX is Keystone, not a sibling; the Maxwell fleet-monitoring deferral resolved against MON §4.1). MON-SOVEREIGN-001 finished ? data_classification registered in §3.2, closing the DLP-category item. Count unchanged: nineteen Spec Complete + one Release Candidate + thirteen Draft. The frontier is now threads, not loose items: Migration Services (the intercloud-transitions manual, cloud-to-cloud and cloud-to-sovereign incl. Nextcloud onboarding ? racked) and OS-DAILYDRIVER-001 to Spec Complete; plus the Fabrication / Peripherals placeholders. Next: Migration Services.
+
+
+POLARIS IT SOLUTIONS  Product & System Map  ?  Version 2.23  ?  June 2026
+
+
+
+Polaris IT Solutions  ?  Product & System Map  ?  Version 2.23  ?  June 2026
+
+POLARIS IT SOLUTIONS  Product & System Map  ?  Version 2.23  ?  June 2026
+
+Polaris IT Solutions  ?  Product & System Map  ?  Version 2.23  ?  June 2026
+

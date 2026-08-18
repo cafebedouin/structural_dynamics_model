@@ -1,0 +1,72 @@
+# VALIDATION REPORT
+
+MODE: FULL (/40)
+
+## DIMENSIONAL SCORES
+
+**D1: Constraint Preservation** — 5
+All three constraints trace cleanly. C1 (MoralPurge, Snare at powerless index) manifests as the culling: Duvray, structurally identical to the narrator, named for the boat by a standard that "the deck" never sees debated — Voss and the captain "walked the deck together" and Voss speaks "the same voice, same flat competence" for a death sentence as for a weight reading. C2 (EnvironmentalTrap, Mountain) manifests correctly as pure ambient condition — the doldrums, the featureless water — never assigned to an enforcing agent, exactly matching C2's diagnostic absence of an institutional beneficiary. C3 (ResourceScarcity, Tangled Rope/Rope split) manifests through the reserve cask (Thess's unaudited keys, the lock "a quarter-turn off true") and the ration-mark economy (Farro counting, the narrator's overpour). The chi-asymmetry between X1 (narrator, moderate/managerial) and X4 (Farro, powerless) is preserved: Farro counts against the ration with her lips moving in a private ritual of extraction-awareness, while the narrator, holding the tally book, has just enough institutional slack to let a skin run past the mark unpunished. No constraint is misrouted; the Snare (C1) is never softened into Tangled Rope by narrative sympathy for Duvray.
+
+**D2: Topology Isomorphism** — 5
+Causal chain intact: C1 (the purge standard) sits upstream of and structurally independent from C3 (scarcity), exactly as specified (C1 → C2 → C3 generation sequence, with C1 imposing the tragic ceiling). The blocking relationship holds — TR4 (X1 attempting institutional reclassification of C1) is correctly never dramatized as achieved; the narrator's quarter-turn-then-back gesture at the reserve cask *is* TR1's precondition ("access... absence of monitoring") glimpsed and declined, not exploited. Indexical variance is preserved on the page: Voss reads the same needle with the same face for water and for Duvray, dramatizing exactly the χ-sign-flip the formalization predicts (institutional index inverts extraction cost). The narrator's own position (moderate power, managerial) sits legibly between Farro's powerless counting and Voss/the captain's institutional remove.
+
+**D3: Voice Integrity** — 5
+The register is sustained without drift: declarative, tactile, allergic to abstraction, from "The plate is cold at dawn" to "flat water in every direction and nothing on it that owed either of us an explanation." Free indirect interiority never escalates into essay-voice; even the story's closest approach to a thesis statement ("the true-weight has never once decided anything... Somebody else decides") stays inside the narrator's own idiom of measurement, not authorial commentary.
+
+**D4: Framework Invisibility** — 5
+Scanned for banned structural vocabulary: "extraction," "coordination," "mechanism," "topology," "indexical," "constraint," "snare," "rope," "chi," "asymmetry," "invariant," "substrate" — **zero hits** in the story text (Section 1). No character states thesis language ("this is what the system does to people," "she wasn't measured fairly") — scanned all dialogue (Farro's lines, Voss's naming of Duvray, the narrator's internal address) — zero hits. The manifest's own anti-pattern scan (framework residue, theme-naming, explaining-feeling, math-explaining) is consistent with this reading.
+
+**D5: Origin Obfuscation** — 5
+Seven-vector check against the anonymized Stage 1 spec (which itself carries no source-domain vocabulary, so this is a structural-recognizability check): names (Voss, Farro, Duvray, Imke, Thess — invented, non-indexed to any identifiable source), occupation (quartermaster's tally room aboard a sailing vessel — a setting choice made fresh at naturalization, not given in the formalization), setting (a ship mid-ocean, doldrums — generic maritime, not traceable to a specific real vessel/incident), plot beats (culling-by-boat, ration economy, predecessor's fate) are structural translations of C1/C3, not lifted from a recognizable single source narrative, iconic imagery (the brass scale, the thumb-worn cup) is invented substrate, emotional register (flat, measured, uneasy) matches the strategy brief's chosen voice rather than mimicking a known text's affect, relational core (narrator/predecessor/replacement chain) is original patterning. Zero vectors are recognizable to a specific origin work. No override triggered.
+
+**D6: Literary Craft** — 5
+Opening earns its stillness (brass, cold, the small clean ache) and sets the story's central instrument in the first paragraph. Pacing is deliberately modulated per the edit manifest — still at the ritual, medium at the reserve-cask hesitation, compressed at the culling ("Voss reads the true-weight with his eyes on the needle... He said Duvray's name like he was reading the weight of the water"). The single coda (hand on plate, thumb in the cup's worn place) replaces a doubled ending, landing once and cleanly. Prose is controlled without being inert — concrete image work (the quarter-turn lock, the pencil column under the false floor of the scale) does the story's thinking.
+
+**D7: Inhabitation Density** — 5
+Sensory specificity from inside is constant and load-bearing: the cold brass at dawn, the "small definite click" of the needle's rest, the thumb not quite fitting the worn hollow, the ration notch felt "with a thumbnail in the dark." Constraints are felt through the body throughout — the narrator's ache at the scale ("the only ache on this ship that means exactly what it says"), Farro's lips moving over the dipper, the narrator's own hand flat on the cold plate at the very end. This is a story about measurement that never once measures anything abstractly.
+
+**D8: Emotional Honesty** — 4
+The story goes to real discomfort: Duvray's culling is delivered with no rescue, no revelation, and the narrator's "stupid, weightless second" of false hope (thinking the scale might finally answer the only question that matters) is a genuine flinch-point rendered rather than described. The reserve-cask thread is dramatized as a *chosen* inaction with a cost the narrator names directly ("I don't think that not-going is innocent, whatever else it is") — this is exactly the flinch point the strategy brief demanded be dramatized rather than merely stated, and it lands. Where the story pulls back slightly from full uneasiness: the ending's water-skin generosity, while kept appropriately uncertain in effect, still gives the reader *something* warm to exit on (Duvray's look, Farro's hidden fish) immediately before the final still image — the brief itself flagged this as the "quiet rebellion consolation prize" risk, and while it's earned by recurrence (the ration-mark overpour established earlier) and never validated as meaningful or futile, its placement directly before the ending softens the story's final note by half a register. Not a comfort resolution, but a single moment where the story's own discipline slackens fractionally.
+
+**D9: Invariant Preservation** — 5
+The falsifier holds. Voss reads the needle ("Twenty-two pounds, four ounces... It has never once been wrong") and the belonging-judgment for Duvray is executed on a wholly separate, undisclosed standard — no rulebook surfaces, no fairer authority is gestured at, and the narrator's closing hand-on-plate confirms only the instrument's honesty ("It has never once lied to me. It was not lying now") immediately paired with the explicit denial that this settles anything ("It had also never once told anybody a single thing about whether they'd be kept"). The grain invariant is also correctly subordinate and resolved on its own separate track: the narrator's small acts of care (the overpoured skin, letting Farro's dipper run past the notch) are legible as honorable without being convertible into belonging-currency — no one weighs them, they change no official outcome, and the floor question stays exactly as unresolved as the contract requires.
+
+STRONGEST CANDIDATE (own): *"The true-weight has never once decided anything. It only tells you what a thing weighs. Somebody else decides, afterward, in a room with no scale in it at all, what that weight is worth keeping."*
+This is the passage a hostile reviewer would flag first — it comes closest to *naming* the floor's mechanism, which risks converting the invariant into a stated proposition rather than an inhabited one, and "a room with no scale in it at all" could be misread as gesturing toward a *recoverable* alternative standard existing somewhere else, knowable if only the narrator entered that room. Refuted: the sentence names the *absence* of a scale for that question, not the presence of a hidden but findable rule — no room is ever located, entered, or its standard disclosed; the narrator's next move is not to seek that room but to place her hand back on the only instrument she has, which she has just finished establishing cannot answer the question. The line diagnoses the gap; it does not fill it. This is the invariant stated as physics, not a clue toward a fairer measure.
+
+STAGE-9 FINDING ADJUDICATION: The finding cites the culling sequence — Voss reading the needle, then separately and privately deciding Duvray's fate off an undisclosed standard, with the closing hand-on-plate confirming only the instrument's honesty, not its competence to answer belonging. This is accurate to the text as written: "They didn't weigh anyone... Voss's eyes went past the mast step entirely... He said Duvray's name like he was reading the weight of the water. Same voice. Same flat competence" — the culling standard is never disclosed, never leaked, never subjected to a fairer alternative reading. Confirmed, not conceded as weak: this is the load-bearing scene for the entire invariant and the text executes it without exception.
+
+**D10: Break Presence** — 4
+Target_prior: "the expectation that an individual's personal code is sufficient to overcome an indifferent, overwhelming system." The story affords and largely executes this break: the narrator's personal code (turning the lock back true, sealing an over-full skin, the quarter-turn hesitation named as non-innocent) never overcomes, delays, or even locally dents C1's operation — Duvray goes over the side "at the turn of the tide with no wind to speak of" regardless of any private act of decency performed around him, and the story's last image is the narrator alone at an indifferent scale, "nothing on it that owed either of us an explanation." The break is present and citable: *"I sealed Duvray's skin and set it in the boat by his feet and he looked at me... and neither of us said anything, because there wasn't a word sized right for it"* — followed immediately by the boat vanishing into water "past where the eye could hold it," with no suggestion the gesture changed his fate or ever could. Scored 4 rather than 5 because the break is somewhat softened by being distributed across several small acts (overpour, hidden fish, the look) rather than landing in one unmistakably violated expectation — a reader could still exit feeling the small kindnesses "counted" emotionally even though the text is careful never to claim they counted structurally. The violation lands, but its edges are slightly blurred by the accumulation of grace notes around it.
+
+---
+
+## TOTAL: 39/40 (D9 and D10 reported, not summed)
+
+## FRACTURES DETECTED:
+
+Scan results (witnessed):
+
+- **F37 (Voice Drift):** Scanned full text for register breaks — none found. Voice holds from opening to closing paragraph.
+- **F38 (Theme-Naming Dialogue):** Scanned all quoted dialogue (Farro's two lines, Voss's naming of Duvray) — no character states the story's thesis. Clean.
+- **F39 (Framework Residue):** Scanned for structural vocabulary ("extraction," "chi," "snare," "rope," "coordination," "topology," "indexical," "invariant," "substrate") — zero hits in story text.
+- **F40 (Counting Tic):** Cross-checked against the manifest's numeric inventory adjudication — all retained numerals (22 lb 4 oz, quarter-turn, twenty feet, three→weeks revision) are tied to in-scene positional access per the adjudication log. No un-earned tally residue found.
+- **F42 (Motif Redundancy):** The water-skin overpour recurs exactly twice (Farro's dipper, Duvray's skin) per strategy-brief instruction to seed recurrence — this is directed craft, not redundancy drift.
+- **F44 (Multiple Endings):** Manifest confirms the second coda ("nobody comes back from the sack") was cut; only one closing movement (hand on plate, thumb in the worn hollow) remains. Clean.
+- **F47 (Comfort Resolution):** Borderline — see D8 discussion. The ending's warmth (Duvray's look, Farro's fish) sits close to this fracture but is not scored as present: no outcome changes, no one is saved, the gesture's meaning is explicitly denied resolution ("I didn't know yet whether it would keep me"). Flagged as near-miss, not fracture.
+- **F50 (Direct-Realism Reversion):** Checked explicitly against D9 falsifier — no recoverable true value ever surfaces to replace the private standard. Not present.
+
+No fractures scored as PRESENT. One near-miss (F47) noted for the human reviewer's attention though it does not cap the score at current severity.
+
+## ROUTE: PUBLISH
+
+## AUTOMATIC OVERRIDES TRIGGERED:
+- None.
+
+---
+
+**Ω_E:** D9's strongest-candidate obligation surfaced a genuinely load-bearing sentence ("a room with no scale in it at all") rather than a decoy — the refutation required tracing the narrator's *next action* (returning to the scale, not seeking the room) to confirm the line diagnoses absence rather than implying a findable alternative.
+
+**Ω_C:** Scored D8 at 4 rather than 5 on the strength of the brief's own flagged risk (the ending's accumulated warmth) rather than treating the strategy brief's anticipatory concern as already resolved by the craft pass — the brief named the risk precisely enough that crediting a full 5 would have required the ending to feel more austere than it reads.
+
+**Ω_P:** Judgment call on D10 (4 vs 5): the break is unambiguous in substance but distributed rather than singular in delivery; a stricter reader could argue for 5 on the grounds that distribution is itself the honest form the break takes in a story this restrained. Flagging this as the closest call in the report.

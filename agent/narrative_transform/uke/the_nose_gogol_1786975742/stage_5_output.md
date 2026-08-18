@@ -1,0 +1,69 @@
+DISCOVERY REPORT
+
+EMERGENT ELEMENTS:
+
+The story enacts a three-way structural fracture around what the constraint engine names **categorical_nonexistence_as_soft_denial**: the Table's ledger does not deny claims, it simply has no page for them. This is the load-bearing mechanism of the whole piece.
+
+- **How it manifests in prose:** Section I gives us the mechanism directly — "Not refuse. He knew better than to think refuse... What happened in the Reading-chamber was quieter than that." Ostrun's petition isn't rejected, it's "not seated." The distinction is repeated almost liturgically ("The Table thanks you for bringing this forward. It has not been seated at this time" appears verbatim in both I and II), which is the story's own formal device for showing the mechanism is systemic rather than personal — it happens to two unrelated petitioners in identical language.
+
+- **Perspectival gap carriers:** Ostrun (fused-fifth, powerless/moderate seat) experiences the absence-of-category as a wound that "settl[es] a little further into its groove" — cumulative, personal, corporeal (the splice-knot he checks nightly). Ceth (institutional seat) experiences the same absence as *architecture* — "an unseatable claim was not a claim the Table had failed... the kindest true thing anyone could do... was say so plainly." The engine's χ analysis makes this precise: institutional χ is *negative* (-0.029, -0.026) while powerless/moderate/analytical χ all sit strongly positive (0.35–0.93). The prose embodies this exactly — Ceth's chapter is the only one where the denial-mechanism is narrated as competence and mercy rather than harm.
+
+- **Where the axis is most alive:** The "held breath" moment with Hara Dost's claim — the one place Ceth's confidence cracks ("Ceth held very still... one beat longer than the beat Ceth would have held for Ostrun Vey's petition"). This is the story's single instance of the institutional seat almost seeing what the engine calls the oracle gap: cross-position comparison revealing what single-position confidence cannot. It's underdeveloped — the crack closes within a paragraph and Ceth's private thought ends in *"I cannot enter what has nowhere to go,"* which re-fortifies the wall rather than breaching it.
+
+- **Where present but underdeveloped:** Prel Kastade is the story's purest instance of a beneficiary who isn't asked to see anything — "he'd like to get the boy onto the western seal by week's end." He functions as the engine's "concentrated beneficiary" role but the text never makes him aware he benefits; he's pure atmospheric contrast, not yet doing dramatic work.
+
+**bounded_empathy_as_stabilizing_mechanism** is the second axis, riding on Ceth specifically: the felt sorrow ("I understand the weight of what you're describing... and still could not make the ledger's architecture bend") is real and yet functions structurally as what stabilizes the extraction rather than interrupting it. The prose names this almost exactly in Ceth's closing thought of section II: "I have made myself the wall that keeps it from drowning... I have never once had to stand on the other side of it to know that it is." That line is the axis's clearest instantiation — and also flags its own blind spot (Ceth asserts confidence about a position never occupied).
+
+**unranked_substrate_as_negative_commons** — the bedrock — is the scaffold constraint, and the engine's flag (false_ci_rope, "appears to be rope... hides extraction behind low metrics") is worth sitting with: the ending frames the bedrock as sanctuary ("the bedrock, which had never once, in four hundred years, asked either of them what they were owed"), but structurally it is a space defined entirely by *absence of asking*, not presence of anything positive. Ostrun and the girl exchange no words, no names, no aid. The commons is negative in the literal sense the label gives it.
+
+LATENT POTENTIAL:
+
+- The Frankl question sits almost unaddressed: is there meaning available in categorical non-existence that the story hasn't found? The ending gestures at communion-through-shared-absence but stops short of either character *doing* anything with the recognition — no exchange of names, no plan, no gesture of aid, not even speech. The "unfiled and fused" pairing at the close is thematically resonant but dramatically inert; the two people who structurally rhyme never actually touch the rhyme.
+
+- Hara Dost's claim is the richest unexploited seam in the piece — it's the one moment the engine flags as producing a crack in institutional certainty, and it belongs to a character who then vanishes from the story entirely. She is the only adult who explicitly names the structural trap ("She's some of the unfiled, and she's going to stay some of the unfiled, because two dead households can't sign a withdrawal") — and the narrative doesn't return to her, or to what happens to the girl next, except obliquely through Ostrun's late, half-formed noticing.
+
+- The girl (Nine-and-Nothing) is introduced twice as someone Ostrun has "never actually looked at" — this is stated almost as authorial confession ("He would say, if asked, that of course he'd seen the child around... He would not be able to say when he had last actually looked at her") and then the device is *repeated verbatim in structure* in section III ("He had seen her before, certainly. He would have said, if asked, that of course he had."). This doubling is either a deliberate motif about attention-as-the-only-currency the unfiled receive, in which case it could be pushed further (what does it cost him to finally look?), or it's underdeveloped repetition that the story hasn't yet decided what to do with.
+
+- World-implying detail that's underused: the "Table's grammar" as a phrase Ceth uses to describe an entire cognitive register ("Ceth had no other grammar left to think in even for a single private beat") implies a genuinely totalizing institutional psychology — a person who has no private language left. This is a strong idea sitting mostly unexamined; we get one moment of it cracking and then it resolidifies with no cost shown.
+
+STRONGEST WRITING:
+
+- The splice-knot passage in section I: "he had learned, over twenty-two years, exactly how it lay against his collar in cold weather and in warm... He found it now without looking, the way a tongue finds the gap where a tooth used to be." This is the story's best physical image — precise, unsentimental, doing the emotional work through bodily habit rather than statement.
+
+- Ceth's closing interior line in section II: "an unfiltered Table would drown in every grief that wanted hearing, and I have made myself the wall that keeps it from drowning, and the wall is a true and necessary thing, and I have never once had to stand on the other side of it to know that it is." This is the thematic center of the piece delivered with genuine ambiguity — it reads as both self-justification and confession, and the prose doesn't tip its hand.
+
+- The "held breath" paragraph with Hara Dost: "This was the crack, and it lasted exactly as long as a held breath lasts — one beat longer than the beat Ceth would have held for Ostrun Vey's petition." The comparative measurement of two different silences is exact, controlled writing.
+
+- Section III's vertigo passage: "he did not think *she has none and I have twice*, because that thought required an arithmetic he had no procedure in him for performing. He only felt, all at once, the specific vertigo of two absences that were not the same absence." This explicitly refuses the numeric-comparison move even while gesturing at it — worth noting because it shows the prose actively resisting the anchor pattern rather than falling into it.
+
+- The final paragraph's long single sentence about the two ledger pages "perfectly correct, perfectly kind, perfectly unable to find the other" — strong controlled cumulative syntax that earns its length.
+
+ANCHOR CHECK:
+
+None found as anchor material. The one place a numeric comparison is set up — "she has none and I have twice" — is explicitly named and then explicitly declined by the narration ("he did not think [this]... because that thought required an arithmetic he had no procedure in him for performing"). This is the opposite of the anchor pattern: the story stages the temptation toward extraction-arithmetic and has the character's mind refuse to perform it. No countdowns, tallies, or descending scores appear anywhere else in the text. The "four" petitions and "twenty-two years" and "nine years" are scene-setting facts, not escalation structures — they don't compound or count down toward inevitability.
+
+INVARIANT PROBE:
+
+There is a real here the instruments cannot read, and the story names it almost exactly: "there is no procedural mechanism by which a dead party's silence can stand in for a living party's withdrawal, and I do not know whether that is an oversight or a design, and it does not matter which, because I cannot enter what has nowhere to go." This is the invariant — not a hidden fact awaiting a better ledger, but a category of experience (testimony of a fusion's original separateness; a birth suspended between two expired contests) that has *no slot in any possible schema*, because the schema's whole function is to convert lived particularity into recordable category, and some particularity resists that conversion by its nature, not by the Table's incompetence. Ceth's honesty about this ("I would enter it if I could find where it goes") is what keeps the story from collapsing into simple bureaucratic-villain satire — the absence is structural, not a fixable oversight, which the omega-resolution scenarios (schema_incompleteness_negligence_vs_design) leave explicitly open rather than resolved. The bedrock at the end is the story's other gesture at this: a place that asks nothing because it has no mechanism for asking, which is different from a place that forgives. The story is right at the edge of stating plainly that a *fairer* Table — one with more categories, better clerks, more patient notaries — would still not have a page for what Ostrun and the girl are, because what they are isn't a mis-filed instance of something nameable; it's the remainder that any act of naming necessarily produces. This is not fully stated as such, but it is not contradicted either, and it is the single most valuable thing the piece has found.
+
+SCOPE ASSESSMENT:
+
+Current word count: 3,741 (actual, computed). This reads as a short story, essentially complete in its current compression — closer to the tight end of the form. It is not an undercooked novella; the three-section structure (petitioner / institution / synthesis) is a complete gesture.
+
+Expansion would require: developing Hara Dost and the girl into fuller presences rather than catalysts for Ostrun's and Ceth's interiority — currently both are instrumentalized (the girl especially, who has no name, no line of dialogue, and exists almost entirely as an image for Ostrun to fail-then-partially-succeed at seeing). A longer treatment could let the "held breath" crack in Ceth actually cost something — have Ceth carry the Hara Dost case back into a private space and watch the wall's cost accumulate, or track what happens to the girl after Ostrun notices her, giving the ending's implied communion an actual dramatic event rather than a shared silence.
+
+Compression would sacrifice: the doubled "he would not be able to say when he had last actually looked at her" motif, which needs the space between its two occurrences to land; and the parallel liturgical repetition of "The Table thanks you for bringing this forward. It has not been seated at this time," which depends on two full scenes to establish as pattern rather than coincidence. Any further compression risks losing the two-notary structure that makes the perspectival-gap legible at all — you need both Ostrun's and Ceth's chapters at roughly their current length for the institutional/powerless split to register as a split rather than a single mood.
+
+---
+
+OMEGA LOG:
+
+- Ω_C: Whether the story intends the ending's silence between Ostrun and the girl as a deliberate refusal of false resolution (thematically coherent with "nothing here asked him for a tier") or as an underdeveloped scene that needed one more beat of contact. Requires creative judgment about what "recognition without action" is doing.
+
+- Ω_C: Whether Hara Dost's disappearance from the narrative after section II is a structural choice (mirroring how the unfiled vanish from institutional attention) or an abandoned thread. The engine's flagging of her scene as the story's sole "crack" moment raises the stakes of this decision for any revision.
+
+- Ω_E: Whether Prel Kastade is meant to carry more thematic weight than his current two brief appearances suggest — worth re-reading against the "concentrated beneficiary" structural role the engine assigns him to check if his lightness is calibrated or accidental.
+
+- Ω_P: Whether the girl's namelessness ("Nine-and-Nothing") is a defensible authorial choice (enacting the erasure the story is about) or a move that risks instrumentalizing her suffering for Ostrun's arc without giving her subjectivity — a judgment call about whose interiority the piece is ultimately for.
+
+- Ω_C: Whether the bounded_empathy axis (Ceth's felt sorrow as stabilizer) should be pushed toward an explicit reckoning — a moment where Ceth's competence is shown to cost the institution something, or a later case where the wall visibly fails — or whether the axis is meant to remain permanently unresolved as the story's honest claim about institutions that feel and still do not bend.

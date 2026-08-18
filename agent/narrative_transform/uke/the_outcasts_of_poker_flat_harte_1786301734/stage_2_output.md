@@ -1,0 +1,62 @@
+# SECTION 0: INVARIANT CONTRACT
+
+**The floor (primary invariant).** In this world, whether a person counts as *one of the crew* — whether their existence aboard is legitimate at all — is decided by a standard the ranking officers hold privately and never publish, never fix, and never submit to outside check. There is no written code beneath their judgment; their judgment is the only floor there is. **Falsifier:** if the finished story contains a recoverable "real" standard for belonging that a fairer captain or a leaked rulebook could apply correctly, the floor invariant was lost — this must never resolve into a correctable measurement error.
+
+**The grain (subordinate invariant).** A person can act with honor — steady the wounded, keep a promise made to no one who'll ever know, refuse a cruelty available for free — entirely apart from whether the ship's hierarchy has certified them worth keeping. This capacity is real and legible to whoever is near it. It is not, however, the thing that decides the floor question; it is subordinate on-screen, and at least one beat lets the grain's question settle (did she act rightly? yes, plainly) while the floor's question (does that make her one of the crew?) remains exactly as unresolved as before.
+
+**The substrate.** The floor's native home is the ship's own honest instrument: the manifest-weight — the scale bolted to the mast step that weighs cargo, water, and bodies alike for ballast and ration, and weighs true, always, to the ounce. It has never lied. What it cannot do, and was never built to do, is weigh belonging — and the officers read belonging off it anyway, because there is nothing else to read it off. The scale is not corrupt. It is simply being asked a question it has no face for.
+
+**Substrate inhabitation sentence:** *You watch the quartermaster read the ballast scale's true number aloud, and watch him decide, from a private ledger no one has ever seen, that your true weight means you are cargo and not crew.*
+
+---
+
+# SECTION 1: CONTEXT DESCRIPTION
+
+**The setting.** The merchant galley *Sesostris* runs the incense coast in the last years before the parent trading house at the river-mouth city collapses its smaller fleets into one. It is crewed past capacity — eleven bodies where the manifest was built for eight — because the House pays by the completed voyage, not the head, and every captain over-hires against the certainty that the crossing will kill or maroon a few before landfall. There is no navy here, no magistrate, no chaplain: three hundred miles of open water and a supply hold with forty days of stores stretched to serve a sixty-day route, because the last resupply cistern at the mid-route atoll silted shut two seasons back and the House has not yet paid to dredge it. The ship is the whole world for the length of the crossing. Whatever law exists is whatever the captain and the two mates agree to enforce, this week, on this deck, and they do not write it down.
+
+Twice a voyage, at the reef-shoal and again at the doldrum flats, the captain holds what the crew calls **the Culling** — not its official name, which doesn't exist, but the only name anyone uses. He and the mates walk the deck and name who goes over the side in the ship's boat, alone, with three days' water, ostensibly to "lighten ship" for the shoal-crossing or to "wait out" the windless flats at a nearby spit. No one sent off this way has ever been seen again by anyone who later reached port. The captain calls it seamanship. He never explains his list.
+
+**Constraint reference table:**
+
+- **C1 (invariant/floor) → the Culling itself, at the level of *why this name and not that one gets read out*.** Not naturalized as a rule anyone enforces by argument — naturalized as *physics of this closed world*: the captain's private sense of who is "sound" and who is "dead weight" is the only floor beneath continued existence on the ship, and it answers to nothing, not the manifest-weight, not seniority, not the House's articles. Agent X1/X2 (two deckhands, interchangeable in the captain's eye — the specification's flat χ=1.20 for both is the point: he does not distinguish them, they are simply *on the list or not*) experience it as **Snare**: total, immediate, physically inescapable — you cannot out-argue a decision made in a ledger you're not shown, on a ship you cannot leave. Agent X3 (the first mate) experiences the same Culling as **Rope**: from his seat it is orderly, necessary, cheap to execute, the thing that keeps the ship afloat and his own position secure — he loses nothing by it and gains a functioning crew-to-provender ratio.
+- **C2 (Mountain) → the Long Water — the crossing itself, the three hundred miles of empty sea with no port, no rescue, no wind you can bargain with.** This is naturalized as pure environment: nobody enforces the ocean, nobody profits from a becalming, and the captain suffers the doldrums exactly as the crew does, though he suffers them from a dry cabin. It is backdrop every character routes around, not a thing anyone fights.
+- **C3 (Tangled Rope / Rope split) → the water-and-biscuit ration, kept under the quartermaster's lock and measured out by the manifest-weight scale.** Agent X4 (a deckhand on the general ration) experiences it as **Tangled Rope**: the ration genuinely keeps her alive and genuinely, systematically shorts her relative to what the hold contains, because the shortfall is quietly padded into the "spare" reserve the mates draw on. Agent X1, when reassigned mid-voyage to help the quartermaster tally the ration (a promotion of sorts, forced by a death at the last Culling), experiences the *same* ration system as **Rope** — legitimate rationing, necessary, no longer felt as theft, because managing scarcity from inside the tally room reads differently than receiving from outside it. Agent X5 (the second mate) experiences it as **Rope** from a different angle entirely: he has been quietly siphoning a skin of water and a fistful of biscuit from the spare reserve every third night, an act invisible to the tally, which functions for him as a private arbitrage that costs him nothing and exits him from scarcity altogether.
+
+**Characters as positions:**
+
+- **Mirelle Cade** (X1) — deckhand, twenty-two, three voyages in. Reassigned to the tally room after the reef-shoal Culling takes the previous quartermaster's mate. Watches the scale weigh true every single day.
+- **Osan Duvray** (X2) — deckhand, structurally identical to Cade in the captain's private ledger: sound body, no family name worth protecting at the House, no skill the captain values enough to spare. Named at the doldrum-flat Culling.
+- **First Mate Bellard Voss** (X3) — executes the Culling on the captain's word, reads the manifest-weight aloud each dawn, has never once had his own name considered for the boat.
+- **Ines Farro** (X4) — deckhand on general ration, keeps a private count of what the hold *should* hold against what the ration actually gives, and says nothing, because saying something has a name too.
+- **Second Mate Corlin Thess** (X5) — nightwatch officer with keys to the spare reserve nobody audits.
+
+**Linguistic strategy — Direct Translation (with a naming layer).** The crew speaks a maritime creole descended from three trading-coast tongues, but the load-bearing move is vocabulary with no clean English gloss:
+
+- ***Sûrete*** — not "safety," but *the state of having been counted as sound.* You don't feel *sûrete*; you are told you have it, by someone who never explains the telling. "She had *sûrete* till the shoal" means: she was crew, then she wasn't, and no one will say why.
+- ***Le poids-vrai*** ("the true-weight") — the crew's name for the manifest-weight scale. It is spoken with genuine respect; everyone agrees it never lies. The horror is precisely that it never lies and is asked the wrong question anyway.
+- ***Aller au sac*** ("to go to the sack") — local idiom for being named at a Culling, from the meal-sack given to those put in the boat. Said flatly, never dramatized — the flatness is the tell of how normalized it's become.
+- **Naming tradition:** deckhands carry river-mouth-city surnames (Cade, Duvray, Farro) marking indentured or debt-passage origin — cheap labor, replaceable in the House's ledgers. Officers carry coast-trader surnames (Voss, Thess) marking free-contract status. The surname alone tells you, before anyone speaks, who can be named for the boat and who cannot.
+
+**Inhabitation sentences:**
+
+- **Mirelle Cade (X1):** *You have learned to read the true-weight scale for the tally room, and you are starting to understand that the number it gives is the only honest thing on this ship, and it has never once been the thing that decided whether you'd be kept.*
+- **Osan Duvray (X2):** *You are exactly as sound as Mirelle Cade by every measure anyone has ever taken of you, and you are the one who goes to the sack, and no one — least of all the man who named you — can say why it was you and not her.*
+- **Bellard Voss (X3):** *You read the manifest-weight aloud every dawn because it is the one number on this ship nobody argues with, and you have built the Culling on top of that trust without once letting the scale itself decide a name.*
+- **Ines Farro (X4):** *You take your ration at the mark the tally gives you and you have counted, in secret, exactly how much more the hold holds than what reaches your hands, and you say nothing, because you have seen what saying something costs.*
+- **Corlin Thess (X5):** *You unlock the spare reserve on your own watch, in the dark, and you have never once had to explain the taking to a scale that would only ever tell the truth about it.*
+- **Substrate (the manifest-weight, felt through whoever stands closest — Cade):** *You press your hand flat on the scale plate and watch it read your own weight back to you in perfect honesty, and you understand, for the first time with your whole body, that the number was never what saved anyone.*
+
+---
+
+# SECTION 2: OMEGA LOG
+
+**RESOLVED:**
+
+- **Ω_C01:** Should the Culling's selection logic be given *any* visible pattern (e.g., always the newest hires, always the injured)? → **Resolution:** No stated pattern; the captain's ledger is explicitly never shown to the reader either, not just to the crew. → **Impact:** Preserves the floor invariant — a reader who could reconstruct "the real rule" would convert the floor into a puzzle with a correct answer, which is exactly the failure mode the contract forbids.
+- **Ω_C02:** Does Corlin Thess's theft (TR1, C3) need to be discovered in-story to satisfy the transformation rule? → **Resolution:** No — the rule documents the index-shift itself (moderate/powerless → institutional arbitrage), not its narrative disclosure. Discovery is a Stage 4/5 dramaturgical choice, not a Stage 2 requirement. → **Impact:** Leaves the beat open for downstream stages without over-specifying plot.
+- **Ω_C03:** Does the grain (dignified action independent of category) need its own named character arc, or can it live inside Farro/Cade's existing positions? → **Resolution:** Housed inside Farro's silent count and Cade's scale-reading, not given a separate vessel. → **Impact:** Keeps the grain subordinate on-screen per the dominance ordering, rather than competing with the floor for narrative weight.
+
+**UNRESOLVED:**
+
+- **Ω_P04:** Should the story render the Culling boat's ultimate fate (survival, death, unknown) at any point, even obliquely? → **Recommendation:** Leave permanently unresolved — "no one sent off this way has ever been seen again by anyone who later reached port" preserves both the Mountain-adjacent finality of the Long Water and the Deterministic Tragedy attractor's closed horizon. → **Awaiting Stage 4/5 decision** on whether even a rumor should surface.
+- **Ω_P05:** Register/formality level of the creole dialogue — how heavily to lean into phonetic spelling versus clean English carrying the two key untranslatable terms? → **Recommendation:** Light phonetic touch, heavy reliance on *sûrete*, *le poids-vrai*, *aller au sac* as the primary defamiliarization vehicles, to avoid dialect-heaviness overwhelming the invariant work. → **Awaiting Stage 4 stylistic confirmation.**

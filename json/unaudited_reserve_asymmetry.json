@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "unaudited_reserve_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.44,
+    "resistance": 0.51,
+    "claimed_type": "snare",
+    "human_readable": "Unaudited Reserve Asymmetry (Ship's Cask vs. Notched Ration)",
+    "topic_domain": "organizational/maritime-logistics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "thess_and_officers_with_reserve_access"
+    ],
+    "victims": [
+      "general_ration_crew_farro_and_peers"
+    ],
+    "vindicated_propositions": [
+      "reserve_stewardship_necessity_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "thess_and_officers_with_reserve_access",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Holds the key-ring to the reserve cask and the pencil ledger that records its level. Draws against the cask in daylight without logging the draw, or logs a figure lower than what remains untouched. Justifies any scrutiny by citing stewardship duty over the ship's true survival margin. Because the ledger and the lock are held by the same hand, no one can independently verify whether the paper figure and the cask level match \u2014 and the gap between them is exactly the room this seat operates in."
+    },
+    {
+      "name": "general_ration_crew_farro_and_peers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Draws rations against a notched measure that is visible, physical, and non-negotiable \u2014 the notch is the only scarcity they can see or contest. They have no access to the cask, no view of the ledger, and no keyring. Their hunger is calibrated to the notch, not to the actual reserve; if the reserve is fuller than recorded, their scarcity is manufactured rather than discovered. Confined aboard ship, there is no exit until landfall, and no lateral channel to compare notes against the officers' books."
+    },
+    {
+      "name": "ships_quartermaster_clerk",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Nominally responsible for provisioning records but lacks independent access to the cask itself \u2014 the clerk transcribes whatever figure the keyholder reports and has no instrument to cross-check it. Would object to the unaudited draws if given cask access or a counting method, but is structurally kept out of the one room that would let the transcription mean anything."
+    },
+    {
+      "name": "ships_captain",
+      "role": "observer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Sits above the daily ration dispute and receives the pencil figure as settled fact, treating it as sufficient basis for voyage planning and crew discipline. Benefits indirectly from the appearance of a managed, sufficient reserve \u2014 a comfortable command narrative \u2014 without personally auditing the cask, and therefore has no independent means of detecting the asymmetry even if motivated to look."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A shared reserve buffer genuinely solves a real problem: pooling emergency provisions against unforeseeable shortage (storms, delayed landfall, spoilage) so that no single ration cycle failure sinks the voyage.",
+    "transfer_function": "Moves actual food volume from the general ration allotment's true entitlement into an unaudited surplus accessible only to keyholders \u2014 the crew's notch-measured hunger is calibrated against a reserve figure that may not reflect what the cask actually holds, transferring slack from the many to the few holding the key.",
+    "absent_voices": "The quartermaster's clerk, who transcribes the ledger but cannot verify it against the cask, would object to unaudited draws if given the means to check; the general crew has no representative in the room where the reserve figure is set at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the asymmetry were resolved overnight \u2014 reserve audited, ledger reconciled to cask, draws logged and visible to ration recipients \u2014 daily notch allotments would likely increase to reflect true surplus, keyholder daylight draws would end or require justification, and crew trust in command's provisioning claims would shift substantially; the ship's actual survival margin, not merely its recorded one, would become common knowledge.",
+    "founding_problem": "Ships historically needed a discretionary emergency reserve because voyages run longer than planned and a rigid, fully-visible ration schedule leaves no margin for storms, spoilage, or delay \u2014 someone competent needed authority to hold back and dispense surplus at their judgment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Officers with reserve access attest the discretionary buffer remains necessary for voyage safety. No corroboration from outside the benefiting parties exists aboard: the clerk cannot verify the cask independently, the crew has no access to the ledger, and the captain relies on the same unaudited figure the keyholders report \u2014 there is no seat on this ship positioned to confirm or deny the founding problem's current status from outside the beneficiary group."
+  },
+  "gain_flow": "thess_and_officers_with_reserve_access",
+  "fixing_cost": "cheap",
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Aboard a provisioning ship, a reserve cask of emergency food exists alongside a pencil ledger that is supposed to record its exact level. The general crew \u2014 Farro among them \u2014 draws daily rations against a visible, physically notched measure: the notch is the entire scarcity they can perceive. Meanwhile, an officer class holding the reserve's key-ring draws against the cask in daylight, sometimes without logging the draw, sometimes logging a figure below what the cask actually holds. The scarcity the rationed crew experiences is therefore not the ship's true scarcity \u2014 it is a manufactured proxy, calibrated to a ledger figure that the keyholders themselves control and that no independent party can check against the cask. The claimed type here is snare: the reserve's stated coordination function (emergency buffering against unforeseeable shortage) is real in principle, but it functions as cover for a structure that persists specifically because it is unaudited and because exit for the rationed crew (confined aboard ship) does not exist.",
+    "logic_rationale": "Extraction is high and rising (0.42 to 0.81 across the interval) because the gap between the pencil figure and the actual cask level appears to widen the longer the voyage runs without audit \u2014 each unlogged or under-logged daylight draw compounds. Suppression is substantial (0.72) but not total: the notch measure itself is a form of structural suppression (it fixes what the crew can perceive as their entitlement) while nothing prevents an audit in principle \u2014 the suppression is maintained by keyring exclusivity and information asymmetry, not by force. Theater ratio rises over the interval (0.28 to 0.58) because as scrutiny risk increases, more of the ledger-keeping activity becomes performative reconciliation rather than honest accounting \u2014 the pencil figure increasingly exists to be shown, not to be true.",
+    "perspectival_gap": "From the keyholder officer seat, this looks like prudent discretionary stewardship of a necessary emergency margin \u2014 a coordination function they are entitled to administer with judgment. From the rationed crew's seat, the identical structure is pure extraction: their hunger is real and immediate, calibrated against a figure they cannot see or challenge, while surplus flows invisibly to those who hold the lock. The engine computes these as different seat-types from the same structural data \u2014 the divergence is not an error, it is the finding.",
+    "directionality_logic": "Officers with reserve access are the clearest beneficiaries: they collect the undocumented surplus and control both the physical access (keyring) and the informational record (ledger) that would otherwise expose the gap \u2014 d sits near the full-beneficiary end, reinforced by arbitrage-grade exit (they can adjust the figure at will). The general crew is the clear target: trapped aboard ship, calibrated to a notch they cannot renegotiate, with zero visibility into the reserve's true state \u2014 d sits near the full-target end. The captain is a secondary beneficiary (comfortable command narrative) but not a keyholder, so directionality there is milder than the officers' \u2014 this asymmetry between two nominally institutional-power seats is deliberate and is why an override is not needed: the captain's exit is analytical/observational rather than arbitrage-grade, so the derivation chain already separates them without manual correction.",
+    "mandatrophy_analysis": "The reserve's founding problem \u2014 buffering against unpredictable shortage \u2014 is not obviously dead; ships genuinely can run into extended voyages. But the arrangement as currently operated has drifted from solving that problem to exploiting the absence of audit that solving it originally required. Classifying this as snare rather than tangled_rope turns on whether a genuine coordination function is still being served: the beneficiaries here are not identifiably coordinating anything for the crew's benefit \u2014 the crew derives no protective value from a reserve they cannot access, verify, or draw on in the emergency it is nominally held for. The coordination story is cover, not substance, which is the snare signature."
+  },
+  "omegas": [
+    {
+      "id": "reserve_necessity_vs_capture",
+      "question": "Is the discretionary, unaudited reserve arrangement a genuinely necessary emergency-buffering mechanism that happens to be currently exploited, or has it always functioned primarily as an officer perquisite with the emergency-buffer justification as post-hoc cover?",
+      "resolution_mechanism": "A full audit reconciling the ledger against the actual cask level, cross-referenced against historical voyage records showing whether the reserve was ever drawn upon for genuine emergencies versus routine daylight officer consumption.",
+      "impact": "If the reserve was rarely or never used for genuine emergencies, the coordination story collapses entirely and the classification is unambiguously snare with no residual coordination credit. If emergency use is documented, some tangled-rope coordination credit may be warranted even under continued extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reserve's coordination function is real-but-exploited or fabricated cover."
+    },
+    {
+      "id": "notch_calibration_provenance",
+      "question": "Was the notch-measured ration originally calibrated against the true total provisions (cask plus visible stock), or was it calibrated only against the visible stock from the start, making the crew's scarcity artificial by design rather than by later drift?",
+      "resolution_mechanism": "Historical provisioning records at voyage departure, if they exist independently of the current keyholders' ledger, showing the notch's original derivation.",
+      "impact": "If the notch was always calibrated short of true total supply, this reclassifies the asymmetry as a founding design feature rather than an emergent drift \u2014 strengthening the snare reading and weakening any residual mandatrophy defense.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the crew's ration scarcity was designed-in or drifted-into."
+    },
+    {
+      "id": "clerk_independence_ambiguity",
+      "question": "Could the quartermaster's clerk have obtained independent cask-verification authority at any point, or was exclusion from the cask itself part of the enforcement structure protecting the asymmetry?",
+      "resolution_mechanism": "Review of the ship's standing orders regarding provisioning authority and whether any prior clerk sought and was denied cask access.",
+      "impact": "If exclusion was actively enforced rather than merely customary, this strengthens requires_active_enforcement as a structural fact rather than an inferred one, and supports a higher suppression reading tied specifically to information control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the clerk's exclusion from cask verification is enforced or merely customary."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "dual_formulation_note": "This story addresses only the reserve-asymmetry constraint (unaudited keyholder draw vs. ledger figure). A sibling constraint could be written for the notch-ration mechanism itself as experienced independent of reserve knowledge (i.e., is the notch calibration a separate constraint on the crew even absent any officer misconduct?) \u2014 that would be a distinct \u03b5 and likely a rope or scaffold rather than a snare, since the notch alone, honestly calibrated, is a legitimate rationing coordination device. Not authored here to preserve \u03b5-invariance; flagged for potential decomposition."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-09",
+    "source_essay": "uke_narrative",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "temperature=0.2,max_tokens=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

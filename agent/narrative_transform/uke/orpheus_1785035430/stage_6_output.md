@@ -1,0 +1,22 @@
+STRATEGY BRIEF
+
+IMPLIED AUTHOR: A close-grained folklorist of grief-economy — someone who trusts institutional-voice free indirect discourse (Ossory) as much as lyric first-person (Ness, Cal), and who believes the strongest emotional beats live in objects that fail to help (salt, shawl) rather than in stated paradox. This author notices bureaucratic self-comfort with surgical patience and skips melodrama entirely. The prose should trust silence and gesture over aphorism.
+
+AUDIENCE: Readers of literary folk-horror / quiet fabulism — the readership of Kelly Link, Karen Russell's quieter registers, or "The Ones Who Walk Away from Omelas" adjacent work. Comfortable with unresolved ambiguity, institutional critique delivered obliquely, multiple close-third/first braided povs. Not seeking catharsis or explanation — seeking precision of feeling.
+
+SCOPE: Current story is 3,595 words; feasible ceiling for rewrite/pacing stages is 11,468 words. Target range: 4,200–5,200 words. This is a short story, not a novella — the braided-voice structure is already complete and effective. The task is deepening and de-crutching existing material, not expansion. Modest growth (600–1,600 words) should go toward earning the ending's silence, not toward new plot machinery or added scope.
+
+CREATIVE DEEPENING: The richest untapped material is Ossory's declined fork — his "beat of attention" is the story's sharpest device (institutional complicity registered and then let go unexamined) and could be trusted further without adding explanation. Similarly, Ness's closing testimony already contains the story's thesis ("there should be another word... but there isn't") — this line is stronger than any of the "both are true" formulations and models what the whole piece should sound like at its climaxes. The falter-in-the-footstep moment is the structural and thematic center; everything else should be judged by whether it protects or dilutes that moment's irresolution.
+
+FLINCH POINTS:
+1. "Both are true. I don't have room to be delicate about which" (recurs near-verbatim at III, VIII, IX, X): This is the draft explaining its own ambiguity to the reader at the exact moments it should be trusting the image alone. What honesty requires: cut the formula everywhere except possibly once, early, so its final appearance isn't a tic but a choice; let the salt running through the fingers, the empty coat pockets, and the unresumed footstep-rhythm carry the duality without a label.
+2. Cal's turn at the causeway's end (Section IX): the narration immediately supplies the moral ("I understand, too late to change anything, that this second look was never the thing the rule was built to test") — explaining what the rule was "built to test" resolves the ambiguity the invariant-falsifier check confirmed the story otherwise protects. What honesty requires: let the turn happen with less interpretive scaffolding; trust the reader to feel the failure without narrated diagnosis of the rule's intent.
+3. Ossory's interiority (Sections II, VI, X): the "beat of attention... he did not take it" device is excellent once, slightly overexplained by the third repetition in Section X, where the bridge-plank metaphor risks tipping from damning-by-restraint into authorial wink. What honesty requires: trust the first instance (Section VI) to do the work; the final occurrence should be even sparer than its predecessor, not equally elaborated.
+
+PATTERN CHECK: Concern, but correctly aimed already. The story does resolve its central cruelty through "quiet, dignified failure" rather than either villainy or triumph — but the Review's invariant check confirms this is what the material demands (the target_prior is explicitly that devotion doesn't convert to outcome). The risk isn't that the ending is too quiet; it's that the narration keeps interrupting its own quiet to gloss it. The fix is compression of authorial commentary, not escalation of stakes or darkness.
+
+---
+
+Ω_E: strategy_v1 | continuity=stage5_review | route=STRATEGY
+Ω_C: implied_author=folklorist_free_indirect | audience=literary_fabulism | scope=4200-5200w | ceiling=11468w
+Ω_P: flinch_count=3 | pattern_check=concern_aimed_correctly | primary_target=paired_abstraction_tic | invariant=preserve

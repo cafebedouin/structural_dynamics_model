@@ -297,32 +297,134 @@ def salient_stderr(stderr: str, limit: int = 800, tail: int = 8) -> str:
     return picked if len(picked) <= limit else picked[:limit] + " ...[truncated]"
 
 
-def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.CompletedProcess:
-    """Run a SWI-Prolog command and return the CompletedProcess.
+def invalidate(*paths) -> None:
+    """Delete a step's outputs BEFORE it runs, so a failure cannot leave stale ones.
+
+    The invariant (operator ruling, 2026-08-17, generalising the OQ-193
+    giant_comp raw.json rule): *a step that pre-deletes any of its outputs must
+    pre-delete ALL of them.* A step writes its artifacts only on success, so on
+    a crash every artifact it did NOT pre-delete survives from the previous run
+    — and none of the .md surfaces carries a run stamp, so a stale one is
+    indistinguishable from a fresh one at the read site (Build Discipline
+    Pattern 6: absence wearing a success shape).
+
+    Witnessed 2026-08-17: the giant_comp SIGSEGV correctly left no raw.json and
+    correctly left the manifest sidecar unstamped, while
+    `giant_component_analysis.md` silently kept the PREVIOUS run's content.
+
+    Deliberate consequence: a downstream consumer of a failed step's artifact
+    now fails LOUDLY (file missing) instead of silently reading last run's
+    numbers. That is the intended direction — never coerce this back to a
+    default-on-missing.
+    """
+    for p in paths:
+        Path(p).unlink(missing_ok=True)
+
+
+def _log_prolog_child(pid: int, rc, goal: str, t_start, t_end) -> None:
+    """Append one line per swipl child: wall-clock bounds + pid + rc + goal.
+
+    Correlating a kernel-log crash ("swipl: fatal signal 11", pid NNN) with the
+    step that died previously required reconstructing timing from file mtimes
+    (2026-08-17). This makes the correlation a lookup: the pid the kernel names
+    appears here with the goal it was running and the window it ran in.
+    Append-only, best-effort — a logging failure must never fail a pipeline step.
+    """
+    try:
+        OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
+        line = (f"{t_start.isoformat(timespec='milliseconds')}\t"
+                f"{t_end.isoformat(timespec='milliseconds')}\t"
+                f"{(t_end - t_start).total_seconds():.2f}s\t"
+                f"pid={pid}\trc={rc}\t{goal}\n")
+        with open(OUTPUTS_DIR / "prolog_children.log", "a", encoding="utf-8") as f:
+            f.write(line)
+    except Exception:
+        pass
+
+
+def run_prolog(modules: list[str], goal: str, timeout: int = 300,
+               attempts: int = 3, soft_timeout: Optional[int] = None
+               ) -> subprocess.CompletedProcess:
+    """Run a SWI-Prolog command, retrying TRANSIENT runtime deaths.
+
+    Measured 2026-08-17 on the live corpus (n=279): `run_giant_component_analysis`
+    fails **7 times in 100** serial, single-process, otherwise-idle invocations —
+    6 futex deadlocks (both OS threads parked; ~1 s of CPU done, then forever) and
+    1 SIGSEGV inside libswipl 9.2.9. The failure is per-invocation and independent,
+    so 3 attempts takes ~7% to ~0.03%. Root cause is upstream and unresolved
+    (audits/2026-08-17_giant_comp_segv_hang/); this is the operational mitigation,
+    not a fix — do not delete it when the upstream bug closes without re-measuring.
+
+    Retry ONLY on death-by-signal and timeout. An ordinary goal failure (rc=1) or a
+    Prolog ERROR is deterministic: retrying it burns minutes and hides a real defect.
+
+    *soft_timeout* caps every attempt but the LAST, so a hang is caught early and
+    retried while a genuinely slow corpus still gets the full *timeout* on its final
+    attempt (giant_comp: ~1.3 s live at n=279, ~6 s at kernel_v1 n=1106, ~6 min at
+    original_v6 n=3380 — a fixed tight cap would break the archive path).
 
     Args:
         modules: List of .pl files to load via -l flags.
         goal: Prolog goal string (without trailing halt).
-        timeout: Subprocess timeout in seconds.
+        timeout: Absolute ceiling, in seconds, for the final attempt.
+        attempts: Total tries (1 = the old no-retry behaviour).
+        soft_timeout: Per-attempt cap for all but the final attempt.
 
     Returns:
         subprocess.CompletedProcess with captured stdout/stderr.
 
     Raises:
-        PrologError: On non-zero exit code.
+        PrologError: On non-zero exit code (after retries are exhausted).
+        subprocess.TimeoutExpired: If the final attempt times out.
     """
+    last_exc = None
+    for attempt in range(1, attempts + 1):
+        final = (attempt == attempts)
+        cap = timeout if (final or not soft_timeout) else min(soft_timeout, timeout)
+        try:
+            return _run_prolog_once(modules, goal, cap, attempt, attempts)
+        except subprocess.TimeoutExpired as e:
+            last_exc = e
+            if final:
+                raise
+        except PrologError as e:
+            last_exc = e
+            # Only a signal death is transient; a goal failure is not.
+            if final or not getattr(e, "signalled", False):
+                raise
+    raise last_exc  # unreachable; kept so the contract is total
+
+
+def _run_prolog_once(modules: list[str], goal: str, timeout: int,
+                     attempt: int, attempts: int) -> subprocess.CompletedProcess:
+    """One swipl invocation. See run_prolog for the retry policy."""
     cmd = ["swipl"]
     for mod in modules:
         cmd.extend(["-l", mod])
     cmd.extend(["-g", f"{goal}, halt."])
 
-    result = subprocess.run(
+    # Popen rather than subprocess.run so the child pid is recoverable: it is
+    # the join key against the kernel log when a child dies on a signal.
+    t_start = datetime.now(timezone.utc)
+    proc = subprocess.Popen(
         cmd,
         cwd=str(PROLOG_DIR),
-        capture_output=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
         text=True,
-        timeout=timeout,
     )
+    try:
+        stdout, stderr = proc.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        proc.kill()
+        stdout, stderr = proc.communicate()
+        _log_prolog_child(proc.pid, "TIMEOUT", f"{goal} [try {attempt}/{attempts}]",
+                          t_start, datetime.now(timezone.utc))
+        raise
+    result = subprocess.CompletedProcess(cmd, proc.returncode, stdout, stderr)
+    _log_prolog_child(proc.pid, result.returncode,
+                      f"{goal} [try {attempt}/{attempts}]", t_start,
+                      datetime.now(timezone.utc))
     if result.returncode != 0:
         # rc < 0 means the process was KILLED BY A SIGNAL (rc=-11 = SIGSEGV).
         # SWI-Prolog's crash handler then prints a banner plus the full Prolog
@@ -341,10 +443,14 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.
             limit=6000 if signalled else 800,
             tail=120 if signalled else 8,
         )
-        raise PrologError(
+        err = PrologError(
             f"Prolog goal '{goal}' failed (rc={result.returncode}"
-            f"{', KILLED BY SIGNAL' if signalled else ''}): {detail}"
+            f"{', KILLED BY SIGNAL' if signalled else ''}"
+            f"{f', try {attempt}/{attempts}' if attempts > 1 else ''}): {detail}"
         )
+        # Retry policy reads this: a signal death is transient, rc>0 is not.
+        err.signalled = signalled
+        raise err
     return result
 
 
@@ -500,6 +606,7 @@ def _prolog_fingerprint():
 
 def _prolog_orbit():
     """Run orbit_report → orbit_report.md + orbit_data.json (sidecar)."""
+    invalidate(OUTPUTS_DIR / "orbit_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl", "orbit_report.pl"],
         "run_orbit_report",
@@ -514,6 +621,7 @@ def _prolog_orbit():
 
 def _prolog_fpn():
     """Run fpn_report → fpn_report.md."""
+    invalidate(OUTPUTS_DIR / "fpn_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "fpn_report.pl"],
         "run_fpn_report",
@@ -528,6 +636,7 @@ def _prolog_fpn():
 
 def _prolog_maxent():
     """Run maxent_report → maxent_report.md."""
+    invalidate(OUTPUTS_DIR / "maxent_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
          "maxent_classifier.pl", "maxent_report.pl"],
@@ -543,6 +652,7 @@ def _prolog_maxent():
 
 def _prolog_abductive():
     """Run abductive_report → abductive_report.md + abductive_data.json (sidecar)."""
+    invalidate(OUTPUTS_DIR / "abductive_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "dirac_classification.pl",
          "maxent_classifier.pl", "abductive_engine.pl", "abductive_report.pl"],
@@ -558,6 +668,7 @@ def _prolog_abductive():
 
 def _prolog_trajectory():
     """Run context_profile_report (conditional) → context_profile_report.md."""
+    invalidate(OUTPUTS_DIR / "context_profile_report.md")
     # Check if trajectory is enabled
     try:
         check = subprocess.run(
@@ -591,6 +702,7 @@ def _prolog_trajectory():
 
 def _prolog_covering():
     """Run covering_analysis → covering_analysis.md."""
+    invalidate(OUTPUTS_DIR / "covering_analysis.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl"],
         "run_covering_analysis",
@@ -611,11 +723,13 @@ def _prolog_giant_comp():
     never silently drop its owed section while the step still reads ok (covers a
     future catch-wrapping / soft-fail regression on the Prolog side).
     """
-    (OUTPUTS_DIR / "giant_component_analysis.raw.json").unlink(missing_ok=True)
+    invalidate(OUTPUTS_DIR / "giant_component_analysis.raw.json",
+               OUTPUTS_DIR / "giant_component_analysis.md")
     result = run_prolog(
         ["stack.pl", "giant_component_analysis.pl"],
         "run_giant_component_analysis",
-        timeout=900,
+        timeout=900,       # absolute ceiling: original_v6 (n=3380) needs ~6 min
+        soft_timeout=60,   # live corpus runs in ~1.3s; a hang is caught here, not at 900s
     )
     if "## Provenance split (OQ-193)" not in result.stdout:
         raise RuntimeError(
@@ -628,6 +742,7 @@ def _prolog_giant_comp():
 
 def _prolog_coupling():
     """Run coupling_protocol → coupling_protocol.md."""
+    invalidate(OUTPUTS_DIR / "coupling_protocol.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "inferred_coupling_protocol.pl"],
         "run_coupling_protocol",
@@ -637,6 +752,7 @@ def _prolog_coupling():
 
 def _prolog_maxent_diag():
     """Run maxent_diagnostic → maxent_diagnostic_report.md."""
+    invalidate(OUTPUTS_DIR / "maxent_diagnostic_report.md")
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl", "maxent_classifier.pl",
          "dirac_classification.pl", "maxent_diagnostic.pl"],
@@ -667,6 +783,8 @@ def _prolog_commentary_census():
     Coverage is computed ONLY for sources flagged CENSUS_COVERAGE decidable;
     undecided sources ship coverage null, never a default 1.0 (Pattern 6).
     """
+    invalidate(OUTPUTS_DIR / "commentary_census.json",
+               OUTPUTS_DIR / "commentary_census.md")
     result = run_prolog(
         ["stack.pl", "commentary_census.pl"],
         "run_commentary_census",

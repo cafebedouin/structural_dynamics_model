@@ -113,7 +113,11 @@ DATA_PREFIXES = (
     # from "the live radius" to "the live radius plus every historical probe".
     "audits/",
 )
-SELF_OUTPUT = ("audits/2026-08-17_oq190_blast_radius/", "python/audits/oq190_blast_radius.py")
+# This audit's OWN instruments. The probe file joined the census the moment it was committed —
+# `git ls-files` does not know the difference between a consumer and the tool measuring consumers,
+# and an instrument that counts itself inflates the very number it reports.
+SELF_OUTPUT = ("audits/2026-08-17_oq190_blast_radius/", "python/audits/oq190_blast_radius.py",
+               "prolog/probe_oq190_edge_admission.pl")
 
 CODE_SUFFIX = (".pl", ".py")
 # Active document surface per prereg §(g). audits/ is NOT swept; forward-citations INTO audits/
@@ -402,8 +406,35 @@ NAME_ANY = re.compile(
 AUDIT_CITE = re.compile(r"audits/(\d{4}-\d{2}-\d{2}_[A-Za-z0-9_.-]+)")
 
 
+# A documentary claim can rest on cast draw-stability while naming NO cast field, because it names
+# the INSTRUMENT that scores those fields. OQ-75: "compare only draw-stable fields, or size
+# n-per-cohort if the OQ-109 homogeneity falsifier fires" — the stability table IS the cast/verdict
+# score sheet, so gating on it is a cast dependency with no cast name in the sentence. The first
+# version of this sweep required a name and missed OQ-75 outright; the doc control then PASSED
+# anyway by matching OQ-190's own body, which is why the self-output pin below is not cosmetic.
+INSTRUMENT_PREMISE = re.compile(
+    r"(stability[- ]table|stability_table|replicate[- ]probe|draw-stable fields|"
+    r"stability-table-gates-claims|cohort[- ]zero.{0,40}(?:stability|replicate))", re.I)
+
+# OQ-190's own body is not a finding about the repo; it is this audit describing its own subject.
+# Same shape as pattern_citation_check pinning OQ-278's own span.
+SELF_OQ = "OQ-190"
+
+
+def oq190_span():
+    lines = read("ISSUES.md").splitlines()
+    try:
+        start = next(i for i, l in enumerate(lines, 1) if l.startswith(f"## {SELF_OQ} "))
+    except StopIteration:
+        return (0, 0)
+    end = next((i for i, l in enumerate(lines, 1)
+                if i > start and l.startswith("## OQ-")), len(lines)) - 1
+    return (start, end)
+
+
 def sweep_docs(paths):
     rows, edges = [], []
+    self_lo, self_hi = oq190_span()
     for p in paths:
         txt = read(p)
         if not txt:
@@ -414,12 +445,18 @@ def sweep_docs(paths):
                 edges.append(dict(file=p, line=i, target="audits/" + m.group(1),
                                   text=line.strip()[:160]))
             # Window: a claim and the field it rests on are often on adjacent lines in wrapped prose.
+            if p == "ISSUES.md" and self_lo <= i <= self_hi:
+                continue                      # this audit's own body — not a finding about the repo
             window = " ".join(lines[max(0, i - 2):i + 1])
-            if STABILITY_CLAIM.search(window) and NAME_ANY.search(window):
+            named = STABILITY_CLAIM.search(window) and NAME_ANY.search(window)
+            instrument = INSTRUMENT_PREMISE.search(window)
+            if named or instrument:
                 rows.append(dict(file=p, line=i, surface="doc",
                                  bucket="verdict" if re.search(
                                      r"disappearance_verdict|founding_problem", window) else "cast",
                                  claim=line.strip()[:200],
+                                 admitted_by=("named-field-stability-claim" if named
+                                              else "stability-instrument-as-gating-premise"),
                                  repair="repair-by-annotation",
                                  confidence="recovered"))
     return rows, edges
@@ -577,10 +614,24 @@ def selftest():
           "the closure reached an apparatus-presence-only consumer — OVER-BROAD")
 
     # -- Pair 4: DOCUMENTARY. Free, naturally arising fire target on the active surface.
+    # The control names the TARGET LINE, not a substring that any row could carry. Its first
+    # version asked only "does some row say draw-stable" and passed on OQ-190's own body while
+    # OQ-75 — the one claim the prereg says must be flagged before any doc-radius claim — was
+    # missed entirely. A control that a self-reference can satisfy tests nothing.
     drows, _ = sweep_docs(["ISSUES.md"])
-    oq75 = [r for r in drows if "draw-stable" in r["claim"].lower()]
-    check("doc FIRE    OQ-75 'compare only draw-stable fields' flagged",
-          bool(oq75), "the doc sweep did not flag OQ-75's own stability premise")
+    ilines = read("ISSUES.md").splitlines()
+    try:
+        want = next(i for i, l in enumerate(ilines, 1) if "only draw-stable fields" in l)
+    except StopIteration:
+        want = -1
+    check("doc FIRE    OQ-75's 'compare only draw-stable fields' premise flagged AT ITS LINE",
+          want > 0 and any(r["file"] == "ISSUES.md" and abs(r["line"] - want) <= 2
+                           for r in drows),
+          f"no doc row within 2 lines of ISSUES.md:{want} (OQ-75's stability-table gate)")
+    check("doc SELF-PIN OQ-190's own body not counted as a finding about the repo",
+          not any(r["file"] == "ISSUES.md" and oq190_span()[0] <= r["line"] <= oq190_span()[1]
+                  for r in drows),
+          "the sweep counted this audit's own text as a documentary dependent")
     desc = ["A beneficiary is an actor who gains from the constraint; victims are named per story."]
     desc_hit = STABILITY_CLAIM.search(" ".join(desc)) and NAME_ANY.search(" ".join(desc))
     check("doc DECLINE descriptive cast mention resting no stability claim not flagged",
@@ -602,13 +653,17 @@ def selftest():
     check("3d DECLINE  OQ-53's draw-stability claim about a NON-cast field not flagged",
           not dec53, "a stability claim about a non-cast field was admitted as a cast dependent")
 
+    self_rows = [p for p in code_files(tracked()) if p.startswith(SELF_OUTPUT)]
+    check("self-pin   this audit's own instruments are not in the code surface",
+          not self_rows, f"the sweep would census its own tooling: {self_rows}")
+
     print()
     if fails:
         print(f"SELFTEST RED — {len(fails)} control(s) failed: {fails}")
         print("Per prereg §(d): no radius claim may be made, and if a CLOSURE arm is among the")
         print("failures the verdict bucket returns `reserved-pending` regardless of the sweep.")
         return 1
-    print("SELFTEST GREEN — 10 controls, 5 two-sided pairs.")
+    print("SELFTEST GREEN — 12 controls, 5 two-sided pairs + 2 self-pins.")
     return 0
 
 
@@ -648,8 +703,10 @@ def do_sweep():
 
     drows, aedges = sweep_docs(docs)
     write_tsv(AUDIT / "doc_claims.tsv",
-              ["file", "line", "surface", "bucket", "repair", "confidence", "claim"], drows,
-              ["file", "line", "surface", "bucket", "repair", "confidence", "claim"],
+              ["file", "line", "surface", "bucket", "admitted_by", "repair", "confidence",
+               "claim"], drows,
+              ["file", "line", "surface", "bucket", "admitted_by", "repair", "confidence",
+               "claim"],
               ["OQ-190 doc_claims.tsv — active-surface documentary dependents (3c)",
                "a dependent RESTS A CLAIM on stability; a descriptive mention does not",
                f"doc surface: {len(docs)} tracked .md files; audits/ NOT swept"])
