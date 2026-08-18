@@ -1,0 +1,47 @@
+# Frame delta attribution, 2026-08-10 -> 2026-08-18
+
+## raw on-disk count (the command Appendix B's 1.1 row actually states)
+2026-08-10 frozen n_dirs_on_disk : 175
+2026-08-18 ls -d audits/*/ | wc -l : 187
+
+## population (self-excluded), 08-10 rule = exclude 1 own dir; 08-18 rule = exclude 2 arc dirs
+08-10 n_all_dirs      : 174   numerator 73   incidence 0.4195
+08-18 n_all (excl 2) : 185   numerator 83   incidence 0.4486
+
+## the SAME rule the 08-10 run used (exclude only the in-progress dir), for comparability
+08-18 n_all (excl 1) : 186   numerator 84   incidence 0.4516
+
+## DIRECTORIES ADDED to the population since 2026-08-10 (glob rule, both arc dirs out)
+2026-08-10_oq78_idiom_close
+2026-08-12_oq283_framing_boundary_discrimination
+2026-08-13_oq287_defork
+2026-08-13_rqd_recognition_vs_enumeration
+2026-08-14_cheap_confession_codraw_replication
+2026-08-14_oq278_index_collision
+2026-08-17_bound_dispatch_hardening
+2026-08-17_giant_comp_segv_hang
+2026-08-17_oq190_blast_radius
+2026-08-17_oq251_natural_law_reachability
+2026-08-17_oq285_mode3_measurement_arm
+
+## count added:
+11
+
+## DIRECTORIES REMOVED from the population since 2026-08-10
+(count: 0)
+
+## NUMERATOR members added since 2026-08-10
+2026-08-10_oq78_idiom_close
+2026-08-12_oq283_framing_boundary_discrimination
+2026-08-13_oq287_defork
+2026-08-13_rqd_recognition_vs_enumeration
+2026-08-14_cheap_confession_codraw_replication
+2026-08-14_oq278_index_collision
+2026-08-17_bound_dispatch_hardening
+2026-08-17_oq190_blast_radius
+2026-08-17_oq251_natural_law_reachability
+2026-08-17_oq285_mode3_measurement_arm
+(count: 10)
+
+## NUMERATOR members LOST since 2026-08-10 (would indicate an edited/removed audit)
+(count: 0)

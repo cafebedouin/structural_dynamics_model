@@ -1,0 +1,33 @@
+=== ROW 5.4 Non-census directories with no .md / with keywords in unopened file types ===
+non-census population: 102
+
+no .md file at all                          : 4
+census keywords present in NON-.md files    : 12
+  (2026-08-10 published: 4 / 12 of 101)
+
+-- dirs with no .md:
+2025-02-23_gap_tests
+2026-06-04_oq71_depth_lineage
+2026-06-12_gate_partial_fix
+2026-07-24_oq153_update_authority_step2
+
+-- dirs with keywords in unopened file types:
+2026-06-04_oq65_bait_census
+2026-06-05_generation_pipeline_deleak
+2026-06-11_oq93_grid_migration
+2026-06-13_oq122_retype_discriminator
+2026-06-13_oq50_power_scaling_residue
+2026-06-21_oq35_field_counterfactual
+2026-07-01_oq197_acceptance_controls
+2026-07-23_oq232_falsifier_redesign
+2026-07-27_cross_author_epsilon_probe
+2026-08-03_oq258_referent_discriminator
+2026-08-06_oq259_item2_tframework
+2026-08-09_oq151_dual_gauge
+
+CONTROL (two-sided): the same non-.md sweep run over the CENSUS stratum must be non-empty
+somewhere, else the sweep itself is dead. Sampling the numerator:
+  fires on 2026-06-07_stakeholder_layer_migration (4 non-.md files)
+  fires on 2026-06-10_oq81_reading_upstream_recon (5 non-.md files)
+  fires on 2026-06-11_oq112_item4_sentinel_trace (2 non-.md files)
+  fires on 2026-06-11_oq33_close (1 non-.md files)

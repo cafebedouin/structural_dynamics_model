@@ -1,0 +1,35 @@
+=== ROW 1.1 Prolog modules (top-level) ===
+$ ls prolog/*.pl | wc -l
+125
+$ wc -l prolog/*.pl | tail -1
+  41860 total
+
+=== ROW 1.1 Python scripts ===
+$ ls python/*.py | wc -l
+134
+$ find python -name '*.py' -not -path '*/archives/*' | wc -l
+285
+$ find python -name '*.py' -not -path '*/archives/*' -exec cat {} + | wc -l
+106965
+
+=== ROW 1.1 Audit directories (the command AS WRITTEN in the row) ===
+$ ls -d audits/*/ | wc -l
+187
+
+=== ROW 1.1 Corpus stories, per leg ===
+$ for d in testsets testsets_haiku testsets_flash testsets_kimi testsets_sonnet; do ls prolog/$d/*.pl | wc -l; done
+testsets: 279
+testsets_haiku: 960
+testsets_flash: 960
+testsets_kimi: 1005
+testsets_sonnet: 1001
+total: 4205
+
+=== ROW 1.1 Repository initialized ===
+$ git log --reverse --format='%ad %h' --date=short | head -1
+2026-01-12 41db1d0b
+
+=== ROW 1.2 CLAUDE.md / ISSUES.md / KNOWN_STATE.md born ===
+CLAUDE.md        2026-02-28 f6906066
+ISSUES.md        2026-05-28 e5f805ab
+KNOWN_STATE.md   2026-05-31 aaba00e0

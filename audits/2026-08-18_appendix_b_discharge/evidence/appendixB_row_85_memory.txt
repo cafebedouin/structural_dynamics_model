@@ -1,0 +1,35 @@
+=== ROW 8.5 Deleted / merged — NAME-LEVEL diff, not the balancing arithmetic ===
+
+The row's stated method ('arithmetic over backup vs. current listing') is a CONSISTENCY
+check: 113 - 25 deleted - 45 merged + 10 clusters = 53 balances by construction if the
+terms were derived from one another, so it cannot fail. The discriminating check is a
+name-level set diff, run here.
+
+before (backup, incl. MEMORY.md) : 114
+after  (current, incl. MEMORY.md): 54
+
+-- names present BEFORE and gone AFTER (deleted or merged away):
+70
+-- names present AFTER and absent BEFORE (new cluster files):
+10
+feedback_close_honesty.md
+feedback_commit_hygiene.md
+feedback_control_validity.md
+feedback_doc_correction.md
+feedback_interpretation_labeling.md
+feedback_plan_structure.md
+feedback_prereg_review_riders.md
+feedback_redraw_replication_claims.md
+feedback_sweep_reporting.md
+project_perturbation_primitives.md
+-- names surviving unchanged in NAME (content may differ):
+44
+
+ARITHMETIC CHECK on the name-level sets:
+  114 - 70 + 10 = 54   (must equal after = 54)
+
+=== ROW 8.5 Genuinely wrong content: 2 files ===
+The row's command is 'named in 8.5; verify against the backup tarball'. That is a POINTER.
+The two files are named in the paper's 8.5 prose; checking they exist in the backup:
+1670:absorptions. **Genuinely wrong content was rare: 2 files.** The always-loaded index component fell
+2450:| 8.5 | Genuinely wrong content | 2 files | named in §8.5; verify against the backup tarball |

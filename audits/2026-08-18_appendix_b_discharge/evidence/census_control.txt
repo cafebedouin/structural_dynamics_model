@@ -1,0 +1,19 @@
+fixture                       want       got   verdict
+  d1_empty                   False     False   ok
+  d2_keyword_md               True      True   ok
+  d3_plain_md                False     False   ok
+  d4_keyword_wrong_ext       False     False   ok
+  d5_keyword_nested           True      True   ok
+  d6_no_md_at_all            False     False   ok
+
+  [control 3] empty dir enters population, never the numerator — denominator inflation is REPRODUCED
+
+  [control 4] pinned form (root, 'audits/') : ['d2_keyword_md', 'd5_keyword_nested']
+  [control 4] broken form (inside, '*')     : ['WRITEUP.md', 'sub']
+  [control 4] broken form yields FILENAMES, not directories — the 77/175 unit error is still reproducible, so the control is live
+
+  [control 5] target '.' -> ['d2_keyword_md', 'd5_keyword_nested']
+  [control 5] target '*' -> ['WRITEUP.md', 'sub']
+  [control 5] same command, same tree, different target SHAPE -> different extracted field. The census is a positional parse whose field index is unchecked. Use an explicit 'audits/' target, never '.'
+
+CONTROL PASSED — 6 fixtures classified correctly, empty-dir defect reproduced, cwd regression control live.

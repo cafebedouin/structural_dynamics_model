@@ -1,0 +1,56 @@
+=== ROW 10.4 Audit cadence — the command AS WRITTEN (no exclusion) ===
+$ for m in 2026-06 2026-07 2026-08; do ls -d audits/$m-* | wc -l; done
+2026-06: 98
+2026-07: 45
+2026-08: 22
+
+=== ROW 10.4 — BOTH WAYS: excluding ONLY this pass's own in-progress dir ===
+Rationale (operator correction): the census excludes the two arc dirs because they carry the
+P-lexicon — a CONTAMINATION rationale that does not transfer to a cadence count. The 08-10
+arc dir is a legitimate audit and belongs in the activity numerator; excluding it would bias
+the contested absorption/decay series toward the decay reading. Only the pass's own
+in-progress dir is excluded, and the rule is applied to EVERY month (a no-op for June/July,
+stated so the series stays comparable with the original no-exclusion 98/45/10).
+$ for m in 2026-06 2026-07 2026-08; do ls -d audits/$m-* | grep -vx audits/2026-08-18_appendix_b_discharge/ | wc -l; done
+2026-06: 98
+2026-07: 45
+2026-08: 22
+
+=== delta attribution: which August dirs exist, and which the rule removes ===
+2026-08-03_kritik_ingest
+2026-08-03_oq258_referent_discriminator
+2026-08-05_oq259_emphasis_discriminator
+2026-08-06_oq259_item2_tframework
+2026-08-06_oq259_item3_genreflag
+2026-08-06_oq264_kredraw_variance
+2026-08-07_oq261_forced_gluing
+2026-08-09_oq151_dual_gauge
+2026-08-09_oq262_coexists_severance
+2026-08-10_oq277_rq2_crosscoding
+2026-08-10_oq78_idiom_close
+2026-08-12_oq283_framing_boundary_discrimination
+2026-08-13_oq287_defork
+2026-08-13_rqd_recognition_vs_enumeration
+2026-08-14_cheap_confession_codraw_replication
+2026-08-14_oq278_index_collision
+2026-08-17_bound_dispatch_hardening
+2026-08-17_giant_comp_segv_hang
+2026-08-17_oq190_blast_radius
+2026-08-17_oq251_natural_law_reachability
+2026-08-17_oq285_mode3_measurement_arm
+2026-08-18_appendix_b_discharge
+
+removed by the rule: 2026-08-18_appendix_b_discharge (1)
+delta June: 0 | delta July: 0 | delta August: -1
+
+=== the ORIGINAL 2026-08-10 reading, for comparability ===
+paper (as of 2026-08-10, no exclusion): June 98 / July 45 / Aug 1-10 10
+Note the August cell is a PARTIAL month in the paper's reading (Aug 1-10) and a FULL-to-date
+month here (Aug 1-18). They are not the same cell and must not be diffed directly.
+
+=== ROW 7.4 Apparatus self-instances in the arc ===
+The row reads '9, of which 8 from one ~36h pass; 0 caught by a gate' with command 'the arc's
+session record'. That is a POINTER, not a command. Cross-checked against the paper's own
+table at 7.4, which enumerates the nine rows:
+9
+(count of single-digit-numbered table rows in the whole file; the 7.4 table is the only such block)

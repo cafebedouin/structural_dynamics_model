@@ -1,0 +1,31 @@
+# OQ-309 census frame — FROZEN
+as_of_local_date: 2026-08-18
+repo_commit: c1c3ef7752ca66baa7d1456e4c80bf63257bda55
+repo_dirty: yes
+grep_binary: grep (GNU grep) 3.11
+
+n_dirs_on_disk: 187
+n_self_excluded: 2  # want exactly 2 (2026-08-10_oq277_rq2_crosscoding, 2026-08-18_appendix_b_discharge)
+
+## denominator, computed BOTH ways
+n_denominator_rule_glob:              185   # every dir under audits/
+n_denominator_rule_nonempty_anydepth: 185   # >=1 regular file at any depth
+n_denominator_rule_nonempty_toplevel: 184   # >=1 regular file at top level
+delta_glob_minus_nonempty:            0
+
+## numerator (unchanged by the denominator rule)
+n_incident_bearing: 83
+numerator_outside_nonempty_population: 0  # want 0
+
+## incidence, both ways
+incidence_rule_glob:     83 / 185 = 0.4486
+incidence_rule_nonempty: 83 / 185 = 0.4486
+
+## integrity: the two strata must partition the glob population exactly
+partition_check: 185 == 185
+
+# md5 of each frozen listing
+0da4090a763bb8ad54f5149b21049710  audits/2026-08-18_appendix_b_discharge/frame/all_dirs_glob.txt
+0da4090a763bb8ad54f5149b21049710  audits/2026-08-18_appendix_b_discharge/frame/all_dirs_nonempty.txt
+a80803fac0d720e93043206f0e1a69f0  audits/2026-08-18_appendix_b_discharge/frame/incident_bearing_dirs.txt
+9fc3543d3a081f98c6b21fd80b9e7a41  audits/2026-08-18_appendix_b_discharge/frame/non_census_dirs.txt

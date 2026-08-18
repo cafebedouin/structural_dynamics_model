@@ -1,0 +1,47 @@
+=== ROW 5.1 P1 instance: frozen artifact n (historical †) ===
+$ /usr/bin/grep -n 'n=563' docs/technical/build_discipline.md
+63:  (n=563 → 772) but left the join frozen at the old snapshot — its embedded manifest still
+64:  read `n=563 / b5ccee0` while the corpus had moved on. The artifact had *consumed* its
+2721:*before* that guard existed, frozen at n=563 while the corpus grew to 772 (Pattern 1). The
+
+=== ROW 5.1 P5 instance: certifications (historical †) ===
+$ /usr/bin/grep -n '0/404' docs/technical/build_discipline.md
+744:`natural_law`-signature constraints, **0/404** carry any beneficiary signal from either source
+746:is **0/404 by cascade construction**. The 404 NL certifications currently mean "no beneficiary
+
+=== ROW 5.1 P6 instance: suppressed warning duration (historical †) ===
+$ /usr/bin/grep -n 'four months' docs/technical/build_discipline.md
+826:   printed at every load for four months into a universally filtered channel, until the dead
+
+=== ROW 8.5 Memory content files before / after ===
+$ ls $M/*.md | wc -l
+54
+$ ls $M/*.md | /usr/bin/grep -v 'MEMORY.md' | wc -l
+53
+$ tar tzf <backup> | grep -c '\.md$'
+114
+
+=== ROW 8.5 Always-loaded index size ===
+$ wc -c $M/MEMORY.md
+9906 /home/scott/.claude/projects/-home-scott-bin-structural-dynamics-model/memory/MEMORY.md
+$ tar xzf <backup> -O memory/MEMORY.md | wc -c
+17416
+
+=== ROW 8.5 / 10.2 apparatus_instrument ===
+$ python3 python/apparatus_instrument.py --check
+PROBLEM: 2026-08-18_appendix_b_discharge: WRITEUP.md missing its **Fired:** line (required for dirs dated > 2026-08-10)
+delivery (REPORTING ONLY, not gated): 53 sibling files, 5 front-loaded per the OQ-290 ruling
+  NOTE: for a [front-loaded] file the delivered FRACTION is not a health metric — the delivered prefix is self-sufficient by construction, so a low number is the design working, not a loss. Front-loading LOWERS this percentage on purpose.
+  under NSp (4096 B / 200 lines): 19 of 53 over cap
+      15%   28116 B   409 ln  [front-loaded] feedback_prereg_review_riders.md
+      23%   17486 B   220 ln  [front-loaded] feedback_probe_positive_controls.md
+      28%   14577 B   208 ln  [front-loaded] feedback_close_honesty.md
+      31%   13180 B   184 ln  [front-loaded] feedback_control_validity.md
+      35%   11540 B   147 ln  [front-loaded] feedback_verification_design_discipline.md
+    ... and 14 more (listing capped at 5; the COUNT above is full)
+  under kae (25000 B / 200 lines): 3 of 53 over cap
+      53%   28116 B   409 ln  [front-loaded] feedback_prereg_review_riders.md
+      92%   17486 B   220 ln  [front-loaded] feedback_probe_positive_controls.md
+      96%   14577 B   208 ln  [front-loaded] feedback_close_honesty.md
+  truncation tripwire: no sightings file (no truncation notice has been recorded; NOT evidence that none occurred — see OQ-292)
+apparatus: catch-rate 11L/1l/0n of 12 bits (12 of 61 writeups carry one; forward-only from 2026-08-10) — NO DECLINE EVER RECORDED: readout not yet interpretable (OQ-276); channel 33/33; RED
