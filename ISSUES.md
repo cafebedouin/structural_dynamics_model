@@ -4889,17 +4889,23 @@ disconfirming temperature would not either, since model+prompt already accounts 
 **The corpus-wide design is dead regardless:** 60% of the phenomenon has no `six_questions` block to
 populate.
 
-**The gating free check RAN, and returns a THIRD state — not "clean", not "aliased", but
-UNRECORDED** (`limb3_temperature_aliasing.out`). `story_provenance/8` arg 8 (`SamplingParams`) is the
-only temperature carrier in substrate, and **only 31 of 279 stories carry an actual temperature
-value** (24 at `temperature=0.2`, 7 at `temperature=1.0`); 173 say `unspecified`, 44 record
-`max_tokens` only, 26 have no provenance. **The haiku/`22843cdf` cell — the one cell exhibiting both
-outcomes — is `max_tokens=16384`, i.e. temperature is not recorded for it at all.** So the aliasing
-question is Ω_E-**unanswerable from this corpus** for the cell that matters; declared, not papered
-over. Two things nonetheless close it:
-1. **Where temperature IS observable, it separates nothing.** Sampling params vary *within*
-   `claude-sonnet-4-5` (0.2 vs unspecified) and *within* `claude-sonnet-5` (three values); absence
-   in those cells is **0–1 regardless**. Across all 31 temperature-bearing stories: **0 absences.**
+**The gating free check RAN — and its FIRST RESULT WAS WRONG; the corrected read lands on branch 1
+(temperature CONSTANT in the deciding cell).** The first probe split `story_provenance/8` args on
+`,` while `sampling_params` values themselves contain `,`
+(`'max_tokens=16384,temperature=api_default'`), truncating arg 8 at its first comma and dropping
+every temperature term in a compound value — a plausible, well-formed, silently wrong parse
+(Pattern 4 in the probe). Corrected quote-aware read:
+`limb3_temperature_aliasing_CORRECTED.out`; the defective output is retained beside it as the
+superseded record. **Corrected numbers: 80/279 (29%) carry a temperature term** (42 numeric, 38
+symbolic), not 31/279; and **the haiku/`22843cdf` cell is 28/28 at a single `sampling_params` value,
+`max_tokens=16384,temperature=api_default`** — temperature IS recorded and IS constant there.
+Since that is the only cell exhibiting both outcomes, temperature cannot explain its 16-vs-12 split:
+**the clustering attribution is clean and unaliased.** Two things close it:
+1. **Where temperature varies at all, it separates nothing.** Every stratum holds one
+   `sampling_params` value, so temperature is confounded with (model, prompt) *between* strata —
+   irrelevant, since the question is within-cell. Across the 80 temperature-bearing stories the only
+   absences are the 16 in the cell where temperature is **fixed**; the other 64 carry **0 absences**
+   across four distinct temperature terms (0.1, 0.2, 1.0, `default`).
 2. **A positive mechanism, measured, that discriminates AGAINST temperature.** Over the full haiku
    stratum (n=28): files WITH `founding_problem_status` are median 39,072 B / 96 facts /
    **12/12 carry `constraint_stakeholder` facts**; files WITHOUT are median 27,564 B / 58 facts /
@@ -4914,9 +4920,15 @@ over. Two things nonetheless close it:
    minted for exactly this gap.
 
 **Limb 3 therefore closes RESOLVED-BY-CORPUS, not resolved-by-spend; the ~$1.5–2 reserve is
-released and does not carry forward.** Re-escalation scope, if it ever comes: a *within-cell* temp
-sweep on the 28-story haiku stratum only — a fraction of the original price and actually targeted —
-and only if OQ-202's emission fix fails to account for the stratum. Full enumeration:
+released and does not carry forward.** On the corrected read there is no residual within-cell sweep
+either: it would hold constant the one variable already constant in that cell.
+**But "released" is partly UNSPENDABLE-AS-DESIGNED, not only unnecessary, and the record must not
+let a later reader take it for "the temperature question was answered corpus-wide."** It was
+answered on one 28-story cell where temperature is fixed, plus a mechanism attribution. **199 of 279
+stories (71%) carry no temperature term at all** — for them no sampling-parameter attribution is
+possible from substrate, so the sweep this OQ reserved could never have been purchased against most
+of the material it was reserved for. That capability absence, and the unconsumed
+delimiter-colliding shape of the slot that would carry it, are declared as **GAP-37**. Full enumeration:
 `audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5 + §8. Until OQ-202 disposes the stratum,
 OQ-305 must not re-adjudicate OQ-136. The denominator finding is routed OUT of this entry to
 **OQ-306** — it is larger than the verdict question.

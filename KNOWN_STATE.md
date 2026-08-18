@@ -83,15 +83,28 @@ reads the roster), `disappearance_verdict` does **not** reach `q6_cell` (q6 read
 `founding_problem_status` only), and **neither verdict atom reaches `dr_type`**.
 
 **Limb-3 CLOSED resolved-by-corpus (operator re-reserved 2026-08-17; the ~$1.5–2 reserve is
-RELEASED and does not carry forward).** The gating aliasing check returned a third state:
-`story_provenance/8` arg 8 carries an actual temperature for only **31 of 279** stories, and the
-haiku/`22843cdf` cell — the sole cell with both outcomes — records `max_tokens=16384` only, so the
-question is Ω_E-**unanswerable** there. It closes anyway on a measured mechanism: over the full
+RELEASED and does not carry forward).** **Tripwire — `story_provenance/8` arg 8 (`sampling_params`)
+is a comma-separated `k=v` BAG inside a comma-delimited Prolog term, so a naive arg-split truncates
+it at the first comma and yields a plausible, well-formed, silently wrong value.** This audit's own
+first probe did exactly that, dropped every temperature term in a compound value, and inverted the
+aliasing verdict; corrected read `limb3_temperature_aliasing_CORRECTED.out`. **Consumers today:
+ZERO** — every reader takes arg 7 (`Model`): `json_report.pl:1134`,
+`oq136_bucket_provenance.py:70`, `run_pipeline.py:199`. T5b inert-unconsumed; the hazard is armed
+for its first reader. Corrected numbers: **80/279 (29%) carry a temperature term** (42 numeric, 38
+symbolic), and the deciding haiku cell is **28/28 at one value**
+(`max_tokens=16384,temperature=api_default`) — temperature is CONSTANT there, so the clustering
+attribution is clean and unaliased. It closes on that plus a measured mechanism: over the full
 28-file haiku stratum, files with `founding_problem_status` are 12/12 carrying
 `constraint_stakeholder` (median 96 facts) and files without are **0/16** (median 58) — categorical,
 **non-overlapping**, two fact families co-missing. A whole-block emission failure (truncation or
-schema-branch miss), not a temperature continuum. Owned by **OQ-202**, already open. Re-escalation
-scope if ever: a within-cell temp sweep on those 28 files only.
+schema-branch miss), not a temperature continuum. Owned by **OQ-202**, already open. No residual within-cell sweep: it
+would hold constant the one variable already constant there. **"Released" is partly
+UNSPENDABLE-AS-DESIGNED — 199/279 stories (71%) carry no temperature term, so no
+sampling-parameter attribution is possible from substrate for most of the corpus, and the reserved
+sweep could never have been purchased against that material. Declared as GAP-37** so the next
+person reaching for a temperature explanation learns it before scoping, not after. Do NOT read the
+close as answering temperature corpus-wide: it was answered on one 28-story cell where temperature
+is fixed.
 
 **Limb-3 addendum (the earlier same-day ruling: YES accepted, spend-go approved IN PRINCIPLE,
 DO NOT SPEND — the reserved design targets verdict *value* stability, OQ-136 needs *presence*

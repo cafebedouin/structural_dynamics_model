@@ -45,7 +45,8 @@ without spending it and spawned OQ-306.
 | `dispositions.md` | the frozen rule applied to every row | §3–§6 |
 | `absence_agreement_exposure.tsv` | per-field split of stable cells into positive vs absence-agreement, all 38 scored fields | §7: the conflation's full reach; the apparatus controls are 18/18 genuine `PRESENT` |
 | `limb3_incidence_recon.out` | live-corpus `founding_problem_status` absence by model × prompt_commit | §8: 26/43 absences are non-story artifacts → OQ-306 |
-| `limb3_temperature_aliasing.out` | sampling_params by stratum + the 28-file haiku emission split | §8a: temperature unrecorded in the deciding cell; block-emission mechanism discriminates against it |
+| `limb3_temperature_aliasing.out` | **SUPERSEDED** — comma-split parse truncated `sampling_params` at its first comma | kept as the defective read the correction is against |
+| `limb3_temperature_aliasing_CORRECTED.out` | quote-aware re-read: sampling_params by stratum + the 28-file haiku emission split | §8a: temperature CONSTANT in the deciding cell (clean attribution); block-emission mechanism |
 | `python/audits/oq190_blast_radius.py` | the re-runnable sweep; `--selftest` = 12 controls | all census claims |
 | `prolog/probe_oq190_edge_admission.pl` | the edge-admission pruner | `derivation_graph.tsv` |
 
@@ -345,23 +346,37 @@ is new is the share — the stratum has grown **9 → 26** and now dominates the
    OQ-136 measured, not independent replication. The `*_contradictions` limb, meanwhile, is now
    explainable **with no stability claim at all**: those files could never have carried the field.
 
-### 8a. The gating aliasing check: a THIRD state — temperature is UNRECORDED, not constant
+### 8a. The gating aliasing check — CORRECTED: temperature IS constant in the deciding cell
 
-The sweep ruling made one free check the gate: is temperature constant across the seven strata?
-Run: `limb3_temperature_aliasing.out`. The answer is neither branch.
+**The first run of this check was defective, and the correction is recorded here rather than
+substituted silently.** `limb3_temperature_aliasing.out` split `story_provenance/8` arguments on
+`,` — but `sampling_params` values *contain* commas
+(`'max_tokens=16384,temperature=api_default'`). Arg 8 was therefore truncated at its first comma,
+every compound value read as its `max_tokens` prefix, and **every temperature term in a compound
+value was silently dropped.** A truncated-but-plausible field value that parses fine is Pattern 4 in
+the probe rather than in the engine. Corrected, quote-aware re-read:
+`limb3_temperature_aliasing_CORRECTED.out` (the defective output is kept beside it, superseded).
 
-`story_provenance/8` arg 8 (`SamplingParams`) is the only temperature carrier in substrate, and
-**only 31 of 279 stories carry an actual temperature value** (24 `temperature=0.2`, 7
-`temperature=1.0`). 173 record `unspecified`, 44 record `max_tokens` only, 26 have no provenance at
-all. **The haiku @ `22843cdf` cell — the one cell exhibiting both outcomes — is `max_tokens=16384`:
-temperature is not recorded for it.** So for the cell that matters the aliasing question is
-**Ω_E-unanswerable from this corpus.** Declared as a verdict, not carried as a caveat.
+| | defective first read | corrected |
+|---|---|---|
+| stories carrying a temperature term | 31 / 279 (11%) | **80 / 279 (29%)** |
+| — of which numeric | 31 | 42 |
+| — of which symbolic (`api_default`/`default`) | 0 | 38 |
+| the deciding cell's `sampling_params` | `max_tokens=16384` (temperature absent) | **`max_tokens=16384,temperature=api_default`** |
 
-Two findings close it anyway, and the second is the stronger:
+**This lands the ruling on its FIRST branch, not the third state I reported.** The haiku @
+`22843cdf` cell is **28/28 at a single `sampling_params` value**, temperature term included. So
+temperature is **constant within the one cell that exhibits both outcomes**, and therefore cannot
+explain the 16-vs-12 split inside it. The clustering attribution is clean and unaliased, and the
+reserve closes permanently — which is exactly the condition the sweep ruling named.
 
-**(i) Where temperature IS observable, it separates nothing.** Sampling params vary *within*
-`claude-sonnet-4-5` (0.2 vs unspecified) and *within* `claude-sonnet-5` (three values), and absence
-in those cells is 0–1 either way. Across all 31 temperature-bearing stories: **0 absences.**
+Corpus-wide, every stratum is a *single* `sampling_params` value, so temperature is perfectly
+confounded with (model, prompt_commit) **between** strata. That does not matter here: the question
+is within-cell variance, and the only cell with variance holds temperature fixed.
+
+**(ii) Where temperature varies at all, it separates nothing.** Across the 80 temperature-bearing
+stories the only absences are the 16 in the haiku cell — where temperature is constant. The other
+64 carry 0 absences across four distinct temperature terms (0.1, 0.2, 1.0, `default`).
 
 **(ii) A positive mechanism, measured over the full stratum, that discriminates against
 temperature.** Splitting all 28 haiku files:
@@ -387,9 +402,17 @@ already owned by OQ-202** ("Generation authoring gap: haiku + contradictions pat
 fact layer"), open since 2026-07-02. Nothing new needs minting for it.
 
 **Ruling recorded: RE-RESERVE — Limb 3 closes resolved-by-corpus, not resolved-by-spend.** The
-~$1.5–2 reserve is released and does not carry forward. Re-escalation scope if it ever comes: a
-*within-cell* temp sweep on the 28-story haiku stratum only, and only if OQ-202's emission fix fails
-to account for the stratum.
+~$1.5–2 reserve is released and does not carry forward. On the corrected read the close is
+*stronger* than filed: temperature is constant in the deciding cell (clean attribution), **and** a
+positive mechanism accounts for the split. A within-cell temp sweep would hold constant the one
+thing already held constant — there is nothing for it to vary.
+
+**But "released" must not be read as "the temperature question was answered corpus-wide."** It was
+answered on one cell where temperature is fixed, plus a mechanism attribution. For the other
+199 stories that carry no temperature term, no sampling-parameter attribution is possible from
+substrate at all — the reserve is partly **unspendable-as-designed**, not merely unnecessary. That
+capability absence is declared as **GAP-37**, so the next person reaching for a temperature
+explanation learns it before scoping work rather than after.
 
 ### 8b. The denominator finding is routed OUT — it is larger than the verdict question
 

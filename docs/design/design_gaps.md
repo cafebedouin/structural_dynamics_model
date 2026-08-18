@@ -1720,3 +1720,67 @@ is a **generation spend, never a re-read**.
 **Related:** GAP-31 (no cross-story *seat* identity — the seat-level analogue of this gap), GAP-25
 (cross-model differences are dispositional fingerprints), OQ-281 (whose branch (B) costing rests on
 this entry), OQ-78 (close), `CLAUDE.md` Critical Distinctions.
+
+---
+
+## GAP-37 — Sampling parameters are not queryable: 71% of the live corpus carries no temperature term, and the slot that would carry it is an unconsumed, delimiter-colliding string
+
+**Declared:** 2026-08-18 (OQ-190 close, `audits/2026-08-17_oq190_blast_radius/`, from the OQ-118
+Limb-3 sweep ruling). **Drives:** OQ-118 Limb 3 (closed partly as *unspendable-as-designed*),
+OQ-202.
+
+**Numbering note:** GAP-36 is claimed-but-unlanded — proposed by
+`audits/2026-08-17_oq285_mode3_measurement_arm/` and not yet written here. This entry takes **37**
+rather than 36 so a landed and a proposed entry never share an index. A visible gap is a checked
+fact; a silent reuse is a fork (the OQ-278 numbering principle).
+
+**The absent capability:** the ability to attribute any corpus property to a sampling parameter.
+Not "hard" — **not possible from substrate** for most of the corpus, because the parameter was
+never recorded per story.
+
+**Measured (live leg `prolog/testsets/`, n=279, 2026-08-18;
+`limb3_temperature_aliasing_CORRECTED.out`):**
+
+| `sampling_params` content | stories |
+|---|---|
+| carries a **numeric** temperature (`0.1`, `0.2`, `1.0`) | 42 |
+| carries a **symbolic** temperature (`api_default`, `default`) | 38 |
+| `'unspecified'` — no sampling information at all | 173 |
+| no `story_provenance` fact at all (the GAP-adjacent `*_contradictions` stratum, OQ-306) | 26 |
+
+So **199 of 279 (71%) carry no temperature term**, and only **42 (15%) carry a numeric one.**
+
+**Why this is a declared absence and not a defect:** nothing misreports. `story_provenance/8` says
+`'unspecified'` honestly. The gap is that a whole class of Ω_E question — *"is this corpus property
+attributable to a sampling parameter?"* — is unanswerable for most of the corpus, **and that fact is
+not discoverable without running this count.** OQ-118's original Limb-3 framing presumed a
+temperature sweep was purchasable against existing material; for 71% of the corpus there is no
+baseline to sweep against. Declaring it here is what stops the next person scoping that work before
+learning it.
+
+**Second half of the gap — the slot itself is not a field, it is a bag, and it collides with its own
+container's delimiter.** `story_provenance/8` arg 8 is schema-typed only as
+`{"type": "string", "description": "Sampling parameters at generation (e.g. 'temperature=1.0')"}`.
+In practice it holds nine distinct shapes, most of them comma-separated `k=v` bags
+(`'max_tokens=16384,temperature=0.1,thinking_budget=0'`) — **inside a comma-delimited Prolog term.**
+
+- **Consumers today: ZERO** (verified 2026-08-18). Every reader takes arg **7** (`Model`):
+  `json_report.pl:1134`, `python/audits/oq136_bucket_provenance.py:70`, `run_pipeline.py:199`.
+  Arg 8 is emitted (`generate_constraint_pl.py:857`), declared, and never read — **T5b
+  inert-unconsumed** in OQ-190's vocabulary.
+- **The hazard is armed for its first reader, and it is Pattern 4.** A naive arg-split on `,`
+  truncates the value at its first comma and yields `'max_tokens=16384'` — a **well-formed,
+  plausible, silently wrong** value, not an error. This is not hypothetical: **OQ-190's own first
+  probe did exactly this**, dropped every temperature term in a compound value, and reported
+  "temperature unrecorded in the deciding cell" when the cell records
+  `temperature=api_default`. The correction reversed which branch of the sweep ruling applied.
+
+**What closing it would require** (none of it done here): a structured sampling-parameter surface
+(per-key fields or an authored map) rather than a string bag; a back-stamp for the 173
+`'unspecified'` stories where the value is recoverable from generation logs, or an honest
+declaration that it is not; and a parse contract for arg 8 for as long as it stays a string —
+if a reader is ever written, it owes a control on a compound value.
+
+**Do not read the OQ-118 Limb-3 close as answering the temperature question corpus-wide.** It was
+answered on one 28-story cell where temperature is *constant*, plus a mechanism attribution. This
+GAP is the scope of what remains unanswerable.

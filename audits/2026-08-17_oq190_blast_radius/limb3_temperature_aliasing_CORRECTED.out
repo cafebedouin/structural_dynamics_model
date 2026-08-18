@@ -1,0 +1,37 @@
+CORRECTED TEMPERATURE READ (quote-aware parse; supersedes limb3_temperature_aliasing.out)
+================================================================================
+DEFECT IN THE PRIOR PROBE: it split story_provenance args on ',' while sampling_params
+values themselves contain ','. Arg 8 was truncated at the first comma, so compound values
+read as their max_tokens prefix and their temperature term was DROPPED.
+
+distinct sampling_params (corrected):
+   'unspecified'                                173
+   'max_tokens=16384,temperature=api_default'   28
+   'NO_PROVENANCE'                              26
+   'temperature=0.2,max_tokens=8192'            19
+   'max_tokens=16384,temperature=0.1,thinking_budget=0' 11
+   'temperature=1.0'                            7
+   'temperature=0.2'                            5
+   'max_tokens=16384,thinking=disabled,temperature=api_default' 5
+   'max_tokens=32000,temperature=default,reasoning=max' 5
+
+stories carrying a temperature TERM: 80/279 = 29%   (prior probe said 31/279 = 11%)
+   of which a NUMERIC temperature: 42
+   symbolic (api_default/default): 38
+
+--- absence by (model, sampling_params) ---
+model                          sampling_params                                 n  absent
+NO_PROVENANCE                  NO_PROVENANCE                                  26      26
+claude-haiku-4-5-20251001      max_tokens=16384,temperature=api_default       28      16
+claude-sonnet-4-5-20250929     unspecified                                    70       1
+claude-sonnet-5                unspecified                                   103       0
+claude-sonnet-4-5-20250929     temperature=0.2                                 5       0
+claude-sonnet-5                max_tokens=16384,thinking=disabled,temperatu    5       0
+claude-sonnet-5                temperature=0.2,max_tokens=8192                19       0
+gemini-2.5-flash               max_tokens=16384,temperature=0.1,thinking_bu   11       0
+kimi-k3                        max_tokens=32000,temperature=default,reasoni    5       0
+claude-sonnet-4-20250514       temperature=1.0                                 7       0
+
+--- the deciding cell (haiku @ 22843cdf) ---
+   n=28  sampling_params value(s): ['max_tokens=16384,temperature=api_default']
+   absent: 16
