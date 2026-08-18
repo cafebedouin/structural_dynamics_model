@@ -25,6 +25,12 @@ repairing it is not your job.
 * **Triage precedes grading, and the triage is reported.** An essay with no register
   (pre-v2.2, or defective) is UNSCOREABLE — recorded, never silently skipped. The scoreable
   ratio is itself a finding: it dates when the writing practice acquired the discipline.
+* **Ledger-blind, fail-stopped.** If `FORECAST.md` (the forecasting lessons ledger) is in
+  your context — or you have otherwise read the standing hypotheses / expected error
+  directions — you are contaminated for scoring and cannot self-blind: **stop, do not
+  score, and tell the operator to start a fresh instance given only the register rows and
+  this rubric.** Refusing is the correct completion of the task; report it at the volume
+  of a completion. (The ledger is writer-side input; it updates only *after* scoring.)
 
 ---
 
@@ -118,6 +124,8 @@ Scored: [YYYY-MM-DD] | Register written: [date_written] | Rows: [n] ([resolved]/
 - Never score PENDING rows early
 - Never omit UNSCOREABLE/UNRESOLVABLE counts — silence launders the triage
 - Never adjudicate the OQ-229 hypothesis inside a scorecard; emit the counts and stop
+- Never score with `FORECAST.md` in context — stop and route the operator to a fresh
+  instance (§0, ledger-blind invariant)
 
 ---
 
