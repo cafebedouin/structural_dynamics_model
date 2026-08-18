@@ -10,6 +10,7 @@
     % Core API
     constraint_classification/3,    % New indexed classification
     constraint_claim_indexed/2,     % Backward compatible wrapper (renamed to avoid collision)
+    exit_modulation_value/2,        % OQ-68 read accessor over the exit_modulation/2 table
     
     % Context builders
     default_context/1,
@@ -493,6 +494,14 @@ exit_modulation(constrained,     0.02).
 exit_modulation(mobile,          0.00).
 exit_modulation(arbitrage,      -0.03).
 exit_modulation(analytical,      0.00).
+
+%% exit_modulation_value(?ExitOption, -Adjustment)
+%  Exported read accessor over the table above (OQ-68). The table is a CALIBRATION
+%  constant set, not a computed store — it is `:- dynamic` so a sweep can overlay it, and
+%  a cross-module reader wanting the shipped value should go through this name so an
+%  overlay-vs-default question stays answerable at one place.
+exit_modulation_value(Exit, Adjustment) :-
+    exit_modulation(Exit, Adjustment).
 
 %% clamp(+Value, +Min, +Max, -Clamped)
 %  Clamp Value to [Min, Max].

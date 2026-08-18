@@ -54,7 +54,7 @@ run_audit3 :-
 
     %% Save clean distributions before maxent_multi_run calls maxent_cleanup
     findall(C-Dist,
-        maxent_classifier:maxent_dist(C, AnalyticalCtx, Dist),
+        maxent_classifier:maxent_distribution(C, AnalyticalCtx, Dist),
         CleanList),
     length(CleanList, NClean),
     format(user_error, '[audit3] Saved ~w clean distributions.~n', [NClean]),
@@ -117,7 +117,7 @@ build_row(C, Ctx, Row) :-
     ),
 
     %% Accumulated session data from maxent_dist/3
-    (   maxent_classifier:maxent_dist(C, Ctx, AccumDist)
+    (   maxent_classifier:maxent_distribution(C, Ctx, AccumDist)
     ->  dist_top_type_prob(AccumDist, AccumTopType, AccumPTop),
         dist_entropy_norm(AccumDist, AccumH),
         (   catch(maxent_classifier:maxent_disagreement(C, Ctx, hard(_, _)), _, fail)

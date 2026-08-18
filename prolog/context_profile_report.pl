@@ -229,8 +229,8 @@ report_phase_a_validation(Context) :-
     % Cross-family check
     format('### Cross-Family Separation~n~n'),
     (   FamilyA = [FA1|_], FamilyB = [FB1|_],
-        context_profile_mining:family_assignment(FA1, FIDA),
-        context_profile_mining:family_assignment(FB1, FIDB)
+        context_profile_mining:structural_family(FA1, FIDA),
+        context_profile_mining:structural_family(FB1, FIDB)
     ->  (   FIDA \= FIDB
         ->  format('**PASS**: Family A (ID: ~w) and Family B (ID: ~w) are in different structural families.~n~n', [FIDA, FIDB])
         ;   format('**NOTE**: Family A and Family B share the same structural family ID: ~w~n~n', [FIDA])
@@ -239,7 +239,7 @@ report_phase_a_validation(Context) :-
     ).
 
 report_constraint_family_row(C, _Context) :-
-    (   context_profile_mining:family_assignment(C, FID) -> true ; FID = '(not found)' ),
+    (   context_profile_mining:structural_family(C, FID) -> true ; FID = '(not found)' ),
     (   catch(dirac_classification:gauge_orbit(C, OrbitPoints), _, fail)
     ->  findall(T, member(orbit_point(T, _), OrbitPoints), Ts),
         sort(Ts, Orbit)
@@ -258,7 +258,7 @@ report_constraint_family_row(C, _Context) :-
 check_same_family(Members, Label) :-
     findall(FID, (
         member(C, Members),
-        context_profile_mining:family_assignment(C, FID)
+        context_profile_mining:structural_family(C, FID)
     ), FIDs),
     sort(FIDs, Unique),
     length(Unique, N),
@@ -279,7 +279,7 @@ report_orbit_refinement(_Context) :-
 
     % For each orbit family, count how many structural families it maps to
     findall(OrbitFamily-FID, (
-        context_profile_mining:family_assignment(C, FID),
+        context_profile_mining:structural_family(C, FID),
         catch(dirac_classification:gauge_orbit(C, OrbitPoints), _, fail),
         findall(T, member(orbit_point(T, _), OrbitPoints), Ts),
         sort(Ts, OrbitFamily)
@@ -310,7 +310,7 @@ report_orbit_refinement(_Context) :-
         format('**Summary**: ~w / ~w orbit families were split by trajectory mining.~n', [NSplit, NTotal]),
 
         % Count total structural families
-        findall(FID, context_profile_mining:family_assignment(_, FID), AllFIDs),
+        findall(FID, context_profile_mining:structural_family(_, FID), AllFIDs),
         sort(AllFIDs, UniqueFIDs),
         length(UniqueFIDs, NFamilies),
         format('**Total structural families**: ~w (vs ~w orbit families)~n~n', [NFamilies, NTotal])

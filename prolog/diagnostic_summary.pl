@@ -21,7 +21,15 @@
     diagnostic_summary/2,
     diagnostic_verdict/2,
     verdict_join/3,
-    diagnostic_selftest/0
+    diagnostic_selftest/0,
+
+    % Attempt-marker WRITE API (OQ-68). The store is this module's — it reads and
+    % INTERPRETS the marker (maxent_stage_attempted_but_void/2) — but the writer is
+    % json_report, an outsider. The write-ownership axis therefore asks for a write
+    % accessor, not a read one: a read accessor cannot help a caller whose whole
+    % interaction is retractall/assertz.
+    maxent_attempt_reset/0,          % clear stale markers at run start
+    maxent_mark_attempted/1          % maxent_mark_attempted(+Stage), Stage in {classical, indexed}
 ]).
 
 :- use_module(config).
@@ -62,7 +70,7 @@ constructed_type(piton).
    ================================================================ */
 
 ds_subsystem_available(maxent) :-
-    catch(maxent_classifier:maxent_run_info(_, _, _), _, fail), !.
+    catch(maxent_classifier:maxent_fitted(_), _, fail), !.
 ds_subsystem_available(cohomology) :-
     predicate_property(grothendieck_cohomology:cohomological_obstruction(_,_,_), defined), !.
 ds_subsystem_available(abductive) :-
@@ -637,6 +645,28 @@ compute_verdict(_, _, _, green).
 %  completion fact absent -> gate fires). Cleared at run_json_report start.
 :- dynamic maxent_attempted/1.
 
+%% maxent_attempt_reset
+%  Clear stale attempt markers. Called by json_report at run start.
+maxent_attempt_reset :-
+    retractall(maxent_attempted(_)).
+
+%% maxent_mark_attempted(+Stage)
+%  Record that Stage was ATTEMPTED this run. Must be called BEFORE the stage's absorbing
+%  catch, or the void gate cannot distinguish "attempted but voided" from "not in this
+%  pipeline" — the marker is the only thing carrying that provenance bit.
+%  Fails loudly on an unknown Stage: an unrecognised marker would sit in the store
+%  unread, and maxent_void_alerts/1 would report a clean run over it (absence satisfying
+%  the gate). The legal set is pinned to the two maxent_stage_attempted_but_void/2 clauses
+%  below — widen both together.
+maxent_mark_attempted(Stage) :-
+    (   maxent_attempt_stage(Stage)
+    ->  assertz(maxent_attempted(Stage))
+    ;   throw(error(domain_error(maxent_attempt_stage, Stage), _))
+    ).
+
+maxent_attempt_stage(classical).
+maxent_attempt_stage(indexed).
+
 %% maxent_void_alerts(-Alerts)
 %  OQ-112 item 2 — per-attempted-stage fail-closed completion gate. A maxent stage
 %  ATTEMPTED this run whose OWN completion witness is ABSENT for the consumed (default)
@@ -658,10 +688,10 @@ maxent_void_alerts(Alerts) :-
 
 maxent_stage_attempted_but_void(classical, Ctx) :-
     maxent_attempted(classical),
-    \+ maxent_classifier:maxent_run_info(Ctx, _, _).
+    \+ maxent_classifier:maxent_fitted(Ctx).
 maxent_stage_attempted_but_void(indexed, Ctx) :-
     maxent_attempted(indexed),
-    \+ maxent_classifier:maxent_indexed_run_info(Ctx, _, _).
+    \+ maxent_classifier:maxent_indexed_fitted(Ctx).
 
 %% verdict_join(+C, +Summary, -Join)
 %  Join = verdict_join(Joined, Base, CapApplied, Alerts, GridProv, MeasProv,

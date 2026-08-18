@@ -73,7 +73,7 @@ derive_directionality_for_stakeholder(C, Name, D) :-
     (   stakeholder_d_override(C, Name, D)
     ->  true
     ;   role_base_d(Role, BaseD)
-    ->  constraint_indexing:exit_modulation(Exit, Mod),
+    ->  constraint_indexing:exit_modulation_value(Exit, Mod),
         D0 is BaseD + Mod,
         D is max(0.0, min(1.0, D0))
     ;   constraint_indexing:canonical_d_for_power(Power, D)

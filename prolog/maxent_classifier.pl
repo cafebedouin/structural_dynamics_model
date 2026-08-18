@@ -46,6 +46,14 @@
     maxent_indexing_divergence/3,    % maxent_indexing_divergence(C, Context, Divergence)
     maxent_indexing_divergences/3,   % maxent_indexing_divergences(Context, Threshold, Divergent)
 
+    % Fitted-state accessors (OQ-68). MaxEnt reads FAIL SOFT — maxent_entropy/3 and
+    % maxent_top_type/3 FAIL rather than throw on an unfitted model, so catch/3 does not
+    % intercept and a probe measuring nothing is indistinguishable from a result. These give
+    % the "did MaxEnt run?" check a name instead of hand-rolling it against a private fact.
+    maxent_fitted/1,                 % maxent_fitted(?Context) — a classical run completed
+    maxent_indexed_fitted/1,         % maxent_indexed_fitted(?Context) — an indexed run completed
+    maxent_profile_param/4,          % maxent_profile_param(?Type, ?Metric, ?Context, -params(Mu,Sigma))
+
     % Internals (exposed for testing)
     maxent_type_log_likelihood/5,    % maxent_type_log_likelihood(C, Type, Context, LogL, Details)
     maxent_cleanup/0,
@@ -441,14 +449,50 @@ entropy_acc(_Type-P, Acc, NewAcc) :-
    ================================================================ */
 
 % Categorical: Distribution on Omega — probability measure over the type space (structurally analogous to Giry monad image)
-%% maxent_distribution(+C, +Context, -Distribution)
+%% maxent_distribution(?C, ?Context, -Distribution)
+%  Mode widened from (+C, +Context, -) 2026-08-18 (OQ-68): the accessor cutover moved 12
+%  enumerating call sites off the private maxent_dist/3 onto this wrapper. Enumeration is a
+%  SANCTIONED use — the body is a bare dynamic-fact lookup, so an unbound C backtracks over
+%  the store exactly as the direct read did. Behaviour unchanged; only the contract is honest.
 maxent_distribution(C, Context, Dist) :-
     maxent_dist(C, Context, Dist).
 
 %% maxent_distribution_raw(+C, +Context, -Distribution)
 %  Raw (pre-override) distribution for override impact analysis.
+%  NOTE: wraps maxent_dist_raw/3, a DIFFERENT store from maxent_dist/3. Not interchangeable
+%  with maxent_distribution/3 — do not collapse them.
 maxent_distribution_raw(C, Context, Dist) :-
     maxent_dist_raw(C, Context, Dist).
+
+%% maxent_fitted(?Context)
+%  Succeeds iff a CLASSICAL maxent run has completed for Context. Call unbound
+%  (maxent_fitted(_)) for "did MaxEnt run at all?".
+%
+%  WHY THIS EXISTS (OQ-66 / OQ-68). Every MaxEnt read in this module FAILS SOFT on an
+%  unfitted model: maxent_entropy/3 and maxent_top_type/3 fail rather than throw, so a
+%  catch/3 wrapper does NOT intercept, and a caller that maps the failure to a placeholder
+%  ("no_top", 0.0) turns "measured nothing" into something indistinguishable from a result.
+%  That is exactly how the OQ-66 guard compared [no_top,...] against itself for its whole
+%  life. A `[stack]` load alone leaves this UNFITTED — maxent_cleanup/0 +
+%  maxent_multi_run/2 is the refit, and clear_all_caches/0 is NOT (MaxEnt is corpus-fitted
+%  state deliberately outside cache_registry). Assert this before reading any observable.
+maxent_fitted(Context) :-
+    maxent_run_info(Context, _, _).
+
+%% maxent_indexed_fitted(?Context)
+%  Same contract for the INDEXED stage. Deliberately a separate witness from
+%  maxent_fitted/1: the indexed run has its own completion fact (OQ-112 item 2) because
+%  indexed requires the classical profiles and can be voided independently.
+maxent_indexed_fitted(Context) :-
+    maxent_indexed_run_info(Context, _, _).
+
+%% maxent_profile_param(?Type, ?Metric, ?Context, -params(Mu, Sigma))
+%  Read accessor for the per-(Type, Metric, Context) fitted Gaussian profile. Context is
+%  part of the key — the profile store was widened to /4 by the profile-indexing fix, and
+%  the arity change is precisely the kind of internal signature change that used to fail
+%  silently at every qualified bypass site (the OQ-68 mechanism).
+maxent_profile_param(Type, Metric, Context, Params) :-
+    maxent_profile(Type, Metric, Context, Params).
 
 %% maxent_entropy(+C, +Context, -HNorm)
 maxent_entropy(C, Context, HNorm) :-
@@ -956,7 +1000,9 @@ maxent_indexed_run(Context, Summary) :-
     Summary = maxent_indexed_summary(NTotal, MeanEntropy),
     format(user_error, '[maxent_indexed] Done. Mean indexed entropy=~4f~n', [MeanEntropy]).
 
-%% maxent_indexed_distribution(+C, +Context, -Distribution)
+%% maxent_indexed_distribution(?C, ?Context, -Distribution)
+%  Mode widened alongside maxent_distribution/3 (OQ-68) — same bare-lookup body, and the
+%  swapped abductive_helpers site calls it fully unbound as an existence check.
 maxent_indexed_distribution(C, Context, Dist) :-
     maxent_indexed_dist(C, Context, Dist).
 

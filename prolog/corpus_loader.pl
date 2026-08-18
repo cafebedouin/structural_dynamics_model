@@ -19,7 +19,11 @@
     load_all_testsets/0,
     ensure_corpus_loaded/0,
     corpus_constraint/1,
-    resolve_corpus_dir/2
+    resolve_corpus_dir/2,
+    corpus_loaded/0        % OQ-68: load-completion witness. Part of the contract, not an
+                           % internal — callers legitimately branch on "already loaded?"
+                           % (ensure_corpus_loaded/0 is guarded by exactly this fact), and
+                           % probes need it to fail closed rather than silently load 0.
 ]).
 
 :- use_module(config).

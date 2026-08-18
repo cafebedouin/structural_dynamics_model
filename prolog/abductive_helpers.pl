@@ -181,7 +181,7 @@ compute_confidence(EvidenceLines, Base, Confidence) :-
 %  Checks whether a subsystem's data is present (has been run).
 %  Does NOT check enable flags — only whether dynamic state exists.
 subsystem_available(maxent) :-
-    catch(maxent_classifier:maxent_run_info(_, _, _), _, fail), !.
+    catch(maxent_classifier:maxent_fitted(_), _, fail), !.
 subsystem_available(fpn) :-
     catch(drl_modal_logic:fpn_iteration_info(_, _, _, _), _, fail), !.
 subsystem_available(dirac) :- !.     % Always available (computed on demand)
@@ -193,7 +193,7 @@ subsystem_available(fingerprint) :-  % Always available (computed on demand)
 subsystem_available(cohomology) :-
     predicate_property(grothendieck_cohomology:cohomological_obstruction(_,_,_), defined), !.
 subsystem_available(indexed_maxent) :-
-    catch(maxent_classifier:maxent_indexed_dist(_, _, _), _, fail), !.
+    catch(maxent_classifier:maxent_indexed_distribution(_, _, _), _, fail), !.
 
 %% available_subsystems(-List)
 %  Returns list of subsystem atoms that are currently available.

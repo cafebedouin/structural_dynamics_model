@@ -126,7 +126,7 @@ task1_missing_constraints(Context) :-
     ),
 
     % Check which visible constraints have maxent_dist vs don't
-    findall(C, maxent_classifier:maxent_dist(C, Context, _), DistConstraints),
+    findall(C, maxent_classifier:maxent_distribution(C, Context, _), DistConstraints),
     sort(DistConstraints, UniqueDistCs),
     length(UniqueDistCs, NWithDist),
     format('CONSTRAINTS_WITH_DIST: ~w~n', [NWithDist]),
@@ -134,7 +134,7 @@ task1_missing_constraints(Context) :-
     % Constraints visible but without distribution (silent failure in classify_one)
     findall(C, (
         member(C, Visible),
-        \+ maxent_classifier:maxent_dist(C, Context, _)
+        \+ maxent_classifier:maxent_distribution(C, Context, _)
     ), NoDist),
     length(NoDist, NNoDist),
     format('VISIBLE_BUT_NO_DIST: ~w~n', [NNoDist]),
@@ -180,7 +180,7 @@ task2_per_type_entropy(Context) :-
 
     % Collect all constraints with distributions
     findall(row(C, HNorm, DetType), (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         maxent_classifier:maxent_entropy(C, Context, HNorm),
         (drl_core:dr_type(C, Context, DetType) -> true ; DetType = unknown)
     ), Rows),
@@ -362,7 +362,7 @@ task4_non_overlapping(Context) :-
     format('INVERSE_CHECK:~n'),
     format('Constraint|DetType|H_norm|OrbitTypes~n'),
     findall(C, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         has_multi_type_orbit(C),
         maxent_classifier:maxent_entropy(C, Context, HN),
         HN < 0.30
@@ -407,20 +407,20 @@ task5_gaussian_profiles(Context) :-
     % Report all empirical profiles
     format('EMPIRICAL_PROFILES:~n'),
     format('Type|Metric|Mu|Sigma~n'),
-    forall(maxent_classifier:maxent_profile(Type, Metric, Context, params(Mu, Sigma)),
+    forall(maxent_classifier:maxent_profile_param(Type, Metric, Context, params(Mu, Sigma)),
         format('~w|~w|~6f|~6f~n', [Type, Metric, Mu, Sigma])),
 
     % Flag suspiciously large sigmas
     format('LARGE_SIGMA_FLAGS:~n'),
     forall((
-        maxent_classifier:maxent_profile(Type, Metric, Context, params(_Mu, Sigma)),
+        maxent_classifier:maxent_profile_param(Type, Metric, Context, params(_Mu, Sigma)),
         Sigma > 0.25
     ), format('  LARGE_SIGMA: ~w ~w sigma=~6f~n', [Type, Metric, Sigma])),
 
     % Rope BaseEps distribution — check for bimodality
     format('ROPE_EPS_DISTRIBUTION:~n'),
     findall(Eps, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         drl_core:dr_type(C, Context, rope),
         drl_core:base_extractiveness(C, Eps)
     ), RopeEpsList),
@@ -441,7 +441,7 @@ task5_gaussian_profiles(Context) :-
     % Override-rope analysis
     format('OVERRIDE_ROPE_ANALYSIS:~n'),
     findall(C-Sig-Eps-HN, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         drl_core:dr_type(C, Context, rope),
         catch(signature_detection:constraint_signature(C, Sig), _, fail),
         is_override_sig(Sig),
@@ -455,7 +455,7 @@ task5_gaussian_profiles(Context) :-
 
     % Non-override rope entropy
     findall(HN, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         drl_core:dr_type(C, Context, rope),
         maxent_classifier:maxent_entropy(C, Context, HN),
         \+ (catch(signature_detection:constraint_signature(C, Sig), _, fail),
@@ -485,7 +485,7 @@ task5_gaussian_profiles(Context) :-
     format('ALL_TYPE_EPS_STATS:~n'),
     forall(maxent_classifier:maxent_type(Type), (
         findall(Eps, (
-            maxent_classifier:maxent_dist(C, Context, _),
+            maxent_classifier:maxent_distribution(C, Context, _),
             drl_core:dr_type(C, Context, Type),
             drl_core:base_extractiveness(C, Eps)
         ), TypeEpsList),
@@ -523,7 +523,7 @@ task6_cross_diagnostic(Context) :-
 
     % High entropy population
     findall(C, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         maxent_classifier:maxent_entropy(C, Context, HN),
         HN > Threshold
     ), HighEntropyCs),
@@ -532,7 +532,7 @@ task6_cross_diagnostic(Context) :-
 
     % Low entropy population (for comparison)
     findall(C, (
-        maxent_classifier:maxent_dist(C, Context, _),
+        maxent_classifier:maxent_distribution(C, Context, _),
         maxent_classifier:maxent_entropy(C, Context, HN),
         HN =< Threshold
     ), LowEntropyCs),

@@ -50,6 +50,7 @@
 
     % Corpus-level analysis
     corpus_cohomology/1,            % corpus_cohomology(Summary)
+    obstruction_cached/3,           % obstruction_cached(?C, ?H0, ?H1) — OQ-68 read accessor
 
     % Contextuality fraction (Abramsky-Brandenburger)
     constraint_contextuality/2,     % constraint_contextuality(C, CF)
@@ -84,6 +85,14 @@
    ================================================================ */
 
 :- dynamic cached_obstruction/3.     % cached_obstruction(C, H0, H1)
+
+%% obstruction_cached(?C, ?H0, ?H1)
+%  Read accessor over the obstruction cache (OQ-68). Populated by corpus_cohomology/1;
+%  EMPTY until then, and an empty cache is not "no obstructions" — it is "not computed".
+%  H1 is NULLABLE by the OQ-51 rule: a null/absent band means <2 real (non-unknown) seats,
+%  i.e. UNDETERMINED, never 0. Callers must not coerce a missing row to a numeric default.
+obstruction_cached(C, H0, H1) :-
+    cached_obstruction(C, H0, H1).
 :- dynamic cohomology_run_info/5.    % cohomology_run_info(Timestamp, N, H0Total, H1Total, H1Mean)
 
 /* ================================================================

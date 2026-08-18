@@ -917,7 +917,7 @@ trajectory_run(Context, Summary) :-
 %% ensure_maxent(+Context)
 %  Runs MaxEnt if not already available. Tries multi-context first.
 ensure_maxent(Context) :-
-    (   catch(maxent_classifier:maxent_run_info(_, _, _), _, fail)
+    (   catch(maxent_classifier:maxent_fitted(_), _, fail)
     ->  format(user_error, '[trajectory] MaxEnt data already available.~n', [])
     ;   format(user_error, '[trajectory] Running MaxEnt classifier...~n', []),
         standard_contexts(Contexts),

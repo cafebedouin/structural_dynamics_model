@@ -122,7 +122,7 @@ query_maxent_divergence_vs_h1(Ctx) :-
 
     % Reverse direction: what fraction of H^1 > 0 constraints have high divergence?
     findall(C2, (
-        grothendieck_cohomology:cached_obstruction(C2, 0, H1_2),
+        grothendieck_cohomology:obstruction_cached(C2, 0, H1_2),
         H1_2 > 0
     ), AllH1Positive),
     length(AllH1Positive, NH1Positive),

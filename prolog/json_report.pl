@@ -69,12 +69,12 @@ run_json_report :-
     % OQ-112 item 2: clear stale attempt markers, then mark each maxent stage ATTEMPTED
     % BEFORE its absorbing catch — so verdict_join can tell "attempted but voided" (marker
     % present, completion fact absent -> fail closed) from "not in this pipeline".
-    retractall(diagnostic_summary:maxent_attempted(_)),
+    diagnostic_summary:maxent_attempt_reset,
 
     % Precompute MaxEnt at all 4 Wasserstein contexts (includes analytical = default)
     constraint_indexing:default_context(MaxEntCtx),
     measurement_layer:wasserstein_contexts(WCtxs),
-    assertz(diagnostic_summary:maxent_attempted(classical)),
+    diagnostic_summary:maxent_mark_attempted(classical),
     % OQ-112 item 2 (A10-widened): absorb BOTH throw AND plain failure so a voided stage
     % continues the run (does not crash mid-pipeline) — catch/3 alone is blind to failure.
     % The void is no longer silent: verdict_join fails closed on the absent completion fact.
@@ -82,7 +82,7 @@ run_json_report :-
     format(user_error, '[json] MaxEnt multi-context (Wasserstein) done.~n', []),
 
     % Run indexed MaxEnt (uses power-scaled χ; profiles from multi-run's last context)
-    assertz(diagnostic_summary:maxent_attempted(indexed)),
+    diagnostic_summary:maxent_mark_attempted(indexed),
     ( catch(maxent_classifier:maxent_indexed_run(MaxEntCtx, _IndexedSummary), _, fail) -> true ; true ),
     format(user_error, '[json] MaxEnt indexed run done.~n', []),
 

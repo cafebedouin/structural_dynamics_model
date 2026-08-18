@@ -92,7 +92,7 @@ test_maxent_profiles_are_per_context_independent :-
     % Phase A: compute profiles for CtxA
     maxent_classifier:maxent_compute_profiles(SmallSet, CtxA),
     findall(Type-Metric-PA,
-        maxent_classifier:maxent_profile(Type, Metric, CtxA, PA),
+        maxent_classifier:maxent_profile_param(Type, Metric, CtxA, PA),
         ProfilesA),
     length(ProfilesA, NA),
     format('  Context A profiles: ~w~n', [NA]),
@@ -100,7 +100,7 @@ test_maxent_profiles_are_per_context_independent :-
     % Phase B: compute profiles for CtxB (without cleanup — this is the bug condition)
     maxent_classifier:maxent_compute_profiles(SmallSet, CtxB),
     findall(Type-Metric-PB,
-        maxent_classifier:maxent_profile(Type, Metric, CtxB, PB),
+        maxent_classifier:maxent_profile_param(Type, Metric, CtxB, PB),
         ProfilesB),
     length(ProfilesB, NB),
     format('  Context B profiles: ~w~n', [NB]),
@@ -117,7 +117,7 @@ test_maxent_profiles_are_per_context_independent :-
     maxent_classifier:maxent_type(SomeType),
     findall(LL, (
         member(MN, [extractiveness, suppression, theater]),
-        maxent_classifier:maxent_profile(SomeType, MN, CtxA, params(Mu, Sigma)),
+        maxent_classifier:maxent_profile_param(SomeType, MN, CtxA, params(Mu, Sigma)),
         Sigma > 0,
         LL is -0.5 * log(2 * Sigma * Sigma)  % dummy computation, value irrelevant
     ), LLsA),
@@ -134,7 +134,7 @@ test_maxent_profiles_are_per_context_independent :-
 
     % Assertion 3: maxent_cleanup removes all profile facts regardless of context.
     maxent_classifier:maxent_cleanup,
-    findall(_, maxent_classifier:maxent_profile(_, _, _, _), Remaining),
+    findall(_, maxent_classifier:maxent_profile_param(_, _, _, _), Remaining),
     length(Remaining, NRemaining),
     (   NRemaining =:= 0
     ->  format('  [OK] maxent_cleanup removed all profile facts~n')

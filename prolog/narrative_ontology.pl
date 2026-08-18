@@ -105,7 +105,18 @@
     stakeholder_gain_flow/2,       % stakeholder_gain_flow(+C, +Receiver) — Receiver = seat name (capturer) | diffuse (authored no-capture). NEVER synthesized (fabrication ban, OQ-92 Rulings; data_repair.pl is the named door). Receipt ≠ beneficiary-role.
     fixing_cost_class/2,           % fixing_cost_class(+C, +Class) — Class ∈ {cheap, prohibitive}; distinct field from gain_flow by ruling (b); cost never demotes capture
     story_provenance/8, story_seed/3,  % Phase C provenance facts (compiler-emitted per story). MUST be multifile like every sibling above — declared dynamic-only, they loaded 1/N ("Redefined static procedure" on each testset consult, last-file-wins). Fixed 2026-06-13.
-    epsilon_provenance/5.   % epsilon_provenance(+C, +ValueAsWritten, +Author, +GenerationRunId, +Route) — OQ-205 spec §3 (R2 ratified 2026-07-03). ValueAsWritten redundantly records the authored ε so drift vs constraint_metric/3 is a checkable inequality; Author = authoring-model atom or human; Route ∈ {direct, scope_bin(Bin), hand_authored, seed_inherited} (every fabrication source its own token). Compiler-emitted (generate_constraint_pl.py); generator-forward by ruling — the pre-build corpus is the declared loud-null stratum, corpus-complete arrives at rebuild.
+    epsilon_provenance/5,   % epsilon_provenance(+C, +ValueAsWritten, +Author, +GenerationRunId, +Route) — OQ-205 spec §3 (R2 ratified 2026-07-03). ValueAsWritten redundantly records the authored ε so drift vs constraint_metric/3 is a checkable inequality; Author = authoring-model atom or human; Route ∈ {direct, scope_bin(Bin), hand_authored, seed_inherited} (every fabrication source its own token). Compiler-emitted (generate_constraint_pl.py); generator-forward by ruling — the pre-build corpus is the declared loud-null stratum, corpus-complete arrives at rebuild.
+    % OQ-68 (2026-08-18): the last two corpus-schema predicates held ONLY by writer
+    % convention. Both were correct on disk — every testset that writes them also emits a
+    % local `:- multifile narrative_ontology:P.` — but that is a generation-time habit, not
+    % an engine guarantee: one generator revision that drops the local declaration and the
+    % predicate silently reverts to the story_provenance/8 failure above (last-file-wins,
+    % loading 1/N). Declared here so correctness stops depending on every future writer.
+    flat_control_of/2,       % flat_control_of(+ControlC, +TargetC) — 28 facts, testsets/ only.
+                             % NOTE: no engine consumer exists (checked 2026-08-18: zero
+                             % non-corpus references). Declared for load-correctness, NOT
+                             % wired — an authored field awaiting a reader, tracked as such.
+    has_sunset_clause/1.
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
@@ -113,7 +124,7 @@
     constraint_claim/2, human_readable/2, topic_domain/2, recommendation/2, affects_constraint/2,
     cs_reading_relation/3,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
-    measurement/5, has_sunset_clause/1,
+    measurement/5, has_sunset_clause/1, flat_control_of/2,
     story_provenance/8, story_seed/3,  % story_seed(C, SeededFrom, Draw) — forward-authored identity link (cohort ruling)            % story_provenance(C, PromptCommit, SchemaCommit, Date, SourceEssay, OneShotExample, Model, SamplingParams) — cohort metadata (Phase C growth rule + determinism-frontier ruling 2026-06-12)
     epsilon_provenance/5,
     measurement_basis/2,
