@@ -130,8 +130,8 @@ no session log exists. **The circulation GO is the operator's call** and is reco
 
 ---
 
-## 2026-08-18 — [tripwire] The OS upgrade moved Python 3.10 → 3.12 and stranded every third-party package; `scripts/gate.sh` calls bare `python3`, so the gate now runs the EMPTY interpreter while the work runs in `.venv`
-**Files:** scripts/gate.sh, pyproject.toml, python/check_gap_status_surfaces.py, python/orbit_characterization.py, python/idea_site_exploration.py, python/audits/bc_coupling_audit.py, agent/c-orchestrator.py
+## 2026-08-18 — [tripwire] The OS upgrade moved Python 3.10 → 3.12 and stranded every third-party package; the gate ran the EMPTY interpreter while the work ran in `.venv` — RESOLVED same day: `.venv` is canonical, one resolution point, and a `python env` gate row that derives its own required set
+**Files:** scripts/gate.sh, python/python_env_check.py, pyproject.toml, .claude/settings.json, agent/c-orchestrator.py, agent/perspective_experiment.py, agent/uke_narrative_orchestrator.py, python/check_gap_status_surfaces.py
 **Tier:** tripwire
 
 **Symptom, and why it under-reports.** `./scripts/gate.sh` shows ONE red for this
@@ -154,23 +154,44 @@ networkx ×3, pandas ×2** (`python/` + `agent/`). The `anthropic` count matters
 is the whole generation path (`agent/c-orchestrator.py`), so a topic run under system
 `python3` fails at import, not mid-run.
 
-**Current state — repair is PARTIAL and operator-owned; do not "finish" it unasked.** A
-`.venv` (3.12.3) exists and carries pandas, numpy, scipy, sklearn, anthropic, jinja2. Two
-are still missing there: **`networkx` and `matplotlib`** (consumers:
-`python/orbit_characterization.py`, `python/idea_site_exploration.py`,
-`python/audits/bc_coupling_audit.py`). `pyproject.toml` is modified-uncommitted in the same
-direction (`requires-python` 3.10→3.12, a `[build-system]` block, `[tool.setuptools]
-packages = []`, poetry stanza dropped) with a matching `structural_dynamics_model.egg-info/`
-— i.e. an in-flight `pip install -e .`. **That is operator in-flight work: adjudicate it
-before assuming the tree is clean, and never sweep it into an unrelated commit.**
+**RESOLVED the same day (operator: "fix the Python gate using .venv and whatever makes
+sense for the project"). `.venv` is canonical; the fix is below and the gate is GREEN.**
 
-**The standing decision this leaves OPEN (genuinely the operator's seat, not self-resolvable).**
-`scripts/gate.sh` hardcodes bare `python3` at **21 call sites**. Until someone rules which
-interpreter is canonical, the gate does not measure the environment the work runs in. Three
-options, none taken here: activate `.venv` before invoking the gate; point the gate at
-`.venv/bin/python`; or install the deps system-wide. **Until it is ruled, a `gap surfaces`
-red is not evidence about gap surfaces — check which interpreter produced it before
-recording any gate result as a witness.**
+1. **`scripts/gate.sh` resolves the interpreter ONCE**, not at 22 call sites:
+   `$SDM_PYTHON` → `.venv/bin/python` → `python3`, aborting if the winner is not runnable.
+   Every row runs `"$PY"`, and the banner prints the resolved path, so a gate transcript
+   now says which interpreter produced it.
+2. **New FIRST gate row `python env`** (`python/python_env_check.py`, +`python env st`
+   selftest, 12/12 controls). It AST-scans `python/` + `agent/` and asserts the *running*
+   interpreter can import everything they import. Required set is **derived, not declared** —
+   a hand manifest would be a second canonical list (Pattern 2) and would rot. It is first on
+   purpose: if it is red, later reds may be downstream of a missing import rather than real
+   findings. Two-sided by construction: GREEN under `.venv`, RED under `python3` naming all
+   11 missing modules with consumer counts.
+3. **Interpreter propagation fixed.** Three sites spawned a literal `["python3", …]` child
+   (`agent/c-orchestrator.py:905`, `agent/perspective_experiment.py:477`,
+   `agent/uke_narrative_orchestrator.py:2696`), so running a parent under `.venv` handed the
+   child the EMPTY interpreter. Now `sys.executable`, the idiom 6 other files already used.
+4. **Deps installed into `.venv`:** jsonschema, networkx, diptest, feedparser, nltk.
+   `sentence_transformers` deliberately NOT (pulls torch, GB-scale, 2 audit scripts) —
+   declared optional, so its absence prints as a note.
+5. **`pyproject.toml` reconciled** with the census: it declared 2 modules while the code
+   imported 15. Now 5 core + extras `stats`/`ai`/`graph`/`nlp`/`embeddings`. The manifest is
+   not the authority — the gate row derives from imports and goes red on drift.
+
+**The one thing left as a memory, so it is checked instead.** The `.claude/settings.json`
+hooks still run bare `python3` deliberately — a JSON-string hook cannot reliably resolve a
+venv and `$CLAUDE_PROJECT_DIR` may not be cwd. That is safe ONLY while the three hook
+scripts (`omega_resolver.py`, `pretooluse_tripwires.py`, `issues_status.py`) stay
+stdlib-only. **Adding a third-party import to any of them would break the hook silently in a
+fresh shell while every venv-run check stayed green** — so `python_env_check.py` asserts the
+invariant (`HOOK_SCRIPTS`), with a planted-violation control proving the detector fires.
+If you must add one, fix the hook command in the same change.
+
+**Still operator-owned:** `pyproject.toml`'s `requires-python` 3.10→3.12 + `[build-system]`
++ `[tool.setuptools]` edits and `structural_dynamics_model.egg-info/` were in-flight
+uncommitted work (an `pip install -e .`); the dependency reconciliation above was layered on
+top of them, not instead of them.
 
 ---
 

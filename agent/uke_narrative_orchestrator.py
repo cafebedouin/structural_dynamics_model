@@ -2693,7 +2693,7 @@ class UKEOrchestrator:
         # Step 2: Enhanced reports
         try:
             proc = subprocess.run(
-                ["python3", "python/enhanced_report.py"] + constraint_ids,
+                [sys.executable, "python/enhanced_report.py"] + constraint_ids,
                 cwd=str(_REPO_ROOT),
                 capture_output=True,
                 text=True,

@@ -474,7 +474,7 @@ class PerspectiveExperiment:
 
         try:
             proc = subprocess.run(
-                ["python3", "python/enhanced_report.py"] + mangled_ids,
+                [sys.executable, "python/enhanced_report.py"] + mangled_ids,
                 cwd=str(REPO_ROOT),
                 capture_output=True,
                 text=True,

@@ -233,6 +233,16 @@ pulled out of the parallel Phase-2 set and run **sequentially after** the parall
 (`run_pipeline.py` `_phase_prolog`); the 11 remaining real stages stay parallel. Keep it that way —
 do not fold `trajectory` back into the parallel `tasks` list.
 
+- **The canonical interpreter is `.venv/bin/python`, not system `python3` (2026-08-18).** The
+  2026-08-18 OS upgrade moved system Python 3.10→3.12 and stranded every pip package, so bare
+  `python3 python/foo.py` now fails on ~20 tools (`scipy` ×15, `anthropic` ×14, `numpy` ×16, …).
+  Activate the venv, or prefix `.venv/bin/python`. `scripts/gate.sh` resolves this itself
+  (`$SDM_PYTHON` → `.venv/bin/python` → `python3`) and its FIRST row, `python env`, asserts the
+  running interpreter can import what the repo imports — **read that row before believing any
+  other red**, and never `pip install` into system python to "fix" a ModuleNotFoundError
+  (that fragments the environment; install into `.venv`). New Python subprocess call sites use
+  `sys.executable`, never the string `"python3"` — a literal handed the child the empty
+  interpreter at three sites. Detail: KNOWN_STATE 2026-08-18.
 - **Discover/run any python tool:** `python3 python/cli.py list` (grouped tree of every tool with
   one-line summaries) / `python3 python/cli.py <group> <name> [args]` (run; argv forwarded verbatim).
   Single subprocess pass-through dispatcher (OQ-163); no file moves — grouping is in the command tree,

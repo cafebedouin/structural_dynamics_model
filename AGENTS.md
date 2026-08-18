@@ -719,18 +719,38 @@ every call through it looks like a bypass).
 
 ## 5. Testing Requirements
 
-### Running `scripts/gate.sh` — put the `.venv` on PATH
+### Running `scripts/gate.sh` — it resolves its own interpreter now
 
-`gate.sh` calls bare `python3`, and the `gap surfaces` row shells out to `python/query.py`,
-which imports pandas. Outside the repo virtualenv that row reports a **false RED**
-(`ModuleNotFoundError: No module named 'pandas'`) on a check that is actually green. Run it as:
+**The PATH workaround this section used to prescribe is obsolete (fixed 2026-08-18); plain
+`./scripts/gate.sh` is correct.** `gate.sh` resolves the interpreter once —
+`$SDM_PYTHON` → `.venv/bin/python` → `python3` — uses it for every row, and prints the
+resolved path in its banner, so a gate transcript says which interpreter produced it.
 
 ```bash
-PATH="$PWD/.venv/bin:$PATH" ./scripts/gate.sh
+./scripts/gate.sh                          # uses .venv automatically
+SDM_PYTHON=/usr/bin/python3 ./scripts/gate.sh   # override, e.g. to reproduce a system-python red
 ```
 
-The repo `.venv` carries pandas 3.0.5. This is an invocation artifact, not a defect in the
-row — do not "fix" the check.
+**Correction to what this section previously said.** It called the `gap surfaces` red "an
+invocation artifact, not a defect in the row — do not fix the check," and that read was
+wrong in a way worth keeping: the row was reporting truthfully that *the interpreter running
+it could not import pandas*. Treating it as an artifact is what let the condition persist —
+and the single red badly understated the damage, because ~20 other affected tools are not
+gate rows at all (`scipy` ×15, `anthropic` ×14, `numpy` ×16, `sklearn` ×6). One red row read
+as one broken check; it was an empty interpreter.
+
+The replacement is the FIRST gate row, `python env` (`python/python_env_check.py`): it
+AST-scans `python/` + `agent/` and asserts the *running* interpreter can import everything
+they import, deriving the required set rather than declaring it (a hand manifest would be a
+second canonical list and would rot). It is first on purpose — **if it is red, later reds may
+be downstream of a missing import rather than real findings.**
+
+Two rules this leaves standing:
+- **Never `pip install` into system python to clear a `ModuleNotFoundError`.** Install into
+  `.venv` and, if the module is a new import, add it to `pyproject.toml` in the same change.
+- **Never spawn `["python3", …]` from Python — use `sys.executable`.** A literal hands the
+  child the system interpreter even when the parent runs under `.venv`; that bug was live at
+  three orchestrator sites until 2026-08-18.
 
 ### Run the Prolog test suite
 

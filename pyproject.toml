@@ -10,9 +10,18 @@ authors = [
     {name = "cafebedouin", email = "cafebedouin@gmail.com"}
 ]
 requires-python = ">=3.12"
+# Reconciled against the actual import census 2026-08-18 (was: pandas + jinja2 only, while
+# the code imported 15 distinct third-party modules). This list is the INSTALL manifest;
+# it is NOT the authority on completeness. `python/python_env_check.py` derives the required
+# set by AST-scanning python/ + agent/, so if this list drifts from what the code imports,
+# the `python env` gate row goes RED rather than the drift going unnoticed. Add an import,
+# add it here.
 dependencies = [
-    "pandas",
     "jinja2>=3.1.6",
+    "jsonschema",   # constraint .pl emit + kernel corpus generation
+    "numpy",
+    "pandas",
+    "requests",
 ]
 
 [project.optional-dependencies]
@@ -20,10 +29,24 @@ stats = [
     "scipy",
     "scikit-learn",
     "statsmodels",
+    "diptest",      # oq48_analyze
 ]
 ai = [
     "google-genai",
     "anthropic",
+]
+graph = [
+    "networkx",     # orbit_characterization, idea_site_exploration, bc_coupling_audit
+]
+nlp = [
+    "nltk",         # sotu_fetch
+    "feedparser",   # generate_rss
+]
+# Deliberately NOT installed by default: pulls torch (GB-scale) for two audit scripts
+# (cluster_space_audit, g_orbit_proximity_probe). Declared optional in python_env_check.py
+# too, so its absence prints as a note rather than a red row.
+embeddings = [
+    "sentence-transformers",
 ]
 
 # This repo is a collection of scripts run as `python3 python/foo.py`,
