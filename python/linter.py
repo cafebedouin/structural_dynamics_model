@@ -681,9 +681,21 @@ def lint_file(filepath):
 
     # 25. MOUNTAIN NL PROFILE METRIC COVERAGE
     # The mountain metric gate in classify_from_metrics requires emerges_naturally(C).
-    # The natural_law_signature certification chain requires accessibility_collapse
-    # and resistance metrics. Without these, get_metric_average defaults to 0.5,
-    # failing the NL thresholds (collapse >= 0.85, resistance <= 0.15).
+    # Missing accessibility_collapse / resistance makes get_metric_average/3 return the
+    # `unknown` ABSENCE SENTINEL (signature_detection.pl, "Honest abstain on missing
+    # data" — it stopped defaulting to 0.5 at commit 966d53c8, OQ-44); the profile then
+    # fails number/1 in profile_metrics_authored/1 and the constraint abstains.
+    #
+    # SCOPE HONESTY (OQ-296 / OQ-113): the natural_law half of this advisory is about
+    # COVERAGE ONLY, never certification. natural_law_signature/1 is unsatisfiable at
+    # HEAD regardless of what an author declares: its `HasAlternatives == false` conjunct
+    # is DEAD-BY-RANGE, because has_viable_alternatives/2's range is {true, unknown}
+    # (`false` is builder-unreachable — the intent_viable_alternative/3 table is empty,
+    # GAP-08). Adding accessibility_collapse and resistance therefore CANNOT produce an
+    # NL certification; it only restores the authored metric vector so the constraint
+    # stops abstaining. Powering certification is GAP-08 §7 (author-independent
+    # immovability signal, unsolved) — not an authoring action. Do not re-word this
+    # message to instruct authors toward NL certification.
     #
     # Trigger: emerges_naturally declared (definitive mountain signal),
     # OR mountain in constraint_claim, OR mountain-only uniform type.
@@ -715,10 +727,14 @@ def lint_file(filepath):
             errors.append(
                 f"MISSING_NL_PROFILE: Mountain candidate is missing required NL "
                 f"profile data: {', '.join(missing)}. Without these, the mountain "
-                f"metric gate will not fire (emerges_naturally) and/or the "
-                f"natural_law_signature certification will fail (accessibility_collapse "
-                f"and resistance default to 0.5). Add the missing declarations or "
-                f"reclassify the constraint."
+                f"metric gate will not fire (emerges_naturally), and the profile "
+                f"metrics read as the `unknown` absence sentinel, so the constraint "
+                f"abstains instead of receiving a signature. Add the missing "
+                f"declarations or reclassify the constraint. NOTE: this restores "
+                f"metric COVERAGE only — it cannot yield a natural_law certification. "
+                f"natural_law_signature/1 is unsatisfiable at HEAD for every constraint "
+                f"(its HasAlternatives == false conjunct is dead-by-range; OQ-113/OQ-296, "
+                f"unblocking is GAP-08 §7), so no authoring action reaches it."
             )
 
     # 26. METRIC_SOURCE_INCONSISTENCY CHECK
