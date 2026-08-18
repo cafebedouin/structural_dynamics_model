@@ -1674,7 +1674,22 @@ integrity line — *the two strata must partition the population exactly* — re
 had silently acquired a member which was not a directory. The count alone would have read as one
 more audit; the partition check is what could not be satisfied. So the honest property is now: **a
 gate catches this class exactly when the gate asserts a structural invariant rather than checking a
-value**, and ten of eleven instances had no such invariant available to violate. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
+value**, and ten of eleven instances had no such invariant available to violate.
+
+**Stated as a design rule, with its falsifier.** *A gate detects an apparatus self-instance if and
+only if it asserts an invariant the defect cannot satisfy; a gate that checks a value against an
+expectation does not.* **Falsifier, either direction: a value-checking gate that catches a
+self-instance, or an invariant-asserting gate that misses one.** This is cheap to attack — the
+repository runs twenty-one gate rows, and most of them check values.
+
+**A third witness was already sitting in the pass that produced instances 10 and 11, unnoticed until
+the rule named what to look for.** The V04 manifest's item-count check ran green for a week against
+a documented figure it did not match, and the pass's own closing verification block mis-fired twice
+— once reporting a present phrase absent, once reading a withdrawn number as an asserted one. All
+three are **value checks**, and all three missed. The census's `partition_check` is the only
+invariant in the set, and it is the only one that caught anything. That the rule *retrodicts* three
+misses it was not derived from is the strongest support available at this n, and it is still
+retrodiction: the falsifier above is what would move it. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
@@ -2263,6 +2278,22 @@ its own selection criterion without an author declaring it — not a repository 
 corroboration here is a category error in the direction of excessive modesty, and it cost three
 drafts the section that motivated the work.
 
+> **The one reflexive move this paper can point to as discharged rather than argued (2026-08-18).**
+> A methodology paper about success-shaped absence is in a poor position to *claim* that it applies
+> its own discipline to itself; the claim is cheap and the framework can absorb it. What is not
+> cheap is a revision that runs **against the paper's own interest and can be checked in the diff**.
+> The 2026-08-18 pass produced two. Its correction history was **revised upward, from three
+> corrections to six** — a methodology paper about instrument defects finding three more in its own
+> central instrument, and publishing the larger number. And Appendix D.3, the list of things this
+> paper had settled, **lost a settled row**: the 77/175 → 73/174 correction had been recorded as
+> closed, and the re-run showed the manifest row carrying 174 had paired it with a command that
+> returned 175, so the row certifying the paper's numbers was itself uncertified for the whole
+> interval. Neither edit was forced by a reader; both were produced by running the paper's own
+> commands and reporting what came back. **That is the difference between coherence and practice:
+> coherence is what a framework supplies for free, and a correction against interest is what it
+> cannot.** It is one pass, it is not a general claim about the method, and it is the only
+> reflexive evidence in this document that a sceptic can audit without granting anything.
+
 **Where the framework supplies vocabulary for auditing practice, the v0.2 caution stands intact.**
 Verdict-carries-position, verification-depth-is-a-seat, and drift-versus-accretion are used below to
 *describe* the practice, and agreement between a description and the thing described is not evidence
@@ -2754,7 +2785,7 @@ path component, and the census pipes grep into a positional parse.
 | 5.4 | Non-census directories with no `.md` / with keywords in unopened file types | 4 / 12 (of 102) | the auditing grep, §5.4, re-run 2026-08-18: numerators unchanged at 4 and 12, denominator 101 → 102. Two-sided control: the same non-`.md` sweep fires on the census stratum, so its silence elsewhere is a fact about the world |
 | 5.4 | Blinded escape check | 8 drawn, 6 candidate hits, 0 confirmed, calibration arm closed unresolved (k = 0 NO-UNIT across n = 22) | audit record of the escape stratum (`audits/2026-08-10_oq277_rq2_crosscoding/`). **Not re-run: this is a frozen draw, not a command** — re-running would be a new draw, not a re-measurement |
 | 5.4 | Census false-positive rate (the precision direction, measured for the first time) | **13 / 83 numerator members are hygiene-only (15.7%)** | `audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py`. A *hygiene-only* directory is one whose every keyword hit is the contrastive form *"recorded rather than silently dropped"* — the author describing their own reporting discipline, not a defect found. Two-sided control: 5 fire, 8 decline, all lines drawn from the corpus. **This measures ONE precision failure mode**; a second (bare `was never` in ordinary prose) is visible in the raw hits and unmeasured, so 15.7% is a floor |
-| 5.4 | Pooled value, retained as a *computed* quantity that must not be published as a summary | 83 / 185 = 44.9% (was 73/174 = 42% at 2026-08-10) | same command. Retained so the 42% → 45% movement stays attributable (+11 directories, 10 into the numerator, 0 removed) and so a reader who meets the old scalar can locate it. **Not a summary of anything**: see the window rows above |
+| 5.4 | Pooled value — **retained for findability, NOT reportable, and here is why** | 83 / 185 = 44.9% (was 73/174 = 42% at 2026-08-10) | same command. **Why it is not a summary:** it pools a rate that is *non-stationary* over the interval it pools — 36.7% / 57.8% / 80.0% across the three windows above — so the ratio is a mixture whose value tracks the denominator's age distribution as much as the record. Concretely: it rose 42% → 45% between 2026-08-10 and 2026-08-18 on growth alone, with every command unchanged and nothing about the world different. Retained so the movement stays attributable (+11 directories, 10 into the numerator, 0 removed) and so a reader arriving with 42% or 45% in hand has somewhere to land. **A bare "not a summary" marking would be exactly the unqualified label §5.4 spent three narrowings learning to distrust** |
 | 7.4 | Apparatus self-instances | **11** across two independent passes (8 from one ~36h arc, 2 from the 2026-08-18 discharge); **1 caught by a gate** | the sessions' records. **This is a pointer, not a command, and is marked as one**; the eleven are enumerated in §7.4's own table, which is the checkable form. Cross-checked 2026-08-18: the table carries 11 numbered rows. The single gate catch is instance 11, refused by the census frame's `partition_check` |
 | 8.5 | Memory content files before / after | 113 / 53 (114 / 54 incl. the index) | after: `ls <memory>/*.md \| wc -l`; before: `tar tzf memory_pre_prune_backup_20260810.tar.gz \| grep -c '\.md$'` |
 | 8.5 | Deleted / merged | 25 deleted; 45 merged into 10 cluster files + 2 absorptions | **The stated method was a consistency check that cannot fail** — 113 − 25 − 45 + 10 = 53 balances by construction if the terms were derived from one another. Replaced 2026-08-18 by a **name-level set diff** of the backup listing against the current one, which can: 70 names gone (= 25 + 45), 10 names new **and all ten named**, 44 surviving; 114 − 70 + 10 = 54. The figures hold under the discriminating check |

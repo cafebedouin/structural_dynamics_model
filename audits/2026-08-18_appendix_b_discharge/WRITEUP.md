@@ -51,7 +51,8 @@ live draw.
 | `evidence/appendixB_rows_104_74.txt` | the first cadence run | superseded by the above; retained because it contains the no-op-filter defect verbatim |
 | `evidence/crosswalk_absence_probes.txt` | absence probes with two-sided controls | the NOT-LANDED verdicts |
 | `evidence/v04_section7_discrimination_record.txt` | the §7 check fires at the defective commit, declines after | the check discriminates, on naturally-arising states |
-| `evidence/sync_sweep_witness.txt` | all 38 sweep hits assigned to a declared class | **Class C was not empty** — four stale prose claims |
+| `evidence/sync_sweep_witness.txt` | all 38 sweep hits assigned to a declared class — **and its own supersession note**, recording that the retention model is now THREE-state (asserted / withdrawn / historical) | Class C was not empty — four stale prose claims; and why a two-state sweep misreads a post-withdrawal document |
+| `evidence/carriage_check_discrimination.txt` | `amnesiac_carriage_check.py` fires and names the invariant on a re-asserted scalar and on a twelfth §7.4 row, and **declines on a pure re-wrap** | the replacement instrument discriminates, on the live document, on the path the gate runs |
 | `evidence/promotion_test_prompt_*.txt`, `evidence/promotion_test_response_*_draw{1,2}.txt`, `evidence/promotion_test_scores.txt` | the trial's raw inputs and outputs; **draw 1's responses are transcript-restored, not file-persisted** | the trial result and the incident |
 | `evidence/new_numerator_hits_raw.txt` | every keyword hit in the 10 new numerator dirs | the hand-scoring behind the contamination read |
 | `evidence/final_verification.txt` | the plan's verification checklist, run at close | census control 0; V04 self-checks 35 / 19W-5R-11U / 1-2-3-4-5-6; sweep 38 hits all classed; three checkers green; the one remaining gate red shown pre-existing |
@@ -143,6 +144,11 @@ stakes term is untouched and remains a declared gap.**
   §10.4, §10.5, Appendix B); `docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md` (§7 gap-5
   folded-and-deleted per operator ruling; self-checks repaired; dated landing-status note);
   `ISSUES.md` OQ-309; `KNOWN_STATE.md`; `audits/README.md` index row.
+- **New standing apparatus:** `python3 python/amnesiac_carriage_check.py --check`, gate row
+  **`paper carriage`**. It replaces this pass's closing pattern-sweep, which mis-fired twice. It
+  asserts **expected hit counts at enumerated sites** and fails on a miss as loudly as on an extra,
+  so a normalisation bug turns it red rather than green — §5.1's P8 rider applied to the pass's own
+  last instrument. Editing a carriage site without updating the manifest turns it red, deliberately.
 - **A pre-existing gate red, untouched:** `gap surfaces` fails under `scripts/gate.sh` because the
   script calls bare `python3` and the system interpreter has no `pandas`. Run under the project
   virtualenv's interpreter instead, the check passes (3/3 human surfaces, self-test OK). Unrelated

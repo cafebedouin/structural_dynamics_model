@@ -81,6 +81,7 @@ run "claim cites st" python3 python/claim_cite_check.py --selftest
 run "known_state"    python3 python/known_state_status.py --check
 run "axis boundary"  python3 python/check_axis_boundary.py --selftest
 run "audit cites"    python3 python/audit_citation_status.py --check
+run "paper carriage"  python3 python/amnesiac_carriage_check.py --check
 run "audit writeup"  python3 python/audit_writeup_gate.py --check
 run "apparatus"      python3 python/apparatus_instrument.py --check
 run "gap surfaces"   python3 python/check_gap_status_surfaces.py

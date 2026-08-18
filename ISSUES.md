@@ -14027,6 +14027,30 @@ in §5.1 (a persistence rule with no read path is a producer with no consumer); 
 count-check finding is landed in §5 as a rider on P8 — *the instruction to re-run existed; the
 instruction to compare the output did not.*
 
+**Second review round (2026-08-18): the closing check was the least-witnessed instrument, and is
+replaced.** §7.4's restated property — *a gate catches this class exactly when it asserts a
+structural invariant rather than checking a value* — is now stated as a **design rule with a
+two-sided falsifier** (find a value-checking gate that catches a self-instance, or an
+invariant-asserting gate that misses one), and it **retrodicts three misses it was not derived
+from**: the V04 count check's whole-life green, and this pass's own closing sweep mis-firing twice.
+All three are value checks. Acting on that, the pattern-sweep is retired and replaced by
+`python3 python/amnesiac_carriage_check.py --check` (gate row **`paper carriage`**), which asserts
+**expected hit counts at enumerated sites** and fails on a MISS as loudly as on an EXTRA — 15
+invariants, selftest 6/6, discrimination record on the live document at
+`audits/2026-08-18_appendix_b_discharge/evidence/carriage_check_discrimination.txt` (fires and names
+the invariant on a re-asserted scalar and a twelfth §7.4 row; **declines on a pure re-wrap**, the
+case the old grep got wrong). Building it surfaced two more defects in its own first draft — a
+too-narrow row regex that could not see a twelfth instance, and a selftest whose plants silently
+no-opped against the wrapped source, so it had been asserting things about a document it never
+damaged. Both fixed; `plant()` now raises if a fixture fails to land.
+
+Also landed: the retention model is declared **three-state** (asserted / withdrawn / historical) in
+the superseded sweep file, because a two-state sweep against a post-withdrawal document reads a
+withdrawn number as a live claim; Appendix B's pooled row now states **why** it is not a summary
+rather than only that it is not; and §11 gains the one reflexive move that can be audited from the
+diff — a correction history revised **upward** against interest, and Appendix D.3 **losing** a
+settled row.
+
 **RESIDUE — this entry is its home, and none of it is blocking.**
 
 - **V04 rows still open (10):** items 8, 9, 10, 11, 19, 23, 28 (not landed) and the open halves of

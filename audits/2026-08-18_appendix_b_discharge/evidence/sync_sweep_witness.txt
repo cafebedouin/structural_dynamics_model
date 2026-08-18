@@ -53,3 +53,42 @@ is where the numbers live and the prose is where they are *spent*. Updating the 
 believing the document current is precisely the produced-but-not-consumed shape — the producer was
 refreshed and four consumers were not. The sweep is the consumer check, and it must run over prose,
 not over the table.
+
+
+---
+
+# SUPERSEDED 2026-08-18 (same day, after operator review) — AND THE RETENTION MODEL IS NOW THREE-STATE
+
+**This file's method is retired.** It classified every hit as *current-value* or *dated-record* and
+did the filtering by hand. Two things broke it:
+
+**1. The classification is no longer binary.** With §5.4's pooled scalar withdrawn, an occurrence of
+`73`, `174`, `42%` or `45%` in the paper falls into **three** states, not two:
+
+| state | meaning | example |
+|---|---|---|
+| **ASSERTED** | the document is claiming this number is the case now | *none remain — this is the point of the withdrawal* |
+| **WITHDRAWN** | the number appears inside a clause that retires it | §0's W2 row: *"the pooled scalar this row carried through v0.6 (73/174, 42%) is **withdrawn**"* |
+| **HISTORICAL** | a dated record of an earlier state, correct as history | §5.2.1's account of the 2026-08-11 vacating; Appendix D's correction list |
+
+A sweep with a two-state model against a three-state document will read every WITHDRAWN mention as
+either a live claim (false positive — which is exactly what happened here, on §0's W2 row) or as
+history (false negative, and worse: it would let a re-assertion pass as a quotation). **Any future
+sweep over this document must encode all three, and the retention list must say which state each
+site is in — not merely current-vs-historical.**
+
+**2. The method was a value check, and value checks miss.** This block's own two mis-fires are
+recorded above at §8e/§8a. Both are instances of the property §7.4 now states as a design rule: a
+value check cannot distinguish *the sweep worked* from *the probe is broken*, because a pattern that
+fails to match returns the same silence either way.
+
+**Replacement: `python3 python/amnesiac_carriage_check.py --check`**, gate row `paper carriage`. It
+asserts, per enumerated site, the **expected number of hits**, and fails on a MISS as loudly as on
+an EXTRA — so a normalisation bug turns it RED instead of green. Its discrimination record is
+`carriage_check_discrimination.txt`: it fires and NAMES THE INVARIANT on a re-asserted scalar and on
+a twelfth §7.4 row, and **declines** on a pure re-wrap, which is the case the old grep got wrong.
+Fifteen invariants, selftest 6/6 with every plant verified to land.
+
+This file is kept because the class assignment of the 38 hits is still the record of what the
+document contained on 2026-08-18, and because a superseded instrument's output is evidence about the
+instrument.

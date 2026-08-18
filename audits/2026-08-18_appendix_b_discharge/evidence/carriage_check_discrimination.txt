@@ -1,0 +1,27 @@
+# amnesiac_carriage_check.py — discrimination record, on the LIVE document
+# The selftest plants in memory; this perturbs the file on disk and restores it, so
+# the record covers the path the gate actually runs.
+
+== GREEN on the real document ==
+amnesiac carriage check: GREEN — 15 carriage invariants asserted (expected counts published in the manifest); selftest 6/6, every plant verified to land
+exit=0
+
+== RED, and NAMES THE INVARIANT, when a pooled scalar is re-asserted in 2.A ==
+amnesiac carriage check: RED — 1 carriage invariant(s) violated
+  - 2.A no pooled scalar: expected 0, found 1 — §2.A's worked example asserts no pooled scalar
+exit=1
+
+== RED on a twelfth 7.4 instance ==
+amnesiac carriage check: RED — 1 carriage invariant(s) violated
+  - 7.4 numbered rows: expected 11, found 12 — §7.4's recursion table enumerates eleven instances — ANY integer row counts, so a twelfth is caught rather than ignored by a too-narrow alternation
+exit=1
+
+== DECLINES on a pure re-wrap — the misfire this replaces ==
+   The old pattern-grep reported the phrase ABSENT after a re-wrap. A re-wrap is not
+   a carriage change, so the invariant check must stay GREEN. This is the decline side.
+amnesiac carriage check: GREEN — 15 carriage invariants asserted (expected counts published in the manifest); selftest 6/6, every plant verified to land
+exit=0  <- 0 is CORRECT: the decline side
+
+== restored ==
+amnesiac carriage check: GREEN — 15 carriage invariants asserted (expected counts published in the manifest); selftest 6/6, every plant verified to land
+exit=0
