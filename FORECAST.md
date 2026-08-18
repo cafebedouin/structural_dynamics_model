@@ -9,11 +9,27 @@ transferable lessons. Single tracking surface for forecasting outcomes — per-c
 post-mortems go in `blog/YYYY-MM/`, one row lands here. Related open question:
 ISSUES OQ-229 (essay-archive outcome scoring; Forecast Register instrument).
 
-**Reader and decision.** The operator (or an instance), before registering the next
-matrix or scoring a resolved one: which hypotheses are live, which lessons apply,
-what the protocol's known defects are. If a planned register contradicts a lesson
-below, either follow the lesson or say why not — silently ignoring the ledger is how
-it stops earning its place.
+**Reader and decision.** The operator (or an instance), before *registering* the
+next matrix: which hypotheses are live, which lessons apply, what the protocol's
+known defects are. If a planned register contradicts a lesson below, either follow
+the lesson or say why not — silently ignoring the ledger is how it stops earning
+its place. When a register is written with this file in context, stamp it: one line
+naming which lessons/hypotheses were applied (e.g. "written under H1 correction;
+L1 interaction rows"), so scoring can attribute corrections rather than re-test an
+already-corrected bias.
+
+**⛔ SCORING INSTANCES: STOP.** This file is for the *writing* pass only. Scoring
+is row-only by contract (`agent/uke_score_v0.1.md`; uke_write v2.2 §1.6) — a scorer
+holding this ledger's standing hypotheses and expected error directions can drift
+toward resolving ambiguous rows in hypothesis-confirming directions, and that
+contamination cannot be undone by trying to ignore what you have read. If you have
+read any part of this file and are now asked to score a register or matrix, do not
+proceed and do not attempt to self-blind: **stop, tell the operator this instance
+is ledger-contaminated for scoring, and ask them to start a fresh instance that is
+given only the register rows and the scoring rubric.** Refusing here is the correct
+completion of the task, and the refusal should be reported at the volume of a
+completion. (Sequence: writer reads this file → scorer reads rows only → this file
+is updated *after* scoring.)
 
 ---
 
