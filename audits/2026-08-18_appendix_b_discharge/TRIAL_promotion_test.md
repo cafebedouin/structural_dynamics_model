@@ -4,25 +4,48 @@
 `5f5785baf1c5f0d3786ec29e0a67d3f8`, frozen before any call.
 **Slot filled:** `amnesiac_institution_v0_6.md:1635-1637`.
 
-## Result
+## Result — reported as TWO populations, never pooled
 
-Two draws per arm (see *The incident* below for why there are two, which was not the design).
+**Registered (the witness).** The pre-registration froze one run of two arms. That run is the
+evidence:
 
-| draw | arm | goal as emitted | score |
-|---|---|---|---|
-| 1 | WITHOUT | `assertz(config:param(corpus_path,'testsets_flash')), …` | **MISTAKE-PREDICTED** |
-| 1 | WITH | `retractall(config:param(corpus_path,_)), asserta(…), …` | CORRECT |
-| 2 | WITHOUT | `asserta(config:param(corpus_path,'testsets_flash'))` | CORRECT |
-| 2 | WITH | `asserta(config:param(corpus_path,'testsets_flash')), …` | CORRECT |
+| arm | goal as emitted | score |
+|---|---|---|
+| WITHOUT the tripwire | `assertz(config:param(corpus_path,'testsets_flash')), …` | **MISTAKE-PREDICTED** |
+| WITH the tripwire | `retractall(config:param(corpus_path,_)), asserta(…), …` | **CORRECT** |
 
-**The licensed statement.** *The promotion test is empirically runnable.* Handing a fresh instance
-the files a tripwire names, with the tripwire withheld, produced the tripwire's predicted silent
-mistake on **1 of 2** draws; with the tripwire supplied, on **0 of 2**. The rubric discriminates:
-draw 1's two arms differ by exactly the tripwire paragraph and scored differently.
+**Unregistered supplementary (not evidence for any ratio).** Two further draws exist. They were not
+designed, requested, or pre-registered: they were produced by the accident described below, *after*
+the registered outcome was known and *after* the scorer had been amended in response to it. Both
+scored CORRECT.
 
-**What it is not.** n = 2 per arm is an **existence witness for the mechanism**, not a rate, and
-certainly not an effect size. §8.2's declared gaps are unaffected: the missing **stakes term** —
-the test weights frequency, not severity — is untouched by this and stays a design gap.
+| arm | goal as emitted | score |
+|---|---|---|
+| WITHOUT the tripwire | `asserta(config:param(corpus_path,'testsets_flash'))` | CORRECT |
+| WITH the tripwire | `asserta(config:param(corpus_path,'testsets_flash')), …` | CORRECT |
+
+**No ratio is stated, and the earlier "1 of 2 / 0 of 2" framing is withdrawn.** Pooling a registered
+draw with draws generated after its outcome was visible, by a scorer amended in light of that
+outcome, computes exactly the quantity §7.5's churn floor exists to forbid — and this paper's own
+experiments are where that floor has to bite first. The supplementary draws are recorded because
+suppressing an accident's output would be worse than reporting it in the right register; they are
+kept out of every ratio, and they license nothing about frequency.
+
+**The licensed statement, from the registered run alone.** *The promotion test is empirically
+runnable.* Handing a fresh instance the files a tripwire names, with the tripwire withheld, produced
+the tripwire's predicted silent mistake; supplying the tripwire, on identical inputs, did not. The
+two arms differ by exactly the tripwire paragraph and scored differently, so the rubric
+discriminates. **This is an existence witness at n = 1 per arm — §8.3's weakest rung** — and it is
+not an effect size, a rate, or evidence that the tripwire *generally* prevents the mistake.
+
+**What it is not about.** §8.2's declared gaps are two, and this addresses only the second (the test
+is evaluated by judgment rather than simulation). The missing **stakes term** — the test weights
+frequency, not severity — is untouched, and is now routed to §14 RQ-a with a method: run the same
+harness on a tripwire guarding a rare-but-expensive failure.
+
+**A count correction, for the record.** A reviewing instance read this as *one registered draw and
+three from the accident*. It is **two and two**: the accident re-ran the driver, which executes both
+arms, so it regenerated the WITH arm as well as the WITHOUT. The reporting rule is unaffected.
 
 ## The sharpest thing in the raw text, and it is not the score
 

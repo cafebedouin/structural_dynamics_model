@@ -54,8 +54,13 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 Appendix B row re-run under one as-of stamp, and the 35-item V04 manifest pass completed by anchor
 text (23 landed / 3 partial / 2 superseded / 7 not landed), its one U-BLOCKING item resolved.
 
-**How the incidence figure must now be cited.** **83 / 185 (45%) as of 2026-08-18** — was 73/174
-(42%) at 2026-08-10. Three qualifications, all new:
+**How the incidence figure must now be cited — THE POOLED SCALAR IS WITHDRAWN.** Do not cite
+83/185, 45%, 73/174 or 42% as *the* incidence figure; the paper no longer publishes one. **Cite per
+window:** June 2026 36/98 (36.7%), July 26/45 (57.8%), August 1–18 16/20 (80.0%). The rate is
+**non-stationary**, so a pooled ratio over the observation window measures the denominator's age
+distribution as much as the record — which is why the pooled value rose 42% → 45% on eight days of
+growth with no command changed. The pooled value survives in Appendix B only as a *computed*
+quantity marked not-a-summary, so the old scalar stays locatable. Four qualifications:
 
 1. **The movement is GROWTH, not correction.** +11 directories, 10 of them into the numerator, 0
    removed, 0 numerator members lost. Every prior movement of this figure was a repair.

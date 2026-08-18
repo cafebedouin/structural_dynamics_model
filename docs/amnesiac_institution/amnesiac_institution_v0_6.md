@@ -3,23 +3,35 @@
 **cafebedouin@gmail.com**
 
 *Status: DRAFT v0.6 (2026-08-12; §5 amended 2026-08-17, see §5.2.1; **all numbers re-run and the
-v0.4 manifest pass completed 2026-08-18** — see the in-place corrections below and Appendix B).
+v0.4 manifest pass completed 2026-08-18, and §5.4's pooled headline WITHDRAWN in the same pass** —
+the incidence rate is non-stationary and is now reported per window; see the in-place corrections
+below and Appendix B).
 PROPOSED throughout, with the
 exceptions recorded in §5.2, §5.2.1 and §9.2, which are operator rulings and are marked as such. Slots marked `[UNWITNESSED]` are claims
 this draft cannot pay for and are not to be cited until filled; `[OPERATOR]` slots await facts only
 the operator holds. The framing errors are the draft's; the witnessed instances are the
 repository's.*
 
-> **The factual half of the circulation blocker is discharged; the decision is not.** As of
+> **The blocker is discharged, and the discharge changed what the paper's headline is.** As of
 > 2026-08-18 Appendix B is re-run under a single as-of stamp, the pass against
-> `V04_CONSOLIDATION_MANIFEST.md` is complete and its one blocking item resolved, and four rows
-> remain `[UNWITNESSED]` with their blockers named. What the discharge also produced is a reason for
-> caution the earlier box did not have: §5.4's central figure has now moved on **growth** rather
-> than correction, carries a **fifth** instrument defect, and sits on a monthly rate that more than
-> doubles across the window it pools — so the number is current and commanded, and it may not be
-> compared across time. **Whether this draft circulates is the operator's call and is not settled
-> here** (§9.2). The numbers are citable with their as-of date; the paper's readiness is a
-> judgment.
+> `V04_CONSOLIDATION_MANIFEST.md` is complete with its one blocking item resolved, and four rows
+> remain `[UNWITNESSED]` with their blockers named and re-verified.
+>
+> **The discharge's own finding forced a second change, made here rather than deferred.** §5.4's
+> central statistic had been a pooled scalar; re-running it showed the underlying rate is
+> **non-stationary** (37% → 58% → 80% across June, July and the first eighteen days of August), so
+> the pooled form measures the denominator's age distribution as much as the record. Circulating
+> that scalar would have retired a citability blocker at the moment the headline became *less*
+> citable. **The pooled figure is therefore withdrawn**, §5.4 leads with per-window rates, and the
+> paper's central claim now matches what its instrument can support. The earlier claim that the
+> figure had *"survived three corrections"* was also undercounted in the paper's own favour: the
+> count is six, and the withdrawal is not a seventh correction but a change of form.
+>
+> **Whether this draft circulates remains the operator's call and is not settled here** (§9.2). One
+> reviewing instance's recommendation is on record — *no-go on the pre-amendment text, and the GO
+> question is not answerable until the pooled scalar is withdrawn* — and that condition is now met.
+> The numbers are current, commanded, and window-bounded; readiness is a judgment, and an instance
+> recommending is not an instance ruling.
 
 ---
 
@@ -151,8 +163,10 @@ that stopped tracking the list it summarises, corrected here rather than silentl
   carries the qualitative finding and names the reason. Nothing downstream moved: the scalar stays in
   §0's W2 row (framing adjacent in the Status column), in Appendix B's manifest row with its extraction
   command, and in §2.A's use of the figure as a worked example — the three sites where carriage is
-  cheapest and a reader cannot pick the number up without it. **(Re-dated 2026-08-18: the scalar is
-  now 45%, and the three sites are the ones the sync sweep is computed over.)**
+  cheapest and a reader cannot pick the number up without it. **(2026-08-18: the scalar is now
+  withdrawn from all three. §5.4's rate is non-stationary, so the carriage problem this bullet
+  solves has been superseded by the stronger move of not having a scalar to carry — the sites now
+  carry per-window rates, which cannot travel without their window.)**
 
 **In-place corrections to v0.6 (2026-08-18, the Appendix B discharge pass).** A second dated block
 rather than an extension of the one above, because those corrections were 2026-08-12 and mixing
@@ -168,11 +182,15 @@ items was completed. Full record: `audits/2026-08-18_appendix_b_discharge/`, ISS
   items are carried as residue at OQ-309, not silently dropped. The walk is addressed by **anchor
   text**, not section number, because v0.6's own §6.4 is a different section from the §6.4 that 13
   manifest rows point at — the OQ-278 collision species, live in the paper's own crosswalk.
-- **§5.4's figure moved for the first time on something other than a correction**, from 73/174 (42%)
-  to 83/185 (45%). Every prior movement was a repair; this one is growth, decomposed in Appendix B
-  (+11 directories, 10 of them into the numerator, 0 removed). The v0.6 sentence that 42% *"survived
-  three corrections at the same headline value"* is retained as the record of what was true through
-  v0.6 and is no longer the current state.
+- **§5.4's POOLED FIGURE IS WITHDRAWN, which is a larger change than the movement that exposed it.**
+  Re-running it gave 83/185 (45%) against 73/174 (42%) — the first movement on growth rather than
+  correction — and decomposing that movement showed why the form was never valid: the underlying
+  rate is **non-stationary** (36.7% June, 57.8% July, 80.0% August 1–18), so a pooled ratio measures
+  the denominator's age distribution as much as the record. §5.4 now leads with per-window rates and
+  reports the pooled value only as a computed quantity that must not be published as a summary. The
+  v0.6 claim that the figure *"survived three corrections at the same headline value"* was also
+  **undercounted in the paper's own favour**: the correct count is six, and the seventh finding is
+  not a correction but this withdrawal.
 - **§5.4 gains a SIXTH instrument defect, found by the discharge and *caused* by it.** The census
   extracts the second path component, so a keyword in `audits/README.md` — the audit index, a file
   at the top level — enters the numerator as a phantom member. Appending this pass's own index row
@@ -195,10 +213,14 @@ items was completed. Full record: `audits/2026-08-18_appendix_b_discharge/`, ISS
   and the scale figure and the frame had been merged into one cell. The manifest row that certifies
   the paper's numbers was itself an uncertified number, and only re-running the command could show
   it. The two quantities are now separate rows.
-- **§8.2's `[UNWITNESSED]` empirical slot is filled — and it is the ONLY one this pass fills.** The
-  promotion test was run: a fresh instance given the files without the tripwire produced the
-  predicted silent mistake on 1 of 2 draws; with the tripwire, 0 of 2. n = 2 per arm is an existence
-  witness that the test is *runnable*, not a rate. **§8.2's missing stakes term is untouched and
+- **§8.2's `[UNWITNESSED]` empirical slot is filled — and it is the ONLY one this pass fills.** In
+  the **pre-registered** draw, a fresh instance given the files with the tripwire withheld produced
+  the predicted silent mistake, and the instance given it did not. **One registered draw per arm: an
+  existence witness that the test is runnable, and no rate.** Two further draws were generated by an
+  accident after the registered outcome was known and the scorer amended; they are reported as
+  unregistered supplementary observations and are **not pooled** with the registered ones, because a
+  ratio across a registered and an unregistered draw is the quantity §7.5's churn floor exists to
+  forbid — and the paper's own experiments are where that floor has to bite first. **§8.2's missing stakes term is untouched and
   stays a declared gap.** The sharpest datum is not the score: the failing draw emitted the
   defective goal and then explained, in the next paragraph, exactly why it was defective — a
   different failure from the one the tripwire is written against, and the reason the test must be
@@ -264,8 +286,11 @@ jurisdictions. The principal internal indicator — the share of audit directori
 least one silent or never-fired defect — is **withheld from this abstract by design**. It is a yield
 over a single stratum, measured by an instrument with known recall and precision defects, and an
 abstract is a boundary in this paper's own sense: a scalar that crosses it arrives stripped of the
-selection rule that produced it, and is cited as a prevalence within one hop. The figure is reported
-in §5.4 with the framing that makes it readable. What survives at this altitude is qualitative:
+selection rule that produced it, and is cited as a prevalence within one hop. **As of 2026-08-18 the
+withholding is no longer only a carriage precaution: the pooled scalar has been withdrawn outright,
+because the underlying rate is non-stationary and a pooled ratio over the observation window is not
+a summary of anything** (§5.4). The rates are reported there per window, with the framing that makes
+them readable. What survives at this altitude is qualitative:
 within the audited incident record, silent defects were common enough to motivate the discipline's
 standing cost — which is not an estimate of repository-wide prevalence, of severity, or of the
 discipline's causal effect.
@@ -311,8 +336,8 @@ amount of repository data confirms or refutes these; they are refuted by exhibit
 | # | Claim | Evidence | Status |
 |---|---|---|---|
 | W1 | Non-persistent generative workers fail characteristically by producing the form of a completed operation without its substance | Dated repository incidents; five recurring patterns (§5) | Witnessed; **externally corroborated** (§6.2) |
-| W2 | 83 of 185 audit directories document at least one silent or never-fired defect (2026-08-18; 73 of 174 at 2026-08-10) | §5.4, Appendix B | Witnessed, with **six** known instrument defects, a stratum limit, and a **non-stationary** underlying rate that forbids cross-time comparison of the pooled value |
-| W3 | The apparatus commits, inside its own repairs, the defect the repair addresses; nine instances, none caught by a gate | §7.4 | Witnessed; denominator stated (one arc) |
+| W2 | Silent or never-fired defects are documented in a large and **rising** share of audit directories: 37% (June 2026), 58% (July), 80% (August 1–18) | §5.4, Appendix B | Witnessed **per window**. The pooled scalar this row carried through v0.6 (73/174, 42%) is **withdrawn**: the rate is non-stationary, so a pooled ratio measures the denominator's age distribution as much as the record. Six known instrument defects and a stratum limit |
+| W3 | The apparatus commits, inside its own repairs, the defect the repair addresses; **eleven** instances across two independent passes, **one** of them caught by a gate | §7.4 | Witnessed; denominator stated (eight from one arc, two from a later pass) |
 | W4 | The principal failure of accumulated LLM-authored memory here was redundant accretion, not false content | 113→53 consolidation; 2 files wrong | Witnessed; n = 1 institution, one pass |
 | W5 | Four operator rulings were correct in prose and defective in execution, each caught by a receiving instance that enumerated | §3.3 | Witnessed; the empirical face of A3 |
 
@@ -481,15 +506,17 @@ Two that look like two kinds of mistake and are one:
 
 - A count of "open questions" correct at the `open`-status framing, correct at the workable-frontier
   framing, correct at the not-resolved framing, and wrong as an uncited composite (§1.1).
-- An incidence figure of 45% accurate over the substrate stratum it was computed on and silent about
-  the instrument stratum nobody has measured — and, since 2026-08-18, silent about the fact that the
-  monthly rate underneath it more than doubles across the window it pools (§5.4).
+- An incidence figure accurate over the substrate stratum it was computed on, silent about the
+  instrument stratum nobody has measured, **and silent about its own pooling interval** — a scalar
+  formed over a window in which the underlying rate more than doubled, so the compression dropped a
+  dimension (time) that no reader could recover from the number (§5.4).
 
 The paper's own headline is the second of these. `CWC:A2@31548228` and that paper's §5.4 state the
-general form; **45% is the instance this paper is answerable for**, accurate at the framing it was
-formed at and silent about the instrument stratum until someone asked what the denominator ranged
-over — and silent about its own time-dimension until someone asked what the denominator ranged over
-*in time*, which is the same question asked twice and answered separately (§5.4).
+general form; **the incidence figure is the instance this paper is answerable for**, accurate at the
+framing it was formed at and silent about the instrument stratum until someone asked what the
+denominator ranged over — and silent about its own time-dimension until someone asked what the
+denominator ranged over *in time*. The same question, asked twice, answered separately, six drafts
+apart; the second answer **retired the number's form** rather than correcting its value (§5.4).
 
 The same shape in three phrasings this repository actually produces: *"tests pass"* without a date is
 a compression over an expired interval; *"no occurrences found"* without a positive control is a
@@ -541,7 +568,7 @@ where a compression crosses without its framing.
 **And the workforce is constitutionally better at recognition than at enumeration.** Fluent
 completion over available context is what the substrate does well and cheaply. Counting the
 directory, re-running the command, and comparing a claimed number against the artifact it describes
-is what it does unreliably unless made to. §7.4's central finding — that not one of nine apparatus
+is what it does unreliably unless made to. §7.4's central finding — that ten of eleven apparatus
 defects was caught by a gate, and every one was caught by a person or script comparing a claimed
 number against the artifact — is this asymmetry showing up as an operational fact.
 
@@ -634,13 +661,13 @@ required that divergence be reported rather than averaged away. The same is owed
 one.
 
 The account predicts that carrying the framing to the read site repairs the failure. **At the
-instrument stratum it does not.** §7.4's nine instances were committed by artifacts that carried
+instrument stratum it does not.** §7.4's eleven instances were committed by artifacts that carried
 their scope scrupulously — manifests with declared coverage, controls with stated plants, a
 consolidation table with an explicit totals row — and the defect was that the carried scope was
 *itself* a compression with its own unstated framing (the totals row disagreed with the table
 beneath it; the drift list reported 12 changed sources when 2 had changed). Declaring Π produces a
 new artifact with a new Π. **The remedy is therefore not self-terminating, and §7.4.1's finding —
-that every one of the nine was caught by someone comparing a claimed number against the artifact —
+that ten of the eleven were caught by someone comparing a claimed number against the artifact —
 is the shape of what actually terminates it: not a declaration but a re-derivation.**
 
 So the honest scope of the unification, stated at the altitude the control licenses: **the account
@@ -985,6 +1012,17 @@ Each with one dated instance (illustrative, per §4.4):
 audit. A producer is not done until something consumes its output — and consumed-once is not
 kept-fresh.
 
+> **A second instance, 2026-08-18, in tooling built for a witness pass — which is where this pattern
+> costs most.** A trial driver persisted every raw model response to disk *before parsing*, exactly
+> so that a defect in the scorer could be repaired by re-reading the artifact instead of re-spending
+> the calls. The rule was honoured on the write side and **no consumer was ever built on the read
+> side**: nothing could get the persisted file back to a scorer except by importing the module that
+> had written it. When the scorer needed repair, the repair took the only available path, the
+> import executed the driver's entry point, and the raw responses were **overwritten by fresh
+> calls**. The producer's output had no independent consumer, so reaching it re-ran the producer and
+> destroyed it. **A persistence rule with no read path is a producer with no consumer**, and the
+> gap is invisible while the producer still runs.
+
 **P2.** Four parallel task trackers were consolidated into one and their recreation prohibited.
 Canonicity is a checked fact, not a memory.
 
@@ -1007,6 +1045,17 @@ failed to unify, their cuts never executed, and the query answered "satisfies th
 rather than "the engine assigns it." Witnessed twice on the same predicate: **1 against a real 0**
 in 2026-05-30, and **276 against a real 0** on 2026-08-17 — the second inflated a published
 denominator and concealed that two thirds of the population resolved to `unknown`.
+
+> **A rider on P8, added 2026-08-18, because it names the gap between a check and a checked thing.**
+> A self-check can be written, published, instructed-to-be-re-run, and **still never compared**. A
+> consolidation manifest built to prevent double-counting shipped a check on its own item count; the
+> check ran correctly and returned **32** against a documented **35**, and had done so from the day
+> a new section added three rows its regex did not match. It was not skipped — it was run and not
+> read. **The instruction to re-run existed; the instruction to compare the output did not.** A
+> number that is regenerated and never held against its expectation is a recap wearing a command's
+> clothes: P8 at one remove, and the remove is what hides it, because the presence of a command
+> reads as the presence of a check. The forcing form is to **publish the expected value beside the
+> command**, so that running it without comparing is visibly incomplete.
 
 **P8.** "Three edits witnessed," with only the third pasted. This is the pattern that motivates the
 witness calculus (§7).
@@ -1117,12 +1166,33 @@ component was correct and the composite was fluent. In `CWC:C1@8475dc95`'s terms
 "nothing was computed" formed at the fallback's scope, read at the aggregate's scope as a
 measurement, with the two scopes rendered in the same eight bytes.
 
-### 5.4 Incidence in the audit record, and six defects in the instrument that measures it
+### 5.4 Incidence in the audit record — a rate that is not constant, and six defects in the instrument that measures it
 
-As of 2026-08-18, **83 of 185 audit directories (45%) document at least one silent or never-fired
-defect** — something that "read 0 for its whole life," "never fired," or passed vacuously
-(keyword-proxy coding rule and exact command: Appendix B). At 2026-08-10 the same instrument read
-**73 of 174 (42%)**; the movement is growth, not correction, and is decomposed below.
+**The pooled figure this section used to report is withdrawn.** Through v0.6 the headline was a
+single scalar — 73 of 174 audit directories (42%) documenting at least one silent or never-fired
+defect. The 2026-08-18 discharge re-ran it, and the re-run's finding is not a new value but the
+**invalidity of the form**: the underlying rate is not constant over the observation window, so a
+pooled ratio over that window summarises nothing a reader can use.
+
+| window | directories | with ≥1 silent or never-fired defect | rate |
+|---|---|---|---|
+| 2026-06 | 98 | 36 | **36.7%** |
+| 2026-07 | 45 | 26 | **57.8%** |
+| 2026-08 (1–18) | 20 | 16 | **80.0%** |
+| *pooled, all windows* | *185* | *83* | *44.9% — **not a reportable summary**, see below* |
+
+**The reportable statement is window-bounded**: *in the audit record for June 2026, 37% of
+directories document at least one silent or never-fired defect; in July, 58%; in the first eighteen
+days of August, 80%.* The rate **more than doubles** across the window, and a pooled value over it
+moves whenever the denominator's age distribution shifts — with no correction, no change in the
+world, and no signal. That is exactly what happened between 2026-08-10 and 2026-08-18, when the
+pooled figure rose 42% → 45% while every underlying command stayed the same.
+
+Everything below — the yield caveat, the stratum limit, the six instrument defects — applies to the
+window-bounded rates as it applied to the pooled one. What follows the defects is the reason the
+pooled form had to go, and it is a stronger finding than any value this section has ever carried.
+
+(Coding rule and exact command: Appendix B.)
 
 > **Correction marked (v0.3).** v0.1 and v0.2 stated 77/175 (44%). Discharging Appendix B revealed
 > a **unit error**: run from inside `audits/`, the pipeline's `cut -d/ -f2` extracted unique
@@ -1131,7 +1201,8 @@ defect** — something that "read 0 for its whole life," "never fired," or passe
 > manifest requirement the previous review round installed.
 
 This figure must be read narrowly. It is the **yield of the audit process**, not a base rate: of the
-places the discipline chose to look hard, 45% contained something silent. It is not an estimate of
+places the discipline chose to look hard, between a third and four fifths contained something
+silent, depending on when they were looked at. It is not an estimate of
 the probability that an arbitrary task silently fails, because audits are not a random sample of
 tasks (§4.2); it does not compare silent failures against other failure classes, so it does not
 establish dominance; and it is not severity-weighted. v0.1 called this a base rate and called silent
@@ -1181,13 +1252,18 @@ failure the dominant failure class. Both are withdrawn.
 > whose comparability to the primary sample could not be established.* It is **not** "the figure is
 > an undercount."
 >
-> **What this did to the figure, through v0.6.** 42% survived three corrections — two on its
-> denominator, one on the parse — at the same headline value. **That survival was evidence of
-> stability under revision, not of accuracy.** Every correction to that point touched the machinery
-> around the count rather than the count itself; the instrument had one measured error direction
-> (recall, bounded by an underpowered probe) and one that had never been audited at all until an
-> extractor noticed a precision failure by accident. A fourth check was to be assumed to exist. It
-> did, and so did a fifth.
+> **What this did to the figure — the count, restated 2026-08-18 because the old count was wrong in
+> the paper's favour.** Through v0.6 this passage said the figure had *"survived three corrections"*
+> at the same headline value, and read that as stability under revision rather than accuracy. **The
+> correct count is six**, and the sixth is not survivable: three through v0.6 (the `cut -d/ -f2`
+> parse; the empty untracked directory; the frame's self-exclusion), and three from the 2026-08-18
+> discharge — the manifest row that paired the value with a command that never produced it, the
+> first measurement of the precision direction, and the numerator's admission of a non-directory.
+> **Every one of the six touched the machinery around the count rather than the count itself, which
+> is exactly why the seventh finding is different in kind: it is not a correction but a withdrawal.**
+> The pooled form was never a valid summary of a non-stationary rate, and no amount of machinery
+> repair would have surfaced that — only asking the number what it ranged over *in time* did. A
+> fourth check was to be assumed to exist. Three more did, and then the form itself failed.
 
 > **A FOURTH DEFECT, AND IT IS THE INVERSE OF THIS PAPER'S SUBJECT (added 2026-08-12, witnessed,
 > raw text retained).** The three above are defects in *this census's* instrument. This one is in the
@@ -1256,37 +1332,29 @@ failure the dominant failure class. Both are withdrawn.
 > life and be activated by an unrelated edit**, which is why the guard belongs in the instrument
 > rather than in a list of files to remember.
 
-> **AND THE POOLED FIGURE IS A MIXTURE OVER A NON-STATIONARY RATE — which is a bigger finding than
-> its movement (2026-08-18).** 42% → 45% invites the reading *"the value drifted a little."* The
-> monthly series says something else:
+> **WHY THE POOLED FORM WAS WITHDRAWN, and what the slope does and does not license.** The rates
+> tabulated at the head of this section — 36.7%, 57.8%, 80.0% — are the finding. A pooled ratio over
+> a rate that more than doubles is a fact about the denominator's age distribution as much as about
+> the record, which is why it rose 42% → 45% on eight days of growth with no command changed.
 >
-> | month | directories | with ≥1 hit | rate |
-> |---|---|---|---|
-> | 2026-06 | 98 | 36 | **36.7%** |
-> | 2026-07 | 45 | 26 | **57.8%** |
-> | 2026-08 (1–18) | 20 | 16 | **80.0%** |
->
-> The rate **more than doubles** across the observation window, and the pooled headline is an average
-> over months that disagree by that much. **A pooled rate over a non-stationary series moves when the
-> denominator's month-composition shifts, with no correction and no change in the world** — which is
-> exactly why the headline rose while every underlying command stayed the same. The 10 directories
-> added to the numerator since 2026-08-10 are 10 of the 11 added at all.
->
-> **Two readings, and this section cannot separate them**, which is the same shape §10.4 is in.
+> **Two readings, and this section cannot separate them**, which is the same position §10.4 is in.
 > Either the population genuinely changed — recent months were defect-hunting work, so §10.4's
 > *change of project phase* hypothesis is now visible in a second instrument — or audit prose adopted
 > the silent-failure lexicon as the project spent the window writing *about* silent failure, and the
-> instrument is reading its own subject matter. The hygiene probe bears on the second and does **not**
-> carry it: hygiene-only share by month is 19.4% (June), 7.7% (July), 25.0% (August), which has no
-> trend and cannot produce a doubling. Hand-scoring the 10 new numerator members finds most of them
-> reporting real defects. **So the rise is not explained by contamination — but "not explained by the
-> one contaminant we measured" is not "genuine", and the discriminator has not been run.**
+> instrument is reading its own subject matter. **The hygiene probe bears on the second and does not
+> carry it:** hygiene-only share by month is 19.4% (June), 7.7% (July), 25.0% (August) — no trend, and
+> nothing of that size can produce a doubling. Hand-scoring the ten directories that entered the
+> numerator most recently finds most of them reporting real defects. So the rise is **not explained
+> by the one contaminant that has been measured** — which is not the same as *genuine*, and the
+> discriminator has not been run.
 >
-> **The operational consequence, which is the part that survives whichever reading wins:** *do not
-> compare this figure across time.* A 2026-08 rate and a 2026-06 rate are not the same measurement,
-> and the pooled value at any date is a fact about the denominator's age distribution as much as
-> about the record. Where the number is cited it must carry its as-of date — and now also the fact
-> that its own time series is steeper than any of its corrections.
+> **What the slope licenses now.** Not a prevalence claim, not a trend claim about the world, and
+> not a comparison of this paper's figure to anyone else's. It licenses exactly one thing, and it is
+> methodological: **a yield statistic computed over an accumulating record must be reported per
+> window, because the pooling interval is a free parameter nobody declared.** This paper carried the
+> pooled form for six drafts without noticing that the interval was a choice — which is `CWC:A2@31548228`'s
+> own claim, arriving in the one number the paper is most answerable for, on the fourth pass through
+> it.
 
 The defensible statement:
 
@@ -1360,7 +1428,7 @@ part.
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
 his silent failures were caught by a human reading the system's actual output rather than by tests,
 health checks, or governance audits, all of which stayed green — which is the same shape as §7.4's
-finding that not one of nine apparatus defects was caught by a gate. A retrospective audit of 15
+finding that ten of eleven apparatus defects were caught by a person or script rather than a gate. A retrospective audit of 15
 incidents found a 0% ex-ante prevention rate and an 87% ex-post regression-blocking rate, supporting
 the position that audit is a regression engine rather than a prediction engine — which is the
 strongest available external evidence bearing on this paper's RQ4 and on §10.4's withdrawn
@@ -1377,9 +1445,10 @@ and judges anchored on confident closing language rather than verified state cha
 independent, better-controlled support for §3.2's rejection of review-by-reading and for §7.4's
 recursion problem.
 
-> **Do not compare 45–75% to this paper's figure — and note that as of 2026-08-18 that figure is
-> itself 45%, which makes the two look identical and is a coincidence with no content.** Advani's
-> denominator is *failures*; this paper's is *audit directories*. His numerator is trajectories where the agent asserted completion against
+> **Do not compare 45–75% to this paper's figure.** Advani's denominator is *failures*; this paper's
+> is *audit directories* — **and since 2026-08-18 this paper has no single figure to compare**, since
+> its rate is non-stationary and is reported per window (§5.4). A cross-study comparison would need
+> both a commensurable denominator and a commensurable interval, and neither is available. His numerator is trajectories where the agent asserted completion against
 > contradicting ground truth; this paper's is directories containing at least one silent or
 > never-fired defect. The numbers are not commensurable, and juxtaposing them would be a Type-C
 > error of exactly the kind §1.1 resolved for the open-question count.
@@ -1580,7 +1649,8 @@ known-live input must flip the output), and gates get planted violations *and* c
 
 Through v0.3 this section argued the recursion from a *constructed* example. It no longer needs to.
 **A single pre-spend arc in August 2026 produced nine instances of the apparatus committing, inside
-its own repairs, the defect the repair was addressing.**
+its own repairs, the defect the repair was addressing — and a second, unrelated pass in the same
+month produced two more, one of which was caught by a gate.**
 
 | # | the repair | the same defect, inside it | what caught it |
 |---|---|---|---|
@@ -1593,24 +1663,34 @@ its own repairs, the defect the repair was addressing.**
 | 7 | a checker rewritten to be more precise | its new drift-list reported 12 changed sources when 2 had changed | cross-checking against version control |
 | 8 | a consolidation manifest built to prevent double-counting | its own totals row disagreed with the table beneath it | a script that recounted the table |
 | 9 | the same manifest | its summary sentence preserved both a wrong figure *and* its correction, in different grammatical roles | a second reader |
+| 10 | a trial driver written to persist raw responses *before parsing*, so a scorer defect could be repaired without re-spending | the re-scoring step imported the driver to reuse its scorer, executing its module-level entry point — two fresh calls, and the persisted responses overwritten | noticing the response files had changed |
+| 11 | a census re-run built to re-witness the incidence figure | the pass's own audit-index row put the census's keywords into `audits/README.md`, which the positional parse admitted to the numerator as a non-directory | **the frame's `partition_check` integrity line, printing `186 == 185` — a gate** |
 
-**The property of the set: not one of the nine was caught by a gate.** Every one was caught by a
-person or a script **comparing a claimed number against the artifact it described** — a diff, a
-directory listing, a file count, a re-read. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
+**The property of the set, restated 2026-08-18: ten of the eleven were caught by a person or a
+script comparing a claimed number against the artifact it described** — a diff, a directory listing,
+a file count, a re-read. Through v0.6 the property was *none was caught by a gate*, over nine
+instances. **Instance 11 breaks it, and the break is worth more than the streak was.** A structural
+integrity line — *the two strata must partition the population exactly* — refused a numerator that
+had silently acquired a member which was not a directory. The count alone would have read as one
+more audit; the partition check is what could not be satisfied. So the honest property is now: **a
+gate catches this class exactly when the gate asserts a structural invariant rather than checking a
+value**, and ten of eleven instances had no such invariant available to violate. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
 
-> **The denominator, stated.** Eight of the nine come from a **single arc**: one operator, one
-> continuous pass, roughly thirty-six hours, entirely pre-spend. That density is not a sample of
+> **The denominator, stated.** Eight of the eleven come from a **single arc**: one operator, one
+> continuous pass, roughly thirty-six hours, entirely pre-spend. Two more (10 and 11) come from an
+> unrelated pass eight days later, which weakens the single-arc objection without removing it and
+> is the nearest thing to a replication the section has. That density is not a sample of
 > ordinary practice, and two readings survive it. Either the instrument stratum genuinely carries a
 > high defect rate — which §5.4's stratum limit says nobody has measured — or an unusually dense pass
 > through the apparatus surfaces defects that a normal month leaves latent and undisturbed. **These
 > are not the same claim, and this section cannot separate them.** The discriminator is available and
 > unrun: a retrospective instrument-layer sweep across the preceding five months, using shape-based
 > probes rather than vocabulary, with a positive control on a known dated instrument defect. Until
-> that runs, read this section as *the recursion is real and has been observed nine times*, not as
-> *instrument defects occur at rate R*.
+> that runs, read this section as *the recursion is real and has been observed eleven times, in two
+> independent passes*, not as *instrument defects occur at rate R*.
 
 Two consequences the individual instances do not show:
 
@@ -1787,6 +1867,28 @@ silent failure can fail a test phrased around what happens "before touching the 
 a stakes term is `[UNWITNESSED]` in the current rule. And **the test is evaluated by operator
 judgment**, not by simulation; a cheap improvement available now is to run it empirically — hand a
 fresh instance the files without the entry and see whether the predicted silent mistake occurs.
+
+> **Run 2026-08-18, and the second gap's slot is filled at existence grade.** In the pre-registered
+> draw, an instance given the files with the tripwire **withheld** emitted the defective goal, and
+> an instance given the same files **with** the tripwire did not
+> (`audits/2026-08-18_appendix_b_discharge/PREREGISTRATION.md`). **One registered draw per arm: an
+> existence witness that the test is runnable, and no rate.** Two further draws exist, generated by
+> an accident after the first outcome was known and after the scorer had been amended; they are
+> reported separately as unregistered supplementary observations and are **not pooled** with the
+> registered ones. §7.5's churn floor applies to this paper's own experiments before it applies to
+> anyone else's, and a ratio computed across a registered and an unregistered draw is exactly the
+> quantity it forbids.
+>
+> **The instructive part is not the score.** The failing instance emitted the defective goal and
+> then explained, in the very next paragraph, precisely why it was defective — naming clause order,
+> `asserta`, and the safer `retractall` form. **The knowledge was present and did not reach the
+> artifact.** That is a *different* failure from the one the tripwire is written against, which
+> assumes the worker does not know. It is also why the promotion test must be scored on **outcome**
+> and never on whether the instance appears to understand: a test scored on apparent understanding
+> would have passed this one.
+>
+> The **first** gap — the missing stakes term — is untouched by this and stays declared, now with a
+> method attached: the same harness measures it (§14, RQ-a).
 
 ### 8.3 Staleness as a first-class property
 
@@ -2070,6 +2172,23 @@ absorption assumes while saying nothing about this repository's three numbers.
 The instrument closes one loop, not all. The catch bit can be gamed. The channel cap bounds count,
 not quality. It cannot see restraint. And the deepest question has no instrument because it is an
 Ω_P.
+
+> **[ADDED 2026-08-18 — the first witnessed closure, and it says what kind of gate can close one.]**
+> Through v0.6 this section's companion claim in §7.4 was that **none** of the apparatus's
+> self-inflicted defects had been caught by a gate; every one had been caught by a person or a
+> script comparing a claimed number against an artifact. Instance 11 is the exception. A census
+> re-run silently acquired a numerator member that was not a directory — the pass's own audit-index
+> row, written in the prose the census keys on — and the frame's structural integrity line refused
+> it, printing `partition_check: 186 == 185`. **The count was plausible; the invariant was not
+> satisfiable.**
+>
+> The generalisation is narrow and is the point: **a gate catches this class exactly when it
+> asserts a structural invariant rather than checking a value.** *These two strata partition this
+> population* has no plausible-looking failure — there is no number a compromised numerator could
+> take that would make it hold. Ten of the eleven instances had no such invariant available to
+> violate, which is why they needed a reader. So the loop this instrument closes is real and small:
+> **it closes wherever an invariant exists to state, and nowhere else** — and finding those places
+> is design work, not more apparatus.
 
 > **[ADDED 2026-08-13 — the catch bit has NO DISCRIMINATION RECORD, and this is structural.]** The
 > readout stands at **4 live / 0 latent / 0 no** (**12 / 1 / 0 over 13 bits at 2026-08-18 — the
@@ -2365,6 +2484,14 @@ Secondary, in the order they become tractable:
   the mistake class × incidence, with the stakes term the promotion test lacks (§8.2). *Falsifier: an
   optimal policy materially different from the promotion test's — e.g. retrieval-on-demand dominating
   always-loaded rules.*
+  > **Now partly executable (2026-08-18).** §8.2's promotion test was shown to be empirically
+  > runnable: hand a fresh instance the files a tripwire names, withhold the tripwire, and score
+  > whether the predicted silent mistake occurs. **The same harness tests the stakes term** — run it
+  > on a tripwire guarding a *rare but expensive* silent failure rather than a frequent cheap one,
+  > and compare the withheld-vs-supplied gap. The missing term stops being a declared absence and
+  > becomes a measurement with a method. *Falsifier for the stakes half specifically: rare-but-
+  > expensive tripwires showing the same gap as frequent ones, which would mean the rule's frequency
+  > phrasing costs nothing and the gap is cosmetic.*
 - **RQ-b — Provenance of the rules.** Do rule-minting events follow witnessed incidents or
   reading/exposure events? Requires an operator diary or interview layer; git history cannot remove
   the workforce-exposure confound. *Falsifier: rule provenance tracing to external methodology
@@ -2603,8 +2730,9 @@ path component, and the census pipes grep into a positional parse.
 > landed, and **the one U-BLOCKING item discharged**, so the manifest's blocking count is 0.
 >
 > **What remains, stated rather than closed.** Four rows are still `[UNWITNESSED]` and say why. The
-> incidence row moved, on growth rather than on correction, and carries a **fifth** instrument
-> defect and a non-stationarity finding (§5.4). **Whether the paper circulates is the operator's
+> incidence row moved, on growth rather than on correction, and that movement exposed something
+> larger: the rate is **non-stationary**, so the pooled scalar this appendix used to publish is
+> **withdrawn** and the row now reports per window. Six instrument defects are known (§5.4). **Whether the paper circulates is the operator's
 > call and is not settled by this appendix**; what the appendix settles is that the numbers are
 > current, commanded, and bounded.
 
@@ -2622,12 +2750,12 @@ path component, and the census pipes grep into a positional parse.
 | 5.1 | P1 instance: frozen artifact n † | 563 vs corpus 772 | `/usr/bin/grep -n 'n=563' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 3 hits (`:63`, `:64`, `:2721`) |
 | 5.1 | P5 instance: certifications † | 0/404 carry beneficiary signal | `/usr/bin/grep -n '0/404' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 2 hits (`:744`, `:746`) |
 | 5.1 | P6 instance: suppressed warning duration † | four months | `/usr/bin/grep -n 'four months' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 1 hit (`:826`) |
-| 5.4 | Audit directories with ≥1 silent defect | **83 / 185 (45%)** — was 73/174 (42%) at 2026-08-10 | `/usr/bin/grep -rl 'for its whole life\\\|never fired\\\|never ran\\\|read.*0 for\\\|was never\\\|silently' --include='*.md' audits/ \| cut -d/ -f2 \| sort -u`, **intersected with the directory population** and minus the two lexicon-carrying arc directories. **`/usr/bin/grep` pinned and the path prefix load-bearing**; the control that licenses the figure is `frame/control_frame_command.py` and it must exit 0 before any value here is cited (it did, 6/6 fixtures two-sided). Coding rule unchanged: keyword proxy over audit prose, single pass, not severity-weighted; a directory counts once. **Denominator inclusion rule (landed here 2026-08-18, queued since v0.4): a directory counts iff it contains at least one file.** Computed both ways in `frame/frame_manifest.txt`; the delta is **0** today, so the rule lands without moving the number, and the movement is attributable to growth alone: +11 directories since 2026-08-10, 0 removed, 10 of the 11 into the numerator, 0 numerator members lost. **Six known instrument defects and a non-stationarity finding: §5.4.** The intersection is not cosmetic: without it the command emits `README.md` as a member and returns 84 |
+| 5.4 | Audit directories with ≥1 silent or never-fired defect, **per window** | June 2026 **36/98 (36.7%)** · July **26/45 (57.8%)** · Aug 1–18 **16/20 (80.0%)**. **The pooled value (83/185) is computed but NOT reportable** — the rate is non-stationary, so pooling measures the denominator's age distribution | `/usr/bin/grep -rl 'for its whole life\\\|never fired\\\|never ran\\\|read.*0 for\\\|was never\\\|silently' --include='*.md' audits/ \| cut -d/ -f2 \| sort -u`, **intersected with the directory population** and minus the two lexicon-carrying arc directories. **`/usr/bin/grep` pinned and the path prefix load-bearing**; the control that licenses the figure is `frame/control_frame_command.py` and it must exit 0 before any value here is cited (it did, 6/6 fixtures two-sided). Coding rule unchanged: keyword proxy over audit prose, single pass, not severity-weighted; a directory counts once. **Denominator inclusion rule (landed here 2026-08-18, queued since v0.4): a directory counts iff it contains at least one file.** Computed both ways in `frame/frame_manifest.txt`; the delta is **0** today, so the rule lands without moving the number, and the movement is attributable to growth alone: +11 directories since 2026-08-10, 0 removed, 10 of the 11 into the numerator, 0 numerator members lost. **Six known instrument defects and a non-stationarity finding: §5.4.** The intersection is not cosmetic: without it the command emits `README.md` as a member and returns 84 |
 | 5.4 | Non-census directories with no `.md` / with keywords in unopened file types | 4 / 12 (of 102) | the auditing grep, §5.4, re-run 2026-08-18: numerators unchanged at 4 and 12, denominator 101 → 102. Two-sided control: the same non-`.md` sweep fires on the census stratum, so its silence elsewhere is a fact about the world |
 | 5.4 | Blinded escape check | 8 drawn, 6 candidate hits, 0 confirmed, calibration arm closed unresolved (k = 0 NO-UNIT across n = 22) | audit record of the escape stratum (`audits/2026-08-10_oq277_rq2_crosscoding/`). **Not re-run: this is a frozen draw, not a command** — re-running would be a new draw, not a re-measurement |
 | 5.4 | Census false-positive rate (the precision direction, measured for the first time) | **13 / 83 numerator members are hygiene-only (15.7%)** | `audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py`. A *hygiene-only* directory is one whose every keyword hit is the contrastive form *"recorded rather than silently dropped"* — the author describing their own reporting discipline, not a defect found. Two-sided control: 5 fire, 8 decline, all lines drawn from the corpus. **This measures ONE precision failure mode**; a second (bare `was never` in ordinary prose) is visible in the raw hits and unmeasured, so 15.7% is a floor |
-| 5.4 | Monthly incidence, the series behind the pooled figure | June 36.7% (36/98) · July 57.8% (26/45) · August 1–18 80.0% (16/20) | `frame/all_dirs_glob.txt` × `frame/incident_bearing_dirs.txt`, bucketed by directory-name month. **The pooled headline is a mixture over a rate that more than doubles across the window**, so 45% is not a stable property of the audit record and a pooled value moves when the denominator's month-composition shifts, independently of any correction |
-| 7.4 | Apparatus self-instances in the arc | 9, of which 8 from one ~36h pass; 0 caught by a gate | the arc's session record. **This is a pointer, not a command, and is marked as one**; the nine are enumerated in §7.4's own table, which is the checkable form. Cross-checked 2026-08-18: the table carries exactly 9 numbered rows |
+| 5.4 | Pooled value, retained as a *computed* quantity that must not be published as a summary | 83 / 185 = 44.9% (was 73/174 = 42% at 2026-08-10) | same command. Retained so the 42% → 45% movement stays attributable (+11 directories, 10 into the numerator, 0 removed) and so a reader who meets the old scalar can locate it. **Not a summary of anything**: see the window rows above |
+| 7.4 | Apparatus self-instances | **11** across two independent passes (8 from one ~36h arc, 2 from the 2026-08-18 discharge); **1 caught by a gate** | the sessions' records. **This is a pointer, not a command, and is marked as one**; the eleven are enumerated in §7.4's own table, which is the checkable form. Cross-checked 2026-08-18: the table carries 11 numbered rows. The single gate catch is instance 11, refused by the census frame's `partition_check` |
 | 8.5 | Memory content files before / after | 113 / 53 (114 / 54 incl. the index) | after: `ls <memory>/*.md \| wc -l`; before: `tar tzf memory_pre_prune_backup_20260810.tar.gz \| grep -c '\.md$'` |
 | 8.5 | Deleted / merged | 25 deleted; 45 merged into 10 cluster files + 2 absorptions | **The stated method was a consistency check that cannot fail** — 113 − 25 − 45 + 10 = 53 balances by construction if the terms were derived from one another. Replaced 2026-08-18 by a **name-level set diff** of the backup listing against the current one, which can: 70 names gone (= 25 + 45), 10 names new **and all ten named**, 44 surviving; 114 − 70 + 10 = 54. The figures hold under the discriminating check |
 | 8.5 | Genuinely wrong content | 2 files | named in §8.5; verify against the backup tarball. **Still a pointer, and marked as one** — the two files are identified in prose and the claim that their content was *wrong* is a judgment no command discharges |
@@ -2637,7 +2765,7 @@ path component, and the census pipes grep into a positional parse.
 | 10.4 | Audit cadence June / July / Aug 1–18 | 98 / 45 / **21** (was 98 / 45 / 10 through Aug 10) | `for m in 2026-06 2026-07 2026-08; do ls -d audits/$m-* \| /usr/bin/grep -vx audits/2026-08-18_appendix_b_discharge \| wc -l; done`. **Exclusion rule, stated in the row because it is a choice:** only *this pass's own in-progress directory* is excluded, and the rule is applied to every month (a no-op for June and July, stated so the series stays comparable with the original no-exclusion 98/45/10). The census's two-directory exclusion is **not** used here — that one is a contamination rationale about lexicon-carrying prose, and it does not transfer to an activity count; excluding a legitimate audit would bias the contested absorption/decay series toward decay. Both ways are in `evidence/appendixB_row_104_cadence.txt`; the exclusion carries a positive control asserting it removes exactly 1. **The August cell is not comparable to the published 10**: that was Aug 1–10, this is Aug 1–18 |
 | 10.4 | Standing-gate catch counts over the same months | `[UNWITNESSED]` — the absorption test (§10.4 cites it as RQ-c; RQ4's method also reaches it) | **Explicitly NOT discharged by the 2026-08-18 pass, and the blocker is that nobody has collected the series.** The cadence row above is a different quantity — audits *written*, not gate catches — and refreshing it does not touch this |
 | 3.5 | Truncation of the always-loaded channel at load time | `[UNWITNESSED]` — and **the carrier is retracted** | **Blocker re-verified and the row re-pointed 2026-08-18.** The always-loaded file has 46× headroom and is skipped whole rather than tail-truncated (the retracted claim is ISSUES **OQ-286**); the live question is the per-turn **recall** channel, ISSUES **OQ-289**, whose measurement has not been run. `apparatus_instrument.py --check` reports the delivery table today (19 of 53 files over a 4,096 B cap, 3 over a 25,000 B cap — *which constant binds is exactly what OQ-289 settles*) and prints `no sightings file`, which is not evidence that no truncation occurred |
-| 8.2 | Promotion-test trial: does the predicted silent mistake occur without the tripwire? | **1 of 2 draws without the tripwire produced the predicted mistake; 0 of 2 with it** | `.venv/bin/python audits/2026-08-18_appendix_b_discharge/frame/promotion_test_trial.py`, rubric frozen at that directory's `PREREGISTRATION.md` (md5 `5f5785ba`). **Tier: n = 2 per arm — an existence witness for the mechanism, §8.3's weakest rung, not a rate and not an effect size.** **This command regenerates the TRIAL, not the VALUE.** Generation is stochastic and unpinnable (no seed; Sonnet 5 rejects non-default temperature), so a re-run may legitimately land on a different score **without falsifying the dated existence witness** — unlike every other row here, where re-running reproduces the number. Two of the four response files are transcript-restored rather than file-persisted, and are labelled as such: the re-scoring harness overwrote them (`TRIAL_promotion_test.md`) |
+| 8.2 | Promotion-test trial: does the predicted silent mistake occur without the tripwire? | **Pre-registered run: WITHHELD → the predicted mistake occurred; SUPPLIED → it did not.** One registered draw per arm. Two further draws exist as **unregistered supplementary** observations (see the tier note) and are reported separately; **no ratio is stated** | `.venv/bin/python audits/2026-08-18_appendix_b_discharge/frame/promotion_test_trial.py`, rubric frozen at that directory's `PREREGISTRATION.md` (md5 `5f5785ba`). **Tier: existence witness at n = 1 per arm — §8.3's weakest rung.** The two supplementary draws were produced by an accident *after* the registered outcome was known and *after* the scorer had been amended, so pooling them with the registered draw would compute exactly the quantity §7.5's churn floor forbids; they are recorded because suppressing them would be worse, and kept out of every ratio. **This command regenerates the TRIAL, not the VALUE** — generation is stochastic and unpinnable (no seed; Sonnet 5 rejects non-default temperature), so a re-run may legitimately land on a different score **without falsifying the dated existence witness**, unlike every other row here. Two of the four response files are transcript-restored rather than file-persisted and are labelled as such (`TRIAL_promotion_test.md`) |
 
 **The manifest's positive control** — the requirement that at least one row be verified by perturbing
 the underlying state and watching the command's output move — is discharged three times. Deliberately:
@@ -2732,7 +2860,18 @@ negative control (§2, §2.9), rather than v0.1's assertion.
 
 Not restored, and stated so the reversal is not read as a rollback:
 
-- v0.1's "77 of 175 (44%)" — a unit error, corrected to 73/174 and then bounded (§5.4).
+- v0.1's "77 of 175 (44%)" — a unit error, corrected to 73/174 and then bounded (§5.4). **This
+  line was itself wrong to call the matter settled, and the correction is dated 2026-08-18.** The
+  Appendix B row carrying 174 paired that value with `ls -d audits/*/ | wc -l`, which returned
+  **175** on the day it was published: 174 was the *census frame* after a self-exclusion, and a
+  frame had been recorded in a scale cell. **The row that certifies this paper's numbers was itself
+  uncertified for the whole interval between the correction and its re-run**, and no re-reading
+  would have shown it — only running the command did. A second residue is declared rather than
+  resolved: §5.4 attributes 175 → 174 to removing an empty untracked directory while the frozen
+  2026-08-10 frame reaches 174 by self-exclusion; both are consistent with 174, the directory was
+  untracked, and version control cannot adjudicate.
+- **And the pooled form of the figure itself is now withdrawn** (§5.4), which is not a correction
+  in this list's sense: nothing about the value was wrong, and the summary was never valid.
 - v0.1's "silent failure is the *dominant* failure class" — never established, still not.
 - v0.1's "the convergence is itself a finding" — confounded (§6.4).
 - v0.1's "no existing methodology" and "a field whose entire methodological literature would fit on

@@ -2656,6 +2656,25 @@ were complete), and cross-instance interference. The end-of-session batch commit
 recap-as-witness applied to git: "I'll commit it all later" is a done-claim whose witness does not
 yet exist.
 
+**Corollary — SCOPE the commit; `git add -A` corrupts the provenance record, not just the diff
+(2026-08-18).** Commit-as-you-go raises the commit rate, which raises the cost of a wide stage. The
+orchestrator's `_step_commit` has always been scoped to its own cids and refuses when the index
+holds unrelated staged changes; **the same rule binds hand commits and is easier to break there.**
+Witnessed: a documentation pass discharging the Appendix B manifest ran `git add -A` and swept in
+(a) an unrelated in-flight `pyproject.toml` edit belonging to another session and (b) a
+`structural_dynamics_model.egg-info/` build artifact that had been correctly untracked, so every
+later editable install would produce a spurious diff.
+
+**Why this is worse than an untidy diff.** A commit message is the project's densest provenance
+record — the amnesiac-institution paper cites commit hashes as witnesses, and `omega_resolver check`
+validates OQ resolutions against them. A swept-in edit acquires the message's attribution: someone
+else's change is now recorded as part of a pass it had nothing to do with, and the record says so
+confidently. **`-A` is a claim that everything in the tree belongs to this unit of work**, made
+without checking — which is P8's shape in the one place the project treats as authoritative about
+what happened. The rule: name the paths, or use `git add -u <paths>`; if `git status` shows anything
+you did not touch, that is the signal to narrow the command, not to widen the message. Build
+artifacts get a `.gitignore` rule the moment they appear, so they cannot be swept at all.
+
 **The discipline:** when a unit of work is *witnessed* (its paste-or-untag obligation is
 discharged), commit it then, as its own commit. Granularity follows witness boundaries, not
 session boundaries. The output-changing vs behavior-preserving split (memory:

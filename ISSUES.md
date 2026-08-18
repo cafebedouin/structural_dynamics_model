@@ -14004,6 +14004,29 @@ so the manifest's blocking count is 1 → 0.
    persist-before-parse rule protects the write path and says nothing about who may import the
    writer. Two response files are transcript-restored and labelled as such.
 
+**A seventh finding, larger than the six above, landed after operator review (2026-08-18).**
+**§5.4's pooled scalar is WITHDRAWN.** The movement 42% → 45% was the symptom; the disease is that
+the underlying rate is **non-stationary** — 36.7% (June) / 57.8% (July) / 80.0% (Aug 1–18) — so a
+pooled ratio over the observation window measures the denominator's age distribution as much as the
+record. Circulating the scalar would have retired a citability blocker at the moment the headline
+became less citable. §5.4 now leads with per-window rates; the pooled value is retained in Appendix B
+as a *computed* quantity explicitly marked not-a-summary. Consequences landed in the same pass: the
+header's *"survived three corrections"* was undercounted in the paper's favour (the count is six, and
+the withdrawal is a change of form, not a seventh correction); Appendix D.3's *"corrected to 73/174"*
+is no longer listed as settled, because the row carrying 174 paired it with a command that returned
+175; §7.4 goes from *nine instances, none caught by a gate* to **eleven across two independent
+passes, one caught by a gate** (instance 11, refused by the census frame's `partition_check`); and
+§10.5 records its **first witnessed closure**, with the generalisation that a gate catches this class
+exactly when it asserts a structural invariant rather than checking a value.
+
+**Also landed on review:** the §8.2 trial is now reported as two populations and never pooled — one
+registered draw per arm as the witness, two accident-generated draws as unregistered supplementary,
+no ratio stated; the promotion test's missing **stakes term** is routed to §14 RQ-a with a method
+rather than left as a bare declared gap; the trial's data loss is filed as a second **P1** instance
+in §5.1 (a persistence rule with no read path is a producer with no consumer); and the V04
+count-check finding is landed in §5 as a rider on P8 — *the instruction to re-run existed; the
+instruction to compare the output did not.*
+
 **RESIDUE — this entry is its home, and none of it is blocking.**
 
 - **V04 rows still open (10):** items 8, 9, 10, 11, 19, 23, 28 (not landed) and the open halves of
@@ -14012,9 +14035,11 @@ so the manifest's blocking count is 1 → 0.
   `audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md`.
 - **Operator decisions (2).** (a) The **circulation GO** — recorded above as `blocked_on_human`; the
   factual half is discharged and the judgment is not, and §9.2 forbids an instance ruling it.
-  (b) The **§8.2 stakes-term reading**: the trial witnesses that the promotion test is *runnable*
-  (n = 2/arm, existence grade), and the missing stakes term is a design gap the trial does not
-  touch — whether that gap is worth pricing is Ω_P.
+  (b) The **§8.2 stakes-term reading** is **downgraded from an open decision to a research item**:
+  the trial showed the promotion test is runnable (existence grade, n = 1 per arm registered), which
+  makes the stakes term measurable **by the same harness** — withhold a rare-but-expensive tripwire
+  and score identically. Routed to §14 RQ-a with a falsifier. It is the lowest-value of this entry's
+  open items; the rate's slope is where attention belongs.
 - **Rows still `[UNWITNESSED]`, blockers re-verified (4).** §10.4's standing-gate catch series (the
   absorption test) — **explicitly NOT discharged by this pass**; nobody has collected it, and the
   cadence row is a different quantity. §3.5's truncation row — re-pointed from the retracted
