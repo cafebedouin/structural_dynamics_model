@@ -1,0 +1,34 @@
+# Absence checks for the crosswalk's NOT-LANDED verdicts, with positive controls
+# executed 2026-08-18; target: amnesiac_institution_v0_6.md (2582 lines)
+# NOTE (control caught a real defect in the probe): the file is hard-wrapped at ~100 cols, so a
+# line-oriented /usr/bin/grep MISSES any multi-word phrase that straddles a newline. The first
+# run of this script scored the control phrase 'terminates in someone counting' as 0 hits — it is
+# present at :1449-1450, wrapped between 'someone' and 'counting'. Every multi-word probe below is
+# therefore run against a whitespace-flattened copy; single-word probes run line-oriented.
+
+## Single-word absence probes (line-oriented)
+ABSENCE-PROBE  pattern=[correlated]  hits=0
+ABSENCE-PROBE  pattern=[leak]  hits=0
+ABSENCE-PROBE  pattern=[unit-06]  hits=0
+ABSENCE-PROBE  pattern=[drifted]  hits=1
+  -> 'drifted' hits=1 at :836, 'Approval posture has drifted' — a DIFFERENT subject.
+     Item 14's 'two pinned sources have drifted' is absent. Inspected, not assumed.
+
+## Multi-word absence probes (whitespace-flattened)
+ABSENCE-PROBE  pattern=[permission class]  hits=0
+ABSENCE-PROBE  pattern=[two pinned sources]  hits=0
+ABSENCE-PROBE  pattern=[not additive]  hits=0
+ABSENCE-PROBE  pattern=[caught by the sweep]  hits=0
+ABSENCE-PROBE  pattern=[correct and still unreadable]  hits=0
+
+## POSITIVE CONTROLS — same tool, same flattened path, strings known to exist
+CONTROL        pattern=[terminates in someone counting]  hits=1
+CONTROL        pattern=[A fifth efficacy the instrument cannot see at all]  hits=1
+CONTROL        pattern=[demoted to the witness calculus]  hits=1
+CONTROL        pattern=[the second is evidential]  hits=1
+CONTROL        pattern=[Unbounded retention is not memory]  hits=1
+
+## DECLINE CONTROLS — same shape, must NOT be found (the two-sided half)
+DECLINE        pattern=[terminates in someone shouting]  hits=0
+DECLINE        pattern=[a sixth efficacy the instrument]  hits=0
+DECLINE        pattern=[promoted to the witness calculus]  hits=0
