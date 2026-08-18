@@ -116,8 +116,26 @@ DATA_PREFIXES = (
 # This audit's OWN instruments. The probe file joined the census the moment it was committed —
 # `git ls-files` does not know the difference between a consumer and the tool measuring consumers,
 # and an instrument that counts itself inflates the very number it reports.
-SELF_OUTPUT = ("audits/2026-08-17_oq190_blast_radius/", "python/audits/oq190_blast_radius.py",
-               "prolog/probe_oq190_edge_admission.pl")
+#
+# DECLARED AS A NAMED PATH LIST, NOT A FILTER (operator ruling, 2026-08-17). Excluding paths from
+# a census is precisely the move Amendment A exists to constrain — the cheapness filter may not
+# shrink the radius — so the exclusion must be AUDITABLE: every excluded path is named here with
+# its reason, and `--selftest` fails if the declaration and the actual exclusions diverge in
+# EITHER direction (an undeclared exclusion, or a declared path that no longer exists and is
+# silently doing nothing). A prefix filter would have grown quietly; a list cannot.
+SELF_EXCLUSIONS = {
+    "audits/2026-08-17_oq190_blast_radius/":
+        "this audit's own directory: its artifacts ARE the census, not inputs to it",
+    "python/audits/oq190_blast_radius.py":
+        "the sweep itself — every cast/verdict name in its vocabulary tables would census as a hit",
+    "prolog/probe_oq190_edge_admission.pl":
+        "the edge-admission pruner — its edge() facts name every cast/verdict predicate by design",
+}
+SELF_OUTPUT = tuple(SELF_EXCLUSIONS)
+
+# Corpus DATA exclusions are a DIFFERENT rule and are declared separately below (DATA_PREFIXES):
+# a testset asserting `constraint_beneficiary/2` is the authored datum, not a consumer of it.
+# Conflating the two would let a data rule quietly absorb an instrument rule.
 
 CODE_SUFFIX = (".pl", ".py")
 # Active document surface per prereg §(g). audits/ is NOT swept; forward-citations INTO audits/
@@ -653,9 +671,26 @@ def selftest():
     check("3d DECLINE  OQ-53's draw-stability claim about a NON-cast field not flagged",
           not dec53, "a stability claim about a non-cast field was admitted as a cast dependent")
 
-    self_rows = [p for p in code_files(tracked()) if p.startswith(SELF_OUTPUT)]
-    check("self-pin   this audit's own instruments are not in the code surface",
+    # Two-sided, because a declaration that only checks one direction rots into a filter.
+    all_tracked = tracked()
+    self_rows = [p for p in code_files(all_tracked) if p.startswith(SELF_OUTPUT)]
+    check("self-pin   no declared self-exclusion leaks into the code surface",
           not self_rows, f"the sweep would census its own tooling: {self_rows}")
+    # The dual: every declared exclusion must actually name something that exists and would
+    # otherwise have been swept. A stale entry is an exclusion doing nothing while reading as
+    # diligence — and a live one that stops matching would silently re-admit the instrument.
+    stale = [d for d in SELF_EXCLUSIONS
+             if not any(t == d or t.startswith(d) for t in all_tracked)]
+    check("self-pin   every declared exclusion still names a real tracked path",
+          not stale, f"stale declaration(s), excluding nothing: {stale}")
+    # And nothing is excluded that is not declared: recompute the exclusion set from scratch and
+    # compare against the declaration.
+    swept = set(code_files(all_tracked))
+    would_sweep = {p for p in all_tracked
+                   if p.endswith(CODE_SUFFIX) and not p.startswith(DATA_PREFIXES)}
+    undeclared = {p for p in (would_sweep - swept) if not p.startswith(SELF_OUTPUT)}
+    check("self-pin   no UNDECLARED path is excluded from the code surface",
+          not undeclared, f"excluded without a declaration: {sorted(undeclared)[:5]}")
 
     print()
     if fails:
@@ -663,7 +698,7 @@ def selftest():
         print("Per prereg §(d): no radius claim may be made, and if a CLOSURE arm is among the")
         print("failures the verdict bucket returns `reserved-pending` regardless of the sweep.")
         return 1
-    print("SELFTEST GREEN — 12 controls, 5 two-sided pairs + 2 self-pins.")
+    print("SELFTEST GREEN — 14 controls: 5 two-sided pairs + 4 declaration checks.")
     return 0
 
 

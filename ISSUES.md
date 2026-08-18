@@ -4860,10 +4860,32 @@ presence-flips), so the cohort contains no story in the `q6_unmeasured` conditio
 presence premise is *unmeasured*, not confirmed, in either direction. Corroboration: the OQ-190
 pruner admits `founding_problem_status → q6_cell` with the graph's largest treatment diff (472), and
 the census's `Σ buckets == n_corpus` guard is a **totality** check that a redraw does not trip while
-redistributing the buckets. **The spend is now load-bearing and is escalated UNSPENT — operator
-ruling owed (blocked_on_human).** Enumeration that prices it:
-`audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5. Until it is ruled, OQ-305 must not
-re-adjudicate OQ-136.
+redistributing the buckets. **OPERATOR RULING (2026-08-17): YES ACCEPTED; spend-go APPROVED IN
+PRINCIPLE, but DO NOT SPEND — the reserved design does not target the question that un-reserved
+it.** The ~$1.5–2 sweep was scoped to verdict *value* stability across temperature; OQ-136 needs
+*presence/absence attribution*. A temp sweep over material producing the field ~85% of the time may
+return too few absences to attribute anything. Ruled: run the free Ω_E incidence version first,
+report back, and the sweep design is ruled separately.
+**Free precursor EXECUTED (`audits/2026-08-17_oq190_blast_radius/limb3_incidence_recon.out`, zero
+spend) — and it materially changes the design question.** Live corpus n=279: 43 absences (15.4%),
+but **26 of them (60%) are not stories.** Every `*_contradictions` file carries exactly one
+predicate (`cs_axiom_contradiction`) — no `six_questions`, no `base_properties` — and all 26 sit in
+the `n_constraints=279` denominator. They are axiom meta-files (known: `ISSUES.md:4038`, `:5345`;
+OQ-136 itself named 9 as a stratum — the stratum has since grown **9 → 26**). Consequences:
+(i) **a temperature sweep cannot reach 60% of the phenomenon** — an axiom meta-file has no
+`six_questions` block to populate, and these files carry no `story_provenance`, so there is no
+model/prompt_commit to sweep at; (ii) the genuine story-level rate is **17/253 = 6.7%**, not 15.4%;
+(iii) **16 of those 17 sit in ONE stratum** — `claude-haiku-4-5-20251001` @ prompt_commit
+`22843cdf`, 16/28 = 57% — while five of seven strata are at 0% across 225 stories, so the only cell
+exhibiting both outcomes is a well-defined 28-story target; (iv) the haiku numbers reproduce OQ-136
+exactly (16/28; 17/74 at `22843cdf`) but that is the **same** stratum, not independent replication,
+and the `*_contradictions` limb is now explainable **with no stability claim at all**.
+**Sweep design owed (blocked_on_human), narrowed:** if run, target the haiku/`22843cdf` 28-story
+stratum on presence/absence attribution, not corpus-wide value stability. Two cheaper items first:
+(a) restate OQ-136's `q6_unmeasured` arithmetic over a story-only denominator; (b) whether
+`*_contradictions` artifacts belong in `n_constraints` at all is a separate live question. Full
+enumeration: `audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5 + §8. Until the sweep is ruled,
+OQ-305 must not re-adjudicate OQ-136.
 **Side product delivered by OQ-190:** the `reading_diff` re-point's cohort-one gate is now
 satisfiable — `constraint_stakeholder` is dense on the live corpus (236/279) and `reading_diff.pl`
 was un-stranded onto the live stakeholder-seat schema (`01cff6a7`).
@@ -7562,6 +7584,23 @@ other: it must separate a field whose presence genuinely flipped across draws fr
 Two naturally-arising candidates are already in the frozen table —
 `base_properties.vindicated_propositions` shows `presence-flip` in 3 of 6 stories (the FIRE side) and
 `six_questions.founding_problem_status` shows **zero** presence-flips (the DECLINE side).
+
+**Scope gap folded in (OQ-190 close, 2026-08-17): `gain_flow` and `fixing_cost` were OUTSIDE the
+frozen cast-9 and are the sources of the sharpest edges.** OQ-190's prereg froze the cast bucket as
+the 9 fields `cohort_stability.FIELDS` groups under `base_properties.*`/`stakeholders.*`, but
+`gain_flow` and `fixing_cost` are top-level `FIELDS` entries bucketed `sigma` — and they are the
+authored sources of edges e6/e9, i.e. of `constraint_captured/1` and `piton_candidate/1`, the
+name-identity edges that put the cast radius on the classification path. Their frozen-table scores
+are **1/6 positive-stable each** (3 absence-agreement, 2 unstable), a weaker base than
+`roster_card`'s 2/6. This strengthens rather than weakens OQ-190's finding, but the bucket
+definition did not cover the two fields feeding its own headline. Re-score them with the rest.
+
+**Absence-conflation note (why this OQ is the right home).** The frozen table's `status: stable`
+scores shared **absence** as agreement in 8 of 38 fields. Both machine consumers already filter it
+(`cohort_sigma_seat_eval.py:208`, `oq118_reprobe.py:117`); the exposure is to human readers, and the
+three live prose surfaces were annotated in-arc. At presence grade the absence cells stop being a
+defect and become the signal — which is a further reason this re-score is the disposition step, not
+a workaround. Exposure map: `audits/2026-08-17_oq190_blast_radius/absence_agreement_exposure.tsv`.
 
 **Sequencing.** Higher value than most of the OQ-190 repair queue: it is what converts the
 classification layer from grade-unmeasured to dispositioned, and it is cheap.

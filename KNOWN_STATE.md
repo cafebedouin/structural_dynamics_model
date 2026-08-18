@@ -82,7 +82,32 @@ against live controls): `constraint_beneficiary` does **not** reach `constraint_
 reads the roster), `disappearance_verdict` does **not** reach `q6_cell` (q6 reads
 `founding_problem_status` only), and **neither verdict atom reaches `dr_type`**.
 
-**Routed:** OQ-118 Limb 3 escalated to a spend-go (verdict bucket YES on OQ-136 — see that entry);
+**Limb-3 addendum (operator ruled the same day: YES accepted, spend-go approved IN PRINCIPLE,
+DO NOT SPEND — the reserved design targets verdict *value* stability, OQ-136 needs *presence*
+attribution).** The required free Ω_E precursor ran: **26 of the live corpus's 43
+`founding_problem_status` absences are not stories.** Every `*_contradictions` file carries exactly
+one predicate (`cs_axiom_contradiction`) and sits in the `n_constraints=279` denominator — known
+axiom meta-files, but the stratum grew 9 (OQ-136) → 26 and now dominates the absence count.
+**Tripwire for anyone sizing a probe off `n_constraints`:** the story-level absence rate is
+**17/253 = 6.7%**, not 15.4%, and **16 of the 17 sit in one stratum** (haiku-4.5 @ prompt_commit
+`22843cdf`, 16/28 = 57%) while five of seven strata are 0% across 225 stories. A temperature sweep
+cannot reach the 26 (no `six_questions` block to populate, and no `story_provenance` to sweep at).
+Evidence: `limb3_incidence_recon.out`.
+
+**Instrument-reach check (the one place the conflation could have reached the CONTROLS, not just
+the findings): CLEAN.** The three control-eligible apparatus-presence rows are 18/18 literal
+`PRESENT`, zero absence cells — `classify_field` returns `("stable","absence")` before the branch
+that yields `positive`, so a uniformly-absent field cannot read positive. 8 of 38 fields ARE
+absence-inflated (`has_sunset_clause` and `coercion_grid.presence` are 6/6 pure absence); both
+machine consumers already filter absence, so the reach is to human readers only. Map:
+`absence_agreement_exposure.tsv`.
+
+**Also recorded, so nobody re-derives it by running it:** `shared_agent_link/4` has **zero** edges
+on the frozen cohort in every draw-slice — the six stories share no actor name — so cohort zero
+cannot re-witness contamination-network claims in EITHER direction. Use a live or twin leg.
+
+**Routed:** OQ-118 Limb 3 escalated to a spend-go, then narrowed by the incidence recon (see that
+entry);
 OQ-304 (re-score the frozen draws at presence/cardinality grade — Ω_E, zero spend, converts the 221
 grade-unmeasured rows); OQ-305 (20 resolved OQs closed on a quoted cast-presence count).
 

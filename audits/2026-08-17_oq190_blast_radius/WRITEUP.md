@@ -17,7 +17,9 @@ stability, and the routed follow-on is what would.
 manufactured a false survival on its only candidate claim (§4); the 3d resolved-entry extractor
 returned 0 and was defective (§3); the documentary control passed on a self-reference while missing
 the one claim the prereg requires it to flag (§3); and the verdict bucket produced a live dependent
-that flips OQ-118 Limb 3 from reserved to spend-go (§5).
+that flips OQ-118 Limb 3 from reserved to spend-go (§5); and the free precursor the ruling
+required found that **26 of 43 absences are not stories at all** — 60% of the phenomenon the
+reserved design was about to be spent on is a denominator artifact (§8).
 
 **Prior art** (`docs/technical/build_discipline.md`, grepped this pass): no hit for
 `constraint_captured`, `shared_agent_link`, `agent_beneficiary`, `has_mandatrophy_declaration`,
@@ -40,6 +42,8 @@ that flips OQ-118 Limb 3 from reserved to spend-go (§5).
 | `resolved_closure_premises.tsv` | 20 resolved OQs whose closure quotes a cast-presence count as settled | §3; the routed reanalysis queue |
 | `conclusion_invariance_reach.out` | the §(b) instrument run on the frozen draw-slices | §4: the fallback branch, witnessed |
 | `dispositions.md` | the frozen rule applied to every row | §3–§6 |
+| `absence_agreement_exposure.tsv` | per-field split of stable cells into positive vs absence-agreement, all 38 scored fields | §7: the conflation's full reach; the apparatus controls are 18/18 genuine `PRESENT` |
+| `limb3_incidence_recon.out` | live-corpus `founding_problem_status` absence by model × prompt_commit | §8: 26/43 absences are non-story artifacts; the sweep target is one 28-story stratum |
 | `python/audits/oq190_blast_radius.py` | the re-runnable sweep; `--selftest` = 12 controls | all census claims |
 | `prolog/probe_oq190_edge_admission.pl` | the edge-admission pruner | `derivation_graph.tsv` |
 
@@ -194,7 +198,148 @@ emitted, with no reader anywhere. Opposite conditions, distinct labels; neither 
 mandatrophy clause is admitted at name-identity grade (e10/e10b), so it becomes a T1 dependent the
 day anyone writes its reader.
 
-## 7. Residue — what changed in substrate, and what is handed off
+## 7. Operator-required defences (added at the close ruling, 2026-08-17)
+
+### `cleared = 0` is a FLOOR, not a measurement — and the population is near-tautological
+
+The honest answer is the second one. **Clearing was never attempted in this arc.**
+
+- **71 rows** reached the T4 candidate branch (per-story render, story is the unit — all 71 are
+  test-file rows). **0** were carried to a clearing test.
+- **394 rows** were never candidates: they entered the census by matching a cast/verdict name or by
+  the closure, and §(a) permits T4 only for a consumer shown **absent** from the closure.
+
+So the census population *is* "rows the sweep hit," and a row in it by name-match is by construction
+not absent from the name surface. **`cleared = 0` therefore reports that no row was tested for
+clearing, not that no row would clear.** The decline arms show the instrument *can* decline on
+constructed and on natural negatives; they do not show it declined on this population, because it
+was never asked to. Anyone citing the 447 should read it as *"447 not shown safe,"* never as
+*"447 shown unsafe."*
+
+The 71 test-file rows are the cheapest place to attack that floor, and they are named in
+`consumer_census.tsv` (`tier == T4?`).
+
+### The self-census exclusion is a DECLARED PATH LIST, not a filter
+
+Excluding paths from a census is the move Amendment A exists to constrain, so it is auditable.
+`SELF_EXCLUSIONS` in `python/audits/oq190_blast_radius.py` names three paths, each with its reason:
+
+| excluded path | reason |
+|---|---|
+| `audits/2026-08-17_oq190_blast_radius/` | this audit's own directory — its artifacts ARE the census, not inputs to it |
+| `python/audits/oq190_blast_radius.py` | the sweep itself: every name in its vocabulary tables would census as a hit |
+| `prolog/probe_oq190_edge_admission.pl` | the pruner: its `edge/4` facts name every cast/verdict predicate by design |
+
+Three selftest checks hold the declaration to the code **in both directions**: no declared exclusion
+leaks into the surface; **every declared exclusion still names a real tracked path** (a stale entry
+is an exclusion doing nothing while reading as diligence); and **no undeclared path is excluded**
+(recomputed from scratch and diffed against the declaration). Corpus-data exclusion
+(`DATA_PREFIXES`) is a separate rule, declared separately, so a data rule cannot quietly absorb an
+instrument rule.
+
+### The absence-conflation does NOT reach the instrument — checked, not assumed
+
+The concern is exact: the apparatus-presence rows are the control-eligible negatives and their 6/6
+was read off the same table whose `status` conflates agreement with absence. If any were 6/6 *by
+shared absence*, the cast decline arm and the closure's must-not-reach arm would stand on a vacuous
+positive.
+
+**They are not.** All three are 18/18 literal `PRESENT` tokens, zero absence cells
+(`absence_agreement_exposure.tsv`, values pasted per story in the raw read). Reading
+`cohort_stability.classify_field`: `all_absent` and `all_empty` return `("stable", "absence")`
+*before* the `len(uniq) == 1` branch that yields `positive`, so `positive` cannot be reached by a
+uniformly-absent field. The controls are sound.
+
+**Full exposure map, since the question is about reach rather than about three rows.** Eight of the
+38 scored fields carry absence-inflated stables: `has_sunset_clause` (6/6 absence — pure),
+`coercion_grid.presence` (6/6 — pure), `victims` (4), `cs_structure.presence` (4), `gain_flow` (3),
+`fixing_cost` (3), `vindicated_propositions` (1), `requires_active_enforcement` (1). The other 30 are
+clean.
+
+**Both machine consumers already filter it.** `cohort_sigma_seat_eval.py:208` (`if
+r["agreement_kind"] == "absence": continue`, comment citing Pattern-5) and
+`oq118_reprobe.py:117` both exclude absence before tabulating. **The defect's reach is to human
+readers taking `status` at face value** — which is what the OQ-190 plan did, and what the three
+in-arc annotations now guard.
+
+**One genuinely unrouted item, now routed to OQ-304:** `gain_flow` and `fixing_cost` are
+**1/6 positive-stable each** (3 absence, 2 unstable) — and they are the authored sources of edges
+e6/e9, i.e. of `constraint_captured/1` and `piton_candidate/1`, the sharpest name-identity edges in
+the graph. They sit **outside** the prereg's frozen cast-9 (in `FIELDS` they are top-level entries
+bucketed `sigma`), so the frozen bucket definition did not cover the two fields feeding its own
+headline finding. This *strengthens* the finding — the base is weaker than `roster_card`'s 2/6 — but
+it is a scope gap and is now named in OQ-304.
+
+### `shared_agent_link/4` has ZERO edges on the frozen cohort — the corollary of the §4 kill
+
+Recorded so a future reader learns it here rather than by running it. Across all three frozen
+draw-slices the six cohort-zero stories produce **0** shared-beneficiary and **0** shared-victim
+edges — they are on six unrelated topics and share no actor name in any draw
+(`conclusion_invariance_reach.out`). **`shared_agent_link` is therefore not a viable re-witness
+target on cohort zero at all**, in either direction: it cannot show a survival (nothing to be
+invariant) and it cannot show a failure (nothing to break). A re-witness of the contamination-network
+claims needs a corpus where stories share actors — the live leg or a twin, not the frozen cohort.
+
+### Correction to the plan's exhaustion set, restated
+
+`check_indexical_relativity/1` was named in the endorsed §(e) exhaustion set and **does not exist**
+(two prose comments, `narrative_ontology.pl:155` and `:576`). Caught by RECON §2b before the freeze
+and carried as prereg §(0b). Recorded here because a sender-side pin that was never checked is the
+same shape this thread's discipline is about, and the record should say so plainly rather than let
+the correction sit only in a §(0) note.
+
+## 8. Limb-3 free precursor: the incidence recon the spend-go ruling required
+
+The ruling approved the un-reserve in principle and **withheld the spend** on the ground that the
+reserved design (verdict *value* stability across temperature) does not target the question that
+un-reserved it (verdict *presence/absence attribution*). It required the free Ω_E version first.
+Run: `limb3_incidence_recon.out`, zero spend, artifacts on disk.
+
+**Live corpus `prolog/testsets/`, n=279: `founding_problem_status` absent in 43 (15.4%).**
+
+| stratum | absent | total | rate |
+|---|---|---|---|
+| **no `story_provenance` at all** (`*_contradictions`) | **26** | 26 | **100%** |
+| `claude-haiku-4-5-20251001` @ `22843cdf` | **16** | 28 | **57%** |
+| `claude-sonnet-4-5-20250929` | 1 | 75 | 1.3% |
+| `claude-sonnet-5` | 0 | 127 | 0% |
+| `gemini-2.5-flash` / `claude-sonnet-4` / `kimi-k3` | 0 | 23 | 0% |
+
+**The headline result: 26 of the 43 absences — 60% — are not stories.** Every one of the 26
+`*_contradictions` files carries exactly one predicate, `narrative_ontology:cs_axiom_contradiction`,
+and nothing else: no `six_questions`, no `base_properties`, no stakeholders. They are axiom
+meta-files (documented: `ISSUES.md:4038` *"axiom meta-files"*, `:5345` *"pl-only (NO_JSON)"*), and
+they sit in the `n_constraints = 279` denominator — confirmed present in `per_constraint`. Prior art
+is honest here: **the artifact kind is known and OQ-136 itself named 9 of them as a stratum.** What
+is new is the share — the stratum has grown **9 → 26** and now dominates the absence count.
+
+**Consequences for the spend design, which is what the ruling asked for:**
+
+1. **A temperature sweep cannot reach 60% of the phenomenon.** An axiom meta-file has no
+   `six_questions` block to populate; no sampling temperature makes it grow one. These absences are
+   structural, not stochastic, and they are also **un-targetable** — the files carry no
+   `story_provenance`, so there is no model or prompt_commit to sweep at.
+2. **The genuine story-level phenomenon is much smaller than the raw count suggests:**
+   43 − 26 = **17 absences over 253 story files = 6.7%**, and **16 of the 17 sit in one stratum**
+   (haiku @ `22843cdf`, 57%). The remaining 1 is a lone sonnet-4-5 file.
+3. **Within-stratum variance is where a probe must aim, and it exists in exactly one place.** Five
+   of seven strata are at 0% absence across 225 stories — nothing there for temperature to move. The
+   haiku/`22843cdf` stratum at 16/28 is the only cell showing both outcomes, and it is a
+   well-defined 28-story target.
+4. **It corroborates OQ-136's clustering while narrowing what the clustering means.** The haiku
+   numbers reproduce exactly (16/28 haiku; 17/74 at `22843cdf`) — but that is the *same* stratum
+   OQ-136 measured, not independent replication. The `*_contradictions` limb, meanwhile, is now
+   explainable **with no stability claim at all**: those files could never have carried the field.
+
+**Recommendation carried to the operator (the sweep design is the operator's ruling, not this
+audit's).** If a sweep is run, the target is the **haiku @ `22843cdf` 28-story stratum**, and the
+question is presence/absence attribution within it, not value stability across the corpus. Before
+even that, two cheaper things are available: (a) OQ-136's `q6_unmeasured` arithmetic should be
+restated over the story-only denominator, since 26/26 of its provenance-less limb is a denominator
+artifact rather than a generation-path finding about stories; (b) whether `*_contradictions`
+artifacts belong in `n_constraints` at all is a separate live question this audit does not rule on.
+
+## 9. Residue — what changed in substrate, and what is handed off
 
 **HEAD stamps.** OPEN `f80bc3eb`, CLOSE `8c34157f`. They differ **only by this audit's own five
 commits** (`cd79b5e1`, `643d1cba`, `badf88dd`, `d0199458`, `8c34157f`); `git diff --stat OPEN CLOSE`
