@@ -13875,6 +13875,51 @@ schema predicate acquires its first consumer, forcing that decision at the momen
 it does not, and cannot, check per-leg expectations — that is this OQ's job.
 
 
+## OQ-309 — Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run
+
+**Ω-type:** Ω_E (the rows are measurable; the residue items are typed individually below).
+
+**Status:** open
+**Priority:** 2
+**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289
+**Origin:** 2026-08-18, minted BEFORE the pass that discharges it (the pass moves the
+issues-status row it must then quote, so the OQ has to exist before the count is taken).
+**Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (Appendix B, §5.4, §8.2,
+§10.4, the circulation-blocker box), `docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md`,
+`audits/2026-08-18_appendix_b_discharge/`.
+
+**The two owed items** (self-declared by the paper at `amnesiac_institution_v0_6.md:11-13`):
+(a) Appendix B's regeneration commands were last run 2026-08-10 and several rows are stale or
+`[UNWITNESSED]`; (b) the pass over `V04_CONSOLIDATION_MANIFEST.md`'s 35 flagged items had never
+been run. Together they are the paper's declared blocker before circulation.
+
+**What this pass does** (operator ruling, 2026-08-18): V04 walk first, command re-runs last;
+full re-date plus prose sweep under a single as-of stamp (a two-row patch would reproduce the
+mixed-as-of failure Appendix D lists as what stays dead); a v0.4→v0.6 crosswalk addressed by
+**anchor text**, not section number, so the record survives a v0.7 renumber; item 17 adjudicated
+against subsequent history (the 2026-08-11 index-3 vacation and OQ-278's close) and routed as a
+named operator decision only if a genuine residue survives; the census re-run reuses the
+`audits/2026-08-10_oq277_rq2_crosscoding/frame/` control apparatus rather than rebuilding it,
+and **no census figure may be cited unless that control exits 0** — on exit 1 the failure is
+the finding.
+
+**This OQ is the declared home for three residue types**, so that nothing from the pass lands
+only in a WRITEUP:
+1. **V04 rows still open** after the walk (the `U`-graded and any `NOT-LANDED` rows) — typed Ω_E
+   individually where they are measurable, Ω_C where they are a design choice.
+2. **Any question that is genuinely the operator's** — item 17's remainder if one survives, the
+   circulation GO itself, and the §8.2 stakes-term reading. Per the paper's §9.2 no instance may
+   self-rule these; they attach here as `blocked_on_human` when they arise.
+3. **Rows that stay `[UNWITNESSED]` because their blocker is another OQ** — the memory-channel
+   rows blocked on OQ-289's measurement, and the RQ4 standing-gate series (`:1893` / Appendix B
+   `:2455`), which this pass explicitly does NOT discharge.
+
+**What resolution would change.** The paper's circulation blocker names exactly these two items;
+discharging them removes the *factual* half of the blocker. The GO decision remains the
+operator's and is not what this OQ closes.
+
+
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

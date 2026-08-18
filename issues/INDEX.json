@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "6f80739be3860005a7819da405956cd61c0dd0f2",
+    "store_version": "c9982296a174c6d7963a1cb700eea6e3427b40cc",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T07:11:56"
+    "generated_at": "2026-08-18T08:30:24"
   },
-  "issues_sha": "b96e2b50f56edef9064a917e0b0cfb1b23f690a9951b9e709d014314297c32aa",
-  "n_entries": 308,
+  "issues_sha": "1a4bd3eb063990918d7b5fee41bf78dcf04d13e23fb8b361c0260fda731c6b67",
+  "n_entries": 309,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 117,
+    "open": 118,
     "partial": 7
   },
   "active": [
@@ -1777,6 +1777,24 @@
       "mentioned_in": [
         "OQ-66",
         "OQ-68"
+      ]
+    },
+    {
+      "id": "OQ-309",
+      "status": "open",
+      "priority": 2,
+      "summary": "Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run",
+      "deps": [
+        "bundled_with OQ-276",
+        "bundled_with OQ-280",
+        "bundled_with OQ-289"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-278",
+        "OQ-280",
+        "OQ-289"
       ]
     }
   ],
