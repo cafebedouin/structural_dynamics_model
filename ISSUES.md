@@ -13323,6 +13323,71 @@ re-run.
 
 ---
 
+## OQ-302 — boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577
+
+**Ω-type:** Ω_E (mechanically checkable defect; the fix is a one-line call-shape repair).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-296
+**Origin:** 2026-08-17 bound-dispatch recon (`audits/2026-08-17_bound_dispatch_hardening/`
+RECON.md §4) — a checker-only find the exploration hand table missed.
+**Files:** `prolog/boltzmann_compliance.pl` (`:577` the defect, `:466–498` the warned
+predicate, `:139` consumer), `prolog/drl_boltzmann_analysis.pl:176` (consumer).
+
+**The defect.** `epistemic_access_check/2`'s header (2026-06-03, written after the
+structural_purity episode) states that calling it with `false` BOUND always succeeds —
+clause 1's head cannot unify, its guard+cut never run, the catch-all matches everything.
+`boltzmann_invariant_mountain/2` clause 1 (`:577`) does exactly that, so it fires for
+EVERY constraint and the real 4-test invariance body (`:579`) is unreachable: the mountain
+invariance check has been reporting `inconclusive(insufficient_data)` corpus-wide.
+
+**Blast radius (recon-scoped):** diagnostic surfaces only — `boltzmann_shadow_audit`
+(`:139`) and `drl_boltzmann_analysis:boltzmann_invariant_check/2` (itself consumer-less).
+NOT in the dr_type classification path.
+
+**The fix and its witness obligation:** replace `:577`'s body with
+`once(epistemic_access_check(C, S)), S == false` (the repaired idiom used at the OQ-296
+sites). OUTPUT-CHANGING on diagnostic surfaces — real invariant/variant verdicts appear
+for the first time — so it was kept OUT of the 2026-08-17 zero-diff pilot (prereg scope
+guard) and owes its own clean-vs-edited pair + an enumeration of consumers of the shadow
+audit before landing. Git-blame `:577` for the free before-commit control pair.
+
+## OQ-303 — bound-dispatch rollout: class-B head conversions, the cs_verdict repair, bound_selector_check retirement, MaxEnt catch+default arms
+
+**Ω-type:** Ω_E throughout (mechanical conversions per a witnessed template).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-296
+**Origin:** 2026-08-17 bound-dispatch pilot WRITEUP follow-ons
+(`audits/2026-08-17_bound_dispatch_hardening/`).
+**Files:** `python/dispatch_head_check.py` (the DECLARED registry IS the worklist),
+`agent/validate_naturalization_gap.py:287`, `python/bound_selector_check.py`,
+`scripts/gate.sh`.
+
+**(a) Class-B conversions.** The `latent-B` entries in dispatch_head_check's registry
+(~60 predicates, no live bound caller found 2026-08-17) convert mechanically per the
+pilot template (fresh-variable heads + unify-after-cut; commit label
+"output-preserving on the witness set, semantics-changing by construction"; six-leg
+witness only needed for predicates on live output paths). Retire each registry entry in
+the converting change; the gate row keeps the list fresh.
+**(b) cs_verdict repair.** `validate_naturalization_gap.py:287` embeds a bound
+`cs_verdict(cid, false_natural_law_constraint)` goal — over-permissive if verdict bodies
+overlap. Repair is `once + ==`, but the script is a manual generation-spend validator:
+repair and witness together on its next run, not blind.
+**(c) bound_selector_check retirement (proposal).** Post-conversion a bound
+`constraint_signature` call is honest, so the call-site row guards a defunct hazard.
+Executable once the `dispatch head` row has fired in anger at least once; the retiring
+change must carry a reason string naming the definition-site row as its cover, so a
+future narrowing of that row's scope cannot silently uncover the retired entry.
+**(d) MaxEnt catch+default arms.** The OQ-66-shaped residual hazard is the callers that
+`catch`+default MaxEnt reads (`HNorm = 0.0`, `ShadowType = unknown`) — `det/1` is the
+wrong tool (semidet is legitimate for contexts the fit doesn't cover). Named here so the
+writeup's OPEN is routed; needs its own census before any fix.
+
+---
+
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*

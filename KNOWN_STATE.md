@@ -45,6 +45,31 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-17 — [tripwire] Dispatch heads are CONVERTED: a bound call to classify_from_metrics/6, constraint_signature/2, or classify_by_signature/3 now means "the engine assigns" — reverting a head to the atom form re-arms Pattern 7 and gate row `dispatch head` goes RED
+**Files:** prolog/drl_core.pl, prolog/signature_detection.pl, prolog/isomorphism_engine.pl, prolog/dispatch_head_check.pl, python/dispatch_head_check.py, python/bound_selector_check.py, python/check_logic_symbolic_drift.py, scripts/gate.sh, prolog/tests/test_dispatch_bound_call.pl, prolog/boltzmann_compliance.pl
+**Tier:** tripwire
+
+**The conversion (fresh-variable heads + unify-after-cut, the dr_type/3 idiom; audit
+`audits/2026-08-17_bound_dispatch_hardening/`, fix commit `6c40a0bb`).** Every clause of
+the three predicates binds its output AFTER the cut, never in the head. Consequences a
+future editor must know: (1) **do not "simplify" a head back to
+`classify_from_metrics(..., snare) :- ...`** — that re-creates the bound-probe shape
+(bound calls skip earlier clauses' cuts and answer "body holds in isolation"; 311
+manufactured cells were witnessed live on `testsets/` alone, 4,694 across five legs);
+the gate row `dispatch head` (definition-site walker + MUST-NOT-FIRE registry) and
+`tests/test_dispatch_bound_call.pl` both go red on the revert. (2) The zero-diff pilot
+witness is **output-preserving on the witness set, semantics-changing by construction**
+— never cite it as "behavior-preserving". (3) `check_logic_symbolic_drift.py`'s span
+extraction is anchored to the NEW terminal clause text — restructuring the clause set
+again means re-anchoring it (it fails loud). (4) `cluster_by_signature` now enumerates
+`corpus_constraint/1` — with fresh-variable heads an UNBOUND-C findall over a cut
+cascade is pruned to the first generated solution, so never write
+`findall(C, converted_pred(C, boundatom), L)` expecting a census. (5) The live
+`boltzmann_invariant_mountain` bound-`false` defect (unconditionally inconclusive since
+its clause 1 landed) is OQ-302, NOT fixed here — do not cite mountain invariance
+results until it lands. Follow-on rollout (class-B conversions, cs_verdict repair,
+bound_selector_check retirement proposal, MaxEnt catch+default arms): OQ-303.
+
 ## 2026-08-17 — [tripwire] OQ-278 RESOLVED — one taxonomy, seven members at eight indices; the citation freeze is LIFTED, and renumbering a member is a CONSUMER SWEEP
 **Files:** CLAUDE.md, docs/technical/build_discipline.md, AGENTS.md, README.md, python/doc_pattern_check.py, python/pattern_citation_check.py, python/bound_selector_check.py, docs/technical/doc_pattern_check.md, scripts/gate.sh, docs/amnesiac_institution/amnesiac_institution_v0_6.md, ISSUES.md, audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md
 **Tier:** tripwire

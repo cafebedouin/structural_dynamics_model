@@ -166,3 +166,36 @@ end-anchor re-pinned to the new terminal clause text (verified GREEN post-edit).
   executed as REPAIR (dormant predicate, no callers, zero risk): enumerate
   corpus_constraint/1 + once + post-filter, site comment records both failure regimes.
   Probe re-run: MATCH on unknown (26/26), false_ci_rope (85/85), natural_law (0/0).
+
+## Phase 5 + CLOSE
+
+- WRITEUP.md finalized (stub replaced); **Fired: live** (RED/GREEN pair fired; probe
+  lists non-empty; walker bug caught by own selftest; 3b premise falsified).
+- Consumer sweep clean: no recorded artifact carries the bound diagnostics' output
+  (only MATCHES_* hit outside this audit is a source LISTING in
+  audits/2026-02-28_codebase_audit_data/).
+- Substrate: KNOWN_STATE 2026-08-17 tripwire entry (hook-delivered on the converted
+  files); ISSUES OQ-302 + OQ-303 minted, omega index regenerated (303 rows, 0 problems);
+  audits/README.md index rows appended (incl. the giant_comp PARTIAL row that was
+  missing).
+
+## CLOSE stamp
+
+```
+git rev-parse HEAD
+042554e6fb42f3f2c1f41409ed8a8a4a9460a226
+```
+
+OPEN (6f42b67a) ≠ CLOSE — the intervening commits are ALL this audit's own
+(e67659db, 9a5d8526, a76c21dd, a558a53b, e16f9c0f, 5ce17390, 6c40a0bb, 042554e6 + this
+close commit); no foreign writer. git diff --stat over the read set (engine files this
+audit's probes touched):
+```
+ prolog/drl_core.pl                   | 50 +++++++++++++++++----------
+ prolog/isomorphism_engine.pl         | 20 +++++++++--
+ prolog/signature_detection.pl        | 66 +++++++++++++++++++++++-------------
+ python/bound_selector_check.py       |  9 +++++
+ python/check_logic_symbolic_drift.py |  4 ++-
+ scripts/gate.sh                      | 10 ++++++
+ 6 files changed, 116 insertions(+), 43 deletions(-)
+```

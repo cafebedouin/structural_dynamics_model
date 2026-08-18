@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "8399265aa6fd5d3f99e5d1d6effac67770a80ba8",
+    "store_version": "042554e6fb42f3f2c1f41409ed8a8a4a9460a226",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-17T21:31:13"
+    "generated_at": "2026-08-17T22:12:13"
   },
-  "issues_sha": "73b6c9a3a5e8bba84336e9908d686b6eff66502bbabb037fd59f461fd053a1f9",
-  "n_entries": 301,
+  "issues_sha": "4ad2e647bb08131b4337413c787ee72585fd30944b31a8564bc511d0bf501ffc",
+  "n_entries": 303,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 112,
+    "open": 114,
     "partial": 7
   },
   "active": [
@@ -1662,6 +1662,33 @@
       "mentioned_in": [
         "OQ-77",
         "OQ-182"
+      ]
+    },
+    {
+      "id": "OQ-302",
+      "status": "open",
+      "priority": 2,
+      "summary": "boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-303",
+      "status": "open",
+      "priority": 3,
+      "summary": "bound-dispatch rollout: class-B head conversions, the cs_verdict repair, bound_selector_check retirement, MaxEnt catch+default arms",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-296"
       ]
     }
   ],
