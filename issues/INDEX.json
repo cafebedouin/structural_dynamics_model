@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "249bb635c1fad2e539d26d4d337a09bfe1312810",
+    "store_version": "0f8ecf74cc02b0b75324359a6c58a249ba8d6733",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T09:02:48"
+    "generated_at": "2026-08-18T09:12:47"
   },
-  "issues_sha": "dbf4b88537d74ee407dc46a2520ee7706402eb16655dd95e4344619949b4514f",
+  "issues_sha": "1f2c8b73e62ffb0c6501e3a51af01130b1189dfb8d867bb5f2b908c19194c899",
   "n_entries": 309,
   "active_token_set": [
     "investigating",
@@ -16,8 +16,8 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 118,
-    "partial": 7
+    "open": 117,
+    "partial": 8
   },
   "active": [
     {
@@ -1783,19 +1783,21 @@
     },
     {
       "id": "OQ-309",
-      "status": "open",
+      "status": "partial",
       "priority": 2,
       "summary": "Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run",
       "deps": [
         "bundled_with OQ-276",
         "bundled_with OQ-280",
-        "bundled_with OQ-289"
+        "bundled_with OQ-289",
+        "blocked_on_human circulation GO on amnesiac_institution_v0_6 is the operator's call (§9.2); the factual half of the blocker is discharged and the judgment is not"
       ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-276",
         "OQ-278",
         "OQ-280",
+        "OQ-286",
         "OQ-289"
       ]
     }

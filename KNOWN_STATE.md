@@ -45,6 +45,56 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — [correction-key] Appendix B discharged: the incidence figure is 83/185 (45%) as of 2026-08-18, it carries FIVE instrument defects, and its monthly rate is NON-STATIONARY — so it may not be compared across time
+**Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md, audits/2026-08-18_appendix_b_discharge/
+**Tier:** correction-key
+
+**What changed.** OQ-309 (`partial`), `audits/2026-08-18_appendix_b_discharge/`, commits
+`d9941e3e`…`0f8ecf74`. Both halves of the paper's self-declared circulation blocker discharged: every
+Appendix B row re-run under one as-of stamp, and the 35-item V04 manifest pass completed by anchor
+text (23 landed / 3 partial / 2 superseded / 7 not landed), its one U-BLOCKING item resolved.
+
+**How the incidence figure must now be cited.** **83 / 185 (45%) as of 2026-08-18** — was 73/174
+(42%) at 2026-08-10. Three qualifications, all new:
+
+1. **The movement is GROWTH, not correction.** +11 directories, 10 of them into the numerator, 0
+   removed, 0 numerator members lost. Every prior movement of this figure was a repair.
+2. **A FIFTH instrument defect — the precision direction, measured for the first time.** 13 of the
+   83 numerator members (15.7%) are *hygiene-only*: their sole keyword hit is this project's own
+   reporting prose (*"recorded rather than silently deleted"*), an author describing their own
+   discipline rather than a defect they found. That is a **floor over one mechanism**; a second
+   false-positive mode (bare *"was never"* in ordinary prose) is visible and unmeasured.
+3. **The pooled figure is a mixture over a non-stationary rate:** 36.7% (June) → 57.8% (July) →
+   80.0% (Aug 1–18). A pooled value moves when the denominator's age distribution shifts, with no
+   correction and no change in the world. **Do not compare this figure across time.** Two readings
+   (genuine phase change; lexicon adoption) are stated in §5.4 and neither is picked; the hygiene
+   probe bounds one channel of the second and does not carry it (monthly hygiene share 19.4 / 7.7 /
+   25.0, no trend).
+
+**The row-level defect worth remembering.** The Appendix B audit-directory row read **174** while its
+stated command `ls -d audits/*/ | wc -l` returned **175**: 174 was the *census frame* after
+self-excluding an in-progress arc directory, and the scale figure and the frame had been merged into
+one cell. A manifest row is the pairing of a value with the command that produces it; this one had
+stopped being that, and only *running* the command could show it. Now two separate rows (187 on
+disk, 185 in frame). **Related unresolvable, declared rather than smoothed:** §5.4 attributes
+175 → 174 to removing an empty untracked directory while the frozen 08-10 frame reaches 174 by
+self-exclusion. Both are consistent with 174; the directory was untracked, so git cannot adjudicate.
+
+**A self-check that was published, instructed-to-be-re-run, and never compared.** The V04 manifest's
+item-count check read **32 against a documented 35** from the moment §4b landed, because three
+`‡`-marked rows do not match `^\| [0-9]+ \|`. The instruction *"re-run after ANY edit"* existed; the
+instruction *"and compare the output to 35"* did not. Fixed, with the grade recount promoted from a
+prose instruction to a runnable command and `/usr/bin/grep` pinned.
+
+**Not discharged, and a cold reader should not assume otherwise.** §10.4's standing-gate catch series
+stays `[UNWITNESSED]` (nobody has collected it; the cadence row is a different quantity). §3.5's
+truncation row stays `[UNWITNESSED]`, re-pointed from the retracted always-loaded carrier (OQ-286) to
+the recall channel (OQ-289). The sessions/instances row stays `[UNWITNESSED]` — blocker re-verified,
+no session log exists. **The circulation GO is the operator's call** and is recorded as
+`blocked_on_human` on OQ-309.
+
+---
+
 ## 2026-08-18 — [tripwire] The OS upgrade moved Python 3.10 → 3.12 and stranded every third-party package; `scripts/gate.sh` calls bare `python3`, so the gate now runs the EMPTY interpreter while the work runs in `.venv`
 **Files:** scripts/gate.sh, pyproject.toml, python/check_gap_status_surfaces.py, python/orbit_characterization.py, python/idea_site_exploration.py, python/audits/bc_coupling_audit.py, agent/c-orchestrator.py
 **Tier:** tripwire

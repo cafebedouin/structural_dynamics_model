@@ -13919,9 +13919,10 @@ it does not, and cannot, check per-leg expectations — that is this OQ's job.
 
 **Ω-type:** Ω_E (the rows are measurable; the residue items are typed individually below).
 
-**Status:** open
+**Status:** partial — both owed items DONE 2026-08-18; this entry stays live as the declared
+home for the residue it pre-registered, and for the one operator decision it cannot make.
 **Priority:** 2
-**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289
+**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289, blocked_on_human circulation GO on amnesiac_institution_v0_6 is the operator's call (§9.2); the factual half of the blocker is discharged and the judgment is not
 **Origin:** 2026-08-18, minted BEFORE the pass that discharges it (the pass moves the
 issues-status row it must then quote, so the OQ has to exist before the count is taken).
 **Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (Appendix B, §5.4, §8.2,
@@ -13957,6 +13958,63 @@ only in a WRITEUP:
 **What resolution would change.** The paper's circulation blocker names exactly these two items;
 discharging them removes the *factual* half of the blocker. The GO decision remains the
 operator's and is not what this OQ closes.
+
+---
+
+## OUTCOME (2026-08-18) — `audits/2026-08-18_appendix_b_discharge/`, commits `d9941e3e`…`0f8ecf74`
+
+**Both owed items done.** Every Appendix B row re-run under one as-of stamp with per-row raw
+output; the V04 walk completed against v0.6 by **anchor text** (23 landed / 3 partial / 2
+superseded / 7 not landed), and its one `U-BLOCKING` item — item 17, the P3 ruling — **discharged**,
+so the manifest's blocking count is 1 → 0.
+
+**Five findings the pass produced that were not in its brief:**
+
+1. **The audit-directory row's value came from a different instrument than its command.** It read
+   174 while `ls -d audits/*/ | wc -l` returned 175 that day; 174 was the census frame after a
+   self-exclusion. The row that certifies the paper's numbers was itself uncertified, and only
+   *re-running* the command — not re-reading the row — could show it. Now two rows.
+2. **The census's precision direction, measured for the first time: 13/83 (15.7%) of numerator
+   members are hygiene-only** — their only keyword hit is this project's own reporting prose
+   (*"recorded rather than silently deleted"*). A floor over one mechanism; a second false-positive
+   mode (bare *"was never"*) is visible and unmeasured. §5.4's instrument defects go four → **five**.
+3. **The pooled incidence is a mixture over a NON-STATIONARY rate** — 36.7% (June) → 57.8% (July)
+   → 80.0% (Aug 1–18). A pooled value moves when the denominator's age distribution shifts, with no
+   correction and no change in the world. **The figure may not be compared across time.** This also
+   puts a second instrument on §10.4's absorption/decay/phase-change fork: fewer audits, each far
+   likelier to carry a defect, is what *phase change* predicts.
+4. **The manifest's own item-count self-check read 32 against a documented 35**, and had since §4b
+   was added, because three `‡`-marked rows do not match its regex. It survived because the
+   instruction to *re-run* existed and the instruction to *compare the output* did not. Fixed;
+   grade recount promoted from prose to a runnable command; `/usr/bin/grep` pinned.
+5. **Three instruments introduced by this pass committed the defect they were introduced to
+   catch**, and the third destroyed data: a line-oriented absence probe scored a *present* phrase
+   absent (the paper is hard-wrapped); a cadence exclusion filter matched nothing and printed a
+   plausible identical number; and the promotion-trial re-scorer, run by *importing* the driver,
+   executed its module-level `sys.exit(main())`, re-ran two API calls, and **overwrote the raw
+   responses the driver had persisted precisely so re-scoring would not need a re-run**. The
+   persist-before-parse rule protects the write path and says nothing about who may import the
+   writer. Two response files are transcript-restored and labelled as such.
+
+**RESIDUE — this entry is its home, and none of it is blocking.**
+
+- **V04 rows still open (10):** items 8, 9, 10, 11, 19, 23, 28 (not landed) and the open halves of
+  14, 22, 31. All grade W or R; each is a paragraph the paper could carry and does not. Ω_E — they
+  are matters of what the sources say, checkable by reading them. Detail per row:
+  `audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md`.
+- **Operator decisions (2).** (a) The **circulation GO** — recorded above as `blocked_on_human`; the
+  factual half is discharged and the judgment is not, and §9.2 forbids an instance ruling it.
+  (b) The **§8.2 stakes-term reading**: the trial witnesses that the promotion test is *runnable*
+  (n = 2/arm, existence grade), and the missing stakes term is a design gap the trial does not
+  touch — whether that gap is worth pricing is Ω_P.
+- **Rows still `[UNWITNESSED]`, blockers re-verified (4).** §10.4's standing-gate catch series (the
+  absorption test) — **explicitly NOT discharged by this pass**; nobody has collected it, and the
+  cadence row is a different quantity. §3.5's truncation row — re-pointed from the retracted
+  always-loaded carrier (**OQ-286**) to the recall channel (**OQ-289**), whose measurement is
+  unrun. The sessions/instances/audit-rate row — no session log exists, re-verified. And §5.4's
+  instrument-stratum rate, still unmeasured.
+- **Not re-raised here:** OQ-280's perform-vs-amend fork for §4.3, which is out of scope by ruling
+  and stays at its own entry.
 
 
 
