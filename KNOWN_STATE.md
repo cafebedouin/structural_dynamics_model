@@ -45,6 +45,30 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — TRIPWIRE: `prolog/testsets/` carries no literal file count anywhere; the four static legs may
+**Files:** CLAUDE.md, AGENTS.md, ISSUES.md, docs/project_orientation.md
+**Tier:** tripwire
+
+**Operator ruling 2026-08-18.** `prolog/testsets/` is the leg the operator works in continuously —
+topic runs land stories mid-session — so **any literal count for it is stale the moment it is
+written, while still reading as authoritative.** Do not publish one in CLAUDE.md, AGENTS.md, or any
+standing reference; count it when you need it (`manifest.n_constraints` from the run's own
+`pipeline_output.json`, or `ls prolog/testsets/*.pl | wc -l`) and state the date alongside.
+
+**The four other legs are STATIC and their counts ARE usable** — `testsets_haiku` 960,
+`testsets_flash` 960, `testsets_kimi` 1005, `testsets_sonnet` 1001 (disk-verified 2026-08-18). If a
+piece of work needs a concrete corpus size, take it from one of those, not from the live leg.
+
+**The drift that produced the ruling:** CLAUDE.md published `testsets 259` stamped "disk-verified
+2026-08-12". On 2026-08-18 — six days later — it was **279**, and the stamp still read as verified.
+The stale figure sat in an always-loaded file that is read at every session start by something with
+no way to check it. Corrected in the same change; the static-leg figures were kept because they are
+safe for the reason the live-leg figure is not.
+
+**Dated measurements in closed OQs and audits are NOT covered by this** — an OQ body citing "0/276
+live" is a historical witness of what was measured then, and rewriting it would falsify the record.
+The rule governs *standing reference* counts, not evidence.
+
 ## 2026-08-18 — OQ-296 closed: consumers of the dead natural_law/coordination_scaffold detector made honest
 **Files:** python/linter.py, python/extract_corpus_data.py, python/container_typology_analysis.py, prolog/signature_detection.pl, prolog/dirac_classification.pl, prolog/reading_registry.pl, prolog/domain_priors.pl, prolog/cs_pattern_detection.pl, prolog/signature_mapper.pl, prolog/abductive_helpers.pl, prolog/maxent_classifier.pl, prolog/context_profile_mining.pl, prolog/isomorphism_report.pl, prolog/constraint_bridge.pl, prolog/data_validation.pl, prolog/axiom_reachability.py, python/shared/maxent.py, docs/design/design_gaps.md, ISSUES.md
 **Tier:** landed

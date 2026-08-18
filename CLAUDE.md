@@ -907,10 +907,22 @@ filename==subject) before trusting a legacy-corpus DR sweep. Provenance: OQ-20 a
 lets the operator exercise the engine *while building it* (running it surfaces more live issues);
 `prolog/testsets_haiku/` + `prolog/testsets_flash/` are the reconciled multi-reading **twins**, kept
 as the comparison baseline; `prolog/testsets_kimi/` + `prolog/testsets_sonnet/` are two additional
-model-named legs added later (postdate the 2026-07-23 OQ-60 census). **File counts (disk-verified
-2026-08-12, cite the manifest not these for any run): testsets 259, testsets_haiku 960,
-testsets_flash 960, testsets_kimi 1005, testsets_sonnet 1001.** All five are live. **`testsets/`'s
-singleton sparsity is INTENDED, not a defect or a half-finished
+model-named legs added later (postdate the 2026-07-23 OQ-60 census).
+
+**File counts — the four STATIC legs only (disk-verified 2026-08-18): `testsets_haiku` 960,
+`testsets_flash` 960, `testsets_kimi` 1005, `testsets_sonnet` 1001.** These are finished corpora;
+a number here is usable.
+
+**`prolog/testsets/` CARRIES NO COUNT, EVER (operator ruling, 2026-08-18) — count it, never recall
+it.** It is the live leg and moves continuously: operator topic runs land stories mid-session
+(witnessed 2×). Any literal figure for it is stale the moment it is written, while still reading as
+authoritative. Get it at the moment you need it — `manifest.n_constraints` from the run's own
+`pipeline_output.json`, or `ls prolog/testsets/*.pl | wc -l` — and state the date alongside it.
+This paragraph previously published `testsets 259` stamped 2026-08-12; it was **279** by
+2026-08-18, six days later, still reading as disk-verified. That is the drift the ruling removes,
+and it is why the static-leg figures above are safe and this one is not.
+
+All five are live. **`testsets/`'s singleton sparsity is INTENDED, not a defect or a half-finished
 rebuild** — do not "complete," flatten, or rebuild it on sight; its high OQ-58 dangling rate is the
 expected sparsity artifact (each lone reading dangles edges to ungenerated siblings). **The project
 is currently ALPHA, working toward BETA: extract maximum value from the corpus we have so the work

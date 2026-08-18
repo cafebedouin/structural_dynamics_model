@@ -168,3 +168,45 @@ not silenced: if `coordination_scaffold` ever fires, those tests go red first.
 
 Final: **GATE GREEN** (24 rows), after regenerating both Phase 2 outputs so the shipped artifacts
 match the reworded source.
+
+---
+
+## The generalization this session earned (candidate for `build_discipline.md`)
+
+**Dead-by-empty-INPUT and dead-by-CONSTRUCTION present identically at the call site and repair
+differently.** Two instances landed in this one pass:
+
+| | dead by construction | dead by empty input |
+|---|---|---|
+| `has_viable_alternatives/2` | the `false` branch — no clause can emit it | the `true` branch — only `intent_viable_alternative/3` supplies it, and that table is empty (GAP-08) |
+| `domain_priors:category_of/2` | — | `physical_natural` dispatches correctly under a planted claim; the claim vocabulary is authored 0 times in ~5,311 files |
+
+At the call site both look the same: a predicate that returns one value forever. The repairs are
+not even in the same category — construction-dead needs a **code** change (or a ruling that the
+branch should not exist), input-dead needs **data** or a decision to retire the axis that consumes
+it. Guessing wrong sends the work to the wrong place: OQ-296's plan described `category_of/2` as a
+collapsed classifier needing repair, when the predicate is fine and its feed is empty.
+
+**The discriminator is cheap and should be routine: plant the input the branch needs and see
+whether the predicate fires.** A predicate that fires on a planted input is input-dead; one that
+cannot fire on any input is construction-dead. That single probe separated the two cases here and
+took one query. Run it *before* characterizing any constant-valued predicate — the characterization
+is what routes the fix.
+
+Prior-art grep: `build_discipline.md` documents `has_viable_alternatives`'s fail-close (`:780-782`)
+but does not carry this distinction as a named diagnostic. Recorded here as a promotion candidate
+rather than minted directly — the promotion is the operator's call, and two instances in one
+session is the evidence for it, not a decision.
+
+## Caveat on the roster's remaining accuracy — read this before citing any Phase 3 annotation
+
+Three of ~20 roster entries were wrong. **That is not a 15% error rate on the roster; it is a 3/3
+hit rate on the subset that got close attention.** All three were found in sites that were read,
+run, or diffed. The eighteen Phase 3 sites got **comment-only** treatment under the
+confirm-at-edit-time rule, which is genuinely weaker evidence than a read-and-diff: it confirms the
+atom appears in a live code path, not that the surrounding claim about the site is right.
+
+**Treat the remaining roster accuracy as UNMEASURED, not as good.** If any of those eighteen sites
+ever becomes load-bearing for a claim, re-verify it directly — do not cite this session's
+annotation as confirmation. The annotation records what was confirmed at edit time and nothing
+beyond it, which is exactly why each one states its own scope.
