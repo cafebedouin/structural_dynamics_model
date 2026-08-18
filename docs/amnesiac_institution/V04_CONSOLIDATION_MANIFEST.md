@@ -185,6 +185,17 @@ hold.** Those files matched only on broad patterns, for these reasons:
 **Total asserted by enumeration**, not by summing per-file greps. The per-file sum would read 39+
 because the amendment is counted at two addresses and multi-line items counted per line.
 
+> **Landing status is tracked elsewhere, and the blocking row is discharged (2026-08-18).** The
+> figures above are a 2026-08-11 assertion and are *not* re-graded by later landings — this file
+> stays a point-in-time record. The walk of all 35 rows against `amnesiac_institution_v0_6.md`,
+> addressed by anchor text rather than section number, is
+> `audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md` (23 landed / 3 partial /
+> 2 superseded / 7 not-landed). **`U items that BLOCK v0.4` is 1 as of 2026-08-11 and 0 as of
+> 2026-08-18:** item 17's antecedent was tested (v0.6 §5.2, four prevention records and zero
+> undone deletions) and its consequent executed by operator ruling on 2026-08-11 (P3 demoted to
+> §7.7 as a witness rule), then superseded by OQ-278's 2026-08-17 seven-members-at-eight-indices
+> ruling. Tracking OQ: **OQ-309**.
+
 ---
 
 ## 7. Known gaps in this manifest
@@ -226,26 +237,39 @@ because the amendment is counted at two addresses and multi-line items counted p
    below it.** A check is scoped to what it reads, and a document's summary sentence is a claim
    like any other.
 
-   **Re-run after ANY edit** — the second command is the one added in response to the ninth:
+   On the eighth, carried verbatim from the entry this item superseded (2026-08-18): *"A summary
+   line disagreeing with the set it summarises — in the totals row of a document whose stated
+   purpose is to prevent exactly that, written by the instance that had just documented the
+   pattern."*
+
+   **A TENTH instance, and it is this item's own check (2026-08-18).** The command below read
+   **32** against a documented **35** — and it read 32 from the moment §4b was added, because the
+   three `‡`-marked rows (29, 30, 33) do not match `^\| [0-9]+ \|`. The check minted to catch a
+   summary disagreeing with its set *was* a summary disagreeing with its set, and nothing caught it
+   because **nobody re-ran it and compared the output to 35** — the instruction to re-run existed
+   and the comparison did not. Fixed below; the grade recount is added as a *runnable* command
+   rather than a prose instruction, and `/usr/bin/grep` is pinned (a shell `grep` function in the
+   working environment alters output, and this is a reported count —
+   `build_discipline.md` → *a consistency check is not a discrimination check*).
+
+   **Re-run after ANY edit, and COMPARE THE OUTPUT to the expected value** — the second command is
+   the one added in response to the ninth, the third in response to the tenth:
 
    ```bash
-   # item count and grades, from numbered rows ONLY.
-   # Trap: the legend's own W/R/U rows match a naive grade regex and inflate the total by 3.
-   grep -cE '^\| [0-9]+ \|' V04_CONSOLIDATION_MANIFEST.md
+   # (1) item count, from numbered rows ONLY.  EXPECT: 35
+   # Trap A: the legend's own W/R/U rows match a naive grade regex and inflate the total by 3.
+   # Trap B: '‡'-marked rows (29, 30, 33) need the optional marker group, or the count reads 32.
+   /usr/bin/grep -cE '^\| [0-9]+ (‡ )?\|' V04_CONSOLIDATION_MANIFEST.md
+
+   # (2) grade recount from the LAST CELL of numbered rows.  EXPECT: 19 W / 5 R / 11 U
+   # Trap: item 17's grade is '**U — BLOCKING**', so match the cell, not a bare '**U**'.
+   /usr/bin/grep -E '^\| [0-9]+ (‡ )?\|' V04_CONSOLIDATION_MANIFEST.md \
+     | awk -F'|' '{g=$(NF-1); gsub(/[ *]/,"",g); sub(/—.*/,"",g); print g}' | sort | uniq -c
+
+   # (3) §7's own block numbers must be sequential from 1, no repeats.  EXPECT: 1 2 3 4 5 6
+   # Added 2026-08-18: neither (1) nor (2) can see §7, so a duplicate gap number passed both.
+   /usr/bin/grep '^[0-9]\+\. ' V04_CONSOLIDATION_MANIFEST.md | sed 's/^\([0-9]\+\)\..*/\1/' | tr '\n' ' '
 
    # header-vs-table: every figure in the header must be derived from §6.
    # There is no automatic check for this. Read the header and §6 side by side.
-   ```
-5. **Its own totals row was wrong on first write** and was caught by a script that recounted the
-   grades from the numbered rows: the header claimed `18 / 6 / 4`, the enumerated set is
-   `19 / 5 / 4`. A summary line disagreeing with the set it summarises — in the totals row of a
-   document whose stated purpose is to prevent exactly that, written by the instance that had just
-   documented the pattern. Corrected, and recorded rather than silently fixed: **the check that
-   caught it compared a claimed number against the artifact**, which is the only mechanism that has
-   caught anything in this arc. Re-run it after any edit:
-
-   ```
-   grep -cE "^\| [0-9]+ \|" V04_CONSOLIDATION_MANIFEST.md      # item count
-   # and recount the grade column from numbered rows only — the legend's W/R/U rows
-   # match a naive grade regex and inflate the total by exactly 3.
    ```

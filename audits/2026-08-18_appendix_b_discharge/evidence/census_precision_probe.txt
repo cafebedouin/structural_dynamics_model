@@ -1,0 +1,37 @@
+numerator members scanned : 83
+  with no hits (BUG if >0) : 0  []
+  HYGIENE-ONLY             : 13
+  at least one non-hygiene : 70
+
+HYGIENE-ONLY directories (candidate census false positives):
+  2026-06-06_kernel_first_phase0  (2 hits)
+  2026-06-08_coordination_washing_clean_pass  (1 hit)
+  2026-06-16_seat_invariant_vs_prolog  (1 hit)
+  2026-06-18_oq01_rope_bypass_twins  (1 hit)
+  2026-06-21_maxent_seat_aware  (1 hit)
+  2026-06-21_oq119_gate0  (1 hit)
+  2026-06-23_oq112_round3  (1 hit)
+  2026-07-02_oq138_fnl_evidence  (1 hit)
+  2026-07-03_oq03_self_application  (4 hits)
+  2026-08-06_oq259_item3_genreflag  (3 hits)
+  2026-08-10_oq78_idiom_close  (1 hit)
+  2026-08-12_oq283_framing_boundary_discrimination  (1 hit)
+  2026-08-17_bound_dispatch_hardening  (3 hits)
+
+CONTROL — the hygiene regex must FIRE on known hygiene lines and DECLINE on
+known defect lines. Both drawn from the corpus, not authored for this test.
+  FIRE    ok   Cells below n=50 were excluded and are listed, never dropped silently: s
+  FIRE    ok   Recorded, not silently skipped.
+  FIRE    ok   marked on close, not silently rewritten
+  FIRE    ok   Recorded rather than silently deleted, for two reasons. It is instance s
+  FIRE    ok   ## 9. AMENDMENT 1 - scorer repaired mid-run (declared, not silently appl
+  DECLINE ok   the value was silently dropped.** A truncated-but-plausible field value 
+  DECLINE ok   an artifact stratum that grows silently inside a denominator gets WORSE 
+  DECLINE ok   It stayed undetected across 151 commits touching one or
+  DECLINE ok   The pass that the power floor governs never ran.
+  DECLINE ok   the formalization axis silently degenerates.
+  DECLINE ok   can never fire and its `textual_combined` sum is silently mountain-only
+  DECLINE ok   prevalence surface silently reading 0
+  DECLINE ok   produced by a query that **silently failed to dispatch** the lock clause
+
+CONTROL PASSED — 5 fire, 8 decline, two-sided.

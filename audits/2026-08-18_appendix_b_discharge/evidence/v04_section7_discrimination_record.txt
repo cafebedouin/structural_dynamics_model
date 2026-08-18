@@ -1,0 +1,37 @@
+# V04 §7 numbering check — discrimination record
+
+The check fires at the defective state and declines at the repaired one. Both states are
+naturally arising: the defect is what commit ede866c7 left on disk, not a planted fixture.
+
+## BEFORE the edit (commit 59a48473, the pre-edit tree)
+```
+1 2 3 4 5 6 5 
+FAIL — count 7, sequence 1 2 3 4 5 6 5 (repeat at position 7)
+```
+
+## AFTER the edit (working tree)
+```
+section-7 block numbers, in file order: 1 2 3 4 5 6 
+count: 6 (expected 6)
+PASS — sequential from 1, no repeats, no gaps, count matches.
+```
+
+## The manifest's own two self-checks, before and after
+```
+item count BEFORE (broken regex, as published): 32
+item count AFTER  (broken regex, as published): 32
+item count AFTER  (corrected regex):            35
+grade recount AFTER (corrected):
+      5 R
+     11 U
+     19 W
+```
+
+THE FINDING: the published item-count check read **32 against a documented 35**, both before
+and after this edit — so the defect is not this pass's. It has read 32 since the second-reader
+commit added §4b, because the three '‡'-marked rows do not match '^| [0-9]+ |'. The check
+minted to catch a summary disagreeing with its set WAS a summary disagreeing with its set,
+and it survived because the instruction to re-run existed while the instruction to COMPARE
+THE OUTPUT did not. Recorded in the manifest as instance ten of the arc's signature; the
+regex is fixed, the grade recount is promoted from prose to a runnable command, and
+/usr/bin/grep is pinned.
