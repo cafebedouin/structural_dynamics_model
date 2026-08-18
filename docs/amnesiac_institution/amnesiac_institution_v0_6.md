@@ -173,6 +173,13 @@ items was completed. Full record: `audits/2026-08-18_appendix_b_discharge/`, ISS
   (+11 directories, 10 of them into the numerator, 0 removed). The v0.6 sentence that 42% *"survived
   three corrections at the same headline value"* is retained as the record of what was true through
   v0.6 and is no longer the current state.
+- **§5.4 gains a SIXTH instrument defect, found by the discharge and *caused* by it.** The census
+  extracts the second path component, so a keyword in `audits/README.md` — the audit index, a file
+  at the top level — enters the numerator as a phantom member. Appending this pass's own index row
+  put the words there; the numerator read 84 and the frame's partition check printed `186 == 185`.
+  Latent in the instrument for its whole life, activated by an unrelated edit, caught by an
+  integrity line rather than by the count. Fixed in the instrument; the published value is
+  unchanged, since `README.md` is not an audit directory.
 - **§5.4 gains a FIFTH instrument defect, and it is the first measurement of the precision
   direction.** The census counts directories whose only keyword hit is this project's own reporting
   hygiene — *"recorded rather than silently deleted"*. 13 of 83 numerator members (15.7%) are
@@ -304,7 +311,7 @@ amount of repository data confirms or refutes these; they are refuted by exhibit
 | # | Claim | Evidence | Status |
 |---|---|---|---|
 | W1 | Non-persistent generative workers fail characteristically by producing the form of a completed operation without its substance | Dated repository incidents; five recurring patterns (§5) | Witnessed; **externally corroborated** (§6.2) |
-| W2 | 83 of 185 audit directories document at least one silent or never-fired defect (2026-08-18; 73 of 174 at 2026-08-10) | §5.4, Appendix B | Witnessed, with **five** known instrument defects, a stratum limit, and a **non-stationary** underlying rate that forbids cross-time comparison of the pooled value |
+| W2 | 83 of 185 audit directories document at least one silent or never-fired defect (2026-08-18; 73 of 174 at 2026-08-10) | §5.4, Appendix B | Witnessed, with **six** known instrument defects, a stratum limit, and a **non-stationary** underlying rate that forbids cross-time comparison of the pooled value |
 | W3 | The apparatus commits, inside its own repairs, the defect the repair addresses; nine instances, none caught by a gate | §7.4 | Witnessed; denominator stated (one arc) |
 | W4 | The principal failure of accumulated LLM-authored memory here was redundant accretion, not false content | 113→53 consolidation; 2 files wrong | Witnessed; n = 1 institution, one pass |
 | W5 | Four operator rulings were correct in prose and defective in execution, each caught by a receiving instance that enumerated | §3.3 | Witnessed; the empirical face of A3 |
@@ -1110,7 +1117,7 @@ component was correct and the composite was fluent. In `CWC:C1@8475dc95`'s terms
 "nothing was computed" formed at the fallback's scope, read at the aggregate's scope as a
 measurement, with the two scopes rendered in the same eight bytes.
 
-### 5.4 Incidence in the audit record, and five defects in the instrument that measures it
+### 5.4 Incidence in the audit record, and six defects in the instrument that measures it
 
 As of 2026-08-18, **83 of 185 audit directories (45%) document at least one silent or never-fired
 defect** — something that "read 0 for its whole life," "never fired," or passed vacuously
@@ -1227,6 +1234,27 @@ failure the dominant failure class. Both are withdrawn.
 > plainly visible in the raw hits and is not measured: the bare phrase *"was never"* in ordinary
 > prose (*"the expense was never in writing the caveat"*) satisfies the keyword and concerns nothing.
 > So the instrument now has a measured error in **both** directions, and neither is bounded above.
+
+> **A SIXTH DEFECT — the numerator admits things that are not directories, and this paper's own
+> housekeeping fired it during the discharge (2026-08-18).** The census greps `audits/` recursively
+> and extracts the second path component. For a hit in `audits/<dir>/<file>.md` that is the
+> directory. For a hit in a **file at the top level** — `audits/README.md`, the audit index — it is
+> `README.md`: a member of the numerator that is not a directory, cannot be in the denominator, and
+> is not an audit. The instrument has never had a membership filter. It was correct only because
+> `audits/README.md` had never happened to use the census's vocabulary.
+>
+> **It stopped happening not to, and the cause was this discharge.** Appending the index row that
+> describes *this pass* — written in the project's ordinary prose, which is the prose the census
+> keys on — put the words into the file. The numerator went 83 → 84 and the frame's integrity line
+> printed `partition_check: 186 == 185`. **The count alone would have looked like one more audit;
+> the partition check is what refused it.** The fix is one `comm -12` against the population, and
+> the published value does not move: `README.md` is not an audit directory, so 83/185 stands.
+>
+> Two things worth taking from it. **The instrument is sensitive to writing that is *about* it** —
+> the same exposure the arc-directory self-exclusions were introduced for, reaching a file nobody
+> had thought of as being in the frame. And **a defect can be latent in an instrument for its whole
+> life and be activated by an unrelated edit**, which is why the guard belongs in the instrument
+> rather than in a list of files to remember.
 
 > **AND THE POOLED FIGURE IS A MIXTURE OVER A NON-STATIONARY RATE — which is a bigger finding than
 > its movement (2026-08-18).** 42% → 45% invites the reading *"the value drifted a little."* The
@@ -2594,7 +2622,7 @@ path component, and the census pipes grep into a positional parse.
 | 5.1 | P1 instance: frozen artifact n † | 563 vs corpus 772 | `/usr/bin/grep -n 'n=563' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 3 hits (`:63`, `:64`, `:2721`) |
 | 5.1 | P5 instance: certifications † | 0/404 carry beneficiary signal | `/usr/bin/grep -n '0/404' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 2 hits (`:744`, `:746`) |
 | 5.1 | P6 instance: suppressed warning duration † | four months | `/usr/bin/grep -n 'four months' docs/technical/build_discipline.md` — re-confirmed 2026-08-18, 1 hit (`:826`) |
-| 5.4 | Audit directories with ≥1 silent defect | **83 / 185 (45%)** — was 73/174 (42%) at 2026-08-10 | `/usr/bin/grep -rl 'for its whole life\\\|never fired\\\|never ran\\\|read.*0 for\\\|was never\\\|silently' --include='*.md' audits/ \| cut -d/ -f2 \| sort -u \| wc -l`, minus the two lexicon-carrying arc directories. **`/usr/bin/grep` pinned and the path prefix load-bearing**; the control that licenses the figure is `frame/control_frame_command.py` and it must exit 0 before any value here is cited (it did, 6/6 fixtures two-sided). Coding rule unchanged: keyword proxy over audit prose, single pass, not severity-weighted; a directory counts once. **Denominator inclusion rule (landed here 2026-08-18, queued since v0.4): a directory counts iff it contains at least one file.** Computed both ways in `frame/frame_manifest.txt`; the delta is **0** today, so the rule lands without moving the number, and the movement is attributable to growth alone: +11 directories since 2026-08-10, 0 removed, 10 of the 11 into the numerator, 0 numerator members lost. **Five known instrument defects and a non-stationarity finding: §5.4** |
+| 5.4 | Audit directories with ≥1 silent defect | **83 / 185 (45%)** — was 73/174 (42%) at 2026-08-10 | `/usr/bin/grep -rl 'for its whole life\\\|never fired\\\|never ran\\\|read.*0 for\\\|was never\\\|silently' --include='*.md' audits/ \| cut -d/ -f2 \| sort -u`, **intersected with the directory population** and minus the two lexicon-carrying arc directories. **`/usr/bin/grep` pinned and the path prefix load-bearing**; the control that licenses the figure is `frame/control_frame_command.py` and it must exit 0 before any value here is cited (it did, 6/6 fixtures two-sided). Coding rule unchanged: keyword proxy over audit prose, single pass, not severity-weighted; a directory counts once. **Denominator inclusion rule (landed here 2026-08-18, queued since v0.4): a directory counts iff it contains at least one file.** Computed both ways in `frame/frame_manifest.txt`; the delta is **0** today, so the rule lands without moving the number, and the movement is attributable to growth alone: +11 directories since 2026-08-10, 0 removed, 10 of the 11 into the numerator, 0 numerator members lost. **Six known instrument defects and a non-stationarity finding: §5.4.** The intersection is not cosmetic: without it the command emits `README.md` as a member and returns 84 |
 | 5.4 | Non-census directories with no `.md` / with keywords in unopened file types | 4 / 12 (of 102) | the auditing grep, §5.4, re-run 2026-08-18: numerators unchanged at 4 and 12, denominator 101 → 102. Two-sided control: the same non-`.md` sweep fires on the census stratum, so its silence elsewhere is a fact about the world |
 | 5.4 | Blinded escape check | 8 drawn, 6 candidate hits, 0 confirmed, calibration arm closed unresolved (k = 0 NO-UNIT across n = 22) | audit record of the escape stratum (`audits/2026-08-10_oq277_rq2_crosscoding/`). **Not re-run: this is a frozen draw, not a command** — re-running would be a new draw, not a re-measurement |
 | 5.4 | Census false-positive rate (the precision direction, measured for the first time) | **13 / 83 numerator members are hygiene-only (15.7%)** | `audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py`. A *hygiene-only* directory is one whose every keyword hit is the contrastive form *"recorded rather than silently dropped"* — the author describing their own reporting discipline, not a defect found. Two-sided control: 5 fire, 8 decline, all lines drawn from the corpus. **This measures ONE precision failure mode**; a second (bare `was never` in ordinary prose) is visible in the raw hits and unmeasured, so 15.7% is a floor |

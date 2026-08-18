@@ -46,7 +46,24 @@ done < "$OUT/all_dirs_glob.txt"
 /usr/bin/grep -rl 'for its whole life\|never fired\|never ran\|read.*0 for\|was never\|silently' \
   --include='*.md' audits/ \
   | cut -d/ -f2 | sort -u > "$OUT/incident_bearing_raw.txt"
-/usr/bin/grep -vxE "$SELF_A|$SELF_B" "$OUT/incident_bearing_raw.txt" > "$OUT/incident_bearing_dirs.txt"
+/usr/bin/grep -vxE "$SELF_A|$SELF_B" "$OUT/incident_bearing_raw.txt" > "$OUT/incident_bearing_prefilter.txt"
+
+# --- (5) NUMERATOR MEMBERSHIP FILTER (added 2026-08-18, after this frame caught the defect) -----
+# The census is `grep -rl ... audits/` piped through `cut -d/ -f2`. For a hit in
+# `audits/<dir>/<file>.md` that yields <dir>. For a hit in a FILE at the top level —
+# `audits/README.md` — it yields `README.md`, a phantom member that is not a directory at all
+# and can never be in the population. The instrument has never had a membership filter; it
+# worked only because `audits/README.md` happened not to use the census vocabulary.
+#
+# It stopped happening to. This pass appended an index row to `audits/README.md` describing this
+# very census, in this project's ordinary prose, and the row contains the words. The numerator
+# went 83 -> 84 and `partition_check` printed `186 == 185`. The integrity line caught it; the
+# count alone would not have.
+#
+# The numerator is now intersected with the population. This is a fix to the INSTRUMENT and does
+# not move the published value: `README.md` is not an audit directory, so 83/185 stands.
+comm -12 "$OUT/all_dirs_glob.txt" "$OUT/incident_bearing_prefilter.txt" > "$OUT/incident_bearing_dirs.txt"
+comm -13 "$OUT/all_dirs_glob.txt" "$OUT/incident_bearing_prefilter.txt" > "$OUT/numerator_nonmembers.txt"
 
 comm -23 "$OUT/all_dirs_glob.txt" "$OUT/incident_bearing_dirs.txt" > "$OUT/non_census_dirs.txt"
 
@@ -77,6 +94,7 @@ N_INC=$(wc -l < "$OUT/incident_bearing_dirs.txt")
   echo
   echo "## numerator (unchanged by the denominator rule)"
   echo "n_incident_bearing: $N_INC"
+  echo "n_numerator_nonmembers_dropped: $(wc -l < "$OUT/numerator_nonmembers.txt")  # non-directories the positional parse emitted; listed in numerator_nonmembers.txt"
   echo "numerator_outside_nonempty_population: $(wc -l < "$OUT/numerator_outside_nonempty.txt")  # want 0"
   echo
   echo "## incidence, both ways"

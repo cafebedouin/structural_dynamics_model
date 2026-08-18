@@ -13987,7 +13987,15 @@ so the manifest's blocking count is 1 → 0.
    was added, because three `‡`-marked rows do not match its regex. It survived because the
    instruction to *re-run* existed and the instruction to *compare the output* did not. Fixed;
    grade recount promoted from prose to a runnable command; `/usr/bin/grep` pinned.
-5. **Three instruments introduced by this pass committed the defect they were introduced to
+5. **The census admits non-directories, and this pass's own audit-index row fired it.**
+   `cut -d/ -f2` over `audits/` turns a hit in **`audits/README.md`** into the numerator member
+   `README.md` — not a directory, not in the denominator. No membership filter had ever existed;
+   the instrument was correct only because that file had never used the census vocabulary. The
+   index row appended for *this* audit put the words there: numerator 84, `partition_check:
+   186 == 185`. **Re-runner's tripwire: intersect the numerator with the directory population.**
+   Latent for the instrument's whole life, activated by an unrelated edit, caught by an integrity
+   line rather than by the count. Published value unaffected.
+6. **Four instruments introduced by this pass committed the defect they were introduced to
    catch**, and the third destroyed data: a line-oriented absence probe scored a *present* phrase
    absent (the paper is hard-wrapped); a cadence exclusion filter matched nothing and printed a
    plausible identical number; and the promotion-trial re-scorer, run by *importing* the driver,

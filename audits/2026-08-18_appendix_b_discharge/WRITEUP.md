@@ -6,7 +6,8 @@
 row re-run under one as-of stamp, and the 35-item `V04_CONSOLIDATION_MANIFEST.md` pass completed with
 its one U-BLOCKING item resolved — but the discharge produced **two new bounds on §5.4's central
 figure, not just a new value**: the census's precision direction is now measured (13/83 hygiene-only,
-a floor over one mechanism) and the pooled rate is a mixture over a **non-stationary** monthly series
+a floor over one mechanism), a **sixth** defect surfaced (the numerator admits non-directories, fired
+by this pass's own audit-index row), and the pooled rate is a mixture over a **non-stationary** monthly series
 (36.7% → 57.8% → 80.0%), so the figure may not be compared across time. The circulation GO itself is
 the operator's and is not settled here.
 **Substrate:** no pipeline run. Docs and audit apparatus only. Census frame frozen at
@@ -15,7 +16,7 @@ the operator's and is not settled here.
 **Fired:** live — the audit-directory row's stated command was shown never to have produced its
 stated value (174 vs 175); the incidence figure moved 42% → 45% and gained a fifth instrument defect
 plus a non-stationarity bound; the V04 manifest's own item-count self-check was found reading 32
-against a documented 35; four current-value claims in the paper's prose were found stale after the
+against a documented 35; the census was found admitting `audits/README.md` as a numerator member; four current-value claims in the paper's prose were found stale after the
 table had been refreshed; and the promotion-test trial reproduced its predicted silent mistake on a
 live draw.
 
@@ -54,6 +55,7 @@ live draw.
 | `evidence/final_verification.txt` | the plan's verification checklist, run at close | census control 0; V04 self-checks 35 / 19W-5R-11U / 1-2-3-4-5-6; sweep 38 hits all classed; three checkers green; the one remaining gate red shown pre-existing |
 | `frame/all_dirs_raw.txt`, `all_dirs_glob.txt`, `all_dirs_nonempty.txt`, `all_dirs_nonempty_toplevel.txt`, `all_dirs_excl1.txt` | the population under each denominator rule and each exclusion rule | the both-ways denominator diff |
 | `frame/incident_bearing_raw.txt`, `incident_bearing_dirs.txt`, `incident_bearing_excl1.txt`, `non_census_dirs.txt`, `numerator_outside_nonempty.txt` | the numerator under each rule, its complement, and the emptiness assertion | 83/185, the partition check, and that no numerator member falls outside the non-empty population |
+| `frame/numerator_nonmembers.txt`, `frame/incident_bearing_prefilter.txt` | what the new membership filter drops, and the pre-filter numerator | instrument defect #6 |
 | `frame/nc_no_md.txt`, `frame/nc_keyword_nonmd.txt` | the named 4 and 12 directories behind the §5.4 sub-row | that row is a membership list, not just a count |
 | `WRITEUP.md` | this file | the evidence map itself — listed so the map is closed under its own rule |
 
@@ -85,14 +87,27 @@ because three `‡`-marked rows do not match its regex. Not this pass's defect; 
 The instruction *"re-run after ANY edit"* existed; the instruction *"and compare the output to 35"*
 did not, and that is the whole difference.
 
-**5. Three instruments this pass introduced committed the defect they were introduced to catch.**
+**5. The census admits things that are not directories — and this pass's own housekeeping fired it.**
+The command extracts the second path component, so a keyword hit in `audits/README.md` (the audit
+index, a file at the top level) enters the numerator as `README.md`: a member that is not a
+directory and cannot be in the denominator. The instrument never had a membership filter; it was
+correct only because that file had never used the census vocabulary. **Appending this pass's own
+index row put the words there.** The numerator read 84 and the frame's integrity line printed
+`partition_check: 186 == 185` — the *count* would have passed for one more audit; the partition
+check refused it. One `comm -12` against the population fixes it, and the published figure does not
+move, since `README.md` is not an audit directory. Latent for the instrument's whole life,
+activated by an unrelated edit, which is exactly why the guard belongs in the instrument.
+
+**6. Four instruments this pass introduced committed the defect they were introduced to catch.**
 A line-oriented absence probe scored a *present* control phrase absent (the paper is hard-wrapped).
 A cadence exclusion filter matched nothing, for a trailing-slash mismatch, and printed a plausible
 number identical to the unfiltered one. And the promotion-trial re-scorer, run by **importing** the
 driver, executed its module-level `sys.exit(main())`, made two fresh API calls, and **overwrote the
 raw responses the driver had persisted precisely so re-scoring would never need a re-run.** The
 persist-before-parse rule protects the write path and says nothing about who may import the writer.
-Full account and fixes: `TRIAL_promotion_test.md`.
+And the evidence-map coverage control reported 19 uncovered artifacts of which 15 were its own
+suffix-stripping bug. Full account and fixes: `TRIAL_promotion_test.md` and
+`evidence/final_verification.txt`.
 
 ## The §8.2 trial, in one paragraph
 

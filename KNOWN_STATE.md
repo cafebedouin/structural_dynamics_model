@@ -64,7 +64,16 @@ text (23 landed / 3 partial / 2 superseded / 7 not landed), its one U-BLOCKING i
    reporting prose (*"recorded rather than silently deleted"*), an author describing their own
    discipline rather than a defect they found. That is a **floor over one mechanism**; a second
    false-positive mode (bare *"was never"* in ordinary prose) is visible and unmeasured.
-3. **The pooled figure is a mixture over a non-stationary rate:** 36.7% (June) → 57.8% (July) →
+3. **A SIXTH instrument defect, and the fix belongs in the instrument.** The census pipes
+   `grep -rl ... audits/` into `cut -d/ -f2`, so a keyword hit in **`audits/README.md`** — the audit
+   index, a file at the top level — enters the numerator as `README.md`, a member that is not a
+   directory and cannot be in the denominator. There was never a membership filter; the instrument
+   was correct only because that file had never used the census vocabulary. **Appending an audit-index
+   row describing this very pass put the words there**, the numerator read 84, and the frame's
+   `partition_check` printed `186 == 185`. **Tripwire for anyone re-running the §5.4 census: the
+   numerator must be intersected with the directory population (`comm -12`), or the command returns
+   84 and one of its members is a file.** Published value unaffected: 83/185 stands.
+4. **The pooled figure is a mixture over a non-stationary rate:** 36.7% (June) → 57.8% (July) →
    80.0% (Aug 1–18). A pooled value moves when the denominator's age distribution shifts, with no
    correction and no change in the world. **Do not compare this figure across time.** Two readings
    (genuine phase change; lexicon adoption) are stated in §5.4 and neither is picked; the hygiene

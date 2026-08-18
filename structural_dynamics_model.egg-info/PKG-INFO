@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: structural-dynamics-model
+Version: 0.1.0
+Summary: Dependency-aware pipeline for structural dynamics analysis
+Author-email: cafebedouin <cafebedouin@gmail.com>
+Requires-Python: >=3.12
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: jinja2>=3.1.6
+Provides-Extra: stats
+Requires-Dist: scipy; extra == "stats"
+Requires-Dist: scikit-learn; extra == "stats"
+Requires-Dist: statsmodels; extra == "stats"
+Provides-Extra: ai
+Requires-Dist: google-genai; extra == "ai"
+Requires-Dist: anthropic; extra == "ai"
+Dynamic: license-file

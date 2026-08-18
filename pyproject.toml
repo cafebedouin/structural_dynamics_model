@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "structural-dynamics-model"
 version = "0.1.0"
@@ -5,14 +9,11 @@ description = "Dependency-aware pipeline for structural dynamics analysis"
 authors = [
     {name = "cafebedouin", email = "cafebedouin@gmail.com"}
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "pandas",
     "jinja2>=3.1.6",
 ]
-
-[tool.poetry]
-package-mode = false  # <--- Moved here
 
 [project.optional-dependencies]
 stats = [
@@ -24,3 +25,11 @@ ai = [
     "google-genai",
     "anthropic",
 ]
+
+# This repo is a collection of scripts run as `python3 python/foo.py`,
+# not an importable package. Declaring no packages/modules disables
+# setuptools' flat-layout auto-discovery, which otherwise tries to
+# package every top-level data directory (json/, blog/, outputs/, ...).
+[tool.setuptools]
+packages = []
+py-modules = []
