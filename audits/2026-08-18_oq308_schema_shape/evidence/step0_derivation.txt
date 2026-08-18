@@ -1,0 +1,53 @@
+rows  (ROLE=corpus-schema @ narrative_ontology) : 40
+heads (qualified heads, all five legs)          : 40
+
+DISAGREEMENT SET (row but no head): 0
+DISAGREEMENT SET (head but no row): 0
+
+=> TOTAL DISAGREEMENTS ON THE 40: 0
+
+REGISTER (repo-wide resolved declaration set): 63
+register members that are ROWLESS: 23
+    attribute/3   dynamic@narrative_ontology
+    constraint_claim/3   dynamic@narrative_ontology
+    coordination_vitality/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    coupling_profile/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    entity/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    event/4   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    founding_problem_corroboration_class/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    has_mandatrophy_declaration/1   dynamic@narrative_ontology
+    input_vector/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_alternative_rejected/3   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_beneficiary_class/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_fact/4   dynamic@scenario_manager
+    intent_norm_strength/3   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_power_change/3   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_resistance_level/4   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_suppression_level/4   dynamic@narrative_ontology,multifile@narrative_ontology
+    intent_viable_alternative/3   dynamic@narrative_ontology,multifile@narrative_ontology
+    measurement/2   dynamic@scenario_manager
+    recommendation/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    theater_ratio/2   multifile@narrative_ontology
+    update_authority/2   dynamic@narrative_ontology,multifile@narrative_ontology
+    veto_actor/1   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    veto_exposed/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+
+intent_fact/4 in register? True
+intent_fact/4 has an allowlist row of ANY role? False
+
+multi-module declared members: 15
+    affects_constraint/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    constraint_claim/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    constraint_metric/3   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    cs_axiom/3   multifile@cs_axiom_engine,multifile@narrative_ontology
+    cs_axiom_contradiction/2   multifile@cs_axiom_engine,multifile@narrative_ontology
+    cs_axiom_grounding/3   dynamic@narrative_ontology,multifile@cs_axiom_engine,multifile@narrative_ontology
+    cs_axiom_status/2   multifile@cs_axiom_engine,multifile@narrative_ontology
+    entity/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    event/4   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    interval/3   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    measurement/5   dynamic@data_repair,dynamic@narrative_ontology,multifile@narrative_ontology
+    omega_variable/3   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    recommendation/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    veto_actor/1   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
+    veto_exposed/2   dynamic@narrative_ontology,dynamic@scenario_manager,multifile@narrative_ontology
