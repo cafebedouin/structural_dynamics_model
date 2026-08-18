@@ -44,3 +44,65 @@ Every figure published in the paper re-computed against the FILTERED numerator:
 No published number moved. The membership filter removed a phantom member that had
 entered only after the audit-index row was appended, so the pre-filter figures used
 for the paper were already correct; the filter makes them REPRODUCIBLE by a re-runner.
+
+=== 8. POST-REVIEW VERIFICATION (2026-08-18) ===
+
+-- 8a. The pooled scalar is withdrawn from every CARRIAGE site.
+   Sites the document itself enumerates as carriers (:141-155): W2 row, Appendix B row, 2.A.
+   W2 row carries a pooled scalar? 1
+   2.A carries a pooled scalar?    0
+   abstract carries one?           0
+   (0 = withdrawn. Remaining 45% mentions in the file are all ABOUT the withdrawal:)
+186:  Re-running it gave 83/185 (45%) against 73/174 (42%) — the first movement on gro
+1189:pooled figure rose 42% → 45% while every underlying command stayed the same.
+1338:> the record, which is why it rose 42% → 45% on eight days of growth with no comm
+2757:| 5.4 | Pooled value, retained as a *computed* quantity that must not be published 
+
+-- 8b. The per-window rates are present and are the lead.
+| 2026-06 | 98 | 36 | **36.7%** |
+| 2026-07 | 45 | 26 | **57.8%** |
+| 2026-08 (1–18) | 20 | 16 | **80.0%** |
+| *pooled, all windows* | *185* | *83* | *44.9% — **not a reportable summary**, see below* |
+
+-- 8c. 7.4's table carries 11 numbered rows, and one names a gate as the catcher.
+   numbered rows in the 7.4 table: 11
+   rows whose catcher is a gate:    1
+   W3 row still says "none caught"? 0
+
+-- 8d. No pooled ratio is stated for the 8.2 trial.
+   occurrences of the withdrawn "1 of 2"/"0 of 2" framing in paper+audit: 0
+
+-- 8e (corrected TWICE, and the second correction is the reportable one).
+   [The correct count is six              ] naive-flatten=0  blockquote-stripped=1
+   [not a correction but a withdrawal     ] naive-flatten=1  blockquote-stripped=1
+   [survived three corrections            ] naive-flatten=3  blockquote-stripped=3
+
+   Two separate wrap traps, found one after the other in this pass's own closing check:
+   (1) the file is HARD-WRAPPED, so a line-oriented grep misses any phrase crossing a
+       newline. Fixed earlier in the pass by flattening whitespace.
+   (2) the phrase sits inside a BLOCKQUOTE, so every continuation line begins '> '.
+       Whitespace-flattening leaves those markers embedded mid-phrase, and the flattened
+       probe still misses. The naive flatten reports 0 for a phrase that is present.
+
+   STANDING FIX for any textual probe over this document: strip leading blockquote
+   markers BEFORE flattening whitespace. A probe that only flattens is still one-sided,
+   and its zero is a fact about the probe. This is the third and fourth instance of the
+   same class in one pass -- which is why the fix is written down here rather than
+   remembered.
+
+-- 8f. D.3 no longer lists 73/174 as settled.
+1
+
+-- 8g. Gate state.
+GATE: RED
+  ✗ gap surfaces     ModuleNotFoundError: No module named 'pandas'
+
+-- 8h. All three surviving "survived three corrections" mentions are QUOTED-AS-WITHDRAWN.
+   Checked with blockquote-stripped flattening; each occurrence sits inside a clause that
+   names it as the earlier, undercounted claim (blocker box; amendment bullet; 5.4's own
+   restated-count paragraph). None asserts it. Zero undeclared carriers.
+
+-- 8i. Final gate: 20 of 21 rows green. The one red is `gap surfaces`, a pre-existing
+   interpreter defect recorded at KNOWN_STATE 2026-08-18 (gate.sh calls bare `python3`;
+   the system interpreter has no pandas). It passes under the project virtualenv and is
+   untouched by this pass.
