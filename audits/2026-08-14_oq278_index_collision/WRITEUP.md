@@ -23,7 +23,7 @@ landed.
 |---|---|
 | `PREREGISTRATION.md` | R1a/R1b/R2/R4 branch conditions, registered **before** this sweep ran. Also carries two corrections to the plan's evidence. |
 | `python/pattern_citation_check.py` | the re-runnable sweep, **moved to `python/` 2026-08-14** when the gate mode was added (a scanner here plus one in `python/` would be Pattern 2 on this audit's own subject). `--sweep` writes the label set; `--check` is the gate row `vacated cites`; `--selftest` runs two known positives + one naturally-arising negative. |
-| `LABEL_SET.tsv` | **789** machine rows at the 2026-08-17 close, one per candidate, `mechanism_slug`-keyed; **48** are taxonomy citations. **The artifact OQ-294 consumes.** Regenerate with `--sweep`; byte-identical across runs. The census is a *point-in-time* count of a line-keyed sweep over tracked files — see §2.1 before citing any figure here as stable. |
+| `LABEL_SET.tsv` | **743** machine rows at the 2026-08-17 close, one per candidate, `mechanism_slug`-keyed; **48** are taxonomy citations. **The artifact OQ-294 consumes.** Regenerate with `--sweep`; byte-identical across runs. The census is a *point-in-time* count of a line-keyed sweep over tracked files — see §2.1 before citing any figure here as stable. |
 | §4 below | the hand-adjudicated table — every taxonomy-sense row read in context, not accepted on report. It is the **reference** the machine sweep is checked against, and it won that check (§3(c)). |
 
 ---
@@ -82,16 +82,16 @@ Counts at the final run:
 | namespace | rows (2026-08-14) | rows (2026-08-17 close) | how it was found |
 |---|---|---|---|
 | `oq277-frozen-prereg` | 339 | 339 | **not ambiguous**: a local defined namespace pinned verbatim by the md5-frozen prereg, precisely so the out-of-harness coder could not read it by reference |
-| `other-unclassified` | 112 | 135 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
-| `oq278-subject` | 99 | 115 | OQ-278's own body and this audit — subject, not citation |
-| `paper-publication` | 51 | 51 | the six paper versions PUBLISH the list; definitional restatements, not consumers |
+| `other-unclassified` | 112 | 138 | bare `P3`/`P4` with no taxonomy vocabulary anywhere near |
+| `oq278-subject` | 99 | 68 | OQ-278's own body and this audit — subject, not citation |
+| `paper-publication` | 51 | 49 | the six paper versions PUBLISH the list; definitional restatements, not consumers |
 | **`taxonomy-candidate`** | **49** | **48** | the actual citation population — §4 |
 | `analysis-enumeration` | 49 | 49 | essays, uke transform outputs, recon reports, protocols and analysis scripts numbering **their own** findings |
 | `decompose-manifest-candidate` | 18 | 18 | `"candidate_pattern": "Interpretive Capture (Pattern 3)"` — the DR engine's own vocabulary |
 | `prolog-variable` | 15 | 15 | a Prolog variable literally named `P3` |
 | `prolog-conflict-catalog` | 9 | 9 | `diagnostic_summary.pl:374`'s independent `P1`–`P10` EXPECTED CONFLICT CATALOG |
 | **`cwc-claim-row`** | **9** | **10** | **found as a false positive:** `CWC:P3` is a *concealment paper claim row*, guarded by `python/claim_cite_check.py` |
-| | **750** | **789** | |
+| | **750** | **743** | |
 
 ### 2.1 The published census was stale at its own commit — attributed by ROW IDENTITY, not by count
 
@@ -124,16 +124,19 @@ c06bcb26 -> 2026-08-17 pre-repair   (761 -> 805, net +44)
   No unattributed growth; the self-consumption shape is not present (and the fixpoint holds:
   two consecutive `--sweep` runs are byte-identical).
 
-2026-08-17 pre-repair -> close   (805 -> 789)
+2026-08-17 pre-repair -> close   (805 -> 743)
   the §4.6 repairs remove the nine `destructive-replace` index citations and the live
-  `bound-probe` ones; the residue is prose that names the old index on purpose.
+  `bound-probe` ones (the residue is prose that names the old index on purpose); and the
+  close COMPRESSED OQ-278's own 442-line entry, which alone took `oq278-subject` 115 -> 68.
+  That last step is the standing reason this figure is not a stable quantity: the sweep scans
+  the trackers, so compressing an entry or adding a KNOWN_STATE one moves it by tens of rows.
 ```
 
 **How the figures above were made honest, given that this file is itself scanned.** Publishing a
 census inside the corpus it counts has no fixed point *unless the last edit adds no countable
 token* — so: all prose landed first, then `--sweep`, then **only the numerals** were patched (a
 digit carries no `Pattern N`/`PN`), then `--sweep` again to confirm the row count had not moved.
-789 rows before the patch and 789 after, and two consecutive runs against a settled tree are
+743 rows before the patch and 743 after, and two consecutive runs against a settled tree are
 byte-identical. **No md5 is stamped here on purpose** — the label set is line-keyed, so editing
 this file moves its own rows and any content hash would invalidate itself as it was written,
 which is §3(d)'s corollary (*pin the PRODUCER, never the artifact's content*) applied to the very

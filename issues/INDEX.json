@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "b06963accb040f2298e0a54a02cae75b703e0dfb",
+    "store_version": "98d0996ad3231828b769e65930c03853d9e5d6e7",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-17T21:11:08"
+    "generated_at": "2026-08-17T21:21:03"
   },
-  "issues_sha": "37f782e81485eb55fef09f765f81343aaf9dcd16b78619c5203efd8f93f131f9",
+  "issues_sha": "113e3815bcd1ea261e8fd9942a6148b12e06d7c9525205de000996a7dca88576",
   "n_entries": 300,
   "active_token_set": [
     "investigating",
@@ -12,12 +12,12 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 150,
+    "resolved": 151,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
     "open": 112,
-    "partial": 7
+    "partial": 6
   },
   "active": [
     {
@@ -1383,21 +1383,6 @@
       ]
     },
     {
-      "id": "OQ-278",
-      "status": "partial",
-      "priority": 3,
-      "summary": "The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)",
-      "deps": [
-        "blocked_on_human oq278-p4-index-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-251",
-        "OQ-277",
-        "OQ-294"
-      ]
-    },
-    {
       "id": "OQ-279",
       "status": "open",
       "priority": 4,
@@ -1560,7 +1545,6 @@
       "priority": 4,
       "summary": "Does our own defect taxonomy reproduce against itself? (the symmetric half of the Wu question, split from OQ-278)",
       "deps": [
-        "blocked_on OQ-278",
         "splits_from OQ-278"
       ],
       "cross_refs": [],
@@ -4123,6 +4107,17 @@
       ]
     },
     {
+      "id": "OQ-278",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "The pattern taxonomy was INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision was in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277"
+      ]
+    },
+    {
       "id": "OQ-283",
       "status": "resolved",
       "priority": 1,
@@ -4156,9 +4151,7 @@
       "status": "mitigated",
       "priority": 2,
       "summary": "Two live papers now claim the same contribution: the derivation is in both `amnesiac_institution_v0_6.md` §2 and `concealment_without_a_concealer_v0_4.md` (Pattern 2 on the paper substrate)",
-      "deps": [
-        "blocked_on OQ-278"
-      ],
+      "deps": [],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-277",

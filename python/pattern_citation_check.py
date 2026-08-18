@@ -27,10 +27,10 @@ vacating that lived only in the paper for a day; the same ruling leaving `CLAUDE
 the old six; and the nine stale citations this sweep found. Operator, 2026-08-14: *three
 instances of one failure mode wants an instrument, not a fourth note.*
 
-This mode is that instrument, and it is DECLARATION-BASED, not repair-based — the nine stale
-citations cannot be repaired until OQ-278's R2, because "append the slug in place" is
-invalidated if the ruling renumbers. Green today; RED on a tenth; RED when one is silently
-repaired without retiring its manifest entry. Same shape as
+This mode is that instrument, and it is DECLARATION-BASED: RED on a NEW consumer, RED when one is
+silently repaired without retiring its manifest entry. It was built while the nine stale citations
+were unrepairable (R2 could still have renumbered, which invalidates "append the slug in place");
+they were repaired at the 2026-08-17 close and that block is now empty. Same shape as
 `doc_pattern_check.DECLARED_SPINE_LAG` and `prolog/axis_boundary_allowlist.txt`.
 
 **It has already earned its keep once.** Its first run DISAGREED with the hand adjudication in
@@ -59,11 +59,17 @@ positives — `CWC:P3` (a concealment claim row, guarded by `python/claim_cite_c
 decompose-manifest `candidate_pattern` (the DR engine's own vocabulary). The others:
 `prolog/diagnostic_summary.pl`'s independent EXPECTED CONFLICT CATALOG (P1-P10); `Priority:`
 levels; essay/protocol/analysis enumerations; a Prolog *variable* named `P3`; and the paper's
-own published table. A prohibition gate on bare `Pattern N` would run >50% false positives,
-which is why Step 0 namespaces citations (`CM-P4` / `BD-P4`) instead of forbidding them.
+own published table. A prohibition gate on bare `Pattern N` would run >50% false positives, which
+is why the interim rule namespaced citations instead of forbidding them. That freeze LIFTED at the
+2026-08-17 close (both documents now publish the same member at every index), but the overload did
+not go away: name the taxonomy when surrounding text does not.
 
 Two further populations are PINNED, not ambiguous, and must never be counted as citations: the
 md5-frozen OQ-277 prereg (which defines `P1`-`P6` verbatim) and OQ-278's own body.
+
+A CONSEQUENCE OF SCANNING THE TRACKERS: the row count is not a stable quantity. Compressing an
+`ISSUES.md` entry or adding a `KNOWN_STATE.md` one moves it by tens of rows. Any published census
+is a point-in-time figure — regenerate and compare, never assume unchanged.
 
 So this sweep classifies NAMESPACE first, then recovers the mechanism only inside the taxonomy
 namespace.
@@ -168,7 +174,7 @@ DISPLACED = {
         "consumers": {
             "AGENTS.md": 1,
             "ISSUES.md": 1,
-            "KNOWN_STATE.md": 6,
+            "KNOWN_STATE.md": 7,
             "audits/2026-08-17_oq251_natural_law_reachability/audit_log.md": 2,
             "docs/engine_handoff_5.md": 1,
             "docs/technical/swipl_load_path_and_probe_gotchas.md": 1,

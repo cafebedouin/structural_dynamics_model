@@ -45,6 +45,68 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-17 — [tripwire] OQ-278 RESOLVED — one taxonomy, seven members at eight indices; the citation freeze is LIFTED, and renumbering a member is a CONSUMER SWEEP
+**Files:** CLAUDE.md, docs/technical/build_discipline.md, AGENTS.md, README.md, python/doc_pattern_check.py, python/pattern_citation_check.py, python/bound_selector_check.py, docs/technical/doc_pattern_check.md, scripts/gate.sh, docs/amnesiac_institution/amnesiac_institution_v0_6.md, ISSUES.md, audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md
+**Tier:** tripwire
+
+**THE RULING.** R2 = C2, R1b′ executed. `CLAUDE.md` and `docs/technical/build_discipline.md` now
+publish the same member at the same index: 1 produced-but-not-consumed, 2
+one-canonical-thing-became-two, **3 VACANT (never reused)**, 4 fabricated-default, 5
+absence-satisfies-the-gate, 6 success-shaped-absorption, 7 bound-probe-bypasses-clause-order, 8
+recap-as-witness-substitution. **Ground: read-site weight** — nine of eleven publishing sites are
+internal to the detail doc; the two on the other side include the always-loaded file. The 5:1
+edit-count measure is explicitly not the ground. Symmetry is **unified indices, asymmetric depth**:
+a document may carry a member as a pointer entry, but **every pointer must state the TELL, not the
+member** — a name-drop is indistinguishable from absence at the read site, which is exactly what
+the pre-repair "bound-probe" mention was. The interim `CM-Pn`/`BD-Pn` freeze is **lifted**;
+`Pattern N`/`PN` is still seven-way overloaded outside this taxonomy, so name the taxonomy when
+context does not.
+
+**TRIPWIRE 1 — RENUMBERING A MEMBER IS A CONSUMER SWEEP, NOT AN EDIT, AND NOTHING GOES RED IF YOU
+SKIP IT.** Moving `bound-probe` off index 3 strands every citation that resolved *correctly* to
+`BD-P3` — a second stale class, created by this ruling rather than by the 2026-08-11 vacating.
+Declare the population in `pattern_citation_check.DISPLACED` **before** the move (gate row
+`displaced cites`, renamed from `vacated cites`; one manifest block per displaced member, carrying
+the STATE that says why its citations are stale, because the state decides the repair). Do it
+first, not after: mechanism recovery is what distinguishes those citations and it gets harder once
+index 3 resolves to `bound-probe` in **neither** document. The 2026-08-11 vacating skipped this and
+stranded nine pointers — the third time repairing this taxonomy committed the defect it
+instantiates; declaring first is what kept this close from being the fourth.
+
+**TRIPWIRE 2 — A SELF-COUNTING DOCUMENT IS CORRECT ONLY AT A FIXED POINT, AND REACHING ONE
+REQUIRES THE LAST WRITE TO BE TOKEN-FREE.** The audit's `WRITEUP.md` publishes a census of a
+line-keyed sweep that scans `WRITEUP.md`. Its published 750 rows was **stale at its own commit**
+(`fd73ec9e`'s own TSV held 755; `c06bcb26` took it to 761 untouched) — not degraded by later
+drift, which is the more forgiving story the plan assumed. Method that works: land all prose,
+`--sweep`, patch **only the numerals** (a digit carries no countable token), `--sweep` again and
+confirm the count did not move. And **stamp no md5 of the artifact inside it** — the label set is
+line-keyed, so a content hash invalidates itself as it is written, which is the audit's own
+*pin the PRODUCER, never the artifact's content* corollary applied to the file that recorded it.
+
+**TRIPWIRE 3 — A POSITIVE CONTROL PINNED TO A SITE ON ITS OWN INSTRUMENT'S REPAIR LIST RETIRES
+ITSELF THE DAY THE INSTRUMENT WORKS.** `pattern_citation_check`'s second control was anchored on
+`docs/design/design_gaps.md`'s cross-wired citation. Repairing that citation turned the control RED
+and blocked the sweep from writing a label set at all. It was **re-anchored, not deleted**, onto
+artifacts nothing is licensed to edit — a dated audit finding (`fabricated-default`), a frozen
+`_BEFORE` snapshot (`recap-as-witness`), a completed audit log (`bound-probe`) — one per
+recoverable mechanism, strictly more coverage than the two it replaced. Loud, so it stays history
+rather than a promotion, but worth knowing before anchoring the next control.
+
+**Also landed, and checkable rather than remembered.** `DECLARED_COLLISIONS` and
+`DECLARED_SPINE_LAG` are now **EMPTY — the strong state**, nothing exempted, so any divergence is a
+new fork and reds immediately; two controls that could only be forced by contradicting a live
+declaration are now forced by a **synthetic manifest** rather than dropped (selftest 6/6 → 7/7).
+The discrimination record was re-run on the new 8-slot shape: `--pairwise 220739b8` FIRES,
+`--pairwise 4f623017` DECLINES. The record repair walked all four §4.4 "wrong labels" against the
+new numbering and **all four are retroactively correct** — the class emptied itself; the principle
+that decided the rest is *claims are point-in-time, pointers are navigation*. `bound_selector_check`
+no longer prints `BD-P3` at users. R4 applied: `amnesiac_institution_v0_6.md` §5.1 amended and a
+new §5.2.1 records the delay's measured cost. Full account:
+`audits/2026-08-14_oq278_index_collision/` (`WRITEUP.md` §7, `PREREGISTRATION.md` AMENDMENT 3);
+ISSUES OQ-278 resolved; OQ-294 and OQ-287 unblocked.
+
+---
+
 ## 2026-08-17 — [tripwire] OQ-251 RESOLVED: maxwell's `natural_law` loss was `8b5a34b8`, NOT OQ-70 — a single-variable isolation over a 126-commit span cannot name a commit
 **Files:** prolog/narrative_ontology.pl, prolog/signature_detection.pl, prolog/tests/test_oq113_dead_natural_law.pl, prolog/drl_core.pl, prolog/routing_sink.pl, python/container_typology_analysis.py, python/extract_corpus_data.py, python/linter.py, audits/2026-07-25_oq66_nlwb_filter_cutover/GATE2_REWITNESS.md, ISSUES.md
 **Tier:** tripwire
@@ -411,9 +473,20 @@ fix for a claim that should not be load-bearing is re-running it. Provenance:
 
 ---
 
-## 2026-08-14 — [tripwire] Pattern indices are NAMESPACED (`CM-P4`/`BD-P4`) until OQ-278 rules; a bare `Pattern 3`/`P4` is UNRESOLVED, and canonicity is now gate-checked
-**Files:** CLAUDE.md, docs/technical/build_discipline.md, python/doc_pattern_check.py, docs/technical/doc_pattern_check.md, scripts/gate.sh, ISSUES.md, audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md, audits/2026-08-14_oq278_index_collision/sweep_pattern_citations.py
-**Tier:** tripwire
+## 2026-08-14 — [correction-key] The interim `CM-P4`/`BD-P4` namespacing freeze (SUPERSEDED 2026-08-17), and the corrections to OQ-278's own figures
+**Files:** audits/2026-08-14_oq278_index_collision/WRITEUP.md, audits/2026-08-14_oq278_index_collision/PREREGISTRATION.md
+**Tier:** correction-key
+
+> **SUPERSEDED 2026-08-17 — DO NOT FOLLOW THE NAMESPACING INSTRUCTION BELOW.** OQ-278 ruled: both
+> documents publish the same member at every index and the freeze is lifted, so writing `CM-P4` /
+> `BD-P4` now asserts a distinction that does not exist. See the 2026-08-17 entry *"OQ-278
+> RESOLVED — one taxonomy…"*. **Retiered `tripwire` → `correction-key` and its `Files:` line
+> narrowed to the audit artifacts on purpose:** `Tier:` is a ROUTING decision, and leaving this
+> entry as a `tripwire` naming `CLAUDE.md` would keep the `PreToolUse` hook delivering a retired
+> instruction to every future editor of that file. What survives here is the *figure* corrections
+> and the archaeology, which is why it is kept rather than deleted. Two of its own numbers have
+> since moved: the overload count is **seven**, not six, and the published census figures are
+> corrected in the audit's §2.1.
 
 **The silent mistake this prevents:** writing `Pattern 4` in a new document, or reading one in
 an old one, as if it named a single mechanism. `CLAUDE.md` and `docs/technical/build_discipline.md`

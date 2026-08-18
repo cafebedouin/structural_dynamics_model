@@ -497,3 +497,92 @@ always-loaded file — which is exactly why the ground is read-site weight and n
 | **R4** | falls out of R1a + R1b′ — the paper gains two members and a vacant 3; applied at Step 5 |
 
 Steps 4 and 5 remain blocked on R2. Nothing here is a repair.
+
+---
+
+# AMENDMENT 3 — 2026-08-17 (R2 RULED; R4 applied; the entry closes)
+
+*Appended, never rewritten. Numbered 3 because AMENDMENT 2 already exists — the execution plan
+called this one "AMENDMENT 2", which was written against the pre-`c06bcb26` state of this file.
+Recorded rather than silently renumbered.*
+
+## A3.1 — R2 RULED: C2
+
+**`fabricated-default` keeps index 4; `recap-as-witness` renumbers to 8.** The operator lean in
+A2.4 is now the ruling, on the ground A2.4 corrected it to.
+
+**GROUND: read-site weight.** Nine of the eleven publishing sites are internal to
+`build_discipline.md`, read on demand; the two on the other side include `CLAUDE.md`, read by
+every instance on load. **The 5:1 edit-count measure is explicitly NOT the ground** — it was
+corrected away in A1.3/A2.4 and reinstating it here would undo that correction.
+
+**Two corroborations, filed as corroboration and NOT as criteria.** Recording either as a
+membership criterion would repeat the R1b defect diagnosed in A1.1 — inventing the discriminator
+at ruling time:
+
+1. `fabricated-default` is the member with worked mechanism text and `recap-as-witness` has none
+   anywhere, so C2 does not put the specified member at the higher index.
+2. C2 makes `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md:23` **retroactively correct**
+   rather than a repair target — and on execution the whole §4.4 wrong-label class emptied the
+   same way, all four rows re-adjudicated in context.
+
+Neither is a membership criterion written down in `build_discipline.md`.
+
+## A3.2 — SYMMETRY: unified indices, asymmetric depth
+
+Every member occupies the same index in **both** documents; a document may carry a member as a
+**pointer entry** rather than a worked section. Index-only symmetry was rejected because its cost
+is measured, not hypothetical: under index-only, C2 leaves `CLAUDE.md` with index 3 vacant *and*
+index 4 occupied only in the detail doc — which is the configuration that produced the 2026-08-17
+bound-selector incident, where the rule was published in one document, named-but-not-taught in the
+other, and an executor ran the exact query the worked example warns about.
+
+**Binding condition on every pointer entry: state the TELL, not the member.** A pointer reading
+`4 — fabricated default (see build_discipline.md:686)` degrades to index-only with extra steps —
+precisely what the pre-repair "bound-probe" mention was, and it was indistinguishable from absence
+at the read site. The form generalised is the interim BD-P3 repair: state the shape, why it
+misfires, the rule, and the asymmetry that says when you need not re-run.
+
+## A3.3 — R4 APPLIED
+
+`amnesiac_institution_v0_6.md` §5.1 amended to the 7-member / 8-slot set with two new dated
+instances; §5.2's declination of index 4 replaced by new **§5.2.1**, which names this audit
+directory and states the delay's cost as measured. Receiver check re-run immediately before the
+edit (no reachable agents; the sole pin into the paper is below the amended region; every hunk at
+or below line 886 is line-count-preserving) rather than relied on from the plan.
+
+## A3.4 — What the execution added that was NOT pre-registered
+
+Stated because unregistered additions are exactly what a pre-registration exists to expose:
+
+1. **A commit 0.** Executing R1b′ strands the citations that resolved *correctly* to `BD-P3` — a
+   second stale class, created by this ruling rather than by the 2026-08-11 one. Its population was
+   declared **before** the move, because mechanism recovery is what distinguishes those citations
+   and it gets harder once index 3 resolves to `bound-probe` in neither document. Not renumbering
+   without sweeping is the whole content of it: the vacating did that and it is this entry's third
+   self-inflicted instance.
+2. **Both members relocated in `CLAUDE.md`, not just renumbered in place.** The priced footprint
+   said "the `:598` block gains index 7"; leaving it after the spine paragraph would have put
+   members 7 and 8 *after* the summary that generalises over them. They were moved to sit after
+   member 6 so the list reads 1–8 contiguously.
+3. **Two checker controls re-forced through a synthetic manifest.** With `DECLARED_COLLISIONS` and
+   `DECLARED_SPINE_LAG` retired to empty, the `UNDECLARED RESOLUTION` shapes can no longer be
+   forced by mutating a document. Dropping them would have retired two controls for a reason
+   unrelated to whether their code paths work.
+4. **The sweep's second positive control re-anchored.** It was pinned to `design_gaps.md` — a site
+   on its own instrument's repair list — and went red the day the repair landed. All three positives
+   now sit on artifacts nothing is licensed to edit, one per recoverable mechanism.
+5. **The census reconciled by row identity and driven to a fixed point.** Registered as a check;
+   what it found was not registered — the published 750 was stale *at its own commit* (`fd73ec9e`
+   held 755), not by later drift.
+
+## A3.5 — Status
+
+| ruling | state |
+|---|---|
+| **R1a** | RULED — A1, peer member (AMENDMENT 1) |
+| **R1b′** | RULED — B1′, peer member, index 7 (AMENDMENT 2); **executed 2026-08-17** |
+| **R2** | **RULED — C2, on read-site weight** |
+| **R4** | **APPLIED** |
+
+Steps 4 and 5 are executed. OQ-278 closes; OQ-294 and OQ-287 are unblocked.

@@ -11413,447 +11413,52 @@ frozen document and must not be edited now that results exist.
 
 ---
 
-## OQ-278 — The pattern taxonomy is INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision is in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)
+## OQ-278 — The pattern taxonomy was INDEX-COLLIDED: CLAUDE.md's six vs build_discipline.md's six — and the collision was in the INCIDENT RECORD, not only in the two specifications (a worked P2 instance on the discipline's own substrate)
 
-**Ω-type:** Ω_C — which set is canonical is a design ruling with no seat-free fact
-(both sets are internally coherent, both have real dated exemplars, and they sort the
-phenomenon on different axes). The *residue measurement* that feeds the ruling is Ω_E.
+**Ω-type:** Ω_C — which set is canonical was a design ruling with no seat-free fact; the residue
+measurement that fed it was Ω_E.
 
-**Status:** partial — **index 3 SETTLED 2026-08-11 (operator ruling: DEMOTE); index 4 still
-collided.** The entry stays full-bodied because the live half is the P4 collision.
+**Status:** resolved — index 3 DEMOTED-AND-VACATED 2026-08-11; **index 4 ruled C2 and the whole
+set executed 2026-08-17.**
 **Priority:** 3
-**Deps:** blocked_on_human oq278-p4-index-ruling
 
-**EVIDENCE 2026-08-17 — the vacated index has a MEASURED COST, and it is on the index already
-ruled settled.** The index-3 demotion left `CLAUDE.md` with an empty grave at 3 while
-`build_discipline.md` continues to publish **BD-P3 (bound-probe bypasses clause-order)** there. The
-ruling settled *which mechanism owns the number*; it did not ask **whether the always-loaded file
-still teaches the mechanism that lost it.** It does not. `CLAUDE.md`'s only occurrence of
-"bound-probe" was inside this entry's own CITATION FREEZE — naming the collision, never stating the
-rule.
+**Origin:** Surfaced 2026-08-10 while designing OQ-277, when "which set do the coders label
+against?" had no answer. The two lists diverged at `220739b8` (2026-05-30) — the exact commit
+where their member COUNTS converged — and went unnoticed for 151 commits touching either file.
 
-**Consequence, witnessed on an instance rather than argued:** the OQ-251 executor, working with
-`CLAUDE.md` auto-loaded, ran `constraint_signature(C, ambiguous)` with the selecting argument
-BOUND, got **276** where the real cascade gives **0**, and published a denominator gloss that
-concealed a larger finding (**67% of kernel_v1 signatures resolve to `unknown`**). It was caught by
-operator challenge, not by the discipline. BD-P3 has documented that exact query — same predicate,
-same `natural_law` example — since **2026-05-30**. A rule two months old, in the detail doc, on a
-vacated index, did not reach the instance that needed it.
+**RULING (operator, 2026-08-14/17).** R1a = A1 and R1b′ = B1′: `fabricated-default` and
+`bound-probe` are both peer members. R2 = **C2** — index 4 is `fabricated-default`,
+`recap-as-witness` moves to 8, `bound-probe` to 7. **Ground: read-site weight** (nine of eleven
+publishing sites are internal to the detail doc; the two on the other side include the
+always-loaded file). The 5:1 edit count is explicitly NOT the ground. Symmetry = **unified
+indices, asymmetric depth**: same member at the same index in both documents, a document may
+carry one as a pointer entry — but **every pointer must state the TELL, not the member**, because
+a name-drop is indistinguishable from absence at the read site. Resulting set: 1
+produced-but-not-consumed, 2 one-canonical-thing-became-two, **3 VACANT (never reused)**, 4
+fabricated-default, 5 absence-satisfies-the-gate, 6 success-shaped-absorption, 7
+bound-probe-bypasses-clause-order, 8 recap-as-witness-substitution.
 
-**What this contributes to the P4 ruling (the live half):** it is a data point that
-*vacate-and-leave-empty* is not cost-free even when the demotion itself is right. The index-3
-demotion was correct on its four converging lines — but "the number is retired" and "the mechanism
-that held the number is still reachable from the always-loaded file" are separate questions, and
-only the first was asked. **Whatever P4 is ruled, the ruling should state where each displaced
-mechanism is taught, not only which index it loses.** Interim repair already landed (2026-08-17):
-BD-P3 promoted into `CLAUDE.md` as a **NAMED, explicitly unnumbered** rule, which sidesteps this
-freeze entirely rather than pre-empting it — if P4's ruling later renumbers, a named rule needs no
-migration. Witness: `audits/2026-08-17_oq251_natural_law_reachability/` (addendum 3),
-KNOWN_STATE 2026-08-17 TRIPWIRE 5.
+**STILL-OPERATIVE, kept per the footer's exception clause:**
+- **Canonicity is a CHECKED FACT, not a memory.** `python3 python/doc_pattern_check.py --check`
+  (gate row `doc patterns`) compares names **per index, never totals** — counts converged at the
+  divergence commit, so any cardinality check reads green forever. Both allowlists are now EMPTY,
+  which is the strong state. Never store the pattern NAMES in either checker.
+- **Renumbering a member is a consumer sweep, not an edit.** Declare its citations in
+  `pattern_citation_check.DISPLACED` **before** the move (gate row `displaced cites`); once the
+  old index resolves to it in neither document the distinguishing evidence is gone. The
+  2026-08-11 vacating skipped this and stranded nine pointers — the third time repairing this
+  taxonomy committed the defect it instantiates.
+- **`Pattern N`/`PN` remains seven-way overloaded outside this taxonomy**, so name the taxonomy
+  when context does not. A prohibition gate is not buildable at that false-positive rate. A
+  pre-2026-08-17 `Pattern 3`/`P3` means the MECHANISM: `bound-probe` (now 7) or the vacated
+  `destructive-replace`.
 
-**Bundle with OQ-277 DISSOLVED 2026-08-12** at that OQ's close: this entry's live half (the P4
-index collision) never depended on the cross-coding. **The successor question lands here rather
-than as a new entry** — *does our own six-pattern taxonomy reproduce against itself?* That is the
-symmetric half of what the Wu letter asked (`docs/comparing_incident_taxonomies.md` §3, §7): 177
-audit directories carry pattern assignments, it needs nobody's cooperation, it is runnable without a
-prereg-scale spend, and it is the honest RQ2 result now that the cross-coding is retired. It sits
-with the taxonomy work because splitting one question across three entries is how the index
-collision happened in the first place.
-
-**RULING RECEIVED — INDEX 3 DEMOTED, and it reached the trackers LATE (recorded 2026-08-12).**
-*Destructive-replace without proof* is demoted from a defect pattern to a **witness rule**; the
-index is **vacated and never reused**. Four converging lines (`amnesiac_institution_v0_6.md` §5.2):
-no mechanism text in `build_discipline.md`; no dated exemplar in any version, alone among the six;
-a shared index; and **zero instances on a search built to find one** (`d0c3c5fb`, the OQ-278
-failure-shape sweep). The rule survives intact as a discipline — the question was which layer it
-lives at, and the evidence says *a thing one does*, not *a way systems fail silently*.
-
-**This answers the scope question the sweep deliberately left open, and on better grounds than the
-sweep had.** The sweep asked whether *pre-discipline* delete→restore episodes count, and declined to
-rule. The ruling makes the question moot: they are excluded on **independent** grounds — *a deletion
-that gets undone announced itself; the restoration IS the notice* — so a loud failure is not a member
-of a taxonomy of absences-that-present-as-presences, whatever its date. Scoping to the
-post-discipline window would have been circular; this argument is not. Per
-`amnesiac_institution_v0_6.md` §2.9, the account's exclusion and the operator's ruling were reached
-**independently and before the account was written**, which makes them mutually corroborating.
-The `oq278-p3-prediscipline-scope-ruling` dep is therefore DISCHARGED, not deferred.
-
-**THE DIVERGENCE THIS EXPOSED, which is the entry's own subject one level up.** The ruling lived
-**only in the paper** for a day: `CLAUDE.md` — the always-loaded file every instance reads — went on
-publishing six patterns with P3 as a defect shape, while the paper published five with index 3
-deliberately empty. Two documents, one taxonomy, no queryable fact of canonicity, both internally
-coherent: **Pattern 2, committed by the ruling that resolved a Pattern-2 instance.** Repaired
-2026-08-12 (`CLAUDE.md:492` now carries the vacated-index marker + the surviving witness rule, and
-the §145 pointer reads "five live, index 3 vacated"). The general lesson is the standing one: **a
-ruling recorded in a paper is not recorded** — trackers and always-loaded rules are separate read
-sites and a ruling has to land at each.
-
-**WHAT THE RULING DID NOT SETTLE, flagged because vacating index 3 changed the collision state and
-nobody stated the consequence.** `build_discipline.md`'s Pattern 3 is *Bound-probe bypasses
-clause-order* — a different mechanism, with worked text, untouched by this ruling. With CLAUDE.md's
-claimant vacated there is now exactly **one** claimant at index 3, so "Pattern 3" arguably resolves
-unambiguously to bound-probe. **That is an inference from the ruling, not part of it**, and it is
-left un-acted: a bare `Pattern 3` citation dated before 2026-08-11 is still ambiguous as to which
-document its author had open, and the dating rule below still applies. Needs one line from the
-operator: *does "Pattern 3" now name bound-probe, or does index 3 read as vacant in both documents?*
-**Origin:** Surfaced 2026-08-10 while designing OQ-277, when the question "which set do
-we code against?" forced a comparison nobody had run. **Fired: live at plan stage** — the
-fork was found by the experiment's design, not by the experiment.
-
-**The fork, witnessed 2026-08-10** (`grep -nE '^#{2,4} ' docs/technical/build_discipline.md`
-against CLAUDE.md → Build Discipline):
-
-| # | CLAUDE.md (the set v0.3 §4.3 publishes) | `docs/technical/build_discipline.md` |
-|---|---|---|
-| P1 | Produced-but-not-consumed | Produced-but-not-consumed — SHARED |
-| P2 | One-canonical-thing-became-two | One-canonical-thing-became-two — SHARED |
-| **P3** | **Destructive-replace without proof (the faith merge)** | **Bound-probe bypasses clause-order (`build_discipline.md:486`)** |
-| **P4** | **Recap-as-witness substitution** | **Fabricated default (`build_discipline.md:571`)** |
-| P5 | Absence satisfies the gate | Absence satisfies the gate — SHARED |
-| P6 | Success-shaped absorption | Success-shaped absorption — SHARED |
-
-Four shared, **two disjoint per side**, all four disjoint members carrying real exemplars.
-The always-loaded file and the file it points to as "the full patterns" have disagreed on
-one third of the taxonomy, undetected, for as long as both have existed. **This is Pattern 2
-(one-canonical-thing-became-two) instantiated on the pattern list itself: no queryable fact
-of canonicity, and both copies "parse" — each reads as a complete, coherent six.** It is the
-sharpest available instance of the paper's own thesis and is queued for v0.4 §4.4 per
-operator.
-
-**Operator ruling received (binding on OQ-277):** code against **the published six**
-(CLAUDE.md / v0.3 §4.3), with the definitions frozen VERBATIM in the prereg with file +
-commit hash. Rationale: the coder is out-of-harness and takes the taxonomy from the prompt,
-so a by-reference definition would leave it unpinned in exactly the way that caused the fork.
-**This ruling scopes the experiment only — it does not resolve the fork.**
-
-**Evidence feed (pre-registered, from OQ-277).** The fork-residue row is a SECOND CODING
-PASS, its own instrument (operator ruling: option b). Post-hoc, run by the adjudication
-phase: fresh out-of-harness SDK calls whose prompt carries ONLY the two orphaned
-`build_discipline.md` definitions (bound-probe-bypasses-clause-order; fabricated-default) +
-the unit — never the published six, never the first-pass label, never Wu's classes. Verdict
-vocabulary: matches-BD-P3 / matches-BD-P4 / neither. It owes everything a coding pass owes:
-k=3 unanimity; its own churn report; its own anchor (one agreed fork-expressible unit — the
-`classify_at_time` Supp=0.5 fabricated-default exemplar, redacted — interleaved, which the
-pass must recover, else the fork-residue row is VOID, not the experiment); its own leak-grep
-(banned: published-six lexicon, Wu lexicon) with a planted-leak control.
-
-**Read in BOTH directions, both branches pre-registered:** near-zero fork-expressible
-residue ⇒ the orphaned BD patterns are not load-bearing (argues resolving the fork toward the
-published set); substantial residue ⇒ §4.3 under-covers. **Wu incidents routing to BD's
-orphaned P3/P4 is independent evidence the orphans are real** — a corpus with no stake in our
-fork. Threshold: ≥3 unanimous fork-expressible items across both directions = "substantial."
-
-**Power block (BLOCKING amendment — two serial unanimity gates must not manufacture the
-null).** The pass sits behind first-pass unanimity and adds its own; filtering can produce
-near-zero residue with the orphans present, and the near-zero branch would then retire two
-witnessed patterns on a P5-shaped null — inside the experiment that studies P5. Guards:
-(a) **input strata** — the pass receives BOTH first-pass-unanimous "other" items AND
-first-pass-UNSTABLE items where any redraw returned "other" (the churning-between-other-and-P3
-item is the strongest residue candidate); coded identically, reported separately; the ≥3
-threshold counts only the unanimous stratum, the unstable stratum is supporting data (and had
-exclusion been chosen instead, that would be a declared blind spot — it is not excluded).
-(b) **Power floor** — if fewer than 5 unanimous-"other" items reach the pass, the near-zero
-branch is UNDERPOWERED and ships as typed OPEN, never as evidence for fork resolution.
-(c) **Pass churn beside residue** — the pass's own churn rate is reported next to the residue
-count; pass churn >1/3 ⇒ row OPEN. (d) **Narrow license** — recovering BD's own published
-exemplar shows the pass is not broken, never that it detects orphan patterns in unfamiliar
-material; the writeup may not over-read the anchor.
-
----
-
-### RESTATED 2026-08-11 — it is an INDEX COLLISION, and its blast radius is wider than this entry assumed
-
-Two corrections, both raising the stakes. Neither retracts the fork table above; both change what
-resolving it means and where the damage already is.
-
-**1. Collision, not fork (`RULING_2026-08-11_freeze_scope.md` §2.6).** Two patterns sharing an index
-is not one pattern that diverged. **A fork resolves by choosing a branch; a collision resolves by
-RENUMBERING** — because both members may be real and merely mis-addressed.
-`bound-probe-bypasses-clause-order` and `destructive-replace` are plausibly both genuine mechanisms,
-so "resolve toward the published set" would **retire a real pattern for the wrong reason.** The
-resolution options below are restated on that basis. Note also §2.5's finding: the published P3
-branch (*destructive-replace*) has **no dated record of the pattern FIRING** anywhere — the only
-dated record, `audits/2026-06-12_oq106_retire/`, records the discipline being *followed*. The branch
-that won publication is the one with the least behind it in the operational record, which suggests
-the collision was not divergence under pressure but **an index reused because nothing was firmly
-attached to it.**
-
-**2. THIRD INDEPENDENT SIGHTING — and the first that produces a WRONG LABEL rather than an
-ambiguous pointer.** Found 2026-08-11 while authoring OQ-277's direction-(ii) redaction twins, from
-outside any instrument built to measure the collision:
-
-> "**Build-discipline spine, twice over:** the 0.0 fallback is a fabricated default
-> **(Pattern 4)** that made a failed computation indistinguishable from a flat result at every read
-> site" — `audits/2026-06-10_oq93_grid_viability_probe/FINDINGS.md:22-23`
-
-`build_discipline.md`'s Pattern 4 **is** *fabricated default*. `CLAUDE.md`'s published P4 is
-*Recap-as-witness substitution*. So a source document in our own corpus, **written before the
-collision was known, attributes its own incident to the orphan branch's numbering** — and under the
-published six that index names a different pattern than the incident instantiates.
-
-The three sightings, ordered by severity, because they are not the same event:
-
-| # | sighting | member | what it shows |
-|---|---|---|---|
-| 1 | the two specifications disagree (2026-08-10, this entry's origin) | P3, P4 | the collision exists |
-| 2 | `AUDIT.md:144` "Build-Discipline Pattern-1" (§Q.4) | P1 — **shared** | incident records cite indices *by the orphan-bearing document's name*; the label happens to be unambiguous |
-| 3 | `FINDINGS.md:23` "fabricated default (Pattern 4)" | P4 — **disjoint** | an incident record carries a label that is **wrong under the published set** |
-
-**The blast radius this entry assumed was too small.** The collision is not confined to the two
-specification documents. It is in the **incident record**, which means: **any historical reference
-to "Pattern 3" or "Pattern 4" anywhere in this repository is AMBIGUOUS until dated against the
-collision** — and, worse, may be *confidently wrong* rather than merely unclear, because the author
-had a coherent six in view and simply had the other one. Documents, audits, KNOWN_STATE entries and
-commit messages are all in scope. A reader cannot resolve such a reference from the index alone;
-they must recover which document the author was reading.
-
-**Immediate consequence, already applied (OQ-277).** Unit `05`'s unredacted twin arm restores
-`fabricated default` and `success-shaped zero` but **OMITS the bare `(Pattern 4)` index**, with the
-omission declared in place and machine-checked absent
-(`controls/redaction_twins_direction_ii.json` → `declared_omission`). Restoring it would not
-un-redact vocabulary — it would inject a **wrong label** into a control whose entire job is to
-measure what redaction costs. Operator ruling, 2026-08-11.
-
-**3. FOURTH SIGHTING — and it removes an assumption the resolution options were resting on.**
-Found 2026-08-11 at the (iii′) extraction hand-back, from outside any instrument built to measure
-the collision (the extractor hit it while writing a P4 unit and reported it unprompted; re-checked
-independently with controls).
-
-**CLAUDE.md's published P3 and P4 have no worked section in `build_discipline.md` at all**, while
-the orphan members holding those indices do:
-
-| index | `CLAUDE.md` (published six) | worked section in `build_discipline.md`? | `build_discipline.md`'s own member at that index |
-|---|---|---|---|
-| P3 | destructive-replace / the faith merge | **NO — and 0 occurrences of the term anywhere in the file** | `## Pattern 3 — Bound-probe bypasses clause-order` (:486) |
-| P4 | recap-as-witness substitution | **NO worked section**; 4 prose mentions, none a heading | `## Pattern 4: Fabricated default` (:571) |
-
-*Controls, because this is a false-absence-shaped claim:* the heading probe demonstrably matches —
-it returns `## Pattern 3` and `## Pattern 4` from the same file — so "no heading" is a measurement,
-not a failed search; and `recap-as-witness` returns 4 hits as prose, so the string probe reads the
-file. The published P3's **0** is therefore a genuine total absence, not an unworked mention.
-
-**What this changes.** §2.5 recorded that the published P3 has no dated record of *firing*. This is
-the stronger fact one level up: **it has no operational specification either.** The two
-published-only members are not symmetric — P4 has an incident named in `CLAUDE.md` and no mechanism
-text; **P3 has neither.** So of the six published patterns, one is a name and an index with no
-mechanism document behind it anywhere in the repository.
-
-**And it answers a question that had been open since the (iii′) P3 row was written.** That row's
-entry is `no members — uncalibrated`. The reason is now mechanical rather than an accident of
-sampling: **the published P3 has no mechanism text to extract an exemplar from.** Not "nobody got
-around to it" — there is nothing to extract.
-
-**What resolution would change — RESTATED as a collision, and now constrained by sighting 4.**
-Not "which branch wins" but **which member keeps the index and which is renumbered**, with both
-retained unless one is independently shown not to be a real mechanism. **Renumbering assumes both
-members are specified, and one of them is not** — the published P3 has no mechanism document, so
-"renumber the orphans to P7/P8 and keep all eight" would mint an index for a pattern that has never
-been operationally defined. The option set therefore gains a prior question, which must be answered
-before any renumbering: **is the published P3 a pattern at all, or a name that acquired an index?**
-Three dispositions, and this is a ruling (Ω_C), not a measurement: specify it (write the mechanism
-section and let it keep or take an index), demote it (it is a *discipline* — "prove before you
-replace" — rather than a defect pattern, and disciplines do not belong in a defect taxonomy),
-or retire it. **Do not renumber before this is ruled**, or the taxonomy acquires a permanent index
-whose referent was never written down. Candidate shapes for the renumbering itself, unchanged:
-renumber the orphans to P7/P8 (making it eight);
-or keep both sets but give every index a namespace so a bare "Pattern 4" cannot be written. Either
-way the always-loaded file stops disagreeing with its own detail doc, and — the part this restatement
-adds — **the historical record needs a dating rule**, since existing references cannot be repaired
-by fiat: a citation's meaning depends on which document its author had open, and that is recoverable
-from dates only if the divergence date is established. Until ruled, any document citing "the six
-patterns" must name WHICH six, and any citing a bare `Pattern 3`/`Pattern 4` must be treated as
-unresolved.
-
-**~~Graduation step for the dating rule~~ — RETIRED 2026-08-14, the rule is VOID.** It read:
-*establish when the two lists diverged, then bucket each reference by whether it predates or
-postdates the divergence.* **That instruction cannot work, and unconditionally so: a date cannot
-tell you which document the author had open.** Both lists were live simultaneously from
-`220739b8` (2026-05-30) onward, so no date partitions the citations. Superseded by recovery on
-**mechanism**, which works for 55 of 66 taxonomy-sense references
-(`audits/2026-08-14_oq278_index_collision/`).
-
----
-
-### EXECUTED 2026-08-14 — `audits/2026-08-14_oq278_index_collision/`. Fired: live.
-
-Three things landed; **none of them rules the index** — R1a/R1b/R2/R4 branches were
-pre-registered *before* the sweep ran (`PREREGISTRATION.md`) so the ruling is not made against an
-account written with a direction.
-
-**1. Canonicity is now a CHECKED FACT — `python/doc_pattern_check.py`, gate row `doc patterns`.**
-Compares index→name between the two documents; collisions 3 and 4 are allowlisted **with their
-state** (`ruled_pending_R1b` vs `unruled`), so a *silent resolution* goes red as well as a new
-fork. Doc: `docs/technical/doc_pattern_check.md`. **Why counting could never have caught this:**
-the member counts CONVERGED at `220739b8`, the exact commit where the contents diverged, and
-matched at every append after — so anything comparing cardinalities read green from 2026-05-30
-across all 151 commits that touched either file. Discrimination record (naturally arising, both
-sides, neither authored): `--pairwise 220739b8` FIRES at the defect's own commit, `--pairwise
-4f623017` DECLINES at its immediate parent.
-
-**2. INTERIM CITATION FREEZE, landed in `CLAUDE.md`'s Build Discipline pointer.** Every index is
-namespaced on sight — `CM-P3`/`BD-P3`, `CM-P4`/`BD-P4`; a bare `Pattern 3`/`Pattern 4`/`P3`/`P4`
-is treated as UNRESOLVED, not interpreted. This stops new ambiguous references being minted while
-the ruling is pending, has zero dependencies, and **dissolves the R5 prohibition-gate question** —
-a gate forbidding bare `Pattern N` is not buildable (see 3). The digest form (`BD-P4@<digest>`,
-the `claim_cite_check.py` idiom) is **deliberately deferred**: it pins *content*, so every
-digest-bearing citation minted in the interim would go red at the renumbering by construction.
-
-**3. THREE CORRECTIONS TO THIS ENTRY'S OWN FIGURES.**
-
-- **The namespace is SIX-way overloaded, not four.** Added: `CWC:P3` (concealment claim rows,
-  guarded by `claim_cite_check.py`) and `"candidate_pattern": "… (Pattern 3)"` (the DR engine's
-  own vocabulary in decompose manifests). **Both were found as the sweep's own false positives.**
-  Two further populations are **PINNED, not ambiguous** — everything under
-  `audits/2026-08-10_oq277_rq2_crosscoding/` (the md5-frozen prereg defines `P1`–`P6` verbatim)
-  and this entry's own body. That shrinks the genuinely-ambiguous population well below what
-  this entry assumed: **66 taxonomy-sense rows out of 666 raw candidates.**
-- **The wrong-label count is 4, not 1** — and three are new. Beyond `FINDINGS.md:23`:
-  `prolog/coercion_projection.pl:86` (**in CODE**), `docs/design/the_perturbation_move.md:116`,
-  and `python/omega_resolver.py:820,830` — the last cross-wired in the *opposite* direction,
-  naming `CLAUDE.md`'s section title while carrying `build_discipline.md`'s member.
-- **The 2026-08-11 vacating created NINE stale pointers, not three, and nobody swept.** Each
-  cites the demoted mechanism, so each now points at an index empty in one document and occupied
-  by an unrelated mechanism in the other. Enumerated at `WRITEUP.md` §4.6. This is
-  `build_discipline.md:1392`/`:2558` firing on the taxonomy's own repair — **the third time
-  resolving this collision has committed the defect the collision instantiates.**
-
-**One piece of evidence R1/R2 should weigh:** all three CROSS-WIRED citations attribute to
-`build_discipline.md` while carrying `CLAUDE.md`'s mechanism. **Authors treat the detail doc as
-canonical** — the predictable consequence of `CLAUDE.md:158` calling it "the full patterns."
-
-**Not repaired yet, deliberately.** The citation repair is held until R2: the repair form
-"append the slug in place" is invalidated if the ruling renumbers, and only the *inventory* is
-ruling-independent.
-
-**RULINGS 2026-08-14 (operator review).** **R1a = A1: `fabricated-default` is a PEER MEMBER**,
-on the file's own criterion at `build_discipline.md:769–772` (distinct tell, distinct
-corrective). R2 is therefore live and blocked on R1b′.
-
-**R1b VOIDED AND RE-REGISTERED (R1b′), and the reason is a defect in the registration itself.**
-Both original branches conditioned on a **generality** criterion — "a *language-specific*
-instance" / "distinct at the taxonomy's altitude" — that appears **nowhere in
-`build_discipline.md`**. Applying it at ruling time would be inventing the discriminator, the
-same granularity error this entry charges against the paper's §5.2. Two checks, run:
-(a) every `altitude`/`general` hit in that file is about *claim scope* or *where an instance
-sits*, never about membership; (b) **`Pattern 5` is ALREADY language-specific in its tells** —
-`Count == 0`, `Supp =< 0.05`, `forall(P,Q)` vacuous (`:735–737`) — so generality is demonstrably
-not a membership criterion in practice. R1b′ therefore runs on the stated criterion only, under
-which bound-probe's corrective was already recorded as *not subsumed*. A generality criterion
-remains available but must be **written into `build_discipline.md` as a membership rule and
-reconciled with Pattern 5** first — a change to the taxonomy's constitution, not a ruling within
-it. **R1b′ UNRULED.**
-
-**R2's ground corrected — the audit had overstated it.** The frozen prereg is **point-in-time,
-the same class as the 228 JSON payloads and `FINDINGS.md:23`**, and Step 4 already repairs that
-class *by the label set, not in place*; calling it "permanently unrepairable" inflated an
-ordinary member of a class we already handle. **R2's real ground is the priced cost asymmetry:
-11 live editable sites if `fabricated-default` moves off index 4 (9 of them internal
-cross-references in one file), against 2 if it stays — ~5:1.** Priced in `PREREGISTRATION.md`
-AMENDMENT 1 §A1.3. **R2 UNRULED**, blocked on R1b′.
-
-**SECOND INSTRUMENT — `python/pattern_citation_check.py`, gate row `vacated cites`.**
-`build_discipline.md:1392`/`:2558` have now fired **three times on this one taxonomy**, so this
-is an instrument rather than a fourth note (operator). It gates the **unswept consumers of the
-VACATED member**: declaration-based, since the 9 stale citations cannot be repaired until R2 —
-RED on a tenth, RED on a silent repair. The archaeology sweep was **moved** into `python/`
-rather than copied (a scanner in an audit dir plus one in `python/` is this entry's own defect).
-**It earned its keep on its first run** — it disagreed with the hand-adjudicated §4.6 list on
-**7 of 9** sites and the hand list was right: `faith merge` never matched `faith-merge`,
-`old-vs-new diff` never matched `Old-vs-new OUTPUT diff`. **Under-recovery is silent** (a miss
-presents as `unrecoverable`, which reads like a result), so `LABEL_SET.tsv` had been shipping
-under-recovered rows to OQ-294. Also caught: the sweep **read its own committed output** (671 →
-1421 rows; a producer consuming its own artifact reports growth as discovery) and a regex
-literal containing an index made the checker **cite itself**.
-
-**R1b′ RULED 2026-08-14 — B1′, `bound-probe-bypasses-clause-order` is a PEER MEMBER, AT INDEX 7.**
-The criterion is conjunctive and only the corrective half had been checked; the tell half was run
-and **`build_discipline.md`'s own spine table answers it**, giving the two SEPARATE rows with
-opposite-polarity tokens: `| 3 | Bound-probe … | a solution came back → "it's in the class" | the
-findall result/count |` against `| — | (diagnostic layer) | a clean/empty result → "nothing there"
-| the analyst reading the result |`. An over-count against an under-read; a tell visible
-**statically** in the source (`:648`) against one visible **only by running a known-positive**
-(`:1007`). `:1015` files the bound probe under the positive-control section, but at the level of
-the **spine**, which every member shares by construction and therefore cannot discriminate.
-**Index 7, not 3** (operator): `CLAUDE.md:506` — *"Index deliberately left EMPTY; do not reuse or
-renumber"* — is a standing instruction on the always-loaded file, and refilling 3 would
-countermand a ruling a fortnight old. **3 stays vacant in both documents.**
-
-**THE `P3 = 0` EVIDENCE IS STRUCK — the bullet asserting it was FALSE.** It read "zero measured
-coverage … **with no account**." It has an account, written four lines below the figure in the
-artifact cited: **`no members — uncalibrated`** (`audits/2026-08-10_oq277_rq2_crosscoding/PREREGISTRATION.md:78–84`),
-which further states that *"per-pattern agreement is not [reportable]"* and that reading a
-per-pattern (iii′) figure as a finding is a **pre-registered error** — listed as such at `:244`
-row 6. The operator's power-floor question does not arise: that floor governs the **fork-residue
-pass, which never ran** (retired with the cross-coding). **The shape of the mistake is a live
-instance of a declared residual:** the artifact is md5-frozen and gate-enforced, and the freeze
-guarantees the *text* is unaltered, not that the *reading* is apt — exactly the gap
-`claim_cite_check.py` declares it cannot close ("the mechanical relation is guarded; the semantic
-one is not"). Also inadmissible and unused: the 1-vs-9 citation asymmetry (evidence about how
-heavily a member is cited, not whether it is one, and a lagging measure of this OQ's own
-ambiguity).
-
-**R2's ground CORRECTED — read-site weight, not the 5:1 edit count** (operator). Nine of the
-eleven sites are internal to `build_discipline.md`, read on demand; the two on the other side
-include `CLAUDE.md`, read by every instance on load. *"Moving recap-as-witness is two edits but
-changes what every future instance reads first; keeping fabricated-default at 4 is nine edits in
-one file, in one change, mechanically checkable by the new checker."* The asymmetry runs in
-**opposite directions on the two measures** and only read-site weight is about what readers
-encounter. **Operator lean: C2 — `fabricated-default` keeps 4. R2 NOT formally ruled.** Consequent
-set if C2 lands: `1, 2, —(vacant), 4 fabricated-default, 5, 6, 7 bound-probe, 8 recap-as-witness`.
-
-**CLOSE CONDITION — this entry does not close until all four hold.** Stated as a list because
-the successor has died in a hand-off once already (OQ-277's close note).
-
-1. R1a, R1b, R2 ruled against `PREREGISTRATION.md`'s branches; R4 applied to
-   `amnesiac_institution_v0_6.md` §5.1/§5.2.
-2. Every site in the priced footprint updated **in one change** — `doc_pattern_check.py` goes red
-   if a ruling lands in one document only, which is the point.
-3. The 4 wrong labels, 9 stale pointers and 3 cross-wirings repaired per `WRITEUP.md` §4;
-   `README.md:170`'s cardinality claim corrected; the 1 unrecoverable marked `[AMBIGUOUS — OQ-278]`.
-4. **`OQ-294` is unblocked and named here as the successor.** It carries the taxonomy
-   self-reproducibility study (`splits_from OQ-278`), and it consumes
-   `audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv` as its cleaned ground truth. **Do not
-   close this entry without checking that OQ-294 is still live** — the label set is only ground
-   truth for as long as something reads it.
-
-**Note on the fork-residue row's scope, given the above.** The row was designed against the *fork*
-reading — it asks which branch carries load. **A row built to measure "which branch" cannot answer
-"were these ever the same question"** (§2.6). Its result stays valid as evidence about whether the
-orphaned mechanisms are load-bearing; it must not be read as adjudicating the index.
-
-**v0.4 queue note (§11 amendment, independent of the experiment):** §2.3's original
-classification, whatever informal form it took, may straddle the fork boundary and be
-heterogeneous across an unrecorded line. Add to Limitations.
-
-**P3 FAILURE-SHAPE SWEEP EXECUTED (2026-08-11, `d0c3c5fb`) — the search the disposition ruling
-was waiting on. `audits/2026-08-10_oq277_rq2_crosscoding/P3_FAILURE_SHAPE_SWEEP.md`; Fired: live.**
-Branches were pre-registered by the operator BEFORE the sweep ran (witnessed failure instance →
-*specify*; only prevention records → *demote*; nothing found and search shown able to find →
-*demote with residue declared*; **retire off the table in all branches**). The prior search was a
-vocabulary search; this one searched the failure SHAPE by two independent probes over git history,
-with the discipline boundary at `7af6b945` (2026-05-29, the commit that first wrote the words).
-**Probe A** — 19 destructive commits, 5 post-discipline: four prevention records, one non-deletion
-(`29889e50`, a move the rename detector missed). **Probe B** — deletions later restored: 135 files
-collapsing to **3 episodes, all pre-discipline**; post-discipline delete→restore episodes **ZERO**.
-Controls are two-sided and mostly naturally-arising (Probe A declines on genuine proof ×2 and fires
-on a witness-stripped variant; Probe B returns 3 real episodes and correctly excludes the move) —
-so *"I didn't find it"* is a fact about the world here, for the post-discipline window.
-
-**Result: branch 2 on the post-discipline population — but the ruling is NOT discharged, and the
-gap is a scope question that is the operator's seat.** The pre-registered branches do not say
-whether **pre-discipline** instances count. If they do not → *demote* follows outright. If they do
-→ the 133-file Feb 2026 episode (`2726506e` → `828ad085`; 166 deleted, 133 restored to identical
-paths, the undone-mistake signature) is a witnessed instance of the shape and *specify* is live —
-with the complication that P3's authoring cites no incident. The sweep deliberately declines to
-resolve this, since deciding it there would be an instance answering the question it was sent to
-gather evidence for. **One datum that bears on the ruling:** P3's text, at authoring and today,
-cites **no dated instance** — alone among the six; if the Feb episode had motivated it, the
-citation was available and unused. One close call recorded rather than rounded: `ef92a61d` carries
-no witness vocabulary, justifies its single difference (which P3's text permits) but pastes no
-old-vs-new output (which P3's own "the diff is proof" clause asks for) — classified prevention
-record in the weaker permitted form, not a failure.
-
----
+**Resolution witness:** `866c5c9a` (commit 0 — displaced consumers declared before the move),
+the ruling commit, the record-repair commit (9 stale pointers repaired, 4 wrong labels
+re-adjudicated as retroactively correct, census reconciled by row identity and driven to a fixed
+point), the R4 paper amendment (`amnesiac_institution_v0_6.md` §5.1 + new §5.2.1). Full account:
+`audits/2026-08-14_oq278_index_collision/` (`WRITEUP.md` §7, `PREREGISTRATION.md` AMENDMENT 3);
+KNOWN_STATE 2026-08-17.
 
 ## OQ-279 — Transcript-derived false-success arm: residual false-success under discipline (RQ1-complement, NOT the RQ1 historical control)
 
@@ -12781,7 +12386,14 @@ The *existence* of the duplication is Ω_E and is settled below.
 
 **Status:** mitigated — Pass A landed 2026-08-13/14; the derivation fork is CLOSED, two limbs remain.
 **Priority:** 2
-**Deps:** blocked_on OQ-278
+
+**UNBLOCKED 2026-08-17.** `blocked_on OQ-278` cleared — OQ-278 resolved, so **Limb 1's section III
+is now authorable.** One thing confirmed on the way out, because Limb 1's own definition-of-done
+turns on it: `EXTRACTION_PROMPT.md:242`'s *"pointer-only edits, which is all v0.6 admits"* is item 3
+of that list and is scoped to the defork's redirect table (reciprocal forward pointers in §2.8/§2.9)
+— **not** a global freeze on v0.6, which is why OQ-278's R4 was able to amend §5 in the same arc.
+Note also that `mitigated` is outside `omega_resolver.ACTIVE`, so this entry does not appear in the
+`menu` frontier and will not surface on `[NEXT]` until its status moves.
 
 **PASS A COMPLETE — what closed, and what did not.** `concealment_without_a_concealer_v0_4.md` is
 canonical for the derivation (operator ruling 2026-08-13); v0.6 §2.1–2.7 are vacated, the numbers
@@ -13169,7 +12781,15 @@ is Ω_C and is not part of this entry.
 
 **Status:** open
 **Priority:** 4
-**Deps:** blocked_on OQ-278, splits_from OQ-278
+**Deps:** splits_from OQ-278
+
+**UNBLOCKED 2026-08-17** — `blocked_on OQ-278` cleared; `splits_from` kept, since the provenance
+edge is what makes this entry findable from the taxonomy work. **Verified live at the close:** it is
+`open`, `Priority: 4`, and present in `omega_resolver menu`'s WORKABLE NOW — the label set is ground
+truth only for as long as something reads it, so that check is part of closing OQ-278, not a
+formality. **The taxonomy it codes against is now SEVEN members at eight indices**, not the six this
+entry was minted against; the coding vocabulary must be re-derived from the documents (or
+`doc_pattern_check --list`) rather than taken from this entry's Origin quote.
 **Origin:** Bundled into OQ-278 at OQ-277's close (2026-08-12) as *"does our own six-pattern
 taxonomy reproduce against itself?"* — the honest RQ2 result once the cross-coding was retired.
 **Split out 2026-08-14** (operator decision) with a typed `splits_from` edge, so the successor
@@ -13200,9 +12820,10 @@ OQ-277's fork-residue row was.
 `audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv` — the disambiguated label set, keyed on
 `mechanism_slug` with the index preserved only as `raw_text_as_found`.
 
-**CONSUME A COPY PRODUCED BY `python/pattern_citation_check.py` AT COMMIT `fd73ec9e` OR LATER.
-NOT the revision this entry was minted against (`6e7df53f`), which is UNDER-RECOVERED and must
-not be used.** The pin is on the **PRODUCER**, not on the artifact's content: the label set is a
+**CONSUME A COPY PRODUCED BY `python/pattern_citation_check.py` AT THE OQ-278 CLOSE (2026-08-17)
+OR LATER. NOT the revision this entry was minted against (`6e7df53f`), which is UNDER-RECOVERED
+and must not be used; and not a pre-close copy either — the close repaired the index citations,
+so a pre-close copy describes a numbering the documents have left.** The pin is on the **PRODUCER**, not on the artifact's content: the label set is a
 line-keyed census of tracked files, so it legitimately changes whenever any scanned file is
 edited — **including this entry.** A content hash pinned here would invalidate itself the moment
 it was written, and chasing it would read as churn rather than as the corruption it is meant to
@@ -13211,8 +12832,10 @@ merge` never matched `faith-merge`; `old-vs-new diff` never matched `Old-vs-new 
 the sweep stopped reading its own committed output. **Under-recovery is silent — a miss presents
 as `unrecoverable`, which reads like a result** — so the `6e7df53f` copy is absence wearing a
 result's clothes, on the artifact whose entire job is to be the disambiguated record.
-Regenerate and verify before use: `python3 python/pattern_citation_check.py --sweep` must leave
-the file byte-identical, and gate row `vacated cites` must be GREEN. **That keying is what
+Regenerate and verify before use: `python3 python/pattern_citation_check.py --sweep`, then
+compare — **never assume unchanged**. That precondition did NOT hold when this entry was written
+(the committed TSV was not the product of a run against the committed tree; see the audit's §2.1),
+and it holds now. Gate row `displaced cites` must be GREEN. **That keying is what
 makes it survive OQ-278's ruling**: if the ruling renumbers, an index-keyed ground truth would
 express a numbering that no longer exists, and this entry would inherit it silently. Do not
 re-derive ground truth from raw index citations; consume the label set.
