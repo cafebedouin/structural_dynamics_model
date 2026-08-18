@@ -13306,11 +13306,91 @@ over pattern assignments, including OQ-276's `Fired:` catch rate, can be leaned 
 **Ω-type:** Ω_E (mechanical — the roster and the zeros are measured), with an Ω_C rider on the
 disposition (make-honest vs retire vs leave-declared-dark is a design choice, not a measurement).
 
-**Status:** open
+**Status:** resolved — 2026-08-18, at CONSUMER-HONESTY altitude only. Every consumer is now
+honest, retired, or declared dark; **the detector is unchanged and still 0-firing**, and the
+disposition that keeps it is SUNSET-BOUND (OQ-317, re-review 2026-11-17, retire-by-default).
 **Priority:** 3
 **Deps:** splits_from OQ-251, blocked_on_human disposition-ruling
 **Origin:** OQ-251 resolution, 2026-08-17 — pre-authorized by the operator at plan review to be
 minted regardless of how OQ-251's hypotheses resolved.
+
+> ## RESOLUTION 2026-08-18 — `audits/2026-08-18_oq296_consumer_honesty/`, commits `d989520c`,
+> `a8aa7284`, `65230466`, `fe64033d`
+>
+> **Operator ruling D1 — keep sockets, make honest.** No repair-by-authorship (that IS the drift
+> OQ-251 worried about, performed deliberately) and no retirement — the dead `true` branch makes
+> GAP-08 §7's payoff larger, since one capability revives BOTH signatures. **Bounded by OQ-317**:
+> if §7 is unpowered on 2026-11-17 the disposition returns with *retire* as the default, and the
+> burden sits on whoever wants to KEEP.
+>
+> **Kill condition re-witnessed first (HALT gate, passed).** OQ-113 suite 3/3; unbound `once/1`
+> census on the live leg returned `natural_law` 0 and `coordination_scaffold` 0 against a
+> non-degenerate 7-signature histogram — a measured zero, not a didn't-look.
+>
+> ### What shipped
+> 1. **`linter.py` MISSING_NL_PROFILE** (`d989520c`) — the highest-value site, fixed first. It
+>    cited a stale mechanism ("defaults to 0.5" — untrue since `966d53c8` made it the `unknown`
+>    sentinel) and never named the binding `HasAlternatives == false` conjunct, so it instructed
+>    authors down a path that cannot work. Now scoped to metric COVERAGE, routing certification to
+>    GAP-08 §7. Discrimination record: fires on the kernel_v1 story that trips it, declines on the
+>    other 313 mountain candidates across five legs + archive — 1/314 before AND after.
+> 2. **`extract_corpus_data.py`** (`a8aa7284`) — `is_constructed` KEPT and FLAGGED.
+> 3. **`container_typology_analysis.py`** (`a8aa7284`) — input-provenance stamp, NOT the planned
+>    darkness flag. See the roster corrections below.
+> 4. **18 dark declarations + regression lock** (`65230466`) — comment-only, 0 non-comment lines
+>    changed; `test_oq113_dead_natural_law.pl` extended 3→8 green, locking `coordination_scaffold`
+>    and the two-sided constancy of `has_viable_alternatives/2`; clean-vs-edited pipeline pair
+>    `per_constraint` byte-identical (exit 0 + mtime advanced on both halves, corpus md5-frozen).
+> 5. **D3 retirement** (`fe64033d`) — the `domain_priors` expectation trio, dead in both senses.
+>    Table preserved verbatim as **GAP-38**.
+>
+> ### ROSTER CORRECTIONS — three of ~20, all found by inspecting sites rather than inheriting them
+> - **`python/reports/queries/classification_audit.py:61`** — validates authored `constraint_claim`
+>   values, a different surface that can legitimately be non-empty. **Not a consumer of the
+>   constant.** (Pre-identified at plan review.)
+> - **`python/container_typology_analysis.py:151-157,331`** — this entry recorded it as
+>   "spot-verified by direct read" reading a constant zero. **The read was of the code, not the
+>   served values.** It serves `natural_law_pct` up to **0.9808** from a 2026-05-16 recon artifact
+>   over the chimera-era corpus (n=3369), never refreshed across the 2026-06-05 reset. → **OQ-319**.
+> - **`prolog/diagnostic_summary.pl:437`** — already fully annotated; nothing to extend.
+>
+> **The measured lesson: 3/20 roster entries were wrong, and none of the errors were visible from
+> the roster.** Consequence adopted mid-execution (operator): a comment-only phase verifies nothing
+> by the act of editing, so every Phase 3 annotation states what was confirmed at that site at edit
+> time, and a site that does not read the predicate is reclassified out rather than annotated — a
+> dark declaration on such a site is a false annotation in the `MISSING_NL_PROFILE` class.
+>
+> ### CORRECTIONS TO D2's STATED RATIONALE (the ruling survives; the reasons were wrong)
+> - **"No third state exists at HEAD"** — false. A third state does exist: the **26/279** rows
+>   carrying the `unknown` honest-abstain signature, which `sig not in ('natural_law',)` reports as
+>   asserted `constructed`. It simply is not the state D2 had in view (D2 reasoned about the
+>   detector being dark; this is the signature cascade abstaining). **Tri-valued is still refused,
+>   for a different and better reason:** consumers coerce — `boolean_independence.py:169` does
+>   `bool(c.get(...))`, and `bool(None)` is `False`, so emitting None delivers abstains as asserted
+>   NEGATIVES. Half a tri-state into a two-valued consumer is worse than not starting. → **OQ-318**.
+> - **D2's site-1 half is superseded entirely.** It held the `formalization` axis is *biased*
+>   (textual absorbing would-be formal) and required provenance to reach the derived label. That
+>   assumed the axis is computed on live data. It is not computed at all — it is served from a
+>   frozen file. The site-2 half stands and was implemented as written.
+>
+> ### SPAWNED (all `splits_from OQ-296`)
+> **OQ-313** totality gate admits constant functions · **OQ-314** kernel_v1 67% `unknown` stratum ·
+> **OQ-315** `piton_signature` 0-firing, cause NOT inherited · **OQ-316** `category_of/2` constant ·
+> **OQ-317** the GAP-08 §7 sunset · **OQ-318** abstain-as-assertion · **OQ-319** container_typology
+> staleness.
+>
+> **OQ-316 was measured on two legs before minting**, because a one-leg constancy claim would have
+> reproduced inside this OQ's own spawn the error the SCOPING GUARD below warns about
+> (`natural_law_without_beneficiary/1` looks dead on the live leg and has 30 firings on kernel_v1).
+> It is constant on both (279/279, 1106/1106) — and the mechanism is not what the plan assumed: the
+> predicate **dispatches correctly** under a planted claim; its input vocabulary is authored 0 times
+> in ~5,311 files. Absence-of-input, not a broken classifier. Its three consumer modules therefore
+> carry **measurement-and-pointer** notes, NOT dark declarations — declaring dark would pre-commit
+> a disposition OQ-316 has not ruled.
+>
+> **Surviving Ω, relocated and sharpened (held at GAP-08 §7 and OQ-317):** *does the
+> author-independent immovability signal produce a non-authored `false`, or bottom out in authored
+> inputs one layer down?* If the latter, §7 re-creates this problem with more machinery.
 **Files:** `python/container_typology_analysis.py`, `python/extract_corpus_data.py`,
 `python/linter.py`, `python/axiom_reachability.py`, `python/shared/maxent.py`,
 `python/cluster_space_phase4.py`, `python/cluster_space_phase5.py`,
@@ -14489,6 +14569,271 @@ formalization at `:8763`/`:9170`; formalizing the committer axis at `:9212`/`:92
 same `formalization` axis — `:13396`, which is OQ-296, precisely the entry the SCOPING GUARD above
 distinguishes. So: no prior OQ tracks this question, and the nearest neighbour is the one already
 named and correctly separated.
+
+
+## OQ-313 — the OQ-137 reading-totality gate certifies coverage without information: a constant function is trivially `total_on_domain`
+
+**Ω-type:** Ω_E (mechanical — the gate's semantics and the witnessed instance are both measurable).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296 execution, 2026-08-18.
+**Files:** `prolog/reading_registry.pl`, `prolog/tests/test_reading_totality.pl`,
+`python/run_pipeline.py`
+
+**The defect.** `total_on_domain` proves *exactly one answer per key*. A **constant** function
+satisfies that perfectly — it returns the same token for every key — so the gate goes GREEN on a
+reading that carries **zero information**. The gate cannot distinguish *a reading that measures*
+from *a reading that returns `unknown` forever*.
+
+**Witnessed instance.** `reading_registry.pl:115` registers
+`signature_detection:has_viable_alternatives/2` as `aggregatable_reading(..., corpus_constraint,
+total_on_domain)`. That predicate is a constant function — `unknown` on all 8,688 constraints
+across seven legs (OQ-296). The registration has been green for its whole life while certifying
+nothing. Annotated in place 2026-08-18 (comment-only; the registration was deliberately NOT removed
+— deregistering hides the defect rather than fixing it).
+
+**Why it matters beyond this instance.** Registration is the project's opt-in guard against silent
+holes in aggregate coverage (CLAUDE.md: "an unregistered reading escapes the guard silently"). If
+the guard also passes vacuously on constants, then a green totality suite is consistent with an
+arbitrary number of informationless readings. Nobody knows how many, because nothing measures it.
+
+**Cheapest first step (a census, not a fix).** For each registered `aggregatable_reading`, compute
+the cardinality of its answer set over its domain. `|range| == 1` is the tell. That produces a
+ranked list of vacuous registrations in one pass and costs no design decision. Only then is the
+gate-semantics question — should `total_on_domain` gain a `discriminates_on_domain` sibling, and
+what would its floor be — worth ruling on.
+
+**What resolution would change.** Either the gate distinguishes informative from constant readings,
+or the project accepts (in writing, at the registry) that totality is a shape check only and
+coverage-with-information is measured elsewhere.
+
+## OQ-314 — two-thirds of kernel_v1 resolves to signature `unknown` (739/1106) and nobody owns the fact
+
+**Ω-type:** Ω_E (mechanical — the distribution is measured).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296's self-correction block, 2026-08-17; spawned as its own item 2026-08-18 because
+OQ-296 closed at consumer-honesty altitude and this is a signature-layer question.
+**Files:** `prolog/signature_detection.pl`, `prolog/archives/datasets/kernel_v1/`
+
+**The fact.** Unbound `once/1` census of `constraint_signature/2` on kernel_v1 (n=1106): **unknown
+739 (67%)**, false_ci_rope 273, coupling_invariant_rope 58, ambiguous 25, false_summit_mountain 10,
+constructed_high_extraction 1. The live leg is far healthier (26/279 unknown, 9%).
+
+**Why it is not self-explaining.** `unknown` is the deliberate honest-abstain token for unauthored
+profile metrics (`get_metric_average/3` → `unknown`, then the abstain clause of
+`constraint_signature/2`). So 67% *could* mean "two-thirds of kernel_v1 lacks authored
+accessibility_collapse/suppression/resistance" — a corpus-authoring fact — or it could mean a
+profile-builder path fails on that corpus for a structural reason. **These have different fixes and
+nobody has separated them.** The discriminating query is cheap: count kernel_v1 constraints whose
+`constraint_metric/3` vector is genuinely absent versus those with metrics that fail
+`profile_numeric/1`.
+
+**Why it matters.** kernel_v1 is the project's breadth archive and the leg every legacy-side sweep
+overlays. A 67% abstain rate means most such sweeps are computing over a stratum whose signature
+layer is silent — and a rate over that denominator is not comparable to the same rate on the live
+leg. This is the *denominator composition* hazard, on a corpus that is cited often.
+
+**What resolution would change.** Either the 67% is explained as authored absence (in which case
+every kernel_v1 signature-keyed statistic needs an `n_scored/n_total` pair, per the OQ-60 write
+rule), or a structural fault is found and the archive's usability for signature work changes.
+
+## OQ-315 — `piton_signature` fires 0 on every measured leg, cause uninvestigated
+
+**Ω-type:** Ω_E (mechanical).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296 noted the zero and explicitly refused to inherit a cause for it; spawned
+2026-08-18.
+**Files:** `prolog/signature_detection.pl`, `prolog/signature_mapper.pl`,
+`prolog/abductive_helpers.pl`
+
+**The fact.** `piton_signature` fires 0 on the live leg (n=279) and 0 on kernel_v1 (n=1106).
+
+**What is explicitly NOT inherited.** `natural_law` and `coordination_scaffold` are 0 for a *known*
+reason (OQ-296: `has_viable_alternatives/2` is constant). `piton_signature` is 0 for **no
+established reason**. Do not assume the same cause. In-file comments at `signature_mapper.pl` and
+`signature_detection.pl` (the `compute_signature_confidence` piton clause) say the profile-path
+dispatch was **retired 2026-06-11 under OQ-90's FCR refinement** — so the leading hypothesis is
+"deliberately severed, and the map entries are the residue," which would make this a *declared
+absence* (design_gaps.md) rather than a defect. **That hypothesis is unverified and the severance
+carries no marker at the site** — which is precisely the failure mode Pattern 1's
+*wire-that-was-cut-on-purpose* rule exists to prevent.
+
+**Cheapest first step.** Read the OQ-90 resolution and the 2026-06-11 commit; if the dispatch was
+severed deliberately, mark the field at the site and log the capability in `design_gaps.md`. If it
+was not, this is a live dead-path with a different cause than OQ-296's.
+
+**What resolution would change.** A third signature atom either joins the declared-dark set with a
+stated cause, or turns out to be an unnoticed regression.
+
+## OQ-316 — `domain_priors:category_of/2` returns one value on every corpus; its non-fallback clause has zero authored input
+
+**Ω-type:** Ω_E (mechanical — census and dispatch control both run), with an Ω_C rider on the
+disposition (repair the classifier vs author the vocabulary vs retire the axis).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296 execution, 2026-08-18. Routed rather than decided — the disposition was not
+settled while holding the delete key.
+**Files:** `prolog/domain_priors.pl`, `prolog/isomorphism_report.pl`,
+`prolog/constraint_bridge.pl`, `prolog/data_validation.pl`
+
+**Measured, two legs (`audits/2026-08-18_oq296_consumer_honesty/CATEGORY_OF_CENSUS.md`):**
+
+| corpus | n | distribution |
+|---|---|---|
+| `testsets` | 279 | `[unknown_novel-279]` |
+| `archives/datasets/kernel_v1` | 1106 | `[unknown_novel-1106]` |
+
+**The predicate is NOT broken — this is the part that changes the fix.** Dispatch control:
+a planted `constraint_claim(_, natural_law)` yields `physical_natural`; a planted
+`constraint_claim(_, physical_law)` yields `physical_natural`; no claim declines to
+`unknown_novel`. Two-sided. The constant comes from the **input**: the claim vocabulary
+`{natural_law, physical_law}` is authored **0 times across all five live legs and kernel_v1**
+(~5,311 story files).
+
+**So there are two true facts with different consequences,** and the plan that spawned this OQ
+conflated them: (1) the predicate **collapsed structurally** when `domain_registry` was deleted
+(Feb 2026), leaving two clauses; (2) of the survivors, the non-fallback clause **dispatches
+correctly but is never fed**. "Restore the classifier" and "author the vocabulary, or retire the
+category axis" are different repairs, and the evidence points at the second. This is Pattern 5
+(absence satisfies the gate) at the consumer end, not a misclassification.
+
+**Live consumers (enumerated 2026-08-18; the parent plan left them unenumerated).**
+`isomorphism_report.pl:26,27,62,64` (pairs constraints by category — with one category, every
+constraint is category-identical to every other), `constraint_bridge.pl:127`,
+`data_validation.pl:165,266,268,511,518`. All three modules carry a measurement-and-pointer
+annotation as of 2026-08-18 — **not** a dark declaration, because this OQ has not ruled and a
+declare-dark comment would pre-commit the answer.
+
+**What resolution would change.** `isomorphism_report`'s category-keyed grouping is either a
+real partition or a no-op; that verdict is currently unknown and is being consumed as though known.
+
+## OQ-317 — SUNSET: GAP-08 §7 re-review on 2026-11-17; the keep-sockets disposition expires unless someone argues to keep it
+
+**Ω-type:** Ω_C (a scheduled disposition re-ruling, not a measurement).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-296, blocked_on_human disposition-ruling
+**Origin:** OQ-296 close, 2026-08-18 — the operator's D1 ruling ("keep sockets, make honest") was
+issued **bounded**, and this entry is the bound.
+**Files:** `docs/design/design_gaps.md`, `prolog/signature_detection.pl`
+
+**The standing disposition being bounded.** OQ-296 kept `natural_law_signature/1` and
+`coordination_scaffold_signature/1` as unpowered sockets rather than retiring them, on the grounds
+that GAP-08 §7's author-independent immovability signal would revive **both at once** — one
+capability, two signatures. That payoff is the whole justification for keeping dead code.
+
+**The re-review, due 2026-11-17.** If §7 is still unpowered on that date, the disposition returns
+for re-ruling **with retire as the default**.
+
+**The burden sits on whoever wants to KEEP** — a positive case that §7 has actually moved, not an
+absence of objection. A deferral that renews itself by silence is how dead sockets become permanent
+furniture, which is the specific outcome the sunset exists to prevent.
+
+**Surviving Ω, sharpened (hold this open until §7 is specified).** The fiat question does not
+disappear when the signal is built; it **relocates one layer down**: *does the author-independent
+immovability signal produce a non-authored `false`, or does it bottom out in authored inputs one
+layer down?* If the latter, §7 re-creates OQ-296's problem with more machinery — the drift OQ-251
+worried about, performed deliberately. Recorded at GAP-08 §7 as well as here.
+
+## OQ-318 — `is_constructed` reports an honest abstain as an asserted "constructed"; the fix needs three-valued consumers, not a tri-valued field
+
+**Ω-type:** Ω_E (mechanical — the 26 rows and the coercion sites are both measured).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296 Phase 2, 2026-08-18. Found while flagging the constant; operator ruled it out of
+OQ-296's scope because fixing it properly requires touching `boolean_independence.py`, which
+OQ-296's ruling placed out of bounds.
+**Files:** `python/extract_corpus_data.py`, `python/boolean_independence.py`, `python/query.py`,
+`python/reports/queries/pattern_mining.py`
+
+**The defect.** `constraint.is_constructed = sig not in ('natural_law',)` is True for the
+`unknown` signature too — **26/279 rows on the live leg**. `unknown` is `signature_detection`'s
+honest abstain on unauthored metrics, so those rows currently assert *"this constraint is
+constructed"* on the strength of having **no data**. This is Pattern 4/6, and it is **independent
+of** the dead `natural_law` detector that OQ-296 was about: fixing the detector would not fix this.
+
+**Why the obvious fix is refused, and this is the load-bearing part.** Emitting `None` for the
+abstaining rows makes the JSON more truthful and the **read less truthful**. Consumers coerce:
+`boolean_independence.py:169` does `bool(c.get("is_constructed"))`, and `bool(None)` is `False` — so
+an abstain arrives there as an **asserted negative**, which is the same defect with the sign
+flipped. **Half a tri-state, delivered into a consumer that can only see two values, is worse than
+not starting.**
+
+**So the unit of work is the consumer set, not the field.** Tri-state the field AND make every
+reader three-valued in the same change, with a before/after diff at each — `boolean_independence.py`
+(its NMI/independence numbers will move, and that shift is the point, not a side effect),
+`query.py:95,396`, `pattern_mining.py:190`. The existing `analysis.is_constructed_provenance`
+sibling (added 2026-08-18) states the defect at the read site in the meantime.
+
+**What resolution would change.** `is_constructed`'s published independence score (NMI 0.873,
+`docs/binary_structural_gates.md`) was computed with abstains counted as positives. Whether it
+survives an honest recount is unknown.
+
+## OQ-319 — `container_typology_*` outputs never refresh: the whole artifact describes a corpus retired on 2026-06-05
+
+**Ω-type:** Ω_E (mechanical — the artifact's provenance is measured).
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-296
+**Origin:** OQ-296 Phase 2, 2026-08-18 — the site was on OQ-296's consumer roster as "reads a
+constant zero"; direct inspection showed it reads something else entirely.
+**Files:** `python/container_typology_analysis.py`, `python/container_typology_recon.py`,
+`python/run_pipeline.py`, `outputs/container_typology_recon_data.json`
+
+**The finding, and it reclassifies a roster entry.** OQ-296 and the 2026-08-17 audit both recorded
+this site as a consumer *silently reading a constant zero* — "spot-verified by direct read". The
+read was of the **code**, not the **served values**. `outputs/container_candidates.json` actually
+serves `natural_law_pct` up to **0.9808** (mathematics 68/72, mathematical_logic 51/52, physics
+22/26).
+
+**Cause.** `signature_distribution` comes from `outputs/container_typology_recon_data.json`, whose
+mtime is **2026-05-16** and whose own `total_constraints` is **3369** — the chimera-era
+`original_v6` corpus (ID reuse across runs, OQ-25), not the live post-reset corpus (n=279). Neither
+`container_typology_recon.py` nor `container_typology_analysis.py` is wired into
+`run_pipeline.py`, so the artifact has never refreshed across the 2026-06-05 reset. Pattern 1's
+*consumed-once is not kept-fresh*.
+
+**Scope: the staleness is NOT confined to the natural_law component.** Every field —
+`type_distribution`, `mountain_pct`, `mean_extractiveness`, orbit stats, and all derived axes —
+comes from that same file. A flag naming only the dead NL component would have certified the rest
+of the record as current, which is the more dangerous claim; the stamp added 2026-08-18 therefore
+covers the whole artifact.
+
+**Lead hypothesis for the recon-era numbers, explicitly NOT asserted at the site.** The May-16
+firings are probably the pre-OQ-44 **pass-open** regime: `signature_detection.pl:249-255` records
+that `has_viable_alternatives/2`'s "default used to be `false`, which the empty
+`intent_viable_alternative/3` table satisfied by ABSENCE — and natural_law_signature requires
+HasAlternatives == false, so the absence SUPPORTED every NL certification." The 2026-06-11
+fail-close is then what darkened the detector. **This is a reconstruction of a regime that no longer
+governs, applied to an artifact generated before the change — probably right, not witnessed.** It is
+this OQ's lead hypothesis and was deliberately kept out of the artifact's stamp, which records
+measurements only.
+
+**Also stamped: this artifact is not a falsifier hit.** It reports non-zero `natural_law_pct` and
+would otherwise read as OQ-296's own kill condition sitting in `outputs/`. It is not: these are
+pre-reset values over a different corpus, not a firing at HEAD. Phase 0's live-leg census
+(2026-08-18) returned `natural_law` 0 and `coordination_scaffold` 0 over a non-degenerate
+7-signature histogram.
+
+**What resolution would change.** Either the two scripts join `run_pipeline.py` in dependency order
+(and every axis value in the artifact changes, possibly dropping domains below `min_domain_size` at
+n=279), or they are declared one-shot historical analyses and the artifact is marked terminal. The
+current state — live-looking output, dead input, no consumer — is the one state that should not
+persist.
 
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark

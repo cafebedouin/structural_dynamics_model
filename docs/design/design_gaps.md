@@ -612,6 +612,29 @@ routing-not-override supersession above (2026-06-17g) and its surviving need poi
 needs no intent layer either. Net: the `intent_*` surface is to be **deleted, not fed**; only `data_verification.pl`
 referencing diagnostics and the fail-closed `has_viable_alternatives/2` gate remain to clean up at rebuild.
 
+**SUNSET ATTACHED 2026-08-18 (OQ-296 close; the sunset itself is OQ-317, due 2026-11-17).** OQ-296
+ruled to KEEP `natural_law_signature/1` and `coordination_scaffold_signature/1` as unpowered
+sockets rather than retire them, and the justification rests entirely on this section: §7's
+author-independent immovability signal would revive **both signatures at once** — one capability,
+two detectors. That payoff is the whole reason dead code is being kept. **If §7 is still unpowered
+on 2026-11-17, the keep-sockets disposition returns for re-ruling with `retire` as the DEFAULT, and
+the burden sits on whoever wants to keep: a positive case that §7 has moved, not an absence of
+objection.** A deferral that renews itself by silence is how an unpowered socket becomes permanent
+furniture.
+
+**The Ω this section inherits, sharpened by OQ-296 (hold it open until §7 is specified).** OQ-296's
+whole finding is that `has_viable_alternatives/2` is a constant because its `true` branch reads an
+empty authored table and its `false` branch is unreachable — i.e. the "is this immovable?" question
+currently bottoms out in authorship. Building §7 does not automatically escape that; it **relocates
+the question one layer down**:
+
+> *Does the author-independent immovability signal produce a non-authored `false`, or does it bottom
+> out in authored inputs one layer down?*
+
+If the latter, §7 re-creates OQ-296's defect with more machinery — the drift OQ-251 worried about,
+performed deliberately. **This question must be answered in the §7 design, not after it**, because a
+signal that fails it will look exactly like a signal that passes: both emit a real-looking token.
+
 ---
 
 ## GAP-09 — No kernel-dominance stage: the kernel set is unfiltered for dominance (by ruling, not accident)

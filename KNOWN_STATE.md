@@ -45,6 +45,78 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — OQ-296 closed: consumers of the dead natural_law/coordination_scaffold detector made honest
+**Files:** python/linter.py, python/extract_corpus_data.py, python/container_typology_analysis.py, prolog/signature_detection.pl, prolog/dirac_classification.pl, prolog/reading_registry.pl, prolog/domain_priors.pl, prolog/cs_pattern_detection.pl, prolog/signature_mapper.pl, prolog/abductive_helpers.pl, prolog/maxent_classifier.pl, prolog/context_profile_mining.pl, prolog/isomorphism_report.pl, prolog/constraint_bridge.pl, prolog/data_validation.pl, prolog/axiom_reachability.py, python/shared/maxent.py, docs/design/design_gaps.md, ISSUES.md
+**Tier:** landed
+
+OQ-296 resolved at CONSUMER-HONESTY altitude (commits `d989520c`, `a8aa7284`, `65230466`,
+`fe64033d`; `audits/2026-08-18_oq296_consumer_honesty/`). Operator ruling D1: keep the unpowered
+sockets, make the readers honest — no repair-by-authorship, no retirement — **bounded by a sunset**
+(OQ-317, re-review 2026-11-17, retire-by-default, burden on whoever wants to keep).
+
+Shipped: linter advisory rescoped (it cited a mechanism stale since `966d53c8` and never named the
+binding conjunct, so it instructed authors down a path that cannot work); provenance siblings on
+`is_constructed` and an input-provenance stamp on `container_candidates.json`; 18 verified dark
+declarations, comment-only; `test_oq113_dead_natural_law.pl` extended 3→8 green; the `domain_priors`
+expectation trio retired with its table preserved as **GAP-38**. Spawned OQ-313…OQ-319.
+
+Witnesses: kill-condition re-witness (HALT gate) green; `per_constraint` byte-identical across the
+clean-vs-edited pipeline pair (exit 0 + mtime advanced both halves, corpus md5-frozen per leg);
+`[stack]` load 3 warnings/3 allowlisted/0 unexpected after the deletion.
+
+## 2026-08-18 — TRIPWIRE: `outputs/container_candidates.json` is served from a 2026-05-16 artifact over a RETIRED corpus
+**Files:** python/container_typology_analysis.py, python/container_typology_recon.py, outputs/container_typology_recon_data.json
+**Tier:** tripwire
+
+**Do not read any value in `outputs/container_candidates.json` as a measurement of the live corpus.**
+Every field — `type_distribution`, `signature_distribution`, `mountain_pct`, `natural_law_pct`,
+`mean_extractiveness`, orbit stats, all derived axes — is computed from
+`outputs/container_typology_recon_data.json`, whose mtime is **2026-05-16** and whose own
+`total_constraints` is **3369**: the chimera-era `original_v6` corpus (ID reuse across runs, OQ-25),
+not the live post-reset corpus (n=279). **Neither script is wired into `run_pipeline.py`**, so the
+artifact has never refreshed across the 2026-06-05 reset. Pattern 1, *consumed-once is not
+kept-fresh*.
+
+**The silent mistake this prevents:** `natural_law_pct` reads up to **0.9808** there
+(mathematics 68/72, mathematical_logic 51/52). At HEAD that signature is 0-firing by construction,
+so the file reads like a falsifier hit against OQ-113/OQ-296 — it is not, it is pre-reset data. A
+`_input_provenance` stamp was added 2026-08-18 stating exactly this; it is the first thing to read.
+Tracked as **OQ-319**. Lead hypothesis for the recon-era firings (pre-OQ-44 pass-open regime,
+`signature_detection.pl:249-255`) is deliberately NOT asserted at the site — it is a reconstruction
+of a regime that no longer governs.
+
+**Corollary worth carrying:** the site was on OQ-296's roster as "spot-verified by direct read"
+reading a constant zero. It was verified — by reading the CODE. Nobody read the OUTPUT. A code-read
+and an output-read are both "direct reads" and only one shows what a consumer serves.
+
+## 2026-08-18 — CORRECTION-KEY: three OQ-296 roster entries were wrong; D2's stated rationale corrected in two places
+**Files:** ISSUES.md, audits/2026-08-17_oq251_natural_law_reachability/audit_log.md, python/extract_corpus_data.py, python/reports/queries/classification_audit.py, prolog/diagnostic_summary.pl, prolog/domain_priors.pl
+**Tier:** correction-key
+
+**How the OQ-296 / OQ-251 consumer roster may be cited.** 3 of ~20 entries were wrong, all found by
+inspecting sites rather than inheriting them:
+- `classification_audit.py:61` — validates authored `constraint_claim` values; legitimately non-empty.
+- `container_typology_analysis.py:151-157,331` — does not read a constant zero (see the tripwire above).
+- `diagnostic_summary.pl:437` — already fully annotated; the "partial note" needing extension was not partial.
+
+**Do not cite the remaining roster entries as verified by this pass** beyond the 18 that carry
+edit-time confirmation in their annotations.
+
+**D2's rationale corrected (the ruling survives; two stated reasons were wrong).**
+1. *"No third state exists at HEAD"* — false. The **26/279** rows carrying the `unknown`
+   honest-abstain signature are a third state; `sig not in ('natural_law',)` reports them as
+   asserted `constructed`. Tri-valued is still refused, for a better reason: consumers coerce, and
+   `bool(None)` is `False`, so emitting None delivers abstains as asserted NEGATIVES
+   (`boolean_independence.py:169`). Half a tri-state into a two-valued consumer is worse than not
+   starting. → OQ-318.
+2. *D2's site-1 half is superseded entirely* — it reasoned about a `formalization` axis computed on
+   live data. The axis is not computed at all; it is served from a frozen file.
+
+**Also corrected:** the plan's "5 of 7 `expected_signature` rows unreachable" is three-layered —
+5/7 unreachable by construction, **6/7** unreachable on any authored corpus, and the one surviving
+row expects `ambiguous` while `constructed_constraint` (the expectation for four rows) **is not in
+the live signature vocabulary at all**.
+
 ## 2026-08-18 — [correction-key] Appendix B discharged: the incidence figure is 83/185 (45%) as of 2026-08-18, it carries FIVE instrument defects, and its monthly rate is NON-STATIONARY — so it may not be compared across time
 **Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md, audits/2026-08-18_appendix_b_discharge/
 **Tier:** correction-key

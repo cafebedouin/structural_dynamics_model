@@ -503,8 +503,8 @@ def main():
         "not_a_falsifier_hit": (
             "This artifact reports non-zero natural_law_pct values. That does NOT "
             "trip OQ-296's kill condition and is not evidence that OQ-113's range "
-            "finding regressed. The kill condition is about "
-            "constraint_signature(_, natural_law) firing at HEAD; these are "
+            "finding regressed. The kill condition is about the natural_law "
+            "signature firing at HEAD; these are "
             "pre-reset recon values over a different corpus, not a HEAD firing. "
             "The live-leg census run 2026-08-18 (Phase 0, "
             "audits/2026-08-18_oq296_consumer_honesty/PHASE0_REWITNESS.md) returned "

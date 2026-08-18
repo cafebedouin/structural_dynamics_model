@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "4e82275ff0054631aa7e59f91b5270f436263580",
+    "store_version": "fe64033d49ba4ada98e079eca72e9a0caca1e4fe",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T14:42:04"
+    "generated_at": "2026-08-18T15:38:23"
   },
-  "issues_sha": "a62ba44b907860cf0c0ac994aa53a59f0c7c040d1a23cc74116af0625164c08c",
-  "n_entries": 312,
+  "issues_sha": "9dadd4aafd81a773e5c7f02ac8a86729ac86db9535059ee69e5117b1c5f03d3c",
+  "n_entries": 319,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 153,
+    "resolved": 154,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 120,
+    "open": 126,
     "partial": 8
   },
   "active": [
@@ -1550,24 +1550,6 @@
       ]
     },
     {
-      "id": "OQ-296",
-      "status": "open",
-      "priority": 3,
-      "summary": "~20 consumers read a `natural_law` detector that fires zero times by construction, and at least two turn that constant zero into plausible non-zero output",
-      "deps": [
-        "splits_from OQ-251",
-        "blocked_on_human disposition-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-43",
-        "OQ-44",
-        "OQ-113",
-        "OQ-137",
-        "OQ-251"
-      ]
-    },
-    {
       "id": "OQ-297",
       "status": "open",
       "priority": 4,
@@ -1847,6 +1829,103 @@
         "OQ-296",
         "OQ-310",
         "OQ-311"
+      ]
+    },
+    {
+      "id": "OQ-313",
+      "status": "open",
+      "priority": 2,
+      "summary": "the OQ-137 reading-totality gate certifies coverage without information: a constant function is trivially `total_on_domain`",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-314",
+      "status": "open",
+      "priority": 2,
+      "summary": "two-thirds of kernel_v1 resolves to signature `unknown` (739/1106) and nobody owns the fact",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-315",
+      "status": "open",
+      "priority": 4,
+      "summary": "`piton_signature` fires 0 on every measured leg, cause uninvestigated",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-90",
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-316",
+      "status": "open",
+      "priority": 3,
+      "summary": "`domain_priors:category_of/2` returns one value on every corpus; its non-fallback clause has zero authored input",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-317",
+      "status": "open",
+      "priority": 3,
+      "summary": "SUNSET: GAP-08 §7 re-review on 2026-11-17; the keep-sockets disposition expires unless someone argues to keep it",
+      "deps": [
+        "splits_from OQ-296",
+        "blocked_on_human disposition-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-251",
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-318",
+      "status": "open",
+      "priority": 3,
+      "summary": "`is_constructed` reports an honest abstain as an asserted \"constructed\"; the fix needs three-valued consumers, not a tri-valued field",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-319",
+      "status": "open",
+      "priority": 2,
+      "summary": "`container_typology_*` outputs never refresh: the whole artifact describes a corpus retired on 2026-06-05",
+      "deps": [
+        "splits_from OQ-296"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-25",
+        "OQ-44",
+        "OQ-296"
       ]
     }
   ],
@@ -4415,6 +4494,31 @@
       "mentioned_in": [
         "OQ-289",
         "OQ-292"
+      ]
+    },
+    {
+      "id": "OQ-296",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "~20 consumers read a `natural_law` detector that fires zero times by construction, and at least two turn that constant zero into plausible non-zero output",
+      "deps": [
+        "splits_from OQ-251",
+        "blocked_on_human disposition-ruling"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-43",
+        "OQ-44",
+        "OQ-113",
+        "OQ-137",
+        "OQ-251",
+        "OQ-313",
+        "OQ-314",
+        "OQ-315",
+        "OQ-316",
+        "OQ-317",
+        "OQ-318",
+        "OQ-319"
       ]
     }
   ]

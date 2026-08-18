@@ -22,8 +22,9 @@ IS_CONSTRUCTED_PROVENANCE = {
     "measured": "279/279 True on the live leg (2026-08-18)",
     "derivation": "sig not in ('natural_law',)",
     "reason_detector_dark": (
-        "constraint_signature(C, natural_law) is 0-firing on every corpus — "
-        "natural_law_signature/1's HasAlternatives == false conjunct is "
+        "the natural_law signature is 0-firing on every corpus (the cascade "
+        "never emits that atom) — natural_law_signature/1's "
+        "HasAlternatives == false conjunct is "
         "dead-by-range (has_viable_alternatives/2 range is {true, unknown}, "
         "intent_viable_alternative/3 empty, GAP-08). The only value that could "
         "yield False is unreachable."
