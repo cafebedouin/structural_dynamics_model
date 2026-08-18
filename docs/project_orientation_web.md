@@ -58,7 +58,7 @@ The papers form a coherent intellectual trajectory. Listed in development order,
 
 **`metrics_as_routing.md`.** Foundation document. Framework metrics — ε, χ, power modifiers, thresholds — are routing mechanisms and governance stands, not truth measurements. Misreading this makes the framework look like precision theater. Canonical.
 
-**`observers_not_humans_v5.md`.** The universality-class framing. DR's load-bearing claims are structural rather than anthropocentric; they should generalize across systems whose internal states update differentially under position-relative net flows. Canonical; v2–v4 are superseded.
+**`observers_not_humans_v6.md`.** The universality-class framing — **proposed, with its quantitative support open.** DR's load-bearing claims are structural rather than anthropocentric; they should generalize across systems whose internal states update differentially under position-relative net flows. v6 §2.3 carries a marked correction dated 2026-08-18 (OQ-311): robustness to functional form survives (Jaccard 0.697–0.833 over six forms), but the **type-concentration claim is withdrawn as unwitnessed** — its named witness could not have produced per-type numbers. Whether the advantage tracks the `tangled_rope` label or the geometric condition is open at OQ-311 Item 2. **Do not cite "universality class" as an established result.** Canonical; v2–v5 are superseded.
 
 **`contextuality_paper_v1.md`.** The cohomological-obstruction paper. Reports the canonical-site mountain contextuality fraction (11/403 = 0.027). This number is distinct from the SOTU 151/151 finding which is corpus-limited and not used as evidence.
 

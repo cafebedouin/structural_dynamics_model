@@ -14972,6 +14972,25 @@ same commit that repaired the defect, never in a follow-up. **Standing rule this
 establishes: a marker minted to make a defect visible names its removal as a close condition of
 the OQ it points at, in the OQ, at minting time.**
 
+**SCOPE WAS WIDER THAN THIS OQ WAS FILED FOR — caught by the close readback, not by the fix.**
+The entry named `project_orientation.md` only. A repo-wide sweep run *as a readback of the repair*
+(`grep -rn observers_not_humans_v5 docs/ essays/ *.md`, excluding the versioned papers themselves)
+found **two more sites**, and the second is the consequential one:
+- `project_orientation.md:500` — the fragility/opacity cross-tab line still credited v5. v6 carries
+  that cross-tab forward (v6 `:69–73`), so the reference is now to v6.
+- **`docs/project_orientation_web.md:61`** — a file this OQ never named, whose entry read
+  *"`observers_not_humans_v5.md`. **The universality-class framing.** … Canonical; v2–v4 are
+  superseded."* That is a **web-facing** doc asserting as canonical both the superseded revision
+  **and** the framing whose quantitative support OQ-311 had just withdrawn. Rewritten to v6, with
+  the withdrawal stated and an explicit *do not cite "universality class" as an established result*.
+Re-swept clean (0 hits), control confirmed the probe still fires.
+
+**The lesson, which is the reusable part.** The original fix was scoped by *the file the OQ named*
+rather than by *the claim the OQ was about*. A one-file sweep would have passed its own readback and
+left a stale canonical claim on the web-facing surface — the more visible of the two. **A
+doc-currency repair is swept by claim, not by filename, and the sweep is a readback step with a
+control, not a pre-flight guess at scope.**
+
 **Residue: none.** The one surviving `OQ-320` mention in `project_orientation.md` is a deliberate
 *pin-history* note (recording that `:430–526` was wrong and why the citation is now by predicate),
 not a marker — it has no defect to outlive.

@@ -497,7 +497,7 @@ The following files in `docs/` were not listed in the task brief and may be rele
 - `docs/two_hub_architecture.md` — Implementation-level explanation of the hub decomposition; includes the classical oracle test (8/790 constraints with H¹ > 0 show high MaxEnt divergence; 100% correlation between probabilistic divergence and cohomological obstruction). Canonical reference for the Hub 1 / Hub 2 architectural description.
 - `docs/logic.md` — Formal classification rules and thresholds. UTF-8 encoding was repaired in Feb 2026 (prior versions had mojibake from double-encoded characters). This is the formal spec document; `config.pl` should match it.
 - `audits/2026-05-02_trifurcation_mapping/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
-- `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v5.md` and `when_consensus_isnt_coherence.md`.
+- `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v6.md` (§ the fragility/opacity cross-tab, which v6 carries forward from v5) and `when_consensus_isnt_coherence.md`.
 - `docs/observers_not_humans_v2.md` through `v5.md` — Superseded by v6.
 
 **Draft/working documents** (may be incomplete or superseded):

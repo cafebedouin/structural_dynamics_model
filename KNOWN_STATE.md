@@ -46,7 +46,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 ---
 
 ## 2026-08-18 — OQ-311 Item 1: §2.3's type-concentration claim withdrawn as unwitnessed; range-robustness survives
-**Files:** docs/observers_not_humans_v6.md, python/sweeps/range_sweep.py, docs/project_orientation.md, docs/lawvere_glossary.md, ISSUES.md
+**Files:** docs/observers_not_humans_v6.md, python/sweeps/range_sweep.py, docs/project_orientation.md, docs/project_orientation_web.md, docs/lawvere_glossary.md, ISSUES.md
 **Tier:** landed
 
 `observers_not_humans_v6.md` §2.3 fused two claims; only one had a witness. Commits `5d548413`,
@@ -85,6 +85,21 @@ Use `-E`, and pin `/usr/bin/grep`.
 HEAD, and OQ-22 pinned it at `:479–483` on 2026-06-28 — three positions, which is the argument for
 citing by predicate. The rope-clause bypass moved likewise: `:356` → `:384` → **`:432`**
 (`classify_from_metrics/6` clause `:426–436`).
+
+**Follow-on, same day — OQ-320 (filed and closed).** The correction above rewrote
+`project_orientation.md` §5.5's *Summary* with v6 content and left its heading naming v5, i.e. **one
+edit made that section internally inconsistent** — a different defect class from drift, since it has
+a named author and a dated commit, and it reads as ordinary staleness unless the tracker says
+otherwise. Repaired: §5.5 retitled/restatused to v6; the `:430–526` pin **verified WRONG at both
+ends** (began 25 lines after `derive_directionality/3`, ran ~40 past the last
+`power_role_heuristic/4` into `exit_modulation/2`) and re-cited by predicate; `d_zero ≈ 0.1642`
+**verified at HEAD** by deriving it from live config (`0.50 − ln(7.5)/6.00 = 0.164183`); `N=3,314`
+labelled corpus-bound. **A close readback sweep found two more sites the OQ never named**, including
+web-facing `project_orientation_web.md:61`, which called v5 canonical *and* asserted "the
+universality-class framing" the same day it was withdrawn. **A doc-currency repair is swept by
+claim, not by filename.** The `[STALE HEADING]` marker was pulled in the same change that repaired
+its defect — a marker outliving its OQ becomes furniture, and worse, points at an unfindable
+resolution (the `docs/open_questions.md` shape).
 
 **Promotion test: NO PROMOTION.** Each failure here is **loud**, not silent — a dead corpus path
 throws `corpus_empty` (exit 2), and a withdrawn claim is visible in the paper. The standing
