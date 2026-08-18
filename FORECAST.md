@@ -24,9 +24,12 @@ it stops earning its place.
 | GJ Open 2019 (74 questions) | 2018–2019 | 2019–2020 | 2020-01-05 | Brier .23; accuracy −.05 vs crowd median |
 | GJ Open 2020 (114 questions) | 2020 | 2020–2021 | 2021-03-15 | Brier .32; accuracy −.03 vs crowd median |
 | Colombia 2026 election matrix (5 claims) | 2026-01-26 | 2026-06-21 | 2026-08-18 | "Needs revision" per own scheme; mechanism ~5/5, magnitude ~1/4 |
-| Paris 2026 municipal matrix (5 claims) | pre-2026-03 | 2026-03-22 | **UNSCORED** | Weakened-noose twin of Colombia — the standing type-transfer test |
+| Paris 2026 municipal matrix (5 claims) | pre-2026-03 | 2026-03-22 | 2026-08-18 | LEVEL-SPLIT: ballot-level snare broken (confirmed), seat-level snare intact (4 rows fired); H2 positive, H1 counterexample |
+| Bangladesh lock-in analysis (4 claims) | 2026-02-09 | partial | 2026-08-18 interim | P1–P2 confirmed (charter margin cleared its own narrowness line by 0.26); P3 open to 2027-08–2028-02, P4 open to 2027-02 |
 | U.S. farm wages decomposition | 2026-08-03 | ~2027 | OPEN | Two kill conditions; resolvers: OEWS May-2027 release, H-2A 2027 disclosure data |
 | France 2027 election essay | 2026 | 2027 | OPEN | Cordon-sanitaire-as-piton; Bardella-as-structural-vacancy (first transfer of L2) |
+| China debt-deleveraging call | 2021-05-27 | ~2031 | OPEN (legacy) | Decade-horizon macro call, pre-DR; revisited 2021-09-22 |
+| Cryptocurrency price forecast | 2021-09-27 | resolved | UNSCORED (legacy) | Pre-DR mechanical-model exercise; low priority |
 
 Accuracy convention (GJ Open rows): own mean Brier minus crowd-median mean Brier;
 negative = beat the crowd. Both years beat the median on average; the edge narrowed
@@ -35,35 +38,54 @@ in 2020 (−.05 → −.03) on a harder, more pandemic-shaped question mix.
 Artifacts: Colombia — matrix + essay in `blog/2026-05_or_before/`
 (`columbia_falsification_matrix.md`, `columbian_election_2026_essay.md`), post-mortem
 `blog/2026-08/columbia-2026-post-mortem.md`, published at cafebedouin.org
-(2026-01-17, 2026-01-26). Paris — `blog/2026-05_or_before/paris_2026_falsification_matrix.md`.
+(2026-01-17, 2026-01-26). Paris — matrix
+`blog/2026-05_or_before/paris_2026_falsification_matrix.md`, post-mortem
+`blog/2026-08/paris-2026-post-mortem.md`. Bangladesh — cafebedouin.org 2026-02-09
+("How Bangladesh's Interim Government Is Locking In Constitutional Change…"),
+interim scoring `blog/2026-08/bangladesh-2026-interim-scoring.md` (a
+commitment-systems prediction registered before the CS sketch paper; diarize P4 for
+2027-02 and P3 for 2027-08–2028-02).
 France — `blog/2026-05_or_before/france_election_2027_essay.md`. Farm wages —
 cafebedouin.org 2026-08-03 ("U.S. Farm Wages: The Decomposition Nobody Has Run").
+China / crypto — cafebedouin.org 2021-05-27, 2021-09-22, 2021-09-27.
 GJ Open reviews were standalone PDFs (not retained in-repo); their performance
 numbers and complete lessons are preserved below.
+
+Vocabulary note: the January-2026 matrices use "Noose" for the type the framework
+now calls **snare**; this ledger and the 2026-08 post-mortems use snare throughout.
 
 ---
 
 ## Standing hypotheses (pre-registered, falsifiable)
 
-**H1 — Mechanism-hit / magnitude-timid (registered 2026-08-18, n=1).** The
+**H1 — Mechanism-hit / magnitude-timid (registered 2026-08-18; n=3, mixed).** The
 structural read identifies the right load-bearing joints and then under-prices their
 intensity: misses cluster in the direction of *the named mechanism operating more
-strongly than modeled*. Source: Colombia (all four magnitude misses point that way —
-compression harder, re-coordination faster, pole absorption bigger). Sibling
-hypothesis: OQ-229's pre-registered *fragility bias* (misses cluster on
-over-predicted breakdown). Colombia is one datum against fragility-bias and for
-magnitude-timidity; both stay open. **Test:** score Paris; tag every future register
-row `fragility`/`stability` per v2.2 and read the error-direction distribution.
+strongly than modeled*. Evidence for: Colombia (all four magnitude misses point that
+way); Bangladesh P1 ("clear plurality" → two-thirds supermajority — the named
+consolidation under-priced again); Paris's magnitude rows (Grégoire 37.98 vs 32–37
+predicted; turnout 58.89 vs 45–52). **Counterexample:** Paris claim 5 ("reduced
+majority bonus prevents hegemonic control") was a clean *mechanism* miss — the
+matrix never modeled inter-round mergers or bonus-on-second-round-share math. So:
+magnitude-timidity recurs in every scored case, but "mechanism always hits" is
+already false at the layer the theory hasn't modeled. Sibling hypothesis: OQ-229's
+pre-registered *fragility bias* — still no scored case supports it. **Test:** tag
+every future register row `fragility`/`stability` per v2.2 and read the
+error-direction distribution.
 
 **H2 — Type-transfer (the load-bearing one).** Do constraint types carry forecast
-profiles at all — does a lesson learned on a "noose" in one country apply to the
-next thing classified as a noose? If type-tagged forecasts never outperform after
-importing a type-level lesson, the taxonomy organizes but does not predict. The
-Colombia→Paris pair is a designed two-condition test (same topology theory, majority
-bonus 50%→25%, opposite predictions: multi-polar stability, centrist viability >12%,
-compression velocity <1.5 pts/week vs Colombia's 5.6). **Scoring Paris is the
-single highest-value pending action in this file.** France 2027 is the second test
-(L2 transfer, registered in the essay itself).
+profiles at all — does a lesson learned on a "snare" in one country apply to the
+next thing classified as a snare? The Colombia→Paris pair was the designed
+two-condition test (same topology theory, majority bonus 50%→25%, opposite
+predictions). **First verdict (2026-08-18): positive at the ballot level.** The
+full/weakened-snare distinction predicted a real observed differential across two
+countries eleven weeks apart — Paris kept 5 lists >10% and its centrist at 11.34%
+where Colombia compressed to two poles at 84.65% with the centrist at 4.26%. The
+typing is predictive AND incomplete: the reform converted psychological compression
+without converting mechanical compression (see L3) — "snare" needs a level index.
+France 2027 is the second test (L2 transfer, registered in the essay itself);
+Bangladesh P3 is the first commitment-systems-axis test (entrenchment→hollowing,
+window 2027-08–2028-02).
 
 ---
 
@@ -86,6 +108,17 @@ scaffold-hardening (De la Espriella: 16–20% predicted February share, 32.1%
 observed). **First transfer in flight:** France 2027 essay's Bardella-as-
 structural-vacancy read. Score at the 2027 resolution.
 
+**L3 — Compression relocates across levels rather than dying** *(Paris 2026;
+RULED at the ballot/seat split — the level-split is in the official results, not an
+interpretation).* Weakening one compression channel (psychological, pre-round-one)
+moved the compression to downstream mechanical channels (inter-round list mergers,
+25%-bonus-on-second-round-share seat math): a 37.98% first-round list took 63.2% of
+seats with zero coalition partners. Judge snare-breaking reforms at the terminal
+allocation, never the ballot. This is the *relocating confound* pattern
+(`build_discipline.md`) appearing in the world rather than in a verification
+harness. **Next test:** any future claim that a rule change converts Snare→Rope —
+the register must carry rows at every level the extraction can relocate to.
+
 ---
 
 ## Protocol defects found by execution (feed into uke_write / uke_score revisions)
@@ -105,7 +138,16 @@ structural-vacancy read. Score at the 2027 resolution.
    election day" is true in every election; the skill lived in the *rate*
    checkpoints (Feb/Apr). Put the falsification weight on rate and intermediate
    dates, not the terminal state.
-5. **Thresholds without probabilities can't measure skill-over-baseline.** The
+5. **Compound verdict bands assume coherent movement** (Paris). The
+   STRONG/PARTIAL/CONFIRM bands mixed ballot-level and seat-level conditions, so
+   the level-split outcome reached no band — the verdict grammar went silent
+   exactly when the result was most informative. Stratify bands by level.
+6. **A register row without a named collector is a wish** (Paris). Compression
+   velocity was the matrix's own "core test" and Gini its polarization
+   instrument; both died UNRESOLVABLE because the weekly series and the
+   arrondissement computation were specified but never assigned. v2.2 names
+   resolvers; name collectors too.
+7. **Thresholds without probabilities can't measure skill-over-baseline.** The
    Colombia matrix (pre-v2.2 idiom) is scoreable on its own terms but yields no
    `p_essay` − `p_baseline` skill number; the informal baseline comparison (markets
    implied a 14.5-pt separation; matrix said 1–4; actual 2.85) had to be

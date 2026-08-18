@@ -3,7 +3,9 @@
 *Post-mortem of "Colombia 2026 Election: Falsification Matrix" (registered 2026-01-26,
 building on "A Constraint Story: Why Colombia's Election Defies Standard Forecasting,"
 2026-01-17). Scored 2026-08-18 against the matrix's own pre-registered thresholds.
-Mechanical resolution first; interpretation separated and marked.*
+Mechanical resolution first; interpretation separated and marked.
+Vocabulary: the source matrix uses "Noose" for the type the framework now calls
+**snare**; this document uses snare throughout, per that mapping.*
 
 ---
 
@@ -34,7 +36,7 @@ AS/COA runoff analysis.
 
 | # | Claim | Own threshold | Observed | Verdict |
 |---|---|---|---|---|
-| 1 | Noose: bipolar compression of undecideds | fail if undecided >12% by May 15 | 7.7% by mid-Feb; ~0 at vote | **CONFIRMED** |
+| 1 | Snare: bipolar compression of undecideds | fail if undecided >12% by May 15 | 7.7% by mid-Feb; ~0 at vote | **CONFIRMED** |
 | 2 | Institutional collapse on the right | fail if primary winner >26% nationally; fail if primary turnout >4M | Valencia 6.92% (no fire); turnout ≥4.49M (**fired**) | **CONFIRMED, one misattributed fire** (see below) |
 | 3 | Centrist strangulation (Fajardo terminal ~9–10%) | fail if Fajardo >15% (Feb) / >13% (Apr); non-polar combined >22% (May) | Fajardo 4.26%; non-top-two 15.35% | **CONFIRMED** — overshot its own prediction by 2× |
 | 4 | Left Rope bounded at ~35% | fail if Cepeda >40%; confirm if never >38% | 40.90% first round; 48.70% runoff | **FALSIFIED** at its own line |
@@ -66,7 +68,7 @@ The rows were scored independently, but the claims were not independent. The ~35
 ceiling on Cepeda binds only if non-left anti-Espriella voters have somewhere else to
 park. Claims 1 and 3 assert they do not — and both confirmed *more severely than
 modeled* (Fajardo at 4.26% against a predicted 9–10% terminal). Full compression
-transfers the strangled middle's mass to the poles; the Noose's over-performance
+transfers the strangled middle's mass to the poles; the Snare's over-performance
 entails the Rope-ceiling's failure. The runoff is consistent: of ~5.6M votes added
 between rounds, Cepeda took roughly 54% and closed the gap from 2.85 to 0.96.
 
