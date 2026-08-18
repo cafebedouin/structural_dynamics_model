@@ -18,6 +18,12 @@ map_custom_pillar(C, _CustomType, StandardType) :-
     signature_detection:constraint_signature(C, Signature),
     resolve_mapping(Signature, StandardType).
 
+% DEAD MAP ENTRIES (OQ-296, confirmed 2026-08-18): neither key is ever produced
+% by constraint_signature/2 — natural_law's `HasAlternatives == false` and
+% coordination_scaffold's `== true` are both unsatisfiable (signature_detection
+% :427, :478). Confirmed at edit time by unbound once/1 census on the live leg:
+% both 0. Kept as sockets, not retired — GAP-08 §7 revives both at once. Same
+% disposition as the piton_signature row below, different cause.
 % Natural Laws and high-stability invariants are Mountains
 resolve_mapping(natural_law, mountain).
 % Successful voluntary coordination (like decentralized_governance) are Ropes

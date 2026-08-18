@@ -162,6 +162,12 @@ is_complete_constraint(C) :-
     ;  (assertz(validation_error(missing_metric, C, suppression_requirement)), fail)),
 
     % Must have domain category
+    % MEASUREMENT, NOT A DISPOSITION (2026-08-18): domain_priors:category_of/2 returns
+    % `unknown_novel` on 279/279 live-leg and 1106/1106 kernel_v1 constraints. The
+    % predicate itself dispatches correctly (a planted constraint_claim(_, natural_law)
+    % or (_, physical_law) yields physical_natural); that claim vocabulary is simply
+    % authored 0 times in any corpus. Disposition OPEN — see the spawned OQ recorded at
+    % OQ-296's close. Do not infer grouping validity from this call.
     (domain_priors:category_of(C, Cat)
     -> (Cat \= unknown, Cat \= unknown_novel)
     ;  (assertz(validation_warning(missing_category, C, 'No domain category assigned')), fail)),

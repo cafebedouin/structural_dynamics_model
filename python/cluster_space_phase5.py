@@ -28,6 +28,11 @@ TESTSETS   = ROOT / "prolog" / "testsets"
 OUT_MD     = ROOT / "outputs" / "cluster_space_phase5.md"
 OUT_JSON   = ROOT / "outputs" / "cluster_space_phase5.json"
 
+# OQ-296 (confirmed 2026-08-18): the "natural_law" column is PERMANENTLY ZERO —
+# the engine never emits that signature (unsatisfiable by construction,
+# signature_detection.pl:427). A zero in that column is structural, not a
+# measured absence, and must not be read as "this stratum contains no natural
+# laws." The other four flags are live.
 # Copied verbatim from cluster_space_audit.py
 SIGNATURE_FLAGS    = ["false_natural_law", "false_ci_rope", "natural_law",
                       "constructed_high_extraction", "coupling_invariant_rope"]

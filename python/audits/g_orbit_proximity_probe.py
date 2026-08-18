@@ -74,6 +74,11 @@ TYPE_ORDER = ["mountain", "rope", "tangled_rope", "snare",
 TYPE_IDX   = {t: i for i, t in enumerate(TYPE_ORDER)}
 OBSERVER_POSITIONS = ["powerless", "moderate", "institutional", "analytical"]
 MAXENT_TYPES       = ["mountain", "rope", "tangled_rope", "snare", "scaffold", "piton"]
+# OQ-296 (confirmed 2026-08-18): the "natural_law" column is PERMANENTLY ZERO —
+# the engine never emits that signature (unsatisfiable by construction,
+# signature_detection.pl:427). A zero in that column is structural, not a
+# measured absence, and must not be read as "this stratum contains no natural
+# laws." The other four flags are live.
 SIGNATURE_FLAGS    = ["false_natural_law", "false_ci_rope", "natural_law",
                       "constructed_high_extraction", "coupling_invariant_rope"]
 

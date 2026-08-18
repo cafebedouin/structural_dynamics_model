@@ -35,6 +35,10 @@ OUT_PATH         = os.path.join(REPO_ROOT, "outputs", "audit3_report.md")
 
 
 # Override target table — from abductive_helpers.pl:70-80
+# OQ-296 (confirmed 2026-08-18): the "natural_law" and "coordination_scaffold"
+# keys below are dead — never produced by the engine. Mirrors
+# abductive_helpers.pl override_target/2. Any count keyed on them is
+# structurally 0, not a measured absence.
 OVERRIDE_TARGET = {
     "false_natural_law":          "tangled_rope",
     "false_ci_rope":              "tangled_rope",

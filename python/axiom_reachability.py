@@ -167,6 +167,13 @@ BOOL_COMBOS = make_bool_combos()
 # Signatures that change the metric-based type. We enumerate which signatures
 # are possible for each boolean combo, then apply overrides.
 
+# OQ-296 (confirmed 2026-08-18): "natural_law" and "coordination_scaffold" are
+# enumerated here but are NEVER produced by the engine — both signature clauses
+# are unsatisfiable by construction (signature_detection.pl :427 dead-by-range,
+# :478 dead-by-empty-table). A reachability result that reports a type as
+# reachable VIA one of those two atoms is reporting a path the engine cannot
+# take. Left in the enumeration deliberately: this module asks what is reachable
+# in principle, and GAP-08 §7 re-powers both at once.
 SIGNATURES = [
     "natural_law", "false_natural_law", "coupling_invariant_rope", "false_ci_rope",
     "coordination_scaffold", "piton_signature",

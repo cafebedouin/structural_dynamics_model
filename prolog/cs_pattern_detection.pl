@@ -350,6 +350,14 @@ cs_displaced_beneficiary(C) :-
     cs_authority_grounding(C, AG),
     memberchk(AG, [self_enforcing, lineage, practice, expertise, diffuse_epistemic]),
     signature_detection:constraint_signature(C, Sig),
+    % PARTIALLY DEAD EXCLUSION (OQ-296, confirmed 2026-08-18). Of the three atoms
+    % excluded here, TWO can never occur — natural_law and coordination_scaffold
+    % are 0-firing by construction (signature_detection :427, :478). Only
+    % coupling_invariant_rope is live (15 on the live leg), so in practice this
+    % reads `\+ Sig == coupling_invariant_rope`. The guard still functions, but it
+    % is WEAKER than it looks: it excludes one atom, not three. Direction of the
+    % error is pass-open — more constraints reach the body than the written list
+    % implies. Do not tighten by deleting the dead atoms; GAP-08 §7 restores them.
     \+ memberchk(Sig, [natural_law, coupling_invariant_rope, coordination_scaffold]),
     narrative_ontology:cs_story_uid(C, UID),
     narrative_ontology:cs_reading_relation(UID, Target, forecloses),
@@ -428,6 +436,12 @@ cs_grounding_contradiction(distributed,       Sig) :- cs_extraction_signature(Si
 cs_grounding_contradiction(diffuse_epistemic, Sig) :- cs_extraction_signature(Sig).
 cs_grounding_contradiction(self_enforcing,    Sig) :- cs_extraction_signature(Sig).
 
+% DEAD ROWS below (OQ-296, confirmed 2026-08-18): the second argument of
+% cs_grounding_contradiction/2 is the ENGINE signature atom — :416-417 calls
+% constraint_signature(C, Sig) then cs_grounding_contradiction(AG, Sig) — and
+% natural_law / coordination_scaffold are never produced (live-leg census 0).
+% The coupling_invariant_rope row is LIVE. Note the CS layer's own
+% `natural_law_constraint` vocabulary is a SEPARATE namespace and is unaffected.
 % Self-enforcing claims natural necessity; coordination_scaffold says it was a choice.
 cs_grounding_contradiction(self_enforcing, coordination_scaffold).
 

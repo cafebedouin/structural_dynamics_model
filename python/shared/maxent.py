@@ -164,6 +164,9 @@ def log_sum_exp_normalize(type_ll_pairs):
 def apply_signature_override(signature, dist):
     """Apply signature-based overrides matching maxent_classifier.pl:297-324."""
     # Unconditional overrides
+    # OQ-296 (confirmed 2026-08-18): the "natural_law" key is dead — the engine
+    # never emits that signature (live-leg census 0), so this branch has never
+    # fired. The other keys are live. Mirrors maxent_classifier.pl's arm.
     unconditional = {
         "natural_law": "mountain",
         "false_natural_law": "tangled_rope",

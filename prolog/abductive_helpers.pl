@@ -68,6 +68,9 @@ known_override_signature(false_ci_rope).
 % explain. FSM now grades via signature_detection:converted_signature/1 +
 % signature_diagnostic_severity/3.
 known_override_signature(coupling_invariant_rope).
+% DEAD (OQ-296, confirmed 2026-08-18): natural_law and coordination_scaffold are
+% never produced by constraint_signature/2 (both 0 on the live-leg census), so
+% these two facts are never matched. Sockets kept — GAP-08 §7 revives both.
 known_override_signature(natural_law).
 known_override_signature(coordination_scaffold).
 known_override_signature(constructed_low_extraction).
@@ -110,6 +113,8 @@ override_target(false_ci_rope,              tangled_rope).
 % override_target(false_summit_mountain, ...) REMOVED 2026-06-21 (OQ-138): FSM
 % converted to ROUTE/COMMENT, forces no type. See known_override_signature/1 above.
 override_target(coupling_invariant_rope,    rope).
+% DEAD rows (OQ-296, confirmed 2026-08-18) — same cause as
+% known_override_signature/1 above: these keys never arrive.
 override_target(natural_law,                mountain).
 override_target(coordination_scaffold,      rope).
 override_target(constructed_low_extraction, rope).

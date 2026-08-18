@@ -497,6 +497,12 @@ severity_rank(warning, 2).
 severity_rank(critical, 3).
 
 %% signature_distance(+Sig1, +Sig2, -D)
+% UNREACHABLE ROWS (OQ-296, confirmed 2026-08-18): every row below keyed on
+% `natural_law` in either argument is dead — the atom is never produced by
+% constraint_signature/2 (live-leg census 0). `false_natural_law`,
+% `false_ci_rope` and `coupling_invariant_rope` ARE produced, so rows pairing
+% only those are live. Dead pairs fall through to the 0.4 catch-all, which is
+% why nothing errors. Sockets kept: GAP-08 §7.
 signature_distance(S, S, 0.0) :- !.
 signature_distance(natural_law, false_natural_law, 0.8) :- !.
 signature_distance(false_natural_law, natural_law, 0.8) :- !.

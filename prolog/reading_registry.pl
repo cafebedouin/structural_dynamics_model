@@ -112,6 +112,14 @@ aggregatable_reading(stakeholder_seats:power_witness_map/2,    corpus_constraint
 aggregatable_reading(signature_detection:signature_confidence/3, constraint_signature_pair, total_on_domain).
 aggregatable_reading(signature_detection:explain_signature/3,    constraint_signature_pair, total_on_domain).
 aggregatable_reading(signature_detection:structural_purity/2,    corpus_constraint, total_on_domain).
+% VACUOUS TOTALITY (OQ-296, confirmed 2026-08-18). This registration is GREEN and
+% certifies nothing: has_viable_alternatives/2 is a CONSTANT function (`unknown`
+% on all 8,688 constraints across seven legs), and a constant is trivially
+% total_on_domain. The OQ-137 gate proves exactly-one-answer-per-key; it cannot
+% distinguish a reading that measures from one that returns the same token
+% forever. Coverage is certified WITHOUT information. The gate defect this
+% instantiates is tracked separately — see the spawned OQ recorded at OQ-296's
+% close; do NOT deregister this reading to make the point.
 aggregatable_reading(signature_detection:has_viable_alternatives/2, corpus_constraint, total_on_domain).
 aggregatable_reading(cs_pattern_detection:cs_pattern/3,          corpus_constraint, total_on_domain).
 aggregatable_reading(cs_kernel_registry:cs_kernel_coverage/2,    kernel, total_on_domain).

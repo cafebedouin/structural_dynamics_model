@@ -196,7 +196,14 @@ get_constraint_profile(C,
     % Count asymmetric beneficiaries
     count_power_beneficiaries(C, BeneficiaryCount),
 
-    % Check for viable alternatives
+    % Check for viable alternatives.
+    % CONSTANT SLOT (OQ-296, confirmed 2026-08-18): has_viable_alternatives/2 is a
+    % constant function — `unknown` on all 8,688 constraints across seven legs.
+    % Every profile term built here therefore carries `unknown` in the
+    % HasAlternatives position, which is what makes BOTH the natural_law
+    % (== false, :427) and coordination_scaffold (== true, :478) conjuncts
+    % unsatisfiable. The slot is kept, not removed: it re-powers both signatures
+    % at once if GAP-08 §7 lands.
     has_viable_alternatives(C, HasAlternatives),
 
     % Compute temporal stability
@@ -475,6 +482,17 @@ coordination_scaffold_signature(profile(AccessCollapse, Suppression, Resistance,
 
     % Structural conditions (DIFFERENT from natural law)
     BeneficiaryCount =< 1,  % Symmetric or near-symmetric
+    % DEAD-BY-EMPTY-TABLE (OQ-296, confirmed 2026-08-18). The sibling of :427's
+    % DEAD-BY-RANGE: natural_law needs `false` and cannot get it; this needs
+    % `true` and cannot get it either. has_viable_alternatives/2 returns `true`
+    % ONLY from intent_viable_alternative/3, which is EMPTY corpus-wide (GAP-08),
+    % so its live range is the single value {unknown} and this conjunct makes
+    % coordination_scaffold unsatisfiable on every corpus.
+    % Confirmed at edit time: unbound once/1 census over the live leg returns
+    % coordination_scaffold = 0 (audits/2026-08-18_oq296_consumer_honesty/
+    % PHASE0_REWITNESS.md), against a non-degenerate 7-signature histogram.
+    % Powering it is GAP-08 §7, same blocker as natural_law — ONE capability
+    % revives BOTH signatures, which is why neither socket is retired.
     HasAlternatives == true.  % KEY: This WAS a choice
 
 /* ================================================================
@@ -642,6 +660,19 @@ compute_signature_confidence(Profile, natural_law, Confidence) :-
     ;   Confidence = low
     ).
 
+% UNREACHABLE (OQ-296, confirmed 2026-08-18) on two independent counts, and the
+% inner one is the interesting half:
+%   (a) No caller can bind this clause head. signature_confidence/3's profile arm
+%       is reached with the signature the engine ACTUALLY computed, and the only
+%       enumerator is reading_registry's `constraint_signature_pair` domain
+%       (:77-79 = corpus_constraint(C) x constraint_signature(C, Sig)).
+%       coordination_scaffold is never in that pair set; grep confirms no
+%       external caller of signature_confidence/3 outside this file.
+%   (b) Even if reached, `high` is arithmetically unreachable: of the three
+%       indicators below, (HasAlternatives == true) can never hold (:478), so
+%       Count =< 2 always and the Count >= 3 arm is dead. The clause would
+%       silently cap at `medium` — a degraded scale that still looks like a
+%       working one.
 compute_signature_confidence(Profile, coordination_scaffold, Confidence) :-
     Profile = profile(AccessCollapse, Suppression, _, _, HasAlternatives, _, _),
     % Strong indicators

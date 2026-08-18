@@ -124,6 +124,12 @@ derive_diagnostic_state(_IntervalID) :-
 check_for_social_twins(Name, State) :-
     member(State, [snare, tangled_rope, extractive_snare]), % High-risk states [cite: 4, 206, 208]
     isomorphism_engine:find_high_risk_isomorphism(Name, SocialTwin, Score),
+    % MEASUREMENT, NOT A DISPOSITION (2026-08-18): domain_priors:category_of/2 returns
+    % `unknown_novel` on 279/279 live-leg and 1106/1106 kernel_v1 constraints. The
+    % predicate itself dispatches correctly (a planted constraint_claim(_, natural_law)
+    % or (_, physical_law) yields physical_natural); that claim vocabulary is simply
+    % authored 0 times in any corpus. Disposition OPEN — see the spawned OQ recorded at
+    % OQ-296's close. Do not infer grouping validity from this call.
     domain_priors:category_of(SocialTwin, Cat),
     member(Cat, [narrative_history, statutory_formal, election_cycle]),
     !,

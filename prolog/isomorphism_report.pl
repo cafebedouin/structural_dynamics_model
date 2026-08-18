@@ -23,6 +23,12 @@ generate_isomorphism_report :-
     
     forall(member(iso(C1, C2, Score), SortedIndex),
            (   % Only report if C1 is "technical" and C2 is "social" to highlight the thesis
+               % MEASUREMENT, NOT A DISPOSITION (2026-08-18): domain_priors:category_of/2 returns
+               % `unknown_novel` on 279/279 live-leg and 1106/1106 kernel_v1 constraints. The
+               % predicate itself dispatches correctly (a planted constraint_claim(_, natural_law)
+               % or (_, physical_law) yields physical_natural); that claim vocabulary is simply
+               % authored 0 times in any corpus. Disposition OPEN — see the spawned OQ recorded at
+               % OQ-296's close. Do not infer grouping validity from this call.
                domain_priors:category_of(C1, Cat1),
                domain_priors:category_of(C2, Cat2),
                (is_technical(Cat1), is_social(Cat2))

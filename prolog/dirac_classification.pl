@@ -354,7 +354,17 @@ gauge_freedom(C, Context, Freedom) :-
 describe_freedom(second_class, _, _, no_freedom).
 
 % First-class: coordination choice. Has viable alternatives?
-% (has_viable_alternatives/2 from structural_signatures.pl:186)
+% Cite corrected 2026-08-18 (OQ-296): the former `structural_signatures.pl:186`
+% was stale — that file is a 13-line re-export shim with no line 186 and zero
+% occurrences of the predicate. Real definition: signature_detection.pl:249.
+%
+% CONSTANT OUTPUT (OQ-296, confirmed 2026-08-18): has_viable_alternatives/2 is a
+% constant function returning `unknown` on every constraint (empty
+% intent_viable_alternative/3, GAP-08), so every first_class constraint reports
+% coordination_choice(unknown). The term is NOT a measurement of whether
+% alternatives exist — it is the absence sentinel wearing a reading's shape. A
+% consumer that treats coordination_choice(unknown) as "no alternatives found"
+% converts an abstain into a finding. Blocked on GAP-08 §7.
 describe_freedom(first_class, C, _, coordination_choice(HasAlts)) :-
     signature_detection:has_viable_alternatives(C, HasAlts).
 

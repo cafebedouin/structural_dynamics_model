@@ -364,6 +364,10 @@ apply_signature_override(C, DistIn, DistOut) :-
 %  resolved for its own FCR/constructed scope).
 
 %% Unconditional overrides: set target to 0.95, redistribute 0.05 (natural_law, CI-rope NOT converted — keep)
+% DEAD CLAUSE for the natural_law arm (OQ-296, confirmed 2026-08-18): the atom is
+% never produced by constraint_signature/2 (live-leg census 0), so this override
+% has never fired and cannot. The CI-rope arm below is LIVE (15 firings on the
+% live leg) — do not read this note as covering it. Socket kept: GAP-08 §7.
 apply_override_for_sig(_, natural_law, DistIn, DistOut) :-
     !, override_unconditional(mountain, DistIn, DistOut).
 %% false_natural_law — CONVERTED (OQ-138, 2026-07-03): boost only under the legacy lever.
