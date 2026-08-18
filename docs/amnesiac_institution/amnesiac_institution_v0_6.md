@@ -351,7 +351,7 @@ the repository's always-loaded instructions hand it, works, and vanishes.
 
 Scale, as of 2026-08-18 (all manifested in Appendix B): 187 audit directories on disk, 185 in the
 census frame; 309 tracked open questions; 4,205 corpus stories across five generation legs (a figure
-that moves mid-session); ~1.5k commits since repository initialization (2026-01-12); ~42k lines of
+that moves mid-session); 1,688 commits since repository initialization (2026-01-12); ~42k lines of
 Prolog across 125 modules and ~107k lines of Python across 285 files. Denominators still missing — total sessions, total
 instances, and the fraction of work ever audited — are `[UNWITNESSED]`: no session log exists, so
 commits are the nearest recorded proxy for activity.
@@ -1973,9 +1973,11 @@ after adoption, and none existed yet. The honest publication was that empty read
 not a retrospectively reconstructed rate: back-filling bits onto old audits would be single-coder
 retrospective classification of exactly the kind §4.3 flags.
 
-**The current reading (2026-08-18): 11 live / 1 latent / 0 `no`, over 12 bits, from 12 of 61
+**The current reading (2026-08-18): 12 live / 1 latent / 0 `no`, over 13 bits, from 13 of 62
 writeups.** Eight days of forward-only accumulation, and the shape §10.5 identified at four bits is
-unchanged at twelve: **still no decline**. `apparatus_instrument.py` continues to print a refusal in
+unchanged at thirteen: **still no decline**. The thirteenth bit is this row's own discharge pass,
+which is the population-selection effect §10.5 names, arriving on schedule: an audit written because
+something was suspected scores `live`, and it moves the rate it reports. `apparatus_instrument.py` continues to print a refusal in
 place of a rate.
 
 ### 10.3 Five efficacies, two instrumentable, one invisible
@@ -2042,7 +2044,7 @@ not quality. It cannot see restraint. And the deepest question has no instrument
 Ω_P.
 
 > **[ADDED 2026-08-13 — the catch bit has NO DISCRIMINATION RECORD, and this is structural.]** The
-> readout stands at **4 live / 0 latent / 0 no** (**11 / 1 / 0 over 12 bits at 2026-08-18 — the
+> readout stands at **4 live / 0 latent / 0 no** (**12 / 1 / 0 over 13 bits at 2026-08-18 — the
 > `no` column is still empty, so the argument below is unchanged and now rests on three times the
 > data**). §7.3 requires that a control's licence come from a
 > case it **declined**; this instrument has never declined, and it is the apparatus's own falsifier —
@@ -2583,9 +2585,9 @@ path component, and the census pipes grep into a positional parse.
 | 1.1 | Prolog modules (top-level) | 125 files, 41,860 lines | `ls prolog/*.pl \| wc -l`; `wc -l prolog/*.pl \| tail -1` |
 | 1.1 | Python scripts | 134 top-level; 285 incl. subpackages (excl. archives), 106,965 lines | `ls python/*.py \| wc -l`; `find python -name '*.py' -not -path '*/archives/*' \| wc -l`; lines: `find python -name '*.py' -not -path '*/archives/*' -exec cat {} + \| wc -l`. **The line command is new here and is not byte-reproducible from git history** — it counts the working tree, which includes untracked files; replayed against the 2026-08-10 commit it gives 266 files / 96,331 lines against the row's then-published 267 / 96,995, the gap being untracked files present on disk that day |
 | 1.1 | Audit directories | **187** on disk; **185** in the census frame | `ls -d audits/*/ \| wc -l` gives 187. **The old row read 174 against this command and the command never produced 174** — 174 was the *census frame* after self-excluding one in-progress arc directory, a different quantity that had been conflated with the scale figure. The two are now separate. Frame: `audits/2026-08-18_appendix_b_discharge/frame/freeze_frame.sh` |
-| 1.1 | Tracked open questions, by status | `[PINNED AT STEP 5]` | `python3 python/issues_status.py \| tail -1`. Written by a **second** edit, after this pass's own OQ-309 is dispositioned — a breakdown quoted before the disposition it counts is stale on landing day |
+| 1.1 | Tracked open questions, by status | total **309** = open 117 + resolved 153 + mitigated 19 + partial 8 + future 6 + disposed 6 | `python3 python/issues_status.py \| tail -1`. **Written by a second edit, after this pass's own OQ-309 was dispositioned to `partial`** — a breakdown quoted before the disposition it counts is stale on landing day, which is a small instance of the staleness ladder applied to the manifest's own writing order |
 | 1.1 | Corpus stories, per leg | 279 + 960 + 960 + 1005 + 1001 = 4,205 (moves mid-session) | `for d in testsets testsets_haiku testsets_flash testsets_kimi testsets_sonnet; do ls prolog/$d/*.pl \| wc -l; done` |
-| 1.1 | Commits | `[PINNED AT STEP 5]` | Pinned to a **named hash**, in the same as-of style the repo-init row uses. A bare `git rev-list --count HEAD` self-invalidates at the commit that lands it, which is why this cell is written by the second edit |
+| 1.1 | Commits | **1,688** at `3c7f7947` | `git rev-list --count HEAD`, **pinned to a named hash** in the same as-of style the repo-init row uses. A bare count self-invalidates at the commit that lands it — the value would be wrong the instant it was true — so the cell names the commit it was taken at, and this row is written by a second edit for that reason |
 | 1.1 | Repository initialized | 2026-01-12 (`41db1d0b`) | `git log --reverse --format='%ad %h' --date=short \| head -1` |
 | 1.2 | `CLAUDE.md` / `ISSUES.md` / `KNOWN_STATE.md` born | 2026-02-28 / 2026-05-28 / 2026-05-31 | `git log --reverse --format='%ad %h' --date=short -- <file> \| head -1` |
 | 1.1 | Sessions / instances / audit rate | `[UNWITNESSED]` — no session log exists | **Blocker re-verified 2026-08-18: still none.** Commits remain the nearest recorded proxy. Nothing in this pass changed the availability of the datum |
@@ -2603,7 +2605,7 @@ path component, and the census pipes grep into a positional parse.
 | 8.5 | Genuinely wrong content | 2 files | named in §8.5; verify against the backup tarball. **Still a pointer, and marked as one** — the two files are identified in prose and the claim that their content was *wrong* is a judgment no command discharges |
 | 8.5 | Rule-stack cap | 33 (currently 33/33) | `python3 python/apparatus_instrument.py --check` |
 | 8.5 | Always-loaded index size, before / after | 17,416 / 9,906 chars (≈4,400 / ≈2,500 tokens at 4 chars/token) | `tar xzf <backup> -O memory/MEMORY.md \| wc -c`; `wc -c <memory>/MEMORY.md` |
-| 10.2 | Rolling catch rate | **11 live / 1 latent / 0 no, over 12 bits** (12 of 61 writeups carry one) — was 0 bits at adoption | `python3 python/apparatus_instrument.py --check`. **Still no `no` and therefore still no decline**, which is §10.5's structural point at 12 bits rather than 4: the readout is reported and not interpreted |
+| 10.2 | Rolling catch rate | **12 live / 1 latent / 0 no, over 13 bits** (13 of 62 writeups carry one) — was 0 bits at adoption | `python3 python/apparatus_instrument.py --check`. **Still no `no` and therefore still no decline**, which is §10.5's structural point at 12 bits rather than 4: the readout is reported and not interpreted |
 | 10.4 | Audit cadence June / July / Aug 1–18 | 98 / 45 / **21** (was 98 / 45 / 10 through Aug 10) | `for m in 2026-06 2026-07 2026-08; do ls -d audits/$m-* \| /usr/bin/grep -vx audits/2026-08-18_appendix_b_discharge \| wc -l; done`. **Exclusion rule, stated in the row because it is a choice:** only *this pass's own in-progress directory* is excluded, and the rule is applied to every month (a no-op for June and July, stated so the series stays comparable with the original no-exclusion 98/45/10). The census's two-directory exclusion is **not** used here — that one is a contamination rationale about lexicon-carrying prose, and it does not transfer to an activity count; excluding a legitimate audit would bias the contested absorption/decay series toward decay. Both ways are in `evidence/appendixB_row_104_cadence.txt`; the exclusion carries a positive control asserting it removes exactly 1. **The August cell is not comparable to the published 10**: that was Aug 1–10, this is Aug 1–18 |
 | 10.4 | Standing-gate catch counts over the same months | `[UNWITNESSED]` — the absorption test (§10.4 cites it as RQ-c; RQ4's method also reaches it) | **Explicitly NOT discharged by the 2026-08-18 pass, and the blocker is that nobody has collected the series.** The cadence row above is a different quantity — audits *written*, not gate catches — and refreshing it does not touch this |
 | 3.5 | Truncation of the always-loaded channel at load time | `[UNWITNESSED]` — and **the carrier is retracted** | **Blocker re-verified and the row re-pointed 2026-08-18.** The always-loaded file has 46× headroom and is skipped whole rather than tail-truncated (the retracted claim is ISSUES **OQ-286**); the live question is the per-turn **recall** channel, ISSUES **OQ-289**, whose measurement has not been run. `apparatus_instrument.py --check` reports the delivery table today (19 of 53 files over a 4,096 B cap, 3 over a 25,000 B cap — *which constant binds is exactly what OQ-289 settles*) and prints `no sightings file`, which is not evidence that no truncation occurred |
