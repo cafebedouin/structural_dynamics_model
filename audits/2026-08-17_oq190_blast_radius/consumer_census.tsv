@@ -1,0 +1,469 @@
+# OQ-190 consumer_census.tsv — pass 1 (name-keyed) + pass 2 (closure/T2b)
+# governed by the frozen PREREGISTRATION.md in this directory
+# code surface: 497 tracked .pl/.py files (corpus data excluded)
+file	line	surface	emitted_name	bucket	tier	grade	reached_by	disposition	confidence	text
+agent/validate_naturalization_gap.py	257	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	lines.append(f"narrative_ontology:constraint_beneficiary({cid}, {safe_b}).")
+examples/grayman/labor_union_dues_structure.pl	78	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(labor_union_dues, union_administrative_body).
+examples/grayman/labor_union_dues_structure.pl	79	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim(labor_union_dues, rank_and_file_workers).
+examples/grayman/labor_union_dues_structure.pl	124	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(labor_union_dues, _),
+examples/grayman/labor_union_dues_structure.pl	125	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(labor_union_dues, _).
+prolog/abductive_triggers.pl	189	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	298	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	359	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	473	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	633	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, fail),
+prolog/abductive_triggers.pl	697	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	;   catch(drl_core:dr_type(C, Context, tangled_rope), _, fail)
+prolog/abductive_triggers.pl	712	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	772	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	824	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	883	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, PowerlessCtx, DrType), _, fail),
+prolog/abductive_triggers.pl	890	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, AnalyticalType), _, (AnalyticalType = unknown)),
+prolog/abductive_triggers.pl	957	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, DetType), _, (DetType = unknown)),
+prolog/abductive_triggers.pl	1013	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Context, mountain), _, fail),
+prolog/arakelov_height.pl	49	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Claimed),
+prolog/arakelov_height.pl	59	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Claimed),
+prolog/audit3_maxent_compare.pl	179	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, DetType), _, fail)
+prolog/bifurcation_export.pl	20	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type)
+prolog/bifurcation_export.pl	55	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   (drl_core:dr_type(C, Ctx, Type) -> true ; Type = unknown),
+prolog/boltzmann_compliance.pl	491	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, _, _, _, _, _),
+prolog/commentary_census.pl	95	code	q6_crosscheck	verdict	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	stakeholder_seats:q6_crosscheck(C, Cell, _).
+prolog/constraint_bridge.pl	94	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Type),
+prolog/constraint_bridge.pl	96	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C, Actor),
+prolog/constraint_indexing.pl	455	code	agent_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	(   narrative_ontology:agent_beneficiary(Constraint, _)
+prolog/constraint_indexing.pl	459	code	constraint_victim	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	(   narrative_ontology:constraint_victim(Constraint, _)
+prolog/constraint_indexing.pl	524	code	constraint_victim	cast	T2	cardinality	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(_, narrative_ontology:constraint_victim(Constraint, _), Victims),
+prolog/constraint_indexing.pl	573	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	resolve_coalition_power(Power, Constraint, ResolvedPower),
+prolog/constraint_indexing.pl	917	code	constraint_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries), !.
+prolog/constraint_indexing.pl	919	code	constraint_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:constraint_beneficiary(C, B), All),
+prolog/constraint_instances.pl	155	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(carbon_tax_2026, society_at_large).
+prolog/constraint_instances.pl	156	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim(carbon_tax_2026, low_income_consumers).
+prolog/context_profile_mining.pl	133	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, Type), _, fail)
+prolog/cs_kernel_registry.pl	89	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	once(drl_core:dr_type(C1, Ctx, Type1)),
+prolog/cs_kernel_registry.pl	90	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	once(drl_core:dr_type(C2, Ctx, Type2)),
+prolog/cs_kernel_registry.pl	142	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	once(drl_core:dr_type(C, Ctx, Type)) ),
+prolog/cs_pattern_detection.pl	213	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, scaffold),
+prolog/cs_pattern_detection.pl	275	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C, _), !.
+prolog/cs_pattern_detection.pl	290	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C, _),
+prolog/cs_pattern_detection.pl	291	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C, _).
+prolog/data_repair.pl	134	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	(   acc_has(AccIn, constraint_beneficiary(IntervalID, _))
+prolog/data_repair.pl	140	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	->  Acc1 = [bridge_result(constraint_beneficiary(IntervalID, inferred_institutional)) | AccIn],
+prolog/data_repair.pl	141	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	format('  [BRIDGE] Derived constraint_beneficiary(~w, inferred_institutional) from metrics (E=~2f, S=~2f)~n',
+prolog/data_repair.pl	147	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	(   acc_has(Acc1, constraint_victim(IntervalID, _))
+prolog/data_repair.pl	153	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	->  AccOut = [bridge_result(constraint_victim(IntervalID, inferred_subject)) | Acc1],
+prolog/data_repair.pl	154	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	format('  [BRIDGE] Derived constraint_victim(~w, inferred_subject) from metrics (E=~2f, S=~2f)~n',
+prolog/data_repair.pl	174	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	(   acc_has(Acc1, constraint_beneficiary(IntervalID, _))
+prolog/data_repair.pl	176	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	;   AccOut = [bridge_result(constraint_beneficiary(IntervalID, coordinated_group)) | Acc1],
+prolog/data_repair.pl	177	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	format('  [BRIDGE] Derived constraint_beneficiary(~w, coordinated_group) from scaffold declaration~n',
+prolog/data_repair.pl	205	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(IntervalID, ComputedType), _, fail),
+prolog/data_repair.pl	400	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	persist_single(constraint_beneficiary(ID, Actor)) :-
+prolog/data_repair.pl	401	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:constraint_beneficiary(ID, _)
+prolog/data_repair.pl	403	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	;   assertz(narrative_ontology:constraint_beneficiary(ID, Actor))
+prolog/data_repair.pl	405	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	persist_single(constraint_victim(ID, Actor)) :-
+prolog/data_repair.pl	406	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:constraint_victim(ID, _)
+prolog/data_repair.pl	408	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	;   assertz(narrative_ontology:constraint_victim(ID, Actor))
+prolog/data_validation.pl	187	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _), !.
+prolog/data_validation.pl	236	code	disappearance_verdict	verdict	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:disappearance_verdict(C, world_unchanged).
+prolog/detector_calibration.pl	87	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, _, payer, _, _, trapped, _), !.
+prolog/diagnostic_summary.pl	93	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, DetType), _, fail)
+prolog/diagnostic_summary.pl	835	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Ctx, DetType), _, fail),
+prolog/dirac_classification.pl	154	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type)),
+prolog/dirac_classification.pl	212	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, LocalType),
+prolog/dirac_classification.pl	218	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, AltCtx, AltType),
+prolog/dirac_classification.pl	262	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/dirac_classification.pl	403	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, DRType),
+prolog/dirac_classification.pl	411	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(DRType),
+prolog/drl_boltzmann_analysis.pl	111	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/drl_boltzmann_analysis.pl	112	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_asymmetric_extraction(C),
+prolog/drl_boltzmann_analysis.pl	115	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C, _),
+prolog/drl_boltzmann_analysis.pl	116	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C, _), !.
+prolog/drl_boltzmann_analysis.pl	119	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:has_coordination_function(C),
+prolog/drl_boltzmann_analysis.pl	120	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_asymmetric_extraction(C), !.
+prolog/drl_boltzmann_analysis.pl	123	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/drl_boltzmann_analysis.pl	124	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:has_asymmetric_extraction(C), !.
+prolog/drl_boltzmann_analysis.pl	182	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type)
+prolog/drl_boltzmann_analysis.pl	214	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/drl_composition.pl	56	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C1, Context, T1),
+prolog/drl_composition.pl	57	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C2, Context, T2),
+prolog/drl_composition.pl	108	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Component, snare),
+prolog/drl_composition.pl	121	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Source, mountain),
+prolog/drl_composition.pl	334	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, rope).
+prolog/drl_composition.pl	339	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, mountain).
+prolog/drl_core.pl	337	code	agent_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:agent_beneficiary(C, _).
+prolog/drl_core.pl	413	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/drl_core.pl	420	code	constraint_captured	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	\+ narrative_ontology:constraint_captured(C),
+prolog/drl_core.pl	449	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/drl_core.pl	450	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_asymmetric_extraction(C), !,
+prolog/drl_core.pl	548	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx, Type).
+prolog/drl_core.pl	560	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, mountain), !.
+prolog/drl_core.pl	563	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, rope), !.
+prolog/drl_core.pl	566	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, tangled_rope), !.
+prolog/drl_core.pl	569	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, snare), !.
+prolog/drl_core.pl	572	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, scaffold), !.
+prolog/drl_core.pl	575	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, piton), !.
+prolog/drl_core.pl	578	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, naturalized), !.
+prolog/drl_core.pl	637	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx1, Type1),
+prolog/drl_core.pl	638	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx2, Type2),
+prolog/drl_core.pl	685	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, snare).
+prolog/drl_core.pl	689	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Context, ActualType),
+prolog/drl_core.pl	769	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx1, Type1),
+prolog/drl_core.pl	770	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx2, Type2),
+prolog/drl_core.pl	791	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(C, Ctx, Type)),
+prolog/drl_core.pl	844	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	Old: dr_type(constraint, Type)
+prolog/drl_core.pl	845	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	New: dr_type(constraint, Context, Type)
+prolog/drl_core.pl	851	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	dr_type(constraint, Ctx, Type)
+prolog/drl_counterfactual.pl	43	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Constraint, Context, Type),
+prolog/drl_counterfactual.pl	94	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Target, Context, mountain),
+prolog/drl_counterfactual.pl	97	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Source, Context, SourceType),
+prolog/drl_counterfactual.pl	109	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Source, Context, snare),
+prolog/drl_counterfactual.pl	115	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Target, Context, mountain),
+prolog/drl_counterfactual.pl	120	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Source, Context, snare),
+prolog/drl_counterfactual.pl	121	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Target, Context, rope),
+prolog/drl_counterfactual.pl	126	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Source, Context, rope),
+prolog/drl_counterfactual.pl	127	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Target, Context, rope),
+prolog/drl_counterfactual.pl	180	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Constraint, Context, Type),
+prolog/drl_counterfactual.pl	204	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/drl_counterfactual.pl	212	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(For, Context, snare),
+prolog/drl_counterfactual.pl	239	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(Constraint, Context, Type),
+prolog/drl_fpn.pl	118	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Context, Type)
+prolog/drl_fpn.pl	265	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(Other, Context, OtherType)
+prolog/drl_purity_network.pl	114	code	shared_agent_link	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	( shared_agent_link(C, Other, LinkType, _),
+prolog/drl_purity_network.pl	153	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C1, Agent),
+prolog/drl_purity_network.pl	154	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C2, Agent),
+prolog/drl_purity_network.pl	157	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C1, Agent),
+prolog/drl_purity_network.pl	158	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C2, Agent),
+prolog/drl_purity_network.pl	164	code	shared_agent_link	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	findall(A, shared_agent_link(C1, C2, LinkType, A), Agents),
+prolog/drl_purity_network.pl	234	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	;   drl_core:dr_type(C, Context, MyType),
+prolog/drl_purity_network.pl	307	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(Other, Context, OtherType)
+prolog/drl_purity_network.pl	334	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(Src, Context, SrcType)
+prolog/fingerprint_report.pl	101	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, CtxLocal, TLocal), _, fail),
+prolog/fingerprint_report.pl	102	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, CtxNat, TNat), _, fail),
+prolog/fingerprint_report.pl	103	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, CtxGlobal, TGlobal), _, fail),
+prolog/fingerprint_report.pl	120	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(catch(drl_core:dr_type(C, CtxL, TL), _, TL = error) ; TL = error),
+prolog/fingerprint_report.pl	121	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(catch(drl_core:dr_type(C, CtxN, TN), _, TN = error) ; TN = error),
+prolog/fingerprint_report.pl	122	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(catch(drl_core:dr_type(C, CtxG, TG), _, TG = error) ; TG = error),
+prolog/fpn_report.pl	103	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Context, Type) -> true ; Type = unknown ).
+prolog/gap_diagnostic.pl	135	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:has_coordination_function(C)
+prolog/gap_diagnostic.pl	138	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:has_asymmetric_extraction(C)
+prolog/genuine_findings_query.pl	61	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, DetType) -> true ; DetType = unknown),
+prolog/giant_component_analysis.pl	347	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Context, Type), _, Type = unknown)
+prolog/giant_component_analysis.pl	1336	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, CType), _, CType = unknown)
+prolog/global_delta_report.pl	64	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+prolog/global_delta_report.pl	75	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:constraint_beneficiary(C, _) -> HasBenef = yes ; HasBenef = no),
+prolog/global_delta_report.pl	76	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:constraint_victim(C, _) -> HasVict = yes ; HasVict = no),
+prolog/global_delta_report.pl	302	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	has_beneficiary(C) :- narrative_ontology:constraint_beneficiary(C, _), !.
+prolog/global_delta_report.pl	303	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	has_victim(C) :- narrative_ontology:constraint_victim(C, _), !.
+prolog/grothendieck_cohomology.pl	164	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Ctx, T)
+prolog/grothendieck_cohomology.pl	364	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type).
+prolog/inferred_coupling_protocol.pl	228	code	shared_agent_link	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	drl_purity_network:shared_agent_link(C1, C2, _, _),
+prolog/inferred_coupling_protocol.pl	500	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, T), _, T = error)
+prolog/invertibility_analysis.pl	120	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:has_coordination_function(C) -> HasCoord = true ; HasCoord = false),
+prolog/invertibility_analysis.pl	121	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:has_asymmetric_extraction(C) -> HasAsymm = true ; HasAsymm = false),
+prolog/invertibility_analysis.pl	134	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:constraint_beneficiary(C, _) -> HasBen = true ; HasBen = false),
+prolog/invertibility_analysis.pl	135	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:constraint_victim(C, _) -> HasVic = true ; HasVic = false),
+prolog/invertibility_analysis.pl	162	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+prolog/invertibility_analysis.pl	251	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, TgtCtx, TgtType).
+prolog/invertibility_analysis.pl	358	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, SrcCtx, SrcType) -> true ; SrcType = unknown),
+prolog/invertibility_analysis.pl	359	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, TgtCtx, TgtType) -> true ; TgtType = unknown),
+prolog/invertibility_analysis.pl	458	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(P1, C, R1),
+prolog/invertibility_analysis.pl	459	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(P2, C, R2),
+prolog/invertibility_analysis.pl	534	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, PowCtx, PowType) -> true ; PowType = unknown),
+prolog/invertibility_analysis.pl	535	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, ModCtx, ModType) -> true ; ModType = unknown),
+prolog/invertibility_analysis.pl	536	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, InstCtx, InstType) -> true ; InstType = unknown),
+prolog/invertibility_analysis.pl	537	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, AnalCtx, AnalType) -> true ; AnalType = unknown),
+prolog/isomorphism_engine.pl	85	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/isomorphism_report.pl	72	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C1, Type),
+prolog/json_report.pl	398	code	constraint_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:constraint_beneficiary(C, B), Bens),
+prolog/json_report.pl	405	code	constraint_victim	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(V, narrative_ontology:constraint_victim(C, V), Vics),
+prolog/json_report.pl	1103	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, Type), _, fail)
+prolog/json_report.pl	1355	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(Other, Context, NType), _, fail)
+prolog/json_report.pl	1363	code	shared_agent_link	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	drl_purity_network:shared_agent_link(Subj, Other, Source, A),
+prolog/logical_fingerprint.pl	95	code	fingerprint_actors	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	fingerprint_actors(C, Actors),
+prolog/logical_fingerprint.pl	123	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, T) -> Type = T ; Type = unknown).
+prolog/logical_fingerprint.pl	176	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C).
+prolog/logical_fingerprint.pl	179	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_asymmetric_extraction(C).
+prolog/logical_fingerprint.pl	182	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_beneficiary(C, _), !.
+prolog/logical_fingerprint.pl	185	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C, _), !.
+prolog/logical_fingerprint.pl	226	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:has_coordination_function(C).
+prolog/logical_fingerprint.pl	242	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C, _),
+prolog/logical_fingerprint.pl	263	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:constraint_beneficiary(C, _),
+prolog/logical_fingerprint.pl	280	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_asymmetric_extraction(C),
+prolog/logical_fingerprint.pl	298	code	constraint_beneficiary	cast	T2	cardinality	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:constraint_beneficiary(C, B), Bs),
+prolog/logical_fingerprint.pl	302	code	constraint_victim	cast	T2	cardinality	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(V, narrative_ontology:constraint_victim(C, V), Vs),
+prolog/logical_fingerprint.pl	444	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:has_coordination_function(C), !.
+prolog/logical_fingerprint.pl	543	code	fingerprint_actors	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	fingerprint_actors(C1, A1),
+prolog/logical_fingerprint.pl	544	code	fingerprint_actors	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	fingerprint_actors(C2, A2),
+prolog/logical_fingerprint.pl	581	code	fingerprint_actors	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(fingerprint_actors(C, actors(BT, VT))
+prolog/maxent_classifier.pl	198	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:has_coordination_function(C) -> Val = true ; Val = false).
+prolog/maxent_classifier.pl	200	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	(narrative_ontology:has_asymmetric_extraction(C) -> Val = true ; Val = false).
+prolog/maxent_classifier.pl	204	code	constraint_captured	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	(narrative_ontology:constraint_captured(C) -> Val = true ; Val = false).
+prolog/maxent_classifier.pl	488	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Context, DetType) -> true ; DetType = unknown ),
+prolog/maxent_classifier.pl	561	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Context, _) -> true ; true ),
+prolog/maxent_classifier.pl	613	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/maxent_classifier.pl	657	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(member(C, Constraints), drl_core:dr_type(C, Ctx, Type)),
+prolog/maxent_classifier.pl	876	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/maxent_diagnostic.pl	146	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(ND, Context, DT) -> true ; DT = no_type),
+prolog/maxent_diagnostic.pl	155	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, T) -> true ; T = no_dr_type)
+prolog/maxent_diagnostic.pl	166	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, T),
+prolog/maxent_diagnostic.pl	185	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, DetType) -> true ; DetType = unknown)
+prolog/maxent_diagnostic.pl	374	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, DT2) -> true ; DT2 = unknown),
+prolog/maxent_diagnostic.pl	424	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, rope),
+prolog/maxent_diagnostic.pl	445	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, rope),
+prolog/maxent_diagnostic.pl	459	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, rope),
+prolog/maxent_diagnostic.pl	489	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/maxent_report.pl	50	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, DetType) -> true ; DetType = unknown),
+prolog/maxent_report.pl	225	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(drl_core:dr_type(C, Context, DT) -> true ; DT = unknown),
+prolog/maxent_report.pl	277	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, rope),
+prolog/metric_drift_events.pl	158	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/metric_drift_events.pl	236	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/metric_drift_events.pl	284	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, ActualType),
+prolog/metric_drift_events.pl	289	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Context, Type),
+prolog/narrative_ontology.pl	169	code	founding_problem_status	verdict	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	founding_problem_status(C, dead),
+prolog/narrative_ontology.pl	170	code	disappearance_verdict	verdict	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	disappearance_verdict(C, world_rearranges).
+prolog/narrative_ontology.pl	320	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	has_coordination_function(ConstraintID),
+prolog/narrative_ontology.pl	321	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	has_asymmetric_extraction(ConstraintID).
+prolog/narrative_ontology.pl	333	code	stakeholder_gain_flow	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	stakeholder_gain_flow(C, Receiver),
+prolog/narrative_ontology.pl	335	code	constraint_stakeholder	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	constraint_stakeholder(C, Receiver, _, _, _, _, _), !.
+prolog/narrative_ontology.pl	344	code	stakeholder_gain_flow	cast	T6		name	SUSPECT-unwitnessed	inferred	stakeholder_gain_flow(C, diffuse).
+prolog/narrative_ontology.pl	352	code	uncaptured	cast	T6		name	SUSPECT-unwitnessed	inferred	uncaptured(C),
+prolog/narrative_ontology.pl	353	code	fixing_cost_class	cast	T6		name	SUSPECT-unwitnessed	inferred	fixing_cost_class(C, prohibitive).
+prolog/narrative_ontology.pl	362	code	uncaptured	cast	T6		name	SUSPECT-unwitnessed	inferred	uncaptured(C),
+prolog/narrative_ontology.pl	363	code	fixing_cost_class	cast	T6		name	SUSPECT-unwitnessed	inferred	fixing_cost_class(C, cheap).
+prolog/narrative_ontology.pl	372	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	constraint_beneficiary(ConstraintID, _).
+prolog/narrative_ontology.pl	381	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	constraint_victim(ConstraintID, _).
+prolog/narrative_ontology.pl	568	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	constraint_beneficiary(ConstraintID, Beneficiary),
+prolog/narrative_ontology.pl	569	code	non_agent_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ non_agent_beneficiary(Beneficiary).
+prolog/network_dynamics.pl	108	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(Other, Context, OtherType)
+prolog/network_dynamics.pl	134	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	;   drl_core:dr_type(C, Context, MyType),
+prolog/network_dynamics.pl	142	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(Other, Context, OtherType)
+prolog/omega1_audit.pl	78	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, Type), _, Type = error)
+prolog/omega1_audit.pl	124	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:has_coordination_function(C) -> HasCoord = true ; HasCoord = false ),
+prolog/omega1_audit.pl	125	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:has_asymmetric_extraction(C) -> HasAsymm = true ; HasAsymm = false ),
+prolog/omega1_audit.pl	391	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, Ctx, T), _, T = error)
+prolog/persistence_export.pl	53	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type)
+prolog/probe_oq35_field_counterfactual.pl	54	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(C, T0), _, fail) -> DrType = T0 ; DrType = error ),
+prolog/probe_oq35_field_counterfactual.pl	109	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	[ narrative_ontology:constraint_victim(_, _) ],
+prolog/product_site_export.pl	116	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Ctx, T)
+prolog/quantum_verification_report.pl	203	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, mountain),
+prolog/quantum_verification_report.pl	236	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, MtnCtx, mountain),
+prolog/quantum_verification_report.pl	240	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, OtherCtx, OtherType),
+prolog/quantum_verification_report.pl	262	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(CB, MCtx, mountain),
+prolog/quantum_verification_report.pl	264	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(CB, OCtx, OT), OT \= mountain, !,
+prolog/quantum_verification_report.pl	344	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, FullType),
+prolog/reading_registry.pl	73	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, _, _, _, _, _).
+prolog/report_generator.pl	280	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, _Role, Power, _T, _E, _S),
+prolog/report_generator.pl	291	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Ctx, Type), _, fail),
+prolog/report_generator.pl	469	code	q6_crosscheck	verdict	T6		name	SUSPECT-unwitnessed	inferred	stakeholder_seats:q6_crosscheck(C, Cell, Daylight),
+prolog/report_generator.pl	525	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+prolog/report_generator.pl	581	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	->  (   narrative_ontology:constraint_beneficiary(C, B)
+prolog/report_generator.pl	748	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   drl_core:dr_type(C, Context, ActualType)
+prolog/routing_sink.pl	111	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   once(drl_core:dr_type(C, Seat, T)), T \== unknown
+prolog/sheaf_analysis.pl	125	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, Type)
+prolog/signature_detection.pl	245	code	agent_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),
+prolog/signature_detection.pl	867	code	piton_candidate	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	narrative_ontology:piton_candidate(C), !.
+prolog/signature_detection.pl	1213	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/signature_detection.pl	1220	code	constraint_captured	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	\+ narrative_ontology:constraint_captured(C),
+prolog/signature_detection.pl	1375	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/signature_detection.pl	1378	code	constraint_captured	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	\+ narrative_ontology:constraint_captured(C), !.
+prolog/signature_detection.pl	1477	code	constraint_captured	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	narrative_ontology:constraint_captured(C), !.
+prolog/signature_detection.pl	1479	code	piton_candidate	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	narrative_ontology:piton_candidate(C), !.
+prolog/signature_detection.pl	1481	code	transient_neglect	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:transient_neglect(C), !.
+prolog/signature_detection.pl	1652	code	agent_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	agent_beneficiary(C, _).
+prolog/signature_detection.pl	1716	code	agent_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(B, narrative_ontology:agent_beneficiary(C, B), Beneficiaries),
+prolog/signature_detection.pl	1794	code	piton_candidate	cast	T1	name-identity	name	SUSPECT-confirmed-and-fails	recovered	\+ narrative_ontology:piton_candidate(C),
+prolog/signature_detection.pl	1798	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, DT),
+prolog/signature_detection.pl	1815	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, unknown).
+prolog/signature_detection.pl	1833	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, DT),
+prolog/signature_detection.pl	1857	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	once(narrative_ontology:constraint_victim(C, _)), !.
+prolog/signature_detection.pl	1862	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	once(narrative_ontology:constraint_victim(C, _)), !.
+prolog/signature_detection.pl	1872	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	once(narrative_ontology:constraint_victim(C, _)), !.
+prolog/signature_detection.pl	1904	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, FinalType),
+prolog/stakeholder_seats.pl	66	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, _Role, P, T, E, S).
+prolog/stakeholder_seats.pl	72	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, Role, Power, _, Exit, _),
+prolog/stakeholder_seats.pl	104	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, _, _, Power, _, _, _),
+prolog/stakeholder_seats.pl	134	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, N1, _, Power, _, _, _),
+prolog/stakeholder_seats.pl	135	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, N2, _, Power, _, _, _),
+prolog/stakeholder_seats.pl	137	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:stakeholder_non_agent(C, N1),
+prolog/stakeholder_seats.pl	138	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:stakeholder_non_agent(C, N2),
+prolog/stakeholder_seats.pl	142	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	role_of(C, N, R) :- narrative_ontology:constraint_stakeholder(C, N, R, _, _, _, _).
+prolog/stakeholder_seats.pl	143	code	stakeholder_secondary_role	cast	T6		name	SUSPECT-unwitnessed	inferred	role_of(C, N, R) :- narrative_ontology:stakeholder_secondary_role(C, N, R).
+prolog/stakeholder_seats.pl	161	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_stakeholder(C, Name, _, _, T, E, _),
+prolog/stakeholder_seats.pl	180	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(N, ( narrative_ontology:constraint_stakeholder(C, N, R, _, _, _, _),
+prolog/stakeholder_seats.pl	182	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns).
+prolog/stakeholder_seats.pl	250	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
+prolog/stakeholder_seats.pl	394	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Ns).
+prolog/stakeholder_seats.pl	417	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	;   findall(N, ( narrative_ontology:constraint_stakeholder(C, N, Role, _, _, _, _),
+prolog/stakeholder_seats.pl	418	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:stakeholder_non_agent(C, N) ), Ns)
+prolog/stakeholder_seats.pl	550	code	q6_cell	verdict	T6		name	SUSPECT-unwitnessed	inferred	q6_cell(C, Cell),
+prolog/stakeholder_seats.pl	571	code	founding_problem_status	verdict	T6		name	SUSPECT-unwitnessed	inferred	(   \+ narrative_ontology:founding_problem_status(C, _)
+prolog/stakeholder_seats.pl	573	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	;   drl_core:dr_type(C, unknown)
+prolog/stakeholder_seats.pl	575	code	founding_problem_status	verdict	T6		name	SUSPECT-unwitnessed	inferred	;   narrative_ontology:founding_problem_status(C, Status),
+prolog/stakeholder_seats.pl	576	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Sig),
+prolog/stakeholder_seats.pl	605	code	founding_problem_corroboration_class	verdict	T6		name	SUSPECT-unwitnessed	inferred	(   narrative_ontology:founding_problem_corroboration_class(C, Class)
+prolog/stakeholder_seats.pl	647	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:constraint_victim(C, V),
+prolog/stakeholder_seats.pl	674	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   \+ ( drl_core:dr_type(C, T0), extractive_type(T0) )
+prolog/stakeholder_seats.pl	686	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(N, ( narrative_ontology:constraint_stakeholder(C, N, _, _, _, _, _),
+prolog/stakeholder_seats.pl	687	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	\+ narrative_ontology:stakeholder_non_agent(C, N),
+prolog/test_harness.pl	126	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	(   catch(drl_core:dr_type(IntervalID, Ctx, ComputedType), _, fail)
+prolog/test_harness.pl	150	code	resolve_coalition_power	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	constraint_indexing:resolve_coalition_power(Power, C, ResolvedPower),
+prolog/tests/fixtures/nlwb_controls/nlwb_ctl_agent_only.pl	32	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(nlwb_ctl_agent_only, nlwb_ctl_extracting_guild).
+prolog/tests/fixtures/nlwb_controls/nlwb_ctl_mixed.pl	31	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(nlwb_ctl_mixed, entropic_universe_hypothesis).
+prolog/tests/fixtures/nlwb_controls/nlwb_ctl_mixed.pl	32	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(nlwb_ctl_mixed, nlwb_ctl_extracting_guild).
+prolog/tests/fixtures/nlwb_controls/nlwb_ctl_nonagent_only.pl	39	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(nlwb_ctl_nonagent_only, entropic_universe_hypothesis).
+prolog/tests/test_agent_beneficiary.pl	63	code	non_agent_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(V, narrative_ontology:non_agent_beneficiary(V), Vs0),
+prolog/tests/test_agent_beneficiary.pl	72	code	non_agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ narrative_ontology:non_agent_beneficiary(nlwb_ctl_extracting_guild).
+prolog/tests/test_agent_beneficiary.pl	86	code	agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	predicate_property(narrative_ontology:agent_beneficiary(_, _),
+prolog/tests/test_agent_beneficiary.pl	94	code	non_agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ predicate_property(narrative_ontology:non_agent_beneficiary(_), dynamic).
+prolog/tests/test_agent_beneficiary.pl	99	code	constraint_beneficiary	cast	T2	cardinality	name	SUSPECT-confirmed-grade-unmeasured	recovered	aggregate_all(count, narrative_ontology:constraint_beneficiary(_, _), NB),
+prolog/tests/test_agent_beneficiary.pl	101	code	constraint_beneficiary	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	forall(narrative_ontology:constraint_beneficiary(C, B),
+prolog/tests/test_agent_beneficiary.pl	102	code	non_agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	(   narrative_ontology:non_agent_beneficiary(B)
+prolog/tests/test_agent_beneficiary.pl	103	code	agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	->  \+ narrative_ontology:agent_beneficiary(C, B)
+prolog/tests/test_agent_beneficiary.pl	104	code	agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	;   narrative_ontology:agent_beneficiary(C, B)
+prolog/tests/test_agent_beneficiary.pl	122	code	agent_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ narrative_ontology:agent_beneficiary(C, _)
+prolog/tests/test_coexists_fpn_canary.pl	244	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_victim(C, canary_public)),
+prolog/tests/test_coexists_fpn_canary.pl	245	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_beneficiary(C, canary_elite)).
+prolog/tests/test_coexists_fpn_canary.pl	258	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_victim(C, _)),
+prolog/tests/test_coexists_fpn_canary.pl	259	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_beneficiary(C, _)),
+prolog/tests/test_commentary_census.pl	46	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, Name, agenda_setter,
+prolog/tests/test_commentary_census.pl	62	code	founding_problem_status	verdict	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:founding_problem_status(tcc_dead_snare, dead)),
+prolog/tests/test_commentary_census.pl	64	code	founding_problem_status	verdict	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:founding_problem_status(tcc_live_snare, live)),
+prolog/tests/test_commentary_census.pl	66	code	founding_problem_status	verdict	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:founding_problem_status(tcc_contested_open, contested)),
+prolog/tests/test_commentary_census.pl	67	code	founding_problem_status	verdict	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:founding_problem_status(tcc_sig_unknown, contested)),
+prolog/tests/test_commentary_census.pl	74	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_victim(tcc_ext_clear, captured_party)),
+prolog/tests/test_commentary_census.pl	85	code	founding_problem_status	verdict	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:founding_problem_status(C, _)),
+prolog/tests/test_commentary_census.pl	86	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_victim(C, _)),
+prolog/tests/test_commentary_census.pl	87	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _)) )).
+prolog/tests/test_commentary_census.pl	125	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	test(dead_snare_precondition_type) :- drl_core:dr_type(tcc_dead_snare, snare).
+prolog/tests/test_commentary_census.pl	128	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	test(live_snare_precondition_type) :- drl_core:dr_type(tcc_live_snare, snare).
+prolog/tests/test_commentary_census.pl	131	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	test(contested_open_precondition_type) :- drl_core:dr_type(tcc_contested_open, snare).
+prolog/tests/test_commentary_census.pl	134	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	test(sig_unknown_precondition_type) :- drl_core:dr_type(tcc_sig_unknown, unknown).
+prolog/tests/test_commentary_census.pl	148	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(tcc_ext_ood, T), \+ stakeholder_seats:extractive_type(T).
+prolog/tests/test_commentary_census.pl	152	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(tcc_ext_clear, T), stakeholder_seats:extractive_type(T),
+prolog/tests/test_commentary_census.pl	153	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(tcc_ext_clear, _).
+prolog/tests/test_commentary_census.pl	157	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(tcc_ext_unnameable, T), stakeholder_seats:extractive_type(T),
+prolog/tests/test_commentary_census.pl	158	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ narrative_ontology:constraint_victim(tcc_ext_unnameable, _).
+prolog/tests/test_cs_pattern_detection.pl	146	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(test_naturalized_mountain, admin_structures).
+prolog/tests/test_cs_pattern_detection.pl	147	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim(test_naturalized_mountain, workforce).
+prolog/tests/test_dispatch_bound_call.pl	19	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	Fixture: bdh_synth_overlap authors ONLY a constraint_beneficiary (multifile), making
+prolog/tests/test_dispatch_bound_call.pl	31	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary(bdh_synth_overlap, bdh_synth_group).
+prolog/tests/test_empty_chair.pl	50	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, agenda_setter,
+prolog/tests/test_empty_chair.pl	53	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, victim,
+prolog/tests/test_empty_chair.pl	56	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, payer,
+prolog/tests/test_empty_chair.pl	59	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, excluded,
+prolog/tests/test_empty_chair.pl	62	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, excluded,
+prolog/tests/test_empty_chair.pl	72	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _)),
+prolog/tests/test_empty_chair.pl	73	code	stakeholder_non_agent	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:stakeholder_non_agent(C, _)),
+prolog/tests/test_h1_stakeholder_spectrum.pl	150	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, agenda_setter,
+prolog/tests/test_h1_stakeholder_spectrum.pl	153	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, not_a_role,
+prolog/tests/test_h1_stakeholder_spectrum.pl	156	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, Role,
+prolog/tests/test_h1_stakeholder_spectrum.pl	159	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, excluded,
+prolog/tests/test_h1_stakeholder_spectrum.pl	164	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _)),
+prolog/tests/test_h1_stakeholder_spectrum.pl	165	code	stakeholder_non_agent	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:stakeholder_non_agent(C, _)),
+prolog/tests/test_h1_stakeholder_spectrum.pl	268	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(C, N, victim,
+prolog/tests/test_h1_stakeholder_spectrum.pl	352	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(tsh_domain,
+prolog/tests/test_h1_stakeholder_spectrum.pl	355	code	stakeholder_non_agent	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:stakeholder_non_agent(tsh_domain, robot)),
+prolog/tests/test_oq186_common_cause_clique.pl	30	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_a1, oq186t_shared_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	31	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_a2, oq186t_shared_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	32	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_a3, oq186t_shared_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	33	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_a1, oq186t_shared_victim),
+prolog/tests/test_oq186_common_cause_clique.pl	34	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_a2, oq186t_shared_victim),
+prolog/tests/test_oq186_common_cause_clique.pl	35	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_a3, oq186t_shared_victim),
+prolog/tests/test_oq186_common_cause_clique.pl	39	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_b1, oq186t_b1_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	40	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_b2, oq186t_b2_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	41	code	constraint_beneficiary	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_beneficiary(oq186t_b3, oq186t_b3_beneficiary),
+prolog/tests/test_oq186_common_cause_clique.pl	42	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_b1, oq186t_b1_victim),
+prolog/tests/test_oq186_common_cause_clique.pl	43	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_b2, oq186t_b2_victim),
+prolog/tests/test_oq186_common_cause_clique.pl	44	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq186t_b3, oq186t_b3_victim)
+prolog/tests/test_oq39_scaffold_escalation.pl	40	data	has_coordination_function	cast	producer		name	n/a-authorship	recovered	narrative_ontology:has_coordination_function(t39_rise).
+prolog/tests/test_oq39_scaffold_escalation.pl	50	data	has_coordination_function	cast	producer		name	n/a-authorship	recovered	narrative_ontology:has_coordination_function(t39_flat).
+prolog/tests/test_oq39_scaffold_escalation.pl	66	data	has_coordination_function	cast	producer		name	n/a-authorship	recovered	narrative_ontology:has_coordination_function(t39_dual).
+prolog/tests/test_oq39_scaffold_escalation.pl	76	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Ctx, scaffold), !.
+prolog/tests/test_oq86_extraction_commentary.pl	51	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_positive, cartel_member_a, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	53	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_positive, cartel_member_b, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	55	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_positive, trade_press, observer,
+prolog/tests/test_oq86_extraction_commentary.pl	67	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_type, cartel_member_a, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	69	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_type, cartel_member_b, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	82	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim(oq86_neg_victim, captured_suppliers).
+prolog/tests/test_oq86_extraction_commentary.pl	83	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_victim, cartel_member_a, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	85	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_victim, cartel_member_b, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	98	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_vacuity, squeezed_supplier, payer,
+prolog/tests/test_oq86_extraction_commentary.pl	100	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_neg_vacuity, trade_press, observer,
+prolog/tests/test_oq86_extraction_commentary.pl	118	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim(oq86_bridge_sentinel, inferred_subject).
+prolog/tests/test_oq86_extraction_commentary.pl	119	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_bridge_sentinel, cartel_member_a, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	121	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(oq86_bridge_sentinel, cartel_member_b, agenda_setter,
+prolog/tests/test_oq86_extraction_commentary.pl	130	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(oq86_positive, T),
+prolog/tests/test_oq86_extraction_commentary.pl	134	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ narrative_ontology:constraint_victim(oq86_positive, _).
+prolog/tests/test_oq86_extraction_commentary.pl	150	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(oq86_neg_type, T),
+prolog/tests/test_oq86_extraction_commentary.pl	158	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(oq86_neg_victim, T),
+prolog/tests/test_oq86_extraction_commentary.pl	162	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_victim(oq86_neg_victim, _).
+prolog/tests/test_oq86_extraction_commentary.pl	169	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(oq86_neg_vacuity, T),
+prolog/tests/test_oq86_extraction_commentary.pl	173	code	constraint_victim	cast	T4?		name	SUSPECT-unwitnessed	recovered	\+ narrative_ontology:constraint_victim(oq86_neg_vacuity, _).
+prolog/tests/test_oq86_extraction_commentary.pl	180	code	constraint_victim	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(V, narrative_ontology:constraint_victim(oq86_bridge_sentinel, V), Vs),
+prolog/tests/test_seat_totality.pl	36	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(tst_excluded_only, ghost, excluded,
+prolog/tests/test_seat_totality.pl	40	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(tst_agent_seat, boss, agenda_setter,
+prolog/tests/test_seat_totality.pl	46	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(tst_two_agent_seats, boss, agenda_setter,
+prolog/tests/test_seat_totality.pl	48	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	assertz(narrative_ontology:constraint_stakeholder(tst_two_agent_seats, boss2, agenda_setter,
+prolog/tests/test_seat_totality.pl	54	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	retractall(narrative_ontology:constraint_stakeholder(C, _, _, _, _, _, _)) )).
+prolog/tests/test_seat_totality.pl	89	code	constraint_stakeholder	cast	T4?		name	SUSPECT-unwitnessed	recovered	narrative_ontology:constraint_stakeholder(C, N, _, _, _, _, _) ),
+prolog/transition_paths.pl	31	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	36	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C),
+prolog/transition_paths.pl	41	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	52	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	60	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	66	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	78	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	83	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C).
+prolog/transition_paths.pl	87	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	93	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/transition_paths.pl	254	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	narrative_ontology:has_coordination_function(C), !.
+prolog/uke_dr_bridge.pl	14	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, Type),
+prolog/uke_dr_bridge.pl	45	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	drl_core:dr_type(C, snare),
+prompts/archives/constraint_story_template.pl	111	data	constraint_beneficiary	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_beneficiary([id], [beneficiary_group]).
+prompts/archives/constraint_story_template.pl	114	data	constraint_victim	cast	producer		name	n/a-authorship	recovered	narrative_ontology:constraint_victim([id], [victim_group]).
+python/audits/coordination_vitality_diagnostic.py	1159	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	f"because it only checks `constraint_beneficiary(C, _)` existence. "
+python/audits/g_channel_flip_audit.py	157	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	lines.append("    ( drl_core:dr_type(CAtom, Ctx, GT) -> true ; GT = unknown ),")
+python/audits/g_channel_flip_audit.py	160	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	lines.append("    ( drl_core:dr_type(CAtom, Ctx, CT) -> true ; CT = unknown ),")
+python/audits/g_channel_flip_audit.py	188	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(CAtom, ModCtx, GT) -> true ; GT = unknown ),
+python/audits/g_channel_flip_audit.py	190	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(CAtom, ModCtx, CT) -> true ; CT = unknown ),
+python/audits/oq207_stakeholder_h1_census.py	101	code	constraint_stakeholder	cast	T3	presence	name	SUSPECT-confirmed-grade-unmeasured	recovered	findall(X, narrative_ontology:constraint_stakeholder(C, X, excluded, _, _, _, _), Excl),
+python/audits/oq22_starvation_census.py	138	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(C, Ctx, FT0) -> true ; FT0 = unknown ),
+python/audits/oq48_threshold_distributions.py	84	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(C, Ctx, FT0) -> true ; FT0 = unknown ),
+python/audits/oq49_override_remeasure.py	69	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(C, Ctx, FT0) -> true ; FT0 = unknown ),
+python/audits/oq49_override_remeasure.py	102	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(C, Ctx, FT) -> true ; FT = unknown ),
+python/audits/oq65_bait_census.py	167	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	for _, term in capture_terms(t, ("constraint_beneficiary(",)):
+python/audits/oq65_bait_census.py	168	code	constraint_beneficiary	cast	T2	cardinality	name	SUSPECT-confirmed-grade-unmeasured	recovered	inner = term[len("constraint_beneficiary("):-1]
+python/generate_constraint_pl.py	748	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_beneficiary({cid}, {b}).")
+python/generate_constraint_pl.py	750	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_victim({cid}, {v}).")
+python/generate_constraint_pl.py	755	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_beneficiary({cid}, {b}).")
+python/generate_constraint_pl.py	757	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_victim({cid}, {v}).")
+python/generate_constraint_pl.py	761	code	constraint_vindicates	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_vindicates({cid}, {p}).")
+python/generate_constraint_pl.py	792	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:constraint_stakeholder({cid}, {s['name']}, {s['role']},")
+python/generate_constraint_pl.py	795	code	stakeholder_secondary_role	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:stakeholder_secondary_role({cid}, {s['name']}, {s['secondary_role']}).")
+python/generate_constraint_pl.py	797	code	stakeholder_non_agent	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:stakeholder_non_agent({cid}, {s['name']}).")
+python/generate_constraint_pl.py	807	code	stakeholder_gain_flow	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:stakeholder_gain_flow({cid}, {data['gain_flow']}).")
+python/generate_constraint_pl.py	809	code	fixing_cost_class	cast	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:fixing_cost_class({cid}, {data['fixing_cost']}).")
+python/generate_constraint_pl.py	829	code	disappearance_verdict	verdict	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:disappearance_verdict({cid}, {sq['disappearance_verdict']}).")
+python/generate_constraint_pl.py	831	code	founding_problem_status	verdict	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:founding_problem_status({cid}, {sq['founding_problem_status']}).")
+python/generate_constraint_pl.py	839	code	founding_problem_corroboration_class	verdict	T6		name	SUSPECT-unwitnessed	inferred	emit(f"narrative_ontology:founding_problem_corroboration_class({cid}, {sq['founding_problem_corroboration_class']}).")
+python/lineage_fingerprint_probe.py	56	code	fingerprint_actors	cast	T2b	cardinality	closure	SUSPECT-confirmed-grade-unmeasured	recovered	logical_fingerprint:fingerprint_actors(C, A),
+python/linter.py	126	code	constraint_stakeholder	cast	T6		name	SUSPECT-unwitnessed	inferred	has_stakeholder_surface = "constraint_stakeholder(" in content
+python/linter.py	250	code	founding_problem_status	verdict	T6		name	SUSPECT-unwitnessed	inferred	and "founding_problem_status(" not in content):
+python/linter.py	298	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	has_beneficiary_data = 'constraint_beneficiary(' in content
+python/linter.py	323	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	has_beneficiary = 'constraint_beneficiary(' in content
+python/linter.py	324	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	has_victim = 'constraint_victim(' in content
+python/linter.py	337	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	if 'constraint_beneficiary(' not in content:
+python/linter.py	344	code	constraint_beneficiary	cast	T6		name	SUSPECT-unwitnessed	inferred	has_beneficiary = 'constraint_beneficiary(' in content
+python/linter.py	345	code	constraint_victim	cast	T6		name	SUSPECT-unwitnessed	inferred	has_victim = 'constraint_victim(' in content
+python/shared/maxent.py	29	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	def has_coordination_function(c):
+python/shared/maxent.py	34	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	def has_asymmetric_extraction(c):
+python/shared/maxent.py	55	code	has_coordination_function	cast	T6		name	SUSPECT-unwitnessed	inferred	return has_coordination_function(c)
+python/shared/maxent.py	57	code	has_asymmetric_extraction	cast	T6		name	SUSPECT-unwitnessed	inferred	return has_asymmetric_extraction(c)
+python/sweeps/epsilon_stability.py	149	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( catch(drl_core:dr_type(C, Ctx, T0), _, fail) -> T = T0 ; T = err ).
+python/sweeps/representation_robustness_sweep.py	152	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	findall(T, (member(Ctx, Ctxs), drl_core:dr_type(C, Ctx, T)), Types),
+python/sweeps/surface2_lock_sweep.py	42	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	LOAD-BEARING when metric_based_type_indexed != final dr_type (the override actually
+python/sweeps/surface2_lock_sweep.py	145	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	final_type(C, T) :- ( catch(drl_core:dr_type(C, T0),_,fail) -> T = T0 ; T = err ).
+python/sweeps/tripwire_fabricated_defaults.py	58	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Ctx, Type), _, Type=error)
+python/sweeps/witness_pass.py	46	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	catch(drl_core:dr_type(C, Ctx, Type), _, Type=error)
+python/tests/test_battery.py	68	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	( drl_core:dr_type(C, Ctx, T) -> true ; T = unknown ),
+python/testset_rebuild.py	634	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	f"(drl_core:dr_type({cid},{ctx},T) -> true ; T = unknown),"
+python/validate_constraint_story.py	689	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	f":- (   drl_core:dr_type({constraint_id}, "
+python/validate_constraint_story.py	703	code	dr_type	cast	T2b	presence	closure	SUSPECT-confirmed-grade-unmeasured	recovered	f"     drl_core:dr_type({constraint_id}, Ctx, T)),\n"

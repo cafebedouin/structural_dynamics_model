@@ -1,0 +1,26 @@
+# OQ-190 derivation_graph.tsv — cast/verdict field -> derived value, GRADE-carrying.
+# Admission decided by prolog/probe_oq190_edge_admission.pl on testsets/ (n=279, HEAD f80bc3eb).
+# Raw probe output with the deciding diffs: edge_admission_raw.tsv
+# ADMITTED = the source can CHANGE the derived value (non-empty treatment diff).
+# NOT ADMITTED = 0-diff with source presence>0 AND a LIVE positive control (ctl_diff>0).
+# Control note (read before calling ctl_diff circular): for the ADMITTED rows the control
+#   template overlaps the treatment, so ctl_diff==treat_diff and the control adds nothing there
+#   -- a non-empty treatment diff already proves the probe dispatched. The control does its real
+#   work on the four 0-diff rows, where it is genuinely DISTINCT from the treatment:
+#   e4 (gain_flow vs beneficiary), e12 (founding_problem_status vs disappearance_verdict),
+#   e13/e14 (extractiveness vs the verdict atoms). Zero rows returned `broken`.
+edge_id	src	dst	site	grade	admitted	decided_by
+e1	constraint_beneficiary	dr_type	constraint_indexing.pl:455-458 (via agent_beneficiary) -> BaseD -> d -> chi	presence	yes	treatment_diff(132); source_presence=674; treatment_diff=132
+e2	constraint_victim	dr_type	constraint_indexing.pl:459-462 -> BaseD -> d -> chi	presence	yes	treatment_diff(78); source_presence=564; treatment_diff=78
+e3	constraint_victim	resolve_coalition_power	constraint_indexing.pl:523-528 count >= critical_mass_threshold	cardinality	yes	treatment_diff(118); source_presence=564; treatment_diff=118
+e4	constraint_beneficiary	constraint_captured	narrative_ontology.pl:332-335 (join is on the STAKEHOLDER roster, not beneficiaries)	presence	no	zero_diff_with_live_control(91); source_presence=674; treatment_diff=0
+e7	constraint_beneficiary+constraint_victim	fingerprint_actors	logical_fingerprint.pl:296-306 count_to_topology	cardinality	yes	treatment_diff(506); source_presence=1238; treatment_diff=506
+e6	stakeholder_gain_flow	constraint_captured	narrative_ontology.pl:333 gain_flow receiver name	name-identity	yes	treatment_diff(91); source_presence=131; treatment_diff=91
+e6b	constraint_stakeholder	constraint_captured	narrative_ontology.pl:335 roster membership of the receiver name	name-identity	yes	treatment_diff(91); source_presence=1579; treatment_diff=91
+e6c	stakeholder_gain_flow	dr_type	narrative_ontology.pl:332-335 -> drl_core.pl:420 scaffold clause + signature_detection.pl:1220/1378/1477	name-identity	yes	treatment_diff(38); source_presence=131; treatment_diff=38
+e10	founding_problem_status	has_mandatrophy_declaration	narrative_ontology.pl:168-170	name-identity	yes	treatment_diff(15); source_presence=236; treatment_diff=15
+e10b	disappearance_verdict	has_mandatrophy_declaration	narrative_ontology.pl:168-170	name-identity	yes	treatment_diff(15); source_presence=237; treatment_diff=15
+e11	founding_problem_status	q6_cell	stakeholder_seats.pl:q6_cell -> commentary_census.pl:94-95 -> outputs/commentary_census.json	name-identity	yes	treatment_diff(472); source_presence=236; treatment_diff=472
+e12	disappearance_verdict	q6_cell	stakeholder_seats.pl:q6_cell reads founding_problem_status ONLY	name-identity	no	zero_diff_with_live_control(472); source_presence=237; treatment_diff=0
+e13	founding_problem_status	dr_type	no verdict atom on the classification path	name-identity	no	zero_diff_with_live_control(402); source_presence=236; treatment_diff=0
+e14	disappearance_verdict	dr_type	no verdict atom on the classification path	name-identity	no	zero_diff_with_live_control(402); source_presence=237; treatment_diff=0
