@@ -663,18 +663,29 @@ python3 python/cli.py <group> <name> [args] # run a tool (argv forwarded verbati
 wherever they physically sit (no file moves). `cli.py report ...` delegates to the reports package;
 `cli.py menu` delegates to `omega_resolver.py menu`. `cli selftest` is wired into `scripts/gate.sh`.
 
-### Pattern-index citations: NAMESPACE THEM (OQ-278 standing guard)
+### The pattern taxonomy: SETTLED numbering, and how it is kept settled (OQ-278)
 
 **`CLAUDE.md` and `docs/technical/build_discipline.md` publish the same numbered defect taxonomy
-and disagree at indices 3 and 4.** `CM-P4` is *recap-as-witness*; `BD-P4` is *fabricated default*.
-Both documents read as a complete, coherent six, which is why it went unnoticed for 151 commits —
-the member COUNTS converged at `220739b8` (2026-05-30), the exact commit the CONTENTS diverged.
+— seven members at eight indices, index 3 a grave — and since 2026-08-17 they publish the same
+member at every index.** They disagreed at 3 and 4 for 79 days and it went unnoticed for 151
+commits, because the member COUNTS converged at `220739b8` (2026-05-30), the exact commit the
+CONTENTS diverged; both copies read as a complete, coherent six. **So agreement is checked per
+index on NAMES, never on totals.**
 
-**Write `CM-P3`/`BD-P3`, `CM-P4`/`BD-P4`. Never a bare `Pattern 4` or `P4`; a bare one found in
-the record is UNRESOLVED, not interpreted.** `P3`/`P4` is seven-way overloaded (the concealment
-paper's `CWC:P3`, `diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, essay
-enumerations, decompose-manifest `candidate_pattern`, a Prolog variable, and this taxonomy), so a
-prohibition gate is not buildable — the convention is the guard.
+**The roster is not reproduced here.** Read it from either publishing document, or run
+`doc_pattern_check.py --list` for both extractions side by side — a third authored copy in this
+file would be the silent fork all over again, in the guard's own instructions, and nothing checks
+this file. What is recorded here is only what the documents cannot tell you: which indices moved.
+
+**Reading the historical record:** a pre-2026-08-17 `Pattern 3`/`P3`/`BD-P3` means the
+*mechanism* — *bound-probe* (now 7) if it names `build_discipline.md`, the vacated
+*destructive-replace* if it names `CLAUDE.md`. Their swept populations are declared per file in
+`pattern_citation_check.py`. **Writing new ones:** the interim `CM-Pn`/`BD-Pn` freeze is lifted,
+but `Pattern N`/`PN` is still seven-way overloaded (the concealment paper's `CWC:P3`,
+`diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, essay enumerations,
+decompose-manifest `candidate_pattern`, a Prolog variable), so name the taxonomy when the
+surrounding text does not already say *build discipline*. A prohibition gate on the bare form is
+not buildable at that false-positive rate.
 
 ```bash
 python3 python/doc_pattern_check.py --check          # gate: index->name agreement, per index
@@ -684,17 +695,22 @@ python3 python/pattern_citation_check.py --check     # gate: unswept consumers o
 python3 python/pattern_citation_check.py --sweep     # regenerate the OQ-278 label set
 ```
 
-Both run in `scripts/gate.sh` (`doc patterns`, `displaced cites`). Three things that bite:
+Both run in `scripts/gate.sh` (`doc patterns`, `displaced cites`). Four things that bite:
 
 - **Never store the pattern NAMES in either checker.** The manifests hold *locations* and
   *states*; agreement is computed from the documents. An authored copy of the taxonomy inside the
   checker that guards the taxonomy is the fork it exists to detect.
-- **Collisions 3 and 4 are allowlisted with their STATE** (`ruled_pending_R1b` vs `unruled`), so a
-  *silent resolution* goes red as well as a new fork. If a ruling lands, retire the allowlist
-  entry in the **same change**.
-- **`CLAUDE.md`'s items 3 and 6 hard-wrap inside the bold run**, so the extraction regex needs
-  `re.DOTALL`. Without it the check reads GREEN while measuring four of six indices. After any
-  edit to that list, run `--list` and confirm all six resolve on both sides.
+- **`DECLARED_COLLISIONS` and `DECLARED_SPINE_LAG` are now EMPTY, which is the strong state.**
+  Nothing is exempted, so any divergence is a new fork and reds immediately. If you ever need to
+  allowlist one, give it a STATE, and retire the entry in the **same change** as the repair — a
+  *silent resolution* goes red as well as a silent fork.
+- **`CLAUDE.md`'s items hard-wrap inside the bold run**, so the extraction regex needs
+  `re.DOTALL`. Without it those items silently extract to nothing and the check reads GREEN while
+  measuring a subset. After any edit to that list, run `--list` and confirm all eight indices
+  resolve on both sides — a green `--check` alone does not witness that they are being seen.
+- **Renumbering a member is a consumer sweep, not an edit.** Declare its citations in
+  `pattern_citation_check.DISPLACED` *before* the move, while mechanism recovery is still cheap;
+  once the old index resolves to it in neither document the distinguishing evidence is gone.
 
 Full detail: `docs/technical/doc_pattern_check.md`; provenance
 `audits/2026-08-14_oq278_index_collision/`.

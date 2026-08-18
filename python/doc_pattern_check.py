@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 """doc_pattern_check — make the build-discipline taxonomy's canonicity a CHECKED FACT.
 
-Two always-read documents publish a numbered defect taxonomy and have disagreed at
-indices 3 and 4 since `220739b8` (2026-05-30), undetected for 151 commits touching
-either file:
+Two always-read documents publish a numbered defect taxonomy. They DISAGREED at indices
+3 and 4 from `220739b8` (2026-05-30) until OQ-278 ruled on 2026-08-17 — undetected for
+151 commits touching either file:
 
     CLAUDE.md                        -> "## Build Discipline" numbered list
     docs/technical/build_discipline.md -> "## Pattern N" headings (+ a spine table)
 
-That is Pattern 2 (one-canonical-thing-became-two) instantiated on the pattern list
-itself: no queryable fact of canonicity, and BOTH COPIES PARSE — each reads as a
-complete, coherent six. This checker is the queryable fact. OQ-278.
+That was Pattern 2 (one-canonical-thing-became-two) instantiated on the pattern list
+itself: no queryable fact of canonicity, and BOTH COPIES PARSE — each read as a
+complete, coherent six. This checker is the queryable fact, and it is what keeps the
+post-ruling agreement from silently decaying back. OQ-278.
 
 WHY THE COUNTS COULD NEVER DETECT IT
     7af6b945  2026-05-29   CLAUDE=3  BD=2   <- unequal for one day
@@ -28,11 +29,12 @@ exact failure. `spec_enum_check.py:3-5` opens by recording that manual spec/code
 DECLARED_COLLISIONS holds index -> (owning OQ, state); agreement is COMPUTED from the
 documents themselves.
 
-The `state` field is load-bearing. Indices 3 and 4 are both legitimately owned by OQ-278
-but are DIFFERENT STATES — 4 is an unruled collision with two live claimants, 3 is a
-*ruled* one (CLAUDE.md vacated 2026-08-11) with an unrepaired second site still
-publishing `bound-probe`. Without the state, an eventual "allowlisted collision
-disappeared" red is uninterpretable without opening the OQ.
+The `state` field is load-bearing WHENEVER an entry exists. It carried the difference
+between index 4 (an unruled collision with two live claimants) and index 3 (a *ruled*
+one, CLAUDE.md vacated 2026-08-11, with an unrepaired second site still publishing
+`bound-probe`) — without it, an eventual "allowlisted collision disappeared" red is
+uninterpretable without opening the OQ. Both entries retired on 2026-08-17 when the
+ruling landed in the documents; the mechanism stays for the next one.
 
 WHAT GOES RED
     MISSING INDEX        an index one document publishes and the other does not
@@ -52,14 +54,13 @@ encoding of index->name in the same file, and it is checked for INDEX-SET agreem
 NOT names — it deliberately uses short forms ("Silent fork" for
 "One-canonical-thing-became-two", "Bound-probe bypasses cut" for
 "...bypasses clause-order"), so a name comparison there would fire on abbreviation rather
-than on divergence. Checking its index set is what catches the live defect: the spine
-table publishes 1-5 and says "The five patterns" while the headings publish 1-6.
+than on divergence. Checking its index set is what caught the live defect: the spine
+table published 1-5 and said "The five patterns" while the headings published 1-6.
 
 STILL UNGUARDED (enumerated rather than left silent — every one is an index->pattern
 encoding this checker does not read):
-    CLAUDE.md:158                    cardinality claim ("five live, index 3 vacated")
-    README.md:170                    cardinality claim ("the six defect patterns") — ALREADY
-                                     WRONG since the 2026-08-11 vacating
+    CLAUDE.md:158                    cardinality claim ("seven members at eight indices")
+    README.md:170                    cardinality claim ("the seven defect patterns")
     docs/amnesiac_institution*.md    6 paper versions, each publishing the list
     docs/design/design_discipline.md :464 :600 :710 index citations
     KNOWN_STATE.md                   ~10 index citations
@@ -99,17 +100,30 @@ SITES = {
 
 DECLARED_COLLISIONS = {
     # index -> (owning OQ, state).  state is NOT decoration: see the header.
-    3: ("OQ-278", "ruled_pending_R1b"),   # CLAUDE.md VACATED 2026-08-11; BD still publishes bound-probe
-    4: ("OQ-278", "unruled"),             # two live claimants, no ruling
+    #
+    # EMPTY SINCE 2026-08-17 — OQ-278 RULED, and the entries were retired in the same change that
+    # landed the ruling in the documents. Both former entries are gone for DIFFERENT reasons and
+    # neither is "we stopped caring": index 4 was ruled to `fabricated-default` (R2 = C2) so the
+    # documents now AGREE, and index 3 became a grave in both (`destructive-replace` demoted here,
+    # `bound-probe` renumbered to 7 there) so it agrees as `<vacated>`. Leaving either entry in
+    # place would fire UNDECLARED RESOLUTION — which is this checker working, not a nuisance.
+    #
+    # An empty allowlist is the strong state, not a lapsed one: every index is now compared on
+    # names with nothing exempted, so ANY divergence is a NEW fork and goes red immediately.
 }
 
 DECLARED_SPINE_LAG = {
     # indices the spine table is KNOWN to omit, and why the repair is held.
-    "missing_from_spine": [6],
+    #
+    # EMPTY SINCE 2026-08-17. The lag was `[6]`, held deliberately until OQ-278's ruling because
+    # editing the spine before it would have destroyed the evidence of what each document
+    # published when. The ruling landed, the spine table now publishes every index its own
+    # headings publish (1-8, including the vacated 3 as an explicit empty row), and the
+    # declaration retired with it. The mechanism stays: a new omission goes red with no allowlist
+    # to hide in.
+    "missing_from_spine": [],
     "owning_oq": "OQ-278",
-    "reason": ("the spine table publishes 1-5 and its prose says 'The five patterns', omitting "
-               "Pattern 6. Repair is held until OQ-278's index ruling because editing the spine "
-               "before the ruling destroys the evidence of what each document published when."),
+    "reason": "no lag declared — the spine table and the headings publish the same index set.",
 }
 
 VACATED = "<vacated>"
@@ -268,7 +282,15 @@ def pairwise(rev=None):
 # --- selftest: mutation IN MEMORY ONLY, never on disk ------------------------
 
 def selftest():
-    """Six controls: five violation shapes forced red, plus the unmutated pair asserted green."""
+    """Seven controls: six violation shapes forced red, plus the unmutated pair asserted green.
+
+    THE ALLOWLISTS ARE EMPTY SINCE THE OQ-278 RULING, so two shapes can no longer be forced by
+    mutating a DOCUMENT — there is no declared entry left for a document edit to contradict.
+    They are forced by passing a synthetic manifest instead (controls 3 and 6). Dropping them
+    when the allowlists emptied would have retired two controls for a reason that has nothing
+    to do with whether the code paths still work: an unexercised branch that reads green is the
+    orphan shape this file's own taxonomy names.
+    """
     failures = []
     cm_text = (REPO / CLAUDE_MD).read_text(encoding="utf-8")
     bd_text = (REPO / BUILD_DISC).read_text(encoding="utf-8")
@@ -292,11 +314,12 @@ def selftest():
                               "## Pattern 1 — Dangling-wire syndrome", 1)
     want("DIVERGENT", run_check(cm_text, mutated), "renamed Pattern 1 in one document only")
 
-    # (3) UNDECLARED RESOLUTION — make declared collision 4 agree without touching the allowlist.
-    mutated = bd_text.replace("## Pattern 4: Fabricated default",
-                              "## Pattern 4: Recap-as-witness substitution", 1)
-    want("UNDECLARED RESOLUTION", run_check(cm_text, mutated),
-         "silently resolved the index-4 collision")
+    # (3) UNDECLARED RESOLUTION — an index the manifest calls a collision on which the documents
+    #     AGREE. Forced with a synthetic manifest: the real one is empty post-ruling, so the
+    #     stale-entry report has no live entry to demonstrate itself on.
+    want("UNDECLARED RESOLUTION",
+         run_check(cm_text, bd_text, collisions={4: ("OQ-TEST", "synthetic")}),
+         "allowlisting an index on which both documents agree")
 
     # (4) UNKNOWN COLLISION — an allowlist entry pointing at nothing.
     bogus = {**DECLARED_COLLISIONS, 99: ("OQ-999", "stale")}
@@ -306,6 +329,14 @@ def selftest():
     # (5) SPINE LAG — the second encoding inside build_discipline.md drifts from its own headings.
     mutated = bd_text.replace("| 4 | Fabricated default |", "| 9 | Fabricated default |", 1)
     want("SPINE LAG", run_check(cm_text, mutated), "spine table row renumbered away from headings")
+
+    # (6) UNDECLARED RESOLUTION on the SPINE lag — a declared omission the table now publishes.
+    #     Same synthetic-manifest reason as (3): `missing_from_spine` is empty post-ruling.
+    want("UNDECLARED RESOLUTION",
+         run_check(cm_text, bd_text,
+                   spine_lag={"missing_from_spine": [6], "owning_oq": "OQ-TEST",
+                              "reason": "synthetic control"}),
+         "declaring a spine omission the table in fact publishes")
 
     return failures
 
@@ -373,7 +404,7 @@ def main(argv):
         print("doc_pattern_check: RED (selftest)")
         return 1
     if selftest_only:
-        print("doc_pattern_check: selftest 6/6 (5 violation shapes red-capable + negative control)")
+        print("doc_pattern_check: selftest 7/7 (6 violation shapes red-capable + negative control)")
         return 0
 
     errors = run_check((REPO / CLAUDE_MD).read_text(encoding="utf-8"),
@@ -384,10 +415,12 @@ def main(argv):
         print(f"doc_pattern_check: RED — {len(errors)} problem(s)")
         return 1
     cm = claude_md_patterns((REPO / CLAUDE_MD).read_text(encoding="utf-8"))
-    print(f"doc_pattern_check: GREEN — {len(cm)} indices, "
-          f"{len(DECLARED_COLLISIONS)} declared collision(s) at "
-          f"{sorted(DECLARED_COLLISIONS)} (OQ-278); names checked CLAUDE.md vs BD headings, "
-          f"spine table index-set only; selftest 6/6")
+    n_decl = len(DECLARED_COLLISIONS)
+    decl = (f"{n_decl} declared collision(s) at {sorted(DECLARED_COLLISIONS)}"
+            if n_decl else "0 declared collisions — every index compared, nothing exempted "
+                           "(OQ-278 ruled 2026-08-17)")
+    print(f"doc_pattern_check: GREEN — {len(cm)} indices, {decl}; names checked CLAUDE.md vs BD "
+          f"headings, spine table index-set only; selftest 7/7")
     return 0
 
 

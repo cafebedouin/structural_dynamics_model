@@ -598,94 +598,25 @@ left only in `outputs/` re-open this pattern. Conventions: `audits/README.md`.
 
 ---
 
-## Pattern 3 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)
+## Pattern 3 — VACATED: this file's index 3 held *bound-probe*, RENUMBERED to Pattern 7
 
-**Shape:** a probe enumerates a class by *binding* the selecting argument —
-`findall(C, constraint_signature(C, natural_law), Cs)` — and receives constraints the
-engine never actually classifies as that class.
+**Two documents, two different histories at this index, and a citation needs the one belonging
+to the document it names.** `CLAUDE.md`'s index 3 held *destructive-replace*, which was
+**demoted** on 2026-08-11 to the surviving witness rule *prove before you replace* — see that
+file for the demotion's four converging lines. **This** file's index 3 held *bound-probe
+bypasses clause-order*, which was **not demoted**: it is a full peer member and was
+**renumbered to Pattern 7** on 2026-08-17 (OQ-278 R1b′ = B1′, R2 = C2) so that both documents
+publish the same member at the same index.
 
-**Mechanism:** `signature_detection:constraint_signature/2` resolves by clause order, with
-lock clauses that fire first under a cut when the engine calls with the second argument
-*unbound*:
+So a pre-2026-08-17 `BD-P3` / "`build_discipline.md` Pattern 3" citation resolves to
+**Pattern 7**, and a pre-2026-08-17 `CM-P3` to the vacated *destructive-replace*. Their swept
+populations are declared per file in `python/pattern_citation_check.py` (gate row
+`displaced cites`), which goes red on an undeclared new one and on a silent repair.
 
-```prolog
-% prolog/signature_detection.pl
-:70  constraint_signature(C, false_natural_law)    :- false_natural_law(C, _), !.
-:77  constraint_signature(C, false_ci_rope)        :- false_ci_rope(C, _), !.
-:87  constraint_signature(C, false_summit_mountain) :- false_summit_mountain(C, _), !.
-:97  constraint_signature(C, natural_law)           :-
-         domain_priors:emerges_naturally(C),
-         get_constraint_profile(C, Profile),
-         natural_law_signature(Profile), !.
-```
-
-When the probe binds the second arg to `natural_law`, the lock clause heads
-(`false_natural_law`, `false_ci_rope`, `false_summit_mountain`) fail to unify (wrong atom),
-their cuts *never execute*, and Prolog falls through to the `:97` clause. The probe answers
-"satisfies the `natural_law` clause body in isolation," not "the engine assigns
-`natural_law`" — they differ exactly when a lock would have fired.
-
-**Live demonstration (223-constraint corpus, 2026-05-30):**
-
-```
-findall(C, signature_detection:constraint_signature(C, natural_law), BoundCs)
-  → [behavioral_competence_reading]   % bound form: 1 result
-
-findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), UnboundCs)
-  → []                                % unbound+post-filter: 0 results
-```
-
-`behavioral_competence_reading` satisfies the `:97` clause body but the engine actually
-assigns it `false_summit_mountain` (lock at `:87`). The bound probe manufactured a false
-witness.
-
-**Fix:** query unbound, take the engine's first solution, post-filter by equality:
-
-```prolog
-findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), Cs).
-```
-
-**Diagnostic:** any `findall`/`forall` over a cut-ordered predicate with the *selecting*
-argument bound is suspect. Re-run unbound + post-filter; if the count drops, the bound form
-over-counted.
-
-**Where it recurs:** a probe that queries signature membership directly to build a witness
-set for kernel readings will over-count exactly the constraints the locks were installed to
-protect. Welfare-reading / false_natural_law (OQ-30) is the live case: a bound probe there
-manufactures false natural-law witnesses on the constraints `false_natural_law` was designed
-to intercept.
-
-### INCIDENCE LEDGER (the accumulator — append here, do not start a second list)
-
-The same-pass prior-art grep (`audits/README.md`) has no meaning without somewhere to
-accumulate. This is that place, and it is deliberately attached to the rule rather than kept
-as a separate artifact that would drift. **Append a row when this rule produces or catches a
-defect; the count is the evidence for whether the documentation channel works for this rule
-class.**
-
-| date | surface | site | how found |
-|---|---|---|---|
-| 2026-05-30 | rule authored, with worked example | `build_discipline.md:601` | — |
-| 2026-08-17 | engine | `diagnostic_summary.pl:424` (latent) | gate row, first sweep |
-| 2026-08-17 | engine | `diagnostic_summary.pl:450` (latent, masked by an unrelated conjunct) | gate row, first sweep |
-| 2026-08-17 | engine | `routing_sink.pl:120` (latent) | gate row, first sweep |
-| 2026-08-17 | test | `test_reading_totality.pl:139` (weaker-assertion) | gate row, first sweep |
-| 2026-08-17 | Python | `fcr_ablation.py:75` (LIVE — inflated a reported %) | gate row, first sweep |
-| 2026-08-17 | audit artifact | `audits/2026-06-21_oq138_.../fcr_ablation.pl:23` | OQ-298 consumer enumeration |
-| 2026-08-17 | reasoning | an instance re-derived this rule as a "new" tripwire | operator challenge |
-
-**Reading as of 2026-08-17 — six defect sites across five surface kinds (engine, test, Python,
-audit artifact, reasoning) plus one confirmed re-discovery, from a rule that had a worked
-example naming the exact query form AND inline annotations at two sibling sites.** That is
-strong enough to quote: **for this rule class the documentation channel is dead**, and the
-mechanism (gate row `bound selector`, `python/bound_selector_check.py`) is what works. Note the
-last row is the one a counter alone would have missed — undetected re-discovery is
-indistinguishable from novel finding, which is why the grep is a *step* and not a habit.
-
-**Caveat against over-reading:** every 2026-08-17 row was found by one sweep on one day, so
-this is a stock measurement, not a rate. It says the rule failed to reach code that was written
-over ~3 months; it does not yet say anything about the rate at which new violations appear now
-that the gate exists. That second number needs rows dated after the gate landed.
+**The index itself is not reused, in either document.** A visible gap is a checked fact; a
+silent renumber is a fork — Pattern 2 applied to the numbering. That is also why nothing was
+shifted *down* into this slot when the taxonomy was reconciled: the one member that moved went
+**up**, to an index no dated citation had ever used.
 
 ---
 
@@ -937,6 +868,126 @@ distinction both lower patterns protect.
 
 ---
 
+## Pattern 7 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)
+
+**Shape:** a probe enumerates a class by *binding* the selecting argument —
+`findall(C, constraint_signature(C, natural_law), Cs)` — and receives constraints the
+engine never actually classifies as that class.
+
+**Mechanism:** `signature_detection:constraint_signature/2` resolves by clause order, with
+lock clauses that fire first under a cut when the engine calls with the second argument
+*unbound*:
+
+```prolog
+% prolog/signature_detection.pl
+:70  constraint_signature(C, false_natural_law)    :- false_natural_law(C, _), !.
+:77  constraint_signature(C, false_ci_rope)        :- false_ci_rope(C, _), !.
+:87  constraint_signature(C, false_summit_mountain) :- false_summit_mountain(C, _), !.
+:97  constraint_signature(C, natural_law)           :-
+         domain_priors:emerges_naturally(C),
+         get_constraint_profile(C, Profile),
+         natural_law_signature(Profile), !.
+```
+
+When the probe binds the second arg to `natural_law`, the lock clause heads
+(`false_natural_law`, `false_ci_rope`, `false_summit_mountain`) fail to unify (wrong atom),
+their cuts *never execute*, and Prolog falls through to the `:97` clause. The probe answers
+"satisfies the `natural_law` clause body in isolation," not "the engine assigns
+`natural_law`" — they differ exactly when a lock would have fired.
+
+**Live demonstration (223-constraint corpus, 2026-05-30):**
+
+```
+findall(C, signature_detection:constraint_signature(C, natural_law), BoundCs)
+  → [behavioral_competence_reading]   % bound form: 1 result
+
+findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), UnboundCs)
+  → []                                % unbound+post-filter: 0 results
+```
+
+`behavioral_competence_reading` satisfies the `:97` clause body but the engine actually
+assigns it `false_summit_mountain` (lock at `:87`). The bound probe manufactured a false
+witness.
+
+**Fix:** query unbound, take the engine's first solution, post-filter by equality:
+
+```prolog
+findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), Cs).
+```
+
+**Diagnostic:** any `findall`/`forall` over a cut-ordered predicate with the *selecting*
+argument bound is suspect. Re-run unbound + post-filter; if the count drops, the bound form
+over-counted.
+
+**Where it recurs:** a probe that queries signature membership directly to build a witness
+set for kernel readings will over-count exactly the constraints the locks were installed to
+protect. Welfare-reading / false_natural_law (OQ-30) is the live case: a bound probe there
+manufactures false natural-law witnesses on the constraints `false_natural_law` was designed
+to intercept.
+
+### INCIDENCE LEDGER (the accumulator — append here, do not start a second list)
+
+The same-pass prior-art grep (`audits/README.md`) has no meaning without somewhere to
+accumulate. This is that place, and it is deliberately attached to the rule rather than kept
+as a separate artifact that would drift. **Append a row when this rule produces or catches a
+defect; the count is the evidence for whether the documentation channel works for this rule
+class.**
+
+| date | surface | site | how found |
+|---|---|---|---|
+| 2026-05-30 | rule authored, with worked example | `build_discipline.md:601` | — |
+| 2026-08-17 | engine | `diagnostic_summary.pl:424` (latent) | gate row, first sweep |
+| 2026-08-17 | engine | `diagnostic_summary.pl:450` (latent, masked by an unrelated conjunct) | gate row, first sweep |
+| 2026-08-17 | engine | `routing_sink.pl:120` (latent) | gate row, first sweep |
+| 2026-08-17 | test | `test_reading_totality.pl:139` (weaker-assertion) | gate row, first sweep |
+| 2026-08-17 | Python | `fcr_ablation.py:75` (LIVE — inflated a reported %) | gate row, first sweep |
+| 2026-08-17 | audit artifact | `audits/2026-06-21_oq138_.../fcr_ablation.pl:23` | OQ-298 consumer enumeration |
+| 2026-08-17 | reasoning | an instance re-derived this rule as a "new" tripwire | operator challenge |
+
+**Reading as of 2026-08-17 — six defect sites across five surface kinds (engine, test, Python,
+audit artifact, reasoning) plus one confirmed re-discovery, from a rule that had a worked
+example naming the exact query form AND inline annotations at two sibling sites.** That is
+strong enough to quote: **for this rule class the documentation channel is dead**, and the
+mechanism (gate row `bound selector`, `python/bound_selector_check.py`) is what works. Note the
+last row is the one a counter alone would have missed — undetected re-discovery is
+indistinguishable from novel finding, which is why the grep is a *step* and not a habit.
+
+**Caveat against over-reading:** every 2026-08-17 row was found by one sweep on one day, so
+this is a stock measurement, not a rate. It says the rule failed to reach code that was written
+over ~3 months; it does not yet say anything about the rate at which new violations appear now
+that the gate exists. That second number needs rows dated after the gate landed.
+
+---
+
+## Pattern 8 — Recap-as-witness substitution (a done-claim is not a witness)
+
+**Shape:** a turn-end recap, or any "done / verified / working / complete / passing" in prose,
+stands in for the thing that would discharge it. The absence is the witness; the success-shaped
+token that fills it is a sentence *about* the work, written by the party that did the work.
+
+**The tell is arithmetic, not tone.** A turn reporting N edits done must paste N witnesses —
+the diff, the run, the validation result, the count. **M < N is the defect**, and it is the
+form actually observed: *"three edits witnessed"* with only the third pasted. A confident recap
+reads identically whether M = N or M = 0, which is why the count is the check and re-reading the
+recap is not.
+
+**Rule (paste-or-untag):** every done/verified/fixed claim carries its witness in the SAME turn.
+If the witness cannot be produced this turn, drop the done-tag and label the item **OPEN** with
+its graduation step — the step that would discharge it. On the reading side: any done-claim
+lacking a same-turn paste is unverified, regardless of what the recap says.
+
+**Where it recurs:** at every hand-off boundary — turn ends, commit messages, audit writeups,
+`ISSUES.md` status flips. It is the prose-substrate twin of *Gate the output, not only the
+input*: there a pipeline reported green on what it consumed while producing nothing; here a turn
+reports green on what it intended while witnessing part of it. Both are checked the same way —
+count the artifacts, not the claims.
+
+Worked instances and the surrounding discipline: `CLAUDE.md` → *The working method* and
+*Paste-or-untag*; the audit-side form is *An audit directory has one entry point and an evidence
+map*, below.
+
+---
+
 ## Estimator-classifier independence
 
 The principle, generalized: the boundary logic should live in exactly one place — the
@@ -1041,10 +1092,10 @@ is byte-identical to a read that didn't look.** An empty grep, a `findall` that 
 count of `0`, an "I found it nowhere" — each can mean "nothing is there" *or* "the probe never
 dispatched, queried the wrong thing, or was never run." The two are indistinguishable from the
 output alone; absence and "looked and found absence" collapse to the same token at the read site,
-exactly as in the five patterns.
+exactly as in the seven patterns.
 
 This conversation supplied four instances, all the same shape:
-- the bound Pattern-3 probe reported **432** `natural_law` constraints — a result set produced by a
+- the bound Pattern-7 probe reported **432** `natural_law` constraints — a result set produced by a
   query that **silently failed to dispatch** the lock clauses; the engine's real count is **404**;
 - a `0 facts` result means "this predicate is empty" only if the query was *aimed right* — otherwise
   it means "didn't look right";
@@ -1788,7 +1839,8 @@ paths; **untracked new files under the same pathspec are NOT added** and the com
 Instance: a `git add A B C` that hit a stale pathspec aborted the whole add, then
 `git commit -- <dir>` committed the tracked rename + edit but silently dropped THREE untracked new
 `.md` files — `git log --stat` showed 2 files, exit 0, and a turn-end recap would have read "done."
-This is the Pattern-4/6 shape (a green exit conceals the absence). **The rule: after any commit
+This is the Pattern-4/6 shape (a green exit conceals the absence), and Pattern 8 is why a
+recap does not close it. **The rule: after any commit
 whose staging was non-trivial, witness the commit's CONTENTS (`git show --stat <sha>`), not its exit
 code — and for a tracked+untracked mix, `git add` the paths explicitly first and confirm
 `git status` is clean.** Exit 0 attests the command ran, never that it captured what you intended.
@@ -1917,7 +1969,7 @@ the apparatus itself (`perturb.py`, the stability band). Theory: `docs/the_pertu
 code shape: `docs/design/the_perturbation_move.md`. The build-discipline consequence is one sentence:
 **an invariance claim is the null result one level up, so it inherits the spine.** "Invariant under
 perturbation" is byte-identical to "I never perturbed," "I perturbed the wrong axis," or "my probe
-didn't dispatch" — the same absence-as-presence the five patterns share, now wearing the costume of a
+didn't dispatch" — the same absence-as-presence the seven patterns share, now wearing the costume of a
 *stability* finding instead of a clean grep.
 
 So a claimed invariant is unfalsified until a **perturbation you know in advance must move a seated
@@ -2196,7 +2248,7 @@ accepted; do not reintroduce them.
 ## Separate fallible judgment from action at the tool boundary
 
 The meta-lesson behind several patterns above (Pattern 4 fabricated default, Pattern 5
-absence-satisfies-the-gate, and the recap-as-witness defect in `CLAUDE.md`): **when an agent's
+absence-satisfies-the-gate, Pattern 8 recap-as-witness): **when an agent's
 judgment and its actions are both fallible in the same direction, separate them at the tool
 boundary so the fallible judgment cannot execute itself.** The agent that would mis-decide is the
 same agent that would carry out the mis-decision, so a single pass that both decides *and* acts
@@ -2666,11 +2718,12 @@ sweep is a snapshot; the clause comment is where the next reader will actually b
 
 ## The spine: every defect here is an absence that presents as a presence
 
-The five patterns are one shape seen in five places. In each, something is **missing** — a
-consumer, a canonical-fact, a clause dispatch, an authored datum, an authored disqualifier — and
-the missing thing is filled by a **success-shaped token** the read site cannot tell from the real
-thing. The producer ran; both copies parse; a solution came back; a plausible constant arrived; the
-gate passed. Presence is reported where there is absence.
+The seven patterns are one shape seen in seven places. In each, something is **missing** — a
+consumer, a canonical fact, a clause dispatch, an authored datum, an authored disqualifier, a
+coverage bit, a pasted witness — and the missing thing is filled by a **success-shaped token** the
+read site cannot tell from the real thing. The producer ran; both copies parse; a solution came
+back; a plausible constant arrived; the gate passed; the aggregate returned; the recap said done.
+Presence is reported where there is absence.
 
 This is the *what* the patterns share. It is distinct from, and complementary to, the two other
 generalizations already in this note: the *why* (the intro — the reconciling step is deferrable and
@@ -2682,15 +2735,20 @@ the *what*.
 |---|---------|--------------------|----------------------------------------|------------------------|
 | 1 | Produced-but-not-consumed | no consumer reads the output | the producer ran and wrote the file → "done" | whoever checks the producer |
 | 2 | Silent fork | no fact says which copy is canonical | both copies exist and parse → "it's there" | a step targeting "the" file |
-| 3 | Bound-probe bypasses cut | the lock clause never dispatched | a solution came back → "it's in the class" | the `findall` result/count |
+| 3 | *(vacated — see Pattern 3 above; never reused)* | — | — | — |
 | 4 | Fabricated default | the datum was never authored | a plausible constant (`0.5`) → "a measurement" | the downstream computation |
 | 5 | Absence satisfies the gate | the disqualifier was never authored | the gate passed → "checked and clear" | the gate's boolean |
+| 6 | Success-shaped absorption | nobody looked, or coverage was partial | an aggregate/channel returned cleanly → "measured empty" | whoever reads the composed output |
+| 7 | Bound-probe bypasses cut | the lock clause never dispatched | a solution came back → "it's in the class" | the `findall` result/count |
+| 8 | Recap-as-witness | the witness was never pasted | a prose "done / verified" → "it happened" | the reader of the recap |
 | — | (diagnostic layer) | the probe didn't actually look | a clean/empty result → "nothing there" | the analyst reading the result |
 
 Pattern 5 already states this for the P4↔P5 pair ("both conflate missing with measured"); the spine
-is that statement widened to all five and to the diagnostic layer below (see *Every diagnostic needs
-a positive control*). The bottom row is why diagnostics are not exempt: a null result is the same
-shape one level up.
+is that statement widened to all seven and to the diagnostic layer below (see *Every diagnostic
+needs a positive control*). The bottom row is why diagnostics are not exempt: a null result is the
+same shape one level up. Index 3 is a grave and carries no row — the taxonomy is seven members at
+eight slots (OQ-278, 2026-08-17); the empty row is kept rather than closed up because a visible gap
+is a checked fact and a silent renumber is a fork.
 
 **The fix is one move, too.** Every pattern's rule above is the same act: **carry the provenance bit
 with the value, so absence and success stop collapsing to one token at the read site.** A bare value
@@ -2699,9 +2757,11 @@ whether it is. Make the absence representable and branch the consumer on it:
 
 - **P1** — wire the consumer, or **fail loud** when output is left unconsumed (don't let "written" stand for "used").
 - **P2** — make canonicity a **checked fact** (a documented path, a CI assertion), not a copy that merely exists.
-- **P3** — let the **engine dispatch** (query unbound, post-filter); don't let a bound probe substitute for the cascade.
 - **P4** — return **`unknown`, not `0.5`** — an out-of-band token the caller is forced to handle.
 - **P5** — **fail-closed on absence**: the gate may not pass until the datum is authored.
+- **P6** — **carry the coverage to the read site**; a default-on-empty returns `unknown`/OPEN, never a plausible value.
+- **P7** — let the **engine dispatch** (query unbound, post-filter); don't let a bound probe substitute for the cascade.
+- **P8** — **paste the witness in the same turn**; if you cannot, drop the done-tag and mark it OPEN with its graduation step.
 - **(diagnostics)** — pair every probe with a **positive control** before trusting its clean result.
 
 The shared invariant: *a value and "no value" must never be the same token where someone reads them.*

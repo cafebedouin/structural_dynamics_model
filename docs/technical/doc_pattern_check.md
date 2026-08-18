@@ -45,19 +45,24 @@ output*, not authored content.
 
 ```python
 SITES = {...}                        # (path, kind) per index->name encoding
-DECLARED_COLLISIONS = {              # index -> (owning OQ, state)
-    3: ("OQ-278", "ruled_pending_R1b"),
-    4: ("OQ-278", "unruled"),
-}
-DECLARED_SPINE_LAG = {"missing_from_spine": [6], "owning_oq": "OQ-278", "reason": "..."}
+DECLARED_COLLISIONS = {}             # index -> (owning OQ, state). EMPTY since 2026-08-17:
+                                     # OQ-278 ruled and both entries retired in the same change.
+DECLARED_SPINE_LAG = {"missing_from_spine": [], "owning_oq": "OQ-278", "reason": "..."}
 # agreement is COMPUTED from the documents.
 ```
 
-**The `state` field is load-bearing, not decoration.** Indices 3 and 4 are both owned by
-OQ-278 but are *different states*: index 4 is an unruled collision with two live claimants;
-index 3 is a **ruled** one — `CLAUDE.md` vacated it 2026-08-11 — with an unrepaired second site
-still publishing `bound-probe`. Without the state, a future `UNDECLARED RESOLUTION` red is
-uninterpretable without opening the OQ.
+**The `state` field is load-bearing whenever an entry exists.** While the collision was live
+it carried the difference between index 4 (an unruled collision with two claimants) and index 3
+(a **ruled** one — `CLAUDE.md` vacated it 2026-08-11 — with an unrepaired second site still
+publishing `bound-probe`). Without the state, an `UNDECLARED RESOLUTION` red is uninterpretable
+without opening the OQ.
+
+**Both entries retired 2026-08-17, in the same change that landed the ruling** (R2 = C2,
+R1b′ = B1′): index 4 is `fabricated-default` in both documents, index 3 is a grave in both, and
+the spine table publishes every index its headings do. **An empty allowlist is the strong state,
+not a lapsed one** — every index is compared with nothing exempted, so any divergence is a new
+fork and reds immediately. Leaving either entry behind would have fired `UNDECLARED RESOLUTION`,
+which is the guard working.
 
 ## Extraction assumptions (read before editing the pinned files)
 
@@ -94,20 +99,20 @@ displays only `tail -1`.
 The spine table is checked for **index-set agreement only, not names.** It deliberately uses
 short forms — `Silent fork` for `One-canonical-thing-became-two`, `Bound-probe bypasses cut` for
 `…bypasses clause-order` — so a name comparison there would fire on abbreviation rather than on
-divergence. Checking its *index set* is what catches the live defect: the spine table publishes
-1–5 and its prose says *"The five patterns"* while the headings publish 1–6. That omission is
+divergence. Checking its *index set* is what caught the live defect: the spine table published
+1–5 and its prose said *"The five patterns"* while the headings published 1–6. That omission was
 **declared** (`DECLARED_SPINE_LAG`) rather than repaired, because editing the spine before
-OQ-278's ruling destroys the evidence of what each document published when. When the repair
-lands, the declaration disappearing goes red — symmetric with the collision allowlist.
+OQ-278's ruling would have destroyed the evidence of what each document published when. The
+ruling landed 2026-08-17, the spine now publishes 1–8 (index 3 as an explicit empty row), and the
+declaration retired with it — symmetric with the collision allowlist.
 
 ## The silent edges (what the checker does NOT cover)
 
 Enumerated rather than left implicit — each is a real index→pattern encoding this row does not
 read, so a green `doc patterns` says nothing about them:
 
-- `CLAUDE.md:158` — cardinality claim ("five live, index 3 vacated").
-- `README.md:170` — cardinality claim ("the six defect patterns"), **already wrong** since the
-  2026-08-11 vacating.
+- `CLAUDE.md:158` — cardinality claim ("seven members at eight indices").
+- `README.md:170` — cardinality claim ("the seven defect patterns").
 - `docs/amnesiac_institution*.md` — six paper versions, each publishing the list.
 - `docs/design/design_discipline.md` `:464` `:600` `:710`; ~10 `KNOWN_STATE.md` index citations.
 - `audits/2026-08-10_oq277_rq2_crosscoding/PREREGISTRATION.md:350,356` — **md5-frozen and
@@ -122,10 +127,17 @@ the same residual `claim_cite_check.py` declares for citations.
 
 ## Controls
 
-Six, all mutating **in memory only** — never a scratch copy on disk, which would be Pattern 2 on
-the checker's own substrate. Five force a distinct violation shape; the sixth is the negative
-control asserting the unmutated pair is green (without it, the five show only that the
-instrument *can* fire, never that its firing carries information).
+Seven, all mutating **in memory only** — never a scratch copy on disk, which would be Pattern 2
+on the checker's own substrate. Six force a distinct violation shape; the seventh is the negative
+control asserting the unmutated pair is green (without it, the six show only that the instrument
+*can* fire, never that its firing carries information).
+
+**Two are forced by a synthetic MANIFEST rather than by mutating a document** (`UNDECLARED
+RESOLUTION` on a collision, and its spine-lag twin), because since the 2026-08-17 retirement
+there is no declared entry left for a document edit to contradict. Dropping them when the
+allowlists emptied would have retired two controls for a reason unrelated to whether the code
+paths still work — an unexercised branch that reads green is the orphan shape this taxonomy names
+(*a control must witness that it is CALLED*).
 
 **Discrimination record — naturally arising, both sides, neither authored to be found.** Per
 CLAUDE.md's *"When a defect is found, its before-commit is a free negative control"*, the git
@@ -160,11 +172,11 @@ extraction.
 
 ---
 
-# Sibling: `pattern_citation_check.py` — the vacated-consumer gate
+# Sibling: `pattern_citation_check.py` — the displaced-consumer gate
 
-Gate row `vacated cites`. Same OQ (OQ-278), different object: `doc_pattern_check` guards the two
-**specifications** against each other; this guards the **citation record** against a member that
-was removed from it.
+Gate row `displaced cites`. Same OQ (OQ-278), different object: `doc_pattern_check` guards the
+two **specifications** against each other; this guards the **citation record** against a member
+whose index moved out from under it.
 
 ## Why it is an instrument and not a note
 
@@ -177,19 +189,31 @@ instances of one failure mode wants an instrument, not a fourth note.*
 
 ## Declaration-based, not repair-based
 
-The nine stale citations **cannot be repaired yet** — the repair is OQ-278's Step 4, after R2,
-because "append the slug in place" is invalidated if the ruling renumbers. So they are
-**declared**, per file (never per line — line numbers drift under ordinary editing and a
-line-keyed manifest would go red on churn instead of on substance):
+**One manifest block per displaced member, carrying the STATE that says why its citations are
+stale** — because the state decides the repair. `destructive-replace` was *vacated* (2026-08-11):
+its citations get the surviving witness rule named, no index. `bound-probe` was *renumbered*
+3 → 7 (2026-08-17): its citations get the new index. The second block was declared **before** the
+renumbering landed — the 2026-08-11 vacating created nine stale pointers and nobody swept, and
+renumbering without capturing the displaced member's consumers first would have committed that
+same defect in the commit that closes the entry.
+
+Declared per file, never per line — line numbers drift under ordinary editing and a line-keyed
+manifest would go red on churn instead of on substance:
 
 | verdict | meaning |
 |---|---|
-| `UNSWEPT CONSUMER` | a **tenth** site cites the vacated member and is not in the manifest |
+| `UNSWEPT CONSUMER` | a site cites a displaced member and is not in that member's manifest block |
 | `DECLARED CONSUMER GONE` | a declared site stopped citing it — either the repair landed (retire the entry in the **same change**) or the detector stopped seeing it |
 | `COUNT CHANGED` | the per-file count moved |
 
-Green today. Same shape as `DECLARED_SPINE_LAG` above and
-`prolog/axis_boundary_allowlist.txt`.
+The phantom-entry control runs **once per displaced member**: a control that fires for one block
+licenses nothing about the other's plumbing.
+
+**A residual count after repair is expected and is declared residue, not backlog.** Not every
+declared row is a repair target — discussion *of* the displacement is correct as written, and
+point-in-time audit records are not retro-edited. The manifest deliberately declines to encode
+which is which: a count is checkable, a disposition is a judgment, and the dispositions live in
+`audits/2026-08-14_oq278_index_collision/WRITEUP.md` §4.
 
 ## It has already earned its keep, and the lesson generalizes
 

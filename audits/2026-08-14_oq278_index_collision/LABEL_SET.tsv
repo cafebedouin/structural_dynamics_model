@@ -1,8 +1,6 @@
 file	line	raw_text_as_found	quoted_context	namespace	mechanism_slug	confidence
-AGENTS.md	669	P4	and disagree at indices 3 and 4.** `CM-P4` is *recap-as-witness*; `BD-P4` is *fabricated default*.	taxonomy-candidate	fabricated-default|recap-as-witness	unrecoverable
-AGENTS.md	673	Pattern 4	**Write `CM-P3`/`BD-P3`, `CM-P4`/`BD-P4`. Never a bare `Pattern 4` or `P4`; a bare one found in	taxonomy-candidate		unrecoverable
-AGENTS.md	674	P3	the record is UNRESOLVED, not interpreted.** `P3`/`P4` is seven-way overloaded (the concealment	other-unclassified		n/a
-AGENTS.md	675	P3	paper's `CWC:P3`, `diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, essay	cwc-claim-row		n/a
+AGENTS.md	680	Pattern 3	**Reading the historical record:** a pre-2026-08-17 `Pattern 3`/`P3`/`BD-P3` means the	taxonomy-candidate	bound-probe	recovered
+AGENTS.md	684	P3	but `Pattern N`/`PN` is still seven-way overloaded (the concealment paper's `CWC:P3`,	cwc-claim-row		n/a
 ISSUES.md	350	Pattern-3	**Resolution (behavior-preserving):** (1) `metric_delta/5`, `metric_trend/3`, `drift_velocity/3` annotated at their definitions with reduction-kind + faithful-source pointer + the witnessed flip-statu	taxonomy-candidate	destructive-replace	recovered
 ISSUES.md	717	P3	(3) (§8 P3-locality) are scope-clarifications — they narrow what the prose claims rather	other-unclassified		n/a
 ISSUES.md	852	Pattern 3	**Signature audit (2026-05-30) — 51 triples, UNBOUND query, Pattern 3 verified:**	taxonomy-candidate		unrecoverable
@@ -729,7 +727,7 @@ docs/seat-theorem-v1.md	212	P3	P3 is the new fulcrum and it is resistable. A dir
 docs/seat-theorem-v1.md	214	P3	The seal is therefore **real but local**: it holds for anyone who grants P3, and it cannot compel the joint-carving realist who denies it. Stating "self-sealing" without that qualifier would be the no	other-unclassified		n/a
 docs/seat-theorem-v1.md	232	P3	3. **The P3-locality clause** (§8, the seal is "real but local") is likewise a	other-unclassified		n/a
 docs/seat-theorem-v1.md	233	P3	**scope-clarification**: P3 is explicitly contestable, so localizing the theorem's reach	other-unclassified		n/a
-docs/technical/doc_pattern_check.md	213	Pattern-3	- **A regex literal containing `Pattern-3` made the checker cite itself.** Exactly the shape	taxonomy-candidate		unrecoverable
+docs/technical/doc_pattern_check.md	237	Pattern-3	- **A regex literal containing `Pattern-3` made the checker cite itself.** Exactly the shape	taxonomy-candidate		unrecoverable
 docs/technical/swipl_load_path_and_probe_gotchas.md	226	Pattern 3	bound bypasses the lock cuts and lies about clause order (Pattern 3 /	taxonomy-candidate	bound-probe	recovered
 docs/the_perturbation_principle.md	276	Pattern 3	in-progress consolidation, `build_discipline.md` Pattern 3 / faith-merge).	taxonomy-candidate	destructive-replace	recovered
 docs/v8/foundations/constraint_lifecycles.md	1824	Pattern 3	### Pattern 3: The Extraction Capture	analysis-enumeration		n/a
@@ -781,25 +779,23 @@ python/audits/oq290_frontload_check/riders_BEFORE.md	313	Pattern 4	recap-as-witn
 python/bound_selector_check.py	2	P3	"""bound_selector_check.py — BD-P3 made mechanical.	other-unclassified		n/a
 python/bound_selector_check.py	17	P3	WHY THIS EXISTS AS A GATE ROW RATHER THAN A DOCUMENTED RULE. BD-P3 was written	taxonomy-candidate	bound-probe	recovered
 python/bound_selector_check.py	231	P3	f"predicate — query unbound + post-filter (BD-P3). | {line}"	taxonomy-candidate	bound-probe	recovered
-python/doc_pattern_check.py	296	Pattern 4	mutated = bd_text.replace("## Pattern 4: Fabricated default",	taxonomy-candidate	fabricated-default	recovered
-python/doc_pattern_check.py	297	Pattern 4	"## Pattern 4: Recap-as-witness substitution", 1)	taxonomy-candidate	fabricated-default|recap-as-witness	unrecoverable
 python/omega_resolver.py	820	Pattern 4	# Pattern 4/5).	taxonomy-candidate		inferred
 python/omega_resolver.py	830	Pattern 4	the failure is fixable without weakening strictness (Pattern 4/5)."""	taxonomy-candidate		unrecoverable
 python/pattern_citation_check.py	58	P3	positives — `CWC:P3` (a concealment claim row, guarded by `python/claim_cite_check.py`) and	cwc-claim-row		n/a
 python/pattern_citation_check.py	61	P3	levels; essay/protocol/analysis enumerations; a Prolog *variable* named `P3`; and the paper's	other-unclassified		n/a
 python/pattern_citation_check.py	63	P4	which is why Step 0 namespaces citations (`CM-P4` / `BD-P4`) instead of forbidding them.	other-unclassified		n/a
 python/pattern_citation_check.py	83	P3	cross-reference — and must DECLINE on a planted non-taxonomy `P3` in the Prolog conflict-catalog	taxonomy-candidate	bound-probe	recovered
-python/pattern_citation_check.py	204	P3	# SIXTH namespace, found by this sweep's own false positive: `CWC:P3` is a claim row in	cwc-claim-row		n/a
-python/pattern_citation_check.py	218	Pattern 3	# trees never cite build discipline; the mid-sentence references ("Pattern 3 exhibits	taxonomy-candidate		inferred
-python/pattern_citation_check.py	234	Pattern 3	# Corpus-analysis manifests emit `"candidate_pattern": "... (Pattern 3)"` — the DR	decompose-manifest-candidate		n/a
-python/pattern_citation_check.py	240	Pattern 3	# recon reports and analysis scripts number their OWN findings `Pattern 3: <name>`.	analysis-enumeration		n/a
-python/pattern_citation_check.py	382	P4	# `.jpg` under agent/analysis/originals/ produced a byte sequence containing `P4`	taxonomy-candidate	bound-probe	recovered
-python/pattern_citation_check.py	425	P3	"""Two-sided: must FIND two known hits; must DECLINE on a planted foreign-namespace P3."""	other-unclassified		n/a
-python/pattern_citation_check.py	435	Pattern 4	failures.append("selftest FAILED: known positive (oq93 FINDINGS.md 'Pattern 4') not found")	taxonomy-candidate	fabricated-default	recovered
-python/pattern_citation_check.py	444	Pattern 3	failures.append("selftest FAILED: known positive (design_gaps.md 'Pattern 3') not found")	taxonomy-candidate		unrecoverable
-python/pattern_citation_check.py	446	P3	# (3) NEGATIVE control — a foreign-namespace P3 in the Prolog conflict-catalog shape must	other-unclassified		n/a
-python/pattern_citation_check.py	451	P3	failures.append("selftest FAILED: negative control absent — no P3/P4 found in "	other-unclassified		n/a
-python/pattern_citation_check.py	457	P3	failures.append(f"selftest FAILED: negative control — conflict-catalog P3/P4 read as "	other-unclassified		n/a
+python/pattern_citation_check.py	206	P3	# SIXTH namespace, found by this sweep's own false positive: `CWC:P3` is a claim row in	cwc-claim-row		n/a
+python/pattern_citation_check.py	220	Pattern 3	# trees never cite build discipline; the mid-sentence references ("Pattern 3 exhibits	taxonomy-candidate		inferred
+python/pattern_citation_check.py	236	Pattern 3	# Corpus-analysis manifests emit `"candidate_pattern": "... (Pattern 3)"` — the DR	decompose-manifest-candidate		n/a
+python/pattern_citation_check.py	242	Pattern 3	# recon reports and analysis scripts number their OWN findings `Pattern 3: <name>`.	analysis-enumeration		n/a
+python/pattern_citation_check.py	384	P4	# `.jpg` under agent/analysis/originals/ produced a byte sequence containing `P4`	taxonomy-candidate	bound-probe	recovered
+python/pattern_citation_check.py	427	P3	"""Two-sided: must FIND two known hits; must DECLINE on a planted foreign-namespace P3."""	other-unclassified		n/a
+python/pattern_citation_check.py	437	Pattern 4	failures.append("selftest FAILED: known positive (oq93 FINDINGS.md 'Pattern 4') not found")	taxonomy-candidate	fabricated-default	recovered
+python/pattern_citation_check.py	446	Pattern 3	failures.append("selftest FAILED: known positive (design_gaps.md 'Pattern 3') not found")	taxonomy-candidate		unrecoverable
+python/pattern_citation_check.py	448	P3	# (3) NEGATIVE control — a foreign-namespace P3 in the Prolog conflict-catalog shape must	other-unclassified		n/a
+python/pattern_citation_check.py	453	P3	failures.append("selftest FAILED: negative control absent — no P3/P4 found in "	other-unclassified		n/a
+python/pattern_citation_check.py	459	P3	failures.append(f"selftest FAILED: negative control — conflict-catalog P3/P4 read as "	other-unclassified		n/a
 python/scenario_convergence.py	104	Pattern 3	# Pattern 3: Convergent extraction_accumulation drift	analysis-enumeration		n/a
 python/scenario_convergence.py	123	Pattern 4	# Pattern 4: Dominant abductive trigger class	analysis-enumeration		n/a
 scripts/gate.sh	33	P3	# BD-P3 made mechanical (2026-08-17). A bound SELECTOR on a cut-ordered dispatch predicate	other-unclassified		n/a

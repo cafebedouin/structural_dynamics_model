@@ -126,7 +126,8 @@ AUDIT = REPO / "audits/2026-08-14_oq278_index_collision"
 # `bound-probe` block: (a) live citations that must gain the new index (`ISSUES.md:859,945`,
 # `engine_handoff_5/6`, `swipl_load_path_and_probe_gotchas.md:226`, `bound_selector_check.py`);
 # (b) discussion OF the collision, correct as written and never repaired (`KNOWN_STATE.md`'s
-# 2026-08-14/17 entries, `ISSUES.md`'s OQ-278-adjacent prose, the oq251 audit log); (c) this
+# 2026-08-14/17 entries, `ISSUES.md`'s OQ-278-adjacent prose, the oq251 audit log, and
+# `AGENTS.md`'s how-to-read-the-historical-record line, which must NAME the old index); (c) this
 # file's own prose, which names mechanisms rather than citing indices — one row (the
 # decoded-`.jpg` note) is a recovery false positive that merely sits near an index token.
 # So a residual count after repair is expected and is declared residue, not backlog.
@@ -156,6 +157,7 @@ DISPLACED = {
         "what": "peer member (R1b' = B1'), moved off the vacated index 3 to index 7 in BOTH documents",
         "repair": "cite index 7 (or the mechanism name); index 3 is a grave in both documents",
         "consumers": {
+            "AGENTS.md": 1,
             "ISSUES.md": 4,
             "KNOWN_STATE.md": 6,
             "audits/2026-08-17_oq251_natural_law_reachability/audit_log.md": 2,

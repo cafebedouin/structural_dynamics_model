@@ -167,7 +167,7 @@ corpus statistics are one sample conditional on one generation (v8 §3.2, §7.2)
 | The law | `docs/seat-theorem-v1.md` + `docs/one_seat_audited.md`, `docs/choosing-the-seat-well-v0_2.md`, `docs/the-few-seats-worth-choosing-v2.md` |
 | Formal rules / calibration | `docs/logic.md` (spec) + `prolog/config.pl` (single source of truth) |
 | Operations | `docs/project_orientation.md` · `AGENTS.md` · `CLAUDE.md` |
-| Method | `docs/technical/build_discipline.md` (the six defect patterns) · `docs/design/design_discipline.md` · `docs/design/design_gaps.md` |
+| Method | `docs/technical/build_discipline.md` (the seven defect patterns) · `docs/design/design_discipline.md` · `docs/design/design_gaps.md` |
 | Open questions | `ISSUES.md` (single tracker; `python3 python/omega_resolver.py menu` for what's workable) |
 | Evidence | `audits/` (one dated directory per investigation) |
 

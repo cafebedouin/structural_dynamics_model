@@ -155,9 +155,9 @@ test-local predicate swaps or retract/re-assert probes, writing goal-TEMPLATE pr
 VACUOUSLY, §13), running an in-session corpus sweep or
 overlay counterfactual (validated signature-sweep recipe; Boltzmann memo caches read stale unless
 cleared), or interpreting a pipeline_output.json diff. `build_discipline.md` documents the
-defect patterns (summarized in Build Discipline below — **five live, index 3 vacated 2026-08-11
-and never reused**; the two documents' numbering still collides at index 4, ISSUES OQ-278) with
-diagnostics; it also carries the
+defect patterns (summarized in Build Discipline below — **seven members at eight indices, index 3
+vacated 2026-08-11 and never reused**; both documents publish the same member at every index since
+OQ-278 closed 2026-08-17, gate-checked per index) with diagnostics; it also carries the
 **citation-time / staleness-ladder** rule (a witnessed fact has a shelf life: reusing it as a
 premise re-asserts it, so rung it — pointer / as-of stamp / gate — by mutable-state ×
 cost-of-acting-on-stale) and the **triage list** of premises that may not be cited as settled
@@ -483,17 +483,17 @@ These defects recur across unrelated subsystems because the producing step is in
 reconciling step is boring; each looks complete at the moment it's introduced. Full patterns,
 instances, and diagnostics: `docs/technical/build_discipline.md`.
 
-**CITATION FREEZE — namespace every pattern index on sight (interim, OQ-278, 2026-08-14).**
-This list and `build_discipline.md`'s **disagree at indices 3 and 4** and have since
-`220739b8` (2026-05-30); index 3 was vacated here 2026-08-11 while `build_discipline.md`
-still publishes *bound-probe* there, and index 4 has **two live claimants** (here:
-*recap-as-witness*; there: *fabricated default*) with no ruling. So: **write `CM-P4` for this
-file's member and `BD-P4` for `build_discipline.md`'s** — never a bare `Pattern 4` / `P4`.
-**A bare `Pattern 3`/`Pattern 4`/`P3`/`P4` found in the record is UNRESOLVED, not interpreted**
-(`P1`–`P10` is also `prolog/diagnostic_summary.pl`'s conflict catalog, plus three more senses —
-of 146 raw `Pattern 3` hits only ~68 are this taxonomy, so a prohibition gate is not buildable).
-Agreement at the *other* indices is machine-checked: `python3 python/doc_pattern_check.py --check`
-(gate row `doc patterns`). Lifts when OQ-278's index-4 ruling lands.
+**Numbering is SETTLED (OQ-278, ruled 2026-08-14/17; the interim citation freeze is LIFTED).**
+Both documents publish the same member at the same index — seven members at eight slots, index 3
+a grave that is never reused — and that agreement is machine-checked per index, not per count:
+`python3 python/doc_pattern_check.py --check` (gate row `doc patterns`). Two residues survive the
+lift. **`Pattern N`/`PN` is still seven-way overloaded outside this taxonomy** (also
+`prolog/diagnostic_summary.pl`'s `P1`–`P10` conflict catalog, `Priority:` levels, the concealment
+paper's `CWC:P3`, essay/protocol enumerations, decompose-manifest `candidate_pattern`, a Prolog
+variable), so name the taxonomy whenever the surrounding text does not already say *build
+discipline*. And **a pre-2026-08-17 `Pattern 3`/`P3` in the record means the mechanism, not the
+index** — *bound-probe* (now 7) or the vacated *destructive-replace*; their swept population is
+declared in the `displaced cites` gate row, and an undeclared new one turns it red.
 
 **1. Produced-but-not-consumed (the dangling wire).** Data is generated and written, and nothing
 reads it back into the thing that needs it (unread `*_sensitivity_results.json`;
@@ -525,8 +525,9 @@ record the verdict in KNOWN_STATE.md.
 **3. — VACATED 2026-08-11 (operator ruling). Index deliberately left EMPTY; do not reuse or
 renumber.** *Destructive-replace without proof* was demoted from a defect pattern to a **witness
 rule** (below) on four converging lines: no mechanism text in `build_discipline.md`; no dated
-exemplar in any version (alone among the six); a shared index (the number 3 named a *different*
-mechanism in the detail doc); and **no instance on a search built to find one** — the failure-shape
+exemplar in any version (alone among the six); a shared index (the number 3 then named a
+*different* mechanism in the detail doc — that mechanism is now **Pattern 7**, moved off the grave
+rather than left on it); and **no instance on a search built to find one** — the failure-shape
 sweep returned five post-discipline destructive commits, four prevention records, one non-deletion,
 and **zero** deletions that had to be undone, with the sweep's ability to find established
 independently (three real delete→restore episodes before the rule existed; fires when witness
@@ -534,7 +535,10 @@ language is stripped). A loud failure is not a member of a taxonomy of absences-
 presences: **a deletion that gets undone announced itself — the restoration is the notice.** The
 index is not reused because every dated audit citing P4/P5/P6 would become ambiguous against its own
 history: *a visible gap is a checked fact; a silent renumber is a fork* (Pattern 2 applied to the
-numbering). Provenance: `amnesiac_institution_v0_6.md` §5.2, `d0c3c5fb`, ISSUES OQ-278.
+numbering). The 2026-08-17 ruling honours that: nothing was shifted *down* into the grave — the one
+member that did move went **up** to a fresh index, and its stranded citations were swept and
+declared before the move (gate row `displaced cites`). Provenance:
+`amnesiac_institution_v0_6.md` §5.2, `d0c3c5fb`, ISSUES OQ-278.
 
 > **The rule itself survives intact, as a WITNESS RULE — prove before you replace.** Before
 > deleting, retiring, or overwriting any script, sweep, data file, or generator that something
@@ -544,12 +548,21 @@ numbering). Provenance: `amnesiac_institution_v0_6.md` §5.2, `d0c3c5fb`, ISSUES
 > retired. It is a *discipline* (a thing one does), not a *defect shape* (a way systems fail
 > silently) — which is the whole content of the demotion.
 
-**4. Recap-as-witness substitution.** A turn-end recap or any "done / verified / working /
-complete" in prose is a CLAIM; only the pasted output (diff, run, validation result, count)
-discharges it. A turn reporting N edits done must paste N witnesses; M<N is the defect (observed:
-"three edits witnessed" with only the third pasted). If a witness cannot be produced this turn,
-label the item OPEN with its graduation step. The operator should read any done-claim lacking a
-same-turn paste as unverified, regardless of the recap.
+**4. Fabricated default (the missing-data fallback that emits a real-looking value).** A predicate
+whose input is absent binds a plausible constant instead of failing or returning `unknown`. **The
+tell is a catch-all clause binding a metric to a constant** — `(measurement(..., V) -> true ; V =
+0.5)`. Downstream receives a real-looking number and treats it as a measurement; nothing errors,
+warns, or flags coverage, so a fabrication is distinguishable from a genuine reading only by
+perturbation. **Rule: return `unknown`, never a plausible value** — an out-of-band token the caller
+is forced to handle. **Diagnostic: count how often the fallback actually fires on the corpus** — if
+more than a handful, it is a fabrication, not a safety net; then tripwire it (swap the constant for
+an obviously out-of-range value and count the flips). Witnessed LOAD-BEARING-WRONG:
+`classify_at_time`'s `Supp=0.5` fired on 190/190 live testsets, and 443/519 non-unknown temporal
+classifications flipped to `unknown` under a poisoned source (OQ-33) — while the static path
+fabricated the *same* gap as `0`, so two surfaces invented different fillers and their divergence
+was artifact, not signal. **Report two numbers, not one:** the flips are the *census* blast radius
+and systematically undercount the *input-exposure* (rows computed on the fallback at all). Full
+entry: `build_discipline.md` → *Pattern 4*.
 
 **5. Absence satisfies the gate (authored-zero vs absent).** A gate, threshold, or quantifier
 passes because its input is *missing*, not because a condition was *checked*: `Count == 0` is
@@ -582,6 +595,29 @@ the QUESTION, not the dataset — fail-closed per-question (consumer-named requi
 global fraction.** Full entry + diagnostics: `build_discipline.md` → Pattern 6; candidate-site
 census: OQ-97.
 
+**7. Bound-probe bypasses clause-order (a BOUND selecting argument skips the cut — census
+unbound, or the count is manufactured).** `findall(C, constraint_signature(C, natural_law), Cs)`
+does **not** answer "the engine assigns `natural_law`"; earlier lock clauses fail to *unify* on
+the wrong atom, so their cuts never execute and the query falls through. It answers "satisfies
+that clause body in isolation." **Rule: any `findall`/`forall`/`aggregate_all` over a cut-ordered
+predicate with the *selecting* argument bound is suspect — re-run unbound with `once/1` +
+post-filter by equality.** Asymmetry worth knowing, because it says when you need not re-run: the
+bound form is **over-permissive**, so a bound-arg **zero is conservative and trustworthy**, while a
+bound-arg **nonzero is an artifact until checked**. Witnessed twice on the same predicate and the
+same atom — 2026-05-30 (bound 1 vs real 0) and 2026-08-17 (`constraint_signature(C, ambiguous)`
+276 vs real 0, which inflated a denominator and concealed that **67% of kernel_v1 signatures
+resolve to `unknown`**). For this rule class the documentation channel measured **dead** — six
+defect sites across five surface kinds found by one sweep — so the working guard is mechanical:
+gate row `bound selector` (`python/bound_selector_check.py`), with the incidence ledger kept at
+the rule. Full mechanism, worked example, diagnostic: `build_discipline.md` → *Pattern 7*.
+
+**8. Recap-as-witness substitution.** A turn-end recap or any "done / verified / working /
+complete" in prose is a CLAIM; only the pasted output (diff, run, validation result, count)
+discharges it. A turn reporting N edits done must paste N witnesses; M<N is the defect (observed:
+"three edits witnessed" with only the third pasted). If a witness cannot be produced this turn,
+label the item OPEN with its graduation step. The operator should read any done-claim lacking a
+same-turn paste as unverified, regardless of the recap.
+
 The first two share a root: **the corpus/codebase you are building for is not the one on disk
 now.** Build naming schemes, linkage rules, and reports correct for the corpus you intend
 (thousands of stories, regeneration under schema change, found-article ingestion). A scheme that
@@ -594,24 +630,6 @@ read site can't tell it from the real thing. The single fix, everywhere: **carry
 bit with the value so absence and success stop collapsing to one token at the read site.**
 Concretely: wire-or-fail-loud, checked-canonicity, let the engine dispatch, return `unknown` not
 `0.5`, fail-closed-on-absence.
-
-**A BOUND selecting argument bypasses clause-order cuts — census unbound, or the count is
-manufactured (`BD-P3`; NAMED, deliberately takes NO index here — see the citation freeze).**
-`findall(C, constraint_signature(C, natural_law), Cs)` does **not** answer "the engine assigns
-`natural_law`"; earlier lock clauses fail to *unify* on the wrong atom, so their cuts never
-execute and the query falls through. It answers "satisfies that clause body in isolation." **Rule:
-any `findall`/`forall`/`aggregate_all` over a cut-ordered predicate with the *selecting* argument
-bound is suspect — re-run unbound with `once/1` + post-filter by equality.** Asymmetry worth
-knowing, because it says when you need not re-run: the bound form is **over-permissive**, so a
-bound-arg **zero is conservative and trustworthy**, while a bound-arg **nonzero is an artifact
-until checked**. Witnessed twice on the same predicate and the same atom — 2026-05-30 (bound 1 vs
-real 0) and 2026-08-17 (`constraint_signature(C, ambiguous)` 276 vs real 0, which inflated a
-denominator and concealed that **67% of kernel_v1 signatures resolve to `unknown`**). **This is
-promoted precisely because it was invisible from here:** `build_discipline.md` publishes it at its
-index 3, this file's index 3 is the vacated grave, and the only prior mention of "bound-probe" in
-this file is inside the citation freeze — naming the collision, never teaching the rule. Full
-mechanism, worked example, diagnostic: `build_discipline.md` → *Pattern 3*. (Provenance:
-KNOWN_STATE 2026-08-17; evidence filed on OQ-278.)
 
 **Diagnostics are not exempt — every probe needs a positive control.** An empty grep, a `findall`
 of `[]`, a count of `0`, an "I found it nowhere" each can mean "nothing there" or "didn't
