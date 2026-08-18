@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "91f1541539170ef94ec5aaa3c6092ec7306bfc1c",
+    "store_version": "0dbe710b38f4974691252aa6d313578aee60db54",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T09:50:04"
+    "generated_at": "2026-08-18T10:07:35"
   },
-  "issues_sha": "321b3b5540307bf4289874fbf57865659e8171605bc6a4dc6310cc22af09dbe4",
-  "n_entries": 309,
+  "issues_sha": "8ef5fc69f1833b2d69bd509c444252f742db8071dead2dc4d0105b63dc1fed2c",
+  "n_entries": 310,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 117,
+    "open": 118,
     "partial": 8
   },
   "active": [
@@ -1798,7 +1798,21 @@
         "OQ-278",
         "OQ-280",
         "OQ-286",
-        "OQ-289"
+        "OQ-289",
+        "OQ-310"
+      ]
+    },
+    {
+      "id": "OQ-310",
+      "status": "open",
+      "priority": 3,
+      "summary": "Walk the 22 gate rows against the invariant-versus-value rule: it predicts every value-checking row is blind to apparatus self-instances, and that prediction is cheap and unrun",
+      "deps": [
+        "splits_from OQ-309"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-309"
       ]
     }
   ],

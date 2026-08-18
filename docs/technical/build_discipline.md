@@ -2641,6 +2641,70 @@ one of them is currently enforced by anything.
 
 ---
 
+## A textual probe's zero is a fact about the probe: the wrap-trap class, five instances in one pass
+
+**The class.** A probe that searches prose for a phrase can return "absent" for a phrase that is
+present, because the *storage* form differs from the *reading* form. Markdown supplies at least
+three independent ways to do this, and each defeats the fix for the last:
+
+| variant | what it does to a line-oriented probe | the fix it defeats |
+|---|---|---|
+| hard wrap | a phrase crossing a newline is invisible to `grep` | — |
+| blockquote | continuation lines begin `> `, so whitespace-flattening leaves markers *inside* the phrase | defeats "flatten whitespace" |
+| table cell, nested-list continuation, soft-wrapped footnote | further per-line prefixes | defeats "strip `> ` then flatten" |
+
+**Witnessed 2026-08-18, five instances in a single pass**, all on
+`docs/amnesiac_institution/amnesiac_institution_v0_6.md`: (1) an absence probe scored a control
+phrase absent that was present; (2) a cadence exclusion filter matched nothing on a trailing-slash
+mismatch and printed a plausible identical number; (3) a closing verification line reported a
+present phrase absent; (4) the same block read a *withdrawn* number as an asserted one; **(5) the
+selftest of the instrument built to close (1)–(4) planted its fixtures with a plain `str.replace`
+against the wrapped, blockquoted source — every plant silently no-opped, the document came back
+undamaged, and the "did the check go red?" assertions passed a document that had never been
+perturbed.**
+
+**Instance 5 is the one that matters: the class survived a full round of being understood.** The
+author had just written the normalisation, knew both traps, and reached for `str.replace` in the
+fixture code anyway — because the fixtures felt like setup rather than like probes. **A control's
+setup code is a probe too, and inherits every defect the probe has.**
+
+**The fix is not a better pattern; it is an invariant.** Chasing variants loses — the next markdown
+construct evades the last fix the same way. Two moves close it:
+
+- **Assert expected counts at enumerated sites, not pattern matches.** A check that fails on a MISS
+  as loudly as on an EXTRA cannot silently pass when its normaliser breaks, because the expected
+  count stops being met. `python/amnesiac_carriage_check.py` is the worked implementation.
+- **A perturbation helper must RAISE when it fails to land.** `plant()` in that file compiles the
+  phrase into a whitespace-and-marker-tolerant regex and raises on a zero-substitution result. A
+  fixture that reports rather than raises is indistinguishable from a fixture that worked.
+
+**How instance 5 was caught, recorded because the provenance is the interesting part.** Not by
+applying the invariant-versus-value rule §7.4 of that paper had just stated — by a **two-sided
+assertion already in the selftest** (*"deleting an expectation must turn the check red"*), authored
+under the standing positive-control discipline before that rule was formulated. The assertion is
+invariant-shaped, so the catch is *consistent* with the rule; it is **not a forward test of it**,
+and the rule still has **zero non-retrodictive witnesses**. Recording the difference matters because
+a retrodicted rule and a predicting one are not the same asset, and the cheapest way to confuse them
+is to count a catch that predated the rule as evidence for it.
+
+## A check reports its FINDINGS before its own health — ordering is a correctness property
+
+**The rule.** When an instrument can emit both *what it found* and *whether it is working*, the
+findings print first. **A check that reports its own health before its findings will hide the
+finding whenever both fire** — and both firing is the common case, because whatever broke the
+document often also breaks a fixture.
+
+**Witnessed 2026-08-18.** `amnesiac_carriage_check.py` opened its selftest with "the clean document
+must be green". When a real carriage invariant broke, that assertion failed first and the tool
+printed *"selftest failed: clean document is not green"* — true, useless, and it swallowed the one
+thing the operator needed, which invariant broke. The redundant assertion was removed (main() already
+runs the document check) and the print order inverted; a selftest failure alongside document
+findings now appends *"the instrument is also suspect"* rather than replacing them.
+
+**This is not a formatting preference.** An instrument whose failure mode is to describe itself is
+one an operator learns to read past, and reading past a check is how a check stops being one. The
+generalisation: **health output is a qualifier on findings, never a substitute for them.**
+
 ## Commit-as-you-go: a witnessed unit of work is committed when witnessed, not at session end
 
 **Operator ruling (2026-06-09): standing permission to commit without asking.** The repo is CC0,

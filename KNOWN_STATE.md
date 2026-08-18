@@ -100,6 +100,27 @@ item-count check read **32 against a documented 35** from the moment §4b landed
 instruction *"and compare the output to 35"* did not. Fixed, with the grade recount promoted from a
 prose instruction to a runnable command and `/usr/bin/grep` pinned.
 
+**New standing gate row: `paper carriage`** (`python3 python/amnesiac_carriage_check.py --check`).
+It asserts **expected hit counts at enumerated carriage sites** in the paper and fails on a MISS as
+loudly as on an EXTRA, so a normalisation bug turns it RED rather than green. **Editing a carriage
+site without updating its expectation in the checker's manifest turns the gate red — deliberately**,
+the same opt-in-with-teeth shape as `spec_enum_check.py`. It replaced a pattern-grep sweep that
+mis-fired twice.
+
+**Tripwire for any textual probe over `amnesiac_institution_v0_6.md` (or any hard-wrapped,
+blockquoted markdown): a probe's zero is a fact about the probe.** Five instances of this class
+landed in one pass, and the fifth was **inside the instrument built to close the first four** — its
+selftest planted fixtures with a plain `str.replace` against wrapped source, every plant silently
+no-opped, and the "did the check go red?" assertions passed a document that had never been damaged.
+Chasing normalisation variants loses; the fix is an invariant (assert expected counts) plus a
+perturbation helper that **raises** when it fails to land. Full class:
+`docs/technical/build_discipline.md` → *A textual probe's zero is a fact about the probe*.
+
+**Circulation reframed (operator ruling, 2026-08-18): GO is a jurisdictional act, not a quality
+certification.** Nothing about circulating makes the incidence figure more citable — withdrawing the
+pooled scalar and reporting per window did that. Do not read the paper's front-matter box as a
+quality gate; it states what the artifact is.
+
 **Not discharged, and a cold reader should not assume otherwise.** §10.4's standing-gate catch series
 stays `[UNWITNESSED]` (nobody has collected it; the cadence row is a different quantity). §3.5's
 truncation row stays `[UNWITNESSED]`, re-pointed from the retracted always-loaded carrier (OQ-286) to

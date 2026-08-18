@@ -12,27 +12,34 @@ this draft cannot pay for and are not to be cited until filled; `[OPERATOR]` slo
 the operator holds. The framing errors are the draft's; the witnessed instances are the
 repository's.*
 
-> **The blocker is discharged, and the discharge changed what the paper's headline is.** As of
-> 2026-08-18 Appendix B is re-run under a single as-of stamp, the pass against
-> `V04_CONSOLIDATION_MANIFEST.md` is complete with its one blocking item resolved, and four rows
-> remain `[UNWITNESSED]` with their blockers named and re-verified.
+> **What circulation is, and what it is not (2026-08-18).** Earlier drafts carried a *blocker before
+> circulation* and treated lifting it as the moment the paper became citable. That framing was
+> wrong, and the pass that discharged the blocker is what showed why.
 >
-> **The discharge's own finding forced a second change, made here rather than deferred.** §5.4's
-> central statistic had been a pooled scalar; re-running it showed the underlying rate is
-> **non-stationary** (37% → 58% → 80% across June, July and the first eighteen days of August), so
-> the pooled form measures the denominator's age distribution as much as the record. Circulating
-> that scalar would have retired a citability blocker at the moment the headline became *less*
-> citable. **The pooled figure is therefore withdrawn**, §5.4 leads with per-window rates, and the
-> paper's central claim now matches what its instrument can support. The earlier claim that the
-> figure had *"survived three corrections"* was also undercounted in the paper's own favour: the
-> count is six, and the withdrawal is not a seventh correction but a change of form.
+> **Nothing about a decision to circulate makes a number more citable.** The pooled incidence figure
+> was exactly as uninterpretable the day before the blocker lifted as the day after; what made the
+> statistic citable was **withdrawing it and reporting per window** (§5.4) — a change to the paper,
+> made by re-running its own commands, entirely independent of anyone's permission. Citability is a
+> property of the artifact and is settled by work. A GO settles something else.
 >
-> **Whether this draft circulates remains the operator's call and is not settled here** (§9.2). One
-> reviewing instance's recommendation is on record — *no-go on the pre-amendment text, and the GO
-> question is not answerable until the pooled scalar is withdrawn* — and that condition is now met.
-> The numbers are current, commanded, and window-bounded; readiness is a judgment, and an instance
-> recommending is not an instance ruling.
-
+> **GO is a jurisdictional act.** It is the operator deciding, from a seat no instance occupies
+> (§9.2), that this document may carry his name outside the repository — a judgment about audience,
+> timing, standing and what he is prepared to defend. It certifies **no** quality claim. It cannot
+> repair a figure, and a paper whose central statistic was still pooled would have been no more
+> defensible for having been released.
+>
+> **Where the artifact stands, stated so the jurisdictional question is asked against facts.** The
+> two items earlier drafts named as blocking are discharged: Appendix B is re-run under a single
+> as-of stamp with per-row raw output, and the 35-item `V04_CONSOLIDATION_MANIFEST.md` pass is
+> complete with its one U-BLOCKING item resolved. Four rows remain `[UNWITNESSED]` and name their
+> blockers. §5.4's pooled scalar is withdrawn; the rate is reported per window, with six known
+> instrument defects and a stratum limit. The correction history was revised **upward**, from three
+> corrections to six. Appendix D.3 **lost** a settled row. A standing gate (`paper carriage`) now
+> fails if any of that quietly reverts.
+>
+> **This box no longer blocks anything.** It records what the artifact is. Whether it circulates is
+> a call in a jurisdiction this document cannot enter, and its answer would not change a single
+> figure above.
 ---
 
 > **CANONICITY — RULED 2026-08-13 (operator; ISSUES OQ-287). This supersedes the provisional marker
@@ -1639,6 +1646,17 @@ Two consequences reached the hard way:
 **If no decline is available anywhere in the population**, the question is unanswerable from that
 corpus — a verdict to declare, not a caveat to ship under.
 
+**And an instrument reports its findings before its own health.** Where a check can emit both *what
+it found* and *whether it is working*, the finding prints first: **a check that reports its health
+first will hide the finding whenever both fire**, and both firing is the common case, because
+whatever broke the substrate often also breaks a fixture. Witnessed 2026-08-18 — a checker whose
+selftest opened with "the clean document must be green" answered a real violation with *"selftest
+failed: clean document is not green"*, which is true, useless, and silent about which invariant
+broke. Health output is a **qualifier** on findings, never a substitute for them; an instrument
+whose failure mode is to describe itself is one an operator learns to read past, and reading past a
+check is how it stops being one. Ordering is a correctness property here, not a formatting
+preference.
+
 ### 7.4 The recursion — observed, not hypothetical
 
 Every control, canary, fallback, or harness added to satisfy the discipline is a *new* unwitnessed
@@ -1687,9 +1705,20 @@ the rule named what to look for.** The V04 manifest's item-count check ran green
 a documented figure it did not match, and the pass's own closing verification block mis-fired twice
 — once reporting a present phrase absent, once reading a withdrawn number as an asserted one. All
 three are **value checks**, and all three missed. The census's `partition_check` is the only
-invariant in the set, and it is the only one that caught anything. That the rule *retrodicts* three
-misses it was not derived from is the strongest support available at this n, and it is still
-retrodiction: the falsifier above is what would move it. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
+invariant in the set, and it is the only one that caught anything.
+
+**The rule has zero non-retrodictive witnesses, and one candidate was checked and rejected.** When
+the instrument built to replace that verification block was itself found defective — its selftest
+fixtures silently failing to perturb the document they claimed to damage — the catch looked at first
+like a forward confirmation. It is not. The assertion that caught it (*"deleting an expectation must
+turn the check red"*) is invariant-shaped, so the catch is **consistent** with the rule; but it was
+authored under §7.3's standing two-sided-control discipline **before** this rule was formulated, and
+would have been written identically had the rule never existed. Counting it would be helping
+oneself. So the position is: eleven instances, three retrodicted misses, **no prediction yet tested**
+— and the falsifier above is cheap. The repository runs twenty-two gate rows, most of them value
+checks, and the rule says every one of them is blind to this class. Walking them is a short pass and
+is registered as ISSUES **OQ-310**; it either hardens the rule or kills it while it is still small
+enough to kill cheaply. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.

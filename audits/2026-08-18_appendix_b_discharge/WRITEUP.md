@@ -128,6 +128,37 @@ That is a *different* failure from the one the tripwire is written against, and 
 must be scored on outcome rather than on whether the instance appears to know. **§8.2's missing
 stakes term is untouched and remains a declared gap.**
 
+## Closing round: the wrap-trap class survived being understood, and a forward witness was checked and rejected
+
+**Wrap-trap instance five occurred inside the instrument built to close instances one through
+four.** `amnesiac_carriage_check.py`'s selftest planted its fixtures with a plain `str.replace`
+against the wrapped, blockquoted source. Every plant silently no-opped: the document came back
+undamaged, and the assertions *"a deleted expectation must turn the check red"* were passing a
+document that had never been perturbed. The author had just written the normalisation and knew both
+traps — the fixture code did not feel like a probe. **A control's setup code is a probe too, and
+inherits every defect the probe has.** Closed by `plant()` now *raising* on a zero-substitution
+result rather than reporting, which is the invariant move applied one level down.
+
+**Whether that catch is a forward witness for §7.4's rule: checked, and no.** The assertion that
+caught it is invariant-shaped, so the catch is *consistent* with the rule. But it was written under
+§7.3's standing two-sided-control discipline **before** the rule was formulated, and would have been
+written identically had the rule never existed. Counting it would be helping ourselves. **The rule
+stands at eleven instances, three retrodicted misses, and zero predictions tested.** The falsifier
+is registered as **OQ-310**: walk the twenty-two gate rows and find either a value-checker that
+catches this class or an invariant-asserter that misses it.
+
+**Selftest defect #3 generalised** (`build_discipline.md` → *A check reports its FINDINGS before its
+own health*): a check that reports its own health before its findings hides the finding whenever
+both fire — and both firing is the common case, since whatever broke the substrate often also breaks
+a fixture. Ordering is a correctness property, not a formatting preference. Also landed at §7.3.
+
+**The circulation box is rewritten as a jurisdictional statement, per operator ruling.** It no longer
+reads as a quality gate. *Nothing about a GO makes the incidence figure more citable — withdrawing
+the pooled scalar and reporting per window did that, by re-running the paper's own commands.* GO is
+the operator deciding, from a seat no instance occupies, that the document may carry his name
+outside the repository; it certifies no quality claim and repairs no figure. The box now states what
+the artifact is and stops blocking anything.
+
 ## Residue — what a cold reader must pick up
 
 - **OQ-309 is `partial`, not resolved**, and is the declared home for: the 10 still-open V04 rows

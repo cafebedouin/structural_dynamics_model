@@ -14051,14 +14051,33 @@ rather than only that it is not; and §11 gains the one reflexive move that can 
 diff — a correction history revised **upward** against interest, and Appendix D.3 **losing** a
 settled row.
 
+**Third round (2026-08-18): the wrap-trap class survived being understood, and the derived rule's
+first candidate forward witness was checked and REJECTED.** Wrap-trap instance **five** occurred
+inside `amnesiac_carriage_check.py` — the instrument built to close instances one through four —
+whose selftest planted fixtures with a plain `str.replace` against wrapped, blockquoted source, so
+every plant silently no-opped and the "did it go red?" assertions passed a document never damaged.
+Closed by making `plant()` raise rather than report. **The catch is not a forward test of §7.4's
+invariant-versus-value rule:** the assertion that fired is invariant-shaped, but it was authored
+under §7.3's two-sided-control discipline before the rule existed and would have been written
+identically without it. The rule stands at **zero non-retrodictive witnesses**, and its falsifier is
+registered as **OQ-310** (walk the 22 gate rows). Class documented at `build_discipline.md` → *A
+textual probe's zero is a fact about the probe*, together with the ordering rule from selftest
+defect #3 (*a check that reports its own health before its findings hides the finding whenever both
+fire*), which also landed at §7.3.
+
 **RESIDUE — this entry is its home, and none of it is blocking.**
 
 - **V04 rows still open (10):** items 8, 9, 10, 11, 19, 23, 28 (not landed) and the open halves of
   14, 22, 31. All grade W or R; each is a paragraph the paper could carry and does not. Ω_E — they
   are matters of what the sources say, checkable by reading them. Detail per row:
   `audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md`.
-- **Operator decisions (2).** (a) The **circulation GO** — recorded above as `blocked_on_human`; the
-  factual half is discharged and the judgment is not, and §9.2 forbids an instance ruling it.
+- **Operator decisions (2).** (a) The **circulation GO**, recorded above as `blocked_on_human` and
+  **reframed 2026-08-18 (operator ruling): GO is a JURISDICTIONAL act, not a quality certification.**
+  Nothing about a decision to circulate makes the incidence figure more citable — withdrawing the
+  pooled scalar and reporting per window did that, and it was done by re-running the paper's own
+  commands. GO settles whether the document may carry the operator's name outside the repository, a
+  question no instance occupies the seat for (§9.2) and whose answer changes no figure. The paper's
+  blocker box is rewritten to say exactly this and no longer blocks anything.
   (b) The **§8.2 stakes-term reading** is **downgraded from an open decision to a research item**:
   the trial showed the promotion test is runnable (existence grade, n = 1 per arm registered), which
   makes the stakes term measurable **by the same harness** — withhold a rare-but-expensive tripwire
@@ -14072,6 +14091,59 @@ settled row.
   instrument-stratum rate, still unmeasured.
 - **Not re-raised here:** OQ-280's perform-vs-amend fork for §4.3, which is out of scope by ruling
   and stays at its own entry.
+
+
+
+## OQ-310 — Walk the 22 gate rows against the invariant-versus-value rule: it predicts every value-checking row is blind to apparatus self-instances, and that prediction is cheap and unrun
+
+**Ω-type:** Ω_E (each row either catches or does not; it is a matter of fact about the gate set).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-309
+**Origin:** 2026-08-18, minted at the second review round of OQ-309 rather than folded into it —
+OQ-309's brief was the Appendix B discharge, and this is a test of a rule that discharge produced.
+**Files:** `scripts/gate.sh` (the row list), `docs/amnesiac_institution/amnesiac_institution_v0_6.md`
+(§7.4, where the rule is stated with its falsifier), `docs/technical/build_discipline.md`.
+
+**The rule under test** (`amnesiac_institution_v0_6.md` §7.4, 2026-08-18): *a gate detects an
+apparatus self-instance if and only if it asserts an invariant the defect cannot satisfy; a gate
+that checks a value against an expectation does not.*
+
+**Why it is worth attacking now.** It was derived from eleven instances and **retrodicts** three
+misses it was not built on — the V04 manifest's item-count check running green for a week against a
+figure it did not match, and the OQ-309 pass's own closing sweep mis-firing twice. All three are
+value checks; the single invariant in the set (`freeze_frame.sh`'s `partition_check`) is the only
+thing that caught anything. **It has zero non-retrodictive witnesses**, and a rule with none is a
+description of the cases that made it.
+
+**The pass.** For each row in `scripts/gate.sh`, classify it as *invariant-asserting* (it states a
+structural property the substrate cannot satisfy while defective — partitions, totality, per-index
+agreement, dispatch shape) or *value-checking* (it compares an output against an expected value or
+pattern). Then look for either half of the falsifier:
+
+- **a value-checking row that has caught an apparatus self-instance** — a defect in a control,
+  gate, checker or manifest, not in the substrate. Commit history and the audit record both carry
+  the evidence.
+- **an invariant-asserting row that missed one** — a self-instance that lived while a row that
+  should have refused it stayed green.
+
+**Either finding kills or narrows the rule while it is small enough to kill cheaply**, which is the
+whole reason to run it before v0.7 rather than after the rule has been cited.
+
+**Design notes carried forward so a cold reader does not repeat the mistakes that produced the
+rule.** The classification is the hard part and it is a *seat*: several rows do both (a selftest
+asserting fixture behaviour inside a checker that compares values). Declare the mixed rows as mixed
+rather than forcing a binary — a forced binary would manufacture whichever answer the classifier
+preferred, which is the failure this whole family is about. And **count the rows that have never
+fired at all**: a row with no incident history is evidence about neither side, and folding it into
+either column would be the absence-satisfies-the-gate shape one level up.
+
+**What resolution changes.** A surviving rule is a design criterion for new gates — *state an
+invariant or expect to miss this class* — and belongs in `build_discipline.md` as a construction
+rule. A killed rule retires a sentence from §7.4 and returns the eleven instances to being a
+description rather than a prediction. Either is worth more than the current state, which is a
+confident sentence with no test.
 
 
 
