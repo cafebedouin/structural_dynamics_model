@@ -1,0 +1,55 @@
+# SYNC SWEEP WITNESS — two-sided, run 2026-08-18 AFTER the paper edit
+
+Pattern (from the plan; deliberately includes `42%` and the bare `73`/`174` forms expected to
+SURVIVE, so that a zero-hit result would indicate a broken pattern rather than a clean document):
+
+  /usr/bin/grep -n '73/174\|174 audit\|73 of 174\|42%\|2026-08-10\|\b73\b\|\b174\b' \
+    docs/amnesiac_institution/amnesiac_institution_v0_6.md
+
+**38 hits. The sweep decides nothing by itself** — a hit is stale or retained depending on whether
+it is a CURRENT-VALUE claim or a DATED RECORD. The class assignment below is the witness, and every
+one of the 38 is assigned.
+
+## A — this pass's own 2026-08-18 amendment, stating what moved (13 lines)
+
+171, 173, 187 (the in-place-correction bullets), 307 (W2, carrying both values with dates),
+1117, 1118 (§5.4's new opening), 1232, 1245 (the non-stationarity box), 2584, 2585, 2595, 2597
+(new Appendix B rows), 2622 (the new third positive-control paragraph).
+
+## B — dated record of an earlier state, correct as history (21 lines)
+
+Re-dating these would destroy the record; §8.3's staleness ladder calls this an as-of stamp.
+
+| line | what it records |
+|---|---|
+| 135 | the 2026-08-13 in-place correction, about the state then |
+| 363 | the v0.2/v0.3 open-question reconciliation, quoted with its date |
+| 806, 858, 1790 | the 2026-08-10 consolidation and disk verification |
+| 1147, 1148, 1151, 1152, 1153, 1155 | the 175 → 174 history — **with the attribution conflict newly declared** (the frozen 08-10 frame reaches 174 by self-exclusion, not by the empty-directory removal this sentence describes; the directory was untracked, so git cannot adjudicate) |
+| 1166 | the 73/73 two-sided control, **newly stamped** to the 2026-08-10 stratum it was run on |
+| 1177 | "through v0.6" — explicitly past tense after this pass |
+| 1309, 2199, 2458 | the literature search / verification date |
+| 1960, 1971 | adoption day, now immediately followed by the current reading |
+| 2016 | the 2026-08-10 cadence, now immediately followed by the 2026-08-18 re-run |
+| 2051 | the 2026-08-13 catch-bit box, now carrying the current figure alongside |
+| 2306, 2315 | the OQ-277 preregistration's own **73 items** — a different 73 entirely, and a good reminder that a bare number in a sweep pattern matches things it does not mean |
+| 2616 | v0.3's 77 → 73 correction |
+| 2663, 2705 | Appendix D's "owed since" date and correction history |
+
+## C — genuinely stale, found by THIS sweep and repaired in the same pass (4 sites)
+
+**Class C was not empty, which is what makes this a check rather than a formality.** All four
+survived the pass over the Appendix B table and were caught only by grepping the prose:
+
+1. §10.2's *"The current reading (2026-08-10, adoption day): zero bits"* — the row had been
+   updated to 11 live / 1 latent / 0 no and the prose still said zero.
+2. §10.4's cadence sentence — the row said Aug 1–18 = 21 and the prose still said Aug 1–10 = 10.
+3. §10.5's *"readout stands at 4 live / 0 latent / 0 no"* — three times out of date.
+4. The 73/73 census-stratum control, which carried no stratum stamp and now reads as a current
+   claim about a stratum of 83 unless dated.
+
+**The generalisable point, and it is this pass's own instance of the paper's subject:** the table
+is where the numbers live and the prose is where they are *spent*. Updating the manifest and
+believing the document current is precisely the produced-but-not-consumed shape — the producer was
+refreshed and four consumers were not. The sweep is the consumer check, and it must run over prose,
+not over the table.
