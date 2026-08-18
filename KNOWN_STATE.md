@@ -94,11 +94,16 @@ Closing the schema set costs it; arm C buys it back. So do not "simplify" arm C 
 grounds that arm B already covers the schema set — they check opposite directions
 (B: row → declaration; C: authored head → row).
 
-**Correction to the plan's table (write-ownership applied correctly):**
-`diagnostic_summary:maxent_attempted/1` was listed as needing a read accessor. It is
-**written** by `json_report` and read only by its owner, so the repair is a WRITE accessor
-(`maxent_attempt_reset/0` + `maxent_mark_attempted/1`, fail-loud on an unknown stage). A read
-accessor cannot serve a caller whose entire interaction is retractall/assertz.
+**The axis has FOUR dispositions, not three (operator, 2026-08-18).**
+`diagnostic_summary:maxent_attempted/1` was first logged as a *correction* to the plan's table;
+it is better read as a new branch. An outsider writes (`json_report` does the
+retractall/assertz), **but the owner enforces an invariant** over what was written
+(`maxent_stage_attempted_but_void/2` interprets the marker, so an unrecognised stage would sit
+unread and the void gate would report a clean run over it). The hosting test is therefore not
+"who asserts" alone but whether the module merely holds the facts or also means something by
+them. Disposition: **write accessor, fail-loud** — `maxent_attempt_reset/0` +
+`maxent_mark_attempted/1`, no allowlist row. A pure host takes a row; a host with an invariant
+takes a write accessor. Do not apply the axis as a three-way branch.
 
 **Three parser defects the checker had before it was trusted**, each now fixture-controlled —
 worth knowing if you write another source-text sweep over Prolog: predicate INDICATORS
@@ -121,7 +126,13 @@ comparing load counts on all five legs against `5c37b3e4`. Counts are identical 
 predicate went from **undefined** (call throws `existence_error`) to **defined-but-empty**
 (call fails silently). Nothing consumes it, so nothing observes it — but the direction is loud
 → quiet, and a future consumer must not read the empty result as "no flat control exists".
-Noted at the declaration site in `narrative_ontology.pl`. Two probe lessons worth carrying:
+Noted at the declaration site in `narrative_ontology.pl` — **and, since a comment does not
+survive the arrival of the first consumer, made gate-visible**: `module_boundary_check` arm D
+watches `flat_control_of/2` and goes RED the moment it acquires a reference anywhere in engine
+code (verified red-capable by plant-and-restore). The arm's green state and its red state are
+the two states of the fact it watches, so its two-sidedness is structural rather than
+incidental. Per-leg non-emptiness expectations — the part arm D cannot check — are folded into
+OQ-308's scope. Two probe lessons worth carrying:
 the first version of this probe was non-total and died on exactly this undefined case while
 printing nothing a grep would catch, and the second labelled everything `defined` because
 `St0=UNDEFINED` binds a *variable*, not an atom — a capitalised-atom slip that made the label
@@ -141,6 +152,15 @@ needs more (raise it in a throwaway driver, not in `run_pipeline.py`); and a fir
 reported `[exited with code 0]` while the Python underneath had raised `TimeoutExpired` — the
 `| tail` in the invocation swallowed the exception status, success-shaped absorption at the
 shell boundary.
+
+**Census reconciliation, because arm A claims CLOSURE.** Two different bypass counts with no
+bridge would leave that claim resting on air. This instrument's own stages:
+239 naive → 132 (predicate INDICATORS excluded) → 115 (meta-predicate CLOSURES resolved) → 98
+(FACADE reexports resolved) + 18 write-only corpus-schema heads = **116 rows**. The plan's
+recon reported **279** and is **superseded, not bridged**: scope does not explain the gap
+(including `probsets/` moves this instrument 239 → 242, not 279), so the difference is the
+parser, and that recon documented its own arity defects — a mis-arity'd parse inflates the
+count of distinct (module, predicate, arity) triples. Do not cite the 279.
 
 **Also witnessed (invocation, not a defect):** a bare `./scripts/gate.sh` reports a FALSE RED
 on `gap surfaces` — `ModuleNotFoundError: No module named 'pandas'`, because the row shells out

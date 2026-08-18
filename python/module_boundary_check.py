@@ -22,6 +22,17 @@ not exported-vs-qualified:
     have to qualify their heads or declare `multifile` locally, so it changes name
     resolution across 100+ modules and still leaves qualified writes — all cost, no
     consolidation.
+  * FOURTH DISPOSITION, an EXTENSION of the ruling rather than an application of it
+    (recorded 2026-08-18): an outsider writes, BUT the namespace owner reads and enforces an
+    INVARIANT over what was written -> WRITE ACCESSOR, fail-loud. The hosting test is not
+    "who asserts" alone; it is whether the module merely holds the facts or also means
+    something by them. diagnostic_summary:maxent_attempted/1 is the instance —
+    json_report does the retractall/assertz, but diagnostic_summary interprets the marker
+    (maxent_stage_attempted_but_void/2), so an unrecognised stage would sit in the store
+    unread and the void gate would report a clean run over it. Shipped as
+    maxent_attempt_reset/0 + maxent_mark_attempted/1, the latter throwing on an unknown
+    stage. Do not read the axis as having three branches: a pure host takes a row, a host
+    with an invariant takes a write accessor.
 
 WHY A GATE ROW RATHER THAN A DOCUMENTED RULE. The corpus-schema set is opt-in in exactly
 the way `reading_registry` registration and the `spec_enum_check` sentinels are: a new
@@ -40,6 +51,13 @@ THREE ARMS
       `:- multifile` in a PRODUCTION engine module. A declaration under tests/ does NOT
       count: the production load chain never consults those files, so a tests/-only
       declaration defends nothing at pipeline time.
+  D — unwired-schema consumer tripwire. A corpus-schema predicate declared for
+      load-correctness but with no engine consumer is listed in UNWIRED_SCHEMA; the arm goes
+      RED when one ACQUIRES a reference. Declaring such a predicate turns it from UNDEFINED
+      (call throws) into DEFINED-BUT-EMPTY (call fails silently) on any leg with no writers,
+      which is the OQ-66 shape; "no consumer exists" is the mitigation AND the thing that
+      stops being true silently. The arm fires exactly when that happens, so the first
+      consumer is forced to decide what an empty read means. See the registry below.
   C — corpus-schema closure (the restored typo detector). Every `narrative_ontology:P(...)`
       clause head written by a testset must appear as a ROLE=corpus-schema row. THIS ARM
       IS WHY THE LIST MUST BE CLOSED: once a predicate is `multifile`, SWI stops warning on
@@ -84,9 +102,20 @@ record dangles if the anchoring commit is amended or rebased).
   i.e. 27 of 28 authored rows silently lost. Both predicates were added to
   narrative_ontology.pl's multifile block in the same change that introduced this checker.
 
-  ARM A: fires on a planted bypass (selftest fixtures below); declines on the ~2,900
-  existing cross-module qualified calls to EXPORTED predicates — a naturally-arising
-  negative drawn from the population, not an authored decoy.
+  ARM A: fires on a planted bypass; declines on the ~2,900 existing cross-module qualified
+  calls to EXPORTED predicates — a naturally-arising negative drawn from the population, not
+  an authored decoy. Verified live 2026-08-18 by plant-and-restore on the real tree (an added
+  engine file reaching maxent_classifier:maxent_dist/3 -> RED naming it; removed -> GREEN).
+
+  ARM C: verified the same way and in the same run — a planted testset head
+  narrative_ontology:constraint_victimm/2 -> RED naming it; removed -> GREEN, with the
+  testsets md5 byte-identical before and after.
+
+  ARM D: verified 2026-08-18 — a planted engine file calling
+  narrative_ontology:flat_control_of/2 -> "RED - 1 boundary problem(s)" naming the file and
+  line; removed -> GREEN. Note this arm's two-sidedness is structural rather than incidental:
+  it is GREEN today precisely because the predicate has no consumer, so its green state and
+  its red state are the two states of the fact it is watching.
 
   ARM C tokenizer control: the first version of this sweep was line-based and reported 17
   undeclared corpus-schema predicates; 15 were artifacts of multi-line facts and commas
@@ -95,6 +124,37 @@ record dangles if the anchoring commit is amended or rebased).
   cancel against a compensating error. (build_discipline: "pin /usr/bin/grep, not grep, in
   any script computing a reported count" — this checker computes its counts in-process for
   the same reason.)
+
+CENSUS RECONCILIATION — WHY 116 ROWS AND NOT ~279 (added 2026-08-18 at operator request).
+Arm A claims CLOSURE ("every non-exported cross-module reference has a row"), so a reader who
+finds two different census numbers and no bridge is entitled to disbelieve the claim. The
+bridge, measured by toggling each defect in this instrument back on:
+
+    239   naive: predicate indicators counted as calls, closures unresolved, reexport ignored
+    132   - 107  predicate INDICATORS (`mod:pred/2` in a directive) excluded
+    115   -  17  meta-predicate CLOSURES resolved to their real arity
+     98   -  17  FACADE reexports resolved transitively
+    +18   write-only corpus-schema heads (arm C requires a row; no read site to find)
+    ----
+    116   allowlist rows
+
+THE PLAN'S 279 IS SUPERSEDED, NOT BRIDGED. The recon this work was executed from reported 279
+(mod,pred) pairs from a different sweep. Scope does not explain the gap — including probsets/
+moves this instrument from 239 to 242, not to 279 — so the difference is the PARSER, and that
+recon documented its own arity defects ("mis-arity'd multi-line facts and commas inside quoted
+strings"). A mis-arity'd parse inflates the count of distinct (module, predicate, arity)
+triples, each wrong arity becoming its own row. That census is therefore not reproducible here
+and should not be cited; this instrument's numbers supersede it, and the table above is the
+only bridge that exists.
+
+WHAT THE CENTRAL DECLARATION ACTUALLY BUYS (operator, 2026-08-18). The 1/28-vs-28/28 witness
+demonstrates the MECHANISM, not the EXPOSURE — the corpus loads 28/28 either way today,
+because every writer happens to self-declare. The real property gained is stronger and is not
+a count: with a central `:- multifile`, LOAD ORDER STOPS MATTERING AT ALL. "28/28 loads today"
+is a fact about the current corpus and the current generator; "no load order can lose a row" is
+a fact about the engine. That is the justification for the change. (Note also that the control
+must strip ALL loaded writers: `multifile` is a property of the PREDICATE, set by whichever
+file declares it first, so stripping one writer of 28 changes nothing and licenses nothing.)
 
 Usage:
     python3 python/module_boundary_check.py --check      # selftest, then live sweep
@@ -142,6 +202,42 @@ LEGAL_ROLES = {
 }
 
 SCHEMA_ROLE = "corpus-schema"
+
+# ---------------------------------------------------------------------------
+# ARM D — corpus-schema predicates DECLARED FOR LOAD-CORRECTNESS BUT UNWIRED.
+#
+# Adding a predicate to narrative_ontology's multifile/dynamic block is not free: on a leg
+# with no writers it changes the predicate from UNDEFINED (a call throws existence_error) to
+# DEFINED-BUT-EMPTY (a call fails silently). That is the OQ-66 shape — a consumer measuring
+# NOTHING becomes indistinguishable from a consumer measuring ZERO — and the mitigation
+# usually offered, "no consumer exists," is exactly the condition that stops being true
+# without anyone noticing.
+#
+# So this arm fires at the moment the hazard goes live: a listed predicate ACQUIRING a
+# reference anywhere in engine code is RED. That is not a complaint about wiring it — it is a
+# demand that whoever wires it decides, in that change, what an empty read means on a leg
+# with no authored data, and then removes the entry here.
+#
+# Witnessed 2026-08-18 for flat_control_of/2 across all five legs: counts identical before
+# and after (28/0/0/0/0), and on the four twin legs the predicate went undefined ->
+# defined-but-empty. Related open question: OQ-308 (arity/shape safety for the schema set).
+# ---------------------------------------------------------------------------
+UNWIRED_SCHEMA: dict[tuple[str, int], str] = {
+    ("flat_control_of", 2):
+        "28 facts in testsets/ only; ZERO writers on the four twin legs and ZERO engine "
+        "consumers (checked 2026-08-18). Declared in narrative_ontology.pl for "
+        "load-correctness. A first consumer MUST treat an empty result as 'no data authored "
+        "on this leg', never as 'no flat-control relation exists' — on four of five legs "
+        "those are now the same token. Decide that, then delete this entry.",
+}
+
+# Files where naming an UNWIRED_SCHEMA predicate is not a consumer: the declaration itself,
+# the allowlist that records it, and this checker.
+UNWIRED_EXEMPT_FILES = {
+    "prolog/narrative_ontology.pl": "the declaration site itself",
+    "prolog/module_boundary_allowlist.txt": "the record, not a consumer",
+    "python/module_boundary_check.py": "this checker's own registry",
+}
 
 # Directories that hold CORPUS DATA, not engine code: story files author facts, they do not
 # call the engine. Declared with reasons — a bare list decays into "places someone stopped
@@ -521,6 +617,11 @@ def arm_c_heads(legs: list[str]) -> dict:
     return counts
 
 
+def M_strip(path: Path) -> str:
+    """Comment-stripped body of a file, for arm D's reference scan."""
+    return strip_comments(path.read_text(encoding="utf-8", errors="replace"))
+
+
 def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
     problems, notes = [], []
     entries, ap = parse_allowlist()
@@ -580,6 +681,29 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
                 f"list. Either it is a NEW schema predicate (add the row AND a "
                 f"production-side :- multifile in this change) or it is a TYPO — this arm "
                 f"is the typo detector that `:- multifile` silences.")
+
+    # --- ARM D: an unwired schema predicate acquiring a consumer ----------------
+    for (pred, ar), reason in sorted(UNWIRED_SCHEMA.items()):
+        sightings = []
+        for f in files:
+            rel = str(f.relative_to(REPO))
+            if rel in UNWIRED_EXEMPT_FILES:
+                continue
+            body = M_strip(f)
+            for i, line in enumerate(body.splitlines(), start=1):
+                if re.search(rf"(?<![A-Za-z0-9_]){re.escape(pred)}\s*[(/]", line):
+                    sightings.append(f"{rel}:{i}")
+        if sightings:
+            where = ", ".join(sightings[:4]) + (" ..." if len(sightings) > 4 else "")
+            problems.append(
+                f"ARM D unwired schema predicate narrative_ontology:{pred}/{ar} has ACQUIRED "
+                f"a consumer: {where}\n"
+                f"           -> This is the moment the loud->quiet change becomes live. On a "
+                f"leg with no writers this predicate is DEFINED-BUT-EMPTY, so a failed read "
+                f"means 'no data authored here', NOT 'the relation does not hold'. Decide "
+                f"which your consumer needs, handle absence explicitly, then remove the "
+                f"UNWIRED_SCHEMA entry in the same change.\n"
+                f"           -> registry note: {reason}")
 
     # --- stale rows (a `note:`, never red) -------------------------------------
     # ROLE-AWARE, because a corpus-schema row is justified by arm C — a testset WRITES the
@@ -764,6 +888,8 @@ def main(argv: list[str]) -> int:
           f"{stats['bypasses']} predicate(s), all declared in {stats['rows']} allowlist "
           f"row(s); arm C scanned leg(s): {', '.join(stats['legs'])} "
           f"({stats['heads']} schema heads); {len(notes)} stale-row note(s); "
+          f"{len(UNWIRED_SCHEMA)} unwired schema predicate(s) watched "
+          f"({', '.join(f'{p}/{a}' for p, a in sorted(UNWIRED_SCHEMA))}); "
           f"selftest {len(FIXTURES)}/{len(FIXTURES)}")
     return 0
 

@@ -18,6 +18,15 @@
 # qualify their heads or declare `multifile` locally, so it changes name resolution across
 # 100+ modules and still leaves qualified writes. All cost, no consolidation.
 #
+# FOURTH DISPOSITION — an EXTENSION of the ruling, recorded 2026-08-18. An outsider writes,
+# BUT the namespace owner reads and enforces an INVARIANT over what was written -> WRITE
+# ACCESSOR, fail-loud. The hosting test is not "who asserts" alone; it is whether the module
+# merely holds the facts or also means something by them. Instance:
+# diagnostic_summary:maxent_attempted/1 — json_report does the retractall/assertz, but
+# diagnostic_summary interprets the marker, so an unrecognised stage would sit unread and the
+# void gate would report a clean run over it. There is therefore no allowlist row for it. A
+# pure host takes a row; a host with an invariant takes a write accessor.
+#
 # ROLE=internal-state IS NOT A LEGAL VALUE. A store whose module owns the write gets an
 # accessor, not a row. If you are reaching for it, you want the accessor.
 #
@@ -28,6 +37,11 @@
 #   ARM B (corpus-schema without a production-side :- multifile) — add the predicate to the
 #     multifile block in prolog/narrative_ontology.pl IN THE SAME CHANGE. A declaration
 #     under tests/ does not count: the production load chain never consults those files.
+#   ARM D (an unwired schema predicate acquired a consumer) — you are the FIRST consumer of a
+#     predicate that is declared for load-correctness only. On a leg with no writers it is
+#     defined-but-EMPTY, so a failed read means "no data authored here", not "the relation
+#     does not hold". Decide which your consumer needs, handle absence explicitly, then remove
+#     the UNWIRED_SCHEMA entry in the same change.
 #   ARM C (a testset writes a head with no row) — either it is a genuinely new schema
 #     predicate (row + production-side multifile, same change) or IT IS A TYPO. Arm C is
 #     the typo detector that `:- multifile` silences: once a predicate is multifile, SWI

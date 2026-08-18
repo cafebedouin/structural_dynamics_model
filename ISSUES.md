@@ -2954,10 +2954,26 @@ deciding axis is **who owns the write**, not exported-vs-qualified:
   corpus-schema family): there is nothing to breach → **qualification is the idiom**;
   declare it, do not export it.
 
+- **FOURTH DISPOSITION — an EXTENSION of the ruling, not an application of it (recorded
+  2026-08-18, operator).** An outsider writes, **but the namespace owner reads and enforces an
+  invariant** over what was written → **write accessor, fail-loud**. The hosting test is not
+  "who asserts" alone; it is whether the module merely holds the facts or also *means*
+  something by them.
+
 Exporting the corpus-schema predicates was **ruled against**: writers would still have to
 qualify their heads or declare `multifile` locally, so it changes name resolution across
 100+ modules and still leaves qualified writes. All cost, no consolidation.
 `ROLE=internal-state` is therefore not a legal value in the allowlist.
+
+The fourth branch exists because `diagnostic_summary:maxent_attempted/1` fits none of the
+first three: `json_report` does the retractall/assertz, but `diagnostic_summary` interprets the
+marker (`maxent_stage_attempted_but_void/2`), so an unrecognised stage would sit in the store
+unread and `maxent_void_alerts/1` would report a clean run over it. It shipped as
+`maxent_attempt_reset/0` + `maxent_mark_attempted/1` (throws on an unknown stage) and has **no
+allowlist row**. Read the axis as four dispositions: a pure host takes a row, a host with an
+invariant takes a write accessor. This was originally logged here as a *correction* to the
+plan's table; the operator's reading is right that it is a new branch, and it is recorded as
+one so the next person applying the axis does not have to guess.
 
 **What shipped.** 11 exported accessors, 35 call sites cut over; `narrative_ontology`'s
 multifile block closed (`flat_control_of/2`, `has_sunset_clause/1`);
@@ -3004,7 +3020,17 @@ fingerprint-frozen corpus, both exit 0 with mtime advanced, `per_constraint` md5
   nothing observes it today; the direction is nonetheless loud → quiet, against the
   fail-closed default, and is noted at the declaration site so a future consumer does not read
   "empty" as "no flat control exists". The alternative — leaving it undeclared — is the 1/28
-  row-loss defect this close exists to remove, so the declaration stands.
+  row-loss defect this close exists to remove, so the declaration stands. **Now gate-visible**
+  (operator, 2026-08-18): a declaration-site comment does not survive the arrival of the first
+  consumer, which is the exact event that makes the hazard live. `module_boundary_check` arm D
+  watches `flat_control_of/2` and goes RED the moment it acquires a reference anywhere in
+  engine code — verified red-capable by plant-and-restore. Semantic scope also folded into
+  **OQ-308**.
+- **What the central declaration actually buys** (operator, 2026-08-18): not "28/28 loads
+  today" — the corpus loads 28/28 either way, because every writer self-declares. The property
+  gained is that **load order stops mattering at all**, which is a fact about the engine rather
+  than about the current corpus and generator. The 1/28 witness demonstrates the *mechanism*,
+  not the *exposure*.
 ---
 
 ## OQ-69 — Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)
@@ -13836,6 +13862,17 @@ fact — the operator's call.
 **Watch for the shape this shares with its siblings:** registration is opt-in, so a NEW
 schema predicate is unguarded until someone adds it — the same silent-escape as
 reading-registry registration, the spec-enum sentinels, and OQ-68 arm C itself.
+
+**Folded in at the OQ-68 close (2026-08-18): absence semantics, not just shape.** Declaring a
+schema predicate turns it from UNDEFINED (a call throws `existence_error`) into
+DEFINED-BUT-EMPTY (a call fails silently) on any leg with no writers — the OQ-66 shape, where
+a consumer measuring *nothing* is indistinguishable from one measuring *zero*. So the
+assertion this OQ designs must cover **which legs a predicate is expected to be non-empty on**,
+not only its arity: `flat_control_of/2` is legitimately 0 on the four twin legs and
+legitimately 28 on `testsets/`, and only an authored expectation can tell those apart from a
+load failure. Interim mitigation in place: `module_boundary_check` arm D fires when an unwired
+schema predicate acquires its first consumer, forcing that decision at the moment it matters;
+it does not, and cannot, check per-leg expectations — that is this OQ's job.
 
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark

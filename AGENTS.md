@@ -662,6 +662,12 @@ bypass site. The operator ruling settles what to do about any given one, and the
 |---|---|
 | The module **asserts** and outsiders only read (`maxent_dist/3`, `fpn_neighbors_cache/3`) | encapsulation is real → **add an exported accessor** and swap the call |
 | Outsiders **assert** into a namespace the module merely **hosts** (the `narrative_ontology` corpus-schema family) | nothing to breach → **qualification is the idiom**: add an allowlist row, do **not** export |
+| An outsider asserts, **but the owner enforces an invariant** over what was written (`diagnostic_summary:maxent_attempted/1`) | the owner *means something* by the facts → **write accessor, fail-loud** — no allowlist row |
+
+The third row is an **extension** of the ruling recorded 2026-08-18, not an application of it:
+the hosting test is not "who asserts" alone but whether the module merely holds the facts or
+also interprets them. Read the axis as four dispositions, not three — a pure host takes a row,
+a host with an invariant takes a write accessor.
 
 Exporting the corpus-schema predicates was ruled **against**: writers would still have to
 qualify their heads or declare `multifile` locally, so it changes name resolution across
@@ -674,10 +680,13 @@ wants a **write** accessor, not a read one (`diagnostic_summary:maxent_attempt_r
 
 Declared bypasses live in **`prolog/module_boundary_allowlist.txt`** (116 rows; grammar
 `mod:pred/arity  ROLE=<role>  <reason>`, reason REQUIRED). The guard is
-`python/module_boundary_check.py`, gate row **`module bounds`**, three arms: **A** every
+`python/module_boundary_check.py`, gate row **`module bounds`**, four arms: **A** every
 non-exported cross-module reference has a row; **B** every `ROLE=corpus-schema` row has a
 **production-side** `:- multifile`; **C** every `narrative_ontology:P(...)` head a testset
-writes has a row. Standing run scans the default leg (~1.4s); `--full` does all five (~13s)
+writes has a row; **D** a schema predicate declared for load-correctness but unwired goes RED
+the moment it **acquires a consumer** — because declaring it turned it from *undefined*
+(throws) into *defined-but-empty* (fails silently) on legs with no writers, and the first
+consumer must decide what an empty read means there. Standing run scans the default leg (~1.4s); `--full` does all five (~13s)
 and the GREEN line always prints which legs were scanned.
 
 **If you add a corpus-schema predicate, it needs BOTH a `:- multifile` in

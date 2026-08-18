@@ -65,7 +65,10 @@ run "displaced cites" python3 python/pattern_citation_check.py --check
 # predicate is unguarded until someone remembers it, and TWO members had already fallen out
 # undetected (flat_control_of/2 declared nowhere engine-side; has_sunset_clause/1 :- dynamic
 # but never :- multifile) — held correct only by every writing testset self-declaring.
-# Arm C additionally BUYS BACK the typo detector that `:- multifile` silences: once a
+# Arm D goes red when a schema predicate declared for load-correctness only ACQUIRES a
+# consumer — declaring it turned undefined-throws into defined-but-empty-fails on legs with no
+# writers (the OQ-66 shape), and "no consumer exists" is both the mitigation and the thing that
+# stops being true silently. Arm C additionally BUYS BACK the typo detector that `:- multifile` silences: once a
 # predicate is multifile, SWI stops warning on redefinition, and that warning was doing the
 # job by accident. Standing run scans the default leg (1.4s); --full does all five (13s).
 # Discrimination record: arm B fires at dc12bf5a^ and declines at dc12bf5a, differing by
