@@ -86,3 +86,18 @@ Adjudication — none of these are uncommitted ENGINE edits that would invalidat
 ## Log
 
 (append-only; the PREREGISTRATION md5 line below sits physically ABOVE the first result line)
+
+### PREREGISTRATION.md FROZEN — md5 recorded BEFORE the first result line
+
+    875605570f7413d1bf88a56e664f88f3  audits/2026-08-17_oq190_blast_radius/PREREGISTRATION.md
+
+Recorded 2026-08-17, after RECON.md (read-only gathering; RECON decides nothing and produces no
+census row) and before any census row, closure run, or disposition. Everything below this line is
+a result.
+
+Archived-artifact non-mutation witness at freeze time:
+
+    $ git status --short audits/2026-06-12_cohort_zero/
+    (empty)
+
+---
