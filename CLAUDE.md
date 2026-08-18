@@ -1040,6 +1040,12 @@ analysis product is the SHAPE (clusters, shifts, connections — judged by the h
 generate); read the replicate stability table as a σ/seat partition (draw-stable ≈ situation-fixed,
 draw-unstable ≈ seat-expressive), not a noise filter. Corollary 3 unchanged: pre-committed
 confrontations still bite — only the determinism valence was wrong, the witness discipline holds.
+**Reading that table: `status: stable` is NOT `positive`-stable (OQ-190, 2026-08-17).** A cell whose
+`agreement_kind` is `absence` was absent in every draw — nothing was compared, and the gate passed on
+absence (Pattern 5). `base_properties.victims` reads 4/6 stable and is **0/6 positive**; the cast
+bucket is **3 positive-stable cells out of 54**, not a uniform 0/6 (`roster_card` 2/6 and
+`time_horizon_multiset` 1/6 are genuine). Filter on `agreement_kind` before citing any stability
+score. Witness: `audits/2026-08-17_oq190_blast_radius/stability_positive_grade.tsv`.
 
 **Pre-computed values live in `outputs/pipeline_output.json`** (H¹, Arakelov heights, MaxEnt
 distributions, classifications). Read from there; do not recompute from scratch.

@@ -101,3 +101,28 @@ Archived-artifact non-mutation witness at freeze time:
     (empty)
 
 ---
+
+## Results log
+
+- RECON executed read-only; `git status --short audits/2026-06-12_cohort_zero/` clean throughout
+  (no `cohort_stability.py` run; `stability_table.json` READ only).
+- Edge-admission pruner run on `testsets/` (n=279 loaded, witnessed by the loader line):
+  10 edges admitted, 4 rejected, 0 `broken`. Raw: `edge_admission_raw.tsv`.
+- Sweep selftest: **12 controls GREEN** (5 two-sided pairs + 2 self-pins).
+- 3d reconciliation: extractor 151 == `issues_status.py` 151 — PASSED before the 3d read.
+- Census: 465 rows; docs 23; audit edges 850; resolved premises 20 — each counted from the
+  written artifact, never from the producing loop.
+- Adjudication (separate read-only deciding pass): SUSPECT = 17 + 221 + 209 = **447** across 86 files.
+- §(b) `-and-survives`: instrument tested first, category DELETED (fallback branch).
+  Witness: `conclusion_invariance_reach.out`.
+- Verdict bucket: **YES** on first-hit (OQ-136). Limb-3 spend escalated, UNSPENT.
+
+## HEAD stamp — CLOSE
+
+    8c34157f70fa454e172167432c64a6cdd3497daa
+
+Comparison against OPEN `f80bc3eb5dc5d84568ea446e1279ccf97eaa4229`: they differ **only by this
+audit's own commits**. `git diff --stat <open> <close>` over the audit's read-set (the nine engine
+files, the two generators, the three trackers, `audits/2026-06-12_cohort_zero/`) was **empty** when
+taken at `8c34157f`; the commits after it are this audit's own doc/tracker edits, listed in
+WRITEUP.md §7. No concurrent writer.

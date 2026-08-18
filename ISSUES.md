@@ -3267,6 +3267,12 @@ mountain probe the false-foundational rejection rides Boltzmann non-compliance +
 cross-story claims, so the stability-table-gates-claims rule (OQ-109 item 4) applies —
 Stage-2 analysis design consumes cohort zero's replicate-probe stability table (compare
 only draw-stable fields, or size n-per-cohort if the OQ-109 homogeneity falsifier fires).
+**OQ-190 annotation (2026-08-17):** this gate is a live documentary dependent on cast draw-stability
+and it is the reason OQ-190 `gates OQ-75`. Two corrections before it is applied: (i) the table's
+`status: stable` conflates positive agreement with shared **absence** — `victims` is 0/6 positive,
+not 4/6, so filter on `agreement_kind`; (ii) "draw-stable fields" is scoreable at **name-identity
+grade only** — the table has no presence- or cardinality-grade number, which is where most of the
+engine's cast dependence actually sits. Evidence: `audits/2026-08-17_oq190_blast_radius/`.
 Cohort zero (~60 stories) is BELOW Tier 1 power and is OQ-109's, not this OQ's — no
 OQ-75 verdict rides it; conversely, Stage-2 cohorts share cohort zero's provenance
 regime, which is when OQ-109's homogeneity falsifier (item 6) becomes checkable.
@@ -4840,8 +4846,27 @@ blocked on a three-axis-instrumented corpus. Cross-refs: OQ-119, OQ-120, OQ-118
 **Status:** open — filed 2026-06-13 (successor to OQ-109's σ/seat residual, discharged here not
 answered). The **2026-06-27 re-probe** (`audits/2026-06-27_oq118_reprobe/`, commit `fc57e833`,
 re-runnable `oq118_reprobe.py`) **discharges narrow-A** (σ/seat is not the stability partition) and
-re-scopes the rest into the four limbs below; **broad-A and the cast graded re-test remain open;
-the verdict class is RULED accept-as-confounded (2026-06-27), its one temp sweep held in reserve.**
+re-scopes the rest into the four limbs below; **broad-A and the cast graded re-test remain open.**
+**LIMB 3 — the verdict class: the reserve is BROKEN, and a spend-go ruling is owed (OQ-190,
+2026-08-17).** The 2026-06-27 accept-as-confounded ruling held the ~$1.5–2 temperature sweep in
+reserve *pending a demonstration that some live claim needs verdict stability real*. OQ-190's
+verdict bucket returned **YES on first-hit**: OQ-136 (**resolved**) closes on *"q6_unmeasured (26)
++ no_agent_seats (26) = authoring artifact, clustered on model AND prompt_commit, p_holm=8e-4"*, and
+`q6_unmeasured` fires precisely when `\+ founding_problem_status(C, _)` — so the closure asserts that
+**verdict-field ABSENCE is a property of the generation path rather than the draw**, with
+OQ-202/OQ-203/OQ-204 minted downstream. **This OQ's own cohort cannot settle it:** all six frozen
+stories HAVE `founding_problem_status` authored (3/6 positive-stable, three value-shifts, **zero**
+presence-flips), so the cohort contains no story in the `q6_unmeasured` condition at all — the
+presence premise is *unmeasured*, not confirmed, in either direction. Corroboration: the OQ-190
+pruner admits `founding_problem_status → q6_cell` with the graph's largest treatment diff (472), and
+the census's `Σ buckets == n_corpus` guard is a **totality** check that a redraw does not trip while
+redistributing the buckets. **The spend is now load-bearing and is escalated UNSPENT — operator
+ruling owed (blocked_on_human).** Enumeration that prices it:
+`audits/2026-08-17_oq190_blast_radius/WRITEUP.md` §5. Until it is ruled, OQ-305 must not
+re-adjudicate OQ-136.
+**Side product delivered by OQ-190:** the `reading_diff` re-point's cohort-one gate is now
+satisfiable — `constraint_stakeholder` is dense on the live corpus (236/279) and `reading_diff.pl`
+was un-stranded onto the live stakeholder-seat schema (`01cff6a7`).
 The frozen σ/seat prediction
 (`audits/2026-06-12_cohort_zero/SIGMA_SEAT_PREDICTION.md`, `5f2a626c`) was **falsified-as-tested**.
 
@@ -7391,7 +7416,9 @@ bypass is untouched — the flag is commentary-grade, it annotates and never ove
 
 **Ω-type:** Ω_E (a corpus + codebase census — enumerable by query/grep/read; no theory ruling).
 
-**Status:** open — filed 2026-06-27, split from OQ-118's blast-radius open item.
+**Status:** resolved — 2026-08-17, scoped. Census executed and controlled; radius stated on the
+SUSPECT count per Amendment A. Residue declared below and routed to OQ-304/OQ-305 + an OQ-118
+spend-go escalation; nothing is left implicit.
 **Priority:** 2
 **Deps:** splits_from OQ-118, gates OQ-75
 
@@ -7430,6 +7457,156 @@ Fail-closed on absence — a not-yet-witnessed dependent stays SUSPECT, not clea
 **Cross-refs:** OQ-118 (parent; the finding that creates the blast radius), OQ-75 (the cross-story
 consumer this protects), OQ-109 (cohort lineage), re-probe witness
 `audits/2026-06-27_oq118_reprobe/`.
+
+**Resolution (2026-08-17; evidence `audits/2026-08-17_oq190_blast_radius/` — PREREGISTRATION md5
+`875605570f7413d1bf88a56e664f88f3` recorded in `audit_log.md` above the first result line; HEAD
+OPEN `f80bc3eb` / CLOSE `8c34157f`, read-set diff empty).**
+
+**Headline, per the frozen Amendment-A arithmetic:** SUSPECT = 17 `-and-fails` + 221
+`-grade-unmeasured` + 209 `-unwitnessed` = **447 rows across 86 files** (cast 429 / verdict 18).
+`-and-survives` = **0**, reported beside the headline, merged into neither total. `cleared` = **0** —
+the tier rule permits CLEARED only for a consumer shown *absent* from the closure, and none was.
+
+**1. Cast bucket — the radius IS the classification layer, at a harder grade than predicted.**
+`constraint_captured/1` (`narrative_ontology.pl:332–335`) joins `stakeholder_gain_flow`'s receiver
+against the `constraint_stakeholder` roster **on the name**, and gates `classify_from_metrics/6`'s
+scaffold clause (`drl_core.pl:420`), three signature gates (`signature_detection.pl:1220/1378/1477`)
+and the maxent mirror — **name-identity** grade, not the predicted presence/cardinality. The pruner
+(`prolog/probe_oq190_edge_admission.pl`) discriminated: 10 edges admitted, **4 rejected**, zero
+`broken`, each rejection against a live control. Rejections worth knowing:
+`constraint_beneficiary → constraint_captured` (the join reads the roster, not beneficiaries),
+`disappearance_verdict → q6_cell` (q6 reads `founding_problem_status` only), and neither verdict atom
+reaches `dr_type`.
+
+**2. Verdict bucket — YES (first-hit; Amendment B satisfied without needing exhaustion).** OQ-136
+(**resolved**) closes on *"q6_unmeasured (26) + no_agent_seats (26) = authoring artifact,
+clustered on model AND prompt_commit, p_holm=8e-4"*. `q6_unmeasured` fires precisely when
+`\+ founding_problem_status(C, _)`, so the closure asserts that verdict-field **absence** is a
+property of the generation path rather than the draw — and OQ-202/OQ-203/OQ-204 were minted from it.
+OQ-118 cannot settle it: all six frozen stories HAVE the field authored, so the cohort contains no
+story in the `q6_unmeasured` condition. Unmeasured, not confirmed. Corroborating: edge e11 carries
+the graph's largest treatment diff (472). The census's `Σ buckets == n_corpus` guard is a
+**totality** check — a redraw redistributes buckets without tripping it. → **the reserved ~$1.5–2
+Limb-3 temp sweep is escalated as a SPEND-GO, unspent.**
+
+**3. Three premise corrections landed before the freeze.** (a) The stability table's `status: stable`
+conflates positive agreement with shared **absence**: `base_properties.victims` is **0/6 positive**,
+not 4/6, and the cast bucket is 3 positive-stable cells of 54 — `roster_card` (2/6) and
+`time_horizon_multiset` (1/6) are genuinely positive, so "0/6" is a population claim, not a per-row
+theorem. (b) The verdict bucket is a different stability regime from the cast bucket (7/12 vs 3/54).
+(c) `check_indexical_relativity/1` does not exist; `has_mandatrophy_declaration/1` has zero consumers
+(T5b terminal, not a closure hop).
+
+**4. `-and-survives` was TESTED before adoption and the category was DELETED** (the pre-authorized
+fallback branch). Its only candidate — `shared_agent_link/4` network topology over the frozen
+draw-slices — is invariant **by construction**: the six cohort-zero stories share no beneficiary or
+victim name in any draw, so component count == story count in every slice and no draw could have made
+it differ. A consistency check wearing a discrimination check's clothes; carrying the category would
+have manufactured a survival into the one confirmed state the headline excludes. The declared
+slice-size confound fired exactly as pre-registered (raw 5,6,6 reads as failure; restricted reads as
+trivially invariant — both artifacts). Witness: `conclusion_invariance_reach.out`.
+
+**5. Instrument defects the controls caught (the discipline clause earning its keep).** The 3d
+resolved-ISSUES extractor returned **0** and was broken — it required an entry to *announce* a
+stability premise, and hunting a positive control found OQ-52 closing on *"289/293 both-authored, 4
+victim-only"*, a cast-presence count quoted as settled fact. Second admitting pattern: 0 → **20
+rows**, of which **zero announce and all 20 quote**. The documentary control passed by matching
+**OQ-190's own body** while missing OQ-75's *"compare only draw-stable fields"* — that sentence names
+the stability *table*, not a cast field. Fixed + self-pinned: 9 → **23 rows**, now including
+`CLAUDE.md:1039–1041`. And the sweep censused its own probe once committed. Controls at close:
+**12 green (5 two-sided pairs + 2 self-pins)**; cast/verdict/3d pairs naturally-arising, the closure
+pair synthetic and declared as such (a natural T2b candidate's status is decided by the graph under
+test — circular). No free before-commit negative pair exists; checked, not assumed.
+
+**6. Inert ≠ cleared.** `founding_problem_corroboration_class/2` = **T5 inert-unexercised** (emitted,
+two readers, **0/4205 authored** across all five legs). `constraint_vindicates/2` and
+`has_mandatrophy_declaration/1` = **T5b inert-unconsumed** (authored + emitted, no reader anywhere).
+Opposite conditions, distinct labels; the mandatrophy clause is admitted at name-identity grade and
+becomes a T1 dependent the day anyone writes its reader.
+
+**Residue, declared (this close is scoped, not complete):** the 221 `-grade-unmeasured` rows are
+unscoreable in this arc and route to **OQ-304**; the 20 resolved-entry reanalyses route to **OQ-305**;
+the 23 documentary hits were repaired in-arc by annotation (CLAUDE.md determinism-frontier block,
+this OQ-75 gate, KNOWN_STATE 2026-06-12). **Side product for OQ-118:** the `reading_diff` re-point's
+cohort-one gate is now satisfiable — `constraint_stakeholder` is dense on the live corpus (236/279)
+and `reading_diff.pl` was un-stranded onto the live stakeholder-seat schema (`01cff6a7`).
+
+## OQ-304 — Re-score the frozen cohort-zero draws at PRESENCE and CARDINALITY grade (converts the OQ-190 radius's bulk from grade-unmeasured to dispositioned)
+
+**Ω-type:** Ω_E (a re-read of artifacts already on disk — no theory ruling, no new draw).
+
+**Status:** open — filed 2026-08-17 from the OQ-190 close.
+**Priority:** 2
+**Deps:** splits_from OQ-190, gates OQ-118
+
+**Origin.** OQ-190's census lands **221 of its 447 SUSPECT rows** in
+`SUSPECT-confirmed-grade-unmeasured` — confirmed in the blast radius, unscoreable in that arc. The
+reason is single and mechanical: **OQ-118 scored name-identity stability only** (exact set-match).
+It produced no number for presence ("does a beneficiary/victim exist at all?") or cardinality ("does
+the count cross the threshold?"), and those are the grades the engine's classification path actually
+keys on — `constraint_indexing.pl:455–462` (presence → `d` → χ), `:523–528` (victim count →
+coalition power), `logical_fingerprint.pl:296–306` (counts → actor topology).
+
+**What resolves it.** Re-score the **same 17 cohort-zero replicate draws already on disk**
+(`audits/2026-06-12_cohort_zero/replicates/`) at the two coarser grades, and re-run OQ-190's
+adjudication over the 221 rows with the resulting numbers. **Ω_E, zero generation spend** — it is a
+re-read, not a redraw.
+
+**Explicitly NOT OQ-118 Limb 4.** Limb 4 is the τ-calibrated **graded distance** metric for name
+identity (distinguishing "renamed cast" from "fresh cast"), which owes its own control burden
+(`audits/2026-06-27_oq118_reprobe/HALF1_PREDICTION.md`). This is a different and much cheaper
+question at two coarser grades. Do not fold them.
+
+**Control burden, inherited.** The re-score is an instrument and owes a two-sided control like every
+other: it must separate a field whose presence genuinely flipped across draws from one that held.
+Two naturally-arising candidates are already in the frozen table —
+`base_properties.vindicated_propositions` shows `presence-flip` in 3 of 6 stories (the FIRE side) and
+`six_questions.founding_problem_status` shows **zero** presence-flips (the DECLINE side).
+
+**Sequencing.** Higher value than most of the OQ-190 repair queue: it is what converts the
+classification layer from grade-unmeasured to dispositioned, and it is cheap.
+
+**Cross-refs:** OQ-190 (parent), OQ-118 (the scoring regime this extends), OQ-109.
+
+---
+
+## OQ-305 — Twenty resolved OQs closed on a cast-presence count quoted as a settled population fact
+
+**Ω-type:** Ω_E per entry (re-check the arithmetic), but each re-opening is a ruling — Ω_C at the
+disposition step.
+
+**Status:** open — filed 2026-08-17 from the OQ-190 close.
+**Priority:** 3
+**Deps:** splits_from OQ-190
+
+**Origin.** OQ-190's 3d sweep (`resolved_closure_premises.tsv`) found **20 resolved OQs whose
+closure quotes a cast-presence count as a settled population fact** — e.g. OQ-52's *"289/293
+both-authored, 4 victim-only"*. **Zero of the 20 announce a stability premise; all 20 quote one.**
+That is the surface's whole hazard: a closed issue is a standing claim that does not advertise itself
+as live, and OQ-190's first extractor — which required the announcement — returned 0 and would have
+been read as a small radius.
+
+Under OQ-118 Limb 2, cast presence is draw-conditional (`victims` shows presence-flips; the field is
+**0/6 positive**-stable), so a population count over cast presence is a property of the draw unless
+shown otherwise.
+
+**The 20:** OQ-45, OQ-52, OQ-63, OQ-64, OQ-83, OQ-86, OQ-108, OQ-114, OQ-117, OQ-134, OQ-136,
+OQ-137, OQ-151, OQ-153, OQ-186, OQ-187, OQ-188, OQ-195, OQ-207, OQ-255.
+
+**Sequencing (why-this-one first).** **OQ-52 and OQ-136 go first** — they are the two with named
+downstream mints, so a shift in either propagates. OQ-136 is additionally the OQ-190 verdict-bucket
+first-hit and is **gated behind the OQ-118 Limb-3 spend-go ruling**: do not re-adjudicate it until
+the operator has ruled on the temperature sweep, or the same premise gets re-litigated twice.
+
+**What resolves it.** Per entry: does the quoted count survive as a *conclusion* under presence-grade
+draw variation, or was the closure resting on a draw artifact? A per-entry disposition of
+{holds | scoped-narrower | reopened}, with the arithmetic re-witnessed, not re-asserted. **Blocked on
+OQ-304 for anything needing an actual presence-grade number** — before that lands, an entry can only
+be dispositioned as premise-identified, not premise-tested.
+
+**Cross-refs:** OQ-190 (parent), OQ-304 (supplies the grade numbers), OQ-118, OQ-52, OQ-136.
+
+---
 
 ## OQ-191 — Python toolset physical regrouping (deferred from OQ-163)
 

@@ -45,6 +45,53 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-17 — [correction-key] The cohort-zero stability table's `status: stable` is NOT positive-stable: `victims` is 0/6 positive (its 4 stables are shared ABSENCE), and the cast blast radius reaches classification at NAME-IDENTITY grade via `constraint_captured/1`
+**Files:** audits/2026-06-12_cohort_zero/stability_table.json, python/cohort_stability.py, prolog/narrative_ontology.pl, prolog/drl_core.pl, prolog/signature_detection.pl, prolog/constraint_indexing.pl, prolog/logical_fingerprint.pl, prolog/stakeholder_seats.pl, prolog/commentary_census.pl, python/audits/oq190_blast_radius.py, prolog/probe_oq190_edge_admission.pl, ISSUES.md, CLAUDE.md
+**Tier:** correction-key
+
+**OQ-190 closed scoped** (`audits/2026-08-17_oq190_blast_radius/`; PREREGISTRATION md5
+`875605570f7413d1bf88a56e664f88f3` logged above the first result line; HEAD OPEN `f80bc3eb` /
+CLOSE `8c34157f`, read-set diff empty). Headline per the frozen Amendment-A arithmetic:
+**SUSPECT = 17 + 221 + 209 = 447 rows across 86 files**; `-and-survives` = 0; `cleared` = 0.
+
+**How prior citations must change (the correction-key part):**
+
+1. **Never read `status` off `stability_table.json` without `agreement_kind`.** A `stable` cell
+   whose kind is `absence` was absent in every draw — the gate passed on absence (Pattern 5), not
+   on agreement. `base_properties.victims` reads 4/6 stable and is **0/6 positive**;
+   `vindicated_propositions`' lone stable is likewise absence. Cast positive-stability is **3 cells
+   of 54**, and it is *not* uniform: `roster_card` 2/6 and `time_horizon_multiset` 1/6 are genuine.
+   So "cast is 0/6 draw-stable" is a **population** claim, not a per-row theorem — cite it that way.
+   Tripwire promoted to `CLAUDE.md` (Generation-is-stochastic block).
+2. **The verdict bucket is a different stability regime from the cast bucket** — 7/12 positive-stable
+   vs 3/54. A disposition treating "cast/verdict" as one radius gets the arithmetic wrong.
+3. **`constraint_captured/1` is a NAME-IDENTITY join on the classification path.**
+   `narrative_ontology.pl:332–335` matches `stakeholder_gain_flow`'s receiver against the
+   `constraint_stakeholder` roster **by name**, and gates `drl_core.pl:420` (scaffold),
+   `signature_detection.pl:1220/1378/1477` and the maxent mirror. The predicted [EDGE] outcome —
+   classification is cast-dependent — holds at a *harder* grade than presence/cardinality.
+4. **`check_indexical_relativity/1` does not exist** (two prose comments only), and
+   `has_mandatrophy_declaration/1` has **zero consumers** — T5b, not a closure hop. Do not go
+   looking for that predicate and do not read its absence as an unfinished sweep.
+5. **`founding_problem_corroboration_class/2` is 0/4205 authored** across all five live legs while
+   having two readers — T5 inert-*unexercised*, the opposite condition from `constraint_vindicates/2`
+   (authored, no reader = T5b inert-*unconsumed*). Neither is `cleared`.
+
+**Rejected edges are as citable as admitted ones** (`derivation_graph.tsv`, decided by perturbation
+against live controls): `constraint_beneficiary` does **not** reach `constraint_captured` (the join
+reads the roster), `disappearance_verdict` does **not** reach `q6_cell` (q6 reads
+`founding_problem_status` only), and **neither verdict atom reaches `dr_type`**.
+
+**Routed:** OQ-118 Limb 3 escalated to a spend-go (verdict bucket YES on OQ-136 — see that entry);
+OQ-304 (re-score the frozen draws at presence/cardinality grade — Ω_E, zero spend, converts the 221
+grade-unmeasured rows); OQ-305 (20 resolved OQs closed on a quoted cast-presence count).
+
+**Method note worth keeping:** three instrument defects were found by *hunting positive controls*,
+not by review — the 3d extractor returned 0 because it required a resolved entry to *announce* its
+stability premise (all 20 real ones merely quote a count); the documentary control passed by matching
+**OQ-190's own body** while missing the one claim it was declared to flag; and the sweep censused its
+own probe once committed. Each is the same shape: an instrument that looks like it passed.
+
 ## 2026-08-17 — [tripwire] Dispatch heads are CONVERTED: a bound call to classify_from_metrics/6, constraint_signature/2, or classify_by_signature/3 now means "the engine assigns" — reverting a head to the atom form re-arms Pattern 7 and gate row `dispatch head` goes RED
 **Files:** prolog/drl_core.pl, prolog/signature_detection.pl, prolog/isomorphism_engine.pl, prolog/dispatch_head_check.pl, python/dispatch_head_check.py, python/bound_selector_check.py, python/check_logic_symbolic_drift.py, scripts/gate.sh, prolog/tests/test_dispatch_bound_call.pl, prolog/boltzmann_compliance.pl
 **Tier:** tripwire
@@ -5098,6 +5145,10 @@ index, schema-required for cohort zero — OQ-109 item 4), never recovered backw
 matching. Operator ruling appended (seat-theorem): a category shift on redraw is the mechanism
 WORKING; the "identity does not survive" valence WITHDRAWN; the stability table reads as a σ/seat
 partition (OQ-26). PROMOTED to CLAUDE.md Critical Distinctions (Generation is stochastic block).
+**OQ-190 correction (2026-08-17):** the table's `status: stable` is not `positive`-stable — cells
+with `agreement_kind: absence` witness nothing (`victims` 0/6 positive, not 4/6; cast bucket 3/54
+positive). Filter on `agreement_kind` before citing. Tripwire promoted to CLAUDE.md; witness
+`audits/2026-08-17_oq190_blast_radius/stability_positive_grade.tsv`.
 
 ## 2026-06-12 — COHORT ZERO LIVE: pilot 7/7 generated, swap executed (live corpus = 5 _c0 stories; pre-cohort set retired to kernel_v2_test2); C-arm first live decisions witnessed; trio falsifier RESOLVED (filters on new regime); OQ-116 filed
 **Files:** prolog/testsets/ (corpus swap), json/, prolog/guard_exclusions.pl, prolog/archives/datasets/kernel_v2_test2/, agent/cohort_zero_regen.py, ISSUES.md, audits/2026-06-12_cohort_zero/

@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "042554e6fb42f3f2c1f41409ed8a8a4a9460a226",
+    "store_version": "8c34157f70fa454e172167432c64a6cdd3497daa",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-17T22:12:13"
+    "generated_at": "2026-08-17T23:23:18"
   },
-  "issues_sha": "4ad2e647bb08131b4337413c787ee72585fd30944b31a8564bc511d0bf501ffc",
-  "n_entries": 303,
+  "issues_sha": "f7d7b5be065071c03ed8fae83201c265f91aeace2968ea619df60b2727eb9245",
+  "n_entries": 305,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 151,
+    "resolved": 152,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 114,
+    "open": 115,
     "partial": 7
   },
   "active": [
@@ -63,7 +63,8 @@
         "OQ-87",
         "OQ-109",
         "OQ-117",
-        "OQ-178"
+        "OQ-178",
+        "OQ-190"
       ]
     },
     {
@@ -99,7 +100,12 @@
         "OQ-75",
         "OQ-109",
         "OQ-119",
-        "OQ-190"
+        "OQ-136",
+        "OQ-190",
+        "OQ-202",
+        "OQ-203",
+        "OQ-204",
+        "OQ-305"
       ]
     },
     {
@@ -570,25 +576,6 @@
         "OQ-39",
         "OQ-183",
         "OQ-221"
-      ]
-    },
-    {
-      "id": "OQ-190",
-      "status": "open",
-      "priority": 2,
-      "summary": "Blast-radius enumeration: which live claims rest on cast-field draw-stability (the OQ-118 corpus-grep that also prices the reserved verdict spend)",
-      "deps": [
-        "splits_from OQ-118",
-        "gates OQ-75"
-      ],
-      "cross_refs": [
-        "OQ-75",
-        "OQ-118"
-      ],
-      "mentioned_in": [
-        "OQ-75",
-        "OQ-109",
-        "OQ-118"
       ]
     },
     {
@@ -1689,6 +1676,67 @@
       "mentioned_in": [
         "OQ-66",
         "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-304",
+      "status": "open",
+      "priority": 2,
+      "summary": "Re-score the frozen cohort-zero draws at PRESENCE and CARDINALITY grade (converts the OQ-190 radius's bulk from grade-unmeasured to dispositioned)",
+      "deps": [
+        "splits_from OQ-190",
+        "gates OQ-118"
+      ],
+      "cross_refs": [
+        "OQ-109",
+        "OQ-118",
+        "OQ-190"
+      ],
+      "mentioned_in": [
+        "OQ-109",
+        "OQ-118",
+        "OQ-190"
+      ]
+    },
+    {
+      "id": "OQ-305",
+      "status": "open",
+      "priority": 3,
+      "summary": "Twenty resolved OQs closed on a cast-presence count quoted as a settled population fact",
+      "deps": [
+        "splits_from OQ-190"
+      ],
+      "cross_refs": [
+        "OQ-52",
+        "OQ-118",
+        "OQ-136",
+        "OQ-190",
+        "OQ-304"
+      ],
+      "mentioned_in": [
+        "OQ-45",
+        "OQ-52",
+        "OQ-63",
+        "OQ-64",
+        "OQ-83",
+        "OQ-86",
+        "OQ-108",
+        "OQ-114",
+        "OQ-117",
+        "OQ-118",
+        "OQ-134",
+        "OQ-136",
+        "OQ-137",
+        "OQ-151",
+        "OQ-153",
+        "OQ-186",
+        "OQ-187",
+        "OQ-188",
+        "OQ-190",
+        "OQ-195",
+        "OQ-207",
+        "OQ-255",
+        "OQ-304"
       ]
     }
   ],
@@ -3732,6 +3780,32 @@
         "OQ-101",
         "OQ-108",
         "OQ-187"
+      ]
+    },
+    {
+      "id": "OQ-190",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Blast-radius enumeration: which live claims rest on cast-field draw-stability (the OQ-118 corpus-grep that also prices the reserved verdict spend)",
+      "deps": [
+        "splits_from OQ-118",
+        "gates OQ-75"
+      ],
+      "cross_refs": [
+        "OQ-75",
+        "OQ-118"
+      ],
+      "mentioned_in": [
+        "OQ-52",
+        "OQ-75",
+        "OQ-109",
+        "OQ-118",
+        "OQ-136",
+        "OQ-202",
+        "OQ-203",
+        "OQ-204",
+        "OQ-304",
+        "OQ-305"
       ]
     },
     {
