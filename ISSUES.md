@@ -13289,6 +13289,38 @@ witnessed defect; building a second on the strength of an argument rather than a
 apparatus-begets-apparatus move this repo warns about. It is filed with its control preserved so
 the next instance gets it free.
 
+## OQ-301 — giant_comp SIGSEGV/hang round 2: preregistered and staged; owner session hung and was closed with the arms unrun
+
+**Ω-type:** Ω_E (empirical — the arms are runnable and the readings are pre-committed in the
+prereg's decision table).
+
+**Status:** partial — audit dir marked PARTIAL (stub WRITEUP.md); no round-2 arm has recorded results
+**Priority:** 2
+**Deps:** blocked_on_human giantcomp-round2-return
+**Origin:** operator ruling 2026-08-17 — the owning instance hung waiting on shells and was
+closed; "mark it as partial and I'll return to it." Marked by a different instance the same day.
+**Files:** `audits/2026-08-17_giant_comp_segv_hang/` (PREREGISTRATION.md, round2_arms.sh,
+WRITEUP.md stub), `prolog/giant_component_analysis.pl`.
+
+**The question.** Round 1 (owner session, evidence not in the audit dir) measured **7/100
+failures** (6 hang at 25 s, 1 SIGSEGV) on serial, single-process
+`run_giant_component_analysis` over the live corpus (n=279), every failure truncating at
+exactly 967 bytes of output. That challenges OQ-182's co-residency attribution (its N=10
+cure battery had P(10 clean | p₀=0.07) = 0.48 — "cured" and "got lucky" were not
+distinguished; a power objection, not a claim the serialization fix was wrong) and makes
+OQ-77 a reopen candidate. Round 2 is fully preregistered (n=150/arm, arms A–F, B×C decision
+table committed before any run, arm-D buffering caveat) with the driver staged.
+
+**What resuming needs, in order:** (1) create `audit_log.md` with the prereg md5 logged
+BEFORE any result line — the prereg's freeze is currently asserted in its own header, not
+witnessed; (2) run `./round2_arms.sh A B C D` (serial, idle machine, corpus fingerprinted
+around each arm by the driver); (3) read strictly against the pre-committed decision table.
+Arm F additionally needs a source-built swipl 9.3.x; naming the crashing frame needs an
+interactive `sudo apt install` of the dbgsym package (prereg §Out of scope — operator
+action). At marking time the working tree carried an uncommitted `python/run_pipeline.py`
+modification of unknown ownership — adjudicate it before assuming the tree is clean for the
+re-run.
+
 ---
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
