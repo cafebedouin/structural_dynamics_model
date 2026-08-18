@@ -51,6 +51,11 @@ live draw.
 | `evidence/sync_sweep_witness.txt` | all 38 sweep hits assigned to a declared class | **Class C was not empty** — four stale prose claims |
 | `evidence/promotion_test_prompt_*.txt`, `evidence/promotion_test_response_*_draw{1,2}.txt`, `evidence/promotion_test_scores.txt` | the trial's raw inputs and outputs; **draw 1's responses are transcript-restored, not file-persisted** | the trial result and the incident |
 | `evidence/new_numerator_hits_raw.txt` | every keyword hit in the 10 new numerator dirs | the hand-scoring behind the contamination read |
+| `evidence/final_verification.txt` | the plan's verification checklist, run at close | census control 0; V04 self-checks 35 / 19W-5R-11U / 1-2-3-4-5-6; sweep 38 hits all classed; three checkers green; the one remaining gate red shown pre-existing |
+| `frame/all_dirs_raw.txt`, `all_dirs_glob.txt`, `all_dirs_nonempty.txt`, `all_dirs_nonempty_toplevel.txt`, `all_dirs_excl1.txt` | the population under each denominator rule and each exclusion rule | the both-ways denominator diff |
+| `frame/incident_bearing_raw.txt`, `incident_bearing_dirs.txt`, `incident_bearing_excl1.txt`, `non_census_dirs.txt`, `numerator_outside_nonempty.txt` | the numerator under each rule, its complement, and the emptiness assertion | 83/185, the partition check, and that no numerator member falls outside the non-empty population |
+| `frame/nc_no_md.txt`, `frame/nc_keyword_nonmd.txt` | the named 4 and 12 directories behind the §5.4 sub-row | that row is a membership list, not just a count |
+| `WRITEUP.md` | this file | the evidence map itself — listed so the map is closed under its own rule |
 
 ## What the pass found that it was not looking for
 

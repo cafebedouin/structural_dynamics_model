@@ -1,0 +1,34 @@
+=== 1. Census control exits 0 before any figure is cited ===
+control exit=0  (0 required)
+
+=== 2. V04 self-checks, all three, after the edit ===
+item count (want 35): 35
+grades (want 19W/5R/11U):       5 R      11 U      19 W 
+section-7 numbers (want 1 2 3 4 5 6): 1 2 3 4 5 6 
+
+=== 3. Post-sweep grep: zero UNDECLARED stale sites ===
+total hits: 38
+placeholders remaining (want 0): 0
+class assignment for all hits: audits/2026-08-18_appendix_b_discharge/evidence/sync_sweep_witness.txt
+
+=== 4. The three checkers named in the plan ===
+309 parsed, 0 malformed
+0 problems
+300 entries parsed, 0 problems
+
+=== 5. The one remaining gate red, and the witness that it is pre-existing ===
+98:## 2026-08-18 — [tripwire] The OS upgrade moved Python 3.10 → 3.12 and stranded every third-party package; `scripts/gate.sh` calls bare `python3`, so the gate now runs the EMPTY interpreter while the work runs in `.venv`
+under the project virtualenv: gap surfaces check: 3/3 human surfaces distinguish no_gap vs undetermined (self-test OK)
+
+=== 6. Every artifact in the audit dir appears in the WRITEUP evidence map ===
+files under the audit dir: 50
+artifacts not covered by the evidence map: 0
+
+NOTE — the FIRST run of this control reported 19 uncovered, and 15 of those were the
+control's own bug: it stripped filename suffixes in the wrong order, so glob rows in the
+map (`frame/*.txt`, `promotion_test_response_*_draw{1,2}.txt`) were not recognised as
+covering their members. Four were real and were fixed: a `__pycache__` directory (deleted),
+`final_verification.txt` and the frame's listing files (added to the map), and `WRITEUP.md`
+itself (added, so the map is closed under its own rule). **This is the fourth instrument in
+this pass whose own control caught it before its number was believed** — see the WRITEUP's
+finding 5. The count above is from the corrected matcher.
