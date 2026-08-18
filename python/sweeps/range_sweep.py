@@ -21,7 +21,11 @@ OVERLAY_TEMPLATE = """\
 :- ( retract(config:param(power_function, _)) -> true ; true ),
    asserta(config:param(power_function, {variant})).
 :- ( retract(config:param(corpus_path, _)) -> true ; true ),
-   asserta(config:param(corpus_path, 'archives/prolog_v5')).
+   % 2026-08-18: path repaired from the dead 'archives/prolog_v5'. That directory was
+   % renamed to 'archives/datasets/original_v6' at R100 (byte-identical); the old path
+   % threw corpus_empty at HEAD. asserta (not assertz) is required — config.pl's default
+   % param(corpus_path, testsets) is the first clause and wins otherwise.
+   asserta(config:param(corpus_path, 'archives/datasets/original_v6')).
 :- [stack].
 :- [tests/test_battery_variants].
 :- [product_site_export].
@@ -255,7 +259,15 @@ if __name__ == '__main__':
     print(f'  Max span-drop Arm A: {max_drop_a:.4f}')
     print(f'  Max span-drop Arm B: {max_drop_b:.4f}')
 
-    # Write results
+    # Write results.
+    # 2026-08-18 marker: this script computes UNSTRATIFIED, arm-level Jaccard only —
+    # there is no per-type or per-condition breakdown anywhere in it. It is therefore NOT
+    # the source of any per-type number, and in particular cannot have produced the
+    # "+0.21 in tangled_rope / +0.014 in snare+rope" figures that
+    # docs/observers_not_humans_v6.md §2.3 cites to outputs/range_sweep_results.json.
+    # That citation was never satisfiable; the claim is withdrawn (OQ-311 Item 1,
+    # audits/2026-08-18_oq311_universality_class/). A stratified sweep is OQ-311 Item 2
+    # and does not yet exist.
     results_out = {
         'arm_a_jacs': {str(k): v for k, v in arm_a_jacs.items()},
         'arm_b_jacs': {str(k): v for k, v in arm_b_jacs.items()},
