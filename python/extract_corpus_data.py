@@ -11,6 +11,37 @@ from pathlib import Path
 from collections import defaultdict
 from typing import Dict, List, Optional, Tuple
 
+
+# ---------------------------------------------------------------------------
+# OQ-296: is_constructed is a constant-True field. See the derivation site for
+# the full reasoning; this block is what ships to consumers alongside the value.
+# ---------------------------------------------------------------------------
+IS_CONSTRUCTED_PROVENANCE = {
+    "status": "constant",
+    "observed_value": True,
+    "measured": "279/279 True on the live leg (2026-08-18)",
+    "derivation": "sig not in ('natural_law',)",
+    "reason_detector_dark": (
+        "constraint_signature(C, natural_law) is 0-firing on every corpus — "
+        "natural_law_signature/1's HasAlternatives == false conjunct is "
+        "dead-by-range (has_viable_alternatives/2 range is {true, unknown}, "
+        "intent_viable_alternative/3 empty, GAP-08). The only value that could "
+        "yield False is unreachable."
+    ),
+    "reason_abstain_read_as_assertion": (
+        "The `unknown` signature — signature_detection's honest abstain on "
+        "unauthored metrics, 26/279 rows on the live leg — also satisfies the "
+        "derivation, so those rows assert `constructed` on the strength of "
+        "having no data. A separate defect from the dark detector; not fixed here."
+    ),
+    "do_not_interpret_as": (
+        "evidence that the corpus contains no naturally-emerging constraints"
+    ),
+    "blocked_on": "GAP-08 §7 (author-independent immovability signal)",
+    "issues": ["OQ-296", "OQ-113"],
+}
+
+
 class ConstraintData:
     """Unified constraint data structure"""
 
@@ -71,6 +102,9 @@ class ConstraintData:
             'analysis': {
                 'structural_signature': self.structural_signature,
                 'is_constructed': self.is_constructed,
+                # Mandatory sibling (OQ-296): is_constructed is a CONSTANT, not a
+                # measurement. Any consumer reading it must read this too.
+                'is_constructed_provenance': IS_CONSTRUCTED_PROVENANCE,
                 'omegas': self.omegas,
                 'maxent_probs': self.maxent_probs,
                 'variance_ratio': self.variance_ratio,
@@ -139,6 +173,35 @@ class CorpusExtractor:
                 constraint.maxent_probs = maxent
 
             # Signature → is_constructed + structural_signature
+            #
+            # is_constructed IS A CONSTANT AT HEAD (OQ-296). Two independent
+            # reasons, and the provenance sibling emitted in to_dict() states
+            # both — a reader must not take `True` for a measurement:
+            #
+            #   (1) DETECTOR DARK. The only value that could make this False is
+            #       `natural_law`, and constraint_signature(C, natural_law) fires
+            #       on ZERO constraints on every corpus: natural_law_signature/1's
+            #       `HasAlternatives == false` conjunct is dead-by-range
+            #       (has_viable_alternatives/2's range is {true, unknown};
+            #       intent_viable_alternative/3 is empty, GAP-08). Powering it is
+            #       GAP-08 §7, unsolved. Measured 279/279 True on the live leg.
+            #
+            #   (2) ABSTAIN READ AS ASSERTION. `sig not in ('natural_law',)` is
+            #       True for the `unknown` signature too — 26/279 rows on the live
+            #       leg. `unknown` is signature_detection's HONEST ABSTAIN on
+            #       unauthored metrics, so those rows currently assert "this
+            #       constraint is constructed" on the strength of having no data.
+            #       That is a distinct defect from (1) and is NOT fixed here.
+            #
+            # WHY THIS IS NOT MADE TRI-VALUED (operator ruling, 2026-08-18):
+            # emitting None for the abstaining rows would be MORE truthful in the
+            # JSON and LESS truthful at the read. Consumers coerce —
+            # boolean_independence.py:169 does bool(c.get("is_constructed")) — so a
+            # None arrives there as an ASSERTED NEGATIVE, not as an abstain. Half a
+            # tri-state, delivered into a consumer that can only see two values, is
+            # worse than not starting. The real fix is tri-state plus three-valued
+            # reads at every consumer, which is scoped to its own OQ where
+            # boolean_independence.py is in scope and gets a before/after diff.
             sig = entry.get('signature')
             if sig:
                 constraint.structural_signature = sig
