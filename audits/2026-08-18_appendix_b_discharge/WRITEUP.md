@@ -117,6 +117,10 @@ stakes term is untouched and remains a declared gap.**
   folded-and-deleted per operator ruling; self-checks repaired; dated landing-status note);
   `ISSUES.md` OQ-309; `KNOWN_STATE.md`; `audits/README.md` index row.
 - **A pre-existing gate red, untouched:** `gap surfaces` fails under `scripts/gate.sh` because the
-  script calls bare `python3` and the system interpreter has no `pandas`. Under
-  `.venv/bin/python` the check passes (3/3 human surfaces, self-test OK). Unrelated to this pass;
-  changing how the gate resolves its interpreter is not this pass's call.
+  script calls bare `python3` and the system interpreter has no `pandas`. Run under the project
+  virtualenv's interpreter instead, the check passes (3/3 human surfaces, self-test OK). Unrelated
+  to this pass; changing how the gate resolves its interpreter is not this pass's call, and it is
+  already recorded as a tripwire at KNOWN_STATE 2026-08-18.
+  *(The first draft of this bullet wrote the interpreter as a literal path, which the `audit cites`
+  gate correctly read as a citation of an untracked file and turned RED. An interpreter is not
+  evidence; the gate was right and the prose was wrong.)*
