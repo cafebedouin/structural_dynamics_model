@@ -1,34 +1,25 @@
 {
   "manifest": {
-    "store_version": "ff3c673b4d72f3e35a0e78aa5b3eaf409645574e",
+    "store_version": "917bcc5fbbc7468ab5fea34a401705cf6ad29e3a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T00:12:01"
+    "generated_at": "2026-08-18T04:16:21"
   },
-  "issues_sha": "bdb5019e51022676f56ed00575dcebee21396d1f91254b090c7c76c35169462b",
-  "n_entries": 306,
+  "issues_sha": "08645bc37fbca609c821dd6bc797eb9ada8144d09f946bb2432b792bd260d21b",
+  "n_entries": 308,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 152,
+    "resolved": 153,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 116,
+    "open": 117,
     "partial": 7
   },
   "active": [
-    {
-      "id": "OQ-68",
-      "status": "open",
-      "priority": 1,
-      "summary": "Module-internal dynamic facts read cross-module by qualification bypass (maxent_dist/3 instance)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": []
-    },
     {
       "id": "OQ-73",
       "status": "open",
@@ -1760,6 +1751,32 @@
         "OQ-202",
         "OQ-305"
       ]
+    },
+    {
+      "id": "OQ-307",
+      "status": "open",
+      "priority": 3,
+      "summary": "`dr_claim_mismatch` type_5_piton_as_snare is unreachable: a /3 view whose 3rd argument the rule ignores, keyed on a fact that exists nowhere",
+      "deps": [
+        "splits_from OQ-68"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-68"
+      ]
+    },
+    {
+      "id": "OQ-308",
+      "status": "open",
+      "priority": 4,
+      "summary": "Corpus-schema predicates have no arity/shape assertion: OQ-68 made the blast radius enumerable, not safe",
+      "deps": [
+        "splits_from OQ-68"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-68"
+      ]
     }
   ],
   "archive": [
@@ -2610,6 +2627,21 @@
       "deps": [],
       "cross_refs": [],
       "mentioned_in": []
+    },
+    {
+      "id": "OQ-68",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "Module-internal dynamic facts read cross-module by qualification bypass (maxent_dist/3 instance)",
+      "deps": [
+        "bundled_with OQ-142"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-142",
+        "OQ-307",
+        "OQ-308"
+      ]
     },
     {
       "id": "OQ-69",

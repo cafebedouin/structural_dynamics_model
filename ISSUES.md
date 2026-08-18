@@ -2935,30 +2935,62 @@ exit 0 + `per_constraint` byte-identical at n=199; `check_stack` byte-identical;
 
 ## OQ-68 — Module-internal dynamic facts read cross-module by qualification bypass (maxent_dist/3 instance)
 
-**Ω-type:** Ω_C (API-boundary design), with the load-path gotcha as context.
+**Ω-type:** Ω_C (API-boundary design).
 
-**Status:** open
+**Status:** resolved — 2026-08-18. Both halves landed together (accessors `7e810d52`,
+declared-bypass gate `917bcc5f`), so there is no interim `mitigated` state.
+
 **Priority:** 1
-**Origin:** AGENDA.md Item I-3 (2026-05-18, then about `maxent_profile/3`), inherited at
-tracking-surface consolidation 2026-06-04 and re-verified against the live tree.
-**Files:** `maxent_diagnostic.pl:129,137,183` (reads `maxent_classifier:maxent_dist/3`),
-`maxent_classifier.pl:69` (`:- dynamic maxent_dist/3.` — NOT in the module export list).
+**Deps:** bundled_with OQ-142
+**Origin:** AGENDA.md Item I-3 (2026-05-18, about `maxent_profile/3`), inherited at
+tracking-surface consolidation 2026-06-04.
 
-**Specific question:** the original I-3 instance (`maxent_profile/3`) was overtaken by the
-profile-indexing fix (`maxent_profile/4` shipped), but the CLASS is live: `maxent_diagnostic`
-reaches past `maxent_classifier`'s public API into the unexported dynamic fact `maxent_dist/3`
-by module qualification. Any internal signature change fails silently at the bypass sites (the
-exact mechanism that made the profile-accumulation bug's blast radius hard to enumerate).
-Should internal dynamic stores get public read accessors (export a `maxent_dist/3` accessor or
-a dump predicate), or is qualification-bypass acceptable for diagnostic-only consumers if
-declared? Related context: `docs/technical/swipl_load_path_and_probe_gotchas.md` §1 — module
-boundaries in this repo are already porous via non-module report files importing into `user`,
-so the export list is the only honest API statement there is.
+**THE RULING (operator, 2026-08-18) — still operative, kept per compress-on-close.** The
+deciding axis is **who owns the write**, not exported-vs-qualified:
 
-**Diagnostic when picked up:** grep for `maxent_classifier:` qualified calls outside the module;
-classify each against the export list; the unexported set is the leak inventory (repeat for the
-other stateful modules: purity caches, fingerprint stores).
+- The module asserts and outsiders only read (`maxent_dist/3`, `fpn_neighbors_cache/3`):
+  encapsulation is real, so the leak is real → **accessor**.
+- Outsiders assert into a namespace the module merely **hosts** (the `narrative_ontology`
+  corpus-schema family): there is nothing to breach → **qualification is the idiom**;
+  declare it, do not export it.
 
+Exporting the corpus-schema predicates was **ruled against**: writers would still have to
+qualify their heads or declare `multifile` locally, so it changes name resolution across
+100+ modules and still leaves qualified writes. All cost, no consolidation.
+`ROLE=internal-state` is therefore not a legal value in the allowlist.
+
+**What shipped.** 11 exported accessors, 35 call sites cut over; `narrative_ontology`'s
+multifile block closed (`flat_control_of/2`, `has_sunset_clause/1`);
+`prolog/module_boundary_allowlist.txt` (116 rows, ROLE + reason each);
+`python/module_boundary_check.py` + gate row `module bounds` (arms A/B/C).
+
+**Two corrections to the plan the work was executed from, both witnessed:**
+- `diagnostic_summary:maxent_attempted/1` was tabled as needing a read accessor. It is
+  **written** by `json_report` (retractall/assertz) and read only by its owning module — a
+  read accessor cannot serve a writer. Shipped as a **write** accessor pair
+  (`maxent_attempt_reset/0`, `maxent_mark_attempted/1`, fail-loud on an unknown stage).
+- The plan's discriminating control (strip ONE writer's local `:- multifile`) does **not**
+  discriminate: `multifile` is a property of the predicate, set by whichever file declares
+  it first, so 27 remaining self-declaring writers still cover it. Stripping **all 28**
+  loaded writers is the control that carries information.
+
+**Witnesses.** Discriminating pair on a scratch leg, only variable = the central
+declaration: no central `:- multifile` → `flat_control_of` loads **1/28**, `multifile=no`,
+27 × "Redefined static procedure"; with it → **28/28**, clean. MaxEnt accessor parity with a
+pre-refit vacuity control (0 → 1012 = 1012; two-sided, `maxent_fitted(bogus)` declines).
+Behaviour preservation: same-session clean-vs-edited `run_pipeline` pair over a
+fingerprint-frozen corpus, both exit 0 with mtime advanced, `per_constraint` md5
+`6bab9cdc3880b6b7d21f95ad453b33cd` on both sides at n=279. Gate GREEN.
+
+**Declared residue (not defects of this close):**
+- The ~34 `ROLE=helper-static` static-predicate leaks are recorded, not repaired — out of
+  scope by ruling.
+- `validation_suite:test_case/4` was in the plan's accessor table and is **not a store**:
+  it is undefined at runtime, one of the three `check_stack` baseline undefined-references.
+  Repair belongs to **OQ-142** (bundled, not gated — this work does not change that baseline).
+- Arity/shape safety for the wide corpus predicates → **OQ-308**. This close makes the blast
+  radius *enumerable*, not *safe*.
+- A latent defect found by the sweep, recorded not fixed → **OQ-307**.
 ---
 
 ## OQ-69 — Research-frontier backlog inherited from retired AGENDA.md / TODO.md (ledger)
@@ -13706,6 +13738,91 @@ wrong tool (semidet is legitimate for contexts the fit doesn't cover). Named her
 writeup's OPEN is routed; needs its own census before any fix.
 
 ---
+
+## OQ-307 — `dr_claim_mismatch` type_5_piton_as_snare is unreachable: a /3 view whose 3rd argument the rule ignores, keyed on a fact that exists nowhere
+
+**Ω-type:** Ω_E (mechanically checkable defect; the fix changes a verdict surface, so it needs a ruling on intent).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-68
+**Origin:** 2026-08-18 OQ-68 module-boundary sweep — a checker-only find. The bypass
+inventory flagged `narrative_ontology:constraint_claim/3` as a non-exported cross-module
+read; inspecting the single read site turned up the defect.
+**Files:** `prolog/drl_core.pl:710` (the defect), `prolog/narrative_ontology.pl:626-627`
+(the /3 view), `prolog/module_boundary_allowlist.txt` (`ROLE=derived-view` row).
+
+**The defect, two independent ways.** `drl_core.pl:710` reads
+
+```prolog
+narrative_ontology:constraint_claim(C, theater_ratio, TR), TR >= 0.70,
+```
+
+but `constraint_claim/3` is not a store — it is a one-clause VIEW,
+`constraint_claim(ID, Type, _Context) :- constraint_claim(ID, Type).` So:
+
+1. **The third argument is discarded.** `TR` is bound to `_Context`, which the rule never
+   touches, so `TR` reaches `TR >= 0.70` UNBOUND — an instantiation error if it were ever
+   reached. The author plainly meant `narrative_ontology:theater_ratio(C, TR)`, a real and
+   separate predicate.
+2. **It is never reached.** No `constraint_claim(_, theater_ratio)` fact exists in any leg
+   (verified 2026-08-18: the only occurrence of the string `theater_ratio` in a
+   `constraint_claim` context anywhere in the repo is this call site itself). Nor is
+   `theater_ratio/2` authored — 0 files in `testsets/`. So the clause fails at its first
+   goal, corpus-wide, and `type_5_piton_as_snare` has never fired.
+
+This is Pattern 5 (absence satisfies the gate) sitting on top of the exact OQ-68 mechanism:
+a qualified read into a predicate whose signature does not mean what the caller assumed,
+failing silently at the boundary.
+
+**Why recorded and not fixed.** Repairing it makes a mismatch type fire for the first time,
+which is output-changing on a verdict surface — it needs a ruling on what type_5 is meant to
+test (a `theater_ratio` threshold? a `constraint_claim(C, snare)` + is_piton pairing, by
+analogy with type_3 immediately above?) before a repair can be witnessed as correct rather
+than merely green. Owes a clean-vs-edited pair on landing.
+
+**Free control available:** git-blame `drl_core.pl:710` for the before-commit pair.
+
+---
+
+## OQ-308 — Corpus-schema predicates have no arity/shape assertion: OQ-68 made the blast radius enumerable, not safe
+
+**Ω-type:** Ω_C (validation design — where the assertion lives is a design choice).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-68
+**Origin:** 2026-08-18, declared as residue at the OQ-68 close rather than folded into it
+(out of scope by ruling, not scope creep).
+**Files:** `prolog/validation_suite.pl` (proposed home), `prolog/narrative_ontology.pl`
+(the schema block), `prolog/module_boundary_allowlist.txt` (the 40 `ROLE=corpus-schema` rows
+are the worklist).
+
+**The gap.** OQ-68 closed the question of whether a cross-module qualified read is
+*declared*. It did nothing about whether the read is *correct*. `constraint_stakeholder/7`
+changing arity still fails silently at all of its read sites, and neither `multifile` nor
+exporting helps: `multifile` governs clause accumulation, not shape, and a qualified call to
+a wrong arity is simply a different predicate that quietly has no clauses. The allowlist
+knows the set of 40 schema predicates but asserts nothing about their arguments.
+
+**Shape of the mechanism.** An arity/shape assertion over the schema set in
+`validation_suite` — for each corpus-schema predicate, the declared arity and (where the
+value space is closed) the legal argument atoms, checked against what the corpus actually
+loaded. The 40 allowlist rows and the `narrative_ontology` multifile block are both already
+machine-readable, so the registry exists; what is missing is the assertion and its failure
+semantics.
+
+**Design question to settle first (the reason this is Ω_C, not Ω_E).** Fail-closed on an
+arity mismatch is the obvious posture, but the corpus is a *test bed* under an evolving
+schema (CLAUDE.md: schema changes are encouraged pre-rebuild and exercised on `testsets/`),
+so a hard gate would fire on exactly the experimentation the leg exists for. Candidate
+resolution: hard-fail on the twin legs, report-only on `testsets/`. That is a seat, not a
+fact — the operator's call.
+
+**Watch for the shape this shares with its siblings:** registration is opt-in, so a NEW
+schema predicate is unguarded until someone adds it — the same silent-escape as
+reading-registry registration, the spec-enum sentinels, and OQ-68 arm C itself.
+
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —

@@ -651,9 +651,77 @@ observer-side module, the gate goes RED** — that is by design.
 - The guard is corpus-independent (it walks code, not data; live/haiku/flash all → the
   same 8 edges). Provenance: `audits/2026-06-23_oq15_crossaxis_witnesses/`, OQ-15/OQ-135.
 
+### Module-boundary bypass — decide by WHO OWNS THE WRITE (OQ-68, 2026-08-18)
+
+A call written `other_module:pred(...)` reaches past `other_module`'s export list. SWI
+permits it unconditionally, so an internal signature change fails **silently** at every
+bypass site. The operator ruling settles what to do about any given one, and the axis is
+**not** exported-vs-qualified:
+
+| situation | repair |
+|---|---|
+| The module **asserts** and outsiders only read (`maxent_dist/3`, `fpn_neighbors_cache/3`) | encapsulation is real → **add an exported accessor** and swap the call |
+| Outsiders **assert** into a namespace the module merely **hosts** (the `narrative_ontology` corpus-schema family) | nothing to breach → **qualification is the idiom**: add an allowlist row, do **not** export |
+
+Exporting the corpus-schema predicates was ruled **against**: writers would still have to
+qualify their heads or declare `multifile` locally, so it changes name resolution across
+100+ modules and still leaves qualified writes. `ROLE=internal-state` is consequently not a
+legal value in the allowlist — if you are reaching for it, you want the accessor.
+
+Note the write direction cuts both ways: a store the module owns but an **outsider writes**
+wants a **write** accessor, not a read one (`diagnostic_summary:maxent_attempt_reset/0` +
+`maxent_mark_attempted/1`, whose caller is `json_report`).
+
+Declared bypasses live in **`prolog/module_boundary_allowlist.txt`** (116 rows; grammar
+`mod:pred/arity  ROLE=<role>  <reason>`, reason REQUIRED). The guard is
+`python/module_boundary_check.py`, gate row **`module bounds`**, three arms: **A** every
+non-exported cross-module reference has a row; **B** every `ROLE=corpus-schema` row has a
+**production-side** `:- multifile`; **C** every `narrative_ontology:P(...)` head a testset
+writes has a row. Standing run scans the default leg (~1.4s); `--full` does all five (~13s)
+and the GREEN line always prints which legs were scanned.
+
+**If you add a corpus-schema predicate, it needs BOTH a `:- multifile` in
+`prolog/narrative_ontology.pl` AND an allowlist row, in the same change.** Registration is
+opt-in — the same silent-escape shape as `reading_registry` registration and the spec-enum
+sentinels. Two things that look like they defend a schema predicate and do not:
+
+- **A `:- multifile` in a `tests/` file.** The production load chain never consults those
+  files. `has_sunset_clause/1` lived this way undetected.
+- **Every writing testset self-declaring.** It works until one generator revision drops the
+  local declaration. Witnessed: strip it from all 28 loaded `flat_control_of/2` writers and
+  the predicate loads **1 of 28** with 27 × "Redefined static procedure" (the
+  `story_provenance/8` tombstone in `narrative_ontology.pl`); with the central declaration
+  it loads 28/28. Stripping **one** writer proves nothing — `multifile` is a property of the
+  predicate, set by whichever file declares it first.
+
+**Do not "simplify" arm C into arm B.** They check opposite directions (B: row →
+declaration; C: authored head → row), and arm C is specifically buying back a typo detector:
+once a predicate is `multifile`, SWI stops warning on redefinition, and that warning was the
+only thing catching a misspelled qualified head in a story file.
+
+**Writing another source-text sweep over Prolog?** Three shapes broke this one before it was
+trusted, all now fixture-controlled in the checker: predicate **indicators** (`mod:pred/2`
+in a directive) are not 0-arity calls; **closures** passed to meta-predicates
+(`maplist(m:pair_snd, ...)`) carry their real arity elsewhere; and **facade** modules
+re-export (`drl_lifecycle` declares an empty export list and `:- reexport`s four modules, so
+every call through it looks like a bypass).
+
 ---
 
 ## 5. Testing Requirements
+
+### Running `scripts/gate.sh` — put the `.venv` on PATH
+
+`gate.sh` calls bare `python3`, and the `gap surfaces` row shells out to `python/query.py`,
+which imports pandas. Outside the repo virtualenv that row reports a **false RED**
+(`ModuleNotFoundError: No module named 'pandas'`) on a check that is actually green. Run it as:
+
+```bash
+PATH="$PWD/.venv/bin:$PATH" ./scripts/gate.sh
+```
+
+The repo `.venv` carries pandas 3.0.5. This is an invocation artifact, not a defect in the
+row — do not "fix" the check.
 
 ### Run the Prolog test suite
 

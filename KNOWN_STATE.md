@@ -45,6 +45,86 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — [tripwire] OQ-68 resolved by write-ownership: accessors where the module asserts, declared bypass where it only hosts — and a corpus-schema predicate is defended by the CENTRAL `:- multifile`, never by its writers
+**Files:** prolog/narrative_ontology.pl, prolog/maxent_classifier.pl, prolog/diagnostic_summary.pl, prolog/json_report.pl, prolog/corpus_loader.pl, prolog/constraint_indexing.pl, prolog/grothendieck_cohomology.pl, prolog/context_profile_report.pl, prolog/maxent_diagnostic.pl, prolog/abductive_helpers.pl, prolog/module_boundary_allowlist.txt, python/module_boundary_check.py, scripts/gate.sh, ISSUES.md, AGENTS.md
+**Tier:** tripwire
+
+**OQ-68 resolved** (accessors `7e810d52`, gate `917bcc5f`). The ruling and the full inventory
+are in ISSUES OQ-68; what follows is what a future editor can get silently wrong.
+
+**THE TRIPWIRE — a `tests/` `:- multifile` defends nothing, and neither does a writer's own.**
+`narrative_ontology`'s corpus-schema predicates are written by testset files as qualified
+heads. Whether they load COMPLETELY depends on a `:- multifile` declaration existing at load
+time, and there are three places one can appear, only one of which works:
+
+| declared in | defends the production chain? |
+|---|---|
+| `prolog/narrative_ontology.pl` (central) | **yes** — this is the only one that counts |
+| a `tests/` file | **no** — the production load chain never consults those files |
+| every writing testset (self-declaration) | **accidentally**, until one generator revision drops it |
+
+Two members were living on the third row until this change: `flat_control_of/2` was declared
+NOWHERE engine-side, and `has_sunset_clause/1` was `:- dynamic` but never `:- multifile`
+(its only `multifile` declarations were in two `tests/` files). Both loaded complete, so
+nothing was red — the set was simply not closed.
+
+**The forcing witness** (scratch copy of the leg, local declaration stripped from all 28
+loaded `flat_control_of` writers; the ONLY variable is the central declaration):
+
+```
+no central :- multifile  ->  loaded 1/28, multifile=no, 27 x "Redefined static procedure"
+with it                  ->  loaded 28/28, multifile=yes, 0 warnings
+```
+
+That is the `story_provenance/8` tombstone (narrative_ontology.pl, fixed 2026-06-13)
+reproduced on demand. **Note the control that does NOT work:** stripping ONE writer's local
+declaration changes nothing, because `multifile` is a property of the PREDICATE, set by
+whichever file declares it first — 27 self-declaring writers still cover it. The plan this
+work executed proposed exactly that one-writer control; it is not discriminating.
+
+**Consequence when you add a corpus-schema predicate:** it needs a central `:- multifile` AND
+an allowlist row in the same change, or gate row `module bounds` goes red. Registration is
+opt-in — the same silent-escape shape as reading-registry registration and the spec-enum
+sentinels.
+
+**Second tripwire — arm C is a TYPO DETECTOR, and it exists because we spent one.** Once a
+predicate is `multifile`, SWI stops warning on redefinition. That warning had been doing
+accidental duty as the only check that a qualified head in a story file is spelled right.
+Closing the schema set costs it; arm C buys it back. So do not "simplify" arm C away on the
+grounds that arm B already covers the schema set — they check opposite directions
+(B: row → declaration; C: authored head → row).
+
+**Correction to the plan's table (write-ownership applied correctly):**
+`diagnostic_summary:maxent_attempted/1` was listed as needing a read accessor. It is
+**written** by `json_report` and read only by its owner, so the repair is a WRITE accessor
+(`maxent_attempt_reset/0` + `maxent_mark_attempted/1`, fail-loud on an unknown stage). A read
+accessor cannot serve a caller whose entire interaction is retractall/assertz.
+
+**Three parser defects the checker had before it was trusted**, each now fixture-controlled —
+worth knowing if you write another source-text sweep over Prolog: predicate INDICATORS
+(`mod:pred/2` in a directive) are not 0-arity calls (they manufactured 20+ phantom rows
+naming predicates that exist at no arity); CLOSURES passed to meta-predicates
+(`maplist(maxent_classifier:pair_snd, ...)`) carry their real arity elsewhere; and FACADE
+modules re-export (`drl_lifecycle` declares an EMPTY export list and `:- reexport`s four
+modules, so every call through it looked like a bypass — the first live run reported
+`drl_lifecycle:generate_drift_report` as a wrong-qualifier defect, and it is not one).
+
+**Latent defect found by the sweep, recorded not fixed → OQ-307.** `drl_core.pl:710` reads
+`constraint_claim(C, theater_ratio, TR), TR >= 0.70`, but `constraint_claim/3` is a view whose
+third argument the rule discards, and no `constraint_claim(_, theater_ratio)` fact exists in
+any leg — so `type_5_piton_as_snare` has never fired, and would throw on `TR` if it did.
+
+**Also witnessed (invocation, not a defect):** a bare `./scripts/gate.sh` reports a FALSE RED
+on `gap surfaces` — `ModuleNotFoundError: No module named 'pandas'`, because the row shells out
+to `python/query.py` and `gate.sh` calls bare `python3`. Run it as
+`PATH="$PWD/.venv/bin:$PATH" ./scripts/gate.sh`. The repo `.venv` has pandas 3.0.5 and the row
+is green under it. `module_boundary_check.py` is stdlib-only and unaffected.
+
+**Housekeeping note for the operator:** a pre-existing `stash@{0}` ("WIP on main: 2ad08ed1")
+is present in this clone. It was accidentally popped and immediately reverted during this
+session (`ISSUES.md` / `issues/INDEX.*` restored to HEAD); **the stash entry itself was not
+dropped and is intact**. Nothing of it was kept.
+
 ## 2026-08-17 — [correction-key] The cohort-zero stability table's `status: stable` is NOT positive-stable: `victims` is 0/6 positive (its 4 stables are shared ABSENCE), and the cast blast radius reaches classification at NAME-IDENTITY grade via `constraint_captured/1`
 **Files:** audits/2026-06-12_cohort_zero/stability_table.json, python/cohort_stability.py, prolog/narrative_ontology.pl, prolog/drl_core.pl, prolog/signature_detection.pl, prolog/constraint_indexing.pl, prolog/logical_fingerprint.pl, prolog/stakeholder_seats.pl, prolog/commentary_census.pl, python/audits/oq190_blast_radius.py, prolog/probe_oq190_edge_admission.pl, ISSUES.md, CLAUDE.md
 **Tier:** correction-key
