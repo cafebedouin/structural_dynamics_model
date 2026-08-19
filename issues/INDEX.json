@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "8687019df9929ac5a62e035fd1a3fd302c5ccacf",
+    "store_version": "20f58faf4dab78b37bdba2b485b09d979de48e5b",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T16:12:16"
+    "generated_at": "2026-08-19T16:20:20"
   },
-  "issues_sha": "6fb3576c61b192630fbe25a338a1a4affdd101379ce36f0349f5f2d9db280b45",
+  "issues_sha": "e98dc4bcf24d9e064a2fd0036854f72d30b8a1f0364424c30637cb467f72008e",
   "n_entries": 326,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 157,
+    "resolved": 158,
     "mitigated": 19,
     "disposed": 6,
     "future": 9,
-    "open": 129,
+    "open": 128,
     "partial": 6
   },
   "active": [
@@ -54,26 +54,6 @@
       "mentioned_in": [
         "OQ-78",
         "OQ-117"
-      ]
-    },
-    {
-      "id": "OQ-127",
-      "status": "open",
-      "priority": 1,
-      "summary": "SCAFFOLD_DANGER_ZONE lint calibration: 5/7 fire rate on a shape the de-leaked prompt authors legitimately",
-      "deps": [
-        "splits_from OQ-116",
-        "blocked_on_human sdz-demotion-ruling (demote-to-advisory or disarm pending a witnessed TP; the OQ-221 row-10 datum below shifted the burden — ruling is the operator's)"
-      ],
-      "cross_refs": [
-        "OQ-74",
-        "OQ-116"
-      ],
-      "mentioned_in": [
-        "OQ-74",
-        "OQ-116",
-        "OQ-117",
-        "OQ-221"
       ]
     },
     {
@@ -3607,6 +3587,25 @@
         "OQ-74",
         "OQ-107",
         "OQ-137"
+      ]
+    },
+    {
+      "id": "OQ-127",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "SCAFFOLD_DANGER_ZONE lint calibration: 5/7 fire rate on a shape the de-leaked prompt authors legitimately",
+      "deps": [
+        "splits_from OQ-116"
+      ],
+      "cross_refs": [
+        "OQ-74",
+        "OQ-116"
+      ],
+      "mentioned_in": [
+        "OQ-74",
+        "OQ-116",
+        "OQ-117",
+        "OQ-221"
       ]
     },
     {

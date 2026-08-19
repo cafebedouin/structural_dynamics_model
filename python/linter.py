@@ -282,13 +282,16 @@ def lint_file(filepath):
             errors.append("MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.")
 
     # 9b. SCAFFOLD DANGER ZONE (v6.0)
-    # Catch constraints whose metrics could produce false scaffold classifications
-    # at the engine level. The scaffold gate fires when:
+    # ADVISORY (OQ-127 ruling, 2026-08-19): coarse authoring-time predictor of the
+    # engine's scaffold gate, which fires when:
     #   chi <= 0.30 AND has_coordination_function AND NOT requires_active_enforcement
     #   AND theater < 0.70
-    # If a constraint has eps <= 0.30, beneficiary data (coordination), no enforcement,
-    # and no sunset clause, it's in the scaffold danger zone — the engine may classify
-    # it as scaffold even though it lacks temporality (scaffold's defining feature).
+    # The gate is context/chi-dependent; this check reads base authored eps
+    # perspective-independently, so it over-approximates — it fires on legitimately
+    # authored mid-eps ropes. Advisory grade, never error grade: calibration record
+    # and the revival condition (a witnessed genuine gate misfire re-promotes it)
+    # live at ISSUES.md OQ-127. Keep the SCAFFOLD_DANGER_ZONE prefix intact — the
+    # THRESHOLD_COUPLED_LINT strip matches on it.
     if ext_val is not None and ext_val <= scaffold_extraction_ceil:
         # Skip when mountain or scaffold is already in the file's type set:
         # - Mountains can't be misclassified as scaffolds (signature override)
@@ -301,10 +304,12 @@ def lint_file(filepath):
             low_theater = theater_val is None or theater_val < piton_theater_floor
             if has_beneficiary_data and not has_enforcement and not has_sunset and low_theater:
                 errors.append(
-                    f"SCAFFOLD_DANGER_ZONE: eps={ext_val} with beneficiary data, no enforcement, "
-                    "no sunset clause, and low theater. The engine's scaffold gate may fire "
-                    "at moderate/analytical perspectives. Either add has_sunset_clause/1 (if "
-                    "genuinely a scaffold) or verify that the intended classification is rope."
+                    f"SCAFFOLD_DANGER_ZONE (advisory): eps={ext_val} with beneficiary data, "
+                    "no enforcement, no sunset clause, and low theater. Authoring-time "
+                    "predictor of the engine's perspective-dependent scaffold gate; "
+                    "over-approximates and fires on legitimately-authored mid-eps ropes. "
+                    "If genuinely a scaffold, add has_sunset_clause/1; otherwise verify the "
+                    "intended classification is rope. Calibration record: OQ-127."
                 )
 
     # 10. PITON-SPECIFIC CHECKS

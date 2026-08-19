@@ -5375,64 +5375,49 @@ row-disjoint since the OQ-137 fix. Worked instances:
 
 **Ω-type:** Ω_E (advisory-lint calibration; witnessed on the cohort-zero pilot).
 
-**Status:** open — split-refiled from OQ-116 on 2026-06-14 when the MMC half resolved. The
+**Status:** resolved — 2026-08-19 (operator ruling, second-instance reviewed): remedy **(b)+(c)
+compound** — SDZ DEMOTED to advisory grade with reworded text ("authoring-time predictor of a
+perspective-dependent gate"), NOT disarmed; stays in `THRESHOLD_COUPLED_LINT` (de-leak membership
+unchanged, OQ-116 chokepoint untouched). Landed at `python/linter.py` (comment block + message;
+`SCAFFOLD_DANGER_ZONE` prefix kept intact for the strip match). Witness:
+`test_deleak_chokepoint.py` 4/4 PASS incl. `test_sdz_present_in_lint_absent_in_prompt`.
+Compressed on close per footer rule; the full calibration narrative (the two MMC-transfer cuts,
+the OQ-221 burden-shift) is in git history at this entry.
 **Priority:** 1
-**Deps:** splits_from OQ-116, blocked_on_human sdz-demotion-ruling (demote-to-advisory or disarm pending a witnessed TP; the OQ-221 row-10 datum below shifted the burden — ruling is the operator's)
-operator-only linter ruling (OQ-116: the linter is an operator diagnostic, lint never gates
-generation, threshold-coupled codes never reach the authoring LLM) **was applied here and
-explicitly did NOT settle SDZ** — do not re-derive the MMC reasoning and extend it to SDZ; the
-cuts differ (below). Status honesty is the deciding reason for the split: OQ-116 would otherwise
-carry a resolved+promotable principle and a live calibration question under one status field.
+**Deps:** splits_from OQ-116
+**Origin:** split-refiled from OQ-116 on 2026-06-14 when the MMC half resolved (the operator-only
+linter ruling explicitly did not settle SDZ: no `false_scaffold` correction-grade analog exists,
+and SDZ fires perspective-independently while the engine's scaffold gate is context/χ-dependent —
+so the OQ-74 "readout of the gate" mirror does not transfer).
 
-**Witness (`audits/2026-06-12_cohort_zero/pilot_witness.out`):** 5/7 pilot stories fired
-SCAFFOLD_DANGER_ZONE (mid-ε + beneficiaries + no enforcement/sunset + low theater — a shape the
-de-leaked prompt authors legitimately). Both lint rules fired in the same pilot run, so this OQ
-inherits that audit artifact directly (not by pointer-to-OQ-116).
+### Still-operative ruling block (kept per the footer exception)
 
-**Why SDZ does NOT close as MMC did (the two genuine cuts):**
-1. **No correction-grade analog of ANY family.** `prolog/signature_detection.pl` has
-   `coordination_scaffold` only as a POSITIVE classifier (`coordination_scaffold_signature/_`,
-   line 412); there is **no `false_scaffold` signature** (grep-confirmed; positive control:
-   `false_natural_law`/`false_summit_mountain` DO exist, so the grep fires). Unlike MMC's FNL,
-   the scaffold "danger" SDZ flags has nothing the engine *overrides classification* for — it is
-   not a claimed-vs-structural divergence at all, just a warning that a metric profile might
-   produce an UNINTENDED positive classification. The OQ-74 mirror ("engine measures the
-   divergence; lint just notices it") therefore **does not transfer**. (Not "no FSM" — that
-   baseline is stale; MMC's analog is FNL, see the OQ-116 correction.)
-2. **Perspective mismatch.** The scaffold gate is context/Chi-dependent (`drl_core.pl:145`
-   `is_scaffold(C, Context, scaffold)`; `classify_from_metrics(C, BaseEps, Chi, …)`), but SDZ
-   fires **perspective-independently** at authoring time on base authored ε (`linter.py:233`,
-   `ext_val <= scaffold_extraction_ceil`). So rewording SDZ as "readout of the scaffold gate"
-   would be **inaccurate**, not merely gentler.
+- **Ruling rationale (the record):** the cost of error-grade here is not friction on the flagged
+  story — lint never gates generation and every consumer prints non-blocking. It is that a 71%
+  FP rate at error grade teaches the operator to dismiss error lines by reflex, and that habit
+  does not stay local to SDZ. Demotion protects the error grade itself, across every lint that
+  uses it.
+- **Untested, not disproven — citation rule:** the OQ-221 row-10 defect side is n=0 by NO
+  MATERIAL, not by a searched decline (the writeup's ratified rule: "zero-defect-side rows are
+  PROPOSED-capped ... regardless of earned-side rate"; graduation = one witnessed instance). The
+  5/7 FP and the 0 TP come from different populations, only one of which has observations — they
+  are not a ratio. "0 TP" is evidence nobody has checked, NOT evidence SDZ doesn't work, and may
+  not be cited as proof of inefficacy in any future disarm argument. An untested detector aimed
+  at a zero-base-rate event is exactly the thing one keeps a socket for.
+- **Revival condition — PASSIVE, accepted as such (operator, 2026-08-19):** no process surveils
+  for scaffold-gate misfires, so the condition — first witnessed genuine gate misfire on a
+  legitimately-authored story re-promotes SDZ to error grade and reopens calibration — fires
+  only on incidental notice. The operator accepts the passivity rather than funding a
+  surveillance path; a future reader proposing disarm must first check whether this condition
+  ever *could* have fired.
 
-**De-leak membership is correct (orthogonal to calibration):** SDZ discloses/predicts an engine
-boundary, so it **stays in `THRESHOLD_COUPLED_LINT`** (stripped from author prompts via
-`linter.build_author_feedback`) regardless of the calibration call.
-
-**What would resolve (operator's call — remedy FRAMED, not picked):** (a) narrow the trigger so
-legitimate de-leaked ropes don't fire; (b) demote severity / mark coarse heuristic; (c) reword to
-"authoring-time predictor of a perspective-dependent gate" (accurate, but does not address the
-5/7 rate). No trigger surgery pending the ruling.
-
-**OQ-221 datum → the live decision (2026-07-16; promoted from cross-note on operator review):**
-the partition's row 10 ran SDZ as a two-distribution condition: earned-side fire rate **5/7,
-Wilson95 [0.359, 0.918]** on the legitimately-authored shapes; defect side **n=0** — in the
-entire record there is no witnessed instance of the engine's scaffold gate actually misfiring.
-**Zero witnessed true positives plus a measured 5/7 false-positive rate on legitimate shapes is
-the profile of a lint that is pure suppression cost until it produces one genuine catch — the
-burden of proof now sits on SDZ, not on the stories it flags.** This moves the remedy weight
-toward (b)-or-disarm (demote to advisory / disarm pending a witnessed TP) and promotes that
-choice to this entry's live question (Deps now carries `blocked_on_human`); the ruling itself
-stays the operator's — nothing here self-resolves it. Witnesses:
-`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 10;
-`audits/2026-06-12_cohort_zero/pilot_witness.out` (as-of 2026-06-12).
-
-**Cross-refs:** OQ-116 (MMC half resolved; the shared operator-only linter ruling), OQ-74 (seat
-divergence / de-leak-in-reverse — transfers to MMC, NOT to SDZ), OQ-117 (claim/metric
-co-authoring doctrine), `docs/design/design_discipline.md` (linter operator-vs-engine principle).
-
-**Provenance:** 2026-06-14 CC session implementing the OQ-116 close plan; the operator-only linter
-ruling and the split decision are the operator's.
+**Witnesses:** `audits/2026-06-12_cohort_zero/pilot_witness.out` (5/7 fire, as-of 2026-06-12);
+`audits/2026-07-16_oq221_meter_partition/WRITEUP.md` row 10 (Wilson95 [0.359, 0.918], defect
+n=0); live re-witness 2026-08-19 (SDZ live at `linter.py`; `false_scaffold` 0 hits with positive
+control `false_natural_law` 21 hits in `signature_detection.pl`; all four lint consumers print
+non-blocking).
+**Cross-refs:** OQ-116 (operator-only linter ruling; de-leak chokepoint), OQ-74 (transfers to
+MMC, not SDZ), OQ-221 row 10, OQ-117.
 
 ---
 

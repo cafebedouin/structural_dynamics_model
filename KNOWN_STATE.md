@@ -45,6 +45,21 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: OQ-127 ruled — SDZ demoted to advisory ((b)+(c) compound), untested-not-disproven citation rule, passive revival
+**Files:** python/linter.py, ISSUES.md
+**Tier:** landed
+
+Operator ruling (second-instance reviewed): SCAFFOLD_DANGER_ZONE demoted from error grade to
+advisory with reworded text ("authoring-time predictor of a perspective-dependent gate"; points
+at OQ-127, no maintained claims hardcoded); stays in `THRESHOLD_COUPLED_LINT`, OQ-116 chokepoint
+untouched (`test_deleak_chokepoint.py` 4/4 PASS post-change). Ruling record carries three
+amendments in the OQ's still-operative block: (1) the OQ-221 row-10 "0 TP" is n=0 by NO MATERIAL
+(PROPOSED-capped zero-D rule), so it is untested-not-disproven and may not be cited for a future
+disarm; (2) the revival condition (witnessed genuine gate misfire re-promotes) is declared
+PASSIVE — no surveillance path exists, accepted; (3) the ruling rationale on record is
+error-grade protection (71% FP at error grade trains reflex-dismissal of error lines generally),
+not attention economics. Witness commit + OQ-127 resolved entry.
+
 ## 2026-08-19 — LANDED: OQ-302, the bound-`false` call at `boltzmann_compliance.pl:577`; and the spec that prescribed it
 **Files:** prolog/boltzmann_compliance.pl, python/dispatch_head_check.py, prolog/codewalk_caller_allowlist.txt, docs/logic_extensions.md, docs/logic_thresholds.md, docs/noether_implementation.md, docs/lawvere_implementation_notes.md, docs/lawvere_glossary.md, docs/grothendieck_framing.md, docs/v8/foundations/logic_extensions.md, docs/v8/foundations/logic_thresholds.md, docs/technical/build_discipline.md, audits/2026-08-19_oq302_bound_false_repair/
 **Tier:** landed
