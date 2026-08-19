@@ -12000,9 +12000,46 @@ transcript-derived** — the transcripts are the operator's own working sessions
 any of it leaves the repository is the operator's ruling, not an evidential question. Typed
 at mint so no future instance treats publication as settled.
 
-**Status:** open
+**Status:** open — **the Ω_P publication ruling is DISCHARGED (operator, 2026-08-19,
+second-instance reviewed): the three-tier rule below stands.** The arm itself is now workable at
+P4; running it is a separate, later choice. Substrate re-verified at ruling time: snapshot
+present, md5 matches the recorded `289534248baeae333db49c5d00ef185d`.
 **Priority:** 4
-**Deps:** blocked_on_human oq279-omega-p-publication-ruling
+
+### Publication ruling (2026-08-19) — standing three-tier rule for transcript-derived material
+
+Framing fact the tiers rest on: **this repository is public and CC0, so committing IS
+publishing** — there is no in-repo-but-unpublished tier. And a scope correction that outranks
+the tiers: **the transcripts are not only the operator's** — working sessions contain whatever
+was pasted in (third-party names, emails, material), so a third party appearing in a transcript
+has an interest the Ω_P typing cannot rule away by fiat. Tier 1 covers them by default; tier 2's
+gate checks for them explicitly.
+
+1. **Raw transcripts and verbatim excerpts: never leave the local store.** No commit, no paper;
+   no exception without a fresh per-item operator ruling.
+2. **Pure aggregates — publishable, gated on ONE pre-commit operator review of the exact
+   artifact** (the artifact, not the intention, is what gets reviewed — the OQ-309 lesson
+   twice over). Gate conditions, all of them: (a) **pooled across sessions, never
+   per-session** — session-level anything (counts, rates, N-in-window) is a work-pattern
+   disclosure regardless of timestamp granularity; per-session breakdowns are tier 3; (b) **no
+   cell small enough to point at a single session**, and the review checks for third-party
+   presence in the UNDERLYING ROWS, not just the output; (c) **the methods text is reviewed
+   alongside the numbers** — a sufficiently specific description of what was excluded and why
+   can characterize the excluded material, so instrument descriptions are inside the review,
+   not pre-approved; (d) no content not already public in the repo; timestamps no finer than
+   the day.
+3. **Anything between** (paraphrase, quoted completion claims): per-item operator ruling,
+   default no.
+
+**Scoping travels with the number (mandatory):** anything published from this arm carries "residual
+false-success UNDER DISCIPLINE — RQ1-complement, not a before/after; the discipline-off period is
+permanently unrecoverable" in the same breath as the rate — never a footnote. A bare rate in §9
+will be read against an implied before; a public reader has fewer defenses than a future instance.
+
+**Where outside eyes earn their keep, if anywhere:** the tier-2 review moment — the operator will
+be holding a finished artifact with the work already done, which is when "it's only aggregates" is
+most persuasive.
+
 **Origin:** Plan-time determination 2026-08-10: Advani (arXiv:2606.09863,
 `docs/amnesiac_institution/2606.09863v1.pdf`) operationalizes silent failure in a way that
 IS applicable here — to the Claude Code session transcripts, which pair completion assertions
