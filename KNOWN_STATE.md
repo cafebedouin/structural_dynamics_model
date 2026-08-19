@@ -80,13 +80,28 @@ declared in the audit rather than left looking like an oversight.
 
 **Three things a later reader should not have to re-derive:**
 
-1. **`probe_harness:with_overlay/3` CANNOT swap a rule clause, and fails SOFT.** It snapshots
-   FACTS only (`probe_harness.pl:91–100`, `clause(M:T, true)`); a template matching a rule
-   produces a *warning*, not an error, and an asserted replacement lands AFTER the existing
-   clauses — so an overlay "counterfactual" on a cut-ordered rule silently measures the
-   unmodified program. The target here was also static (`assertz` throws). The plan specified
-   this mechanism; it was refused and replaced with `clause/2`-fetch-and-call of the engine's own
-   clause body. Detail: the audit's `PREREGISTRATION.md` §0a.
+1. **`probe_harness:with_overlay/3` CANNOT REPORT THAT IT OVERLAID NOTHING → minted as OQ-326.**
+   It snapshots FACTS only (`probe_harness.pl:91–100`, `clause(M:T, true)`); a template matching a
+   RULE produces a *warning*, not an error, and asserted facts land AFTER the existing clauses —
+   so an overlay "counterfactual" on a cut-ordered rule silently measures the unmodified program.
+   An empty snapshot for ANY other reason (wrong arity, undefined predicate, unloaded corpus,
+   absent id) is equally silent. **The harness verifies RESTORE; nothing verifies INSTALL** — so
+   an overlay pair is not a witness unless the probe asserts, inside the overlay, that the change
+   took effect. The plan specified this mechanism; it was refused and replaced with
+   `clause/2`-fetch-and-call of the engine's own clause body (`PREREGISTRATION.md` §0a).
+   **Retroactive census DONE (OQ-326 Phase 1), and it clears the record:** 44 call sites / 27
+   files / 13 distinct retract-side templates; 12 rule-free; the 1 rule-bearing template
+   (`constraint_indexing:constraint_classification/3` at
+   `audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77`) is safe by BINDING — its rule
+   clauses are hard-keyed to the two engine demo constraints. **No prior audit is voided.** The
+   live trap is that `probe_harness.pl`'s OWN header example is the unsafe form of that same call
+   (first argument unbound). Method note for a re-runner: parse ARGUMENT POSITIONS — a
+   functor-proximity grep flags goal-body predicates and produced six rule-bearing false
+   positives. Evidence:
+   `audits/2026-08-19_oq302_bound_false_repair/overlay_template_census.md`.
+   **`clause/2` on a static predicate is legal only while `protect_static_code` is `false`** (SWI
+   default; `access_level=user`), and the refusal path is real — a foreign built-in still raises
+   `permission_error`. That idiom is **n=1** and deliberately lives in gotchas §12, not CLAUDE.md.
 2. **The spec prescribed the defect.** `docs/logic_extensions.md`'s "How to Activate" instructed
    `boltzmann_invariant_mountain(C, true)` — unsatisfiable against every result shape. Corrected
    at the origin (`4f8f0e3f`), together with `logic_thresholds.md:260` (Stage-7 enhancement now
@@ -102,6 +117,17 @@ declared in the audit rather than left looking like an oversight.
    the 753 the unbound call declines on and fires on exactly the other 4,558. The row is a
    genuine class-B **conversion** candidate (output last arg, reached, 5 callers on live output
    paths) → routed to OQ-303 arm (a); conversion owes the six-leg pair, not the template.
+   **And the count edit did NOT reach a published OQ-303 conclusion.**
+   `audits/2026-08-18_classb_conversion_rollout/clause_order_census.md:19` — *"No latent-B
+   predicate carries a nonzero steal-risk at any atom"* — was a set-level claim over a set that
+   has since gained a member. Re-running that arm's own tool (its pre-registered naturally-arising
+   control firing first: `signature_grade/2` correction=0, commentary=1 at `6c1bfa44`) makes it
+   **FALSE: 1 of 1**, `epistemic_access_check/2` at atom `false`, steal-risk 1, skipped `[true]`,
+   zero at `true`. **A set-level claim is re-witnessed by RE-RUNNING the instrument, not by editing
+   the count the claim was computed over.** The 2026-08-18 dir was not edited (point-in-time,
+   restored byte-identical); re-run filed at `oq303_steal_risk_recensus.md`. That standing
+   condition — a `latent-B` predicate stealable at `false` — is tracked at OQ-303 arm (a), not
+   only as the allowlist's scope justification.
 
 ---
 
