@@ -13944,24 +13944,59 @@ the next instance gets it free.
 **Ω-type:** Ω_E (empirical — the arms are runnable and the readings are pre-committed in the
 prereg's decision table).
 
-**Status:** partial — audit dir marked PARTIAL (stub WRITEUP.md); no round-2 arm has recorded results
+**Status:** partial — audit dir marked PARTIAL (stub WRITEUP.md); no round-2 arm has recorded
+results. **Return plan RULED (operator, 2026-08-19, second-instance reviewed) — see the ruling
+block below; execution is a DEDICATED session** (idle machine per prereg; not the tail of a
+working session — co-residency is the confound this OQ family chases).
 **Priority:** 2
-**Deps:** blocked_on_human giantcomp-round2-return
 **Origin:** operator ruling 2026-08-17 — the owning instance hung waiting on shells and was
 closed; "mark it as partial and I'll return to it." Marked by a different instance the same day.
 **Files:** `audits/2026-08-17_giant_comp_segv_hang/` (PREREGISTRATION.md, round2_arms.sh,
 WRITEUP.md stub), `prolog/giant_component_analysis.pl`.
 
-**The question.** Round 1 (owner session, evidence not in the audit dir) measured **7/100
-failures** (6 hang at 25 s, 1 SIGSEGV) on serial, single-process
-`run_giant_component_analysis` over the live corpus (n=279), every failure truncating at
-exactly 967 bytes of output. That challenges OQ-182's co-residency attribution (its N=10
+**The question.** Round 1 (owner session) reported **7/100 failures** (6 hang at 25 s, 1 SIGSEGV)
+on serial, single-process `run_giant_component_analysis` over the live corpus (n=279), every
+failure truncating at exactly 967 bytes of output. **REPORTED-NOT-WITNESSED (marked on ruling,
+2026-08-19): the round-1 evidence never reached the audit dir, so the 7/100 baseline is an
+assertion, not a witnessed measurement** — load-bearing for the closure label in the ruling
+block, and the round-1 binary is purged, so it can never be upgraded to witnessed. That challenges OQ-182's co-residency attribution (its N=10
 cure battery had P(10 clean | p₀=0.07) = 0.48 — "cured" and "got lucky" were not
 distinguished; a power objection, not a claim the serialization fix was wrong) and makes
 OQ-77 a reopen candidate. Round 2 is fully preregistered (n=150/arm, arms A–F, B×C decision
 table committed before any run, arm-D buffering caveat) with the driver staged.
 
-**What resuming needs, in order:** (1) create `audit_log.md` with the prereg md5 logged
+### Return plan (RULED 2026-08-19 — supersedes the resume list below where they conflict)
+
+1. **Sysctl pass FIRST, unconditionally** (operator sudo, ~2 min): `kernel.yama.ptrace_scope=0`
+   + a `core_pattern` that writes a file (persist via `/etc/sysctl.d/`). Not conditional on arm
+   A failing — at the reported round-1 rate arm A expects ~10 failures, every one occurring with
+   capture broken; round 1's capture was equally broken, so the pass is not a comparison
+   variable. **Caveat, recorded so it does not enter the record unqualified: the sysctl pass
+   does NOT make hangs analyzable.** A hang produces no core; its instrument is attach, and
+   `round2_arms.sh` has **no attach-on-timeout hook** (verified 2026-08-19 — bare `timeout
+   $TMO`, then next iteration). The executing session must either add the hook (amending the
+   prereg in the same commit) or record explicitly that hangs — 6/7 of the reported failure
+   mass — remain uncaptured in round 2. "Failures preserve something analyzable" is true only
+   of the SIGSEGV mode.
+2. **Arm A alone next** (default flags, n=150, swipl 10.0.2): the does-the-regime-survive-the-
+   upgrade test. Before any result line, `audit_log.md` records the prereg md5 AND the frozen
+   failure detector: `TMO=25` (matches round 1's reported 25 s), rc=124 hang / rc=139 segv /
+   rc≠0 fail, per-run output byte count (967-byte truncation signature checkable per row), and
+   the exact swipl version — so a later reader can see what "clean" was defined as; on a new
+   interpreter, a detector that stopped tripping is indistinguishable from hangs that stopped.
+3. **Pre-committed reading.** 0/150 ⇒ close as **"the failure regime is not reproducible on the
+   current system"** — NOT "interpreter-resolved." Three compounding reasons: the 7/100
+   baseline is reported-not-witnessed (above); the round-1 binary is purged, so attribution can
+   never be checked; and the interpreter is the salient but demonstrably not the only change in
+   the window (`run_pipeline.py` moved and was resolved in it). Attributing the cure to the
+   upgrade from a single post-change observation is the OQ-251 single-variable-isolation error
+   run in reverse. The honest close — regime absent now, cause permanently unattributable — is
+   still a real result and still moots arms B–D/F, valgrind, and the symbol question.
+   **Any failures** (even 1/150) ⇒ the regime persists; proceed to arms B–D per the prereg's
+   decision table (capture already fixed by step 1).
+
+**What resuming needs, in order (pre-ruling list — step order superseded by the ruled plan
+above):** (1) create `audit_log.md` with the prereg md5 logged
 BEFORE any result line — the prereg's freeze is currently asserted in its own header, not
 witnessed; (2) run `./round2_arms.sh A B C D` (serial, idle machine, corpus fingerprinted
 around each arm by the driver); (3) read strictly against the pre-committed decision table.
