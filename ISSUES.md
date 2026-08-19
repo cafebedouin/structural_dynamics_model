@@ -3199,7 +3199,10 @@ a blanket `retractall` that would have wiped the baked registry — now scoped, 
 
 **Ω-type:** Ω_E (one controlled generation run answers it).
 
-**Status:** open — deferred out of the 2026-06-05 de-leak work item (verification hygiene: a second change variable; the de-leak's Stage-1/Stage-2 must read clean first)
+**Status:** future — operator ruling 2026-08-19: follows OQ-75 (its blocker/supplier) into future
+— this is a controlled-generation probe and no corpus rebuild/generation spend is slated; revive
+with OQ-75. Prior state: open — deferred out of the 2026-06-05 de-leak work item (verification
+hygiene: a second change variable; the de-leak's Stage-1/Stage-2 must read clean first)
 **Priority:** 1
 **Deps:** blocked_on OQ-75
 **Origin:** 2026-06-05 generation-pipeline audit (brief F6). Reading-sets inherit one jurisprudential
@@ -3808,7 +3811,10 @@ census exporter.
 **Ω-type:** Ω_E (detection-independence is measurable; on kernel_v1 it is saturation-confounded, not
 proven) + Ω_P (whether to fund a larger de-leaked study — operator's, fresh decision).
 
-**Status:** partial — twins characterization DONE 2026-07-03 (zero-spend read-only;
+**Status:** future — operator ruling 2026-08-19: follows OQ-75 (its declared supplier for the
+de-baited fired-core rate) into future — no corpus rebuild is slated, so the existence-proof limb
+has no reachable supplier; revive with OQ-75. The twins characterization below stands as recorded.
+Prior state: partial — twins characterization DONE 2026-07-03 (zero-spend read-only;
 `audits/2026-07-03_oq87_twins_ca3/`); existence proof RE-SCOPED (operator ruling 2026-07-03): the
 limb is blocked on a **de-baited fired-core rate measurement** — the Deps edge below points at
 OQ-75 as the *expected supplier*, but the edge discharges only when that measurement exists (a
