@@ -21,6 +21,23 @@ REGISTRY SEMANTICS (declaration-based, both directions red-capable):
   latent-B    expected to fire; class-B latent member (shape present, no live bound
               caller found in the 2026-08-17 caller sweep). Firing = OK. Stops firing
               -> stale note (converted/removed; retire the entry), exit 0.
+  unreached   expected to fire; the shape is present AND the predicate is CALLED BY NOTHING
+              on any corpus this project has. A DIFFERENT FACT FROM latent-B, with a
+              different remedy, and it gets its own disposition so the next reader does not
+              inherit these as convertible-pending-effort (operator ruling, 2026-08-19).
+              `latent-B` means "no live BOUND caller found"; this means "no live caller found
+              AT ALL". Evidence: a six-leg profiler pass over the same run_json_report goal
+              classify_corpus runs — testsets, testsets_haiku, testsets_flash, testsets_kimi,
+              testsets_sonnet and archives/datasets/kernel_v1, 5,311 constraints — with
+              hot-path controls firing at ~1.1M calls per leg. Zero calls on every leg.
+              (audits/2026-08-18_classb_conversion_rollout/reachability.json.)
+              DO NOT CONVERT THESE ON THE CLASS-B LICENCE. Their footing is adjudication plus
+              the by-construction census with NO corpus leg at all — and the corpus is the
+              only instrument in this chain that has ever caught a misconversion: both
+              failure classes this OQ found (input-keyed rows, wrong-category rows) were
+              caught by the corpus and missed by everything internal to the change.
+              Converting here spends the one licence whose backing instrument is
+              structurally silent. Same stale-note rule as latent-B.
   input-key   expected to fire; adjudicated: the last argument is an INPUT supplied by
               the caller by contract (availability key / test name / value to
               serialize) — not an engine answer. Same stale-note rule.
@@ -69,58 +86,58 @@ MUST_NOT_FIRE = "MUST-NOT-FIRE"
 # (file, name/arity) -> class. Census + adjudication: 2026-08-17 bound-dispatch audit
 # (RECON.md §§1-4). Retire an entry when its predicate is converted or removed.
 DECLARED: dict[tuple[str, str], str] = {
-    ("abductive_helpers.pl", "fpn_band/2"): "latent-B",
+    ("abductive_helpers.pl", "fpn_band/2"): "unreached",
     ("abductive_helpers.pl", "seat_overrides/2"): "input-key",
     ("abductive_helpers.pl", "subsystem_available/1"): "input-key",
     ("boltzmann_compliance.pl", "epistemic_access_check/2"): "finding",
     ("boltzmann_compliance.pl", "expected_power_divergence/4"): "input-key",
-    ("context_profile_mining.pl", "classify_isomorphism_level/2"): "latent-B",
-    ("covering_analysis.pl", "cell_short/2"): "latent-B",
-    ("covering_analysis.pl", "sigma_label/2"): "latent-B",
-    ("cs_kernel_registry.pl", "stance_member_provenance/3"): "latent-B",
+    ("context_profile_mining.pl", "classify_isomorphism_level/2"): "unreached",
+    ("covering_analysis.pl", "cell_short/2"): "unreached",
+    ("covering_analysis.pl", "sigma_label/2"): "unreached",
+    ("cs_kernel_registry.pl", "stance_member_provenance/3"): "unreached",
     ("cs_pattern_detection.pl", "cs_verdict/2"): "finding",
     ("diagnostic_summary.pl", "ds_subsystem_available/1"): "input-key",
-    ("dirac_classification.pl", "gauge_fixed/3"): "latent-B",
-    ("domain_priors.pl", "infer_category_from_priors/2"): "latent-B",
-    ("drl_boltzmann_analysis.pl", "has_purity_drift/2"): "latent-B",
-    ("drl_boltzmann_analysis.pl", "purity_to_cut_priority/2"): "latent-B",
-    ("drl_boltzmann_analysis.pl", "qualify_action/5"): "latent-B",
-    ("drl_boltzmann_analysis.pl", "raw_urgency/4"): "latent-B",
-    ("drl_composition.pl", "composition_rule/3"): "latent-B",
+    ("dirac_classification.pl", "gauge_fixed/3"): "unreached",
+    ("domain_priors.pl", "infer_category_from_priors/2"): "unreached",
+    ("drl_boltzmann_analysis.pl", "has_purity_drift/2"): "unreached",
+    ("drl_boltzmann_analysis.pl", "purity_to_cut_priority/2"): "unreached",
+    ("drl_boltzmann_analysis.pl", "qualify_action/5"): "unreached",
+    ("drl_boltzmann_analysis.pl", "raw_urgency/4"): "unreached",
+    ("drl_composition.pl", "composition_rule/3"): "unreached",
     ("drl_core.pl", "classify_from_metrics/6"): MUST_NOT_FIRE,
-    ("drl_core.pl", "dr_action/3"): "latent-B",
+    ("drl_core.pl", "dr_action/3"): "unreached",
     ("drl_core.pl", "is_mountain/3"): "wrapper",
     ("drl_core.pl", "is_piton/3"): "wrapper",
     ("drl_core.pl", "is_rope/3"): "wrapper",
     ("drl_core.pl", "is_scaffold/3"): "wrapper",
     ("drl_core.pl", "is_snare/3"): "wrapper",
     ("drl_core.pl", "is_tangled_rope/3"): "wrapper",
-    ("drl_counterfactual.pl", "estimate_impact_indexed/5"): "latent-B",
-    ("fpn_report.pl", "ep_band/2"): "latent-B",
-    ("gap_diagnostic.pl", "gate_description/2"): "latent-B",
-    ("giant_component_analysis.pl", "action_band/2"): "latent-B",
-    ("giant_component_analysis.pl", "would_cross_threshold/5"): "latent-B",
+    ("drl_counterfactual.pl", "estimate_impact_indexed/5"): "unreached",
+    ("fpn_report.pl", "ep_band/2"): "unreached",
+    ("gap_diagnostic.pl", "gate_description/2"): "unreached",
+    ("giant_component_analysis.pl", "action_band/2"): "unreached",
+    ("giant_component_analysis.pl", "would_cross_threshold/5"): "unreached",
     ("grothendieck_cohomology.pl", "classify_deltas/2"): "finding",
-    ("invertibility_analysis.pl", "chi_subband/2"): "latent-B",
-    ("invertibility_analysis.pl", "predict_rope_snare/4"): "latent-B",
-    ("invertibility_analysis.pl", "predict_rope_tangled/4"): "latent-B",
-    ("invertibility_analysis.pl", "predict_snare_tangled/4"): "latent-B",
-    ("invertibility_analysis.pl", "predict_three_type/4"): "latent-B",
+    ("invertibility_analysis.pl", "chi_subband/2"): "unreached",
+    ("invertibility_analysis.pl", "predict_rope_snare/4"): "unreached",
+    ("invertibility_analysis.pl", "predict_rope_tangled/4"): "unreached",
+    ("invertibility_analysis.pl", "predict_snare_tangled/4"): "unreached",
+    ("invertibility_analysis.pl", "predict_three_type/4"): "unreached",
     ("json_report.pl", "write_json_number/2"): "input-key",
-    ("logical_fingerprint.pl", "extraction_zone/2"): "latent-B",
-    ("logical_fingerprint.pl", "structural_property_holds/2"): "latent-B",
-    ("logical_fingerprint.pl", "suppression_zone/2"): "latent-B",
-    ("maxent_report.pl", "entropy_interpretation/2"): "latent-B",
-    ("orbit_report.pl", "characterize_family/2"): "latent-B",
-    ("probe_oq197_controls.pl", "status_kind/2"): "latent-B",
-    ("report_generator.pl", "completeness_to_confidence/2"): "latent-B",
+    ("logical_fingerprint.pl", "extraction_zone/2"): "unreached",
+    ("logical_fingerprint.pl", "structural_property_holds/2"): "unreached",
+    ("logical_fingerprint.pl", "suppression_zone/2"): "unreached",
+    ("maxent_report.pl", "entropy_interpretation/2"): "unreached",
+    ("orbit_report.pl", "characterize_family/2"): "unreached",
+    ("probe_oq197_controls.pl", "status_kind/2"): "unreached",
+    ("report_generator.pl", "completeness_to_confidence/2"): "unreached",
     ("report_generator.pl", "generate_scenario_for_omega/5"): "input-key",
-    ("report_generator.pl", "resolve_omega_source/4"): "latent-B",
-    ("routing_sink.pl", "detector_state/2"): "latent-B",
+    ("report_generator.pl", "resolve_omega_source/4"): "unreached",
+    ("routing_sink.pl", "detector_state/2"): "unreached",
     ("signature_detection.pl", "classify_by_signature/3"): MUST_NOT_FIRE,
     ("signature_detection.pl", "constraint_signature/2"): MUST_NOT_FIRE,
-    ("signature_detection.pl", "determine_pure_subtype/2"): "latent-B",
-    ("transition_paths.pl", "predicted_terminal_state/3"): "latent-B",
+    ("signature_detection.pl", "determine_pure_subtype/2"): "unreached",
+    ("transition_paths.pl", "predicted_terminal_state/3"): "unreached",
 }
 
 # ---------------------------------------------------------------------------
@@ -379,23 +396,23 @@ def main(argv: list[str]) -> int:
     # `latent-B` class, not a nice-to-have. A row with no fact has not been adjudicated, and
     # `latent-B` would license the template on it.
     for key, cls in sorted(DECLARED.items()):
-        if cls != "latent-B":
+        if cls not in ("latent-B", "unreached"):
             continue
         fact = LAST_ARG.get(key)
         if fact is None:
             problems.append(
-                f"latent-B {key[0]} {key[1]} has NO LAST_ARG fact — the class licenses the "
+                f"{cls} {key[0]} {key[1]} has NO LAST_ARG fact — the class licenses the "
                 f"conversion template, which is valid only if the last argument is an output. "
                 f"Adjudicate and record it (with evidence) in the same change.")
         elif fact[0] == "generator":
             notes.append(
-                f"latent-B {key[0]} {key[1]} is LAST_ARG=generator — not cut-ordered dispatch "
+                f"{cls} {key[0]} {key[1]} is LAST_ARG=generator — not cut-ordered dispatch "
                 f"(its caller enumerates it), so the conversion template retires no hazard "
                 f"here. Not an error; do not fold it into the `output` population when "
                 f"counting what the rollout covers.")
         elif fact[0] == "input":
             problems.append(
-                f"latent-B {key[0]} {key[1]} is recorded LAST_ARG=input ({fact[1]}) — the "
+                f"{cls} {key[0]} {key[1]} is recorded LAST_ARG=input ({fact[1]}) — the "
                 f"template is invalid for it; its class must be `input-key`, not `latent-B`.")
     for key, fact in sorted(LAST_ARG.items()):
         if key not in DECLARED:
@@ -413,7 +430,7 @@ def main(argv: list[str]) -> int:
     n_in = sum(1 for v in LAST_ARG.values() if v[0] == "input")
     n_gen = sum(1 for v in LAST_ARG.values() if v[0] == "generator")
     print(f"  last-arg facts: {len(LAST_ARG)} row(s) adjudicated ({n_out} output, {n_in} "
-          f"input, {n_gen} generator); every latent-B row carries one")
+          f"input, {n_gen} generator); every latent-B/unreached row carries one")
     print(f"dispatch_head_check: GREEN — {scanned} engine files, {len(hitset)} shape "
           f"hit(s) all declared ({n_declared} declared + "
           f"{sum(1 for v in DECLARED.values() if v == MUST_NOT_FIRE)} must-not-fire), "

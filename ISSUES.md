@@ -13990,6 +13990,55 @@ for the first time — so it was kept OUT of the 2026-08-17 zero-diff pilot (pre
 guard) and owes its own clean-vs-edited pair + an enumeration of consumers of the shadow
 audit before landing. Git-blame `:577` for the free before-commit control pair.
 
+## OQ-325 — a third of the bound-dispatch census is reached by NO corpus: dead code, missing inputs, or unrun configurations?
+
+**Ω-type:** Ω_E (a census; the resolution operation is measurement — extend reachability to the
+whole engine and partition the unreached set by cause).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-303
+**Origin:** 2026-08-19, fell out of the OQ-303(a) rollout's reachability pass
+(`audits/2026-08-18_classb_conversion_rollout/`). Not a rollout question — the rollout only
+needed to know which rows the corpus could clear.
+**Files:** `python/dispatch_head_check.py` (the `unreached` disposition),
+`audits/2026-08-18_classb_conversion_rollout/reachability.{py,json}`.
+
+**The measurement, already made.** Profiling the same `run_json_report` goal `classify_corpus`
+runs, over **six legs** — `testsets` (279), `testsets_haiku` (960), `testsets_flash` (960),
+`testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) = **5,311
+constraints** — **34 of 54 remaining bound-dispatch census rows are called ZERO times on every
+leg.** Controls fire at ~1.1M calls per hot-path predicate per leg (`dr_type/3`,
+`classify_from_metrics/6`, `constraint_signature/2`), so the zeros are measured, not
+didn't-looks. Full per-leg counts: `reachability.json`. These rows now carry the registry
+disposition `unreached`.
+
+**Why it is a question and not a cleanup.** Roughly a third of the 2026-08-17 census sits
+outside every exercised path, and *unreached* has at least three causes with three different
+remedies:
+1. **dead** — nothing can reach it; retire (but see the asymmetry below);
+2. **input-starved** — reachable, but only on authored inputs no corpus contains (the OQ-178
+   shape: a probe landing off the authored grid reads as absence);
+3. **configuration-gated** — reachable only under `config:param` settings no live run uses
+   (`trajectory_enabled`, the fcr/fnl levers, the purity gates).
+
+**`Unwired ≠ worthless` governs, in a new instance.** "Called by nothing on six corpora" answers
+*is it used*, not *is it useful* — the exact substitution `build_discipline.md` warns against.
+(2) and (3) are unfinished value, not cruft, and retiring them silently destroys capability;
+only (1), and only after the cause partition, is a retirement question at all.
+
+**Phase 1 input is already in hand** — the per-leg call table. Phase 2 is the cause partition
+(static reachability from the export entry points vs. authored-input coverage vs. config
+sensitivity), and it wants extending beyond the census rows to the engine generally: there is no
+reason to think the bound-dispatch census is where unreached code concentrates, and the 34 are a
+biased sample of it (they were selected for a head shape, not for reachability).
+
+**What resolution would change:** whether the engine's live surface is materially smaller than
+its module count suggests, and which absences are corpus gaps the rebuild should close rather
+than code to retire. Cross-ref: `project_live_surface_smaller_than_activity` (memory), GAP-01.
+
+---
+
 ## OQ-303 — bound-dispatch rollout: class-B head conversions, the cs_verdict repair, bound_selector_check retirement, MaxEnt catch+default arms
 
 **Ω-type:** Ω_E for 57 of arm (a)'s 58 rows (mechanical conversions per a witnessed
@@ -14108,9 +14157,29 @@ so the screen is ordering, never clearance.
 159,777 / 188,901 / 183,649 calls): **34 of 54 rows are COLD on `testsets`**, the leg the per-file
 clearance came from, so for those `changed=0` is absence of exercise, not correctness. 20 rows are
 genuinely exercised. A per-leg reachability pass would move some of the 34 into the cleared group.
-**Still open, and the executor did not resume on its own authority:** the batch stays reverted;
-whether to spend the rebuilt licence, and on which rows, is the next decision. Branch
-`oq303-classb-rollout`, unmerged.
+**LANDED 2026-08-19.** Per-leg reachability first (operator ruling), then the exercised rows.
+**The per-leg pass promoted ZERO rows** — six legs, 5,032 additional constraints, controls at
+~1.1M calls — so the claim about the remainder strengthens from "unexercised by the leg we used"
+to **"unexercised by every corpus this project has"**; a pass that failed its stated purpose and
+returned a stronger fact. **The 20 exercised rows are CONVERTED** with a six-leg pair at **0
+changed constraints over 5,311** (provenance asserted: corpus md5 identical per leg across
+halves, code state differing; OQ-137 totality 10/10; `run_dynamic_suite` GOOD; gate GREEN;
+`dispatch_head_check` 69 → 49 hits). Their footing is the strongest in the OQ — per-row mode
+adjudication + by-construction check + six-leg zero diff + a *demonstrated firing control for
+this exact failure class*.
+**The 34 remaining rows are NOT converted and are NO LONGER `latent-B`:** they carry a new
+registry disposition **`unreached`** (called zero times on all six legs), because their footing
+is adjudication + census with **no corpus leg at all** — and the corpus is the only instrument in
+this chain that has ever caught a misconversion. Leaving them `latent-B` would hand the next
+reader a worklist labelled by a premise that no longer describes them.
+**Process finding, at the same altitude as the mode lines:** the conversion driver reported
+`0 failures` while silently dropping its last row (a `"\n".join` with no trailing newline, and
+`while read`), with a six-leg run already loading the half-converted file. Only a check *outside*
+the loop caught it. **A conversion loop needs a completeness check that does not come from the
+loop** — the instrument that reports success cannot be the instrument that verifies coverage.
+The engine question this raised is minted separately as **OQ-325**.
+`latent-B` is now EMPTY: every 2026-08-17 census row is converted, `input-key`, `wrapper`,
+`finding`, `MUST-NOT-FIRE`, or `unreached`.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

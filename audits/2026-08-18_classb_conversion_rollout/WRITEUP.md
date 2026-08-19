@@ -13,9 +13,10 @@ answered in a comment. That is a general fact about where this codebase's *decla
 versus where its *verification* looks, and it is worth more than the 55 rows. The rollout is how
 it surfaced: Phase 1 (`signature_grade/2`) landed with a six-leg pair at **0 changed constraints
 over 5,311** and the pre-declared Ω_P escalation declining; the batch of 55 passed every
-structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: licence rebuilt
-per row and gate-enforced; the 20 exercised rows CONVERTED with a six-leg zero-diff pair; 34
-rows remain, adjudicated but unexercised by any corpus.** Nothing merged to `main`.
+structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: LANDED.** 21 rows converted
+(Phase 1 + the 20 exercised) each with a six-leg zero-diff pair; 3 reclassified `input-key`; 1
+recorded `generator`; 34 held as **`unreached`** and deliberately not converted; the registry now
+carries a per-row last-argument fact with its evidence, under the gate.
 **Substrate:** six legs — `testsets` (n=279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) =
 5,311 constraints. Clean half at `code_commit` 2f459d3a, edited half at 6c1bfa44, corpus md5
@@ -73,7 +74,31 @@ for the template to retire at all. "This dispatches on an output" and "this was 
 fail differently, so the registry now carries `generator` as its own `LAST_ARG` verdict rather
 than folding it into the 53 outputs — a future census must be able to tell them apart.
 
-## 2. Carry (i) — `commentary` reachability, answered before the run
+## 2. The same lesson, from the other end: the instrument that reports success cannot be the instrument that verifies coverage
+
+§1 is about a fact the author declared and no verifier read. This is the same structure inside
+the tooling built to do the reading.
+
+The conversion driver iterated a row list and reported **`0 failures`**. It was wrong by one:
+the list was written with `"\n".join(...)` and no trailing newline, so `while read` silently
+dropped its last line — `signature_diagnostic_severity/3` — while the six-leg run had **already
+started loading `signature_detection.pl`**. Had that pair completed, it would have measured a
+half-converted tree and reported a zero-diff over 5,311 constraints that meant nothing.
+
+Nothing inside the loop could catch it. The loop's own success count is derived from the
+iteration that dropped the row; a truncated list produces a smaller loop that succeeds
+completely. What caught it was a check **outside** the loop — re-scanning all 20 target
+predicates for remaining bare-atom output heads, sourced from the reachability data rather than
+from the driver's own list.
+
+**Rule, at the same altitude as §1: a conversion loop needs a completeness check that does not
+come from the loop.** More generally — and this is the structural lesson this unit found twice —
+*the instrument that reports success cannot be the instrument that verifies coverage.* In §1 the
+verifiers all presupposed the thing they should have checked; here the driver's success count
+presupposed the list it was iterating. Both are Pattern 6: a channel that cannot distinguish
+"did the work" from "had less work to do" emits success-shaped output either way.
+
+## 3. Carry (i) — `commentary` reachability, answered before the run
 
 Pre-registered from reads, not read off the diff afterwards (`audit_log.md` R1):
 **`commentary` is reachable downstream as a VALUE but is queried NOWHERE as a BOUND SELECTOR.**
@@ -85,7 +110,7 @@ serialized as `verdict_join.signature_grade` (`json_report.pl:1509`) and read li
 That distinction is what decides Ω_E from Ω_P, which is why it was fixed in advance along with
 what each outcome would mean.
 
-## 3. Phase 1 result — zero-diff, and the three ways a zero-diff can lie, closed
+## 4. Phase 1 result — zero-diff, and the three ways a zero-diff can lie, closed
 
 ```
 testsets  0 | testsets_haiku  0 | testsets_flash  0
@@ -110,7 +135,7 @@ and 932→899 (haiku), i.e. into exact agreement with the engine, while `correct
 untouched. Precisely 29 and 33 over-permissive answers retired, and zero consumer-visible
 change, because nothing in the engine queries at `commentary`.
 
-## 4. Carry (ii) — the census: the exposure is 165 of 218
+## 5. Carry (ii) — the census: the exposure is 165 of 218
 
 `steal_risk(P, A)` = cut-bearing clauses of `P` whose head output arg is an atom ≠ `A`, before
 the last clause that can yield `A`. Upper bound by design.
@@ -143,7 +168,7 @@ a misconversion that makes later clauses unreachable leaves it nothing to count.
 differences the corpus may never exercise; the corpus sees a failure class the census cannot
 represent. Different coverage, no ordering.
 
-## 5. The transformer, and why it is a transformer
+## 6. The transformer, and why it is a transformer
 
 55 hand edits and one transformer make different *kinds* of mistake. A hand edit can drop a
 guard in a way no structural check catches; a transformer makes the same mistake everywhere,
@@ -158,7 +183,7 @@ over-strong post-condition ("every output is a variable") that would have revert
 with a compound output argument. The second is the one worth keeping: a parser that is wrong
 and right-by-accident on the file you tested it on is the failure mode this whole arc is about.
 
-## 6. A tool that could not run the witness it exists for
+## 7. A tool that could not run the witness it exists for
 
 `classify_corpus`'s `run_prolog` timeout is a hard-coded 300 s, sized on the live leg (~35 s).
 Measured this session: haiku **288 s** (13 s of headroom), flash **530 s**, sonnet **724 s**,
@@ -168,7 +193,7 @@ because the failure was *loud and correct* — the harness refused rather than e
 — and still cost a full run to discover, since nothing about the default announced that it was
 sized for one leg out of six.
 
-## 7. Phase 3 — the batch moved the corpus, and every structural check said it would not
+## 8. Phase 3 — the batch moved the corpus, and every structural check said it would not
 
 292 clauses across 28 files. Post-conversion: 0 atom-headed output clauses remained across all
 57 predicates (2 compound-headed, declared), `dispatch_head_check` dropped 69 → 12 hits, the
@@ -186,7 +211,7 @@ Per-file bisect, with an all-reverted control that reproduces the baseline exact
 attribution measures conversions, not drift): **2 of 29 files**, `abductive_helpers.pl` (129,
 `seat_overrides/2`) and `boltzmann_compliance.pl` (17, `expected_power_divergence/4`).
 
-## 8. The mechanism, and why it is bigger than two rows
+## 9. The mechanism, and why it is bigger than two rows
 
 ```prolog
 seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
@@ -218,7 +243,7 @@ argument really is a description to compute. 2 confirmed, **21 unadjudicated**. 
 reclassified `input-key`; reclassifying 21 on a candidate-finder's say-so would be the same
 error in the other direction.
 
-## 9. The licence, rebuilt on the direct question — and the fact was already in the source
+## 10. The licence, rebuilt on the direct question — and the fact was already in the source
 
 Operator ruling 2026-08-19: *"mechanical per a witnessed template"* is falsified because its
 unstated premise — every `latent-B` row's last argument is an OUTPUT — is false at 2 rows,
@@ -280,7 +305,7 @@ on them is unbounded. Quoting "0 misses" without that scope would repeat, one in
 exactly the move this unit exists to correct. The screen is ordering and cross-check, never
 clearance; neither instrument clears a row alone.
 
-## 10. Registry hygiene — the durable fix
+## 11. Registry hygiene — the durable fix
 
 `python/dispatch_head_check.py` now carries `LAST_ARG`: **one row per registry entry, its
 verdict, and the evidence that settled it** (the authored `%%` line, or a dated read naming what
@@ -295,7 +320,7 @@ Gate-enforced in the same checker, because a fact nothing checks is what produce
 All three input rows are reclassified `latent-B` → `input-key`. The class definition in the
 checker now carries the mechanism and names both instruments.
 
-## 11. Reachability — what the corpus clearance actually covers
+## 12. Reachability — what the corpus clearance actually covers
 
 The per-file bisect cleared 27 of 29 files at `changed=0` on the **live leg**. A cold predicate
 clears that on absence of exercise, not correctness — so the clearance is bounded by what the
@@ -305,20 +330,32 @@ leg reaches, and that is measurable rather than assumable.
 Controls fire hard in the same run (`dr_type/3` 159,777 calls, `classify_from_metrics/6`
 188,901, `constraint_signature/2` 183,649 — 1,248 predicates observed).
 
-**34 of 54 latent-B rows are COLD — and the per-leg pass did not shrink that.** Run across all
-six legs (5,311 constraints, ~1.1M calls per hot-path control on each), the result is
-**identical to the `testsets`-only measurement: 34 cold, 20 exercised, zero promotions.**
+**34 of 54 latent-B rows are COLD — and the per-leg pass did not shrink that by one row.**
 
-That null is worth more than the number it replaced. The expectation — mine and the operator's —
-was that the cold set would shrink materially once the twins and the 1,106-story breadth archive
-were added. It did not move at all. So the claim is no longer "cold on the leg the clearance came
-from"; it is **unreached by every corpus this project has**.
+Read the shape of that result carefully, because it is the good outcome and it does not look
+like one. The pass had a **stated purpose**: move rows out of the weak-footing bucket before
+anything had to rely on the weak footing. It achieved that purpose **zero times**. Run across all
+six legs — five more than the original measurement, **5,032 additional constraints**, with
+hot-path controls firing at **~1.1M calls on every leg** confirming the instrument was live and
+looking — the result is byte-for-byte the same partition: 34 cold, 20 exercised, no promotions.
+
+**A pass that fails at its stated purpose and returns a stronger fact is a good outcome, not a
+wasted spend.** What it bought is not rows; it is the difference between two claims about the
+same 34 predicates:
+
+- before: *unexercised by the leg we happened to use* — a fact about our sampling;
+- after: *unexercised by every corpus this project has* — a fact about the predicates.
+
+The second licenses a disposition the first could not (§11: `unreached`), and it is the sort of
+fact only a null can establish. Had one row been promoted, the remaining cold set would still
+have been "cold on what we tried"; zero promotions across the full corpus inventory is what
+converts sampling into coverage.
 
 For the 20 exercised rows the corpus clearance is real evidence with a demonstrated firing
 control for this exact failure class. For the 34, `changed=0` licenses nothing and the remaining
 witness is the adjudication plus the by-construction census.
 
-## 12. Residue — what is OPEN
+## 13. Residue — what is OPEN
 
 - **Phase 3 is HALTED and reverted.** It needs an operator ruling, not a retry: 21 rows carry
   the input-key tell and are unadjudicated, and adjudicating "is this last argument an output?"
@@ -329,15 +366,24 @@ witness is the adjudication plus the by-construction census.
   is the strongest anything in this OQ has had, Phase 1 included: per-row mode adjudication, the
   by-construction check, a six-leg zero diff, and a *demonstrated firing control for this exact
   failure class* — the same corpus caught both input-keyed rows when they were converted.
-- **RESIDUAL COLD COUNT: 34 rows.** Adjudicated (`LAST_ARG=output`, evidence recorded) and
-  covered by the by-construction census, but exercised by **no corpus this project has**. That
-  is a defensible but thinner footing and it is a separate decision, now with a number attached:
-  the per-leg pass was supposed to shrink it and did not.
-- **A note on what the residual actually is.** 34 predicates that no story in 5,311 reaches is
-  itself a finding about the engine, independent of this rollout — it is roughly a third of the
-  2026-08-17 census sitting outside every exercised path. Whether that is dead weight, a corpus
-  gap, or capability awaiting its input is the `Unwired ≠ worthless` question, and it is not
-  this unit's to answer.
+- **The 34 are NOT converted and are NO LONGER `latent-B`** (operator ruling, 2026-08-19). They
+  hold their own registry disposition, **`unreached`**, carrying the six-leg zero and the
+  reachability evidence. Two reasons, and the second is why the relabel matters as much as the
+  non-conversion:
+  1. *Don't convert.* Their footing is adjudication plus the by-construction census with **no
+     corpus leg at all** — and the corpus is the only instrument in this chain that has ever
+     caught a misconversion. Both failure classes this OQ found were caught by it and missed by
+     everything internal to the change. Converting here spends the one licence whose backing
+     instrument is structurally silent.
+  2. *Don't leave them `latent-B` either.* That label asserts "no live **bound** caller found";
+     these are "no live caller found **at all**, by any corpus". Different fact, different
+     remedy. Left mislabelled they would be inherited as convertible-pending-effort, which is
+     exactly how three rows got converted on a premise nobody had checked.
+- **The engine question is minted separately as its own OQ**, with this unit's reachability data
+  as its Phase-1 input. A third of the 2026-08-17 census sitting outside every exercised path is
+  a finding about the engine, not about this rollout: dead code, code reachable only by inputs
+  the corpora lack, and code gated behind configurations nobody runs have three different
+  remedies, and telling them apart needs its own census.
 - **Phase 4 not begun** (`json_report.pl` `boltzmann_label/2`, `live_index_label/3` — both are
   in the flagged 23, so they were never as safe as `converts-clean-minus-dataflow` suggested).
   **Ordering them last was right for a reason that did not exist when the ordering was chosen.**
