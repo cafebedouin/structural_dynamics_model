@@ -9282,12 +9282,25 @@ or by *construction* (injection removes the fork entirely at some assembly cost)
 **Ω-type:** Ω_C (the committer axis — authored commitment structure; whether to formalize it in the
 narrative pipeline is a committer-side design question).
 
-**Status:** open — findings note; the default is HOLD (see framework verdict). Whether to ever build
-is a genuine operator ruling, so this is blocked on a human, not on engine work.
+**Status:** future — operator ruling 2026-08-19 (branch (a), second-instance reviewed): the
+narrative pipeline is CORRECTLY observer-only; building the CS narrative step would formalize a
+dimension the engine ruled null (v6 sketch §10.4: "the audit bought the committer *axis* one bit
+of credence and the committer *space* nothing"). Clearest Pattern-1 shape of the 2026-08-19
+ruling set — an apparatus for a measured null.
+
+**Revival — two independent triggers, both conditions ruled 2026-08-19:**
+1. **Graduation, with the bar NAMED so the condition fires only in the direction that matters:**
+   revival requires the committer **SPACE** to graduate on a future corpus re-test — not another
+   single bit. The beneficiary/victim bit already graduated and already feeds the engine via
+   directionality `d`; a second bit graduating is NOT this OQ's condition, and a reviver holding
+   one new bit does not have a case for this build. Read-site: sketch §10.5 (Standing
+   follow-ups) carries the pointer here.
+2. **The blocker is CURRENT-PIPELINE-SCOPED, not permanent:** the central obstruction (the
+   narrative pipeline produces no contested kernels with sibling readings + manifest-injected
+   `kernel_id`) is a fact about today's pipeline; a rebuild could cheapen or dissolve it. A
+   reviver checks whether it still holds rather than inheriting it.
 
 **Priority:** 4
-
-**Deps:** blocked_on_human operator-ruling (whether to ever build the committer-axis narrative step; default is hold)
 
 **Origin:** 2026-07-14 (Part B of the logic-docs reconciliation). Confirmed absence: the narrative
 pipeline touches the committer axis **nowhere** — zero `cs_`/`kernel`/`authority_grounding` references

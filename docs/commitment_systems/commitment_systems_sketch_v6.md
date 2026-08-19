@@ -1009,6 +1009,13 @@ home for non-tautological P/K content; disciplined prior: another null, worth ru
 clean null). Both recorded so the committer axis is not re-explored from first principles
 without the results attached.
 
+**If a graduation re-test on a future corpus succeeds, one dormant build question revives:**
+ISSUES **OQ-223** (marked `future` 2026-08-19) holds the committer-axis narrative-pipeline step —
+its bar is the committer **space** graduating, not another single bit (the beneficiary/victim bit
+already graduated and already feeds the engine via `d`), and its stated blocker is
+current-pipeline-scoped: re-check it before inheriting it. Read OQ-223 before building anything
+from a graduation result.
+
 ---
 
 ## 11. Declared absences and open rows
