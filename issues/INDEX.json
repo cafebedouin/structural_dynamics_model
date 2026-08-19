@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "db0129eb8965ecb5646a1422fa49ab8a51f322bf",
+    "store_version": "62604df640234f97077aa50de115a88a63e647ba",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T22:57:37"
+    "generated_at": "2026-08-19T13:00:09"
   },
-  "issues_sha": "ff48d7167ac84bac18ba3452ed568cfeda3f01197bf9bd7707a33a8d92371547",
-  "n_entries": 324,
+  "issues_sha": "64b6e360d2781ab91ba0c4dd335969a4ad0ec6f782cd668f9ac7d8a52324fdb8",
+  "n_entries": 325,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 129,
+    "open": 130,
     "partial": 8
   },
   "active": [
@@ -1652,7 +1652,9 @@
       "mentioned_in": [
         "OQ-66",
         "OQ-98",
-        "OQ-296"
+        "OQ-137",
+        "OQ-296",
+        "OQ-325"
       ]
     },
     {
@@ -1972,6 +1974,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-308"
+      ]
+    },
+    {
+      "id": "OQ-325",
+      "status": "open",
+      "priority": 3,
+      "summary": "a third of the bound-dispatch census is reached by NO corpus: dead code, missing inputs, or unrun configurations?",
+      "deps": [
+        "splits_from OQ-303"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-178",
+        "OQ-303"
       ]
     }
   ],

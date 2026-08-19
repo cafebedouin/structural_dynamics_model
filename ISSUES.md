@@ -13990,6 +13990,55 @@ for the first time — so it was kept OUT of the 2026-08-17 zero-diff pilot (pre
 guard) and owes its own clean-vs-edited pair + an enumeration of consumers of the shadow
 audit before landing. Git-blame `:577` for the free before-commit control pair.
 
+## OQ-325 — a third of the bound-dispatch census is reached by NO corpus: dead code, missing inputs, or unrun configurations?
+
+**Ω-type:** Ω_E (a census; the resolution operation is measurement — extend reachability to the
+whole engine and partition the unreached set by cause).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-303
+**Origin:** 2026-08-19, fell out of the OQ-303(a) rollout's reachability pass
+(`audits/2026-08-18_classb_conversion_rollout/`). Not a rollout question — the rollout only
+needed to know which rows the corpus could clear.
+**Files:** `python/dispatch_head_check.py` (the `unreached` disposition),
+`audits/2026-08-18_classb_conversion_rollout/reachability.{py,json}`.
+
+**The measurement, already made.** Profiling the same `run_json_report` goal `classify_corpus`
+runs, over **six legs** — `testsets` (279), `testsets_haiku` (960), `testsets_flash` (960),
+`testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) = **5,311
+constraints** — **34 of 54 remaining bound-dispatch census rows are called ZERO times on every
+leg.** Controls fire at ~1.1M calls per hot-path predicate per leg (`dr_type/3`,
+`classify_from_metrics/6`, `constraint_signature/2`), so the zeros are measured, not
+didn't-looks. Full per-leg counts: `reachability.json`. These rows now carry the registry
+disposition `unreached`.
+
+**Why it is a question and not a cleanup.** Roughly a third of the 2026-08-17 census sits
+outside every exercised path, and *unreached* has at least three causes with three different
+remedies:
+1. **dead** — nothing can reach it; retire (but see the asymmetry below);
+2. **input-starved** — reachable, but only on authored inputs no corpus contains (the OQ-178
+   shape: a probe landing off the authored grid reads as absence);
+3. **configuration-gated** — reachable only under `config:param` settings no live run uses
+   (`trajectory_enabled`, the fcr/fnl levers, the purity gates).
+
+**`Unwired ≠ worthless` governs, in a new instance.** "Called by nothing on six corpora" answers
+*is it used*, not *is it useful* — the exact substitution `build_discipline.md` warns against.
+(2) and (3) are unfinished value, not cruft, and retiring them silently destroys capability;
+only (1), and only after the cause partition, is a retirement question at all.
+
+**Phase 1 input is already in hand** — the per-leg call table. Phase 2 is the cause partition
+(static reachability from the export entry points vs. authored-input coverage vs. config
+sensitivity), and it wants extending beyond the census rows to the engine generally: there is no
+reason to think the bound-dispatch census is where unreached code concentrates, and the 34 are a
+biased sample of it (they were selected for a head shape, not for reachability).
+
+**What resolution would change:** whether the engine's live surface is materially smaller than
+its module count suggests, and which absences are corpus gaps the rebuild should close rather
+than code to retire. Cross-ref: `project_live_surface_smaller_than_activity` (memory), GAP-01.
+
+---
+
 ## OQ-303 — bound-dispatch rollout: class-B head conversions, the cs_verdict repair, bound_selector_check retirement, MaxEnt catch+default arms
 
 **Ω-type:** Ω_E for 57 of arm (a)'s 58 rows (mechanical conversions per a witnessed
@@ -14062,6 +14111,75 @@ exclusion), and the genuinely unmeasured residue is runtime-computed selectors o
 `converts-clean` here means *clean under two instruments with known, disjoint, NON-EMPTY blind
 spots* — both blind spots are demonstrated and populated in the partition itself. Conversions
 themselves are still unstarted.
+
+**(a) ROLLOUT HALTED 2026-08-19 — the `latent-B` label does NOT license the conversion
+template, and that needs a ruling** (`audits/2026-08-18_classb_conversion_rollout/`).
+`signature_grade/2` converted cleanly (six-leg clean-vs-edited pair: **0 changed constraints
+over 5,311**; the pre-declared Ω_P escalation DECLINED, so that row is Ω_E discharged; landed).
+The **batch of the remaining 55 was reverted**: it passed every structural check it owed —
+292 clauses, 0 atom-headed output clauses left, `dispatch_head_check` 69→12, gate GREEN, OQ-137
+totality 10/10 — and moved the corpus on all six legs (129/279 testsets … 1106/1106 kernel_v1).
+A per-file bisect (all-reverted control reproduces the baseline exactly) attributed **all** of it
+to 2 files: `abductive_helpers.pl seat_overrides/2` and
+`boltzmann_compliance.pl expected_power_divergence/4`. **Neither predicate's last argument is an
+OUTPUT** — the first is a semidet test keyed on the signature, the second a pure semidet test —
+so `p(C, sig) :- !, guard.` becomes `p(C, T) :- !, guard, T = sig.`, matching EVERY second
+argument, cutting, and making every later clause unreachable. Both were misfiled `latent-B`;
+they are now `input-key`. `dispatch_head_check.pl:9-11` states the violated assumption in its own
+header, and **Unit A's partition inherited it and could not have caught it** — `converts-clean`
+answers "no bound caller", which presupposes the last argument is an answer at all.
+**Mechanical candidate-finder** (`inputkey_screen.py`; tell = a clause whose body's FIRST goal is
+`!`, i.e. it commits before testing, so it selects on its head args; controls fire on both
+attributed rows and decline on `signature_grade/2`): **23 of 58 flagged, 2 confirmed, 21
+UNADJUDICATED**. It is a candidate-finder, not a verdict — a cut-first clause can still have a
+real output last argument (`characterize_family/2` selects on arg 1), so the 21 are not
+reclassified. **LICENCE REBUILT (operator ruling, 2026-08-19) — per row, on the direct question, not on the
+screen.** Absence of the cut-first tell is not presence of an output, and adopting a
+2-instance-tuned heuristic as clearance one unit after Unit A corrected exactly that shape would
+mirror the error. So every remaining row was adjudicated on *does the last argument carry an
+answer out?* — **and the answer was already authored in the source**: both misfiled rows carry a
+mode line three lines above their clauses (`%% seat_overrides(+C, +Signature)`,
+`%% expected_power_divergence(+P1, +P2, +T1, +T2)`) and nothing read it. That is how a header-stated
+assumption (`dispatch_head_check.pl:9-11`) let two violations sit inside its own worklist.
+`mode_adjudication.py` reads it (controls: fires on both attributed rows, declines on
+`signature_grade/2`): **36 authored OUTPUT, 1 authored INPUT, 18 no-mode-line adjudicated by hand
+read** (all output; `structural_property_holds/2` is a *generator* — sole caller a `findall` —
+not dispatch at all). The authored-INPUT row is a **THIRD misfiled row the corpus could not
+catch**, `report_generator.pl generate_scenario_for_omega/5` (its file diffed `changed=0`); all
+three are now `input-key`.
+**Durable fix = registry hygiene, gate-enforced:** `dispatch_head_check.py` carries `LAST_ARG`,
+one row per entry with its verdict and the evidence that settled it (57 rows, 54 output, 3 input).
+A `latent-B` row with no fact is RED; a `latent-B` row recorded `input` is RED.
+**Cross-check vs the screen** (disagreement either way is the finding): 10 rows where the screen
+over-flags an authored output, **0** where the author says input and the screen missed it —
+so the screen is ordering, never clearance.
+**Reachability bounds the corpus clearance** (`reachability.py`, profiler; controls fire at
+159,777 / 188,901 / 183,649 calls): **34 of 54 rows are COLD on `testsets`**, the leg the per-file
+clearance came from, so for those `changed=0` is absence of exercise, not correctness. 20 rows are
+genuinely exercised. A per-leg reachability pass would move some of the 34 into the cleared group.
+**LANDED 2026-08-19.** Per-leg reachability first (operator ruling), then the exercised rows.
+**The per-leg pass promoted ZERO rows** — six legs, 5,032 additional constraints, controls at
+~1.1M calls — so the claim about the remainder strengthens from "unexercised by the leg we used"
+to **"unexercised by every corpus this project has"**; a pass that failed its stated purpose and
+returned a stronger fact. **The 20 exercised rows are CONVERTED** with a six-leg pair at **0
+changed constraints over 5,311** (provenance asserted: corpus md5 identical per leg across
+halves, code state differing; OQ-137 totality 10/10; `run_dynamic_suite` GOOD; gate GREEN;
+`dispatch_head_check` 69 → 49 hits). Their footing is the strongest in the OQ — per-row mode
+adjudication + by-construction check + six-leg zero diff + a *demonstrated firing control for
+this exact failure class*.
+**The 34 remaining rows are NOT converted and are NO LONGER `latent-B`:** they carry a new
+registry disposition **`unreached`** (called zero times on all six legs), because their footing
+is adjudication + census with **no corpus leg at all** — and the corpus is the only instrument in
+this chain that has ever caught a misconversion. Leaving them `latent-B` would hand the next
+reader a worklist labelled by a premise that no longer describes them.
+**Process finding, at the same altitude as the mode lines:** the conversion driver reported
+`0 failures` while silently dropping its last row (a `"\n".join` with no trailing newline, and
+`while read`), with a six-leg run already loading the half-converted file. Only a check *outside*
+the loop caught it. **A conversion loop needs a completeness check that does not come from the
+loop** — the instrument that reports success cannot be the instrument that verifies coverage.
+The engine question this raised is minted separately as **OQ-325**.
+`latent-B` is now EMPTY: every 2026-08-17 census row is converted, `input-key`, `wrapper`,
+`finding`, `MUST-NOT-FIRE`, or `unreached`.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

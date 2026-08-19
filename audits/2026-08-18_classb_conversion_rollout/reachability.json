@@ -1,0 +1,740 @@
+{
+ "legs": [
+  "testsets",
+  "testsets_haiku",
+  "testsets_flash",
+  "testsets_kimi",
+  "testsets_sonnet",
+  "archives/datasets/kernel_v1"
+ ],
+ "hot_controls": {
+  "dr_type/3": {
+   "testsets": 159777,
+   "testsets_haiku": 1006827,
+   "testsets_flash": 1035385,
+   "testsets_kimi": 1106429,
+   "testsets_sonnet": 1122312,
+   "archives/datasets/kernel_v1": 1024856
+  },
+  "classify_from_metrics/6": {
+   "testsets": 188901,
+   "testsets_haiku": 1102462,
+   "testsets_flash": 1121434,
+   "testsets_kimi": 1211516,
+   "testsets_sonnet": 1254718,
+   "archives/datasets/kernel_v1": 1062519
+  },
+  "constraint_signature/2": {
+   "testsets": 183649,
+   "testsets_haiku": 1076074,
+   "testsets_flash": 1109997,
+   "testsets_kimi": 1190973,
+   "testsets_sonnet": 1233024,
+   "archives/datasets/kernel_v1": 1056364
+  }
+ },
+ "rows": [
+  {
+   "file": "abductive_helpers.pl",
+   "pi": "fpn_band/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "constraint_indexing.pl",
+   "pi": "restricted_classify/7",
+   "calls": {
+    "testsets": 279,
+    "testsets_haiku": 960,
+    "testsets_flash": 960,
+    "testsets_kimi": 1005,
+    "testsets_sonnet": 1001,
+    "archives/datasets/kernel_v1": 1106
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "context_profile_mining.pl",
+   "pi": "classify_isomorphism_level/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "covering_analysis.pl",
+   "pi": "cell_short/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "covering_analysis.pl",
+   "pi": "sigma_label/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "cs_kernel_registry.pl",
+   "pi": "stance_member_provenance/3",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "data_repair.pl",
+   "pi": "source_class/2",
+   "calls": {
+    "testsets": 4193,
+    "testsets_haiku": 22364,
+    "testsets_flash": 11816,
+    "testsets_kimi": 16831,
+    "testsets_sonnet": 15981,
+    "archives/datasets/kernel_v1": 9696
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "diagnostic_summary.pl",
+   "pi": "compute_verdict/4",
+   "calls": {
+    "testsets": 253,
+    "testsets_haiku": 889,
+    "testsets_flash": 869,
+    "testsets_kimi": 965,
+    "testsets_sonnet": 883,
+    "archives/datasets/kernel_v1": 1096
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "diagnostic_summary.pl",
+   "pi": "mismatch_source/2",
+   "calls": {
+    "testsets": 692,
+    "testsets_haiku": 3113,
+    "testsets_flash": 2863,
+    "testsets_kimi": 2999,
+    "testsets_sonnet": 2671,
+    "archives/datasets/kernel_v1": 4183
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "dirac_classification.pl",
+   "pi": "gauge_fixed/3",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "dirac_classification.pl",
+   "pi": "score_to_separability/2",
+   "calls": {
+    "testsets": 39,
+    "testsets_haiku": 141,
+    "testsets_flash": 128,
+    "testsets_kimi": 269,
+    "testsets_sonnet": 249,
+    "archives/datasets/kernel_v1": 325
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "dirac_classification.pl",
+   "pi": "type_to_dirac_class/4",
+   "calls": {
+    "testsets": 279,
+    "testsets_haiku": 960,
+    "testsets_flash": 960,
+    "testsets_kimi": 1005,
+    "testsets_sonnet": 1001,
+    "archives/datasets/kernel_v1": 1106
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "domain_priors.pl",
+   "pi": "category_of/2",
+   "calls": {
+    "testsets": 279,
+    "testsets_haiku": 960,
+    "testsets_flash": 960,
+    "testsets_kimi": 1005,
+    "testsets_sonnet": 1001,
+    "archives/datasets/kernel_v1": 1106
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "domain_priors.pl",
+   "pi": "infer_category_from_priors/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_boltzmann_analysis.pl",
+   "pi": "has_purity_drift/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_boltzmann_analysis.pl",
+   "pi": "purity_to_cut_priority/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_boltzmann_analysis.pl",
+   "pi": "qualify_action/5",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_boltzmann_analysis.pl",
+   "pi": "raw_urgency/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_composition.pl",
+   "pi": "composition_rule/3",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_core.pl",
+   "pi": "dr_action/3",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "drl_counterfactual.pl",
+   "pi": "estimate_impact_indexed/5",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "fpn_report.pl",
+   "pi": "ep_band/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "gap_diagnostic.pl",
+   "pi": "gate_description/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "giant_component_analysis.pl",
+   "pi": "action_band/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "giant_component_analysis.pl",
+   "pi": "would_cross_threshold/5",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "invertibility_analysis.pl",
+   "pi": "chi_subband/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "invertibility_analysis.pl",
+   "pi": "predict_rope_snare/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "invertibility_analysis.pl",
+   "pi": "predict_rope_tangled/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "invertibility_analysis.pl",
+   "pi": "predict_snare_tangled/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "invertibility_analysis.pl",
+   "pi": "predict_three_type/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "json_report.pl",
+   "pi": "boltzmann_label/2",
+   "calls": {
+    "testsets": 558,
+    "testsets_haiku": 1920,
+    "testsets_flash": 1920,
+    "testsets_kimi": 2010,
+    "testsets_sonnet": 2002,
+    "archives/datasets/kernel_v1": 2212
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "json_report.pl",
+   "pi": "live_index_label/3",
+   "calls": {
+    "testsets": 253,
+    "testsets_haiku": 960,
+    "testsets_flash": 960,
+    "testsets_kimi": 1005,
+    "testsets_sonnet": 1001,
+    "archives/datasets/kernel_v1": 1106
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "logical_fingerprint.pl",
+   "pi": "categorize_coupling/5",
+   "calls": {
+    "testsets": 708,
+    "testsets_haiku": 1482,
+    "testsets_flash": 2244,
+    "testsets_kimi": 2928,
+    "testsets_sonnet": 3000,
+    "archives/datasets/kernel_v1": 3312
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "logical_fingerprint.pl",
+   "pi": "extraction_zone/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "logical_fingerprint.pl",
+   "pi": "purity_zone/2",
+   "calls": {
+    "testsets": 669,
+    "testsets_haiku": 1476,
+    "testsets_flash": 2004,
+    "testsets_kimi": 2100,
+    "testsets_sonnet": 2790,
+    "archives/datasets/kernel_v1": 3306
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "logical_fingerprint.pl",
+   "pi": "structural_property_holds/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "logical_fingerprint.pl",
+   "pi": "suppression_zone/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "maxent_report.pl",
+   "pi": "entropy_interpretation/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "metric_drift_events.pl",
+   "pi": "drift_severity/3",
+   "calls": {
+    "testsets": 2295,
+    "testsets_haiku": 7643,
+    "testsets_flash": 7680,
+    "testsets_kimi": 9006,
+    "testsets_sonnet": 9996,
+    "archives/datasets/kernel_v1": 13408
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "network_dynamics.pl",
+   "pi": "ep_base_severity/2",
+   "calls": {
+    "testsets": 354,
+    "testsets_haiku": 1224,
+    "testsets_flash": 2347,
+    "testsets_kimi": 1900,
+    "testsets_sonnet": 3108,
+    "archives/datasets/kernel_v1": 3851
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "orbit_report.pl",
+   "pi": "characterize_family/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "probe_oq197_controls.pl",
+   "pi": "status_kind/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "report_generator.pl",
+   "pi": "completeness_to_confidence/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "report_generator.pl",
+   "pi": "omega_severity/2",
+   "calls": {
+    "testsets": 287,
+    "testsets_haiku": 742,
+    "testsets_flash": 968,
+    "testsets_kimi": 1660,
+    "testsets_sonnet": 1196,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "report_generator.pl",
+   "pi": "resolve_omega_source/4",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "routing_sink.pl",
+   "pi": "detector_state/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "appears_as_rope/2",
+   "calls": {
+    "testsets": 181996,
+    "testsets_haiku": 1060975,
+    "testsets_flash": 1100631,
+    "testsets_kimi": 1176828,
+    "testsets_sonnet": 1221359,
+    "archives/datasets/kernel_v1": 1056364
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "capture_disposition/2",
+   "calls": {
+    "testsets": 73953,
+    "testsets_haiku": 266498,
+    "testsets_flash": 410764,
+    "testsets_kimi": 170069,
+    "testsets_sonnet": 492698,
+    "archives/datasets/kernel_v1": 307156
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "claimed_natural/2",
+   "calls": {
+    "testsets": 183928,
+    "testsets_haiku": 1077034,
+    "testsets_flash": 1110957,
+    "testsets_kimi": 1191978,
+    "testsets_sonnet": 1234025,
+    "archives/datasets/kernel_v1": 1057470
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "determine_pure_subtype/2",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "has_viable_alternatives/2",
+   "calls": {
+    "testsets": 274614,
+    "testsets_haiku": 1799557,
+    "testsets_flash": 1651739,
+    "testsets_kimi": 2128168,
+    "testsets_sonnet": 1880159,
+    "archives/datasets/kernel_v1": 1058666
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "resolve_with_perspectival_check/4",
+   "calls": {
+    "testsets": 174756,
+    "testsets_haiku": 1043376,
+    "testsets_flash": 1077421,
+    "testsets_kimi": 1155632,
+    "testsets_sonnet": 1198147,
+    "archives/datasets/kernel_v1": 1024856
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "signature_detection.pl",
+   "pi": "signature_diagnostic_severity/3",
+   "calls": {
+    "testsets": 76,
+    "testsets_haiku": 238,
+    "testsets_flash": 240,
+    "testsets_kimi": 104,
+    "testsets_sonnet": 222,
+    "archives/datasets/kernel_v1": 124
+   },
+   "cold_everywhere": false
+  },
+  {
+   "file": "transition_paths.pl",
+   "pi": "predicted_terminal_state/3",
+   "calls": {
+    "testsets": 0,
+    "testsets_haiku": 0,
+    "testsets_flash": 0,
+    "testsets_kimi": 0,
+    "testsets_sonnet": 0,
+    "archives/datasets/kernel_v1": 0
+   },
+   "cold_everywhere": true
+  }
+ ]
+}

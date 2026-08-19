@@ -1040,7 +1040,7 @@ generate_scenario_for_omega(OID, OType, Desc, C, Gap) :-
 
 %% omega_severity(+OmegaID, -Severity)
 %  Prioritizes omegas by severity/urgency.
-omega_severity(OID, critical) :-
+omega_severity(OID, T) :-
     atom(OID),
     (sub_atom(OID, _, _, _, extraction_blindness)
     ; (narrative_ontology:omega_variable(OID, _, Desc),
@@ -1049,24 +1049,28 @@ omega_severity(OID, critical) :-
        ; sub_atom(Desc, _, _, _, snare)
        ; sub_atom(Desc, _, _, _, 'Snare')
        ; sub_atom(Desc, _, _, _, trap)))
-    ), !.
+    ), !,
+    T = critical.
 
-omega_severity(OID, high) :-
+omega_severity(OID, T) :-
     atom(OID),
     (sub_atom(OID, _, _, _, learned_helplessness)
     ; sub_atom(OID, _, _, _, cut_safety)
     ; narrative_ontology:omega_variable(OID, conceptual, _)
-    ), !.
+    ), !,
+    T = high.
 
-omega_severity(OID, moderate) :-
+omega_severity(OID, T) :-
     atom(OID),
-    narrative_ontology:omega_variable(OID, empirical, _), !.
+    narrative_ontology:omega_variable(OID, empirical, _), !,
+    T = moderate.
 
-omega_severity(OID, low) :-
+omega_severity(OID, T) :-
     atom(OID),
-    narrative_ontology:omega_variable(OID, preference, _), !.
+    narrative_ontology:omega_variable(OID, preference, _), !,
+    T = low.
 
-omega_severity(_, unknown).
+omega_severity(_, T) :- T = unknown.
 
 %% generate_omega_triage/0
 %  Displays omegas organized by severity level.

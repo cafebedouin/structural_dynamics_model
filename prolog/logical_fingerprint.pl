@@ -437,14 +437,17 @@ fingerprint_coupling(C, coupling(Category, Score, CoupledPairs, Compliance, Puri
 %  Converts raw coupling score into categorical coupling level.
 %  Checks for "nonsensical" coupling: strong coupling with no
 %  functional justification (no coordination function declared).
-categorize_coupling(Score, Threshold, _, _, independent) :-
-    Score =< Threshold, !.
-categorize_coupling(Score, _, StrongThreshold, C, nonsensically_coupled) :-
+categorize_coupling(Score, Threshold, _, _, T) :-
+    Score =< Threshold, !,
+    T = independent.
+categorize_coupling(Score, _, StrongThreshold, C, T) :-
     Score > StrongThreshold,
-    \+ narrative_ontology:has_coordination_function(C), !.
-categorize_coupling(Score, _, StrongThreshold, _, strongly_coupled) :-
-    Score > StrongThreshold, !.
-categorize_coupling(_, _, _, _, weakly_coupled).
+    \+ narrative_ontology:has_coordination_function(C), !,
+    T = nonsensically_coupled.
+categorize_coupling(Score, _, StrongThreshold, _, T) :-
+    Score > StrongThreshold, !,
+    T = strongly_coupled.
+categorize_coupling(_, _, _, _, T) :- T = weakly_coupled.
 
 % ============================================================================
 % CONSTRAINT DISCOVERY
@@ -616,10 +619,16 @@ print_fingerprint(C) :-
 %  contaminated thing in the corpus. Fail closed to `unknown` instead. The
 %  `< 0.0` clause MUST follow the `\+ number` clause: the comparison itself
 %  throws on the atom. Exactly 0.0 is a real score and still bands `degraded`.
-purity_zone(S, unknown)      :- \+ number(S), !.
-purity_zone(S, unknown)      :- S < 0.0, !.
-purity_zone(S, pristine)     :- S >= 0.90, !.
-purity_zone(S, sound)        :- S >= 0.70, !.
-purity_zone(S, borderline)   :- S >= 0.50, !.
-purity_zone(S, contaminated) :- S >= 0.30, !.
-purity_zone(_, degraded).
+purity_zone(S, T)      :- \+ number(S), !,
+    T = unknown.
+purity_zone(S, T)      :- S < 0.0, !,
+    T = unknown.
+purity_zone(S, T)     :- S >= 0.90, !,
+    T = pristine.
+purity_zone(S, T)        :- S >= 0.70, !,
+    T = sound.
+purity_zone(S, T)   :- S >= 0.50, !,
+    T = borderline.
+purity_zone(S, T) :- S >= 0.30, !,
+    T = contaminated.
+purity_zone(_, T) :- T = degraded.

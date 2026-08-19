@@ -1252,21 +1252,31 @@ coupling_liveness_fields(C, SV, PV, LiveIndex) :-
 %% live_index_label(+ScopeViolations, +PowerViolations, -Label)
 %  none  — index-invariant on the grid (seat-free w.r.t. observer index;
 %          consistent with a Mountain). scope/power/both — which index is live.
-live_index_label(0, 0, none)  :- !.
-live_index_label(SV, 0, scope) :- SV > 0, !.
-live_index_label(0, PV, power) :- PV > 0, !.
-live_index_label(_, _, both).
+live_index_label(0, 0, T)  :- !,
+    T = none.
+live_index_label(SV, 0, T) :- SV > 0, !,
+    T = scope.
+live_index_label(0, PV, T) :- PV > 0, !,
+    T = power.
+live_index_label(_, _, T) :- T = both.
 
 %% boltzmann_label(+Result, -Label)
 %  Normalize boltzmann compliance term to a simple atom.
-boltzmann_label(compliant, compliant) :- !.
-boltzmann_label(compliant(_), compliant) :- !.
-boltzmann_label(non_compliant, non_compliant) :- !.
-boltzmann_label(non_compliant(_), non_compliant) :- !.
-boltzmann_label(non_compliant(_, _), non_compliant) :- !.
-boltzmann_label(inconclusive(_), inconclusive) :- !.
-boltzmann_label(inconclusive, inconclusive) :- !.
-boltzmann_label(_, unknown).
+boltzmann_label(compliant, T) :- !,
+    T = compliant.
+boltzmann_label(compliant(_), T) :- !,
+    T = compliant.
+boltzmann_label(non_compliant, T) :- !,
+    T = non_compliant.
+boltzmann_label(non_compliant(_), T) :- !,
+    T = non_compliant.
+boltzmann_label(non_compliant(_, _), T) :- !,
+    T = non_compliant.
+boltzmann_label(inconclusive(_), T) :- !,
+    T = inconclusive.
+boltzmann_label(inconclusive, T) :- !,
+    T = inconclusive.
+boltzmann_label(_, T) :- T = unknown.
 
 /* ================================================================
    CONTAMINATION NETWORK (FPN TOPOLOGY)

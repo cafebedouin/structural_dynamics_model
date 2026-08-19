@@ -593,14 +593,18 @@ count_run_ds(_, List, 1, List).
 %  GREEN:  No tensions, no convergent rejections.
 %  YELLOW: Has tensions OR convergent rejections, but no critical mass.
 %  RED:    >= 3 tensions, OR convergent rejection with >= 3 subsystems.
-compute_verdict(_, Rejections, _, red) :-
+compute_verdict(_, Rejections, _, T) :-
     member(convergent_rejection(_, _, Subs), Rejections),
-    length(Subs, N), N >= 3, !.
-compute_verdict(_, _, Tensions, red) :-
-    length(Tensions, N), N >= 3, !.
-compute_verdict(_, [_|_], _, yellow) :- !.
-compute_verdict(_, _, [_|_], yellow) :- !.
-compute_verdict(_, _, _, green).
+    length(Subs, N), N >= 3, !,
+    T = red.
+compute_verdict(_, _, Tensions, T) :-
+    length(Tensions, N), N >= 3, !,
+    T = red.
+compute_verdict(_, [_|_], _, T) :- !,
+    T = yellow.
+compute_verdict(_, _, [_|_], T) :- !,
+    T = yellow.
+compute_verdict(_, _, _, T) :- T = green.
 
 /* ================================================================
    VERDICT JOIN (OQ-98)
@@ -751,8 +755,9 @@ join_alerts(C, Alerts) :-
     ;   Alerts = MisAlerts
     ).
 
-mismatch_source(perspectival_incoherence, perspectival) :- !.
-mismatch_source(_, claim_mismatch).
+mismatch_source(perspectival_incoherence, T) :- !,
+    T = perspectival.
+mismatch_source(_, T) :- T = claim_mismatch.
 
 %% severity_floor(+Severity, -Floor)
 %  informational carries NO floor (the clause set is closed on purpose:

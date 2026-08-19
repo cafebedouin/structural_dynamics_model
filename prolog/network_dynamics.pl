@@ -280,10 +280,13 @@ network_drift_severity(C, Context, Severity) :-
 %% ep_base_severity(+EP, -Severity)
 % OQ-60 (R3 dispositive): effective_purity can be `unknown` (no-data). A severity
 % band is a VERDICT — it abstains rather than fabricating `watch` from absence.
-ep_base_severity(EP, undetermined) :- \+ number(EP), !.
-ep_base_severity(EP, critical) :- EP < 0.30, !.
-ep_base_severity(EP, warning) :- EP < 0.70, !.
-ep_base_severity(_, watch).
+ep_base_severity(EP, T) :- \+ number(EP), !,
+    T = undetermined.
+ep_base_severity(EP, T) :- EP < 0.30, !,
+    T = critical.
+ep_base_severity(EP, T) :- EP < 0.70, !,
+    T = warning.
+ep_base_severity(_, T) :- T = watch.
 
 %% escalate_severity(+Base, -Escalated)
 escalate_severity(watch, warning).

@@ -35,7 +35,19 @@ non-recursive glob; a second directory can be passed to run_dispatch_head_check/
 */
 
 :- module(dispatch_head_check, [run_dispatch_head_check/0, run_dispatch_head_check/1,
-                                scan_file/2]).
+                                scan_file/2, scan_file_clauses/2]).
+
+%% scan_file_clauses(+File, -Clauses) is det.
+%  The ORDERED clause list this file already builds internally, exposed so a consumer can
+%  ask clause-ORDER questions (which cut does a bound query at atom A skip?) without minting
+%  a second reader of the same source — Pattern 2. Clauses = [Name/Arity-clause(Args,HasCut)]
+%  in reading order. Additive: scan_file/2 and the walker are untouched.
+scan_file_clauses(File, Clauses) :-
+    setup_call_cleanup(
+        open(File, read, S),
+        read_all_terms(S, Terms, 0, _NErr),
+        close(S)),
+    collect_clauses(Terms, Clauses).
 
 run_dispatch_head_check :-
     module_property(dispatch_head_check, file(Self)),
