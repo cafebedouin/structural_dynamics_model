@@ -1,23 +1,25 @@
-# OQ-303(a) — class-B conversion rollout: Phase 1 landed zero-diff on six legs; the clause-order census says the latent exposure is 165 of 218, not zero
+# OQ-303(a) — class-B conversion rollout: Phase 1 landed zero-diff on six legs, then the batch of 55 moved the corpus and was reverted — the `latent-B` label does not license the template
 
 **Executed:** 2026-08-18 → 2026-08-19 (directory dated to the open)
 **OQ:** OQ-303 (arm (a))
-**Verdict:** `signature_grade/2` — the one `live-output-path` row — is converted, and its
-six-leg clean-vs-edited pair reads **0 changed constraints over 5,311**, so the pre-declared
-**Ω_P escalation DECLINED**: the conversion is Ω_E and discharged. The census answering the
-second carry found the latent exposure is **not** zero — **165 of 218 (predicate, atom) pairs
-across 57 of 58 predicates** are hazardous-if-called-bound today, held back solely by the fact
-that nobody calls them bound. **STATUS: IN PROGRESS** — Phases 3–4 (the 55 batch, then the 2
-`converts-clean-minus-dataflow` rows) are OPEN; nothing is merged to `main`.
+**Verdict:** Phase 1 landed: `signature_grade/2` converted, six-leg pair **0 changed
+constraints over 5,311**, so the pre-declared **Ω_P escalation DECLINED** and that conversion is
+Ω_E, discharged. **Phase 3 is HALTED and REVERTED**: the batch of 55 passed every structural
+check it owed and moved the corpus on all six legs (129/279 up to 1106/1106). A per-file bisect
+attributed all of it to two rows whose last argument is an **INPUT, not an output** — the
+class-B template is invalid there, and both were misfiled `latent-B` in the 2026-08-17 registry.
+**The finding is not "two bad rows": it is that the `latent-B` label does not license the
+template on its own**, which is the premise the whole batch rested on. A mechanical
+candidate-finder flags 23 of the 58; 2 are confirmed, 21 need adjudication. **STATUS: HALTED**
+— Phase 4 not begun; nothing merged to `main`; this needs an operator ruling.
 **Substrate:** six legs — `testsets` (n=279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) =
 5,311 constraints. Clean half at `code_commit` 2f459d3a, edited half at 6c1bfa44, corpus md5
 identical per leg across halves. swipl 10.0.2.
-**Fired:** live — the census's pre-registered control fired on the census itself (its first
-version reported steal-risk 0 for both of `signature_grade/2`'s atoms, contradicting Unit A's
-five-leg measurement), and the transformer's selftest fired three times on the transformer
-before it touched a tracked file. The conversion itself flipped 29–33 over-permissive
-`commentary` answers per leg into agreement with the engine, with zero consumer-visible change.
+**Fired:** live — the batch six-leg pair caught a conversion that every structural check
+called clean and that would have silently changed 129–1106 constraints per leg on a live output
+surface. Also live: the census's pre-registered control fired on the census itself, and the
+transformer's selftest fired three times on the transformer before it touched a tracked file.
 **Evidence map:**
 
 | artifact | what it is | which claim it witnesses |
@@ -30,6 +32,9 @@ before it touched a tracked file. The conversion itself flipped 29–33 over-per
 | `clause_order_census.pl`, `clause_order_census.py` | the steal-risk census + its fail-closed control | §3 |
 | `clause_order_census.md`, `clause_order_census_raw.txt` | the census table and raw output | §3 |
 | `convert.py` | the template transformer with adversarial parse fixtures | §4 |
+| `bisect_batch.py`, `bisect_batch.json` | per-file attribution of the batch diff, with an all-reverted control | §7 |
+| `inputkey_screen.py`, `inputkey_screen.json` | the cut-first candidate-finder + its two-sided naturally-arising controls | §8 |
+| `sixleg_diff_batchclean_vs_batchedited.txt` | the batch diff | §7 |
 | `../2026-08-18_bound_caller_rewitness/` | Unit A: the partition this unit executes | inputs |
 
 ---
@@ -121,11 +126,68 @@ because the failure was *loud and correct* — the harness refused rather than e
 — and still cost a full run to discover, since nothing about the default announced that it was
 sized for one leg out of six.
 
-## 6. Residue — what is OPEN
+## 7. Phase 3 — the batch moved the corpus, and every structural check said it would not
 
-- **Phase 3: the 55 `converts-clean` rows.** Not started. Owed: `convert.py --all`, census → 0
-  of 218, six-leg pair, gate, Prolog suites, registry entries retired in the same change.
-- **Phase 4: the 2 `converts-clean-minus-dataflow` rows** (`json_report.pl`
-  `boltzmann_label/2`, `live_index_label/3`), deliberately last — least evidence behind them.
+292 clauses across 28 files. Post-conversion: 0 atom-headed output clauses remained across all
+57 predicates (2 compound-headed, declared), `dispatch_head_check` dropped 69 → 12 hits, the
+gate was GREEN, the OQ-137 totality gate passed 10/10. Then:
+
+```
+testsets 129/279 | haiku 640/960 | flash 504/960 | kimi 1005/1005 | sonnet 538/1001 | kernel_v1 1106/1106
+```
+
+Corpus md5 identical per leg across halves; code state different. **This is the entire case for
+running the six-leg pair on the batch rather than the prereg's one-leg floor:** every check
+internal to the change passed. Only the corpus dissented.
+
+Per-file bisect, with an all-reverted control that reproduces the baseline exactly (so the
+attribution measures conversions, not drift): **2 of 29 files**, `abductive_helpers.pl` (129,
+`seat_overrides/2`) and `boltzmann_compliance.pl` (17, `expected_power_divergence/4`).
+
+## 8. The mechanism, and why it is bigger than two rows
+
+```prolog
+seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
+expected_power_divergence(powerless, institutional, _, _) :- !.
+```
+
+Neither last argument is an output. The first is a semidet test keyed on the signature; the
+second is a pure semidet test with no output at all. Converted,
+`seat_overrides(C, T) :- !, guard, T = false_ci_rope.` matches **every** second argument, cuts,
+and makes every later clause unreachable.
+
+`dispatch_head_check.pl:9-11` states the violated assumption in its own header — *"OUTPUT
+ARGUMENT is taken to be the LAST argument, by engine convention. This is a declared assumption,
+not a fact about every predicate"* — and the registry already carries the exception class,
+`input-key`. These two were filed `latent-B`.
+
+**Unit A's partition inherited the misclassification, and could not have caught it.**
+`converts-clean` means "no bound caller under both instruments" — a question that *presupposes*
+the last argument is an answer. Both arms answered it correctly and the answer was irrelevant.
+
+**The screen.** A clause whose body's FIRST goal is `!` commits before testing anything, so it
+is selecting on its head arguments. `scan_file_clause_shapes/2` (additive export, no second
+walker) + `inputkey_screen.py`, controls naturally arising and asserted in-process: fires on
+both corpus-attributed rows, declines on `signature_grade/2`. **It flags 23 of 58.**
+
+**It is a candidate-finder, not a verdict.** A cut-first clause can still have a genuine output
+last argument — `characterize_family/2` cuts first but selects on argument 1, so its last
+argument really is a description to compute. 2 confirmed, **21 unadjudicated**. Only the 2 are
+reclassified `input-key`; reclassifying 21 on a candidate-finder's say-so would be the same
+error in the other direction.
+
+## 9. Residue — what is OPEN
+
+- **Phase 3 is HALTED and reverted.** It needs an operator ruling, not a retry: 21 rows carry
+  the input-key tell and are unadjudicated, and adjudicating "is this last argument an output?"
+  is a per-row reading, not a mechanical pass. The prereg's §5 licence ("template application,
+  no six-leg run each") was written on the assumption the class was uniform; it is not.
+- **A defensible partial exists and I did not take it:** the 35 rows the screen does not flag
+  all showed `changed=0` in the per-file bisect, so converting those alone is supported by both
+  the structural screen and the corpus attribution. I left it for the ruling because the reason
+  the batch was licensed in the first place has been falsified, and re-deriving a narrower
+  licence from my own screen is exactly the move that should need a second party.
+- **Phase 4 not begun** (`json_report.pl` `boltzmann_label/2`, `live_index_label/3` — both are
+  in the flagged 23, so they were never as safe as `converts-clean-minus-dataflow` suggested).
 - **Nothing merged to `main`.** Branch `oq303-classb-rollout`.
 - **`caller_sweep.py` is not retired by any of this**, and OQ-303(c) is untouched.

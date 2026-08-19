@@ -14063,6 +14063,32 @@ exclusion), and the genuinely unmeasured residue is runtime-computed selectors o
 spots* — both blind spots are demonstrated and populated in the partition itself. Conversions
 themselves are still unstarted.
 
+**(a) ROLLOUT HALTED 2026-08-19 — the `latent-B` label does NOT license the conversion
+template, and that needs a ruling** (`audits/2026-08-18_classb_conversion_rollout/`).
+`signature_grade/2` converted cleanly (six-leg clean-vs-edited pair: **0 changed constraints
+over 5,311**; the pre-declared Ω_P escalation DECLINED, so that row is Ω_E discharged; landed).
+The **batch of the remaining 55 was reverted**: it passed every structural check it owed —
+292 clauses, 0 atom-headed output clauses left, `dispatch_head_check` 69→12, gate GREEN, OQ-137
+totality 10/10 — and moved the corpus on all six legs (129/279 testsets … 1106/1106 kernel_v1).
+A per-file bisect (all-reverted control reproduces the baseline exactly) attributed **all** of it
+to 2 files: `abductive_helpers.pl seat_overrides/2` and
+`boltzmann_compliance.pl expected_power_divergence/4`. **Neither predicate's last argument is an
+OUTPUT** — the first is a semidet test keyed on the signature, the second a pure semidet test —
+so `p(C, sig) :- !, guard.` becomes `p(C, T) :- !, guard, T = sig.`, matching EVERY second
+argument, cutting, and making every later clause unreachable. Both were misfiled `latent-B`;
+they are now `input-key`. `dispatch_head_check.pl:9-11` states the violated assumption in its own
+header, and **Unit A's partition inherited it and could not have caught it** — `converts-clean`
+answers "no bound caller", which presupposes the last argument is an answer at all.
+**Mechanical candidate-finder** (`inputkey_screen.py`; tell = a clause whose body's FIRST goal is
+`!`, i.e. it commits before testing, so it selects on its head args; controls fire on both
+attributed rows and decline on `signature_grade/2`): **23 of 58 flagged, 2 confirmed, 21
+UNADJUDICATED**. It is a candidate-finder, not a verdict — a cut-first clause can still have a
+real output last argument (`characterize_family/2` selects on arg 1), so the 21 are not
+reclassified. **The ruling needed:** the 35 unflagged rows all read `changed=0` in the per-file
+bisect and are convertible on both the screen and the corpus, but the licence that authorised the
+batch has been falsified, so re-deriving a narrower one from this unit's own screen is the
+operator's call, not the executor's. Branch `oq303-classb-rollout`, unmerged.
+
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,
 single-sided unification, or **`:- det/1`** determinism declarations. The framing OQ does
