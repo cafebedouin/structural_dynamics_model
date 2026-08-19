@@ -1,22 +1,22 @@
 {
   "manifest": {
-    "store_version": "883d4067d2e0aaaa1baaede5f5f26122889e5ed0",
+    "store_version": "6d0e020feb3e7f199faf3ddf093965e89b80553b",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-18T18:39:32"
+    "generated_at": "2026-08-18T19:36:59"
   },
-  "issues_sha": "ae7262911579cacea9da87d53196c36b301c8f6605e36e8c6081e27c5b546e74",
-  "n_entries": 320,
+  "issues_sha": "10cd5308edd2f39272d5f9fd0da288726ddbcd73d675a95349e49e57696eb689",
+  "n_entries": 324,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 155,
+    "resolved": 156,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 126,
+    "open": 129,
     "partial": 8
   },
   "active": [
@@ -1746,21 +1746,9 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-68"
-      ]
-    },
-    {
-      "id": "OQ-308",
-      "status": "open",
-      "priority": 4,
-      "summary": "Corpus-schema predicates have no arity/shape assertion: OQ-68 made the blast radius enumerable, not safe",
-      "deps": [
-        "splits_from OQ-68"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-66",
-        "OQ-68"
+        "OQ-68",
+        "OQ-308",
+        "OQ-322"
       ]
     },
     {
@@ -1926,6 +1914,63 @@
         "OQ-25",
         "OQ-44",
         "OQ-296"
+      ]
+    },
+    {
+      "id": "OQ-321",
+      "status": "open",
+      "priority": 3,
+      "summary": "17 of the 18 live-read, zero-written schema predicates have never been checked for absence-safety, and each now carries a row that reads as inspected",
+      "deps": [
+        "splits_from OQ-308",
+        "blocked_on OQ-66"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-308"
+      ]
+    },
+    {
+      "id": "OQ-322",
+      "status": "open",
+      "priority": 5,
+      "summary": "`theater_ratio` has four spellings and the narrative_ontology one is a dead fork",
+      "deps": [
+        "splits_from OQ-308"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-307",
+        "OQ-308"
+      ]
+    },
+    {
+      "id": "OQ-323",
+      "status": "open",
+      "priority": 4,
+      "summary": "`scenario_manager` invents shape in a namespace it does not own, and four more members are dead",
+      "deps": [
+        "splits_from OQ-308",
+        "bundled_with OQ-322"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-308",
+        "OQ-322"
+      ]
+    },
+    {
+      "id": "OQ-324",
+      "status": "open",
+      "priority": 3,
+      "summary": "static ≠ loaded: the default `run_pipeline` path has no `Loaded == glob_count` assertion",
+      "deps": [
+        "splits_from OQ-308"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-308"
       ]
     }
   ],
@@ -2441,7 +2486,8 @@
         "OQ-45",
         "OQ-113",
         "OQ-251",
-        "OQ-296"
+        "OQ-296",
+        "OQ-308"
       ]
     },
     {
@@ -4521,6 +4567,23 @@
         "OQ-317",
         "OQ-318",
         "OQ-319"
+      ]
+    },
+    {
+      "id": "OQ-308",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "Corpus-schema predicates have no arity/shape assertion: OQ-68 made the blast radius enumerable, not safe",
+      "deps": [
+        "splits_from OQ-68"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-68",
+        "OQ-321",
+        "OQ-322",
+        "OQ-323",
+        "OQ-324"
       ]
     },
     {

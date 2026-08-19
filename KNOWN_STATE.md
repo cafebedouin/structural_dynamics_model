@@ -45,6 +45,105 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-18 — TRIPWIRE: `prolog/schema_shape.txt` is anchored on the DECLARATION set (63), not on the 40 corpus-schema rows
+**Files:** prolog/schema_shape.txt, python/module_boundary_check.py, prolog/module_boundary_allowlist.txt, prolog/narrative_ontology.pl, prolog/scenario_manager.pl, scripts/gate.sh
+**Tier:** tripwire
+
+**The silent mistake this prevents:** adding a `:- multifile narrative_ontology:P/N` or `:- dynamic
+narrative_ontology:P/N` declaration ANYWHERE in the repo without adding a `schema_shape.txt` row in
+the same change. The gate goes RED and the message is clear, so this is loud once you run it — but
+the tripwire is for the step BEFORE that: **do not assume the register is the 40 `ROLE=corpus-schema`
+allowlist rows.** It is the repo-wide resolved declaration set, 63 members, and 23 of them have no
+allowlist row *and correctly should not*. Adding a corpus-schema row for one of those 23 to "fix"
+a perceived gap breaks arm E's derivation check, which enforces `row IFF a story file writes that
+qualified head`, keyed name/arity (`measurement/5` says nothing about `measurement/2`).
+
+**Second silent mistake:** the register is COMPUTED by scanning every non-tests module, never read
+from a list. Do not "optimize" it into a named-module scan. Measured: a `narrative_ontology.pl`-only
+anchor finds 57 and misses six — `measurement/2` and `intent_fact/4` (`scenario_manager.pl`),
+`cs_authority_grounding/2`, `cs_interpretation_layer_present/1`, `cs_kernel_codification/2`
+(`cs_pattern_detection.pl`), `cs_kernel_id/2` (`cs_kernel_registry.pl`). That totality is the whole
+escape-removal guarantee; a named list re-opens the opt-in escape invisibly.
+
+**Third:** `--full` is RETIRED. `--check` scans all five legs and is a strict superset. It still
+accepts `--full` with a note rather than dying, so an old invocation works.
+
+**What is enforced vs documented:** 54 of 162 declared argument positions are checked by arm F
+(closed `{a,b,c}` sets, `number`, `text`); the other 108 (`open`/`cid`/`atom`/`compound`) are
+documentation. Do not cite a green arm F as evidence that an `open` position was validated.
+
+**And arms F and G are DRIFT RATCHETS, not specifications** — transcribed from the corpus as it
+stands. Green means the schema has not changed unnoticed, not that it is right.
+
+Provenance: OQ-308 (resolved), `audits/2026-08-18_oq308_schema_shape/`, commits `c2aa6a67`,
+`3d9c221c`, `1db3ba01`, `1b2f9d9c`, `6d0e020f`. Residues: OQ-321/322/323/324.
+
+## 2026-08-18 — CORRECTION-KEY: how the OQ-308 numbers may be cited, and three plan counts that did not reproduce
+**Files:** prolog/schema_shape.txt, python/module_boundary_check.py, ISSUES.md
+**Tier:** correction-key
+
+**Citable as measured (2026-08-18, HEAD `d0caef57`→close):** register 63; 40 written / 23 rowless;
+15 multi-module members (10 `scenario_manager`, 4 `cs_axiom_engine`, 1 `data_repair`); 162 declared
+argument positions, 54 enforced; 60,642 distinct authored values compared; 4,205 story files over
+five legs (279/960/960/1005/1001); allowlist 117 rows; selftest 50.
+
+**Three counts in the OQ-308 plan are WRONG and must not be re-cited:**
+1. *"only 3 readerless: `coupling_profile/2`, `input_vector/2`, `theater_ratio/2`"* — it is **five**;
+   `attribute/3` and `intent_fact/4` join them. Verified with a positive control (the same probe
+   fires on `update_authority`).
+2. *"a named-module scan gives 61; the delta is `cs_axiom_engine.pl` (4) and `intent_fact/4`"* —
+   `cs_axiom_engine`'s four are ALSO declared in `narrative_ontology.pl`, so excluding that module
+   loses DECL sites and **zero members**. The real delta of a `narrative_ontology`-only anchor is
+   **six members from three other modules**. The escape is wider than the plan estimated.
+3. *"arm H fires on two real in-tree sites (`constraint_claim/3`, `measurement/2`)"* — neither is an
+   arity skew; both arities are genuinely declared, so arm H never sees them. Arm H's one live
+   finding is a different fact: `tests/axis_boundary_ctl_payload_widen.pl:12` calling
+   `cs_axiom_foreclosed/2`, which resolves at **no** arity anywhere, and is a deliberate fixture.
+   The exemption registry is therefore `SCHEMA_ARITY_EXEMPT`, **not** `SCHEMA_ARITY_ALIASES`.
+
+**Also did not reproduce:** the plan's `--full` timing ("4.3s / 36s; the 1.4s/13s comment is stale")
+measured 1.35s/14.4s at open — the existing comment was nearly right. And the `PATH=` prefix the plan
+called moot was already absent from `gate.sh`.
+
+**How arm E's control quality may be cited.** Arm E has two checks at two altitudes and the strong one
+does not cover the weak one. Anchor resolution: **naturally arising, two-sided** (57 vs 63, declining
+on nothing). Derivation: **fixtures only, and unavoidably so** — the rule was derived from the
+substrate it checks, so an in-tree positive is unavailable BY CONSTRUCTION, the same circularity as
+arm F's declared sets. Cite the derivation half at fixture altitude, never at the anchor's.
+
+**Step 0 is the pass's only falsifier.** Correction (b)'s IFF rule replaced a first rule that was
+wrong; the register design rests on it. A non-empty disagreement set on the 40 means the FOUNDATION
+is broken, not a row — re-derive the rule, do not repair rows. Measured 0/0 on sets, committed at
+`c2aa6a67` before any authoring.
+
+## 2026-08-18 — LANDED: three parser defects in `module_boundary_check.py`, one of them a disarmed control
+**Files:** python/module_boundary_check.py
+**Tier:** landed
+
+1. **Bracket blindness** (`1db3ba01`). `_scan_args`'s `saw` flag was not set by `[` or `]`, so a term
+   whose arguments are all bracket structures — `adjacent_pairs([], [])` — scanned as arity **0**.
+   32 of 29,447 engine open-parens; 17 phantom `/0` entries left `defined_preds`, 0 true arities were
+   added (each predicate's other clauses already supplied them). **Latent, not live:** no reported set
+   moved, but the phantoms are load-bearing for `closure_arity`, whose first branch is
+   `if (pred, 0) in pool: return 0`.
+2. **A clause-body GOAL counted as a clause HEAD** (`1b2f9d9c`). 810 occurrences across 270 files, all
+   `constraint_metric/3`, all inside plunit test bodies. Arm C never noticed — it asks only whether
+   the pair appears, and that predicate has 20,895 genuine heads, so the key set and every per-file
+   count are unchanged. Arm F **would** have: it harvested the Prolog variable `ExtMetricName` as an
+   authored value of argument 2.
+3. **An existing control was DISARMED by fix 2, not broken by it.** The naive-parser fixture's only
+   discriminating element (`ghost_pred` in a block comment) became preceded by `:` rather than `.`,
+   so the clause-start guard excluded it from BOTH sides and the two parsers agreed. It would have
+   stayed green while testing nothing. Repaired with a second head at a genuine clause start, and
+   re-checked to actually differ. **Its label was also wrong** and is corrected: it read "mis-parses
+   the multi-line fact", but the multi-line fact parses identically under both strippers — the block
+   comment was always its whole content.
+
+**The general lesson, which is why this is `landed` and not `history`:** a change that tightens a
+parser can silently disarm a control that depended on the looser behaviour, and a disarmed control is
+indistinguishable from a passing one. When tightening a shared parser, re-check that every fixture
+depending on it still DISCRIMINATES — not merely that it still passes.
+
 ## 2026-08-18 — OQ-311 Item 1: §2.3's type-concentration claim withdrawn as unwitnessed; range-robustness survives
 **Files:** docs/observers_not_humans_v6.md, python/sweeps/range_sweep.py, docs/project_orientation.md, docs/project_orientation_web.md, docs/lawvere_glossary.md, ISSUES.md
 **Tier:** landed

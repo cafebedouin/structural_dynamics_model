@@ -678,19 +678,37 @@ Note the write direction cuts both ways: a store the module owns but an **outsid
 wants a **write** accessor, not a read one (`diagnostic_summary:maxent_attempt_reset/0` +
 `maxent_mark_attempted/1`, whose caller is `json_report`).
 
-Declared bypasses live in **`prolog/module_boundary_allowlist.txt`** (116 rows; grammar
+Declared bypasses live in **`prolog/module_boundary_allowlist.txt`** (117 rows; grammar
 `mod:pred/arity  ROLE=<role>  <reason>`, reason REQUIRED). The guard is
-`python/module_boundary_check.py`, gate row **`module bounds`**, four arms: **A** every
-non-exported cross-module reference has a row; **B** every `ROLE=corpus-schema` row has a
-**production-side** `:- multifile`; **C** every `narrative_ontology:P(...)` head a testset
-writes has a row; **D** a schema predicate declared for load-correctness but unwired goes RED
-the moment it **acquires a consumer** — because declaring it turned it from *undefined*
-(throws) into *defined-but-empty* (fails silently) on legs with no writers, and the first
-consumer must decide what an empty read means there. Standing run scans the default leg (~1.4s); `--full` does all five (~13s)
-and the GREEN line always prints which legs were scanned.
+`python/module_boundary_check.py`, gate row **`module bounds`**, **eight** arms. Over the
+allowlist: **A** every non-exported cross-module reference has a row; **B** every
+`ROLE=corpus-schema` row has a **production-side** `:- multifile`; **C** every
+`narrative_ontology:P(...)` head a testset writes has a row; **D** a schema predicate declared
+for load-correctness but unwired goes RED the moment it **acquires a consumer** — because
+declaring it turned it from *undefined* (throws) into *defined-but-empty* (fails silently) on
+legs with no writers, and the first consumer must decide what an empty read means there.
 
-**If you add a corpus-schema predicate, it needs BOTH a `:- multifile` in
-`prolog/narrative_ontology.pl` AND an allowlist row, in the same change.** Registration is
+Over **`prolog/schema_shape.txt`** (added by OQ-308, 2026-08-18): **E** two-way closure against
+the register, plus the allowlist derivation as an IFF and a `DISPOSITION=` requirement for dead
+members; **F** authored-value conformance on enforced argument shapes; **G** declared per-leg
+emptiness against the head census; **H** a `narrative_ontology:P/N` reference whose arity the
+namespace does not resolve. One run scans all five legs (~16.7s) and the GREEN line prints which;
+**`--full` is retired** (accepted with a note, `--check` is a strict superset).
+
+**`schema_shape.txt` is anchored on the DECLARATION set, not the corpus-schema rows.** Its
+register is every `(name, arity)` declared `:- multifile`/`:- dynamic` into `narrative_ontology`
+by any non-tests module — **63 members, computed by scanning, never a list**. The 40 corpus-schema
+allowlist rows are a **derived view**: a row exists there IFF a story file writes that qualified
+head, keyed name/arity (`measurement/5` says nothing about `measurement/2`). **23 register members
+correctly have no allowlist row** — do not add one to close a perceived gap; arm E will red.
+Do not narrow the scan to named modules: `narrative_ontology.pl` alone finds 57 and misses six.
+**Arms F and G are drift ratchets, not specifications** — green means the schema has not changed
+unnoticed, not that it is right; 54 of 162 argument positions are enforced, the rest documentation.
+
+**If you add a corpus-schema predicate, it needs a `:- multifile` in
+`prolog/narrative_ontology.pl`, an allowlist row, AND a `schema_shape.txt` row, in the same
+change.** (A declaration that no story writes needs the `schema_shape.txt` row only — arm E
+requires it, and arm E's derivation check forbids the allowlist row.) Registration is
 opt-in — the same silent-escape shape as `reading_registry` registration and the spec-enum
 sentinels. Two things that look like they defend a schema predicate and do not:
 

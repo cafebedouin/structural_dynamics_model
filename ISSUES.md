@@ -1319,6 +1319,14 @@ Kernel_v1-regime evidence (404 NL certs = "no beneficiary authored") in git hist
 **Still-operative pointer:** auditing whether any NL constraint hides a real winner is a content
 re-audit — OQ-45, not engine maintenance.
 
+**Registered by OQ-308 (2026-08-18), forward-looking.** `intent_power_change/3` — the predicate
+whose corpus-wide absence made this gate satisfiable by absence — now carries a row in
+`prolog/schema_shape.txt` with `LEGS=all:empty` and a reason naming this OQ. **The moment any
+story authors it, arm G goes RED on that row.** That is wanted: it is the signal that the
+condition this entry closed over has changed. Whoever sees that red should read it as the
+tripwire firing, not as a regression, and the fix is a `schema_shape.txt` edit in the same
+change.
+
 ## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
 
 **Ω-type:** Ω_C (design choice — the engine-wide fail-closed-on-absence policy; decided once for OQ-41/36/37/43).
@@ -14082,56 +14090,73 @@ than merely green. Owes a clean-vs-edited pair on landing.
 
 ---
 
+**Implicated by OQ-308 (2026-08-18).** `constraint_claim/3` is registered in
+`prolog/schema_shape.txt`: declared, authored by **zero** story files on all five legs, and
+reached only from this site. Two consequences for whoever picks this up. (1) Arm H does **not**
+flag it — the arity is genuinely declared, so an arity check never sees it; the OQ-308 plan
+predicted arm H would fire here and that prediction did not reproduce. (2) The site is
+implicated in OQ-322's fork census, because a `/3` view whose third argument the rule ignores is
+the same shape as `theater_ratio`'s extra spelling. Fixing this carries a `schema_shape.txt`
+edit.
+
 ## OQ-308 — Corpus-schema predicates have no arity/shape assertion: OQ-68 made the blast radius enumerable, not safe
 
 **Ω-type:** Ω_C (validation design — where the assertion lives is a design choice).
 
-**Status:** open
+**Status:** resolved — 2026-08-18. `prolog/schema_shape.txt` (63 rows) + arms E–H in
+`python/module_boundary_check.py`, all on `--check` over all five legs; `--full` retired.
 **Priority:** 4
 **Deps:** splits_from OQ-68
-**Origin:** 2026-08-18, declared as residue at the OQ-68 close rather than folded into it
-(out of scope by ruling, not scope creep).
-**Files:** `prolog/validation_suite.pl` (proposed home), `prolog/narrative_ontology.pl`
-(the schema block), `prolog/module_boundary_allowlist.txt` (the 40 `ROLE=corpus-schema` rows
-are the worklist).
+**Origin:** 2026-08-18, declared as residue at the OQ-68 close rather than folded into it.
 
-**The gap.** OQ-68 closed the question of whether a cross-module qualified read is
-*declared*. It did nothing about whether the read is *correct*. `constraint_stakeholder/7`
-changing arity still fails silently at all of its read sites, and neither `multifile` nor
-exporting helps: `multifile` governs clause accumulation, not shape, and a qualified call to
-a wrong arity is simply a different predicate that quietly has no clauses. The allowlist
-knows the set of 40 schema predicates but asserts nothing about their arguments.
+**Resolution.** The register is NOT the 40 `ROLE=corpus-schema` allowlist rows. It is the
+**repo-wide resolved declaration set (63)** — every `(name, arity)` declared `:- multifile` or
+`:- dynamic` into `narrative_ontology` by any non-tests module — **computed by scanning, never
+read from a list**. That totality is the escape-removal guarantee: a declaration landing in a
+seventh module becomes a member with nobody adding it, and arm E reds until it has a row. The
+allowlist's corpus-schema rows are a **derived view**, their rule (`row IFF a story file writes
+that qualified head`, keyed name/arity) re-checked by arm E in both directions. 23 members are
+correctly rowless.
 
-**Shape of the mechanism.** An arity/shape assertion over the schema set in
-`validation_suite` — for each corpus-schema predicate, the declared arity and (where the
-value space is closed) the legal argument atoms, checked against what the corpus actually
-loaded. The 40 allowlist rows and the `narrative_ontology` multifile block are both already
-machine-readable, so the registry exists; what is missing is the assertion and its failure
-semantics.
+Arms: **E** closure + derivation + a `DISPOSITION=deletion-candidate` requirement so `all:empty`
+cannot mean both "unauthored so far" and "dead"; **F** authored-value conformance on 54 of 162
+declared argument positions (the other 108 are documentation, and the file says which is which);
+**G** declared per-leg emptiness vs the head census, membership from the anchor and never from
+head presence; **H** a reference whose arity the namespace does not resolve.
 
-**Design question to settle first (the reason this is Ω_C, not Ω_E).** Fail-closed on an
-arity mismatch is the obvious posture, but the corpus is a *test bed* under an evolving
-schema (CLAUDE.md: schema changes are encouraged pre-rebuild and exercised on `testsets/`),
-so a hard gate would fire on exactly the experimentation the leg exists for. Candidate
-resolution: hard-fail on the twin legs, report-only on `testsets/`. That is a seat, not a
-fact — the operator's call.
+**Arms F and G are DRIFT RATCHETS, not specifications** — transcribed from the corpus, so a
+green F/G means the schema has not changed unnoticed, not that it is right. In both docstrings.
 
-**Watch for the shape this shares with its siblings:** registration is opt-in, so a NEW
-schema predicate is unguarded until someone adds it — the same silent-escape as
-reading-registry registration, the spec-enum sentinels, and OQ-68 arm C itself.
+**Step 0 was the pass's only falsifier**, and it is the entry point for anyone who later finds a
+disagreement: correction (b)'s IFF rule replaced a first rule that was wrong, and the register
+design rests on it, so a non-empty disagreement set on the 40 means the FOUNDATION is broken,
+not a row — re-derive the rule, never repair a row. Measured 0/0 on sets over all five legs,
+committed at `c2aa6a67` before any authoring.
 
-**Folded in at the OQ-68 close (2026-08-18): absence semantics, not just shape.** Declaring a
-schema predicate turns it from UNDEFINED (a call throws `existence_error`) into
-DEFINED-BUT-EMPTY (a call fails silently) on any leg with no writers — the OQ-66 shape, where
-a consumer measuring *nothing* is indistinguishable from one measuring *zero*. So the
-assertion this OQ designs must cover **which legs a predicate is expected to be non-empty on**,
-not only its arity: `flat_control_of/2` is legitimately 0 on the four twin legs and
-legitimately 28 on `testsets/`, and only an authored expectation can tell those apart from a
-load failure. Interim mitigation in place: `module_boundary_check` arm D fires when an unwired
-schema predicate acquires its first consumer, forcing that decision at the moment it matters;
-it does not, and cannot, check per-leg expectations — that is this OQ's job.
+**Arm E's derivation half ships on FIXTURES ONLY and cannot do otherwise:** the rule was derived
+from the substrate it checks, so an in-tree positive is unavailable **by construction**, the same
+circularity as arm F's declared sets. Recorded because arm E's *other* half (anchor resolution)
+has a naturally-arising two-sided control — 57 vs 63, declining on nothing — and unstated the
+contrast reads as an oversight rather than a structural limit.
 
+**Three plan counts corrected by measurement:** the readerless stratum is **5**, not 3
+(`attribute/3` was missed); the anchor delta is **6 members from three modules**, not 5 including
+`cs_axiom_engine.pl` (whose four are also declared in `narrative_ontology.pl` and contribute zero
+member delta); and arm H's two predicted arity skews **do not exist as skews** — both are
+genuinely declared, so the exemption registry is `SCHEMA_ARITY_EXEMPT`, not `SCHEMA_ARITY_ALIASES`.
 
+**Also fixed, each with its own commit and witness:** the arity scanner's bracket blindness (32
+mis-parses, 17 phantom `/0` entries — latent, `closure_arity` reads them); a clause-body GOAL
+counted as a clause head (810 occurrences, and the reason arm F would have conformed a Prolog
+variable); and an existing naive-parser control found **disarmed** by that guard — green while
+testing nothing — repaired and its mislabelled description corrected.
+
+**Evidence:** `audits/2026-08-18_oq308_schema_shape/` (WRITEUP.md + per-arm controls + the step-0
+witness). Commits `c2aa6a67`, `3d9c221c`, `1db3ba01`, `1b2f9d9c`, `6d0e020f`. selftest 23 → 50.
+
+**Residues:** OQ-321 (per-consumer absence-safety, 17 unaudited readers — the largest finding),
+OQ-322 (`theater_ratio/2` fork), OQ-323 (`scenario_manager` shape-inventing declarations),
+OQ-324 (static ≠ loaded).
 ## OQ-309 — Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run
 
 **Ω-type:** Ω_E (the rows are measurable; the residue items are typed individually below).
@@ -14994,6 +15019,137 @@ control, not a pre-flight guess at scope.**
 **Residue: none.** The one surviving `OQ-320` mention in `project_orientation.md` is a deliberate
 *pin-history* note (recording that `:430–526` was wrong and why the citation is now by predicate),
 not a marker — it has no defect to outlive.
+
+## OQ-321 — 17 of the 18 live-read, zero-written schema predicates have never been checked for absence-safety, and each now carries a row that reads as inspected
+
+**Ω-type:** Ω_E (empirically settleable — read each consumer).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-308, blocked_on OQ-66
+**Origin:** 2026-08-18, the largest finding of the OQ-308 pass.
+**Files:** `prolog/schema_shape.txt` (the 18 `all:empty` rows), `prolog/data_verification.pl`,
+`prolog/data_validation.pl`, `prolog/constraint_bridge.pl`, `prolog/scenario_manager.pl`,
+`prolog/drl_core.pl`, `prolog/signature_detection.pl`, `prolog/stakeholder_seats.pl`.
+
+**The gap.** 18 predicates in the narrative_ontology declared namespace are read by engine code
+and written by no story file on any of the five legs. Declaring them turned each from UNDEFINED
+(a call throws) into DEFINED-BUT-EMPTY (a call fails silently) — the OQ-66 shape, at scale.
+
+OQ-308's arm G asserts that the emptiness is **expected**. It asserts nothing about whether each
+reader can tell *absent* from *zero*. Exactly one of the 18 has been checked:
+`founding_problem_corroboration_class/2`, whose consumer handles the absence explicitly at
+`stakeholder_seats.pl:605`. **The other 17 were not audited**, and each now carries an
+`all:empty` row in a gate-enforced file — which is the hazard: a row that records an unexamined
+fact reads exactly like a row that records an examined one. That is the OQ-308 apparatus
+producing a success-shaped token, and it is worth fixing at the source rather than in prose.
+
+**The 17:** `constraint_claim/3`, `coordination_vitality/2`, `entity/2`, `event/4`,
+`has_mandatrophy_declaration/1`, `intent_alternative_rejected/3`, `intent_beneficiary_class/2`,
+`intent_norm_strength/3`, `intent_power_change/3`, `intent_resistance_level/4`,
+`intent_suppression_level/4`, `intent_viable_alternative/3`, `measurement/2`,
+`recommendation/2`, `update_authority/2`, `veto_actor/1`, `veto_exposed/2`.
+
+**What resolution looks like.** Per consumer, one of: (a) it distinguishes absence explicitly —
+record the site, as `stakeholder_seats.pl:605` is recorded; (b) it does not, and the empty read
+is load-bearing — that is a defect, fix it; (c) it does not, and the empty read is harmless —
+say why. Then give `schema_shape.txt` a way to carry the verdict, so an audited `all:empty` and
+an unaudited one stop looking the same.
+
+**Sequencing.** Do NOT start by widening the row grammar. Read the 17 consumers first: the
+grammar for recording the verdict should be shaped by what the verdicts turn out to be, and an
+absence-safety token invented before the audit will encode the guess.
+
+## OQ-322 — `theater_ratio` has four spellings and the narrative_ontology one is a dead fork
+
+**Ω-type:** Ω_E (empirically settleable — the four surfaces are enumerable).
+
+**Status:** open
+**Priority:** 5
+**Deps:** splits_from OQ-308
+**Origin:** 2026-08-18, OQ-308 finding 8.
+**Files:** `prolog/narrative_ontology.pl` (the declaration), `prolog/schema_shape.txt`,
+`python/generate_constraint_pl.py:611`, `prolog/drl_core.pl:339–342`.
+
+**The gap.** `narrative_ontology:theater_ratio/2` is declared `:- multifile` and has **zero
+writers on all five legs and zero engine readers** — it carries `DISPOSITION=deletion-candidate`.
+Meanwhile the quantity is alive under three other spellings: `constraint_metric(C, theater_ratio,
+V)` authored corpus-wide, `domain_priors:theater_ratio/2` emitted by
+`generate_constraint_pl.py:611`, and `drl_core.pl`'s `effective_theater_ratio/3`. OQ-307's
+`drl_core.pl:710` reaches for a fourth reading of the same idea.
+
+**Not a stub — a fork.** Build Discipline Pattern 2: one canonical thing became several, with no
+queryable fact saying which is canonical. Deleting this declaration removes one spelling and
+leaves three; that is a reduction, not a resolution, and the resolution is naming the canonical
+one.
+
+**Falsifier.** If any consumer is found reading `narrative_ontology:theater_ratio/2`, the
+deletion-candidate marking is wrong and arm E's disposition check will say so on the next run.
+
+## OQ-323 — `scenario_manager` invents shape in a namespace it does not own, and four more members are dead
+
+**Ω-type:** Ω_C (design ruling — whether a scratch KB may share the corpus namespace).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-308, bundled_with OQ-322
+**Origin:** 2026-08-18, OQ-308 findings 5 and 6.
+**Files:** `prolog/scenario_manager.pl:43–72`, `prolog/narrative_ontology.pl`,
+`prolog/schema_shape.txt`, `prolog/module_boundary_allowlist.txt:192`.
+
+**The gap.** `scenario_manager.pl` declares 12 predicates into the `narrative_ontology`
+namespace. Ten are redundant redeclarations of predicates `narrative_ontology` already declares
+(it retracts them in `clear_kb/0`). **Two INVENT shape there**, and are declared nowhere else:
+
+- **`measurement/2`** — a second arity, declared by its own consumer, read at 61 sites, while the
+  corpus authors `measurement/5` exclusively. Every read is of a defined-but-empty predicate.
+- **`intent_fact/4`** — declared in `scenario_manager.pl` alone, in no `narrative_ontology` block
+  and no allowlist row, zero writers, zero readers. **The member nothing watched**, and the
+  concrete reason OQ-308's register is scanned repo-wide: a named-module anchor misses it.
+
+**Plus four more dead members** carrying `DISPOSITION=deletion-candidate`: `attribute/3`,
+`coupling_profile/2`, `input_vector/2` (and `theater_ratio/2`, which is OQ-322 because its
+mechanism is a fork rather than mere disuse).
+
+**The ruling wanted.** A scratch knowledge base sharing the corpus's namespace is either
+legitimate (say so, and the 10 redeclarations are fine) or it is not (move it to its own module).
+Either way `measurement/2` and `intent_fact/4` are separate: they are shape a non-owner invented,
+which is a different act from a non-owner re-declaring what the owner already declared.
+
+**Sequencing.** The namespace ruling comes first; the four dead members are cheap deletions that
+should ride whichever way it goes, and `schema_shape.txt` rows plus the allowlist:192 wording must
+change in the same commit.
+
+## OQ-324 — static ≠ loaded: the default `run_pipeline` path has no `Loaded == glob_count` assertion
+
+**Ω-type:** Ω_E (empirically settleable — the refusal already exists on the other path).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-308
+**Origin:** 2026-08-18, OQ-308 finding 10.
+**Files:** `prolog/corpus_loader.pl` (`load_testset_list/3`), `python/run_pipeline.py:147`
+(`classify_corpus`, which DOES refuse), `python/load_warning_gate.py`.
+
+**The gap.** Every OQ-308 arm is a STATIC scan of files on disk. That is the right instrument for
+a shape register, but it makes a standing assumption the engine does not check: that the files
+scanned are the files loaded. `load_testset_list/3` **skips and continues** on a file it cannot
+load, and the default `run_pipeline` path has no `Loaded == glob_count` assertion — only
+`classify_corpus` has one. `load_warning_gate` runs `[stack]` with 0 testsets and filters
+prefixes that `[corpus] SKIPPED` does not carry.
+
+So a story file can be skipped at load time while every static arm counts it as present. Arm G
+would report a leg `nonempty` that loaded nothing from that file; arm F would conform values the
+engine never saw.
+
+**Candidate fix.** Mirror `classify_corpus`'s refusal onto the default path. This is a
+`run_pipeline` BEHAVIOUR change — above the fix-on-sight threshold, hence an OQ rather than a
+commit.
+
+**Cheapest first step.** Before changing anything, measure whether the gap is live: count
+`glob_count` vs `corpus_constraint/1` on each of the five legs. If they are equal everywhere the
+hazard is latent and the fix is a guard; if not, there is a live discrepancy and it should be
+named before it is guarded.
 
 *Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
