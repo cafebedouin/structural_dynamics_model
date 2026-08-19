@@ -3019,3 +3019,33 @@ forward-only — and it is a **checked fact, not a memory** (the Pattern-2 rule 
 literally): `python/audit_writeup_gate.py --check` is wired into `scripts/gate.sh`, fails
 closed on malformed directory names, and runs an 8-fixture selftest (6 violation shapes must
 flag, 2 conforming shapes must pass) before every live sweep.
+
+## A passive trigger never fires — date it and gate it, or name its read-site
+
+A revival condition, reactivation trigger, or scheduled re-review parked on a closed or
+deferred entry depends by default on a future instance *incidentally* encountering it — and a
+`future`/resolved entry is not watched, so the default is that it never fires. Witnessed as an
+accumulating pattern in one session (2026-08-19): four passive triggers ruled in a day — OQ-171's
+rebuild-window revival, OQ-281's off-8 reactivation, GAP-39's revival bar, GAP-40's capacity-
+judgment hinge — plus one dated obligation (OQ-317's 2026-11-17 sunset) whose REVIEW-BY token
+was prose nothing enforced.
+
+**The split rule (operator, 2026-08-19):**
+
+- **A DATED obligation gets GATE ENFORCEMENT.** `python/sunset_check.py` (gate row `sunset`)
+  turns red when today ≥ the date, scanning allowlist `REVIEW-BY` tokens and ISSUES
+  `**Sunset:**` lines on active entries — two carriers on purpose, so an obligation does not
+  die when its sibling's carrier is removed. Licensed responses to the red are pre-committed
+  (review, or extend BY RECORDED OPERATOR RULING — never a silent date edit), because a gate
+  that can only be greened by doing the review teaches build-passers to extend dates, which is
+  renewal-by-silence with extra steps.
+- **An UNDATED trigger gets a NAMED READ-SITE:** state, in the entry itself, which document its
+  plausible reviver will actually be reading when the condition becomes relevant, and put a
+  pointer there (GAP-40 → CS sketch §2.5 is the worked example). If no such document exists,
+  say the trigger is unlikely to fire and let that be part of the record rather than a
+  surprise. Declaring a trigger passive-and-accepted (OQ-127's revival, OQ-171's, OQ-281's) is
+  legitimate — the defect is only the UNDECLARED passive trigger, which reads as an armed
+  falsifier while being a disclaimer.
+
+Candidates for the OQ-295 STANDING section when it ships: this rule, and each accepted-passive
+trigger it governs.

@@ -45,6 +45,22 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: OQ-317 trigger enforced — sunset_check.py gate row; the disposition itself deliberately NOT ruled early
+**Files:** python/sunset_check.py, scripts/gate.sh, ISSUES.md, docs/technical/build_discipline.md
+**Tier:** landed
+
+Operator ruling (second-instance reviewed): the 2026-11-17 socket disposition is NOT ruled early
+(ruling today would foreclose the window set 2026-08-18 or renew by fiat); instead the passive
+trigger is made ACTIVE. New gate row `sunset` (`python/sunset_check.py`): scans allowlist
+`REVIEW-BY` tokens AND ISSUES `**Sunset:**` lines on active entries — two carriers on purpose so
+the October row-removal cannot silence the November socket review; fires ON the day (same-day
+boundary is a selftest control, 5/5); licensed responses pre-committed (review, or extend BY
+RECORDED OPERATOR RULING, never a silent date edit). OQ-317 carries `**Sunset:** 2026-11-17`,
+the blocked_on_human is discharged as not-ripe, and the November desk is told plainly that the
+allowlist containment is CALLER-scoped while the definition stays unguarded. General rule minted
+at build_discipline.md → *A passive trigger never fires — date it and gate it, or name its
+read-site* (the session's four passive triggers cited; STANDING candidate).
+
 ## 2026-08-19 — LANDED: OQ-285 resolved as GAP-40 (no expressive-capacity instrument); the fresh-instance gate CAUGHT the entry's own wrong binary
 **Files:** ISSUES.md, docs/design/design_gaps.md, docs/commitment_systems/commitment_systems_sketch_v6.md, audits/2026-08-17_oq285_mode3_measurement_arm/STEP2_WEB_REVIEW.md, audits/2026-08-19_oq285_mode3_measurement_arm/
 **Tier:** landed

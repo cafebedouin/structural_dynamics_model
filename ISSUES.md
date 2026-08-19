@@ -15436,12 +15436,35 @@ real partition or a no-op; that verdict is currently unknown and is being consum
 
 **Ω-type:** Ω_C (a scheduled disposition re-ruling, not a measurement).
 
-**Status:** open
+**Status:** open — **NOT RIPE until 2026-11-17; returns via the gate** (operator ruling
+2026-08-19, second-instance reviewed): the disposition is deliberately NOT ruled early — ruling
+today would either foreclose the window set 2026-08-18 or renew the socket by fiat, and
+renewal-by-silence is the failure mode this entry exists to prevent. Retire-as-default stands.
 **Priority:** 3
-**Deps:** splits_from OQ-296, blocked_on_human disposition-ruling
+**Deps:** splits_from OQ-296
+**Sunset:** 2026-11-17
 **Origin:** OQ-296 close, 2026-08-18 — the operator's D1 ruling ("keep sockets, make honest") was
 issued **bounded**, and this entry is the bound.
 **Files:** `docs/design/design_gaps.md`, `prolog/signature_detection.pl`
+
+### Trigger mechanics (ruled 2026-08-19 — the passive trigger is now ENFORCED)
+
+- **Two independent dated hooks, on purpose:** the allowlist row's `REVIEW-BY 2026-11-17` AND
+  this entry's `**Sunset:**` line above — both scanned by `python/sunset_check.py` (gate row
+  `sunset`), which turns RED when today ≥ the date (fires ON the day; same-day boundary is a
+  selftest control). Independence matters: if the OQ-303 arm-(a) conversion lands in October and
+  the allowlist row is deleted per its REMOVE condition, this entry's Sunset line still summons
+  the socket disposition in November — the two obligations share a date but not a carrier.
+- **Licensed responses to the red (pre-committed, so a build-passer cannot convert the sunset
+  into renewal-by-silence-with-extra-steps):** conduct the review, OR extend the date — but an
+  extension is an OPERATOR RULING recorded in this entry, never a silent edit to the date token.
+  The gate's job is to summon; this entry's job is to hold the argument.
+- **For the November desk, stated plainly (operator flag, 2026-08-19): the interim containment
+  is CALLER-scoped and the DEFINITION is unguarded.** The allowlist row (`ATOMS=true`) contains
+  existing callers; nothing stops a NEW bound-`false` call against `epistemic_access_check/2`
+  being written in September — it would be wrong on the day it is written and caught only by the
+  `codewalk caller` gate row's next run. Do not read the allowlist row as coverage of the
+  definition's stealable shape.
 
 **ON THE 2026-11-17 REVIEWER'S DESK, added 2026-08-19 by OQ-302 (a standing condition, not a
 pointer).** `boltzmann_compliance:epistemic_access_check/2` is a `latent-B` predicate whose clause
