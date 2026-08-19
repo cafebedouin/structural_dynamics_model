@@ -35,3 +35,14 @@ code* (OQ-197), not in `build_discipline.md`; it is the general Pattern-6 rule i
 intervening commits, so no concurrent-writer blast radius to compute. Detection, not
 prevention (OQ-297): this rules out a writer landing commits during the pass; it does not
 rule out uncommitted edits by another instance.
+
+## Post-write note (2026-08-19, same session)
+
+First `./scripts/gate.sh` after committing WRITEUP.md came back **RED on the `apparatus` row**.
+Cause: this writeup's own `Fired:` line was written `**Fired:** **latent** — …` (value bolded),
+which `python/apparatus_instrument.py`'s `FIRED_RE` (`^\*\*Fired:\*\*\s+(live|latent|no)\b`) reads
+as malformed while `FIRED_ANY_RE` still matches — i.e. the bit was present and unparseable.
+Fixed to `**Fired:** latent — …`; gate row returns GREEN (`19L/2l/0n of 21 bits`).
+Recorded because it is a same-session instance of this audit's own subject matter: a machine
+checker distinguishing *present-but-unreadable* from *absent*, and being the only thing that
+noticed. No other gate row changed.
