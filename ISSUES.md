@@ -14029,11 +14029,51 @@ is incomplete.
 **Ω-type:** Ω_C (a documentation-architecture ruling: whether headings are restructured, and
 whether the situation→rule map is generated or hand-kept).
 
-**Status:** open
+**Status:** open — **RULED (operator, 2026-08-19, second-instance reviewed): GO on the
+restructure; the ruling block below binds the executing session.** Blocker discharged; the
+restructure is now a workable item.
 **Priority:** 4
-**Deps:** splits_from OQ-278, blocked_on_human heading-restructure-ruling
+**Deps:** splits_from OQ-278
 **Origin:** OQ-251 close, 2026-08-17 (operator proposal). Directly follows the witnessed
 re-discovery of BD-P3.
+
+### Ruling (2026-08-19) — binding on the executing session
+
+**Correction marked on ruling:** this entry's sequencing constraint is STALE — the OQ-278
+citation freeze was LIFTED 2026-08-17. The practical force survives in different clothes:
+renaming a pattern heading is a declared record-wide CONSUMER SWEEP (doc_pattern_check +
+pattern_citation_check ground truth + every dated citation), expensive-by-rule rather than
+forbidden-by-freeze.
+
+1. **Restructure the non-pattern headings action-first; the eight pattern-taxonomy headings stay
+   VERBATIM** — because renaming famous, index-cited rules is a record-wide sweep for zero
+   findability gain, not because anything forbids it.
+2. **Triage FIRST — not every rule has a triggering action.** Action-first fits procedural rules
+   (Pattern 7: "before running a query with a bound selector"); it fits dispositional rules
+   badly (false-absence, "a textual probe's zero is a fact about the probe", retention models) —
+   those attach to a judgment, not a moment, and forcing "Before X —" phrasing produces
+   contorted headings worse than the originals while making the index look more complete than it
+   is. The executing session sorts the ~54 into has-triggering-action (restructure) vs
+   dispositional (keep topic-first, NAME them in the coverage boundary as a second exception).
+   The boundary's job is to be accurate, not short.
+3. **The coverage boundary lives IN THE GREP PATH, not only at the index top.** The failure is
+   grep-shaped — a searcher never reads a header. Reachable-by-the-missing-motion means: a
+   footer line too, boundary text seeded with missing-rule-searcher vocabulary, or the gate row
+   emitting it on zero hits — whichever is cheapest. A top-only boundary protects against a
+   failure nobody has (opening the index and misjudging scope).
+4. **The index is GENERATED from the headings** with a doc_pattern_check-style gate row (drift =
+   red); the headings are the artifact under version pressure, never a hand-kept map.
+5. **Falsifier, repaired against the ratchet (re-discoveries are incidentally noticed;
+   prevention is invisible):** when a re-discovery IS noticed, check whether the rule was
+   findable by action-keyed grep at that moment. **Found-but-not-searched is a different verdict
+   from not-findable, and only the second counts against the restructure.** Attach the check
+   wherever OQ-295's STANDING section lands, if it ships.
+6. **Why fund a documentation bet in a repo whose evidence runs against them (on record):**
+   OQ-295's annotation and Pattern 7's six-sites-one-sweep were PUSH channels — content
+   delivered to someone not looking. This is a PULL channel — retrieval for someone already
+   searching. They fail differently; the prior against push does not straightforwardly transfer.
+   If pull fails too, that is a much stronger result than another push null, and it is what
+   justifies OQ-297's declined hook on evidence rather than intuition.
 **Files:** `docs/technical/build_discipline.md` (~60 headings), `python/doc_pattern_check.py`
 (the model for a generated-index row).
 
