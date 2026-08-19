@@ -420,29 +420,33 @@ stability_distance(T1, T2, DStability) :-
     ->  CoupDiff is abs(Coup1 - Coup2)
     ;   CoupDiff = 0.0
     ),
-    % Purity difference (handle -1.0 inconclusive as 0.5)
-    normalize_purity(Pur1, NPur1),
-    normalize_purity(Pur2, NPur2),
-    PurDiff is abs(NPur1 - NPur2),
     % Preservation distance
     preservation_distance(Pres1, Pres2, PresDist),
     % Boltzmann distance
     boltzmann_distance(Boltz1, Boltz2, BoltzDist),
-    DStability is 0.30 * CoupDiff + 0.25 * PurDiff
-               + 0.25 * PresDist + 0.20 * BoltzDist.
+    % OQ-242 ruling (2026-08-19): a distance component is computed only over
+    % inputs that were MEASURED — absence drops the component and renormalizes
+    % the remaining weights; it never substitutes a value (the retired
+    % normalize_purity/2 fabricated a 0.5 midpoint for both OQ-60 absence
+    % tokens). Sibling fallbacks in this metric (coupling absent -> 0.0,
+    % boltzmann inconclusive -> 0.5, preservation catch-all -> 1.0) are
+    % OQ-327's sweep — do not extend the ruling to them without their own
+    % clean-vs-edited diff-pair witness.
+    (   purity_scored(Pur1), purity_scored(Pur2)
+    ->  PurDiff is abs(Pur1 - Pur2),
+        DStability is 0.30 * CoupDiff + 0.25 * PurDiff
+                   + 0.25 * PresDist + 0.20 * BoltzDist
+    ;   DStability is (0.30 * CoupDiff + 0.25 * PresDist + 0.20 * BoltzDist)
+                    / 0.75
+    ).
 
-%% normalize_purity(+Purity, -Normalized)
-%  Maps BOTH OQ-60 absence tokens to 0.5 for the stability-distance component:
-%  the `unknown` atom (no-data — purity_scoring.pl:54) and the -1.0
-%  epistemic-gate-fail sentinel (purity_scoring.pl:59).
-%
-%  Guard order is load-bearing: `\+ number(P)` MUST precede the arithmetic.
-%  `=:=` evaluates its args, so testing `P =:= -1.0` first THROWS on the
-%  `unknown` atom before the non-number disjunct can catch it (CLAUDE.md
-%  OQ-60 invariant: guard number/1 before any arithmetic over purity).
-normalize_purity(P, 0.5) :- \+ number(P), !.   % `unknown` (no-data) — never reaches =:=
-normalize_purity(P, 0.5) :- P =:= -1.0, !.     % gate-fail sentinel
-normalize_purity(P, P).
+%% purity_scored(+P)
+%  True iff P is an actual purity measurement: a number that is not the -1.0
+%  epistemic-gate-fail sentinel. Guard order is load-bearing: number/1 must
+%  come first — =\= evaluates its arguments and THROWS on the OQ-60 `unknown`
+%  no-data atom (CLAUDE.md invariant: guard number/1 before any arithmetic
+%  over purity).
+purity_scored(P) :- number(P), P =\= -1.0.
 
 preservation_distance(preserved(_), preserved(_), 0.0) :- !.
 preservation_distance(violated(_), violated(_), 0.0) :- !.
