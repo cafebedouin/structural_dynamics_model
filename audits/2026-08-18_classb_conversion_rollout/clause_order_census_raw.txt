@@ -1,0 +1,303 @@
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=fpn_clean steal_risk=3 skipped=[unknown,unknown,fpn_pure] nclauses=7
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=fpn_compromised steal_risk=5 skipped=[unknown,unknown,fpn_pure,fpn_clean,fpn_mixed] nclauses=7
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=fpn_critical steal_risk=6 skipped=[unknown,unknown,fpn_pure,fpn_clean,fpn_mixed,fpn_compromised] nclauses=7
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=fpn_mixed steal_risk=4 skipped=[unknown,unknown,fpn_pure,fpn_clean] nclauses=7
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=fpn_pure steal_risk=2 skipped=[unknown,unknown] nclauses=7
+COC_ROW: abductive_helpers.pl fpn_band/2 atom=unknown steal_risk=0 skipped=[] nclauses=7
+COC_PRED: abductive_helpers.pl fpn_band/2 atoms=6 max_steal_risk=6
+COC_ROW: abductive_helpers.pl seat_overrides/2 atom=constructed_high_extraction steal_risk=2 skipped=[false_ci_rope,false_natural_law] nclauses=4
+COC_ROW: abductive_helpers.pl seat_overrides/2 atom=false_ci_rope steal_risk=2 skipped=[constructed_high_extraction,false_natural_law] nclauses=4
+COC_ROW: abductive_helpers.pl seat_overrides/2 atom=false_natural_law steal_risk=2 skipped=[false_ci_rope,constructed_high_extraction] nclauses=4
+COC_PRED: abductive_helpers.pl seat_overrides/2 atoms=3 max_steal_risk=2
+COC_ROW: boltzmann_compliance.pl expected_power_divergence/4 atom=mountain steal_risk=0 skipped=[] nclauses=16
+COC_ROW: boltzmann_compliance.pl expected_power_divergence/4 atom=naturalized steal_risk=5 skipped=[mountain,mountain,rope,tangled_rope,snare] nclauses=16
+COC_ROW: boltzmann_compliance.pl expected_power_divergence/4 atom=rope steal_risk=3 skipped=[mountain,mountain,naturalized] nclauses=16
+COC_ROW: boltzmann_compliance.pl expected_power_divergence/4 atom=snare steal_risk=6 skipped=[mountain,mountain,naturalized,rope,tangled_rope,naturalized] nclauses=16
+COC_ROW: boltzmann_compliance.pl expected_power_divergence/4 atom=tangled_rope steal_risk=4 skipped=[mountain,mountain,naturalized,rope] nclauses=16
+COC_PRED: boltzmann_compliance.pl expected_power_divergence/4 atoms=5 max_steal_risk=6
+COC_ROW: constraint_indexing.pl restricted_classify/7 atom=indeterminate steal_risk=4 skipped=[mountain,snare,rope,piton] nclauses=5
+COC_ROW: constraint_indexing.pl restricted_classify/7 atom=mountain steal_risk=0 skipped=[] nclauses=5
+COC_ROW: constraint_indexing.pl restricted_classify/7 atom=piton steal_risk=3 skipped=[mountain,snare,rope] nclauses=5
+COC_ROW: constraint_indexing.pl restricted_classify/7 atom=rope steal_risk=2 skipped=[mountain,snare] nclauses=5
+COC_ROW: constraint_indexing.pl restricted_classify/7 atom=snare steal_risk=1 skipped=[mountain] nclauses=5
+COC_PRED: constraint_indexing.pl restricted_classify/7 atoms=5 max_steal_risk=4
+COC_ROW: context_profile_mining.pl classify_isomorphism_level/2 atom=family steal_risk=2 skipped=[strict,trajectory] nclauses=4
+COC_ROW: context_profile_mining.pl classify_isomorphism_level/2 atom=none steal_risk=3 skipped=[strict,trajectory,family] nclauses=4
+COC_ROW: context_profile_mining.pl classify_isomorphism_level/2 atom=strict steal_risk=0 skipped=[] nclauses=4
+COC_ROW: context_profile_mining.pl classify_isomorphism_level/2 atom=trajectory steal_risk=1 skipped=[strict] nclauses=4
+COC_PRED: context_profile_mining.pl classify_isomorphism_level/2 atoms=4 max_steal_risk=3
+COC_ROW: covering_analysis.pl cell_short/2 atom=an/glo steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=an/loc steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=an/nat steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=in/glo steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=in/loc steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=in/nat steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=mo/glo steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/nat,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=mo/loc steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=mo/nat steal_risk=11 skipped=[pw/loc,pw/nat,pw/glo,mo/loc,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=pw/glo steal_risk=11 skipped=[pw/loc,pw/nat,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=pw/loc steal_risk=11 skipped=[pw/nat,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_ROW: covering_analysis.pl cell_short/2 atom=pw/nat steal_risk=11 skipped=[pw/loc,pw/glo,mo/loc,mo/nat,mo/glo,in/loc,in/nat,in/glo,an/loc,an/nat,an/glo] nclauses=13
+COC_PRED: covering_analysis.pl cell_short/2 atoms=12 max_steal_risk=11
+COC_ROW: covering_analysis.pl sigma_label/2 atom=continental steal_risk=4 skipped=[local,regional,national,global] nclauses=6
+COC_ROW: covering_analysis.pl sigma_label/2 atom=global steal_risk=4 skipped=[local,regional,national,continental] nclauses=6
+COC_ROW: covering_analysis.pl sigma_label/2 atom=local steal_risk=4 skipped=[regional,national,continental,global] nclauses=6
+COC_ROW: covering_analysis.pl sigma_label/2 atom=national steal_risk=4 skipped=[local,regional,continental,global] nclauses=6
+COC_ROW: covering_analysis.pl sigma_label/2 atom=regional steal_risk=4 skipped=[local,national,continental,global] nclauses=6
+COC_PRED: covering_analysis.pl sigma_label/2 atoms=5 max_steal_risk=4
+COC_ROW: cs_kernel_registry.pl stance_member_provenance/3 atom=hand_declared steal_risk=1 skipped=[morphology_suggested] nclauses=2
+COC_ROW: cs_kernel_registry.pl stance_member_provenance/3 atom=morphology_suggested steal_risk=0 skipped=[] nclauses=2
+COC_PRED: cs_kernel_registry.pl stance_member_provenance/3 atoms=2 max_steal_risk=1
+COC_ROW: data_repair.pl source_class/2 atom=authored steal_risk=2 skipped=[injected,imputed] nclauses=3
+COC_ROW: data_repair.pl source_class/2 atom=imputed steal_risk=1 skipped=[injected] nclauses=3
+COC_ROW: data_repair.pl source_class/2 atom=injected steal_risk=0 skipped=[] nclauses=3
+COC_PRED: data_repair.pl source_class/2 atoms=3 max_steal_risk=2
+COC_ROW: diagnostic_summary.pl compute_verdict/4 atom=green steal_risk=4 skipped=[red,red,yellow,yellow] nclauses=5
+COC_ROW: diagnostic_summary.pl compute_verdict/4 atom=red steal_risk=0 skipped=[] nclauses=5
+COC_ROW: diagnostic_summary.pl compute_verdict/4 atom=yellow steal_risk=2 skipped=[red,red] nclauses=5
+COC_PRED: diagnostic_summary.pl compute_verdict/4 atoms=3 max_steal_risk=4
+COC_ROW: diagnostic_summary.pl mismatch_source/2 atom=claim_mismatch steal_risk=1 skipped=[perspectival] nclauses=2
+COC_ROW: diagnostic_summary.pl mismatch_source/2 atom=perspectival steal_risk=0 skipped=[] nclauses=2
+COC_PRED: diagnostic_summary.pl mismatch_source/2 atoms=2 max_steal_risk=1
+COC_ROW: dirac_classification.pl gauge_fixed/3 atom=false steal_risk=1 skipped=[true] nclauses=3
+COC_ROW: dirac_classification.pl gauge_fixed/3 atom=true steal_risk=0 skipped=[] nclauses=3
+COC_PRED: dirac_classification.pl gauge_fixed/3 atoms=2 max_steal_risk=1
+COC_ROW: dirac_classification.pl score_to_separability/2 atom=entangled steal_risk=2 skipped=[separable,partially_separable] nclauses=3
+COC_ROW: dirac_classification.pl score_to_separability/2 atom=partially_separable steal_risk=1 skipped=[separable] nclauses=3
+COC_ROW: dirac_classification.pl score_to_separability/2 atom=separable steal_risk=0 skipped=[] nclauses=3
+COC_PRED: dirac_classification.pl score_to_separability/2 atoms=3 max_steal_risk=2
+COC_ROW: dirac_classification.pl type_to_dirac_class/4 atom=first_class steal_risk=0 skipped=[] nclauses=9
+COC_ROW: dirac_classification.pl type_to_dirac_class/4 atom=first_class_degenerate steal_risk=1 skipped=[first_class] nclauses=9
+COC_ROW: dirac_classification.pl type_to_dirac_class/4 atom=second_class steal_risk=0 skipped=[] nclauses=9
+COC_ROW: dirac_classification.pl type_to_dirac_class/4 atom=undetermined steal_risk=1 skipped=[first_class] nclauses=9
+COC_PRED: dirac_classification.pl type_to_dirac_class/4 atoms=4 max_steal_risk=1
+COC_ROW: domain_priors.pl category_of/2 atom=physical_natural steal_risk=0 skipped=[] nclauses=2
+COC_ROW: domain_priors.pl category_of/2 atom=unknown_novel steal_risk=1 skipped=[physical_natural] nclauses=2
+COC_PRED: domain_priors.pl category_of/2 atoms=2 max_steal_risk=1
+COC_ROW: domain_priors.pl infer_category_from_priors/2 atom=extractive_market steal_risk=0 skipped=[] nclauses=2
+COC_ROW: domain_priors.pl infer_category_from_priors/2 atom=statutory_formal steal_risk=1 skipped=[extractive_market] nclauses=2
+COC_PRED: domain_priors.pl infer_category_from_priors/2 atoms=2 max_steal_risk=1
+COC_ROW: drl_boltzmann_analysis.pl has_purity_drift/2 atom=false steal_risk=1 skipped=[true] nclauses=2
+COC_ROW: drl_boltzmann_analysis.pl has_purity_drift/2 atom=true steal_risk=0 skipped=[] nclauses=2
+COC_PRED: drl_boltzmann_analysis.pl has_purity_drift/2 atoms=2 max_steal_risk=1
+COC_ROW: drl_boltzmann_analysis.pl purity_to_cut_priority/2 atom=critical steal_risk=3 skipped=[low,moderate,high] nclauses=4
+COC_ROW: drl_boltzmann_analysis.pl purity_to_cut_priority/2 atom=high steal_risk=2 skipped=[low,moderate] nclauses=4
+COC_ROW: drl_boltzmann_analysis.pl purity_to_cut_priority/2 atom=low steal_risk=0 skipped=[] nclauses=4
+COC_ROW: drl_boltzmann_analysis.pl purity_to_cut_priority/2 atom=moderate steal_risk=1 skipped=[low] nclauses=4
+COC_PRED: drl_boltzmann_analysis.pl purity_to_cut_priority/2 atoms=4 max_steal_risk=3
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=aggressive_reform_needed steal_risk=8 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=careful_reform_sufficient steal_risk=6 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=coordination_contaminated steal_risk=4 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=cut_purity_informs_energy steal_risk=10 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=degraded_beyond_coordination_value steal_risk=5 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=dissolve_sooner steal_risk=13 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy,scaffold_healthy,scaffold_purity_declining] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=insufficient_purity_data steal_risk=0 skipped=[] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=natural_law_no_gate steal_risk=1 skipped=[insufficient_purity_data] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=no_qualification_rule steal_risk=17 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy,scaffold_healthy,scaffold_purity_declining,dissolve_sooner,terminal_state,passthrough,passthrough] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=passthrough steal_risk=15 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy,scaffold_healthy,scaffold_purity_declining,dissolve_sooner,terminal_state] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=purity_declining steal_risk=3 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=scaffold_healthy steal_risk=11 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=scaffold_purity_declining steal_risk=12 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy,scaffold_healthy] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=sound_coordination steal_risk=2 skipped=[insufficient_purity_data,natural_law_no_gate] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=standard_surgical_reform steal_risk=7 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=terminal_state steal_risk=14 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed,unreformable_cut,cut_purity_informs_energy,scaffold_healthy,scaffold_purity_declining,dissolve_sooner] nclauses=18
+COC_ROW: drl_boltzmann_analysis.pl qualify_action/5 atom=unreformable_cut steal_risk=9 skipped=[insufficient_purity_data,natural_law_no_gate,sound_coordination,purity_declining,coordination_contaminated,degraded_beyond_coordination_value,careful_reform_sufficient,standard_surgical_reform,aggressive_reform_needed] nclauses=18
+COC_PRED: drl_boltzmann_analysis.pl qualify_action/5 atoms=17 max_steal_risk=17
+COC_ROW: drl_boltzmann_analysis.pl raw_urgency/4 atom=critical steal_risk=0 skipped=[] nclauses=5
+COC_ROW: drl_boltzmann_analysis.pl raw_urgency/4 atom=high steal_risk=1 skipped=[critical] nclauses=5
+COC_ROW: drl_boltzmann_analysis.pl raw_urgency/4 atom=low steal_risk=3 skipped=[critical,high,moderate] nclauses=5
+COC_ROW: drl_boltzmann_analysis.pl raw_urgency/4 atom=moderate steal_risk=2 skipped=[critical,high] nclauses=5
+COC_ROW: drl_boltzmann_analysis.pl raw_urgency/4 atom=none steal_risk=4 skipped=[critical,high,moderate,low] nclauses=5
+COC_PRED: drl_boltzmann_analysis.pl raw_urgency/4 atoms=5 max_steal_risk=4
+COC_ROW: drl_composition.pl composition_rule/3 atom=mountain steal_risk=0 skipped=[] nclauses=14
+COC_ROW: drl_composition.pl composition_rule/3 atom=piton steal_risk=11 skipped=[mountain,mountain,snare,snare,snare,snare,snare,rope,tangled_rope,tangled_rope,tangled_rope] nclauses=14
+COC_ROW: drl_composition.pl composition_rule/3 atom=rope steal_risk=7 skipped=[mountain,mountain,snare,snare,snare,snare,snare] nclauses=14
+COC_ROW: drl_composition.pl composition_rule/3 atom=snare steal_risk=2 skipped=[mountain,mountain] nclauses=14
+COC_ROW: drl_composition.pl composition_rule/3 atom=tangled_rope steal_risk=8 skipped=[mountain,mountain,snare,snare,snare,snare,snare,rope] nclauses=14
+COC_ROW: drl_composition.pl composition_rule/3 atom=unknown steal_risk=13 skipped=[mountain,mountain,snare,snare,snare,snare,snare,rope,tangled_rope,tangled_rope,tangled_rope,piton,piton] nclauses=14
+COC_PRED: drl_composition.pl composition_rule/3 atoms=6 max_steal_risk=13
+COC_ROW: drl_core.pl dr_action/3 atom=accept steal_risk=0 skipped=[] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=bypass steal_risk=5 skipped=[accept,maintain,reform,cut,monitor_sunset] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=cut steal_risk=3 skipped=[accept,maintain,reform] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=investigate steal_risk=7 skipped=[accept,maintain,reform,cut,monitor_sunset,bypass,investigate_naturalization] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=investigate_naturalization steal_risk=6 skipped=[accept,maintain,reform,cut,monitor_sunset,bypass] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=maintain steal_risk=1 skipped=[accept] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=monitor_sunset steal_risk=4 skipped=[accept,maintain,reform,cut] nclauses=8
+COC_ROW: drl_core.pl dr_action/3 atom=reform steal_risk=2 skipped=[accept,maintain] nclauses=8
+COC_PRED: drl_core.pl dr_action/3 atoms=8 max_steal_risk=7
+COC_ROW: drl_counterfactual.pl estimate_impact_indexed/5 atom=disrupts_coordination steal_risk=2 skipped=[load_bearing,removes_extraction] nclauses=4
+COC_ROW: drl_counterfactual.pl estimate_impact_indexed/5 atom=load_bearing steal_risk=0 skipped=[] nclauses=4
+COC_ROW: drl_counterfactual.pl estimate_impact_indexed/5 atom=no_dependency steal_risk=3 skipped=[load_bearing,removes_extraction,disrupts_coordination] nclauses=4
+COC_ROW: drl_counterfactual.pl estimate_impact_indexed/5 atom=removes_extraction steal_risk=1 skipped=[load_bearing] nclauses=4
+COC_PRED: drl_counterfactual.pl estimate_impact_indexed/5 atoms=4 max_steal_risk=3
+COC_ROW: fpn_report.pl ep_band/2 atom=ep_contested steal_risk=3 skipped=[unknown,unknown,ep_sound] nclauses=6
+COC_ROW: fpn_report.pl ep_band/2 atom=ep_critical steal_risk=5 skipped=[unknown,unknown,ep_sound,ep_contested,ep_low] nclauses=6
+COC_ROW: fpn_report.pl ep_band/2 atom=ep_low steal_risk=4 skipped=[unknown,unknown,ep_sound,ep_contested] nclauses=6
+COC_ROW: fpn_report.pl ep_band/2 atom=ep_sound steal_risk=2 skipped=[unknown,unknown] nclauses=6
+COC_ROW: fpn_report.pl ep_band/2 atom=unknown steal_risk=0 skipped=[] nclauses=6
+COC_PRED: fpn_report.pl ep_band/2 atoms=5 max_steal_risk=5
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=BaseEps > 0.45, blocking rope (chi passes) steal_risk=0 skipped=[] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=Chi < 0.40, blocking tangled_rope steal_risk=4 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold,Chi > 0.30, blocking scaffold] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=Chi < 0.66, blocking snare steal_risk=7 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold,Chi > 0.30, blocking scaffold,Chi < 0.40, blocking tangled_rope,No has_coordination_function, blocking tangled_rope,No requires_active_enforcement, blocking tangled_rope] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=Chi > 0.30, blocking scaffold steal_risk=3 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=Chi > 0.35, blocking rope steal_risk=1 skipped=[BaseEps > 0.45, blocking rope (chi passes)] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=No has_coordination_function, blocking scaffold steal_risk=2 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=No has_coordination_function, blocking tangled_rope steal_risk=5 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold,Chi > 0.30, blocking scaffold,Chi < 0.40, blocking tangled_rope] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=No requires_active_enforcement, blocking tangled_rope steal_risk=6 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold,Chi > 0.30, blocking scaffold,Chi < 0.40, blocking tangled_rope,No has_coordination_function, blocking tangled_rope] nclauses=9
+COC_ROW: gap_diagnostic.pl gate_description/2 atom=See classify_from_metrics/6 steal_risk=8 skipped=[BaseEps > 0.45, blocking rope (chi passes),Chi > 0.35, blocking rope,No has_coordination_function, blocking scaffold,Chi > 0.30, blocking scaffold,Chi < 0.40, blocking tangled_rope,No has_coordination_function, blocking tangled_rope,No requires_active_enforcement, blocking tangled_rope,Chi < 0.66, blocking snare] nclauses=9
+COC_PRED: gap_diagnostic.pl gate_description/2 atoms=9 max_steal_risk=8
+COC_ROW: giant_component_analysis.pl action_band/2 atom=gc_escalate steal_risk=4 skipped=[unknown,unknown,gc_monitor,gc_watch] nclauses=6
+COC_ROW: giant_component_analysis.pl action_band/2 atom=gc_monitor steal_risk=2 skipped=[unknown,unknown] nclauses=6
+COC_ROW: giant_component_analysis.pl action_band/2 atom=gc_override steal_risk=5 skipped=[unknown,unknown,gc_monitor,gc_watch,gc_escalate] nclauses=6
+COC_ROW: giant_component_analysis.pl action_band/2 atom=gc_watch steal_risk=3 skipped=[unknown,unknown,gc_monitor] nclauses=6
+COC_ROW: giant_component_analysis.pl action_band/2 atom=unknown steal_risk=0 skipped=[] nclauses=6
+COC_PRED: giant_component_analysis.pl action_band/2 atoms=5 max_steal_risk=5
+COC_ROW: giant_component_analysis.pl would_cross_threshold/5 atom=N/A steal_risk=1 skipped=[~] nclauses=4
+COC_ROW: giant_component_analysis.pl would_cross_threshold/5 atom=~ steal_risk=2 skipped=[N/A,N/A] nclauses=4
+COC_PRED: giant_component_analysis.pl would_cross_threshold/5 atoms=2 max_steal_risk=2
+COC_ROW: invertibility_analysis.pl chi_subband/2 atom=above_range steal_risk=4 skipped=[low_tangled,mid_tangled,high_tangled,below_range] nclauses=5
+COC_ROW: invertibility_analysis.pl chi_subband/2 atom=below_range steal_risk=3 skipped=[low_tangled,mid_tangled,high_tangled] nclauses=5
+COC_ROW: invertibility_analysis.pl chi_subband/2 atom=high_tangled steal_risk=2 skipped=[low_tangled,mid_tangled] nclauses=5
+COC_ROW: invertibility_analysis.pl chi_subband/2 atom=low_tangled steal_risk=0 skipped=[] nclauses=5
+COC_ROW: invertibility_analysis.pl chi_subband/2 atom=mid_tangled steal_risk=1 skipped=[low_tangled] nclauses=5
+COC_PRED: invertibility_analysis.pl chi_subband/2 atoms=5 max_steal_risk=4
+COC_ROW: invertibility_analysis.pl predict_rope_snare/4 atom=rope steal_risk=0 skipped=[] nclauses=6
+COC_ROW: invertibility_analysis.pl predict_rope_snare/4 atom=snare steal_risk=2 skipped=[rope,rope] nclauses=6
+COC_PRED: invertibility_analysis.pl predict_rope_snare/4 atoms=2 max_steal_risk=2
+COC_ROW: invertibility_analysis.pl predict_rope_tangled/4 atom=rope steal_risk=0 skipped=[] nclauses=4
+COC_ROW: invertibility_analysis.pl predict_rope_tangled/4 atom=tangled_rope steal_risk=1 skipped=[rope] nclauses=4
+COC_PRED: invertibility_analysis.pl predict_rope_tangled/4 atoms=2 max_steal_risk=1
+COC_ROW: invertibility_analysis.pl predict_snare_tangled/4 atom=snare steal_risk=0 skipped=[] nclauses=4
+COC_ROW: invertibility_analysis.pl predict_snare_tangled/4 atom=tangled_rope steal_risk=1 skipped=[snare] nclauses=4
+COC_PRED: invertibility_analysis.pl predict_snare_tangled/4 atoms=2 max_steal_risk=1
+COC_ROW: invertibility_analysis.pl predict_three_type/4 atom=rope steal_risk=0 skipped=[] nclauses=4
+COC_ROW: invertibility_analysis.pl predict_three_type/4 atom=snare steal_risk=1 skipped=[rope] nclauses=4
+COC_ROW: invertibility_analysis.pl predict_three_type/4 atom=tangled_rope steal_risk=2 skipped=[rope,snare] nclauses=4
+COC_PRED: invertibility_analysis.pl predict_three_type/4 atoms=3 max_steal_risk=2
+COC_ROW: json_report.pl boltzmann_label/2 atom=compliant steal_risk=0 skipped=[] nclauses=8
+COC_ROW: json_report.pl boltzmann_label/2 atom=inconclusive steal_risk=5 skipped=[compliant,compliant,non_compliant,non_compliant,non_compliant] nclauses=8
+COC_ROW: json_report.pl boltzmann_label/2 atom=non_compliant steal_risk=2 skipped=[compliant,compliant] nclauses=8
+COC_ROW: json_report.pl boltzmann_label/2 atom=unknown steal_risk=7 skipped=[compliant,compliant,non_compliant,non_compliant,non_compliant,inconclusive,inconclusive] nclauses=8
+COC_PRED: json_report.pl boltzmann_label/2 atoms=4 max_steal_risk=7
+COC_ROW: json_report.pl live_index_label/3 atom=both steal_risk=3 skipped=[none,scope,power] nclauses=4
+COC_ROW: json_report.pl live_index_label/3 atom=none steal_risk=0 skipped=[] nclauses=4
+COC_ROW: json_report.pl live_index_label/3 atom=power steal_risk=2 skipped=[none,scope] nclauses=4
+COC_ROW: json_report.pl live_index_label/3 atom=scope steal_risk=1 skipped=[none] nclauses=4
+COC_PRED: json_report.pl live_index_label/3 atoms=4 max_steal_risk=3
+COC_ROW: logical_fingerprint.pl categorize_coupling/5 atom=independent steal_risk=0 skipped=[] nclauses=4
+COC_ROW: logical_fingerprint.pl categorize_coupling/5 atom=nonsensically_coupled steal_risk=1 skipped=[independent] nclauses=4
+COC_ROW: logical_fingerprint.pl categorize_coupling/5 atom=strongly_coupled steal_risk=2 skipped=[independent,nonsensically_coupled] nclauses=4
+COC_ROW: logical_fingerprint.pl categorize_coupling/5 atom=weakly_coupled steal_risk=3 skipped=[independent,nonsensically_coupled,strongly_coupled] nclauses=4
+COC_PRED: logical_fingerprint.pl categorize_coupling/5 atoms=4 max_steal_risk=3
+COC_ROW: logical_fingerprint.pl extraction_zone/2 atom=extreme steal_risk=4 skipped=[negligible,low,moderate,high] nclauses=5
+COC_ROW: logical_fingerprint.pl extraction_zone/2 atom=high steal_risk=3 skipped=[negligible,low,moderate] nclauses=5
+COC_ROW: logical_fingerprint.pl extraction_zone/2 atom=low steal_risk=1 skipped=[negligible] nclauses=5
+COC_ROW: logical_fingerprint.pl extraction_zone/2 atom=moderate steal_risk=2 skipped=[negligible,low] nclauses=5
+COC_ROW: logical_fingerprint.pl extraction_zone/2 atom=negligible steal_risk=0 skipped=[] nclauses=5
+COC_PRED: logical_fingerprint.pl extraction_zone/2 atoms=5 max_steal_risk=4
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=borderline steal_risk=4 skipped=[unknown,unknown,pristine,sound] nclauses=7
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=contaminated steal_risk=5 skipped=[unknown,unknown,pristine,sound,borderline] nclauses=7
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=degraded steal_risk=6 skipped=[unknown,unknown,pristine,sound,borderline,contaminated] nclauses=7
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=pristine steal_risk=2 skipped=[unknown,unknown] nclauses=7
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=sound steal_risk=3 skipped=[unknown,unknown,pristine] nclauses=7
+COC_ROW: logical_fingerprint.pl purity_zone/2 atom=unknown steal_risk=0 skipped=[] nclauses=7
+COC_PRED: logical_fingerprint.pl purity_zone/2 atoms=6 max_steal_risk=6
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=asymmetric steal_risk=0 skipped=[] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=coordination steal_risk=0 skipped=[] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=enforcement steal_risk=0 skipped=[] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=has_beneficiaries steal_risk=0 skipped=[] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=has_temporal_data steal_risk=2 skipped=[has_beneficiaries,has_victims] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=has_theater steal_risk=3 skipped=[has_beneficiaries,has_victims,has_temporal_data] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=has_victims steal_risk=1 skipped=[has_beneficiaries] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=natural steal_risk=0 skipped=[] nclauses=9
+COC_ROW: logical_fingerprint.pl structural_property_holds/2 atom=sunset steal_risk=0 skipped=[] nclauses=9
+COC_PRED: logical_fingerprint.pl structural_property_holds/2 atoms=9 max_steal_risk=3
+COC_ROW: logical_fingerprint.pl suppression_zone/2 atom=extreme steal_risk=4 skipped=[negligible,low,moderate,high] nclauses=5
+COC_ROW: logical_fingerprint.pl suppression_zone/2 atom=high steal_risk=3 skipped=[negligible,low,moderate] nclauses=5
+COC_ROW: logical_fingerprint.pl suppression_zone/2 atom=low steal_risk=1 skipped=[negligible] nclauses=5
+COC_ROW: logical_fingerprint.pl suppression_zone/2 atom=moderate steal_risk=2 skipped=[negligible,low] nclauses=5
+COC_ROW: logical_fingerprint.pl suppression_zone/2 atom=negligible steal_risk=0 skipped=[] nclauses=5
+COC_PRED: logical_fingerprint.pl suppression_zone/2 atoms=5 max_steal_risk=4
+COC_ROW: maxent_report.pl entropy_interpretation/2 atom=High steal_risk=2 skipped=[Low uncertainty,Moderate] nclauses=4
+COC_ROW: maxent_report.pl entropy_interpretation/2 atom=Low uncertainty steal_risk=0 skipped=[] nclauses=4
+COC_ROW: maxent_report.pl entropy_interpretation/2 atom=Moderate steal_risk=1 skipped=[Low uncertainty] nclauses=4
+COC_ROW: maxent_report.pl entropy_interpretation/2 atom=Very high steal_risk=3 skipped=[Low uncertainty,Moderate,High] nclauses=4
+COC_PRED: maxent_report.pl entropy_interpretation/2 atoms=4 max_steal_risk=3
+COC_ROW: metric_drift_events.pl drift_severity/3 atom=critical steal_risk=14 skipped=[warning,warning,watch,warning,warning,watch,warning,warning,watch,warning,watch,watch,warning,watch] nclauses=26
+COC_ROW: metric_drift_events.pl drift_severity/3 atom=warning steal_risk=12 skipped=[critical,watch,critical,critical,watch,critical,watch,critical,watch,watch,critical,watch] nclauses=26
+COC_ROW: metric_drift_events.pl drift_severity/3 atom=watch steal_risk=14 skipped=[critical,warning,warning,critical,warning,critical,warning,critical,warning,warning,critical,warning,critical,warning] nclauses=26
+COC_PRED: metric_drift_events.pl drift_severity/3 atoms=3 max_steal_risk=14
+COC_ROW: network_dynamics.pl ep_base_severity/2 atom=critical steal_risk=1 skipped=[undetermined] nclauses=4
+COC_ROW: network_dynamics.pl ep_base_severity/2 atom=undetermined steal_risk=0 skipped=[] nclauses=4
+COC_ROW: network_dynamics.pl ep_base_severity/2 atom=warning steal_risk=2 skipped=[undetermined,critical] nclauses=4
+COC_ROW: network_dynamics.pl ep_base_severity/2 atom=watch steal_risk=3 skipped=[undetermined,critical,warning] nclauses=4
+COC_PRED: network_dynamics.pl ep_base_severity/2 atoms=4 max_steal_risk=3
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: immutable restriction from all perspectives steal_risk=10 skipped=[Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: ossified coordination from all perspectives steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: pure coordination from all perspectives steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: pure extraction from all perspectives steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: tangled coordination-extraction from all perspectives steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Gauge-invariant: temporary coordination from all perspectives steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Three-type: full rope-tangled-snare gauge structure with irreducible middle band steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Two-type: coordination/extraction bifurcation along power axis steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Two-type: pure vs tangled coordination steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Two-type: scaffold/snare transition steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/tangled transition] nclauses=13
+COC_ROW: orbit_report.pl characterize_family/2 atom=Two-type: scaffold/tangled transition steal_risk=10 skipped=[Gauge-invariant: immutable restriction from all perspectives,Gauge-invariant: pure coordination from all perspectives,Gauge-invariant: tangled coordination-extraction from all perspectives,Gauge-invariant: pure extraction from all perspectives,Gauge-invariant: temporary coordination from all perspectives,Gauge-invariant: ossified coordination from all perspectives,Two-type: coordination/extraction bifurcation along power axis,Two-type: pure vs tangled coordination,Three-type: full rope-tangled-snare gauge structure with irreducible middle band,Two-type: scaffold/snare transition] nclauses=13
+COC_PRED: orbit_report.pl characterize_family/2 atoms=11 max_steal_risk=10
+COC_ROW: probe_oq197_controls.pl status_kind/2 atom=gap steal_risk=0 skipped=[] nclauses=3
+COC_ROW: probe_oq197_controls.pl status_kind/2 atom=no_gap steal_risk=1 skipped=[gap] nclauses=3
+COC_PRED: probe_oq197_controls.pl status_kind/2 atoms=2 max_steal_risk=1
+COC_ROW: report_generator.pl completeness_to_confidence/2 atom=high steal_risk=0 skipped=[] nclauses=3
+COC_ROW: report_generator.pl completeness_to_confidence/2 atom=low steal_risk=2 skipped=[high,moderate] nclauses=3
+COC_ROW: report_generator.pl completeness_to_confidence/2 atom=moderate steal_risk=1 skipped=[high] nclauses=3
+COC_PRED: report_generator.pl completeness_to_confidence/2 atoms=3 max_steal_risk=2
+COC_ROW: report_generator.pl generate_scenario_for_omega/5 atom=general_type_mismatch steal_risk=1 skipped=[unresolved_source] nclauses=9
+COC_ROW: report_generator.pl generate_scenario_for_omega/5 atom=mountain_coordination_confusion steal_risk=1 skipped=[unresolved_source] nclauses=9
+COC_ROW: report_generator.pl generate_scenario_for_omega/5 atom=snare_masked_as_rope steal_risk=1 skipped=[unresolved_source] nclauses=9
+COC_ROW: report_generator.pl generate_scenario_for_omega/5 atom=snare_mountain_confusion steal_risk=1 skipped=[unresolved_source] nclauses=9
+COC_ROW: report_generator.pl generate_scenario_for_omega/5 atom=unresolved_source steal_risk=0 skipped=[] nclauses=9
+COC_PRED: report_generator.pl generate_scenario_for_omega/5 atoms=5 max_steal_risk=1
+COC_ROW: report_generator.pl omega_severity/2 atom=critical steal_risk=0 skipped=[] nclauses=5
+COC_ROW: report_generator.pl omega_severity/2 atom=high steal_risk=1 skipped=[critical] nclauses=5
+COC_ROW: report_generator.pl omega_severity/2 atom=low steal_risk=3 skipped=[critical,high,moderate] nclauses=5
+COC_ROW: report_generator.pl omega_severity/2 atom=moderate steal_risk=2 skipped=[critical,high] nclauses=5
+COC_ROW: report_generator.pl omega_severity/2 atom=unknown steal_risk=4 skipped=[critical,high,moderate,low] nclauses=5
+COC_PRED: report_generator.pl omega_severity/2 atoms=5 max_steal_risk=4
+COC_ROW: report_generator.pl resolve_omega_source/4 atom=general_type_mismatch steal_risk=0 skipped=[] nclauses=3
+COC_ROW: report_generator.pl resolve_omega_source/4 atom=unresolved_source steal_risk=1 skipped=[general_type_mismatch] nclauses=3
+COC_PRED: report_generator.pl resolve_omega_source/4 atoms=2 max_steal_risk=1
+COC_ROW: routing_sink.pl detector_state/2 atom=nl_absent steal_risk=1 skipped=[nl_fired] nclauses=2
+COC_ROW: routing_sink.pl detector_state/2 atom=nl_fired steal_risk=0 skipped=[] nclauses=2
+COC_PRED: routing_sink.pl detector_state/2 atoms=2 max_steal_risk=1
+COC_ROW: signature_detection.pl appears_as_rope/2 atom=explicit_rope_claim steal_risk=0 skipped=[] nclauses=2
+COC_ROW: signature_detection.pl appears_as_rope/2 atom=low_extraction_profile steal_risk=1 skipped=[explicit_rope_claim] nclauses=2
+COC_PRED: signature_detection.pl appears_as_rope/2 atoms=2 max_steal_risk=1
+COC_ROW: signature_detection.pl capture_disposition/2 atom=absent steal_risk=3 skipped=[captured,piton_candidate,transient_neglect] nclauses=4
+COC_ROW: signature_detection.pl capture_disposition/2 atom=captured steal_risk=0 skipped=[] nclauses=4
+COC_ROW: signature_detection.pl capture_disposition/2 atom=piton_candidate steal_risk=1 skipped=[captured] nclauses=4
+COC_ROW: signature_detection.pl capture_disposition/2 atom=transient_neglect steal_risk=2 skipped=[captured,piton_candidate] nclauses=4
+COC_PRED: signature_detection.pl capture_disposition/2 atoms=4 max_steal_risk=3
+COC_ROW: signature_detection.pl claimed_natural/2 atom=explicit_mountain_claim steal_risk=0 skipped=[] nclauses=2
+COC_ROW: signature_detection.pl claimed_natural/2 atom=natural_law_signature_match steal_risk=1 skipped=[explicit_mountain_claim] nclauses=2
+COC_PRED: signature_detection.pl claimed_natural/2 atoms=2 max_steal_risk=1
+COC_ROW: signature_detection.pl determine_pure_subtype/2 atom=pure_coordination steal_risk=0 skipped=[] nclauses=4
+COC_ROW: signature_detection.pl determine_pure_subtype/2 atom=pure_scaffold steal_risk=1 skipped=[pure_coordination] nclauses=4
+COC_ROW: signature_detection.pl determine_pure_subtype/2 atom=pure_unclassified steal_risk=2 skipped=[pure_coordination,pure_scaffold] nclauses=4
+COC_PRED: signature_detection.pl determine_pure_subtype/2 atoms=3 max_steal_risk=2
+COC_ROW: signature_detection.pl has_viable_alternatives/2 atom=true steal_risk=0 skipped=[] nclauses=2
+COC_ROW: signature_detection.pl has_viable_alternatives/2 atom=unknown steal_risk=1 skipped=[true] nclauses=2
+COC_PRED: signature_detection.pl has_viable_alternatives/2 atoms=2 max_steal_risk=1
+COC_ROW: signature_detection.pl resolve_with_perspectival_check/4 atom=piton steal_risk=0 skipped=[] nclauses=4
+COC_PRED: signature_detection.pl resolve_with_perspectival_check/4 atoms=1 max_steal_risk=0
+COC_ROW: signature_detection.pl signature_diagnostic_severity/3 atom=informational steal_risk=4 skipped=[moderate,moderate,moderate,severe] nclauses=8
+COC_ROW: signature_detection.pl signature_diagnostic_severity/3 atom=moderate steal_risk=0 skipped=[] nclauses=8
+COC_ROW: signature_detection.pl signature_diagnostic_severity/3 atom=severe steal_risk=3 skipped=[moderate,moderate,moderate] nclauses=8
+COC_PRED: signature_detection.pl signature_diagnostic_severity/3 atoms=3 max_steal_risk=4
+COC_ROW: signature_detection.pl signature_grade/2 atom=commentary steal_risk=1 skipped=[correction] nclauses=3
+COC_ROW: signature_detection.pl signature_grade/2 atom=correction steal_risk=0 skipped=[] nclauses=3
+COC_PRED: signature_detection.pl signature_grade/2 atoms=2 max_steal_risk=1
+COC_ROW: transition_paths.pl predicted_terminal_state/3 atom=high steal_risk=1 skipped=[medium] nclauses=8
+COC_ROW: transition_paths.pl predicted_terminal_state/3 atom=low steal_risk=6 skipped=[high,high,medium,high,medium,medium] nclauses=8
+COC_ROW: transition_paths.pl predicted_terminal_state/3 atom=medium steal_risk=3 skipped=[high,high,high] nclauses=8
+COC_PRED: transition_paths.pl predicted_terminal_state/3 atoms=3 max_steal_risk=6
+COC_SCANNED: 58

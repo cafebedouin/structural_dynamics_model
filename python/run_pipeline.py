@@ -146,7 +146,9 @@ def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
 
 def classify_corpus(corpus_path: str, output_name: str,
                     expected_model: Optional[str],
-                    run_at: Optional[str] = None) -> dict:
+                    run_at: Optional[str] = None,
+                    timeout: int = 300,
+                    soft_timeout: Optional[int] = None) -> dict:
     """Classify a NON-default corpus into its own manifest-bearing output (B1).
 
     A minimal, gate-free, fresh-process driver for the twin-comparison harness. Runs
@@ -171,6 +173,15 @@ def classify_corpus(corpus_path: str, output_name: str,
         is also asserted, so the model-match cannot pass over an empty fact set.
       - raw freshness: the raw artifact is deleted pre-run and must reappear newer.
       - seen == classified: len(per_constraint) == glob_count == manifest.n_constraints.
+
+    *timeout* / *soft_timeout* are forwarded to run_prolog. The 300 s default was sized on
+    the live leg (n=279, ~35 s) and is NOT enough for the big twin legs: measured 2026-08-18,
+    testsets_haiku (n=960) takes ~287 s — inside the ceiling by 13 s — and testsets_flash
+    (n=960) exceeds it, so the default silently costs three full-length attempts and then
+    refuses. Callers running a multi-leg witness pass should raise it explicitly and keep a
+    soft_timeout so a genuine hang is still caught early and retried (the OQ-301 giant_comp
+    failure mode run_prolog exists to absorb). Default unchanged, so every existing caller
+    behaves exactly as before.
 
     Returns the manifest dict written into output_name.
     """
@@ -216,7 +227,7 @@ def classify_corpus(corpus_path: str, output_name: str,
         ["stack.pl", "covering_analysis.pl", "maxent_classifier.pl",
          "dirac_classification.pl", "diagnostic_summary.pl",
          "post_synthesis.pl", "json_report.pl"],
-        goal,
+        goal, timeout=timeout, soft_timeout=soft_timeout,
     )
 
     # Raw freshness: must exist and be newer than the pre-run delete.
