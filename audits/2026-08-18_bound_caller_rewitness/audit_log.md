@@ -341,6 +341,91 @@ codewalk verdict at all — the arm could not resolve them (R5). They are theref
 in `partition.py` and in the table as NOT PRE-REGISTERED. The prereg is not amended; the
 gap is recorded here and in the writeup, which is the honest record.
 
+## RESULTS (second pass, same day) — operator directives 2026-08-18
+
+### R11. `signature_grade/2`'s bound caller is BENIGN at its atom — and the control fires
+
+R6/R9 established that a live bound caller exists where the class label says none does. What
+they did **not** establish is whether the bound form answers differently. Checked, all five
+live legs (`signature_grade_agreement.txt`, probe `sg_probe.pl`):
+
+```
+testsets         corpus=279  bound=45  unbound_filtered=45  only_bound=0 only_unbound=0  control(commentary): bound=263 unbound_filtered=234
+testsets_haiku   corpus=960  bound=61  unbound_filtered=61  only_bound=0 only_unbound=0  control(commentary): bound=932 unbound_filtered=899
+testsets_flash   corpus=960  bound=126 unbound_filtered=126 only_bound=0 only_unbound=0  control(commentary): bound=886 unbound_filtered=834
+testsets_kimi    corpus=1005 bound=73  unbound_filtered=73  only_bound=0 only_unbound=0  control(commentary): bound=993 unbound_filtered=932
+testsets_sonnet  corpus=1001 bound=216 unbound_filtered=216 only_bound=0 only_unbound=0  control(commentary): bound=952 unbound_filtered=785
+```
+
+Exact agreement at `correction`; the **control at the sibling atom `commentary` diverges on
+every leg** (29/33/52/61/167). So the probe discriminates, and over-permissiveness on this
+predicate is ATOM-SPECIFIC. Structural reason, from the clause set: clause 1 (`:1924`) has a
+fresh-variable head so its cut always runs, and a bound `correction` query skips only clause
+3's cut, whose atom cannot match; a bound `commentary` query skips clause 2's cut, and clause 2
+binds `correction` — the answer it steals.
+
+**This corrects R6's framing**, which read as "a live hazard on the headline path". The class
+label is wrong; the caller is benign at its atom. Conversion still owes the six-leg pair (live
+output path, semantics-changing by construction), but this is not a firing defect.
+
+### R12. Allowlisted and gate-wired GREEN — discrimination record, both directions
+
+`prolog/codewalk_caller_allowlist.txt`, grammar
+`<file.pl>:<name>/<arity>  ATOMS=<a[,b]>  REMOVE=<condition>  <reason>`, all four columns
+required, malformed row RED, missing file RED.
+
+```
+$ grep -v "^signature_detection.pl:signature_grade" allow.bak > prolog/codewalk_caller_allowlist.txt
+$ .venv/bin/python python/codewalk_caller_check.py --check
+  latent-B signature_detection.pl signature_grade/2: 1 bound call site(s) under the codewalk arm — the class label says none was found. Adjudicate and allowlist (with ATOMS + REMOVE) in the same change, or convert.
+codewalk_caller_check: RED — 1 problem(s)
+
+$ sed 's/ATOMS=correction/ATOMS=commentary/' allow.bak > prolog/codewalk_caller_allowlist.txt
+$ .venv/bin/python python/codewalk_caller_check.py --check
+  latent-B signature_detection.pl signature_grade/2: bound caller(s) on atom(s) ['correction'], which the allowlist (codewalk_caller_allowlist.txt:28) does NOT cover — it adjudicates only ['commentary']. Over-permissiveness is atom-specific; the listed atom's evidence does not transfer. Adjudicate this atom.
+codewalk_caller_check: RED — 1 problem(s)
+
+$ cp allow.bak prolog/codewalk_caller_allowlist.txt
+$ .venv/bin/python python/codewalk_caller_check.py --check
+codewalk_caller_check: GREEN — ...
+```
+
+The rogue-atom half is the one worth having: a predicate-level allowlist would have covered the
+hazardous atom with the benign atom's evidence.
+
+### R13. `evaluate(false)` recovery — the two single-instrument rows are no longer single-instrument
+
+The `json_report.pl` exclusion is specific to `evaluate(true)`. A recovery pass re-walks the
+rows it costs at `evaluate(false)` — module-resolved, multi-line bodies, meta-called goals,
+minus only the unification-bound stratum:
+
+```
+$ .venv/bin/python audits/2026-08-18_bound_caller_rewitness/partition.py
+PARTITION: 58 latent-B rows (registry N_latentB=58), all classified
+  converts-clean   55
+  converts-clean-minus-dataflow 2
+  live-output-path 1
+  unification-bound sites (evaluate true minus false): 0
+  codewalk unresolved: 2
+  (machine, pre-adjudication: converts-clean=53, converts-clean-minus-dataflow=2, not-latent=3)
+```
+
+`regex-only` is now empty. The missing stratum is named in the grade rather than rounded off —
+these rows would otherwise have ridden into conversion on the evidence of the one instrument
+that just produced a proven false negative on the headline path.
+
+### R14. Gate at 25 rows, GREEN
+
+```
+  ✓ codewalk caller  codewalk_caller_check: GREEN — 74 registry spec(s) (58 latent-B), 99 loaded module(s), 1772 traced goal(s), 71 resolved / 3 unresolved, controls two-sided (fires dr_type/3 bound=20, declines constraint_signature/2 sites=29 bound=0); 1 adjudicated allowlist row(s) (signature_grade/2@['correction']); 1 declared load exclusion(s) under evaluate(true) (json_report.pl), 3 row(s) recovered at evaluate(false) as converts-clean-minus-dataflow; declared blind spots: ...; selftest OK
+GATE: GREEN
+```
+
+Note the control figures moved (`dr_type/3` 67/19 → 80/20, `constraint_signature/2` 18/0 →
+29/0) because the checker's load chain is wider than `[stack]`. **The figures are
+chain-relative and both are now recorded in the module header** — a reader reproducing one on
+the other chain would otherwise read a real difference as drift.
+
 ---
 
 ## CLOSE — 2026-08-18
@@ -384,12 +469,9 @@ whatever this unit wrote — nothing in the read-set. Verified with
 GATE: GREEN
 ```
 
-**Deliberately RED and NOT gate-wired:**
-
-```
-$ .venv/bin/python python/codewalk_caller_check.py --check
-  latent-B signature_detection.pl signature_grade/2: 1 bound call site(s) under the codewalk arm — the class label says none was found. Adjudicate before converting.
-codewalk_caller_check: RED — 1 problem(s)
-```
+**SUPERSEDED by R12 (same day).** This section originally recorded the checker as deliberately
+RED and not gate-wired. Operator ruled otherwise 2026-08-18: allowlist it and wire it GREEN —
+a knowingly-red row trains its readers to ignore the channel, and an unwired checker strands
+the discrimination. Final state: gate row `codewalk caller`, GREEN, 25 rows.
 
 **Hard stop.** No conversion performed; no `prolog/*.pl` semantics changed; Unit B not begun.

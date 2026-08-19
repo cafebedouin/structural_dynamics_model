@@ -1,0 +1,48 @@
+signature_grade/2 — bound vs unbound-filtered agreement, all five live legs
+Executed 2026-08-18. Probe: sg_probe.pl (below). Run from prolog/, corpus_path overlaid
+with asserta per leg (config.pl:489 first-clause trap).
+
+== results ==
+testsets           corpus=279 bound=45 unbound_filtered=45 only_bound=0 only_unbound=0 control(commentary): bound=263 unbound_filtered=234 
+testsets_haiku     corpus=960 bound=61 unbound_filtered=61 only_bound=0 only_unbound=0 control(commentary): bound=932 unbound_filtered=899 
+testsets_flash     corpus=960 bound=126 unbound_filtered=126 only_bound=0 only_unbound=0 control(commentary): bound=886 unbound_filtered=834 
+testsets_kimi      corpus=1005 bound=73 unbound_filtered=73 only_bound=0 only_unbound=0 control(commentary): bound=993 unbound_filtered=932 
+testsets_sonnet    corpus=1001 bound=216 unbound_filtered=216 only_bound=0 only_unbound=0 control(commentary): bound=952 unbound_filtered=785 
+
+== reading ==
+bound == unbound_filtered on every leg (only_bound=0, only_unbound=0): the bound call at
+:1951 returns exactly what once(signature_grade(C,G)), G == correction returns.
+
+The control is the informative half. The SAME comparison at the sibling atom
+`commentary` DIVERGES on every leg (bound > unbound_filtered by 29/33/52/61/167), so
+the probe is not blind — it separates the over-permissive case from the benign one, and
+over-permissiveness here is ATOM-SPECIFIC. Structural reason: clause 1 of
+signature_grade/2 (signature_detection.pl:1924) has a FRESH-VARIABLE head, so its cut
+always runs; a bound `correction` query skips only clause 3's cut, and clause 3 binds
+`commentary`, which cannot match. A bound `commentary` query skips clause 2's cut, and
+clause 2 binds `correction`, which is exactly the answer it steals.
+
+== probe source ==
+% Does the BOUND call signature_grade(C, correction) agree with the unbound-then-filter
+% form on the live corpus? Pattern 7 says the bound form is OVER-PERMISSIVE; a disagreement
+% is the hazard firing, an agreement is a corpus-scoped benign verdict.
+sg_probe :-
+    findall(C, corpus_loader:corpus_constraint(C), Cs),
+    length(Cs, N),
+    findall(C, (member(C,Cs), signature_detection:signature_grade(C, correction)), Bound),
+    findall(C, (member(C,Cs), once(signature_detection:signature_grade(C, G)), G == correction), Unbound),
+    length(Bound, NB), length(Unbound, NU),
+    sort(Bound, SB), sort(Unbound, SU),
+    subtract(SB, SU, OnlyBound), subtract(SU, SB, OnlyUnbound),
+    length(OnlyBound, NOB), length(OnlyUnbound, NOU),
+    format("corpus=~w bound=~w unbound_filtered=~w only_bound=~w only_unbound=~w~n",
+           [N, NB, NU, NOB, NOU]),
+    ( OnlyBound == [] -> true ; format("  ONLY-BOUND: ~q~n", [OnlyBound]) ),
+    ( OnlyUnbound == [] -> true ; format("  ONLY-UNBOUND: ~q~n", [OnlyUnbound]) ),
+    % POSITIVE CONTROL: the same comparison on a predicate whose bound form IS known
+    % over-permissive would differ. Use commentary — clause 3's atom, whose cut IS skipped
+    % under a bound `correction` query — to show the probe can separate the two forms.
+    findall(C, (member(C,Cs), signature_detection:signature_grade(C, commentary)), BC),
+    findall(C, (member(C,Cs), once(signature_detection:signature_grade(C, G2)), G2 == commentary), UC),
+    length(BC, NBC), length(UC, NUC),
+    format("control(commentary): bound=~w unbound_filtered=~w~n", [NBC, NUC]).

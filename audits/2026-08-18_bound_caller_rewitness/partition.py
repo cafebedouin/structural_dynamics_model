@@ -68,7 +68,18 @@ ADJUDICATED: dict[tuple[str, str], tuple[str, str]] = {
         "(git show 9a5d8526:prolog/signature_detection.pl -> line 1901), so this is a true "
         "false negative of the regex arm at sweep time, not a later addition. It is on a LIVE "
         "OUTPUT PATH: signature_severity/2 -> diagnostic_summary:join_alerts/2:749 -> the "
-        "OQ-98 verdict_join headline. Conversion owes the full six-leg clean-vs-edited pair."),
+        "OQ-98 verdict_join headline. BUT THE CALLER IS BENIGN AT THIS ATOM, WITNESSED not "
+        "assumed: clause 1 of signature_grade/2 has a FRESH-VARIABLE head so its cut always "
+        "runs, and a bound `correction` query skips only clause 3's cut, whose atom cannot "
+        "match. Bound and once+== agree exactly on all five live legs (0 only-bound, 0 "
+        "only-unbound over 279/960/960/1005/1001) while the two-sided control in the same runs "
+        "DIVERGES at the sibling atom `commentary` on every leg (263/234, 932/899, 886/834, "
+        "993/932, 952/785) — so the probe discriminates and over-permissiveness here is "
+        "ATOM-SPECIFIC. Evidence: signature_grade_agreement.txt. Adjudicated into "
+        "prolog/codewalk_caller_allowlist.txt with ATOMS=correction and a REMOVE condition; "
+        "the gate row is GREEN and goes RED on any other atom. Conversion still owes the full "
+        "six-leg clean-vs-edited pair — the row is on a live output path and the conversion is "
+        "semantics-changing by construction, benign caller or not."),
 }
 
 HDR_RE = re.compile(r"^== (\S+)/(\d+) \((\S+)\): (\d+) bound call site\(s\)")
@@ -120,6 +131,7 @@ def main() -> int:
                          "this run is readable")
 
     cw_pred = {(r["deffile"], r["pi"]): r for r in cw_t["preds"]}
+    recovered = {(r["deffile"], r["pi"]): r for r in cw_t.get("recovered", [])}
     cw_pred_f = {(r["deffile"], r["pi"]): r for r in cw_f["preds"]}
     cw_unres = {(r["deffile"], r["pi"]): r["reason"] for r in cw_t["unresolved"]}
     cw_sites: dict[tuple[str, str], list[dict]] = {}
@@ -141,11 +153,23 @@ def main() -> int:
         # executes `A=B` while walking.
         unif = None if (cw_bound is None or cwf_bound is None) else cw_bound - cwf_bound
 
-        if unres is not None:
+        rec = recovered.get(key)
+        if unres is not None and rec is not None and rec["bound"] == 0 and (rx or 0) == 0:
+            disp = "converts-clean-minus-dataflow"
+            witness = ("NOT PRE-REGISTERED — see partition.md. The codewalk arm cannot walk "
+                       "this row's file under evaluate(true) (declared LOAD_EXCLUSION: "
+                       "prolog_walk_code does not terminate on json_report.pl with `A=B` "
+                       "propagation on). It DOES walk at evaluate(false) in 0.6s, so the row "
+                       "gets a module-resolved, multi-line-body, meta-call-aware codewalk "
+                       "verdict — everything the second arm buys EXCEPT the unification-bound "
+                       "stratum, which is named in the grade rather than rounded off. "
+                       "Template application; no six-leg run.")
+        elif unres is not None:
             disp = "regex-only"
-            witness = ("NOT PRE-REGISTERED — see partition.md §Prereg gap. The codewalk arm "
-                       "returned no verdict for this row, so `converts-clean` (which requires "
-                       "zero under BOTH arms) cannot be assigned. Regex-arm evidence only.")
+            witness = ("NOT PRE-REGISTERED — see partition.md. The codewalk arm returned no "
+                       "verdict for this row under either evaluate setting, so `converts-clean` "
+                       "(which requires zero under BOTH arms) cannot be assigned. Regex-arm "
+                       "evidence only.")
         elif cw_bound and cw_bound > 0:
             if rx == 0:
                 disp = "not-latent"
@@ -162,7 +186,12 @@ def main() -> int:
                        "callers before treating either arm as wrong")
         else:
             disp = "converts-clean"
-            witness = "template application; no six-leg run"
+            witness = ("template application; no six-leg run. NOTE THE ALTITUDE: `clean` here "
+                       "means clean under two instruments with known, disjoint, NON-EMPTY "
+                       "blind spots — not clean. The residual false-negative rate is "
+                       "unknown-but-nonzero, and there is one confirmed instance in this very "
+                       "partition (signature_grade/2), so the distinction is load-bearing for "
+                       "any row that turns out to reach a recorded output path.")
 
         machine_disp = disp
         adj = ADJUDICATED.get(key)
@@ -233,6 +262,21 @@ def main() -> int:
           "(`codewalk_caller_check.py`) bound call sites, with total sites seen in parentheses;",
           "`uni` = sites the codewalk arm resolves ONLY because `prolog_codewalk` executes",
           "`A=B` while walking (evaluate true minus evaluate false).",
+          "",
+          "**`converts-clean` is scoped, and the scope is load-bearing.** It means *clean under",
+          "two instruments with known, disjoint, NON-EMPTY blind spots* — not clean. Two of the",
+          "blind spots are demonstrated and populated in this very partition: real bound goals",
+          "inside a Prolog goal string in a `.py` file (`claimed_natural/2`, invisible to",
+          "codewalk), and a body goal ending its clause (`signature_grade/2`, invisible to the",
+          "regex, and on the `verdict_join` headline path). The residual false-negative rate is",
+          "unknown-but-nonzero.",
+          "",
+          "**The `uni` zero is scoped too.** It is zero *over the walked set*, and the one file",
+          "that could not be walked under `evaluate(true)` — `json_report.pl` — is the file that",
+          "could not be walked BECAUSE its clauses carry enough unification to make the abstract",
+          "interpreter diverge. That is not a reason to distrust the zero; it is the reason the",
+          "zero must be stated with its exclusion attached, since the exclusion is the one place",
+          "a counterexample could hide.",
           "",
           "## Counts", ""]
     for d in sorted(counts):

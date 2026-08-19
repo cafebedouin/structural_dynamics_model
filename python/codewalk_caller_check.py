@@ -39,18 +39,39 @@ record is the output text below; run --check to reproduce it. Both halves are re
 the SAME process before any zero from that process is readable (PREREGISTRATION §4,
 audits/2026-08-18_bound_caller_rewitness/):
 
-  FIRES    CWC_PRED: drl_core.pl dr_type/3 module=drl_core sites=67 bound=19
-  DECLINES CWC_PRED: signature_detection.pl constraint_signature/2 module=signature_detection sites=18 bound=0
+On the chain --check actually uses ([stack] + every registry file except LOAD_EXCLUSIONS):
 
-The DECLINES half is the informative one: the arm looked (sites=18) and declined on the
+  FIRES    drl_core.pl dr_type/3 module=drl_core sites=80 bound=20
+  DECLINES signature_detection.pl constraint_signature/2 module=signature_detection sites=29 bound=0
+
+On `[stack]` alone the same pair reads sites=67 bound=19 and sites=18 bound=0. Both are
+recorded because the FIGURES ARE CHAIN-RELATIVE and a reader reproducing one on the other
+chain would otherwise read a real difference as drift. The discriminating property is
+neither integer: it is bound>0 on the fires half and (sites>0, bound=0) on the declines half.
+
+The DECLINES half is the informative one: the arm LOOKED (sites=29) and declined on the
 bound question (bound=0). A declines-control reporting sites=0 means it never looked, and
-invalidates every zero in that run — enforced below, not merely documented.
+invalidates every zero in that run — enforced by check_controls(), not merely documented.
 
 Usage:
     python3 python/codewalk_caller_check.py --check     # selftest, then live sweep
     python3 python/codewalk_caller_check.py --selftest  # fixtures only
     python3 python/codewalk_caller_check.py --list      # every call site, classified
     python3 python/codewalk_caller_check.py --json      # machine-readable per-predicate rows
+
+ALLOWLIST (prolog/codewalk_caller_allowlist.txt). A `latent-B` row asserts "no live bound
+caller". When this arm finds one, the assertion is wrong and the row is RED unless it carries
+an adjudication there — with its ATOMS and its REMOVE condition. Neither red-forever nor
+unwired: a knowingly-red row trains readers to ignore the channel, and an unwired checker
+cannot catch the NEXT one (operator ruling, 2026-08-18). ATOMS is enforced per-atom because
+over-permissiveness is atom-specific — signature_grade/2 is exactly identical to the
+unbound-then-filter form at `correction` on all five legs and diverges by 29-167 constraints
+per leg at `commentary`.
+
+RECOVERY PASS. LOAD_EXCLUSIONS is specific to evaluate(true); the excluded file walks fine at
+evaluate(false). Rows it costs are re-walked there and graded
+`converts-clean-minus-dataflow` — module-resolved, multi-line-body, meta-call-aware, minus
+only the unification-bound stratum. The missing stratum is named in the grade, not rounded off.
 """
 from __future__ import annotations
 
@@ -64,6 +85,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 PROLOG = REPO / "prolog"
 WALKER = PROLOG / "codewalk_caller.pl"
+ALLOWLIST = PROLOG / "codewalk_caller_allowlist.txt"
 
 sys.path.insert(0, str(REPO / "python"))
 from dispatch_head_check import DECLARED, MUST_NOT_FIRE  # the worklist, imported not copied
@@ -82,6 +104,40 @@ DECLARED_BLIND_SPOTS = [
     "free; unification-bound selectors DO resolve, via prolog_codewalk evaluate/2)",
     "output-not-last (last argument assumed to be the output, per dispatch_head_check.pl:9-11)",
 ]
+
+ALLOW_RE = re.compile(
+    r"^(?P<file>\S+\.pl):(?P<pi>\S+/\d+)\s+ATOMS=(?P<atoms>\S+)\s+"
+    r"REMOVE=(?P<remove>.+?)\s{2,}(?P<reason>\S.*)$")
+
+
+def read_allowlist(path: Path = ALLOWLIST) -> dict[tuple[str, str], dict]:
+    """Parse the allowlist. A MALFORMED row is RED, never a skipped line.
+
+    Absence of the file is also RED: an allowlist-shaped guard whose allowlist vanished
+    would otherwise go green by having nothing to compare against (Pattern 5).
+    """
+    if not path.exists():
+        raise SystemExit(f"codewalk_caller_check: RED — allowlist missing: {path}")
+    entries: dict[tuple[str, str], dict] = {}
+    for lineno, raw in enumerate(path.read_text().splitlines(), 1):
+        line = raw.rstrip()
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        m = ALLOW_RE.match(line)
+        if not m:
+            raise SystemExit(
+                f"codewalk_caller_check: RED — malformed allowlist row {path.name}:{lineno}: "
+                f"{line[:120]!r} (grammar: <file.pl>:<name>/<arity>  ATOMS=<a[,b]>  "
+                f"REMOVE=<condition>  <reason>; two+ spaces separate the columns)")
+        key = (m.group("file"), m.group("pi"))
+        if key in entries:
+            raise SystemExit(f"codewalk_caller_check: RED — duplicate allowlist row for "
+                             f"{key[0]} {key[1]} at {path.name}:{lineno}")
+        entries[key] = {"atoms": set(m.group("atoms").split(",")),
+                        "remove": m.group("remove").strip(),
+                        "reason": m.group("reason").strip(), "line": lineno}
+    return entries
+
 
 PRED_RE = re.compile(
     r"^CWC_PRED: (\S+) (\S+/\d+) module=(\S+) sites=(\d+) bound=(\d+)\s*$")
@@ -308,6 +364,70 @@ def selftest() -> list[str]:
         fails.append("SELFTEST empty spec did not fail loud")
     except SystemExit:
         pass
+
+    fails.extend(allowlist_selftest())
+    return fails
+
+
+# ---------------------------------------------------------------------------
+# The allowlist is itself a claim, so it owes its own two-sided controls: the parser must
+# ACCEPT a well-formed row and REFUSE each way a row can be wrong. An allowlist that silently
+# skips a line it cannot parse is an exemption channel with no floor.
+# ---------------------------------------------------------------------------
+ALLOWLIST_FIXTURES: list[tuple[str, str, bool]] = [
+    # (label, text, expect_parse_ok)
+    ("well-formed row parses",
+     "foo.pl:bar/2  ATOMS=alpha  REMOVE=when bar/2 is converted  because reasons\n", True),
+    ("multi-atom row parses",
+     "foo.pl:bar/2  ATOMS=alpha,beta  REMOVE=on conversion  because reasons\n", True),
+    ("comments and blanks are skipped, not parsed",
+     "# a comment\n\n   \nfoo.pl:bar/2  ATOMS=alpha  REMOVE=x  y\n", True),
+    ("REFUSE missing ATOMS",
+     "foo.pl:bar/2  REMOVE=on conversion  because reasons\n", False),
+    ("REFUSE missing REMOVE",
+     "foo.pl:bar/2  ATOMS=alpha  because reasons\n", False),
+    ("REFUSE missing reason",
+     "foo.pl:bar/2  ATOMS=alpha  REMOVE=on conversion\n", False),
+    ("REFUSE bare predicate indicator with no file",
+     "bar/2  ATOMS=alpha  REMOVE=x  y\n", False),
+    ("REFUSE duplicate rows for one predicate",
+     "foo.pl:bar/2  ATOMS=alpha  REMOVE=x  y\nfoo.pl:bar/2  ATOMS=beta  REMOVE=x  y\n",
+     False),
+]
+
+
+def allowlist_selftest() -> list[str]:
+    fails: list[str] = []
+    with tempfile.TemporaryDirectory(prefix="cwc_allow_") as td:
+        for i, (label, text, ok) in enumerate(ALLOWLIST_FIXTURES):
+            f = Path(td) / f"allow_{i}.txt"
+            f.write_text(text)
+            try:
+                read_allowlist(f)
+                got = True
+            except SystemExit:
+                got = False
+            if got != ok:
+                fails.append(f"SELFTEST allowlist {label}: expected parse_ok={ok}, got {got}")
+        # A missing allowlist must be RED, not an empty (and therefore permissive) one.
+        try:
+            read_allowlist(Path(td) / "does_not_exist.txt")
+            fails.append("SELFTEST allowlist absence did not fail loud — a vanished "
+                         "allowlist would go GREEN by having nothing to compare against")
+        except SystemExit:
+            pass
+        # The LIVE allowlist must parse, and every row must name a real registry entry.
+        try:
+            live = read_allowlist()
+        except SystemExit as e:
+            return fails + [f"SELFTEST live allowlist does not parse: {e}"]
+        for key, entry in live.items():
+            if key not in DECLARED:
+                fails.append(f"SELFTEST live allowlist row {entry['line']} names {key[0]} "
+                             f"{key[1]}, absent from the dispatch_head_check registry")
+            if not entry["remove"]:
+                fails.append(f"SELFTEST live allowlist row {entry['line']} has an empty "
+                             f"REMOVE condition — a permanent exemption in temporary clothes")
     return fails
 
 
@@ -350,6 +470,25 @@ def live_run(evaluate: bool = True) -> WalkResult:
     return run_walker(live_specs(), live_goals(), cwd=PROLOG, evaluate=evaluate)
 
 
+def recovery_run() -> WalkResult:
+    """Second pass at evaluate(false), WITH the excluded file loaded.
+
+    The exclusion in LOAD_EXCLUSIONS is specific to `evaluate(true)` — json_report.pl walks
+    in 0.6s once `A=B` propagation is off. So the rows it costs need not stay
+    single-instrument: at evaluate(false) they get a module-resolved, multi-line-body,
+    meta-call-aware codewalk verdict — everything the second arm buys EXCEPT the
+    unification-bound stratum. That is a materially different epistemic state from
+    regex-only, and it is one subprocess away.
+
+    Rows recovered here are graded `converts-clean-minus-dataflow`, never `converts-clean`:
+    the missing stratum is declared in the grade rather than rounded off.
+    """
+    files = sorted({f for (f, _pi) in live_specs()})
+    loads = ", ".join(f"catch(ensure_loaded('{f}'), _, true)" for f in files)
+    goals = ["['stack']", f"forall(member(G, [{loads}]), (call(G) -> true ; true))"]
+    return run_walker(live_specs(), goals, cwd=PROLOG, evaluate=False)
+
+
 def check_controls(r: WalkResult) -> list[str]:
     """The zero rule, enforced rather than documented (PREREGISTRATION §4)."""
     problems = []
@@ -381,24 +520,74 @@ def main(argv: list[str]) -> int:
         print("codewalk_caller_check: RED (selftest)")
         return 1
     if "--selftest" in argv:
-        print("codewalk_caller_check: selftest OK (4 regex-blind positive shapes, "
-              "module-resolution control, unification-stratum control both ways "
-              "[evaluate true/false], runtime-residue control both ways, free-call "
-              "looked-and-declined control, comment negative, unresolved-spec control, "
-              "empty-scan control)")
+        print(f"codewalk_caller_check: selftest OK (4 regex-blind positive shapes, "
+              f"module-resolution control, unification-stratum control both ways "
+              f"[evaluate true/false], runtime-residue control both ways, free-call "
+              f"looked-and-declined control, comment negative, unresolved-spec control, "
+              f"empty-scan control, {len(ALLOWLIST_FIXTURES)} allowlist-grammar fixtures "
+              f"[3 accept / 5 refuse] + allowlist-absence control + live-allowlist "
+              f"registry-membership and REMOVE-nonempty checks)")
         return 0
 
     evaluate = not ("--evaluate" in argv and "false" in argv)
+    allow = read_allowlist()
     r = live_run(evaluate=evaluate)
     control_problems = check_controls(r)
+
+    # RECOVERY: fill in rows the primary pass could not resolve (LOAD_EXCLUSIONS), at
+    # evaluate(false), which is the setting the exclusion is specific to.
+    recovered: dict[tuple[str, str], dict] = {}
+    if evaluate and r.unresolved:
+        rec = recovery_run()
+        rec_problems = check_controls(rec)
+        if rec_problems:
+            control_problems += [f"RECOVERY {p}" for p in rec_problems]
+        else:
+            rec_pred = {(x["deffile"], x["pi"]): x for x in
+                        [{"deffile": k[0], "pi": k[1], **v} for k, v in rec.preds.items()]}
+            for key in [(a, b) for a, b, _ in r.unresolved]:
+                if key in rec_pred:
+                    recovered[key] = rec_pred[key]
+
     latentb_problems: list[str] = []
+    stale_notes: list[str] = []
     # Computed BEFORE the --list/--json branches so every mode reports the same verdict.
     for (f, pi), cls in sorted(DECLARED.items()):
-        if cls == "latent-B" and (f, pi) in r.preds and r.preds[(f, pi)]["bound"] > 0:
+        if cls != "latent-B":
+            continue
+        row = r.preds.get((f, pi)) or recovered.get((f, pi))
+        if row is None or row["bound"] == 0:
+            continue
+        atoms = {s["atom"] for s in r.sites
+                 if (s["deffile"], s["pi"]) == (f, pi) and s["kind"] == "bound"}
+        entry = allow.get((f, pi))
+        if entry is None:
             latentb_problems.append(
-                f"latent-B {f} {pi}: {r.preds[(f, pi)]['bound']} bound call site(s) under "
-                f"the codewalk arm — the class label says none was found. Adjudicate "
-                f"before converting.")
+                f"latent-B {f} {pi}: {row['bound']} bound call site(s) under the codewalk "
+                f"arm — the class label says none was found. Adjudicate and allowlist (with "
+                f"ATOMS + REMOVE) in the same change, or convert.")
+            continue
+        rogue = sorted(atoms - entry["atoms"])
+        if rogue:
+            latentb_problems.append(
+                f"latent-B {f} {pi}: bound caller(s) on atom(s) {rogue}, which the allowlist "
+                f"({ALLOWLIST.name}:{entry['line']}) does NOT cover — it adjudicates only "
+                f"{sorted(entry['atoms'])}. Over-permissiveness is atom-specific; the "
+                f"listed atom's evidence does not transfer. Adjudicate this atom.")
+
+    # A listed row that stopped firing is a stale entry: note, exit 0, prune it.
+    for (f, pi), entry in sorted(allow.items()):
+        if (f, pi) not in DECLARED:
+            latentb_problems.append(
+                f"allowlist row {ALLOWLIST.name}:{entry['line']} names {f} {pi}, which is "
+                f"not in the dispatch_head_check registry at all — stale or misspelled")
+            continue
+        row = r.preds.get((f, pi)) or recovered.get((f, pi))
+        if row is not None and row["bound"] == 0:
+            stale_notes.append(
+                f"stale allowlist row ({ALLOWLIST.name}:{entry['line']}): {f} {pi} no longer "
+                f"has a bound caller — prune it. REMOVE condition was: {entry['remove']}")
+
     problems = control_problems + latentb_problems
 
     if "--json" in argv:
@@ -407,6 +596,15 @@ def main(argv: list[str]) -> int:
             rows.append({"deffile": f, "pi": pi, "cls": DECLARED.get((f, pi), "CONTROL"),
                          **d})
         print(json.dumps({"preds": rows,
+                          "recovered": [{"deffile": k[0], "pi": k[1],
+                                         "grade": "converts-clean-minus-dataflow",
+                                         **{x: y for x, y in v.items()
+                                            if x not in ("deffile", "pi")}}
+                                        for k, v in sorted(recovered.items())],
+                          "allowlist": [{"deffile": k[0], "pi": k[1], **v}
+                                        for k, v in sorted(allow.items())
+                                        for v in [{**v, "atoms": sorted(v["atoms"])}]],
+                          "stale_notes": stale_notes,
                           "unresolved": [{"deffile": a, "pi": b, "reason": c}
                                          for a, b, c in r.unresolved],
                           "sites": r.sites,
@@ -431,6 +629,10 @@ def main(argv: list[str]) -> int:
         return 1 if problems else 0
 
     n_latentb = sum(1 for v in DECLARED.values() if v == "latent-B")
+    allow_summary = ", ".join(f"{pi}@{sorted(e['atoms'])}"
+                              for (_f, pi), e in sorted(allow.items()))
+    for n in stale_notes:
+        print(f"  note: {n}")
     if problems:
         for p in problems:
             print(f"  {p}")
@@ -442,8 +644,11 @@ def main(argv: list[str]) -> int:
           f"controls two-sided (fires {FIRES_CONTROL[1]} bound="
           f"{r.preds[FIRES_CONTROL]['bound']}, declines {DECLINES_CONTROL[1]} sites="
           f"{r.preds[DECLINES_CONTROL]['sites']} bound=0); "
-          f"{len(LOAD_EXCLUSIONS)} declared load exclusion(s) "
-          f"({', '.join(sorted(LOAD_EXCLUSIONS))}); declared blind spots: "
+          f"{len(allow)} adjudicated allowlist row(s) "
+          f"({allow_summary}); "
+          f"{len(LOAD_EXCLUSIONS)} declared load exclusion(s) under evaluate(true) "
+          f"({', '.join(sorted(LOAD_EXCLUSIONS))}), {len(recovered)} row(s) recovered at "
+          f"evaluate(false) as converts-clean-minus-dataflow; declared blind spots: "
           + "; ".join(DECLARED_BLIND_SPOTS) + "; selftest OK")
     return 0
 

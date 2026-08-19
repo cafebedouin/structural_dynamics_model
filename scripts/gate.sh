@@ -72,6 +72,19 @@ run "bound selector" "$PY" python/bound_selector_check.py --check
 # constraint_signature/2, declined on dr_type/3 and on both post-fix
 # (audits/2026-08-17_bound_dispatch_hardening/).
 run "dispatch head"  "$PY" python/dispatch_head_check.py --check
+# CALL-SITE arm of the same registry (2026-08-18, OQ-303(a) re-witness). The `latent-B` class
+# label asserts "no live bound caller"; caller_sweep.py, the regex that produced it, missed one
+# on the verdict_join headline path because the call ends its clause and its clause-head
+# heuristic read the terminating `.` as a fact. This row is library(prolog_codewalk) over the
+# loaded program — module-resolved, multi-line bodies, meta-called goals — and it exists to
+# catch the NEXT such miss, not to memorialize that one. Red on a bound caller for any
+# latent-B row not adjudicated in prolog/codewalk_caller_allowlist.txt, and red per-ATOM
+# (over-permissiveness is atom-specific: signature_grade/2 is exact at `correction` on all five
+# legs and diverges by 29-167 per leg at `commentary`). NOT a superset of the regex row above —
+# disjoint blind spots, both directions witnessed (audits/2026-08-18_bound_caller_rewitness/).
+# Discrimination record: RED naming signature_grade/2 with the allowlist row deleted, RED naming
+# the uncovered atom with ATOMS narrowed to `commentary`, GREEN restored.
+run "codewalk caller" "$PY" python/codewalk_caller_check.py --check
 # Unswept consumers of a DISPLACED taxonomy member (OQ-278) — one manifest block per member,
 # with the state that says WHY its citations are stale: `destructive-replace` was vacated
 # (2026-08-11), `bound-probe` was renumbered 3 -> 7 (2026-08-17). build_discipline.md's

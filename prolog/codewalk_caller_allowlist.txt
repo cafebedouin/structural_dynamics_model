@@ -1,0 +1,28 @@
+# codewalk_caller_allowlist.txt — ADJUDICATED bound call sites on `latent-B` registry rows.
+#
+# The guard is python/codewalk_caller_check.py (gate row `codewalk caller`), the CALL-SITE
+# arm of the bound-dispatch registry: library(prolog_codewalk) over the loaded program,
+# module-resolved. A `latent-B` entry in python/dispatch_head_check.py's DECLARED asserts
+# "shape present, NO live bound caller". When this arm finds one, that assertion is wrong,
+# and the row lands here with its adjudication or the gate goes RED.
+#
+# WHY AN ALLOWLIST AND NOT A STANDING RED (operator ruling, 2026-08-18). A knowingly-red row
+# trains its readers to ignore the channel — the failure this project keeps naming. An
+# unwired checker is worse: the finding lives only in an audit dir and the instrument's
+# discrimination is unavailable to catch the NEXT one. Same shape as
+# prolog/load_warning_allowlist.txt and prolog/axis_boundary_allowlist.txt.
+#
+# GRAMMAR (checked; a malformed row is RED, never a skipped line):
+#     <deffile.pl>:<name>/<arity>  ATOMS=<a1[,a2...]>  REMOVE=<condition>  <reason>
+# All four columns REQUIRED. In particular:
+#   ATOMS  — the bound atoms adjudicated benign. A bound caller on an allowlisted predicate
+#            using ANY OTHER atom is RED. This is not pedantry: over-permissiveness is
+#            ATOM-SPECIFIC (see the signature_grade/2 entry, where the sibling atom diverges
+#            by 29-167 constraints per leg), so a predicate-level allowlist would silently
+#            cover the hazardous case with the benign case's evidence.
+#   REMOVE — the condition under which this entry is DELETED. An allowlist entry with no
+#            stated exit is a permanent exemption wearing a temporary one's clothes.
+#
+# A listed row that stops firing prints a stale note and exits 0 — prune it.
+
+signature_detection.pl:signature_grade/2  ATOMS=correction  REMOVE=deleted when the class-B conversion of signature_grade/2 lands with its six-leg clean-vs-edited pair, OR immediately if any caller binds an atom other than `correction`  Live bound caller at signature_detection.pl:1951, `signature_severity(C, moderate) :- signature_grade(C, correction).`, on the signature_severity/2 -> diagnostic_summary:join_alerts/2:749 -> verdict_join headline path. The `latent-B` label is WRONG (caller_sweep.py scored 0 at census HEAD 9a5d8526 because the call ends its clause and is_clause_head() read the terminating `.` as a fact). But the caller is BENIGN AT THIS ATOM and that is witnessed, not assumed: clause 1 of signature_grade/2 has a FRESH-VARIABLE head, so its cut always gets its chance, and the only cut a bound `correction` query skips is clause 3's, whose atom cannot match anyway. Bound vs once+== agree exactly on all five live legs (0 only-bound, 0 only-unbound over 279/960/960/1005/1001), and the two-sided control in the same runs shows the probe DISCRIMINATES: the sibling atom `commentary` diverges on every leg (263/234, 932/899, 886/834, 993/932, 952/785). Evidence: audits/2026-08-18_bound_caller_rewitness/signature_grade_agreement.txt

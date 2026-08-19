@@ -569,6 +569,20 @@
    "bound": 0
   }
  ],
+ "recovered": [],
+ "allowlist": [
+  {
+   "deffile": "signature_detection.pl",
+   "pi": "signature_grade/2",
+   "atoms": [
+    "correction"
+   ],
+   "remove": "deleted when the class-B conversion of signature_grade/2 lands with its six-leg clean-vs-edited pair, OR immediately if any caller binds an atom other than `correction`",
+   "reason": "Live bound caller at signature_detection.pl:1951, `signature_severity(C, moderate) :- signature_grade(C, correction).`, on the signature_severity/2 -> diagnostic_summary:join_alerts/2:749 -> verdict_join headline path. The `latent-B` label is WRONG (caller_sweep.py scored 0 at census HEAD 9a5d8526 because the call ends its clause and is_clause_head() read the terminating `.` as a fact). But the caller is BENIGN AT THIS ATOM and that is witnessed, not assumed: clause 1 of signature_grade/2 has a FRESH-VARIABLE head, so its cut always gets its chance, and the only cut a bound `correction` query skips is clause 3's, whose atom cannot match anyway. Bound vs once+== agree exactly on all five live legs (0 only-bound, 0 only-unbound over 279/960/960/1005/1001), and the two-sided control in the same runs shows the probe DISCRIMINATES: the sibling atom `commentary` diverges on every leg (263/234, 932/899, 886/834, 993/932, 952/785). Evidence: audits/2026-08-18_bound_caller_rewitness/signature_grade_agreement.txt",
+   "line": 28
+  }
+ ],
+ "stale_notes": [],
  "unresolved": [
   {
    "deffile": "json_report.pl",
@@ -2518,7 +2532,5 @@
  "scanned": 74,
  "modules": 99,
  "control_problems": [],
- "latentb_problems": [
-  "latent-B signature_detection.pl signature_grade/2: 1 bound call site(s) under the codewalk arm \u2014 the class label says none was found. Adjudicate before converting."
- ]
+ "latentb_problems": []
 }

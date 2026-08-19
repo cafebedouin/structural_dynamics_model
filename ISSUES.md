@@ -13992,7 +13992,17 @@ audit before landing. Git-blame `:577` for the free before-commit control pair.
 
 ## OQ-303 — bound-dispatch rollout: class-B head conversions, the cs_verdict repair, bound_selector_check retirement, MaxEnt catch+default arms
 
-**Ω-type:** Ω_E throughout (mechanical conversions per a witnessed template).
+**Ω-type:** Ω_E for 57 of arm (a)'s 58 rows (mechanical conversions per a witnessed
+template; named resolution operation = run the conversion and measure). **NOT Ω_E throughout —
+amended 2026-08-18**, because the re-witness below disproved "throughout" for one row.
+`signature_detection.pl signature_grade/2` is **Ω_E with a pre-declared Ω_P escalation**: the
+measurement (its six-leg clean-vs-edited pair) is Ω_E, but the row sits on the `verdict_join`
+headline via `signature_severity/2`, so a pair that comes back with a consumer-visible diff
+raises "is the changed headline the one we want?", which is a value-decision by those bearing
+the cost and the operator's seat, not a measurement. That escalation is not new policy — it is
+OQ-98's already-recorded deferred re-rule (the moderate→yellow cap for correction-grade
+signatures is confirmed-but-never-stressed; the first firing on a base-GREEN constraint IS the
+re-rule evidence and gets surfaced). Arms (b)/(c)/(d) unchanged.
 
 **Status:** open
 **Priority:** 3
@@ -14028,18 +14038,30 @@ writeup's OPEN is routed; needs its own census before any fix.
 `caller_sweep.py`", a single-line regex; a second arm (`python/codewalk_caller_check.py` +
 `prolog/codewalk_caller.pl`, `library(prolog_codewalk)`, module-resolved) splits the 58
 `latent-B` rows (registry count, not the "~60" above) into **55 `converts-clean` / 1
-`live-output-path` / 2 `regex-only`**. The one live row is `signature_detection.pl
-signature_grade/2` — called bound at `signature_detection.pl:1951` on the
-`signature_severity/2 → diagnostic_summary:join_alerts/2 → verdict_join` headline path, missed
-by the regex because the call ends its clause and the sweep's clause-head heuristic read the
-`.` as a fact; it owes the six-leg pair, not the template, and `codewalk_caller_check --check`
-is RED on it until converted or reclassified (deliberately NOT gate-wired — that is a standing
-red light and an operator call). The two `regex-only` rows are `json_report.pl`'s, which the
-codewalk arm cannot walk at all. The arms are **not nested** (disjointness witnessed both ways,
-WRITEUP §5), and the residue class the unit was built to declare turned out not to be shared —
-`prolog_codewalk` executes `A=B` while walking, so unification-bound selectors resolve; that
-stratum is measured **0** on the live engine, and the genuinely unmeasured residue is
-runtime-computed selectors only. Conversions themselves are still unstarted.
+`live-output-path` / 2 `converts-clean-minus-dataflow`**. The one live row is
+`signature_detection.pl signature_grade/2` — called bound at `signature_detection.pl:1951` on
+the `signature_severity/2 → diagnostic_summary:join_alerts/2 → verdict_join` headline path,
+missed by the regex because the call ends its clause and the sweep's clause-head heuristic read
+the `.` as a fact. **The class label is wrong; the caller is benign at that atom, and that is
+witnessed:** bound and `once + ==` agree exactly on all five live legs (0 only-bound, 0
+only-unbound over 279/960/960/1005/1001) while the same comparison at the sibling atom
+`commentary` diverges on every leg (29–167 constraints) — so the probe discriminates and
+over-permissiveness here is ATOM-SPECIFIC (`audits/2026-08-18_bound_caller_rewitness/signature_grade_agreement.txt`).
+Conversion still owes the six-leg pair, not the template: the row is on a live output path and
+the conversion is semantics-changing by construction. Adjudicated into
+`prolog/codewalk_caller_allowlist.txt` (`ATOMS=correction` + a REMOVE condition) and the guard
+is **gate-wired GREEN** as row `codewalk caller` — not left red (a knowingly-red row trains its
+readers to ignore the channel) and not left unwired (the finding would live only in an audit
+dir); it goes RED on a bound caller for any other `latent-B` row and RED per-atom.
+`caller_sweep.py` is **not** retired by this — the two arms are **not nested**, disjointness
+witnessed both ways (WRITEUP §5). The residue class the unit was built to declare turned out not
+to be shared: `prolog_codewalk` executes `A=B` while walking, so unification-bound selectors
+resolve; that stratum measures **0 over the walked set** (the one unwalkable file,
+`json_report.pl`, is unwalkable *because* of that same propagation — the zero carries its
+exclusion), and the genuinely unmeasured residue is runtime-computed selectors only.
+`converts-clean` here means *clean under two instruments with known, disjoint, NON-EMPTY blind
+spots* — both blind spots are demonstrated and populated in the partition itself. Conversions
+themselves are still unstarted.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

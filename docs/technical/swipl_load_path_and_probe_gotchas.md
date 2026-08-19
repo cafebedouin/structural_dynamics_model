@@ -578,7 +578,15 @@ while walking** (`prolog_codewalk.pl:663-664`), so a selector bound by a same-cl
 unification resolves to a bound atom — useful, and the reason `run_codewalk_caller/2` exposes
 the flag (true-minus-false measures that stratum). It is also the reason the walker **does not
 terminate on `prolog/json_report.pl`** (>90 s vs 0.5–0.7 s for every other engine file; 0.6 s
-under `evaluate(false)`) — that file is a declared, printed load exclusion.
+under `evaluate(false)`) — that file is a declared, printed load exclusion, and rows it costs
+are recovered by a second pass at `evaluate(false)`, graded `converts-clean-minus-dataflow`.
+
+**Those two are the same fact, so quote the stratum measurement WITH its scope.** The
+unification-bound stratum measures **0 sites over the walked set** — not 0 globally. The one
+file excluded from the walk is excluded *because* its clauses carry enough unification to make
+the abstract interpreter diverge, which makes the exclusion the one place a counterexample
+could sit. State it as scoped; a future reader who lifts "dataflow residue: 0" out of its
+paragraph has the counterexample sitting in the same paragraph they dropped.
 
 **Not covered by any OQ, and correctly so:** `must_be/2` typed wrappers at `unknown`-vs-
 number read sites. That is not a language-adoption question, it is the existing
