@@ -1916,3 +1916,60 @@ gap.** Condition (c) binds ANY authored per-reading field whose value someone wo
 not just a framing field. It is recorded here because this is where the ruling happened, but its
 scope is every future per-reading schema addition. Candidate for the OQ-295 STANDING section when
 that ships (a general rule with no natural `Files:` line).
+
+## GAP-40 — No per-position expressive-capacity instrument: blind-vs-absent is not separable at the seat level, and the axis proposed to measure it had no population
+
+**Declared:** 2026-08-19 (OQ-285 disposition; full gate sequence ran: fresh-instance
+recommendation `audits/2026-08-17_oq285_mode3_measurement_arm/`, Claude-web adversarial check
+persisted beside it as `STEP2_WEB_REVIEW.md` — endorse with 10 amendments — plus an independent
+re-derivation `audits/2026-08-19_oq285_mode3_measurement_arm/`).
+**Drives:** nothing — declared absence. OQ-285 is resolved on it.
+
+**The absent capability:** an instrument separating *a position that cannot express the question*
+(Mode 3, CS sketch §2.5) from *a position that produced no reading*, at the seat level.
+
+**The evidence, at its licensed altitude:**
+
+- **Route census (2026-08-19 audit):** three routes to `unknown` at the H¹ read site, not the
+  two OQ-285's brief named. Routes (a) derivation-FAILS and (b) input-missing: **0 across five
+  legs, 19,141 agent seats**. **That zero is CORPUS-SCOPED, explicitly:** the two-sided planted
+  control (authored-decoy grade — no naturally-arising positive exists anywhere) shows the
+  DETECTOR works and the CORPUS contains no population. "Tested and found to have no population
+  in this corpus" — NOT "tested and found not to occur." The zero survives a rebuild only as a
+  claim about the old corpus.
+- **Route (c) — the only populated route (1,934 seats; live-leg sub-diagnosis 152/152
+  `cascade_fell_through`) — is a PRODUCED READING, not an absence.** In the one place the
+  proposed axis had a population, the phenomenon was not the phenomenon.
+- **The distinction already exists at four other read sites:** `gap_status/3`'s trichotomy (all
+  three outcomes populated), `purity_n_gate_fail` vs `purity_n_no_data`,
+  `sheaf_undetermined_reason/2`, and `seat_perceived_vs_real/4`'s `untyped` (guarded,
+  0-population). The concept's LIVE operational carrier is **`extraction_blindness`** — firing
+  134/279 live stories — on the *surviving* side of the `is_real_type/1` filter OQ-285 laddered.
+- **Category status: unsupported on evidence, NOT inadmissible on principle** (the 2026-08-17
+  §5 wording, kept over that document's own stronger gap-draft per the step-2 review).
+
+**Routes not foreclosed — enumerated with their measured statuses (never "generation spend or
+nothing"):**
+
+1. **Cascade-exit reason token** (serializes WHY `classify_from_metrics/6` fell through):
+   measurable read-only — the 2026-08-19 sub-diagnosis did exactly this. NOT the signature-joined
+   token, which is killed by measurement (misfires on 111 constraints). Buildable but
+   CONSUMERLESS — GAP-39's condition (a) applies: build only for a consumer that exists.
+2. **Pairwise / coarser-coordinate twin-leg matching:** UNMEASURED (the 2026-08-17 "maximal
+   population is 8" was retracted on review; pairwise intersections were never reported).
+3. **Twin-leg seat-level engine runs:** WEAKENED by the 2026-08-19 join measurement — 392/957
+   matched ids carry seats in all four legs, **0** identical seat-name sets, and GAP-31 rules
+   seat names are not identity. Both findings stand together.
+4. **The one revival hinge:** an independently-sourced seat-level capacity judgment — sourced
+   OUTSIDE the authoring pass (an in-corpus slot would be self-certifying, the OQ-70 class).
+
+**Reversal is PASSIVE, and the plausible read-site is named:** whoever acquires an independent
+capacity judgment is most plausibly working from CS sketch §2.5 (Mode 3) — its amendment block
+now carries a pointer here saying the hinge is theirs. Without that read-site the hinge would be
+unlikely to fire; with it, it is still passive. This is the third passive-reversal entry of
+2026-08-19 (with OQ-281's off-8 trigger and GAP-39's revival bar) — an accumulating pattern,
+noted so the OQ-295 STANDING backfill can weigh it.
+
+**Reproducibility caveat, carried from both audits:** both measurements ran on `code_dirty:true`
+trees (`c06bcb2`-dirty and `6523046`-dirty respectively) — the numbers are not reproducible from
+a commit hash.

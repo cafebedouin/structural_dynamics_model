@@ -45,6 +45,25 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: OQ-285 resolved as GAP-40 (no expressive-capacity instrument); the fresh-instance gate CAUGHT the entry's own wrong binary
+**Files:** ISSUES.md, docs/design/design_gaps.md, docs/commitment_systems/commitment_systems_sketch_v6.md, audits/2026-08-17_oq285_mode3_measurement_arm/STEP2_WEB_REVIEW.md, audits/2026-08-19_oq285_mode3_measurement_arm/
+**Tier:** landed
+
+OQ-285's three-step gate ran to completion and WORKED: the independent re-derivation found the
+entry's own FAILS-vs-unknown binary wrong (three routes; the only populated route (c), 1,934
+seats, is a produced reading, not an absence) while the concept's live carrier
+(extraction_blindness, 134/279) sat on the surviving side of the laddered filter — false-absence
+sub-rule (c) instantiated and caught by the gate built for it. Disposition: GAP-40 declared
+absence, NO code (signature-joined token killed by measurement); category
+unsupported-on-evidence, not inadmissible; routes (a)/(b) zero is CORPUS-SCOPED (decoy-grade
+control: detector works, corpus has no population — does not survive a rebuild as a claim about
+the new corpus); cheaper routes enumerated with measured statuses; passive revival hinge with its
+read-site named (CS sketch §2.5 pointer added). Claude-web step-2 check (endorse + 10
+amendments) persisted verbatim beside the 2026-08-17 WRITEUP, which stands point-in-time. Both
+audits ran on code_dirty trees — numbers not reproducible from a hash. Sketch changelog row
+updated. Sweep: the falsified plan-claim ("signature layer never converts unknown") propagated
+nowhere (positive control fired on the WRITEUP's own quotation).
+
 ## 2026-08-19 — LANDED: OQ-242 ruled as a principle — distance components compute only over measured inputs; purity 0.5 midpoint retired; OQ-327 minted for the sibling fallbacks
 **Files:** prolog/context_profile_mining.pl, ISSUES.md, audits/2026-08-19_oq242_absence_semantics/
 **Tier:** landed

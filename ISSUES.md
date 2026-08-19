@@ -12447,11 +12447,38 @@ the absence as an oversight and "fixing" it.
 **Ω-type:** Ω_E for the token behavior (mechanically checkable); **Ω_C** for whether the gauge axis
 should carry an *expressive-capacity* predicate distinct from a verdict.
 
-**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch. **The doc half is DONE**
-(CS sketch §2.5 corrected in place, v6.1); **the code half is GATED** behind the fresh-instance
-review + operator/Claude-web check below — no code lands before it.
+**Status:** resolved — 2026-08-19, as a **declared absence: GAP-40** (`docs/design/design_gaps.md`),
+with **NO CODE** — no reason token of any kind, and specifically no signature-joined token (killed
+by measurement: misfires on 111 constraints). The full three-step gate ran: fresh-instance
+recommendation (`audits/2026-08-17_oq285_mode3_measurement_arm/`, verdict (D)); Claude-web
+adversarial check (persisted verbatim as `STEP2_WEB_REVIEW.md` in that dir — **endorse with 10
+amendments**, consumed by GAP-40's text); independent re-derivation
+(`audits/2026-08-19_oq285_mode3_measurement_arm/`, verdict (B) with the route correction below).
+Operator disposition 2026-08-19.
+
+**THE GATE WORKED — say it at headline volume, not as bookkeeping.** The strongest result of the
+sequence: the 2026-08-19 re-derivation found this entry's own two-route binary WRONG — there are
+three routes to `unknown`, and route (c) (the only populated one: 1,934 seats across five legs,
+152/152 `cascade_fell_through` on the live leg) is a **produced reading, not an absence**. So in
+the one place the proposed axis had a population, the thing OQ-285 was built to instrument was not
+the phenomenon at all — while the concept's live carrier, `extraction_blindness` (134/279), sat on
+the *surviving* side of the filter this entry laddered. That is false-absence sub-rule (c)
+instantiated — a perfect control ladder on the wrong predicate — and it is exactly the failure the
+gate's fresh-instance requirement was designed to catch, catching it. (OQ-295 §7.4-class material:
+a gate that fires and gets recorded as bookkeeping teaches nothing.)
+
+**Corrections marked on close:** (1) this entry's FAILS-vs-`unknown` binary merged routes (b) and
+(c), which differ most — the 2026-08-19 instance's return of an unlisted verdict form was the
+brief's license-to-refuse working as designed; (2) the 2026-08-17 (D) recommendation stands
+point-in-time, endorsed-with-amendments — its ten over-claims ("empty everywhere", "does not even
+correlate", "maximal population is 8", among others) are enumerated in `STEP2_WEB_REVIEW.md`
+beside it, never silently rewritten into an executed audit; (3) both audits ran on
+`code_dirty:true` trees — the numbers are not reproducible from a commit hash. GAP-40 carries the
+corpus-scoped-zero discipline (detector works, corpus has no population — the zero survives a
+rebuild only as a claim about the old corpus), the enumerated cheaper routes, and the named
+read-site for its passive revival hinge (CS sketch §2.5 now points at it).
 **Priority:** 3
-**Deps:** blocked_on OQ-283, bundled_with OQ-284, blocked_on_human oq285-measurement-arm-recommendation-check
+**Deps:** blocked_on OQ-283, bundled_with OQ-284
 
 **The mechanism, read off the code.** `stakeholder_seats.pl:337-341` maps a seat whose type
 derivation FAILS to `unknown`; `is_real_type/1` (`T \== unknown`) filters it; the header states the

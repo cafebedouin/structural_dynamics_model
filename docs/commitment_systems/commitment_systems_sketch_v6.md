@@ -92,7 +92,7 @@ spec layer — absorbed corrections with the marks sanded off.
 | Committer/ground axis recorded as a bundle null | v5 §5 | The possibility-space exploration | Superseded by the v5.1 split (below) |
 | Bundle null split: beneficiary/victim bit graduated (ε-independent, bounded); everything else standing null on sharper grounds | v5.1 §§5.1–5.5 | v5's single undifferentiated null | Carried — §10 |
 | `natural_law_constraint` + `epistemic_consensus` promoted from unspecced to acknowledged | v5.2 §2 | Seven-atom spec enumeration vs nine-atom code | Carried — §4 |
-| Positional-blindness formalization claim corrected: the presheaf/H¹ machinery formalizes disagreement between positions that each produced a reading, **not** the inability to see — a non-reading seat maps to `unknown` and `is_real_type/1` filters it out before H¹ | v6.1 §2.5 | v4→v6's implied "the framework formalizes this," which read as covering both claims of the paragraph | Live — the unable-to-see claim is now marked UNFORMALIZED; build question is OQ-285 |
+| Positional-blindness formalization claim corrected: the presheaf/H¹ machinery formalizes disagreement between positions that each produced a reading, **not** the inability to see — a non-reading seat maps to `unknown` and `is_real_type/1` filters it out before H¹ | v6.1 §2.5 | v4→v6's implied "the framework formalizes this," which read as covering both claims of the paragraph | Live — the unable-to-see claim is now marked UNFORMALIZED; build question OQ-285 RESOLVED 2026-08-19 as declared absence (GAP-40) |
 
 ---
 
@@ -296,10 +296,14 @@ necessary to use the framework.
 > carries `NSeats`/`NReal` in-band — never the *kind*.
 >
 > The unable-to-see claim therefore stands as this document's own structural assertion, presently
-> **unformalized**, not as a described output of the engine. Whether the gauge axis should carry
-> an "expressible-from-here" predicate distinct from "types-to-X-from-here" is **OQ-285**;
-> `design_discipline.md` §5 governs whether the category is addable at all, since Mode-3 blind
-> cells are by construction undetectable from inside the system that has them. Background:
+> **unformalized**, not as a described output of the engine. **OQ-285 RESOLVED 2026-08-19 as a
+> declared absence — GAP-40 (`docs/design/design_gaps.md`): no instrument separates expressive
+> incapacity from coordinate position, category unsupported-on-evidence; the concept's live
+> operational carrier is `extraction_blindness` (134/279). If you hold, or are building, an
+> independently-sourced seat-level capacity judgment, GAP-40's revival hinge is YOURS — read it
+> before formalizing here.** `design_discipline.md` §5 governs whether the category is addable at
+> all, since Mode-3 blind cells are by construction undetectable from inside the system that has
+> them. Background:
 > `docs/concealment/concealment_without_a_concealer_v0_4.md` §5.3 (mode 3, positional blindness). The structural insight is that disagreement between positions
 can be a measurable feature of the system rather than evidence that someone is wrong.
 
