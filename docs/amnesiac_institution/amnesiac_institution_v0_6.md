@@ -5,7 +5,11 @@
 *Status: DRAFT v0.6 (2026-08-12; §5 amended 2026-08-17, see §5.2.1; **all numbers re-run and the
 v0.4 manifest pass completed 2026-08-18, and §5.4's pooled headline WITHDRAWN in the same pass** —
 the incidence rate is non-stationary and is now reported per window; see the in-place corrections
-below and Appendix B).
+below and Appendix B. **Added 2026-08-19, from the eighteen-ruling session:** §7.8 — two new
+witness-calculus shapes, untested-is-not-failed and the ratchet falsifier; §9.4 — the ruling pass
+and what the repo-blind reviewer's jurisdiction turned out to be; §4.1 update — the auto-approval
+posture stated with its reversibility rationale, and the review loop's depth and cross-model
+composition recorded).
 PROPOSED throughout, with the
 exceptions recorded in §5.2, §5.2.1 and §9.2, which are operator rulings and are marked as such. Slots marked `[UNWITNESSED]` are claims
 this draft cannot pay for and are not to be cited until filled; `[OPERATOR]` slots await facts only
@@ -944,6 +948,27 @@ operator's own seat. Its consequence is direct: an unknown fraction of the measu
 conducted under lighter supervision than the earlier portion, so **the audit record is not
 homogeneous across the window** (§12).
 
+**Update, 2026-08-19 — the posture is now stated, which converts the drift into a ruling going
+forward (the historical inhomogeneity above stands; nothing here repairs it retroactively).** The
+implementing instance almost always runs in auto-approval mode **with a standing instruction to
+surface rulings when they arise**. The operator's stated rationale: *"I don't want to micromanage
+implementation and view implementations as revisable after."* Read structurally, this is
+**supervision allocated by reversibility**: implementation is cheap to revise — the substrate is
+version-controlled and CC0, so a wrong edit is a diff away from undone — while a ruling an
+instance makes for itself is the one output that is *not* revisable-after, because a self-certified
+value call contaminates everything built on it before anyone knows it was a call (§9.2's first
+jurisdiction, and the failure mode it names). Auto mode with a surface-rulings tripwire is
+therefore not lighter supervision uniformly applied; it is supervision **concentrated at the
+non-reversible points**. Two further facts about the review loop, previously unrecorded: plan
+review typically runs **four to six** rounds before the operator declares the plan ready, and has
+run past twelve (OQ-303); and the loop is routinely **cross-model** (Fable and Opus reviewing each
+other's plans). The cross-model composition matters for a reason a reviewer stated during the
+OQ-285 step-2 check, and it deserves to be carried as the limit statement: *a fresh instance is
+context-independent, not model-independent* — fresh context removes inherited framing, but a
+model-shaped misreading of a concept→surface mapping survives fresh context, and only a different
+model family's read reaches it. The review stack has two independence axes; the institution was
+using both before it had named either.
+
 ### 4.2 Units of analysis
 
 | Unit | What it is | Used for |
@@ -1879,6 +1904,45 @@ receiver's actions concretely**; a prompt that says "read the design document an
 pointer wearing an instruction's clothes, and writing one will feel like discharging the rule while
 discharging none of it.
 
+### 7.8 Two shapes found by ruling in bulk (added 2026-08-19)
+
+Processing eighteen held rulings in one session (§9.4) exposed two recurring shapes that the
+calculus above did not name, at frequencies that meet this paper's own bar for a pattern (§7.4.1
+counts two instances as one). Both are stated here because they are witness-calculus members, not
+organizational anecdotes.
+
+**Untested is not failed — a citation-side rule, four instances in one day.** §7.3 already says a
+one-sided control licenses little; this is the same fact met at the *reading* end: a recorded zero
+gets cited later as evidence the instrument does not work, when the zero was never a test. A lint
+with zero true positives whose defect-side population was never assembled is an *untested*
+detector, not a failed one — the two numbers cited as its "0 TP / 71% FP ratio" came from
+different populations, only one of which had observations. A falsifier with no decline in its
+entire record (the apparatus's own `Fired:` tally) licenses nothing in either direction. A
+five-leg engine-measured zero with only an authored-decoy control is a claim that *this corpus
+has no population*, not that the condition cannot occur — it survives a rebuild only as a claim
+about the old corpus. And a negative whose raw text was discarded is *unrecheckable*, a third
+disposition distinct from both confirmed-absent and untested. The rule: **before citing any zero,
+classify it — tested absence, untested instrument, or unrecheckable — and record which, because a
+later reader will otherwise promote it to whichever reading their argument needs.**
+
+**The ratchet falsifier — a kill condition whose falsifying branch cannot fire, three instances
+in one day.** A stated falsifier reads as two-sided: "if X, keep; if Y, retire." The ratchet is
+the version where Y produces no observable by construction, so evidence accumulates on one side
+only while the condition wears a falsifier's costume. Witnessed forms: a prevention-shaped
+success (an instance that reads a warning and *doesn't* err generates no event, so the warning
+section can only ever accumulate misses); a slipped-detection branch (an episode that evades the
+detector emits no signal, so "detector insufficient" can never be concluded from the detector's
+own record); a structurally unreachable outcome class (audit directories created on suspicion
+cannot produce a pure-confirmation writeup). The repairs are type-specific and all landed the
+same day: a **dated** obligation gets gate enforcement (a sunset check that goes red on its day);
+an **undated** trigger gets a named read-site — a stated pointer where its plausible reviver will
+actually be standing — or an explicit declaration that it is passive and unlikely to fire; an
+unreachable outcome class gets **registration** (record the decision to look before the outcome
+of looking, so the empty-handed case enters the denominator). The test to run on any falsifier
+before it ships is one sentence: *describe the event in which the falsifying branch fires, and
+name who observes it* — if the answer is "someone notices incidentally," it is a disclaimer, not
+a falsifier, and should be recorded as one.
+
 ---
 
 ## 8. Memory as an Economy of Forgetting
@@ -2118,9 +2182,45 @@ expensive, because it consumes operator attention; marginal *standing process* i
 all, because it taxes every future session. The instrumentation of §10 exists because the third cost
 is invisible at the moment each process element is added.
 
----
+### 9.4 The ruling pass (added 2026-08-19, from one witnessed session)
 
-## 10. Self-Instrumentation
+§4.1's cycle moves *work*. A second variant, run once at scale and worth recording while its
+transcript is fresh, moves *rulings*: on 2026-08-19 all eighteen items in the tracker's
+blocked-on-human queue were processed in a single session through a three-party loop — a
+repo-access instance assembling evidence and a suggested ruling per item; a **context-holding,
+repo-blind** reviewer (a web instance following the session but unable to touch or read the
+substrate) checking each suggestion; the operator ruling; the same repo instance implementing in
+the same turn, gate-checked and committed per item.
+
+Two observations from that session generalize.
+
+**The reviewer's amendments never touched the evidence.** Across eighteen rulings the assembled
+counts, greps, and controls held every time — and the first three rulings were nonetheless each
+amended, on the same three axes: *shape* (does the decision live in the right entry — no live
+rider on a closing entry, a principle recorded as a principle rather than a local patch),
+*record* (how the text will read cold later — stale baselines reconciled, "zero true positives"
+distinguished from "never tested"), and *reviver* (what the mark leaves behind — passive
+triggers declared, sequencing against other open work recorded, sibling claimants named). The
+regularity was strong enough that it was adopted mid-session as a checklist the assembling
+instance runs *before* presenting, after which the amendments shifted to genuinely item-specific
+content. What this characterizes is the repo-blind reviewer's actual jurisdiction: it
+**simulates the future cold reader** — it reads the record as text because text is all it has,
+where the instance that wrote the record reads its own intentions. §9.2 places cross-session
+pattern-recognition in a jurisdiction "structurally unavailable to any instance"; this session
+suggests a refinement: unavailable to any instance *inside the work loop*. An instance held
+outside the substrate occupies a slice of it — the how-will-this-read-later slice — precisely
+because it is denied the context that would let it silently supply the missing halves.
+
+**The reviewer also exercised a jurisdiction §9.2 does not name: framing accuracy on the channel
+into the operator's seat.** At the one ruling that was purely the operator's (a circulation GO —
+audience, timing, name), the reviewer stated its own boundary plainly: *"I can check whether the
+framing you're being handed is accurate, not whether you should sign"* — and then did exactly
+that, flagging one sentence in the assembled presentation as a quality claim wearing a
+jurisdictional argument's clothes, which was kept out of the ruling record. The two §9.2
+jurisdictions say who decides; this is a third function, a check on **what reaches the decider**,
+and it is instance-occupiable because it requires reading a presentation, not a history.
+
+The session's material findings — two recurring shapes across the eighteen rulings — are §7.8.
 
 ### 10.1 The hazard
 
