@@ -13,9 +13,9 @@ answered in a comment. That is a general fact about where this codebase's *decla
 versus where its *verification* looks, and it is worth more than the 55 rows. The rollout is how
 it surfaced: Phase 1 (`signature_grade/2`) landed with a six-leg pair at **0 changed constraints
 over 5,311** and the pre-declared Ω_P escalation declining; the batch of 55 passed every
-structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: licence
-rebuilt per row and gate-enforced; the 20 exercised rows are cleared to convert; the batch stays
-reverted pending the per-leg reachability pass.** Nothing merged to `main`.
+structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: licence rebuilt
+per row and gate-enforced; the 20 exercised rows CONVERTED with a six-leg zero-diff pair; 34
+rows remain, adjudicated but unexercised by any corpus.** Nothing merged to `main`.
 **Substrate:** six legs — `testsets` (n=279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) =
 5,311 constraints. Clean half at `code_commit` 2f459d3a, edited half at 6c1bfa44, corpus md5
@@ -305,13 +305,18 @@ leg reaches, and that is measurable rather than assumable.
 Controls fire hard in the same run (`dr_type/3` 159,777 calls, `classify_from_metrics/6`
 188,901, `constraint_signature/2` 183,649 — 1,248 predicates observed).
 
-**34 of 54 latent-B rows are COLD on `testsets`.** For those, the bisect's `changed=0` is an
-absence-of-exercise result and licenses nothing. 20 rows are genuinely exercised, and for those
-the corpus clearance is real evidence with a demonstrated firing control.
+**34 of 54 latent-B rows are COLD — and the per-leg pass did not shrink that.** Run across all
+six legs (5,311 constraints, ~1.1M calls per hot-path control on each), the result is
+**identical to the `testsets`-only measurement: 34 cold, 20 exercised, zero promotions.**
 
-This is a `testsets`-only measurement, matching the bisect's own scope. Extending it to the
-other five legs would shrink the cold set; that run is not done, and the number above should be
-read as "cold on the leg the clearance came from", not "cold everywhere".
+That null is worth more than the number it replaced. The expectation — mine and the operator's —
+was that the cold set would shrink materially once the twins and the 1,106-story breadth archive
+were added. It did not move at all. So the claim is no longer "cold on the leg the clearance came
+from"; it is **unreached by every corpus this project has**.
+
+For the 20 exercised rows the corpus clearance is real evidence with a demonstrated firing
+control for this exact failure class. For the 34, `changed=0` licenses nothing and the remaining
+witness is the adjudication plus the by-construction census.
 
 ## 12. Residue — what is OPEN
 
@@ -319,16 +324,20 @@ read as "cold on the leg the clearance came from", not "cold everywhere".
   the input-key tell and are unadjudicated, and adjudicating "is this last argument an output?"
   is a per-row reading, not a mechanical pass. The prereg's §5 licence ("template application,
   no six-leg run each") was written on the assumption the class was uniform; it is not.
-- **The rebuilt licence is now in place, and it is per row rather than per screen:** 54 rows
-  carry an adjudicated `LAST_ARG=output` fact with evidence, gate-enforced. What that licenses
-  is the template's *validity*, not its safety on any particular row — 34 of those 54 are cold
-  on the leg the corpus clearance came from, so for them the remaining witness is the
-  adjudication and the by-construction census, not the diff.
-- **Not resumed on my own authority.** The batch stays reverted. The licence was rebuilt to the
-  ruling's specification; whether to spend it, and on which rows, is the next decision and it is
-  yours. My reading of the evidence: the 20 exercised rows carry adjudication + corpus + census;
-  the 34 cold rows carry adjudication + census only, and a per-leg reachability pass would move
-  some of them into the first group before any conversion needs to rely on the weaker footing.
+- **The 20 exercised rows are CONVERTED** (six-leg pair, 0 changed constraints; suites and gate
+  green; registry entries and their `LAST_ARG` facts retired in the same change). Their footing
+  is the strongest anything in this OQ has had, Phase 1 included: per-row mode adjudication, the
+  by-construction check, a six-leg zero diff, and a *demonstrated firing control for this exact
+  failure class* — the same corpus caught both input-keyed rows when they were converted.
+- **RESIDUAL COLD COUNT: 34 rows.** Adjudicated (`LAST_ARG=output`, evidence recorded) and
+  covered by the by-construction census, but exercised by **no corpus this project has**. That
+  is a defensible but thinner footing and it is a separate decision, now with a number attached:
+  the per-leg pass was supposed to shrink it and did not.
+- **A note on what the residual actually is.** 34 predicates that no story in 5,311 reaches is
+  itself a finding about the engine, independent of this rollout — it is roughly a third of the
+  2026-08-17 census sitting outside every exercised path. Whether that is dead weight, a corpus
+  gap, or capability awaiting its input is the `Unwired ≠ worthless` question, and it is not
+  this unit's to answer.
 - **Phase 4 not begun** (`json_report.pl` `boltzmann_label/2`, `live_index_label/3` — both are
   in the flagged 23, so they were never as safe as `converts-clean-minus-dataflow` suggested).
   **Ordering them last was right for a reason that did not exist when the ordering was chosen.**
