@@ -257,11 +257,30 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 **Implementation:** `signature_detection.pl` natural_law_signature/1
 
-**Enhancement (Stage 7):** NL claims must pass `boltzmann_invariant_mountain/2` test:
+**Enhancement (Stage 7) — UNIMPLEMENTED AND DARK, not a live gate (OQ-302, 2026-08-19):**
+NL claims *would* have to pass the `boltzmann_invariant_mountain/2` test:
 - Factorization across Power × Scope
 - Scope invariance
 - No excess extraction
 - Boltzmann compliance
+
+**Status, stated so an empty placeholder is not mistaken for a working feature.** This
+enhancement has never shipped. `natural_law_signature/1` does **not** call
+`boltzmann_invariant_mountain/2`; the dependency runs the other way (the predicate's Test 4
+calls the signature). Two facts keep it dark, and both are measured, not assumed:
+
+1. Until 2026-08-19 `boltzmann_invariant_mountain/2` returned `inconclusive(insufficient_data)`
+   for **every** constraint — a bound-`false` call at `boltzmann_compliance.pl:577` meant its
+   four-test body had never executed on any corpus.
+2. Even repaired, an `invariant(_)` verdict is **unreachable**, because Test 4 gates on
+   `natural_law_signature/1`, which is dead-by-range: `has_viable_alternatives/2`'s range is
+   `{true, unknown}` and no clause can emit the `false` the signature requires (OQ-113).
+   Measured 2026-08-19 across six legs, 5,311 constraints: `T4 = fail` on **5,311/5,311**.
+
+So wiring this gate today would reject **all** NL claims, not strengthen the test. Powering it
+is GAP-08 §7 (author-independent immovability signal). The prior "How to Activate" instruction
+in `logic_extensions.md` was itself unsatisfiable and is corrected there. Witness:
+`audits/2026-08-19_oq302_bound_false_repair/`.
 
 ---
 

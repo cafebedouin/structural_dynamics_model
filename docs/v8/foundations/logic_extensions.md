@@ -760,6 +760,8 @@ purity_score(C, Score) :-
     Score is (0.30 * F) + (0.25 * S) + (0.25 * K) + (0.20 * E).
 ```
 
+> **[CORRECTION — OQ-302, 2026-08-19; snapshot ANNOTATED, not rewritten]** The code block above carries the bound-argument defect described in `docs/logic_extensions.md` (the live spec, corrected in the same change). `docs/v8/` is v8 SOURCE MATERIAL — a point-in-time record of the inputs to the v8 writing plan (OQ-135) — so the erroneous text is preserved rather than edited, and the correction is attached here. Do not copy the block above into code. Witness: `audits/2026-08-19_oq302_bound_false_repair/`.
+
 **Parameters:**
 - Weights: 30/25/25/20 (theoretical, not fitted)
 - Decay rate λ = 2.0
@@ -824,6 +826,8 @@ structural_purity(C, PurityClass) :-
 %   contaminated(Reasons) — one or more tests fail (Reasons = list of failures)
 %   inconclusive          — insufficient data for reliable test
 ```
+
+> **[CORRECTION — OQ-302, 2026-08-19; snapshot ANNOTATED, not rewritten]** The code block above carries the bound-argument defect described in `docs/logic_extensions.md` (the live spec, corrected in the same change). `docs/v8/` is v8 SOURCE MATERIAL — a point-in-time record of the inputs to the v8 writing plan (OQ-135) — so the erroneous text is preserved rather than edited, and the correction is attached here. Do not copy the block above into code. Witness: `audits/2026-08-19_oq302_bound_false_repair/`.
 
 **Note:** `structural_purity/2` returns structural subtypes (not numeric purity zones). The numeric purity zones (pristine, sound, borderline, contaminated, degraded) are derived from `purity_score/2` values in `purity_scoring.pl`. The two are complementary: `purity_score/2` gives a continuous [0,1] health metric, while `structural_purity/2` gives a categorical structural diagnosis.
 
@@ -1583,6 +1587,8 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
    boltzmann_invariant_mountain(C, true)
    ```
 2. This makes NL signature require full Boltzmann compliance
+
+> **[CORRECTION — OQ-302, 2026-08-19; snapshot ANNOTATED, not rewritten]** `boltzmann_invariant_mountain(C, true)` is **unsatisfiable**: the second argument is an OUTPUT with range `invariant(_)` / `variant(_)` / `inconclusive(_)`, so the atom `true` unifies with none of them and the added goal fails for every constraint — silently killing `natural_law_signature/1` rather than strengthening it. The engine implemented this spec faithfully at `boltzmann_compliance.pl:577` and its four-test body went unexecuted on every corpus until 2026-08-19. Corrected form and full reasoning: `docs/logic_extensions.md` § *How to Activate* (the live spec); witness: `audits/2026-08-19_oq302_bound_false_repair/`. Preserved unedited here because `docs/v8/` is v8 source material (OQ-135), not a spec implementers read.
 
 ---
 

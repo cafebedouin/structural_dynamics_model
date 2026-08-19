@@ -573,8 +573,34 @@ coordination_type_to_floor_param(global_infrastructure,   boltzmann_floor_global
 %    variant(FailedTests)      — fails one or more tests
 %    inconclusive(Reason)      — insufficient data
 
+% BOUND-PROBE REPAIR (OQ-302, 2026-08-19). This clause called
+% epistemic_access_check(C, false) with `false` BOUND — the exact idiom this file's own
+% header warns against at :470-477, 79 lines above, added 2026-06-03 after the
+% structural_purity/2 episode repaired the sibling instance and did not sweep this one.
+% The catch-all `epistemic_access_check(_, false).` unifies with everything, so clause 1
+% fired for EVERY constraint and the four-test body below had never executed on any corpus.
+% Repaired to the unbound + post-filter idiom already used at signature_detection.pl:1309
+% and routing_sink.pl:125.
+%
+% WHAT THIS BUYS, measured, not asserted (audits/2026-08-19_oq302_bound_false_repair/):
+% six legs, 5,311 constraints. The VERDICT stays constant in kind — `invariant(_)` remains
+% UNREACHABLE, because Test 4 is dead-by-range: natural_law_signature/1 requires
+% HasAlternatives == false and has_viable_alternatives/2's range is {true, unknown} with no
+% clause able to emit `false` (OQ-113; re-witnessed here, T4 = fail on 5311/5311). The
+% PAYLOAD does become per-constraint: 4,558 constraints now reach the body and produce 129-270
+% distinct (T1,T2,T3) tuples per leg, where before every constraint got the same
+% inconclusive(insufficient_data). The 753 constraints with genuinely insufficient epistemic
+% access still report inconclusive (declines-control, 753/753).
+%
+% This is NOT "the invariance check now works". The predicate remains uninformative as a
+% mountain test until T4 is powered (GAP-08 s7 author-independent immovability signal), and
+% both its consumers -- boltzmann_shadow_audit/2 and drl_boltzmann_analysis:
+% boltzmann_invariant_check/2 -- are zero-caller static orphans, so nothing downstream moves.
+% The predicate is NOMINATED to OQ-296/OQ-317 (re-review 2026-11-17) for the
+% keep-or-sunset adjudication; nominating is not pre-deciding, and per *Unwired != worthless*
+% it may not be retired on wiring grounds.
 boltzmann_invariant_mountain(C, inconclusive(insufficient_data)) :-
-    epistemic_access_check(C, false), !.
+    once(epistemic_access_check(C, S)), S == false, !.
 
 boltzmann_invariant_mountain(C, Result) :-
     % Test 1: Factorization (Boltzmann compliance)

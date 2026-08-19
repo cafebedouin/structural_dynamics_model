@@ -263,6 +263,14 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 - No excess extraction
 - Boltzmann compliance
 
+> **[CORRECTION — OQ-302, 2026-08-19; snapshot ANNOTATED, not rewritten]** This enhancement
+> has **never shipped** and is dark twice over: `boltzmann_invariant_mountain/2` returned
+> `inconclusive(insufficient_data)` for every constraint until 2026-08-19 (a bound-`false`
+> call at `boltzmann_compliance.pl:577`), and even repaired its `invariant(_)` verdict is
+> unreachable because Test 4 gates on the dead-by-range `natural_law_signature/1`
+> (`T4 = fail` on 5,311/5,311 across six legs). Full status: `docs/logic_thresholds.md`
+> (the live spec). Preserved unedited here — `docs/v8/` is v8 source material (OQ-135).
+
 ---
 
 ### 4b. Coordination Scaffold (CS)

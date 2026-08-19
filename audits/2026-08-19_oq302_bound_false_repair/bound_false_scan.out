@@ -1,0 +1,22 @@
+# OQ-302 Phase-0 enumeration — bound-`false` CALL-site scan
+# generated 2026-08-19T18:53:44Z by run_scan.sh -> bound_false_scan.sh
+# selection rule is stated in bound_false_scan.sh; /usr/bin/grep pinned.
+
+## HEAD  (a84cb693 2026-08-19 OQ-303(a): generator becomes a registry class; doc currency for the push)
+prolog/boltzmann_compliance.pl:577:    epistemic_access_check(C, false), !.
+count=1
+
+## 0bfd3b31^  (669eab52 2026-06-03 docs: the perturbation principle — invariance-under-perturbation as the engine's one move)
+prolog/boltzmann_compliance.pl:536:    epistemic_access_check(C, false), !.
+prolog/signature_detection.pl:975:    epistemic_access_check(C, false), !.
+count=2
+
+## 0bfd3b31  (0bfd3b31 2026-06-03 fix: structural_purity/2 bound-probe bug + purity audit (correction key; OQ-60..62))
+prolog/boltzmann_compliance.pl:545:    epistemic_access_check(C, false), !.
+count=1
+
+## a0e8d772^  (74b41af4 2026-02-17 Cleaning pipeline code, phase 2/3. Together: Phase 1: Eliminated duplication (corpus_loader, config reads), removed dead code, added requirements.txt. Free wins. Phase 2: Replaced a 10MB regex-parsed log file as the data bus with a 1.2MB typed JSON contract. Migrated all 16 consumers. Collapsed 7 reporters into 1. Fixed data quality bugs that had been silently present — broken context parsing, missing omegas, missing signatures, and a network stability dashboard that was reporting 100% stable when the actual assessment was cascading. Phase 3: Replaced a 700-line sequential shell script with a 297-line Makefile. Pipeline went from ~60 seconds to a few seconds. Gained selective re-runs, parallelism, and dependency tracking.)
+prolog/structural_signatures.pl:1224:    epistemic_access_check(C, false), !.
+prolog/structural_signatures.pl:1464:    epistemic_access_check(C, false), !.
+count=2
+

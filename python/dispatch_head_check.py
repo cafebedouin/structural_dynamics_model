@@ -98,7 +98,7 @@ DECLARED: dict[tuple[str, str], str] = {
     ("abductive_helpers.pl", "fpn_band/2"): "unreached",
     ("abductive_helpers.pl", "seat_overrides/2"): "input-key",
     ("abductive_helpers.pl", "subsystem_available/1"): "input-key",
-    ("boltzmann_compliance.pl", "epistemic_access_check/2"): "finding",
+    ("boltzmann_compliance.pl", "epistemic_access_check/2"): "latent-B",
     ("boltzmann_compliance.pl", "expected_power_divergence/4"): "input-key",
     ("context_profile_mining.pl", "classify_isomorphism_level/2"): "unreached",
     ("covering_analysis.pl", "cell_short/2"): "unreached",
@@ -209,6 +209,19 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("output", "authored: %% fpn_band(+EP, -Band)"),
     ("abductive_helpers.pl", "seat_overrides/2"):
         ("input", "authored: %% seat_overrides(+C, +Signature)"),
+    ("boltzmann_compliance.pl", "epistemic_access_check/2"):
+        ("output", "authored: %% epistemic_access_check(+Constraint, -Sufficient). "
+                   "Reclassified finding -> latent-B 2026-08-19 (OQ-302): the one live bound "
+                   "caller, boltzmann_compliance.pl:577, is repaired to unbound + `S == false` "
+                   "and the enumeration finds no other (audits/2026-08-19_oq302_bound_false_"
+                   "repair/consumer_enumeration.md 2, discrimination record 2->1 at "
+                   "0bfd3b31^/0bfd3b31). NOTE FOR THE NEXT READER: this row is a genuine "
+                   "class-B CONVERSION candidate on OQ-303's own criteria — output last "
+                   "argument, and reached (5 callers, on the purity_score / "
+                   "fingerprint_coupling / structural_purity output paths). It was excluded "
+                   "from the 2026-08-19 rollout only because it was classed `finding` then. "
+                   "Converting it owes the six-leg pair, not the template; routed to OQ-303 "
+                   "arm (a), not done here."),
     ("boltzmann_compliance.pl", "expected_power_divergence/4"):
         ("input", "authored: %% expected_power_divergence(+P1, +P2, +T1, +T2)"),
     ("context_profile_mining.pl", "classify_isomorphism_level/2"):

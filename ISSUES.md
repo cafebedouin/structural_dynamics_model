@@ -13964,31 +13964,54 @@ nobody had named.
 
 **Ω-type:** Ω_E (mechanically checkable defect; the fix is a one-line call-shape repair).
 
-**Status:** open
+**Status:** resolved — 2026-08-19. Repaired to `once(epistemic_access_check(C, S)), S == false, !`
+(`fb10708a`); registry row `finding` → `latent-B` with its surviving bound-`true` caller
+adjudicated (`5f9ec36d`); the spec that prescribed the defect corrected at its origin (`4f8f0e3f`).
+Witness: `audits/2026-08-19_oq302_bound_false_repair/` — prereg md5 `c7a7345c…` frozen before the
+probe existed; six legs, 5,311 constraints; **Fired: live**. KNOWN_STATE 2026-08-19.
 **Priority:** 2
-**Deps:** splits_from OQ-296
+**Deps:** splits_from OQ-296, bundled_with OQ-303
 **Origin:** 2026-08-17 bound-dispatch recon (`audits/2026-08-17_bound_dispatch_hardening/`
 RECON.md §4) — a checker-only find the exploration hand table missed.
 **Files:** `prolog/boltzmann_compliance.pl` (`:577` the defect, `:466–498` the warned
 predicate, `:139` consumer), `prolog/drl_boltzmann_analysis.pl:176` (consumer).
 
-**The defect.** `epistemic_access_check/2`'s header (2026-06-03, written after the
-structural_purity episode) states that calling it with `false` BOUND always succeeds —
-clause 1's head cannot unify, its guard+cut never run, the catch-all matches everything.
-`boltzmann_invariant_mountain/2` clause 1 (`:577`) does exactly that, so it fires for
-EVERY constraint and the real 4-test invariance body (`:579`) is unreachable: the mountain
-invariance check has been reporting `inconclusive(insufficient_data)` corpus-wide.
+**Three lines of this entry were WRONG and are corrected in place, not appended to:**
+1. *"Blast radius (recon-scoped): diagnostic surfaces only"* → **ZERO LIVE CONSUMERS.** Both
+   consumers are zero-caller static orphans (OQ-38 census rows 110 and 620); `diagnostic_summary.
+   pl:47` *imports* `boltzmann_shadow_audit/2` and never calls it. Zero Python readers, zero
+   occurrences in `pipeline_output.json` (grep positive-controlled). **So a pipeline
+   clean-vs-edited pair is byte-identical BY CONSTRUCTION — a consistency check that cannot fail
+   — and was deliberately NOT run;** declaration in `consumer_enumeration.md` §1a.
+2. *"real invariant/variant verdicts appear for the first time"* → **false with T4 dark.**
+   `invariant(_)` is UNREACHABLE: Test 4 gates on `natural_law_signature/1`, which needs
+   `HasAlternatives == false` while `has_viable_alternatives/2`'s range is `{true, unknown}`
+   (OQ-113). Measured: `T4 = fail` on **5,311/5,311**. What the fix buys instead — the verdict
+   stays constant *in kind* (`variant`/`inconclusive` only), the **payload** stops being constant
+   (`N_reaching` 4,558; **129–270 distinct `(T1,T2,T3)` tuples per leg**), and the `bound
+   selector` / `dispatch head` rows stop carrying a known-benign row so the next firing is signal.
+3. *"Git-blame `:577` for the free before-commit control pair"* → **wrong; this site has no clean
+   parent.** `git log -L 577,578` returns only `a0e8d772` (the Feb-2026 split, which *moved* the
+   line); the defect predates it (`a0e8d772^` carries it twice in `structural_signatures.pl`),
+   first introduced `80aebdb3` 2026-02-07. The correct free pair is `0bfd3b31` / `0bfd3b31^`, and
+   the enumeration scan fires at **2** and declines to **1** across it.
 
-**Blast radius (recon-scoped):** diagnostic surfaces only — `boltzmann_shadow_audit`
-(`:139`) and `drl_boltzmann_analysis:boltzmann_invariant_check/2` (itself consumer-less).
-NOT in the dr_type classification path.
+**Root cause — the spec prescribed it.** `docs/logic_extensions.md`'s "How to Activate" told
+implementers to add `boltzmann_invariant_mountain(C, true)`, which cannot unify with any of the
+three result shapes and would have silently killed `natural_law_signature/1`. Corrected there,
+plus `logic_thresholds.md:260` (Stage-7 enhancement marked **unimplemented and dark**, not
+deleted) and four claims that described T4 as working; `docs/v8/` **annotated, not rewritten**
+(v8 source material, OQ-135). New sub-shape in the Pattern-7 incidence ledger: *the spec can
+prescribe the defect*, and the code sweep cannot see it.
 
-**The fix and its witness obligation:** replace `:577`'s body with
-`once(epistemic_access_check(C, S)), S == false` (the repaired idiom used at the OQ-296
-sites). OUTPUT-CHANGING on diagnostic surfaces — real invariant/variant verdicts appear
-for the first time — so it was kept OUT of the 2026-08-17 zero-diff pilot (prereg scope
-guard) and owes its own clean-vs-edited pair + an enumeration of consumers of the shadow
-audit before landing. Git-blame `:577` for the free before-commit control pair.
+**Residues routed, not closed here.** (a) `latent-B` is no longer empty (0 → 1); OQ-303's line is
+corrected in place. The row is a **genuine class-B conversion candidate on OQ-303's own criteria**
+(output last argument; reached, 5 callers on live output paths), excluded from the 2026-08-19
+rollout only because it was `finding` then — conversion owes the six-leg pair, not the template
+→ **OQ-303 arm (a)**. (b) The `boltzmann_shadow_audit` / `boltzmann_invariant_check` orphan pair
+is an ***Unwired ≠ worthless*** adjudication — *what unique product does it yield?* → **OQ-317**
+(re-review 2026-11-17); **not retirable on wiring grounds**. (c) Powering T4 at all is
+**GAP-08 §7**. (d) `testsets_sonnet`'s declines-control has n=1 — tested, thin, declared.
 
 ## OQ-325 — a third of the bound-dispatch census is reached by NO corpus: dead code, missing inputs, or unrun configurations?
 
@@ -14181,8 +14204,20 @@ reader a worklist labelled by a premise that no longer describes them.
 the loop caught it. **A conversion loop needs a completeness check that does not come from the
 loop** — the instrument that reports success cannot be the instrument that verifies coverage.
 The engine question this raised is minted separately as **OQ-325**.
-`latent-B` is now EMPTY: every 2026-08-17 census row is converted, `input-key`, `wrapper`,
-`finding`, `MUST-NOT-FIRE`, `generator`, or `unreached`.
+`latent-B` was EMPTY at the close of this arm: every 2026-08-17 census row is converted,
+`input-key`, `wrapper`, `finding`, `MUST-NOT-FIRE`, `generator`, or `unreached`.
+**CORRECTED 2026-08-19 (same day, by OQ-302): `latent-B` is 0 → 1.** Repairing
+`boltzmann_compliance.pl:577` discharged `epistemic_access_check/2`'s `finding`, and the
+row's honest class is now `latent-B` (`5f9ec36d`; `LAST_ARG` = output, authored mode line).
+**It is a genuine class-B conversion candidate on this arm's own criteria** — output last
+argument, and *reached* (5 callers, on the `purity_score` / `fingerprint_coupling` /
+`structural_purity` output paths) — so it belongs with the 20 exercised rows, not with the
+34 `unreached`. It was excluded from the rollout only because it was classed `finding` at
+the time. **Conversion owes the six-leg clean-vs-edited pair, not the template**, and is
+the one piece of arm (a) still outstanding. Its surviving bound-`true` caller
+(`boltzmann_compliant/2` at `:94-95`) is already adjudicated in
+`prolog/codewalk_caller_allowlist.txt` with `ATOMS=true` and a REMOVE condition that names
+exactly this conversion as its exit.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

@@ -395,6 +395,30 @@ Two ways an in-session override fails, both witnessed building the OQ-22 Hub-1/H
   originally-witnessed OQ-22 starvation regime, χ ceiling 0.15, is no longer reachable through a valid
   config, since it needs `sigmoid_upper < 0.5`.)
 
+- **`with_overlay/3` is FACT-ONLY, and on a RULE clause it fails SILENTLY — the worse sibling of the
+  bullet above** (OQ-302, 2026-08-19; `audits/2026-08-19_oq302_bound_false_repair/`). The static-
+  predicate case at least *throws*. This one does not. `snapshot/2` collects
+  `clause(M:Inst, true)` — clauses whose body is `true` — so a template matching a RULE finds
+  nothing, retracts nothing, and `warn_if_rule_clauses/1` emits a **warning, not an error**
+  (`probe_harness.pl:80–100`). The `Facts` you assert then land **after** the existing clauses, so
+  a cut-ordered predicate still dispatches to its original first clause and **your "counterfactual"
+  arm measures the unmodified program**. Both arms come back identical, no error, no diff — which
+  is exactly what a correct behaviour-preserving result looks like. Witnessed as a *plan* defect:
+  a preregistered probe specified `with_overlay/3` to install a repaired clause over
+  `boltzmann_compliance:boltzmann_invariant_mountain/2`, whose clause 1 is a rule AND whose
+  predicate is static (so `assertz` throws too — belt and braces, but only the second failure is
+  loud).
+  **What to do instead, in order of fidelity:** (i) `clause/2` still works on a static predicate,
+  so fetch the engine's OWN clause body and `call/1` it under your modified guard — this composes
+  the counterfactual out of the real program rather than a hand-copied replica; (ii) edit the
+  source, run, revert (the six-leg clean-vs-edited idiom), when the change is what you intend to
+  ship anyway; (iii) the §3 `abolish + assertz` swap, if you genuinely need the predicate replaced
+  for the rest of the process.
+  **And whichever you pick, make the probe DETECT which arm the source implements rather than
+  assume it** — read the clause (`clause/2` + inspect the argument) and emit the arm as a column.
+  Post-repair the source holds the *other* arm, so a probe that labels columns by run order
+  silently compares the wrong pair and reproduces the expected table for the wrong reason.
+
 ## 13. Goal-TEMPLATE probes: `Key-m:g(...)` and `V^m:g(...)` parse WRONG — the vacuous-pass trap
 
 `:` is `op(600, xfy)` — LOOSER than both `-` (500) and `^` (200). So the natural template

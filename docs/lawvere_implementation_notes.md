@@ -41,7 +41,7 @@ Helper predicates use these names directly: `is_mountain/3`, `is_snare/3`, etc. 
 
 Three naming registers coexist:
 
-- **Boltzmann engine:** `boltzmann_compliant/2`, `cross_index_coupling/2`, `boltzmann_invariant_mountain/2` — physics-derived names for naturality tests
+- **Boltzmann engine:** `boltzmann_compliant/2`, `cross_index_coupling/2`, `boltzmann_invariant_mountain/2` — physics-derived names for naturality tests. (`boltzmann_invariant_mountain/2` is a naturality test **in design only**: its Test 4 gates on the dead-by-range `natural_law_signature/1`, so no constraint can ever certify `invariant` — OQ-302, 2026-08-19.)
 - **Derived signatures:** `false_natural_law/2`, `coupling_invariant_rope/2`, `false_ci_rope/2` — composite names blending domain (rope, natural_law) with diagnostic function (false, coupling_invariant)
 - **Purity layer:** `purity_score/2`, `structural_purity/2`, `factorization_subscore/2` — mathematical names for the meta-invariant
 
@@ -150,7 +150,7 @@ The actual structure is: structural signatures can **override** metric-based cla
 2. A natural bijection Hom(F(A), B) ≅ Hom(A, G(B))
 3. Unit η: Id → GF and counit ε: FG → Id satisfying triangle identities
 
-`extractiveness_for_agent/3` (`constraint_indexing.pl`) computes `χ = ε × sigmoid(π(P)) × σ(S)`, which is a parametric family of scalings indexed by context. `snare_immutability_check/1` (`drl_core.pl:188`) is an existential quantifier over contexts (∃ context such that rope), and `boltzmann_invariant_mountain/2` is a universal quantifier (∀ dimensions, classification is mountain). These are quantifiers, not adjoint functors — the quantifier/adjunction correspondence (Lawvere) requires the quantifiers to satisfy the adjunction triangle identities, which has not been verified.
+`extractiveness_for_agent/3` (`constraint_indexing.pl`) computes `χ = ε × sigmoid(π(P)) × σ(S)`, which is a parametric family of scalings indexed by context. `snare_immutability_check/1` (`drl_core.pl:188`) is an existential quantifier over contexts (∃ context such that rope), and `boltzmann_invariant_mountain/2` is a universal quantifier (∀ dimensions, classification is mountain) **whose range never actually reaches the affirmative case** — its Test 4 gates on `natural_law_signature/1`, which is dead-by-range, so the ∀ is vacuously refuted for every constraint (OQ-302, 2026-08-19; `T4 = fail` on 5,311/5,311 across six legs). These are quantifiers, not adjoint functors — the quantifier/adjunction correspondence (Lawvere) requires the quantifiers to satisfy the adjunction triangle identities, which has not been verified.
 
 **What IS present:** The sigmoid scaling creates a genuine parametric family of type assignments indexed by power level. This is structurally analogous to a family of functors, but without formal proof of the adjunction.
 

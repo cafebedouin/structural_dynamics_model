@@ -148,15 +148,20 @@ Where:
 **Implementation:**
 ```prolog
 % boltzmann_compliance.pl
+% NOTE (OQ-302, 2026-08-19): the second argument of epistemic_access_check/2 is an
+% OUTPUT. Bound-`false` ALWAYS succeeds via the catch-all clause and is a defect
+% (bound-probe bypasses clause-order); bound-`true` is safe by head unification —
+% clause 1's guard and cut both run, and failure yields no solution rather than a
+% wrong one. The code takes the bound-`true` form; this snippet is synced to it.
 boltzmann_compliant(C, Result) :-
-    (   epistemic_access_check(C, false)
-    ->  Result = inconclusive(insufficient_classifications)
-    ;   cross_index_coupling(C, CouplingScore),
+    (   epistemic_access_check(C, true)
+    ->  cross_index_coupling(C, CouplingScore),
         complexity_adjusted_threshold(C, Threshold),
         (   CouplingScore =< Threshold
         ->  Result = compliant(CouplingScore)
         ;   Result = non_compliant(CouplingScore, Threshold)
         )
+    ;   Result = inconclusive(insufficient_classifications)
     ).
 ```
 
@@ -1668,9 +1673,28 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 
 1. In `natural_law_signature/1`, add:
    ```prolog
-   boltzmann_invariant_mountain(C, true)
+   once(boltzmann_invariant_mountain(C, R)), R = invariant(_)
    ```
 2. This makes NL signature require full Boltzmann compliance
+
+> **CORRECTION (OQ-302, 2026-08-19).** This step previously read
+> `boltzmann_invariant_mountain(C, true)`. **That instruction is unsatisfiable and would
+> have silently killed the detector.** `boltzmann_invariant_mountain/2`'s second argument
+> is an OUTPUT whose range is `invariant(_)` / `variant(_)` / `inconclusive(_)` — the atom
+> `true` cannot unify with any of the three, so the added goal fails for every constraint
+> and `natural_law_signature/1` becomes unsatisfiable. This is the **bound-argument class**
+> (`build_discipline.md` → *Pattern 7, bound-probe bypasses clause-order*, seen from the
+> spec side): writing a bound value into an output slot answers a different question than
+> the one intended, or — as here — no question at all. The engine implemented this spec
+> faithfully at `boltzmann_compliance.pl:577` with `epistemic_access_check(C, false)`, and
+> the four-test body went unexecuted on every corpus until 2026-08-19
+> (`audits/2026-08-19_oq302_bound_false_repair/`).
+>
+> **The corrected step is still an ENHANCEMENT THAT HAS NOT SHIPPED**, and would be
+> vacuous today: `invariant(_)` is currently unreachable, because Test 4 calls
+> `natural_law_signature/1` — which is itself dead-by-range (`has_viable_alternatives/2`'s
+> range is `{true, unknown}`; no clause emits `false`). Measured 2026-08-19: `T4 = fail` on
+> 5,311/5,311 constraints across six legs. Powering it is GAP-08 §7.
 
 ---
 
