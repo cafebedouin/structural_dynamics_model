@@ -9015,10 +9015,51 @@ OQ-218 human-read gate still gates publication of any output. Cf. the ergodicity
 once) with an Ω_C tail per story (authored-vs-latent structure).
 
 **Status:** open — minted 2026-07-13 from the ergodicity run + the operator's Web-Claude reversal.
+**STAGED GO ruled (operator, 2026-08-19, second-instance reviewed)** — spend-go discharged; the
+staged plan below governs execution.
 
 **Priority:** 3
 
-**Deps:** blocked_on_human operator-spend-go
+### Staged GO (2026-08-19) — binding on the executor
+
+**Stage 1 (zero generation spend, runnable now):** cold-arm label-delta on the existing rewrite
+`blog/2026-07/the_clean_small_song.md` — two model families, fresh instances, identical-escape
+payloads, grep-adjudicated claims (OQ-218 standing rules).
+- **Pre-registered prediction, recorded BEFORE the arms run (amendment 2):** a genuinely cold
+  arm should recover the structure-without-the-word at roughly the Perplexity pilot's level
+  ("a convergence condition indistinguishable from impoverishment"-grade). Materially lower
+  recovery is a finding about READER-ADJACENCY (the pilot reader knew the asking context), not
+  about the story — without this line the result is unreadable in both directions.
+- **Authorship asymmetry, stated so it is visible in the result record (amendment 3):** Claude
+  web AUTHORED the rewrite, so any Claude-family arm carries an authorship relation to the text
+  the other family does not — two families with one authorship connection is a different
+  instrument than two unrelated families. Not disqualifying; must be labeled per-arm in the
+  readout.
+
+**Stage-1 → stage-2 gate — a CLOSED LIST, not a judgment (amendment 1).** Stage 2 proceeds
+unless stage 1 exhibits one of exactly these instrument failures: (i) payload leakage (a blind
+arm was shown the label or asking context); (ii) unadjudicable arm claims (the grep adjudication
+cannot run or cannot settle); (iii) a cold arm unable to produce a reading (refusal, protocol
+failure, malformed output); (iv) wrong artifact (the payload text is not byte-identical to the
+committed rewrite). **Anything not on this list does not block stage 2.** Rationale on record:
+small-delta is TWO of the three poles (dramatized and absent), and the pilots place this story
+at the dramatized pole — its delta is EXPECTED small; a result-gated stage 2 would kill the
+class on a confirmation. Instrument-validity-gated means this list, pre-committed, nothing else.
+
+**Stage 2 (generation spend):** the four remaining sources through the narrative pipeline on
+production defaults + label-delta blind reads per the pre-registration below; the 4.5-pinned
+disambiguator rerun stays conditional as pre-registered.
+- **Co-value re-verified 2026-08-19, with its coupling (reviewer note):** the runs double as the
+  uke NARRATIVE orchestrator's Sonnet-5 re-baseline, which remains undischarged —
+  `testsets_sonnet/` does NOT count (generated 2026-07-05 by the kernel-corpus generator,
+  `no_scope_rebuild_sonnet`, per its `story_provenance`; the model-swap rule is per-generator,
+  and the narrative stage-2 drift was witnessed 2026-07-13, after that leg). **If OQ-216 closes
+  in a way that produces a narrative re-baseline before stage 2 runs, stage 2's cost
+  justification is halved — RE-TAKE the spend decision rather than inheriting today's.**
+
+**Foreclosed in writing (reviewer flag):** stage 1's cold arms are MACHINE readers; they never
+satisfy the publication gate's one cold HUMAN read (the human gold arm, operator's seat). Citing
+stage-1 results as discharging that gate is the error this line exists to prevent.
 
 **Origin:** 2026-07-13. The operator ran `docs/v8/math_stories/112_ergodocity_kids.md` through
 the pipeline (first Sonnet-5-default run; fired the OQ-216 stage-2 guard site). The source class
