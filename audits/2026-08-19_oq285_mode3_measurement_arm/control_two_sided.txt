@@ -1,0 +1,25 @@
+# discrimination control — captured 2026-08-19T22:19:42Z
+--- BASELINE (unmodified live leg) ---
+  route_c_cascade_literal_unknown             152
+  route_r_real_type                           1210
+
+--- PLANT 1: route a (valid role, BOGUS exit atom) ---
+  route_a_derivation_FAILS                    1
+  route_c_cascade_literal_unknown             152
+  route_r_real_type                           1210
+
+--- PLANT 2: route a (BOGUS role AND BOGUS power) ---
+  route_a_derivation_FAILS                    2
+  route_c_cascade_literal_unknown             152
+  route_r_real_type                           1210
+
+--- PLANT 3: route b (well-formed seat on a constraint with NO base_extractiveness) ---
+  route_a_derivation_FAILS                    2
+  route_b_clause2_catchall_unknown            1
+  route_c_cascade_literal_unknown             152
+  route_r_real_type                           1210
+
+--- RESTORE ---
+  route_c_cascade_literal_unknown             152
+  route_r_real_type                           1210
+  RESTORE VERIFIED: baseline == post-restore
