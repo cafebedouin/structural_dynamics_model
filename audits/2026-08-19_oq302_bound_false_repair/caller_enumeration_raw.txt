@@ -1,0 +1,64 @@
+# Raw greps for the OQ-302 Phase-0 consumer enumeration
+# generated 2026-08-19T18:54:30Z at HEAD a84cb693
+# scope: prolog/**.pl minus prolog/archives/ ; plus python/ agent/ for readers
+
+== boltzmann_invariant_mountain (prolog, non-archive) ==
+prolog/boltzmann_compliance.pl:11:    boltzmann_invariant_mountain/2,
+prolog/boltzmann_compliance.pl:139:    (   boltzmann_invariant_mountain(C, Invariant)
+prolog/boltzmann_compliance.pl:567:%% boltzmann_invariant_mountain(+Constraint, -Result)
+prolog/boltzmann_compliance.pl:576:boltzmann_invariant_mountain(C, inconclusive(insufficient_data)) :-
+prolog/boltzmann_compliance.pl:579:boltzmann_invariant_mountain(C, Result) :-
+prolog/dirac_classification.pl:276:% boltzmann_invariant_mountain/2 certifies structural invariance.
+prolog/dirac_classification.pl:58:%   - Mountain as "second_class" adds nothing beyond boltzmann_invariant_mountain/2.
+prolog/drl_boltzmann_analysis.pl:164:   Delegates to boltzmann_compliance:boltzmann_invariant_mountain/2
+prolog/drl_boltzmann_analysis.pl:176:    boltzmann_compliance:boltzmann_invariant_mountain(C, InvResult),
+prolog/drl_boltzmann_analysis.pl:30::- use_module(boltzmann_compliance, [cross_index_coupling/2, excess_extraction/2, boltzmann_invariant_mountain/2]).
+
+== boltzmann_invariant_mountain (python/ agent/) ==
+(no hits)
+
+== boltzmann_shadow_audit (prolog, non-archive) ==
+prolog/boltzmann_compliance.pl:105:%% boltzmann_shadow_audit(+Constraint, -AuditReport)
+prolog/boltzmann_compliance.pl:120:boltzmann_shadow_audit(C, boltzmann_audit(C, Compliance, Coupling, Threshold,
+prolog/boltzmann_compliance.pl:3:    boltzmann_shadow_audit/2,
+prolog/boltzmann_compliance.pl:92:%  Use boltzmann_shadow_audit/2 for full diagnostic output.
+prolog/diagnostic_summary.pl:47:    boltzmann_shadow_audit/2,
+
+== boltzmann_shadow_audit (python/ agent/) ==
+(no hits)
+
+== boltzmann_invariant_check (prolog, non-archive) ==
+prolog/drl_boltzmann_analysis.pl:10:    boltzmann_invariant_check/2,
+prolog/drl_boltzmann_analysis.pl:169:%% boltzmann_invariant_check(+Constraint, -Result)
+prolog/drl_boltzmann_analysis.pl:174:boltzmann_invariant_check(C, boltzmann_check(InvResult, ModalConsistency)) :-
+
+== boltzmann_invariant_check (python/ agent/) ==
+(no hits)
+
+== epistemic_access_check (prolog, non-archive) ==
+prolog/boltzmann_compliance.pl:466:%% epistemic_access_check(+Constraint, -Sufficient)
+prolog/boltzmann_compliance.pl:471:%  Calling epistemic_access_check(C, false) with `false` bound ALWAYS
+prolog/boltzmann_compliance.pl:478:epistemic_access_check(C, true) :-
+prolog/boltzmann_compliance.pl:498:epistemic_access_check(_, false).
+prolog/boltzmann_compliance.pl:577:    epistemic_access_check(C, false), !.
+prolog/boltzmann_compliance.pl:8:    epistemic_access_check/2,
+prolog/boltzmann_compliance.pl:95:    (   epistemic_access_check(C, true)
+prolog/logical_fingerprint.pl:417:    boltzmann_compliance:epistemic_access_check(C, EpistemicOk),
+prolog/logical_fingerprint.pl:65::- use_module(boltzmann_compliance, [epistemic_access_check/2, cross_index_coupling/2, complexity_adjusted_threshold/2, detect_nonsensical_coupling/3, boltzmann_compliant/2]).
+prolog/purity_scoring.pl:30:     -1.0    = epistemic-gate-fail sentinel (epistemic_access_check/2 said false)
+prolog/purity_scoring.pl:49:    epistemic_access_check(C, true),
+prolog/signature_detection.pl:1308:    % Bound-probe fix (2026-06-03 purity audit): calling epistemic_access_check(C, false)
+prolog/signature_detection.pl:1314:    epistemic_access_check(C, Access),
+prolog/tests/test_coexists_fpn_canary.pl:227:% ontology presence. epistemic_access_check needs >= 3 classifications (config
+prolog/tests/test_purity_absence_class.pl:46:% epistemic_access_check fails -> purity_score = -1.0 sentinel (gate_fail).
+
+== epistemic_access_check (python/ agent/) ==
+python/dispatch_head_check.py:101:    ("boltzmann_compliance.pl", "epistemic_access_check/2"): "finding",
+
+== keys in outputs/pipeline_output.json (manifest pipeline_run_at 2026-08-18T20:34:53Z, n_constraints 279) ==
+boltzmann_invariant: 0
+boltzmann_shadow: 0
+boltzmann_audit: 0
+invariant_mountain: 0
+purity_score: 279
+h1_band: 422
