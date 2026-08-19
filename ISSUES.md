@@ -13146,9 +13146,48 @@ condition unrun, and §14 should record that attempt 1 happened and why it does 
 **Ω-type:** Ω_E — a bounded, mechanical retro-audit over an enumerable set. What to do about any
 hit is a separate question; the census is not.
 
-**Status:** open — minted 2026-08-12 from the OQ-289 smoke run 2 finding.
+**Status:** open — minted 2026-08-12 from the OQ-289 smoke run 2 finding. **Scope CONFIRMED
+(operator ruling 2026-08-19, second-instance reviewed) — the retro-audit is now workable; the
+blocker is discharged.** Ruling record below governs execution.
 **Priority:** 2
-**Deps:** blocked_on_human oq292-retro-audit-scope-confirm
+**Deps:** splits_from OQ-289
+
+### Scope ruling (2026-08-19) — binding on the executing instance
+
+**Sources (source 3 CORRECTED on ruling):** (1) `python/audits/*.py` prompts × their
+negative-scored results (81 scripts counted 2026-08-19); (2) `audits/*/` writeups reporting
+negative self-report results (~49 crude grep matches of 194 dirs — filter before counting);
+(3) UNWITNESSED-tagged claims in **ISSUES.md (6 tags), KNOWN_STATE.md, and the amnesiac paper's
+§5.4 incidence records** — NOT `build_discipline.md` as this entry originally said: that file
+carries the False-absence *rule* (its §170ff) and zero UNWITNESSED tags (grep 2026-08-19,
+positive control: the rule section found). Correction marked here so no auditor sweeps the empty
+source and records it clean — which would be this OQ's own defect turned on itself.
+
+**Execution riders (operator amendments):**
+1. **The scorer owes a discrimination pair with a SECOND positive.** The OQ-289 run-2 prompt is
+   the scorer's training example — it flagging is no witness. Before the sweep runs: hand-pick an
+   instruction-shaped prompt from the corpus that nobody has examined, adjudicate it by hand,
+   hold it out as the must-flag check, alongside a known-clean report-only prompt as the decline.
+   A scorer that only catches the shape it was built on returns "instruction-free" for every
+   differently-working redirect, and downgrade-only semantics then leave those scored clean
+   forever.
+2. **Third disposition: `unrecheckable`.** Alongside flagged/clean: negative scored, raw text
+   NOT retained. A discarded-raw-text probe is unfalsifiable by this sweep in both directions
+   (prompt inspectable, second channel forever unrunnable). The unrecheckable COUNT is itself a
+   finding — if most of the corpus lands there, the audit's reach is far smaller than "81
+   scripts, ~49 writeups" suggests, and the record must say so rather than let a small
+   flagged-count read as reassurance.
+3. **Flagged/clean is recorded separately from MECHANISM.** A well-formed NONE over visible
+   content has routes besides instruction-redirect (payload treated as context; treated as
+   not-the-answer) that show no instruction-shaped wording and sail through the scorer.
+   "Prompt was instruction-free" is never recorded as "prompt was not the cause." Downgrade-only
+   protects the ABSENT scores; nothing protects the causal hypothesis, and the scorer's output
+   will otherwise accumulate as false confirmation of it.
+
+**Second-POV obligation:** the scorer (rider 1) gets adversarial review BEFORE the sweep runs,
+not during — it enters execution never having been tested against anything it wasn't built from.
+**Execution is a separate work item** from this ruling (different status shapes; the OQ-127/242
+split precedent).
 
 **The witnessed defect** (`python/audits/oq289_smoke_run2/`, raw text retained). A canary was placed
 in a memory file; an index entry describing that file was worded — for unrelated reasons, to make it
