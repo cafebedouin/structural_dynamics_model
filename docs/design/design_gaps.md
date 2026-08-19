@@ -1872,3 +1872,47 @@ signature vocabulary. Reviving the predicates alone would reproduce the dead sta
 **Do not re-mint a similar surface without reading this entry first.** The failure here was not the
 idea but a table that outlived both its classifier and its target vocabulary while continuing to
 export cleanly.
+
+## GAP-39 — No framing carriage in the corpus schema: a constraint story cannot state the selection rule its reading was formed under
+
+**Declared:** 2026-08-19 (OQ-284 ruling, operator, second-instance reviewed — the author-vs-declare
+choice was made, not defaulted).
+**Drives:** nothing — that is the point of the declaration. OQ-284 is resolved on this disposition.
+
+**The absent capability:** an authored field on a constraint story declaring the selection rule /
+framing under which its reading was produced — the corpus-side analogue of what the apparatus
+already carries everywhere (the pipeline manifest convention, coverage-in-band, the OQ-60 dual
+absence tokens, the staleness ladder). The nearest existing surface, `cs_reference_frame/2`, is
+serialized (`json_report.pl:720`) and never joined — GAP-17, the standing demonstration of what
+happens when a field is authored without a consumer.
+
+**Why declared rather than built.** (1) **No consumer exists.** No current analysis joins or wants
+this field; the schema-test-bed rule ("test whether a metric earns its keep on `testsets/`")
+measures earning-its-keep against a consumer, and there is none. (2) **Self-certification at
+birth:** the field would be authored by the same generation pass whose framing it purports to
+declare. (3) The churn rider below makes any citable use expensive before it is meaningful.
+
+**Revival conditions — all three, before any schema field is authored:**
+
+- **(a) A consumer that EXISTS and currently wants the data, or a specific analysis BLOCKED on the
+  absence.** Not an analysis that could be written if the field existed — proposing a consumer is
+  cheap and would arrive from the same reasoning that wants the field. The bar is an existing join
+  site or a named, blocked analysis.
+- **(b) The self-certification problem solved STRUCTURALLY — and note why the obvious answer is
+  not obviously available.** The declaring party must not be the authoring pass. A sidecar will be
+  proposed; note that OQ-71's lineage sidecar worked precisely because it never reached the
+  generator — which is also why it could carry nothing the generator knew. A framing sidecar has
+  the INVERSE requirement: it must describe the selection rule the generation pass operated under,
+  so something outside that pass has to know the rule independently. Whether such an independent
+  knower exists is the actual open question behind this condition — start there, not at "write a
+  sidecar."
+- **(c) The OQ-264 churn rider honored as written:** per-reading redraw identity is unstable with
+  NO global floor (2/6–3/6 at 340K arsenal; file-structure-dependent), so an authored framing
+  value is citable only under the k=3-unanimous standard, and reporting may never be finer than
+  the denominator's own churn.
+
+**The churn rider is GENERAL, not framing-specific — read this even if you are not reviving this
+gap.** Condition (c) binds ANY authored per-reading field whose value someone would want to cite,
+not just a framing field. It is recorded here because this is where the ruling happened, but its
+scope is every future per-reading schema addition. Candidate for the OQ-295 STANDING section when
+that ships (a general rule with no natural `Files:` line).

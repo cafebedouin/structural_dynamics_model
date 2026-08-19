@@ -12395,9 +12395,20 @@ evidence gave 2 and a seam, and the seam is the one correction this audit produc
 **Ω-type:** Ω_C for whether to author it at all (a schema/generation change is the operator's seat,
 and the honest alternative is a declared absence in `design_gaps.md`); Ω_E for the churn rider.
 
-**Status:** open — minted 2026-08-12 out of OQ-283's SEPARATION branch.
+**Status:** resolved — 2026-08-19 (operator ruling, second-instance reviewed): **declare the
+absence, do not author the field.** Landed as **GAP-39** (`docs/design/design_gaps.md`) with
+three revival conditions: (a) a consumer that EXISTS or an analysis BLOCKED on the absence — not
+one that could be written (proposing a consumer is cheap and arrives from the same reasoning
+that wants the field); (b) self-certification solved structurally, with the sidecar
+non-obviousness stated (OQ-71's sidecar worked because it never reached the generator, so it
+could carry nothing the generator knew — a framing sidecar has the inverse requirement, and
+whether an independent knower of the selection rule exists is the real open question); (c) the
+OQ-264 churn rider as written, recorded in the gap as GENERAL to any authored per-reading field,
+not framing-specific (STANDING candidate). Deciding evidence: no consumer exists (GAP-17 is the
+standing demonstration — `cs_reference_frame/2` serialized forever, joined never). This is a
+choice made, not a deferral.
 **Priority:** 3
-**Deps:** blocked_on OQ-283, blocked_on_human oq284-author-vs-declare-gap-ruling, bundled_with OQ-285
+**Deps:** blocked_on OQ-283, bundled_with OQ-285
 
 **The asymmetry, witnessed.** This repository implements framing carriage **well, on the apparatus
 side** — the pipeline manifest convention (`pipeline_run_at`, `n_constraints`, `code_commit`,

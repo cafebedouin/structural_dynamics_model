@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "223c155d9c622646b73f5bfbf0c16fa50883fdc9",
+    "store_version": "8ab60e21c8475594325d09001786fc351102b42b",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T16:56:30"
+    "generated_at": "2026-08-19T16:59:40"
   },
-  "issues_sha": "94bcb7573670a71f31bbca1d7b2de8077a4ed7df3041e4a43e56c2a7a87ba494",
+  "issues_sha": "c2c155be60b5faea6402b1b5a19176445bbfd2175d7c4fd35740c3e862bfb9ae",
   "n_entries": 327,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 159,
+    "resolved": 160,
     "mitigated": 19,
     "disposed": 6,
     "future": 11,
-    "open": 126,
+    "open": 125,
     "partial": 6
   },
   "active": [
@@ -1293,24 +1293,6 @@
       "mentioned_in": [
         "OQ-78",
         "OQ-188"
-      ]
-    },
-    {
-      "id": "OQ-284",
-      "status": "open",
-      "priority": 3,
-      "summary": "No framing carriage in the CORPUS schema (only in the apparatus): a constraint story cannot state the selection rule its reading was formed under",
-      "deps": [
-        "blocked_on OQ-283",
-        "blocked_on_human oq284-author-vs-declare-gap-ruling",
-        "bundled_with OQ-285"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-60",
-        "OQ-264",
-        "OQ-283",
-        "OQ-285"
       ]
     },
     {
@@ -4529,6 +4511,24 @@
       "mentioned_in": [
         "OQ-277",
         "OQ-284",
+        "OQ-285"
+      ]
+    },
+    {
+      "id": "OQ-284",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "No framing carriage in the CORPUS schema (only in the apparatus): a constraint story cannot state the selection rule its reading was formed under",
+      "deps": [
+        "blocked_on OQ-283",
+        "bundled_with OQ-285"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-71",
+        "OQ-264",
+        "OQ-283",
         "OQ-285"
       ]
     },
