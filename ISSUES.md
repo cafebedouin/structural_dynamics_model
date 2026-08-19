@@ -12095,16 +12095,55 @@ rewriting.
 
 **Ω-type:** Ω_E (a prevalence/boundary question, witnessable by measuring further model legs).
 
-**Status:** open — split out of OQ-78 on 2026-08-10 when the idiom half's two components proved to
-have opposite trajectories (point mass dissolved, rail held) **and were then shown to be made of
-different material** (R3 below), which is what makes the split an empirical finding rather than a
-bookkeeping decision. **Re-scoped:** the original question ("is the `.x8` rail *this model's* own
-idiom?") is ANSWERED — no, sonnet-5 inherits it. The live question is the boundary of the sharing
-family.
+**Status:** future — operator ruling 2026-08-19 (branch (C), second-instance reviewed): the
+boundary is accepted as un-falsified, filed Ω_E, deliberately unslated; three pre-commits pinned
+in the ruling block below (null-licensing with passive reactivation; the arm-channel floor pinned
+in-pass; the rebuild-interaction caveat). Prior state: open — split out of OQ-78 on 2026-08-10
+when the idiom half's two components proved to have opposite trajectories (point mass dissolved,
+rail held) **and were then shown to be made of different material** (R3 below), which is what
+makes the split an empirical finding rather than a bookkeeping decision. **Re-scoped:** the
+original question ("is the `.x8` rail *this model's* own idiom?") is ANSWERED — no, sonnet-5
+inherits it. The live question is the boundary of the sharing family.
 
 **Priority:** 3
-**Deps:** splits_from OQ-78, blocked_on_human oq281-null-licensing-precommit (what does a null
-result license? see PRE-COMMIT REQUIRED below — settle before any instrument runs)
+**Deps:** splits_from OQ-78
+
+### Ruling (2026-08-19, operator, second-instance reviewed): branch (C), marked `future`, three pre-commits pinned
+
+Status is `future` (see the Status line above — updated on this ruling): the boundary is accepted
+as un-falsified and filed Ω_E; nothing downstream is blocked on the answer.
+
+1. **The citable state, exactly:** *the rail is model-bound; every measured Claude population
+   shares it; the family boundary is un-probed.* Nothing stronger.
+2. **Null-licensing (the load-bearing one):** any (A)-type model sweep ever run is corpus
+   documentation ONLY, labelled as such — more Claude models landing on 8 licenses nothing and
+   never closes this entry. Only an off-8 Claude population reactivates the question.
+   **Reactivation is PASSIVE, accepted as such:** nobody is running (A) and a `future` entry is
+   not watched; the trigger fires only if whoever characterizes a new model leg checks the ε
+   argmax digit and knows this entry exists. Nominated for the OQ-295 STANDING backfill when
+   that build ships (a general rule with no natural `Files:` line — exactly OQ-295's class).
+3. **The arm channel: floor and stability check PINNED IN THIS PASS** (the entry required both
+   settled with the null-licensing pre-commit, and funding-time pinning would not launder a
+   floor calibrated with the seen +0.055 in hand — only the NEW half would be unseen).
+   - **Confirmation floor for any future within-family pair** (requires the GAP-35 generation
+     spend): excess ≥ **+0.030** AND above that run's own label-permutation p99, n ≥ 500 matched
+     pairs on the OQ-78 apparatus. Rationale: a single just-above-p99 +0.055 is subject to
+     replication shrinkage; roughly half-magnitude guards the winner's curse; both conditions
+     required so neither α alone nor magnitude alone confirms. Below floor on a valid new pair ⇒
+     the channel FAILS to confirm and "one inherited habit within family" downgrades to
+     unreplicated — it is not defended by the original pair.
+   - **Stability check on the EXISTING pair, owed BEFORE the floor is ever used** (zero-spend,
+     runnable from `audits/2026-08-10_oq78_idiom_close/` data): claimed_type-stratum jackknife —
+     the haiku × sonnet-5 excess must stay positive and above the run's p95 in every
+     leave-one-type-out re-read. A sign flip or sub-p95 drop in any stratum ⇒ the +0.055 is a
+     composition/boundary artefact and the channel is RETIRED, not confirmed. Until this check
+     runs, the channel stays exploratory-unpinned even for characterization cites.
+4. **The rebuild is NOT a neutral revival window (correction to the naive coupling).** A rebuild
+   on a new model partially answers the rail question BY HAPPENING — and if the rail resets, the
+   archived legs become the only witnesses to the old rail, with the documented join fragility
+   (filename-equality pairing; `cs_story_uid` 0/956; kernel join failing outside the twins). If
+   a rebuild lands on a new model, RE-READ this entry before assuming (B) is still the right
+   instrument — the event changes what (B) can measure, not just when it is affordable.
 
 **What is established** (`audits/2026-08-10_oq78_idiom_close/`, prereg md5
 `384e68bbac80e0959dba1294a6f6ee87`, commit `bfbe52ea`; zero-spend, pre-registered):
