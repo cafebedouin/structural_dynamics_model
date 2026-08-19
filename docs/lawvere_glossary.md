@@ -77,7 +77,7 @@ Each entry maps a predicate or concept across three vocabularies:
 | IB-adjusted threshold | `ib_adjusted_threshold/2` — structural_signatures.pl:1537 | Theater-aware threshold | STRICT | Reduces complexity offset when theater ratio is high |
 | Nonsensical coupling | `detect_nonsensical_coupling/3` — structural_signatures.pl | Coupling without function | STRICT | Classification change without functional justification |
 | Excess extraction | `excess_extraction/2` — structural_signatures.pl | Above-floor extraction | STRICT | Extraction above Boltzmann minimum |
-| Universal naturality | `boltzmann_invariant_mountain/2` — structural_signatures.pl | Mountain invariance | STRICT | Classification constant across all dimensions |
+| Universal naturality | `boltzmann_invariant_mountain/2` — boltzmann_compliance.pl (the module was split out of structural_signatures.pl by `a0e8d772`, 2026-02-17) | Mountain invariance | STRICT-BY-DESIGN, **DARK-IN-FACT** (OQ-302: Test 4 gates on the dead-by-range `natural_law_signature/1`, so `invariant(_)` is unreachable — `T4 = fail` on 5,311/5,311 across six legs, 2026-08-19) | Classification constant across all dimensions |
 
 ## 7. Naturality Certificates and Failures
 

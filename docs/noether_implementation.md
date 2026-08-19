@@ -81,11 +81,23 @@ The symmetry analysis pipeline has five stages, each implemented across one or m
 |---|---|---|
 | `cross_index_coupling/2` | Tests factorizability: χ(P,S) ≈ f(P) × g(S) | STRICT |
 | `boltzmann_compliant/2` | Overall naturality verdict (compliant / non_compliant / inconclusive) | STRICT |
-| `boltzmann_invariant_mountain/2` | Tests full symmetry: classification constant across ALL dimensions | STRICT |
+| `boltzmann_invariant_mountain/2` | Tests full symmetry: classification constant across ALL dimensions — **but see the note below: Test 4 is dead-by-range, so the `invariant` verdict this row describes is UNREACHABLE** | STRICT-BY-DESIGN, DARK-IN-FACT |
 | `expected_power_divergence/4` | Identifies known-legitimate symmetry breaking (expected non-commutativity) | STRICT |
 | `detect_nonsensical_coupling/3` | Finds classification changes without functional justification | STRICT |
 | `scope_invariance_test/2` | Tests symmetry along the scope dimension specifically | STRICT |
 | `excess_extraction/2` | Measures extraction above the Boltzmann minimum (thermodynamic floor) | STRICT |
+
+> **Note on `boltzmann_invariant_mountain/2` (OQ-302, 2026-08-19).** The predicate's four-test
+> composite is STRICT as designed, but the composite can never return `invariant(_)`: Test 4
+> calls `signature_detection:natural_law_signature/1`, which requires
+> `HasAlternatives == false` while `has_viable_alternatives/2`'s range is `{true, unknown}` —
+> no clause can emit `false` (OQ-113). Measured across six legs, 5,311 constraints:
+> `T4 = fail(natural_law_signature)` on **5,311/5,311**. A separate defect kept the whole body
+> from executing at all until 2026-08-19 (a bound-`false` call at
+> `boltzmann_compliance.pl:577`); repairing it made the *payload* per-constraint but did not
+> make the symmetry verdict reachable. Read this row as a symmetry test that is **specified,
+> wired, and dark** — not as evidence that full symmetry is being tested on the corpus.
+> Powering it is GAP-08 §7. Witness: `audits/2026-08-19_oq302_bound_false_repair/`.
 
 **Noether interpretation:** Factorizability IS separability of the Lagrangian. When χ(P,S) = f(P) × g(S), the system has independent symmetries along P and S, each generating its own conservation law. When factorizability fails, the symmetries are entangled — the Power and Scope dimensions interact in a way that prevents independent conservation.
 
