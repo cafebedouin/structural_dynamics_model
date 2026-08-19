@@ -532,6 +532,32 @@ def qualified_refs(text: str) -> list[tuple[str, str, int, int]]:
 SCHEMA_HEAD = re.compile(r"(?:^|(?<=[.\s]))narrative_ontology\s*:\s*([a-z][A-Za-z0-9_]*)\s*(\()?")
 
 
+def opens_a_clause(text: str, start: int) -> bool:
+    """True iff the term at `start` opens a CLAUSE, rather than sitting in a clause BODY.
+
+    SCHEMA_HEAD accepts any preceding whitespace, so before this guard a GOAL inside a
+    plunit test body counted as a clause head:
+
+        test(mountain_threshold_validation) :-
+            config:param(extractiveness_metric_name, ExtMetricName),
+            narrative_ontology:constraint_metric(collapse_inevitability_reading, ExtMetricName, E),
+
+    810 such occurrences across 270 files, all constraint_metric/3. The (name, arity) key
+    survives either way — that predicate has 20,895 real heads — so arm C never noticed and
+    its 40 do not move. A conformance arm does notice: it would have harvested the Prolog
+    VARIABLE `ExtMetricName` as an authored value of argument 2 and gone red on the corpus
+    for a value no story ever wrote. A parse reused by a second consumer has to mean what
+    its name says.
+
+    A clause opens at the start of the text or just after a clause-terminating `.`; a body
+    goal is preceded by `,` `;` `->` or `:-`.
+    """
+    i = start - 1
+    while i >= 0 and text[i].isspace():
+        i -= 1
+    return i < 0 or text[i] == "."
+
+
 def schema_head_terms(text: str, values: bool = False) -> list[tuple[str, int, list[str], int]]:
     """[(pred, arity, [argument texts], lineno)] for `narrative_ontology:P(...)` HEADS.
 
@@ -547,6 +573,8 @@ def schema_head_terms(text: str, values: bool = False) -> list[tuple[str, int, l
     for m in SCHEMA_HEAD.finditer(text):
         if not m.group(2):
             continue  # `P/N` in a directive, or a bare atom — not a head
+        if not opens_a_clause(text, m.start()):
+            continue  # a GOAL in a clause body, not a head — see opens_a_clause()
         args = _scan_args(text, m.end() - 1, values)
         if args is None:
             continue
@@ -843,9 +871,18 @@ narrative_ontology:constraint_victim(alpha, 'a victim, with a comma').
 narrative_ontology:stakeholder_gain_flow(
     beta,
     diffuse).
-/* block comment: narrative_ontology:ghost_pred(a, b). */
+/* block comment: narrative_ontology:ghost_pred(a, b).
+   narrative_ontology:ghost_head(c, d). */
 :- multifile narrative_ontology:has_sunset_clause/1.
 narrative_ontology:has_sunset_clause(gamma).
+"""
+
+BODY_GOAL_FIXTURE = """\
+narrative_ontology:constraint_metric(alpha, extractiveness, 0.4).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(alpha, ExtMetricName, E),
+    E =< 0.25.
 """
 
 FIXTURES = [
@@ -856,15 +893,15 @@ FIXTURES = [
      lambda: {a for p, a in schema_heads(strip_comments(TOKENIZER_FIXTURE))
               if p == "stakeholder_gain_flow"},
      {2}),
-    ("tokenizer: block-commented head is not a head",
+    ("tokenizer: block-commented heads are not heads",
      lambda: {p for p, _ in schema_heads(strip_comments(TOKENIZER_FIXTURE))
-              if p == "ghost_pred"},
+              if p.startswith("ghost")},
      set()),
     ("tokenizer: `:- multifile P/N` is a declaration, not a head",
      lambda: len([1 for p, a in schema_heads(strip_comments(TOKENIZER_FIXTURE))
                   if (p, a) == ("has_sunset_clause", 1)]),
      1),
-    ("NAIVE parser control: line-based stripping mis-parses the multi-line fact",
+    ("NAIVE parser control: line-based stripping keeps a block-commented clause head",
      lambda: schema_heads(naive_strip(TOKENIZER_FIXTURE)) ==
              schema_heads(strip_comments(TOKENIZER_FIXTURE)),
      False),
@@ -933,6 +970,14 @@ FIXTURES = [
      lambda: bool(ROW.match("narrative_ontology:constraint_victim/2  ROLE=corpus-schema  "
                             "written by testsets")),
      True),
+    ("a GOAL in a clause body is NOT a head (the ExtMetricName variable control)",
+     lambda: sorted(a.strip() for _p, _ar, args, _ln in
+                    schema_head_terms(strip_comments(BODY_GOAL_FIXTURE), values=True)
+                    for a in args),
+     ["0.4", "alpha", "extractiveness"]),
+    ("...and the real head in the SAME text is still counted (two-sided)",
+     lambda: schema_heads(strip_comments(BODY_GOAL_FIXTURE)),
+     {("constraint_metric", 3)}),
     ("bracket-only arguments are ARGUMENTS, not an empty list (phantom /0 control)",
      lambda: arity_at("adjacent_pairs([], []).", len("adjacent_pairs")),
      2),
