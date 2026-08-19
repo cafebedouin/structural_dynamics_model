@@ -3243,7 +3243,10 @@ not a dead probe. Witness:
 
 **Ω-type:** Ω_E (the staked prediction is measurable).
 
-**Status:** partial — SCOPED GO (a) ruled 2026-07-02 (operator). Part (a) diff-distribution readout is
+**Status:** future — operator ruling 2026-08-19: no interest in a corpus rebuild given ISSUES.md's
+recent trajectory growth; deliberately unslated, kept full-bodied for revival if the substrate
+changes. Prior state (2026-07-02, preserved for the reviver): partial — SCOPED GO (a) ruled by the
+operator. Part (a) diff-distribution readout is
 authorized and unblocked; **part (b) cross-axis invariance correlation — the OQ's headline staked falsifier —
 stays UNTESTED under this go** (it is a standalone build, not blocked on OQ-15 which resolved 2026-06-24).
 Construction-pair stratum declared **N/A for this cohort** (flat-control empty in both twins; see OQ-76). Two
