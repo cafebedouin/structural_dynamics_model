@@ -14084,10 +14084,33 @@ answers "no bound caller", which presupposes the last argument is an answer at a
 attributed rows and decline on `signature_grade/2`): **23 of 58 flagged, 2 confirmed, 21
 UNADJUDICATED**. It is a candidate-finder, not a verdict — a cut-first clause can still have a
 real output last argument (`characterize_family/2` selects on arg 1), so the 21 are not
-reclassified. **The ruling needed:** the 35 unflagged rows all read `changed=0` in the per-file
-bisect and are convertible on both the screen and the corpus, but the licence that authorised the
-batch has been falsified, so re-deriving a narrower one from this unit's own screen is the
-operator's call, not the executor's. Branch `oq303-classb-rollout`, unmerged.
+reclassified. **LICENCE REBUILT (operator ruling, 2026-08-19) — per row, on the direct question, not on the
+screen.** Absence of the cut-first tell is not presence of an output, and adopting a
+2-instance-tuned heuristic as clearance one unit after Unit A corrected exactly that shape would
+mirror the error. So every remaining row was adjudicated on *does the last argument carry an
+answer out?* — **and the answer was already authored in the source**: both misfiled rows carry a
+mode line three lines above their clauses (`%% seat_overrides(+C, +Signature)`,
+`%% expected_power_divergence(+P1, +P2, +T1, +T2)`) and nothing read it. That is how a header-stated
+assumption (`dispatch_head_check.pl:9-11`) let two violations sit inside its own worklist.
+`mode_adjudication.py` reads it (controls: fires on both attributed rows, declines on
+`signature_grade/2`): **36 authored OUTPUT, 1 authored INPUT, 18 no-mode-line adjudicated by hand
+read** (all output; `structural_property_holds/2` is a *generator* — sole caller a `findall` —
+not dispatch at all). The authored-INPUT row is a **THIRD misfiled row the corpus could not
+catch**, `report_generator.pl generate_scenario_for_omega/5` (its file diffed `changed=0`); all
+three are now `input-key`.
+**Durable fix = registry hygiene, gate-enforced:** `dispatch_head_check.py` carries `LAST_ARG`,
+one row per entry with its verdict and the evidence that settled it (57 rows, 54 output, 3 input).
+A `latent-B` row with no fact is RED; a `latent-B` row recorded `input` is RED.
+**Cross-check vs the screen** (disagreement either way is the finding): 10 rows where the screen
+over-flags an authored output, **0** where the author says input and the screen missed it —
+so the screen is ordering, never clearance.
+**Reachability bounds the corpus clearance** (`reachability.py`, profiler; controls fire at
+159,777 / 188,901 / 183,649 calls): **34 of 54 rows are COLD on `testsets`**, the leg the per-file
+clearance came from, so for those `changed=0` is absence of exercise, not correctness. 20 rows are
+genuinely exercised. A per-leg reachability pass would move some of the 34 into the cleared group.
+**Still open, and the executor did not resume on its own authority:** the batch stays reverted;
+whether to spend the rebuilt licence, and on which rows, is the next decision. Branch
+`oq303-classb-rollout`, unmerged.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

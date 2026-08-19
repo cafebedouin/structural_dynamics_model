@@ -13,11 +13,6 @@ GATES, because a pair that did not actually run reads byte-identical and is a FA
   * fingerprints from the clean half are compared against the edited half by the differ,
     not just recorded.
 
-timeout=1800 / soft_timeout=900: the classify_corpus default of 300 s is sized on the live
-leg (~35 s) and is NOT enough for the 960-1106 file legs — the first attempt at this pair
-refused on testsets_flash after three full-length attempts. soft_timeout keeps a genuine hang
-caught early and retried rather than sitting for the full ceiling.
-
 expected_model is None for every leg deliberately: a leg's model is not its directory name
 (OQ-78), and this is a same-leg PAIR, so the discriminator is the diff, not the fingerprint.
 The other classify_corpus refusals (zero-glob, load-completeness, raw freshness,
@@ -71,8 +66,11 @@ def run_phase(phase: str) -> int:
         out_path.unlink(missing_ok=True)
         t0 = time.time()
         try:
-            manifest = classify_corpus(rel, out_name, None,
-                                       timeout=1800, soft_timeout=900)
+            # No explicit timeout: classify_corpus now sizes its own ceiling from the
+            # corpus (run_pipeline._classify_timeout_for). Dropping the override here is
+            # deliberate — it makes this harness a CONSUMER of that fix rather than a
+            # workaround that leaves the next caller to rediscover the problem.
+            manifest = classify_corpus(rel, out_name, None)
         except Exception as e:  # refusals are loud, and they end the phase
             print(f"  {name}: REFUSED — {type(e).__name__}: {e}", flush=True)
             return 1

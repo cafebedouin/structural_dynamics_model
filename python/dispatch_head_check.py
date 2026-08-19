@@ -127,7 +127,7 @@ DECLARED: dict[tuple[str, str], str] = {
     ("orbit_report.pl", "characterize_family/2"): "latent-B",
     ("probe_oq197_controls.pl", "status_kind/2"): "latent-B",
     ("report_generator.pl", "completeness_to_confidence/2"): "latent-B",
-    ("report_generator.pl", "generate_scenario_for_omega/5"): "latent-B",
+    ("report_generator.pl", "generate_scenario_for_omega/5"): "input-key",
     ("report_generator.pl", "omega_severity/2"): "latent-B",
     ("report_generator.pl", "resolve_omega_source/4"): "latent-B",
     ("routing_sink.pl", "detector_state/2"): "latent-B",
@@ -141,6 +141,152 @@ DECLARED: dict[tuple[str, str], str] = {
     ("signature_detection.pl", "resolve_with_perspectival_check/4"): "latent-B",
     ("signature_detection.pl", "signature_diagnostic_severity/3"): "latent-B",
     ("transition_paths.pl", "predicted_terminal_state/3"): "latent-B",
+}
+
+# ---------------------------------------------------------------------------
+# LAST-ARGUMENT MODE, PER ROW, WITH ITS EVIDENCE.
+#
+# WHY THIS TABLE EXISTS (operator ruling, 2026-08-19). This file's header states the
+# assumption the whole worklist rests on — "OUTPUT ARGUMENT is taken to be the LAST argument,
+# by engine convention. This is a declared assumption, not a fact about every predicate" — and
+# a header is exactly what let TWO violations sit inside the worklist unnoticed until a
+# conversion moved 129-1106 constraints per leg. A stated assumption is not a checked one.
+#
+# THE FACT WAS ALREADY IN THE SOURCE. Both misfiled rows carried an authored mode line three
+# lines above their clauses:
+#     %% seat_overrides(+C, +Signature)
+#     %% expected_power_divergence(+P1, +P2, +T1, +T2)
+# Nothing read it. So the durable fix is not a better heuristic — it is putting the per-row
+# fact where the checker can see it, with the evidence that settled it.
+#
+#   "output" — the last argument carries an answer OUT; the class-B conversion template
+#              (fresh-variable heads + unify-after-cut) applies.
+#   "input"  — the last argument is supplied BY THE CALLER; the template is INVALID and
+#              silently destroys the predicate (the clause matches every value, cuts, and
+#              makes every later clause unreachable). Such a row belongs in `input-key`.
+#
+# Evidence is either the authored `%%` mode line or a dated read naming what settled it.
+# ADJUDICATION PASS: 2026-08-19, all 58 registry rows of the 2026-08-17 census
+# (audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py + hand reads for the 18
+# rows carrying no mode line). Cross-checked against the independent cut-first screen
+# (inputkey_screen.py): 0 disagreements in the input direction, 10 rows where the screen
+# over-flags an authored output — neither instrument clears a row alone.
+# ---------------------------------------------------------------------------
+LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
+    ("abductive_helpers.pl", "fpn_band/2"):
+        ("output", "authored: %% fpn_band(+EP, -Band)"),
+    ("abductive_helpers.pl", "seat_overrides/2"):
+        ("input", "authored: %% seat_overrides(+C, +Signature)"),
+    ("boltzmann_compliance.pl", "expected_power_divergence/4"):
+        ("input", "authored: %% expected_power_divergence(+P1, +P2, +T1, +T2)"),
+    ("constraint_indexing.pl", "restricted_classify/7"):
+        ("output", "authored: %% restricted_classify(+C, +Eps, +Chi, +Supp, +Theater, +Mutability, -Type)"),
+    ("context_profile_mining.pl", "classify_isomorphism_level/2"):
+        ("output", "read 2026-08-19: arg1 Evidence in, arg2 the level computed from it"),
+    ("covering_analysis.pl", "cell_short/2"):
+        ("output", "read 2026-08-19: arg1 cell(Power,Scope) selects, arg2 is the short label for it"),
+    ("covering_analysis.pl", "sigma_label/2"):
+        ("output", "authored: %% sigma_label(+Sigma, -Label)"),
+    ("cs_kernel_registry.pl", "stance_member_provenance/3"):
+        ("output", "authored: %% stance_member_provenance(+C, +Stance, -Prov)  — morphology_suggested | hand_declared."),
+    ("data_repair.pl", "source_class/2"):
+        ("output", "read 2026-08-19: arg1 id selects, arg2 is the provenance class for it"),
+    ("diagnostic_summary.pl", "compute_verdict/4"):
+        ("output", "authored: %% compute_verdict(+ExpConflicts, +Rejections, +Tensions, -Verdict)"),
+    ("diagnostic_summary.pl", "mismatch_source/2"):
+        ("output", "read 2026-08-19: arg1 error atom selects, arg2 is the source attributed to it"),
+    ("dirac_classification.pl", "gauge_fixed/3"):
+        ("output", "authored: %% gauge_fixed(+Constraint, +Context, -Fixed)"),
+    ("dirac_classification.pl", "score_to_separability/2"):
+        ("output", "authored: %% score_to_separability(+ReformScore, -Separability)"),
+    ("dirac_classification.pl", "type_to_dirac_class/4"):
+        ("output", "authored: %% type_to_dirac_class(+DRType, +Constraint, +Context, -DiracClass)"),
+    ("domain_priors.pl", "category_of/2"):
+        ("output", "authored: %% category_of(+ID, -Category)"),
+    ("domain_priors.pl", "infer_category_from_priors/2"):
+        ("output", "read 2026-08-19: arg1 id in, arg2 the inferred category"),
+    ("drl_boltzmann_analysis.pl", "has_purity_drift/2"):
+        ("output", "authored: %% has_purity_drift(+C, -Detected)"),
+    ("drl_boltzmann_analysis.pl", "purity_to_cut_priority/2"):
+        ("output", "authored: %% purity_to_cut_priority(+Purity, -Priority)"),
+    ("drl_boltzmann_analysis.pl", "qualify_action/5"):
+        ("output", "authored: %% qualify_action(+BaseAction, +Purity, +C, -QAction, -Rationale)"),
+    ("drl_boltzmann_analysis.pl", "raw_urgency/4"):
+        ("output", "authored: %% raw_urgency(+Gap, +Pressure, +Reformability, -Urgency)"),
+    ("drl_composition.pl", "composition_rule/3"):
+        ("output", "authored: %% composition_rule(+Type1, +Type2, -CompositeType)"),
+    ("drl_core.pl", "dr_action/3"):
+        ("output", "read 2026-08-19: arg3 is the recommended action; callers bind it as output (drl_purity_network.pl:472, drl_boltzmann_analysis.pl:432)"),
+    ("drl_counterfactual.pl", "estimate_impact_indexed/5"):
+        ("output", "authored: %% estimate_impact_indexed(+Source, +Target, +Context, -Impact, -Reason)"),
+    ("fpn_report.pl", "ep_band/2"):
+        ("output", "authored: %% ep_band(+EP, -Band)"),
+    ("gap_diagnostic.pl", "gate_description/2"):
+        ("output", "read 2026-08-19: arg1 gate atom selects, arg2 is its prose description"),
+    ("giant_component_analysis.pl", "action_band/2"):
+        ("output", "authored: %% action_band(+P, -Band)"),
+    ("giant_component_analysis.pl", "would_cross_threshold/5"):
+        ("output", "authored: %% would_cross_threshold(+Target, +Source, +Dist, +Ctx, -Result)"),
+    ("invertibility_analysis.pl", "chi_subband/2"):
+        ("output", "read 2026-08-19: arg1 chi in, arg2 the band it falls in"),
+    ("invertibility_analysis.pl", "predict_rope_snare/4"):
+        ("output", "read 2026-08-19: arg4 is the predicted target type; call site invertibility_analysis.pl:277 passes reconstruct_from_type_only/5's own output var"),
+    ("invertibility_analysis.pl", "predict_rope_tangled/4"):
+        ("output", "read 2026-08-19: as predict_rope_snare/4; call site :283"),
+    ("invertibility_analysis.pl", "predict_snare_tangled/4"):
+        ("output", "read 2026-08-19: as predict_rope_snare/4; same lookup shape"),
+    ("invertibility_analysis.pl", "predict_three_type/4"):
+        ("output", "read 2026-08-19: as predict_rope_snare/4; call site :289"),
+    ("json_report.pl", "boltzmann_label/2"):
+        ("output", "authored: %% boltzmann_label(+Result, -Label)"),
+    ("json_report.pl", "live_index_label/3"):
+        ("output", "authored: %% live_index_label(+ScopeViolations, +PowerViolations, -Label)"),
+    ("logical_fingerprint.pl", "categorize_coupling/5"):
+        ("output", "authored: %% categorize_coupling(+Score, +Threshold, +StrongThreshold, +C, -Category)"),
+    ("logical_fingerprint.pl", "extraction_zone/2"):
+        ("output", "authored: %% extraction_zone(+Epsilon, -Zone)"),
+    ("logical_fingerprint.pl", "purity_zone/2"):
+        ("output", "authored: %% purity_zone(+Score, -Zone)"),
+    ("logical_fingerprint.pl", "structural_property_holds/2"):
+        ("output", "read 2026-08-19: GENERATOR, not dispatch: sole caller is findall(Prop, structural_property_holds(C,Prop), _) at logical_fingerprint.pl:161 — arg2 is an output enumerated on backtracking"),
+    ("logical_fingerprint.pl", "suppression_zone/2"):
+        ("output", "authored: %% suppression_zone(+Supp, -Zone)"),
+    ("maxent_report.pl", "entropy_interpretation/2"):
+        ("output", "read 2026-08-19: arg1 entropy in, arg2 the interpretation string"),
+    ("metric_drift_events.pl", "drift_severity/3"):
+        ("output", "read 2026-08-19: arg2 drift kind selects, arg3 is the severity computed"),
+    ("network_dynamics.pl", "ep_base_severity/2"):
+        ("output", "authored: %% ep_base_severity(+EP, -Severity)"),
+    ("orbit_report.pl", "characterize_family/2"):
+        ("output", "authored: %% characterize_family(+Signature, -Description)"),
+    ("probe_oq197_controls.pl", "status_kind/2"):
+        ("output", "read 2026-08-19: arg1 status term selects, arg2 is its kind label"),
+    ("report_generator.pl", "completeness_to_confidence/2"):
+        ("output", "read 2026-08-19: arg1 score in, arg2 the confidence band"),
+    ("report_generator.pl", "generate_scenario_for_omega/5"):
+        ("input", "authored: %% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)"),
+    ("report_generator.pl", "omega_severity/2"):
+        ("output", "authored: %% omega_severity(+OmegaID, -Severity)"),
+    ("report_generator.pl", "resolve_omega_source/4"):
+        ("output", "authored: %% resolve_omega_source(+OmegaID, +Subject, -Constraint, -GapPattern)"),
+    ("routing_sink.pl", "detector_state/2"):
+        ("output", "read 2026-08-19: arg1 constraint in, arg2 the detector state"),
+    ("signature_detection.pl", "appears_as_rope/2"):
+        ("output", "authored: %% appears_as_rope(+C, -AppearanceType)"),
+    ("signature_detection.pl", "capture_disposition/2"):
+        ("output", "authored: %% capture_disposition(+C, -Disposition)"),
+    ("signature_detection.pl", "claimed_natural/2"):
+        ("output", "authored: %% claimed_natural(+C, -ClaimType)"),
+    ("signature_detection.pl", "determine_pure_subtype/2"):
+        ("output", "authored: %% determine_pure_subtype(+C, -Subtype)"),
+    ("signature_detection.pl", "has_viable_alternatives/2"):
+        ("output", "authored: %% has_viable_alternatives(+Constraint, -HasAlternatives)"),
+    ("signature_detection.pl", "resolve_with_perspectival_check/4"):
+        ("output", "authored: %% resolve_with_perspectival_check(+C, +ModalType, +Signature, -AdjustedType)"),
+    ("signature_detection.pl", "signature_diagnostic_severity/3"):
+        ("output", "authored: %% signature_diagnostic_severity(+C, +Signature, -Severity)"),
+    ("transition_paths.pl", "predicted_terminal_state/3"):
+        ("output", "authored: %% predicted_terminal_state(+ConstraintID, -State, -Confidence)"),
 }
 
 HIT_RE = re.compile(r"^DHC_HIT: (\S+) (\S+/\d+) ")
@@ -257,6 +403,26 @@ def main(argv: list[str]) -> int:
     for ln in readerr:
         notes.append(ln + " — unparsed terms are unchecked terms")
 
+    # REGISTRY HYGIENE (2026-08-19): the last-argument fact is a precondition of the
+    # `latent-B` class, not a nice-to-have. A row with no fact has not been adjudicated, and
+    # `latent-B` would license the template on it.
+    for key, cls in sorted(DECLARED.items()):
+        if cls != "latent-B":
+            continue
+        fact = LAST_ARG.get(key)
+        if fact is None:
+            problems.append(
+                f"latent-B {key[0]} {key[1]} has NO LAST_ARG fact — the class licenses the "
+                f"conversion template, which is valid only if the last argument is an output. "
+                f"Adjudicate and record it (with evidence) in the same change.")
+        elif fact[0] == "input":
+            problems.append(
+                f"latent-B {key[0]} {key[1]} is recorded LAST_ARG=input ({fact[1]}) — the "
+                f"template is invalid for it; its class must be `input-key`, not `latent-B`.")
+    for key, fact in sorted(LAST_ARG.items()):
+        if key not in DECLARED:
+            notes.append(f"stale LAST_ARG row (no registry entry): {key[0]} {key[1]}")
+
     for n in notes:
         print(f"  note: {n}")
     if problems:
@@ -265,6 +431,10 @@ def main(argv: list[str]) -> int:
         print(f"dispatch_head_check: RED — {len(problems)} problem(s)")
         return 1
     n_declared = sum(1 for v in DECLARED.values() if v != MUST_NOT_FIRE)
+    n_out = sum(1 for v in LAST_ARG.values() if v[0] == "output")
+    n_in = sum(1 for v in LAST_ARG.values() if v[0] == "input")
+    print(f"  last-arg facts: {len(LAST_ARG)} row(s) adjudicated ({n_out} output, {n_in} "
+          f"input); every latent-B row carries one")
     print(f"dispatch_head_check: GREEN — {scanned} engine files, {len(hitset)} shape "
           f"hit(s) all declared ({n_declared} declared + "
           f"{sum(1 for v in DECLARED.values() if v == MUST_NOT_FIRE)} must-not-fire), "

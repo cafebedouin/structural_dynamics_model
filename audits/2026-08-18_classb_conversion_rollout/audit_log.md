@@ -125,10 +125,17 @@ today**, and the `latent-B` label is holding all of that back on one fact alone:
 them bound. That is the exposure the conversion retires, and it is larger than "55 mechanical
 edits" makes it sound.
 
-**It also hands the conversion a by-construction witness stronger than any corpus diff.** After
-conversion the census must read **0 of 218** — every head fresh-variable, nothing to skip. A
-corpus diff can only say "no story exercised the difference"; the census says "the difference
-is gone." Both are run.
+**It also hands the conversion a by-construction witness the corpus diff cannot give.** After
+conversion the census must read **0 of 218** — every head fresh-variable, nothing to skip.
+
+**[CORRECTED at R7, 2026-08-19 — this paragraph originally called the census "stronger than any
+corpus diff" and that ranking is FALSIFIED.]** The census read 0 of 218 clean on a batch that
+moved 129–1106 constraints per leg. It measures atom-headed output clauses, so it is
+structurally blind to *"this argument was never an output"* — a misconversion that makes later
+clauses unreachable leaves nothing for it to count. The two instruments are **not ranked**: the
+census sees a difference the corpus may never exercise; the corpus sees a failure class the
+census cannot represent. This unit found the class the census cannot reach. Both are run, and
+neither corroborates the other.
 
 ### R4. Phase 1 — `signature_grade/2` converted; six-leg pair ZERO DIFF; prediction held
 

@@ -144,10 +144,43 @@ def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
 
+# MEASURED WALL-CLOCK, 2026-08-19, swipl 10.0.2, single-process otherwise-idle machine
+# (audits/2026-08-18_classb_conversion_rollout/, two full six-leg passes). Put HERE rather
+# than only in a docstring because the number a caller needs is the one the code uses:
+#     testsets    n= 279   ~35 s
+#     haiku       n= 960   ~288 s     <- 12 s inside run_prolog's 300 s default
+#     flash       n= 960   ~530 s
+#     kimi        n=1005   ~370 s
+#     sonnet      n=1001   ~730 s     <- 2.4x the default
+#     kernel_v1   n=1106   ~577 s
+# Cost per story is NOT constant (flash and haiku are both n=960 and differ by 1.8x), so the
+# ceiling is deliberately generous: the slowest measured rate, x3 headroom, floored at the old
+# 300 s default so no existing caller ever gets LESS time than before.
+_CLASSIFY_SECONDS_PER_STORY = 0.73          # sonnet, the slowest measured leg
+_CLASSIFY_HEADROOM = 3.0
+
+
+def _classify_timeout_for(glob_count: int,
+                          soft_timeout: Optional[int]) -> tuple[int, Optional[int]]:
+    """Size the swipl ceiling from the corpus rather than from the live leg.
+
+    The failure this removes is not a crash — it is three full-length attempts followed by a
+    refusal, which reads as "the corpus is broken" when it means "the clock was set for a
+    corpus 3x smaller". run_prolog retries on TIMEOUT, so an undersized ceiling costs
+    attempts x ceiling before it says anything at all.
+    """
+    ceiling = max(300, int(glob_count * _CLASSIFY_SECONDS_PER_STORY * _CLASSIFY_HEADROOM))
+    if soft_timeout is None and ceiling > 300:
+        # Keep a genuine hang caught early and retried (the OQ-301 giant_comp failure mode
+        # run_prolog exists to absorb) instead of parking for the whole generous ceiling.
+        soft_timeout = max(300, ceiling // 2)
+    return ceiling, soft_timeout
+
+
 def classify_corpus(corpus_path: str, output_name: str,
                     expected_model: Optional[str],
                     run_at: Optional[str] = None,
-                    timeout: int = 300,
+                    timeout: Optional[int] = None,
                     soft_timeout: Optional[int] = None) -> dict:
     """Classify a NON-default corpus into its own manifest-bearing output (B1).
 
@@ -174,20 +207,18 @@ def classify_corpus(corpus_path: str, output_name: str,
       - raw freshness: the raw artifact is deleted pre-run and must reappear newer.
       - seen == classified: len(per_constraint) == glob_count == manifest.n_constraints.
 
-    *timeout* / *soft_timeout* are forwarded to run_prolog. The 300 s default was sized on
-    the live leg (n=279, ~35 s) and is NOT enough for the big twin legs: measured 2026-08-18,
-    testsets_haiku (n=960) takes ~287 s — inside the ceiling by 13 s — and testsets_flash
-    (n=960) exceeds it, so the default silently costs three full-length attempts and then
-    refuses. Callers running a multi-leg witness pass should raise it explicitly and keep a
-    soft_timeout so a genuine hang is still caught early and retried (the OQ-301 giant_comp
-    failure mode run_prolog exists to absorb). Default unchanged, so every existing caller
-    behaves exactly as before.
+    *timeout* / *soft_timeout* are forwarded to run_prolog. LEAVE THEM UNSET: the ceiling is
+    SIZED FROM THE CORPUS (see _classify_timeout_for), because run_prolog's 300 s default is
+    sized on the live leg and silently costs three full-length attempts and then a refusal on
+    anything bigger. Pass an explicit value only to override that.
 
     Returns the manifest dict written into output_name.
     """
     run_at = run_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     corpus_dir = (PROLOG_DIR / corpus_path).resolve()
     glob_count = len(list(corpus_dir.glob("*.pl"))) if corpus_dir.exists() else 0
+    if timeout is None:
+        timeout, soft_timeout = _classify_timeout_for(glob_count, soft_timeout)
     if glob_count == 0:
         raise RuntimeError(
             f"classify_corpus: zero .pl files at {corpus_dir} (relative path "
