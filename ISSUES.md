@@ -11188,9 +11188,40 @@ consumer requiring the role gauge).
 **Ω-type:** Ω_P at the read (whether the ritual's cost is worth the catch rate is the
 operator's value ruling); the rate itself is Ω_E (mechanically computed).
 
-**Status:** open
+**Status:** open — **the Ω_P value ruling is DECLARED NOT RIPE (operator, 2026-08-19,
+second-instance reviewed), and unlike OQ-317's calendar bound this one waits on a STRUCTURAL
+change that may never come**: it ripens only when `Fired: no` becomes reachable. The
+investigations ledger (below) is adopted to make it reachable.
 **Priority:** 5
 **Deps:**
+
+### Ruling (2026-08-19) — the ledger, its criterion, and the pre-committed reading
+
+1. **Investigations ledger ADOPTED: `audits/INVESTIGATIONS.md`.** The OPENING CRITERION is in the
+   file's header and is what the ledger's value is entirely determined by: open a line whenever
+   you are about to CHECK something you don't already know the answer to, BEFORE running the
+   check — not when you decide it is worth an audit dir. Small, quick, mostly-negative checks
+   belong there deliberately: hunches that dissolve in five minutes are exactly the `no`
+   population. Without the criterion, hunch-time selection reproduces the 0-of-53 bias one
+   level up and the ledger measures nothing.
+2. **Open-line count is reported, never gated** (`apparatus_instrument.py`, informational
+   suffix on the same row). A rising open count is NOT by itself a defect — pressure to close
+   lines is pressure to write whatever bit clears them fastest, which would re-corrupt the very
+   population the ledger recovers. Shipping note, on record because it is this OQ's subject
+   matter: the counter's first live run counted its own header's format examples ("1 open / 1
+   closed" on an empty ledger — the OQ-285 census-counts-README shape); caught same-turn by
+   eyeballing the first run, fixed by fencing-aware counting, two-sided plant/restore control
+   pasted in the landing commit.
+3. **What a future `no` will and won't license — PRE-COMMITTED while zero exist** (the OQ-281
+   lesson: pin the reading before the data): the rate remains a yield over LEDGERED inquiries,
+   not over all inquiries, and it licenses judgments about the ritual's cost only within
+   whatever the opening criterion actually captured. **It never becomes a general catch
+   rate.** This extends the standing prohibition above; the first interpretation will be made
+   by someone who wants a particular answer, and this line is addressed to them.
+4. **Self-assignment is the residual the ledger does NOT fix:** the bit's author is still the
+   work's author. The monthly consolidation read absorbs this residual only for bits the
+   operator actually spot-checks — **a sample, not a second party in the loop** — and
+   "absorbed at consolidation" must not be read as coverage.
 
 **STANDING PROHIBITION (operator, 2026-08-17) — a `Fired:` bit is NOT apparatus corroboration and
 must never be cited as such.** The readout is now **9L / 0l / 0n**: nine `live`, and still not one

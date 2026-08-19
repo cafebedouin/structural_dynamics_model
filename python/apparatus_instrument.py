@@ -466,6 +466,27 @@ def main() -> int:
             rate += " — NO DECLINE EVER RECORDED: readout not yet interpretable (OQ-276)"
     else:
         rate = "catch-rate: no Fired: bits yet"
+    # INVESTIGATIONS LEDGER readout (OQ-276 ruling, 2026-08-19). Reporting ONLY, never a
+    # problem and never a gate condition: the ledger exists to make `no` reachable by
+    # registering the decision-to-look before the outcome; a rising open count is not by
+    # itself a defect, and pressure to close lines is pressure to write whatever bit
+    # clears them fastest. Contributes NOTHING to the return code by design.
+    ledger = AUDITS / "INVESTIGATIONS.md"
+    if ledger.is_file():
+        # Strip fenced code blocks first: the ledger header carries FORMAT EXAMPLES in a
+        # fence, and counting them reported "1 open / 1 closed" on an empty ledger the day
+        # this shipped — the instrument counting its own template (the OQ-285 README.md
+        # census shape). Caught same-turn because the first live run was eyeballed.
+        in_fence, lines = False, []
+        for ln in ledger.read_text(encoding="utf-8").splitlines():
+            if ln.startswith("```"):
+                in_fence = not in_fence
+                continue
+            if not in_fence:
+                lines.append(ln)
+        n_open = sum(1 for ln in lines if ln.startswith("- [ ]"))
+        n_closed = sum(1 for ln in lines if ln.startswith("- [x]"))
+        rate += f"; ledger {n_open} open / {n_closed} closed (informational)"
     for p in problems:
         print(f"PROBLEM: {p}")
     # Reporting-only readout. Contributes NOTHING to the return code by design —
