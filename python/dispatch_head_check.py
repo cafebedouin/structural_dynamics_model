@@ -159,18 +159,40 @@ DECLARED: dict[tuple[str, str], str] = {
 # Nothing read it. So the durable fix is not a better heuristic — it is putting the per-row
 # fact where the checker can see it, with the evidence that settled it.
 #
-#   "output" — the last argument carries an answer OUT; the class-B conversion template
-#              (fresh-variable heads + unify-after-cut) applies.
-#   "input"  — the last argument is supplied BY THE CALLER; the template is INVALID and
-#              silently destroys the predicate (the clause matches every value, cuts, and
-#              makes every later clause unreachable). Such a row belongs in `input-key`.
+#   "output"    — the last argument carries an answer OUT; the class-B conversion template
+#                 (fresh-variable heads + unify-after-cut) applies.
+#   "input"     — the last argument is supplied BY THE CALLER; the template is INVALID and
+#                 silently destroys the predicate (the clause matches every value, cuts, and
+#                 makes every later clause unreachable). Such a row belongs in `input-key`.
+#   "generator" — the predicate is NOT CUT-ORDERED DISPATCH AT ALL: it is enumerated for all
+#                 solutions (its caller is a findall/setof/forall), so the last argument is an
+#                 output but there is no bound-probe hazard for the template to retire. A
+#                 FOURTH kind of misfiling, and deliberately not folded into "output"
+#                 (operator, 2026-08-19): "this dispatches on an output" and "this was never
+#                 dispatch" fail differently, and a future census must be able to tell them
+#                 apart. Converting one is harmless and pointless; the interesting property of
+#                 such a predicate is whether a cut in a late clause truncates the enumeration.
 #
 # Evidence is either the authored `%%` mode line or a dated read naming what settled it.
 # ADJUDICATION PASS: 2026-08-19, all 58 registry rows of the 2026-08-17 census
 # (audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py + hand reads for the 18
-# rows carrying no mode line). Cross-checked against the independent cut-first screen
-# (inputkey_screen.py): 0 disagreements in the input direction, 10 rows where the screen
-# over-flags an authored output — neither instrument clears a row alone.
+# rows carrying no mode line).
+#
+# THE FINDING THIS TABLE RECORDS IS NOT THE TABLE. Three rows were misfiled; two carried
+# hand-authored `+` mode lines three lines above their clauses, and NO instrument in the chain
+# read them — not the regex caller sweep, not the codewalk arm, not the clause-order census,
+# not the cut-first screen. Two call-site instruments and a structural checker were built to
+# answer a question the author had already answered in a comment. Where this codebase's
+# DECLARED facts live and where its verification LOOKS are different places; that is the
+# general lesson, and it is worth more than the rows.
+#
+# CROSS-CHECK BOUND, SCOPED (operator, 2026-08-19). Against the independent cut-first screen
+# (inputkey_screen.py): 10 rows where the screen over-flags an authored output, and 0 rows
+# where an author wrote `+` and the screen missed it. **That zero is scoped to the 37 of 55
+# rows that carry an authored mode line** — it is a false-negative bound measured against the
+# only instrument that can check the screen. The 18 hand-read rows have NO independent check
+# on the screen at all; their evidence is the read, and the screen's behaviour on them is
+# unbounded. Neither instrument clears a row alone.
 # ---------------------------------------------------------------------------
 LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
     ("abductive_helpers.pl", "fpn_band/2"):
@@ -248,7 +270,13 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
     ("logical_fingerprint.pl", "purity_zone/2"):
         ("output", "authored: %% purity_zone(+Score, -Zone)"),
     ("logical_fingerprint.pl", "structural_property_holds/2"):
-        ("output", "read 2026-08-19: GENERATOR, not dispatch: sole caller is findall(Prop, structural_property_holds(C,Prop), _) at logical_fingerprint.pl:161 — arg2 is an output enumerated on backtracking"),
+        ("generator", "read 2026-08-19: NOT dispatch. Sole caller is "
+                      "findall(Prop, structural_property_holds(C, Prop), _) at "
+                      "logical_fingerprint.pl:161, so every clause is enumerated and arg2 is "
+                      "an output produced on backtracking. No bound-probe hazard exists here "
+                      "for the template to retire — converting it is harmless and pointless. "
+                      "The live question for this predicate is different: the late clauses "
+                      "(:181 onward) carry cuts, which truncate the enumeration."),
     ("logical_fingerprint.pl", "suppression_zone/2"):
         ("output", "authored: %% suppression_zone(+Supp, -Zone)"),
     ("maxent_report.pl", "entropy_interpretation/2"):
@@ -415,6 +443,12 @@ def main(argv: list[str]) -> int:
                 f"latent-B {key[0]} {key[1]} has NO LAST_ARG fact — the class licenses the "
                 f"conversion template, which is valid only if the last argument is an output. "
                 f"Adjudicate and record it (with evidence) in the same change.")
+        elif fact[0] == "generator":
+            notes.append(
+                f"latent-B {key[0]} {key[1]} is LAST_ARG=generator — not cut-ordered dispatch "
+                f"(its caller enumerates it), so the conversion template retires no hazard "
+                f"here. Not an error; do not fold it into the `output` population when "
+                f"counting what the rollout covers.")
         elif fact[0] == "input":
             problems.append(
                 f"latent-B {key[0]} {key[1]} is recorded LAST_ARG=input ({fact[1]}) — the "
@@ -433,8 +467,9 @@ def main(argv: list[str]) -> int:
     n_declared = sum(1 for v in DECLARED.values() if v != MUST_NOT_FIRE)
     n_out = sum(1 for v in LAST_ARG.values() if v[0] == "output")
     n_in = sum(1 for v in LAST_ARG.values() if v[0] == "input")
+    n_gen = sum(1 for v in LAST_ARG.values() if v[0] == "generator")
     print(f"  last-arg facts: {len(LAST_ARG)} row(s) adjudicated ({n_out} output, {n_in} "
-          f"input); every latent-B row carries one")
+          f"input, {n_gen} generator); every latent-B row carries one")
     print(f"dispatch_head_check: GREEN — {scanned} engine files, {len(hitset)} shape "
           f"hit(s) all declared ({n_declared} declared + "
           f"{sum(1 for v in DECLARED.values() if v == MUST_NOT_FIRE)} must-not-fire), "

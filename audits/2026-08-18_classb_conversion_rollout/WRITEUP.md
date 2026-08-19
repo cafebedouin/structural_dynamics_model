@@ -1,21 +1,21 @@
-# OQ-303(a) — class-B conversion rollout: Phase 1 landed zero-diff on six legs, then the batch of 55 moved the corpus and was reverted — the `latent-B` label does not license the template
+# OQ-303(a) — the author had already answered the question, in a comment, and no instrument in the chain read it
 
 **Executed:** 2026-08-18 → 2026-08-19 (directory dated to the open)
 **OQ:** OQ-303 (arm (a))
-**Verdict (updated 2026-08-19 after the ruling):** Phase 1 landed: `signature_grade/2` converted, six-leg pair **0 changed
-constraints over 5,311**, so the pre-declared **Ω_P escalation DECLINED** and that conversion is
-Ω_E, discharged. **Phase 3 is HALTED and REVERTED**: the batch of 55 passed every structural
-check it owed and moved the corpus on all six legs (129/279 up to 1106/1106). A per-file bisect
-attributed all of it to two rows whose last argument is an **INPUT, not an output** — the
-class-B template is invalid there, and both were misfiled `latent-B` in the 2026-08-17 registry.
-**The finding is not "two bad rows": it is that the `latent-B` label does not license the
-template on its own**, which is the premise the whole batch rested on. A mechanical
-candidate-finder flags 23 of the 58, but it is not clearance: the licence was **rebuilt on the
-direct question, per row** (§10–11), which found a **third** misfiled row the corpus could not
-(`generate_scenario_for_omega/5`, its file diffed clean) and put the last-argument fact into the
-registry with its evidence, gate-enforced. Reachability (§12) bounds what the corpus clearance
-covers: **34 of 54 rows are cold on the leg it came from**. **STATUS: HALTED, licence rebuilt**
-— the batch stays reverted; Phase 4 not begun; nothing merged to `main`.
+**Verdict (operator ruling, 2026-08-19 — the headline finding is the mode lines, not the
+rollout):** Four of the 2026-08-17 registry's `latent-B` rows were misfiled, and **two of them
+carried hand-authored mode lines three lines above their clauses saying so** —
+`%% seat_overrides(+C, +Signature)`, `%% expected_power_divergence(+P1, +P2, +T1, +T2)`, last
+argument `+`, INPUT. **No instrument in the chain read them**: not the regex caller sweep, not
+the codewalk arm, not the clause-order census, not the cut-first screen. The project built two
+call-site instruments and a structural checker to answer a question the author had already
+answered in a comment. That is a general fact about where this codebase's *declared* facts live
+versus where its *verification* looks, and it is worth more than the 55 rows. The rollout is how
+it surfaced: Phase 1 (`signature_grade/2`) landed with a six-leg pair at **0 changed constraints
+over 5,311** and the pre-declared Ω_P escalation declining; the batch of 55 passed every
+structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: licence
+rebuilt per row and gate-enforced; the 20 exercised rows are cleared to convert; the batch stays
+reverted pending the per-leg reachability pass.** Nothing merged to `main`.
 **Substrate:** six legs — `testsets` (n=279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) =
 5,311 constraints. Clean half at `code_commit` 2f459d3a, edited half at 6c1bfa44, corpus md5
@@ -43,7 +43,37 @@ transformer's selftest fired three times on the transformer before it touched a 
 
 ---
 
-## 1. Carry (i) — `commentary` reachability, answered before the run
+## 1. The finding: declared facts and verification look in different places
+
+Four misfilings, of three different kinds:
+
+| row | kind | how it was declared | what read it |
+|---|---|---|---|
+| `abductive_helpers.pl seat_overrides/2` | last arg is an INPUT | `%% seat_overrides(+C, +Signature)` | nothing, until the corpus moved 129 constraints |
+| `boltzmann_compliance.pl expected_power_divergence/4` | last arg is an INPUT | `%% expected_power_divergence(+P1, +P2, +T1, +T2)` | nothing, until the corpus moved 17 |
+| `report_generator.pl generate_scenario_for_omega/5` | last arg is an INPUT | `%% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)` | nothing — **the corpus never caught this one**; its file diffed clean |
+| `logical_fingerprint.pl structural_property_holds/2` | **wrong category**: not dispatch at all | its sole caller is a `findall` (`logical_fingerprint.pl:161`) | nothing |
+
+The instrument chain built around this worklist — `caller_sweep.py` (regex call sites),
+`codewalk_caller_check.py` (module-resolved call sites), `clause_order_census.pl` (clause-order
+steal-risk), `inputkey_screen.py` (cut-first tell) — answers increasingly sophisticated versions
+of *"is this predicate called with its last argument bound?"* **Every one of them presupposes the
+last argument is an answer.** The author had recorded that it wasn't, in the conventional place,
+in three of the four cases. Nothing in the verification path reads `%%` mode lines.
+
+`dispatch_head_check.pl:9-11` states the assumption honestly in its own header — *"OUTPUT
+ARGUMENT is taken to be the LAST argument, by engine convention. This is a declared assumption,
+not a fact about every predicate."* A stated assumption is not a checked one, and a header is
+where a violation can sit indefinitely: the checker's own worklist contained two.
+
+**The fourth is a different failure and is deliberately kept separate** (operator, 2026-08-19).
+`structural_property_holds/2` is not a wrong *mode*, it is a wrong *category*: enumerated by its
+caller for all solutions, so its last argument is an output and there is no bound-probe hazard
+for the template to retire at all. "This dispatches on an output" and "this was never dispatch"
+fail differently, so the registry now carries `generator` as its own `LAST_ARG` verdict rather
+than folding it into the 53 outputs — a future census must be able to tell them apart.
+
+## 2. Carry (i) — `commentary` reachability, answered before the run
 
 Pre-registered from reads, not read off the diff afterwards (`audit_log.md` R1):
 **`commentary` is reachable downstream as a VALUE but is queried NOWHERE as a BOUND SELECTOR.**
@@ -55,7 +85,7 @@ serialized as `verdict_join.signature_grade` (`json_report.pl:1509`) and read li
 That distinction is what decides Ω_E from Ω_P, which is why it was fixed in advance along with
 what each outcome would mean.
 
-## 2. Phase 1 result — zero-diff, and the three ways a zero-diff can lie, closed
+## 3. Phase 1 result — zero-diff, and the three ways a zero-diff can lie, closed
 
 ```
 testsets  0 | testsets_haiku  0 | testsets_flash  0
@@ -80,7 +110,7 @@ and 932→899 (haiku), i.e. into exact agreement with the engine, while `correct
 untouched. Precisely 29 and 33 over-permissive answers retired, and zero consumer-visible
 change, because nothing in the engine queries at `commentary`.
 
-## 3. Carry (ii) — the census: the exposure is 165 of 218
+## 4. Carry (ii) — the census: the exposure is 165 of 218
 
 `steal_risk(P, A)` = cut-bearing clauses of `P` whose head output arg is an atom ≠ `A`, before
 the last clause that can yield `A`. Upper bound by design.
@@ -113,7 +143,7 @@ a misconversion that makes later clauses unreachable leaves it nothing to count.
 differences the corpus may never exercise; the corpus sees a failure class the census cannot
 represent. Different coverage, no ordering.
 
-## 4. The transformer, and why it is a transformer
+## 5. The transformer, and why it is a transformer
 
 55 hand edits and one transformer make different *kinds* of mistake. A hand edit can drop a
 guard in a way no structural check catches; a transformer makes the same mistake everywhere,
@@ -128,7 +158,7 @@ over-strong post-condition ("every output is a variable") that would have revert
 with a compound output argument. The second is the one worth keeping: a parser that is wrong
 and right-by-accident on the file you tested it on is the failure mode this whole arc is about.
 
-## 5. A tool that could not run the witness it exists for
+## 6. A tool that could not run the witness it exists for
 
 `classify_corpus`'s `run_prolog` timeout is a hard-coded 300 s, sized on the live leg (~35 s).
 Measured this session: haiku **288 s** (13 s of headroom), flash **530 s**, sonnet **724 s**,
@@ -188,7 +218,7 @@ argument really is a description to compute. 2 confirmed, **21 unadjudicated**. 
 reclassified `input-key`; reclassifying 21 on a candidate-finder's say-so would be the same
 error in the other direction.
 
-## 10. The licence, rebuilt on the direct question — and the fact was already in the source
+## 9. The licence, rebuilt on the direct question — and the fact was already in the source
 
 Operator ruling 2026-08-19: *"mechanical per a witnessed template"* is falsified because its
 unstated premise — every `latent-B` row's last argument is an OUTPUT — is false at 2 rows,
@@ -226,11 +256,14 @@ two violations sat inside its own worklist. A stated assumption is not a checked
 argument an input. The corpus did **not** catch it: its file diffed `changed=0`. It is the latent
 instance the ruling predicted, and the mode read found it where the corpus could not.
 
-All 18 undeclared rows read as output-bearing, each with its evidence recorded in the registry
-(§11). One deserves naming: `structural_property_holds/2` is not a dispatch predicate at all but
-a **generator** — its sole caller is `findall(Prop, structural_property_holds(C, Prop), _)` at
-`logical_fingerprint.pl:161` — so its last argument is an output enumerated on backtracking and
-there is no bound-probe hazard for the template to retire.
+Of the 18 undeclared rows, 17 read as output-bearing and **one is a fourth misfiling of a
+different kind**: `structural_property_holds/2` is not a dispatch predicate at all but a
+**generator**, enumerated by `findall(Prop, structural_property_holds(C, Prop), _)` at
+`logical_fingerprint.pl:161`. Its last argument is an output, but there is no bound-probe hazard
+for the template to retire — converting it would be harmless and pointless. It is recorded as
+its own `LAST_ARG` verdict (`generator`) rather than folded into the outputs, because *"this
+dispatches on an output"* and *"this was never dispatch"* fail differently and a future census
+must distinguish them. Each row's evidence is in the registry (§10).
 
 **Cross-check, not clearance** (the partition's two-instrument discipline): mode read vs
 cut-first screen, disagreement either way being the finding.
@@ -239,10 +272,15 @@ cut-first screen, disagreement either way being the finding.
   `characterize_family/2` already suggested (it cuts first but selects on argument 1).
 - **0 rows where the author declares an input and the screen missed it.**
 
-So the screen has no false negatives *among the mode-declared rows* and a 10/46 false-positive
-rate; it is ordering and cross-check, never clearance, and neither instrument clears a row alone.
+**Scope that zero precisely** (operator, 2026-08-19): it is a false-negative bound measured
+against the only instrument that can check the screen, and it therefore covers **the 37 of 55
+rows that carry an authored mode line — not all 55.** The 18 hand-read rows have **no
+independent check on the screen at all**; their evidence is the read, and the screen's behaviour
+on them is unbounded. Quoting "0 misses" without that scope would repeat, one instrument later,
+exactly the move this unit exists to correct. The screen is ordering and cross-check, never
+clearance; neither instrument clears a row alone.
 
-## 11. Registry hygiene — the durable fix
+## 10. Registry hygiene — the durable fix
 
 `python/dispatch_head_check.py` now carries `LAST_ARG`: **one row per registry entry, its
 verdict, and the evidence that settled it** (the authored `%%` line, or a dated read naming what
@@ -257,7 +295,7 @@ Gate-enforced in the same checker, because a fact nothing checks is what produce
 All three input rows are reclassified `latent-B` → `input-key`. The class definition in the
 checker now carries the mechanism and names both instruments.
 
-## 12. Reachability — what the corpus clearance actually covers
+## 11. Reachability — what the corpus clearance actually covers
 
 The per-file bisect cleared 27 of 29 files at `changed=0` on the **live leg**. A cold predicate
 clears that on absence of exercise, not correctness — so the clearance is bounded by what the
@@ -275,7 +313,7 @@ This is a `testsets`-only measurement, matching the bisect's own scope. Extendin
 other five legs would shrink the cold set; that run is not done, and the number above should be
 read as "cold on the leg the clearance came from", not "cold everywhere".
 
-## 13. Residue — what is OPEN
+## 12. Residue — what is OPEN
 
 - **Phase 3 is HALTED and reverted.** It needs an operator ruling, not a retry: 21 rows carry
   the input-key tell and are unadjudicated, and adjudicating "is this last argument an output?"
