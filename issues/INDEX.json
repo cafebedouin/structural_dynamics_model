@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "25863ab9137f5418e14394c367b427285f3d632a",
+    "store_version": "75cf18cc06d7102e98517709c88f9b20c088ffbc",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T17:51:46"
+    "generated_at": "2026-08-19T17:57:49"
   },
-  "issues_sha": "f67eeffad75d84c8920a22c2271ff2bbfcb1d32d1ef2a0b60a9918428cda2570",
+  "issues_sha": "cec1b8a779cbaa24bb96e92fda269614455ada8f2121921d8e04faa985476099",
   "n_entries": 327,
   "active_token_set": [
     "investigating",
@@ -15,8 +15,8 @@
     "resolved": 161,
     "mitigated": 19,
     "disposed": 6,
-    "future": 12,
-    "open": 123,
+    "future": 13,
+    "open": 122,
     "partial": 6
   },
   "active": [
@@ -1378,21 +1378,6 @@
         "OQ-34",
         "OQ-54",
         "OQ-117"
-      ]
-    },
-    {
-      "id": "OQ-297",
-      "status": "open",
-      "priority": 4,
-      "summary": "Pre-flight concurrent-writer detection: replace the prose sequencing instruction with a check that can fail",
-      "deps": [
-        "splits_from OQ-276",
-        "blocked_on_human apparatus-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-251",
-        "OQ-276"
       ]
     },
     {
@@ -4594,6 +4579,21 @@
         "OQ-317",
         "OQ-318",
         "OQ-319"
+      ]
+    },
+    {
+      "id": "OQ-297",
+      "status": "future",
+      "priority": 4,
+      "summary": "Pre-flight concurrent-writer detection: replace the prose sequencing instruction with a check that can fail",
+      "deps": [
+        "splits_from OQ-276"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-251",
+        "OQ-276",
+        "OQ-295"
       ]
     },
     {

@@ -13835,9 +13835,13 @@ standing regression, 3/3 green at close.)
 **Ω-type:** Ω_C (apparatus design ruling — what the check is and where it lives), with an Ω_E limb
 (does it actually fire? owed a two-sided test before adoption).
 
-**Status:** open
+**Status:** future — operator ruling 2026-08-19 (second-instance reviewed): the blocker was
+STALE — the apparatus ruling was already made at mint (2026-08-17, below) and stands unmodified;
+no decision remains that evidence won't make, and no work exists until a falsifier branch fires.
+Falsifier amended on ruling (see the amended block below); read-site landed in
+`audits/README.md`'s HEAD-stamp paragraph.
 **Priority:** 4
-**Deps:** splits_from OQ-276, blocked_on_human apparatus-ruling
+**Deps:** splits_from OQ-276
 **Origin:** OQ-251 audit, 2026-08-17 — the executing instance made the error itself and caught it
 only at commit time; operator declined the hook at close and directed it be minted here rather than
 folded into that close.
@@ -13874,10 +13878,32 @@ when HEAD moved; declines when it did not), fail-**closed** semantics (unavailab
 silent pass), and a discrimination record — per this repo's own rule that a control must witness it
 is CALLED, not merely that it works.
 
-**Falsifier:** if the landed HEAD-stamp pair catches a real concurrent-writer episode before any
-write, the hook is unnecessary and this OQ closes `disposed`. If an episode slips past the pair —
-i.e. a session where HEAD moved and the close comparison did not surface it — that is the evidence
-the hook is needed, and this OQ becomes a build item.
+**Falsifier — AMENDED on ruling (2026-08-19), because the minted version closed on a mechanism
+nobody checked the timing of and claimed a symmetry it does not have:**
+
+- **A caught episode closes this `disposed` only if the catch was ACTIONABLE** — detection
+  arrived in time to prevent something, or the catch comes with an explicit operator judgment
+  that after-the-fact detection is all this workflow wants. A caught-but-too-late episode is
+  evidence on the OTHER side: the pair is detection at CLOSE, it brackets a session and reports
+  afterward; the OQ-251 episode ended cleanly because the engine tree happened to be
+  byte-identical, which was luck. A catch demonstrates the pair *detects*, not that
+  detection-at-close is sufficient protection.
+- **Branch (b) — an episode slipping PAST the pair — is EFFECTIVELY UNFIREABLE, recorded as
+  such** (the OQ-295 ratchet shape): a slipped episode produces no signal by construction, so
+  this branch fires only if some *other* instrument independently catches the same episode —
+  and if such an instrument existed, the pair would not be the primary detection. The falsifier
+  is therefore one-sided as built: it has a path to "pair suffices" and no realistic path to
+  "hook needed." The cheapest route to making (b) fireable is periodic reconciliation (do
+  commits in the log's window match the HEAD range the stamps bracket?) — NOT built now,
+  recorded so the asymmetry is a known property rather than a discovered one.
+
+**Prose-carried, not a gate (flag on record, no action):** the approved "commit `audit_log.md`
+FIRST" ordering is prose again — the same category as the rule this OQ exists to replace. Small
+surface, checkable after the fact from commit order, and the stamp pair is the real instrument —
+but nobody should later mistake the ordering instruction for an enforced check.
+
+**Read-site:** either stamp-pair outcome feeds this falsifier; `audits/README.md`'s HEAD-stamp
+paragraph routes the holder of a differing pair here at the moment they hold it.
 
 ---
 

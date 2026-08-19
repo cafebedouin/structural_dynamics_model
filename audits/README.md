@@ -89,7 +89,9 @@ they differ, name the intervening commits and state the blast radius **on the au
 read-set** — `git diff --stat <open> <close> -- <paths the probes touched>`; an empty diff over
 those paths is the clean result, and it is a different thing from never having looked. **This is
 DETECTION, not prevention** — prevention needs a lock file, which this workflow deliberately does
-not have. Motivating episode: `audits/2026-08-17_oq251_natural_law_reachability/`, where an
+not have. **If your stamps DIFFER, you are holding OQ-297's falsifier: record at that entry which
+branch fired — an actionable catch (arrived in time to matter) argues the pair suffices; a
+caught-but-too-late episode argues the hook is needed.** Motivating episode: `audits/2026-08-17_oq251_natural_law_reachability/`, where an
 executor read a dirty→clean `git status` transition as a stale index stat while another instance
 was committing between the two commands. **A dirty→clean transition is affirmative evidence OF a
 writer, not of its absence.** Ruling, and the declined `.claude/settings.json` hook alternative
