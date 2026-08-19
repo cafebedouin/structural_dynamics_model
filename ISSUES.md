@@ -6950,11 +6950,38 @@ from OQ-69 (**operator ruling 2026-06-20:** the cluster item splits F/G; minted 
 
 **Ω-type:** Ω_E (corpus measurement — but possibly not cleanly constructible; see the obstruction).
 
-**Status:** open — minted 2026-06-20 from the OQ-71 Phase A close; construct-validity gap named, experiment design specified, spend + pricing deferred to operator.
+**Status:** future — operator ruling 2026-08-19 (second-instance reviewed): no spend; deliberately
+unslated, kept full-bodied for revival. Prior state: open — minted 2026-06-20 from the OQ-71 Phase
+A close; construct-validity gap named, experiment design specified, spend + pricing deferred to
+operator. Three revival conditions in the ruling record below.
 
 **Priority:** 2
 
-**Deps:** splits_from OQ-71, blocked_on_human operator-spend-go
+**Deps:** splits_from OQ-71
+
+### Ruling record (2026-08-19) — conditions a reviver must honor
+
+1. **The untestability fallback is POST-ATTEMPT ONLY.** The pre-registered fallback ("register §3
+   as path-untestable-as-stated") is reachable only *after* an attempted construction of the
+   batch-of-one design fails — it is an outcome of attempting, never a menu option selectable in
+   lieu of attempting. Declining to fund is not evidence about the design; an untestability
+   verdict is a finding about a construction attempt, and there has not been one.
+2. **Rebuild sequencing is OPEN — decide it before pricing.** OQ-75 (the corpus rebuild) was
+   marked future the same day. Two readings, neither established: (i) a rebuilt corpus MOOTS this
+   design as specified (the accumulated-structure store would be the new corpus's — topic set and
+   store construction need re-derivation), or (ii) the rebuild IS the natural occasion (the
+   growing store during a rebuild is precisely the accumulating structure this experiment wants
+   to vary — instrument the rebuild instead of constructing a synthetic store). A reviver must
+   rule which before spending; re-deriving this from scratch is the failure mode this note
+   forecloses.
+3. **Sibling claimant + drift clock.** OQ-71's own graduation step (reading-(b): ~300 Opus-flat
+   seeds, frozen generator, everything downstream unchanged) is also unfunded (`blocked_on_human`
+   there, declined 2026-06-20) and materially cheaper than this OQ's un-batchable per-call shape.
+   The recorded ordering below ranks by EVIDENTIAL value (this > reading-(b) >
+   SCOPE-on-same-topics); the COST order is roughly the reverse — a funding window should weigh
+   both, not just the ranking line. Drift hazard compounding with time-to-revival: reading-(b)'s
+   control must key on `control_membership.json` (300 frozen ids), NOT the regenerated
+   `never_generated_seeds.json` (drifted to 274 by 2026-06-13) — see OQ-71 Phase A close.
 
 **Origin:** 2026-06-20, OQ-71 Phase A two-path-architecture finding (operator-surfaced). §3's bounded-attractor claim is about the **SCOPE construction path** — does the model, growing the corpus the way it is actually grown (SCOPE constructs each kernel from a topic), exhaust the structural-class vocabulary (generator-specific S_max). OQ-71 stressed boundedness with a regime the SCOPE path never enters — **Opus-hand-designed structure rendered through no_scope** — so its 1.5× falsifier killed only **substrate-level** boundedness (the rendering substrate can express more classes than the live corpus holds), NOT **path-level** boundedness. §3's own claim is therefore left standing as within-regime; OQ-71 does not re-engage it. (§10.1 close, `a_hypothesis_about_corpus_size.md`.)
 

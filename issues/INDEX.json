@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "20f58faf4dab78b37bdba2b485b09d979de48e5b",
+    "store_version": "533bdb5d4035add3411cb42936447537f62521ef",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T16:20:20"
+    "generated_at": "2026-08-19T16:24:11"
   },
-  "issues_sha": "e98dc4bcf24d9e064a2fd0036854f72d30b8a1f0364424c30637cb467f72008e",
+  "issues_sha": "a093e962affefd4637ac296bf92ffb1b9570af7c05405a5de00aef215d8d2f6e",
   "n_entries": 326,
   "active_token_set": [
     "investigating",
@@ -15,8 +15,8 @@
     "resolved": 158,
     "mitigated": 19,
     "disposed": 6,
-    "future": 9,
-    "open": 128,
+    "future": 10,
+    "open": 127,
     "partial": 6
   },
   "active": [
@@ -374,20 +374,6 @@
       "mentioned_in": [
         "OQ-69",
         "OQ-160"
-      ]
-    },
-    {
-      "id": "OQ-171",
-      "status": "open",
-      "priority": 2,
-      "summary": "Does the SCOPE *construction path* saturate? (the construct-validity gap OQ-71 left standing)",
-      "deps": [
-        "splits_from OQ-71",
-        "blocked_on_human operator-spend-go"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-71"
       ]
     },
     {
@@ -3891,6 +3877,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-69"
+      ]
+    },
+    {
+      "id": "OQ-171",
+      "status": "future",
+      "priority": 2,
+      "summary": "Does the SCOPE *construction path* saturate? (the construct-validity gap OQ-71 left standing)",
+      "deps": [
+        "splits_from OQ-71"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-71",
+        "OQ-75"
       ]
     },
     {
