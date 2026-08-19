@@ -176,6 +176,10 @@ DISPLACED = {
             "ISSUES.md": 1,
             "KNOWN_STATE.md": 7,
             "audits/2026-08-17_oq251_natural_law_reachability/audit_log.md": 2,
+            # OQ-302, 2026-08-19: the same-pass prior-art grep RECORDS where it hit, and it hit
+            # the vacation notice at build_discipline.md:601. Naming the old index is the
+            # content of that line — residue by construction, not backlog.
+            "audits/2026-08-19_oq302_bound_false_repair/WRITEUP.md": 1,
             "docs/engine_handoff_5.md": 1,
             "docs/technical/swipl_load_path_and_probe_gotchas.md": 1,
             "python/pattern_citation_check.py": 4,

@@ -182,3 +182,17 @@ semantics change and belongs to that OQ's spend, not this one's.
   `boltzmann_compliance.pl` and `codewalk_caller_allowlist.txt`, both this audit's. No
   intervening writer.
 - Final `./scripts/gate.sh`: **GREEN**, all 27 rows (pasted in the close commit message).
+
+### R8. Post-merge: one more consumer sweep, caught by the gate after the merge
+
+The close gate ran GREEN with `WRITEUP.md` present but **untracked**; `pattern_citation_check`
+sweeps tracked files, so the merge is where it first saw it — and it went **RED**:
+`WRITEUP.md` cites `bound-probe` by its OLD index (the prior-art grep records that it hit the
+`Pattern 3 → 7` vacation notice at `build_discipline.md:601`; naming the old index IS the content
+of that line). Declared in `pattern_citation_check.DISPLACED["bound-probe"]["consumers"]` as
+residue-by-construction, the same category as the oq251 audit log. Gate GREEN again: 18 declared
+citations across 8 files.
+
+**Worth carrying:** an untracked file is invisible to the `git grep`-based sweeps, so *a green
+gate taken before `git add` is not a green gate for the files that change*. Run the gate once
+more after staging, or accept that the merge is where those rows first fire.
