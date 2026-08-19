@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "533bdb5d4035add3411cb42936447537f62521ef",
+    "store_version": "a440a310914064167ef180eea32e211dc7df6970",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T16:24:11"
+    "generated_at": "2026-08-19T16:33:46"
   },
-  "issues_sha": "a093e962affefd4637ac296bf92ffb1b9570af7c05405a5de00aef215d8d2f6e",
-  "n_entries": 326,
+  "issues_sha": "39d95bce552b13db7243cd83fc27b826d354d0355a9391a2aa0ba9c84997e826",
+  "n_entries": 327,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 158,
+    "resolved": 159,
     "mitigated": 19,
     "disposed": 6,
     "future": 10,
@@ -940,20 +940,6 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-61"
-      ]
-    },
-    {
-      "id": "OQ-242",
-      "status": "open",
-      "priority": 2,
-      "summary": "`normalize_purity` fabricates 0.5 for an absent purity inside the HAC stability distance",
-      "deps": [
-        "splits_from OQ-60",
-        "blocked_on_human oq242-absence-semantics-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-60"
       ]
     },
     {
@@ -1902,6 +1888,21 @@
       "mentioned_in": [
         "OQ-96",
         "OQ-302"
+      ]
+    },
+    {
+      "id": "OQ-327",
+      "status": "open",
+      "priority": 3,
+      "summary": "The remaining `stability_distance/3` absence fallbacks, under the OQ-242 principle (coupling → 0.0, boltzmann-inconclusive → 0.5, preservation catch-all → 1.0)",
+      "deps": [
+        "splits_from OQ-242"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-51",
+        "OQ-127",
+        "OQ-242"
       ]
     }
   ],
@@ -4338,6 +4339,21 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-234"
+      ]
+    },
+    {
+      "id": "OQ-242",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "`normalize_purity` fabricates 0.5 for an absent purity inside the HAC stability distance",
+      "deps": [
+        "splits_from OQ-60"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-60",
+        "OQ-127",
+        "OQ-327"
       ]
     },
     {

@@ -10061,36 +10061,46 @@ confirmed, documented structural property. Not report text.
 distance component, not measuring anything). A cheap Ω_E measurement should precede the ruling
 (below), but it informs the choice rather than settling it.
 
-**Status:** open
+**Status:** resolved — 2026-08-19 (operator ruling, second-instance reviewed): **option (b),
+recorded as a PRINCIPLE, not a purity patch** — *a distance component is computed only over
+inputs that were measured; absence drops the component and renormalizes the remaining weights,
+never substitutes a value.* Landed at `prolog/context_profile_mining.pl` (`normalize_purity/2`
+retired, `purity_scored/1` guard, number/1-first), commit `a440a310`, output-changing
+split-and-first. Graduation step run before the ruling: family partition INVARIANT (21 families /
+4 singletons byte-identical both sides; +1 twin pair, 2828 vs 2827, +0.04%) on a frozen corpus
+n=279 — the ruling was free by the entry's own criterion. Evidence:
+`audits/2026-08-19_oq242_absence_semantics/` (both reports, 54-line diff, committed-form
+byte-identical re-run). Sibling fallbacks in the same metric → **OQ-327** (split, not folded —
+per the OQ-127 precedent, a closing entry does not carry a live rider).
 **Priority:** 2
-**Deps:** splits_from OQ-60, blocked_on_human oq242-absence-semantics-ruling
+**Deps:** splits_from OQ-60
 **Origin:** OQ-60 consumer sweep, 2026-07-24 (KNOWN_STATE 2026-07-24; commit `ab748fc6`). Fixing
-the `unknown`-throws crash in `normalize_purity/2` surfaced the question the crash was hiding: what
-*should* an absent purity contribute to a pairwise distance? The fix deliberately preserved the
-clause's evident pre-existing intent (both absence tokens → 0.5) because changing it is
-output-changing and is the operator's call.
-**Files:** `prolog/context_profile_mining.pl:434-445` (`normalize_purity/2`), consumed at
-`:426` (`PurDiff`) and weighted at `:431-432` (`0.25 * PurDiff` inside `stability_distance/3`).
+the `unknown`-throws crash in `normalize_purity/2` surfaced the question the crash was hiding:
+what should an absent purity contribute to a pairwise distance? The 0.5 midpoint was a fabricated
+plausible value (Build Discipline Pattern 6) live on 56/279 rows at close (20.1%; 13 no-data +
+43 gate-fail — 46/199 at filing).
 
-**Specific question:** 0.5 is a **fabricated plausible value** for a datum that is absent — Build
-Discipline Pattern 6 ("defaults-on-empty return `unknown`/OPEN, never a plausible value"), and
-CLAUDE.md's OQ-60 rule that the two absence tokens must never be coerced. Here the coercion is
-structural, not cosmetic: an unscored constraint is asserted to sit at the *midpoint* of the purity
-axis, so it reads as maximally-average rather than unmeasured, and two unscored constraints read as
-purity-identical (`PurDiff = 0.0`) when nothing is known about either. Live corpus: 46/199 unscored
-(35 gate_fail + 11 no_data), so this is ~23% of rows, not an edge case. Options: (a) keep 0.5
-(status quo, declared); (b) drop the purity component and re-weight the remaining three
-(0.30/0.25/0.20 → renormalized) when either side is absent, so the distance is computed only over
-components that were actually measured; (c) treat absence as maximal distance (1.0) — fail-open
-into "these are not comparable."
+### Ruling record (still-operative reasoning, kept per footer exception)
 
-**Graduation step (cheap Ω_E, run before the ruling):** re-run `run_trajectory_report` under (b)
-and diff the family partition against HEAD's `18 families / 1467 twins / 4 singletons`. If the
-partition is invariant the ruling is free; if it moves, the size of the move is the argument.
-
-**What resolution changes:** the HAC family clustering that `outputs/context_profile_report.md`
-publishes (family membership, cross-domain twin pairs) — i.e. an analysis product, not report text.
-No classification/χ effect: `stability_distance/3` feeds trajectory mining only.
+- **Why (b) over (c) — the symmetry argument that makes (b) principled rather than convenient:**
+  treating absence as maximal distance (option (c)) is the SAME defect with the sign flipped —
+  it asserts dissimilarity from ignorance where 0.5 asserted mid-similarity — and it is the more
+  expensive fabrication because it *moves* rows (pushes the unscored fifth away from every
+  family) rather than leaving them where a missing measurement found them.
+- **Why (b) over (a), beyond principle:** as the unscored stratum grows, (a)'s fabrication gets
+  monotonically worse, while (b) degrades into a well-understood arity limitation (next bullet).
+  The invariance result shows the ruling is free *today*; the future-proofing is the argument.
+- **Recorded limitation, not fixed:** after renormalization, 3-component and 4-component
+  distances are compared against the same fixed 0.15 twin threshold; fewer terms ⇒ different
+  variance, so unscored-stratum rows are thresholded on a slightly different basis than
+  fully-scored rows. Current cost: one twin pair in 2828.
+- **Baseline drift note (so the record does not read as a moved partition):** the graduation
+  criterion above originally named HEAD's `18 families / 1467 twins / 4 singletons` — the
+  July-24 corpus, n=199. The comparison actually run was contemporaneous clean-vs-edited on
+  n=279 (21/2827→2828/4); partition invariance is the criterion, and it is met.
+- **Separate observation, unminted:** twins grew 1467→2827 while the corpus grew 199→279 —
+  superlinear; if twin count grows ~quadratically, the fixed 0.15 threshold needs its own look
+  before long. Not this ruling's business; recorded here so it is findable.
 
 ---
 
@@ -15504,7 +15514,45 @@ commit.
 hazard is latent and the fix is a guard; if not, there is a live discrepancy and it should be
 named before it is guarded.
 
-*Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark
+---
+
+## OQ-327 — The remaining `stability_distance/3` absence fallbacks, under the OQ-242 principle (coupling → 0.0, boltzmann-inconclusive → 0.5, preservation catch-all → 1.0)
+
+**Ω-type:** Ω_E (empirical application of a settled principle — per-site occurrence counts and a
+clean-vs-edited diff-pair; the semantics were ruled at OQ-242 and are not re-litigated here).
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-242
+**Origin:** 2026-08-19, OQ-242 close. The purity component's fabricated 0.5 was removed under the
+ruled principle (*a distance component is computed only over inputs that were measured; absence
+drops the component and renormalizes, never substitutes a value*); the same sweep found three
+sibling fallbacks in the same metric, each inventing a different absence semantics. Split rather
+than folded into OQ-242 so the closing entry does not carry a live rider (OQ-127 precedent).
+**Files:** `prolog/context_profile_mining.pl` — `stability_distance/3` (`CoupDiff = 0.0`
+fallback), `boltzmann_distance/3` (`inconclusive(_)` → 0.5 clauses), `preservation_distance/3`
+(catch-all → 1.0); coupling absence is genuinely produced (`Coupling = unknown` on <2-point
+grids, summary builder ~`:188`).
+
+**The three sites and what each fabricates:**
+1. **Coupling:** non-number coupling on either side → `CoupDiff = 0.0` — two *unmeasured*
+   couplings read as *identical* (the OQ-242 defect shape exactly; weight 0.30, the largest
+   component).
+2. **Boltzmann:** `inconclusive(_)` vs anything → 0.5 — midpoint substitution. Caveat for the
+   per-site call: `inconclusive` is an explicit *measured abstention* token, not a missing datum;
+   whether the principle's "absence" covers it is part of this OQ's adjudication, not assumed.
+3. **Preservation:** catch-all `_ , _ → 1.0` — any unmatched shape (including absence) reads as
+   maximally distant — the option-(c) shape OQ-242's ruling record argues against.
+
+**Per site, the work is:** (i) count occurrence on the live corpus (how many rows reach the
+fallback — a zero makes the site latent and the fix a guard); (ii) if live, apply the principle
+(drop + renormalize) behind its own clean-vs-edited diff-pair over a fingerprint-frozen corpus,
+per the OQ-242 method (`audits/2026-08-19_oq242_absence_semantics/` is the template); (iii) land
+output-changing split-and-first. The code comment at `stability_distance/3` already forbids
+extending without the witness.
+
+**What resolution changes:** the HAC family clustering `outputs/context_profile_report.md`
+publishes — analysis product only; no classification/χ effect.
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

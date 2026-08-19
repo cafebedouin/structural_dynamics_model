@@ -45,6 +45,23 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: OQ-242 ruled as a principle — distance components compute only over measured inputs; purity 0.5 midpoint retired; OQ-327 minted for the sibling fallbacks
+**Files:** prolog/context_profile_mining.pl, ISSUES.md, audits/2026-08-19_oq242_absence_semantics/
+**Tier:** landed
+
+Operator ruling (second-instance reviewed), recorded as a PRINCIPLE: a distance component is
+computed only over inputs that were measured — absence drops the component and renormalizes,
+never substitutes a value. `normalize_purity/2` (0.5 for both OQ-60 absence tokens, live on
+56/279 rows) retired from `stability_distance/3`; `purity_scored/1` guard (number/1 first).
+Graduation step run BEFORE the ruling: family partition invariant (21/4 byte-identical; +1 twin
+pair 2828 vs 2827) on frozen corpus n=279 — ruling free by the entry's own criterion. Ruling
+record keeps the (c)-symmetry argument (absence-as-max-distance = same defect, sign flipped,
+more expensive because it moves rows) and the renormalization arity limitation. Sibling
+fallbacks (coupling→0.0 identical, boltzmann-inconclusive→0.5, preservation catch-all→1.0)
+split to OQ-327 — application of the settled principle, per-site occurrence count + own
+diff-pair owed; boltzmann `inconclusive` is a measured abstention, whether "absence" covers it
+is part of that adjudication. Commits `a440a310` (code+audit, split-and-first) + this one.
+
 ## 2026-08-19 — LANDED: OQ-127 ruled — SDZ demoted to advisory ((b)+(c) compound), untested-not-disproven citation rule, passive revival
 **Files:** python/linter.py, ISSUES.md
 **Tier:** landed
