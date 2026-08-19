@@ -1,0 +1,216 @@
+# OQ-326 Phase-1 raw runs (filed under OQ-302, the parent)
+# generated 2026-08-19T20:36:44Z at c713d038
+
+## A. clause/2 legality on a static predicate — what made the OQ-302 probe legal
+--- flags ---
+flag access_level = user
+flag unknown = error
+flag protect_static_code = false
+--- target predicate properties ---
+  bim/2 lacks dynamic
+  bim/2 HAS static
+  bim/2 HAS defined
+  bim/2 lacks foreign
+  bim/2 lacks system
+  bim/2 lacks built_in
+  bim/2 HAS number_of_clauses(2)
+--- clause/2 on the target (static, user module) ---
+  clause1 head=(_27560,inconclusive(insufficient_data)) body=once(epistemic_access_check(_27560,_27656)),_27656==false,!
+--- control: clause/2 on a SYSTEM predicate (must be refused) ---
+  system clause/2 SUCCEEDED
+  builtin clause/2 THREW error(permission_error(access,private_procedure,atom_length/2),context(system:clause/2,_27940))
+--- did anything in this session make bim/2 dynamic? ---
+  STATIC — clause/2 read a compiled static predicate
+
+## B. argument-position template extraction (44 call sites / 27 files)
+audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77	kind=overlay
+	RETRACT-SIDE: [Old]
+	ASSERT-SIDE:  [New]
+audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:87	kind=overlay
+	RETRACT-SIDE: [ narrative_ontology:constraint_metric(C, ExtName, _) ]
+	ASSERT-SIDE:  [ narrative_ontology:constraint_metric(C, ExtName, 0.75) ]
+audits/2026-06-07_stakeholder_layer_migration/a2_probe.pl:45	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_victim(C, workers_displaced_without_recourse)]
+	ASSERT-SIDE:  []
+audits/2026-06-07_stakeholder_layer_migration/a2_probe.pl:48	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_victim(C, communities_facing_discriminatory_systems)]
+	ASSERT-SIDE:  []
+audits/2026-06-07_stakeholder_layer_migration/a2_probe.pl:51	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_victim(C, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-07_stakeholder_layer_migration/a2_probe.pl:54	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [constraint_indexing:directionality_override(C, powerful, 0.9)]
+audits/2026-06-07_stakeholder_layer_migration/step3_mechanism_probe.pl:53	kind=overlay
+	RETRACT-SIDE: [config:param(stakeholder_role_d_payer, _)]
+	ASSERT-SIDE:  [config:param(stakeholder_role_d_payer, 0.40)]
+audits/2026-06-11_oq109_phase_b/unanimity_adjudication_probe.pl:66	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [ narrative_ontology:constraint_metric(oq109_seam_nl, EpsName, 0.03), narrative_ontology:constraint_metric(oq109_seam_nl, SuppName, 0.04), narrative_ontology:constraint_metric(oq109_seam_nl, accessibi
+audits/2026-06-11_oq110_residual_join/backed_semantic_probe.pl:20	kind=retracted
+	RETRACT-SIDE: caches auto-cleared
+	ASSERT-SIDE:  []
+audits/2026-06-11_oq110_residual_join/backed_semantic_probe.pl:106	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:measurement(_, C, base_extractiveness, 20, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-11_oq110_residual_join/pin_counterfactuals.pl:67	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:measurement(_, C, Metric, T2, _)]
+	ASSERT-SIDE:  [narrative_ontology:measurement(oq110_pin, C, Metric, T2, PinVal)]
+audits/2026-06-11_oq90_piton_refinement/phase2_control_battery.pl:66	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:stakeholder_gain_flow(C, _)]
+	ASSERT-SIDE:  [narrative_ontology:stakeholder_gain_flow(C, fda_regulatory_authority)]
+audits/2026-06-11_oq90_piton_refinement/phase2_control_battery.pl:75	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:fixing_cost_class(C, _)]
+	ASSERT-SIDE:  [narrative_ontology:fixing_cost_class(C, cheap)]
+audits/2026-06-11_oq90_piton_refinement/phase2_control_battery.pl:84	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:stakeholder_gain_flow(C, _), narrative_ontology:fixing_cost_class(C, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-13_oq122_retype_discriminator/fix_witness.pl:50	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_beneficiary(_,_) ]
+	ASSERT-SIDE:  []
+audits/2026-06-13_oq122_retype_discriminator/probe.pl:51	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_beneficiary(C, _) ]
+	ASSERT-SIDE:  []
+audits/2026-06-13_oq122_retype_discriminator/probe.pl:58	kind=overlay
+	RETRACT-SIDE: [ narrative_ontology:constraint_claim(C, mountain) ]
+	ASSERT-SIDE:  [ narrative_ontology:constraint_claim(C, tangled_rope) ]
+audits/2026-06-13_oq50_power_scaling_residue/joint_witness.pl:51	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_beneficiary(radiative_levitation_stratification,_), narrative_ontology:constraint_beneficiary(actinide_replenishment_mechanism_flat_control,_) ]
+	ASSERT-SIDE:  []
+audits/2026-06-13_oq50_power_scaling_residue/joint_witness.pl:82	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_beneficiary(radiative_levitation_stratification,_), narrative_ontology:constraint_beneficiary(actinide_replenishment_mechanism_flat_control,_) ]
+	ASSERT-SIDE:  []
+audits/2026-06-13_oq50_power_scaling_residue/phase2_probe.pl:78	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_beneficiary(_,_) ]
+	ASSERT-SIDE:  []
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_r3_presentation_vs_structure.pl:46	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:cs_authority_grounding(U1, _)]
+	ASSERT-SIDE:  [narrative_ontology:cs_authority_grounding(U1, AV)]
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_r3_presentation_vs_structure.pl:52	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:constraint_beneficiary(C1, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_r3_presentation_vs_structure.pl:70	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:constraint_metric(C2, suppression_requirement, _)]
+	ASSERT-SIDE:  [narrative_ontology:constraint_metric(C2, suppression_requirement, SV)]
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_r3_presentation_vs_structure.pl:75	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:cs_authority_grounding(U2, _)]
+	ASSERT-SIDE:  [narrative_ontology:cs_authority_grounding(U2, self_enforcing)]
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_seat_test.pl:46	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:constraint_metric(C, extractiveness, _)]
+	ASSERT-SIDE:  [narrative_ontology:constraint_metric(C, extractiveness, EV)]
+audits/2026-06-16_seat_invariant_vs_prolog/evidence/probe_seat_test.pl:53	kind=overlay
+	RETRACT-SIDE: [narrative_ontology:cs_authority_grounding(UID, _)]
+	ASSERT-SIDE:  [narrative_ontology:cs_authority_grounding(UID, AV)]
+audits/2026-06-20_oq69_ledger_drain/probe_delta_loadbearing.pl:37	kind=overlay
+	RETRACT-SIDE: [config:param(cognitive_displacement, _)]
+	ASSERT-SIDE:  [config:param(cognitive_displacement, 0.0)]
+audits/2026-06-20_oq69_ledger_drain/probe_delta_loadbearing.pl:48	kind=overlay
+	RETRACT-SIDE: [config:param(cognitive_displacement, _)]
+	ASSERT-SIDE:  [config:param(cognitive_displacement, 0.3)]
+audits/2026-06-21_oq35_field_counterfactual/probe_oq35_field_counterfactual.pl:101	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_metric(_, accessibility_collapse, _), narrative_ontology:constraint_metric(_, resistance, _) ]
+	ASSERT-SIDE:  []
+audits/2026-06-21_oq35_field_counterfactual/probe_oq35_field_counterfactual.pl:108	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_victim(_, _) ]
+	ASSERT-SIDE:  []
+audits/2026-06-21_oq35_field_counterfactual/probe_oq35_field_counterfactual.pl:114	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_claim(_, mountain) ]
+	ASSERT-SIDE:  []
+audits/2026-06-21_oq35_field_counterfactual/probe_oq35_field_counterfactual.pl:120	kind=retracted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  []
+audits/2026-06-22_oq112_round2/probe_item7_wm_token_controls.pl:53	kind=overlay
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [maxent_classifier:maxent_dist(probe_zero, Ctx1, [mountain-1.0, rope-0.0, tangled_rope-0.0, snare-0.0])]
+audits/2026-06-22_oq112_round2/probe_item7_wm_token_controls.pl:62	kind=overlay
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [maxent_classifier:maxent_dist(probe_nz, Ctx1, [mountain-0.6, scaffold-0.4])]
+audits/2026-06-22_oq112_round2/probe_item7_wm_token_controls.pl:77	kind=overlay
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [maxent_classifier:maxent_dist(probe_err, Ctx1, [mountain-not_a_number])]
+audits/2026-06-23_oq06_offcase_fixtures/probe.pl:32	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  Facts
+audits/2026-06-23_oq06_offcase_fixtures/probe.pl:38	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  Facts
+audits/2026-06-23_oq06_offcase_fixtures/search.pl:115	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  PlantSens
+audits/2026-06-23_oq06_offcase_fixtures/search.pl:117	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  PlantSpec
+audits/2026-06-23_oq112_round3/probe_commit1_witness.pl:70	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_metric(C0, TN, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-23_oq112_round3/probe_round0_control.pl:35	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_metric(C0, TheaterName, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-23_oq112_round3/probe_round0_control.pl:49	kind=retracted
+	RETRACT-SIDE: [drl_core:base_extractiveness(C0, _), constraint_data:base_extractiveness(C0, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-23_oq112_round3/probe_round0_pc3.pl:19	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_metric(C0, ExtName, _)]
+	ASSERT-SIDE:  []
+audits/2026-06-27_oq124_oq149_committer_convention_control/retraction_control.pl:47	kind=retracted
+	RETRACT-SIDE: [narrative_ontology:constraint_claim(C, rope)]
+	ASSERT-SIDE:  []
+audits/2026-07-11_oq186_oq188_readsite/probe_oq186.pl:40	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  Facts
+audits/2026-07-25_oq67_legacy_chi_retire/step0_controls.pl:15	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [drl_composition:constraint_data(oq67_ctl_a, [base_extractiveness(0.9), coord_function(false)])]
+audits/2026-07-25_oq67_legacy_chi_retire/step0_controls.pl:24	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [drl_composition:constraint_data(oq67_ctl_b, [base_extractiveness(0.40), coord_function(false)])]
+audits/2026-07-25_oq67_legacy_chi_retire/step0_controls.pl:33	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [ drl_composition:constraint_data(oq67_ctl_a, [base_extractiveness(0.9), coord_function(false)]), drl_composition:agent_index(oq67_a1, context(powerless, x, x, x)), drl_composition:agent_index(oq67_a2
+audits/2026-07-25_oq67_legacy_chi_retire/step1_reachability.pl:22	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [drl_composition:constraint_data(oq67_ctl_a, [base_extractiveness(0.9), coord_function(false)])]
+audits/2026-07-25_oq67_legacy_chi_retire/step1_reachability.pl:28	kind=asserted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  [drl_composition:constraint_data(oq67_ctl_b, [base_extractiveness(0.40), coord_function(false)])]
+audits/2026-08-17_oq285_mode3_measurement_arm/control_demotion.pl:49	kind=overlay
+	RETRACT-SIDE: [config:param(false_summit_override_target, _)]
+	ASSERT-SIDE:  [config:param(false_summit_override_target, unknown)]
+prolog/probe_oq190_edge_admission.pl:94	kind=retracted
+	RETRACT-SIDE: Templates
+	ASSERT-SIDE:  []
+prolog/probe_oq190_edge_admission.pl:97	kind=retracted
+	RETRACT-SIDE: CtlT
+	ASSERT-SIDE:  []
+prolog/probe_oq35_field_counterfactual.pl:101	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_metric(_, accessibility_collapse, _), narrative_ontology:constraint_metric(_, resistance, _) ]
+	ASSERT-SIDE:  []
+prolog/probe_oq35_field_counterfactual.pl:108	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_victim(_, _) ]
+	ASSERT-SIDE:  []
+prolog/probe_oq35_field_counterfactual.pl:114	kind=retracted
+	RETRACT-SIDE: [ narrative_ontology:constraint_claim(_, mountain) ]
+	ASSERT-SIDE:  []
+prolog/probe_oq35_field_counterfactual.pl:120	kind=retracted
+	RETRACT-SIDE: []
+	ASSERT-SIDE:  []
+
+## C. harness's own rule-detector over every generalized retract-side template
+=== retract-side template safety, harness's own detector, generalized ===
+  safe     narrative_ontology:constraint_metric/3    0 fact-clause(s), 0 rules — a1_probe, probe_r3, probe_seat_test, oq35, oq112r3, oq190-control
+  safe     narrative_ontology:constraint_victim/2    1 fact-clause(s), 0 rules — a2_probe, oq35, oq190
+  safe     narrative_ontology:constraint_beneficiary/2 1 fact-clause(s), 0 rules — oq122, oq50, probe_r3, oq190
+  safe     narrative_ontology:constraint_claim/2     0 fact-clause(s), 0 rules — oq122, oq35, oq124/149
+  safe     narrative_ontology:measurement/5          0 fact-clause(s), 0 rules — oq110 backed_semantic, pin_counterfactuals
+  safe     narrative_ontology:stakeholder_gain_flow/2 0 fact-clause(s), 0 rules — oq90 phase2, oq190
+  safe     narrative_ontology:fixing_cost_class/2    0 fact-clause(s), 0 rules — oq90 phase2
+  safe     narrative_ontology:cs_authority_grounding/2 0 fact-clause(s), 0 rules — probe_r3, probe_seat_test
+  safe     narrative_ontology:founding_problem_status/2 0 fact-clause(s), 0 rules — oq190
+  safe     narrative_ontology:disappearance_verdict/2 0 fact-clause(s), 0 rules — oq190
+  safe     narrative_ontology:constraint_stakeholder/7 0 fact-clause(s), 0 rules — oq190
+  safe     config:param/2                            184 fact-clause(s), 0 rules — step3_mechanism, oq69 delta, oq285 control_demotion
+  ** RULE constraint_indexing:constraint_classification/3 clauses=1 facts=0 RULES=1 — a1_probe.pl:77 (a1_mut_perspective) + probe_harness.pl HEADER EXAMPLE
+=== POSITIVE CONTROL: the detector must FIRE on a known rule ===
+  detector FIRED on boltzmann_invariant_mountain/2 (a known rule)  OK
+=== NEGATIVE CONTROL: must DECLINE on a known pure-fact table ===
+  detector DECLINED on config:param/2 (184 facts, 0 rules)  OK

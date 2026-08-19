@@ -1117,18 +1117,25 @@ automatic cache clearing via `cache_registry:clear_all_caches/0`) instead of han
 retract/assert. Corpus membership/denominator: enumerate `corpus_loader:corpus_constraint/1`.
 Tests: `cd prolog && swipl -g "[stack], [tests/test_probe_harness], run_tests, halt" -t "halt(1)"`.
 
-**FACT-ONLY, and on a RULE clause it fails SILENTLY (OQ-302, 2026-08-19).** `snapshot/2` collects
-`clause(M:Inst, true)` only, so a template matching a rule retracts nothing and
+**IT CANNOT REPORT THAT IT OVERLAID NOTHING (OQ-302 → OQ-326, 2026-08-19).** `snapshot/2`
+collects `clause(M:Inst, true)` only, so a template matching a RULE retracts nothing and
 `warn_if_rule_clauses/1` merely WARNS; the facts you assert land *after* the original clauses, so a
 cut-ordered predicate still dispatches to its first clause and the "counterfactual" arm measures the
 **unmodified program** — both arms identical, no error, indistinguishable from a genuine
-behaviour-preserving result. (Static predicates additionally throw on `assertz`; that failure is
-loud, this one is not.) For a rule-clause counterfactual, use `clause/2` to fetch the engine's own
-clause body and call it under your modified guard, and have the probe **detect** which arm the
-source implements (read the clause) rather than label columns by run order — after the repair
-lands, the no-overlay arm is the *other* one. Detail:
-`docs/technical/swipl_load_path_and_probe_gotchas.md` §12; worked instance:
-`audits/2026-08-19_oq302_bound_false_repair/`.
+behaviour-preserving result. An empty snapshot for any other reason (undefined predicate, wrong
+arity, unloaded corpus, absent id) is equally silent. **The harness verifies RESTORE; nothing
+verifies INSTALL** — so an overlay pair is not a witness unless the probe asserts, inside the
+overlay, that the change took effect (`oq110`'s Control C is the model: it asserts the flip
+*disappears* under retraction). Static predicates additionally throw on `assertz`; that failure is
+loud, this one is not.
+
+Retroactive census (OQ-326 Phase 1, DONE): 44 call sites / 27 files / 13 distinct retract-side
+templates; 12 rule-free, 1 rule-bearing
+(`constraint_indexing:constraint_classification/3` at `a1_probe.pl:77`) and that site checks out
+safe — its rule clauses are keyed to the two engine demo constraints. **No prior audit is voided.
+But `probe_harness.pl`'s own header example is the unsafe form of that same call.** Substitute
+idioms: `docs/technical/swipl_load_path_and_probe_gotchas.md` §12. Evidence:
+`audits/2026-08-19_oq302_bound_false_repair/overlay_template_census.md`.
 
 ### FPN sibling-contamination canary (OQ-23/OQ-24 regression)
 

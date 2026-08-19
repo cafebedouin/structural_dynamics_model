@@ -180,6 +180,7 @@ DISPLACED = {
             # the vacation notice at build_discipline.md:601. Naming the old index is the
             # content of that line — residue by construction, not backlog.
             "audits/2026-08-19_oq302_bound_false_repair/WRITEUP.md": 1,
+            "audits/2026-08-19_oq302_bound_false_repair/audit_log.md": 1,
             "docs/engine_handoff_5.md": 1,
             "docs/technical/swipl_load_path_and_probe_gotchas.md": 1,
             "python/pattern_citation_check.py": 4,

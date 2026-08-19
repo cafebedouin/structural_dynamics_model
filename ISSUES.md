@@ -14013,6 +14013,82 @@ is an ***Unwired ≠ worthless*** adjudication — *what unique product does it 
 (re-review 2026-11-17); **not retirable on wiring grounds**. (c) Powering T4 at all is
 **GAP-08 §7**. (d) `testsets_sonnet`'s declines-control has n=1 — tested, thin, declared.
 
+## OQ-326 — `probe_harness:with_overlay/3` cannot report that it overlaid NOTHING: a silent-no-op class that voids the arm it was meant to create
+
+**Ω-type:** Ω_E (a census plus a mechanical guard; the resolution operation is measurement, then
+a fail-loud change to the harness).
+
+**Status:** open — Phase 1 (the retroactive census) is DONE and reported below; Phases 2–3 open.
+**Priority:** 2
+**Deps:** splits_from OQ-302
+**Origin:** 2026-08-19, fell out of OQ-302 — a preregistered probe specified `with_overlay/3` to
+install a repaired RULE clause, which the harness cannot do and does not error on
+(`audits/2026-08-19_oq302_bound_false_repair/PREREGISTRATION.md` §0a).
+**Files:** `prolog/probe_harness.pl` (`snapshot/2` `:91–100`, `warn_if_rule_clauses/1` `:80–89`),
+`prolog/tests/test_probe_harness.pl`, `docs/technical/swipl_load_path_and_probe_gotchas.md` §12.
+
+**The mechanism.** `with_overlay(Templates, Facts, Goal)` snapshots via `clause(M:Inst, true)` —
+**facts only**. A template naming a RULE-defined predicate matches nothing, retracts nothing, and
+`warn_if_rule_clauses/1` emits a **warning, not an error**; asserted `Facts` then land *after* the
+existing clauses, so a cut-ordered predicate still dispatches to its original first clause. The
+"counterfactual" arm therefore runs the **unmodified program**, both arms come back identical, and
+**byte-identity — the thing a clean-vs-edited pair reports as success — is produced by the overlay
+never having been installed.** The harness verifies *restore*; nothing verifies *install*.
+
+**Why this is a witness-voiding class and not a documentation item.** Any prior audit that
+overlaid a rule and reported a clean pair measured nothing and reported the absence as the
+result. That is Pattern 6 (measured-empty vs didn't-look) at the harness boundary, and the
+success-shaped token is a *zero diff*.
+
+**PHASE 1 — the retroactive census, DONE 2026-08-19.** Artifacts:
+`audits/2026-08-19_oq302_bound_false_repair/` (`overlay_template_census.md` and its raw run).
+Method: every `probe_harness:with_{overlay,retracted,asserted}` call in tracked code parsed for
+its **argument-position** template/fact lists (the Goal is observation, not overlay — a
+functor-proximity grep wrongly flags goal-body predicates), then each distinct retract-side
+template, GENERALIZED to fresh arguments, put through **the harness's own detector verbatim**
+(`clause(M:T, Body), Body \== true`). Generalizing is conservative in the right direction: if the
+fully-general form matches no rule clause, no instantiation of it can. Two-sided instrument
+control, both fired: DETECTS `boltzmann_invariant_mountain/2` (a known rule), DECLINES
+`config:param/2` (184 facts, 0 rules).
+
+**Result: 44 call sites across 27 files; 13 distinct retract-side templates; 12 rule-free.** The
+one rule-bearing template is `constraint_indexing:constraint_classification/3`, used at exactly
+one site — `audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77`. **That site is SAFE,
+checked not assumed:** all 6 rule clauses of that predicate are hard-keyed to the two engine demo
+constraints from `constraint_instances.pl` (`catholic_church_1200`, `property_rights_2025`), and
+the probe's template binds a corpus constraint, so it cannot unify with them. **No prior audit is
+voided by the rule-clause mechanism.**
+
+**But the trap is live in the harness's own header.** `probe_harness.pl`'s usage example is
+`with_retracted([constraint_indexing:constraint_classification(_, mountain, context(...))], …)` —
+the SAME predicate with the first argument **unbound**, which *does* unify with
+`catholic_church_1200`'s rule clause and would partially overlay it. The one documented example a
+future probe author copies is the unsafe form. That is how this propagates, and it is why the
+census result is "not yet damaged", not "cannot happen".
+
+**PHASE 2 (open) — the general empty-snapshot class, which the rule-clause finding does NOT
+cover.** A snapshot can be empty for reasons other than rule-ness: a template whose predicate is
+undefined in that program, an arity that does not match, a corpus that was not loaded, a
+constraint id that is not present. Every one of those retracts nothing and produces the same
+silent identical-arms result. Census which committed probes wrote their own in-overlay assertion
+that the overlay took effect — some did (`oq110`'s Control C asserts the flip *disappears* under
+retraction; `oq35`'s null control `with_retracted([], …)` is byte-identity by design) — and which
+relied on the harness. The ones that relied on the harness have no install witness.
+
+**PHASE 3 (open) — the fix, which is a harness change and therefore an OQ not a fix-on-sight.**
+Candidates, cheapest first: (a) `with_overlay/4` returning the snapshot size, so a caller can
+assert non-zero; (b) promote `warn_if_rule_clauses/1` from `print_message(warning, …)` to a throw,
+with an explicit opt-out for the deliberate partial-overlay case; (c) a `must_overlay/3` variant
+that throws on an empty snapshot. (b) is the one that would have caught OQ-302's plan, and it is
+the one with back-compatibility risk — a prior probe relying on a partial overlay would start
+throwing, which is the point, but it needs the Phase-2 census first to know how many.
+
+**What resolution would change.** Whether "clean-vs-edited pair, zero diff" from any
+overlay-based probe is admissible as a witness without an accompanying install assertion. Right
+now it is not, and the discipline has no mechanical guard saying so. Cross-ref: OQ-96 and Pattern
+6 (`grep -v Warning` — the harness's warning goes to the same channel that history shows is
+filtered); `build_discipline.md` → *Every diagnostic needs a positive control*.
+
 ## OQ-325 — a third of the bound-dispatch census is reached by NO corpus: dead code, missing inputs, or unrun configurations?
 
 **Ω-type:** Ω_E (a census; the resolution operation is measurement — extend reachability to the
@@ -14216,8 +14292,22 @@ argument, and *reached* (5 callers, on the `purity_score` / `fingerprint_couplin
 the time. **Conversion owes the six-leg clean-vs-edited pair, not the template**, and is
 the one piece of arm (a) still outstanding. Its surviving bound-`true` caller
 (`boltzmann_compliant/2` at `:94-95`) is already adjudicated in
-`prolog/codewalk_caller_allowlist.txt` with `ATOMS=true` and a REMOVE condition that names
-exactly this conversion as its exit.
+`prolog/codewalk_caller_allowlist.txt` with `ATOMS=true`, a REMOVE condition naming exactly this
+conversion as its exit, and a **REVIEW-BY 2026-11-17** so it cannot roll over silently.
+**AND ONE PUBLISHED CONCLUSION OF THIS ARM IS NOW FALSE — the count edit did not reach it.**
+`clause_order_census.md:19` concluded *"No latent-B predicate carries a nonzero steal-risk at any
+atom."* That was a set-level claim over a set that has since gained a member. Re-running the arm's
+own `clause_order_census.py` on 2026-08-19, with its pre-registered naturally-arising control
+firing first (`signature_grade/2` @ `correction` = 0, @ `commentary` = 1, at pre-conversion commit
+`6c1bfa44`): **1 of 1 latent-B predicates carries a nonzero steal-risk** —
+`epistemic_access_check/2` at atom `false`, steal-risk 1, skipped `[true]`; zero at `true`. That is
+the OQ-302 defect seen from the definition side, and it is what scopes the allowlist to `ATOMS=true`.
+The 2026-08-18 audit directory was **not** edited (point-in-time record, restored byte-identical);
+the re-run is filed at `audits/2026-08-19_oq302_bound_false_repair/oq303_steal_risk_recensus.md`.
+A second stale reference survives by convention rather than by claim:
+`audits/2026-08-18_classb_conversion_rollout/bisect_batch.py:22`'s comment
+*"(post-retirement: latent-B is empty)"* — inside a completed audit dir, so it is left as written
+and noted here instead.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

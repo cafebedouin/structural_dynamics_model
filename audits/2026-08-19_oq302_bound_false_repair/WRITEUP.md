@@ -167,11 +167,24 @@ declared blind spot), recorded so the allowlist row is not read as a complete ce
    consumers it is byte-identical by construction, i.e. a consistency check that cannot fail. The
    declaration lives in `consumer_enumeration.md` §1a so a later reader does not mistake its
    absence for an oversight.
-5. **Process deviation, stated rather than hidden:** `audits/README.md` rules that `audit_log.md`
-   is committed *before* any code commit. Here it landed in the same commit as the repair
-   (`fb10708a`) rather than ahead of it. The freeze stamp is still physically above the first
-   result line and the md5 is verifiable, so the ordering claim is witnessable — but the commit
-   ordering the rule asks for was not followed.
+5. **Process deviation, and what it COST — not just that it happened.** `audits/README.md` rules
+   that `audit_log.md` is committed *before* any code commit. Here it landed in the same commit as
+   the repair (`fb10708a`). The md5 in the log matches `PREREGISTRATION.md` and sits physically
+   above the first result line, so the ordering is *internally* consistent — but **that is me
+   attesting to it, which is exactly the thing preregistration exists to replace.** Committing the
+   log first puts the freeze in the git object graph *before* any result exists, so the ordering
+   becomes checkable by a third party against timestamps they did not author. Landing both in one
+   commit collapses that: a reader can verify the prereg file hashes to the recorded md5, but
+   nothing external orders the freeze against the run. **Concretely, what is NOT externally
+   witnessed here: that the preregistration was not amended after seeing Phase-2 results.** The
+   substitute available to a checker is weak — the file's content is internally consistent with a
+   pre-run freeze (it declares three dispositions, two of which did not fire, and an escalation
+   clause that did not fire; a retrofitted prereg would have no reason to carry them). That is an
+   argument, not a witness, and it is the gap the rule closes. Next audit: commit the log first.
+
+6. **The census this audit spawned is Phase 1 of OQ-326, not part of this OQ's verdict.**
+   `overlay_template_census.md` and `oq303_steal_risk_recensus.md` are filed here because this is
+   where the evidence was produced; the open questions live at OQ-326 and OQ-303 arm (a).
 
 ## 7. Verification (plan §Verification, item by item)
 

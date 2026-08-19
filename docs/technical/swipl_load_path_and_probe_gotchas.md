@@ -408,12 +408,39 @@ Two ways an in-session override fails, both witnessed building the OQ-22 Hub-1/H
   `boltzmann_compliance:boltzmann_invariant_mountain/2`, whose clause 1 is a rule AND whose
   predicate is static (so `assertz` throws too — belt and braces, but only the second failure is
   loud).
-  **What to do instead, in order of fidelity:** (i) `clause/2` still works on a static predicate,
-  so fetch the engine's OWN clause body and `call/1` it under your modified guard — this composes
-  the counterfactual out of the real program rather than a hand-copied replica; (ii) edit the
-  source, run, revert (the six-leg clean-vs-edited idiom), when the change is what you intend to
-  ship anyway; (iii) the §3 `abolish + assertz` swap, if you genuinely need the predicate replaced
-  for the rest of the process.
+  **The general form of the hazard is not rule-ness — it is that `with_overlay/3` cannot report
+  an EMPTY SNAPSHOT.** An undefined predicate, a mismatched arity, an unloaded corpus, an absent
+  constraint id: each retracts nothing and produces the same silent identical-arms result. **The
+  harness verifies RESTORE; nothing verifies INSTALL.** So the standing rule is:
+  **an overlay pair is not a witness unless the probe asserts, INSIDE the overlay, that the change
+  took effect.** `audits/2026-06-11_oq110_residual_join/backed_semantic_probe.pl` Control C is the
+  model — it asserts the flip *disappears* under retraction and fails loudly if it survives.
+  Tracked as **OQ-326** (Phase 1 census done: 44 call sites, 13 distinct templates, 1 rule-bearing,
+  that one site safe on inspection — no prior audit voided; Phases 2–3 open).
+
+  **What to do instead, in order of fidelity:** (i) edit the source, run, revert — the six-leg
+  clean-vs-edited idiom, and the right default when the change is what you intend to ship anyway;
+  (ii) the §3 `abolish + assertz` swap, if you need the predicate genuinely replaced for the rest
+  of the process; (iii) `clause/2`-fetch-and-call — fetch the engine's OWN clause body and `call/1`
+  it under your modified guard, composing the counterfactual out of the real program rather than a
+  hand-copied replica.
+
+  **(iii) is n=1 — used once, in the session that invented it (OQ-302, 2026-08-19), and it is
+  recorded here rather than promoted precisely because of that.** Two conditions to check before
+  reusing it, both witnessed in that session
+  (`audits/2026-08-19_oq302_bound_false_repair/overlay_template_census.md` §5):
+  - **`clause/2` on a static predicate is permitted only while `protect_static_code` is `false`**
+    (the SWI default; `access_level` was `user`). The predicate was confirmed *static*, not made
+    dynamic by the probe. The refusal path is real and two-sided — `clause/2` on a foreign built-in
+    (`system:atom_length/2`) still raises `permission_error(access, private_procedure, …)` — so if
+    that flag is ever set true, or the target is foreign, this fails **loudly**, which is the safe
+    direction. Record the flag state with any result you get this way.
+  - **The composed program is not the shipped program**, so it owes a second witness: re-run
+    against the committed source and match the arms by an explicitly detected flag, never by
+    column order. In OQ-302 the repair touched clause 1 only and the probe called clause 2, which
+    was byte-identical across the change; the arms agreed on 5311/5311 rows. Without that second
+    run the table describes a program that never shipped.
+  Promote (iii) out of this section only on a second, independent use.
   **And whichever you pick, make the probe DETECT which arm the source implements rather than
   assume it** — read the clause (`clause/2` + inspect the argument) and emit the arm as a column.
   Post-repair the source holds the *other* arm, so a probe that labels columns by run order

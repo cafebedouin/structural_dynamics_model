@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "4f8f0e3f27041385f968ba4cb5531c2e4fb15bc1",
+    "store_version": "c713d03845da0d3303f1deeb3466031d837711b0",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T14:18:33"
+    "generated_at": "2026-08-19T15:40:22"
   },
-  "issues_sha": "a35e1c2da1ea99bae36f530555c92031df52d5d68b6d7effa6d30089dd8381fe",
-  "n_entries": 325,
+  "issues_sha": "9c0b5d1734e597212ee24d69546551d891c4309715f21e5bd7adf15e3eb4900e",
+  "n_entries": 326,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 129,
+    "open": 130,
     "partial": 8
   },
   "active": [
@@ -1976,6 +1976,20 @@
       "mentioned_in": [
         "OQ-178",
         "OQ-303"
+      ]
+    },
+    {
+      "id": "OQ-326",
+      "status": "open",
+      "priority": 2,
+      "summary": "`probe_harness:with_overlay/3` cannot report that it overlaid NOTHING: a silent-no-op class that voids the arm it was meant to create",
+      "deps": [
+        "splits_from OQ-302"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-96",
+        "OQ-302"
       ]
     }
   ],

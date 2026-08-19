@@ -196,3 +196,57 @@ citations across 8 files.
 **Worth carrying:** an untracked file is invisible to the `git grep`-based sweeps, so *a green
 gate taken before `git add` is not a green gate for the files that change*. Run the gate once
 more after staging, or accept that the merge is where those rows first fire.
+
+### R9. Post-close follow-ons (operator review, 2026-08-19)
+
+Four items raised on review, all landed before push.
+
+**(1) The `with_overlay` finding is a witness-voiding CLASS — minted as OQ-326 with the
+retroactive census as its Phase 1, DONE.** `overlay_template_census.md` + `_raw.txt`;
+scripts `extract_overlay_templates.py`, `template_safety.pl`. Method: argument-position parsing
+(a functor-proximity grep flags goal-body predicates — six rule-bearing false positives recorded),
+then the harness's own detector over each generalized retract-side template, with a two-sided
+instrument control that fired both ways. **44 call sites / 27 files / 13 distinct templates; 12
+rule-free; 1 rule-bearing (`constraint_indexing:constraint_classification/3` at
+`a1_probe.pl:77`), and that site is safe on inspection — its rule clauses are hard-keyed to the
+two engine demo constraints, which the probe's bound corpus constraint cannot unify with. No prior
+audit is voided.** The live trap is that `probe_harness.pl`'s OWN header example is the unsafe
+form of that same call (first argument unbound). Phase 2 — the general empty-snapshot class, which
+rule-ness is only one cause of — is open.
+
+**(2) The promotion was asymmetric; corrected.** The *negative* (with_overlay cannot report that
+it overlaid nothing; the harness verifies restore, never install) stays in CLAUDE.md and
+AGENTS.md, restated at the general altitude rather than the rule-clause special case. The
+*positive* (`clause/2`-fetch-and-call) is **n=1** and was demoted to gotchas §12 as option (iii),
+behind edit-run-revert and the `abolish + assertz` swap, with an explicit "promote only on a
+second, independent use".
+**The mechanical question answered, because the guidance was wrong without it:** `clause/2`
+worked because `protect_static_code` is `false` (SWI default) and `access_level` is `user`; the
+predicate was confirmed **static**, not made dynamic by the probe; and the refusal path is real —
+`clause/2` on a foreign built-in still raises `permission_error(access, private_procedure, …)`.
+Both conditions are now recorded with the idiom. **And the measured program did not differ from
+the shipped one in the dimension the second witness closes:** the repair touched clause 1 only,
+while the probe fetched and called clause 2, byte-identical across the change.
+
+**(3) The allowlist entry was a known-benign row with no expiry; fixed.** REMOVE now names the
+OQ-303 conversion as its exit *and* carries **REVIEW-BY 2026-11-17** (the OQ-317 date) so it
+cannot roll over silently, plus an explicit scope limit: the 753/4,558 record shows the CALLER is
+safe at `true`, **not** that the `latent-B` label is right.
+
+**(4) OQ-303's empty class WAS load-bearing for a published conclusion, and the count edit did not
+reach it.** `clause_order_census.md:19` — *"No latent-B predicate carries a nonzero steal-risk at
+any atom"* — is a set-level claim over a set that gained a member. Re-ran the arm's own
+`clause_order_census.py`; its pre-registered naturally-arising control fired before the table
+printed (`signature_grade/2` correction=0, commentary=1 at `6c1bfa44`). **Now false: 1 of 1, at
+atom `false`, steal-risk 1, skipped `[true]`, zero at `true`.** The 2026-08-18 directory was NOT
+edited — point-in-time record, restored byte-identical via `git checkout`; the re-run is filed
+here as `oq303_steal_risk_recensus.md`. Second stale reference left as written by the same
+convention and noted in ISSUES instead: `bisect_batch.py:22`'s
+*"(post-retirement: latent-B is empty)"* comment.
+
+**(5) The audit_log ordering deviation, priced.** See `WRITEUP.md` §6 residue 5: the cost is that
+**it is not externally witnessed that the preregistration was not amended after seeing Phase-2
+results.** The internal consistency argument (the prereg carries three dispositions of which two
+did not fire, and an escalation clause that did not fire — a retrofit would have no reason to) is
+an argument, not a witness. Committing the log first puts the freeze in the object graph before
+any result exists, which is the whole point. Next audit: log first.
