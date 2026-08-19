@@ -14075,13 +14075,43 @@ that the overlay took effect — some did (`oq110`'s Control C asserts the flip 
 retraction; `oq35`'s null control `with_retracted([], …)` is byte-identity by design) — and which
 relied on the harness. The ones that relied on the harness have no install witness.
 
+**ACCEPTANCE CRITERION, stated before anyone implements (added 2026-08-19, so the class cannot be
+closed by a narrower fix).** The obligation is POSITIVE — *assert the install happened* — not
+negative — *detect rule clauses*. **A rule-clause detector alone does NOT close OQ-326** and must
+not be reported as closing it: rule-ness is one cause of an empty snapshot among several, so a
+detector that catches it leaves the class open while making the gate look green. Phase 3 is
+accepted only when a probe cannot report a clean overlay pair without the harness having
+established, and failed LOUD on:
+1. **snapshot non-empty** — at least one clause was actually retracted (or the caller explicitly
+   declared an intentional zero, as `oq35`'s null control `with_retracted([], …)` does);
+2. **template resolvable** — the named predicate is defined in THIS program at THIS arity
+   (an undefined predicate and a mismatched arity are today indistinguishable from "no facts
+   matched");
+3. **partial overlay named, not warned** — a template matching both facts and rules is a declared
+   decision, not a `print_message(warning, …)` into the channel OQ-96 showed is filtered;
+4. **replacement reachable** — asserted `Facts` land after the existing clauses, so on a
+   cut-ordered predicate they may be unreachable; installed-but-dead must be distinguishable from
+   installed-and-live.
+Until then the standing rule holds and belongs in any reviewer's hands: **an overlay-based
+clean-vs-edited pair is not a witness unless the probe asserts, INSIDE the overlay, that the
+change took effect** (`oq110`'s Control C is the model — it asserts the flip *disappears* under
+retraction and fails loudly if it survives).
+
 **PHASE 3 (open) — the fix, which is a harness change and therefore an OQ not a fix-on-sight.**
 Candidates, cheapest first: (a) `with_overlay/4` returning the snapshot size, so a caller can
 assert non-zero; (b) promote `warn_if_rule_clauses/1` from `print_message(warning, …)` to a throw,
 with an explicit opt-out for the deliberate partial-overlay case; (c) a `must_overlay/3` variant
 that throws on an empty snapshot. (b) is the one that would have caught OQ-302's plan, and it is
 the one with back-compatibility risk — a prior probe relying on a partial overlay would start
-throwing, which is the point, but it needs the Phase-2 census first to know how many.
+throwing, which is the point, but it needs the Phase-2 census first to know how many. **None of
+(a)/(b)/(c) alone meets the criterion above; (b) covers only clause 3.**
+
+**Phase 1 residue, LANDED 2026-08-19 (its own warrant, independent of Phases 2–3):**
+`prolog/probe_harness.pl`'s usage example was itself the unsafe form and is repaired — the example
+now overlays a fact table, and the old text is kept beside it, labelled as the counterexample with
+the mechanism spelled out. Left unrepaired it would have re-entered the code every time someone
+followed it (the Pattern-7 sub-shape *the spec can prescribe the defect*), which would have made
+the Phase-1 census a snapshot that began decaying the day it was taken.
 
 **What resolution would change.** Whether "clean-vs-edited pair, zero diff" from any
 overlay-based probe is admissible as a witness without an accompanying install assertion. Right
@@ -15127,6 +15157,22 @@ real partition or a no-op; that verdict is currently unknown and is being consum
 **Origin:** OQ-296 close, 2026-08-18 — the operator's D1 ruling ("keep sockets, make honest") was
 issued **bounded**, and this entry is the bound.
 **Files:** `docs/design/design_gaps.md`, `prolog/signature_detection.pl`
+
+**ON THE 2026-11-17 REVIEWER'S DESK, added 2026-08-19 by OQ-302 (a standing condition, not a
+pointer).** `boltzmann_compliance:epistemic_access_check/2` is a `latent-B` predicate whose clause
+order is **STEALABLE at atom `false`** — measured, not inferred: OQ-303 arm (a)'s own
+`clause_order_census.py`, re-run 2026-08-19 with its pre-registered naturally-arising control
+firing first (`signature_grade/2` @ `correction` = 0, @ `commentary` = 1 at `6c1bfa44`), reports
+**steal-risk 1 at `false`, skipped `[true]`, and 0 at `true`**
+(`audits/2026-08-19_oq302_bound_false_repair/oq303_steal_risk_recensus.md`). OQ-302 repaired the
+one live bound-`false` CALLER; **the DEFINITION still carries the shape**, so the next
+bound-`false` call written against it is wrong on the day it is written. Its only containment
+today is a scoped allowlist row in `prolog/codewalk_caller_allowlist.txt` (`ATOMS=true`) whose
+REMOVE condition is the OQ-303 arm (a) conversion and whose REVIEW-BY is **this date**. So the
+November question is not only *keep or sunset the sockets* — it is also: **has the conversion
+landed, and if not, is the allowlist re-argued in the open or is the predicate converted?** An
+allowlist that outlives its conversion is exactly the known-benign gate row OQ-302 existed to
+remove.
 
 **The standing disposition being bounded.** OQ-296 kept `natural_law_signature/1` and
 `coordination_scaffold_signature/1` as unpowered sockets rather than retiring them, on the grounds

@@ -19,7 +19,16 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
 sys.path.insert(0, str(REPO / "python"))
 sys.path.insert(0, str(HERE))
-from dispatch_head_check import DECLARED  # noqa: E402  (post-retirement: latent-B is empty)
+from dispatch_head_check import DECLARED  # noqa: E402
+# NOTE (OQ-302, 2026-08-19): this line's comment used to read "(post-retirement: latent-B
+# is empty)". That was true when written and is now FALSE — repairing
+# boltzmann_compliance.pl:577 moved epistemic_access_check/2 into latent-B (0 -> 1).
+# Corrected IN PLACE rather than left standing, because this is live tooling: DECLARED is
+# imported at runtime, so whoever next opens this file reads the comment as a current
+# fact about the set they are about to iterate. The point-in-time convention protects
+# audit ARTIFACTS from retroactive editing (clause_order_census.md:19 is correctly left
+# standing and superseded by a filed re-run); it does not extend to source comments,
+# which have no adjacent re-run filing to correct them.
 
 BASE_JSON = REPO / "outputs" / "oq303b_testsets_batchclean.json"
 PROBE_OUT = "oq303b_bisect_probe.json"

@@ -7,11 +7,26 @@
 % memo caches) as one tested utility, so each probe no longer re-implements it
 % from the reading.
 %
-% Usage:
+% Usage — a FACT table, which is the only thing this harness can overlay:
 %   ?- probe_harness:with_retracted(
-%          [constraint_indexing:constraint_classification(_, mountain,
-%               context(agent_power(analytical), _, exit_options(analytical), _))],
+%          [narrative_ontology:constraint_metric(my_constraint, extractiveness, _)],
 %          my_probe_goal).
+%
+% COUNTEREXAMPLE — do NOT copy this shape (OQ-302/OQ-326, 2026-08-19). The example that
+% stood here until 2026-08-19 was:
+%
+%       [constraint_indexing:constraint_classification(_, mountain,
+%            context(agent_power(analytical), _, exit_options(analytical), _))]
+%
+% constraint_classification/3 is RULE-BEARING — constraint_instances.pl defines six clauses
+% with bodies — so with the first argument UNBOUND this template matches a rule clause,
+% which snapshot/2 does not collect and apply_overlay/2 does not retract. The overlay is
+% then PARTIAL and warn_if_rule_clauses/1 says so with a *warning*, not an error. Copying
+% this form is how the hazard documented below propagates: the file warned about the shape
+% in its scope-limits section and demonstrated it in its usage section.
+% Census of every committed probe: audits/2026-08-19_oq302_bound_false_repair/
+% overlay_template_census.md — this example was the only occurrence of the unsafe form,
+% and no probe copied it.
 %
 %   with_retracted(+Templates, :Goal)   — retract matching FACTS, run, restore
 %   with_asserted(+Facts, :Goal)        — assert facts, run, remove

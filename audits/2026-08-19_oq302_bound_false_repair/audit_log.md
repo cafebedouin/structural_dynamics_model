@@ -250,3 +250,41 @@ results.** The internal consistency argument (the prereg carries three dispositi
 did not fire, and an escalation clause that did not fire — a retrofit would have no reason to) is
 an argument, not a witness. Committing the log first puts the freeze in the object graph before
 any result exists, which is the whole point. Next audit: log first.
+
+### R10. Post-push follow-ons (operator review, second pass, 2026-08-19)
+
+Pushed at `d86c3d03`; these four land on top, none of them blocking that push.
+
+**(1) The header example WAS the live defect and is now repaired** — `prolog/probe_harness.pl`
+usage block. It showed `constraint_indexing:constraint_classification(_, mountain, context(...))`
+with the first argument unbound: the one form the Phase-1 census flags, in the file that also
+warns about it 30 lines lower. The example now overlays a fact table
+(`narrative_ontology:constraint_metric/3`); the old text is kept beside it **labelled as the
+counterexample**, with the mechanism spelled out, so the propagation path becomes the teaching
+case. Warrant is independent of OQ-326 Phases 2–3: left standing it re-enters the code every time
+someone follows it (*the spec can prescribe the defect*), which would make the census a snapshot
+that began decaying the day it was taken. Witness: `test_probe_harness` **20/20 passed**.
+
+**(2) OQ-326 Phase 2 now carries a POSITIVE acceptance criterion, written before anyone
+implements.** The obligation is *assert the install happened*, not *detect rule clauses* — and the
+entry says so explicitly: **a rule-clause detector alone does NOT close OQ-326 and must not be
+reported as closing it.** Four clauses required to fail LOUD: snapshot non-empty (or an explicitly
+declared intentional zero); template resolvable at this arity in this program; partial overlay
+*named* rather than warned into the OQ-96 channel; replacement *reachable* (asserted facts land
+after existing clauses, so installed-but-dead must be distinguishable from installed-and-live).
+Recorded that none of the three candidate fixes alone meets it — (b) covers only clause 3.
+
+**(3) `bisect_batch.py:22` corrected IN PLACE** — the weaker of the two calls, and the operator is
+right about why. `clause_order_census.md:19` is a dated artifact: a frozen claim about a past
+state, correctly left standing and superseded by a filed re-run. A comment in **live tooling** has
+no adjacent re-run filing and is read as current by whoever next opens the file — and this one
+sits on the `from dispatch_head_check import DECLARED` line, i.e. directly above the set it
+mis-describes. The point-in-time convention protects audit ARTIFACTS from retroactive editing; it
+does not extend to source comments. Witness: file parses.
+
+**(4) The steal-risk condition now has its own line where the November reviewer will read it** —
+`ISSUES.md` OQ-317, immediately under `**Files:**`, as a standing condition rather than a pointer:
+`epistemic_access_check/2` is stealable at `false` (steal-risk 1, skipped `[true]`, 0 at `true`),
+OQ-302 repaired the CALLER while the DEFINITION keeps the shape, and its only containment is an
+allowlist whose REVIEW-BY is that same date. The November question is therefore also *has the
+conversion landed, and if not is the allowlist re-argued in the open?*
