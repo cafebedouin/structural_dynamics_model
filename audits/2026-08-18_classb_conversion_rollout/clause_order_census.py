@@ -32,7 +32,19 @@ ROW_RE = re.compile(
 PRED_RE = re.compile(r"^COC_PRED: (\S+) (\S+/\d+) atoms=(\d+) max_steal_risk=(\d+)")
 
 # Pre-registered, naturally-arising control (PREREGISTRATION §3).
+#
+# THE CONTROL IS RUN AGAINST THE PRE-CONVERSION FILE, EXTRACTED FROM GIT — not against HEAD.
+# Converting signature_grade/2 removed the very asymmetry the control detects, so a HEAD-only
+# control went stale the moment its subject was fixed: "produced no rows — the census did not
+# look". That is the orphaned-control shape (a guard that stops witnessing because the thing
+# it guarded was repaired), and the repair is the rule that covers it — a defect's
+# before-commit is a free naturally-arising positive, and git still holds it.
+#
+# Content-anchored: the assertion is on the OUTPUT (steal_risk 0 at `correction`, > 0 at
+# `commentary`, matching Unit A's five-leg measurement). The SHA is a convenience pointer and
+# may be re-pointed at any commit whose signature_detection.pl predates the conversion.
 CONTROL = ("signature_detection.pl", "signature_grade/2")
+CONTROL_PRE_COMMIT = "6c1bfa44"             # parent of the signature_grade/2 conversion
 CONTROL_EXPECT = {"correction": 0}          # must be exactly 0
 CONTROL_EXPECT_POSITIVE = {"commentary"}    # must be > 0
 
@@ -64,12 +76,34 @@ def run(specs: list[tuple[str, str]]) -> tuple[list[dict], list[dict], str]:
     return rows, preds, proc.stdout
 
 
+def control_rows() -> tuple[list[dict], str]:
+    """Census the PRE-CONVERSION signature_detection.pl, pulled out of git."""
+    import shutil, tempfile
+    src = subprocess.run(
+        ["git", "show", f"{CONTROL_PRE_COMMIT}:prolog/{CONTROL[0]}"],
+        cwd=REPO, capture_output=True, text=True, timeout=120)
+    if src.returncode != 0 or not src.stdout:
+        raise SystemExit(f"clause_order_census: RED — cannot extract "
+                         f"{CONTROL_PRE_COMMIT}:prolog/{CONTROL[0]}: {src.stderr[-300:]}")
+    td = tempfile.mkdtemp(prefix="coc_ctl_")
+    # The census resolves files against REPO/prolog/, so stage the historical copy there
+    # under a name nothing else scans, and remove it whatever happens.
+    staged = REPO / "prolog" / "_coc_control_pre.pl"
+    try:
+        staged.write_text(src.stdout)
+        rows, _preds, raw = run([("_coc_control_pre.pl", CONTROL[1])])
+    finally:
+        staged.unlink(missing_ok=True)
+        shutil.rmtree(td, ignore_errors=True)
+    return rows, raw
+
+
 def check_control(rows: list[dict]) -> list[str]:
     problems = []
-    got = {r["atom"]: r["steal_risk"] for r in rows
-           if (r["file"], r["pi"]) == CONTROL}
+    got = {r["atom"]: r["steal_risk"] for r in rows}
     if not got:
-        return [f"CONTROL {CONTROL[1]} produced no rows — the census did not look"]
+        return [f"CONTROL {CONTROL[1]} produced no rows at {CONTROL_PRE_COMMIT} — the census "
+                f"did not look, so no zero in this run is readable"]
     for atom, want in CONTROL_EXPECT.items():
         if got.get(atom) != want:
             problems.append(
@@ -88,10 +122,9 @@ def check_control(rows: list[dict]) -> list[str]:
 
 def main() -> int:
     latentb = sorted(k for k, v in DECLARED.items() if v == "latent-B")
-    specs = sorted(set(latentb) | {CONTROL})
-    rows, preds, raw = run(specs)
-
-    problems = check_control(rows)
+    ctl_rows, ctl_raw = control_rows()
+    problems = check_control(ctl_rows)
+    rows, preds, raw = run(sorted(latentb)) if latentb else ([], [], "")
     if problems:
         for p in problems:
             print(f"  {p}")
@@ -100,6 +133,7 @@ def main() -> int:
         return 1
 
     (HERE / "clause_order_census_raw.txt").write_text(raw)
+    (HERE / "clause_order_census_control_raw.txt").write_text(ctl_raw)
     lb = [p for p in preds if (p["file"], p["pi"]) in set(latentb)]
     assert len(lb) == len(latentb), f"{len(lb)} predicate rows != {len(latentb)} latent-B"
 
@@ -138,9 +172,10 @@ def main() -> int:
         md.append("No latent-B predicate carries a nonzero steal-risk at any atom.")
     (HERE / "clause_order_census.md").write_text("\n".join(md) + "\n")
 
-    print(f"clause_order_census: control OK (signature_grade/2 correction=0, commentary="
-          f"{[r['steal_risk'] for r in rows if (r['file'], r['pi']) == CONTROL and r['atom'] == 'commentary'][0]})")
-    print(f"  {len(latentb)} latent-B predicates, {len(rows) - 2} (pred, atom) pairs")
+    cm = [r["steal_risk"] for r in ctl_rows if r["atom"] == "commentary"][0]
+    print(f"clause_order_census: control OK at {CONTROL_PRE_COMMIT} "
+          f"(signature_grade/2 correction=0, commentary={cm})")
+    print(f"  {len(latentb)} latent-B predicates, {len(rows)} (pred, atom) pairs")
     print(f"  {len(at_risk)} predicate(s) with nonzero steal-risk at some atom")
     print(f"  {len(risky_rows)} (pred, atom) pair(s) with nonzero steal-risk")
     print(f"  wrote clause_order_census.md, clause_order_census_raw.txt")

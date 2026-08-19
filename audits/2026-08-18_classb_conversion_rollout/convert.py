@@ -43,7 +43,13 @@ PROLOG = REPO / "prolog"
 sys.path.insert(0, str(REPO / "python"))
 from dispatch_head_check import DECLARED  # noqa: E402
 
-ATOM_RE = re.compile(r"^[a-z][A-Za-z0-9_]*$")
+# A bare lowercase atom OR a quoted atom. The first version matched only the bare form,
+# while the Prolog reader (and dispatch_head_check's walker, and the census) all use atom/1,
+# which is true of 'Quoted Atoms Like This' as well. The two notions of "atom" disagreed and
+# the transformer reported "0 clauses to convert (already fresh-headed?)" for two predicates
+# the census says carry 11 and 5 atom heads — a SILENT SKIP wearing a completed result's
+# clothes. The count cross-check in convert_predicate() now refuses that outcome instead.
+ATOM_RE = re.compile(r"^(?:[a-z][A-Za-z0-9_]*|'(?:[^'\\]|\\.|'')*')$")
 
 
 class Refused(Exception):
@@ -239,8 +245,15 @@ def fresh_var(existing: str) -> str:
     raise Refused("no fresh variable name available")
 
 
-def convert_predicate(path: Path, name: str, arity: int) -> tuple[str, int]:
-    """Return (new_text, n_clauses_converted). Refuses on anything it cannot parse."""
+def convert_predicate(path: Path, name: str, arity: int,
+                      expect: int | None = None) -> tuple[str, int]:
+    """Return (new_text, n_clauses_converted). Refuses on anything it cannot parse.
+
+    *expect*: the number of atom-headed clauses the PROLOG READER sees for this predicate.
+    When supplied and the text pass converts a different number, this REFUSES. That is the
+    guard for the failure this function already had once: two notions of "atom" that disagree,
+    where the text pass finds nothing and reports it as "already conforming".
+    """
     text = path.read_text()
     spans = split_clauses(text)
     head_re = re.compile(r"^" + re.escape(name) + r"\s*\(")
@@ -273,6 +286,12 @@ def convert_predicate(path: Path, name: str, arity: int) -> tuple[str, int]:
         pos = e
         converted += 1
     out.append(text[pos:])
+    if expect is not None and converted != expect:
+        raise Refused(
+            f"{name}/{arity}: text pass converted {converted} clause(s) but the Prolog reader "
+            f"sees {expect} atom-headed clause(s). A text pass that finds FEWER is a silent "
+            f"skip; one that finds MORE is rewriting something the reader does not consider "
+            f"an atom head. Either way, refusing rather than reporting a number.")
     return "".join(out), converted
 
 
@@ -296,12 +315,21 @@ def verify(path: Path, name: str, arity: int, before: list) -> list[str]:
     still_atom = [i for i, c in enumerate(a, 1) if c[2].startswith("$ATOM")]
     if still_atom:
         problems.append(f"{pi}: output argument still a bare atom in clause(s) {still_atom}")
+    return problems
+
+
+def notes_for(path: Path, name: str, arity: int) -> list[str]:
+    """Declared, non-failing observations. A COMPOUND output argument is left unconverted by
+    design; it is not a defect, and folding it into `problems` reverted two whole files on
+    the first batch run — a note that behaved like a failure."""
+    pi = f"{name}/{arity}"
+    a = [c for c in scan_clauses(path) if c[0] == pi]
     compounds = [i for i, c in enumerate(a, 1) if c[2].startswith("$OTHER")]
     if compounds:
-        problems.append(f"{pi}: NOTE compound output argument left unconverted in clause(s) "
-                        f"{compounds} — declared, not a failure, but the predicate is not "
-                        f"fully fresh-headed and the census will still report it")
-    return problems
+        return [f"{path.name} {pi}: compound output argument left unconverted in clause(s) "
+                f"{compounds} — by design (the template retires ATOM heads); the predicate "
+                f"is not fully fresh-headed and the census will still report it"]
+    return []
 
 
 # ---------------------------------------------------------------------------
@@ -315,6 +343,9 @@ SELFTEST_SRC = r"""
 
 % a fact -> becomes a one-goal rule
 p(_, baz).
+
+% a QUOTED atom output — atom/1 is true of it, so it is in scope
+p(X, 'Quoted, Atom) With Punctuation') :- q(X), !.
 
 % a plain cut clause
 p(X, foo) :- q(X), !.
@@ -356,6 +387,8 @@ def selftest() -> list[str]:
     with tempfile.TemporaryDirectory(prefix="cv_selftest_") as td:
         f = Path(td) / "fx_conv.pl"
         f.write_text(SELFTEST_SRC)
+        f2 = Path(td) / "fx_conv2.pl"
+        f2.write_text(SELFTEST_SRC)
         before = scan_clauses(f)
         try:
             new_text, n = convert_predicate(f, "p", 2)
@@ -374,8 +407,8 @@ def selftest() -> list[str]:
         if still_atom:
             fails.append(f"SELFTEST output still a bare atom in p/2 clause(s) {still_atom}")
         compounds = [i for i, c in enumerate(a2, 1) if c[2].startswith("$OTHER")]
-        if compounds != [7]:
-            fails.append(f"SELFTEST expected exactly clause 7 (compound output f(y)) to be "
+        if compounds != [8]:
+            fails.append(f"SELFTEST expected exactly clause 8 (compound output f(y)) to be "
                          f"left unconverted, got {compounds}")
 
         # the compound-output clause must NOT have been rewritten
@@ -399,9 +432,17 @@ def selftest() -> list[str]:
         # the char-code clause survived
         if "0'." not in new_text:
             fails.append("SELFTEST the 0'. char code was mis-parsed as a clause terminator")
-        if n != 6:
-            fails.append(f"SELFTEST expected 6 converted p/2 clauses "
-                         f"(baz foo bar qux zap dot), got {n}")
+        if n != 7:
+            fails.append(f"SELFTEST expected 7 converted p/2 clauses "
+                         f"(baz quoted foo bar qux zap dot), got {n}")
+        if "'Quoted, Atom) With Punctuation'" not in new_text:
+            fails.append("SELFTEST the quoted-atom output was lost in conversion")
+        for bad in (n - 1, n + 1):
+            try:
+                convert_predicate(f2, "p", 2, expect=bad)
+                fails.append(f"SELFTEST count cross-check did not refuse expect={bad}")
+            except Refused:
+                pass
 
         # and it must still load
         load = subprocess.run(["swipl", "-q", "-g", "halt", "-l", str(f)],
@@ -466,8 +507,10 @@ def main() -> int:
         n_here = 0
         for pi in pis:
             name, ar = pi.rsplit("/", 1)
+            n_atom_heads = sum(1 for c in scan_clauses(path)
+                               if c[0] == pi and c[2].startswith("$ATOM"))
             try:
-                new_text, n = convert_predicate(path, name, int(ar))
+                new_text, n = convert_predicate(path, name, int(ar), expect=n_atom_heads)
             except Refused as e:
                 failed.append(f"{f} {pi}: REFUSED — {e}")
                 path.write_text(original)
@@ -481,10 +524,11 @@ def main() -> int:
         if args.dry_run:
             path.write_text(original)
             continue
-        probs = []
+        probs, notes = [], []
         for pi in pis:
             name, ar = pi.rsplit("/", 1)
             probs += verify(path, name, int(ar), before)
+            notes += notes_for(path, name, int(ar))
         load = subprocess.run(["swipl", "-q", "-g", "halt", "-l", str(path)],
                               cwd=PROLOG, capture_output=True, text=True, timeout=300)
         if load.returncode != 0:
@@ -494,6 +538,8 @@ def main() -> int:
             failed += [f"{p} (file REVERTED)" for p in probs]
         else:
             total += n_here
+            for nt in notes:
+                print(f"  note: {nt}")
     for p in failed:
         print(f"  FAILED: {p}")
     print(f"convert: {total} clause(s) converted across {len(by_file)} file(s), "

@@ -235,3 +235,130 @@ codewalk_caller_check: GREEN — 73 registry spec(s) (57 latent-B), 99 loaded mo
 ("deleted when the class-B conversion of signature_grade/2 lands with its six-leg pair") was
 met and the row is gone, so the allowlist is now empty of rows — retirement in the same change
 as the repair, which is the orphaning rule.
+
+### R7. Phase 3 HALTED — the batch of 55 is NOT output-preserving
+
+`convert.py --all` converted 292 clauses across 28 files. Post-conversion the by-construction
+witness was clean (0 atom-headed output clauses left across all 57; 2 compound-headed clauses
+declared), the gate was GREEN, and the OQ-137 totality gate passed 10/10. **The corpus said
+otherwise.**
+
+```
+$ sixleg.py diff batchclean batchedited
+testsets         n=  279  changed= 129
+testsets_haiku   n=  960  changed= 640
+testsets_flash   n=  960  changed= 504
+testsets_kimi    n= 1005  changed=1005
+testsets_sonnet  n= 1001  changed= 538
+kernel_v1        n= 1106  changed=1106
+```
+
+Provenance checked before reading any of it: corpus md5 identical per leg across halves, code
+state different (6c1bfa44 vs 2fec71fe), and the differ's discrimination record already
+established in R4.
+
+**This is why the batch got a six-leg pair rather than the prereg's one-leg floor.** Every
+structural check the batch owed came back clean. Only the corpus dissented.
+
+### R8. Per-file attribution — 2 of 29 files, and the control makes the attribution readable
+
+```
+CONTROL all-reverted vs batchclean: changed=0
+  abductive_helpers.pl               changed= 129  (fpn_band/2, seat_overrides/2)
+  boltzmann_compliance.pl            changed=  17  (expected_power_divergence/4)
+  [27 other files]                   changed=   0
+2 of 29 files move the corpus on their own; sum of independent changes = 146
+(whole batch moved 129 — a shortfall means files interact)
+```
+
+The all-reverted control is the load-bearing line: with every conversion reverted the probe
+reproduces the baseline exactly, so the attribution is measuring conversions and not drift.
+
+### R9. The mechanism — the template is invalid where the last argument is an INPUT
+
+```
+$ git show 348770f5:prolog/abductive_helpers.pl | sed -n '90,91p'
+seat_overrides(C, false_ci_rope) :- !, \+ signature_detection:fcr_routed(C).
+seat_overrides(C, constructed_high_extraction) :- !, \+ signature_detection:constructed_routed(C).
+
+$ git show 348770f5:prolog/boltzmann_compliance.pl | sed -n '350,353p'
+expected_power_divergence(powerless, institutional, _, _) :- !.
+expected_power_divergence(institutional, powerless, _, _) :- !.
+expected_power_divergence(powerless, analytical, _, _) :- !.
+expected_power_divergence(analytical, powerless, _, _) :- !.
+```
+
+Neither predicate's last argument is an output. `seat_overrides/2` is a semidet TEST keyed on
+the signature; `expected_power_divergence/4` is a pure semidet test with no output at all.
+Converted, `seat_overrides(C, false_ci_rope) :- !, guard.` becomes
+`seat_overrides(C, T) :- !, guard, T = false_ci_rope.` — which **matches every second
+argument, cuts, and makes every later clause unreachable.**
+
+`dispatch_head_check.pl:9-11` states the assumption this violates in its own header: *"OUTPUT
+ARGUMENT is taken to be the LAST argument, by engine convention. This is a declared assumption,
+not a fact about every predicate."* The registry even carries a class for the exception —
+`input-key` — and these two were filed `latent-B`. **The misclassification is in the 2026-08-17
+registry, and Unit A's partition inherited it: `converts-clean` answered "no bound caller", a
+question that presupposes the last argument is an answer at all.**
+
+### R10. The screen, and the 21 latent instances
+
+Mechanical tell: **a clause whose body's FIRST goal is `!`** commits before testing anything,
+so it is SELECTING on its head arguments. Added as `scan_file_clause_shapes/2` (additive export
+on the existing reader) + `inputkey_screen.py`.
+
+```
+$ .venv/bin/python audits/2026-08-18_classb_conversion_rollout/inputkey_screen.py
+inputkey_screen: controls OK (fires on the 2 corpus-attributed rows, declines on signature_grade/2)
+  23 of 58 latent-B rows are INPUT-KEYED (cut as first body goal) — the template is invalid for these:
+    abductive_helpers.pl           seat_overrides/2                  clauses [1, 2, 3]  <- corpus-attributed
+    boltzmann_compliance.pl        expected_power_divergence/4       clauses [1..16]    <- corpus-attributed
+    covering_analysis.pl           cell_short/2                      clauses [1..12]    <- LATENT
+    covering_analysis.pl           sigma_label/2                     clauses [1..5]     <- LATENT
+    data_repair.pl                 source_class/2                    clauses [1]        <- LATENT
+    diagnostic_summary.pl          compute_verdict/4                 clauses [3, 4]     <- LATENT
+    diagnostic_summary.pl          mismatch_source/2                 clauses [1]        <- LATENT
+    drl_boltzmann_analysis.pl      qualify_action/5                  clauses [2,6,10,14,15,16,17] <- LATENT
+    drl_composition.pl             composition_rule/3                clauses [1..13]    <- LATENT
+    drl_counterfactual.pl          estimate_impact_indexed/5         clauses [4]        <- LATENT
+    gap_diagnostic.pl              gate_description/2                clauses [1..8]     <- LATENT
+    giant_component_analysis.pl    would_cross_threshold/5           clauses [1,2,3]    <- LATENT
+    invertibility_analysis.pl      predict_rope_snare/4              clauses [1..6]     <- LATENT
+    invertibility_analysis.pl      predict_rope_tangled/4            clauses [1..4]     <- LATENT
+    invertibility_analysis.pl      predict_snare_tangled/4           clauses [1..4]     <- LATENT
+    invertibility_analysis.pl      predict_three_type/4              clauses [1..4]     <- LATENT
+    json_report.pl                 boltzmann_label/2                 clauses [1..7]     <- LATENT
+    json_report.pl                 live_index_label/3                clauses [1]        <- LATENT
+    metric_drift_events.pl         drift_severity/3                  clauses [4,7,10..13,15,18,19,22] <- LATENT
+    orbit_report.pl                characterize_family/2             clauses [1..6,8..12] <- LATENT
+    probe_oq197_controls.pl        status_kind/2                     clauses [1,2,3]    <- LATENT
+    report_generator.pl            generate_scenario_for_omega/5     clauses [1]        <- LATENT
+    signature_detection.pl         resolve_with_perspectival_check/4 clauses [3]        <- LATENT
+  35 rows carry no cut-first clause
+```
+
+Controls are naturally arising and asserted in-process: it must FIRE on the two the corpus
+attributed and DECLINE on `signature_grade/2` (converted, zero-diff over 5,311 constraints).
+
+**The screen is a CANDIDATE-FINDER, not a verdict, and saying so is the honest reading.** A
+cut-first clause can still have a genuine output last argument — `characterize_family/2` cuts
+first but selects on argument 1, so its last argument really is a description to compute. So 21
+of the 23 are *unadjudicated candidates*, not confirmed defects. What is confirmed is narrower
+and worse: **the `latent-B` label does not license the template on its own**, which is the
+premise the whole 55-row batch was resting on.
+
+### R11. Batch REVERTED; Phase 1 retained
+
+```
+$ git checkout -- prolog/ python/dispatch_head_check.py
+$ git status --porcelain | grep -E "prolog/|dispatch_head"
+(empty)
+```
+
+The 55-row batch is gone from the tree. Phase 1 (`signature_grade/2`, committed at 348770f5
+with its own zero-diff six-leg pair) stands. The two corpus-attributed rows are reclassified
+`latent-B` → `input-key` in the registry, with the mechanism and the screen named at the class
+definition. The other 21 are left `latent-B` and flagged as needing adjudication — reclassifying
+them on a candidate-finder's say-so would be the same error in the other direction.
+
+Gate GREEN.

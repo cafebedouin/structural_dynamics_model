@@ -125,9 +125,9 @@ def strip_manifest(doc: dict) -> dict:
     return out
 
 
-def diff() -> int:
-    clean_m = json.loads((HERE / "sixleg_clean_manifest.json").read_text())
-    edit_m = json.loads((HERE / "sixleg_edited_manifest.json").read_text())
+def diff(a_phase: str = "clean", b_phase: str = "edited") -> int:
+    clean_m = json.loads((HERE / f"sixleg_{a_phase}_manifest.json").read_text())
+    edit_m = json.loads((HERE / f"sixleg_{b_phase}_manifest.json").read_text())
     problems, lines = [], []
     for name, _rel in LEGS:
         c, e = clean_m.get(name), edit_m.get(name)
@@ -160,7 +160,7 @@ def diff() -> int:
                          if av.get(s) != bv.get(s)]
                     lines.append(f"      {k}: " + "; ".join(d[:6]))
     print("\n".join(lines))
-    (HERE / "sixleg_diff.txt").write_text("\n".join(lines) + "\n")
+    (HERE / f"sixleg_diff_{a_phase}_vs_{b_phase}.txt").write_text("\n".join(lines) + "\n")
     if problems:
         for p in problems:
             print(f"  {p}")
@@ -174,8 +174,10 @@ def diff() -> int:
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
-    if cmd in ("clean", "edited"):
-        sys.exit(run_phase(cmd))
     if cmd == "diff":
-        sys.exit(diff())
-    sys.exit("usage: sixleg.py clean|edited|diff")
+        a = sys.argv[2] if len(sys.argv) > 2 else "clean"
+        b = sys.argv[3] if len(sys.argv) > 3 else "edited"
+        sys.exit(diff(a, b))
+    if cmd:
+        sys.exit(run_phase(cmd))          # any phase LABEL; outputs are namespaced by it
+    sys.exit("usage: sixleg.py <phase-label> | diff [<a-phase> <b-phase>]")

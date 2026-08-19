@@ -24,6 +24,20 @@ REGISTRY SEMANTICS (declaration-based, both directions red-capable):
   input-key   expected to fire; adjudicated: the last argument is an INPUT supplied by
               the caller by contract (availability key / test name / value to
               serialize) — not an engine answer. Same stale-note rule.
+              THE CLASS-B TEMPLATE IS INVALID HERE and the failure is silent-then-loud:
+              rewriting `p(C, sig) :- !, guard(C).` to `p(C, T) :- !, guard(C), T = sig.`
+              makes the clause match EVERY second argument and cut, so every later clause
+              becomes unreachable. Witnessed 2026-08-19: seat_overrides/2 and
+              expected_power_divergence/4 were misfiled `latent-B`, converted, and moved 129
+              and 17 live constraints (six-leg pair + per-file bisect,
+              audits/2026-08-18_classb_conversion_rollout/).
+              MECHANICAL CANDIDATE-FINDER, not a verdict: a clause whose body's FIRST goal is
+              `!` commits before testing anything, so it is SELECTING on its head arguments.
+              `audits/2026-08-18_classb_conversion_rollout/inputkey_screen.py` flags 23 of the
+              58 latent-B rows on that tell; 2 are these, the other 21 are UNADJUDICATED
+              candidates (a cut-first clause can still have a genuine output last argument —
+              characterize_family/2 selects on arg 1). ADJUDICATE BEFORE CONVERTING ANY OF
+              THEM; the `latent-B` label does not license the template on its own.
   wrapper     expected to fire; is_X/3 alias family — two-clause atom/fail wrappers of
               the (converted) cascade. Same stale-note rule.
   finding     expected to fire; carries a live or latent bound-caller finding recorded
@@ -56,10 +70,10 @@ MUST_NOT_FIRE = "MUST-NOT-FIRE"
 # (RECON.md §§1-4). Retire an entry when its predicate is converted or removed.
 DECLARED: dict[tuple[str, str], str] = {
     ("abductive_helpers.pl", "fpn_band/2"): "latent-B",
-    ("abductive_helpers.pl", "seat_overrides/2"): "latent-B",
+    ("abductive_helpers.pl", "seat_overrides/2"): "input-key",
     ("abductive_helpers.pl", "subsystem_available/1"): "input-key",
     ("boltzmann_compliance.pl", "epistemic_access_check/2"): "finding",
-    ("boltzmann_compliance.pl", "expected_power_divergence/4"): "latent-B",
+    ("boltzmann_compliance.pl", "expected_power_divergence/4"): "input-key",
     ("constraint_indexing.pl", "restricted_classify/7"): "latent-B",
     ("context_profile_mining.pl", "classify_isomorphism_level/2"): "latent-B",
     ("covering_analysis.pl", "cell_short/2"): "latent-B",
