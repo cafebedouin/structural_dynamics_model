@@ -13241,12 +13241,51 @@ defect in the incidence instrument.
 
 ## OQ-295 — Standing prohibitions are archived by closure when closure is what makes them operative: surface them on the resolver menu
 
-**Ω-type:** Ω_C (design — where a rule with force but no open question lives) + a small Ω_E
-(does surfacing change instance behaviour, or is it another memory aid that underperforms?).
+**Ω-type:** Ω_C (design — where a rule with force but no open question lives). **Re-typed
+Ω_C-only on ruling (2026-08-19):** the minted "small Ω_E" (does surfacing change instance
+behaviour?) is STRUCK — prevention generates no observable (an instance that reads STANDING and
+does not propose the forbidden thing produces no event), so the effectiveness question has no
+path to a reading and is left OPEN rather than pre-registered unreadably. What IS observable is
+the miss side, which the repaired kill condition below consumes.
 
-**Status:** open
+**Status:** open — **design RULED (operator, 2026-08-19, second-instance reviewed); build is the
+remaining work.** Ruling record below binds the builder.
 **Priority:** 2
-**Deps:** blocked_on_human oq295-surfacing-design
+
+### Design ruling (2026-08-19) — binding on the builder
+
+1. **Authored marker, forward-only at close:** `**Standing:** general — <one-line rule>` or
+   `**Standing:** instance-of OQ-NN`. Membership is authored, never regex-extracted (the three
+   cuts disagreeing 32/36/24 disqualify mechanical extraction — a section whose membership
+   varies run-to-run is the defect class this repo hunts).
+2. **Surface:** `omega_resolver.py menu` gains a short STANDING section rendering GENERAL rules
+   only, one line each. Instances never render (already double-covered by the file-keyed hook +
+   KNOWN_STATE; the witnessed failures were the general rules); they are enumerable from the
+   general rule's entry. Not SessionStart — the menu fires at [NEXT], design-proposal time, and
+   24–36 always-loaded lines is over-promotion.
+3. **Cap:** ~10 general rules; admission past the cap requires retiring/merging one (the memory
+   feedback-channel 33-cap precedent).
+4. **NON-EXHAUSTIVENESS IS RENDERED, not assumed (amendment 1):** the section carries a fixed
+   line stating it is authored-and-capped, NOT exhaustive, and that **its silence is not
+   permission** — an instance finding nothing about its proposal must not conclude nothing is
+   forbidden. Forward-only + one backfill pass leaves a defined gap (some standing prohibition
+   WILL be missed over a fuzzy set three regex cuts disagree on by a third); without this line
+   the section installs absence-presenting-as-presence inside the fix.
+5. **Kill condition, REPAIRED (amendment 2 — the minted wording was a ratchet, not a test:
+   prevention is invisible, so every violation counted against the section and every prevention
+   counted as nothing).** As ruled: when a violation is caught by human or re-run, check whether
+   the relevant rule WAS on the menu at proposal time. On the menu ⇒ a real miss — the kill
+   condition fires, retire the section. NOT on the menu ⇒ a MEMBERSHIP failure — route to the
+   backfill/admission process (rule 4's gap), not grounds for retirement.
+6. **Backfill:** one curation pass — an instance proposes candidates from the three regex cuts,
+   the operator adjudicates membership (a seat, not a grep), **with a second POV on the proposed
+   set before the operator rules**. The pass RECORDS WHAT IT REJECTED AND WHY, not only what it
+   admitted — the cap makes rejection load-bearing, and the rejected-with-reason list is what
+   lets a reviver tell "considered and excluded" from "never seen" (the same distinction rule 4
+   protects at the top of the section).
+7. **Build mechanics:** read `docs/technical/omega_resolver.md` BEFORE touching
+   `omega_resolver.py` or the authored-field grammar; register the new field with
+   `issues_status.py` / the PostToolUse grammar gate in the same change.
 **Origin:** 2026-08-15, from the cheap_confession co-draw arc. An instance proposed wiring
 `epsilon_bin` into the authoring prompt — forbidden by a rule recorded twice, generally in
 OQ-34 and specifically in OQ-117 — and separately read a `dr_type`-derived Jaccard as a fact
