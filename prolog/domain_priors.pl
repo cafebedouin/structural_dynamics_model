@@ -94,10 +94,11 @@ get_prior(_, _, 0.5).
 % below (constraint_claim -> physical_natural; else unknown_novel) are now the
 % whole of category_of/2. is_known_domain/1 clause 1 (domain_category/2,
 % same dead reference, unqualified) removed for the same reason.
-category_of(ID, physical_natural) :-
+category_of(ID, T) :-
     (narrative_ontology:constraint_claim(ID, natural_law) ;
-     narrative_ontology:constraint_claim(ID, physical_law)), !.
-category_of(_, unknown_novel).
+     narrative_ontology:constraint_claim(ID, physical_law)), !,
+    T = physical_natural.
+category_of(_, T) :- T = unknown_novel.
 
 %% ============================================================================
 %% 3. INTERNAL HELPERS

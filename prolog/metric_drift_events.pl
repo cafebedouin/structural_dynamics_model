@@ -491,47 +491,59 @@ drift_velocity(C, Metric, Rate) :-
 
 % --- Purity drift severity (v5.1) ---
 
-drift_severity(C, purity_drift, critical) :-
+drift_severity(C, purity_drift, T) :-
     purity_scoring:purity_score(C, Purity),
     number(Purity), Purity < 0.30,   % OQ-60: unknown -> clause fails (falls through to warning/watch)
     collect_purity_decline_signals(C, Signals),
-    length(Signals, N), N >= 3, !.
+    length(Signals, N), N >= 3, !,
+    T = critical.
 
-drift_severity(C, purity_drift, warning) :-
+drift_severity(C, purity_drift, T) :-
     purity_scoring:purity_score(C, Purity),
-    number(Purity), Purity < 0.50, !.   % OQ-60: unknown -> clause fails (falls through to watch)
-drift_severity(C, purity_drift, warning) :-
+    number(Purity), Purity < 0.50, !,
+    T = warning.   % OQ-60: unknown -> clause fails (falls through to watch)
+drift_severity(C, purity_drift, T) :-
     collect_purity_decline_signals(C, Signals),
-    length(Signals, N), N >= 2, !.
+    length(Signals, N), N >= 2, !,
+    T = warning.
 
-drift_severity(_, purity_drift, watch) :- !.
+drift_severity(_, purity_drift, T) :- !,
+    T = watch.
 
 drift_severity(C, purity_drift_indexed, Severity) :-
     drift_severity(C, purity_drift, Severity), !.
 
 % --- Standard severity ---
 
-drift_severity(C, sunset_violation, critical) :-
+drift_severity(C, sunset_violation, T) :-
     drift_event(C, sunset_violation, _),
-    safe_metric(C, extractiveness, E), E > 0.3, !.
-drift_severity(_, sunset_violation, warning) :- !.
+    safe_metric(C, extractiveness, E), E > 0.3, !,
+    T = critical.
+drift_severity(_, sunset_violation, T) :- !,
+    T = warning.
 
-drift_severity(C, extraction_accumulation, critical) :-
+drift_severity(C, extraction_accumulation, T) :-
     drift_event(C, extraction_accumulation, evidence(_, _, _, _, V2)),
     config:param(snare_epsilon_floor, Floor),
-    V2 >= Floor, !.
-drift_severity(C, extraction_accumulation, warning) :-
+    V2 >= Floor, !,
+    T = critical.
+drift_severity(C, extraction_accumulation, T) :-
     drift_event(C, extraction_accumulation, evidence(_, _, _, _, V2)),
     config:param(tangled_rope_epsilon_floor, Floor),
-    V2 >= Floor, !.
-drift_severity(_, extraction_accumulation, watch) :- !.
+    V2 >= Floor, !,
+    T = warning.
+drift_severity(_, extraction_accumulation, T) :- !,
+    T = watch.
 
-drift_severity(_, coordination_loss, critical) :-
-    !.
+drift_severity(_, coordination_loss, T) :-
+    !,
+    T = critical.
 
-drift_severity(_, internalized_piton, warning) :- !.
+drift_severity(_, internalized_piton, T) :- !,
+    T = warning.
 
-drift_severity(_, extraction_dried_up, warning) :- !.
+drift_severity(_, extraction_dried_up, T) :- !,
+    T = warning.
 
 drift_severity(C, metric_substitution, Severity) :-
     (   safe_metric(C, theater_ratio, TR), TR > 0.7
@@ -539,30 +551,38 @@ drift_severity(C, metric_substitution, Severity) :-
     ;   Severity = warning
     ), !.
 
-drift_severity(_, function_obsolescence, watch) :- !.
+drift_severity(_, function_obsolescence, T) :- !,
+    T = watch.
 
 % --- Boltzmann drift severity (v5.0) ---
 
-drift_severity(C, coupling_drift, critical) :-
+drift_severity(C, coupling_drift, T) :-
     boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_strong_threshold, StrongT),
     Score > StrongT,
     safe_metric(C, extractiveness, E),
     config:param(snare_epsilon_floor, SnareFloor),
-    E >= SnareFloor, !.
-drift_severity(C, coupling_drift, warning) :-
+    E >= SnareFloor, !,
+    T = critical.
+drift_severity(C, coupling_drift, T) :-
     boltzmann_compliance:cross_index_coupling(C, Score),
     config:param(boltzmann_coupling_strong_threshold, StrongT),
-    Score > StrongT, !.
-drift_severity(_, coupling_drift, watch) :- !.
+    Score > StrongT, !,
+    T = warning.
+drift_severity(_, coupling_drift, T) :- !,
+    T = watch.
 
-drift_severity(_, boltzmann_floor_drift, watch) :- !.
+drift_severity(_, boltzmann_floor_drift, T) :- !,
+    T = watch.
 
-drift_severity(C, reform_pressure_detected, critical) :-
-    reform_pressure(C, P), P > 2.0, !.
-drift_severity(C, reform_pressure_detected, warning) :-
-    reform_pressure(C, P), P > 1.0, !.
-drift_severity(_, reform_pressure_detected, watch) :- !.
+drift_severity(C, reform_pressure_detected, T) :-
+    reform_pressure(C, P), P > 2.0, !,
+    T = critical.
+drift_severity(C, reform_pressure_detected, T) :-
+    reform_pressure(C, P), P > 1.0, !,
+    T = warning.
+drift_severity(_, reform_pressure_detected, T) :- !,
+    T = watch.
 
 drift_severity(C, coupling_drift_indexed, Severity) :-
     drift_severity(C, coupling_drift, Severity), !.
@@ -578,4 +598,4 @@ drift_severity(C, network_drift_indexed, Severity) :-
     network_dynamics:network_drift_severity(C, Ctx, Severity), !.
 
 % Default
-drift_severity(_, _, watch).
+drift_severity(_, _, T) :- T = watch.

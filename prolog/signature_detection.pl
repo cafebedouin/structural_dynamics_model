@@ -285,10 +285,11 @@ count_power_beneficiaries(C, Count) :-
 %  §9a(i)/§7. The natural_law detector survives as a wired-but-dark router
 %  socket (OQ-128 retired its override; the gate leg stays documented, not
 %  revived).
-has_viable_alternatives(C, true) :-
+has_viable_alternatives(C, T) :-
     narrative_ontology:affects_constraint(I, C),
-    narrative_ontology:intent_viable_alternative(I, _, _), !.
-has_viable_alternatives(_, unknown).
+    narrative_ontology:intent_viable_alternative(I, _, _), !,
+    T = true.
+has_viable_alternatives(_, T) :- T = unknown.
 
 %% compute_temporal_stability(+Constraint, -Stability)
 %  Measures whether constraint metrics remain stable over time
@@ -881,8 +882,9 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 %  context-independently because dead coordination is a structural fact,
 %  not a perspectival one.  Uniform piton classification is expected, not
 %  suspicious.  Exempt from the perspectival variance gate.
-resolve_with_perspectival_check(C, piton, false_ci_rope, piton) :-
-    drl_core:coordination_dead(C), !.
+resolve_with_perspectival_check(C, piton, false_ci_rope, T) :-
+    drl_core:coordination_dead(C), !,
+    T = piton.
 % OQ-90: capture-keyed piton refinement. A constraint that appears as rope, fails
 % the Boltzmann tests (=> false_ci_rope), and whose authored receipt surface says
 % the extraction is uncaptured AND prohibitive to remove is a piton (a structural
@@ -893,9 +895,10 @@ resolve_with_perspectival_check(C, piton, false_ci_rope, piton) :-
 % position-encoded cascade priority. Fires even when fcr_override_enabled=0 (separate
 % axis; kill-switch is piton_refinement_enabled). Reads piton_candidate directly, not
 % the fcr_evidence disposition field (which is the evidence trail, populated upstream).
-resolve_with_perspectival_check(C, _ModalType, false_ci_rope, piton) :-
+resolve_with_perspectival_check(C, _ModalType, false_ci_rope, T) :-
     config:param(piton_refinement_enabled, 1),
-    narrative_ontology:piton_candidate(C), !.
+    narrative_ontology:piton_candidate(C), !,
+    T = piton.
 resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     !,
     (   config:param(fcr_override_enabled, 1)
@@ -1192,11 +1195,13 @@ false_natural_law(C, fnl_evidence(Claim, BoltzmannResult, CouplingScore,
 %  2026-06-04). CLASS RULE: no signature may read a single authored perspective as
 %  a story-level claim. Claim-vs-computed divergence is the story-level diff
 %  machinery's job (dr_claim_mismatch over constraint_claim), which covers it.
-claimed_natural(C, explicit_mountain_claim) :-
-    narrative_ontology:constraint_claim(C, mountain), !.
-claimed_natural(C, natural_law_signature_match) :-
+claimed_natural(C, T) :-
+    narrative_ontology:constraint_claim(C, mountain), !,
+    T = explicit_mountain_claim.
+claimed_natural(C, T) :-
     get_constraint_profile(C, Profile),
-    natural_law_signature(Profile).
+    natural_law_signature(Profile),
+    T = natural_law_signature_match.
 
 /* ----------------------------------------------------------------
    SIGNATURE: COUPLING-INVARIANT ROPE (CI_Rope)
@@ -1504,13 +1509,16 @@ false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
 %  'captured' first (the fail-safe danger reading wins any malformed double-
 %  authoring); piton_candidate/transient_neglect are mutually exclusive uncaptured
 %  cases; 'absent' = surface not authored enough to decide (fail-closed).
-capture_disposition(C, captured) :-
-    narrative_ontology:constraint_captured(C), !.
-capture_disposition(C, piton_candidate) :-
-    narrative_ontology:piton_candidate(C), !.
-capture_disposition(C, transient_neglect) :-
-    narrative_ontology:transient_neglect(C), !.
-capture_disposition(_, absent).
+capture_disposition(C, T) :-
+    narrative_ontology:constraint_captured(C), !,
+    T = captured.
+capture_disposition(C, T) :-
+    narrative_ontology:piton_candidate(C), !,
+    T = piton_candidate.
+capture_disposition(C, T) :-
+    narrative_ontology:transient_neglect(C), !,
+    T = transient_neglect.
+capture_disposition(_, T) :- T = absent.
 
 %% zero_excess_coupling_only(+Excess, +FailedTests)
 %  True when the ONLY FCR evidence is Boltzmann coupling and
@@ -1539,8 +1547,9 @@ coupling_based_failure(nonsensical_coupling(_)).
 %  constraint is NOT exclusively classified as Mountain from all
 %  indexed perspectives. This prevents natural laws from being
 %  misidentified as "coordination-washed."
-appears_as_rope(C, explicit_rope_claim) :-
-    narrative_ontology:constraint_claim(C, rope), !.
+appears_as_rope(C, T) :-
+    narrative_ontology:constraint_claim(C, rope), !,
+    T = explicit_rope_claim.
 % RULED OUT (operator ruling 2026-06-05, OQ-70 class rule — same defect as
 % claimed_natural's removed source): `constraint_classification(C, rope, _)` read ANY
 % single authored rope perspective as a story-level "appears as coordination" claim.
@@ -1550,14 +1559,15 @@ appears_as_rope(C, explicit_rope_claim) :-
 % pre-reset the bait was fungible between FNL and this clause (2026-06-04
 % counterfactual). No signature may read a single authored perspective as a
 % story-level claim.
-appears_as_rope(C, low_extraction_profile) :-
+appears_as_rope(C, T) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(C, ExtMetricName, Eps),
     config:param(rope_epsilon_ceiling, EpsCeil),
     Eps =< EpsCeil,
     % Exclude constraints that are mountains from ALL perspectives.
     % Mountains have low ε by nature — that's not "appearing as rope."
-    \+ only_mountain_classifications(C).
+    \+ only_mountain_classifications(C),
+    T = low_extraction_profile.
 
 %% only_mountain_classifications(+C)
 %  FCR's mountain-protection guard: identifies natural-law stories that should
@@ -1884,14 +1894,16 @@ converted_at_seat(C, false_natural_law) :- fnl_routed(C).
 %  which routes (the alert is present and VISIBLE in verdict_join Alerts) but raises
 %  NO floor (severity_floor/2 is closed on severe->red, moderate->yellow). The
 %  informational alert is what keeps "routed" distinguishable from "dropped".
-signature_diagnostic_severity(C, false_summit_mountain, moderate) :-
-    once(narrative_ontology:constraint_victim(C, _)), !.
-signature_diagnostic_severity(_, false_summit_mountain, informational).
+signature_diagnostic_severity(C, false_summit_mountain, T) :-
+    once(narrative_ontology:constraint_victim(C, _)), !,
+    T = moderate.
+signature_diagnostic_severity(_, false_summit_mountain, T) :- T = informational.
 % false_ci_rope (OQ-138 FCR-9): same victim discriminant as FSM — an authored victim
 % => concealment possible => moderate (floor); none => informational (route, no floor).
-signature_diagnostic_severity(C, false_ci_rope, moderate) :-
-    once(narrative_ontology:constraint_victim(C, _)), !.
-signature_diagnostic_severity(_, false_ci_rope, informational).
+signature_diagnostic_severity(C, false_ci_rope, T) :-
+    once(narrative_ontology:constraint_victim(C, _)), !,
+    T = moderate.
+signature_diagnostic_severity(_, false_ci_rope, T) :- T = informational.
 % false_natural_law (OQ-138 FNL, 2026-07-03): same victim discriminant as FSM/FCR — an
 % authored victim => concealment possible => moderate (yellow floor); none => informational
 % (route, no floor); base tensions still render red honestly if warranted (FSM Position-A).
@@ -1899,18 +1911,20 @@ signature_diagnostic_severity(_, false_ci_rope, informational).
 % mountain-claimed (FNL fires definitionally on claimed naturality), so it would floor
 % every routed seat identically; victim varies (census vic 0–4) and is robust to future
 % source-2 profile-match FNL seats where constraint_claim(mountain) is false.
-signature_diagnostic_severity(C, false_natural_law, moderate) :-
-    once(narrative_ontology:constraint_victim(C, _)), !.
-signature_diagnostic_severity(_, false_natural_law, informational).
+signature_diagnostic_severity(C, false_natural_law, T) :-
+    once(narrative_ontology:constraint_victim(C, _)), !,
+    T = moderate.
+signature_diagnostic_severity(_, false_natural_law, T) :- T = informational.
 % constructed_high_extraction (OQ-138 constructed-3): CLAIM discriminant, not victim (all 3 routed
 % seats are vic>0, so victim does not distinguish; the authored claim does). A MOUNTAIN claim over a
 % high-extraction finding is the concealment (a false-summit shape) — keep its floor at `severe`,
 % replacing the floor the manufactured snare used to carry via type_1_false_summit (which now reads
 % informational at dr_type=unknown). Non-mountain claims already admit structure => informational
 % (route; their headline, if red, comes from the honest base unmask, not the signature).
-signature_diagnostic_severity(C, constructed_high_extraction, severe) :-
-    narrative_ontology:constraint_claim(C, mountain), !.
-signature_diagnostic_severity(_, constructed_high_extraction, informational).
+signature_diagnostic_severity(C, constructed_high_extraction, T) :-
+    narrative_ontology:constraint_claim(C, mountain), !,
+    T = severe.
+signature_diagnostic_severity(_, constructed_high_extraction, T) :- T = informational.
 
 alerting_severity(moderate).
 alerting_severity(severe).

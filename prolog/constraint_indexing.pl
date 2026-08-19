@@ -959,16 +959,20 @@ resolve_for_classification(Value, _, Value) :- number(Value).
 
 %% restricted_classify(+C, +Eps, +Chi, +Supp, +Theater, +Mutability, -Type)
 %  Simplified cascade using only the resolved restricted metrics.
-restricted_classify(_C, Eps, _Chi, Supp, _Theater, mountain, mountain) :-
-    Supp =< 0.05, Eps =< 0.25, !.
-restricted_classify(_C, Eps, Chi, Supp, _Theater, _Mut, snare) :-
-    Chi >= 0.66, Eps >= 0.46, Supp >= 0.60, !.
-restricted_classify(_C, Eps, Chi, _Supp, _Theater, _Mut, rope) :-
-    Chi =< 0.35, Eps =< 0.45, !.
-restricted_classify(_C, Eps, Chi, _Supp, Theater, _Mut, piton) :-
+restricted_classify(_C, Eps, _Chi, Supp, _Theater, mountain, T) :-
+    Supp =< 0.05, Eps =< 0.25, !,
+    T = mountain.
+restricted_classify(_C, Eps, Chi, Supp, _Theater, _Mut, T) :-
+    Chi >= 0.66, Eps >= 0.46, Supp >= 0.60, !,
+    T = snare.
+restricted_classify(_C, Eps, Chi, _Supp, _Theater, _Mut, T) :-
+    Chi =< 0.35, Eps =< 0.45, !,
+    T = rope.
+restricted_classify(_C, Eps, Chi, _Supp, Theater, _Mut, T) :-
     number(Theater), Theater >= 0.70,
-    Chi =< 0.25, Eps > 0.10, !.
-restricted_classify(_C, _Eps, _Chi, _Supp, _Theater, _Mut, indeterminate).
+    Chi =< 0.25, Eps > 0.10, !,
+    T = piton.
+restricted_classify(_C, _Eps, _Chi, _Supp, _Theater, _Mut, T) :- T = indeterminate.
 
 % ============================================================================
 % SITE CONTEXTS — configurable observer site for measurement predicates (v6.2)

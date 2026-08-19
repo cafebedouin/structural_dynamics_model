@@ -369,3 +369,74 @@ definition. The other 21 are left `latent-B` and flagged as needing adjudication
 them on a candidate-finder's say-so would be the same error in the other direction.
 
 Gate GREEN.
+
+### R12. Per-leg reachability — the cold set does NOT shrink
+
+Operator ruling: run the per-leg pass before converting, since it moves rows from the weaker
+footing to the stronger one. It moved none.
+
+```
+  testsets                    1248 predicates observed; controls dr_type/3=159,777  cfm/6=188,901  cs/2=183,649
+  testsets_haiku              1251                              1,006,827           1,102,462     1,076,074
+  testsets_flash              1247                              1,035,385           1,121,434     1,109,997
+  testsets_kimi               1248                              1,106,429           1,211,516     1,190,973
+  testsets_sonnet             1249                              1,122,312           1,254,718     1,233,024
+  archives/datasets/kernel_v1 1224                              1,024,856           1,062,519     1,056,364
+
+34 of 54 latent-B rows are COLD on testsets, testsets_haiku, testsets_flash, testsets_kimi,
+testsets_sonnet, archives/datasets/kernel_v1
+20 row(s) exercised
+```
+
+**Identical to the `testsets`-only result: 34 cold, 20 exercised.** Adding 5,032 constraints
+across five further legs — including the 1,106-story breadth archive — promoted **zero** rows.
+The expectation going in (mine and the operator's) was that the cold set would shrink
+materially; it did not, and that is a stronger statement than the one-leg measurement supported:
+these 34 predicates are not "unreached by the live leg", they are **unreached by every corpus
+this project has**, at 5,311 constraints and ~1.1M calls per hot-path control.
+
+Controls fire at six orders of magnitude above zero on every leg, so the zeros are measured, not
+didn't-looks.
+
+### R13. The 20 exercised rows converted
+
+`convert.py` per row. **20 rows checked afterwards, 0 still carrying a bare-atom output head.**
+
+One process note worth keeping because it nearly cost a witness: the driver list was written
+with `"\n".join(...)` and no trailing newline, so `while read` silently dropped the LAST line —
+`signature_diagnostic_severity/3` went unconverted while the six-leg run had already started
+loading `signature_detection.pl`. The completeness check (re-scan all 20 for remaining atom
+heads) caught it; the run was killed before it could measure a half-converted tree, the row
+converted, and the pair restarted from clean. **A conversion loop needs a completeness check
+that does not come from the loop** — the loop reported "0 failures" and was wrong by one.
+
+Registry: 20 entries retired, and their `LAST_ARG` facts retired with them in the same change
+(the adjudication survives in `mode_adjudication.json` and the commit), so the facts table stays
+co-extensive with the live worklist. `dispatch_head_check` 69 → 49 shape hits; 37 rows still
+adjudicated (33 output, 3 input, 1 generator).
+
+### R14. The 20 exercised rows — six-leg pair, ZERO DIFF
+
+```
+$ sixleg.py diff batchclean warm20
+testsets         n=  279  changed=0
+testsets_haiku   n=  960  changed=0
+testsets_flash   n=  960  changed=0
+testsets_kimi    n= 1005  changed=0
+testsets_sonnet  n= 1001  changed=0
+kernel_v1        n= 1106  changed=0
+sixleg diff: 0 changed constraint(s) across 6 legs
+```
+
+Provenance asserted first: corpus md5 identical per leg across halves (True), code state
+different on every leg (True), per-leg mtime advance asserted by the harness. The differ's
+discrimination record is R4's planted-field control.
+
+Suites: OQ-137 reading-totality gate 10/10; `run_dynamic_suite` DATA QUALITY GOOD. Gate GREEN,
+`dispatch_head_check` 69 → 49 shape hits.
+
+**Footing for these 20, which is the strongest anything in this OQ has had:** per-row
+adjudication of the last-argument mode (authored `%%` line or dated read), the by-construction
+check (0 bare-atom output heads remaining), a six-leg corpus pair at zero diff, and — unlike
+Phase 1 — a *demonstrated firing control for this exact failure class*, since the same corpus
+caught both input-keyed rows when they were converted.

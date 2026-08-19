@@ -274,24 +274,25 @@ dirac_class(C, Class) :-
 % Mountains are always second-class: immutable restriction at every
 % power level. type_immunity(mountain, 0.0) — immune to contamination.
 % boltzmann_invariant_mountain/2 certifies structural invariance.
-type_to_dirac_class(mountain, _, _, second_class).
+type_to_dirac_class(mountain, _, _, T) :- T = second_class.
 
 % Snares are always second-class: genuine extraction that cannot be
 % "gauged away" by redescription. composition_rule(rope, snare, snare)
 % shows the extraction is real — it corrupts anything it touches.
-type_to_dirac_class(snare, _, _, second_class).
+type_to_dirac_class(snare, _, _, T) :- T = second_class.
 
 % Ropes are first-class: pure coordination. The specific mechanism
 % is a choice among equivalent coordination solutions. A CI_Rope
 % (coupling_invariant_rope/2) is certified structurally sound.
-type_to_dirac_class(rope, C, _, first_class) :-
-    signature_detection:coupling_invariant_rope(C, _), !.
-type_to_dirac_class(rope, _, _, first_class).
+type_to_dirac_class(rope, C, _, T) :-
+    signature_detection:coupling_invariant_rope(C, _), !,
+    T = first_class.
+type_to_dirac_class(rope, _, _, T) :- T = first_class.
 
 % Scaffolds are first-class with temporal bound: temporary coordination
 % with explicit sunset clause. Even more clearly "gauge" than rope —
 % the mechanism is designed to be removed.
-type_to_dirac_class(scaffold, _, _, first_class).
+type_to_dirac_class(scaffold, _, _, T) :- T = first_class.
 
 % Pitons are degenerate first-class: the gauge freedom (ability to
 % choose among alternatives) formally exists but is practically
@@ -299,7 +300,7 @@ type_to_dirac_class(scaffold, _, _, first_class).
 % degraded gauge — closest is a formalism where the gauge group
 % has shrunk. Explains composition_rule(piton, _, piton): degenerate
 % gauge poisons the algebra.
-type_to_dirac_class(piton, _, _, first_class_degenerate).
+type_to_dirac_class(piton, _, _, T) :- T = first_class_degenerate.
 
 % Tangled ropes are mixed: simultaneously first-class (coordination
 % component) and second-class (extraction component). The reform
@@ -312,19 +313,21 @@ type_to_dirac_class(tangled_rope, C, Context, mixed(Separability)) :-
 % Naturalized constraints have undetermined Dirac class:
 % the constraint algebra is unknown. Investigation IS the bracket
 % computation.
-type_to_dirac_class(naturalized, _, _, undetermined).
+type_to_dirac_class(naturalized, _, _, T) :- T = undetermined.
 
 % Unknown constraints are undetermined by definition.
-type_to_dirac_class(unknown, _, _, undetermined).
+type_to_dirac_class(unknown, _, _, T) :- T = undetermined.
 
 %% score_to_separability(+ReformScore, -Separability)
 %  Maps reformability_score to separability classification.
 %  separable = first-class and second-class components cleanly factor.
 %  partially_separable = some entanglement but reform may succeed.
 %  entangled = components cannot be cleanly separated.
-score_to_separability(Score, separable) :- Score > 0.60, !.
-score_to_separability(Score, partially_separable) :- Score > 0.30, !.
-score_to_separability(_, entangled).
+score_to_separability(Score, T) :- Score > 0.60, !,
+    T = separable.
+score_to_separability(Score, T) :- Score > 0.30, !,
+    T = partially_separable.
+score_to_separability(_, T) :- T = entangled.
 
 /* ================================================================
    SECTION 3: GAUGE FREEDOM

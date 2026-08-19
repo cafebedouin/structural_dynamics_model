@@ -74,20 +74,13 @@ DECLARED: dict[tuple[str, str], str] = {
     ("abductive_helpers.pl", "subsystem_available/1"): "input-key",
     ("boltzmann_compliance.pl", "epistemic_access_check/2"): "finding",
     ("boltzmann_compliance.pl", "expected_power_divergence/4"): "input-key",
-    ("constraint_indexing.pl", "restricted_classify/7"): "latent-B",
     ("context_profile_mining.pl", "classify_isomorphism_level/2"): "latent-B",
     ("covering_analysis.pl", "cell_short/2"): "latent-B",
     ("covering_analysis.pl", "sigma_label/2"): "latent-B",
     ("cs_kernel_registry.pl", "stance_member_provenance/3"): "latent-B",
     ("cs_pattern_detection.pl", "cs_verdict/2"): "finding",
-    ("data_repair.pl", "source_class/2"): "latent-B",
-    ("diagnostic_summary.pl", "compute_verdict/4"): "latent-B",
     ("diagnostic_summary.pl", "ds_subsystem_available/1"): "input-key",
-    ("diagnostic_summary.pl", "mismatch_source/2"): "latent-B",
     ("dirac_classification.pl", "gauge_fixed/3"): "latent-B",
-    ("dirac_classification.pl", "score_to_separability/2"): "latent-B",
-    ("dirac_classification.pl", "type_to_dirac_class/4"): "latent-B",
-    ("domain_priors.pl", "category_of/2"): "latent-B",
     ("domain_priors.pl", "infer_category_from_priors/2"): "latent-B",
     ("drl_boltzmann_analysis.pl", "has_purity_drift/2"): "latent-B",
     ("drl_boltzmann_analysis.pl", "purity_to_cut_priority/2"): "latent-B",
@@ -113,33 +106,20 @@ DECLARED: dict[tuple[str, str], str] = {
     ("invertibility_analysis.pl", "predict_rope_tangled/4"): "latent-B",
     ("invertibility_analysis.pl", "predict_snare_tangled/4"): "latent-B",
     ("invertibility_analysis.pl", "predict_three_type/4"): "latent-B",
-    ("json_report.pl", "boltzmann_label/2"): "latent-B",
-    ("json_report.pl", "live_index_label/3"): "latent-B",
     ("json_report.pl", "write_json_number/2"): "input-key",
-    ("logical_fingerprint.pl", "categorize_coupling/5"): "latent-B",
     ("logical_fingerprint.pl", "extraction_zone/2"): "latent-B",
-    ("logical_fingerprint.pl", "purity_zone/2"): "latent-B",
     ("logical_fingerprint.pl", "structural_property_holds/2"): "latent-B",
     ("logical_fingerprint.pl", "suppression_zone/2"): "latent-B",
     ("maxent_report.pl", "entropy_interpretation/2"): "latent-B",
-    ("metric_drift_events.pl", "drift_severity/3"): "latent-B",
-    ("network_dynamics.pl", "ep_base_severity/2"): "latent-B",
     ("orbit_report.pl", "characterize_family/2"): "latent-B",
     ("probe_oq197_controls.pl", "status_kind/2"): "latent-B",
     ("report_generator.pl", "completeness_to_confidence/2"): "latent-B",
     ("report_generator.pl", "generate_scenario_for_omega/5"): "input-key",
-    ("report_generator.pl", "omega_severity/2"): "latent-B",
     ("report_generator.pl", "resolve_omega_source/4"): "latent-B",
     ("routing_sink.pl", "detector_state/2"): "latent-B",
-    ("signature_detection.pl", "appears_as_rope/2"): "latent-B",
-    ("signature_detection.pl", "capture_disposition/2"): "latent-B",
-    ("signature_detection.pl", "claimed_natural/2"): "latent-B",
     ("signature_detection.pl", "classify_by_signature/3"): MUST_NOT_FIRE,
     ("signature_detection.pl", "constraint_signature/2"): MUST_NOT_FIRE,
     ("signature_detection.pl", "determine_pure_subtype/2"): "latent-B",
-    ("signature_detection.pl", "has_viable_alternatives/2"): "latent-B",
-    ("signature_detection.pl", "resolve_with_perspectival_check/4"): "latent-B",
-    ("signature_detection.pl", "signature_diagnostic_severity/3"): "latent-B",
     ("transition_paths.pl", "predicted_terminal_state/3"): "latent-B",
 }
 
@@ -173,7 +153,11 @@ DECLARED: dict[tuple[str, str], str] = {
 #                 apart. Converting one is harmless and pointless; the interesting property of
 #                 such a predicate is whether a cut in a late clause truncates the enumeration.
 #
-# Evidence is either the authored `%%` mode line or a dated read naming what settled it.
+# Evidence is either the authored `%%` mode line or a dated read naming what settled it. A row
+# RETIRED by conversion has its fact removed here in the converting change — the adjudication
+# survives in audits/2026-08-18_classb_conversion_rollout/mode_adjudication.json and in the
+# commit — so this table stays exactly co-extensive with the live worklist and the gate does
+# not accumulate permanent notes that train readers to skip them.
 # ADJUDICATION PASS: 2026-08-19, all 58 registry rows of the 2026-08-17 census
 # (audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py + hand reads for the 18
 # rows carrying no mode line).
@@ -201,8 +185,6 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("input", "authored: %% seat_overrides(+C, +Signature)"),
     ("boltzmann_compliance.pl", "expected_power_divergence/4"):
         ("input", "authored: %% expected_power_divergence(+P1, +P2, +T1, +T2)"),
-    ("constraint_indexing.pl", "restricted_classify/7"):
-        ("output", "authored: %% restricted_classify(+C, +Eps, +Chi, +Supp, +Theater, +Mutability, -Type)"),
     ("context_profile_mining.pl", "classify_isomorphism_level/2"):
         ("output", "read 2026-08-19: arg1 Evidence in, arg2 the level computed from it"),
     ("covering_analysis.pl", "cell_short/2"):
@@ -211,20 +193,8 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("output", "authored: %% sigma_label(+Sigma, -Label)"),
     ("cs_kernel_registry.pl", "stance_member_provenance/3"):
         ("output", "authored: %% stance_member_provenance(+C, +Stance, -Prov)  — morphology_suggested | hand_declared."),
-    ("data_repair.pl", "source_class/2"):
-        ("output", "read 2026-08-19: arg1 id selects, arg2 is the provenance class for it"),
-    ("diagnostic_summary.pl", "compute_verdict/4"):
-        ("output", "authored: %% compute_verdict(+ExpConflicts, +Rejections, +Tensions, -Verdict)"),
-    ("diagnostic_summary.pl", "mismatch_source/2"):
-        ("output", "read 2026-08-19: arg1 error atom selects, arg2 is the source attributed to it"),
     ("dirac_classification.pl", "gauge_fixed/3"):
         ("output", "authored: %% gauge_fixed(+Constraint, +Context, -Fixed)"),
-    ("dirac_classification.pl", "score_to_separability/2"):
-        ("output", "authored: %% score_to_separability(+ReformScore, -Separability)"),
-    ("dirac_classification.pl", "type_to_dirac_class/4"):
-        ("output", "authored: %% type_to_dirac_class(+DRType, +Constraint, +Context, -DiracClass)"),
-    ("domain_priors.pl", "category_of/2"):
-        ("output", "authored: %% category_of(+ID, -Category)"),
     ("domain_priors.pl", "infer_category_from_priors/2"):
         ("output", "read 2026-08-19: arg1 id in, arg2 the inferred category"),
     ("drl_boltzmann_analysis.pl", "has_purity_drift/2"):
@@ -259,16 +229,8 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("output", "read 2026-08-19: as predict_rope_snare/4; same lookup shape"),
     ("invertibility_analysis.pl", "predict_three_type/4"):
         ("output", "read 2026-08-19: as predict_rope_snare/4; call site :289"),
-    ("json_report.pl", "boltzmann_label/2"):
-        ("output", "authored: %% boltzmann_label(+Result, -Label)"),
-    ("json_report.pl", "live_index_label/3"):
-        ("output", "authored: %% live_index_label(+ScopeViolations, +PowerViolations, -Label)"),
-    ("logical_fingerprint.pl", "categorize_coupling/5"):
-        ("output", "authored: %% categorize_coupling(+Score, +Threshold, +StrongThreshold, +C, -Category)"),
     ("logical_fingerprint.pl", "extraction_zone/2"):
         ("output", "authored: %% extraction_zone(+Epsilon, -Zone)"),
-    ("logical_fingerprint.pl", "purity_zone/2"):
-        ("output", "authored: %% purity_zone(+Score, -Zone)"),
     ("logical_fingerprint.pl", "structural_property_holds/2"):
         ("generator", "read 2026-08-19: NOT dispatch. Sole caller is "
                       "findall(Prop, structural_property_holds(C, Prop), _) at "
@@ -281,10 +243,6 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("output", "authored: %% suppression_zone(+Supp, -Zone)"),
     ("maxent_report.pl", "entropy_interpretation/2"):
         ("output", "read 2026-08-19: arg1 entropy in, arg2 the interpretation string"),
-    ("metric_drift_events.pl", "drift_severity/3"):
-        ("output", "read 2026-08-19: arg2 drift kind selects, arg3 is the severity computed"),
-    ("network_dynamics.pl", "ep_base_severity/2"):
-        ("output", "authored: %% ep_base_severity(+EP, -Severity)"),
     ("orbit_report.pl", "characterize_family/2"):
         ("output", "authored: %% characterize_family(+Signature, -Description)"),
     ("probe_oq197_controls.pl", "status_kind/2"):
@@ -293,26 +251,12 @@ LAST_ARG: dict[tuple[str, str], tuple[str, str]] = {
         ("output", "read 2026-08-19: arg1 score in, arg2 the confidence band"),
     ("report_generator.pl", "generate_scenario_for_omega/5"):
         ("input", "authored: %% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)"),
-    ("report_generator.pl", "omega_severity/2"):
-        ("output", "authored: %% omega_severity(+OmegaID, -Severity)"),
     ("report_generator.pl", "resolve_omega_source/4"):
         ("output", "authored: %% resolve_omega_source(+OmegaID, +Subject, -Constraint, -GapPattern)"),
     ("routing_sink.pl", "detector_state/2"):
         ("output", "read 2026-08-19: arg1 constraint in, arg2 the detector state"),
-    ("signature_detection.pl", "appears_as_rope/2"):
-        ("output", "authored: %% appears_as_rope(+C, -AppearanceType)"),
-    ("signature_detection.pl", "capture_disposition/2"):
-        ("output", "authored: %% capture_disposition(+C, -Disposition)"),
-    ("signature_detection.pl", "claimed_natural/2"):
-        ("output", "authored: %% claimed_natural(+C, -ClaimType)"),
     ("signature_detection.pl", "determine_pure_subtype/2"):
         ("output", "authored: %% determine_pure_subtype(+C, -Subtype)"),
-    ("signature_detection.pl", "has_viable_alternatives/2"):
-        ("output", "authored: %% has_viable_alternatives(+Constraint, -HasAlternatives)"),
-    ("signature_detection.pl", "resolve_with_perspectival_check/4"):
-        ("output", "authored: %% resolve_with_perspectival_check(+C, +ModalType, +Signature, -AdjustedType)"),
-    ("signature_detection.pl", "signature_diagnostic_severity/3"):
-        ("output", "authored: %% signature_diagnostic_severity(+C, +Signature, -Severity)"),
     ("transition_paths.pl", "predicted_terminal_state/3"):
         ("output", "authored: %% predicted_terminal_state(+ConstraintID, -State, -Confidence)"),
 }

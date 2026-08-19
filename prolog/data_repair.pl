@@ -328,10 +328,12 @@ grid_provenance(IntervalID, prov(A, I, P, Abs, Total)) :-
     aggregate_all(count, member(imputed,  Classes), P),
     aggregate_all(count, member(absent,   Classes), Abs).
 
-source_class(m_gen, injected) :- !.
-source_class(ID, imputed) :-
-    atom(ID), sub_atom(ID, 0, _, _, repair_m_), !.
-source_class(_, authored).
+source_class(m_gen, T) :- !,
+    T = injected.
+source_class(ID, T) :-
+    atom(ID), sub_atom(ID, 0, _, _, repair_m_), !,
+    T = imputed.
+source_class(_, T) :- T = authored.
 
 %% stray_injected_count(+IntervalID, -S)
 %  m_gen facts for this interval that sit on NO grid slot — the
