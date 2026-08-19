@@ -129,6 +129,14 @@ run "paper carriage"  "$PY" python/amnesiac_carriage_check.py --check
 run "audit writeup"  "$PY" python/audit_writeup_gate.py --check
 run "apparatus"      "$PY" python/apparatus_instrument.py --check
 run "gap surfaces"   "$PY" python/check_gap_status_surfaces.py
+# Dated obligations turn RED on their day (OQ-317 ruling, 2026-08-19). Scans allowlist
+# REVIEW-BY tokens AND ISSUES **Sunset:** lines on active entries — two surfaces on purpose,
+# so neither obligation dies with the other's carrier (row removal in October must not
+# silence the November socket disposition). Licensed responses to a red are in the checker
+# docstring: review, or extend BY OPERATOR RULING recorded in the owning entry — never a
+# silent date edit. Selftest rides --check: past fires, SAME-DAY fires (the boundary),
+# future declines, malformed fires, closed-entry Sunset declines.
+run "sunset"         "$PY" python/sunset_check.py
 run "cli selftest"   "$PY" python/cli.py selftest
 run "tripwire hook"  "$PY" python/pretooluse_tripwires.py --selftest
 # RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
