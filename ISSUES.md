@@ -324,6 +324,7 @@ Pre-existing latent `dirac_classification:standard_context/1` error in the produ
 ## OQ-17 — `testsets_3000/` quarantined from loader: abandoned or unwired?
 
 **Status:** disposed — superseded by the 2026-06-05 archive consolidation
+**Disposition:** superseded — backfilled 2026-08-19 from the entry's own prose (OQ-291)
 **Origin:** Temporal excavation, May 2026.
 **Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob); `prolog/cs_drift_mismatch.pl:113`
 and `prolog/cs_corpus_analysis.pl:194` (hardcoded flat globs).
@@ -1134,6 +1135,7 @@ Count=0 → the `natural_law` gate's `BeneficiaryCount==0` is vacuously true cor
 populating `intent_power_change` *alone* would activate the gate. Dead on **both** classification and
 committer-drift pipelines. **Decision:** populate (author + schema + prompt) the whole subsystem, or
 delete `intent_engine` and its readers. **High-judgment.**
+**Disposition:** wont_build — backfilled 2026-08-19 (declare-absence ruling = GAP-08; OQ-291)
 
 ## OQ-37 — G2: engine-read `constraint_metric` names with no author and empty corpus
 
@@ -6595,6 +6597,7 @@ re-measurement), OQ-56, OQ-150.
 **Ω-type:** Ω_C (design — a new commentary-grade diagnostic; **annotates, never overrides** the type).
 
 **Status:** disposed — answered-reframed (negative), 2026-07-24: the specified deliverable (a per-seat suppression-collapse curve) is NOT built; the cross-section is unfingerprintable under baseline calibration. No instrument. Evidence: `audits/2026-07-24_oq152_seat_crosssection/`.
+**Disposition:** reframed — backfilled 2026-08-19 from the entry's own prose (OQ-291)
 **Priority:** 3
 **Origin:** suppression/scaffold thread off OQ-56 (operator, 2026-06-19); the temporal half is
 `design_gaps.md` GAP-14 (this OQ was its commentary-grade static cross-section). The
@@ -7580,6 +7583,7 @@ bypass is untouched — the flag is commentary-grade, it annotates and never ove
 **Ω-type:** Ω_C (read-site render surface). Splits from OQ-187 (the standing legend note shipped; this was the per-constraint enrichment OQ-187's ruling deferred).
 
 **Status:** disposed — won't-build; the gating read (2026-06-27) collapsed the value while the standing note already covers the case.
+**Disposition:** wont_build — backfilled 2026-08-19 from the entry's own prose (OQ-291)
 **Priority:** 4
 **Origin:** OQ-187 resolution 2026-06-27. The proposal: lift the authored `preference`-type direction-omega (e.g. `coordination_vs_destabilization_framing`) beside the verdict where it exists.
 **Deps:** splits_from OQ-187
@@ -12672,6 +12676,7 @@ channel. The successor inherits the design, not the carrier.
 
 **Status:** disposed — retracted 2026-08-12, **carrier misidentified**, not answered. The pre-registered
 outcome table was written over the always-loaded set; that set is not where truncation lives.
+**Disposition:** retracted — backfilled 2026-08-19 from the entry's own prose (OQ-291)
 **Priority:** 1
 
 **Origin:** minted 2026-08-12 from `amnesiac_institution_v0_6.md` §3.5 (carried there as
@@ -13257,9 +13262,28 @@ can be wrong.
 **Ω-type:** Ω_C — what the token set should be is a naming ruling with no seat-free fact. That a
 retraction currently has nowhere to land is Ω_E and is settled below.
 
-**Status:** open — minted 2026-08-12 from the OQ-286 close.
+**Status:** resolved — 2026-08-19 (operator ruling, second-instance reviewed): **option 2** — a
+`**Disposition:**` sub-field on disposed entries, closed enum {retracted, wont_build,
+superseded, reframed}, required forward-only, validated by `issues_status.py` (5-control
+selftest rides `--check`), grammar recorded in this file's footer. Chosen over a new `retracted`
+token because the sub-field fixes ALL FOUR conflations while `disposed` keeps meaning `disposed`
+for every existing consumer, and the backfill needed no status-line rewrites on closed entries.
+**Backfill, instrumented (the residue is enumerable, not invisible):** all 6 then-disposed
+entries examined; 5 labeled from their own prose (OQ-17 superseded, OQ-36 wont_build, OQ-152
+reframed, OQ-189 wont_build, OQ-286 retracted); **1 left unlabeled — OQ-59, straddles
+wont_build/reframed** — recorded in the checker's `BACKFILL_UNLABELED` exemption set, so
+unlabeled-because-ambiguous stays distinguishable from unlabeled-because-nobody-looked.
+**Mixture caveat, pre-committed now for OQ-288's census:** any count over Disposition values
+spans two labeling regimes (prose-clear backfill + enforced forward) and must say so.
+**Enum check performed at ruling:** OQ-285 lands OUTSIDE the enum — it resolved (a real answer:
+no arm, GAP-40) even though its sub-finding was a mis-aimed binary; `retracted` is for
+never-answered, recorded in the footer so the distinction survives. **Fifth-kind discipline in
+the footer:** a new kind is a deliberate grammar amendment, never a stretch of `reframed`.
+Discrimination witnessed at landing: pre-backfill the new checker named exactly the 5 unlabeled
+disposed entries and declined on exempt OQ-59; its first live run also caught five LEGACY
+`**Disposition (…)**` prose headings the ruling didn't foresee (regex tightened to the exact
+sub-field form; fail-closed side still covers malformed variants).
 **Priority:** 5
-**Deps:** blocked_on_human oq291-status-token-ruling
 
 **The gap, witnessed.** The status grammar admits `{open, investigating, mitigated, partial,
 resolved, disposed, future}`. OQ-286 was **retracted** — its carrier was misidentified, so the
@@ -16002,6 +16026,21 @@ deliberately not slated for work — realistically won't get done — but is kep
 substrate changes. It is NOT in `omega_resolver.py`'s ACTIVE set, so a `future` entry drops
 out of the workable frontier and the active counts; unlike resolved/disposed it carries no
 resolution witness, so the rotted-witness check skips it.
+*Disposition sub-field (OQ-291 ruling, 2026-08-19) — disposed entries only:
+`**Disposition:** <kind>[ — <detail>]`, kind ∈ {retracted, wont_build, superseded, reframed}.
+`disposed` conflates four epistemically different closes (a retraction — the question was never
+answered and never will be in the form asked — being the highest-value one for auditing whether
+the apparatus is AIMED); the sub-field makes them machine-readable without touching the status
+token set. REQUIRED forward-only on new disposed entries (checker-enforced); the 2026-08-19
+backfill labeled 5 of 6 then-disposed entries from their own prose and recorded the residue
+(OQ-59, straddles wont_build/reframed) as examined-but-unlabeled in the checker's exemption set —
+distinguishable from unlabeled-because-nobody-looked. A FIFTH kind is a deliberate grammar
+amendment (this footer + `issues_status.py` + OQ-291), never a stretch of `reframed` — that
+pressure will arrive and this line exists for that moment. A mis-aimed question that still
+yielded a real answer resolves (OQ-285 precedent); `retracted` is for never-answered. Any count
+over Disposition values is a count over TWO labeling regimes (prose-clear backfill + enforced
+forward) and must say so — pre-committed for OQ-288's census.*
+
 Census: `python3 python/issues_status.py` (table + counts; pass a token to filter);
 `--check` exits 1 on any malformed entry — run it after editing this file, and ALWAYS after
 merging a worktree branch that touches it: since 2026-06-10 it also fails on duplicate OQ

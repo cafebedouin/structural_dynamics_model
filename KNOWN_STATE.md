@@ -45,6 +45,26 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: the 18-ruling BLOCKED-ON-YOU session — and its two recurring shapes, recorded ahead of the individual rulings
+**Files:** ISSUES.md, python/issues_status.py, python/sunset_check.py, python/apparatus_instrument.py, audits/INVESTIGATIONS.md, docs/design/design_gaps.md, docs/technical/build_discipline.md, docs/commitment_systems/commitment_systems_sketch_v6.md
+**Tier:** correction-key
+
+All 18 BLOCKED-ON-YOU items ruled 2026-08-19 (each second-instance reviewed; per-ruling records
+in the OQ entries and per-commit witnesses). **The thing worth recording is not the individual
+rulings but that FOUR of them turned on the same distinction — an UNTESTED instrument vs a
+FAILED one (OQ-127's 0-TP-by-no-material; OQ-276's no-decline-ever; OQ-292's unrecheckable
+disposition; OQ-281's corpus-scoped zero) — and THREE MORE on whether a stated trigger could
+actually FIRE (OQ-295's prevention-invisible ratchet; OQ-297's unfireable branch (b); OQ-299's
+re-discovery window).** Those two shapes were the session's real content, and they are a
+reasonable pair of opening questions for any future ruling pass: (1) is this zero a tested
+absence or an untested instrument? (2) can this trigger's falsifying branch actually fire, and
+who is reading what when it does? Mechanisms minted for them: `sunset_check.py` (dated
+obligations gate-enforced), named read-sites (undated triggers), `audits/INVESTIGATIONS.md`
+(registration making `no` reachable), the `**Disposition:**` sub-field (retraction countable).
+OQ-291's landing also produced two live catches of its own instruments: the checker's first run
+flagged five legacy `**Disposition (…)**` prose headings (regex tightened), and the ledger
+counter counted its own header examples (fencing-aware fix, two-sided control pasted).
+
 ## 2026-08-19 — LANDED: OQ-317 trigger enforced — sunset_check.py gate row; the disposition itself deliberately NOT ruled early
 **Files:** python/sunset_check.py, scripts/gate.sh, ISSUES.md, docs/technical/build_discipline.md
 **Tier:** landed

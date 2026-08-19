@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "b3380209a789c175b3012a5ec1e201db5c44e458",
+    "store_version": "7f7611b9174efc9ad0148d067383b6d9db234031",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T18:18:56"
+    "generated_at": "2026-08-19T18:26:45"
   },
-  "issues_sha": "1b417e8a40166d78bc1786f15cafa0026944f7c6e2b0b272279c46051f2e4425",
+  "issues_sha": "b2a053108fbb111db41f6b78ed07307ca21f960c43cd810f140d76837c013472",
   "n_entries": 327,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 161,
+    "resolved": 162,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 122,
+    "open": 121,
     "partial": 6
   },
   "active": [
@@ -1313,25 +1313,6 @@
       ]
     },
     {
-      "id": "OQ-291",
-      "status": "open",
-      "priority": 5,
-      "summary": "`retracted` has no status token, so \"the question was misaimed\" is indistinguishable from \"the question was answered\" in every machine view",
-      "deps": [
-        "blocked_on_human oq291-status-token-ruling"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-01",
-        "OQ-152",
-        "OQ-276",
-        "OQ-286",
-        "OQ-288",
-        "OQ-289",
-        "OQ-290"
-      ]
-    },
-    {
       "id": "OQ-292",
       "status": "open",
       "priority": 2,
@@ -1821,8 +1802,12 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-51",
+        "OQ-59",
         "OQ-127",
-        "OQ-242"
+        "OQ-242",
+        "OQ-285",
+        "OQ-288",
+        "OQ-291"
       ]
     }
   ],
@@ -2007,7 +1992,9 @@
       "summary": "`testsets_3000/` quarantined from loader: abandoned or unwired?",
       "deps": [],
       "cross_refs": [],
-      "mentioned_in": []
+      "mentioned_in": [
+        "OQ-291"
+      ]
     },
     {
       "id": "OQ-18",
@@ -2232,7 +2219,8 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-43",
-        "OQ-44"
+        "OQ-44",
+        "OQ-291"
       ]
     },
     {
@@ -3759,7 +3747,8 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-56",
-        "OQ-153"
+        "OQ-153",
+        "OQ-291"
       ]
     },
     {
@@ -3970,7 +3959,8 @@
       "mentioned_in": [
         "OQ-101",
         "OQ-108",
-        "OQ-187"
+        "OQ-187",
+        "OQ-291"
       ]
     },
     {
@@ -4526,7 +4516,8 @@
       "mentioned_in": [
         "OQ-287",
         "OQ-289",
-        "OQ-290"
+        "OQ-290",
+        "OQ-291"
       ]
     },
     {
@@ -4555,6 +4546,28 @@
       "mentioned_in": [
         "OQ-289",
         "OQ-292"
+      ]
+    },
+    {
+      "id": "OQ-291",
+      "status": "resolved",
+      "priority": 5,
+      "summary": "`retracted` has no status token, so \"the question was misaimed\" is indistinguishable from \"the question was answered\" in every machine view",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-01",
+        "OQ-17",
+        "OQ-36",
+        "OQ-59",
+        "OQ-152",
+        "OQ-189",
+        "OQ-276",
+        "OQ-285",
+        "OQ-286",
+        "OQ-288",
+        "OQ-289",
+        "OQ-290"
       ]
     },
     {
