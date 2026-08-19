@@ -1,0 +1,91 @@
+# partition — OQ-303(a) `latent-B` rows, both instrument columns
+
+**Generated** by `partition.py` (do not hand-edit — regenerate). Executed
+2026-08-18. Worklist size read from `python/dispatch_head_check.py` `DECLARED`:
+**N_latentB = 58**, and the row count below is asserted equal to it.
+
+Columns: `rx` = regex arm (`caller_sweep.py`) bound call sites; `cw` = codewalk arm
+(`codewalk_caller_check.py`) bound call sites, with total sites seen in parentheses;
+`uni` = sites the codewalk arm resolves ONLY because `prolog_codewalk` executes
+`A=B` while walking (evaluate true minus evaluate false).
+
+## Counts
+
+- `converts-clean` — 55
+- `live-output-path` — 1
+- `regex-only` — 2
+
+- unification-bound sites across all rows: **0**
+- rows the codewalk arm could not resolve: **2**
+
+## Rows
+
+| # | file | predicate | disposition | rx | cw | uni | witness a conversion owes |
+|---|---|---|---|---|---|---|---|
+| 1 | `abductive_helpers.pl` | `fpn_band/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 2 | `abductive_helpers.pl` | `seat_overrides/2` | `converts-clean` | 0 | 0 (0) | 0 | template application; no six-leg run |
+| 3 | `boltzmann_compliance.pl` | `expected_power_divergence/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 4 | `constraint_indexing.pl` | `restricted_classify/7` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 5 | `context_profile_mining.pl` | `classify_isomorphism_level/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 6 | `covering_analysis.pl` | `cell_short/2` | `converts-clean` | 0 | 0 (3) | 0 | template application; no six-leg run |
+| 7 | `covering_analysis.pl` | `sigma_label/2` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 8 | `cs_kernel_registry.pl` | `stance_member_provenance/3` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 9 | `data_repair.pl` | `source_class/2` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 10 | `diagnostic_summary.pl` | `compute_verdict/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 11 | `diagnostic_summary.pl` | `mismatch_source/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 12 | `dirac_classification.pl` | `gauge_fixed/3` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 13 | `dirac_classification.pl` | `score_to_separability/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 14 | `dirac_classification.pl` | `type_to_dirac_class/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 15 | `domain_priors.pl` | `category_of/2` | `converts-clean` | 0 | 0 (6) | 0 | template application; no six-leg run |
+| 16 | `domain_priors.pl` | `infer_category_from_priors/2` | `converts-clean` | 0 | 0 (0) | 0 | template application; no six-leg run |
+| 17 | `drl_boltzmann_analysis.pl` | `has_purity_drift/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 18 | `drl_boltzmann_analysis.pl` | `purity_to_cut_priority/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 19 | `drl_boltzmann_analysis.pl` | `qualify_action/5` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 20 | `drl_boltzmann_analysis.pl` | `raw_urgency/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 21 | `drl_composition.pl` | `composition_rule/3` | `converts-clean` **[adjudicated]** | 5 | 0 (1) | 0 | Regex arm reports 5 bound sites; ALL FIVE ARE PROSE inside block comments (dirac_classification.pl comment spans 224-239 and 429-455, verified by reading the delimiters 2026-08-18). caller_sweep.py's is_comment() skips only lines beginning `%` or `*`, and these begin `behavior:` / `- composition_rule(`. Already adjudicated the same way at audits/2026-08-17_bound_dispatch_hardening/RECON.md:95. The codewalk arm's 0 is the correct reading; the disagreement is a regex FALSE POSITIVE. |
+| 22 | `drl_core.pl` | `dr_action/3` | `converts-clean` | 0 | 0 (3) | 0 | template application; no six-leg run |
+| 23 | `drl_counterfactual.pl` | `estimate_impact_indexed/5` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 24 | `fpn_report.pl` | `ep_band/2` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 25 | `gap_diagnostic.pl` | `gate_description/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 26 | `giant_component_analysis.pl` | `action_band/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 27 | `giant_component_analysis.pl` | `would_cross_threshold/5` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 28 | `invertibility_analysis.pl` | `chi_subband/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 29 | `invertibility_analysis.pl` | `predict_rope_snare/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 30 | `invertibility_analysis.pl` | `predict_rope_tangled/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 31 | `invertibility_analysis.pl` | `predict_snare_tangled/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 32 | `invertibility_analysis.pl` | `predict_three_type/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 33 | `logical_fingerprint.pl` | `categorize_coupling/5` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 34 | `logical_fingerprint.pl` | `extraction_zone/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 35 | `logical_fingerprint.pl` | `purity_zone/2` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 36 | `logical_fingerprint.pl` | `structural_property_holds/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 37 | `logical_fingerprint.pl` | `suppression_zone/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 38 | `maxent_report.pl` | `entropy_interpretation/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 39 | `metric_drift_events.pl` | `drift_severity/3` | `converts-clean` | 0 | 0 (4) | 0 | template application; no six-leg run |
+| 40 | `network_dynamics.pl` | `ep_base_severity/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 41 | `orbit_report.pl` | `characterize_family/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 42 | `probe_oq197_controls.pl` | `status_kind/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 43 | `report_generator.pl` | `completeness_to_confidence/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 44 | `report_generator.pl` | `generate_scenario_for_omega/5` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 45 | `report_generator.pl` | `omega_severity/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 46 | `report_generator.pl` | `resolve_omega_source/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 47 | `routing_sink.pl` | `detector_state/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 48 | `signature_detection.pl` | `appears_as_rope/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 49 | `signature_detection.pl` | `capture_disposition/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 50 | `signature_detection.pl` | `claimed_natural/2` | `converts-clean` **[adjudicated]** | 3 | 0 (1) | 0 | Regex arm reports 3 bound sites, all REAL, all inside a Prolog goal string embedded in python/audits/oq49_override_remeasure.py:73,75,93 (first committed 2026-06-14, so present at the 2026-08-17 sweep). The codewalk arm structurally cannot see goal strings in .py files — THIS IS THE REGEX ARM'S GENUINE UNIQUE CAPABILITY, witnessed. Adjudicated class B with note at RECON.md:96 (point-in-time audit probe, no live output path). Conversion must update that probe in the same change. |
+| 51 | `signature_detection.pl` | `determine_pure_subtype/2` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 52 | `signature_detection.pl` | `has_viable_alternatives/2` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 53 | `signature_detection.pl` | `resolve_with_perspectival_check/4` | `converts-clean` | 0 | 0 (1) | 0 | template application; no six-leg run |
+| 54 | `signature_detection.pl` | `signature_diagnostic_severity/3` | `converts-clean` | 0 | 0 (2) | 0 | template application; no six-leg run |
+| 55 | `transition_paths.pl` | `predicted_terminal_state/3` | `converts-clean` | 0 | 0 (3) | 0 | template application; no six-leg run |
+| 56 | `json_report.pl` | `boltzmann_label/2` | `regex-only` | 0 | UNRESOLVED | - | NOT PRE-REGISTERED — see partition.md §Prereg gap. The codewalk arm returned no verdict for this row, so `converts-clean` (which requires zero under BOTH arms) cannot be assigned. Regex-arm evidence only. |
+| 57 | `json_report.pl` | `live_index_label/3` | `regex-only` | 0 | UNRESOLVED | - | NOT PRE-REGISTERED — see partition.md §Prereg gap. The codewalk arm returned no verdict for this row, so `converts-clean` (which requires zero under BOTH arms) cannot be assigned. Regex-arm evidence only. |
+| 58 | `signature_detection.pl` | `signature_grade/2` | `live-output-path` **[adjudicated]** | 0 | 1 (2) | 0 | NEW — never adjudicated. Codewalk finds a bound caller the regex scored 0 for (caller_sweep_output.txt:251): signature_detection.pl:1951, `signature_severity(C, moderate) :- signature_grade(C, correction).` The call is the clause's LAST goal on its own line, so caller_sweep.py's is_clause_head() heuristic reads the terminating `.` as a fact and skips it. The call existed at the census HEAD (git show 9a5d8526:prolog/signature_detection.pl -> line 1901), so this is a true false negative of the regex arm at sweep time, not a later addition. It is on a LIVE OUTPUT PATH: signature_severity/2 -> diagnostic_summary:join_alerts/2:749 -> the OQ-98 verdict_join headline. Conversion owes the full six-leg clean-vs-edited pair. |
+
+## Bound call sites found (codewalk arm)
+
+- `signature_detection.pl signature_grade/2` — prolog/signature_detection.pl:1951 caller=signature_detection:signature_severity/2 atom=correction
+
+## Bound call sites found (regex arm)
+
+- `drl_composition.pl composition_rule/3` — prolog/dirac_classification.pl:235 atom=piton; prolog/dirac_classification.pl:450 atom=rope; prolog/dirac_classification.pl:451 atom=snare; prolog/dirac_classification.pl:452 atom=mountain; prolog/dirac_classification.pl:454 atom=piton
+- `signature_detection.pl claimed_natural/2` — python/audits/oq49_override_remeasure.py:73 atom=explicit_mountain_claim; python/audits/oq49_override_remeasure.py:75 atom=natural_law_signature_match; python/audits/oq49_override_remeasure.py:93 atom=explicit_mountain_claim

@@ -14023,6 +14023,24 @@ future narrowing of that row's scope cannot silently uncover the retired entry.
 wrong tool (semidet is legitimate for contexts the fit doesn't cover). Named here so the
 writeup's OPEN is routed; needs its own census before any fix.
 
+**(a) RE-WITNESSED 2026-08-18 — the partition is `audits/2026-08-18_bound_caller_rewitness/`
+(`partition.md` is the receiver's worklist).** `latent-B` meant "no live bound caller found by
+`caller_sweep.py`", a single-line regex; a second arm (`python/codewalk_caller_check.py` +
+`prolog/codewalk_caller.pl`, `library(prolog_codewalk)`, module-resolved) splits the 58
+`latent-B` rows (registry count, not the "~60" above) into **55 `converts-clean` / 1
+`live-output-path` / 2 `regex-only`**. The one live row is `signature_detection.pl
+signature_grade/2` — called bound at `signature_detection.pl:1951` on the
+`signature_severity/2 → diagnostic_summary:join_alerts/2 → verdict_join` headline path, missed
+by the regex because the call ends its clause and the sweep's clause-head heuristic read the
+`.` as a fact; it owes the six-leg pair, not the template, and `codewalk_caller_check --check`
+is RED on it until converted or reclassified (deliberately NOT gate-wired — that is a standing
+red light and an operator call). The two `regex-only` rows are `json_report.pl`'s, which the
+codewalk arm cannot walk at all. The arms are **not nested** (disjointness witnessed both ways,
+WRITEUP §5), and the residue class the unit was built to declare turned out not to be shared —
+`prolog_codewalk` executes `A=B` while walking, so unification-bound selectors resolve; that
+stratum is measured **0** on the live engine, and the genuinely unmeasured residue is
+runtime-computed selectors only. Conversions themselves are still unstarted.
+
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,
 single-sided unification, or **`:- det/1`** determinism declarations. The framing OQ does

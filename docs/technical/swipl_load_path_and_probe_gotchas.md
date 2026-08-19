@@ -556,6 +556,30 @@ extensions":**
   comparison silently confounds interpreter version with the thing under test. OQ-301 is
   `blocked_on_human giantcomp-round2-return`.
 
+### `library(prolog_codewalk)` — ADOPTED 2026-08-18
+
+A static call-site walker over the **loaded** program: module-resolved callees, multi-line
+clause bodies, nested-term arguments, goals reached through meta-predicates. Wired as
+`prolog/codewalk_caller.pl` + `python/codewalk_caller_check.py` (call-site arm of the
+bound-dispatch registry). Never used in this repo before that date (prior-art grep: 0 hits).
+
+**Adopted with a caveat that is the whole reason it exists: it is NOT a strict superset of a
+source regex.** The two have *disjoint* blind spots, witnessed in both directions on real
+engine code (`audits/2026-08-18_bound_caller_rewitness/`, §5): the regex reads prose inside
+block comments as call sites and misses a body goal that ends a clause (`is_clause_head()`
+takes the terminating `.` for a fact — that miss concealed a live bound caller on the
+`verdict_join` path for a whole audit cycle); codewalk cannot see goal strings embedded in
+`.py`/`.sh` files, nor anything in a module the load chain does not reach (`[stack]` alone
+misses 11 of 26 registry files, four of which carry no `:- module/2` header at all — resolve
+with `source_file/2`, not `module_property/2`). Run both and read the disagreement.
+
+**Two behaviours to know before using it.** `evaluate` is ON by default and **executes `A=B`
+while walking** (`prolog_codewalk.pl:663-664`), so a selector bound by a same-clause
+unification resolves to a bound atom — useful, and the reason `run_codewalk_caller/2` exposes
+the flag (true-minus-false measures that stratum). It is also the reason the walker **does not
+terminate on `prolog/json_report.pl`** (>90 s vs 0.5–0.7 s for every other engine file; 0.6 s
+under `evaluate(false)`) — that file is a declared, printed load exclusion.
+
 **Not covered by any OQ, and correctly so:** `must_be/2` typed wrappers at `unknown`-vs-
 number read sites. That is not a language-adoption question, it is the existing
 fail-closed rule; add them at the site when the site is being edited anyway.
