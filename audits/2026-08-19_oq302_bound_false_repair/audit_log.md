@@ -104,3 +104,60 @@ on every row. Exactly the frozen verdict text: the verdict stays constant *in ki
 
 **Site comment MAY state that the payload becomes per-constraint** (PREREG §3 row 1). It may not
 say the check now works.
+
+### R4. Commit-1 second witness — composed vs shipped, matched by arm flag
+
+`compare_arms.py`; table in `commit1_second_witness.md`. The probe re-run against the
+committed source detected `source_arm=repaired` **by reading the clause**, on all six legs
+(Phase 2 detected `defect` on all six). The `arm(repaired)` column, matched by arm flag and by
+`(leg, constraint_id)` — never by column position:
+
+**5311/5311 rows identical.** `result__arm_defect` is `NOT_MEASURED` on 5311/5311 post-commit
+(the defect clause no longer exists in the source). The composed program of PREREG §0a and the
+shipped source agree exactly, so the Phase-2 table describes the program that actually shipped.
+
+Suites after Commit 1: OQ-137 reading totality **10/10** on `run_pipeline`'s own load chain
+(`-l stack.pl -l reading_registry.pl -l commentary_census.pl -l tests/test_reading_totality.pl`
++ `corpus_loader:load_all_testsets, run_tests(reading_totality)`); `run_dynamic_suite` **GOOD**
+(0 errors; 3 pre-existing warnings, all on `zionist_legitimacy_basis__national_liberation_reading`).
+
+### R5. The gate caught an under-scoped claim — `latent-B` asserts more than the enumeration proved
+
+Reclassifying the registry row `finding` → `latent-B` turned the `codewalk caller` row **RED**:
+the module-resolved arm found **1 bound call site** on the predicate. Phase 0's claim —
+*"`:577` is the only reachable bound-`false` call site"* — was correct; the **class label** is
+broader (`latent-B` = "no live BOUND caller"), and there is one: `boltzmann_compliant/2` at
+`boltzmann_compliance.pl:94-95`, bound-**`true`**.
+
+Adjudicated into `prolog/codewalk_caller_allowlist.txt` with `ATOMS=true` and a REMOVE
+condition, on evidence this run already holds — a **naturally-arising two-sided record**, no
+plant. `boltzmann_compliant/2`'s only access gate is that bound-`true` call, so its behaviour
+over the corpus is a direct read on whether the idiom is over-permissive:
+
+```
+eac (unbound) = false : 753   -> T1 = fail(factorization, inconclusive(insufficient_classifications))  753/753
+eac (unbound) = true  : 4558  -> T1 = pass(factorization) 512 | fail(factorization, non_compliant(...)) 4046
+```
+
+It **declines on exactly the 753 the unbound call declines on** and **fires on exactly the
+4,558 it fires on** — zero over-permissive rows. That is the head-unification asymmetry the
+file's own header states at `:476-477`, measured: bound-`true` fails through to *no solution*,
+bound-`false` falls through to *a wrong one*.
+
+`purity_scoring.pl:49` carries the same bound-`true` idiom and is **not** reported by this arm
+(its declared blind spot: the walk resolves the defining module's program). Recorded so the
+allowlist row is not read as a complete census of bound-`true` callers.
+
+### R6. Registry disposition, and what it does NOT license
+
+`("boltzmann_compliance.pl", "epistemic_access_check/2")` is now `latent-B` with the required
+`LAST_ARG` fact `("output", authored: %% epistemic_access_check(+Constraint, -Sufficient))`.
+
+**This re-populates a class OQ-303 recorded as EMPTY on 2026-08-19** (`latent-B` 0 → 1). The
+count is correct and the OQ-303 line is corrected in place rather than left to read as still
+true. **This row is a genuine class-B CONVERSION candidate on OQ-303's own criteria** — output
+last argument, and *reached* (5 callers, on the `purity_score` / `fingerprint_coupling` /
+`structural_purity` output paths). It was excluded from the 2026-08-19 rollout only because it
+was classed `finding` at the time. Converting it owes the six-leg clean-vs-edited pair, not the
+template; **routed to OQ-303 arm (a), deliberately not done here** — it is a live-output-path
+semantics change and belongs to that OQ's spend, not this one's.
