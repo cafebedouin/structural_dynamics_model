@@ -315,6 +315,18 @@ red on the revert. New dispatch predicates use the same idiom; an atom-headed on
 flagged by the gate row until declared or converted. Witnesses:
 `audits/2026-08-17_bound_dispatch_hardening/`.
 
+**Rule 4c — the idiom is valid ONLY where the last argument is an OUTPUT (2026-08-19).**
+Applied to a predicate whose last argument is an INPUT the caller supplies, the rewrite makes
+the first clause match every call, cut, and render every later clause unreachable — silently,
+with every structural check green (witnessed: 129/279 `testsets` to 1106/1106 `kernel_v1`).
+`dispatch_head_check.py` now carries `LAST_ARG`, one row per registry entry with its verdict
+(`output` / `input` / `generator`) and the evidence that settled it; a row with no fact, or one
+recorded `input`, turns the gate row red. **Before converting anything, read the predicate's
+`%%` mode line** — that is where the answer already is, and it is what nothing in the instrument
+chain was reading. Registry classes now include `unreached` (called by no corpus) and
+`generator` (never cut-ordered dispatch). Witnesses:
+`audits/2026-08-18_classb_conversion_rollout/`.
+
 ### The chi formula
 
 ```

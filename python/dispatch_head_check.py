@@ -21,6 +21,15 @@ REGISTRY SEMANTICS (declaration-based, both directions red-capable):
   latent-B    expected to fire; class-B latent member (shape present, no live bound
               caller found in the 2026-08-17 caller sweep). Firing = OK. Stops firing
               -> stale note (converted/removed; retire the entry), exit 0.
+  generator   expected to fire; the predicate is NOT CUT-ORDERED DISPATCH AT ALL — its caller
+              enumerates it (findall/setof/forall), so there is no bound-probe hazard for the
+              conversion template to retire. A CATEGORY fact, and it OUTRANKS `unreached`: a
+              generator that no corpus calls is unreached *downstream of* never having been
+              dispatch, so the category is the thing to record and the reachability fact is
+              not the finding. Classed here rather than left `unreached` with a standing note
+              (operator, 2026-08-19) — a note that fires on every run is not a note, it is a
+              label, and standing notes train readers to skip notes. Same ruling as the
+              knowingly-red gate row: put the fact in the class, not in the output.
   unreached   expected to fire; the shape is present AND the predicate is CALLED BY NOTHING
               on any corpus this project has. A DIFFERENT FACT FROM latent-B, with a
               different remedy, and it gets its own disposition so the next reader does not
@@ -125,7 +134,7 @@ DECLARED: dict[tuple[str, str], str] = {
     ("invertibility_analysis.pl", "predict_three_type/4"): "unreached",
     ("json_report.pl", "write_json_number/2"): "input-key",
     ("logical_fingerprint.pl", "extraction_zone/2"): "unreached",
-    ("logical_fingerprint.pl", "structural_property_holds/2"): "unreached",
+    ("logical_fingerprint.pl", "structural_property_holds/2"): "generator",
     ("logical_fingerprint.pl", "suppression_zone/2"): "unreached",
     ("maxent_report.pl", "entropy_interpretation/2"): "unreached",
     ("orbit_report.pl", "characterize_family/2"): "unreached",
@@ -396,7 +405,7 @@ def main(argv: list[str]) -> int:
     # `latent-B` class, not a nice-to-have. A row with no fact has not been adjudicated, and
     # `latent-B` would license the template on it.
     for key, cls in sorted(DECLARED.items()):
-        if cls not in ("latent-B", "unreached"):
+        if cls not in ("latent-B", "unreached", "generator"):
             continue
         fact = LAST_ARG.get(key)
         if fact is None:
@@ -404,12 +413,12 @@ def main(argv: list[str]) -> int:
                 f"{cls} {key[0]} {key[1]} has NO LAST_ARG fact — the class licenses the "
                 f"conversion template, which is valid only if the last argument is an output. "
                 f"Adjudicate and record it (with evidence) in the same change.")
-        elif fact[0] == "generator":
-            notes.append(
-                f"{cls} {key[0]} {key[1]} is LAST_ARG=generator — not cut-ordered dispatch "
-                f"(its caller enumerates it), so the conversion template retires no hazard "
-                f"here. Not an error; do not fold it into the `output` population when "
-                f"counting what the rollout covers.")
+        elif fact[0] == "generator" and cls != "generator":
+            problems.append(
+                f"{cls} {key[0]} {key[1]} is recorded LAST_ARG=generator — it is not "
+                f"cut-ordered dispatch at all (its caller enumerates it), so it belongs in the "
+                f"`generator` class, not `{cls}`. The category fact outranks the reachability "
+                f"one.")
         elif fact[0] == "input":
             problems.append(
                 f"{cls} {key[0]} {key[1]} is recorded LAST_ARG=input ({fact[1]}) — the "
@@ -430,7 +439,7 @@ def main(argv: list[str]) -> int:
     n_in = sum(1 for v in LAST_ARG.values() if v[0] == "input")
     n_gen = sum(1 for v in LAST_ARG.values() if v[0] == "generator")
     print(f"  last-arg facts: {len(LAST_ARG)} row(s) adjudicated ({n_out} output, {n_in} "
-          f"input, {n_gen} generator); every latent-B/unreached row carries one")
+          f"input, {n_gen} generator); every latent-B/unreached/generator row carries one")
     print(f"dispatch_head_check: GREEN — {scanned} engine files, {len(hitset)} shape "
           f"hit(s) all declared ({n_declared} declared + "
           f"{sum(1 for v in DECLARED.values() if v == MUST_NOT_FIRE)} must-not-fire), "

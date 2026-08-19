@@ -45,6 +45,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — class-B conversion rollout: the worklist premise was unchecked, and the fact that would have caught it was in the mode comments
+**Files:** python/dispatch_head_check.py, prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/boltzmann_compliance.pl, prolog/report_generator.pl, prolog/logical_fingerprint.pl, python/run_pipeline.py, audits/2026-08-18_classb_conversion_rollout/
+**Tier:** tripwire
+
+**The tripwire, for anyone converting or auditing bound-dispatch predicates.** The conversion
+template (fresh-variable heads + unify-after-cut) is valid ONLY where the last argument is an
+OUTPUT. Applied to a predicate whose last argument is an INPUT the caller supplies, the first
+clause matches every call, cuts, and **renders every later clause unreachable** — silently, and
+with every structural check still green. Witnessed: converting the 55-row batch moved 129/279
+`testsets` up to 1106/1106 `kernel_v1`, attributed by per-file bisect to
+`abductive_helpers.pl seat_overrides/2` and `boltzmann_compliance.pl expected_power_divergence/4`.
+
+**And the fact was already authored.** Both carried a hand-written mode line three lines above
+their clauses (`%% seat_overrides(+C, +Signature)`,
+`%% expected_power_divergence(+P1, +P2, +T1, +T2)`) — last argument `+`. **No instrument in the
+chain read `%%` mode lines**: not the regex caller sweep, not the codewalk arm, not the
+clause-order census, not the cut-first screen. Each answers a version of "is this called with its
+last argument bound?", and each presupposes the last argument is an answer.
+`dispatch_head_check.pl:9-11` states that assumption in its header; a header is where a violation
+sits indefinitely, and the checker's own worklist held two.
+
+**Now checked, not assumed:** `dispatch_head_check.py` carries `LAST_ARG` — one row per registry
+entry, its verdict (`output` / `input` / `generator`) and the evidence that settled it. A
+`latent-B` / `unreached` / `generator` row with no fact is RED; one recorded `input`, or a
+`generator` filed under another class, is RED. **`latent-B` is now EMPTY.** Two new classes:
+`unreached` (called zero times on all six legs — a different fact from "no bound caller", with a
+different remedy) and `generator` (never cut-ordered dispatch; its caller enumerates it).
+
+**Second tripwire — a conversion loop needs a completeness check that does not come from the
+loop.** The driver reported 0 failures while a missing trailing newline made `while read` drop
+its last row, with a six-leg run already loading the half-converted file. A truncated list makes
+a smaller loop that succeeds completely; only an out-of-loop re-scan caught it. General form:
+*the instrument that reports success cannot be the instrument that verifies coverage.*
+
+**Also landed:** `classify_corpus` now sizes its swipl ceiling from the corpus
+(`_classify_timeout_for`); the old fixed 300 s was sized on the live leg (~35 s) and cost three
+full-length attempts then a refusal on the twins (flash 530 s, sonnet 734 s, kernel_v1 581 s).
+21 predicates converted, each with a six-leg pair at 0 changed constraints over 5,311.
+Detail: `audits/2026-08-18_classb_conversion_rollout/WRITEUP.md`; tracker OQ-303, OQ-325.
+
 ## 2026-08-18 — TRIPWIRE: `prolog/schema_shape.txt` is anchored on the DECLARATION set (63), not on the 40 corpus-schema rows
 **Files:** prolog/schema_shape.txt, python/module_boundary_check.py, prolog/module_boundary_allowlist.txt, prolog/narrative_ontology.pl, prolog/scenario_manager.pl, scripts/gate.sh
 **Tier:** tripwire

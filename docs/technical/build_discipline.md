@@ -868,6 +868,37 @@ distinction both lower patterns protect.
 
 ---
 
+### The instrument that reports success cannot be the instrument that verifies coverage (2026-08-19)
+
+A Pattern-6 shape worth naming on its own because it lives inside *tooling written to do the
+verifying*, and it recurs wherever a driver both does work and reports on it.
+
+Witnessed twice in one unit (`audits/2026-08-18_classb_conversion_rollout/`), at opposite ends:
+
+- **The verifier presupposed what it should have checked.** Four instruments were built to ask
+  "is this predicate called with its last argument bound?" — a regex call-site sweep, a
+  module-resolved codewalk arm, a clause-order census, a cut-first screen. Every one of them
+  *presupposes the last argument is an answer*. Three predicates whose last argument was an
+  INPUT sat inside the worklist, and the fact that would have settled it was authored in the
+  conventional place — a `%%` mode line three lines above the clauses — which nothing in the
+  verification path reads.
+- **The driver's success count presupposed its own input.** A conversion loop reported
+  `0 failures` while a missing trailing newline made `while read` silently drop its last row.
+  Nothing inside the loop could catch that: **a truncated list produces a smaller loop that
+  succeeds completely.** What caught it was an out-of-loop re-scan of the intended targets,
+  sourced from a different artifact than the driver's own list.
+
+**Rule.** A step that transforms N things and reports success must have its coverage checked
+against an N sourced from somewhere else. Concretely: a conversion loop needs a completeness
+check that does not come from the loop; a checker's assumption about its subject needs a fact
+about the subject, not a header stating the assumption; and a "0 failures" from a driver is a
+claim about the work it *attempted*, never about the work it was *given*.
+
+**Diagnostic.** Ask what the reported count would be if the input set were silently truncated.
+If the answer is "the same, only smaller", the count is measuring the iteration and not the
+coverage, and the check is a consistency check rather than a verification (see *A consistency
+check is not a discrimination check*).
+
 ## Pattern 7 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)
 
 **Shape:** a probe enumerates a class by *binding* the selecting argument —

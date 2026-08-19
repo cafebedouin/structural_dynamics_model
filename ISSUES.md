@@ -14008,7 +14008,7 @@ needed to know which rows the corpus could clear.
 runs, over **six legs** — `testsets` (279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) = **5,311
 constraints** — **34 of 54 remaining bound-dispatch census rows are called ZERO times on every
-leg.** Controls fire at ~1.1M calls per hot-path predicate per leg (`dr_type/3`,
+leg** (33 now classed `unreached`, 1 `generator`). Controls fire at ~1.1M calls per hot-path predicate per leg (`dr_type/3`,
 `classify_from_metrics/6`, `constraint_signature/2`), so the zeros are measured, not
 didn't-looks. Full per-leg counts: `reachability.json`. These rows now carry the registry
 disposition `unreached`.
@@ -14167,8 +14167,11 @@ halves, code state differing; OQ-137 totality 10/10; `run_dynamic_suite` GOOD; g
 `dispatch_head_check` 69 → 49 hits). Their footing is the strongest in the OQ — per-row mode
 adjudication + by-construction check + six-leg zero diff + a *demonstrated firing control for
 this exact failure class*.
-**The 34 remaining rows are NOT converted and are NO LONGER `latent-B`:** they carry a new
-registry disposition **`unreached`** (called zero times on all six legs), because their footing
+**The 34 remaining rows are NOT converted and are NO LONGER `latent-B`:** 33 carry a new
+registry disposition **`unreached`** (called zero times on all six legs) and the 34th,
+`structural_property_holds/2`, is classed **`generator`** (never cut-ordered dispatch — its
+caller enumerates it; the category fact outranks the reachability one, and putting it in the
+class rather than in a per-run note keeps the gate free of standing notes). Their footing
 is adjudication + census with **no corpus leg at all** — and the corpus is the only instrument in
 this chain that has ever caught a misconversion. Leaving them `latent-B` would hand the next
 reader a worklist labelled by a premise that no longer describes them.
@@ -14179,7 +14182,7 @@ the loop caught it. **A conversion loop needs a completeness check that does not
 loop** — the instrument that reports success cannot be the instrument that verifies coverage.
 The engine question this raised is minted separately as **OQ-325**.
 `latent-B` is now EMPTY: every 2026-08-17 census row is converted, `input-key`, `wrapper`,
-`finding`, `MUST-NOT-FIRE`, or `unreached`.
+`finding`, `MUST-NOT-FIRE`, `generator`, or `unreached`.
 
 **Keyword route — "the Mercury extensions for swipl" land HERE (added 2026-08-18).** This
 is the OQ a future instance is looking for when it asks about **Mercury**, **SSU**, `=>`,

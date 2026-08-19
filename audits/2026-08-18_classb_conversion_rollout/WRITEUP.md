@@ -15,7 +15,7 @@ it surfaced: Phase 1 (`signature_grade/2`) landed with a six-leg pair at **0 cha
 over 5,311** and the pre-declared Ω_P escalation declining; the batch of 55 passed every
 structural check it owed, moved the corpus on all six legs, and was reverted. **STATUS: LANDED.** 21 rows converted
 (Phase 1 + the 20 exercised) each with a six-leg zero-diff pair; 3 reclassified `input-key`; 1
-recorded `generator`; 34 held as **`unreached`** and deliberately not converted; the registry now
+classed `generator`; 33 held as **`unreached`** and deliberately not converted; the registry now
 carries a per-row last-argument fact with its evidence, under the gate.
 **Substrate:** six legs — `testsets` (n=279), `testsets_haiku` (960), `testsets_flash` (960),
 `testsets_kimi` (1005), `testsets_sonnet` (1001), `archives/datasets/kernel_v1` (1106) =
@@ -46,6 +46,15 @@ transformer's selftest fired three times on the transformer before it touched a 
 
 ## 1. The finding: declared facts and verification look in different places
 
+*Orientation, for a reader arriving cold.* The 2026-08-17 bound-dispatch audit left a registry
+of ~60 engine predicates carrying a hazardous head shape, most of them classed `latent-B` —
+"the shape is present, but no caller passes the last argument bound, so nothing is currently
+being answered wrongly." That class was the worklist for a mechanical conversion. This unit
+executed it. **The worklist's premise — that each row's last argument is an OUTPUT the predicate
+computes — was never checked**, and it is false for some rows, where the last argument is an
+INPUT the caller supplies. Converting such a row makes its first clause match every call, cut,
+and render every later clause unreachable.
+
 Four misfilings, of three different kinds:
 
 | row | kind | how it was declared | what read it |
@@ -54,6 +63,9 @@ Four misfilings, of three different kinds:
 | `boltzmann_compliance.pl expected_power_divergence/4` | last arg is an INPUT | `%% expected_power_divergence(+P1, +P2, +T1, +T2)` | nothing, until the corpus moved 17 |
 | `report_generator.pl generate_scenario_for_omega/5` | last arg is an INPUT | `%% generate_scenario_for_omega(+OmegaID, +Type, +Description, +Constraint, +GapPattern)` | nothing — **the corpus never caught this one**; its file diffed clean |
 | `logical_fingerprint.pl structural_property_holds/2` | **wrong category**: not dispatch at all | its sole caller is a `findall` (`logical_fingerprint.pl:161`) | nothing |
+
+(The "corpus moved N constraints" column refers to the six-leg clean-vs-edited classification
+pair described in §8 — converting the batch changed the engine's output for N stories.)
 
 The instrument chain built around this worklist — `caller_sweep.py` (regex call sites),
 `codewalk_caller_check.py` (module-resolved call sites), `clause_order_census.pl` (clause-order
@@ -71,8 +83,11 @@ where a violation can sit indefinitely: the checker's own worklist contained two
 `structural_property_holds/2` is not a wrong *mode*, it is a wrong *category*: enumerated by its
 caller for all solutions, so its last argument is an output and there is no bound-probe hazard
 for the template to retire at all. "This dispatches on an output" and "this was never dispatch"
-fail differently, so the registry now carries `generator` as its own `LAST_ARG` verdict rather
-than folding it into the 53 outputs — a future census must be able to tell them apart.
+fail differently, so `generator` is both its own `LAST_ARG` verdict and its own registry class,
+rather than being folded into the output population — a future census must be able to tell them
+apart. The category fact outranks the reachability one: this predicate is *also* called by no
+corpus (§12), but it is unreached **downstream of** never having been dispatch, so `generator`
+is the class it carries and the checker turns RED if it is ever filed otherwise.
 
 ## 2. The same lesson, from the other end: the instrument that reports success cannot be the instrument that verifies coverage
 
@@ -81,8 +96,9 @@ the tooling built to do the reading.
 
 The conversion driver iterated a row list and reported **`0 failures`**. It was wrong by one:
 the list was written with `"\n".join(...)` and no trailing newline, so `while read` silently
-dropped its last line — `signature_diagnostic_severity/3` — while the six-leg run had **already
-started loading `signature_detection.pl`**. Had that pair completed, it would have measured a
+dropped its last line — `signature_diagnostic_severity/3` — while the six-leg verification run
+(the clean-vs-edited classification pair of §4) had **already started loading
+`signature_detection.pl`**. Had that pair completed, it would have measured a
 half-converted tree and reported a zero-diff over 5,311 constraints that meant nothing.
 
 Nothing inside the loop could catch it. The loop's own success count is derived from the
@@ -331,6 +347,8 @@ Controls fire hard in the same run (`dr_type/3` 159,777 calls, `classify_from_me
 188,901, `constraint_signature/2` 183,649 — 1,248 predicates observed).
 
 **34 of 54 latent-B rows are COLD — and the per-leg pass did not shrink that by one row.**
+(33 of them carry the `unreached` class; the 34th, `structural_property_holds/2`, is classed
+`generator` instead — see §1.)
 
 Read the shape of that result carefully, because it is the good outcome and it does not look
 like one. The pass had a **stated purpose**: move rows out of the weak-footing bucket before
@@ -366,8 +384,9 @@ witness is the adjudication plus the by-construction census.
   is the strongest anything in this OQ has had, Phase 1 included: per-row mode adjudication, the
   by-construction check, a six-leg zero diff, and a *demonstrated firing control for this exact
   failure class* — the same corpus caught both input-keyed rows when they were converted.
-- **The 34 are NOT converted and are NO LONGER `latent-B`** (operator ruling, 2026-08-19). They
-  hold their own registry disposition, **`unreached`**, carrying the six-leg zero and the
+- **The 34 are NOT converted and are NO LONGER `latent-B`** (operator ruling, 2026-08-19).
+  Thirty-three hold a new registry disposition, **`unreached`**, and the 34th is classed
+  `generator` because its category fact outranks its reachability fact. `unreached` carries carrying the six-leg zero and the
   reachability evidence. Two reasons, and the second is why the relabel matters as much as the
   non-conversion:
   1. *Don't convert.* Their footing is adjudication plus the by-construction census with **no
