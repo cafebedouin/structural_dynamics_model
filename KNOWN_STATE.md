@@ -45,6 +45,66 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-19 — LANDED: OQ-302, the bound-`false` call at `boltzmann_compliance.pl:577`; and the spec that prescribed it
+**Files:** prolog/boltzmann_compliance.pl, python/dispatch_head_check.py, prolog/codewalk_caller_allowlist.txt, docs/logic_extensions.md, docs/logic_thresholds.md, docs/noether_implementation.md, docs/lawvere_implementation_notes.md, docs/lawvere_glossary.md, docs/grothendieck_framing.md, docs/v8/foundations/logic_extensions.md, docs/v8/foundations/logic_thresholds.md, docs/technical/build_discipline.md, audits/2026-08-19_oq302_bound_false_repair/
+**Tier:** landed
+
+`boltzmann_invariant_mountain/2` clause 1 called `epistemic_access_check(C, false)` with `false`
+BOUND — the idiom the file's own header warns against 79 lines above (`:470–477`, written
+2026-06-03 when the sibling `structural_purity/2` instance was repaired and this one was not
+swept). The catch-all unifies with everything, so clause 1 fired for every constraint and the
+four-test body had **never executed on any corpus**. Repaired to
+`once(epistemic_access_check(C, S)), S == false, !` (`fb10708a`).
+
+**Measured before landing** (`audits/2026-08-19_oq302_bound_false_repair/`; prereg md5
+`c7a7345c…` frozen before the probe was written; six legs — testsets 279 counted at run time,
+haiku 960, flash 960, kimi 1005, sonnet 1001, kernel_v1 1106 = **5,311**; every leg's md5
+identical before and after both arms):
+
+- *fires* control: `arm(defect)` = `inconclusive(insufficient_data)` **5311/5311**. Reported as
+  **a wiring check with a known answer, NOT discrimination** — it follows from head unification,
+  which is the finding itself.
+- *declines* control (the two-sided one): **753/753** genuinely access-insufficient constraints
+  still report `inconclusive` post-repair. Subject present on every leg; `testsets_sonnet` n=1,
+  declared thin.
+- **Verdict stays constant in KIND; payload does not.** `invariant(_)` is unreachable —
+  `T4 = fail(natural_law_signature)` on **5311/5311**, because `has_viable_alternatives/2`'s
+  range is `{true, unknown}` (OQ-113). `N_reaching` = 4,558, giving **129–270 distinct
+  `(T1,T2,T3)` tuples per leg** where every constraint previously got the same token.
+- Throws: **0**. Transcription cross-check: 4,558 match / 0 mismatch.
+- OQ-137 totality 10/10; `run_dynamic_suite` GOOD; gate GREEN.
+
+**Blast radius zero live consumers** (OQ-38 census rows 110/620 both `STATIC_ORPHAN`), so the
+pipeline clean-vs-edited pair is byte-identical by construction and was deliberately not run —
+declared in the audit rather than left looking like an oversight.
+
+**Three things a later reader should not have to re-derive:**
+
+1. **`probe_harness:with_overlay/3` CANNOT swap a rule clause, and fails SOFT.** It snapshots
+   FACTS only (`probe_harness.pl:91–100`, `clause(M:T, true)`); a template matching a rule
+   produces a *warning*, not an error, and an asserted replacement lands AFTER the existing
+   clauses — so an overlay "counterfactual" on a cut-ordered rule silently measures the
+   unmodified program. The target here was also static (`assertz` throws). The plan specified
+   this mechanism; it was refused and replaced with `clause/2`-fetch-and-call of the engine's own
+   clause body. Detail: the audit's `PREREGISTRATION.md` §0a.
+2. **The spec prescribed the defect.** `docs/logic_extensions.md`'s "How to Activate" instructed
+   `boltzmann_invariant_mountain(C, true)` — unsatisfiable against every result shape. Corrected
+   at the origin (`4f8f0e3f`), together with `logic_thresholds.md:260` (Stage-7 enhancement now
+   marked **unimplemented and dark**, not deleted) and four docs that described T4 as working.
+   `docs/v8/` was **annotated, not rewritten** — it is v8 source material for OQ-135, so the
+   erroneous text is preserved with the correction beside it. New sub-shape appended to the
+   Pattern-7 incidence ledger in `build_discipline.md`.
+3. **`latent-B` is 0 → 1 again**, one day after OQ-303 recorded it empty. `epistemic_access_check/2`
+   left `finding` for `latent-B` (`5f9ec36d`), which turned `codewalk caller` RED — the arm found
+   a bound caller the Phase-0 enumeration had adjudicated but the class label denies. It is
+   `boltzmann_compliant/2` at `:94–95`, bound-**`true`**, safe by head unification and now
+   allowlisted with `ATOMS=true` on a naturally-arising two-sided record: it declines on exactly
+   the 753 the unbound call declines on and fires on exactly the other 4,558. The row is a
+   genuine class-B **conversion** candidate (output last arg, reached, 5 callers on live output
+   paths) → routed to OQ-303 arm (a); conversion owes the six-leg pair, not the template.
+
+---
+
 ## 2026-08-19 — class-B conversion rollout: the worklist premise was unchecked, and the fact that would have caught it was in the mode comments
 **Files:** python/dispatch_head_check.py, prolog/signature_detection.pl, prolog/abductive_helpers.pl, prolog/boltzmann_compliance.pl, prolog/report_generator.pl, prolog/logical_fingerprint.pl, python/run_pipeline.py, audits/2026-08-18_classb_conversion_rollout/
 **Tier:** tripwire

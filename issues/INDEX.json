@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "a443adb48bf22c27535fcc2a6503011187b05508",
+    "store_version": "4f8f0e3f27041385f968ba4cb5531c2e4fb15bc1",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T13:33:31"
+    "generated_at": "2026-08-19T14:18:33"
   },
-  "issues_sha": "409803162e63baa654b4be9b40710766181fb6dfc81b46091329935fcdca566d",
+  "issues_sha": "a35e1c2da1ea99bae36f530555c92031df52d5d68b6d7effa6d30089dd8381fe",
   "n_entries": 325,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 156,
+    "resolved": 157,
     "mitigated": 19,
     "disposed": 6,
     "future": 6,
-    "open": 130,
+    "open": 129,
     "partial": 8
   },
   "active": [
@@ -1628,19 +1628,6 @@
       ]
     },
     {
-      "id": "OQ-302",
-      "status": "open",
-      "priority": 2,
-      "summary": "boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577",
-      "deps": [
-        "splits_from OQ-296"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-296"
-      ]
-    },
-    {
       "id": "OQ-303",
       "status": "open",
       "priority": 3,
@@ -1654,6 +1641,7 @@
         "OQ-98",
         "OQ-137",
         "OQ-296",
+        "OQ-302",
         "OQ-325"
       ]
     },
@@ -4584,6 +4572,25 @@
         "OQ-317",
         "OQ-318",
         "OQ-319"
+      ]
+    },
+    {
+      "id": "OQ-302",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "boltzmann_invariant_mountain/2 is unconditionally inconclusive: the bound-`false` call its own header warns against, live at boltzmann_compliance.pl:577",
+      "deps": [
+        "splits_from OQ-296",
+        "bundled_with OQ-303"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-38",
+        "OQ-113",
+        "OQ-135",
+        "OQ-296",
+        "OQ-303",
+        "OQ-317"
       ]
     },
     {

@@ -10,8 +10,8 @@
 Artifact: `consumer_enumeration.md`. Raw: `caller_enumeration_raw.txt`, `bound_false_scan.out`.
 Scripts: `bound_false_scan.sh`, `run_scan.sh`.
 
-- Gate GREEN at open (all 27 rows; `python env` row read first — interpreter
-  `.venv/bin/python`, py3.12.3).
+- Gate GREEN at open (all 27 rows; `python env` row read first — it resolved to the repo venv
+  interpreter, py3.12.3, not system python3).
 - Consumer trace terminates at **0 callers** for both consumers of
   `boltzmann_invariant_mountain/2`; OQ-38 census rows 110/620 agree (`STATIC_ORPHAN`, 0).
 - Zero Python/agent readers; zero occurrences in `outputs/pipeline_output.json`
@@ -161,3 +161,24 @@ last argument, and *reached* (5 callers, on the `purity_score` / `fingerprint_co
 was classed `finding` at the time. Converting it owes the six-leg clean-vs-edited pair, not the
 template; **routed to OQ-303 arm (a), deliberately not done here** — it is a live-output-path
 semantics change and belongs to that OQ's spend, not this one's.
+
+### R7. Close — trackers, gate, and the HEAD stamp pair
+
+- `WRITEUP.md` landed with the required header and `**Fired:** live`.
+- `ISSUES.md`: OQ-302 **resolved**, with its three wrong lines corrected **in place**
+  (blast radius; "real invariant/variant verdicts"; the git-blame instruction), `bundled_with
+  OQ-303` added to `**Deps:**`, and the residues routed (OQ-303 arm (a), OQ-317, GAP-08 §7).
+  OQ-303's `latent-B is now EMPTY` line corrected in place — it is 0 → 1 the same day.
+- `KNOWN_STATE.md`: one `landed` entry. Promotion test applied per candidate, two passes:
+  - the `with_overlay/3` fact-only/rule-clause hazard is a **silent** mistake a fresh agent
+    makes by following an always-loaded instruction → **PROMOTED** to CLAUDE.md
+    (*Running the System*) and to `AGENTS.md`, with the mechanism in
+    `swipl_load_path_and_probe_gotchas.md` §12; full provenance stays here.
+  - "the spec prescribed the defect" and the `latent-B` 0 → 1 correction are routing/history,
+    not silent-mistake tripwires → stay in KNOWN_STATE and the Pattern-7 ledger.
+- `omega_resolver.py index` regenerated; `index --check` fresh.
+- **HEAD stamp pair: open `a84cb693`, close `4f8f0e3f` + the close commit.** They differ only
+  by this audit's own commits; `git diff --stat a84cb693..HEAD -- prolog/` shows only
+  `boltzmann_compliance.pl` and `codewalk_caller_allowlist.txt`, both this audit's. No
+  intervening writer.
+- Final `./scripts/gate.sh`: **GREEN**, all 27 rows (pasted in the close commit message).

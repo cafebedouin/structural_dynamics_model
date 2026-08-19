@@ -313,7 +313,16 @@ do not fold `trajectory` back into the parallel `tasks` list.
 - In-session overlay probes: use `probe_harness:with_retracted/2` / `with_overlay/3`
   (snapshot-first, verified restore, automatic cache clearing via
   `cache_registry:clear_all_caches/0`) instead of hand-rolled retract/assert — see
-  `swipl_load_path_and_probe_gotchas.md` §§2–4, 7.
+  `swipl_load_path_and_probe_gotchas.md` §§2–4, 7. **But it is FACT-ONLY, and on a RULE clause it
+  fails SILENTLY (OQ-302, 2026-08-19):** `snapshot/2` collects only `clause(M:T, true)`, so a
+  template matching a rule retracts nothing and merely WARNS, and your asserted replacement lands
+  *after* the original — a cut-ordered predicate still dispatches to its first clause and the
+  "counterfactual" arm measures the unmodified program. Both arms come back identical with no
+  error, which is indistinguishable from a genuine behaviour-preserving result. (Static predicates
+  additionally throw on `assertz` — that failure is loud; this one is not.) For a rule-clause
+  counterfactual use `clause/2` to fetch the engine's own body and call it under your modified
+  guard, and have the probe **detect** which arm the source implements rather than assume it —
+  after the repair lands, the no-overlay arm is the *other* one. Detail: gotchas §12.
 - **New Claude API call sites: route through `agent/llm_call.py` `call()` (or reuse its
   `sampling_overrides`).** Sonnet 5/Opus 4.7+ reject non-default `temperature` (loud 400), but
   Sonnet 5 runs ADAPTIVE thinking when the field is omitted — silently spending `max_tokens` on

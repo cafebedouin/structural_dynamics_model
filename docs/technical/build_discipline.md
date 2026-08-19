@@ -974,6 +974,9 @@ class.**
 | 2026-08-17 | Python | `fcr_ablation.py:75` (LIVE — inflated a reported %) | gate row, first sweep |
 | 2026-08-17 | audit artifact | `audits/2026-06-21_oq138_.../fcr_ablation.pl:23` | OQ-298 consumer enumeration |
 | 2026-08-17 | reasoning | an instance re-derived this rule as a "new" tripwire | operator challenge |
+| 2026-08-19 | engine | `boltzmann_compliance.pl:577` (**LIVE** — `boltzmann_invariant_mountain/2`'s whole four-test body unexecuted on every corpus, ~6 months) | OQ-296 census → OQ-302 |
+| 2026-08-19 | **spec** | `docs/logic_extensions.md:1671` "How to Activate" instructs `boltzmann_invariant_mountain(C, true)` — unsatisfiable against every result shape | OQ-302 root-cause read |
+| 2026-08-19 | spec (snapshot) | `docs/v8/foundations/logic_extensions.md:753,806` — the bound-`false` idiom the 2026-06-03 repair swept out of `docs/` and left here | OQ-302 spec sweep |
 
 **Reading as of 2026-08-17 — six defect sites across five surface kinds (engine, test, Python,
 audit artifact, reasoning) plus one confirmed re-discovery, from a rule that had a worked
@@ -982,6 +985,19 @@ strong enough to quote: **for this rule class the documentation channel is dead*
 mechanism (gate row `bound selector`, `python/bound_selector_check.py`) is what works. Note the
 last row is the one a counter alone would have missed — undetected re-discovery is
 indistinguishable from novel finding, which is why the grep is a *step* and not a habit.
+
+**NEW SUB-SHAPE, 2026-08-19 (OQ-302) — the SPEC can prescribe the defect, and then the code is
+not the place to look.** `boltzmann_compliance.pl:577` was not a slip: `logic_extensions.md`'s
+"How to Activate" told implementers to write a bound value into an output slot, and the engine
+implemented it faithfully. Two consequences worth carrying. **(1) The gate cannot see this.**
+`bound_selector_check.py` and `dispatch_head_check.py` sweep code; a defect that lives in a
+markdown instruction re-enters the code every time someone follows the doc, and the sweep finds
+it only *after* it has been written. **(2) The repair is at the origin or it is not a repair** —
+fixing `:577` without fixing the sentence that produced it leaves the generator running. The
+same-pass prior-art grep is what surfaced this: grepping `epistemic_access_check` and
+`boltzmann_invariant_mountain` against this file returned **no hits**, which correctly said "not
+a re-discovery of a documented instance" — and the useful move was then to grep the *spec* for
+the idiom rather than stop at the ledger.
 
 **Caveat against over-reading:** every 2026-08-17 row was found by one sweep on one day, so
 this is a stock measurement, not a rate. It says the rule failed to reach code that was written
