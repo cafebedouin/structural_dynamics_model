@@ -1,0 +1,13 @@
+############ CONTROL: the 'any' escape costs a reason naming the leg ############
+--- 'testsets_kimi:any' with a reason that does NOT name the leg ---
+  schema_shape.txt:68: flat_control_of/2 declares `testsets_kimi:any` but the reason does not name `testsets_kimi`. `any` is an unpinned leg and carries the same signed cost as `open` — say which leg, and why it is unpinned.
+module_boundary_check: RED — 1 boundary problem(s)
+--- same row, reason now names testsets_kimi ---
+module_boundary_check: GREEN — 180 engine fi
+
+############ CONTROL: ARM F — authored decoy in a real leg ############
+  testsets md5-of-md5s BEFORE: dbefcbbb559f50596ca022c92d1c4ae3  -
+  ARM F narrative_ontology:founding_problem_status/2 argument 2 is declared `{contested,dead,live}` but 1 authored value(s) do not conform: 'bogus_decoy'
+module_boundary_check: RED — 1 boundary problem(s)
+  testsets md5-of-md5s AFTER : dbefcbbb559f50596ca022c92d1c4ae3  -
+module_boundary_check: GREEN — 180 engine fi

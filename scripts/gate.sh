@@ -92,8 +92,16 @@ run "displaced cites" "$PY" python/pattern_citation_check.py --check
 # writers (the OQ-66 shape), and "no consumer exists" is both the mitigation and the thing that
 # stops being true silently. Arm C additionally BUYS BACK the typo detector that `:- multifile` silences: once a
 # predicate is multifile, SWI stops warning on redefinition, and that warning was doing the
-# job by accident. Standing run scans the default leg (1.35s); --full does all five
-# (14.4s) -- both re-measured 2026-08-18 under .venv over a 279/960/960/1005/1001 corpus.
+# job by accident. OQ-308 added arms E-H over prolog/schema_shape.txt: E closes the
+# repo-wide resolved DECLARATION set (63) against that file in both directions and re-checks
+# the allowlist derivation as an IFF; F conforms authored values against 54 enforced argument
+# positions; G checks declared per-leg emptiness against the head census; H flags a
+# narrative_ontology:P/N reference whose arity the namespace does not resolve. Arms F and G
+# are DRIFT RATCHETS transcribed from the corpus, not specifications -- a green F/G means the
+# schema has not changed unnoticed, NOT that it is right. --full is retired: --check now scans
+# all five legs and is a strict superset of it. One run, all five legs: 16.7s (re-measured
+# 2026-08-18 under .venv over a 279/960/960/1005/1001 corpus; the pre-OQ-308 numbers were
+# 1.35s default-leg / 14.4s --full).
 # Discrimination record: arm B fires at dc12bf5a^ and declines at dc12bf5a, differing by
 # exactly {story_provenance/8, story_seed/3} — the pair that commit repaired — with three
 # constant fires on both sides. Arms A and C verified red-capable by plant-and-restore on

@@ -1,0 +1,23 @@
+register 63 | written 40 | zero-written 23
+  of the zero-written: 18 have >=1 production reader, 5 have none
+  ZERO/ZERO (writers and readers both 0) -> DISPOSITION=deletion-candidate required:
+     attribute/3
+     coupling_profile/2
+     input_vector/2
+     intent_fact/4
+     theater_ratio/2
+
+  scenario_manager-only declarations (not in narrative_ontology at all):
+     cs_authority_grounding/2     ['multifile@cs_pattern_detection']
+     cs_interpretation_layer_present/1 ['multifile@cs_pattern_detection']
+     cs_kernel_codification/2     ['multifile@cs_pattern_detection']
+     cs_kernel_id/2               ['multifile@cs_kernel_registry']
+     intent_fact/4                ['dynamic@scenario_manager']
+     measurement/2                ['dynamic@scenario_manager']
+
+plan said: 21 storyless, 18 with readers, 3 readerless (coupling_profile/2, input_vector/2, theater_ratio/2)
+on the plan's denominator (narrative_ontology-declared only): 21 storyless, 17 with readers, 4 readerless:
+     attribute/3
+     coupling_profile/2
+     input_vector/2
+     theater_ratio/2

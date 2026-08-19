@@ -1,0 +1,15 @@
+############ CONTROL: ARM E anchor — naturally arising, two-sided ############
+repo-wide anchor : 63
+named-module scan: 63  (the five modules an author would think to name)
+MISSED by the named scan (0):
+found by named but not repo-wide: []  <- declines on nothing
+
+############ CONTROL: ARM E closure — both directions ############
+--- (a) DELETE a register member's row (theater_ratio/2) ---
+  ARM E register member narrative_ontology:theater_ratio/2 has NO schema_shape.txt row (declared: multifile@narrative_ontology).
+module_boundary_check: RED — 1 boundary problem(s)
+--- (b) ADD a row for a non-member (ghost_pred/2) ---
+  ARM E schema_shape.txt row ghost_pred/2 names a predicate that is declared NOWHERE (line 100). Either the declaration was removed and this row is its ghost, or the row is a typo — a register row for a non-member is the same defect as a member with no row, from the other side.
+module_boundary_check: RED — 1 boundary problem(s)
+--- (c) restored ---
+module_boundary_check: GREEN — 180 engine files, 104 modul

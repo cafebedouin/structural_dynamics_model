@@ -42,7 +42,7 @@ narrative_ontology.pl carries its own tombstone for story_provenance/8 + story_s
 which "MUST be multifile like every sibling above — declared dynamic-only, they loaded 1/N
 ('Redefined static procedure' on each testset consult, last-file-wins). Fixed 2026-06-13."
 
-THREE ARMS
+EIGHT ARMS (A-D over the allowlist; E-H over schema_shape.txt, added by OQ-308)
   A — bypass closure. Every cross-module qualified reference to a NON-EXPORTED predicate
       needs an allowlist row. Undeclared -> RED. A row with no surviving site is a
       `note:` and not red (dispatch_head_check.py precedent) — a stale row is clutter,
@@ -65,6 +65,38 @@ THREE ARMS
       that is currently doing accidental duty as a typo detector for qualified heads. A
       closed, gated list buys it back — an unlisted or MISSPELLED qualified head still
       trips this check.
+  E — SHAPE-REGISTER closure, both directions, plus the DERIVATION check and the
+      DISPOSITION requirement. The register is the repo-wide resolved declaration set (63),
+      computed by SCANNING every non-tests module — not a list. A member with no
+      schema_shape.txt row is RED; a row for a non-member is RED. The derivation check
+      re-states the allowlist rule as an IFF (a ROLE=corpus-schema row exists exactly when
+      a story file writes that qualified head, keyed name/arity) and checks BOTH directions;
+      arm C only checks one. The disposition check stops `all:empty` meaning two things:
+      zero writers AND zero engine readers requires DISPOSITION=deletion-candidate.
+  F — authored-value conformance. For every argument position whose declared shape is
+      ENFORCED ({a,b,c}, number, text), every value any story file authors there must
+      conform. 54 of 162 declared positions are enforced; the other 108 are documentation,
+      and the file states which is which — an unenforced token in a gated file otherwise
+      reads as a checked one.
+  G — declared LEGS= against the per-leg head census. Membership comes from the ANCHOR,
+      never from head presence: deriving "which predicates to check" from "which predicates
+      have heads" would make every all:empty row unfalsifiable by construction.
+  H — a reference to narrative_ontology:P/N whose N is outside the RESOLVED arity set for P.
+      `multifile` governs clause accumulation, not shape, so a qualified call at the wrong
+      arity is a DIFFERENT predicate that quietly has no clauses — it fails rather than
+      erroring. Resolution is declarations UNION definitions, because the namespace also
+      holds static RULES (agent_beneficiary/2, has_coordination_function/1) declared nowhere;
+      resolving against declarations alone reported 8 of them as defects.
+
+WHAT ARMS F AND G ARE NOT. Both were TRANSCRIBED from the corpus as it stands, so they are
+DRIFT RATCHETS, not specifications: they detect that the corpus moved away from what was
+recorded, and cannot tell you the recorded shape was right. Arm G additionally has a
+discrimination record, which proves the arm FIRES — not that the declarations are correct.
+Do not cite a green F or G as evidence the schema is well designed; cite it as evidence
+that it has not changed unnoticed.
+
+WHAT ARM H CANNOT SEE. call/N, =.., and any non-textual reference are invisible to a static
+scan. An `assertz(narrative_ontology:P(...))` site DOES count as a reference.
 
 DISCRIMINATION RECORD — ANCHORED TO CONTENT, NOT A COMMIT (build_discipline: a SHA-only
 record dangles if the anchoring commit is amended or rebased).
@@ -117,6 +149,53 @@ record dangles if the anchoring commit is amended or rebased).
   it is GREEN today precisely because the predicate has no consumer, so its green state and
   its red state are the two states of the fact it is watching.
 
+  ARM E, ANCHOR RESOLUTION — naturally arising, two-sided. The repo-wide anchor finds 63
+  members. The anchor an author would plausibly WRITE — narrative_ontology.pl, the
+  namespace owner's own file — finds 57 and misses six: measurement/2 and intent_fact/4
+  (scenario_manager.pl); cs_authority_grounding/2, cs_interpretation_layer_present/1 and
+  cs_kernel_codification/2 (cs_pattern_detection.pl); cs_kernel_id/2 (cs_kernel_registry.pl).
+  The repo-wide anchor declines on nothing: named-scan minus repo-wide is empty at every
+  widening. Neither side authored to be found. (The plan predicted 61 vs 63 with
+  cs_axiom_engine.pl's four in the delta; measured, those four are ALSO declared in
+  narrative_ontology.pl, so excluding that module loses DECL sites and zero MEMBERS. The
+  escape is six members wide, not five.)
+
+  ARM E, DERIVATION — FIXTURES ONLY, AND IT CANNOT BE OTHERWISE. Step 0 predicted zero
+  disagreements on the 40 and measured zero, so there is no naturally-arising positive to
+  draw on. That is not a gap someone could close with more effort: the rule was DERIVED FROM
+  the substrate it now checks, which makes an in-tree positive unavailable BY CONSTRUCTION.
+  It is the same circularity as arm F's declared sets. Stated explicitly because arm E's
+  OTHER half has a genuinely natural two-sided control, and without this sentence the
+  contrast reads as an oversight in this half rather than a structural limit of it. What it
+  ships on is both-directions fixture rejection — a row whose writers are gone, and a
+  written head with no row — which is arm F's altitude, and is labelled as such.
+
+  ARM G: naturally arising, two-sided, population = the corpus. flat_control_of/2 is
+  28/0/0/0/0 across the five legs. Declared `all:nonempty` the arm fires naming exactly the
+  four twin legs and no others; declared `testsets:empty` it fires naming testsets and its
+  28 files; declared truly (`testsets:nonempty,all:empty`) it declines. The `any` escape is
+  separately two-sided: `testsets_kimi:any` is rejected when the reason does not name that
+  leg and accepted when it does.
+
+  ARM H: naturally arising positive AND negative. 1,080 qualified narrative_ontology:P(...)
+  references exist in engine files; arm H flags exactly ONE —
+  tests/axis_boundary_ctl_payload_widen.pl:12 calling cs_axiom_foreclosed/2, which resolves
+  at no arity anywhere — and declines on the other 1,079. The flagged site is a fixture that
+  has been in the tree since 2026-06-23, not a plant. Emptying SCHEMA_ARITY_EXEMPT makes it
+  fire; restoring makes it decline; the DIFFERENCE SET is exactly that one site, and the
+  totals are 1 and 0, so the arm tracks the one thing that changed rather than returning
+  everything or nothing. An authored decoy additionally exercises ARITY sensitivity, which
+  the natural case does not (it is a no-arity case, not a wrong-arity one): a planted
+  constraint_victim/3 call is flagged against the resolved [2].
+
+  ARM F: AUTHORED DECOY ONLY, and that is its true altitude. Planting
+  founding_problem_status(collapse_inevitability_reading, bogus_decoy) in a real leg makes
+  it fire naming the value AND the file holding it; removing it makes it decline, with the
+  leg md5 byte-identical either side. This shows AUTHORED DRIFT GETS REJECTED and says
+  nothing about whether the declared sets are right — they were transcribed from the same
+  corpus they now police. (The first version named the predicate's first head rather than
+  the offending value's file, sending the reader to innocent code. The decoy exposed it.)
+
   ARM C tokenizer control: the first version of this sweep was line-based and reported 17
   undeclared corpus-schema predicates; 15 were artifacts of multi-line facts and commas
   inside quoted strings. Both parsers stay in the selftest and the assertion is on the
@@ -125,7 +204,7 @@ record dangles if the anchoring commit is amended or rebased).
   any script computing a reported count" — this checker computes its counts in-process for
   the same reason.)
 
-CENSUS RECONCILIATION — WHY 116 ROWS AND NOT ~279 (added 2026-08-18 at operator request).
+CENSUS RECONCILIATION — WHY 117 ROWS AND NOT ~279 (added 2026-08-18 at operator request).
 Arm A claims CLOSURE ("every non-exported cross-module reference has a row"), so a reader who
 finds two different census numbers and no bridge is entitled to disbelieve the claim. The
 bridge, measured by toggling each defect in this instrument back on:
@@ -134,9 +213,18 @@ bridge, measured by toggling each defect in this instrument back on:
     132   - 107  predicate INDICATORS (`mod:pred/2` in a directive) excluded
     115   -  17  meta-predicate CLOSURES resolved to their real arity
      98   -  17  FACADE reexports resolved transitively
+     +1   signature_detection:coordination_scaffold_signature/1 (OQ-296, 18c31a2c)
     +18   write-only corpus-schema heads (arm C requires a row; no read site to find)
     ----
-    116   allowlist rows
+    117   allowlist rows
+
+The table is re-derived rather than adjusted to match. But be clear what that re-derivation
+is worth: 99 bypass-predicates-with-a-row plus 18 write-only rows equals 117 rows BY
+CONSTRUCTION — every row is either in the bypass map or not, so the partition is a
+set-difference and the sum cannot come out otherwise. It is a CONSISTENCY check, not a
+discrimination check (build_discipline: "a check that cannot fail witnesses nothing while
+looking exactly like one that passed"). The line that does carry information is the one
+above it: the 239 -> 98 reductions, each measured by toggling a specific defect back on.
 
 THE PLAN'S 279 IS SUPERSEDED, NOT BRIDGED. The recon this work was executed from reported 279
 (mod,pred) pairs from a different sweep. Scope does not explain the gap — including probsets/
@@ -160,7 +248,6 @@ Usage:
     python3 python/module_boundary_check.py --check      # selftest, then live sweep
     python3 python/module_boundary_check.py --selftest   # fixtures only
     python3 python/module_boundary_check.py --list       # every bypass, classified
-    python3 python/module_boundary_check.py --full       # arm C over all five legs
 """
 
 from __future__ import annotations
@@ -173,6 +260,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 PROLOG = REPO / "prolog"
 ALLOWLIST = PROLOG / "module_boundary_allowlist.txt"
+SHAPE = PROLOG / "schema_shape.txt"
 
 # ---------------------------------------------------------------------------
 # ROLES. Each is a CLASSIFICATION of why a bypass is sanctioned, never a bare
@@ -252,8 +340,9 @@ CORPUS_DIRS = {
     "archives":         "Archived corpora and point-in-time probes; per audits/README.md "
                         "point-in-time documents are not retro-edited.",
 }
-DEFAULT_ARM_C_LEGS = ["testsets"]
+# --check scans ALL five legs since arms F and G landed; --full is retired (see main()).
 ALL_ARM_C_LEGS = ["testsets", "testsets_haiku", "testsets_flash", "testsets_kimi", "testsets_sonnet"]
+DEFAULT_ARM_C_LEGS = ALL_ARM_C_LEGS
 
 
 # ---------------------------------------------------------------------------
@@ -589,6 +678,290 @@ def schema_heads(text: str) -> set[tuple[str, int]]:
 
 
 # ---------------------------------------------------------------------------
+# ARM H exemptions. A reference to narrative_ontology:P/N whose N is outside the
+# RESOLVED arity set for P. Each entry names a site and a reason; a bare list would
+# decay into "places someone stopped looking".
+#
+# NOT named SCHEMA_ARITY_ALIASES, which is what the plan called it. The plan expected two
+# ALIAS cases (constraint_claim/3, measurement/2) and neither is one — both arities are
+# genuinely declared, so arm H never sees them. The single live entry is a reference to a
+# predicate that exists at NO arity anywhere, which is a different fact and gets a name
+# that says so.
+# ---------------------------------------------------------------------------
+SCHEMA_ARITY_EXEMPT: dict[tuple[str, str, int], str] = {
+    ("prolog/tests/axis_boundary_ctl_payload_widen.pl", "cs_axiom_foreclosed", 2):
+        "DELIBERATE positive-control fixture, and the file says so in its own header: it "
+        "plants a v8 section 8 path-b violation so check_axis_boundary.py --selftest has a "
+        "committer-field read to detect. cs_axiom_foreclosed/2 exists at no arity in any "
+        "module — that is the point; the fixture is never consulted into the live stack and "
+        "only has to LOOK like a committer read. Exempt as a FIXTURE, not as an alias.",
+}
+
+# ---------------------------------------------------------------------------
+# schema_shape.txt — the SHAPE register (OQ-308).
+#
+# WHAT IT IS ANCHORED ON. Not the 40 ROLE=corpus-schema allowlist rows, but the repo-wide
+# RESOLVED DECLARATION SET: every (name, arity) declared `:- multifile` or `:- dynamic`
+# into the narrative_ontology namespace by ANY non-tests module in the repo, plus
+# narrative_ontology's own block. 63 members today.
+#
+# THAT TOTALITY IS THE WHOLE ESCAPE-REMOVAL GUARANTEE. The anchor is computed by SCANNING,
+# never by reading a list: a declaration landing in a SEVENTH module tomorrow becomes a
+# register member with nobody adding it anywhere, and arm E goes red until it has a row.
+# The opt-in escape this checker exists to close — "a new predicate is unguarded until
+# someone remembers it" — can only re-enter here, as a member not visible as a missing row.
+# A named-module scan would have reopened it: it yields 61, missing cs_axiom_engine.pl's 4
+# and intent_fact/4, the latter declared only in scenario_manager.pl, in no
+# narrative_ontology block and no allowlist row — a member nothing watched.
+#
+# THE ALLOWLIST'S corpus-schema ROWS ARE A DERIVED VIEW OF THIS, not a peer of it. Their
+# rule — a row exists IFF the (name, arity) is written as a qualified head by a story file
+# — is checked by arm E, keyed name/arity throughout (measurement/5 says nothing about
+# measurement/2). 40 of the 63 are written; the other 23 are correctly rowless.
+#
+# GRAMMAR (one row per line; fail-closed; every field REQUIRED except DISPOSITION):
+#
+#   <pred>/<arity>  DECL=<kinds>@<module>[,<kinds>@<module>...]
+#                   LEGS=<leg>:<exp>[,<leg>:<exp>...]
+#                   ARG1=<shape> ... ARGn=<shape>
+#                   [DISPOSITION=<disposition>]  <reason>
+#
+#   DECL= is a LIST. 15 members are declared in more than one module, and a single-valued
+#         field would record one site and silently drop the rest — first-wins, inside an
+#         instrument built to stop exactly that. <kinds> is mf, dy, or mf+dy.
+#   LEGS= is TOTAL over the five legs; `all` covers every leg not named explicitly.
+#         <exp> is nonempty | empty | any. `any` REQUIRES the reason to name the leg it
+#         leaves unpinned — the same signed cost as `open`, and machine-checked.
+#   ARG<i>= is TOTAL over 1..arity. Shapes:
+#         ENFORCED by arm F:  {a,b,c}  a closed set of atoms
+#                             number   every authored value parses as a number
+#                             text     every authored value is a quoted string
+#         DOCUMENTATION ONLY: open, cid, atom, compound
+#         The split is STATED because an unenforced token in a gated file reads as a
+#         checked one. `cid` and `atom` are not enforced because a constraint id is any
+#         atom and the check would be vacuous; `open` and `compound` declare that no
+#         constraint is claimed.
+#   DISPOSITION=deletion-candidate is REQUIRED where writers AND engine readers are both
+#         zero, so `all:empty` can never silently mean what it legitimately means for
+#         flat_control_of/2 (zero writers on four legs, 28 on testsets, and a live reason
+#         to exist).
+# ---------------------------------------------------------------------------
+SHAPE_FIELD = re.compile(r"^(DECL|LEGS|ARG\d+|DISPOSITION)=(.*)$", re.S)
+ANY_FIELD = re.compile(r"^[A-Z][A-Z0-9_]*=")
+LEG_EXPECTATIONS = {"nonempty", "empty", "any"}
+ENFORCED_SHAPES = {"number", "text"}
+DOC_SHAPES = {"open", "cid", "atom", "compound"}
+LEGAL_DISPOSITIONS = {"deletion-candidate"}
+CLOSED_SET = re.compile(r"^\{([a-z][A-Za-z0-9_]*)(,[a-z][A-Za-z0-9_]*)*\}$")
+
+
+DECL_DIRECTIVE = re.compile(r":-\s*(?:multifile|dynamic|discontiguous|table)\s+.*?\.\s*(?:\n|$)",
+                            re.S)
+
+
+def strip_declarations(text: str) -> str:
+    """Body with `:- multifile/dynamic/discontiguous/table ...` directives removed.
+
+    A DECLARATION is not a consumer — it is the thing being registered. Without this, the
+    reader probe read `:- dynamic narrative_ontology:intent_fact/4.` in scenario_manager.pl
+    as a reader and reported the register's flagship dead predicate as live, which would
+    have retired the DISPOSITION requirement on exactly the member the register exists to
+    surface.
+    """
+    return DECL_DIRECTIVE.sub(lambda m: "\n" * m.group(0).count("\n"), text)
+
+
+def resolved_declarations(files: list[Path], bodies: dict) -> dict:
+    """-> {(pred, arity): {(kind, module)}} — the register, by SCANNING, not by list.
+
+    Every `:- multifile narrative_ontology:P/N` or `:- dynamic narrative_ontology:P/N` in
+    any non-tests module, plus narrative_ontology's own undecorated block. tests/ is
+    excluded for arm B's reason: the production load chain never consults those files, so
+    a tests/-only declaration defends nothing at pipeline time.
+    """
+    out: dict = defaultdict(set)
+    for f in files:
+        if "tests" in f.parts:
+            continue
+        t = bodies[f]
+        mod = module_of(t) or f.stem
+        for kind in ("multifile", "dynamic"):
+            for m in re.finditer(rf":-\s*{kind}\s+(.*?)\.\s*(?:\n|$)", t, re.S):
+                for nm, ar in re.findall(
+                        r"narrative_ontology\s*:\s*([a-z][A-Za-z0-9_]*)\s*/\s*(\d+)",
+                        m.group(1)):
+                    out[(nm, int(ar))].add((kind, mod))
+        if mod == "narrative_ontology":
+            for kind in ("multifile", "dynamic"):
+                for key in directive_preds(t, kind):
+                    out[key].add((kind, mod))
+    return dict(out)
+
+
+def parse_shape(path: Path = SHAPE) -> tuple[dict, list[str]]:
+    """-> ({(pred, arity): row}, [problems]). Fails CLOSED on every malformation.
+
+    A row is parsed field-by-field rather than by one big regex, so a TYPO in a field name
+    is a problem and not silently absorbed into the reason column: any ALLCAPS `FOO=` token
+    that is not a known field is rejected. That is this file's own typo detector, and it is
+    the same job arm C does for the allowlist.
+    """
+    if not path.exists():
+        return {}, [f"schema_shape missing: {path.name} — arm E cannot run, and a "
+                    f"missing register is not an empty one"]
+    return parse_shape_text(path.read_text(encoding="utf-8"), path.name)
+
+
+def parse_shape_text(text: str, name: str = "schema_shape.txt") -> tuple[dict, list[str]]:
+    """The grammar, split from the file read so the selftest can exercise it on fixtures."""
+    class _P:
+        pass
+    path = _P()
+    path.name = name
+    rows, problems = {}, []
+    for lineno, raw in enumerate(text.splitlines(), start=1):
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        toks = line.split()
+        head = toks.pop(0)
+        m = re.match(r"^([a-z][A-Za-z0-9_]*)/(\d+)$", head)
+        if not m:
+            problems.append(f"{path.name}:{lineno}: row must open with `<pred>/<arity>` | {line}")
+            continue
+        pred, arity = m.group(1), int(m.group(2))
+        fields: dict = {}
+        bad = False
+        while toks:
+            fm = SHAPE_FIELD.match(toks[0])
+            if not fm:
+                if ANY_FIELD.match(toks[0]):
+                    problems.append(f"{path.name}:{lineno}: unknown field `{toks[0].split('=')[0]}=` "
+                                    f"(known: DECL, LEGS, ARG<i>, DISPOSITION) — a mistyped field "
+                                    f"must not vanish into the reason column")
+                    bad = True
+                break
+            key, val = fm.group(1), fm.group(2)
+            if key in fields:
+                problems.append(f"{path.name}:{lineno}: duplicate field {key}=")
+                bad = True
+            fields[key] = val
+            toks.pop(0)
+        if bad:
+            continue
+        reason = " ".join(toks).strip()
+        key = (pred, arity)
+        if key in rows:
+            problems.append(f"{path.name}:{lineno}: duplicate row for {pred}/{arity}")
+            continue
+        if not reason:
+            problems.append(f"{path.name}:{lineno}: {pred}/{arity} has no reason — the reason "
+                            f"column is the whole point of the file")
+            continue
+
+        # DECL: a non-empty list of <kinds>@<module>
+        decl_raw = fields.get("DECL")
+        decl = []
+        if not decl_raw:
+            problems.append(f"{path.name}:{lineno}: {pred}/{arity} missing DECL=")
+        else:
+            for part in decl_raw.split(","):
+                dm = re.match(r"^(mf|dy|mf\+dy)@([a-z][A-Za-z0-9_]*)$", part)
+                if not dm:
+                    problems.append(f"{path.name}:{lineno}: {pred}/{arity} bad DECL entry "
+                                    f"`{part}` (want <mf|dy|mf+dy>@<module>)")
+                else:
+                    decl.append((dm.group(1), dm.group(2)))
+
+        # LEGS: total over the five legs, `all` filling the unnamed
+        legs_raw = fields.get("LEGS")
+        legs: dict = {}
+        if not legs_raw:
+            problems.append(f"{path.name}:{lineno}: {pred}/{arity} missing LEGS=")
+        else:
+            default = None
+            named = []
+            ok = True
+            for part in legs_raw.split(","):
+                if ":" not in part:
+                    problems.append(f"{path.name}:{lineno}: {pred}/{arity} bad LEGS entry "
+                                    f"`{part}` (want <leg>:<expectation>)")
+                    ok = False
+                    continue
+                leg, exp = part.split(":", 1)
+                if exp not in LEG_EXPECTATIONS:
+                    problems.append(f"{path.name}:{lineno}: {pred}/{arity} LEGS `{leg}` has "
+                                    f"expectation `{exp}` (want {'|'.join(sorted(LEG_EXPECTATIONS))})")
+                    ok = False
+                    continue
+                if leg == "all":
+                    if default is not None:
+                        problems.append(f"{path.name}:{lineno}: {pred}/{arity} LEGS names `all` twice")
+                        ok = False
+                    default = exp
+                elif leg not in ALL_ARM_C_LEGS:
+                    problems.append(f"{path.name}:{lineno}: {pred}/{arity} LEGS names unknown leg "
+                                    f"`{leg}` (known: {', '.join(ALL_ARM_C_LEGS)})")
+                    ok = False
+                elif leg in legs:
+                    problems.append(f"{path.name}:{lineno}: {pred}/{arity} LEGS names `{leg}` twice")
+                    ok = False
+                else:
+                    legs[leg] = exp
+                    named.append(leg)
+            if ok:
+                for leg in ALL_ARM_C_LEGS:
+                    if leg not in legs:
+                        if default is None:
+                            problems.append(
+                                f"{path.name}:{lineno}: {pred}/{arity} LEGS is not TOTAL — leg "
+                                f"`{leg}` is unassigned and there is no `all:` default. A leg "
+                                f"left out is a leg nobody decided about.")
+                            ok = False
+                        else:
+                            legs[leg] = default
+            # `any` costs a reason that names the leg
+            for leg, exp in sorted(legs.items()):
+                if exp == "any" and leg not in reason and "all" not in legs_raw.split(","):
+                    problems.append(
+                        f"{path.name}:{lineno}: {pred}/{arity} declares `{leg}:any` but the reason "
+                        f"does not name `{leg}`. `any` is an unpinned leg and carries the same "
+                        f"signed cost as `open` — say which leg, and why it is unpinned.")
+
+        # ARG<i>: total over 1..arity
+        args: dict = {}
+        for i in range(1, arity + 1):
+            v = fields.get(f"ARG{i}")
+            if v is None:
+                problems.append(f"{path.name}:{lineno}: {pred}/{arity} missing ARG{i}= "
+                                f"(ARG must be TOTAL over 1..{arity})")
+                continue
+            if CLOSED_SET.match(v):
+                args[i] = ("closed", frozenset(v[1:-1].split(",")))
+            elif v in ENFORCED_SHAPES:
+                args[i] = (v, None)
+            elif v in DOC_SHAPES:
+                args[i] = (v, None)
+            else:
+                problems.append(f"{path.name}:{lineno}: {pred}/{arity} ARG{i}=`{v}` is not a legal "
+                                f"shape (want {{a,b,c}} or one of "
+                                f"{', '.join(sorted(ENFORCED_SHAPES | DOC_SHAPES))})")
+        for k in fields:
+            fm = re.match(r"^ARG(\d+)$", k)
+            if fm and not (1 <= int(fm.group(1)) <= arity):
+                problems.append(f"{path.name}:{lineno}: {pred}/{arity} has {k}= but arity is {arity}")
+
+        disp = fields.get("DISPOSITION")
+        if disp is not None and disp not in LEGAL_DISPOSITIONS:
+            problems.append(f"{path.name}:{lineno}: {pred}/{arity} DISPOSITION=`{disp}` "
+                            f"(legal: {', '.join(sorted(LEGAL_DISPOSITIONS))})")
+
+        rows[key] = {"decl": decl, "legs": legs, "args": args,
+                     "disposition": disp, "reason": reason, "lineno": lineno}
+    return rows, problems
+
+
+# ---------------------------------------------------------------------------
 # Allowlist
 # ---------------------------------------------------------------------------
 ROW = re.compile(r"^([a-z][A-Za-z0-9_]*):([a-z][A-Za-z0-9_]*)/(\d+)\s+ROLE=(\S+)\s+(.*\S)\s*$")
@@ -704,18 +1077,22 @@ def scan_story_legs(legs: list[str], want_args: frozenset = frozenset()) -> dict
                                                            counted once per FILE, not once
                                                            per fact (a set per file).
       per_leg  {leg: {(pred, arity): n_files}}           — arm G's declared-vs-actual
-      args     {(pred, arity): {argpos: {value texts}}}  — arm F's conformance, and
-                 collected ONLY for the (pred, arity, argpos) triples in `want_args`.
-                 Demand-driven on purpose: arm F conforms CLOSED positions only, and
-                 harvesting every value at every position instead cost ~11s of corpus
-                 wall time to build sets nothing reads. A producer sized to its consumer
-                 also cannot quietly become a dangling one.
-      sites    {(pred, arity): (relpath, lineno)}        — first site, for naming a file
+      args     {(pred, arity): {argpos: {value: (relpath, lineno)}}} — arm F's conformance.
+                 The site is carried per VALUE, not per predicate: a conformance failure has
+                 to name the file holding the OFFENDING value. Naming the predicate's first
+                 head instead sends the reader to innocent code — the same defect
+                 strip_comments() preserves line numbers to avoid, and the first version of
+                 arm F did exactly that (it pointed at ability_ceiling_reading.pl for a decoy
+                 planted in collapse_inevitability_reading.pl). Collected ONLY for the
+                 (pred, arity, argpos) triples in `want_args`: demand-driven, because
+                 harvesting every position built sets nothing reads, and a producer sized to
+                 its consumer cannot quietly become a dangling one.
+      sites    {(pred, arity): (relpath, lineno)}        — first head, for naming a file
       files    int
     """
     heads: dict = defaultdict(int)
     per_leg: dict = {leg: defaultdict(int) for leg in legs}
-    args: dict = defaultdict(lambda: defaultdict(set))
+    args: dict = defaultdict(lambda: defaultdict(dict))
     sites: dict = {}
     nfiles = 0
     for leg in legs:
@@ -738,7 +1115,10 @@ def scan_story_legs(legs: list[str], want_args: frozenset = frozenset()) -> dict
                     sites[key] = (rel, lineno)
                 for i, a in enumerate(argv, start=1):
                     if (pred, ar, i) in want_args:
-                        args[key][i].add(a.strip())
+                        v = a.strip()
+                        if v not in args[key][i]:
+                            rel = rel if rel is not None else str(p.relative_to(REPO))
+                            args[key][i][v] = (rel, lineno)
             for key in seen:
                 heads[key] += 1
                 per_leg[leg][key] += 1
@@ -762,7 +1142,18 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
     if not mods:
         raise SystemExit("module_boundary_check: RED — resolved 0 modules")
     bypasses = find_bypasses(files, mods, bodies)
-    scan = scan_story_legs(legs)
+
+    # The shape file is parsed BEFORE the corpus scan, because it is what says which
+    # argument positions have an enforced shape — and those are the only positions whose
+    # values are worth harvesting across ~4,200 story files.
+    shape_rows, shape_problems = parse_shape()
+    problems.extend(shape_problems)
+    want_args = frozenset(
+        (pred, ar, i)
+        for (pred, ar), row in shape_rows.items()
+        for i, (shape, _closed) in row["args"].items()
+        if shape in ("closed",) or shape in ENFORCED_SHAPES)
+    scan = scan_story_legs(legs, want_args)
 
     # --- ARM A: bypass closure -------------------------------------------------
     for key in sorted(bypasses):
@@ -833,32 +1224,211 @@ def live_sweep(legs: list[str]) -> tuple[list[str], list[str], dict]:
                 f"UNWIRED_SCHEMA entry in the same change.\n"
                 f"           -> registry note: {reason}")
 
+    # --- ARM E: two-way total closure, plus the derivation check ---------------
+    # The register is COMPUTED, never read from a list — see the schema_shape header.
+    register = resolved_declarations(files, bodies)
+    for key in sorted(set(register) - set(shape_rows)):
+        pred, ar = key
+        where = ", ".join(sorted(f"{k}@{m}" for k, m in register[key]))
+        problems.append(
+            f"ARM E register member narrative_ontology:{pred}/{ar} has NO schema_shape.txt row "
+            f"(declared: {where}).\n"
+            f"           -> The register is the repo-wide resolved declaration set, computed by "
+            f"scanning every non-tests module. This is the ONLY place the opt-in escape can "
+            f"re-enter: a declaration in a module nobody thought to name is a member that "
+            f"nothing watches. Add the row in the change that adds the declaration.")
+    for key in sorted(set(shape_rows) - set(register)):
+        pred, ar = key
+        problems.append(
+            f"ARM E schema_shape.txt row {pred}/{ar} names a predicate that is declared "
+            f"NOWHERE (line {shape_rows[key]['lineno']}). Either the declaration was removed "
+            f"and this row is its ghost, or the row is a typo — a register row for a "
+            f"non-member is the same defect as a member with no row, from the other side.")
+
+    # Derivation check: the allowlist's corpus-schema rows are a DERIVED VIEW of the
+    # register, and their rule is `row IFF written as a qualified head by a story file`,
+    # keyed name/arity throughout.
+    for pred, ar in sorted(schema_rows - set(heads)):
+        problems.append(
+            f"ARM E derivation: ROLE=corpus-schema row narrative_ontology:{pred}/{ar} exists "
+            f"but NO story file writes that head on any of the five legs. The rule is an IFF; "
+            f"this is the direction where a row outlives its writers.")
+    for pred, ar in sorted(set(heads) - schema_rows):
+        problems.append(
+            f"ARM E derivation: story files write narrative_ontology:{pred}/{ar} but there is "
+            f"no ROLE=corpus-schema row. (Arm C says the same thing; both directions are "
+            f"checked here because the rule is an IFF and arm C only checks one of them.)")
+
+    # --- ARM E, disposition: `all:empty` must not be able to mean two things ----
+    # A row whose legs are all empty is either a predicate the corpus simply does not author
+    # yet (flat_control_of/2 would be one on four legs; intent_power_change/3 is one pending
+    # OQ-43) or a predicate nothing writes AND nothing reads — a dead declaration. Those read
+    # identically in the LEGS= column, so the second kind must say so.
+    #
+    # The reader probe is deliberately OVER-PERMISSIVE: a bare `name(` or `name/` anywhere in
+    # a production engine file counts, which over-counts readers. That is the conservative
+    # direction HERE — it makes "zero readers" harder to claim, so the requirement fires only
+    # when genuinely nothing in the engine mentions the name. An under-permissive probe would
+    # demand deletion-candidate on predicates that do have readers.
+    reader_counts: dict = {}
+    for (pred, ar) in shape_rows:
+        n = 0
+        for f in files:
+            rel = str(f.relative_to(REPO))
+            if rel in UNWIRED_EXEMPT_FILES or "tests" in f.parts:
+                continue
+            if module_of(bodies[f]) in ("narrative_ontology",):
+                continue
+            if re.search(rf"(?<![A-Za-z0-9_]){re.escape(pred)}\s*[(/]",
+                         strip_declarations(bodies[f])):
+                n += 1
+        reader_counts[(pred, ar)] = n
+    for key in sorted(shape_rows):
+        pred, ar = key
+        row = shape_rows[key]
+        writers = sum(scan["per_leg"].get(leg, {}).get(key, 0) for leg in ALL_ARM_C_LEGS)
+        readers = reader_counts[key]
+        dead = writers == 0 and readers == 0
+        if dead and row["disposition"] != "deletion-candidate":
+            problems.append(
+                f"ARM E disposition: narrative_ontology:{pred}/{ar} has ZERO writers on all five "
+                f"legs and ZERO engine readers, so it needs DISPOSITION=deletion-candidate "
+                f"(line {row['lineno']}).\n"
+                f"           -> Without it, `all:empty` here is indistinguishable from "
+                f"`all:empty` on a predicate that is merely unauthored-so-far, which is what it "
+                f"legitimately means for intent_power_change/3 (OQ-43) and on four legs for "
+                f"flat_control_of/2. One token, two meanings, is the shape this file exists to "
+                f"stop.")
+        elif not dead and row["disposition"] == "deletion-candidate":
+            problems.append(
+                f"ARM E disposition: narrative_ontology:{pred}/{ar} is marked "
+                f"DISPOSITION=deletion-candidate but has {writers} writer file(s) and {readers} "
+                f"engine reader file(s) (line {row['lineno']}). It stopped being dead; retire "
+                f"the marking in the change that revived it.")
+
+    # --- ARM F: authored-value conformance on ENFORCED argument shapes ---------
+    for key in sorted(shape_rows):
+        pred, ar = key
+        for i, (shape, closed) in sorted(shape_rows[key]["args"].items()):
+            if shape not in ("closed", "number", "text"):
+                continue
+            seen = scan["args"].get(key, {}).get(i, {})
+            bad = []
+            for v in sorted(seen):
+                if shape == "closed":
+                    if v not in closed:
+                        bad.append(v)
+                elif shape == "number":
+                    try:
+                        float(v)
+                    except ValueError:
+                        bad.append(v)
+                elif shape == "text":
+                    if not (len(v) >= 2 and v[0] == v[-1] and v[0] in ("'", '"')):
+                        bad.append(v)
+            if bad:
+                shown = "; ".join(f"{v!r} at {seen[v][0]}:{seen[v][1]}" for v in bad[:5])
+                more = f" ... and {len(bad) - 5} more" if len(bad) > 5 else ""
+                declared = ("{" + ",".join(sorted(closed)) + "}") if shape == "closed" else shape
+                problems.append(
+                    f"ARM F narrative_ontology:{pred}/{ar} argument {i} is declared `{declared}` "
+                    f"but {len(bad)} authored value(s) do not conform:\n"
+                    f"           -> {shown}{more}\n"
+                    f"           -> Each site is the FIRST file holding THAT value, not the "
+                    f"predicate's first head. Either the corpus grew a value the declaration "
+                    f"does not admit (widen it, in the change that authors it) or a story "
+                    f"misspelled one (fix the story).")
+
+    # --- ARM G: declared LEGS= against the per-leg head census ------------------
+    # Membership comes from the ANCHOR (the register), never from head presence: deriving
+    # "which predicates to check" from "which predicates have heads" would make every
+    # all:empty row unfalsifiable by construction.
+    for key in sorted(shape_rows):
+        pred, ar = key
+        for leg in ALL_ARM_C_LEGS:
+            exp = shape_rows[key]["legs"].get(leg)
+            if exp is None or exp == "any":
+                continue
+            n = scan["per_leg"].get(leg, {}).get(key, 0)
+            if exp == "nonempty" and n == 0:
+                problems.append(
+                    f"ARM G narrative_ontology:{pred}/{ar} declares `{leg}:nonempty` but NO "
+                    f"story file in {leg} writes that head. Either the leg lost its writers "
+                    f"or the declaration was optimistic.")
+            elif exp == "empty" and n > 0:
+                problems.append(
+                    f"ARM G narrative_ontology:{pred}/{ar} declares `{leg}:empty` but {n} story "
+                    f"file(s) in {leg} write that head. An `empty` leg is a claim that a read "
+                    f"there returns nothing; it just stopped being true.")
+
+    # --- ARM H: a reference at an arity the namespace does not resolve ---------
+    # Resolution is declarations UNION definitions: narrative_ontology also holds static
+    # RULES (agent_beneficiary/2, has_coordination_function/1) that are legitimate targets
+    # and are declared nowhere. Resolving against declarations alone reported 8 of them as
+    # defects — a false-absence built from the wrong surface.
+    ns_arities: dict = defaultdict(set)
+    for pred, ar in register:
+        ns_arities[pred].add(ar)
+    for f in files:
+        if module_of(bodies[f]) == "narrative_ontology":
+            for pred, ar in defined_preds(bodies[f]):
+                ns_arities[pred].add(ar)
+    for f in files:
+        rel = str(f.relative_to(REPO))
+        if rel == "python/module_boundary_check.py":
+            continue
+        t = bodies[f]
+        for m in re.finditer(
+                r"(?<![A-Za-z0-9_])narrative_ontology\s*:\s*([a-z][A-Za-z0-9_]*)\s*(\()?", t):
+            if not m.group(2):
+                continue
+            pred = m.group(1)
+            ar = arity_at(t, m.end() - 1)
+            if ar is None or ar in ns_arities.get(pred, set()):
+                continue
+            lineno = t.count("\n", 0, m.start()) + 1
+            if (rel, pred, ar) in SCHEMA_ARITY_EXEMPT:
+                continue
+            known = sorted(ns_arities.get(pred, set()))
+            problems.append(
+                f"ARM H {rel}:{lineno} calls narrative_ontology:{pred}/{ar}, which the namespace "
+                f"resolves at {known if known else 'NO arity at all'}.\n"
+                f"           -> `multifile` governs clause accumulation, not shape: a qualified "
+                f"call at the wrong arity is a DIFFERENT predicate that quietly has no clauses, "
+                f"so it fails rather than erroring. If this arity is intended, declare it; if it "
+                f"is a fixture that must not resolve, add it to SCHEMA_ARITY_EXEMPT with a reason.\n"
+                f"           -> NOTE what this arm cannot see: call/N, =.., and any non-textual "
+                f"reference are invisible to a static scan, and an assertz(narrative_ontology:P(..)) "
+                f"site DOES count as a reference here.")
+
     # --- stale rows (a `note:`, never red) -------------------------------------
     # ROLE-AWARE, because a corpus-schema row is justified by arm C — a testset WRITES the
     # head — not by a cross-module read. The first version noted 18 write-only schema rows
     # as "stale, prune it"; following that advice would have deleted exactly the rows arm C
     # requires and turned the gate red. A note that instructs the reader to break the check
     # is worse than no note.
-    full_legs = set(legs) == set(ALL_ARM_C_LEGS)
+    # The `if not full_legs: continue` carve-out that used to sit here is GONE. It was
+    # tolerance for a partial-leg scan and nothing more — with arms F and G on --check,
+    # every run scans all five legs, so the condition it guarded is unreachable and an
+    # unreachable branch that looks like a decision is worse than no branch. The case it
+    # covered (a corpus-schema row with no head on any leg) is now arm E's derivation RED,
+    # not a note: a row whose writers are gone is a broken IFF, not clutter. Behaviour-
+    # preserving on adoption — the pre-change --full run reported 0 stale-row notes, so no
+    # row was headless.
     for key, (role, _r) in sorted(entries.items()):
         mod, pred, ar = key
         if key in bypasses:
             continue
         if role == SCHEMA_ROLE:
-            if (pred, ar) in heads:
-                continue                       # write-only but LIVE: arm C keeps it
-            if not full_legs:
-                continue                       # cannot tell from a partial leg scan
-            notes.append(f"note: corpus-schema row {mod}:{pred}/{ar} is neither read "
-                         f"cross-module nor written by any story file in any leg — stale.")
-            continue
+            continue                           # live -> arm C keeps it; headless -> arm E reds
         notes.append(f"note: allowlist row {mod}:{pred}/{ar} has no surviving call site "
                      f"— stale, prune it (not red: a stale row is clutter, an "
                      f"undeclared bypass is the defect)")
 
     stats = {"files": len(files), "modules": len(mods), "bypasses": len(bypasses),
              "sites": sum(len(v) for v in bypasses.values()), "rows": len(entries),
-             "heads": len(heads), "legs": legs}
+             "heads": len(heads), "legs": legs, "register": len(register),
+             "shape_rows": len(shape_rows), "story_files": scan["files"]}
     return problems, notes, stats
 
 
@@ -998,6 +1568,91 @@ FIXTURES = [
 ]
 
 
+GOOD_ROW = ("p/2  DECL=mf+dy@narrative_ontology,dy@scenario_manager  LEGS=testsets:nonempty,"
+            "all:empty  ARG1=cid ARG2={a,b}  a well-formed row")
+
+
+def _shape_problems(row: str) -> list[str]:
+    return parse_shape_text(row)[1]
+
+
+SHAPE_FIXTURES = [
+    ("shape grammar accepts a well-formed row",
+     lambda: _shape_problems(GOOD_ROW), []),
+    ("DECL= round-trips as a LIST, not first-wins (15 members are multi-module)",
+     lambda: sorted(parse_shape_text(GOOD_ROW)[0][("p", 2)]["decl"]),
+     [("dy", "scenario_manager"), ("mf+dy", "narrative_ontology")]),
+    ("a declaration in a module the fixtures do not name still round-trips",
+     lambda: parse_shape_text(
+         "p/1  DECL=mf@some_seventh_module  LEGS=all:empty  ARG1=open  r")[0][("p", 1)]["decl"],
+     [("mf", "some_seventh_module")]),
+    ("name/arity keying: a row for p/5 says nothing about p/2",
+     lambda: sorted(parse_shape_text(
+         "p/5  DECL=mf@m  LEGS=all:empty  ARG1=open ARG2=open ARG3=open ARG4=open ARG5=open  r\n"
+         "p/2  DECL=mf@m  LEGS=all:empty  ARG1=open ARG2=open  r")[0]),
+     [("p", 2), ("p", 5)]),
+    ("LEGS= that omits a leg with no `all:` default is REJECTED as non-total",
+     lambda: any("not TOTAL" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=testsets:nonempty  ARG1=open  r")), True),
+    ("...but the same row WITH an `all:` default is accepted (two-sided)",
+     lambda: _shape_problems("p/1  DECL=mf@m  LEGS=testsets:nonempty,all:empty  ARG1=open  r"),
+     []),
+    ("ARG= that omits a position is REJECTED as non-total",
+     lambda: any("ARG must be TOTAL" in x for x in _shape_problems(
+         "p/3  DECL=mf@m  LEGS=all:empty  ARG1=open ARG2=open  r")), True),
+    ("an ARG index beyond the arity is REJECTED",
+     lambda: any("but arity is" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=all:empty  ARG1=open ARG2=open  r")), True),
+    ("`any` without a reason naming the leg is REJECTED",
+     lambda: any("unpinned leg" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=testsets:any,all:empty  ARG1=open  no leg named here")), True),
+    ("...and `any` WITH the leg named in the reason is accepted (two-sided)",
+     lambda: _shape_problems(
+         "p/1  DECL=mf@m  LEGS=testsets:any,all:empty  ARG1=open  unpinned on testsets pending"),
+     []),
+    ("a mistyped field name does NOT vanish into the reason column",
+     lambda: any("unknown field" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=all:empty  ARGS1=open  typo: ARGS1 not ARG1")), True),
+    ("a reasonless row is REJECTED (the reason column is the point of the file)",
+     lambda: any("has no reason" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=all:empty  ARG1=open")), True),
+    ("an unknown leg name is REJECTED",
+     lambda: any("unknown leg" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=testsets_llama:empty,all:empty  ARG1=open  r")), True),
+    ("an illegal ARG shape is REJECTED",
+     lambda: any("not a legal shape" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=all:empty  ARG1=stringish  r")), True),
+    ("an illegal DISPOSITION is REJECTED",
+     lambda: any("DISPOSITION=" in x for x in _shape_problems(
+         "p/1  DECL=mf@m  LEGS=all:empty  ARG1=open DISPOSITION=maybe  r")), True),
+    ("a duplicate row is REJECTED",
+     lambda: any("duplicate row" in x for x in _shape_problems(GOOD_ROW + "\n" + GOOD_ROW)),
+     True),
+    ("a MISSING shape file is a problem, not an empty register (fail-closed)",
+     lambda: bool(parse_shape(Path("/nonexistent/schema_shape.txt"))[1]), True),
+    ("resolved_declarations finds a declaration in ANY module, not a named list",
+     lambda: sorted(resolved_declarations(
+         [Path("seventh.pl")],
+         {Path("seventh.pl"): ":- module(seventh, []).\n"
+                              ":- dynamic narrative_ontology:brand_new/3.\n"})),
+     [("brand_new", 3)]),
+    ("...and a tests/ declaration does NOT enter the register (two-sided; arm B's rule)",
+     lambda: resolved_declarations(
+         [Path("prolog/tests/t.pl")],
+         {Path("prolog/tests/t.pl"): ":- module(t, []).\n"
+                                     ":- dynamic narrative_ontology:tests_only/1.\n"}),
+     {}),
+    ("strip_declarations removes a declaration so it cannot count as a READER",
+     lambda: "intent_fact" in strip_declarations(
+         ":- dynamic narrative_ontology:intent_fact/4.\n"), False),
+    ("...but a real call in the SAME text survives it (two-sided)",
+     lambda: "intent_fact" in strip_declarations(
+         ":- dynamic narrative_ontology:intent_fact/4.\ngo :- narrative_ontology:intent_fact(a,b,c,d).\n"),
+     True),
+]
+FIXTURES = FIXTURES + SHAPE_FIXTURES
+
+
 def selftest() -> list[str]:
     fails = []
     for label, fn, expect in FIXTURES:
@@ -1012,7 +1667,13 @@ def selftest() -> list[str]:
 
 
 def main(argv: list[str]) -> int:
-    legs = ALL_ARM_C_LEGS if "--full" in argv else DEFAULT_ARM_C_LEGS
+    legs = DEFAULT_ARM_C_LEGS
+    if "--full" in argv:
+        # Retired, not removed: --check absorbed it when arms F and G landed and made the
+        # five-leg scan mandatory. An old invocation still works and says why, rather than
+        # dying on an unknown flag.
+        print("  note: --full is RETIRED — --check now scans all five legs and is a strict "
+              "superset of it. Proceeding as --check.")
 
     st = selftest()
     if st:
@@ -1046,8 +1707,10 @@ def main(argv: list[str]) -> int:
     print(f"module_boundary_check: GREEN — {stats['files']} engine files, "
           f"{stats['modules']} modules, {stats['sites']} bypass site(s) over "
           f"{stats['bypasses']} predicate(s), all declared in {stats['rows']} allowlist "
-          f"row(s); arm C scanned leg(s): {', '.join(stats['legs'])} "
-          f"({stats['heads']} schema heads); {len(notes)} stale-row note(s); "
+          f"row(s); arms C/F/G scanned leg(s): {', '.join(stats['legs'])} "
+          f"({stats['heads']} schema heads over {stats['story_files']} story files); "
+          f"register {stats['register']} declared predicate(s) / {stats['shape_rows']} "
+          f"schema_shape row(s); {len(notes)} stale-row note(s); "
           f"{len(UNWIRED_SCHEMA)} unwired schema predicate(s) watched "
           f"({', '.join(f'{p}/{a}' for p, a in sorted(UNWIRED_SCHEMA))}); "
           f"selftest {len(FIXTURES)}/{len(FIXTURES)}")

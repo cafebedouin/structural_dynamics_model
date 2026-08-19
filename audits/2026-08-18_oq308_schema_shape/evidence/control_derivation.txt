@@ -1,0 +1,17 @@
+############ CONTROL: ARM E derivation — both directions ############
+--- (a) DELETE a corpus-schema row whose head IS written (has_sunset_clause/1) ---
+  ARM C unlisted corpus-schema head narrative_ontology:has_sunset_clause/1 written by 72 story file(s) but absent from the ROLE=corpus-schema list. Either it is a NEW schema predicate (add the row AND a production-side :- multifile in this change) or it is a TYPO — this arm is the typo detector that `:- multifile` silences.
+  ARM E derivation: story files write narrative_ontology:has_sunset_clause/1 but there is no ROLE=corpus-schema row. (Arm C says the same thing; both directions are checked here because the rule is an IFF and arm C only checks one of them.)
+--- (b) ADD a corpus-schema row no story writes (ghost_written/2) ---
+  ARM B corpus-schema narrative_ontology:ghost_written/2 has no PRODUCTION-side :- multifile (declared NOWHERE). Writers self-declaring is a generation-time habit, not an engine guarantee: drop it and the predicate loads 1/N, last-file-wins (the story_provenance/8 tombstone).
+  ARM E derivation: ROLE=corpus-schema row narrative_ontology:ghost_written/2 exists but NO story file writes that head on any of the five legs. The rule is an IFF; this is the direction where a row outlives its writers.
+--- (c) restored ---
+module_boundary_check: GREEN — 180 engine fi
+
+############ CONTROL: stale-row exemption removal is behaviour-preserving ############
+pre-change --full, stale-row notes reported:
+0 stale-row note(s)
+post-change --check, stale-row notes reported:
+0 stale-row note(s)
+=> 0 before and 0 after: no row was headless, so promoting the case from a note to
+   arm E's RED changes no output today and changes the verdict the day one appears.

@@ -1,0 +1,27 @@
+############ CONTROL: ARM H ############
+--- the DECLINING population (naturally arising negative) ---
+  qualified narrative_ontology:P(...) references in engine files: 1080
+  arm H flags 1 of them (below); it declines on the other 1079.
+  Neither side authored to be found: the flagged site is a fixture that has been in
+  the tree since 2026-06-23, and the 1079 are the ordinary population.
+
+--- POSITIVE: remove the SCHEMA_ARITY_EXEMPT entry, arm H fires on the real site ---
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+ValueError: substring not found
+--- NEGATIVE: exemption restored ---
+    ARM H problems: 0
+
+--- AUTHORED DECOY: a wrong-ARITY call (the arm's nominal job) ---
+  ARM H prolog/oq308_armh_decoy.pl:2 calls narrative_ontology:constraint_victim/3, which the namespace resolves at [2].
+--- decoy removed ---
+module_boundary_check: GREEN — 180 eng
+
+--- POSITIVE (redone in-process): empty SCHEMA_ARITY_EXEMPT ---
+  arm H problems with the exemption REMOVED: 1
+    ARM H prolog/tests/axis_boundary_ctl_payload_widen.pl:12 calls narrative_ontology:cs_axiom_foreclosed/2, which the namespace resolves at NO arity at all.
+  arm H problems with the exemption RESTORED: 0
+
+  DIFFERENCE SET (not counts): ['ARM H prolog/tests/axis_boundary_ctl_payload_widen.pl:12 calls narrative_ontology:cs_axiom_foreclosed/2, which the namespace resolves at NO arity at all.']
+  total problems either side: 1 / 0  <- the arm tracks the one
+  thing that changed, it does not return everything or nothing.

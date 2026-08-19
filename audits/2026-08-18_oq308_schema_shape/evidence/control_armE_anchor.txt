@@ -1,0 +1,19 @@
+=== ARM E ANCHOR CONTROL, naturally arising, two-sided ===
+The question a control has to answer: does the repo-wide anchor find members that
+the anchor an author would plausibly WRITE does not? Neither side authored to be found.
+
+narrative_ontology.pl alone (the namespace owner's own file)
+    members  57  MISSES 6: cs_authority_grounding/2, cs_interpretation_layer_present/1, cs_kernel_codification/2, cs_kernel_id/2, intent_fact/4, measurement/2
++ scenario_manager.pl (the obvious second writer)
+    members  59  MISSES 4: cs_authority_grounding/2, cs_interpretation_layer_present/1, cs_kernel_codification/2, cs_kernel_id/2
++ cs_axiom_engine.pl (the module the plan named)
+    members  59  MISSES 4: cs_authority_grounding/2, cs_interpretation_layer_present/1, cs_kernel_codification/2, cs_kernel_id/2
+
+repo-wide anchor: 63 members, and it DECLINES on nothing (named-scan minus repo-wide is empty in every case above).
+
+CORRECTION TO THE PLAN. The plan predicted 61 vs 63, delta = cs_axiom_engine.pl's 4
+plus intent_fact/4. Measured, cs_axiom_engine's four are ALSO declared in
+narrative_ontology.pl, so excluding that module loses DECL sites and zero MEMBERS —
+it cannot be part of a member delta. The real delta of a narrative_ontology-only
+anchor is 6 members, from scenario_manager.pl (2), cs_pattern_detection.pl (3) and
+cs_kernel_registry.pl (1). The escape is wider than the plan estimated, not narrower.
