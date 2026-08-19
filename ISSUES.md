@@ -14624,7 +14624,30 @@ OQ-324 (static ≠ loaded).
 **Status:** partial — both owed items DONE 2026-08-18; this entry stays live as the declared
 home for the residue it pre-registered, and for the one operator decision it cannot make.
 **Priority:** 2
-**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289, blocked_on_human circulation GO on amnesiac_institution_v0_6 is the operator's call (§9.2); the factual half of the blocker is discharged and the judgment is not
+**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289, blocked_on_human oq309-prior-recipients-signal (deferred by the operator at GO: whether continued circulation carries any signal to 2026-08-12 recipients, or the asserted/withdrawn/historical retention model suffices for a reader holding the old version — a small outward-facing call, does not block circulation)
+
+### Circulation GO — RULED 2026-08-19 (operator, §9.2 first jurisdiction)
+
+**GO.** Recorded strictly as a jurisdictional act: the operator's decision that the document may
+carry his name outside the repository — a judgment about audience, timing, and standing. **It
+certifies no quality claim and touches no figure.** The citability of the incidence statistic was
+settled by WORK — withdrawing the pooled scalar and reporting per window (§5.4) — before and
+independently of this ruling; a future reader taking GO as endorsement of the figures is refuted
+by the paper's own blocker box.
+
+**Pre-send rider (accepted as specified, scoped on review):** `./scripts/gate.sh` shows the
+`paper carriage` row GREEN at the moment of sending. Scope of what GREEN asserts — and ALL it
+asserts: **the enumerated corrections are present at the enumerated sites** (15 invariants,
+fails on MISS as loudly as EXTRA). The gate is a YOUNG instrument (built in the same pass it
+guards, its own selftest was the fifth wrap-trap instance, no witnessed history outside its
+authoring session) — an argument for running it, not for reading it as certification of anything
+further.
+
+**Deferred at GO (the one thing continued circulation has that a debut does not):** readers hold
+the 2026-08-12 version, whose pooled headline the paper has since withdrawn. Whether wider
+circulation carries a signal to those prior recipients, or the retention model is considered
+sufficient, is DEFERRED — the `blocked_on_human` above; either answer is fine and neither blocks
+circulation.
 **Origin:** 2026-08-18, minted BEFORE the pass that discharges it (the pass moves the
 issues-status row it must then quote, so the OQ has to exist before the count is taken).
 **Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (Appendix B, §5.4, §8.2,
