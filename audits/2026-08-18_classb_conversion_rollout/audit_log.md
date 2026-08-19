@@ -129,3 +129,109 @@ edits" makes it sound.
 conversion the census must read **0 of 218** — every head fresh-variable, nothing to skip. A
 corpus diff can only say "no story exercised the difference"; the census says "the difference
 is gone." Both are run.
+
+### R4. Phase 1 — `signature_grade/2` converted; six-leg pair ZERO DIFF; prediction held
+
+Conversion applied by `convert.py` (its own selftest green first). The diff:
+
+```
+-signature_grade(C, correction) :-                     +signature_grade(C, T) :-
+     ... guard unchanged ...                                ... guard unchanged ...
+-    !.                                                +    !,
+-signature_grade(C, commentary) :-                     +    T = correction.
+-    constraint_signature(C, _), !.                    +signature_grade(C, T) :-
+                                                       +    constraint_signature(C, _), !,
+                                                       +    T = commentary.
+```
+
+**By-construction witness** — the census on the converted predicate:
+
+```
+COC_PRED: signature_detection.pl signature_grade/2 atoms=0 max_steal_risk=0
+```
+
+**By-corpus witness** — the six-leg clean-vs-edited pair, 5,311 constraints:
+
+```
+$ .venv/bin/python audits/2026-08-18_classb_conversion_rollout/sixleg.py diff
+testsets         n=  279  changed=0
+testsets_haiku   n=  960  changed=0
+testsets_flash   n=  960  changed=0
+testsets_kimi    n= 1005  changed=0
+testsets_sonnet  n= 1001  changed=0
+kernel_v1        n= 1106  changed=0
+sixleg diff: 0 changed constraint(s) across 6 legs
+```
+
+**The pair actually ran, and the halves are comparable** — the two things that make a
+zero-diff a false pass if unchecked:
+
+```
+testsets         clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+testsets_haiku   clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+testsets_flash   clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+testsets_kimi    clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+testsets_sonnet  clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+kernel_v1        clean=2f459d3a dirty=True   edited=6c1bfa44 dirty=True   corpus_md5 same=True
+```
+
+Different code state per half; identical corpus md5 per leg across halves. Each leg's output
+mtime was also asserted to advance past a pre-run marker (`sixleg.py`), so no half compares a
+stale file against itself.
+
+**The differ discriminates — a zero from a check that cannot fail witnesses nothing.** One
+field planted in one record of one leg:
+
+```
+planted beneficiaries='__PLANTED__' on constraint ability_ceiling_reading
+testsets         n=  279  changed=1
+    first 10: ['ability_ceiling_reading']
+      ability_ceiling_reading: beneficiaries: ['high_performing_learners', 'meritocratic_sorting_institutions'] -> '__PLANTED__'
+sixleg diff: 1 changed constraint(s) across 6 legs
+--- restored ---
+sixleg diff: 0 changed constraint(s) across 6 legs
+```
+
+Fires on a single field in a single record, names the constraint and the field, declines when
+restored. Same session, both directions.
+
+**And the conversion did what it is FOR — the bound form now agrees with the engine.**
+Re-running the Unit A agreement probe post-conversion:
+
+```
+                    BEFORE                              AFTER
+testsets            commentary: bound=263 unb=234       commentary: bound=234 unb=234
+testsets_haiku      commentary: bound=932 unb=899       commentary: bound=899 unb=899
+                    correction: bound=45  unb=45        correction: bound=45  unb=45
+                    correction: bound=61  unb=61        correction: bound=61  unb=61
+```
+
+The 29 and 33 over-permissive `commentary` answers are gone; `correction` is untouched — which
+is exactly why the corpus diff is zero (nothing in the engine queries at `commentary`).
+
+### R5. The pre-registered verdict, discharged as pre-registered
+
+PREREGISTRATION §2 fixed the outcomes before the run:
+
+- **Zero-diff across all six legs ⇒ Ω_E, discharged; the Ω_P escalation does NOT fire.**
+  That is the result. It is a finding, not a caveat dropped: the escalation was live and
+  declined.
+- The predicted result was recorded as **ZERO DIFF** before the run, and it held. The
+  reasoning it rested on (consumer-facing caller unbound + template output-preserving for
+  unbound callers; the one bound caller at `correction`, measured identical) is therefore
+  supported rather than merely consistent.
+
+### R6. Registry and allowlist entries retired, per their own stated conditions
+
+```
+$ .venv/bin/python python/dispatch_head_check.py --check
+dispatch_head_check: GREEN — 126 engine files, 69 shape hit(s) all declared (69 declared + 3 must-not-fire), 0 file(s) with read errors, selftest OK
+
+$ .venv/bin/python python/codewalk_caller_check.py --check
+codewalk_caller_check: GREEN — 73 registry spec(s) (57 latent-B), 99 loaded module(s), ...
+```
+
+70 → 69 declared shape hits; 58 → 57 `latent-B`. The allowlist row's REMOVE condition
+("deleted when the class-B conversion of signature_grade/2 lands with its six-leg pair") was
+met and the row is gone, so the allowlist is now empty of rows — retirement in the same change
+as the repair, which is the orphaning rule.

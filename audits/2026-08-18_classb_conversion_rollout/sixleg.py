@@ -104,9 +104,25 @@ def run_phase(phase: str) -> int:
 
 
 def strip_manifest(doc: dict) -> dict:
-    """per_constraint only. The manifest re-stamps pipeline_run_at every run, so a
-    whole-file cross-run diff ALWAYS differs even when behaviour is preserved."""
-    return doc.get("per_constraint", doc)
+    """per_constraint, keyed by constraint id. The manifest re-stamps pipeline_run_at every
+    run, so a whole-file cross-run diff ALWAYS differs even when behaviour is preserved.
+
+    per_constraint is a LIST of records; key it by `id` so the diff is per constraint rather
+    than positional — a positional diff would report every row as changed if the load order
+    ever shifted, and would silently pair the wrong records if it shifted partially.
+    """
+    pc = doc.get("per_constraint")
+    if not isinstance(pc, list):
+        raise SystemExit("sixleg diff: RED — per_constraint is not a list")
+    out = {}
+    for rec in pc:
+        cid = rec.get("id")
+        if cid is None:
+            raise SystemExit("sixleg diff: RED — a per_constraint record has no `id`")
+        if cid in out:
+            raise SystemExit(f"sixleg diff: RED — duplicate constraint id {cid!r}")
+        out[cid] = rec
+    return out
 
 
 def diff() -> int:

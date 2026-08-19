@@ -126,7 +126,6 @@ DECLARED: dict[tuple[str, str], str] = {
     ("signature_detection.pl", "has_viable_alternatives/2"): "latent-B",
     ("signature_detection.pl", "resolve_with_perspectival_check/4"): "latent-B",
     ("signature_detection.pl", "signature_diagnostic_severity/3"): "latent-B",
-    ("signature_detection.pl", "signature_grade/2"): "latent-B",
     ("transition_paths.pl", "predicted_terminal_state/3"): "latent-B",
 }
 

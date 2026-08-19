@@ -1927,16 +1927,18 @@ signature_grade(C, Grade) :-
     !,
     signature_diagnostic_severity(C, Sig, Sev),
     ( alerting_severity(Sev) -> Grade = correction ; Grade = commentary ).
-signature_grade(C, correction) :-
+signature_grade(C, T) :-
     constraint_signature(C, Sig),
     abductive_helpers:known_override_signature(Sig),
     constraint_indexing:default_context(Ctx),
     drl_core:metric_based_type_indexed(C, Ctx, MetricType),
     drl_core:dr_type(C, Ctx, FinalType),
     MetricType \= FinalType,
-    !.
-signature_grade(C, commentary) :-
-    constraint_signature(C, _), !.
+    !,
+    T = correction.
+signature_grade(C, T) :-
+    constraint_signature(C, _), !,
+    T = commentary.
 
 %% signature_severity(+Constraint, -Severity)
 %  Converted signatures (OQ-138) carry their discriminated severity directly —
