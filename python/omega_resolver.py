@@ -527,7 +527,13 @@ formatting clipped — the entry IS witnessed by the first, must not flag.
 def selftest():
     entries, parse_probs = parse_entries(FIXTURE)
     fails = []
+    # The control count is DERIVED, never claimed. Each control registers itself here and
+    # the banner prints len(ran), so adding or removing one cannot leave a stale number in
+    # the gate row's own output -- which is exactly what happened between 2026-06-14
+    # (`4e423165`, 7 controls under a "8/8" banner) and 2026-08-20, 67 days.
+    ran: list[str] = []
 
+    ran.append("control 1: §D 2-cycle -> exactly one standoff naming both members")
     # control 1: §D 2-cycle -> exactly one standoff naming both members
     buckets, sccs, nontrivial = frontier(entries)
     standoffs = buckets["standoff"]
@@ -538,18 +544,22 @@ def selftest():
     if any("OQ-9001" in s for s in standoffs):
         fails.append("§D control FAILED: non-cycle node landed in standoff")
 
+    ran.append("control 2: leaf with a resolved blocker is workable_now")
     # control 2: leaf with a resolved blocker is workable_now
     if "OQ-9001" not in buckets["workable_now"]:
         fails.append(f"workable control FAILED: OQ-9001 not workable_now ({_where(buckets,'OQ-9001')})")
+    ran.append("control 3: Ω_P leaf -> blocked_on_human")
     # control 3: Ω_P leaf -> blocked_on_human
     if "OQ-9003" not in buckets["blocked_on_human"]:
         fails.append(f"Ω_P control FAILED: OQ-9003 not blocked_on_human ({_where(buckets,'OQ-9003')})")
 
+    ran.append("control 4: dangling dep flagged")
     # control 4: dangling dep flagged
     auth = authority_report(entries)
     if not any("OQ-9999" in b for b in auth["deps_target"]["bad"]):
         fails.append("dangling-dep control FAILED: OQ-9999 not flagged")
 
+    ran.append("control 5: rotted witness flagged; live witness NOT flagged; and the")
     # control 5: rotted witness flagged; live witness NOT flagged; and the
     # over-fire negative control (one real + one truncated audit dir) NOT flagged.
     probs = check(entries, parse_probs)
@@ -561,16 +571,19 @@ def selftest():
     if any(p.startswith("OQ-9009") for p in rotted):
         fails.append("over-fire control FAILED: OQ-9009 (has a real audit dir) flagged as rotted")
 
+    ran.append("control 6: authority lists non-empty (Pattern 5)")
     # control 6: authority lists non-empty (Pattern 5)
     if auth["deps_target"]["authority_size"] < 1:
         fails.append("authority-nonempty control FAILED: OQ set empty")
 
+    ran.append("control 7: human-gated Ω_E (no Ω_P blocker) -> blocked_on_human, NOT workable_now")
     # control 7: human-gated Ω_E (no Ω_P blocker) -> blocked_on_human, NOT workable_now
     if "OQ-9008" not in buckets["blocked_on_human"]:
         fails.append(f"human-gate control FAILED: OQ-9008 not blocked_on_human ({_where(buckets,'OQ-9008')})")
     if "OQ-9008" in buckets["workable_now"]:
         fails.append("human-gate control FAILED: OQ-9008 mis-bucketed workable_now")
 
+    ran.append("control 8: malformed Deps caught at BOTH layers, two-sided")
     # control 8: malformed Deps caught at BOTH layers, two-sided.
     #  (a) prose-after-comma (unknown relator) surfaces as a parse problem;
     #  (b) `;`-packed edges (the SILENT-drop case) surface as a parse problem;
@@ -590,6 +603,7 @@ def selftest():
     if overfire:
         fails.append(f"malformed-Deps over-fire: well-formed entry parse-flagged: {overfire}")
 
+    ran.append("control 9: a blocked_on_human free-text target may contain commas — the")
     # control 9: a blocked_on_human free-text target may contain commas — the
     # comma is kept as free text, NOT mis-split into a new edge / unknown relator
     # (the bug fixed 2026-06-18). Positive: OQ-9012 parses clean AND registers
@@ -602,7 +616,7 @@ def selftest():
     if not (len(human12) == 1 and "," in human12[0]):
         fails.append(f"human-comma control FAILED: OQ-9012 did not register one comma-bearing human edge ({human12})")
 
-    return fails, parse_probs
+    return fails, parse_probs, ran
 
 
 def _where(buckets, oq):
@@ -1029,7 +1043,7 @@ def main():
     args = sys.argv[1:]
     cmd = args[0] if args else "frontier"
     if cmd == "selftest":
-        fails, parse_probs = selftest()
+        fails, parse_probs, ran = selftest()
         for p in parse_probs:
             print(f"PARSE: {p}")
         for f in fails:
@@ -1037,7 +1051,7 @@ def main():
         if fails:
             print(f"selftest: {len(fails)} FAILED")
             sys.exit(1)
-        print("selftest: all positive controls fired (10/10)")
+        print(f"selftest: all positive controls fired ({len(ran)}/{len(ran)})")
         return
     entries, problems = parse_entries()
     for p in problems:

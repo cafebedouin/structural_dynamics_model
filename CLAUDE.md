@@ -119,7 +119,7 @@ next"), scan the derived router `issues/INDEX.md` then `grep OQ-NN ISSUES.md` �
 alternative to a whole-read. The router is GENERATED (`omega_resolver.py index`; JSON twin
 `issues/INDEX.json`), never authoritative; **regenerate after ANY `ISSUES.md` edit** — `omega index
 --check` in `scripts/gate.sh` turns `[GATE]` red on a stale index. `omega_resolver.py check` is the
-authority gate (dangling/malformed Deps, rotted witnesses); `selftest` runs 10 positive controls.
+authority gate (dangling/malformed Deps, rotted witnesses); `selftest` runs the planted-fixture positive controls and prints its own DERIVED count (do not publish a literal here — it drifted for 67 days).
 **Read `docs/technical/omega_resolver.md` before modifying `omega_resolver.py`, the `ISSUES.md`
 authored fields, or the hooks** — it carries the command table, the SCC model, the
 determinism-boundary "floor" (priority/type stay a declared seat), and the gotchas.
