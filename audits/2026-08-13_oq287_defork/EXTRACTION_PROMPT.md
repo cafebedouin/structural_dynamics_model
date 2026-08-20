@@ -72,38 +72,82 @@ note about churn that never happened. Re-derive anchors at the moment you use th
 - **IV** — the recursion: the practice failing on itself
 - **V** — self-instrumentation and honest limits
 
-## 3. Salvage map — what moves, from where
+## 3. Salvage map — TWO TABLES, because they are two different operations
+
+> **[SPLIT 2026-08-20.]** This section was headed *"Salvage map — what moves, from where"* over a
+> single table containing both. **That one word in a heading already produced a wrong action in a
+> real receiver**, who read it as meaning v0.6 §9 relocates and carried that into a plan as a live
+> `§9.2` exposure. §9 does not move. Exactly **two** subsections move; everything else is material
+> this paper *draws on*, and v0.6 keeps it. The two operations have different obligations, so they
+> get different tables.
+
+### 3a. MOVES — v0.6 becomes the superseded side. Exactly two rows; this list is closed.
 
 | from v0.6 | to | note |
 |---|---|---|
 | §2.8 (unmarked perturbation; the trifurcation→repair table) | **III** | canonical destination per the A2-pre ruling 2026-08-13 |
 | §2.9 (the negative control: (a) three exclusions, (b) the break at the instrument stratum) | **V** | same ruling |
+
+**v0.6's §2.8/§2.9 are the SUPERSEDED side once this lands.** They stay **at their numbers**, keep
+their text, and gain **forward pointers**; they are not deleted. §2.9(b) keeps its letter.
+
+**The test for membership in THIS table is mechanical, not editorial:** a row belongs here iff the
+subsection carries a `[DECLARED TEMPORARY]` marker in v0.6. Check it, do not trust this list —
+
+```
+grep -c 'DECLARED TEMPORARY — A2-pre ruling' docs/amnesiac_institution/amnesiac_institution_v0_6.md
+```
+
+**must print 2.** If it prints more, a section was added to the moving set and this table is stale;
+if fewer, a marker was dropped. `audits/2026-08-13_oq287_defork/checks.sh` row 3 asserts the same 2.
+
+### 3b. DRAWS ON — v0.6 keeps these. Cite them; do not relocate them.
+
+| in v0.6 | feeds | note |
+|---|---|---|
 | §7 (witness calculus), §7.3 (positive controls), §7.5, §7.6, §7.7 | II and V | |
-| §7.4 / §7.4.1 (the recursion; nine defects, none caught by a gate) | **IV** | |
+| §7.4 / §7.4.1 (the recursion) | **IV** | for the count, see §6 — **re-derive it, never copy it** |
+| §7.8 (two shapes found by ruling in bulk) | II and V | *added 2026-08-19, after this map was frozen.* Routed by **INHERITANCE from §7, not by a ruling** — flagged so the operator can override rather than have the call hidden |
 | §8 (memory economy), §9 (organizational form), §10 (self-instrumentation) | II and V | |
+| §9.4 (the ruling pass) | II and V | *added 2026-08-19, after this map was frozen.* Routed by **INHERITANCE from §9, not by a ruling** — same flag |
 
-**v0.6's §2.8/§2.9 are the SUPERSEDED side once this lands.** They stay at their numbers there and
-gain forward pointers; they are not deleted.
+**Nothing in 3b becomes superseded, gains a forward pointer, or leaves v0.6.** When you use this
+material, quote v0.6 and cite it as the canonical source — the opposite of the 3a discipline.
 
-## 4. The redirect table — Limb 2, and it is owed at SUB-ITEM granularity
+## 4. The forward pointers you owe — and the sub-item table you no longer do
 
-`audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md:15` cites **`§2.9(b)`** and **has
-been sent to another author. It cannot be edited.** A section-level redirect does not discharge this.
+> **[REWRITTEN 2026-08-20 — the sub-item requirement was DISCHARGED. Original obligation preserved
+> below, because deleting it would make this section's history unrecoverable and the requirement can
+> come back.]** This section read: *"The redirect table — Limb 2, and it is owed at SUB-ITEM
+> granularity,"* mandating a seven-row map of §2.8/§2.9 sub-items to practice-paper anchors, on the
+> ground that the Wu letter cites `§2.9(b)` and cannot be edited.
+>
+> **Why it was withdrawn** (ISSUES OQ-287, R-A/R-B/R-C, 2026-08-20). Uneditability generates no
+> repository obligation — nothing in this repo can compel an edit to a letter in someone else's
+> inbox. The exposure that *would* have justified sub-item granularity is a reader following
+> `§2.9(b)` out of a **published** artifact into a superseded section; that letter is **filed
+> evidence, not a published appendix** (v0.6's appendices are A/B/C/D; the letter occurs once, as a
+> repo path), so that reader was never created. And **§2.9 keeps its number and (b) keeps its
+> letter**, so the sent letter's citation resolves correctly before and after the move.
 
-Author this table in the practice paper and add the reciprocal forward pointers in v0.6:
+**What you actually owe: a forward pointer at each of the two moved subsections.** Pointer-only
+edits, which is all v0.6 admits.
 
-| v0.6 anchor | practice-paper anchor |
-|---|---|
-| §2.8 — "reading an abstraction at a framing other than its own is an unmarked perturbation" | III, § |
-| §2.8 — "a witness is that perturbation performed deliberately at the boundary" | III, § |
-| §2.8 — "a positive control is the same move run on the probe" | III, § |
-| §2.8 — "the recursion is the principle's reflexive axis" | IV, § |
-| §2.8 — the trifurcation → repair table (Types A/B/C) | III, § |
-| **§2.9(a)** — the three exclusions (structural contradiction · stochastic churn · loud destructive replacement) | V, § |
-| **§2.9(b)** — the break: at the instrument stratum, carriage does not repair | V, § |
+| v0.6 anchor | what to add there | practice-paper destination |
+|---|---|---|
+| §2.8 | forward pointer: this is now the superseded side | **III** |
+| §2.9 | forward pointer: this is now the superseded side | **V** |
 
-**If this table is not authored, OQ-287 does not close** and Limb 2's review date (2026-09-14)
-governs instead.
+Author the reciprocal direction in the practice paper: III and V each say what they superseded.
+
+**A sub-item map is WELCOME but not required.** If III and V happen to land at anchors that make a
+`§2.9(a)/(b)` → anchor mapping cheap, write it — it is strictly better for a reader. It is no longer
+a gate on closing OQ-287.
+
+> **⚠ REVERSION.** If the Wu letter is ever promoted out of filed evidence into a **published
+> appendix**, the original obligation above comes back in full, along with OQ-287's retired
+> **2026-09-14** review date. The trigger is recorded in the letter's own annotation header, where
+> that decision is made. **`§9.2` is not in the reversion** — §9 was never a moving section (§3).
 
 ## 5. Acceptance condition — pre-registered, operator-stated, WITH ITS TEST
 
@@ -128,7 +172,29 @@ after** — and Subject 3 (the recursion) becomes competitive again.
 
 `audits/2026-08-13_oq287_defork/WRITEUP.md` finding 4 records **twelve false absences produced by the
 OQ-287 pass's own instruments**, ten of which the red light *discovered* rather than confirmed, five
-of them committed inside instruments built to catch the earlier ones. Finding 5 records the first
+of them committed inside instruments built to catch the earlier ones.
+
+> **[CORRECTED 2026-08-20.] TWO COUNTS LIVE IN THIS PROMPT AND THEY ARE NOT THE SAME NUMBER.**
+> This section formerly compared against *"§7.4's nine."* **§7.4 is no longer nine.** It grew to
+> **eleven** on 2026-08-18/19 and — decisively for scope bound 4 below — **one of the eleven WAS
+> caught by a gate.** v0.6 §2.9(b) already says eleven.
+>
+> **Do not copy either number from this file. Re-derive both at the moment you use them:**
+>
+> ```
+> # §7.4's count — from the paper's own table, not from prose:
+> awk '/^### 7\.4 /{f=1} f&&/^### 7\.4\.1/{exit} f&&/^\| [0-9]+ \|/{n++} END{print n}' \
+>   docs/amnesiac_institution/amnesiac_institution_v0_6.md
+> ```
+>
+> A standing count in a prose summary of a list that a later edit lengthens has **no gate between
+> them**, which is exactly how "nine" survived into a frozen prompt. The same failure recurred while
+> *repairing* this one: the plan driving the 2026-08-20 pass twice mis-stated how many v0.6 sites
+> carried a sub-item promise (two — there were four), in the step whose purpose was fixing a stale
+> count. The fix in both places is the same: cite a command, not a figure.
+>
+> **The OQ-287 twelve and §7.4's eleven are SEPARATELY DENOMINATED and must never be added,
+> compared, or expressed as a ratio** — see scope bound 2. Finding 5 records the first
 live digest fire: one row's meaning changed, six citations fired, all six were re-read and one
 improved, and **fifteen other digests recomputed identical** — the discrimination being the pair,
 since a scheme that fires on everything is indistinguishable from one that fires on nothing.
@@ -146,13 +212,27 @@ the document into being a different kind of thing, one section at a time.
    its share of the paper, or if I/II start serving it, the genre has drifted — stop and say so.
 2. The count is **a floor, not a measurement**: self-observed, same party, same pass, **no
    denominator**. Cite as *"at least twelve, self-observed, undenominated."* **Never as a rate, and
-   never against §7.4's nine**, which were counted differently.
+   never against §7.4's count** (eleven as of 2026-08-19 — re-derive it, see the box in §6), which
+   was counted differently. *This bound formerly read "against §7.4's nine"; the corrected figure
+   does not soften it — the two are still incommensurable, which is the whole point of the bound.*
 3. The claim it supports is narrow: *declaring a framing produces a new artifact with a new framing;
    the remedy is not self-terminating.* It does **not** support "verification is futile."
-4. What terminated all twelve is the finding, and it is not an instrument: **not one was caught by a
-   gate reading its own output green; ten were caught by a party comparing a claimed value against
-   the artifact it described.** Report that as §7.4.1's finding **independently re-derived** — fresh
-   arc, different route, prospective, with an adversarial second party the earlier arc did not have.
+4. What terminated all twelve is the finding, and it is not an instrument: **of the OQ-287 twelve,
+   not one was caught by a gate reading its own output green; ten were caught by a party comparing a
+   claimed value against the artifact it described.** Report that as §7.4.1's finding **independently
+   re-derived** — fresh arc, different route, prospective, with an adversarial second party the
+   earlier arc did not have.
+
+   > **[RE-SCOPED 2026-08-20 — and this is the row where the drift actually bites.]** The sentence
+   > formerly read *"not one was caught by a gate"* with no stated population, so a receiver could
+   > carry it up a level to the whole phenomenon. **It is still true of the OQ-287 twelve. It is now
+   > FALSE of §7.4's eleven**, whose instance 11 was caught by a gate — a structural integrity line
+   > printing `186 == 185` and refusing a numerator that had silently acquired a non-directory.
+   > v0.6 §7.4 already says so: *"Instance 11 breaks it, and the break is worth more than the streak
+   > was."* **Write the population into the sentence every time you make this claim.** An unscoped
+   > "never caught by a gate" is now a false absence in a paper about false absences — and the honest
+   > version is the more interesting one, because a gate that finally fires is evidence *for* the
+   > architecture, not against it.
 
 ## 7. Citation discipline
 
@@ -169,8 +249,18 @@ the document into being a different kind of thing, one section at a time.
 - Concealment §5.1, §5.4, §9.1 and §3.2 have **no Appendix A row** and cannot be pinned; write them
   `` `CWC` §5.4 ``. **Do not mint Appendix A rows to make your citations checkable** — that is the
   instrument reshaping the substrate to fit itself.
-- Quoting v0.6 material that moved: it is the superseded side, so quote from your own paper and
-  redirect (§4), do not cite v0.6 as authority for it.
+- **Quoting v0.6 material — the rule INVERTS across §3's two tables, and getting it backwards is the
+  most likely citation error in this paper.**
+  - **§3a material (§2.8, §2.9 — the two that MOVE):** v0.6 is the **superseded** side. Quote from
+    your own paper and redirect (§4). **Do not cite v0.6 as authority for it.**
+  - **§3b material (§7, §7.4, §7.8, §8, §9, §9.4, §10 — everything that DRAWS ON):** v0.6 is and
+    remains **canonical**. **Cite v0.6 normally, as authority.** Do not restate it as your own, do
+    not mark it superseded, and do not add a forward pointer to it — that would manufacture the
+    duplication OQ-287 exists to have closed.
+
+  *(Added 2026-08-20. The old single bullet said only "material that moved," which was safe while §3
+  was one undifferentiated table headed "what moves" — and unsafe the moment a receiver read that
+  heading as covering §7–§10, which one did.)*
 
 ## 8. What is UNGUARDED — carry these forward, none is checkable
 
@@ -238,17 +328,49 @@ Five refusals were recorded in the OQ-277 arc; none was caught by a sender re-re
 
 1. G1 checked and recorded; III authored only if green.
 2. I–V drafted; the §5 deletion test **run on a scratch copy** and its result recorded.
-3. §4's redirect table authored at sub-item granularity, with reciprocal forward pointers in v0.6
-   §2.8/§2.9 — **pointer-only edits, which is all v0.6 admits.**
+3. §4's **forward pointers** added at v0.6 §2.8/§2.9, with the reciprocal direction stated in III
+   and V — **pointer-only edits, which is all v0.6 admits.** *(The sub-item table this item used to
+   require was discharged 2026-08-20; see §4. It returns only if the Wu letter is promoted to a
+   published appendix.)*
 4. `claim_cite_check --check` green; every new citation digest-pinned in the same commit; **and
    every new citation carries its one-line aptness note (§8, R2) — the green tick does not discharge
    this and will read as though it does.**
 5. `audits/<date>_<slug>/WRITEUP.md` with its `**Fired:**` bit.
-6. ISSUES OQ-287: Limb 1 and Limb 2 closed, or the residue named. `mitigated → resolved` only when
-   **both** limbs are discharged.
-7. `omega_resolver index` regenerated; `./scripts/gate.sh` GREEN.
+6. **ROUTE BACK, DO NOT REPAIR: `docs/concealment/concealment_without_a_concealer_v0_4.md:34`.**
+   That line describes v0.6 §2.8/§2.9 as declared-temporary ***pending the practice paper***.
+   **Your landing is what makes it false** — and it sits in an externally-destined document §1b
+   forbids you to edit. So: **stop and route it to the operator as a ruling** — amend the line, or
+   accept a knowingly-stale sentence in a published artifact. Do **not** silently repair it; that
+   leaves the defect in the design, where it fires on the next receiver.
+
+   > **This item is tied to YOUR LANDING, not to a date, and it is here rather than in ISSUES
+   > OQ-287 on purpose.** The person who trips this sentence is you, reading §10 — not an operator
+   > reading a tracker entry months later. A trigger nobody is looking at when it fires is a memory.
+   > The sentence is not false until you land, so there is nothing to do before then and nothing
+   > optional about it afterwards.
+   >
+   > Re-derive the line number before quoting it; it drifts. Locate by content:
+   > `grep -n 'declared-temporary' docs/concealment/concealment_without_a_concealer_v0_4.md`
+
+7. ISSUES OQ-287: Limb 1 closed, or the residue named. **Limb 2 is already discharged (2026-08-20)
+   — do not re-open it, and do not treat its absence from your work as an omission.**
+   `mitigated → resolved` when Limb 1 lands. Flip the status to `open` when you START, so the
+   `[NEXT]` frontier is honest while the work is live (`mitigated` is outside
+   `omega_resolver.ACTIVE`).
+8. `omega_resolver index` regenerated; `./scripts/gate.sh` GREEN. **Report the baseline you
+   OBSERVED, not the one this prompt predicts** — a mismatch is a finding about this file.
 
 ---
 
-*Pins in this file are as-of 2026-08-14 and are illustrative. Re-derive every digest with
-`claim_digest.sh` before writing it into a document.*
+*Pins in this file are illustrative. **Re-derive every digest with `claim_digest.sh` before writing
+it into a document** — never hand-copy one, including from here.*
+
+*Freshness, stated as a verification rather than as a date. **Checked 2026-08-20:** this file pins
+exactly one digest, `CWC:A2@31548228` (§7), and it **still matches `claim_digest.sh A2`** — no
+digest in this file has drifted since it was written. The line-number pins have: §2.8 moved
+`:590→:628` and §2.9 `:632→:670` under the OQ-280 write, which is why §1b tells you to re-derive
+anchors at the moment you use them rather than trusting any figure here.*
+
+*Refreshed 2026-08-20 (`audits/2026-08-20_oq287_limb2_discharge/WRITEUP.md`): §3 split in two, §4's
+sub-item requirement discharged, §6 and scope bounds 2/4 re-counted and re-scoped, §10 gained the
+routed-back ruling. The **substantive** change for a receiver is §3 — §7–§10 do not move.*
