@@ -63,10 +63,14 @@ repository's.*
 > (§10), Θ-7. **It states its contribution boundary once, at §13**, and §2.B points there rather
 > than restating it.
 >
-> **Two limbs of OQ-287 remain open, so it is `mitigated`, not `resolved`.** (1) The practice-paper
-> extraction. (2) The redirect for **§2.8 and §2.9**, which keep their numbers and their text and are
-> marked **declared temporary** with the practice paper as canonical destination — §2.9(b) is cited
-> in correspondence already sent, so the redirect is owed at sub-item granularity.
+> **ONE limb of OQ-287 remains open, so it is `mitigated`, not `resolved`: the practice-paper
+> extraction.** The second limb — the redirect for **§2.8 and §2.9** — was **DISCHARGED 2026-08-20**.
+> Those subsections keep their numbers and their text and stay **declared temporary** with the
+> practice paper as canonical destination; what changed is the *form* of what they are owed. A
+> sub-item redirect table was owed **solely** because `§2.9(b)` is cited in correspondence already
+> sent; that correspondence is filed evidence, not a published appendix, so the external exposure is
+> zero and **a forward pointer discharges it** (ISSUES OQ-287, R-A/R-B/R-C). Promoting that letter to
+> a published appendix re-instates the sub-item table.
 >
 > *After correction, this document admits POINTER-ONLY edits — forward pointers and redirect notes —
 > and no content edits. The exception is declared rather than taken: a frozen document with no
@@ -627,11 +631,13 @@ stated scope.**
 
 ### 2.8 The unmarked perturbation: what the witness calculus is doing
 
-> **[DECLARED TEMPORARY — A2-pre ruling, 2026-08-13.]** This subsection's canonical destination is
-> the practice paper (§2.8 → III). It stays here, at this number, until that paper lands and a
-> redirect table maps its sub-items to the practice paper's anchors. Until then **this is the
-> canonical copy**; after it lands, this becomes the superseded side and gains a forward pointer.
-> ISSUES OQ-287, second limb.
+> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20.]** This subsection's
+> canonical destination is the practice paper (§2.8 → III). It stays here, **at this number**, until
+> that paper lands; when it does, this becomes the superseded side and gains a **forward pointer** to
+> its destination. Until then **this is the canonical copy**. *A sub-item redirect table is no longer
+> owed* — that requirement rested on an already-sent letter's `§2.9(b)` citation, and the letter is
+> filed evidence rather than a published appendix, so the reader it guarded does not exist (ISSUES
+> OQ-287, R-B/R-C). The number does not change either way, so nothing already citing §2.8 goes stale.
 
 `the_perturbation_principle.md` states the move under all of the program's instruments: *hold
 everything fixed but one dimension; vary that dimension; read off what stays and what moves.* It
@@ -669,12 +675,15 @@ Wu's *fail-plausible* escalation of it — is set out at `concealment_without_a_
 
 ### 2.9 The negative control on the unification
 
-> **[DECLARED TEMPORARY — A2-pre ruling, 2026-08-13.]** This subsection's canonical destination is
-> the practice paper (§2.9 → V). It stays here, at this number, until that paper lands and a
-> redirect table maps `§2.9(a,b,…)` to its anchors **at sub-item granularity** — the Wu letter of
-> 2026-08-11 cites `§2.9(b)` and has been sent, so section-level redirection is not sufficient.
-> Until then **this is the canonical copy**; after it lands, this becomes the superseded side and
-> gains a forward pointer. ISSUES OQ-287, second limb.
+> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20.]** This subsection's
+> canonical destination is the practice paper (§2.9 → V). It stays here, **at this number, with its
+> sub-items (a)/(b) at their letters**, until that paper lands; when it does, this becomes the
+> superseded side and gains a **forward pointer**. Until then **this is the canonical copy**.
+> *Sub-item redirection is no longer owed.* It was owed because the Wu letter of 2026-08-11 cites
+> `§2.9(b)` and has been sent — but that letter is **filed evidence, not a published appendix**
+> (checked 2026-08-20), so the unrepairable reader it guarded was never created, and §2.9(b) keeps
+> its number regardless, so the letter's citation does not go stale. ISSUES OQ-287, R-A/R-B/R-C.
+> **Promoting the letter out of filed evidence re-instates the sub-item table.**
 
 `the_perturbation_principle.md` §7.1 imposes a condition this section owes and v0.5 did not pay: a
 unification claim is *itself* an invariance claim — invariant under which instrument you look at —
@@ -2641,8 +2650,10 @@ enforced at a boundary regardless of intent.
 form of the failure and the direction of the repair and does **not** establish that scope-carrying is
 sufficient. Note its status: §2.9 is **declared temporary** (§2.8/§2.9 markers, A2-pre ruling
 2026-08-13), with the practice paper as its canonical destination. When that extraction lands, this
-paragraph's grounding moves with it and the redirect table is what keeps this sentence true — which
-is OQ-287's second limb, not a detail.*
+paragraph's grounding moves with it, and **the forward pointer at §2.9 is what keeps this sentence
+true** — §2.9 keeps its number, so this reference does not go stale on the move. (Through 2026-08-19
+this sentence named a sub-item redirect table; that requirement was discharged 2026-08-20 — ISSUES
+OQ-287, R-C.)*
 
 **Institutional novelty: the strongest empirical claim, and the one nobody else is making.**
 

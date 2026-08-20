@@ -13060,7 +13060,11 @@ actually deliverable.
 **Ω-type:** Ω_C — which document owns the derivation is an authorial ruling with no seat-free fact.
 The *existence* of the duplication is Ω_E and is settled below.
 
-**Status:** mitigated — Pass A landed 2026-08-13/14; the derivation fork is CLOSED, two limbs remain.
+**Status:** mitigated — Pass A landed 2026-08-13/14 (derivation fork CLOSED); **Limb 2 DISCHARGED
+2026-08-20** by the R-A/R-B/R-C ruling below, its 2026-09-14 review date retired with its reason.
+**Limb 1 (the extraction) is the only open limb**, and no longer has anything riding on it.
+Flip to `open` when Limb 1 starts — `mitigated` is outside `omega_resolver.ACTIVE`, so this entry
+does not surface on `[NEXT]` while work is live, which is the frontier lying by omission.
 **Priority:** 2
 
 **UNBLOCKED 2026-08-17.** `blocked_on OQ-278` cleared — OQ-278 resolved, so **Limb 1's section III
@@ -13088,18 +13092,90 @@ OQ-278's P4 index ruling before its section III is authored. Pre-registered acce
 operator-stated: **the unmarked perturbation (§2.8) and the negative control (§2.9) must be
 LOAD-BEARING in III and V, not appended**; if they cannot be, revisit Subject BEFORE authoring.
 
-**Limb 2 — the apparatus redirect (NO OWNER; carries its own review date).** v0.6 §2.8/§2.9 keep
-their numbers and text and are marked **declared temporary** with the practice paper as canonical
-destination. The redirect table mapping `§2.9(a,b,…)` to practice-paper anchors is owed **at sub-item
-granularity**, because `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md` cites
-**`§2.9(b)`** and **has already been sent to another author and cannot be edited**.
+**Limb 2 — the apparatus redirect. DISCHARGED 2026-08-20; its review date is RETIRED.** Record:
+`audits/2026-08-20_oq287_limb2_discharge/WRITEUP.md` (`Fired: live`).
 
-> **This limb is contingent on Limb 1 and would otherwise be unreachable.** If the extraction is
-> deferred, nothing schedules the redirect, and the surface it guards is the one that cannot be
-> repaired after the fact. **REVIEW DATE: 2026-09-14** — on or after that date, if Limb 1 has not
-> landed, either (a) land a standalone redirect note in v0.6 §2.9 pointing at the declared-temporary
-> marker and this OQ, or (b) record here that the operator has accepted the exposure. Do not let it
-> ride on Limb 1's schedule a second month.
+> **The ruling, in three parts, because three things were fused in this entry's own text.**
+>
+> **R-A — the obligation to Wu is external and discharged on send.** The old text read as though the
+> letter's uneditability *generated* a repository obligation. It does not. Nothing in this repo can
+> compel an edit to a letter in someone else's inbox, and
+> `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md`'s annotation header already
+> records reply status and the one over-statement in its body. **Uneditability generates no
+> repository obligation.** Phrased this way deliberately: the old phrasing would have regenerated
+> this exact question on 2026-09-14 with less context in the room.
+>
+> **R-B — the exposure that mattered was the APPENDIX READER, not Wu.** A reader following `§2.9(b)`
+> out of a *published* artifact into a vacated section is the surface that cannot be repaired after
+> the fact. **That designation was never executed** (checked 2026-08-20): v0.6's appendices are
+> A/B/C/D (`:2950,:2998,:3072,:3101`) and the letter occurs once, at `:2733`, as a repo path. Nine
+> repo references, none designating publication. **While the letter stays filed evidence, the
+> external exposure is zero.**
+>
+> **R-C — Limb 2 therefore reduces, and closes now rather than waiting on Limb 1.** No sub-item
+> granularity is owed; it was owed *solely* because of the letter's `§2.9(b)`. What remains is
+> ordinary supersession hygiene — v0.6 §2.8/§2.9 keep their numbers and text, and gain a **forward
+> pointer** when the practice paper lands. The four v0.6 sites that promised a sub-item table (`:68`
+> header block, the two markers, the §13 paragraph) were amended 2026-08-20.
+>
+> **REVIEW DATE 2026-09-14 — RETIRED, with its reason, not deleted.** It existed because this limb
+> was contingent on Limb 1 and guarded a surface that could not be repaired after the fact. R-B
+> removes the surface and R-C removes the contingency, so the date now schedules a re-derivation of a
+> settled question. It is **not** retired because the deadline was inconvenient.
+>
+> **THE ONE BRANCH POINT — and its trigger lives with the letter, not here.** Promoting the letter out
+> of filed evidence into a published appendix **re-instates Limb 2's sub-item table at §2.8/§2.9** and
+> the review date with it. A person contemplating that promotion is looking at the letter, so the
+> reversion trigger is recorded in the letter's own repository-annotation header. `§9.2` is **not** in
+> the reversion — see the withdrawal below.
+
+> **`§9.2` WITHDRAWN FROM THIS LIMB'S SCOPE, and the REASON is recorded because the conclusion alone
+> would be re-litigated.** `LETTER_2026-08-11_wu.md:15` cites **`§2.9(b)` and `§9.2`**. A future
+> reader who sees the `§9.2` cite, sees §9.2 outside Limb 2's scope, and finds no reason given will
+> re-open this. The reason: **§9 was never a moving section.** The salvage map in
+> `EXTRACTION_PROMPT.md` §3 is headed *"what moves, from where"* over rows that mostly only *draw
+> on* — and that one word in a heading is the whole basis of the "moves" reading. Five independent
+> lines settle it the other way: only §2.8/§2.9 carry `[DECLARED TEMPORARY]` markers (`checks.sh`
+> asserts exactly 2); §4's redirect table covers only §2.8/§2.9; §3's own note names only §2.8/§2.9
+> as the superseded side; this entry's recommended split says v0.6 **keeps** the organizational form;
+> and concealment's canonicity marker says the same. **§7–§10 are material to DRAW ON, not material
+> that relocates.** The heading was split in two ("moves" / "draws on") 2026-08-20 — it had already
+> produced a wrong-but-reasonable action in a receiver who read only the prompt, which is the receiver
+> test failing exactly where the discipline predicts.
+
+> **STANDING CHECK — before relocating any section of a paper.** Grep the artifacts **designated for
+> external publication** for references to it, **by section NUMBER and by PROSE NAME**. Executable so
+> the recipe cannot rot: `audits/2026-08-20_oq287_limb2_discharge/standing_check.sh` (`--selftest` for
+> its controls).
+>
+> **The set is ENUMERATED, not inferred** — today `docs/amnesiac_institution/amnesiac_institution_v0_6.md`
+> and `docs/concealment/concealment_without_a_concealer_v0_4.md`. Scoped instead to "the appendix" it
+> would run over an **empty set and pass vacuously** (Pattern 5), which is the failure it exists to
+> prevent.
+>
+> **BOTH arms are required, and §9 shows why in one run.** v0.6 §9 is *"The Organizational Form."*
+> Arm 1 (number) returns **11 cross-document hits on `§9`, every one a false positive** — concealment
+> owns its own §9, a different section entirely. Arm 2 (prose) returns **the single true reference**,
+> `concealment_..._v0_4.md:24`, which arm 1 cannot see because that sentence names its domains in
+> prose with **no section numbers anywhere in it**. Blind and noisy in opposite directions; only the
+> pair reads correctly. The mechanism has a naturally-arising witnessed catch (KNOWN_STATE 2026-08-20,
+> the paraphrase false absence: `cross-type` = 0 against a claim made in other words). **The prose arm
+> is UNTESTED on this population** — no moving section has a live prose-only exposure — and was not
+> given a manufactured one, because an authored catch would be a false witness here.
+>
+> **Declared residual: the enumeration has no owner and no gate.** A third artifact designated for
+> publication that nobody adds makes the check go green over a stale set — silently, the same shape as
+> R2's aptness blindness, where the green reads as verification of a set it never saw. Acceptable at
+> two members maintained by one operator; recorded because it is not acceptable undeclared.
+
+> **SEQUENCING — the OQ-280 constraint existed and is DISCHARGED; no `Deps:` edge is authored.**
+> OQ-280's disposition edits v0.6 §4.3, which is upstream of the salvage map's §7–§10 anchors, and its
+> content is the paper's account of its own evidence base — which the practice paper's II and V
+> describe. So Limb 1 was not to be authored against an unamended §4.3. **OQ-280 resolved 2026-08-20
+> (`d8bb9522`), before this pass**, and the pins duly shifted (§2.8 `:590→:628`, §2.9 `:632→:670`,
+> §4.3 `:988→:1026`). A `blocked_on OQ-280` edge is therefore **deliberately not authored**: it would
+> record a satisfied constraint as a live one and require editing a closed entry's *"gating nothing"*
+> line for no live purpose. Recorded as prose because it is history, not frontier.
 
 **DECLARED RESIDUALS FROM PASS A — none is checkable** (detail: `WRITEUP.md` → *Declared residuals*):
 R1 `COVERAGE_DIFF.md`'s coverage calls are unverified and pre-`C1` — *the re-check verifies the

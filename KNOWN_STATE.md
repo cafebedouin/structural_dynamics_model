@@ -1764,9 +1764,24 @@ survives a renumbering.
    substrate to fit itself.
 
 4. **§2.8/§2.9 are DECLARED TEMPORARY, and §2.9(b) is cited in correspondence already sent.**
-   `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md` cites `§2.9(b)` and cannot be
-   edited, so the redirect owed when the practice paper lands is needed **at sub-item granularity**.
-   That limb has **no owner** and carries a review date of **2026-09-14** (ISSUES OQ-287, Limb 2).
+   They keep their numbers and their text; when the practice paper lands they become the superseded
+   side and gain a **forward pointer**. §2.9(b) keeps its letter, so the sent letter's citation
+   resolves correctly before and after.
+
+   > **[CORRECTED 2026-08-20 — original preserved, per the corrections-on-close rule.]** This item
+   > read: *"`LETTER_2026-08-11_wu.md` cites `§2.9(b)` and cannot be edited, so the redirect owed
+   > when the practice paper lands is needed **at sub-item granularity**. That limb has **no owner**
+   > and carries a review date of **2026-09-14**."*
+   >
+   > **Wrong in its inference, not its facts.** The letter does cite `§2.9(b)` and is uneditable —
+   > but **uneditability generates no repository obligation**; nothing here can compel an edit to a
+   > letter in someone else's inbox. The exposure that would have justified sub-item granularity was
+   > **a reader following `§2.9(b)` out of a PUBLISHED artifact**, and that designation was never
+   > executed: v0.6's appendices are A/B/C/D, and the letter occurs once, as a repo path. **Limb 2
+   > was DISCHARGED 2026-08-20 and its 2026-09-14 review date retired** (ISSUES OQ-287, R-A/R-B/R-C;
+   > `audits/2026-08-20_oq287_limb2_discharge/WRITEUP.md`). The reversion trigger — promoting the
+   > letter to a published appendix re-instates the sub-item table — is recorded in the letter's own
+   > annotation header, where the person making that decision is actually looking.
 
 **Three residuals that are NOT checkable and will not announce themselves:** `COVERAGE_DIFF.md`'s
 coverage calls are unverified and pre-`C1` (*the re-check verifies the anchors, not the coverage

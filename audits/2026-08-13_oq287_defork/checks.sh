@@ -218,9 +218,40 @@ row3() {
 
   local marks; marks=$($GREP -c 'DECLARED TEMPORARY — A2-pre ruling' "$V06")
   [ "$marks" -eq 2 ] && pass "both declared-temporary markers present ($marks/2)" || bad "declared-temporary markers: $marks/2"
-  printf '%s' "$norm" | $GREP -q 'at sub-item granularity' \
-    && pass "§2.9's marker names sub-item granularity for the redirect" \
-    || bad "§2.9's marker does not name sub-item granularity"
+  # ARM RETIRED 2026-08-20, NOT DELETED — original assertion preserved above the replacement.
+  #   was: printf '%s' "$norm" | $GREP -q 'at sub-item granularity' \
+  #          && pass "§2.9's marker names sub-item granularity for the redirect" \
+  #          || bad  "§2.9's marker does not name sub-item granularity"
+  # It guarded a requirement that OQ-287's R-C RULED AWAY: sub-item redirection was owed solely
+  # because the already-sent Wu letter cites §2.9(b), and that letter is filed evidence rather than
+  # a published appendix, so the unrepairable reader it guarded was never created (R-B). Retired in
+  # the SAME change as the ruling, because a control left standing over a withdrawn requirement goes
+  # red at the thing that is now correct — and "orphaning arrives through repairs."
+  # The §2.9(b)-addressable arm ABOVE is deliberately KEPT: §2.9(b) retains its letter either way,
+  # and that arm is what keeps the sent letter's citation from dangling. R-C narrowed the OBLIGATION,
+  # not the ADDRESSABILITY.
+  # Replacement arms — what R-C actually requires of the marker.
+  # SCOPED TO THE MARKER BLOCK, not to "$norm". $norm is the WHOLE FILE, and both replacement
+  # phrases occur elsewhere in it (the header block and §2.8's marker), so a whole-file arm here
+  # is green no matter what the §2.9 marker says — unfalsifiable, and indistinguishable from an
+  # arm that passed. Caught by a two-sided control 2026-08-20 (strip the phrase from §2.9's
+  # marker: the whole-file form stayed PASS twice). The ORIGINAL 'at sub-item granularity' arm had
+  # the same whole-file scope and was falsifiable only by accident, that phrase happening to be
+  # unique to §2.9's marker.
+  # Extract from the RAW file, not from $norm: normalized() collapses the whole file to ONE line
+  # (tr '\n' ' '), so any line-oriented range over $norm matches nothing and every arm downstream
+  # would pass vacuously. The block is the §2.9 heading plus the blockquote immediately under it.
+  local m29; m29="$(awk '/^### 2\.9 /{f=1} f&&(/^>/||/^### 2\.9 /){print;next} f&&/^$/{next} f{exit}' "$V06" | tr '\n' ' ')"
+  [ -n "$m29" ] \
+    && pass "§2.9 marker block extracted for scoped arms ($(printf '%s' "$m29" | $GREP -c .) lines)" \
+    || bad "§2.9 marker block did NOT extract - the two arms below would pass vacuously on empty input"
+  printf '%s' "$m29" | $GREP -q 'forward pointer' \
+    && pass "§2.9's marker names the forward pointer it now owes (R-C, 2026-08-20)" \
+    || bad "§2.9's marker does not name the forward pointer R-C requires"
+  # and the reversion trigger must survive, or the branch point becomes a memory:
+  printf '%s' "$m29" | $GREP -qi 're-\?instates the sub-item table' \
+    && pass "§2.9's marker carries the reversion trigger (promotion re-instates the sub-item table)" \
+    || bad "§2.9's marker lost the reversion trigger - the branch point is now unrecorded"
 }
 # --- row 4 -------------------------------------------------------------------------------------
 # A3's check, WRITTEN BEFORE A3. It is expected to be RED until the re-pointing lands; that is the
