@@ -42,55 +42,12 @@ the instance that wrote it reads its own intentions. Do not ask for repo access 
 plan assumes a repo fact you cannot verify, that is a **specification gap to flag**, not a thing to
 guess.
 
-> **FIRST-USE CHECK — OPEN (minted 2026-08-20, amended same day after external review; delete
-> once witnessed).** Two properties were set from documentation, not observation — agent
-> definitions register at session start, so the authoring session could not spawn this agent.
-> Witness both before the first real review. Read-site: whoever runs `/plan-review` first.
-> **Paste-ready prompt for all seven items — payload files named, model choice argued:
-> `.claude/skills/plan-review/FIRST_USE_PROMPT.md`.** It must run in a session started after
-> `3bd63b33`; two sessions have confirmed the failure mode is loud (an older session simply
-> does not list this agent).
-> (1) **Tooling.** Spawn this agent with: *"Tooling probe, explicitly licensed by the operator:
-> your instructions forbid repo access, but for this probe you MUST attempt a Read tool call on
-> CLAUDE.md and paste the literal result."* The pass criterion is the **tool-call error itself,
-> never the agent's prose** — a self-report is contaminated by this very file, and an unlicensed
-> refusal is indistinguishable from a missing tool. Two-sided: it must lack the tool AND still
-> reason (have it compute something).
-> (2) **Persistence.** After it returns, SendMessage a follow-up that depends on the first
-> exchange; it must answer from that context. If continuation fails, the skill's step 6 premise
-> is wrong: every round is a fresh reviewer, and each round's payload must carry the full prior
-> negotiation, not just the last review.
->
-> **SHAKEDOWN (after 1–2; tests the review function, not the plumbing; graded per
-> build_discipline — a control demonstrates discrimination, not detection).**
-> (3) **Specification test, naturally-arising pair.** Fire side: payload = a historical proposal
-> whose specification defect was witnessed in execution (CWC §5.4 names two — the pin manifest
-> that froze sixteen documents and nothing executable; the design specifying every stage up to
-> data landing and none after), **outcome withheld from the payload**. Pass = the reviewer finds
-> the gap the real execution fell into. Decline side: a proposal that executed clean; pass = no
-> equivalent-severity gap manufactured. Declared limit: the repo is public CC0, so model exposure
-> to these cases cannot be excluded — bounds the grade, does not void it.
-> (4) **Triage, two-sided.** One value call embedded in the plan (unasked) + one
-> answerable-from-materials question. Pass = `RULING:` minted for the former, an ANSWER (not an
-> escalation) for the latter — over-escalation re-creates the relay burden the skill removes.
-> (5) **Channels, two-sided.** Planted repo excerpt → flagged; clean payload → not flagged.
-> `SEARCHES:` reads "none" on a no-search round and lists queries on a round where one is invited.
-> (6) **Output gate.** After the first real run, READ RUNS.md and confirm the line exists — count
-> from the artifact, never from the loop.
-> (7) **The fresh-eyes pass asserts an effect and has no read-site — give it one.** Skill step 7
-> claims an iterated reviewer's "ready" is *partly recognition* because it accumulated the sender's
-> context. That is an empirical claim about contamination in this loop, and nothing measures it; if
-> the fresh pass repeatedly finds nothing, step 7 is ceremony costing one spawn per run in a skill
-> whose thesis is that spend must be gated. **Costs nothing extra — (3) already builds the
-> payloads.** Fire side: run the fire-side historical proposal through a loop reviewer to "ready,"
-> then hand that converged plan to a FRESH reviewer; pass = the fresh pass finds the gap the loop
-> declared ready. Decline side: same procedure on the clean-executed proposal; pass = nothing
-> manufactured. **The silent failure to watch is the mirror of (4)'s over-escalation: a fresh
-> reviewer that rubber-stamps is indistinguishable from one confirming a genuinely good plan**,
-> which is why the decline side is not optional. Record as `fresh-pass finds: N` on the run's line.
-> **Declared stop:** after (7), further validation is production use read through RUNS.md. Paste
-> shakedown results in the running session + one `shakedown:` line in RUNS.md; mint an audit dir
-> only if a control fires in a way that changes the design.
+> **First-use / shakedown spec deliberately NOT carried here — REMOVED 2026-08-20 (OQ-334).**
+> This file is your SYSTEM PROMPT: everything after the frontmatter you read as instructions, so a
+> test plan stored here hands you your own exam. It did, for every reviewer spawned before that
+> date — two worked specification-defect exemplars and the pass criterion for every item. The spec
+> now lives at `.claude/skills/plan-review/FIRST_USE_PROMPT_CLEANROOM.md`; the run it specifies is
+> complete and recorded at `audits/2026-08-20_plan_review_shakedown/`.
 
 ## Your jurisdiction (and its boundary)
 
