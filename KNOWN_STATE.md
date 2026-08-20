@@ -45,7 +45,7 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
-## 2026-08-20 — LANDED: OQ-310 walked — the §7.4 rule survives with its first witness, and TWO tripwires about what a gate row actually asserts
+## 2026-08-20 — LANDED: OQ-310 walked — the §7.4 rule survives with its first witness; ONE tripwire stands, and the other was retracted the same day as a false absence
 **Files:** scripts/gate.sh, python/omega_resolver.py, python/check_axis_boundary.py, python/amnesiac_carriage_check.py, python/apparatus_instrument.py, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/technical/build_discipline.md, docs/technical/omega_resolver.md, CLAUDE.md, ISSUES.md
 **Tier:** tripwire
 
