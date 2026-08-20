@@ -79,13 +79,25 @@ runs leave a record.
 
 It must contain: the plan; the stop-and-ask triggers (the CAUTIONS, made concrete); the license to
 refuse, stated ("if an instruction is correct in prose and wrong when executed, say so rather than
-comply — report the refusal at the volume of a completion"); and mid-run question routing:
+comply — report the refusal at the volume of a completion"); **the RUNS.md annotation obligation
+below, quoted into the prompt with the run's line identified**; and mid-run question routing:
 
 - **Spec-interpretation question** → spawn `repo-blind-reviewer` with OQ + plan + the question
   (triage rule applies: it answers from the plan's own terms or marks it RULING).
 - **Evidence question** → re-derive it yourself against the substrate; that is the executor's job,
   not a reviewer's (the reviewer's amendments never touch evidence, §9.4).
 - **RULING** → stop and ask the operator.
+
+> **Why the annotation obligation travels in the prompt (Pattern 1 — wire the consumer in the same
+> change).** The Phase-3 line is written by a session running this skill, so the instruction reaches
+> it. The `post-impl gaps` half is written **after implementation, by a fresh session that is not
+> running this skill** — SKILL.md is not in its context, no hook delivers it, and no KNOWN_STATE
+> entry names either file (checked 2026-08-20: 0 entries). **The executor prompt is the only channel
+> that reaches that session**, so an obligation stated only here is a producer with no consumer, and
+> the column that would carry it accumulates empty. An empty `post-impl gaps` column is
+> indistinguishable from *no gaps were found* — the falsifier's other half reading as a clean
+> record. Quote the obligation, and name the line to annotate (date + target), or it does not
+> happen.
 
 ## After implementation — evaluation is re-derivation, not reading
 
