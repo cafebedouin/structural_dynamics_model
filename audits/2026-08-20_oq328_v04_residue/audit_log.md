@@ -17,3 +17,17 @@ plan-vs-observed mismatch, per the plan's own instruction to report the baseline
 
 ## Log
 
+### 2026-08-20 — Package S, phantom quotation: REFUSED before any edit
+
+The plan's fourth finding ("a phantom quotation, carried at two sites") is false. The phrase
+*"the losses are independent"* IS in §5.4 at `:1357-1358`, split across a hard wrap inside a
+blockquote. Line-based grep returns 0; the plan's own wrap-safe verification probe returns 1.
+Both cited citations are correct and were left untouched.
+
+Evidence + two-sided control on the probe: `phantom_quotation_refused.md` (written before the
+paper was edited; this log entry commits ahead of the paper diff so the ordering is git's, not a
+reconstruction).
+
+Downstream effect: Package C row 11's hazard 1 inverts — the collision it was told might not
+exist DOES exist at that exact wording, so row 11 quotes it.
+
