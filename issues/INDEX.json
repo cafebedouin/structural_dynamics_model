@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "1d431bdb3d1a694a676d497f6021ad79a008f306",
+    "store_version": "45e064305a88f36b51777d1cf9729ae2b5d4a1a8",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T10:29:05"
+    "generated_at": "2026-08-20T11:18:23"
   },
-  "issues_sha": "8f1e462a68fdefe86cc94ef764144b2e040264b4e71a02382213053dc5443b59",
+  "issues_sha": "e12904b2f3967dac67642e2af3261505abd430cc67553d19d93db4dadc279fea",
   "n_entries": 332,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 166,
+    "resolved": 167,
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 124,
+    "open": 123,
     "partial": 5
   },
   "active": [
@@ -1527,21 +1527,6 @@
         "OQ-68",
         "OQ-308",
         "OQ-322"
-      ]
-    },
-    {
-      "id": "OQ-310",
-      "status": "open",
-      "priority": 3,
-      "summary": "Walk the 22 gate rows against the invariant-versus-value rule: it predicts every value-checking row is blind to apparatus self-instances, and that prediction is cheap and unrun",
-      "deps": [
-        "splits_from OQ-309"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-309",
-        "OQ-328",
-        "OQ-332"
       ]
     },
     {
@@ -4701,6 +4686,21 @@
         "OQ-289",
         "OQ-310",
         "OQ-328"
+      ]
+    },
+    {
+      "id": "OQ-310",
+      "status": "resolved",
+      "priority": 3,
+      "summary": "Walk the 22 gate rows against the invariant-versus-value rule: it predicts every value-checking row is blind to apparatus self-instances, and that prediction is cheap and unrun",
+      "deps": [
+        "splits_from OQ-309"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-309",
+        "OQ-328",
+        "OQ-332"
       ]
     },
     {

@@ -2480,6 +2480,60 @@ the detector ships at fixture grade with that stated.
 
 ---
 
+## State an invariant AND exit on it (OQ-310, 2026-08-20 — measured, and the prediction came out backwards)
+
+**The rule under test.** `amnesiac_institution_v0_6.md` §7.4: *a gate detects an apparatus
+self-instance if and only if it asserts an invariant the defect cannot satisfy; a gate that checks
+a value against an expectation does not.* OQ-310 walked the population it quantifies over — 26
+exit-coded gate rows, and 141 printed integrity lines in executable audit artifacts — with the
+classification frozen before any incident history was read.
+
+**Neither half of the falsifier fired**, and the rule gained one witness at natural-catch grade:
+the `apparatus` row went RED on a `**Fired:**` bit that was *present and unparseable*, caught by an
+arm that partitions parseable / present-but-unparseable / absent **by construction** (the loose
+pattern is the strict pattern's prefix), authored eight days before the rule existed and firing one
+day after it. Scoped: an invariant over the bit's **grammar**, not its truth.
+
+**But the operative half is the one the pass got backwards, and it is the part worth carrying
+here.** The pre-registration expected the exit-coded stratum to return nothing while the audit-local
+`partition_check` caught something, which would have made the rule about *legibility rather than
+enforcement*. The reverse happened. The exit-coded stratum produced the witness; `partition_check`
+— still a non-exiting `echo` — printed `186 == 185` and needed a person to read it. **Both are
+invariants; only one was unmissable.** So:
+
+> **An integrity assertion earns its keep on two independent properties, and stating one does not
+> buy the other. The INVARIANT is what makes the failure legible — a partition that cannot close
+> says what is wrong, where a count merely says a number moved. The EXIT CODE is what makes it
+> unmissable — a printed truth nobody reads has the same effect as no check at all.** Write both.
+> A `print` of a comparison inside a manifest is a *note*, not a gate, however structural the
+> comparison is.
+
+**Three further findings from the same walk, each of which is a caution about the binary itself:**
+
+- **Shape distributions run OPPOSITE by stratum.** Gate rows: 18 invariant / 7 mixed / 1 value.
+  Audit-local integrity lines: 117 value / 23 invariant / 1 mixed. A generalization measured on one
+  stratum does not transfer to the other, and §7.4's own premise (*"most of them check values"*) was
+  false of the gate rows it named.
+- **`mixed` is the honest verdict often enough to matter, and it is not a tie-break.** Seven rows
+  assert a structural closure through a *heuristic detector* (`bound selector`: set closure over
+  regex hits) or pair an invariant with a threshold (`apparatus`: exactly-one catch bit, plus
+  `n > FEEDBACK_CAP`). Forcing those into the binary manufactures whichever answer the classifier
+  preferred.
+- **There is a third cell the binary has no room for: an invariant that FALSE-FIRES.** A
+  frozen-corpus md5-of-md5s fingerprint hashed `md5sum`'s output *lines*, which carry path strings,
+  and a relative-versus-absolute mismatch produced a spurious *"corpus moved"* reading. Invariant
+  in shape, wrong in output. Catch/miss is not the whole space.
+
+**And a scoping caution about what a gate row asserts at all.** Six of the 26 rows are
+instrument-only selftests that assert nothing about the substrate. `axis boundary` is the one to
+know: **its gate row runs `--selftest` ONLY**, so the live reachability sweep — the arm that would
+catch a new committer→observer read — is not in the gate. The row proves the detector
+discriminates; it never looks at the code.
+
+Full walk, screens, and per-row classification: `audits/2026-08-20_oq310_gate_row_walk/`.
+
+---
+
 ## A control must witness that it is CALLED, not only that it works
 
 **Operator ruling, 2026-08-11.** The same lesson as *gate the output, not only the input*, one

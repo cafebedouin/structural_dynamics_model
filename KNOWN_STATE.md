@@ -45,6 +45,63 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — LANDED: OQ-310 walked — the §7.4 rule survives with its first witness, and TWO tripwires about what a gate row actually asserts
+**Files:** scripts/gate.sh, python/omega_resolver.py, python/check_axis_boundary.py, python/amnesiac_carriage_check.py, python/apparatus_instrument.py, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/technical/build_discipline.md, docs/technical/omega_resolver.md, CLAUDE.md, ISSUES.md
+**Tier:** tripwire
+
+`audits/2026-08-20_oq310_gate_row_walk/`. Neither half of §7.4's falsifier fires. The rule gains
+**one** independence-screened, non-retrodictive witness — the `apparatus` row RED on a
+*present-but-unparseable* `**Fired:**` bit (2026-08-19), by an arm authored **2026-08-10**, eight
+days before the rule existed. Freeze order: prereg `49988021c27e0b46063f5c830d971637` → prior
+`8f2380b58824641d6afefc2bf3f5b3ca` → classification `c6604cc6bd0625253788045179a6035e`.
+
+**TRIPWIRE 1 — `axis boundary`'s gate row runs `--selftest` ONLY** (`scripts/gate.sh:126`). The
+live reachability sweep — the arm that would catch a **new committer→observer read** — is **not in
+the gate**. A green `axis boundary` row means *the detector discriminates*, NOT *the code is
+clean*, and reading it as the latter is the silent mistake. **Six of 26 rows are instrument-only**
+and assert nothing about the substrate: `python env st`, `omega selftest`, `claim cites st`,
+`axis boundary`, `cli selftest`, `tripwire hook`. Adding the live arm was deliberately NOT done
+here.
+
+**TRIPWIRE 2 — never publish a literal control count; derive it.** `omega_resolver.py:1040` printed
+`all positive controls fired (10/10)` as a hardcoded string against **9** numbered controls,
+diverging at `4e423165` (2026-06-14, 7 controls under an `8/8` banner) and staying wrong for **67
+days** while the row read GREEN every run. Fixed at `45e06430`: each control registers itself and
+the banner prints `len(ran)`, witnessed two-sided (9/9 → 10/10 with a planted control → 9/9
+restored). The literal was also removed from `CLAUDE.md` and `docs/technical/omega_resolver.md`
+rather than corrected in place — a corrected constant re-seeds the same drift.
+
+**CORRECTION-KEY — how the shape counts may be cited.** Stratum 1 (26 exit-coded gate rows):
+**18 invariant / 7 mixed / 1 value**. Stratum 2 (141 printed integrity lines in executable audit
+artifacts, from 228 candidates): **117 value / 23 invariant / 1 mixed**. **Opposite distributions
+by stratum — do not transfer a generalization from one to the other.** §7.4's premise *"most of
+them check values"* is FALSE of the gate rows; the one clean value check is
+`amnesiac_carriage_check.py`, the checker written for §7.4, whose docstring calls itself
+*"INVARIANT-asserting"* ten lines above describing a value check. Counts are as of HEAD `58039b6a`,
+2026-08-20 — re-count, never recall (the gate grew 22 → 26 in two days).
+
+**The pre-registered strata-disagreement prediction came out BACKWARDS**, and that is the finding:
+the exit-coded stratum produced the witness while `partition_check` — a non-exiting `echo` —
+printed `186 == 185` and needed a reader. Promoted to `build_discipline.md` as **State an invariant
+AND exit on it**: the invariant makes the failure legible, the exit code makes it unmissable, and
+stating one does not buy the other.
+
+**A third cell §7.4's binary has no room for: an invariant that FALSE-FIRES** — the OQ-242
+frozen-corpus md5-of-md5s fingerprint hashes `md5sum`'s output *lines*, which carry path strings, so
+a relative-vs-absolute mismatch reads as *"corpus moved."* Catch/miss is not the whole space.
+
+**Instance 12 ADMITTED** (`fde20893`): §7.4's self-contradicting gate-row count is the twelfth
+numbered instance; the property is restated **eleven of twelve** at all five sites; `7.4 numbered
+rows` 11 → 12 landed in its own commit after scoring, with the classification md5 beside it.
+Screen 0, calibrated over the eleven derivation instances, **eliminates 0 of 11** — the
+pre-registered "base is inflated" outcome is scored NEGATIVE.
+
+**And a self-instance this pass committed inside its own instrument:** the first stratum-2
+enumeration command silently excluded `partition_check` — the rule's ONLY positive — because its
+token set required `== [0-9]` and `partition_check` compares against a shell variable. Caught by
+asserting a known member **before** pinning the command. (There are **two** `partition_check` lines
+in the repo; §7.4 cites one.)
+
 ## 2026-08-20 — LANDED: OQ-328 resolved, all eight V04 residue rows in the paper — and row A's zero survived enumeration while its stated REASON did not
 **Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, ISSUES.md, audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md, docs/technical/swipl_load_path_and_probe_gotchas.md
 **Tier:** correction-key

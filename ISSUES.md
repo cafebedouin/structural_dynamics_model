@@ -15212,7 +15212,7 @@ own entry, out of scope by ruling.
 
 **Ω-type:** Ω_E (each row either catches or does not; it is a matter of fact about the gate set).
 
-**Status:** open
+**Status:** resolved — walked 2026-08-20; neither half of the falsifier fires, the rule gains one independence-screened witness, and its stated premise about the population is falsified
 **Priority:** 3
 **Deps:** splits_from OQ-309
 **Origin:** 2026-08-18, minted at the second review round of OQ-309 rather than folded into it —
@@ -15303,6 +15303,101 @@ invariant or expect to miss this class* — and belongs in `build_discipline.md`
 rule. A killed rule retires a sentence from §7.4 and returns the eleven instances to being a
 description rather than a prediction. Either is worth more than the current state, which is a
 confident sentence with no test.
+
+---
+
+**RESOLVED 2026-08-20 — `audits/2026-08-20_oq310_gate_row_walk/`.** Gate GREEN at open (26 rows,
+`gate.sh` md5 `3ad2911661e76dfe9383ec74d94fd1e4`) and at close; `amnesiac_carriage_check.py`'s
+expectation set byte-identical to `22a8b5b3` at open. Phase 1 prereg md5
+`49988021c27e0b46063f5c830d971637`, prior md5 `8f2380b58824641d6afefc2bf3f5b3ca`, Phase 2
+classification md5 `c6604cc6bd0625253788045179a6035e` — in that order, which is the pass's proof
+that the prior was pinned before the verdicts were rendered. **There was no blind and the pass does
+not claim one**: the prior was in view and is measured against, by an explicit
+prior-vs-verdict column.
+
+**THE FRAMING QUESTION, ANSWERED EXPLICITLY (this entry required it).** The walk **stayed on the
+registered cut** — invariant versus value — for all scoring, so the falsifier is answered on the
+terms it was registered on. The second dimension the entry raised (*what the row RANGES OVER*) was
+**measured and recorded as an addition, declared as such**: `classification.tsv` carries a `target`
+column, added at Phase 2, marked as descriptive, and no shape verdict turns on it. Neither
+silently widened nor silently narrowed.
+
+**Falsifier: NEITHER HALF FIRES.**
+
+- **(A) no value-checking row caught an apparatus self-instance.** Both standing candidates sat on
+  the `apparatus` row and fail for *different* reasons. The **34/33 feedback cap** is eliminated by
+  screen 0: a cap breach is a **budget breach, not a defect** — nothing was wrong, there were too
+  many entries, and a threshold said so. The **malformed `Fired:` bit** is admitted as a defect but
+  was caught by an arm that is **not** a value check: `check_catch_bits` partitions *parseable /
+  present-but-unparseable / absent* by construction, so a malformed bit cannot satisfy it by any
+  route.
+- **(B) no invariant-asserting row was found to have missed one — declared null, power stated.**
+  Median row-exposure is **7 days** (8 of 26 rows ≤ 3 days; 695 row-days total); jurisdiction was
+  checked and is cleanly partitioned, so no in-scope miss was available; and 6 of 26 rows assert
+  nothing about the substrate. Its discriminating control is real: the search *did* find a defect
+  in an invariant-shaped instrument (a false fire), so the null is not a didn't-look.
+
+**THE WITNESS — the asset §7.4 said it lacked.** On 2026-08-19 the `apparatus` gate row went RED on
+a `**Fired:**` bit that was *present and unparseable*. The catching arm was authored **2026-08-10,
+eight days before the rule existed**; the incident occurred **one day after** it. §7.4's rejected
+candidate was authored the *same day* as the rule, in the pass that produced it. Grade: natural
+catch on an unrelated defect. Scoped: an invariant over the bit's **grammar**, not its truth.
+
+**THE RULE'S OWN PREMISE IS FALSE OF THE ARTIFACT.** §7.4 prices the falsifier's cheapness against
+*"twenty-two gate rows, most of them value checks."* Measured: **18 invariant / 7 mixed / 1 value**.
+The single clean value check is `amnesiac_carriage_check.py` — the checker written for §7.4, whose
+docstring titles it *"an INVARIANT-asserting carriage check"* ten lines above describing itself as
+asserting *"the expected number of hits."* The audit-local stratum runs the opposite way (117 value
+/ 23 invariant / 1 mixed of 141), so **the two strata have opposite shape distributions**.
+
+**THE OPERATIVE HALF, and the pass got its own prediction backwards.** The strata-disagreement cell
+was pre-registered as *stratum 1 silent + stratum 2 catches ⇒ legibility, not enforcement*. The
+reverse happened: the exit-coded stratum produced the witness, while `partition_check` — still a
+non-exiting `echo` — printed `186 == 185` and needed a reader. **Promoted to
+`build_discipline.md` as *State an invariant AND exit on it*.**
+
+**Screen 0 calibrated against material it was not fitted to: eliminates 0 of 11.** The
+pre-registered *"the eleven-instance base is inflated with non-defects"* outcome is scored
+**NEGATIVE** and reported as such. The declared seat failure (screen 0 was drawn with both
+candidates in view) stands as declared and is now discharged empirically.
+
+**A cell the binary has no room for.** An invariant-asserting instrument **false-fired**: the
+frozen-corpus md5-of-md5s fingerprint in `audits/2026-08-19_oq242_absence_semantics/` hashes
+`md5sum`'s output *lines*, which carry path strings. Catch/miss is not the whole space.
+
+**INSTANCE 12: ADMITTED** (`fde20893`). §7.4's self-contradicting gate-row count becomes the twelfth
+numbered instance; the property is restated **eleven of twelve** at all five sites. The forced edit
+to `7.4 numbered rows` (11 → 12) — a row of exactly the class under test — landed in its own dated
+commit **after** classification was frozen and all scoring complete, with the classification md5
+beside it. Row 19 stays out on the opposite ground: it is a **catch**, not a self-instance.
+
+**TWO DEFECTS FOUND, each fixed in its own dated commit after scoring:**
+
+1. `omega_resolver.py:1040` printed `all positive controls fired (10/10)` as a hardcoded literal
+   against **9** numbered controls; from git it diverged at `4e423165` (2026-06-14, 7 controls under
+   an `8/8` banner) and stayed wrong for **67 days**. The count is now derived from a
+   self-registering control list, two-sided-witnessed (9/9 → 10/10 with a planted control → 9/9
+   restored), and the propagated literal is removed from `CLAUDE.md` and
+   `docs/technical/omega_resolver.md` rather than corrected in place. `45e06430`.
+2. §7.4's cross-reference at v0.6 `:646` read *"ten of eleven apparatus defects **was caught by a
+   gate**"* — ungrammatical and false, a half-edited residue of the pre-instance-11 wording. Fixed
+   with the restatement, `fde20893`.
+
+**A SELF-INSTANCE COMMITTED BY THIS PASS, inside its own enumeration instrument.** The first version
+of the stratum-2 enumeration command silently excluded `freeze_frame.sh:105` — `partition_check`,
+**the rule's only positive** — because its token set required `== [0-9]` and `partition_check`
+compares against a shell variable. Caught by **asserting a known member before pinning the
+command**, not by reading the output. Recorded in `PREREGISTRATION.md` §1 at the time.
+(Also collected: there are **two** `partition_check` lines in the repo; §7.4 cites one.)
+
+**Plants (Phase 5): NOT RUN, and declared.** Pre-registered as conditional on Phases 3–4 being
+inconclusive, which did not obtain — running them would have added floor-grade evidence to a
+question already answered above that grade.
+
+**Standing tripwire this walk produced, for whoever touches the gate next:** the `axis boundary`
+row runs `--selftest` **ONLY** (`gate.sh:126`), so the live reachability sweep is **not in the
+gate**. Six of 26 rows are instrument-only and assert nothing about the substrate. Adding the live
+arm is a separate decision and is **not** taken here.
 
 
 
