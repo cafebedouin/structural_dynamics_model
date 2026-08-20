@@ -298,6 +298,19 @@ biased the result toward the author's preferred verdict.**
   species, and explicitly **not** for the paraphrase one). Read on the test arm alone, each ABSENT is
   indistinguishable from the deletion having worked.
 
+**NO CHECKER NAMES THE PRACTICE PAPER, and v0.6's forward pointers had no far-end check.**
+`amnesiac_carriage_check` covers v0.6 (15 invariants) and `checks.sh` covers v0.6 + concealment;
+**`practice_paper_v0_1.md` is named by neither.** Its only coverage is `claim_cite_check`, which
+finds it **by construction** (that checker scans the whole repo) — coverage by accident of design,
+not by enrolment. Consequence, now fixed: v0.6 §2.8/§2.9 pointed at `practice_paper_v0_1.md`
+§III/§V and **nothing asserted those existed** — renumbering §III dangled both markers with the gate
+green. **Pattern 1 on the pointer substrate, committed by the pass that built the pointers**, because
+the pointers were written after the check was. `checks.sh` row 3 now asserts the destination file,
+§III, §V, the canonicity README, and that both markers name that path — **addressability, not
+content**, so a closed audit does not become a live checker for a document it does not own. Controls
+G/H/I wired into its selftest; G/H are the free git pair (destination absent at `c3667f75`, present
+at `HEAD`). **If you add a fourth paper, check what names it before assuming the gate covers it.**
+
 **The acceptance condition was tested by a REAL DELETION and is MET.** 37 + 11 + 63 lines cut from a
 scratch copy; four anchors absent, eight surviving references dangling.
 Witness: `audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh` + `deletion_test_arm.md`.

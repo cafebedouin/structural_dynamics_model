@@ -255,6 +255,35 @@ row3() {
   printf '%s' "$m29" | $GREP -qi 're-\?instates the sub-item table' \
     && pass "§2.9's marker carries the reversion trigger (promotion re-instates the sub-item table)" \
     || bad "§2.9's marker lost the reversion trigger - the branch point is now unrecorded"
+
+  # ---- THE FAR END OF THE POINTER (added 2026-08-20) -----------------------------------------
+  # Every arm above checks the end of the wire we are standing at: that v0.6's markers NAME a
+  # forward pointer. Nothing checked that the pointer RESOLVES. Delete or renumber the practice
+  # paper's §III and both markers dangle silently with this gate green -- Pattern 1 (produced,
+  # not consumed) on the pointer substrate, in the pass that built the pointers.
+  # Scope note: these arms assert the DESTINATION EXISTS AND IS ADDRESSABLE. They deliberately
+  # say nothing about its content -- that is the practice paper's own business, and asserting it
+  # here would make this closed audit a live checker for a document it does not own.
+  local PP="$REPO/docs/practice/practice_paper_v0_1.md"
+  if [ -f "$PP" ]; then
+    pass "forward-pointer destination exists (docs/practice/practice_paper_v0_1.md)"
+    $GREP -q '^## III\.' "$PP" \
+      && pass "  destination §III is addressable (§2.8's pointer resolves)" \
+      || bad  "  §III MISSING from the practice paper - §2.8's forward pointer dangles"
+    $GREP -q '^## V\.' "$PP" \
+      && pass "  destination §V is addressable (§2.9's pointer resolves)" \
+      || bad  "  §V MISSING from the practice paper - §2.9's forward pointer dangles"
+    [ -f "$REPO/docs/practice/README.md" ] \
+      && pass "  destination directory carries its canonicity marker" \
+      || bad  "  docs/practice/README.md MISSING - a directory without one is the defect OQ-287 closed"
+  else
+    bad "forward-pointer destination MISSING - v0.6 §2.8/§2.9 point at a file that does not exist"
+  fi
+  # Both markers must name that exact path, or they point somewhere else entirely.
+  local named; named=$($GREP -c 'practice/practice_paper_v0_1\.md' "$V06")
+  [ "$named" -ge 2 ] \
+    && pass "  both markers name the destination path ($named site(s))" \
+    || bad  "  only $named marker(s) name the destination path - expected >= 2"
 }
 # --- row 4 -------------------------------------------------------------------------------------
 # A3's check, WRITTEN BEFORE A3. It is expected to be RED until the re-pointing lands; that is the
@@ -468,6 +497,34 @@ selftest() {
                   || sbad "arm F: MISSED removal of the operative phrase"
 
   V06="$saved"
+
+  # ---- controls for row3's FAR-END arms (added 2026-08-20) ------------------------------------
+  # NATURALLY-ARISING ON BOTH SIDES, drawn from git at zero cost: the forward-pointer destination
+  # docs/practice/practice_paper_v0_1.md did not exist at c3667f75 and does at HEAD (created in
+  # 20f2b93d). Neither state was authored to be found. Wired here rather than run by hand, because
+  # a control that only ever ran once witnesses the arm, not the wiring.
+  echo "selftest: controls for row3's far-end arms"
+  if git -C "$REPO" show c3667f75:docs/practice/practice_paper_v0_1.md >/dev/null 2>&1; then
+    sbad "arm G: destination EXISTS at c3667f75 - the free positive control is gone, re-anchor it"
+  else
+    spass "arm G: fires on a naturally-arising positive (destination absent at c3667f75)"
+  fi
+  if git -C "$REPO" show HEAD:docs/practice/practice_paper_v0_1.md >/dev/null 2>&1; then
+    spass "arm H: declines on a naturally-arising negative (destination present at HEAD) - discrimination"
+  else
+    sbad "arm H: destination missing at HEAD - v0.6's forward pointers are dangling right now"
+  fi
+  # arm I: the §-heading arms must be able to fail, on a copy, so the real file is never touched.
+  local tmp3; tmp3="$(mktemp -d)"
+  cp "$REPO/docs/practice/practice_paper_v0_1.md" "$tmp3/p.md"
+  perl -0pi -e 's/^## III\./## IIIa./m' "$tmp3/p.md"
+  if $GREP -q '^## III\.' "$tmp3/p.md"; then
+    sbad "arm I: the §III perturbation did not take - the control tests nothing"
+  else
+    spass "arm I: §III arm is falsifiable (renumbering removes the anchor it asserts)"
+  fi
+  rm -rf "$tmp3"
+
   fail=$sfail          # the harness's verdict is the ARMS' verdict, not the last arm's fire
 }
 

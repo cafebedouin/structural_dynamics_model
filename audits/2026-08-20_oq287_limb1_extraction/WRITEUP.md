@@ -133,6 +133,46 @@ observed silently by the author:
    states the population every time, and then reports the exception as **more informative than the
    streak**, with the narrow generalisation about structural invariants.
 
+## 4.1 A defect this pass introduced, found by asking what the checkers actually name
+
+**Nothing named the practice paper.** `amnesiac_carriage_check` asserts 15 invariants over v0.6;
+`checks.sh` asserts structure over v0.6 and concealment; **no checker named `practice_paper_v0_1.md`
+at all.** Its only coverage was `claim_cite_check`, which picks it up **by construction** — that
+checker scans the whole repository — so the paper was covered by an accident of someone else's design
+decision rather than by anyone enrolling it.
+
+**The consequence was a live dangling pointer.** v0.6 §2.8/§2.9 name `../practice/practice_paper_v0_1.md`
+§III and §V as their canonical destinations. `checks.sh` row 3 asserted **v0.6's side** — that the
+markers name a forward pointer, that the reversion trigger survives — and **nothing touched the far
+end.** Delete or renumber §III and both markers dangle **with the gate green**.
+
+That is **Pattern 1 on the pointer substrate, committed by the pass that built the pointers**: a
+producer wired with no check that its consumer resolves. It is the same shape as the `$norm` collapse
+recorded in the Limb 2 writeup — *a check scoped to what was convenient rather than to what the claim
+needed* — and it survived for the mundane reason that the pointers were written **after** the check
+was.
+
+**Fixed 2026-08-20**, five arms in row 3: the destination file exists; §III is addressable; §V is
+addressable; the directory carries its canonicity marker; and both markers name that exact path.
+They deliberately assert **addressability, not content** — asserting content would make a closed
+audit a live checker for a document it does not own.
+
+**Discrimination, shown four ways rather than asserted.** Renumbering §III fires exactly the §III arm
+(row 3 FAIL count 1); renumbering §V fires exactly the §V arm; removing the README fires exactly the
+README arm; removing the file fires the existence arm and correctly suppresses its sub-arms. Baseline
+and restored are 0, and the destination file is byte-identical afterwards.
+
+> **The control's own readout was wrong first, and this is the third instance of that shape today.**
+> The first pass filtered output on a pattern the *failure* text does not contain, so a fired arm
+> **vanished from the view instead of showing FAIL** — and absent-from-a-filtered-view is
+> indistinguishable from never-fired. Re-run printing the FAIL lines and a per-row FAIL count. Same
+> family as the capitalisation and wrap-trap defects in §3.1: **each time, the instrument was sound
+> and the reading of it was not.**
+
+Arms **G/H/I** are wired into `checks.sh selftest` rather than run by hand, because a control that
+ran once witnesses the arm and not the wiring. G and H are the free git pair — the destination is
+**absent at `c3667f75`** and **present at `HEAD`**, neither state authored to be found.
+
 ## 5. Residue and routed-back rulings
 
 - **ROUTED BACK, NOT REPAIRED — `docs/concealment/concealment_without_a_concealer_v0_4.md:34`.**
