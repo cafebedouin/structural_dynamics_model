@@ -13582,6 +13582,55 @@ assignments. It needs nobody's cooperation, no prereg-scale spend, and it is the
 of what the Wu letter asked (`docs/comparing_incident_taxonomies.md` §3, §7): we asked whether
 *their* taxonomy reproduces; this asks whether *ours* does.
 
+### FLAG 2026-08-20 — the premise sentence above is falsified against the artifact this entry consumes; the question is NOT re-worded here
+
+**What was checked.** This entry's opening premise — *"177 audit directories carry pattern
+assignments"* — was read against `audits/2026-08-14_oq278_index_collision/LABEL_SET.tsv`, the
+artifact the WHAT IT CONSUMES block below pins as the ground truth. **744 lines**, header and two
+rows as found:
+
+```
+file	line	raw_text_as_found	quoted_context	namespace	mechanism_slug	confidence
+AGENTS.md	680	Pattern 3	**Reading the historical record:** a pre-2026-08-17 `Pattern 3`…	taxonomy-candidate	bound-probe	recovered
+AGENTS.md	684	P3	but `Pattern N`/`PN` is still seven-way overloaded (the concealment…	cwc-claim-row		n/a
+```
+
+Every row is keyed on a **file:line prose citation** — *which list does this occurrence of
+"Pattern 4" point at* — not on an incident. The `file` column is a census of tracked files
+(`ISSUES.md` 28 rows, `KNOWN_STATE.md` 31, the OQ-278 prereg 37); no row names an audit directory
+as the *subject* of a classification.
+
+**The discriminating witness, and it is the strong one.** Incident-level assignments DO exist in
+this repository — the ten `true_label` rows at
+`audits/2026-08-10_oq277_rq2_crosscoding/packets/iii_prime_units/*.json` and
+`controls/anchors.json` (OQ-280). The TSV **saw one of them and recorded it as a citation**:
+
+```
+audits/…/packets/iii_prime_units/06_three_edits_one_pasted.json	6	P4	"true_label": "P4",	oq277-frozen-prereg		n/a
+```
+
+`mechanism_slug` empty, `confidence` `n/a`, namespace `oq277-frozen-prereg`. So the instrument is
+not blind to assignments — it converts them to citation rows, which is exactly what it was built
+to do. That is discrimination, not detection: the sweep declined to treat the one genuine
+assignment in its path as an assignment. The other nine `true_label` rows are not in the TSV at
+all.
+
+**Consequence for this entry.** The headline as written would measure whether a blind coder
+reproduces **citations**, not **assignments** — a weaker question wearing the stronger question's
+title. Note the shape: an entry whose stated job is to hold the disambiguated record, carrying an
+unwitnessed premise that reads as a verified one. This entry already warns that *under-recovery is
+silent — a miss presents as `unrecoverable`, which reads like a result* — but scopes that warning
+to the `6e7df53f` revision. It applies one level up, to the premise. **A contradiction, not an
+overlap.**
+
+**The question owed, before anyone runs a coding pass against this entry.** *Does the ground truth
+this study codes against contain incident-level assignments, or citation instances?* The two are
+different studies with different denominators, and picking one is a ruling, not a mechanical
+consequence — which is why the wording above is left **exactly as minted**. Restating it here
+would make the ruling silently, and the flag exists to surface that the ruling is owed. Whoever
+rules it should know the cheap arm now has a measured size: **n=10** incident-level assignments
+exist today, all ten already built (OQ-280's close, 2026-08-20).
+
 **WHY THE DEP ON OQ-278 IS FORCED, and it is not bureaucratic sequencing.** The archaeology
 sweep is this study's **label-cleaning step**. Existing assignments are the ground truth being
 coded against, and until OQ-278's ruling lands, an unknown share of them are index-keyed
