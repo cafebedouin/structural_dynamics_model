@@ -45,6 +45,67 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — TRIPWIRE: minting an OQ at the tail of `ISSUES.md` overwrites the footer's opening line, and no gate sees it
+**Files:** ISSUES.md, python/issues_status.py, issues/INDEX.md
+**Tier:** tripwire
+
+**Witnessed.** `ISSUES.md`'s footer began mid-sentence — *"resolved items with a status change and
+a resolution note rather than deleting — provenance matters.*" — with no opening. `git log -S`
+locates the loss at **`e673f4c8` (2026-08-19, OQ-327 minted)**: the new entry was inserted *over*
+the line `*Last updated: 2026-08-10. Add new items with sequential OQ-NN labels. Mark`, which is
+the last line before the footer block and reads like body text at a glance.
+
+**Why it is silent, and why it is worth a tripwire.** `python/issues_status.py --check` parses
+`## OQ-` headers and `**Status:**` lines; **it does not parse footer prose**, so the file lost a
+standing instruction and the gate row stayed green through two sessions. The deleted line was the
+instruction *for the very operation that deleted it* — a new-OQ author is exactly the reader who
+needed it and exactly the actor who removes it.
+
+**Do this instead.** Mint by anchoring on the footer's own text and inserting *before* it (the
+`*Last updated:` line is the boundary), not by appending to the tail or matching the last body
+paragraph. After any ISSUES.md edit, `/usr/bin/grep -c 'Add new items with sequential OQ-NN'
+ISSUES.md` must return 1. Restored 2026-08-20 (`b86803db`), stamped to the current date.
+
+**Flagged, NOT done — a genuine ruling.** The structural fix is an invariant assertion in
+`issues_status.py` (footer opener present, exactly once), which is cheap and is the
+invariant-over-value move the apparatus argues for. **It was not made**, because `issues_status` is
+one of the gate rows **OQ-310** is registered to walk as an *unedited* population, and converting a
+value-checking row into an invariant-asserting one perturbs the very distribution that falsifier
+tests. Sequencing, not reluctance: land it after OQ-310's walk, or rule that the walk records the
+edit as a declared perturbation.
+
+## 2026-08-20 — CORRECTION-KEY: a PARAPHRASE false absence is a distinct species from the wrap-trap class, and no normaliser fixes it
+**Files:** docs/technical/build_discipline.md, audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md
+**Tier:** correction-key
+
+**How prior results may be cited.** `crosswalk_v04_to_v06.md`'s **item 31 verdict was WRONG** and is
+corrected in place (original quoted, not overwritten). It published *"Git is not identified as the
+cross-type instrument"*; §3.3 identifies it — *"One instrument works across every row: version
+control and dated records… Every instrument in the table is amnesia-type-specific except that
+one"* — and has since v0.6's first commit (`1265d0c1`). **The row was never residue.** Any citation
+of the walk's "ten open rows" or of item 31 as absent is superseded; the corrected count is
+**eight** (OQ-328).
+
+**The mechanism, and why it needed a new name.** The probe searched the literal string `cross-type`
+against a claim made *in other words*. Wrap-trap instances 1–5 are **storage-form** false absences
+(hard wrap, blockquote markers) and a normaliser closes them; this is a **paraphrase** false absence
+and **the normaliser is no help — it returns the same 0 while raising confidence in it.** Filed at
+`build_discipline.md` → *A textual probe's zero is a fact about the probe*, with the disjoint-fix
+table. **Scope rule that generalises: an absence verdict licensed by keyword hits alone is scoped to
+the keywords, and the keywords are the author's, not the document's.**
+
+**What caught it: a positive control, not a re-read** (`"sixteen texts"` = 1, itself wrapped and
+blockquoted, so the normaliser was exercised, while `cross-type` = 0). Same shape as the same OQ's
+audit-directory row, where only *re-running the command* — not re-reading the row — showed the value
+came from a different instrument than the command beside it.
+
+**Second correction in the same document.** The crosswalk's roll-up published the **superseded**
+row-count regex `'^\| [0-9]+ \|'` beside the number **35**. That regex returns **32**; the correct
+form is `'^\| [0-9]+ (‡ )?\|'` (the three `‡`-marked rows escape the old one). The pass that wrote
+the crosswalk is the same pass that *fixed* this regex in the manifest — number carried from the
+corrected run, command from the defective one, nothing re-ran the pair. Both sites corrected
+2026-08-20 (`da6de5b2`).
+
 ## 2026-08-19 — LANDED: the 18-ruling BLOCKED-ON-YOU session — and its two recurring shapes, recorded ahead of the individual rulings
 **Files:** ISSUES.md, python/issues_status.py, python/sunset_check.py, python/apparatus_instrument.py, audits/INVESTIGATIONS.md, docs/design/design_gaps.md, docs/technical/build_discipline.md, docs/commitment_systems/commitment_systems_sketch_v6.md
 **Tier:** correction-key
