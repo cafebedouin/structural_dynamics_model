@@ -54,10 +54,15 @@ inlining repo contents.
    unavailable there, carry the full prior negotiation in each round's payload instead).
    Witnessed practice is 4–6 rounds, occasionally 12+ (OQ-303): cap at 6 by default; if not
    converged, stop and report the sticking points to the operator rather than grinding.
-7. **Fresh-eyes final pass:** when the loop reviewer says ready, spawn a NEW `repo-blind-reviewer`
-   with only the OQ + final plan (not the negotiation). A reviewer that iterated with you has
-   accumulated your context; its "ready" is partly recognition. Address or escalate what the fresh
-   pass finds; it does not restart the loop. Stopping rule, stated because it is otherwise
+7. **Fresh-eyes final pass — MANDATORY, and it is a PRODUCTION step, not a test of the loop**
+   (witnessed 2026-08-20, `audits/2026-08-20_plan_review_shakedown/`). When the loop reviewer says
+   ready, spawn a NEW `repo-blind-reviewer` with only the OQ + final plan, never the negotiation.
+   **A negotiated "Ready" is not gap-free.** Measured: a genuine five-round loop reached
+   `VERDICT: Ready`; a fresh instance holding only that text found a **self-contradictory sentence
+   that had survived all five rounds** — the negotiating reviewer had accumulated context about what
+   was *meant* and stopped parsing it literally — plus a load-bearing gap **that same reviewer had
+   flagged at round 4 and waived as "non-blocking, carried"** on its way to Ready. Negotiated
+   convergence accumulates a charity a fresh read does not have. **Skipping this ships the charity.** Stopping rule, stated because it is otherwise
    implicit: an amendment made in response to the fresh pass ships unreviewed — mark it as such
    at the operator checkpoint rather than silently folding it in.
 
@@ -123,11 +128,33 @@ reviewer approved past are the falsifier's other half.
 
 - This skill automates the relay. It may not resolve rulings, approve its own plans, or push.
 - The reviewer verifies framing and specification, never evidence. Evidence witnesses are produced
-  repo-side and never outsourced to the blind seat.
-- **Falsifier (declared read-site AND substrate):** if RUNS.md shows review rounds repeatedly
-  amending nothing beyond the Phase-1 checklist, or implementations repeatedly surfacing
-  post-impl gaps the reviewer approved past, say so at the operator checkpoint and propose
-  retiring or revising this skill. The record is RUNS.md; the decision is the operator's.
+  repo-side and never outsourced to the blind seat. **This got HARDER to hold on 2026-08-20:** the
+  reviewer now receives the project's rules by injection, so it knows the conventions and may think
+  it knows facts. Watch for it opining on evidence.
+- **"Blind" means TOOL-blind, not context-blind (OQ-334).** Every spawned subagent receives both
+  `CLAUDE.md` files, `MEMORY.md` plus relevance-triggered memory files, and live `gitStatus`. So the
+  **cold-reader jurisdiction survives and is arguably more faithful** — the receiver it simulates is
+  a fresh instance that *will* hold `CLAUDE.md`. The **outside-the-framing jurisdiction is lost** and
+  reverts to a human relay: `CLAUDE.md` **is** the framing, and a reviewer holding it is inside it.
+  **Never cite a loop review as an outside-the-framing check**, and never route the method papers
+  through this agent — Build Discipline is close to an abstract of the practice paper.
+- **The loop REFINES; it does not replace the operator's own outside read.** Its product is a plan
+  already cleaned up before a human sees it. Taking that plan afterwards to a genuinely context-free
+  instance is a separate act with a different warrant — and it is standing practice here for essays,
+  where a no-context read reliably finds what multi-model review, conversation, and the analysis
+  suite do not.
+- **Falsifier (direct, and it needs no instrument):** **do the plans the operator receives read as
+  better?** The operator sees every plan and is the read-site; if the loop stops improving them, say
+  so at the checkpoint and propose retiring or revising this skill. RUNS.md is retained for a
+  different job — a **cost meter**, not a falsifier substrate. A loop living inside planning spends
+  invisibly: the operator sees a plan, not the rounds and agent calls behind it, which is the
+  apparatus-growth hazard at its quietest. One line per run — rounds, agents spawned, findings
+  closed vs opened, defects the FIXER introduced — so the cost stays visible and cappable.
+- **The fixer is a source of rounds, not just the reviewer (witnessed 2026-08-20).** In one measured
+  round on a complex plan, 13 of 22 findings closed and **15 new ones opened**, two of them defects
+  the revising instance introduced while fixing — including a fix-label attached to a non-fix. The
+  loop can feed itself. **The round cap is therefore not a budget suggestion; it is the only bound on
+  a process that can sustain itself.** Hit the cap, stop, report sticking points; do not grind.
 - **Intended evolution, named:** Phase 1's checklist graduation is *designed* to erode the
   reviewer's marginal value on shape/record/reviver — that erosion is success, not failure, and
   RUNS.md is where it becomes visible. As it happens, narrow the reviewer's mandate toward the
