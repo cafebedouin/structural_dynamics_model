@@ -1,0 +1,25 @@
+# Hand review of every stratum-2 line the machine rule verdicted `invariant` or `mixed`
+# (32 of 149 integrity lines). The `value` bucket was NOT hand-reviewed line-by-line;
+# that is declared, and it is the conservative direction — a value line wrongly kept as
+# value cannot manufacture a falsifier-B witness. Reviewed 2026-08-20 at HEAD 65f34a0d.
+file	line	machine	hand	why
+audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh	17	invariant	NOT-INTEGRITY	`echo "== $label"` is a section banner; the `==` is decoration
+audits/2026-08-20_oq287_limb2_discharge/standing_check.sh	145	invariant	NOT-INTEGRITY	header announcing the selftest block, not a verdict line
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py	134	invariant	NOT-INTEGRITY	header for a control block
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py	55	invariant	NOT-INTEGRITY	header stating the invariant; the verdict line is :76
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_nonmd_recall.py	27	invariant	NOT-INTEGRITY	control header
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_nonmd_recall.py	32	mixed	NOT-INTEGRITY	control header
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py	41	invariant	NOT-INTEGRITY	control header
+audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py	155	invariant	NOT-INTEGRITY	section label for a finding list
+# --- the 24 that survive as genuine invariant-asserting integrity lines ---
+# partition_check x2 (set-partition equality; NEITHER exits non-zero)
+# precision_probe.py:99/103/106 (two-sided fire/decline)
+# score_only.py:40 (DISCRIMINATES / DOES NOT)
+# inputkey_screen.py:114/119, clause_order_census.py:131, mode_adjudication.py:138 (discrimination controls)
+# control_frame_command.py:175 x2 (census instrument discrimination)
+# step4_scaffold_leak_witness.py:88/89/101, step4c_allpin_control.py:46 (computed == computed)
+# controls_run.sh:24 (two runs byte-identical)
+# recheck_predeclared_counts.py:149 (stated counts must re-derive)
+# eps_census_analyze.py:43 (planted-value control, HALT)
+# verify_controls.py:120, witness_gate.py:75, pilot_witness.py:79, arithmetic_selfcheck.py:76 (ALL-PASS aggregates)
+# two_axis_witness.py:77 (mixed: computed identity + an "expected" annotation)

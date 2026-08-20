@@ -1,0 +1,46 @@
+# OQ-310 Phase 2 — CLASSIFICATION, both strata. Frozen before Phase 3 (screen-0 calibration)
+# and Phase 4/5 (incident history). HEAD 65f34a0d. Rendered WITHOUT incident history:
+# no Fired: ledger, no KNOWN_STATE, no ISSUES incident text, no §7.4 instance table was read
+# before this file was written.
+#
+# NOT A BLIND. The Phase 1 prior (evidence/prior.tsv, md5 8f2380b58824641d6afefc2bf3f5b3ca)
+# was in view. This file measures AGAINST it; `prior` and `prior_vs_verdict` are columns.
+#
+# Criteria are the Phase 1 frozen ones. Where a hard call turned on
+# "the derived artifact must regenerate identically" (an item explicitly in the frozen
+# invariant list), that criterion is cited in `deciding_line` -- an APPLICATION of the
+# frozen criteria, not a new criterion added at Phase 2.
+#
+# `target` is a DESCRIPTIVE column ADDED AT PHASE 2, declared as such. It is not part of the
+# frozen shape criteria and no shape verdict turns on it. It records what the row asserts
+# about: the SUBSTRATE (repo content), the INSTRUMENT (the checker's own discrimination),
+# or both. It is recorded because 6 of 26 rows turn out to assert nothing about the
+# substrate at all, which bears directly on falsifier B.
+#
+row	checker	shape	target	docstring_disagrees	deciding_line	prior	prior_vs_verdict
+python env	python/python_env_check.py	invariant	substrate	no	:159 ok = not missing_hard and not hook_bad -- totality over an AST-derived required-import set; no expected value anywhere	unassigned	n/a
+python env st	python/python_env_check.py	invariant	instrument	no	:184/:186/:207 set-membership + "detector FIRES on a missing hook script" -- discrimination assertions a broken detector cannot satisfy	unassigned	n/a
+issues_status	python/issues_status.py	invariant	substrate	no	:79/:94/:115/:119 every OQ has a Status line; token in TOKENS; duplicate-label uniqueness; disposition cross-field agreement -- totality + closure	unassigned	n/a
+omega check	python/omega_resolver.py	invariant	substrate	no	:441-:456 dangling Deps targets (referential closure) + rotted witness (a cited durable witness must resolve)	unassigned	n/a
+omega selftest	python/omega_resolver.py	invariant	instrument	no	:534 set(s) == {OQ-9004,OQ-9005} + len(cyc) != 1 (exactly-one) + two-sided over/under-fire controls	unassigned	n/a
+omega index	python/omega_resolver.py	invariant	substrate	no	:1010 md_path.read_text() != md -- FULL RE-RENDER equality; frozen criterion "the derived artifact must regenerate identically"	undecidable	MOVED: undecidable -> invariant
+spec enums	python/spec_enum_check.py	invariant	substrate	no	:203 MISSING SENTINEL fails closed on absence; :215 DIVERGENT is a set diff spec<->code; :218 manifest closure	unassigned	n/a
+doc patterns	python/doc_pattern_check.py	invariant	substrate	no	:222 agree = cm[idx] == bd[idx] per index; docstring :29 "compare NAMES at each index, never cardinalities"	unassigned	n/a
+bound selector	python/bound_selector_check.py	mixed	substrate	no	:246 assertion is set closure (found sites minus EXEMPT must be empty) + :251 fail-closed scanned==0; but the DETECTOR is a source regex, and "regex" is named in the frozen value-checking criterion	undecidable	MOVED: undecidable -> mixed (both frozen criteria apply, at different layers)
+dispatch head	python/dispatch_head_check.py	invariant	substrate	no	:398/:407 computed shape set must be a subset of DECLARED; :320 fail-closed scanned==0	unassigned	n/a
+codewalk caller	python/codewalk_caller_check.py	invariant	both	no	:498-:509 declared registry vs traced goals + explicit two-sided CONTROL (fires/declines) rows; :199 fail-closed scanned==0	unassigned	n/a
+displaced cites	python/pattern_citation_check.py	mixed	substrate	no	:526 UNSWEPT CONSUMER (d==0) and :530 DECLARED CONSUMER GONE (f==0) are membership invariants; but :523 gates on per-path COUNT agreement f==d	unassigned	n/a
+module bounds	python/module_boundary_check.py	invariant	substrate	no	bypass set must be a subset of the allowlist; :830-:887 allowlist grammar + duplicate-row uniqueness	unassigned	n/a
+claim cites	python/claim_cite_check.py	invariant	substrate	no	the pinned digest is RECOMPUTED from the cited source at check time (:242 digest_of) -- a defective row cannot produce the digest; frozen criterion "regenerate identically"	undecidable	MOVED: undecidable -> invariant
+claim cites st	python/claim_cite_check.py	invariant	instrument	no	:382 "MISSED a content change under an unchanged label" -- asserts the digest discriminates; plus a no-self-fire assertion	unassigned	n/a
+known_state	python/known_state_status.py	invariant	substrate	no	:68/:94/:96 every entry must carry Files: and Tier:; tier token closure -- totality	unassigned	n/a
+axis boundary	python/check_axis_boundary.py	invariant	instrument	no	the GATE ROW runs --selftest ONLY (gate.sh:126); :94 verdict = PASS if code == want over planted scenarios. The live reachability sweep (allowlist set-difference, also invariant) is NOT in the gate	unassigned	n/a
+audit cites	python/audit_citation_status.py	invariant	substrate	no	docstring :17 states THE INVARIANT: a cited path must EXIST AND be git-tracked, OR be allowlisted-ephemeral -- membership closure	unassigned	n/a
+paper carriage	python/amnesiac_carriage_check.py	value	substrate	YES -- AND SELF-DISAGREES	:171 ok = actual == expected against hardcoded integers in EXPECTATIONS (:91). :2 titles it "an INVARIANT-asserting carriage check" while :12-14 of the SAME docstring says it "asserts, per enumerated site, the expected number of hits" -- a plain description of a value check	value_leaning	CONFIRMED (and strengthened: the contradiction is inside one docstring, not docstring-vs-code)
+audit writeup	python/audit_writeup_gate.py	invariant	substrate	no	:47/:51/:53 exactly one WRITEUP.md, no rival spellings; unparseable dir name fails closed	unassigned	n/a
+apparatus	python/apparatus_instrument.py	mixed	substrate	no	:121-:125 exactly-one Fired: bit per dir + token closure (invariant); :149 if n > FEEDBACK_CAP and :243 if len(rows) > DELIVERY_ROWS (count against a constant -- pure value/threshold)	unassigned	n/a (plan named the cap arm as a count-against-a-constant but pinned no shape)
+gap surfaces	python/check_gap_status_surfaces.py	mixed	both	no	:50 the two renders must not be identical (discrimination invariant) + a self-test-first positive control; but :52/:54 are substring presence checks ("undetermined" in/not in), which the frozen criterion calls pattern	unassigned	n/a
+sunset	python/sunset_check.py	mixed	substrate	no	:87/:91 malformed date and unattributable entry fail (shape invariant); :96 date <= today is a THRESHOLD comparison	unassigned	n/a
+cli selftest	python/cli.py	mixed	instrument	no	:244 n > 0 per physical group (absence guard) + :257 planted-collision discrimination (invariant); but :251 e.path == PYTHON_DIR/"run_pipeline.py" is equality against a hardcoded path	unassigned	n/a
+tripwire hook	python/pretooluse_tripwires.py	mixed	instrument	no	:208 live_ticks == 0 and seeded_ticks > 0 (two-sided discrimination) + hook output shape; but :188-:189 asserts additionalContext == "x", equality to a literal	unassigned	n/a
+oq277 freeze	python/audits/oq277_build_prereg.py	invariant	substrate	no	:224 md5_file(path) != was per source and :262 shipped_md5 not in recorded stamps -- digest equality against re-derivation/recorded digest; no defective document can produce the digest	undecidable	MOVED: undecidable -> invariant
