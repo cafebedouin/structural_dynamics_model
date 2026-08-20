@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "858503e519ec272fec760834d073cbd7f72fe4f4",
+    "store_version": "fb8dc4de7e1e767e3794fdaf91c17f09b05f41a9",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T13:15:55"
+    "generated_at": "2026-08-20T13:37:49"
   },
-  "issues_sha": "e655a26a0af67451fb6539e3b833effe5a61815efc831de7a3486afa6e5aef39",
-  "n_entries": 333,
+  "issues_sha": "054b4b9fa52b02b2a4b9b0a2becad0e44e6b4262f03063acc75bd9780c452346",
+  "n_entries": 334,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 124,
+    "open": 125,
     "partial": 5
   },
   "active": [
@@ -1831,6 +1831,20 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-310"
+      ]
+    },
+    {
+      "id": "OQ-334",
+      "status": "open",
+      "priority": 2,
+      "summary": "`repo-blind-reviewer` is blind in TOOLS and sighted in CONTEXT: the harness injects CLAUDE.md, MEMORY.md and gitStatus into every subagent, and the automated relay is more contaminated than the web relay it replaced",
+      "deps": [
+        "splits_from OQ-287"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-287",
+        "OQ-293"
       ]
     }
   ],

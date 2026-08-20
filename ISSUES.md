@@ -16811,6 +16811,98 @@ thing OQ-310 established here.
 consistency-of-design question, deliberately not ruled at OQ-310's close because it is the
 operator's trade to make, not one the walk's evidence settles.
 
+
+## OQ-334 — `repo-blind-reviewer` is blind in TOOLS and sighted in CONTEXT: the harness injects CLAUDE.md, MEMORY.md and gitStatus into every subagent, and the automated relay is more contaminated than the web relay it replaced
+
+**Ω-type:** Ω_E for the leak and its channels (witnessed 2026-08-20, verified against ground truth).
+**Ω_C** for the charter's jurisdiction split (which of the reviewer's two roles survives is a
+naming/scoping ruling). **Ω_P** for whether a §IV.4 amendment is admitted to the practice paper.
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-287
+**Origin:** 2026-08-20, item (1) of the `repo-blind-reviewer` first-use check. The item tested
+tooling and passed two-sided; **the finding arrived through a channel item (1) was not designed to
+check**, reported by the instrument about itself.
+**Files:** `.claude/agents/repo-blind-reviewer.md`, `.claude/skills/plan-review/SKILL.md`,
+`.claude/skills/plan-review/FIRST_USE_PROMPT.md`, `docs/practice/practice_paper_v0_1.md` (§IV.4),
+`docs/concealment/concealment_without_a_concealer_v0_4.md` (P2, §5.4).
+**Fired: live** — a control's stated premise was falsified before the control was relied on.
+
+**THE FINDING, AND HOW IT WAS VERIFIED.** The tooling probe returned `Error: No such tool
+available: Read` (side A pass) and correct arithmetic (side B pass). The reviewer then reported,
+unbidden, that its context had arrived pre-loaded with both `CLAUDE.md` files, `MEMORY.md`, and a
+`gitStatus` block naming four recent commits. **Verified against ground truth rather than taken on
+its word: all four commit subjects (`c5c1ce99`, `e507e5eb`, `9b5f12bf`, `be6f5436`) are real,
+current and byte-accurate** — not reconstructible by a `WebSearch`-only agent. `.claude/settings.json`
+carries no hook or setting that does this; it is harness behaviour applied uniformly to
+Agent-spawned subagents.
+
+**THE INVERSION, recorded at the register the original claim was made in.** The skill was built on
+the claim that a spawned reviewer made blindness *"structurally enforced rather than depending on
+discipline about what gets pasted into CW."* **On the context axis that is backwards.** A web
+instance receives only what is pasted. The subagent receives the project's full rule set always.
+The tools axis was the channel the author thought to restrict; the harness delivers context through
+a channel nobody enumerated. **This is the concealment paper's own shape committed inside the
+artifact that cites it** (`CWC` §5.4: an inventory built under an unstated selection criterion reads
+as plausibly total, because every item in it belongs — here the inventory was *access channels* and
+the unstated criterion was *tools are the channel worth restricting*).
+
+**FOUR INJECTION CHANNELS — the fourth is payload-dependent and the naive grep misses it.**
+(1) project `CLAUDE.md`; (2) global `~/.claude/CLAUDE.md`; (3) `MEMORY.md` **plus** relevance-
+triggered sibling memory files — ~53 of them, delivered per-turn on content match, so **a payload's
+own keywords can pull a matching memory file into the reviewer's context at review time**; a grep of
+the index alone does not see this and the whole memory directory must be swept; (4) live `gitStatus`
+including recent commit subjects, which moves every commit.
+
+**SUPPRESSION — DATED PREMISE, NOT A SETTLED FACT.** *No project-level channel to scope subagent
+context injection exists as of **2026-08-20*** (`settings.json` inspected; no hook, no setting).
+Recorded as of-date because this is exactly the premise that expires while staying internally
+correct: **re-check on any harness update before treating the loss as permanent.**
+
+**THE JURISDICTION SPLIT (the charter correction, landed the same day).** One of the reviewer's two
+roles survives and one does not, and the charter now says which rather than only listing channels:
+- **Cold-reader simulation (§9.4) — INTACT, arguably improved.** The reviewer holds none of the
+  *sender's session* context, and the future cold reader it simulates is a fresh instance that will
+  hold `CLAUDE.md`. Injection makes the simulation more faithful.
+- **Outside-the-framing verification (`CWC:P2`, practice §V.4) — LOST ENTIRELY.** `CLAUDE.md` *is*
+  the framing. This jurisdiction reverts to the web relay. **Bounding a suggestion made before this
+  was known:** routing the method trio through this agent is now its **worst** use-case — Build
+  Discipline is close to an abstract of the practice paper — and the six cross-vendor reviews remain
+  the instrument for the papers. Recorded here so the suggestion is not picked up later under the
+  old premise.
+
+**CONSEQUENCE FOR THE SHAKEDOWN — item (3) is an open-book exam, and the burn is ANTI-CORRELATED
+with payload quality.** `CLAUDE.md:777–781` carries item (3)'s fire-side answer verbatim, with the
+number (*"a live run made 219 calls, passed everything … and persisted nothing"*). A genuine find
+would be byte-identical to a recall. Candidate B (OQ-293's prereg) then burned too, through a
+subtler route: its topic keywords were clean on all four channels, but `CLAUDE.md:738` states the
+**defect in the abstract** — *"a prereg that pinned what is judged and never what is shown."*
+**So the selection rule must grep the defect's DESCRIPTION, not the payload's topic.** And the
+structural point behind both burns: **`CLAUDE.md` is a promotion channel** — its function is to lift
+witnessed defects into always-loaded rules — so **the more an incident taught, the likelier its
+lesson is injected, and the worse it is as a fire-side payload.** Payload quality and contamination
+are anti-correlated by construction. A clean payload must be an incident whose defect was *not*
+promoted (most are not; the promotion test is deliberately narrow), and if none exists the honest
+output is the declared verdict *unanswerable from this population*, not a pass.
+**The re-selection search is unblessed spend and is not run here.**
+
+**ROUTED FOR RULING — a practice-paper §IV.4 amendment (Ω_P, operator's).** §IV.4 holds the
+unstated-selection-rule count at **two** and refuses a third *from the coining arc* as
+confirmation-shaped. This is a third **from a different arc**, which is the bar §IV.4 set for
+itself: unstated criterion (*tools are the access channel worth restricting*), apparatus correct on
+what it was given, caught by a substrate read from outside the designer's frame. **Detail worth
+preserving if it is admitted:** the catch's mechanism was *the instrument reporting its own context
+against its charter* — the reviewer was handed a description of itself that its arrival conditions
+contradicted, and said so. **That is the receiver's license to refuse, operating on the agent's own
+system prompt** — a cleaner instance than the design intended. Admitting it is a marked content
+edit to a canonical paper and is the operator's call, not the fixer's; the evidence is here, the
+amendment goes in house form after the ruling.
+
+**What resolution would change:** the loop's reviews stop being cited as outside-the-framing checks
+(they are not), the shakedown's remaining items get payloads that can discriminate, and the papers
+gain — or decline — a naturally-arising third instance with the strongest catch mechanism in the
+record.
 ---
 
 *Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark
