@@ -14908,203 +14908,68 @@ OQ-322 (`theater_ratio/2` fork), OQ-323 (`scenario_manager` shape-inventing decl
 OQ-324 (static ≠ loaded).
 ## OQ-309 — Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run
 
-**Ω-type:** Ω_E (the rows are measurable; the residue items are typed individually below).
+**Ω-type:** Ω_E (the rows are measurable).
 
-**Status:** partial — both owed items DONE 2026-08-18; this entry stays live as the declared
-home for the residue it pre-registered, and for the one operator decision it cannot make.
+**Status:** resolved — both owed items done 2026-08-18; residue re-homed 2026-08-20.
 **Priority:** 2
-**Deps:** bundled_with OQ-276, bundled_with OQ-280, bundled_with OQ-289, blocked_on_human oq309-prior-recipients-signal (deferred by the operator at GO: whether continued circulation carries any signal to 2026-08-12 recipients, or the asserted/withdrawn/historical retention model suffices for a reader holding the old version — a small outward-facing call, does not block circulation)
+**Deps (cleared at close):** `bundled_with OQ-276`, `bundled_with OQ-280`, `bundled_with OQ-289` —
+grouping-only and non-blocking; cleared per the standing convention. Reciprocal edges swept before
+the close (`grep -n 'OQ-309' ISSUES.md`): none of the three carried a return edge, so no one-sided
+grouping survives. OQ-310's and OQ-328's `splits_from OQ-309` stay — lineage to a resolved entry is
+normal.
+**Deps (dropped on close):** was `blocked_on_human oq309-prior-recipients-signal`; ruled 2026-08-19
+(operator): **MOOT — no prior recipients**; the 2026-08-12 version was never sent to anyone
+(operator attestation as of 2026-08-19, **not** a checked distribution log). A fact about
+2026-08-12, not a standing property: the paper is CC0 in a public repo, so "never circulated" means
+nobody was sent it, not that it was unreachable — if the question returns, it returns **live**, not
+pre-ruled moot.
+**Origin:** 2026-08-18, minted BEFORE the pass that discharges it (the pass moves the issues-status
+row it must then quote, so the OQ had to exist before the count was taken).
 
-### Circulation GO — RULED 2026-08-19 (operator, §9.2 first jurisdiction)
+**Resolution.** Both owed items done: every Appendix B row re-run under one as-of stamp with per-row
+raw output, and the 35-item `V04_CONSOLIDATION_MANIFEST.md` walk completed against v0.6 by anchor
+text, its one U-BLOCKING row (item 17) discharged, so the manifest's blocking count went 1 → 0. The
+pass also **withdrew §5.4's pooled scalar** (the rate is non-stationary — 37% June / 58% July / 80%
+Aug 1–18 — so a pooled ratio measures the denominator's age distribution), revised the correction
+history **upward** three → six, and replaced its own closing pattern-sweep with
+`python/amnesiac_carriage_check.py` (gate row `paper carriage`). Evidence: commits
+`d9941e3e`…`0f8ecf74` and `da6de5b2`; `audits/2026-08-18_appendix_b_discharge/` (WRITEUP,
+`crosswalk_v04_to_v06.md`, `evidence/carriage_check_discrimination.txt`). The paper's self-declared
+blocker is the box anchored *"What circulation is, and what it is not (2026-08-18)"*.
 
-**GO.** Recorded strictly as a jurisdictional act: the operator's decision that the document may
-carry his name outside the repository — a judgment about audience, timing, and standing. **It
-certifies no quality claim and touches no figure.** The citability of the incidence statistic was
-settled by WORK — withdrawing the pooled scalar and reporting per window (§5.4) — before and
-independently of this ruling; a future reader taking GO as endorsement of the figures is refuted
-by the paper's own blocker box.
+**RETAINED RULING (a) — GO is JURISDICTIONAL, not a quality certification** (operator, 2026-08-18,
+reaffirmed at the 2026-08-19 GO). GO settles whether the document may carry the operator's name
+outside the repository — audience, timing, standing — a seat no instance occupies (§9.2). **It
+certifies no quality claim and touches no figure.** Nothing about a decision to circulate makes a
+number more citable; withdrawing the pooled scalar and reporting per window did that, by re-running
+the paper's own commands. A future reader taking GO as endorsement of the figures is refuted by the
+paper's own blocker box.
 
-**Pre-send rider (accepted as specified, scoped on review):** `./scripts/gate.sh` shows the
-`paper carriage` row GREEN at the moment of sending. Scope of what GREEN asserts — and ALL it
-asserts: **the enumerated corrections are present at the enumerated sites** (15 invariants,
-fails on MISS as loudly as EXTRA). The gate is a YOUNG instrument (built in the same pass it
-guards, its own selftest was the fifth wrap-trap instance, no witnessed history outside its
-authoring session) — an argument for running it, not for reading it as certification of anything
-further.
+**RETAINED RULING (b) — no recipients** (operator, 2026-08-19). The paper is a **solo working
+draft**, iterated like `deferential_realism_paper_v8.md`; the 2026-08-12 version never circulated.
+Consequences: the deferred prior-recipients signal is moot (empty population), and the V04 residue
+is ordinary draft-iteration content, **not circulation debt**. Scope and evidentiary status as
+stated on the dropped Dep above — an attestation, not a log.
 
-**Deferred at GO (the one thing continued circulation has that a debut does not):** readers hold
-the 2026-08-12 version, whose pooled headline the paper has since withdrawn. Whether wider
-circulation carries a signal to those prior recipients, or the retention model is considered
-sufficient, is DEFERRED — the `blocked_on_human` above; either answer is fine and neither blocks
-circulation.
-**Origin:** 2026-08-18, minted BEFORE the pass that discharges it (the pass moves the
-issues-status row it must then quote, so the OQ has to exist before the count is taken).
-**Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (Appendix B, §5.4, §8.2,
-§10.4, the circulation-blocker box), `docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md`,
-`audits/2026-08-18_appendix_b_discharge/`.
+**Residue re-homed to OQ-328 (2026-08-20) — RE-HOMED, NOT DISCHARGED.** Eight V04 rows (8, 9, 10,
+11, 19, 23, row A of 22, half (b) of 28) are paragraphs the paper could carry and does not; they
+have **not** landed. **The count went 10 → 8 by two mechanisms in opposite directions, which is the
+more interesting fact than the number:** item **31 was never residue** — the crosswalk probed the
+literal string `cross-type` against a claim §3.3 makes in other words and published a false absence
+(a **paraphrase** false absence, a species distinct from the wrap-trap five because no normaliser
+fixes it; caught by a positive control, not a re-read) — while item **28 was residue that split**,
+its writeup half discharged at `audits/2026-08-09_oq262_coexists_severance/WRITEUP.md:132` on
+2026-08-09, **two days before the manifest that recorded the obligation was assembled**. Items 14
+and 22 (rows B/C/D/E) were landed at this close. Also corrected: the crosswalk published the
+superseded row-count regex beside the post-fix number 35 — it returns 32, and a re-runner would have
+concluded three rows had vanished.
 
-**The two owed items** (self-declared by the paper at `amnesiac_institution_v0_6.md:11-13`):
-(a) Appendix B's regeneration commands were last run 2026-08-10 and several rows are stale or
-`[UNWITNESSED]`; (b) the pass over `V04_CONSOLIDATION_MANIFEST.md`'s 35 flagged items had never
-been run. Together they are the paper's declared blocker before circulation.
-
-**What this pass does** (operator ruling, 2026-08-18): V04 walk first, command re-runs last;
-full re-date plus prose sweep under a single as-of stamp (a two-row patch would reproduce the
-mixed-as-of failure Appendix D lists as what stays dead); a v0.4→v0.6 crosswalk addressed by
-**anchor text**, not section number, so the record survives a v0.7 renumber; item 17 adjudicated
-against subsequent history (the 2026-08-11 index-3 vacation and OQ-278's close) and routed as a
-named operator decision only if a genuine residue survives; the census re-run reuses the
-`audits/2026-08-10_oq277_rq2_crosscoding/frame/` control apparatus rather than rebuilding it,
-and **no census figure may be cited unless that control exits 0** — on exit 1 the failure is
-the finding.
-
-**This OQ is the declared home for three residue types**, so that nothing from the pass lands
-only in a WRITEUP:
-1. **V04 rows still open** after the walk (the `U`-graded and any `NOT-LANDED` rows) — typed Ω_E
-   individually where they are measurable, Ω_C where they are a design choice.
-2. **Any question that is genuinely the operator's** — item 17's remainder if one survives, the
-   circulation GO itself, and the §8.2 stakes-term reading. Per the paper's §9.2 no instance may
-   self-rule these; they attach here as `blocked_on_human` when they arise.
-3. **Rows that stay `[UNWITNESSED]` because their blocker is another OQ** — the memory-channel
-   rows blocked on OQ-289's measurement, and the RQ4 standing-gate series (`:1893` / Appendix B
-   `:2455`), which this pass explicitly does NOT discharge.
-
-**What resolution would change.** The paper's circulation blocker names exactly these two items;
-discharging them removes the *factual* half of the blocker. The GO decision remains the
-operator's and is not what this OQ closes.
-
----
-
-## OUTCOME (2026-08-18) — `audits/2026-08-18_appendix_b_discharge/`, commits `d9941e3e`…`0f8ecf74`
-
-**Both owed items done.** Every Appendix B row re-run under one as-of stamp with per-row raw
-output; the V04 walk completed against v0.6 by **anchor text** (23 landed / 3 partial / 2
-superseded / 7 not landed), and its one `U-BLOCKING` item — item 17, the P3 ruling — **discharged**,
-so the manifest's blocking count is 1 → 0.
-
-**Five findings the pass produced that were not in its brief:**
-
-1. **The audit-directory row's value came from a different instrument than its command.** It read
-   174 while `ls -d audits/*/ | wc -l` returned 175 that day; 174 was the census frame after a
-   self-exclusion. The row that certifies the paper's numbers was itself uncertified, and only
-   *re-running* the command — not re-reading the row — could show it. Now two rows.
-2. **The census's precision direction, measured for the first time: 13/83 (15.7%) of numerator
-   members are hygiene-only** — their only keyword hit is this project's own reporting prose
-   (*"recorded rather than silently deleted"*). A floor over one mechanism; a second false-positive
-   mode (bare *"was never"*) is visible and unmeasured. §5.4's instrument defects go four → **five**.
-3. **The pooled incidence is a mixture over a NON-STATIONARY rate** — 36.7% (June) → 57.8% (July)
-   → 80.0% (Aug 1–18). A pooled value moves when the denominator's age distribution shifts, with no
-   correction and no change in the world. **The figure may not be compared across time.** This also
-   puts a second instrument on §10.4's absorption/decay/phase-change fork: fewer audits, each far
-   likelier to carry a defect, is what *phase change* predicts.
-4. **The manifest's own item-count self-check read 32 against a documented 35**, and had since §4b
-   was added, because three `‡`-marked rows do not match its regex. It survived because the
-   instruction to *re-run* existed and the instruction to *compare the output* did not. Fixed;
-   grade recount promoted from prose to a runnable command; `/usr/bin/grep` pinned.
-5. **The census admits non-directories, and this pass's own audit-index row fired it.**
-   `cut -d/ -f2` over `audits/` turns a hit in **`audits/README.md`** into the numerator member
-   `README.md` — not a directory, not in the denominator. No membership filter had ever existed;
-   the instrument was correct only because that file had never used the census vocabulary. The
-   index row appended for *this* audit put the words there: numerator 84, `partition_check:
-   186 == 185`. **Re-runner's tripwire: intersect the numerator with the directory population.**
-   Latent for the instrument's whole life, activated by an unrelated edit, caught by an integrity
-   line rather than by the count. Published value unaffected.
-6. **Four instruments introduced by this pass committed the defect they were introduced to
-   catch**, and the third destroyed data: a line-oriented absence probe scored a *present* phrase
-   absent (the paper is hard-wrapped); a cadence exclusion filter matched nothing and printed a
-   plausible identical number; and the promotion-trial re-scorer, run by *importing* the driver,
-   executed its module-level `sys.exit(main())`, re-ran two API calls, and **overwrote the raw
-   responses the driver had persisted precisely so re-scoring would not need a re-run**. The
-   persist-before-parse rule protects the write path and says nothing about who may import the
-   writer. Two response files are transcript-restored and labelled as such.
-
-**A seventh finding, larger than the six above, landed after operator review (2026-08-18).**
-**§5.4's pooled scalar is WITHDRAWN.** The movement 42% → 45% was the symptom; the disease is that
-the underlying rate is **non-stationary** — 36.7% (June) / 57.8% (July) / 80.0% (Aug 1–18) — so a
-pooled ratio over the observation window measures the denominator's age distribution as much as the
-record. Circulating the scalar would have retired a citability blocker at the moment the headline
-became less citable. §5.4 now leads with per-window rates; the pooled value is retained in Appendix B
-as a *computed* quantity explicitly marked not-a-summary. Consequences landed in the same pass: the
-header's *"survived three corrections"* was undercounted in the paper's favour (the count is six, and
-the withdrawal is a change of form, not a seventh correction); Appendix D.3's *"corrected to 73/174"*
-is no longer listed as settled, because the row carrying 174 paired it with a command that returned
-175; §7.4 goes from *nine instances, none caught by a gate* to **eleven across two independent
-passes, one caught by a gate** (instance 11, refused by the census frame's `partition_check`); and
-§10.5 records its **first witnessed closure**, with the generalisation that a gate catches this class
-exactly when it asserts a structural invariant rather than checking a value.
-
-**Also landed on review:** the §8.2 trial is now reported as two populations and never pooled — one
-registered draw per arm as the witness, two accident-generated draws as unregistered supplementary,
-no ratio stated; the promotion test's missing **stakes term** is routed to §14 RQ-a with a method
-rather than left as a bare declared gap; the trial's data loss is filed as a second **P1** instance
-in §5.1 (a persistence rule with no read path is a producer with no consumer); and the V04
-count-check finding is landed in §5 as a rider on P8 — *the instruction to re-run existed; the
-instruction to compare the output did not.*
-
-**Second review round (2026-08-18): the closing check was the least-witnessed instrument, and is
-replaced.** §7.4's restated property — *a gate catches this class exactly when it asserts a
-structural invariant rather than checking a value* — is now stated as a **design rule with a
-two-sided falsifier** (find a value-checking gate that catches a self-instance, or an
-invariant-asserting gate that misses one), and it **retrodicts three misses it was not derived
-from**: the V04 count check's whole-life green, and this pass's own closing sweep mis-firing twice.
-All three are value checks. Acting on that, the pattern-sweep is retired and replaced by
-`python3 python/amnesiac_carriage_check.py --check` (gate row **`paper carriage`**), which asserts
-**expected hit counts at enumerated sites** and fails on a MISS as loudly as on an EXTRA — 15
-invariants, selftest 6/6, discrimination record on the live document at
-`audits/2026-08-18_appendix_b_discharge/evidence/carriage_check_discrimination.txt` (fires and names
-the invariant on a re-asserted scalar and a twelfth §7.4 row; **declines on a pure re-wrap**, the
-case the old grep got wrong). Building it surfaced two more defects in its own first draft — a
-too-narrow row regex that could not see a twelfth instance, and a selftest whose plants silently
-no-opped against the wrapped source, so it had been asserting things about a document it never
-damaged. Both fixed; `plant()` now raises if a fixture fails to land.
-
-Also landed: the retention model is declared **three-state** (asserted / withdrawn / historical) in
-the superseded sweep file, because a two-state sweep against a post-withdrawal document reads a
-withdrawn number as a live claim; Appendix B's pooled row now states **why** it is not a summary
-rather than only that it is not; and §11 gains the one reflexive move that can be audited from the
-diff — a correction history revised **upward** against interest, and Appendix D.3 **losing** a
-settled row.
-
-**Third round (2026-08-18): the wrap-trap class survived being understood, and the derived rule's
-first candidate forward witness was checked and REJECTED.** Wrap-trap instance **five** occurred
-inside `amnesiac_carriage_check.py` — the instrument built to close instances one through four —
-whose selftest planted fixtures with a plain `str.replace` against wrapped, blockquoted source, so
-every plant silently no-opped and the "did it go red?" assertions passed a document never damaged.
-Closed by making `plant()` raise rather than report. **The catch is not a forward test of §7.4's
-invariant-versus-value rule:** the assertion that fired is invariant-shaped, but it was authored
-under §7.3's two-sided-control discipline before the rule existed and would have been written
-identically without it. The rule stands at **zero non-retrodictive witnesses**, and its falsifier is
-registered as **OQ-310** (walk the 22 gate rows). Class documented at `build_discipline.md` → *A
-textual probe's zero is a fact about the probe*, together with the ordering rule from selftest
-defect #3 (*a check that reports its own health before its findings hides the finding whenever both
-fire*), which also landed at §7.3.
-
-**RESIDUE — this entry is its home, and none of it is blocking.**
-
-- **V04 rows still open (10):** items 8, 9, 10, 11, 19, 23, 28 (not landed) and the open halves of
-  14, 22, 31. All grade W or R; each is a paragraph the paper could carry and does not. Ω_E — they
-  are matters of what the sources say, checkable by reading them. Detail per row:
-  `audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md`.
-- **Operator decisions (2).** (a) The **circulation GO**, recorded above as `blocked_on_human` and
-  **reframed 2026-08-18 (operator ruling): GO is a JURISDICTIONAL act, not a quality certification.**
-  Nothing about a decision to circulate makes the incidence figure more citable — withdrawing the
-  pooled scalar and reporting per window did that, and it was done by re-running the paper's own
-  commands. GO settles whether the document may carry the operator's name outside the repository, a
-  question no instance occupies the seat for (§9.2) and whose answer changes no figure. The paper's
-  blocker box is rewritten to say exactly this and no longer blocks anything.
-  (b) The **§8.2 stakes-term reading** is **downgraded from an open decision to a research item**:
-  the trial showed the promotion test is runnable (existence grade, n = 1 per arm registered), which
-  makes the stakes term measurable **by the same harness** — withhold a rare-but-expensive tripwire
-  and score identically. Routed to §14 RQ-a with a falsifier. It is the lowest-value of this entry's
-  open items; the rate's slope is where attention belongs.
-- **Rows still `[UNWITNESSED]`, blockers re-verified (4).** §10.4's standing-gate catch series (the
-  absorption test) — **explicitly NOT discharged by this pass**; nobody has collected it, and the
-  cadence row is a different quantity. §3.5's truncation row — re-pointed from the retracted
-  always-loaded carrier (**OQ-286**) to the recall channel (**OQ-289**), whose measurement is
-  unrun. The sessions/instances/audit-rate row — no session log exists, re-verified. And §5.4's
-  instrument-stratum rate, still unmeasured.
-- **Not re-raised here:** OQ-280's perform-vs-amend fork for §4.3, which is out of scope by ruling
-  and stays at its own entry.
+**Still open elsewhere, named so the close does not read as covering them.** Four rows stay
+`[UNWITNESSED]` with their own blockers — §10.4's standing-gate catch series (**explicitly not
+discharged here**), §3.5's truncation row (**OQ-289**'s unrun measurement), the
+sessions/instances/audit-rate row (no session log exists), and §5.4's instrument-stratum rate. The
+§8.2 stakes term is routed to §14 RQ-a with a method. OQ-280's perform-vs-amend fork stays at its
+own entry, out of scope by ruling.
 
 
 
@@ -15117,6 +14982,13 @@ fire*), which also landed at §7.3.
 **Deps:** splits_from OQ-309
 **Origin:** 2026-08-18, minted at the second review round of OQ-309 rather than folded into it —
 OQ-309's brief was the Appendix B discharge, and this is a test of a rule that discharge produced.
+**Population update, 2026-08-20 (counted, not recalled):** `./scripts/gate.sh` now prints **26**
+rows, not the 22 in this entry's title — the gate grew while this OQ sat. The title is left as
+minted (it is what was registered); **the walk's denominator is the live count at execution and
+must be re-counted then, never taken from the title.** Two rows added since minting are themselves
+invariant-asserting (`paper carriage`, `oq277 freeze`), which matters for the prediction under
+test: a walk that inherits a stale row list would under-sample exactly the population the rule
+makes claims about. OQ-328's ordering constraint depends on this row set staying unedited.
 **Files:** `scripts/gate.sh` (the row list), `docs/amnesiac_institution/amnesiac_institution_v0_6.md`
 (§7.4, where the rule is stated with its falsifier), `docs/technical/build_discipline.md`.
 
@@ -16001,6 +15873,74 @@ extending without the witness.
 
 **What resolution changes:** the HAC family clustering `outputs/context_profile_report.md`
 publishes — analysis product only; no classification/χ effect.
+
+---
+
+## OQ-328 — The eight V04 rows the paper could carry and does not: re-homed from OQ-309, not discharged
+
+**Ω-type:** Ω_E (what the sources say, checkable by reading the crosswalk against the paper; each
+row is a paragraph whose presence or absence is a matter of fact).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-309
+**Origin:** 2026-08-20, at the OQ-309 close. OQ-309's brief was the Appendix B discharge and the
+V04 manifest walk; both were done 2026-08-18. This entry is the declared home for the walk's
+paragraph-scale residue, split out so the closing entry does not carry live work (OQ-127/OQ-327
+precedent). **These paragraphs have NOT landed — this is re-homed, not discharged.**
+**Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md`,
+`docs/amnesiac_institution/V04_CONSOLIDATION_MANIFEST.md`,
+`audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md` (per-row detail and verdicts).
+
+**Framing (operator ruling, 2026-08-19).** The paper is a **solo working draft**, iterated the way
+`deferential_realism_paper_v8.md` is; the 2026-08-12 version never circulated and there are no
+recipients. So these rows are **ordinary draft-iteration content**, not circulation debt, and
+nothing here blocks anything.
+
+**The eight rows.**
+
+| row | what the paper does not carry | destination |
+|---|---|---|
+| 8 | *vacuity-at-an-interface* — a check correct in its logic and unreadable at its interface; the two nested recurrences | §5.2.1 / §7.x |
+| 9 | §L.7's fixture-graded control (4 real declines + 1 catch on real material; it caught its own author) | §7.3 |
+| 10 | §L.8, the second unplanted fire graded explicitly below §L.7 — the value is the **graded pair**, which §7.3's ladder wants and lacks a worked instance of | §7.3 |
+| 11 | the **correlated-not-additive** reading of the P6 calibration gap. Note the collision risk: §5.4 says *"the losses are independent"* about a **different** triple | §5.4 |
+| 19 | the unit-06 leak, and the fact that the **sweep** caught it — bears on §7.4's declared honest limit | §7.4 |
+| 22 (row A only) | claim-tier marking for the §6.2 mapping table's row **A** (*"A genuine gap"*) | §6.2 |
+| 23 | the `permission class` false-positive/true-negative **pair** — the naturally-arising negative §7.3 explicitly wants | §7.3 |
+| 28 (half b) | the case as a §7.3 **instrument-role** instance: a grammar validated for the main instance, reused by blind judges in a narrower form (§J omits `miscoded_asymmetry`); the error profile belongs to the role | §7.3 |
+
+Rows B/C/D/E of item 22 were landed at the OQ-309 close (`da6de5b2`); row A is deferred **on a
+stated criterion, not on difficulty** — marking it PROPOSED would run the correction *in the
+paper's favour* by softening an admission against interest, and the pass's signature move was
+running one the other way. Its honest tier is arguably WITNESSED, which under §0's own rule owes an
+Appendix B manifest row.
+
+**Ordering constraint against OQ-310 — enumerated, not guessed.** OQ-310 walks the 22 gate rows and
+needs them as an unedited population, and `python/amnesiac_carriage_check.py`'s expectation set is
+one of those rows. The OQ-309 pass read that checker and classified every row above. The result is
+**conditional on how a row lands, which is actionable in a way a flat "gated" is not**:
+
+- **Rows 8, 9, 10, 23 and 22-A, 28(b): no expectation edit.** Their destinations (§5.2.1, §6.2,
+  §7.3) sit outside every `section()` window and touch no whole-document phrase count. **Landable
+  now, before OQ-310.**
+- **Row 19 requires an expectation edit IFF landed as a numbered row.** `7.4 numbered rows` asserts
+  exactly **11** integer rows inside the `### 7.4 The recursion` → `#### 7.4.1` window, and fails on
+  an EXTRA. **Landed as prose in §7.4 it needs no edit and may go before OQ-310**; as a twelfth
+  table row it must wait, and then moves 11 → 12.
+- **Row 11 requires an expectation edit IFF its landing revises the correction count.**
+  `5.4 correction count` pins the literal phrase *"The correct count is six"* at 1. Amending §5.4's
+  independence claim alone needs no edit; if the amendment counts as a seventh correction, the
+  phrase changes and the expectation must move with it. **The judgment of whether it is a seventh
+  correction is the operator's**, not a mechanical consequence.
+
+**What resolution changes.** Eight paragraphs the paper's own manifest says it should carry. None
+is load-bearing for a published claim; the value is that the manifest walk stops having a remainder
+that lives only in an audit directory.
+
+---
+
+*Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 

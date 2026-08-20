@@ -1,23 +1,23 @@
 {
   "manifest": {
-    "store_version": "7f7611b9174efc9ad0148d067383b6d9db234031",
+    "store_version": "da6de5b2d9f260a0fdc3a2d7dce4b0ff3ef03280",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-19T18:26:45"
+    "generated_at": "2026-08-20T00:13:33"
   },
-  "issues_sha": "b2a053108fbb111db41f6b78ed07307ca21f960c43cd810f140d76837c013472",
-  "n_entries": 327,
+  "issues_sha": "98185a557f4fbf1bf1eddfa0e3cc4ef0de353908498a87b9a3ddd7fbb12cc784",
+  "n_entries": 328,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 162,
+    "resolved": 163,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 121,
-    "partial": 6
+    "open": 122,
+    "partial": 5
   },
   "active": [
     {
@@ -1541,27 +1541,6 @@
       ]
     },
     {
-      "id": "OQ-309",
-      "status": "partial",
-      "priority": 2,
-      "summary": "Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run",
-      "deps": [
-        "bundled_with OQ-276",
-        "bundled_with OQ-280",
-        "bundled_with OQ-289",
-        "blocked_on_human oq309-prior-recipients-signal (deferred by the operator at GO: whether continued circulation carries any signal to 2026-08-12 recipients, or the asserted/withdrawn/historical retention model suffices for a reader holding the old version — a small outward-facing call, does not block circulation)"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-276",
-        "OQ-278",
-        "OQ-280",
-        "OQ-286",
-        "OQ-289",
-        "OQ-310"
-      ]
-    },
-    {
       "id": "OQ-310",
       "status": "open",
       "priority": 3,
@@ -1571,7 +1550,8 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-309"
+        "OQ-309",
+        "OQ-328"
       ]
     },
     {
@@ -1801,13 +1781,24 @@
       ],
       "cross_refs": [],
       "mentioned_in": [
-        "OQ-51",
-        "OQ-59",
         "OQ-127",
-        "OQ-242",
-        "OQ-285",
-        "OQ-288",
-        "OQ-291"
+        "OQ-242"
+      ]
+    },
+    {
+      "id": "OQ-328",
+      "status": "open",
+      "priority": 4,
+      "summary": "The eight V04 rows the paper could carry and does not: re-homed from OQ-309, not discharged",
+      "deps": [
+        "splits_from OQ-309"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-127",
+        "OQ-309",
+        "OQ-310",
+        "OQ-327"
       ]
     }
   ],
@@ -4646,6 +4637,21 @@
         "OQ-322",
         "OQ-323",
         "OQ-324"
+      ]
+    },
+    {
+      "id": "OQ-309",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "Appendix B discharge + V04 consolidation pass: the paper's own witness had gone stale, and the manifest pass had never been run",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-280",
+        "OQ-289",
+        "OQ-310",
+        "OQ-328"
       ]
     },
     {
