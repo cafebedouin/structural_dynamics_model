@@ -1956,6 +1956,27 @@ more audit; the partition check is what could not be satisfied. So the honest pr
 gate catches this class exactly when the gate asserts a structural invariant rather than checking a
 value**, and ten of eleven instances had no such invariant available to violate.
 
+> **A catch, recorded so it is not mistaken for a twelfth row (added 2026-08-20).** The property
+> above counts what the eleven instances were caught *by*. Its complement is what the control
+> architecture caught that never became an instance at all, and one such catch belongs beside it:
+> during the escape-unit extraction, a banned-vocabulary leak in coder payload unit `06` was found
+> by `oq277_lexicon.py --sweep`, the arc's leak gate, firing on real contamination in exactly the
+> material it was built to protect. **This is a catch, not a self-instance.** The table above
+> enumerates defects committed *inside repairs*; a payload contamination that a control caught is
+> not one. It adds no row, and no renumbering is owed by it.
+>
+> What it does carry is the **running tally**, which is the complementary datum to the property: the
+> control architecture has now caught **two untracked paths and one real leak, and zero of five
+> instrument defects.** The split is not random. The controls catch what flows *through* the
+> instruments and miss what is *wrong with* them — the same asymmetry the denominator box below
+> declares and has not closed, arriving this time with a positive term attached. Worth stating
+> because a section that counts only misses reads as an architecture that never fires, and that is
+> not what the record shows.
+> (`audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/EXTRACTION_NOTES.md:320-324`. The
+> operator's note there gave the tally's home as *"§6.4"*, which was an earlier numbering; v0.6's
+> §6.4 is the convergence question, and the property this complements is here.)
+
+
 **Stated as a design rule, with its falsifier.** *A gate detects an apparatus self-instance if and
 only if it asserts an invariant the defect cannot satisfy; a gate that checks a value against an
 expectation does not.* **Falsifier, either direction: a value-checking gate that catches a
@@ -1984,6 +2005,24 @@ enough to kill cheaply. In the vocabulary of `CWC:E1@911a4db5` — borrowed for 
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
+
+> **Correction marked (2026-08-20) — this section states its own population twice, with different
+> values, and neither is current.** Seventeen lines apart, the falsifier's cheapness is priced first
+> against *"twenty-one gate rows"* and then against *"twenty-two gate rows"*. Neither figure is
+> marked, neither is dated, and both sentences stand intact above. The live count is **26 as of
+> 2026-08-20**, and it should be carried as-of rather than bare: the population grows, and the
+> disagreement between the two sentences is precisely what a number written twice, at two times,
+> without a stamp produces. Nothing in the argument turns on the value — the point being made is
+> that the population is large and mostly value-checking, which holds at 21, at 22 and at 26.
+>
+> **The location is the finding.** These sentences register OQ-310, whose whole job is to walk that
+> population; a claimed count that disagrees with itself and with the artifact it describes is the
+> shape this section's instances are made of, sitting inside the registration of the test built to
+> give the rule its first non-retrodictive witness. Whether it becomes a twelfth numbered instance
+> is **deferred to OQ-310's close and is not decided here.** Deciding it now would edit a row under
+> test in response to the instance that tests it: `7.4 numbered rows: 11` is itself a value-checking
+> gate row, of exactly the class the rule predicts is blind to apparatus self-instances.
+
 
 > **The denominator, stated.** Eight of the eleven come from a **single arc**: one operator, one
 > continuous pass, roughly thirty-six hours, entirely pre-spend. Two more (10 and 11) come from an
