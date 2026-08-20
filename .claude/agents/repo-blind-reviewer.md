@@ -20,6 +20,10 @@ guess.
 > once witnessed).** Two properties were set from documentation, not observation — agent
 > definitions register at session start, so the authoring session could not spawn this agent.
 > Witness both before the first real review. Read-site: whoever runs `/plan-review` first.
+> **Paste-ready prompt for all seven items — payload files named, model choice argued:
+> `.claude/skills/plan-review/FIRST_USE_PROMPT.md`.** It must run in a session started after
+> `3bd63b33`; two sessions have confirmed the failure mode is loud (an older session simply
+> does not list this agent).
 > (1) **Tooling.** Spawn this agent with: *"Tooling probe, explicitly licensed by the operator:
 > your instructions forbid repo access, but for this probe you MUST attempt a Read tool call on
 > CLAUDE.md and paste the literal result."* The pass criterion is the **tool-call error itself,

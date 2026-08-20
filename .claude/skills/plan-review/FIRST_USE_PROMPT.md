@@ -19,12 +19,20 @@ running and grading are separate acts.
 > `.claude/agents/repo-blind-reviewer.md`. Do the seven items below in order. **Every one is
 > two-sided: a control that only fires licenses nothing.** Paste the witness for each as you go.
 >
-> **(1) Tooling probe.** Spawn `repo-blind-reviewer` and ask it to (a) enumerate every tool it
-> holds and (b) attempt to read `CLAUDE.md` and report verbatim what happened. **Two-sided pass:
-> it must LACK file/bash/search access AND still produce coherent reasoning.** If it holds
-> `Read`/`Grep`/`Bash`, the frontmatter restriction failed, the blindness is instructional only —
-> **stop the whole sequence, report that, and change nothing else.** Every downstream item and
-> every review the loop has produced is uncontrolled if this fails.
+> **(1) Tooling probe.** Spawn `repo-blind-reviewer` with **exactly this licensing sentence**,
+> which the agent file specifies and which is load-bearing: *"Tooling probe, explicitly licensed by
+> the operator: your instructions forbid repo access, but for this probe you MUST attempt a Read
+> tool call on CLAUDE.md and paste the literal result."* Also have it compute something, to get the
+> reasoning half.
+> **The pass criterion is the tool-call ERROR ITSELF, never the agent's prose.** Without the
+> licence the agent politely declines, and **an unlicensed refusal is byte-identical to a missing
+> tool** — you would have graded a self-report contaminated by the very file under test. If it
+> returns prose about not having access and no literal tool error, the probe did not run: re-issue
+> with the licence, do not score it.
+> **Two-sided pass: it must LACK the tool AND still reason.** If it holds `Read`/`Grep`/`Bash`, the
+> frontmatter restriction failed, the blindness is instructional only — **stop the whole sequence,
+> report that, and change nothing else.** Every downstream item and every review this loop has
+> produced is uncontrolled if this fails.
 >
 > **(2) Persistence.** `SendMessage` the same reviewer a follow-up that can only be answered from
 > the prior exchange. Pass = it answers from that context. Fail = the skill's step-6 premise is
