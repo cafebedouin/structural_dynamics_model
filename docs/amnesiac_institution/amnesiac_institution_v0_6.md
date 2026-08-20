@@ -2019,7 +2019,7 @@ month produced two more, one of which was caught by a gate.**
 | 9 | the same manifest | its summary sentence preserved both a wrong figure *and* its correction, in different grammatical roles | a second reader |
 | 10 | a trial driver written to persist raw responses *before parsing*, so a scorer defect could be repaired without re-spending | the re-scoring step imported the driver to reuse its scorer, executing its module-level entry point — two fresh calls, and the persisted responses overwritten | noticing the response files had changed |
 | 11 | a census re-run built to re-witness the incidence figure | the pass's own audit-index row put the census's keywords into `audits/README.md`, which the positional parse admitted to the numerator as a non-directory | **the frame's `partition_check` integrity line, printing `186 == 185` — a gate** |
-| 12 | §7.4 itself, registering **OQ-310** — the walk built to give this rule its first non-retrodictive witness | the registering sentences state the gate-row population twice, seventeen lines apart, with different values (*"twenty-one"*, *"twenty-two"*), neither matching the artifact (26 at 2026-08-20) | a person reading, 2026-08-20; admitted as an instance at OQ-310's close |
+| 12 | §7.4 itself, registering **OQ-310** — the walk built to give this rule its first non-retrodictive witness | **two clauses, one act of not-checking.** (a) The registering sentences state the gate-row population twice, seventeen lines apart, with different values (*"twenty-one"*, *"twenty-two"*), neither matching the artifact (26). (b) Both sentences, **and the 2026-08-20 correction written to mark them**, characterise that population as *"most of them value checks"* — false: it is 18 invariant / 7 mixed / 1 value. The count was wrong twice; the characterisation was wrong three times, once inside its own correction | (a) a person reading, 2026-08-20. (b) **the OQ-310 census itself** — the only way to catch (b) was to walk the population, which is what the sentences were registering |
 
 **The property of the set, restated 2026-08-20 over twelve: eleven of the twelve were caught by a
 person or a script comparing a claimed number against the artifact it described** — a diff, a directory listing,
@@ -2056,8 +2056,10 @@ value**, and eleven of twelve instances had no such invariant available to viola
 only if it asserts an invariant the defect cannot satisfy; a gate that checks a value against an
 expectation does not.* **Falsifier, either direction: a value-checking gate that catches a
 self-instance, or an invariant-asserting gate that misses one.** This is cheap to attack — the
-repository runs twenty-one gate rows, and most of them check values. **Both halves of that
-sentence were wrong when written, and OQ-310 measured how: see the walk's result below.**
+repository runs twenty-one gate rows, and most of them check values. **[FALSE AS WRITTEN — both
+halves. Measured at OQ-310, 2026-08-20: 26 rows, of which 18 assert invariants and 1 checks a
+value. Retained unedited per this paper's house form for corrected claims — retention is not
+endorsement; see the correction block and the walk's result below.]**
 
 **A third witness was already sitting in the pass that produced instances 10 and 11, unnoticed until
 the rule named what to look for.** The V04 manifest's item-count check ran green for a week against
@@ -2078,8 +2080,11 @@ authored under §7.3's standing two-sided-control discipline **before** this rul
 would have been written identically had the rule never existed. Counting it would be helping
 oneself. So the position is: eleven instances, three retrodicted misses, **no prediction yet tested**
 — and the falsifier above is cheap. The repository runs twenty-two gate rows, most of them value
-checks, and the rule says every one of them is blind to this class. **That premise is false of the
-artifact, and the walk is what established it — see below.** Walking them is a short pass and
+checks, and the rule says every one of them is blind to this class. **[FALSE AS WRITTEN — the
+population is invariant-dominated, 18/7/1 of 26, measured at OQ-310. The falsifier is cheap for the
+opposite reason than the one given here: not because there are many value checks to test it
+against, but because there is exactly ONE, which is itself a narrowing of the rule. Retained
+unedited per house form; see below.]** Walking them is a short pass and
 is registered as ISSUES **OQ-310**; it either hardens the rule or kills it while it is still small
 enough to kill cheaply. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
@@ -2112,6 +2117,28 @@ subject, for the third time. The audit-local stratum runs the other way — 117 
 integrity lines are value checks — so the two strata have **opposite** distributions, which
 nothing here anticipated.
 
+*The falsifier's real population, and what the incident record says.* Among the 26 gate rows the
+value population is **n = 1**, so a negative there is mostly a fact about the denominator. The
+audit-local stratum is where the falsifier had room: **117 value-checking integrity lines**.
+Harvested from the incident side — over all eighteen recorded apparatus self-instances, the twelve
+above plus six from the forward window — **six were caught by an integrity line of some kind, and
+all six catchers assert invariants; none was caught by a value check**, while a value check is
+recorded *missing* one (a marker-presence arm that asserted one end of a pointer pair while nothing
+checked the far end). The negative's exposure base is thin and stated as such: audit-local drivers
+are largely run-once artifacts, so this is *"no value check has ever been recorded catching one"*,
+not *"117 of them ran repeatedly and stayed silent."*
+
+*And the harvest collapsed a gap this section did not know it had.* The property above says the
+eleven were caught by *"a person or a script comparing a claimed number against the artifact it
+described — a diff, a directory listing, a file count, a re-read."* **Every one of those is a
+re-derivation, and a re-derivation asserts an invariant** — *the derived artifact must regenerate
+identically* — under the same criteria the walk classified the gate rows with. So the eleven were
+not caught by something outside the invariant-versus-value cut, and the rule and the record are not
+two findings. They were caught by **invariants that no gate asserted and no exit code enforced**,
+run by a human, by hand, at read time. The scarce thing was never the invariant; it was present in
+every one of the eleven catches. **The scarce thing was the exit code** — which is the same
+conclusion the strata reached from the other direction, arriving twice by independent routes.
+
 *A cell this rule has no room for.* An invariant-asserting instrument **false-fired**: the
 frozen-corpus fingerprint in `audits/2026-08-19_oq242_absence_semantics/` hashes `md5sum`'s output
 lines, which carry path strings, and a relative-versus-absolute mismatch produced a spurious
@@ -2132,8 +2159,13 @@ invariant is what makes the failure legible; the exit code is what makes it unmi
 > marked, neither is dated, and both sentences stand intact above. The live count is **26 as of
 > 2026-08-20**, and it should be carried as-of rather than bare: the population grows, and the
 > disagreement between the two sentences is precisely what a number written twice, at two times,
-> without a stamp produces. Nothing in the argument turns on the value — the point being made is
-> that the population is large and mostly value-checking, which holds at 21, at 22 and at 26.
+> without a stamp produces. This block originally added: *"Nothing in the argument turns on the
+> value — the point being made is that the population is large and mostly value-checking, which
+> holds at 21, at 22 and at 26."* **That sentence was itself false, and OQ-310 falsified it the same
+> day it was written.** The population is **invariant-dominated**: 18 invariant, 7 mixed, **1** clean
+> value check of 26. So the argument *did* turn on something — not on the count, but on the
+> characterisation attached to it — and the correction written to mark a wrong number introduced a
+> second wrong claim in the act of excusing the first.
 >
 > **The location is the finding.** These sentences register OQ-310, whose whole job is to walk that
 > population; a claimed count that disagrees with itself and with the artifact it describes is the

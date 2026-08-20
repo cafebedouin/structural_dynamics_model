@@ -92,6 +92,22 @@ population itself supplies:
    `axis boundary`, `cli selftest`, `tripwire hook`) assert nothing about the substrate at all.
    They cannot miss a substrate self-instance because they never look at one.
 
+   **And this compounds with (1) rather than sitting beside it.** Those six rows' exposure-days
+   count toward the 695-row-day total, which is the denominator the falsifier-B power claim is
+   stated over — so part of the exposure the null is credited with is exposure to a population the
+   rows structurally cannot watch. Their contribution, computed rather than estimated:
+   `python env st` 2 + `omega selftest` 67 + `claim cites st` 7 + `axis boundary` 58 +
+   `cli selftest` 54 + `tripwire hook` 7 = **195 of 695 row-days, 28%.** The effective
+   substrate-watching exposure is **500 row-days over 20 rows**, and the null is weaker than the
+   headline figure by that much. Declared in the direction already declared, not discovered later.
+
+   *(The first draft of this paragraph asserted "207 of 695, 30%" and "488 over 20" — written
+   before the sum was run, and wrong. The sum was run in the same turn and corrected before the
+   file was committed. Noted rather than quietly fixed: it is the defect class this whole pass is
+   about, committed inside the pass's own power analysis, and the only reason it did not ship is
+   that the number was computed instead of estimated. The per-row terms are shown so the total is
+   checkable without trusting the writer.)*
+
 **The discriminating control for this null is W5**, and it is a real one: the search *did*
 surface a defect in an invariant-shaped instrument (the OQ-242 md5-of-md5s fingerprint). The
 probe is therefore demonstrably not blind to invariant instruments — it found a **false fire**

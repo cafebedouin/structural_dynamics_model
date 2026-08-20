@@ -2524,6 +2524,22 @@ invariants; only one was unmissable.** So:
   and a relative-versus-absolute mismatch produced a spurious *"corpus moved"* reading. Invariant
   in shape, wrong in output. Catch/miss is not the whole space.
 
+**THE PRICE, stated with the rule so it is not cited as unconditional.** The evidence above is
+evidence of the rule's *benefit*. The false-fire case is evidence of its *cost*, and it is the
+expensive direction: **an invariant that is wrong about its own inputs, wired to an exit code,
+halts on a non-defect** — and it halts with a structural-sounding message, which is more convincing
+than a value mismatch and therefore harder to dismiss correctly. A value check that false-fires
+says *a number differs*, and the reader checks the number. An invariant that false-fires says *the
+partition does not close*, and the reader looks for a defect that is not there. **Exit codes raise
+the cost of a wrong assertion at the same time as they raise the value of a right one.**
+
+So the rule is conditional, and the condition is the ordinary one: **an invariant earns its exit
+code once it has a two-sided control** — a case it must fire on and a case it must decline. Until
+then, state the invariant and *print* it. The OQ-242 fingerprint had no decline case; nothing in it
+distinguished *the corpus moved* from *I hashed the paths differently*. That is not an argument
+against invariants; it is the same discipline every other instrument here owes, arriving at the
+place where the exit code makes skipping it expensive.
+
 **And a scoping caution about what a gate row asserts at all.** Six of the 26 rows are
 instrument-only selftests that assert nothing about the substrate. `axis boundary` is the one to
 know: **its gate row runs `--selftest` ONLY**, so the live reachability sweep — the arm that would

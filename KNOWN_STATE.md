@@ -88,7 +88,38 @@ stating one does not buy the other.
 
 **A third cell §7.4's binary has no room for: an invariant that FALSE-FIRES** — the OQ-242
 frozen-corpus md5-of-md5s fingerprint hashes `md5sum`'s output *lines*, which carry path strings, so
-a relative-vs-absolute mismatch reads as *"corpus moved."* Catch/miss is not the whole space.
+a relative-vs-absolute mismatch reads as *"corpus moved."* Catch/miss is not the whole space. This
+rides into `build_discipline.md` as the rule's **price**: an invariant wrong about its own inputs
+and wired to an exit code halts on a non-defect with a structural-sounding message, which is harder
+to dismiss correctly than a value mismatch. **An invariant earns its exit code once it has a
+two-sided control; until then, state it and print it.**
+
+**CORRECTION-KEY — the re-derivation collapse, the pass's largest finding.** §7.4's *"ten of eleven
+caught by a person or a script comparing a claimed number against the artifact — a diff, a
+directory listing, a file count, a re-read"* names catchers that are **all re-derivations**, and a
+re-derivation is **invariant-asserting** under OQ-310's frozen criteria. So the eleven were never
+caught by something outside the invariant/value cut: they were caught by **invariants no gate
+asserted and no exit code enforced**, run by a human at read time. Do not cite the eleven as
+evidence that invariants were absent — the invariant was present in every one. **The exit code was
+what was missing.**
+
+**Falsifier A was harvested over the INCIDENT population, not the row population**, because
+stratum 1's value denominator is **n = 1** and a negative over one value check is a fact about the
+denominator. Stratum 2 holds 117. Over all **18** recorded self-instances: **6 caught by an
+integrity line, all 6 catchers invariant; 0 by a value check**, one value check recorded *missing*
+one. Exposure: audit-local drivers are largely run-once — *"never recorded catching one"*, not
+*"117 ran repeatedly and stayed silent."*
+
+**The §7.4 premise sentence was AMENDED, not merely measured against** — including the 2026-08-20
+correction block's own excuse for the wrong count (*"mostly value-checking, which holds at 21, at 22
+and at 26"*), which was **false the day it was written**. Both original premise sentences are
+retained unedited per house form but marked **[FALSE AS WRITTEN]** at the point of reading, with
+the measured figures inline. Instance 12 carries **both clauses of one act of not-checking**; no
+thirteenth row was minted.
+
+**Falsifier B's power, corrected downward:** the six instrument-only rows contribute **195 of 695
+row-days (28%)** to a denominator they structurally cannot watch — effective substrate-watching
+exposure **500 row-days over 20 rows**.
 
 **Instance 12 ADMITTED** (`fde20893`): §7.4's self-contradicting gate-row count is the twelfth
 numbered instance; the property is restated **eleven of twelve** at all five sites; `7.4 numbered

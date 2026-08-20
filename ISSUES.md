@@ -15324,7 +15324,14 @@ silently widened nor silently narrowed.
 
 **Falsifier: NEITHER HALF FIRES.**
 
-- **(A) no value-checking row caught an apparatus self-instance.** Both standing candidates sat on
+- **(A) no value-checking row or line caught an apparatus self-instance — harvested over the
+  INCIDENT population, because stratum 1's value denominator is n=1.** A negative over one value
+  check is mostly a fact about the denominator; stratum 2 holds **117**. Over all **18** recorded
+  self-instances (§7.4's twelve plus the forward window's six): **6 caught by an integrity line, all
+  6 catchers invariant; 0 by a value check**, while a value check is recorded *missing* one.
+  Exposure declared: audit-local drivers are largely run-once, so this is *"never recorded catching
+  one"*, not *"117 ran repeatedly and stayed silent."*
+  (`falsifier_a_incident_harvest.md`.) Both standing candidates sat on
   the `apparatus` row and fail for *different* reasons. The **34/33 feedback cap** is eliminated by
   screen 0: a cap breach is a **budget breach, not a defect** — nothing was wrong, there were too
   many entries, and a threshold said so. The **malformed `Fired:` bit** is admitted as a defect but
@@ -15363,7 +15370,32 @@ candidates in view) stands as declared and is now discharged empirically.
 
 **A cell the binary has no room for.** An invariant-asserting instrument **false-fired**: the
 frozen-corpus md5-of-md5s fingerprint in `audits/2026-08-19_oq242_absence_semantics/` hashes
-`md5sum`'s output *lines*, which carry path strings. Catch/miss is not the whole space.
+`md5sum`'s output *lines*, which carry path strings. Catch/miss is not the whole space. **The
+promotion to `build_discipline.md` carries this as the rule's PRICE, not as a footnote**: an
+invariant that is wrong about its own inputs and wired to an exit code halts on a non-defect, with
+a structural-sounding message that is harder to dismiss correctly than a value mismatch. The rule
+ships conditional — **an invariant earns its exit code once it has a two-sided control**; until
+then, state it and *print* it.
+
+**THE RE-DERIVATION COLLAPSE — the largest single finding, and it came from the incident harvest.**
+§7.4's property says the eleven were caught by *"a person or a script comparing a claimed number
+against the artifact it described — a diff, a directory listing, a file count, a re-read."* **Every
+one of those is a re-derivation, and a re-derivation is invariant-asserting** under this pass's own
+frozen criteria. So the eleven were not caught by something outside the invariant/value cut, and
+§7.4's property and its rule are not two findings: they were caught by **invariants that no gate
+asserted and no exit code enforced**, run by a human at read time. The scarce thing was never the
+invariant. **It was the exit code** — reached independently from the strata and from the
+retrospective record.
+
+**THE PREMISE SENTENCE WAS AMENDED, not merely measured against** (post-review obligation). §7.4's
+*"most of them value checks"* is false of the artifact (18/7/1), and so was the **2026-08-20
+correction block's own** excuse for the wrong count — *"the population is large and mostly
+value-checking, which holds at 21, at 22 and at 26"* — which was false the day it was written. That
+sentence is amended. Both original premise sentences are retained unedited per house form but
+marked **[FALSE AS WRITTEN]** at the point of reading, with the measured figures inline, so
+retention is not mistaken for endorsement. Instance 12 therefore carries **both clauses of one act
+of not-checking**: the count wrong twice, the characterisation wrong three times including inside
+its own correction. No thirteenth row was minted — same sentences, same act.
 
 **INSTANCE 12: ADMITTED** (`fde20893`). §7.4's self-contradicting gate-row count becomes the twelfth
 numbered instance; the property is restated **eleven of twelve** at all five sites. The forced edit
@@ -15389,6 +15421,12 @@ of the stratum-2 enumeration command silently excluded `freeze_frame.sh:105` —
 compares against a shell variable. Caught by **asserting a known member before pinning the
 command**, not by reading the output. Recorded in `PREREGISTRATION.md` §1 at the time.
 (Also collected: there are **two** `partition_check` lines in the repo; §7.4 cites one.)
+
+**Falsifier B's power, corrected downward post-review.** The six instrument-only rows' exposure
+counts toward the 695-row-day denominator the null is stated over, but they watch a population they
+structurally cannot see: `python env st` 2 + `omega selftest` 67 + `claim cites st` 7 +
+`axis boundary` 58 + `cli selftest` 54 + `tripwire hook` 7 = **195 of 695 row-days, 28%**. Effective
+substrate-watching exposure: **500 row-days over 20 rows**.
 
 **Plants (Phase 5): NOT RUN, and declared.** Pre-registered as conditional on Phases 3–4 being
 inconclusive, which did not obtain — running them would have added floor-grade evidence to a
