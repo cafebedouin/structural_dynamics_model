@@ -9,7 +9,10 @@ below and Appendix B. **Added 2026-08-19, from the eighteen-ruling session:** §
 witness-calculus shapes, untested-is-not-failed and the ratchet falsifier; §9.4 — the ruling pass
 and what the repo-blind reviewer's jurisdiction turned out to be; §4.1 update — the auto-approval
 posture stated with its reversibility rationale, and the review loop's depth and cross-model
-composition recorded).
+composition recorded. **Amended 2026-08-20, the OQ-280 pass:** §4.3 takes a marked correction —
+the retrospective classification left no artifact, so §5.1's patterns rest on named exemplars and
+not on a coded corpus — and RQ2's Wu cross-coding, retired 2026-08-12, is now carried at §6.2, §14
+and Appendix D.5, having been carried at none of them).
 PROPOSED throughout, with the
 exceptions recorded in §5.2, §5.2.1 and §9.2, which are operator rulings and are marked as such. Slots marked `[UNWITNESSED]` are claims
 this draft cannot pay for and are not to be cited until filled; `[OPERATOR]` slots await facts only
@@ -244,6 +247,41 @@ items was completed. Full record: `audits/2026-08-18_appendix_b_discharge/`, ISS
   quantity. §3.5's truncation row remains `[UNWITNESSED]` and is re-pointed to OQ-289's recall
   channel, its retracted always-loaded carrier being OQ-286. The sessions/instances row remains
   `[UNWITNESSED]`; the blocker was re-verified and no session log exists.
+
+**In-place corrections to v0.6 (2026-08-20, the OQ-280 marked-correction pass).** A **third** dated
+block, not an extension of the two above, for the reason the second one states: mixing as-of dates
+inside one list is what Appendix D records as staying dead. Everything here is a **historical**
+statement — what happened, not what is going to. Full record: ISSUES **OQ-280** (closed with this
+pass), **OQ-277** (the retirement being carried), **OQ-294** (flagged the same day).
+
+- **§4.3's classification procedure produced no artifact, and the paragraph is marked rather than
+  rewritten.** The methods paragraph described a retrospective single-coder pass; two whole-repository
+  searches with a positive control found that no file assigned a pattern label to a directory, an
+  open question, or an incident as a data row. **§5.1's patterns rest on named exemplars (§4.4), not
+  on a coded corpus** — which is what §5.1 already says of itself, and what §4.3 implied otherwise.
+  The correction is stated historically on a deliberate ruling: its truth does not depend on whether
+  a coding pass is ever performed, and a coded corpus arriving later would be an *addition* to the
+  record rather than a correction of this correction. Writing *"§5.1's evidential status is
+  permanently illustrative"* would have installed a forward-looking claim about work nobody has
+  ruled on, inside the paragraph being fixed for containing one.
+- **"A weekend of work" is retracted at §4.3, in the same marked block.** One paragraph takes one
+  correction, not two. The clause priced RQ2 before the attempt; the attempt happened, cost 219
+  model calls, and ended in retirement.
+- **The retirement of RQ2's Wu cross-coding is now carried at four sites, and it was carried at
+  none.** Ruled 2026-08-12; the paper went on recommending the experiment for eight days, most
+  sharply at §6.2, whose Assessment-column note was *written* 2026-08-20 and still named the retired
+  coding as the settler. §6.2 now records that its four PROPOSED rows have no named settling
+  experiment and that **this is not a resource deferral**; §14 carries a new dated retirement block
+  **beneath** its `[COST CORRECTED]` box, leaving the box's text intact, because the box is itself a
+  marked correction dated 2026-08-12 and must not silently acquire content ruled eight days later;
+  §4.3 carries the retraction above.
+- **Appendix D.5's colophon is amended, and it is the only one of the four sites that instructs.**
+  It told successor drafts to treat §14 RQ1 and RQ2 as the work queue — an instruction, not a
+  description, and the one site a v0.7 drafter would act on. It now names RQ2's surviving Advani
+  limb and points at the retirement. Amending a signed, dated colophon is exactly what the §14 rule
+  above forbids for the cost box; the distinction taken here is that the cost box **records a past
+  judgment** while the colophon **issues a standing instruction**, and an instruction that outlives
+  what it points at is the defect this pass is correcting.
 
 ## ABSTRACT
 
@@ -996,6 +1034,30 @@ inductive, interpretive compression that has proved operationally useful, not as
 classification scheme. RQ2 (§14) specifies blind re-coding as the test, and §6.2 notes that an
 external comparison set now exists, which converts RQ2 from a proposal into a weekend of work.
 
+> **Correction marked (2026-08-20).** Two claims in the paragraph above are corrected. Both are
+> stated **historically** — this records what happened, not what is going to.
+>
+> **The classification left no artifact.** Verified 2026-08-10 by two searches over the whole
+> repository: no file assigned a pattern label to an audit directory, an open question, or an
+> incident **as a data row**, and the only quantified pass over the audit record — Appendix B's
+> §4.5 row — is a keyword proxy yielding a silent-defect yes/no per directory, which assigns no
+> pattern at all. The absence claim carries a positive control: the same searches **do** return
+> pattern labels where labels exist, so *found nothing* is a fact about the repository rather than
+> about the probe. The informal reading this paragraph describes certainly occurred; nothing was
+> recorded, so nothing is checkable. **§5.1's patterns therefore rest on named exemplars (§4.4),
+> not on a coded corpus** — which is what §5.1 says of itself, and what this paragraph implied
+> otherwise by describing a classification pass. An absence presenting as a presence, inside the
+> methods section of a paper whose subject is absences presenting as presences. (Ten `true_label`
+> rows built in August 2026 under a since-retired preregistration are not a counterexample: each
+> records its label as *read off* the published pattern block rather than assigned to an incident,
+> so they are derived from §5.1 and are not evidence for it.) ISSUES **OQ-280**.
+>
+> **"A weekend of work" is retracted.** That clause priced the test before anyone attempted it. It
+> was attempted, at 219 model calls, and then **retired** — not deferred, and not on cost — on
+> 2026-08-12, because the external comparison set is unstable under its own author's hand (§6.2,
+> §14, ISSUES **OQ-277**). Blind re-coding survives as the test named here; the *external* form of
+> it does not.
+
 The same disclosure is owed for the document. Each draft of this paper was composed by an LLM
 instance from repository sources at the operator's direction, reviewed by instances of other model
 families, and ruled on by the operator. **The authorship arrangement is the subject and the method
@@ -1460,7 +1522,17 @@ part.
 **The Assessment column is typed, and one row is deliberately not (2026-08-20).** §0 types every
 other claim in this paper; until now this table did not, and its column read as ruled. The four
 convergence rows are **PROPOSED** — a cross-taxonomy correspondence is a design hypothesis owing a
-falsifier, and RQ2's blind bidirectional coding (§14) is the experiment that would settle them.
+falsifier, **and since 2026-08-12 they have had no named settling experiment.** RQ2's blind
+bidirectional coding against Wu (§14), which this sentence pointed at until now, was **retired** on
+that date: the comparison set is unstable under its own author's hand, so a confusion matrix
+against it cannot separate *this taxonomy disagrees with Wu's* from *Wu's disagrees with itself* —
+the exact ambiguity the experiment existed to resolve. **This is not a resource deferral.** No
+sample size repairs a reference that disagrees with itself, so these four rows are not rows
+awaiting a budget; the blocker is the reference. What survives is the cheaper symmetric question —
+whether *this* taxonomy reproduces against itself, which needs nobody's cooperation (ISSUES
+**OQ-294**, itself open as of 2026-08-20 on what its ground truth actually contains). Answering it
+would bound how far these rows can be leaned on; it would not settle the correspondence. Full
+retirement record and revival conditions: ISSUES **OQ-277**, §14.
 Row **A** is left unmarked and is carried as open residue, on a stated criterion rather than on
 difficulty: marking it PROPOSED would soften an admission *against* this paper's interest — the
 concession that Wu expresses a defect shape this taxonomy cannot — and this pass's signature move
@@ -2641,6 +2713,40 @@ A). *Falsifier: silent-failure classes dominated by shapes the taxonomy cannot e
 > than silently re-estimated, because an agenda item priced before the attempt and never re-priced
 > after is a staleness-ladder instance in a paper that teaches the staleness ladder.
 
+> **[RETIRED 2026-08-12 — recorded here 2026-08-20, as a new block beneath the cost box rather
+> than as an edit inside it.]** The box above is itself a marked correction dated 2026-08-12;
+> editing inside it would make it assert on that date something ruled eight days later, which is a
+> marked correction silently acquiring new content — the shape the convention exists to prevent.
+>
+> **The Wu half of this item is retired, not deferred.** The box closes by calling it *"still worth
+> doing and still the highest-value external comparison available."* The operator ruling that
+> closed ISSUES **OQ-277** the same day says the opposite, on a ground the cost box never reached:
+> **price was never the blocker.** Rebuilding the coding units from Wu's published artifacts rather
+> than his prose surfaced that his failure-modes catalog and his labeled dataset **assign different
+> classes to 10 of the same 22 incidents** — 55% self-agreement, single author, own incidents, own
+> five classes, full system knowledge. So a confusion matrix against that reference cannot separate
+> *this taxonomy disagrees with Wu's* from *Wu's disagrees with itself*, which is the ambiguity RQ2
+> exists to resolve. (That figure was **measured during the attempt**, by hand, from two published
+> artifacts. It is not a quantity any repository command regenerates, so it takes no Appendix B row
+> and must not be cited as though it did; the derivation is `docs/comparing_incident_taxonomies.md`
+> §1 and the letter filed at
+> `audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md`.) **No sample size
+> repairs it; the reference is the problem.** The cost box priced the experiment expensive and kept
+> it recommended; the retirement says the price was never the question.
+>
+> **The Advani limb of RQ2 above is unaffected and remains live.** RQ2's stated falsifier is
+> therefore now carried by that limb and by §6.2's row **A** alone — the one defect shape Wu
+> expresses and this taxonomy cannot. The cheaper symmetric question, *does this taxonomy reproduce
+> against itself*, is tracked at ISSUES **OQ-294**, whose own ground truth is an open question as
+> of 2026-08-20; it would bound the §6.2 rows without settling them.
+>
+> **Revival conditions, recorded so this reads as a ruling and not as a mood** (full text at
+> OQ-277). Any one of: Wu resolves which of his two artifacts is canonical, or publishes a
+> reconciliation; a scorer and matrix builder come to exist for another reason, collapsing the
+> build cost; or a third comparison set appears whose self-agreement is measured and adequate.
+> Every one is a condition on the **substrate**, not on the budget. Absent one of them, the spend
+> is not to be re-proposed.
+
 **RQ3 — Transfer.** Can the model be adopted cold? Method: a stepped design — the same operator on a
 green-field project; then a fresh operator (human, without a software team) and a fresh instance
 given this paper plus the operational documents. Measure time-to-first-witnessed-claim and defect
@@ -3082,8 +3188,9 @@ this appendix. **Every other section is unchanged by construction, and the diff 
 ---
 
 *CC0 Universal. Draft v0.6, 2026-08-12. Composed from repository sources, multi-model review, and one
-externally-verified literature check. Successor drafts should treat §14 RQ1 and RQ2 as the work
-queue, `CWC:A2@31548228`'s identification and §2.9's control as the passages most in need of adversarial reading,
+externally-verified literature check. Successor drafts should treat §14 RQ1, and RQ2's surviving
+Advani limb, as the work queue — **RQ2's Wu cross-coding is retired (2026-08-12) and is not to be
+picked up from this line; see the retirement block at §14 and §6.2** — `CWC:A2@31548228`'s identification and §2.9's control as the passages most in need of adversarial reading,
 and Appendix B as the blocker.
 Remaining declared residue: the manifest pass; the sessions/instances denominators; the standing-gate
 catch series; the `[OPERATOR]` slots in §1.2; §6.5's unverified rows; the §3.5 canary **re-aimed at
