@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "d49a41bb07076d78d9d8e7c3e98c13c7035bb2f7",
+    "store_version": "d8bb9522f7f1ff79a98c26f81c4bb686e4aa5135",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T02:14:09"
+    "generated_at": "2026-08-20T02:17:20"
   },
-  "issues_sha": "25e70b8641774e75254501058703b18f744ddcc45cb934daf9952759c2f1b586",
-  "n_entries": 328,
+  "issues_sha": "9a5d93c565a755ee13ae0a9bf55cad7b09d89851069fcdd57e1ae9ef547b7869",
+  "n_entries": 329,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 163,
+    "resolved": 164,
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
@@ -1261,18 +1261,6 @@
       ]
     },
     {
-      "id": "OQ-280",
-      "status": "open",
-      "priority": 2,
-      "summary": "§2.3 describes a coding that produced no artifact: the paper's own evidence base is a described-but-unperformed procedure",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-277",
-        "OQ-278"
-      ]
-    },
-    {
       "id": "OQ-282",
       "status": "open",
       "priority": 2,
@@ -1800,6 +1788,22 @@
         "OQ-309",
         "OQ-310",
         "OQ-327"
+      ]
+    },
+    {
+      "id": "OQ-329",
+      "status": "open",
+      "priority": 4,
+      "summary": "What would it cost to actually P-code the ten exemplar incidents? (a price, not a commitment)",
+      "deps": [
+        "splits_from OQ-280"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277",
+        "OQ-278",
+        "OQ-280",
+        "OQ-294"
       ]
     }
   ],
@@ -4430,6 +4434,19 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-277"
+      ]
+    },
+    {
+      "id": "OQ-280",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "§4.3 described a coding that produced no artifact: the paper's own evidence base was a described-but-unperformed procedure",
+      "deps": [],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277",
+        "OQ-278",
+        "OQ-329"
       ]
     },
     {

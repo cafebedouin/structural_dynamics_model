@@ -12111,69 +12111,62 @@ number §9's self-instrumentation currently has no channel for. It would also gi
 
 ---
 
-## OQ-280 — §2.3 describes a coding that produced no artifact: the paper's own evidence base is a described-but-unperformed procedure
+## OQ-280 — §4.3 described a coding that produced no artifact: the paper's own evidence base was a described-but-unperformed procedure
 
 **Ω-type:** Ω_E — whether an artifact exists is a matter of fact, and it was checked.
 
-**Status:** open
+**Status:** resolved — 2026-08-20 by **amend** (operator ruling; the perform/amend fork is decided,
+not deferred). `resolved`, not `disposed`: the question was asked and answered.
 **Priority:** 2
 *No `Deps:` line: UNBLOCKED 2026-08-12, blocked on nothing and gating nothing.*
+**Origin:** Found 2026-08-10 while scoping OQ-277 direction (iii). **Fired: live** — per the
+operator the larger of the two plan-stage findings, bigger than the fork (OQ-278).
 
-**UNBLOCKED at OQ-277's close.** This was blocked only because cross-coding direction (iii) was to
-supply the comparison against the original coding; that direction is retired with the experiment,
-and the finding here never depended on it — whether the artifact exists was checked and answered in
-2026-08. It is now free-standing and is **the sharper successor to OQ-277**: cheaper than anything
-in the cross-coding and load-bearing for the paper's own evidence base. Two dispositions, and the
-choice is the operator's: **perform** the coding and produce the artifact §2.3 describes, or
-**amend** §2.3 to state what actually happened. Doing neither leaves the paper asserting a procedure
-that produced nothing.
-**Origin:** Found 2026-08-10 while scoping OQ-277 direction (iii), which as briefed required
-comparing the blind coding against the original coding. **Fired: live** — and per the
-operator, the larger of the two plan-stage findings, bigger than the fork (OQ-278).
-
-**The finding.** v0.3 §2.3 ("How incidents were classified") states: *"Classification into
-Patterns 1–6 was retrospective and single-coder: performed by LLM instances reading the audit
-record at the operator's direction, with the operator ruling on disputed cases."* **That
-procedure produced no output.** Witnessed 2026-08-10 by two searches over the whole repo:
-(1) no file assigns a P1–P6 label to an audit directory, an OQ, or an incident as a data row
-— the only multi-P files are the taxonomy's own definitional prose (v0.3 §4.3,
-`build_discipline.md` headers) plus three unrelated vocabularies (`audits/2026-07-24_oq153_step3_blind_pass/key.json`
-where `P11`/`P5` are blind-pass *position roles*; `audits/2026-06-16_seat_invariant_vs_prolog/REPORT.md`
-where `P1–P9` are numbered *predictions*; a 2026-05-02 trifurcation audit's own "Pattern 1/2/3");
-(2) the only quantified pass over the audit record — Appendix B's §4.5 row — is a **keyword
-proxy** (`grep -rl 'for its whole life\|never fired\|…' audits/`) yielding a silent-defect
-yes/no per directory. **It assigns no pattern.** Positive control for the absence claim: the
-same searches DO fire on P-labelled content where it exists (v0.3 §4.3 returns 6 distinct
-labels over 20 occurrences), so "found nothing" here is a fact about the repository, not
-about the probe.
-
-**Why this is P4-adjacent (a described procedure standing in for an unperformed one).** §2.3
-is a methods section describing a coding whose output does not exist — an **absence
-presenting as a presence in the paper's own account of its evidence base**, in a paper whose
-central thesis is that absences present as presences. The success-shaped token is the methods
-paragraph itself: it reads exactly as a completed procedure would read. It is not fabrication
-— informal reading certainly occurred — but nothing was recorded, so nothing is checkable,
-and §4.3's six patterns in fact rest on **named exemplars, not a coded corpus**.
-
-**Consequences (all three tracked here):**
-1. **v0.4 correction queued (§2.3).** State plainly that §4.3's six patterns rest on named
-   exemplars, not a coded corpus, and that the retrospective classification left no artifact.
-   Per the corrections-marked-on-close rule this is marked visibly, not silently fixed —
-   the same treatment §4.5 gave the 77→73 unit error.
-2. **Direction (iii) as briefed is impossible.** OQ-277 substitutes (iii′): blind P-coding of
-   all ~15 named-exemplar anchor incidents, giving the inter-rater row at n≈15.
-3. **OQ-277 produces the repository's first P1–P6 coded corpus.** That is what unblocks the
-   correction from being purely subtractive.
-
-**What resolution would change:** §2.3 stops describing a phantom procedure; §4.3's evidential
-status becomes accurate (illustrative exemplars, per §2.4's own illustrative/quantified
-split, which §2.3 currently contradicts by implying a classification pass); and the paper
-gains a real coded corpus with a measured churn floor to cite instead.
-
-**Sequencing note for a cold reader:** do NOT write the §2.3 correction before OQ-277 lands.
-The correction's honest form depends on whether the experiment produces a usable coded corpus
-(consequence 3); writing it first forces a purely subtractive edit that would then need
-rewriting.
+> ### RESOLUTION 2026-08-20 — amended, phrased historically. Commit `d8bb9522`.
+>
+> *Over the footer's ≤10-line target under its still-operative-ruling exception. Three blocks
+> are operative and are not to be compressed away: the **re-scoping**, the **historical-phrasing
+> ruling**, and the **struck sequencing note**.*
+>
+> **Section numbers, corrected in both directions** (this entry was minted against v0.3's): methods
+> is **§4.3** (not §2.3), the taxonomy **§5.1** (not §4.3), the illustrative/quantified split
+> **§4.4** (not §2.4). v0.6's `§2.1–2.7` were **vacated 2026-08-13 and never reused**, so a bare
+> "§2.3" resolves to a grave, not to a moved section.
+>
+> **THE FINDING, RE-SCOPED — the part compression must not eat.** The literal 2026-08-10 wording
+> (*"no file assigns a P-label … as a data row"*) was overtaken **one day later**:
+> `audits/2026-08-10_oq277_rq2_crosscoding/packets/iii_prime_units/*.json` and
+> `.../controls/anchors.json` **do** carry `true_label` fields — **n=10**. They are not a
+> counterexample. All ten record their label as **read off** the published pattern block, verbatim
+> in each row's own `label_source` (*"…named inside CLAUDE.md's Build Discipline section N at line
+> L. Read off, not assigned."*), so they are **derived from** the taxonomy rather than evidence for
+> it. **The substantive claim is unchanged: the classification left no artifact, and §5.1's patterns
+> rest on named exemplars (§4.4), not on a coded corpus.** A reader who finds those ten rows and
+> concludes this entry was wrong has stopped one line short of their `label_source`.
+>
+> **What landed.** §4.3 takes ONE marked correction covering both its defects (missing artifact;
+> the retracted *"weekend of work"*); front matter gains a third dated corrections block; the status
+> line is stamped; `docs/amnesiac_institution/README.md`'s *"pointer-only … no content edits"*
+> policy is corrected (nine content-edit commits had landed against it in six days). Same commit
+> carries the retirement §4.3 depends on: RQ2's Wu cross-coding, retired 2026-08-12, now recorded at
+> **§6.2, §14, §4.3 and Appendix D.5** — previously at none.
+>
+> **Why HISTORICAL phrasing (ruled, not defaulted).** The correction states a repository fact
+> verified with a positive control; its truth does not depend on whether a coding pass ever happens,
+> and a coded corpus arriving later is an **addition** to the record, not a correction of this
+> correction. The rejected alternative — *"§5.1's evidential status is permanently illustrative"* —
+> would install a forward-looking claim about unruled work inside the paragraph being fixed for
+> containing one.
+>
+> **The sequencing note is STRUCK, recorded so it is not restored.** The body carried *"do NOT write
+> the §2.3 correction before OQ-277 lands."* OQ-277 was **RETIRED 2026-08-12** (`Status: future`;
+> *"do not re-propose the spend — the blocker is not resources"*), so its condition can no longer
+> obtain and the note now argues only for indefinite deferral of a settled correction. OQ-277's
+> disposal #3 had already ruled this entry free-standing; the note survived because nobody edited
+> the body.
+>
+> **Successor: OQ-329** — what performing would cost now that all ten rows exist. A record of the
+> price, not a commitment to pay it.
 
 
 ## OQ-281 — Where is the boundary of the model family that shares the `.x8` ε rail?
@@ -15992,6 +15985,90 @@ one of those rows. The OQ-309 pass read that checker and classified every row ab
 **What resolution changes.** Eight paragraphs the paper's own manifest says it should carry. None
 is load-bearing for a published claim; the value is that the manifest walk stops having a remainder
 that lives only in an audit directory.
+
+## OQ-329 — What would it cost to actually P-code the ten exemplar incidents? (a price, not a commitment)
+
+**Ω-type:** Ω_E for the cost enumeration and for any agreement rate that gets measured; **Ω_C** for
+whether the spend is worth making, which is the operator's seat and is not part of this entry.
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-280
+**Origin:** Minted 2026-08-20 at OQ-280's close. OQ-280 ruled **amend**; this is the *other* limb of
+its fork, kept queryable rather than discarded, so that "perform the coding" is a costed option a
+future session can price at a glance instead of re-deriving.
+
+**FRAME IT RIGHT, because the frame is the whole point.** This entry records **what performing
+would cost**. It is **not** a commitment to pay it, not a slated experiment, and not a revival of
+OQ-277 (retired 2026-08-12; *"do not re-propose the spend — the blocker is not resources"* — that
+retirement is about the **Wu** comparison and does not govern a self-directed coding, but its
+posture does: nothing here is to be run on the strength of this entry alone).
+
+**The population is BUILT, and that is what changed the price.** Not ~15, and not "three were never
+built" — **n=10**, all ten already existing in two places:
+
+- **11 named** exemplars in the frozen population.
+- **Row 9 disqualified** (`controls/anchors.json` → `direction_i._disqualified`: *"COLLIDES with
+  extracted unit 05_oq93_grid_viability, which describes this same incident. Dropping it was forced
+  by the evidence, not chosen."*) → **10 eligible.**
+- **7 newly extracted** as `packets/iii_prime_units/*.json` + **3 referenced, not re-extracted**,
+  already existing as direction-(i) anchors `anchor_i_1` / `_2` / `_3` in `controls/anchors.json`.
+
+**7 + 3 = 10.** Both paths are md5-pinned by the OQ-277 freeze (`python/audits/oq277_build_prereg.py`,
+gate row `oq277 freeze`) — **read them, do not edit them.** Noted for whoever performs: the
+`_disqualified` note names *"extracted unit 05_oq93_grid_viability"* while the file on disk is
+`05_tracker_sprawl.json`; the accounting in `EXTRACTION_NOTES.md` §2 is the authority. Left uncorrected
+because the artifact is frozen and the discrepancy is in a note, not in the population.
+
+**THE LABELS NEED RE-MAPPING BEFORE ANY CODING, and this is the trap.** All ten carry **pre-OQ-278**
+indices. Coverage is **P1/P2/P4/P5/P6**; against the live 8-index taxonomy:
+
+- the recorded **`P4`** is today's **`P8`** (recap-as-witness) — *not* today's P4;
+- **`P3`** is **vacated** (2026-08-11) and has **zero exemplars** in the population, by construction
+  and not by thinness (`EXTRACTION_NOTES.md` §2: *"the population is empty, not thin, and no amount
+  of n buys it"*) — it must not be scored as agreement, `n/a`, or a blank;
+- **`P7`** (bound-probe, renumbered from 3) is **absent** from the population.
+
+Deriving the coding vocabulary from this entry's index letters is exactly the error OQ-294 warns
+about. Take it from the documents or `doc_pattern_check --list`.
+
+**PRE-REGISTERED CEILING, so the result cannot be over-read later.** At n=10 the reportable output
+is a **whole-row agreement rate only** — no per-class rates, no confusion matrix worth publishing.
+It is **calibration data, not a verdict**, and it says so in advance rather than after the number
+lands. Generation is stochastic, so a re-coding is a NEW DRAW: k=3 unanimity and a per-pass churn
+report are owed (the OQ-277 standard).
+
+**PRECONDITIONS — from `SPEC_next_preregistration.md`, none of which exist today:**
+
+- A **new preregistration and a new md5 stamp**. The old one (`4118f64e`) is unusable: it pinned
+  sixteen texts and **no executable**, and two of its pinned sources have since drifted.
+- **(iii′) row construction has no code** (spec §2.3 row 19).
+- **Anchor-recovery scoring has no code and no control** (spec §2.2 row 14) — thresholds are
+  pre-registered, the mechanism is not.
+- **A transport-fault fixture** (spec §3.2) — the heaviest row, and explicitly not shippable as
+  declared residue.
+- **A stub-refusal guard, fail-closed** (spec §3.6): the scorer reads the sibling `_run.json` and
+  asserts `mode == "live"`, refusing on `stub` and on a missing/unparseable file. The repository
+  holds a full 219-unit stub set; a scorer pointed at it emits a clean result computed from
+  fabricated tokens.
+- Every detector built here is graded against its **historical commit pair** where one exists, not
+  only against its fixture (`build_discipline.md` → *When a defect is found, its before-commit is a
+  free negative control*).
+
+**RELATION TO OQ-294 — prose only, deliberately, and there is no edge yet.** OQ-294 asks the
+symmetric question over a much larger corpus, and the two would share instruments: a scorer and a
+matrix builder built for either collapses the other's build cost, which is OQ-277's revival
+condition (b) arriving from an unexpected direction. **No `bundled_with OQ-294` is authored**, for
+two reasons: OQ-294's own premise was flagged falsified on 2026-08-20 (its ground truth is a
+citation census, not incident-level assignments — the open question is which of the two the study
+codes against), and `bundled_with` is the relator this arc has already had to dissolve twice. Add
+the edge once that ground-truth question is ruled. *(`shares_instrument` is not an option:
+`omega_resolver.py:74-90` admits only `blocked_on` / `gates` / `bundled_with` / `splits_from` /
+`blocked_on_human`, and an unknown relator turns `omega check` RED.)*
+
+**What resolution would change:** the operator could price the perform limb of OQ-280's fork from a
+single entry instead of reconstructing it from a retired OQ, a frozen audit directory and a spec.
+If it is ever run, the repository gets its first coded corpus — at n=10, as calibration.
 
 ---
 
