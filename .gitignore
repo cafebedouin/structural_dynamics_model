@@ -52,6 +52,8 @@ json_failed_*/
 # settings.local.json (personal permissions) and worktrees/ stay local.
 .claude/*
 !.claude/settings.json
+!.claude/agents/
+!.claude/skills/
 
 # Run-tagged pilot story dirs: intentionally untracked + glob-isolated + disposable (OQ-87).
 # Canonical json/ stories live flat at json/*.json; other run-tagged subdirs (e.g. a live
