@@ -45,6 +45,28 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — LANDED: OQ-332 ruled (descriptive+dated axis note at both read-sites); OQ-276 routed out of BLOCKED-ON-YOU via the new blocked_on_condition relator + mechanical wake watcher
+**Files:** python/omega_resolver.py, python/apparatus_instrument.py, docs/technical/omega_resolver.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/technical/build_discipline.md, CLAUDE.md, ISSUES.md, audits/INVESTIGATIONS.md
+**Tier:** landed
+
+Commits `50bb3942`, `bdb59763`, `9d14e593`, `f4124b27`. **OQ-332 resolved** as scoped Reading 2 with
+the operator's three-way claim split (shared-property witnessed / admission-rule NOT / completeness
+not claimed): §5.1 and the `build_discipline.md` scope note each carry a **dated descriptive**
+sentence — all eight indices index on a layer of the value's journey; environment-indexed incidents
+(OQ-57 shape) have no index here and are typed at §6.2 row A (trifurcation Type B). Dated because a
+standing invariant in prose is unmaintained (`doc_pattern_check` syncs members, not prose); a ninth
+non-layer member makes it out-of-date, never silently false. CLAUDE.md deliberately not given the
+sentence (BD carries it; asymmetry declared in the close). **OQ-276:** value ruling stays NOT RIPE
+(readout 24L/2l/0n — still no decline); new resolver relator `blocked_on_condition <freetext>`
+(selftest control 10, two-sided against the Ω_P-leaf control) routes it to BLOCKED;
+`apparatus_instrument.oq276_wake` is the watcher (fires on first `Fired: no` in either channel, or
+20 ledger closes with zero `no`); CLAUDE.md Audit Methodology gains the ledger delivery line —
+framed in the OQ addendum as the **disambiguating instrument** (day-one zero's cause deliberately
+unrecorded: delivery vs hunch-time selection indistinguishable at n=1 day). Ledger's first line
+opened+closed (`Fired: live` — the Ω_P-leaf routing finding). Two items pre-staged for the
+2026-09-10 pass in the OQ-276 addendum: spot-check the first two `latent` bits; denominator drift
+(4/53 → 26/75 writeups carrying bits).
+
 ## 2026-08-20 — LANDED: OQ-310 walked — the §7.4 rule survives with its first witness; ONE tripwire stands, and the other was retracted the same day as a false absence
 **Files:** scripts/gate.sh, python/omega_resolver.py, python/check_axis_boundary.py, python/amnesiac_carriage_check.py, python/apparatus_instrument.py, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/technical/build_discipline.md, docs/technical/omega_resolver.md, CLAUDE.md, ISSUES.md
 **Tier:** tripwire
