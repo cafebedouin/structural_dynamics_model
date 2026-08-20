@@ -13591,14 +13591,20 @@ rows as found:
 
 ```
 file	line	raw_text_as_found	quoted_context	namespace	mechanism_slug	confidence
-AGENTS.md	680	Pattern 3	**Reading the historical record:** a pre-2026-08-17 `Pattern 3`…	taxonomy-candidate	bound-probe	recovered
-AGENTS.md	684	P3	but `Pattern N`/`PN` is still seven-way overloaded (the concealment…	cwc-claim-row		n/a
+ISSUES.md	10823	P4	2. **The OQ-278 bundle is DISSOLVED.** Its live half (the P4 index collision) never depended on the	other-unclassified		n/a
+ISSUES.md	11545	P4	**Why this is P4-adjacent (a described procedure standing in for an unperformed one).** §2.3	other-unclassified		n/a
 ```
+
+(Sample rows chosen without a renumbered index on purpose: pasting a row that quotes `Pattern 3`
+turns the `displaced cites` gate RED, because an artifact excerpt is shaped exactly like a
+citation. Witnessed on this very edit.)
 
 Every row is keyed on a **file:line prose citation** — *which list does this occurrence of
 "Pattern 4" point at* — not on an incident. The `file` column is a census of tracked files
-(`ISSUES.md` 28 rows, `KNOWN_STATE.md` 31, the OQ-278 prereg 37); no row names an audit directory
-as the *subject* of a classification.
+(`ISSUES.md` 28 rows, `KNOWN_STATE.md` 31, the OQ-278 prereg 37); **no row names an audit directory
+as the subject of a classification.** The second row above is from OQ-280's own body — so the
+"ground truth" this entry would code against includes citations drawn from the entry that
+established there is no coded corpus.
 
 **The discriminating witness, and it is the strong one.** Incident-level assignments DO exist in
 this repository — the ten `true_label` rows at
