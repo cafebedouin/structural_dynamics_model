@@ -78,16 +78,26 @@ GROUPING_RELATORS = {"bundled_with", "splits_from"}
 # pilot: active Ω_E entries can be human-gated without any Ω_P blocker OQ, which
 # the OQ->OQ model alone mis-buckets as workable_now. Target is free text.
 HUMAN_RELATOR = "blocked_on_human"
-ALL_RELATORS = BLOCKING_RELATORS | GROUPING_RELATORS | {HUMAN_RELATOR}
+# blocked_on_condition: an authored MECHANICAL wake condition — the ruling/next
+# step is declared not ripe until the named condition holds (OQ-276 routing fix,
+# 2026-08-20). Routes to BLOCKED (waiting), never BLOCKED-ON-YOU: the human
+# already ruled, and re-surfacing it as needing a ruling invites the premature
+# read the not-ripe declaration forbids. The condition must name its watcher
+# (the thing that fires mechanically — a gate line, a date check), or it is
+# quiet dormancy in a typed edge's clothes. Target is free text.
+CONDITION_RELATOR = "blocked_on_condition"
+FREETEXT_RELATORS = {HUMAN_RELATOR, CONDITION_RELATOR}
+ALL_RELATORS = BLOCKING_RELATORS | GROUPING_RELATORS | FREETEXT_RELATORS
 
-# Signature of ONE edge: `blocked_on_human` (free-text target) OR an OQ-relator
-# immediately followed by an OQ ref. Used to catch edges PACKED into a single
+# Signature of ONE edge: a free-text relator OR an OQ-relator immediately
+# followed by an OQ ref. Used to catch edges PACKED into a single
 # comma-chunk (e.g. `bundled_with OQ-1; bundled_with OQ-2`), which the comma-only
 # splitter silently DROPS to its first edge — the exact failure that let OQ-136/
-# 137/138 register fewer deps than authored with no error. `blocked_on_human`
-# first (it has no OQ ref) so it isn't shadowed by the alternation.
+# 137/138 register fewer deps than authored with no error. Free-text relators
+# first (they have no OQ ref) so they aren't shadowed by the alternation.
 _EDGE_SIG = re.compile(
-    r"\bblocked_on_human\b|\b(?:blocked_on|gates|bundled_with|splits_from)\b\s+OQ-\d+")
+    r"\bblocked_on_human\b|\bblocked_on_condition\b|"
+    r"\b(?:blocked_on|gates|bundled_with|splits_from)\b\s+OQ-\d+")
 
 OQREF = re.compile(r"OQ-\d+")
 COMMIT = re.compile(r"\b[0-9a-f]{8,40}\b")
@@ -168,26 +178,26 @@ def _split_file_refs(s):
 
 def _chunk_deps(s):
     """Split a `**Deps:**` value into per-edge chunks on commas, BUT keep commas
-    that belong to a `blocked_on_human` free-text target (its target is prose and
-    may legitimately contain commas). Rule: a comma starts a new edge only if the
-    text after it begins with a known relator keyword; otherwise the comma is
-    free text and is re-joined into the current (human) edge. This preserves the
-    unknown-relator / no-OQ-target / packed-edge detection below — a stray
-    non-relator chunk that does NOT follow a human edge is still passed through to
-    be flagged."""
-    chunks, prev_is_human = [], False
+    that belong to a free-text target (`blocked_on_human` / `blocked_on_condition`
+    — their targets are prose and may legitimately contain commas). Rule: a comma
+    starts a new edge only if the text after it begins with a known relator
+    keyword; otherwise the comma is free text and is re-joined into the current
+    (free-text) edge. This preserves the unknown-relator / no-OQ-target /
+    packed-edge detection below — a stray non-relator chunk that does NOT follow
+    a free-text edge is still passed through to be flagged."""
+    chunks, prev_is_freetext = [], False
     for raw in s.split(","):
         toks = raw.split()
         first = toks[0] if toks else ""
         if first in ALL_RELATORS:
             chunks.append(raw)
-            prev_is_human = (first == HUMAN_RELATOR)
-        elif prev_is_human and chunks:
-            # comma inside a blocked_on_human free-text target — re-join, stay human
+            prev_is_freetext = (first in FREETEXT_RELATORS)
+        elif prev_is_freetext and chunks:
+            # comma inside a free-text target — re-join, stay free-text
             chunks[-1] = chunks[-1] + "," + raw
         else:
             chunks.append(raw)   # let the parser flag malformed / unknown-relator
-            prev_is_human = False
+            prev_is_freetext = False
     return chunks
 
 
@@ -208,8 +218,9 @@ def _parse_deps(oq, s):
         if relator not in ALL_RELATORS:
             problems.append(f"{oq}: unknown relator {relator!r} in {chunk!r}")
             continue
-        if relator == HUMAN_RELATOR:
-            # free-text target (a human/external gate, not an OQ); commas allowed
+        if relator in FREETEXT_RELATORS:
+            # free-text target (a human gate or a wake condition, not an OQ);
+            # commas allowed
             target = " ".join(parts[1:]) or "<unspecified>"
             deps.append((relator, target))
             continue
@@ -251,8 +262,8 @@ def authority_report(entries):
     dep_bad = []
     for e in entries.values():
         for relator, target in e.deps:
-            if relator == HUMAN_RELATOR:
-                continue                         # free-text human gate, not an OQ
+            if relator in FREETEXT_RELATORS:
+                continue                         # free-text target, not an OQ
             if target not in oqset:
                 dep_bad.append(f"{e.oq}: dangling Deps target {target} ({relator})")
     rep["deps_target"] = {"authority_size": len(oqset), "bad": dep_bad}
@@ -393,11 +404,22 @@ def frontier(entries):
     def human_gated(oq):
         return any(rel == HUMAN_RELATOR for rel, _ in entries[oq].deps)
 
+    def condition_gated(oq):
+        return any(rel == CONDITION_RELATOR for rel, _ in entries[oq].deps)
+
     for i, comp in enumerate(sccs):
         if i in nontrivial:
             buckets["standoff"].append(sorted(comp))
             continue
         oq = comp[0]
+        if condition_gated(oq):
+            # authored mechanical wake condition (a not-ripe ruling): routes to
+            # BLOCKED, and deliberately BEFORE both the human-gate and the Ω_P
+            # leaf rule — the human already ruled "wait for the condition", so
+            # re-surfacing it in BLOCKED-ON-YOU would ask again for a ruling
+            # that was declared not ripe (OQ-276, 2026-08-20).
+            buckets["blocked"].append(oq)
+            continue
         if human_gated(oq):                          # authored live human gate
             buckets["blocked_on_human"].append(oq)
             continue
@@ -521,6 +543,11 @@ formatting clipped — the entry IS witnessed by the first, must not flag.
 **Status:** open
 **Ω-type:** Ω_E (test)
 **Deps:** blocked_on_human GAP-08 §7 immovability signal, routed to a design gap, not an OQ edge
+
+## OQ-9013 planted condition-gated Ω_P (not-ripe ruling; must route BLOCKED, not blocked_on_human)
+**Status:** open
+**Ω-type:** Ω_P (test)
+**Deps:** blocked_on_condition first Fired: no recorded, watcher is the apparatus gate line
 """
 
 
@@ -615,6 +642,23 @@ def selftest():
     human12 = [t for (r, t) in (e12.deps if e12 else []) if r == HUMAN_RELATOR]
     if not (len(human12) == 1 and "," in human12[0]):
         fails.append(f"human-comma control FAILED: OQ-9012 did not register one comma-bearing human edge ({human12})")
+
+    ran.append("control 10: condition-gated Ω_P leaf -> BLOCKED (not blocked_on_human), comma kept")
+    # control 10: a `blocked_on_condition` free-text edge on an Ω_P LEAF routes the
+    # entry to BLOCKED — overriding the Ω_P->blocked_on_human leaf rule (the ruling
+    # was made; what remains waits on the condition) — parses clean, and keeps a
+    # comma in its free text (same fix as control 9, on the sibling relator).
+    if "OQ-9013" not in buckets["blocked"]:
+        fails.append(f"condition-gate control FAILED: OQ-9013 not blocked ({_where(buckets,'OQ-9013')})")
+    if "OQ-9013" in buckets["blocked_on_human"]:
+        fails.append("condition-gate control FAILED: OQ-9013 mis-bucketed blocked_on_human (Ω_P leaf rule not overridden)")
+    if any(p.startswith("OQ-9013") for p in parse_probs):
+        bad = [p for p in parse_probs if p.startswith("OQ-9013")]
+        fails.append(f"condition-gate control FAILED: OQ-9013 free-text parse-flagged: {bad}")
+    e13 = entries.get("OQ-9013")
+    cond13 = [t for (r, t) in (e13.deps if e13 else []) if r == CONDITION_RELATOR]
+    if not (len(cond13) == 1 and "," in cond13[0]):
+        fails.append(f"condition-gate control FAILED: OQ-9013 did not register one comma-bearing condition edge ({cond13})")
 
     return fails, parse_probs, ran
 
@@ -753,9 +797,13 @@ def cmd_menu(entries):
             print(f"  {' ↔ '.join(grp)}")
 
     if buckets["blocked"]:
-        print(f"\n## BLOCKED ({len(buckets['blocked'])}) — waiting on another OQ")
+        print(f"\n## BLOCKED ({len(buckets['blocked'])}) — waiting on another OQ or an authored condition")
         for oq in sorted(buckets["blocked"], key=lambda o: int(o.split("-")[1])):
             e = entries[oq]
+            conds = [t for r, t in e.deps if r == CONDITION_RELATOR]
+            if conds:
+                print(f"  {oq}  {e.title[:52]}  → waits on condition: {conds[0][:70]}")
+                continue
             waits = [t for r, t in e.deps if r in BLOCKING_RELATORS]
             print(f"  {oq}  {e.title[:52]}  → waits on {', '.join(waits) or '?'}")
 

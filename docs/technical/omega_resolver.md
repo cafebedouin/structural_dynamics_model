@@ -23,10 +23,16 @@ Read this before modifying `omega_resolver.py`, the `ISSUES.md` authored fields,
 
 - `**Status:**` — gated by `python/issues_status.py` (the pipeline gate; tokens
   open/investigating/mitigated/partial/resolved/disposed). Active = {open, investigating, partial}.
-- `**Ω-type:**` — `Ω_E`/`Ω_C`/`Ω_P`. Ω_P (or a `blocked_on_human` dep) routes an OQ to BLOCKED-ON-YOU.
+- `**Ω-type:**` — `Ω_E`/`Ω_C`/`Ω_P`. Ω_P (or a `blocked_on_human` dep) routes an OQ to BLOCKED-ON-YOU —
+  **unless** it carries a `blocked_on_condition` dep, which routes it to BLOCKED instead: an authored
+  not-ripe ruling means the human already ruled "wait", and re-surfacing it as needing a ruling
+  invites the premature read the declaration forbids (OQ-276, 2026-08-20).
 - `**Deps:**` — **typed relators ONLY**: `blocked_on` / `gates` (blocking → reachability),
   `bundled_with` / `splits_from` (grouping, non-blocking), `blocked_on_human <freetext>` (a live
-  operator/substrate gate that is not an OQ edge). **Do not put prose on a `**Deps:**` line** — the
+  operator/substrate gate that is not an OQ edge), `blocked_on_condition <freetext>` (a mechanical
+  wake condition for a ruling declared not ripe — the free text must NAME ITS WATCHER, the thing
+  that fires mechanically when the condition holds, e.g. a gate line or date check; a condition with
+  no watcher is quiet dormancy in a typed edge's clothes). **Do not put prose on a `**Deps:**` line** — the
   parser throws `unknown relator` (this happened; the prose discharge note was renamed
   `**Discharge:**`). Author `Deps:` by hand from the entry's own prose — they are *authored, not
   extracted* (the prose carries cross-ref language like "bundles with"; only a human turns that into

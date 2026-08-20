@@ -110,7 +110,9 @@ list (sorted by authored `Priority:`, 1=highest) plus the **BLOCKED ON YOU** ite
 ruling/spend-go. **Do NOT read `ISSUES.md` whole** (7,300+ lines — whole-reads produce faked
 queries and prose-guessed Deps, a witnessed failure mode). The menu is the queryable surface:
 reachability over the authored `**Deps:**` edges (relators `blocked_on`/`gates`/`bundled_with`/
-`splits_from`/`blocked_on_human`) on an SCC condensation, surfacing the authored `**Priority:**`
+`splits_from`/`blocked_on_human`/`blocked_on_condition` — the last routes a not-ripe ruling to
+BLOCKED with a named mechanical watcher, never back to BLOCKED-ON-YOU) on an SCC condensation,
+surfacing the authored `**Priority:**`
 (*the operator's declared seat — surfaced, never computed*). Its coverage footer states frontier
 trust (how many active OQs have authored Deps); edge-free OQs default `workable_now` and may
 overstate. When you mint or touch an OQ, author its `**Priority:**` (and `**Deps:**`) so the
