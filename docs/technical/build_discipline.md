@@ -2524,6 +2524,30 @@ invariants; only one was unmissable.** So:
   and a relative-versus-absolute mismatch produced a spurious *"corpus moved"* reading. Invariant
   in shape, wrong in output. Catch/miss is not the whole space.
 
+**A CORRECT OPERATION OVER A WRONG INPUT SET IS THE MOST PERSUASIVE ARITHMETIC ERROR, and no
+arithmetic check catches it.** Witnessed three times on one quantity inside this walk's own power
+analysis. The instrument-only exposure figure was published as:
+
+| draft | figure | what was wrong |
+|---|---|---|
+| 1 | 207 of 695, 30% | **asserted before the sum was run** — plain fabrication of a plausible number |
+| 2 | 195 of 695, 28% | **a correct sum over a wrong row set** — six rows summed exactly, but the membership was assigned from an invocation flag instead of the code |
+| 3 | 67 of 695, 9.6% | correct, after the *set* was verified against the source |
+
+Draft 1 is the familiar failure and it is the *easy* one: any recomputation kills it. **Draft 2 is
+the dangerous one.** It survives every check anyone would think to run — the terms are shown, the
+addition is right, the total reconciles, and re-deriving it reproduces it exactly. Its wrongness
+lives entirely upstream of the arithmetic, in *which things were summed*, and re-running the sum
+re-confirms the error with full precision. It is `Pattern 5` and the *denominator that silently
+admits non-members*, met on the numerator side: a set whose membership was never witnessed.
+
+**Rule: verify the SET before summing over it, and publish the membership beside the total, not
+just the terms.** The terms let a reader check your addition; only the membership criterion lets
+them check that you added the right things. Diagnostic: for each member, name the property that put
+it in the set and where that property was *read* — if the answer is a filename, a flag, a label or
+a naming convention rather than a line of code or an authored fact, the set is unwitnessed and the
+total inherits it.
+
 **THE PRICE, stated with the rule so it is not cited as unconditional.** The evidence above is
 evidence of the rule's *benefit*. The false-fire case is evidence of its *cost*, and it is the
 expensive direction: **an invariant that is wrong about its own inputs, wired to an exit code,

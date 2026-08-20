@@ -67,9 +67,8 @@ it has not re-witnessed*, committed by the pass that cites that rule.
 planted positives.** Five of six do it; only `omega selftest` is fixture-only. That is §7.3's
 discipline implemented, and it is the opposite of the caution originally published.
 
-**The one real residue** is `omega selftest`: it asserts frontier behaviour on a fixture and
-nothing about live `ISSUES.md`. Whether it should carry a live negative case is a genuine open
-question and is **not** ruled here.
+**The one real residue** is `omega selftest`: fixture-only, asserting nothing about live
+`ISSUES.md`. Carried as **OQ-333** — numbered rather than left in prose; not ruled here.
 
 ## Downstream numbers corrected
 

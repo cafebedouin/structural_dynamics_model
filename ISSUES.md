@@ -15212,7 +15212,7 @@ own entry, out of scope by ruling.
 
 **Ω-type:** Ω_E (each row either catches or does not; it is a matter of fact about the gate set).
 
-**Status:** resolved — walked 2026-08-20; neither half of the falsifier fires, the rule gains one independence-screened witness, and its stated premise about the population is falsified
+**Status:** resolved — walked 2026-08-20; the rule is NARROWED with a witness — its only-if half survives (0 of 18 self-instances caught by a value check) while its if half is falsified by its own eleven instances, whose catchers are re-derivations and therefore invariant-asserting
 **Priority:** 3
 **Deps:** splits_from OQ-309
 **Origin:** 2026-08-18, minted at the second review round of OQ-309 rather than folded into it —
@@ -15377,7 +15377,18 @@ a structural-sounding message that is harder to dismiss correctly than a value m
 ships conditional — **an invariant earns its exit code once it has a two-sided control**; until
 then, state it and *print* it.
 
-**THE RE-DERIVATION COLLAPSE — the largest single finding, and it came from the incident harvest.**
+**THE RE-DERIVATION COLLAPSE — the largest single finding, and it NARROWS THE RULE rather than
+confirming it.** The registered rule is a **biconditional** and its halves came out differently.
+The **only-if** half survives, witnessed: no value check has ever caught one. The **if** half is
+**falsified by §7.4's own eleven** — their catchers are re-derivations, which assert invariants, so
+in ten of eleven **the invariant was present and no gate detected anything.** Asserting an invariant
+is NOT sufficient; what the eleven lacked was an **exit code** and **jurisdiction**. The
+disconfirming evidence sat inside the derivation base the whole time, unreadable until the catchers
+were typed. Honest restatement, landed in §7.4: *a gate detects this class **only if** it asserts an
+invariant the defect cannot satisfy — **and not merely if**; the invariant must additionally be
+enforced by an exit code and pointed at the claim.* **A reader must not take "tested at OQ-310" as
+vindicating the sentence as minted.** This is a better outcome than either pre-registered bullet,
+and the falsifier did not produce it — reclassifying the rule's own base did.
 §7.4's property says the eleven were caught by *"a person or a script comparing a claimed number
 against the artifact it described — a diff, a directory listing, a file count, a re-read."* **Every
 one of those is a re-derivation, and a re-derivation is invariant-asserting** under this pass's own
@@ -15445,8 +15456,9 @@ median row-exposure (7 days) and jurisdiction partitioning, **not** on this limi
 
 **And the finding that replaces the retracted one runs the other way:** this repo's selftest rows
 are **two-sided by construction** — a live-substrate negative plus planted positives, five of six.
-The one genuine residue is `omega selftest`, fixture-only, with no live `ISSUES.md` case. Whether it
-should carry one is **left open and not ruled here**.
+The one genuine residue is `omega selftest`, fixture-only, with no live `ISSUES.md` case. **Minted
+as OQ-333** rather than left in a writeup paragraph — not ruled here, because it is the operator's
+design trade, not something the walk's evidence settles.
 
 **Plants (Phase 5): NOT RUN, and declared.** Pre-registered as conditional on Phases 3–4 being
 inconclusive, which did not obtain — running them would have added floor-grade evidence to a
@@ -16755,6 +16767,49 @@ what §5.1 claims about itself and opens an enumeration obligation. Reading 3 re
 finding. Until this is ruled, cite the gap **as it is stated at §6.2** — *the eight-index taxonomy
 has no index for what the institution's own trifurcation can type* — and not as a claim about
 §5.1's completeness.
+
+---
+
+## OQ-333 — `omega selftest` is the only gate row with no live-substrate case, and OQ-310 declined to rule whether it should have one
+
+**Ω-type:** Ω_C — whether a fixture-only selftest *should* also assert on live `ISSUES.md` is a
+design trade (coupling the row to corpus churn vs. leaving the live frontier unwatched by it), not
+a matter of fact.
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-310
+**Files:** `python/omega_resolver.py`, `scripts/gate.sh`, `docs/technical/omega_resolver.md`.
+
+**Origin, 2026-08-20.** Split out of OQ-310's close so it carries a number rather than sitting in a
+writeup paragraph. OQ-310 first published that six of 26 gate rows assert nothing about the
+substrate; that claim was **retracted** — five of the six run a live-substrate negative case inside
+their selftest (`audits/2026-08-20_oq310_gate_row_walk/CORRECTION_target_column.md`). **One
+survives the correction:** `omega selftest` runs `parse_entries(FIXTURE)` and asserts frontier
+behaviour on planted fixtures only. Nothing in it reads live `ISSUES.md`.
+
+**Why this is a real question and not tidy-up.** The other five rows demonstrate the house pattern —
+a live negative (*the real substrate must come back clean*) plus planted positives (*the detector
+must fire*). `omega selftest` has the positives and not the negative. Its sibling row `omega check`
+does read live `ISSUES.md`, so the frontier is not unwatched; the question is whether the
+*selftest* should also carry a live case, or whether that would duplicate `omega check` and couple
+a discrimination test to corpus churn.
+
+**Both readings are live.** (a) **Add a live case** — the pattern its five siblings follow, and it
+would catch a fixture that has drifted away from the shape live `ISSUES.md` actually has. (b)
+**Leave it fixture-only** — a discrimination test should be *insensitive* to the substrate by
+design, and `omega check` already fails on live problems, so a live case in the selftest buys
+coverage that already exists while adding a way for the row to go red for reasons unrelated to
+discrimination.
+
+**What resolution changes.** (a) makes the six-row selftest family uniform and removes the one
+asymmetry OQ-310's correction left standing. (b) makes the asymmetry *declared and intended*
+rather than incidental, which is worth as much — the current state is neither, and that is the only
+thing OQ-310 established here.
+
+**Not urgent.** Nothing is failing; `omega check` covers the live frontier. This is a
+consistency-of-design question, deliberately not ruled at OQ-310's close because it is the
+operator's trade to make, not one the walk's evidence settles.
 
 ---
 

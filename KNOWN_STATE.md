@@ -81,7 +81,14 @@ requires **zero un-allowlisted edges on the real substrate**, so a new committer
    cites that rule.
 
 **The one genuine residue:** `omega selftest` runs on `FIXTURE` and asserts nothing about live
-`ISSUES.md`. Whether it should carry a live negative case is **open, and deliberately not ruled**.
+`ISSUES.md`. **Minted as OQ-333**, open and deliberately not ruled — the operator's design trade.
+
+**AND THE NARROWING, which is the pass's real result:** the §7.4 rule is a biconditional; its
+**only-if** half survives (0 of 18 self-instances caught by a value check) while its **if** half is
+**falsified by its own eleven instances** — their catchers are re-derivations, which assert
+invariants, so ten of eleven had the invariant and no gate detected anything. What they lacked was
+an **exit code** and **jurisdiction**. **Do not cite "tested at OQ-310" as vindicating the rule as
+minted** — the surviving sentence is not the sentence that was registered.
 
 Full record, with the per-row verification table: `CORRECTION_target_column.md` in the audit dir.
 

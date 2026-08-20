@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "b7dc03dc4f55054e23a7939bc38967cf322c8c5a",
+    "store_version": "858503e519ec272fec760834d073cbd7f72fe4f4",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T11:40:02"
+    "generated_at": "2026-08-20T13:15:55"
   },
-  "issues_sha": "87413d824d86fce0230d315371f50ac13bf0cc9c7e7d7cb199be8e57ca52b74d",
-  "n_entries": 332,
+  "issues_sha": "e655a26a0af67451fb6539e3b833effe5a61815efc831de7a3486afa6e5aef39",
+  "n_entries": 333,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 123,
+    "open": 124,
     "partial": 5
   },
   "active": [
@@ -1818,6 +1818,19 @@
         "OQ-57",
         "OQ-310",
         "OQ-328"
+      ]
+    },
+    {
+      "id": "OQ-333",
+      "status": "open",
+      "priority": 4,
+      "summary": "`omega selftest` is the only gate row with no live-substrate case, and OQ-310 declined to rule whether it should have one",
+      "deps": [
+        "splits_from OQ-310"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-310"
       ]
     }
   ],
@@ -4700,7 +4713,8 @@
       "mentioned_in": [
         "OQ-309",
         "OQ-328",
-        "OQ-332"
+        "OQ-332",
+        "OQ-333"
       ]
     },
     {

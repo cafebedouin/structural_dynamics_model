@@ -6,8 +6,40 @@ invariant-versus-value rule). Inputs from OQ-328 (`22a8b5b3`), which landed the 
 deferred the instance-12 call here.
 
 **Verdict (scoped to this repository's gate rows and audit-local integrity lines, at HEAD
-`58039b6a`, 2026-08-20):** **Neither half of the registered falsifier fires**, and the rule
-gains **one** non-retrodictive, independence-screened witness — the `apparatus` gate row going
+`58039b6a`, 2026-08-20): the rule is NARROWED, with a witness — the surviving sentence is not the
+sentence OQ-310 registered.** Neither half of the *registered falsifier* fires, and the rule gains
+**one** non-retrodictive, independence-screened witness — but the rule is a **biconditional**, and
+its halves came out differently:
+
+- **The *only-if* half survives, witnessed.** No value check has ever been recorded catching an
+  apparatus self-instance: **0 of 18**, while one is recorded *missing* one.
+- **The *if* half is falsified — by §7.4's own eleven instances**, once their catchers are typed
+  against this pass's frozen criteria. The property says the eleven were caught by *"a person or a
+  script comparing a claimed number against the artifact"*; those are **re-derivations**, and a
+  re-derivation **asserts an invariant**. So in ten of eleven **the invariant was present and no
+  gate detected anything.** Asserting an invariant is not sufficient. The disconfirming evidence
+  was inside the derivation base the whole time, unreadable until the catchers were classified.
+
+**What the eleven lacked was not the invariant but an EXIT CODE and JURISDICTION** — something to
+stop on the failure, and something pointed at the claim at all. Instance 11 had all three and is
+the one a gate caught; instance 12 had none, because no row was watching the sentence.
+
+Honest restatement:
+
+> **A gate detects an apparatus self-instance ONLY IF it asserts an invariant the defect cannot
+> satisfy — and NOT MERELY IF. The invariant must additionally be enforced by an exit code and
+> pointed at the claim. A value check against an expectation does not detect this class at all.**
+
+**This is a better outcome than either bullet in the pre-registered table anticipated.** The table
+offered *survives* and *killed or narrowed* as alternatives resting on the falsifier's verdict. What
+landed is a narrowing that the falsifier did not produce and could not have: it came from
+**reclassifying the rule's own base**, which the pass only did because the incident harvest forced
+the catchers to be typed. A reader coming to §7.4 cold must not read *"tested at OQ-310"* as
+vindicating the sentence as minted.
+
+---
+
+The rule also gains **one** non-retrodictive, independence-screened witness — the `apparatus` gate row going
 RED on a malformed `Fired:` bit on 2026-08-19, by an arm authored 2026-08-10, eight days before
 the rule existed. **But the rule's binary does not partition its own population**, and it fails
 in the *opposite* direction from the one the pass predicted: 18 of 26 gate rows are

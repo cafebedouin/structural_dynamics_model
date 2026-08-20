@@ -2139,6 +2139,33 @@ run by a human, by hand, at read time. The scarce thing was never the invariant;
 every one of the eleven catches. **The scarce thing was the exit code** — which is the same
 conclusion the strata reached from the other direction, arriving twice by independent routes.
 
+**What actually survives is a DIFFERENT SENTENCE from the one registered, and a reader arriving
+here cold should not take *"tested at OQ-310"* as vindicating the rule as minted.** The rule is a
+biconditional, and its two halves came out differently.
+
+*The **only-if** half survives, with a witness.* No value check has ever been recorded catching an
+apparatus self-instance — zero across all eighteen, while one is recorded missing one. A gate that
+checks a value against an expectation does not detect this class.
+
+*The **if** half is falsified — by this section's own eleven, once their catchers are correctly
+classified.* The property says the eleven were caught by *"a person or a script comparing a claimed
+number against the artifact"*. Those are re-derivations; a re-derivation asserts an invariant. **So
+in ten of the eleven the invariant was PRESENT and no gate detected anything.** Asserting an
+invariant is therefore not sufficient for detection, and the base this rule was generalized from is
+the evidence against its sufficiency direction — it was there the whole time, unreadable until the
+catchers were typed.
+
+*What the eleven actually lacked was not the invariant but two other things:* an **exit code**, so
+the invariant's failure stopped something rather than printing; and **jurisdiction**, so some
+standing check was pointed at the claim at all. Instance 11 is the one that had all three, and it
+is the one that a gate caught. Instance 12 had none: no row was watching the sentence.
+
+So the honest restatement, and it is a **narrowing with a witness** rather than a survival:
+
+> **A gate detects an apparatus self-instance only if it asserts an invariant the defect cannot
+> satisfy — and not merely if. The invariant must additionally be enforced by an exit code and
+> pointed at the claim. A value check against an expectation does not detect this class at all.**
+
 *A cell this rule has no room for.* An invariant-asserting instrument **false-fired**: the
 frozen-corpus fingerprint in `audits/2026-08-19_oq242_absence_semantics/` hashes `md5sum`'s output
 lines, which carry path strings, and a relative-versus-absolute mismatch produced a spurious
