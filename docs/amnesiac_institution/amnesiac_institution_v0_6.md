@@ -1580,7 +1580,7 @@ part.
 
 | Wu's class | This paper's nearest | Assessment |
 |---|---|---|
-| **A** — environment and platform quirks (dev green, prod silent) | *no member* | **[WITNESSED]** (2026-08-20, enumerated — see the correction below, which also retires this cell's second sentence). A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
+| **A** — environment and platform quirks (dev green, prod silent) | *no member* | **[WITNESSED]** (2026-08-20, enumerated — see the correction below, which retires **both clauses** of this cell's second sentence, on separate grounds). A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
 | **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | **[PROPOSED]** Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
 | **C** — error swallowing and dilution | P6 | **[PROPOSED]** Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
 | **D** — chained hallucination and fabrication (*fail-plausible*) | P4 (fabricated default) | **[PROPOSED]** **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
@@ -1634,6 +1634,34 @@ row. Tracked at ISSUES **OQ-328**.
 > has the incidents; it has no index for them. **The gap is axis-level, not incident-level** — which
 > is a sharper concession against this paper's interest than the one it replaces, and it is why the
 > against-interest reasoning above is kept rather than deleted.
+>
+> **The second clause goes too, and it fails on the same axis error it was offered to repair.** That
+> clause reads *"its analogue is regime boundaries and corpus resets, which the trifurcation types as
+> Type A drift."* It was a **substitute** — offered because no literal instance was thought to exist
+> — and with four literal instances witnessed there is nothing left for it to substitute for. But it
+> was also **wrongly typed when written**, and the mistake is this row's own: §2.8's table glosses
+> **Type A as *the framing expired*** — spec-versus-code drift, *"the corpus"* without a date, repaired
+> by as-of stamps. That is a **temporal** discontinuity. Wu's A is a **locational** one: the same code,
+> two places, different behaviour, one of them silent. Offering a time-indexed analogue for an
+> environment-indexed class is the identical axis confusion the paragraph above diagnoses, committed
+> one clause earlier as the remedy for it.
+>
+> **And the institution's own trifurcation does have a home for these incidents — just not Type A.**
+> Two load paths returning opposite answers for one line of code is §2.8's **Type B**: *two framings
+> contradict inside one system*. The typing is not asserted here; it is confirmed by a route nobody
+> chose for this purpose. Type B's declared repair is *machine-enforced invariants in the standing
+> gate*, and OQ-57's actual repair — taken 2026-06-04, long before anything in this row was written —
+> was `prolog/check_stack.pl` run as a standing command against a recorded baseline, *"surfacing
+> undefined-predicate references of exactly this class as a command instead of forensics."* The repair
+> chose Type B before anyone asked what type it was.
+>
+> **This narrows the gap rather than widening it, and it is worth stating precisely because the
+> narrowing still runs against interest.** The claim that survives is not *the institution cannot see
+> these failures* — it can, under the trifurcation, and it repaired one of them years of sessions ago.
+> It is that **this paper's eight-index failure taxonomy has no index for what its own trifurcation
+> can type.** The phenomenon occurs here, one apparatus in this institution handles it, and the
+> taxonomy §5.1 publishes still cannot type it. That is a harder thing to say than *we do not have
+> that shape*, and it is the form in which this row carries RQ2's falsifier.
 >
 > **The criterion's own instability, carried with the result.** Wu's class A is VERDICT-INELIGIBLE
 > under the pinned granularity rule — n=1 under his catalog index, n=4 under his dataset index — so

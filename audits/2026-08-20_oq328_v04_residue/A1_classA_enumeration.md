@@ -75,6 +75,48 @@ conflates two claims and licenses the first with the second:
 The honest repair keeps (a), retires (b), and replaces (b) with the sharper reason enumeration
 actually found: the gap is **axis-level, not incident-level.**
 
+## The second clause — found on review, and it fails on the same axis error
+
+Row A's second sentence has two clauses joined by a semicolon, and the first pass addressed only
+the first. The second reads:
+
+> its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A
+> drift (§2.8)
+
+**It was a substitute**, offered because no literal instance was believed to exist. Four literal
+instances are now witnessed, so there is nothing left for it to substitute for — but it also fails
+on its own terms, and it fails the same way the clause before it does.
+
+| | indexes on | §2.8 gloss |
+|---|---|---|
+| **Wu's class A** | **location** — same code, two places, different behaviour, one silent | — |
+| **Type A (drift)** | **time** — spec-vs-code drift, *"the corpus"* without a date | *"the framing expired"*; repaired by as-of stamps |
+| **Type B (structure)** | **contradiction inside one system** | *"two framings contradict inside one system"*; repaired by machine-enforced invariants in the standing gate |
+
+Offering a **time**-indexed analogue for a **location**-indexed class is the identical axis
+confusion this enumeration diagnoses in the clause before it — committed one clause earlier, as the
+remedy for it.
+
+**The four instances are Type B, and the typing is confirmed by a route nobody chose for it.**
+Type B's declared repair is *machine-enforced invariants in the standing gate*. OQ-57's actual
+repair, taken **2026-06-04** and long predating this row, was `prolog/check_stack.pl` run as a
+standing command against a recorded baseline — *"surfacing undefined-predicate references of exactly
+this class as a command instead of forensics"*
+(`swipl_load_path_and_probe_gotchas.md:42-44`; CLAUDE.md:325). **The repair chose Type B before
+anyone asked what type it was.** That is a naturally-arising confirmation, not a classification
+constructed to fit.
+
+**What this does to the gap — it narrows it, and the narrowing still runs against interest.** The
+surviving claim is *not* that the institution cannot see these failures: it can, under the
+trifurcation, and it repaired one of them years of sessions ago. It is that **this paper's
+eight-index failure taxonomy has no index for what the institution's own trifurcation can type.**
+Harder to say than *we do not have that shape*, and it is the form in which the row carries RQ2's
+falsifier.
+
+**Light note, not a defect:** §2.8 was forward-pointered to the practice paper on 2026-08-20 and is
+marked *not maintained*, but the trifurcation table is retained at its number and the citation
+resolves, exactly as that subsection's redirect promises.
+
 ## A2 — the zero classified, per §7.8
 
 **Tested absence**, scoped to claim (a).

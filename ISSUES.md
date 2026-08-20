@@ -16223,6 +16223,29 @@ indexes on where the code is running. That is a sharper concession against the p
 than the one it replaces. Enumeration + classification:
 `audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`; ratchet retest: `A4_ratchet_retest.md`.
 
+**Amended on operator review, same day — the cell's SECOND clause needed retiring too, and the
+first landing addressed only the first.** Row A's second sentence joins two clauses: the falsified
+*"no dev/prod split"* and a substitute, *"its analogue is regime boundaries and corpus resets, which
+the trifurcation types as Type A drift."* With four literal instances witnessed the substitute has
+nothing to substitute for — **and it was mistyped when written, on the same axis error.** §2.8
+glosses **Type A as *"the framing expired"*** (spec-vs-code drift, an undated corpus, repaired by
+as-of stamps): a **temporal** discontinuity. Wu's A is **locational**. A time-indexed analogue for a
+location-indexed class is the identical confusion the correction diagnoses, committed one clause
+earlier as the remedy for it.
+
+**The four instances are Type B** — *two framings contradict inside one system* — and the typing is
+confirmed by a route nobody chose for it: Type B's declared repair is *machine-enforced invariants
+in the standing gate*, and OQ-57's actual repair (**2026-06-04**, long predating this row) was
+`prolog/check_stack.pl` as a standing baselined command. **The repair chose Type B before anyone
+asked what type it was.**
+
+**Net effect: the gap NARROWS, and still runs against interest.** The surviving claim is not that
+the institution cannot see these failures — it can, under the trifurcation, and repaired one years
+of sessions ago. It is that **the eight-index taxonomy has no index for what the institution's own
+trifurcation can type.** Both clauses now retired in the paper in the house form; the tier-mark,
+which had over-claimed that the correction retired the whole sentence when it retired half, is
+corrected to name both clauses.
+
 **One instruction in the governing plan was REFUSED, and the refusal is a finding about the
 crosswalk's reliability in the other direction.** The plan reported that
 `crosswalk_v04_to_v06.md:69` and this entry's own row-11 table cell quote a phrase — *"the losses

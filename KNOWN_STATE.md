@@ -80,6 +80,19 @@ The institution has the incidents; it has no *index* for them. **The gap is axis
 incident-level.** Corrected in the paper in the house form, with the against-interest paragraph
 left intact above the correction.
 
+**The cell's SECOND clause was mistyped on the same axis error, and the first landing missed it**
+(caught on operator review, same day; both clauses now retired). The clause offered *regime
+boundaries and corpus resets, typed **Type A drift**,* as the analogue. §2.8 glosses **Type A as
+*"the framing expired"*** — spec-vs-code drift, an undated corpus, repaired by as-of stamps: a
+**temporal** discontinuity. Wu's A is **locational**. A time-indexed analogue for a
+location-indexed class is the identical confusion, one clause earlier, as its own remedy.
+**The four splits are Type B** (*two framings contradict inside one system*), and the typing is
+confirmed by a route nobody chose for it — Type B's declared repair is *machine-enforced invariants
+in the standing gate*, and OQ-57's actual **2026-06-04** repair was `prolog/check_stack.pl` run as a
+standing baselined command. **How this may be cited: the gap NARROWED and did not soften.** Do not
+cite it as *the institution cannot see these failures* — it can, under the trifurcation. Cite it as
+**the eight-index taxonomy has no index for what the institution's own trifurcation can type.**
+
 **A correction to the governing plan, refused rather than executed.** The plan reported that
 `crosswalk_v04_to_v06.md:69` and ISSUES OQ-328 quote a phrase absent from the paper — *"the
 losses are independent"*, 0 hits — and directed both citations be fixed. **The phrase is

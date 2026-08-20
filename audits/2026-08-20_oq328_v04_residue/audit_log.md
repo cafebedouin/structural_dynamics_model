@@ -93,3 +93,21 @@ stamps DIFFER, and every intervening commit is this audit's own** — `28e72378`
 `db06fc79`, `60e6bac0`, `1e5f3e26`, plus this closing commit. No concurrent writer. Per
 audits/README.md this is a HEAD-stamp pair whose difference is fully attributed, so OQ-297's
 falsifier does **not** fire here: there was no catch, because there was nothing to catch.
+
+### 2026-08-20 — AMENDMENT after close, on operator review: the cell's second clause
+
+The close above was premature on one point and the operator caught it. Row A's second sentence
+joins two clauses; the Package A correction retired the first (*"no dev/prod split"*) and left the
+second (*"its analogue is regime boundaries and corpus resets, which the trifurcation types as
+Type A drift"*) standing — **while the tier-mark I wrote claimed the correction retired the whole
+sentence.** That over-claim is the defect: a pointer asserting a discharge its target does not
+perform (P8 at one remove, inside my own marking).
+
+Substantively the second clause fails twice: its warrant is gone (it was a substitute for an
+absence that no longer exists), and it was **mistyped when written** — §2.8 glosses Type A as
+*"the framing expired"*, a temporal discontinuity, against Wu's locational one. The four splits
+are **Type B**, confirmed by OQ-57's actual 2026-06-04 repair matching Type B's declared repair.
+
+Both clauses now retired in the paper; tier-mark corrected to name both. Gate GREEN, carriage
+15/15 after the amendment. **The wrap-safe anchor check was run on this amendment** — the check
+I failed to run on the finding that produced the refusal.

@@ -52,6 +52,18 @@ index for them. **The gap is axis-level, not incident-level** — a sharper conc
 paper's interest than the one it replaces, which is why the against-interest paragraph was kept
 intact above the correction rather than rewritten.
 
+**The cell's second clause fails too, on the same axis error (found on review, after the first
+landing).** It offered *regime boundaries and corpus resets, typed Type A drift* as the analogue.
+§2.8 glosses **Type A as "the framing expired"** — a *temporal* discontinuity; Wu's A is a
+*locational* one. A time-indexed analogue for a location-indexed class is the identical confusion,
+one clause earlier, as the remedy for it. The four instances are **Type B** (*two framings
+contradict inside one system*), and the typing is confirmed by a route nobody chose for it: Type B's
+declared repair is machine-enforced invariants in the standing gate, and OQ-57's actual 2026-06-04
+repair was `check_stack.pl` as a standing baselined command. **This narrows the gap and the
+narrowing still runs against interest**: the institution *can* see these failures under its
+trifurcation and repaired one long ago — what it lacks is an *index* for them in the eight-member
+taxonomy §5.1 publishes.
+
 **Ratchet retest passes.** The falsifying branch now has an observable (a member shown to index on
 environment) and a named observer (whoever walks §5.1's table from the Appendix B pointer row).
 §14's clause re-read, holds, and was deliberately **not** edited — the false clause is at §6.2, and
