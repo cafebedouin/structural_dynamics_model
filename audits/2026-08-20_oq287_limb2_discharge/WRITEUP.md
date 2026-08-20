@@ -113,6 +113,36 @@ negative anyway.
 > goes green over a stale set — silently, and with the same shape as R2's aptness blindness: the
 > green reads as verification of a set it never saw. Acceptable at two members maintained by one
 > operator; not acceptable undeclared.
+>
+> **THE RESIDUAL FIRED THE SAME DAY IT WAS WRITTEN, and is now closed for that instance.** The
+> practice paper landed hours later — the third artifact, exactly as described. It is enrolled, and
+> the enrolment rule is recorded in the script: **include on CANDIDACY, not on a recorded GO**,
+> because a paper in the set that is never published costs one extra grep while a paper out of the
+> set that *is* published is the unrepairable case. A selftest arm now asserts the third paper is
+> present, so the next omission is loud rather than silent.
+
+### 2.2 ARM 3 — the path arm, added after the sweep missed a file class it knew was load-bearing
+
+**The fifth site was found by accident**, opening `docs/amnesiac_institution/README.md` for an
+unrelated reason. **Nothing in the method produced it**, and that is the finding: arms 1 and 2 were
+both scoped to the *papers*, while the READMEs are the canonicity markers Pass A made a **checked
+fact** — known load-bearing, carrying routing claims about the very sections being moved, and still
+outside the sweep.
+
+The generalisation *absences are scoped to keywords and to paths* is true but not actionable. The
+narrower form is both:
+
+> **Any grep over a paper that does not include its own `docs/<name>/README.md` is scoped wrong by
+> construction.**
+
+Arm 3 derives the README path from each `PUBSET` member rather than keeping a second list — a
+hand-maintained parallel list is the fork this check exists to catch — and a **scope guard** reports
+when it swept fewer READMEs than papers, so scanning short is loud.
+
+**Its discrimination record is naturally-arising on BOTH sides, and cost nothing**, per the operator's
+rule that a defect's before-commit is a free negative control: the stale sub-item promise **fires at
+`c3667f75`** and **declines at `HEAD`** (fixed in `20f2b93d`). Neither state was authored to be found,
+which beats a planted fixture — a plant shows only that authored drift gets rejected.
 
 ## 3. The defect the check surfaced: an ambiguous heading that already moved a receiver
 

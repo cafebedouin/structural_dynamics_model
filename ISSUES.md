@@ -13236,6 +13236,27 @@ their letters, so the already-sent letter's `§2.9(b)` citation still resolves.
 > that reads as global when quoted without its task, and both catches so far were made by the
 > operator, not by the instance reading it.
 >
+> **THE FIX IS IN THE ARTIFACT, NOT THE READER — and this is the operative half, so do not close it
+> as "corrected twice" (operator, 2026-08-20).** The receiver-scoped misread is **not** a defect in
+> `EXTRACTION_PROMPT.md`'s wording that a third careful pass will fix. It is **a reading an instance
+> reliably produces from that wording** — twice, from two different sentences, in the same prompt,
+> about sibling papers, by different readers. Reading it as an authoring slip invites a third local
+> correction, which is the wrong response and would look exactly like the right one.
+>
+> **This is Step 2's heading split reached from the other side.** There, one word in a heading
+> reliably produced a wrong action and the repair was to restructure the artifact, not to instruct
+> the reader more carefully. Same conclusion, opposite approach: enumeration at the handoff caught
+> the heading; recurrence across handoffs caught this.
+>
+> **ESCALATION TRIGGER, pre-registered so the third instance is not spent on another patch.** If a
+> third instance trips a task-scoped write-lock read as a global freeze, that is **not** worth another
+> correction — it is worth a **structural change to how task-scoped write-locks are phrased
+> repo-wide**: every such restriction states its scope *in the sentence that states the
+> restriction*, so it cannot be quoted without its task. Mint that as its own OQ at the third
+> occurrence; do not fold it into a local fix. **The kill condition on this trigger:** if the third
+> occurrence is caught by the *instance* rather than by the operator, the reading is not reliably
+> produced after all, and the trigger downgrades to an authoring note.
+>
 > **Why accepting the stale sentence was the weaker branch, and not on tidiness grounds.**
 > *"Pending the practice paper"* does not **age** — it becomes **affirmatively false**, telling an
 > external reader the practice paper does not exist. That is a staleness-ladder instance in the

@@ -316,6 +316,15 @@ same day: amend.** Two reasons worth carrying:
   prompt, sibling paper, same shape. **Both catches were made by the operator, not by the instance
   reading it — so treat a task-scoped restriction quoted without its task as a live hazard; the
   third occurrence is the one nobody will notice.**
+  **The fix is in the ARTIFACT, not the reader.** This is not a wording defect a third careful pass
+  fixes; it is **a reading an instance reliably produces from that wording** (twice, two different
+  sentences, same prompt, sibling papers, different readers). Reading it as an authoring slip invites
+  a third local correction — the wrong response, wearing the right response's clothes.
+  **Pre-registered escalation:** a third trip is worth a **structural change to how task-scoped
+  write-locks are phrased repo-wide** — each states its scope *in the sentence that states the
+  restriction* — minted as its own OQ, **not** folded into a local fix. Kill condition: if the third
+  is caught by the *instance* rather than the operator, the reading is not reliably produced and this
+  downgrades to an authoring note.
 
 **Accepting the stale sentence was the weaker branch on a substantive ground, not a tidiness one:**
 *"pending the practice paper"* does not age, it becomes **affirmatively false** — it tells an external

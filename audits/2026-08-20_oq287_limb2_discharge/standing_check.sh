@@ -15,6 +15,20 @@
 #   ARM 1 (number)  greps for the section NUMBER.  Noisy: a target document with its own
 #                   §X returns self-cites as false positives.  Blind: misses any reference
 #                   carried in prose.
+#   ARM 3 (path)    scans each paper's SIBLING `docs/<dir>/README.md`.  Owed by construction on a
+#                   narrower and fully checkable ground than arm 2's: **any grep over a paper that
+#                   does not include its own `docs/<name>/README.md` is scoped wrong by
+#                   construction.**  Those READMEs are canonicity markers that Pass A made a
+#                   CHECKED fact -- they carry routing claims about the very sections being moved --
+#                   so they are known load-bearing, and they still sat outside the sweep.
+#                   Discrimination record: NATURALLY-ARISING, both sides, from git.  The stale
+#                   sub-item promise in `docs/amnesiac_institution/README.md` FIRES at c3667f75 and
+#                   DECLINES at HEAD (fixed in 20f2b93d).  Neither state was authored to be found --
+#                   the defect's commit is the positive, its successor the negative.
+#                   HOW IT WAS FOUND, recorded because it indicts the method: by ACCIDENT, opening
+#                   that README for an unrelated reason.  Nothing in the method produced it.  Arm 1
+#                   and arm 2 both missed it because both were scoped to the PAPERS.
+#
 #   ARM 2 (prose)   greps for the section's PROSE NAME.  Owed by construction, because
 #                   concealment v0.4's canonicity sentence names its domains in prose with
 #                   no numbers anywhere in the sentence — arm 1 is structurally blind to
@@ -32,13 +46,30 @@ cd "$(dirname "$0")/../.."
 GREP=/usr/bin/grep   # pinned: build_discipline — never bare `grep` in a script computing a count
 
 # --- the enumerated publication set -----------------------------------------------------
+# ADDING A MEMBER IS CHEAP; OMITTING ONE IS THE FAILURE MODE.  A paper in the set that turns out
+# never to be published costs one extra grep.  A paper OUT of the set that IS published is the
+# unrepairable case this whole check exists for.  So the rule is: include on CANDIDACY, not on a
+# recorded GO -- and note the status rather than deciding it here.
 PUBSET=(
-  docs/amnesiac_institution/amnesiac_institution_v0_6.md
-  docs/concealment/concealment_without_a_concealer_v0_4.md
+  docs/amnesiac_institution/amnesiac_institution_v0_6.md   # GO ruled 2026-08-19 (ISSUES OQ-309)
+  docs/concealment/concealment_without_a_concealer_v0_4.md # circulation UNRECORDED - the repo has
+                                                           # no distribution log; absence here is
+                                                           # not evidence of non-circulation
+  docs/practice/practice_paper_v0_1.md                     # added 2026-08-20, the day it landed.
+                                                           # v0.1 draft, no GO, unreviewed. Included
+                                                           # on candidacy: this is the "third
+                                                           # artifact nobody adds" the declared
+                                                           # residual named, and it arrived within
+                                                           # hours of the residual being written.
 )
 # Self-cites do not count: a document's pointer into its OWN §X is editable together with
 # the move.  SELFSEC maps each publication-set member to the doc whose sections it owns.
 selfdoc() { case "$1" in *amnesiac_institution_v0_6*) echo v06 ;; *concealment_without_a_concealer_v0_4*) echo cwc ;; *) echo other ;; esac; }
+
+# ARM 3's path set is DERIVED from PUBSET, never listed separately -- a hand-maintained second
+# list is the fork this check exists to catch.  A paper at docs/<dir>/<file>.md has its canonicity
+# marker at docs/<dir>/README.md.
+siblingreadme() { echo "$(dirname "$1")/README.md"; }
 
 scan() {
   local sec="$1" prose="$2" owner="${3:-v06}" f d hits
@@ -82,7 +113,30 @@ scan() {
       echo "      arm2 (prose):  $m hit(s)$([ "$d" = "$owner" ] && echo ' — self, not exposure')"
     fi
   done
-  echo "   => cross-document reference(s) needing a ruling: $total"
+  # ---- ARM 3: the sibling canonicity READMEs -------------------------------------------------
+  echo "   -- arm3 (path): sibling docs/<dir>/README.md, derived from PUBSET --"
+  local scoped_wrong=0
+  for f in "${PUBSET[@]}"; do
+    local r; r="$(siblingreadme "$f")"
+    if [ ! -f "$r" ]; then
+      echo "      !! $r MISSING -- $f has no canonicity marker; a grep over it is scoped wrong"
+      scoped_wrong=1; continue
+    fi
+    local rn rm2
+    rn=$("$GREP" -n -- "§${sec}\|§${sec}/\|${sec}\b" "$r" | "$GREP" -c . || true)
+    rm2=$("$GREP" -n -i -- "$prose" "$r" | "$GREP" -c . || true)
+    if [ "$rn" -gt 0 ] || [ "$rm2" -gt 0 ]; then
+      echo "      $r: number=$rn prose=$rm2 -- INSPECT (READMEs carry routing claims about moved sections)"
+      "$GREP" -n -i -- "$prose" "$r" | sed 's/^/         /' || true
+      total=$((total+rn+rm2))
+    else
+      echo "      $r: number=0 prose=0"
+    fi
+  done
+  [ "$scoped_wrong" = 0 ] \
+    && echo "      scope guard: every PUBSET paper's README was swept (${#PUBSET[@]}/${#PUBSET[@]})" \
+    || echo "      !! SCOPE GUARD FAILED -- this run swept fewer READMEs than papers"
+  echo "   => reference(s) needing a ruling: $total"
   echo
 }
 
@@ -109,6 +163,29 @@ selftest() {
   if "$GREP" -qn '^## 9\. ' "$C"; then
     echo "  PASS  arm1 noise confirmed: concealment owns a §9 of its own, so bare-number hits there are self-cites"
   else echo "  FAIL  expected concealment to own a §9 (the self-cite confound)"; fail=1; fi
+
+  # ---- ARM 3's discrimination record: NATURALLY-ARISING on BOTH sides, drawn from git ----------
+  # The operator's rule: when a defect is found, its before-commit is a free negative control.
+  # The stale sub-item promise in docs/amnesiac_institution/README.md was fixed in 20f2b93d, so
+  # its parent c3667f75 is a real defective state and HEAD is a real clean one -- neither authored
+  # to be found.  This beats a planted fixture, which only shows that authored drift gets rejected.
+  local RM=docs/amnesiac_institution/README.md
+  local before after
+  before=$(git show c3667f75:"$RM" 2>/dev/null | "$GREP" -c 'sub-item granularity' || true)
+  after=$(git show HEAD:"$RM" 2>/dev/null | "$GREP" -c 'sub-item granularity' || true)
+  if [ "$before" -ge 1 ]; then echo "  PASS  arm3 FIRES on a naturally-arising positive (c3667f75: README carried the stale promise)"
+  else echo "  FAIL  arm3 did not fire at c3667f75 -- the positive half of its record is gone"; fail=1; fi
+  if [ "$after" = "0" ]; then echo "  PASS  arm3 DECLINES on a naturally-arising negative (HEAD: promise removed) -- discrimination, not detection"
+  else echo "  FAIL  arm3 still fires at HEAD -- it cannot discriminate; the stale promise is back"; fail=1; fi
+
+  # Every PUBSET member must have a sibling README, or arm 3 is scoped wrong by construction.
+  local missing=0 m
+  for m in "${PUBSET[@]}"; do [ -f "$(siblingreadme "$m")" ] || { echo "  FAIL  no canonicity marker for $m"; missing=1; fail=1; }; done
+  [ "$missing" = 0 ] && echo "  PASS  every PUBSET paper has a sibling README (${#PUBSET[@]}/${#PUBSET[@]}) - arm 3 is not scoped short"
+  # The residual is CLOSED for the case that actually arose: the third paper is enrolled.
+  printf '%s\n' "${PUBSET[@]}" | "$GREP" -q 'practice_paper' \
+    && echo "  PASS  the third paper is enrolled (declared residual closed for this instance)" \
+    || { echo "  FAIL  practice paper landed and is NOT in PUBSET - the residual fired and nobody acted"; fail=1; }
 
   # Two-sided: the set must be non-empty, or every arm passes vacuously (Pattern 5).
   if [ "${#PUBSET[@]}" -ge 2 ]; then echo "  PASS  publication set non-empty (${#PUBSET[@]}) — no vacuous pass"
