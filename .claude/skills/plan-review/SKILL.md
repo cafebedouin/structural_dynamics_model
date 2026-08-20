@@ -28,32 +28,52 @@ checklist yourself (§9.4 — the reviewer's known regularities graduate into th
 **specification test** (write the executor's prompt now, as part of the plan — enumerating what a
 receiver must do surfaces what re-reading cannot).
 
+The plan must carry a declared **assumed substrate** section: the repo facts (paths, predicates,
+counts, invariants) the executor is expected to verify itself, each stated checkably. This is the
+damper on blind-review false positives — the reviewer checks that the list exists and its entries
+are checkable, instead of flagging every repo dependency as a gap and pressing the plan toward
+inlining repo contents.
+
 ## Phase 2 — review rounds
 
 3. Spawn the `repo-blind-reviewer` agent. **Payload composition rule:** exactly (a) the OQ/task
    text verbatim, (b) your questions and/or plan verbatim, (c) on later rounds, the reviewer's
    prior round. Nothing else — no file excerpts, no command output, no planning-context summary.
    The blindness is the control; if the reviewer flags leakage, fix the payload, not the flag.
-4. **Model rule (two independence axes, §4.1):** the reviewer must run on a different model family
-   than this session. The agent definition defaults to `opus`; if this session IS Opus, pass a
-   `model` override. Fresh context removes inherited framing; only a different model's read removes
-   a model-shaped misreading.
+4. **Model rule (two independence axes, §4.1), claimed at its altitude:** the reviewer must run
+   on a different model than this session (definition defaults to `opus`; if this session IS
+   Opus, pass a `model` override). A different Anthropic model buys fresh context plus a
+   different capability profile — it does NOT remove lineage-shaped misreadings (same vendor,
+   correlated failure modes). Where that axis matters (concept→surface mappings, framework
+   readings), say so in the deliverable: the operator's relay to a non-Anthropic model remains
+   the path for it, and this skill does not replace that.
 5. Respond to findings **per item** — numbered dispositions, never "all addressed". Questions the
    reviewer marks `RULING:` go on the escalation list untouched; do not argue them down.
-6. Iterate by SendMessage to the same reviewer (its context holds the negotiation). Witnessed
-   practice is 4–6 rounds, occasionally 12+ (OQ-303): cap at 6 by default; if not converged, stop
-   and report the sticking points to the operator rather than grinding.
+6. Iterate by SendMessage to the same reviewer (a send resumes it from its transcript — but this
+   is witnessed by the agent file's FIRST-USE CHECK, not assumed; if continuation proved
+   unavailable there, carry the full prior negotiation in each round's payload instead).
+   Witnessed practice is 4–6 rounds, occasionally 12+ (OQ-303): cap at 6 by default; if not
+   converged, stop and report the sticking points to the operator rather than grinding.
 7. **Fresh-eyes final pass:** when the loop reviewer says ready, spawn a NEW `repo-blind-reviewer`
    with only the OQ + final plan (not the negotiation). A reviewer that iterated with you has
    accumulated your context; its "ready" is partly recognition. Address or escalate what the fresh
-   pass finds; it does not restart the loop.
+   pass finds; it does not restart the loop. Stopping rule, stated because it is otherwise
+   implicit: an amendment made in response to the fresh pass ships unreviewed — mark it as such
+   at the operator checkpoint rather than silently folding it in.
 
 ## Phase 3 — the operator's checkpoint (one interaction)
 
 Present, in the final message: the converged plan; the **executor prompt** (below); the
 **RULINGS list** (each stated neutrally — the reviewer checks that no quality claim wears a
-jurisdictional argument's clothes); and the reviewer's **CAUTIONS**. Then stop. Plan approval and
-rulings are the operator's; implementation happens in a fresh session per §4.1.
+jurisdictional argument's clothes); and the reviewer's **CAUTIONS**, plus any unreviewed
+fresh-pass amendments, marked. Then stop. Plan approval and rulings are the operator's;
+implementation happens in a fresh session per §4.1.
+
+Before stopping, append one line to `.claude/skills/plan-review/RUNS.md` (create if absent):
+`YYYY-MM-DD | target | rounds used | amendments beyond Phase-1 checklist y/n | rulings N |
+searches per round`. This is the falsifier's substrate: each session sees one run, so
+"repeatedly" is unobservable to the amnesiac reader who owns the retirement decision unless the
+runs leave a record.
 
 ## The executor prompt (part of the deliverable, not an afterthought)
 
@@ -70,18 +90,25 @@ comply — report the refusal at the volume of a completion"); and mid-run quest
 ## After implementation — evaluation is re-derivation, not reading
 
 The evaluating instance (fresh, holding OQ + plan + the diff) must not review by reading prose:
-judges anchor on confident closing language (§3.2; Advani 2026, ≤0.65 AUROC). Instead: re-run the
-claimed commands; compare every claimed number/count/diff against the artifact it describes;
-classify every zero (tested absence / untested instrument / unrecheckable, §7.8); paste witnesses.
-A done-claim without a same-turn witness is OPEN (paste-or-untag).
+judges anchor on confident closing language rather than verified state change
+(`amnesiac_institution_v0_6.md` §3.2, citing Advani 2026, ≤0.65 AUROC — the read-site for this
+figure). Instead: re-run the claimed commands; compare every claimed number/count/diff against
+the artifact it describes; classify every zero (tested absence / untested instrument /
+unrecheckable, §7.8); paste witnesses. A done-claim without a same-turn witness is OPEN
+(paste-or-untag). Annotate the run's line in RUNS.md: `post-impl gaps: N (what)` — gaps the
+reviewer approved past are the falsifier's other half.
 
 ## Standing limits
 
 - This skill automates the relay. It may not resolve rulings, approve its own plans, or push.
 - The reviewer verifies framing and specification, never evidence. Evidence witnesses are produced
   repo-side and never outsourced to the blind seat.
-- **Falsifier (declared read-site, not a ratchet):** the operator, at plan-acceptance and at
-  implementation, observes directly whether this loop earns its keep — if review rounds repeatedly
-  amend nothing beyond the Phase-1 checklist, or implementations of skill-reviewed plans repeatedly
-  surface gaps the reviewer approved, say so and propose retiring or revising this skill. Passive
-  trigger, declared as such.
+- **Falsifier (declared read-site AND substrate):** if RUNS.md shows review rounds repeatedly
+  amending nothing beyond the Phase-1 checklist, or implementations repeatedly surfacing
+  post-impl gaps the reviewer approved past, say so at the operator checkpoint and propose
+  retiring or revising this skill. The record is RUNS.md; the decision is the operator's.
+- **Intended evolution, named:** Phase 1's checklist graduation is *designed* to erode the
+  reviewer's marginal value on shape/record/reviver — that erosion is success, not failure, and
+  RUNS.md is where it becomes visible. As it happens, narrow the reviewer's mandate toward the
+  **specification test alone**: the one axis the sender structurally cannot run on itself,
+  because it cannot un-know its own context.
