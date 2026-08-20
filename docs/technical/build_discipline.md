@@ -13,6 +13,15 @@ is invisible because the producer looks finished. That is the *why* the patterns
 also share a single structural *what* — every one of them is an absence that presents as a
 presence — named and tabulated in **The spine** at the end of this note.
 
+Scope note on what the indices range over (dated observation, not an admission rule — enumerated
+2026-08-20, `audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`): each of the eight
+indexes on a *layer of the value's journey* (production, identity, value, gating, composition,
+dispatch, reporting). An incident indexed on something else — e.g. *where the code is running*:
+same line, two load paths, one silent (the OQ-57 shape) — has no index here and that is not this
+file failing you; the class is typed elsewhere (the trifurcation types it Type B; witnessed
+instances and repair record: `../amnesiac_institution/amnesiac_institution_v0_6.md` §6.2 row A).
+Nothing here says a ninth member must be layer-indexed (ruling: ISSUES OQ-332, 2026-08-20).
+
 ---
 
 ## The working method: separated passes (the procedure that prevents the patterns)

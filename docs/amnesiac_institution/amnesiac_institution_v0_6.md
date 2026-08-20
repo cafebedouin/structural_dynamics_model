@@ -1133,6 +1133,16 @@ be taken on fluency has refuted itself in its own terms.
 They are not seven independent categories. They are one mechanism (`CWC:C1@8475dc95`) surfacing at seven layers,
 which is why a fix at one layer reliably fails to protect the others.
 
+As enumerated 2026-08-20 (`audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`), each of
+the eight indexes on a layer of the value's journey; classes indexed on something else — e.g. *where
+the code is running*, Wu's class A — have no member here (§6.2 row A). A reader holding such an
+incident (two load paths, one silent — the OQ-57 shape) will not find its index in this table; the
+absence is typed rather than blind, and §6.2 row A carries it together with the trifurcation typing
+of the witnessed instances (Type B) and their repair record. This is a dated observation about the
+eight members as they stand, not an admission rule: nothing here says a ninth member must be
+layer-indexed, and no enumeration of off-axis classes has been attempted (ruling and its three
+rejected alternatives: ISSUES OQ-332, 2026-08-20).
+
 | Layer | Pattern | The absence | The success-shaped token |
 |---|---|---|---|
 | Production | P1 Produced-but-not-consumed | No consumer, or a stale one | The producer ran |
