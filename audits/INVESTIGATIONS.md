@@ -31,4 +31,4 @@ and pressure to close lines is pressure to write whatever bit clears them fastes
 
 ---
 
-(no entries yet — ledger opens with the OQ-276 ruling, forward-only)
+- [x] 2026-08-20 — what mechanism routes OQ-276 into the resolver's BLOCKED ON YOU section (Ω_P type line, empty Deps, or something else), and what edit routes it out → Fired: live — omega_resolver.py:406-408: every LEAF OQ whose Ω-type line reads Ω_P routes to blocked_on_human; no waiting-on-condition relator exists, so routing OQ-276 out requires either a resolver change or a type-line reorder, neither free (closed 2026-08-20)

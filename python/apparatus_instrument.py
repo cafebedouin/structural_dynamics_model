@@ -285,6 +285,59 @@ def check_truncation_tripwire(path: Path) -> tuple[list[str], str]:
                 f"(kae=25000) sighting(s) recorded — OQ-289 is answerable from these")
 
 
+def read_ledger(text: str) -> tuple[int, int, int]:
+    """Count (n_open, n_closed, n_closed_no) over INVESTIGATIONS.md text.
+
+    Strips fenced code blocks first: the ledger header carries FORMAT EXAMPLES in
+    a fence, and counting them reported "1 open / 1 closed" on an empty ledger the
+    day the counter shipped — the instrument counting its own template (the
+    OQ-285 README.md census shape). Caught same-turn because the first live run
+    was eyeballed. `n_closed_no` counts closed lines whose bit is `Fired: no` —
+    the OQ-276 ripeness signal (a `no` in the ledger counts even when the inquiry
+    never graduated to an audit dir; small checks are exactly the population the
+    ledger exists to recover)."""
+    in_fence, lines = False, []
+    for ln in text.splitlines():
+        if ln.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if not in_fence:
+            lines.append(ln)
+    n_open = sum(1 for ln in lines if ln.startswith("- [ ]"))
+    closed = [ln for ln in lines if ln.startswith("- [x]")]
+    n_closed_no = sum(1 for ln in closed if "Fired: no" in ln)
+    return n_open, len(closed), n_closed_no
+
+
+# Ledger closed-count at which a persistent zero-`no` stops being uninformative:
+# once this many registered-before-outcome inquiries have closed with no decline,
+# the delivery-vs-selection question (OQ-276 addendum 2026-08-20) is answerable
+# and the operator should read it. Authored, revisable at consolidation.
+OQ276_ZERO_NO_THRESHOLD = 20
+
+
+def oq276_wake(bits_no: int, ledger_no: int, n_closed: int) -> str | None:
+    """The mechanical watcher for OQ-276's blocked_on_condition dep (ISSUES.md).
+
+    Its Ω_P value ruling was declared NOT RIPE (2026-08-19) pending `Fired: no`
+    becoming reachable; routing it out of BLOCKED-ON-YOU without a watcher would
+    be quiet dormancy (operator, 2026-08-20). This is the watcher: it fires on
+    the ripeness condition (a `no` exists anywhere — WRITEUP bit or ledger line)
+    and, failing that, on the ledger accumulating enough closed lines that a
+    persistent zero-`no` becomes the delivery-vs-selection reading itself.
+    REPORTING ONLY — never a problem, never the return code."""
+    total_no = bits_no + ledger_no
+    if total_no > 0:
+        return (f"OQ-276 WAKE: `Fired: no` recorded ({bits_no} writeup / "
+                f"{ledger_no} ledger) — the deferred value ruling is RIPE; "
+                "surface to the operator (blocked_on_condition, ISSUES OQ-276)")
+    if n_closed >= OQ276_ZERO_NO_THRESHOLD:
+        return (f"OQ-276 WAKE: {n_closed} ledger lines closed with zero `no` "
+                "anywhere — the delivery-vs-selection question is answerable; "
+                "surface at next consolidation (ISSUES OQ-276)")
+    return None
+
+
 def selftest() -> int:
     """Positive controls: each check must FIRE on a planted violation and stay
     quiet on a conforming twin. want=fail/pass pairs per check."""
@@ -316,6 +369,33 @@ def selftest() -> int:
             failures.append("catch-bit control: pre-adoption dir was not exempt")
         if tally["live"] != 1:
             failures.append(f"catch-bit tally: want live=1, got {tally}")
+
+    # -- OQ-276 wake watcher: fires on a planted `no` (either channel) and on the
+    # zero-`no` threshold; DECLINES on the live shapes (open lines, closed live
+    # lines, sub-threshold) — two-sided, and the ledger parse goes through the
+    # same read_ledger path main() uses (fence-stripping included) -------------
+    LEDGER_FIXTURE = (
+        "# header\n"
+        "```\n- [x] 2026-01-01 — fence example → Fired: no — template (closed)\n```\n"
+        "- [ ] 2026-08-20 — an open line\n"
+        "- [x] 2026-08-20 — a closed live line → Fired: live — found it (closed 2026-08-20)\n")
+    n_o, n_c, n_no = read_ledger(LEDGER_FIXTURE)
+    if (n_o, n_c, n_no) != (1, 1, 0):
+        failures.append(f"wake control: read_ledger miscounted live-shaped fixture "
+                        f"(want (1,1,0), got {(n_o, n_c, n_no)}) — fence example must not count")
+    _, _, n_no2 = read_ledger(LEDGER_FIXTURE +
+                              "- [x] 2026-08-20 — a hunch → Fired: no — dissolved (closed 2026-08-20)\n")
+    if n_no2 != 1:
+        failures.append(f"wake control: planted ledger `Fired: no` not counted (got {n_no2})")
+    if oq276_wake(0, 0, 5) is not None:
+        failures.append("wake control: fired on live-shaped state (0 no, sub-threshold) — must decline")
+    if not (oq276_wake(1, 0, 0) or "").startswith("OQ-276 WAKE"):
+        failures.append("wake control: writeup-channel `no` did not fire the RIPE wake")
+    if not (oq276_wake(0, 1, 1) or "").startswith("OQ-276 WAKE"):
+        failures.append("wake control: ledger-channel `no` did not fire the RIPE wake")
+    thresh = oq276_wake(0, 0, OQ276_ZERO_NO_THRESHOLD)
+    if not (thresh and "delivery-vs-selection" in thresh):
+        failures.append("wake control: zero-`no` threshold wake did not fire at the threshold")
 
     # -- channel cap: over-cap must fail; at-cap must pass; absent must skip ---
     over = "## Feedback — planted\n" + "- entry\n" * (FEEDBACK_CAP + 1)
@@ -472,23 +552,17 @@ def main() -> int:
     # itself a defect, and pressure to close lines is pressure to write whatever bit
     # clears them fastest. Contributes NOTHING to the return code by design.
     ledger = AUDITS / "INVESTIGATIONS.md"
+    wake = None
     if ledger.is_file():
-        # Strip fenced code blocks first: the ledger header carries FORMAT EXAMPLES in a
-        # fence, and counting them reported "1 open / 1 closed" on an empty ledger the day
-        # this shipped — the instrument counting its own template (the OQ-285 README.md
-        # census shape). Caught same-turn because the first live run was eyeballed.
-        in_fence, lines = False, []
-        for ln in ledger.read_text(encoding="utf-8").splitlines():
-            if ln.startswith("```"):
-                in_fence = not in_fence
-                continue
-            if not in_fence:
-                lines.append(ln)
-        n_open = sum(1 for ln in lines if ln.startswith("- [ ]"))
-        n_closed = sum(1 for ln in lines if ln.startswith("- [x]"))
+        n_open, n_closed, ledger_no = read_ledger(
+            ledger.read_text(encoding="utf-8"))
         rate += f"; ledger {n_open} open / {n_closed} closed (informational)"
+        # OQ-276 mechanical watcher (reporting only; see oq276_wake docstring)
+        wake = oq276_wake(tally["no"], ledger_no, n_closed)
     for p in problems:
         print(f"PROBLEM: {p}")
+    if wake:
+        print(wake)
     # Reporting-only readout. Contributes NOTHING to the return code by design —
     # see module docstring item 3.
     _, delivery_lines = delivery_report(MEMORY_DIR)
