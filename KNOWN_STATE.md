@@ -45,6 +45,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — TRIPWIRE: "no session log exists" is true of the REPO and false of the harness — 110 transcripts sit outside it, and KNOWN_STATE.md is a DAY log
+**Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, KNOWN_STATE.md, ISSUES.md
+**Tier:** tripwire
+
+**Before re-verifying the paper's sessions/instances denominator, or editing §6.1's ancestor
+table, read this.** Appendix B row 1.1 has been re-verified twice as `[UNWITNESSED]` — *"no session
+log exists"* — and **both re-verifications checked the repository and stopped at its edge.**
+`~/.claude/projects/-home-scott-bin-structural-dynamics-model/` holds **110 session transcripts**
+(`*.jsonl`, one per session). The datum is partially recoverable; it is just not in git.
+
+**The silent mistake this prevents** (made on 2026-08-18, recorded in OQ-309 as *"blocker
+re-verified: still none"*): concluding from a repo-only search that the denominator is
+unobtainable. It is unobtainable **before 2026-07-19** and recoverable after — session starts
+extracted from the files span 2026-07-19 → 2026-08-20 (26 July / 84 August, 23 session-days), while
+git records **1,221 commits in 2026-02-01…2026-07-18**, so the pre-window absence is the harness's
+retention policy, not inactivity. The store is machine-local, unversioned, and **decaying**: the
+recoverable stratum shrinks silently, which is why the counting half should not wait on the ruling.
+
+**The second half of the tripwire: do not call `KNOWN_STATE.md` a session log.** The paper's §6.1
+ancestor table maps *"dated, tiered session log"* to the laboratory notebook while Appendix B says
+none exists — a collision in the **word**, not in the facts. Measured: this file carries 320 entries
+over **67 distinct dates**; across the overlap window (2026-07-19…2026-08-20) it has **24 dated
+days** against **110 sessions on 23 session-days**. It tracks days-on-which-something-landed almost
+exactly and **undercounts sessions ~4.6×**. It is a day log. A reader who takes "session log" at
+face value concludes row 1.1 is fillable from the repository, which is how the row survives.
+
+**Also: `sessions` ≠ `instances`** (subagents, compaction, `--resume`), the store is one machine,
+and publishing anything from it is governed by **OQ-279's tier rule** — whose tier-2(a) is ambiguous
+about whether a windowed session total is a pure aggregate or a work-pattern disclosure. That
+ambiguity is the operator's to settle and is flagged at the OQ, not resolved here.
+
+Full record, controls on the probe, and the three dispositions: **ISSUES OQ-331** (minted today,
+`splits_from OQ-309`).
+
+---
+
 ## 2026-08-20 — TRIPWIRE: the PreToolUse tripwire hook matches `Edit|Write` ONLY, so every Bash-driven edit bypasses it silently — and auto mode instructs Bash-first editing
 **Files:** .claude/settings.json, python/pretooluse_tripwires.py, ISSUES.md, KNOWN_STATE.md
 **Tier:** tripwire

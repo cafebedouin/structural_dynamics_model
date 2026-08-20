@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "236b27aa66f173db8d3b728090b75c4927e0401a",
+    "store_version": "8bd584c31fe1b78e6fc5578d8c9f67b91bd97698",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T02:30:19"
+    "generated_at": "2026-08-20T02:38:05"
   },
-  "issues_sha": "84bb376a5c2f0ca31795d57f6788cf91b8627a9cec62fa8c11e7eafd741a82db",
-  "n_entries": 330,
+  "issues_sha": "2057dabc747683aea11d58222fb369b350acea3f8a483d3593a10eceb8b3007b",
+  "n_entries": 331,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 123,
+    "open": 124,
     "partial": 5
   },
   "active": [
@@ -1818,6 +1818,21 @@
       "mentioned_in": [
         "OQ-280",
         "OQ-329"
+      ]
+    },
+    {
+      "id": "OQ-331",
+      "status": "open",
+      "priority": 3,
+      "summary": "Appendix B's sessions/instances denominator: \"no session log exists\" is true of the REPOSITORY and false of the HARNESS, which holds 110 unread session transcripts",
+      "deps": [
+        "splits_from OQ-309"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-279",
+        "OQ-309",
+        "OQ-311"
       ]
     }
   ],

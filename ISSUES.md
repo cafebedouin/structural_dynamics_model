@@ -16152,6 +16152,107 @@ replace.
 **What resolution would change:** hook silence becomes readable — the two states stop collapsing at
 the read site — and the coverage question becomes answerable from data instead of from a near-miss.
 
+## OQ-331 — Appendix B's sessions/instances denominator: "no session log exists" is true of the REPOSITORY and false of the HARNESS, which holds 110 unread session transcripts
+
+**Ω-type:** Ω_E for recoverability and its coverage — measured below, and the measurement was cheap.
+**Ω_C** for the disposition (mint an in-repo log / publish a harness-derived count / declare the
+denominator permanently absent as a GAP) and **Ω_P** for publication, which is already governed by
+OQ-279's standing tier rule. Both are deliberately downstream; neither blocks the counting.
+
+**Status:** open
+**Priority:** 3
+**Deps:** splits_from OQ-309
+**Origin:** 2026-08-20, minted from the OQ-309 residue review. OQ-309 lists the
+sessions/instances/audit-rate row among its four re-verified `[UNWITNESSED]` blockers; **the
+re-verification checked the repository and stopped at its edge.**
+**Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (Appendix B row 1.1, §1.1's
+scale paragraph, §6.1's ancestor table, §12's unfilled-denominators bullet), `KNOWN_STATE.md`,
+`docs/design/design_gaps.md` (only if the disposition is a declared absence). *Cited by section and
+row label, never by line — the paper moved twice during the session that minted this (OQ-311's
+line-drift rule).*
+**Fired: latent** — a real absence whose candidate carrier was never checked. Nothing downstream is
+corrupted, and the reason is that the paper tagged the row `[UNWITNESSED]` rather than proxying it.
+
+**THE FINDING.** The paper says, in three places, that no session log exists and that commits are
+therefore the nearest recorded proxy for activity. That is **true of the repository**. It is **false
+of the machine the work runs on**: `~/.claude/projects/-home-scott-bin-structural-dynamics-model/`
+holds **110 session transcripts** (`*.jsonl`, one per session), and nothing in the 2026-08-18
+re-verification looked at them. The denominator is not missing; it is **partially recoverable from
+an unversioned, machine-local store that no repository check can see.**
+
+**COVERAGE, AND WHY THE GAP IS PRUNING RATHER THAN INACTIVITY.** Session start dates extracted from
+the transcripts themselves span **2026-07-19 to 2026-08-20** — 26 sessions in July, 84 in August,
+across 23 distinct session-days. The paper's measurement window is **2026-02 to 2026-08**, so the
+store covers roughly the last **33 days of a ~7-month window**. The missing months are not quiet
+months: git records **1,221 commits between 2026-02-01 and 2026-07-18** against 550 since. Those
+sessions happened and their transcripts are gone. **So the recoverable stratum is the tail, and the
+honest form of any number from it is a windowed count, never a program total.**
+
+**KNOWN_STATE.md IS A DAY LOG, NOT A SESSION LOG — and the paper's own §6.1 says otherwise.** §6.1's
+ancestor table maps *"dated, tiered session log with promotion of standing warnings"* to the
+laboratory notebook, which reads as though the datum exists; Appendix B row 1.1 says it does not.
+Both are defensible and the collision is in the **word**, so here is the measurement that separates
+them. `KNOWN_STATE.md` carries 320 entries over **67 distinct dates** (2026-05-31 to 2026-08-20).
+Over the window where the two sources overlap (2026-07-19 to 2026-08-20) it has **24 dated days**
+against the transcripts' **23 distinct session-days and 110 sessions**. It tracks *days on which
+something landed* almost exactly, and **undercounts sessions ~4.6×**. It is a day log. Whichever
+disposition is chosen, §6.1's row should say *dated, tiered episodic log* — a reader who takes
+"session log" at face value concludes the sessions/instances row is fillable from the repository.
+
+**THE RATCHET, and the reason this is P3 rather than P5.** The store is machine-local, unversioned,
+and subject to a retention policy nobody here controls — the flat absence of anything before
+2026-07-19 is what that policy looks like from inside. **Every week of delay plausibly loses a week
+of the only recoverable stratum, and the loss is silent.** The counting half is a ten-minute job
+against a decaying substrate; the ruling half is not urgent. **Do not let the second gate the
+first** — take the snapshot, then decide what may be done with it.
+
+**WHAT A TRANSCRIPT COUNT STILL IS NOT.** *Sessions* ≠ *instances*: a session spawns subagents,
+compaction replaces the worker mid-session, and `--resume` continues one session id across sittings,
+so the instance count is ≥ the session count by an unmeasured factor. The store is **one machine**.
+And the *fraction of work ever audited* — the third quantity in the row — needs the session count as
+its denominator but is not supplied by it. **A recovered session count fills part of row 1.1, not
+the row.** Say which part, or the row's repair reproduces the collapse it is repairing.
+
+**THE PUBLICATION HALF IS ALREADY RULED, WITH ONE AMBIGUITY THAT IS NOT.** OQ-279's standing
+three-tier rule (2026-08-19) governs anything transcript-derived: tier 1 raw never leaves the local
+store; **tier 2 pure aggregates are publishable gated on one pre-commit operator review of the exact
+artifact**, pooled across sessions, no cell small enough to point at a single session, timestamps no
+finer than the day, methods text reviewed alongside the numbers. A total session count over a window
+looks like a clean tier-2 aggregate. **But tier 2(a) lists "N-in-window" among the things that count
+as session-level work-pattern disclosure**, and "number of sessions in a window" is exactly the
+quantity Appendix B wants. **That reading is genuinely undecided in the text and it is the
+operator's to settle** — is a windowed session total a pure aggregate (tier 2) or a work-pattern
+disclosure (tier 3, default no)? Deliberately **not** filed as `blocked_on_human`: it blocks
+publishing the number, not measuring it, and marking the whole entry blocked would park the decaying
+half behind a ruling it does not need. **The executing instance must stop at the point of writing
+any figure into the paper and ask.**
+
+**THREE DISPOSITIONS, and the choice is the operator's.**
+1. **Mint an in-repo session log** going forward (a one-line append per session, e.g. from the
+   `SessionStart` hook). Fixes the future, fixes nothing before today, and adds a standing cost to
+   every session — weigh it against `KNOWN_STATE.md`, which already exists and already covers days.
+2. **Publish a windowed harness-derived count** under OQ-279 tier 2, subject to the ruling above,
+   and restate row 1.1 as *partially witnessed for 2026-07-19 onward, unrecoverable before* — with
+   the pre-window absence declared rather than pooled away.
+3. **Declare the denominator permanently absent** as a `design_gaps.md` GAP and strike the
+   `[UNWITNESSED]` framing, which currently reads as *pending* when the pre-July half is **closed**.
+   Note this is available *and* compatible with (2): the program total is unrecoverable either way.
+
+**CONTROLS ON THE PROBE THAT FOUND THIS.** The date extraction reads timestamps **inside** each
+file, not filesystem metadata: it returned **2026-07-19** as the earliest session start against an
+oldest file **mtime of 2026-07-23**, so it demonstrably reaches back past what a directory listing
+reports. **110 of 110 files yielded a date**, so no file went silently unparsed and the pre-July
+zero is a real absence of files rather than a parse failure on old ones. *Declared limit: this
+licenses "no transcript file older than 2026-07-19 is in the store," not "the harness never wrote
+one in a format this probe cannot read" — no pre-July file exists to test that against, which is the
+honest one-sided residue.* The 110 count moves while being read: **the session that minted this
+entry is inside it.**
+
+**What resolution would change:** the paper's oldest unfilled denominator stops being a flat
+`[UNWITNESSED]` and becomes a stated coverage window with a named, decaying carrier — or a declared
+permanent absence with a reason. Either is citable; the current tag is neither, and it has been
+re-verified twice against the one surface that could not answer it.
+
 ---
 
 *Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark
