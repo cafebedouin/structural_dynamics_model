@@ -4,6 +4,14 @@
 (35 numbered rows, assembled 2026-08-11) against `docs/amnesiac_institution/amnesiac_institution_v0_6.md`
 (2,582 lines; v0.6 dated 2026-08-12, §5 amended 2026-08-17).
 
+> **AMENDED 2026-08-20, at the OQ-309 close.** Four rows are corrected or discharged below
+> (14, 22, 28, 31). Every amendment is marked inline, dated, and **quotes the original verdict
+> rather than overwriting it** — the walk's own subject matter is records that change without
+> saying so. Two of the four amendments are the walk correcting *itself*, in opposite directions:
+> item 31 was never residue (a false absence in this document's probe), and item 28 was one row
+> holding two different obligations, one of them already discharged elsewhere. The roll-up and
+> residue list at the foot carry the corrected counts.
+
 ## How to read this table, and why it is addressed by anchor text
 
 **Targets in the manifest are v0.3/v0.4 section numbers**, and v0.6 renumbered almost everything:
@@ -66,7 +74,7 @@ named. `NOT-LANDED` — checked, absent. `SUPERSEDED` — a later ruling replace
 |---|---|---|---|---|---|
 | 12 | W | §6.4 | §7.4 | *"Through v0.3 this section argued the recursion from a *constructed* example. It no longer needs to."* + the nine-row table | **LANDED**, at nine instances rather than five. |
 | 13 | W | §6.4 closing; *probably replaces §9.5* | §7.4.1 | *"A detector was written to find controls that nothing calls. **On its first run it named itself**… the exemption was written into the source with its reason."* | **LANDED.** The "replaces §9.5" half is **not** what happened: v0.6 §10.5 survives and was *extended* (the honest limit is now an act of documentation, with the exemption table). Recorded because the item proposed a replacement the paper declined. |
-| 14 | W | §5 / §8.3 | §14 RQ2 box + §7.4.1 | *"the freeze pinned sixteen texts and **no executable**, and… the **analysis half — scorer, overlap-pair identification, matrix construction — exists in neither code nor design**."* | **PARTIAL.** Two of three stamp findings landed. *"Two pinned sources have drifted"* is absent. → **RESIDUE-U** (small). |
+| 14 | W | §5 / §8.3 | §14 RQ2 box + §7.4.1 | *"the freeze pinned sixteen texts and **no executable**, and… the **analysis half — scorer, overlap-pair identification, matrix construction — exists in neither code nor design**."* | **PARTIAL → DISCHARGED 2026-08-20.** Original verdict, retained: *"Two of three stamp findings landed. 'Two pinned sources have drifted' is absent."* The third finding (`audits/2026-08-10_oq277_rq2_crosscoding/audit_log.md:505`, *Fact 3*) landed in the §14 RQ2 box at the OQ-309 close: *"**two of the sources the stamp pinned have since drifted** — `CLAUDE.md` and `docs/technical/build_discipline.md`, both carrying the *gate the output* discipline this failure itself produced."* No residue. |
 | 15 | W | §6.4 / §8.3 | §7.4 row 4 + §14 RQ2 box | *"it printed \"persisted 219\" from an in-memory counter while zero files existed"* / *"the live run **made all 219 calls and persisted nothing**, because every gate in the driver was an input gate"* | **LANDED** twice, at both altitudes. |
 
 ## §3 — Other OQ-277 producers, items 16–23
@@ -79,7 +87,7 @@ named. `NOT-LANDED` — checked, absent. `SUPERSEDED` — a later ruling replace
 | 19 | W | §6.4 | — | — | **NOT-LANDED.** The unit-06 leak, and the fact that the *sweep* caught it, appear nowhere (controlled sweep: 0 hits for `leak` and `unit-06`). This bears on §7.4's honest limit, which the section declares and does not close. → **RESIDUE-U**. |
 | 20 | W | §6.4 | §7.4 | *"### 7.4 The recursion — observed, not hypothetical"* | **LANDED** — the hypothetical no-op harness is gone from the section title down. |
 | 21 | U | §2.3 | §4.3 | *"Classification into the patterns was **retrospective and single-coder**… There was no blind coding, no second coder, and no inter-rater measurement."* | **PARTIAL.** The disclosure landed. The OQ-280 fork it was queued alongside — **perform** the coding or **amend** the section to state what actually happened — is still open and is the operator's choice (OQ-280 `Status: open`). Explicitly out of scope for this pass. → **OPERATOR** (already seated at OQ-280; not re-raised). |
-| 22 | R | §4.3 / §9.2 | §6.2 mapping table | *"\| **E** — operational omission and forensic blind spots \| P1, P2, and §7.3's positive-control rule \| Strong."* | **SUPERSEDED, with residue.** The E↔P6 correspondence the item was about no longer exists — v0.6 maps **E→P1/P2** and **C→P6**. The item's *methodological* demand survives unmet: the table's Assessment column reads as ruled ("Strong", "**The strongest convergence**") and carries no PROPOSED/claim-tier marking, though §0 types every other claim in the paper. → **RESIDUE-U**. |
+| 22 | R | §4.3 / §9.2 | §6.2 mapping table | *"\| **E** — operational omission and forensic blind spots \| P1, P2, and §7.3's positive-control rule \| Strong."* | **SUPERSEDED, with residue.** The E↔P6 correspondence the item was about no longer exists — v0.6 maps **E→P1/P2** and **C→P6**. The item's *methodological* demand survives unmet: the table's Assessment column reads as ruled ("Strong", "**The strongest convergence**") and carries no PROPOSED/claim-tier marking, though §0 types every other claim in the paper. **RESOLVED PER-ROW, 2026-08-20** (a mixed table resolves per row, never as one verdict). Rows **B, C, D, E** are marked **`[PROPOSED]`** and landed: each marking *downgrades* a convergence claim the paper benefits from, so it runs against interest. Row **A** (*"A genuine gap"*) is **deferred to OQ-328 on a stated criterion, not on difficulty**: marking it PROPOSED would run the correction *in the paper's favour* by softening an admission against interest, and this pass's signature move was running one the other way (the correction history revised upward, three → six). Its honest tier is arguably WITNESSED, which under §0's own rule owes an Appendix B manifest row — larger than this pass. → **RESIDUE-U, narrowed to row A.** |
 | 23 | R | §4.2 *(unresolved)* | — | — | **NOT-LANDED.** No `permission class` anywhere in v0.6 (controlled sweep: 0 hits). The pair's value was as a false-positive/true-negative *pair* — the shape §7.3 explicitly wants ("a naturally-arising negative drawn from the population"). → **RESIDUE-U**. |
 
 ## §4 — Outside the arc, items 24–28
@@ -90,7 +98,7 @@ named. `NOT-LANDED` — checked, absent. `SUPERSEDED` — a later ruling replace
 | 25 | W | §3.2, §6.4 | §6.2 | *"This is independent, better-controlled support for §3.2's rejection of review-by-reading and for §7.4's recursion problem."* | **LANDED**, and the sentence even carries the renumber (v0.4 §6.4 → v0.6 §7.4) correctly. |
 | 26 | R | §6.4 | §6.2 | *"**Do not compare 45–75% to this paper's 42%.** Advani's denominator is *failures*; this paper's is *audit directories*… The numbers are not commensurable."* | **LANDED** as a boxed non-comparability warning — a stronger form than the item asked for. |
 | 27 | W | §6.4 | §6.2 | *"The same work establishes that LLM judges cannot detect it: no configuration exceeded 0.65 AUROC, and judges anchored on confident closing language rather than verified state change."* | **LANDED.** |
-| 28 | R | §4.2 *(unresolved)* | — | — | **NOT-LANDED.** The writeup obligation recorded at `audits/2026-08-09_oq262_coexists_severance/A5_leak_check.md:7` is not discharged in v0.6. → **RESIDUE-U**. |
+| 28 | R | §4.2 *(unresolved)* | — | — | **NOT-LANDED → SPLIT, 2026-08-20. This row merged two obligations; they resolve differently.** (a) **The writeup obligation is DISCHARGED at its own home**, and was before this manifest existed: `audits/2026-08-09_oq262_coexists_severance/WRITEUP.md:132`, finding 3 — *"The blind judges ran a slightly narrower grammar than the main instance: §J omits the `miscoded_asymmetry` structural class (operator A5 note). Harmless here — recon witnessed every CP pair profile symmetric, so the class had nothing to flag."* Dated 2026-08-09; **the manifest was assembled 2026-08-11**, so this row carried an obligation already met two days earlier — a record asserting a debt that had been paid, which is this paper's own subject matter and is recorded here rather than quietly dropped. (b) **A real absence survives, narrowed:** v0.6 does not carry the case as a §7.3 **instrument-role** instance — a grammar validated for the main instance, reused by blind judges in a narrower form, where the error profile belongs to the role and not to the instrument. Paragraph-scale. → **RESIDUE-U (b) only**, re-homed to OQ-328. |
 
 ## §4b — The non-file producer (the operator's working conversation), items 29–35
 
@@ -98,7 +106,7 @@ named. `NOT-LANDED` — checked, absent. `SUPERSEDED` — a later ruling replace
 |---|---|---|---|---|---|
 | 29 ‡ | U | §4.3, §4.5 | §5.4 stratum-limit box | *"**42% is a rate over one stratum, and the other has never been measured.** The instrument stratum is not a subset of the audited directories."* | **LANDED**, and it is now the section's load-bearing qualification — carried again at §2.A and §7.4's denominator box. |
 | 30 ‡ | U | §9.3, §8.2 | §10.3 | *"**A fifth efficacy the instrument cannot see at all — restraint.**… **The `Fired:` bit has no encoding for any of them**"* | **LANDED**, including the decline count ("at least eight") and the refusal to instrument it. |
-| 31 | U | §5 | §3.3 (+ §9.2) | *"**Every party in this institution forgets. They forget different things, on different timescales, with different signatures, and each signature needs a different instrument.**"* | **PARTIAL.** The reorganization landed as a four-party table keyed by failure signature and instrument. **Git is not identified as the cross-type instrument** — §9.2 mentions version control among three mechanisms without the cross-type claim. → **RESIDUE-U** (small). |
+| 31 | U | §5 | §3.3 (+ §9.2) | *"**Every party in this institution forgets. They forget different things, on different timescales, with different signatures, and each signature needs a different instrument.**"* | **PARTIAL → LANDED. This row's verdict was WRONG; corrected 2026-08-20.** Original verdict, retained because the error is the finding: *"Git is not identified as the cross-type instrument — §9.2 mentions version control among three mechanisms without the cross-type claim."* It is identified, in §3.3, and has been since v0.6's first commit (`1265d0c1`): *"**One instrument works across every row: version control and dated records.** Git does not care who forgot or how. It converts *recall* into *retrieval*, which is the only operation available to all four parties… Every instrument in the table is amnesia-type-specific except that one."* **The mechanism, which is a sub-species this document did not have a name for:** the probe searched for the literal string `cross-type` (0 hits) against a claim the paper makes in other words. That is *a textual probe's zero is a fact about the probe* — but a **paraphrase** false absence, not the **formatting** false absence of wrap-trap one-through-five, and the distinction matters because a normaliser fixes the second and **cannot fix the first**. What caught it was a positive control, not a re-read — the same shape as the audit-directory row, where only re-running the command showed the value came from a different instrument. No residue. |
 | 32 | U | §7.6 | §8.5 | *"**Unbounded retention is not memory; it is a pile**"* | **LANDED**, and §8.5 is reframed as *"forgetting as the operation"* in its own heading — exactly the reframe the item asked for. |
 | 33 ‡ | U | §8.2 | §9.2 | *"**The second is evidential, and it is created by amnesia rather than by the limits of verification.**… it is **structurally unavailable to any instance**, because each instance sees one session."* | **LANDED**, promoted into the section title (*two* jurisdictions). |
 | 34 | U | §6.3 | §7.3 | *"**A positive control demonstrates discrimination, not detection.**… The witness that its firing carries information is a case it **declined**"* | **LANDED**, with the full grade ladder and the role-dependence corollary. |
@@ -152,12 +160,46 @@ its most visible current violation. That is a declared exemption in the paper, n
 | **SUPERSEDED** | 17, 22 | 2 |
 | **NOT-LANDED** | 8, 9, 10, 11, 19, 23, 28 | 7 |
 
-23 + 3 + 2 + 7 = **35**, checked against the row count (`/usr/bin/grep -cE '^\| [0-9]+ \|'` over the
-manifest = 35). Item 21 is counted once, as PARTIAL, and additionally flagged **OPERATOR** because its
+23 + 3 + 2 + 7 = **35**, checked against the row count over the manifest = 35.
+**[COMMAND CORRECTED 2026-08-20.]** This line published the regex `'^\| [0-9]+ \|'` beside the
+number 35. That regex returns **32** — it is the *superseded* form, fixed in this same pass
+precisely because three `‡`-marked rows escape it (finding 4 of the OQ-309 outcome). The
+correct command is `/usr/bin/grep -cE '^\| [0-9]+ (‡ )?\|'`, which returns 35. A re-runner
+following this line as written would have got 32 and concluded the manifest had lost three
+rows. **The defect the pass documented survived into the document that documented it**, by
+the mechanism the pass named: the number was carried over from the corrected run and the
+command was carried over from the defective one, and nothing re-ran the pair together. Item 21 is counted once, as PARTIAL, and additionally flagged **OPERATOR** because its
 open half is OQ-280's perform-vs-amend fork — a seat, not a second verdict. Item 17 is counted once,
 as SUPERSEDED, and its U-BLOCKING flag is discharged.
 
-**Residue carried to OQ-309:** items 8, 9, 10, 11, 14 (partial half), 19, 22, 23, 28, 31 (partial
+### Roll-up as amended, 2026-08-20 (the table above is the 2026-08-18 point-in-time record and stands)
+
+| verdict | items | count |
+|---|---|---|
+| **LANDED** | the 23 above, **plus 14** (third stamp finding landed at the close) and **plus 31** (verdict corrected — it had landed all along) | 25 |
+| **PARTIAL** | 21 | 1 |
+| **SUPERSEDED** | 17, 22 (residue narrowed to row A) | 2 |
+| **NOT-LANDED** | 8, 9, 10, 11, 19, 23, 28 (narrowed to its half (b)) | 7 |
+
+25 + 1 + 2 + 7 = **35**, against `/usr/bin/grep -cE '^\| [0-9]+ (‡ )?\|'` over the manifest = 35 (run 2026-08-20; the `(‡ )?` alternation is load-bearing — see the correction below).
+**Stated at its real strength:** that sum is a *consistency* check — it balances by construction and
+would fail only on a row counted twice or dropped. It is not evidence that any verdict is correct;
+the discrimination on this pass came from the per-row re-checks, one of which overturned a verdict
+this document had published (item 31).
+
+**Residue as amended — EIGHT rows, and the two it lost went in opposite directions.** Items 8, 9,
+10, 11, 19, 23 (not landed), row **A** of item 22 (claim-tier marking deferred on a stated
+criterion), and half **(b)** of item 28 (the §7.3 instrument-role instance). The drop from ten is
+**not** two discharges: **item 31 was never residue** — this document's probe reported a false
+absence, so the row was miscounted at the walk — while **item 28 was residue that split**, its
+writeup half discharged elsewhere before the manifest was even assembled and its paper half
+retained. A walk that finds two of its own miscounts in opposite directions is the more interesting
+result than the number 8, and the closing note at ISSUES OQ-309 carries the breakdown rather than
+the total.
+
+---
+
+**Residue carried to OQ-309 (as recorded 2026-08-18; superseded by the amended roll-up above):** items 8, 9, 10, 11, 14 (partial half), 19, 22, 23, 28, 31 (partial
 half) — ten rows, all grade W or R in the original manifest, none of them blocking. Item 21's fork
 stays at OQ-280 and is not re-raised here.
 

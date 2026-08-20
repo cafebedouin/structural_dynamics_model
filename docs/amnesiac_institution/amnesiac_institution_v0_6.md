@@ -1452,10 +1452,21 @@ part.
 | Wu's class | This paper's nearest | Assessment |
 |---|---|---|
 | **A** — environment and platform quirks (dev green, prod silent) | *no member* | A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
-| **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
-| **C** — error swallowing and dilution | P6 | Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
-| **D** — chained hallucination and fabrication (*fail-plausible*) | P4 (fabricated default) | **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
-| **E** — operational omission and forensic blind spots | P1, P2, and §7.3's positive-control rule | Strong. Wu's declared-state-≠-runtime-state is P2 (canonicity as memory rather than checked fact). And Wu's forensic finding — an instrument that cannot distinguish *nothing there* from *I was not allowed to look* manufactures false reassurance — is §7.3's founding rule, reached from a macOS sandbox rather than from an empty grep. |
+| **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | **[PROPOSED]** Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
+| **C** — error swallowing and dilution | P6 | **[PROPOSED]** Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
+| **D** — chained hallucination and fabrication (*fail-plausible*) | P4 (fabricated default) | **[PROPOSED]** **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
+| **E** — operational omission and forensic blind spots | P1, P2, and §7.3's positive-control rule | **[PROPOSED]** Strong. Wu's declared-state-≠-runtime-state is P2 (canonicity as memory rather than checked fact). And Wu's forensic finding — an instrument that cannot distinguish *nothing there* from *I was not allowed to look* manufactures false reassurance — is §7.3's founding rule, reached from a macOS sandbox rather than from an empty grep. |
+
+**The Assessment column is typed, and one row is deliberately not (2026-08-20).** §0 types every
+other claim in this paper; until now this table did not, and its column read as ruled. The four
+convergence rows are **PROPOSED** — a cross-taxonomy correspondence is a design hypothesis owing a
+falsifier, and RQ2's blind bidirectional coding (§14) is the experiment that would settle them.
+Row **A** is left unmarked and is carried as open residue, on a stated criterion rather than on
+difficulty: marking it PROPOSED would soften an admission *against* this paper's interest — the
+concession that Wu expresses a defect shape this taxonomy cannot — and this pass's signature move
+was running a correction the other way (§11: the correction history revised upward, from three to
+six). Its honest tier is arguably WITNESSED, which under §0's own rule owes an Appendix B manifest
+row. Tracked at ISSUES **OQ-328**.
 
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
 his silent failures were caught by a human reading the system's actual output rather than by tests,
@@ -2618,7 +2629,12 @@ A). *Falsifier: silent-failure classes dominated by shapes the taxonomy cannot e
 > repaired and now carries 27 controls; and the run cannot be repeated under the original stamp,
 > because the freeze pinned sixteen texts and **no executable**, and because the **analysis half —
 > scorer, overlap-pair identification, matrix construction — exists in neither code nor design.** A
-> perfect capture run would have produced 219 answers nothing in the repository can score. The item
+> perfect capture run would have produced 219 answers nothing in the repository can score. And **two
+> of the sources the stamp pinned have since drifted** — `CLAUDE.md` and
+> `docs/technical/build_discipline.md`, both carrying the *gate the output* discipline this failure
+> itself produced — so the freeze now describes a repository state that no longer exists; the coder
+> prompts are pinned separately and are unchanged, which is why this bears on the stamp rather than
+> on the re-run. The item
 > is still worth doing and is still the highest-value external comparison available; it is not a
 > weekend. Gating artifact:
 > `audits/2026-08-10_oq277_rq2_crosscoding/SPEC_next_preregistration.md`. Recorded in place rather

@@ -2725,6 +2725,38 @@ construct evades the last fix the same way. Two moves close it:
   phrase into a whitespace-and-marker-tolerant regex and raises on a zero-substitution result. A
   fixture that reports rather than raises is indistinguishable from a fixture that worked.
 
+**A sixth instance, and it is a DIFFERENT SPECIES: paraphrase, not formatting (2026-08-20).**
+Instances 1–5 are all *storage-form* false absences — the phrase is there, character for character,
+and a prefix or a newline hides it. The `crosswalk_v04_to_v06.md` walk produced one that is not:
+its item-31 row probed for the literal string `cross-type`, got **0**, and published the verdict
+*"Git is not identified as the cross-type instrument."* The paper identifies it in §3.3 — *"One
+instrument works across every row: version control and dated records… Every instrument in the table
+is amnesia-type-specific except that one"* — and had since the section was first committed. The
+claim was made **in other words**.
+
+**Why the distinction is load-bearing and not a taxonomic nicety: the fix for the first species does
+not touch the second.** A normaliser strips `> ` and flattens whitespace, and after it runs, a
+paraphrase false absence returns exactly the same 0. Worse, the normaliser *raises confidence* in
+that 0 — the probe now looks robust, and its author has already thought about false absences once.
+The two fixes are disjoint:
+
+| species | mechanism | fix |
+|---|---|---|
+| formatting (1–5) | storage form ≠ reading form | normalise, then assert expected counts at enumerated sites |
+| **paraphrase (6)** | **the claim is present under different words; no string equals it** | **a positive control drawn from the same document — and, for an absence verdict, a read of the section the claim would live in, not only a keyword sweep** |
+
+**What caught it was a positive control, not a re-read.** The re-check that overturned the verdict
+ran its probes alongside a phrase known to be present (`"sixteen texts"`, itself wrapped and
+blockquoted, so the normaliser was exercised); the control returned 1 while `cross-type` returned 0,
+which is what licensed treating the 0 as a fact about the probe rather than about the paper. **Same
+shape as the audit-directory row in the same OQ**, where the published value came from a different
+instrument than the published command and only *re-running the command* — not re-reading the row —
+could show it. Generalisation, which is the reason this is filed at the probe rule rather than at
+*False-absence*: **an absence verdict licensed by keyword hits alone is scoped to the keywords, and
+the keywords are the author's, not the document's.** The crosswalk's own header states the correct
+scope (*"absent from the sections where it belongs, and absent from a controlled keyword sweep"*) —
+this row claimed that strength and delivered only the second half.
+
 **How instance 5 was caught, recorded because the provenance is the interesting part.** Not by
 applying the invariant-versus-value rule §7.4 of that paper had just stated — by a **two-sided
 assertion already in the selftest** (*"deleting an expectation must turn the check red"*), authored
