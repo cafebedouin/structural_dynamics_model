@@ -70,7 +70,9 @@ both markers dangle with the gate green."*
 **Falsifier B is a declared null with power stated, not a clean negative.** Three properties of
 the population limit it: median row-exposure **7 days** (8 rows ≤ 3 days; 695 row-days total);
 jurisdiction is cleanly partitioned, so no in-scope miss was available (checked, not assumed);
-and **6 of 26 rows assert nothing about the substrate at all**. Its discriminating control is
+and **1 of 26 rows asserts nothing about the substrate** (corrected post-review — see
+`CORRECTION_target_column.md`; the pass first published 6, having classified by the invocation flag
+rather than the code). Its discriminating control is
 real — the search found a defect *in* an invariant-shaped instrument (§4) — so the null is not a
 didn't-look; what it found was a false fire rather than a miss.
 
@@ -132,12 +134,25 @@ itself *"an INVARIANT-asserting carriage check"*; `:12-14` of the **same docstri
 check; `:171` implements `ok = actual == expected` against hardcoded integers. The contradiction
 is inside one docstring, ten lines apart, not between docstring and code.
 
-**Six of 26 rows assert nothing about the substrate.** `python env st`, `omega selftest`,
-`claim cites st`, `axis boundary`, `cli selftest`, `tripwire hook` are instrument-only. The
-`axis boundary` case is the one worth a tripwire: the **gate row runs `--selftest` only**
-(`gate.sh:126`), so the live reachability sweep — the thing that would catch a new cross-axis
-read — is **not in the gate**. The row proves the detector discriminates; it does not look at the
-substrate.
+**RETRACTED AND RESTATED — see `CORRECTION_target_column.md`.** This section first claimed *"six
+of 26 rows assert nothing about the substrate"* and singled out `axis boundary` as running
+`--selftest` only, so that *"the live reachability sweep is not in the gate."* **That is false.**
+`check_axis_boundary.py:84`'s first selftest case is `("negative (clean corpus)", PROBE, 0)` — it
+runs the live scan against the live allowlist and requires zero un-allowlisted edges, so a new
+committer→observer read **does** turn the row red. Four of the other five named rows likewise carry
+a live-substrate case. **The true figure is 1 of 26** (`omega selftest`, fixture-only), and the
+corrected targets are substrate 18 / both 7 / instrument-only 1.
+
+The error was systematic, not a slip: **every `--selftest` row was assigned its target from the
+invocation flag without reading whether the selftest carried a live case** — in a pass whose own
+frozen criterion is *source decides*. It is a false-absence published without its positive control,
+and it shipped into a KNOWN_STATE **tripwire**, which is a wrong *dismissal* rather than a wrong
+assertion — the shape `build_discipline.md` names in *A verification section may not pre-authorize
+dismissal of a signal it has not re-witnessed*.
+
+**The finding that replaces it runs the other way:** this repo's selftest rows are **two-sided by
+construction** — a live-substrate negative plus planted positives — five of six. Only
+`omega selftest` is fixture-only, and whether it should carry a live case is left open, not ruled.
 
 ## 3a. The harvest collapsed a gap the rule did not know it had
 

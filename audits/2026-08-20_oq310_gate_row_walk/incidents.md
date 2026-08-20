@@ -88,25 +88,28 @@ population itself supplies:
    says *"malformed names are audit_writeup_gate's finding, not ours"*), and `omega selftest`
    asserts nothing about its own printed banner. Jurisdiction is cleanly partitioned, so no
    in-scope miss was available to find.
-3. **Instrument-only rows.** 6 of 26 rows (`python env st`, `omega selftest`, `claim cites st`,
-   `axis boundary`, `cli selftest`, `tripwire hook`) assert nothing about the substrate at all.
-   They cannot miss a substrate self-instance because they never look at one.
+3. **Instrument-only rows — RETRACTED AND RESTATED post-review
+   (`CORRECTION_target_column.md`).** This limit was first stated as *"6 of 26 rows assert nothing
+   about the substrate."* **The true figure is 1 of 26**: only `omega selftest` is fixture-only.
+   The other five named rows each run a live-substrate negative case inside their selftest —
+   `axis boundary`'s is `cases[0] = ("negative (clean corpus)", PROBE, 0)`, which requires zero
+   un-allowlisted edges on the real substrate. So this limit on B's power is **much weaker than
+   published**, and B's declared null rests on limits (1) and (2), not this one.
 
    **And this compounds with (1) rather than sitting beside it.** Those six rows' exposure-days
    count toward the 695-row-day total, which is the denominator the falsifier-B power claim is
    stated over — so part of the exposure the null is credited with is exposure to a population the
-   rows structurally cannot watch. Their contribution, computed rather than estimated:
-   `python env st` 2 + `omega selftest` 67 + `claim cites st` 7 + `axis boundary` 58 +
-   `cli selftest` 54 + `tripwire hook` 7 = **195 of 695 row-days, 28%.** The effective
-   substrate-watching exposure is **500 row-days over 20 rows**, and the null is weaker than the
-   headline figure by that much. Declared in the direction already declared, not discovered later.
+   rows structurally cannot watch. **Corrected figure: `omega selftest` alone, 67 of 695 row-days
+   = 9.6%.** Effective substrate-watching exposure is **628 row-days over 25 rows**.
 
-   *(The first draft of this paragraph asserted "207 of 695, 30%" and "488 over 20" — written
-   before the sum was run, and wrong. The sum was run in the same turn and corrected before the
-   file was committed. Noted rather than quietly fixed: it is the defect class this whole pass is
-   about, committed inside the pass's own power analysis, and the only reason it did not ship is
-   that the number was computed instead of estimated. The per-row terms are shown so the total is
-   checkable without trusting the writer.)*
+   *(Three successive numbers were published for this one quantity and the first two were wrong:
+   "207 of 695, 30%" — asserted before the sum was run; then "195 of 695, 28%" — the sum run
+   correctly over a row set that was itself wrong; now 67 of 695, after the row set was verified
+   against the code. Recorded rather than quietly replaced, because it is the defect class this
+   whole pass is about, committed three times inside the pass's own power analysis. The invariant
+   that would have caught all three at once is the one this walk promoted: derive the number from
+   the artifact, do not assert it — and verify the SET before summing over it, since a correct sum
+   over a wrong membership is the more convincing error.)*
 
 **The discriminating control for this null is W5**, and it is a real one: the search *did*
 surface a defect in an invariant-shaped instrument (the OQ-242 md5-of-md5s fingerprint). The

@@ -15340,8 +15340,8 @@ silently widened nor silently narrowed.
   route.
 - **(B) no invariant-asserting row was found to have missed one — declared null, power stated.**
   Median row-exposure is **7 days** (8 of 26 rows ≤ 3 days; 695 row-days total); jurisdiction was
-  checked and is cleanly partitioned, so no in-scope miss was available; and 6 of 26 rows assert
-  nothing about the substrate. Its discriminating control is real: the search *did* find a defect
+  checked and is cleanly partitioned, so no in-scope miss was available; and 1 of 26 rows asserts
+  nothing about the substrate (**corrected from 6** — see below). Its discriminating control is real: the search *did* find a defect
   in an invariant-shaped instrument (a false fire), so the null is not a didn't-look.
 
 **THE WITNESS — the asset §7.4 said it lacked.** On 2026-08-19 the `apparatus` gate row went RED on
@@ -15422,20 +15422,40 @@ compares against a shell variable. Caught by **asserting a known member before p
 command**, not by reading the output. Recorded in `PREREGISTRATION.md` §1 at the time.
 (Also collected: there are **two** `partition_check` lines in the repo; §7.4 cites one.)
 
-**Falsifier B's power, corrected downward post-review.** The six instrument-only rows' exposure
-counts toward the 695-row-day denominator the null is stated over, but they watch a population they
-structurally cannot see: `python env st` 2 + `omega selftest` 67 + `claim cites st` 7 +
-`axis boundary` 58 + `cli selftest` 54 + `tripwire hook` 7 = **195 of 695 row-days, 28%**. Effective
-substrate-watching exposure: **500 row-days over 20 rows**.
+**CORRECTION, and it is the pass's own worst error — `audits/2026-08-20_oq310_gate_row_walk/CORRECTION_target_column.md`.**
+The close first published *"6 of 26 rows assert nothing about the substrate"* and a standing
+tripwire that `axis boundary`'s gate row runs `--selftest` ONLY, so *"the live reachability sweep is
+not in the gate."* **Both are false.** `check_axis_boundary.py:84`'s first selftest case is
+`("negative (clean corpus)", PROBE, 0)` — the live scan against the live allowlist, requiring zero
+un-allowlisted edges, so a new committer→observer read **does** turn the row red. `AGENTS.md:652`
+and `run_pipeline.py:1760-1769` were correct as written. Live arm run directly as the check that
+should have preceded the claim: `[AXIS-GATE] 9 boundary edges: 9 allowlisted, 0 unexpected`, exit 0.
+
+**The error was systematic:** every `--selftest` row was assigned its target **from the invocation
+flag**, without reading whether the selftest carried a live case — in a pass whose own frozen
+criterion is *source decides*. Corrected targets: **substrate 18 / both 7 / instrument-only 1**
+(only `omega selftest`, which runs on a fixture). The `shape` column, which the falsifier turns on,
+is unaffected. `classification.tsv` stays frozen and unedited; the correction record carries the
+restatement.
+
+**Falsifier B's power, restated:** instrument-only exposure is **67 of 695 row-days (9.6%)**, not
+195/28% and not the 207/30% asserted before that — three numbers for one quantity, two wrong.
+Effective substrate-watching exposure **628 row-days over 25 rows**. B's null therefore rests on
+median row-exposure (7 days) and jurisdiction partitioning, **not** on this limit.
+
+**And the finding that replaces the retracted one runs the other way:** this repo's selftest rows
+are **two-sided by construction** — a live-substrate negative plus planted positives, five of six.
+The one genuine residue is `omega selftest`, fixture-only, with no live `ISSUES.md` case. Whether it
+should carry one is **left open and not ruled here**.
 
 **Plants (Phase 5): NOT RUN, and declared.** Pre-registered as conditional on Phases 3–4 being
 inconclusive, which did not obtain — running them would have added floor-grade evidence to a
 question already answered above that grade.
 
-**Standing tripwire this walk produced, for whoever touches the gate next:** the `axis boundary`
-row runs `--selftest` **ONLY** (`gate.sh:126`), so the live reachability sweep is **not in the
-gate**. Six of 26 rows are instrument-only and assert nothing about the substrate. Adding the live
-arm is a separate decision and is **not** taken here.
+**The standing tripwire this walk first produced was RETRACTED** (above): `axis boundary` does
+watch the substrate. What survives for whoever touches the gate next is the opposite lesson —
+**`--selftest` in this repo usually means TWO-SIDED, not tests-only-itself; read the case list, not
+the flag.**
 
 
 

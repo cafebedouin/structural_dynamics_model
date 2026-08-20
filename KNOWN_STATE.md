@@ -55,13 +55,35 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 days before the rule existed. Freeze order: prereg `49988021c27e0b46063f5c830d971637` → prior
 `8f2380b58824641d6afefc2bf3f5b3ca` → classification `c6604cc6bd0625253788045179a6035e`.
 
-**TRIPWIRE 1 — `axis boundary`'s gate row runs `--selftest` ONLY** (`scripts/gate.sh:126`). The
-live reachability sweep — the arm that would catch a **new committer→observer read** — is **not in
-the gate**. A green `axis boundary` row means *the detector discriminates*, NOT *the code is
-clean*, and reading it as the latter is the silent mistake. **Six of 26 rows are instrument-only**
-and assert nothing about the substrate: `python env st`, `omega selftest`, `claim cites st`,
-`axis boundary`, `cli selftest`, `tripwire hook`. Adding the live arm was deliberately NOT done
-here.
+**TRIPWIRE 1 — RETRACTED THE SAME DAY IT WAS WRITTEN, and the retraction is the tripwire.**
+This entry first published: *"`axis boundary`'s gate row runs `--selftest` ONLY, so the live
+reachability sweep is not in the gate; six of 26 rows are instrument-only."* **BOTH CLAUSES ARE
+FALSE.** `check_axis_boundary.py:84`'s first selftest case is
+`("negative (clean corpus)", PROBE, 0)` — it runs the live scan against the live allowlist and
+requires **zero un-allowlisted edges on the real substrate**, so a new committer→observer read
+**does** turn the row RED. `AGENTS.md:652-654` and the design comment at
+`run_pipeline.py:1760-1769` were correct as written. Verified by running the live arm directly:
+`[AXIS-GATE] 9 boundary edges: 9 allowlisted, 0 unexpected`, exit 0. True figure: **1 of 26**
+(`omega selftest`, fixture-only). Corrected targets: substrate 18 / both 7 / instrument-only 1.
+
+**What to carry instead, and it is the more useful warning:**
+
+1. **`--selftest` in this repo is usually TWO-SIDED, not tests-only-itself** — a live-substrate
+   negative case plus planted positives, in five of the six rows checked. **Read the case list, not
+   the invocation flag.** The original error was reading `main()`'s dispatch and stopping one level
+   short of the code that decides.
+2. **A false ABSENCE published as a caution is worse than a false claim published as a finding.**
+   This one shipped as a `tripwire` — the tier that routes to every future editor of
+   `check_axis_boundary.py` and `scripts/gate.sh` — telling them to distrust a row that works. A
+   wrong assertion is checkable the moment someone looks; **a wrong dismissal suppresses the signal
+   before it reaches a read site.** Same shape as `build_discipline.md` → *A verification section
+   may not pre-authorize dismissal of a signal it has not re-witnessed*, committed by the pass that
+   cites that rule.
+
+**The one genuine residue:** `omega selftest` runs on `FIXTURE` and asserts nothing about live
+`ISSUES.md`. Whether it should carry a live negative case is **open, and deliberately not ruled**.
+
+Full record, with the per-row verification table: `CORRECTION_target_column.md` in the audit dir.
 
 **TRIPWIRE 2 — never publish a literal control count; derive it.** `omega_resolver.py:1040` printed
 `all positive controls fired (10/10)` as a hardcoded string against **9** numbered controls,
@@ -117,9 +139,13 @@ retained unedited per house form but marked **[FALSE AS WRITTEN]** at the point 
 the measured figures inline. Instance 12 carries **both clauses of one act of not-checking**; no
 thirteenth row was minted.
 
-**Falsifier B's power, corrected downward:** the six instrument-only rows contribute **195 of 695
-row-days (28%)** to a denominator they structurally cannot watch — effective substrate-watching
-exposure **500 row-days over 20 rows**.
+**Falsifier B's power:** instrument-only exposure is **67 of 695 row-days (9.6%)** —
+`omega selftest` alone. Effective substrate-watching exposure **628 row-days over 25 rows**. (Three
+numbers were published for this quantity before it was right: 207/30%, asserted before the sum was
+run; 195/28%, a correct sum over a wrong row set; then 67/9.6%, after the set was verified against
+the code. **A correct sum over a wrong membership is the more convincing error** — verify the set
+before summing over it.) B's null therefore rests on median row-exposure (7 days) and jurisdiction
+partitioning, not on this limit.
 
 **Instance 12 ADMITTED** (`fde20893`): §7.4's self-contradicting gate-row count is the twelfth
 numbered instance; the property is restated **eleven of twelve** at all five sites; `7.4 numbered

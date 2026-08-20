@@ -2540,11 +2540,26 @@ distinguished *the corpus moved* from *I hashed the paths differently*. That is 
 against invariants; it is the same discipline every other instrument here owes, arriving at the
 place where the exit code makes skipping it expensive.
 
-**And a scoping caution about what a gate row asserts at all.** Six of the 26 rows are
-instrument-only selftests that assert nothing about the substrate. `axis boundary` is the one to
-know: **its gate row runs `--selftest` ONLY**, so the live reachability sweep — the arm that would
-catch a new committer→observer read — is not in the gate. The row proves the detector
-discriminates; it never looks at the code.
+**A scoping caution, and the correction that replaced it — the more instructive of the two.**
+This section first published: *"six of the 26 rows are instrument-only and assert nothing about the
+substrate; `axis boundary`'s gate row runs `--selftest` ONLY, so the live reachability sweep is not
+in the gate."* **That was false, and it was reached by classifying each row from its invocation
+flag without reading what its selftest does.** `check_axis_boundary.py:84`'s first case is
+`("negative (clean corpus)", PROBE, 0)` — the live scan against the live allowlist, requiring zero
+un-allowlisted edges. Four of the other five named rows carry a live case too. **The true figure is
+one of 26.**
+
+Two lessons, and the second is the one to keep:
+
+1. **`--selftest` is not a synonym for *tests only itself*.** In this repo it usually means
+   *two-sided*: a live-substrate negative case plus planted positives. Read the case list, not the
+   flag.
+2. **A false absence published as a caution is worse than a false claim published as a finding.**
+   This one went into a KNOWN_STATE `tripwire` — the tier that routes to every future editor of the
+   file — telling them to distrust a row that works. A wrong assertion is checkable the moment
+   someone looks; **a wrong dismissal suppresses the signal before it reaches a read site.** Same
+   shape as *A verification section may not pre-authorize dismissal of a signal it has not
+   re-witnessed*, one section up, committed by the pass that cites it.
 
 Full walk, screens, and per-row classification: `audits/2026-08-20_oq310_gate_row_walk/`.
 

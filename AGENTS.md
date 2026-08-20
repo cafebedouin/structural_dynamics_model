@@ -651,7 +651,12 @@ walks the loaded call graph and emits each committer→observer edge; `python/ch
 diffs them against `prolog/axis_boundary_allowlist.txt` (fail-closed on any un-allowlisted
 edge). It runs in **both** `scripts/gate.sh` (`--selftest`) and `python/run_pipeline.py`
 (beside the load-warning gate). **If you add a read of a `cs_` predicate from an
-observer-side module, the gate goes RED** — that is by design.
+observer-side module, the gate goes RED** — that is by design. **This holds via
+`--selftest`, which is two-sided**: its first case is `("negative (clean corpus)",
+PROBE, 0)`, running the live scan against the live allowlist and requiring zero
+un-allowlisted edges, alongside two planted-violation positives. (Confirmed
+2026-08-20 at OQ-310's close, after that pass wrongly claimed the live arm was
+unwired — it read `main()`'s dispatch and not `selftest()`'s case list.)
 - A new **tooling** edge (comparison/validation, not feeding an observer verdict) is
   allowlistable with its role tag.
 - A new **verdict** edge (a genuine *second* committer→observer bridge) is the **OQ-15
