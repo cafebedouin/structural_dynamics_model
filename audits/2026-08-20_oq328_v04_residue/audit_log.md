@@ -111,3 +111,23 @@ are **Type B**, confirmed by OQ-57's actual 2026-06-04 repair matching Type B's 
 Both clauses now retired in the paper; tier-mark corrected to name both. Gate GREEN, carriage
 15/15 after the amendment. **The wrap-safe anchor check was run on this amendment** — the check
 I failed to run on the finding that produced the refusal.
+
+### 2026-08-20 — the two follow-on questions, landed rather than left in chat
+
+Both raised by the operator as questions, not obligations; both had no home, so both went to
+substrate (CLAUDE.md: a next step spoken in chat and not written to substrate is a handoff that
+did not happen).
+
+- **OQ-332 minted** — whether §5.1 should name its own indexing axis, or the gap stays at §6.2
+  as an index question, or relocates to the §2.8 relation. Typed **Ω_P**: there is no seat-free
+  fact about whether a taxonomy must state its own coordinate system, and reading 2 is not free
+  (an axis declaration is a completeness claim on that axis, and no enumeration of off-axis
+  classes exists — one was found, by one comparison, against one external taxonomy). Minted
+  **above the footer**, not at the tail; footer verified intact by reading it, not by its count,
+  per the 2026-08-20 tripwire that a `grep -c` of 1 is success-shaped.
+- **OQ-310 gains a framing note** — both OQ-328 inputs postdate its registration, and the 21/22
+  candidate was caught by a person reading prose, which no row of either kind was watching. That
+  is a miss the invariant-versus-value cut does not explain, because no row was pointed at it.
+  The walk is told to decide explicitly whether it keeps the registered cut or takes the wider
+  one, and to record which — silently widening makes the result unfalsifiable against its own
+  pre-registration.

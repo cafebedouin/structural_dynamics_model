@@ -15287,6 +15287,17 @@ either column would be the absence-satisfies-the-gate shape one level up.
    ten-of-eleven column, not the one-caught-by-a-gate column, and the rule's retrodictive record
    gets one more confirming miss rather than a test.
 
+**The framing may have WIDENED since this OQ was registered, and the walk should decide that before
+it starts.** Both inputs above postdate the minting, and the second one is not just another row —
+it is a self-instance found *inside the sentence registering this OQ*. Together with OQ-332's axis
+finding they raise a question the original brief did not contain: **is the invariant-versus-value
+cut the only cut that matters here, or is there a second dimension — what the row RANGES OVER —
+that the rule is silent about?** The 21/22 candidate was caught by a person reading prose, which no
+gate of either kind was watching; that is a miss the invariant/value cut does not explain, because
+no row was pointed at it. **Decide explicitly whether the walk stays on the registered cut or takes
+the wider one, and record which** — silently widening it would make the result unfalsifiable against
+the pre-registration, and silently narrowing it would drop a datum already in hand.
+
 **What resolution changes.** A surviving rule is a design criterion for new gates — *state an
 invariant or expect to miss this class* — and belongs in `build_discipline.md` as a construction
 rule. A killed rule retires a sentence from §7.4 and returns the eleven instances to being a
@@ -16246,6 +16257,12 @@ trifurcation can type.** Both clauses now retired in the paper in the house form
 which had over-claimed that the correction retired the whole sentence when it retired half, is
 corrected to name both clauses.
 
+**Residue, deliberately NOT closed here: whether §5.1 should name its own axis.** The enumeration's
+finding is that the eight indices share an indexing variable and Wu's A is off it. Whether that
+belongs in §5.1 as an axis declaration, stays at §6.2 as an index gap, or relocates to the §2.8
+relation is a design decision with no seat-free answer, and it is minted as **OQ-332** rather than
+resolved at this landing. Until it is ruled, cite the gap as §6.2 states it.
+
 **One instruction in the governing plan was REFUSED, and the refusal is a finding about the
 crosswalk's reliability in the other direction.** The plan reported that
 `crosswalk_v04_to_v06.md:69` and this entry's own row-11 table cell quote a phrase — *"the losses
@@ -16532,6 +16549,59 @@ entry is inside it.**
 `[UNWITNESSED]` and becomes a stated coverage window with a named, decaying carrier — or a declared
 permanent absence with a reason. Either is citable; the current tag is neither, and it has been
 re-verified twice against the one surface that could not answer it.
+
+---
+
+## OQ-332 — The eight indices share an AXIS, and Wu's class A is off it: is §5.1's gap an index question or an axis question?
+
+**Ω-type:** Ω_P (a design decision about what §5.1 claims about itself — there is no seat-free fact
+that settles whether a taxonomy must state its own indexing variable; the engine abstains).
+
+**Status:** open
+**Priority:** 4
+**Deps:** splits_from OQ-328
+**Origin:** 2026-08-20, raised by the operator on review of the OQ-328 close, and minted rather than
+left in chat because it currently has no home: OQ-328 is resolved and OQ-310 is a different walk.
+**Files:** `docs/amnesiac_institution/amnesiac_institution_v0_6.md` (§5.1, §6.2 row A, §2.8's
+trifurcation table), `audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`.
+
+**The finding this sits on.** The OQ-328 enumeration walked the eight indices against Wu's class-A
+criterion and returned 0 of 8 — but the interesting half was *why*. Every member of §5.1 indexes on
+a **layer of the value's journey** (production, identity, value, gating, composition, dispatch,
+reporting), which is exactly what §5.1 says it is: one mechanism surfacing at seven layers. Wu's A
+indexes on **where the code is running**. No member of a layer-indexed set can express an
+environment-indexed class — so the two taxonomies are not merely missing each other's members, they
+range over different variables.
+
+**The question.** §5.1 states its axis implicitly, through its Layer column, and never names it as
+an axis or says what is off it. Should it? Three readings, none obviously right:
+
+1. **Index question (status quo).** The gap belongs where it is, at §6.2's row A, as one taxonomy's
+   missing member. §5.1 stays a taxonomy and does not editorialise about its own coordinate system.
+2. **Axis question.** §5.1 gains a sentence naming its indexing variable and declaring at least one
+   known off-axis class. This is more honest and it is also a **larger claim** — declaring an axis
+   invites the question of what else is off it, which nobody has enumerated.
+3. **Neither — it belongs to the trifurcation.** §2.8's trifurcation *does* type the environment
+   incidents (Type B, *two framings contradict inside one system*), so the institution is not blind
+   to them; only the eight-index taxonomy is. That may make this a §2.8-vs-§5.1 relation question
+   rather than a §5.1 question.
+
+**Why it is not self-resolvable.** Reading 2 is not free: an axis declaration is a claim about
+completeness *on* that axis, and this paper has no enumeration of off-axis classes — one external
+class was found by one comparison against one external taxonomy. Adopting it would create an
+`[UNWITNESSED]` where there is currently no claim at all. Whether that trade is worth making is the
+operator's, not a matter of fact.
+
+**Witnessed input, so the question is not abstract.** OQ-57 is a real, dated, silent-for-months
+instance of the off-axis class: a wrong-module-qualified call that **threw** on the suite load path
+and **silently resolved** on the pipeline path. The trifurcation types it; the eight indices cannot.
+Three more splits are recorded in the enumeration.
+
+**What resolution changes.** Reading 1 costs nothing and leaves the axis implicit. Reading 2 changes
+what §5.1 claims about itself and opens an enumeration obligation. Reading 3 relocates the whole
+finding. Until this is ruled, cite the gap **as it is stated at §6.2** — *the eight-index taxonomy
+has no index for what the institution's own trifurcation can type* — and not as a claim about
+§5.1's completeness.
 
 ---
 
