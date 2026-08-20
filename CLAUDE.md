@@ -1259,6 +1259,12 @@ what is answerable; proposal states exactly what will run and what would constit
 execution runs scripts and saves raw output; writeup analyzes from evidence only — never
 documentation restated as findings. Detail: `docs/project_orientation.md` §8.1.
 
+**Before running ANY check whose answer you do not already know — audit-worthy or a five-minute
+hunch — open a line in `audits/INVESTIGATIONS.md` first, and close it with its `Fired:` bit
+regardless of outcome** (OQ-276 ledger; the quick mostly-negative checks are exactly the
+population it exists to recover — deciding at hunch time whether something "counts" is the
+selection bias the ledger measures).
+
 **Location mandate (2026-06-04): every audit lives in `audits/<YYYY-MM-DD>_<slug>/`** — one
 subdirectory per audit, writeup AND evidence artifacts together; date = execution date. Not in
 `docs/`; not only in `outputs/` (gitignored = gone on a fresh clone). Audit scripts stay in

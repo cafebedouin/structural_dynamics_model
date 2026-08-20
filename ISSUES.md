@@ -11195,9 +11195,11 @@ operator's value ruling); the rate itself is Ω_E (mechanically computed).
 **Status:** open — **the Ω_P value ruling is DECLARED NOT RIPE (operator, 2026-08-19,
 second-instance reviewed), and unlike OQ-317's calendar bound this one waits on a STRUCTURAL
 change that may never come**: it ripens only when `Fired: no` becomes reachable. The
-investigations ledger (below) is adopted to make it reachable.
+investigations ledger (below) is adopted to make it reachable. **Routed out of BLOCKED-ON-YOU
+2026-08-20** via the `blocked_on_condition` dep below — the menu was re-asking every session for
+a ruling declared not ripe, inviting exactly the premature read the standing prohibition forbids.
 **Priority:** 5
-**Deps:**
+**Deps:** blocked_on_condition first Fired: no in either channel — watcher: apparatus_instrument.py oq276_wake gate line (fires on any no; also at 20 ledger closes with zero no), plus the unconditional catch-rate re-read each monthly consolidation pass
 
 ### Ruling (2026-08-19) — the ledger, its criterion, and the pre-committed reading
 
@@ -11226,6 +11228,37 @@ investigations ledger (below) is adopted to make it reachable.
    work's author. The monthly consolidation read absorbs this residual only for bits the
    operator actually spot-checks — **a sample, not a second party in the loop** — and
    "absorbed at consolidation" must not be read as coverage.
+   **Amended 2026-08-20:** self-assignment recurs one level up, at *line-opening* — whether a
+   check "counts as an inquiry" is still the worker's hunch-time call, so the ledger RELOCATES
+   the residual rather than removing it. Same absorption caveat applies to the open/close record.
+
+### Addendum (2026-08-20) — delivery line, the zero's cause deliberately unrecorded, and the watcher
+
+1. **Ledger delivery line ADOPTED** (CLAUDE.md → Audit Methodology): the opening criterion's only
+   home was the ledger's own header, which nobody reads at check time. One line in an
+   always-loaded surface is delivery, not new apparatus.
+2. **The cause of the day-one zero is DELIBERATELY UNRECORDED.** The ledger stood at 0 open /
+   0 closed after a check-heavy day (2026-08-20 ran at least three checks with unknown answers).
+   That zero is equally consistent with two mechanisms needing different fixes: nobody remembered
+   the ledger exists (delivery), or the criterion was applied and quietly declined at hunch time
+   (selection, one level up — exactly what ruling §1 predicted). One day at zero cannot
+   distinguish them, and recording "delivery failure" would make a rising count after the
+   delivery line read as a fix while the population might still be selected. **The delivery line
+   is the disambiguating instrument, not the repair: a continued zero after it lands
+   discriminates.** The `oq276_wake` threshold arm (20 closes, zero `no`) is that reading's
+   mechanical surface.
+3. **Routing + watcher:** the `blocked_on_condition` dep (this entry's Deps line) moves this OQ
+   from BLOCKED-ON-YOU to BLOCKED in the resolver (relator added 2026-08-20, selftest control 10);
+   `apparatus_instrument.py oq276_wake` is the mechanical watcher — it fires on the first
+   `Fired: no` in EITHER channel (WRITEUP bit or ledger line — small checks that never graduate
+   to an audit dir count) and on 20 ledger closes with zero `no`. Reporting only, never gated.
+4. **For the 2026-09-10 consolidation pass** (recorded now because unreconstructable later):
+   (a) the first two `latent` bits exist — the instrument-falsifier ("everything tagged latent to
+   look useful") finally has data points; spot-check both. (b) **Denominator drift:** the readout
+   moved 4-of-53 writeups (2026-08-13) → 26-of-75 (2026-08-20). If audit-dir creation rate
+   changed after the bit landed, the instrument shifted the population it measures
+   mid-measurement; the entry pre-commits how to read a future `no` but nothing about denominator
+   drift — read the dir-creation rate against the pre-bit baseline before citing any rate.
 
 **STANDING PROHIBITION (operator, 2026-08-17) — a `Fired:` bit is NOT apparatus corroboration and
 must never be cited as such.** The readout is now **9L / 0l / 0n**: nine `live`, and still not one
@@ -16722,7 +16755,7 @@ re-verified twice against the one surface that could not answer it.
 **Ω-type:** Ω_P (a design decision about what §5.1 claims about itself — there is no seat-free fact
 that settles whether a taxonomy must state its own indexing variable; the engine abstains).
 
-**Status:** open
+**Status:** resolved
 **Priority:** 4
 **Deps:** splits_from OQ-328
 **Origin:** 2026-08-20, raised by the operator on review of the OQ-328 close, and minted rather than
@@ -16767,6 +16800,36 @@ what §5.1 claims about itself and opens an enumeration obligation. Reading 3 re
 finding. Until this is ruled, cite the gap **as it is stated at §6.2** — *the eight-index taxonomy
 has no index for what the institution's own trifurcation can type* — and not as a claim about
 §5.1's completeness.
+
+### RESOLVED 2026-08-20 (operator ruling): scoped Reading 2 — descriptive and dated, at both read-sites
+
+**The ruling split three claims where the OQ posed two, and adopted only the first.** (1) All eight
+current members index on layer — WITNESSED (the A1 enumeration; readable off the Layer column).
+(2) Layer is §5.1's *admission criterion* (a ninth member would have to be layer-indexed) — NOT
+witnessed: an enumeration of eight establishes a shared property, not a membership rule. (3) Nothing
+else is off the axis — not claimed. The landed sentence asserts (1) only, **descriptively and
+date-stamped**: a standing invariant in prose is unmaintained (`doc_pattern_check.py` syncs members
+per index, not prose), so a ninth non-layer member would leave a constitutive sentence silently
+false, while a dated observation can only go out of date — which is visible.
+
+**Reading 3 folded in, not adopted:** the absence is non-alarming *because* the trifurcation types
+the class (Type B), so the sentence carries that clause — pointing at §6.2 row A, which holds the
+typing and repair record, never at §2.8 (forward-pointered, not maintained: a dangling pointer by
+construction).
+
+**Read-site decision (§7.8 test — where an incident is actually filed):** BOTH
+`amnesiac_institution_v0_6.md` §5.1 (where the taxonomy is published) and
+`docs/technical/build_discipline.md` scope note (where a working session filing an incident
+stands). **CLAUDE.md deliberately NOT touched** — its Build Discipline summary routes filers to
+`build_discipline.md`, which now carries the sentence; adding always-loaded tokens would duplicate
+that (asymmetry declared, per the OQ-333 lesson).
+
+**The standing citation instruction above ("until this is ruled, cite the gap as stated at §6.2")
+is RETIRED by this close** — the gap is now stated at §5.1 and the BD scope note as well, and all
+three sites carry the same descriptive form.
+
+**Witness:** commit `9d14e593` (both sentences + `doc_pattern_check` GREEN, 8 indices);
+enumeration: `audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`.
 
 ---
 

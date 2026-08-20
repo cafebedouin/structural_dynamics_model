@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "38781ea7742636052f91f0c5851560f45f576a77",
+    "store_version": "9d14e5933dad2a925034b874a23cd7ce0bbd3774",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T15:41:49"
+    "generated_at": "2026-08-20T17:04:53"
   },
-  "issues_sha": "7c720091aea91407fa2c5c8db06d60d19e31f309cffe0a6c5992c9a905739227",
+  "issues_sha": "91058623146c5de8ca54d2b355f5c332057ee38a7c29db62001f652ed782caff",
   "n_entries": 334,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 167,
+    "resolved": 168,
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 125,
+    "open": 124,
     "partial": 5
   },
   "active": [
@@ -1238,7 +1238,9 @@
       "status": "open",
       "priority": 5,
       "summary": "Apparatus catch-rate readout: the standing kill-question on the verification ritual (Fired: bit + feedback-channel cap adopted 2026-08-10)",
-      "deps": [],
+      "deps": [
+        "blocked_on_condition first Fired: no in either channel — watcher: apparatus_instrument.py oq276_wake gate line (fires on any no; also at 20 ledger closes with zero no), plus the unconditional catch-rate re-read each monthly consolidation pass"
+      ],
       "cross_refs": [],
       "mentioned_in": [
         "OQ-264",
@@ -1803,21 +1805,6 @@
         "OQ-279",
         "OQ-309",
         "OQ-311"
-      ]
-    },
-    {
-      "id": "OQ-332",
-      "status": "open",
-      "priority": 4,
-      "summary": "The eight indices share an AXIS, and Wu's class A is off it: is §5.1's gap an index question or an axis question?",
-      "deps": [
-        "splits_from OQ-328"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-57",
-        "OQ-310",
-        "OQ-328"
       ]
     },
     {
@@ -4761,6 +4748,22 @@
         "OQ-310",
         "OQ-327",
         "OQ-332"
+      ]
+    },
+    {
+      "id": "OQ-332",
+      "status": "resolved",
+      "priority": 4,
+      "summary": "The eight indices share an AXIS, and Wu's class A is off it: is §5.1's gap an index question or an axis question?",
+      "deps": [
+        "splits_from OQ-328"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-57",
+        "OQ-310",
+        "OQ-328",
+        "OQ-333"
       ]
     }
   ]
