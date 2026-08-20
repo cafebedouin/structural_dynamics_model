@@ -70,10 +70,19 @@ fresh-pass amendments, marked. Then stop. Plan approval and rulings are the oper
 implementation happens in a fresh session per §4.1.
 
 Before stopping, append one line to `.claude/skills/plan-review/RUNS.md` (create if absent):
-`YYYY-MM-DD | target | rounds used | amendments beyond Phase-1 checklist y/n | rulings N |
-searches per round`. This is the falsifier's substrate: each session sees one run, so
-"repeatedly" is unobservable to the amnesiac reader who owns the retirement decision unless the
-runs leave a record.
+`YYYY-MM-DD | run-id | target | rounds used | amendments beyond Phase-1 checklist y/n | rulings N |
+searches per round | fresh-pass finds: N`. This is the falsifier's substrate: each session sees one
+run, so "repeatedly" is unobservable to the amnesiac reader who owns the retirement decision unless
+the runs leave a record.
+
+**Two grammars live in this file, and a reader counting rows must know which it is parsing.** A
+run row starts with a date; a shakedown row starts with the literal `shakedown:` and has no
+columns. Say so in RUNS.md's own header when creating it, or a later reader parsing by column
+hits a row that does not fit and has no way to tell a malformed run from a different record kind.
+**`run-id` is `<date>-<n>`, `n` starting at 1 per day** — `date | target` collides when two runs
+hit the same target in a day, and that pair is exactly how the post-implementation session
+locates the line it must annotate. **`fresh-pass finds: N`** is shakedown item (7)'s column: it is
+what makes step 7's contamination claim falsifiable rather than assumed.
 
 ## The executor prompt (part of the deliverable, not an afterthought)
 

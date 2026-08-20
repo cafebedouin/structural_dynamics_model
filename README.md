@@ -168,6 +168,7 @@ corpus statistics are one sample conditional on one generation (v8 §3.2, §7.2)
 | Formal rules / calibration | `docs/logic.md` (spec) + `prolog/config.pl` (single source of truth) |
 | Operations | `docs/project_orientation.md` · `AGENTS.md` · `CLAUDE.md` |
 | Method | `docs/technical/build_discipline.md` (the seven defect patterns) · `docs/design/design_discipline.md` · `docs/design/design_gaps.md` |
+| The method papers | `docs/README.md` → the acyclic trio: `docs/concealment/` (the derivation) · `docs/amnesiac_institution/` (the institution) · `docs/practice/` (the practice) |
 | Open questions | `ISSUES.md` (single tracker; `python3 python/omega_resolver.py menu` for what's workable) |
 | Evidence | `audits/` (one dated directory per investigation) |
 
