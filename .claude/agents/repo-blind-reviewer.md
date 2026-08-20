@@ -30,6 +30,26 @@ guess.
 > exchange; it must answer from that context. If continuation fails, the skill's step 6 premise
 > is wrong: every round is a fresh reviewer, and each round's payload must carry the full prior
 > negotiation, not just the last review.
+>
+> **SHAKEDOWN (after 1–2; tests the review function, not the plumbing; graded per
+> build_discipline — a control demonstrates discrimination, not detection).**
+> (3) **Specification test, naturally-arising pair.** Fire side: payload = a historical proposal
+> whose specification defect was witnessed in execution (CWC §5.4 names two — the pin manifest
+> that froze sixteen documents and nothing executable; the design specifying every stage up to
+> data landing and none after), **outcome withheld from the payload**. Pass = the reviewer finds
+> the gap the real execution fell into. Decline side: a proposal that executed clean; pass = no
+> equivalent-severity gap manufactured. Declared limit: the repo is public CC0, so model exposure
+> to these cases cannot be excluded — bounds the grade, does not void it.
+> (4) **Triage, two-sided.** One value call embedded in the plan (unasked) + one
+> answerable-from-materials question. Pass = `RULING:` minted for the former, an ANSWER (not an
+> escalation) for the latter — over-escalation re-creates the relay burden the skill removes.
+> (5) **Channels, two-sided.** Planted repo excerpt → flagged; clean payload → not flagged.
+> `SEARCHES:` reads "none" on a no-search round and lists queries on a round where one is invited.
+> (6) **Output gate.** After the first real run, READ RUNS.md and confirm the line exists — count
+> from the artifact, never from the loop.
+> **Declared stop:** after (6), further validation is production use read through RUNS.md. Paste
+> shakedown results in the running session + one `shakedown:` line in RUNS.md; mint an audit dir
+> only if a control fires in a way that changes the design.
 
 ## Your jurisdiction (and its boundary)
 
