@@ -33,7 +33,10 @@ front-matter in-place-corrections list and never extends an older one; and carri
 machine-checked by `python/amnesiac_carriage_check.py --check` in `scripts/gate.sh`, which goes red
 if a carriage site moves without its expectation moving too.
 
-§2.8 and §2.9 are marked **declared temporary** with the
-practice paper as canonical destination; §2.9(b) is cited in correspondence already sent, so their
-redirect is owed at sub-item granularity. That redirect and the extraction are OQ-287's two open
-limbs.
+§2.8 and §2.9 are marked **declared temporary** with the practice paper as canonical destination.
+**Their redirect — OQ-287's second limb — was DISCHARGED 2026-08-20** and now amounts to a forward
+pointer, not the sub-item table this line previously said was owed. That requirement rested solely on
+`§2.9(b)` being cited in already-sent correspondence; the letter is **filed evidence, not a published
+appendix**, so the reader it guarded was never created (ISSUES OQ-287, R-A/R-B/R-C). **The extraction
+is OQ-287's one remaining limb.** Promoting the letter to a published appendix re-instates the
+sub-item table.

@@ -13060,11 +13060,15 @@ actually deliverable.
 **Ω-type:** Ω_C — which document owns the derivation is an authorial ruling with no seat-free fact.
 The *existence* of the duplication is Ω_E and is settled below.
 
-**Status:** mitigated — Pass A landed 2026-08-13/14 (derivation fork CLOSED); **Limb 2 DISCHARGED
-2026-08-20** by the R-A/R-B/R-C ruling below, its 2026-09-14 review date retired with its reason.
-**Limb 1 (the extraction) is the only open limb**, and no longer has anything riding on it.
-Flip to `open` when Limb 1 starts — `mitigated` is outside `omega_resolver.ACTIVE`, so this entry
-does not surface on `[NEXT]` while work is live, which is the frontier lying by omission.
+**Status:** open — **BOTH LIMBS DISCHARGED 2026-08-20; one routed-back ruling is all that remains.**
+Pass A closed the derivation fork 2026-08-13/14; **Limb 2** was discharged by the R-A/R-B/R-C ruling
+below (review date 2026-09-14 retired with its reason); **Limb 1** landed the same day —
+`docs/practice/practice_paper_v0_1.md`, canonical per `docs/practice/README.md`, with v0.6 §2.8/§2.9
+now the superseded side carrying forward pointers. Deliberately **`open`, not `resolved`**: the
+landing falsified a sentence in an externally-destined document and **only the operator may rule on
+it** (below). `open` is what surfaces it on `[NEXT]`; `resolved` would close the entry over a live
+question, and `mitigated` would hide it — the frontier lying by omission.
+**Deps:** blocked_on_human cwc-v04-line-34-stale-pending-sentence
 **Priority:** 2
 
 **UNBLOCKED 2026-08-17.** `blocked_on OQ-278` cleared — OQ-278 resolved, so **Limb 1's section III
@@ -13176,6 +13180,46 @@ LOAD-BEARING in III and V, not appended**; if they cannot be, revisit Subject BE
 > §4.3 `:988→:1026`). A `blocked_on OQ-280` edge is therefore **deliberately not authored**: it would
 > record a satisfied constraint as a live one and require editing a closed entry's *"gating nothing"*
 > line for no live purpose. Recorded as prose because it is history, not frontier.
+
+**Limb 1 — the extraction. LANDED 2026-08-20.** Record:
+`audits/2026-08-20_oq287_limb1_extraction/WRITEUP.md` (`Fired: live`).
+`docs/practice/practice_paper_v0_1.md` (§I–§V; §III authorable because OQ-278's index ruling is
+green) + `docs/practice/README.md` naming it canonical. v0.6 §2.8/§2.9 are now the **superseded
+side** and carry forward pointers to §III and §V; both keep their numbers and §2.9's (a)/(b) keep
+their letters, so the already-sent letter's `§2.9(b)` citation still resolves.
+
+> **The pre-registered acceptance condition was tested by a REAL DELETION and is MET.** The
+> condition — *§2.8 and §2.9 must be LOAD-BEARING in III and V, not appended* — was run as specified:
+> 37 + 11 + 63 lines cut from a scratch copy. After deletion **four anchors are absent while eight
+> surviving references to them dangle**; §III keeps a taxonomy heading over no taxonomy, and §V keeps
+> a heading naming a negative control it no longer contains. Subject does **not** need revisiting and
+> Subject 3 (the recursion) does not become competitive again. Two-sided witness:
+> `audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh`, run against the intact paper (all
+> anchors PRESENT) and `deletion_test_arm.md` (all ABSENT).
+>
+> **The control arm is the `Fired: live`, and it fired against the author's interest.** On its first
+> run it reported anchors ABSENT from the **intact** paper — twice, for two different reasons: a
+> pattern copied from v0.6 with its capitalisation (`EXCLUDE`) against a paper that writes it
+> lowercase, and a phrase straddling a hard line-break that a line-based grep cannot see (the wrap
+> trap; normaliser added, which is the fix for the *storage-form* species and explicitly not for the
+> paraphrase one). **Both defects biased the test toward the verdict the author wanted**, and read on
+> the test arm alone each is indistinguishable from the deletion having worked. That is the argument
+> for the arm.
+
+> **ROUTED BACK — THE ONE THING ONLY THE OPERATOR MAY RULE. `blocked_on_human`.**
+> `docs/concealment/concealment_without_a_concealer_v0_4.md:34` describes v0.6 §2.8/§2.9 as
+> declared-temporary ***pending the practice paper***. **Limb 1's landing makes that sentence
+> false**, in an externally-destined document the extraction prompt forbids editing.
+>
+> **The ruling: amend the line, or accept a knowingly-stale sentence in a published artifact.**
+> It was **not** silently repaired — a silent repair leaves the defect in the *design*, where it fires
+> on the next receiver, and the licence-to-refuse says to report at the volume of a completion and
+> route back. The line number drifts; locate by content:
+> `grep -n 'declared-temporary' docs/concealment/concealment_without_a_concealer_v0_4.md`.
+>
+> *Found by the standing check running BEFORE it was written down (Limb 2's V7), not by tripping over
+> it after the fact — which is the only reason it is a ruling now rather than a stale sentence
+> discovered by a reader later.*
 
 **DECLARED RESIDUALS FROM PASS A — none is checkable** (detail: `WRITEUP.md` → *Declared residuals*):
 R1 `COVERAGE_DIFF.md`'s coverage calls are unverified and pre-`C1` — *the re-check verifies the

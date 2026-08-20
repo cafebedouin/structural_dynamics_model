@@ -245,6 +245,80 @@ value-checking row into an invariant-asserting one perturbs the very distributio
 tests. Sequencing, not reluctance: land it after OQ-310's walk, or rule that the walk records the
 edit as a declared perturbation.
 
+## 2026-08-20 — LANDED: OQ-287 BOTH LIMBS — the practice paper is extracted, and Limb 2's whole justification was an exposure that was never created
+**Files:** docs/practice/practice_paper_v0_1.md, docs/practice/README.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/amnesiac_institution/README.md, docs/concealment/concealment_without_a_concealer_v0_4.md, audits/2026-08-13_oq287_defork/EXTRACTION_PROMPT.md, audits/2026-08-13_oq287_defork/checks.sh, audits/2026-08-10_oq277_rq2_crosscoding/LETTER_2026-08-11_wu.md, ISSUES.md, AGENTS.md
+**Tier:** tripwire
+
+**Five things a fresh agent would get silently wrong.**
+
+1. **THREE papers now.** `docs/practice/practice_paper_v0_1.md` (the practice) joins the concealment
+   paper (the derivation) and v0.6 (the institution). Each directory has a `README.md` naming its
+   canonical file; the ordering is acyclic; none restates another.
+
+2. **v0.6 §2.8/§2.9 are the SUPERSEDED side.** They keep their numbers, §2.9 keeps its (a)/(b)
+   letters, and both carry forward pointers to practice §III/§V. **Cite the practice paper for that
+   material.** §7–§10 did **not** move — v0.6 stays canonical for them, and citing *those* as
+   superseded is the mirror error, equally wrong.
+
+3. **v0.6 admits CONTENT edits, marked — not "pointer-only."** That sentence stood in the README and
+   in the paper's front matter while nine content-edit commits landed against it. The README was
+   corrected 2026-08-20; **the paper was not, until today** — a ruling that landed at one site and
+   not its sibling, which is the same failure v0.6 §14 records against the RQ2 retirement.
+
+4. **Limb 2's justification was WRONG, and the shape is worth more than the fix.** The entry said a
+   sub-item redirect table was owed because the Wu letter cites `§2.9(b)` and *"cannot be edited."*
+   **Uneditability generates no repository obligation.** The exposure that would have justified it —
+   a reader following `§2.9(b)` out of a **published** artifact — required the letter to be a
+   published appendix, and **that designation was never executed** (v0.6's appendices are A/B/C/D;
+   the letter occurs once, as a repo path). A true premise carried a false conclusion for eight days
+   and had a calendar deadline attached to it. Retired with its reason; **the reversion trigger lives
+   in the letter's own header**, because the person contemplating the promotion is looking at the
+   letter, not at the tracker.
+
+5. **`EXTRACTION_PROMPT.md` §3 was headed *"what moves, from where"* over rows that mostly do not
+   move — and it had already moved a real receiver.** One word in a heading produced a live
+   `§9.2` "exposure" in a plan. Now split into **3a MOVES** (exactly two rows, with a mechanical
+   membership test) and **3b DRAWS ON**. The citation rule **inverts** across the two tables, and
+   the old single bullet had it backwards for half the material.
+
+**TWO INSTRUMENT DEFECTS, BOTH CAUGHT BY A CONTROL ARM AND NEITHER BY READING — and both would have
+biased the result toward the author's preferred verdict.**
+
+- **A check that could not fail.** New arms added to `checks.sh` row 3 were written against `$norm`,
+  which is `normalized()`'s **whole-file** collapse to one line — so both phrases matched elsewhere
+  in the paper and the arms were green no matter what §2.9's marker said. A two-sided control fired
+  **PASS twice** where it should have gone red. Now scoped to the extracted marker block, with a
+  vacuity guard; controls A/B/C each discriminate. *The original `at sub-item granularity` arm had
+  the same whole-file scope and was falsifiable only by accident — that phrase happened to be
+  unique.* **Before adding an arm to that file, check whether `$norm` is the right scope.**
+- **The acceptance test's own probe was wrong twice.** Its control arm reported anchors ABSENT from
+  the **intact** paper: once from a capitalisation mismatch (pattern copied from v0.6's `EXCLUDE`
+  against a paper writing it lowercase), once from the **wrap trap** (a phrase straddling a hard
+  line-break, invisible to a line-based grep; normaliser added — the fix for the *storage-form*
+  species, and explicitly **not** for the paraphrase one). Read on the test arm alone, each ABSENT is
+  indistinguishable from the deletion having worked.
+
+**The acceptance condition was tested by a REAL DELETION and is MET.** 37 + 11 + 63 lines cut from a
+scratch copy; four anchors absent, eight surviving references dangling.
+Witness: `audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh` + `deletion_test_arm.md`.
+
+**OQ-287 is `open` with `blocked_on_human`, not `resolved`.** Both limbs are discharged, but Limb 1's
+landing **falsified** `concealment_without_a_concealer_v0_4.md:34` (*"declared-temporary pending the
+practice paper"*) in an externally-destined document the extraction forbids editing. **Routed to the
+operator as a ruling — amend, or accept a knowingly-stale sentence — and deliberately not repaired
+silently**, because a silent repair leaves the defect in the design. It surfaces on `[NEXT]` →
+BLOCKED ON YOU.
+
+**Two plan premises that were stale at execution, reported as observed.** OQ-280 was **already
+resolved** (`d8bb9522`) rather than in flight, so its `blocked_on` edge was deliberately not authored
+— it would record a satisfied constraint as live. And the plan predicted a 14-row gate; the observed
+baseline is **26 rows**. Line pins had all drifted (§2.8 `:590→:628`, §2.9 `:632→:670`, §4.3
+`:988→:1026`, KNOWN_STATE `:1731→:1766`).
+
+Records: `audits/2026-08-20_oq287_limb2_discharge/WRITEUP.md` and
+`audits/2026-08-20_oq287_limb1_extraction/WRITEUP.md` (both `Fired: live`). Commits `71de3b67`
+`c3667f75` + this one.
+
 ## 2026-08-20 — CORRECTION-KEY: a PARAPHRASE false absence is a distinct species from the wrap-trap class, and no normaliser fixes it
 **Files:** docs/technical/build_discipline.md, audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md
 **Tier:** correction-key

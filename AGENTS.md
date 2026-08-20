@@ -890,9 +890,27 @@ Four things that bite:
   A green tick over 60+ citations reads as verification of the citation set and is not; treat it as
   a hazard, not a caveat (`audits/2026-08-13_oq287_defork/EXTRACTION_PROMPT.md` §8 R2).
 
-`amnesiac_institution_v0_6.md` §2.1–2.7 are **vacated and their numbers never reused**; §2.8/§2.9
-keep their numbers and are marked declared-temporary. Structure is asserted by
-`audits/2026-08-13_oq287_defork/checks.sh all`.
+`amnesiac_institution_v0_6.md` §2.1–2.7 are **vacated and their numbers never reused**. Structure is
+asserted by `audits/2026-08-13_oq287_defork/checks.sh all`.
+
+**THREE papers now, not two, and each owns a different thing (2026-08-20, OQ-287 both limbs
+discharged).** `docs/practice/practice_paper_v0_1.md` is canonical for **the practice** (the
+discipline documents read as a development method); `docs/concealment/…_v0_4.md` for **the
+derivation**; `docs/amnesiac_institution/…_v0_6.md` for **the institution**. Each directory's
+`README.md` names its canonical file. The ordering is acyclic and none restates another.
+
+**`amnesiac_institution_v0_6.md` §2.8 and §2.9 are now the SUPERSEDED side** — they keep their
+numbers (and §2.9 keeps its (a)/(b) letters, because already-sent correspondence cites `§2.9(b)`),
+and they carry **forward pointers** to `practice_paper_v0_1.md` §III and §V. **Cite the practice
+paper for that material, not v0.6.** §7–§10 did NOT move and v0.6 remains canonical for them; the
+distinction is `EXTRACTION_PROMPT.md` §3's two tables, and getting it backwards in either direction
+recreates the duplication OQ-287 closed.
+
+**v0.6's editing policy is `content edits, MARKED, never silent` — NOT "pointer-only."** The
+pointer-only sentence stood in both the README and the paper's front matter while nine content-edit
+commits landed against it; corrected at the README 2026-08-20 and carried to the paper the same day.
+Corrections go in the house form (a dated `> **Correction marked (…)**` blockquote, or a
+`[COST CORRECTED]`/`[RETIRED]` box) leaving the corrected text intact above them.
 
 ### Run the reading-totality suite (OQ-137 standing guard)
 

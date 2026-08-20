@@ -63,6 +63,12 @@ repository's.*
 > (§10), Θ-7. **It states its contribution boundary once, at §13**, and §2.B points there rather
 > than restating it.
 >
+> **Correction marked (2026-08-20, ISSUES OQ-287 R-A/R-B/R-C).** This block read: *"**Two limbs of
+> OQ-287 remain open, so it is `mitigated`, not `resolved`.** (1) The practice-paper extraction.
+> (2) The redirect for **§2.8 and §2.9** … §2.9(b) is cited in correspondence already sent, so the
+> redirect is owed at sub-item granularity."* The second limb was discharged; the corrected text
+> follows.
+>
 > **ONE limb of OQ-287 remains open, so it is `mitigated`, not `resolved`: the practice-paper
 > extraction.** The second limb — the redirect for **§2.8 and §2.9** — was **DISCHARGED 2026-08-20**.
 > Those subsections keep their numbers and their text and stay **declared temporary** with the
@@ -72,9 +78,25 @@ repository's.*
 > zero and **a forward pointer discharges it** (ISSUES OQ-287, R-A/R-B/R-C). Promoting that letter to
 > a published appendix re-instates the sub-item table.
 >
-> *After correction, this document admits POINTER-ONLY edits — forward pointers and redirect notes —
-> and no content edits. The exception is declared rather than taken: a frozen document with no
-> pointer to its canonical side is the findability failure this whole pass closed.*
+> **Correction marked (2026-08-20) — the editing policy stated here was not the one practised, and
+> the ruling that fixed it landed at the README and not at this paper.** This paragraph read:
+> *"After correction, this document admits POINTER-ONLY edits — forward pointers and redirect notes
+> — and no content edits. The exception is declared rather than taken: a frozen document with no
+> pointer to its canonical side is the findability failure this whole pass closed."*
+>
+> It stood from `96db0124` (2026-08-14) while **nine content-edit commits landed against it**
+> (`98d0996a` … `da6de5b2`) — including the withdrawal of §5.4's pooled scalar, two new
+> subsections, and several marked corrections. `../README.md` was corrected on 2026-08-20 for
+> exactly this; **the same correction was not carried here**, which is the ruling-lands-at-one-site
+> failure this paper's own §14 records against the RQ2 retirement. Carried now.
+>
+> *This document admits **content edits, MARKED, never silent**. A correction goes in the house form
+> — a dated `> **Correction marked (…)**` blockquote, or a `[COST CORRECTED]`/`[RETIRED]` box —
+> leaving the corrected text intact above it; a new as-of date gets its **own** dated block and never
+> extends an older one; carriage invariants are machine-checked by
+> `python/amnesiac_carriage_check.py --check` in `scripts/gate.sh`. Pointer-only edits remain the
+> norm for the superseded subsections §2.8/§2.9; they are not the whole policy, and stating them as
+> the whole policy was a success-shaped token for a governance step nobody performed (§5, P8).*
 
 ## Construction note: one exemption discharged, one debt paid
 
@@ -631,10 +653,15 @@ stated scope.**
 
 ### 2.8 The unmarked perturbation: what the witness calculus is doing
 
-> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20.]** This subsection's
-> canonical destination is the practice paper (§2.8 → III). It stays here, **at this number**, until
-> that paper lands; when it does, this becomes the superseded side and gains a **forward pointer** to
-> its destination. Until then **this is the canonical copy**. *A sub-item redirect table is no longer
+> **➜ FORWARD POINTER (2026-08-20): this subsection is now the SUPERSEDED side. Canonical:
+> `../practice/practice_paper_v0_1.md` §III** — the material below was extracted there, where the
+> unmarked perturbation is developed as the spine of the failure taxonomy rather than stated. Cite
+> the practice paper for it; this copy is retained at its number so existing citations resolve, and
+> is not maintained.
+>
+> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20; DISCHARGED
+> 2026-08-20 by the extraction landing.]** This subsection's canonical destination was the practice
+> paper (§2.8 → III), and that paper has landed. Until then **this is the canonical copy**. *A sub-item redirect table is no longer
 > owed* — that requirement rested on an already-sent letter's `§2.9(b)` citation, and the letter is
 > filed evidence rather than a published appendix, so the reader it guarded does not exist (ISSUES
 > OQ-287, R-B/R-C). The number does not change either way, so nothing already citing §2.8 goes stale.
@@ -675,10 +702,15 @@ Wu's *fail-plausible* escalation of it — is set out at `concealment_without_a_
 
 ### 2.9 The negative control on the unification
 
-> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20.]** This subsection's
-> canonical destination is the practice paper (§2.9 → V). It stays here, **at this number, with its
-> sub-items (a)/(b) at their letters**, until that paper lands; when it does, this becomes the
-> superseded side and gains a **forward pointer**. Until then **this is the canonical copy**.
+> **➜ FORWARD POINTER (2026-08-20): this subsection is now the SUPERSEDED side. Canonical:
+> `../practice/practice_paper_v0_1.md` §V** — specifically **§V.3 for (a)**, the three exclusions,
+> and **§V.4 for (b)**, the break at the instrument stratum. Cite the practice paper for it. **This
+> copy is retained at its number and (a)/(b) keep their letters**, because `§2.9(b)` is cited in
+> correspondence already sent and that citation must keep resolving; it is not maintained.
+>
+> **[DECLARED TEMPORARY — A2-pre ruling 2026-08-13; scope narrowed 2026-08-20; DISCHARGED
+> 2026-08-20 by the extraction landing.]** This subsection's canonical destination was the practice
+> paper (§2.9 → V), and that paper has landed. Until then **this is the canonical copy**.
 > *Sub-item redirection is no longer owed.* It was owed because the Wu letter of 2026-08-11 cites
 > `§2.9(b)` and has been sent — but that letter is **filed evidence, not a published appendix**
 > (checked 2026-08-20), so the unrepairable reader it guarded was never created, and §2.9(b) keeps

@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "1df6b118c084ce671740333b4aacf5b13e93f20e",
+    "store_version": "c3667f7574a21075c7d3ce9bf670fb4a53f6cc13",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T02:52:46"
+    "generated_at": "2026-08-20T03:11:43"
   },
-  "issues_sha": "5fa5c2f99d59e86bcb3e330a12b2bf46219b3fbd71865ec19a793af2fb9bfdd1",
+  "issues_sha": "b719988cbdd3ead331eb1159cc946a1bca637a3420f232e5eaa6714293c43fae",
   "n_entries": 331,
   "active_token_set": [
     "investigating",
@@ -13,10 +13,10 @@
   ],
   "per_status": {
     "resolved": 164,
-    "mitigated": 19,
+    "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 124,
+    "open": 125,
     "partial": 5
   },
   "active": [
@@ -1272,6 +1272,23 @@
       "mentioned_in": [
         "OQ-78",
         "OQ-188"
+      ]
+    },
+    {
+      "id": "OQ-287",
+      "status": "open",
+      "priority": 2,
+      "summary": "Two live papers now claim the same contribution: the derivation is in both `amnesiac_institution_v0_6.md` §2 and `concealment_without_a_concealer_v0_4.md` (Pattern 2 on the paper substrate)",
+      "deps": [
+        "blocked_on_human cwc-v04-line-34-stale-pending-sentence"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-277",
+        "OQ-278",
+        "OQ-280",
+        "OQ-286",
+        "OQ-289"
       ]
     },
     {
@@ -4556,21 +4573,6 @@
         "OQ-289",
         "OQ-290",
         "OQ-291"
-      ]
-    },
-    {
-      "id": "OQ-287",
-      "status": "mitigated",
-      "priority": 2,
-      "summary": "Two live papers now claim the same contribution: the derivation is in both `amnesiac_institution_v0_6.md` §2 and `concealment_without_a_concealer_v0_4.md` (Pattern 2 on the paper substrate)",
-      "deps": [],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-277",
-        "OQ-278",
-        "OQ-280",
-        "OQ-286",
-        "OQ-289"
       ]
     },
     {

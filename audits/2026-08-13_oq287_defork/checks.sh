@@ -245,7 +245,10 @@ row3() {
   [ -n "$m29" ] \
     && pass "§2.9 marker block extracted for scoped arms ($(printf '%s' "$m29" | $GREP -c .) lines)" \
     || bad "§2.9 marker block did NOT extract - the two arms below would pass vacuously on empty input"
-  printf '%s' "$m29" | $GREP -q 'forward pointer' \
+  # -i: the requirement is that the marker NAMES the forward pointer, not that it uses a
+  # particular case. Fired correctly on the case change when the extraction landed 2026-08-20
+  # (marker went to "➜ FORWARD POINTER"), which is a live demonstration that this arm can fail.
+  printf '%s' "$m29" | $GREP -qi 'forward pointer' \
     && pass "§2.9's marker names the forward pointer it now owes (R-C, 2026-08-20)" \
     || bad "§2.9's marker does not name the forward pointer R-C requires"
   # and the reversion trigger must survive, or the branch point becomes a memory:
