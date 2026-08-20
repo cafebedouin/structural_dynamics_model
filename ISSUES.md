@@ -16070,6 +16070,88 @@ the edge once that ground-truth question is ruled. *(`shares_instrument` is not 
 single entry instead of reconstructing it from a retired OQ, a frozen audit directory and a spec.
 If it is ever run, the repository gets its first coded corpus — at n=10, as calibration.
 
+## OQ-330 — The PreToolUse tripwire hook has no call-witness: fired-and-matched-nothing is indistinguishable from never-queried
+
+**Ω-type:** Ω_E — whether the hook fired against a changed file is a fact, and it is currently
+unrecorded. The *coverage* question it unblocks (which tools should match) is **Ω_C** and is
+deliberately downstream, not part of this entry.
+
+**Status:** open
+**Priority:** 2
+**Deps:** splits_from OQ-280
+**Origin:** Found 2026-08-20 during the OQ-280 pass, from a near-miss that came out clean by luck.
+**Fired: latent** — a real defect, conditional on an input that was not produced (nothing downstream
+was corrupted this time). Provenance: KNOWN_STATE 2026-08-20 (tripwire entry).
+
+**THE DEFECT.** `.claude/settings.json`'s PreToolUse matcher is `Edit|Write` only, and the session's
+auto mode instructs Bash-first file editing (`sed`, heredocs, short scripts). So the hook fired
+**zero times** across four commits touching `ISSUES.md`, the repository's most tripwired file — and
+the read site could not tell. `CLAUDE.md` states hook silence means *"queried, matched nothing"*,
+which is the reassuring reading and the wrong one here: the truth was **never queried**, and both
+produce identical output. This is the repository's own **Pattern 6** (measured-empty vs didn't-look
+collapsing at a channel boundary) living inside the apparatus built to prevent it, reached through a
+**mode setting** rather than any code change — which is why no gate, sweep or selftest could have
+caught it.
+
+**What was missed, concretely.** Simulating the payload shows the hook was holding the
+exactly-relevant warning, first in its list — *"minting an OQ at the tail of `ISSUES.md` overwrites
+the footer's opening line, and no gate sees it"* — written **the same day**. OQ-329 was minted at
+that tail hours later. **The footer survived only because the mint happened to anchor above
+`*Last updated:`**, which is the prescribed move arrived at without ever seeing the prescription.
+the footer-opener count prescribed by that tripwire (KNOWN_STATE 2026-08-20) returning 1 is
+therefore success-shaped with no control behind it, and is not evidence the channel works.
+
+> **The check phrase is DELIBERATELY not reproduced in this entry.** Writing the `grep -c` literal
+> out drove its own count from 1 to 2 — an entry *about* the footer check registering *as* a footer
+> line. Third occurrence of that shape in one session (with the `displaced cites` red from a pasted
+> TSV row, and `claim_cite_check`'s sentinel-wrapped example, which exists for this reason).
+> **Whenever a counted population includes prose, quoting the counter is an edit to the count** —
+> cite the check, do not reproduce its literal.
+
+**Instrument is sound; the hole is the matcher.** Two-sided control, run 2026-08-20:
+`python/pretooluse_tripwires.py` **FIRES** on `ISSUES.md` (64 entries) and `README.md` (3), and
+**DECLINES** silently on `LICENSE` (0 entries).
+
+### OPERATOR RULING 2026-08-20 — build the call-witness FIRST; rule coverage SECOND
+
+**Do not fix the matcher first.** `|Bash` was considered and rejected: a Bash payload carries no
+`tool_input.file_path`, so the script would have to parse arbitrary shell for target paths — a new
+instrument with its own false-negative surface, on the read side of a channel whose entire failure
+mode is false negatives. **But the alternatives (narrow the auto-mode instruction; change hook
+semantics) all accept the framing that COVERAGE is the problem, and it is not, or not first.** The
+problem is that this hook has no call-witness. `build_discipline.md` → *A control must witness that
+it is CALLED* is the discipline this repository already minted for exactly this shape, unapplied to
+its own hook.
+
+**The build, as ruled:**
+
+1. The hook writes a **per-session fire count** (append-only; file path and format are the
+   implementer's call, but it must survive the session and be readable by the gate).
+2. A gate row derives **from git** whether files matching **the hook's own matcher** changed in the
+   commit range — the matcher is read from `.claude/settings.json`, never hardcoded, so the row
+   stays correct through any future coverage change.
+3. **Zero fires against a changed `ISSUES.md` is RED.**
+
+**Why this shape and not another:** no shell parsing, no workflow change, and it is
+**matcher-agnostic** — whatever coverage is eventually chosen, the counter reports whether coverage
+matched reality. **Coverage then becomes a second, cheaper ruling, made by looking at the gap rather
+than inferring it from a near-miss.**
+
+**Controls owed at build time** (this is an introduced instrument and inherits the discipline —
+*An introduced instrument is itself a claim*): the row must **fire** on a commit range where a
+matcher-matching file changed with a zero fire count, and **decline** on a range where either the
+file did not change or the count is non-zero. A one-sided plant licenses nothing.
+
+**Sequencing note, and it is the reason this is Priority 2 rather than 4.** Every session editing
+`ISSUES.md`/`KNOWN_STATE.md` through Bash is currently running with the warning channel dark and no
+way to know it. The interim mitigation is in `CLAUDE.md` (run
+`python3 python/known_state_status.py --file <path>` yourself, before a Bash-driven edit), and an
+interim mitigation that depends on the editor remembering is exactly what this entry exists to
+replace.
+
+**What resolution would change:** hook silence becomes readable — the two states stop collapsing at
+the read site — and the coverage question becomes answerable from data instead of from a near-miss.
+
 ---
 
 *Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark

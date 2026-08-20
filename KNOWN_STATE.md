@@ -87,13 +87,58 @@ change — which is why no gate, sweep or selftest could have caught it.
 or any high-traffic engine file **through Bash**, run the query the hook would have run:
 `python3 python/known_state_status.py --file <path>` — before the edit, not after.
 
-**Flagged, NOT done — a genuine ruling, and it is the operator's.** The obvious fix is adding
-`|Bash` to the matcher, and it is wrong as stated: the hook keys on `tool_input.file_path`, which a
-Bash payload does not carry, so the script would need to parse arbitrary shell for target paths —
-a new instrument with its own false-negative surface, on the read side of a warning channel.
-The alternatives (narrow the auto-mode Bash-first instruction for these files; or a PostToolUse
-check that fires when a tripwired file's mtime moved without a delivery) are cheaper but change
-either operator workflow or hook semantics. Recorded rather than chosen.
+**THE NEAR-MISS CAME OUT CLEAN BY LUCK, AND THAT IS THE POINT — `Fired: latent`.** Nothing
+downstream was corrupted. The footer survived because the OQ-329 mint happened to anchor on
+`*Last updated:` and insert above it — the prescribed move, arrived at independently and without
+ever seeing the prescription. So `/usr/bin/grep -c 'Add new items with sequential OQ-NN'
+ISSUES.md` returning **1** is a **success-shaped reading with no control behind it**, and a later
+grep will produce exactly that reading on its own. It is not evidence the channel works. Recorded
+explicitly because "the footer is intact" is the sentence this incident will otherwise leave behind.
+
+**OPERATOR RULING 2026-08-20 — do NOT fix the matcher first; make the hook's silence LEGIBLE, then
+rule coverage.** Adding `|Bash` was correctly rejected (a Bash payload carries no
+`tool_input.file_path`, so the script would have to parse arbitrary shell for targets — a new
+false-negative surface on a channel whose entire failure mode is false negatives). But the
+alternatives considered alongside it — narrow the auto-mode instruction, or change hook semantics —
+**all accept the framing that COVERAGE is the problem, and it is not, or not first.** The problem is
+that this hook **has no call-witness**: *fired-and-matched-nothing* and *never-queried* emit
+identical output, which is the whole reason a tripwire written that same day sat dark through four
+commits against the file it was written about. The repository already minted the discipline for
+exactly this — `build_discipline.md` → *A control must witness that it is CALLED* — and did not
+apply it to its own hook.
+
+**The ruled build (OQ-330).** Have the gate derive **from git** whether files matching the hook's
+own matcher changed in the commit range, and compare that against a **per-session fire count the
+hook writes**. Zero fires against a changed `ISSUES.md` is a **red row**. No shell parsing, no
+workflow change, and it is **matcher-agnostic** — whatever coverage is eventually chosen, the
+counter says whether coverage matched reality. **Coverage then becomes a second, cheaper ruling,
+made by looking at the gap instead of inferring it from a near-miss.**
+
+**A SECOND INSTANCE THE SAME SESSION, and it is the same shape one level down: a partial check
+passing where the full gate caught it.** Consolidated here rather than filed separately, because
+both are what the undelivered tripwire would have spoken to.
+
+| # | what was run | what it said | what the FULL gate then caught |
+|---|---|---|---|
+| 1 | `issues_status --check` + `omega check` after the OQ-294 flag | 328 parsed / 0 malformed; 0 problems | `displaced cites` **RED** — the pasted TSV witness quoted `Pattern 3`, so an artifact excerpt read as two undeclared consumers of the renumbered member (`d98e0679`) |
+| 2 | `issues_status --check` after the ISSUES.md row-swap | 328 parsed / 0 malformed | `omega index` **RED** — the derived router had gone stale under a script edit that never regenerated it |
+
+**A THIRD instance, different shape, same session — and it fired while writing THIS ruling up.**
+Minting OQ-330 quoted the footer check's own `grep -c` literal, which drove that check's count from
+1 to 2: an entry *about* the footer check registering *as* a footer line. Same mechanism as row 1
+above (a pasted TSV witness reading as a citation), and the same mechanism `claim_cite_check`
+sentinel-wraps its own example for. **Rule: whenever a counted population includes prose, quoting
+the counter is an edit to the count — cite the check, never reproduce its literal.** Caught and
+reworded before commit; the count is back to 1.
+
+**The shared mechanism, stated so it is checkable:** a narrow checker passes **on the dimension it
+owns**, while a *different* row — one the same edit also perturbed — goes red. `issues_status` owns
+status-grammar; it knows nothing about citation namespaces or router freshness. **So a narrow green
+is not a subset-witness for the gate, and running one is not a cheaper version of running the
+other.** Both instances arrived through the same door as the hook finding: `ISSUES.md` edited
+through Bash, in a session where the apparatus that would have said so could not fire. `[GATE]`
+before committing anything touching `ISSUES.md`/`KNOWN_STATE.md` is already the standing rule; this
+is what it costs to skip it twice in one session.
 
 ## 2026-08-20 — LANDED: OQ-280 resolved by amend; the RQ2 retirement carried into the paper at four sites; OQ-294's premise flagged; OQ-329 minted
 **Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/amnesiac_institution/README.md, ISSUES.md
@@ -130,9 +175,10 @@ the gate was **fully GREEN** at baseline, so nothing red could be attributed awa
 **A pasted witness is shaped like a citation.** The OQ-294 flag's sample TSV rows quoted
 `Pattern 3` and turned gate row `displaced cites` RED — two undeclared consumers of the renumbered
 member. Fixed by choosing rows carrying no renumbered index (`d98e0679`), not by declaring an
-artifact excerpt in the consumer manifest. Same shape `claim_cite_check` sentinel-wraps its own
-example for. Recorded against process: the flag was committed on `issues_status` + `omega check`
-alone, and the **full gate** is what caught it.
+artifact excerpt in the consumer manifest; same shape `claim_cite_check` sentinel-wraps its own
+example for. **This was one of TWO partial-check-passes-where-the-full-gate-caught-it in this
+session; both are tabled in the sibling tripwire entry above** (the hook-matcher one), because both
+arrived through the door that entry describes.
 
 ## 2026-08-20 — TRIPWIRE: minting an OQ at the tail of `ISSUES.md` overwrites the footer's opening line, and no gate sees it
 **Files:** ISSUES.md, python/issues_status.py, issues/INDEX.md

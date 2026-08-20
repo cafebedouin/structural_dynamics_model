@@ -2899,6 +2899,49 @@ premise here may not be cited as settled without re-witnessing at its rung at po
 
 ---
 
+## A verification section may not pre-authorize dismissal of a signal it has not re-witnessed (operator, 2026-08-20)
+
+**The rule.** A plan's Verification block may tell the executor what to *check*. It may not tell the
+executor what to **discount** — "expect the `gap surfaces` row red, it's pre-existing, don't attribute
+it to this change" — unless the plan re-witnessed that condition at authoring time. An unverified
+"expect X to be red" is a **standing licence to ignore X**, and it does not know which X it will be
+used on. The executor cannot tell a pre-authorized red from a new one, because the instruction was
+written before either existed.
+
+**Why it is worse than an ordinary stale premise.** The staleness ladder above governs premises a
+plan *asserts*; this governs a premise a plan *spends* — it converts a stale fact into an
+instruction that suppresses a live signal. A wrong assertion is checkable against the substrate the
+moment someone looks. A wrong dismissal is checkable against nothing: the signal it discounts never
+reaches a read site, so the error leaves no trace in the artifact and no trace in the transcript. It
+is the pre-authorized form of *absence satisfying the gate* (Pattern 5), moved from the engine to
+the plan.
+
+**Witnessed 2026-08-20, at zero cost, which is the only reason it is legible.** The OQ-280 plan's
+Verification section read: *"Expect GREEN except the **pre-existing** `gap surfaces` red
+(interpreter/`pandas`, KNOWN_STATE 2026-08-18) — read the `python env` row first and do not
+attribute that row to this change."* The baseline gate was **fully GREEN**; the gap had been
+repaired and the KNOWN_STATE entry the instruction was written from was two days stale. Nothing was
+lost. But the instruction was in force for the whole session, and **the session did produce a red
+gate that mattered** — `displaced cites`, from a pasted witness that read as a citation. Had that
+red landed in the row the instruction covered, or had the executor been less specific about which
+row it was reading, the plan would have licensed discarding it.
+
+**The cheaper sibling in the same plan, same root.** *"Four content edits have already landed
+against it (`21fddc75`, `c61c635d`, `da6de5b2`, through 2026-08-20)"* — the measured count was
+**nine**. A commit count read off a stale artifact and stated as fact. Same defect one rung down:
+the assertion form is caught by anyone who runs `git log`; the dismissal form is caught by nobody.
+
+**The check, at plan-authoring time.** For every "expect / ignore / don't attribute / known-red /
+pre-existing" in a Verification section, ask: *did I run the thing that establishes this, in this
+plan, at this stamp?* If no — either run it, or convert the dismissal into an **instruction to
+check**: "if `gap surfaces` is red, confirm against KNOWN_STATE 2026-08-18 before attributing it
+elsewhere." The second form survives the premise going stale; the first is destroyed by it while
+continuing to read as diligence. Corollary for the executor, who is the last line of defence: report
+the baseline you actually observed, not the one the plan predicted — the mismatch is a finding about
+the plan.
+
+---
+
 ## A correction is not done until the old value's consumers are swept
 
 The citation-time rule above governs *re-using* a witnessed fact; this is its dual for

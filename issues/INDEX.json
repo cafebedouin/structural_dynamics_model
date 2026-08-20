@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "d8bb9522f7f1ff79a98c26f81c4bb686e4aa5135",
+    "store_version": "236b27aa66f173db8d3b728090b75c4927e0401a",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-20T02:17:20"
+    "generated_at": "2026-08-20T02:30:19"
   },
-  "issues_sha": "9a5d93c565a755ee13ae0a9bf55cad7b09d89851069fcdd57e1ae9ef547b7869",
-  "n_entries": 329,
+  "issues_sha": "84bb376a5c2f0ca31795d57f6788cf91b8627a9cec62fa8c11e7eafd741a82db",
+  "n_entries": 330,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 19,
     "disposed": 6,
     "future": 13,
-    "open": 122,
+    "open": 123,
     "partial": 5
   },
   "active": [
@@ -1804,6 +1804,20 @@
         "OQ-278",
         "OQ-280",
         "OQ-294"
+      ]
+    },
+    {
+      "id": "OQ-330",
+      "status": "open",
+      "priority": 2,
+      "summary": "The PreToolUse tripwire hook has no call-witness: fired-and-matched-nothing is indistinguishable from never-queried",
+      "deps": [
+        "splits_from OQ-280"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-280",
+        "OQ-329"
       ]
     }
   ],

@@ -150,7 +150,12 @@ Editing `ISSUES.md`, `KNOWN_STATE.md` or a high-traffic engine file through Bash
 `python3 python/known_state_status.py --file <path>` yourself, BEFORE the edit. (A query that
 cannot run still says so loudly; a query never dispatched says nothing at all. Witnessed with a
 two-sided control — the script fires on `ISSUES.md`/`README.md`, declines on `LICENSE`; the hole is
-in the matcher, not the code. Provenance + the unmade matcher ruling: KNOWN_STATE 2026-08-20.) To
+in the matcher, not the code. **The one witnessed near-miss came out CLEAN BY LUCK, not by a
+control** — OQ-329 was minted at the tail of `ISSUES.md` hours after the tripwire warning about
+exactly that was written, and the footer survived only because the mint happened to anchor above
+`*Last updated:`; `grep -c` returning 1 is therefore a success-shaped reading with nothing behind
+it, and must not be cited as evidence the channel works. Provenance + the operator's ruling —
+**build the hook's call-witness first, rule coverage second** (OQ-330): KNOWN_STATE 2026-08-20.) To
 add or change one, edit `.claude/settings.json` and commit it with the change it serves.
 
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
@@ -708,6 +713,22 @@ riskiest-shape, substrate-anchored, write-free-if-pre-write (the confound reopen
 the tool you closed it with). Full table: `docs/technical/build_discipline.md` → *The spine*,
 *Every diagnostic needs a positive control*, *A positive control demonstrates DISCRIMINATION, not
 detection*, and *An introduced instrument is itself a claim*.
+
+**A verification section may not pre-authorize dismissal of a signal it has not re-witnessed
+(operator, 2026-08-20).** A plan's Verification block may say what to CHECK; it may not say what to
+**discount** ("expect the `gap surfaces` row red, it's pre-existing, don't attribute it to this
+change") unless the plan re-witnessed that condition at authoring time. An unverified *expect-X-red*
+is a standing licence to ignore X that does not know which X it will be used on. **Worse than an
+ordinary stale premise:** a wrong assertion is checkable the moment someone looks; a wrong dismissal
+suppresses the signal before it reaches a read site, so it leaves no trace in the artifact OR the
+transcript — Pattern 5 moved from the engine to the plan. Witnessed at zero cost 2026-08-20 (the
+baseline was fully GREEN; the KNOWN_STATE entry the instruction came from was two days stale) — but
+the same session DID produce a red that mattered. **Fix:** convert every dismissal into an
+instruction to check ("if X is red, confirm against KNOWN_STATE <date> before attributing it
+elsewhere") — that form survives its premise going stale. **Executor's half:** report the baseline
+you OBSERVED, not the one the plan predicted; the mismatch is a finding about the plan. Detail +
+the stale-commit-count sibling: `build_discipline.md` → *A verification section may not
+pre-authorize dismissal*.
 
 **Write the receiver's prompt before calling a design done — a handoff is a specification test
 (operator ruling, 2026-08-11).** Before declaring a plan, pre-registration, ruling, or design
