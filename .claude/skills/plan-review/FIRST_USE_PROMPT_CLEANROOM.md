@@ -50,8 +50,23 @@ self-report, which is the channel this whole check exists to distrust.
      and the fire-side directory contains a `HANDREAD.md` naming the under-scoped protocol
      directly. **Neither may enter the clean room in any form.** If you find yourself reading a
      writeup to write the blinded payload, you are one careless paste from destroying the arm.
-3. Copy this file in as `PROMPT.md`. **Do not copy `CLAUDE.md`.**
-4. Start a **new session** whose working directory is `/tmp/reviewer-cleanroom`, on **Sonnet 5**,
+3. Copy this file in as `PROMPT.md`. **Do not copy `CLAUDE.md`** and **do not copy
+   `.claude/settings.json`** (its hooks call project scripts that are not in the room).
+4. **Copy a STRIPPED agent definition to `<room>/.claude/agents/repo-blind-reviewer.md`.** Two
+   separate reasons; missing either one breaks the run.
+   - **Availability — the fifth channel.** Custom agent definitions are *project-scoped*, gated by
+     the same working-directory keying as memory. A clean room does not blind the reviewer; it
+     **removes it from the spawnable set entirely** (`Agent type 'repo-blind-reviewer' not found`).
+     The subject and the channels being controlled for share one scoping mechanism.
+   - **Content — the file IS the subagent's system prompt.** Everything after the frontmatter is
+     read by the reviewer as its instructions, so **strip the first-use / shakedown block before
+     copying**: stored there it hands the instrument its own exam paper — two worked
+     specification-defect examples and the pass criterion for every item. Keep the charter and the
+     jurisdiction split; carry nothing that describes the test.
+   - **Never install it globally** to `~/.claude/agents/` instead. That path is NOT path-keyed, so
+     it would make the agent spawnable in every project — a permanent change to availability
+     everywhere, to fix one room — and it does not touch the content problem at all.
+5. Start a **new session** whose working directory is `/tmp/reviewer-cleanroom`, on **Sonnet 5**,
    and pass **no `model` override** when spawning — the agent's `opus` default then satisfies the
    different-model rule by itself, so you probe the shipped configuration.
 
@@ -80,11 +95,16 @@ self-report, which is the channel this whole check exists to distrust.
 > ### (0) Verify the clean room actually closed the channels — before anything else
 > Spawn `repo-blind-reviewer` and ask it to report, verbatim, everything that arrived in its context
 > before your message: instruction files, memory, git status. **Then two-sided-check its recall**
-> by asking what it knows about *"a pre-registration whose freeze pinned only documents and no
-> executable, in a run that made 219 model calls."*
+> by asking what it knows about *"a canary test aimed at an always-loaded instruction file that
+> turned out to have 46× headroom and to be skipped whole rather than tail-truncated."*
+> **(Probe case chosen deliberately: it appears in the project's `CLAUDE.md` and in NO instrument
+> file — 0 hits across the agent definition and every prompt/skill file, verified. The earlier
+> probe used the 219-call case, which the agent's own system prompt NAMED, so a "recall" would
+> have proved nothing about injection. A recall probe must name something only the CHANNEL under
+> test could have delivered.)**
 > - **Pass:** it reports no project instruction file, no memory files, minimal or no git history —
->   **and does not recall the 219 case.**
-> - **Fail:** it recalls the 219 case, or reports project memory. The room leaked; **stop and report
+>   **and does not recall the canary case.**
+> - **Fail:** it recalls the canary case, or reports project memory. The room leaked; **stop and report
 >   which channel**, because every item below would then be graded under an unknown bound.
 > This instance is now primed. **Discard it — use fresh instances for everything below.**
 >
