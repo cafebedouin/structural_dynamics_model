@@ -124,3 +124,49 @@ predating this arc, on a different artifact class — *always* finds something t
 conversation, and the analysis suite do not. That is a naturally-arising instance **in the
 instrument's own history**, the top of the discrimination ladder, and it replicates item (7)'s
 finding from outside this arc entirely.
+
+---
+
+## Specimen, 2026-08-20 — a comparison that passed because neither side existed
+
+Recorded here rather than left in a transcript, because the practice paper's purest motivating case
+for positive controls is *a comparison that reported `identical: True` because both sides were
+empty*, and this is that case recurring live, through a mechanism the record does not yet name.
+
+**What ran.** A command block ended with a self-check:
+
+```
+diff <(grep -c "" <repo file>) <(grep -c "" <evidence file>) && echo "same line count"
+```
+
+It printed **`same line count`**. Neither file was read. An earlier compound command in the same
+session had included a `cd` into a subdirectory; **the Bash tool's working directory persists between
+calls**, so every path in this block resolved relative to the wrong root. The venv interpreter path
+did not resolve, `git rm` matched no pathspec, and both `grep -c` invocations failed with *No such
+file*. (The interpreter is named descriptively here rather than as a literal path: the audit-citation
+checker reads a literal one as a cited evidence artifact, and it is gitignored — a small instance of
+the same class, caught by the same gate, one paragraph after describing it.)
+
+**The mechanism, stated generally.** `diff <(A) <(B)` is an equality test over **stdout**, and a
+command that fails writes its error to **stderr** and nothing to stdout. **Two failures therefore
+compare equal, and the comparison exits 0.** The success token is emitted by the `&&` on a diff of
+two empty streams. Nothing in the construction can distinguish *both files are identical* from
+*neither file was opened* — the absence presents as a presence at the read site, and the read site is
+a line that says the check passed.
+
+**Guard.** Before comparing two command outputs, assert each side is non-empty, or test each
+command's exit status; `set -o pipefail` does not help, because neither command is in a pipeline and
+process substitution discards their statuses. In the general form: **a comparison is only a witness
+if each operand is separately shown to exist.**
+
+**Why it is a distinct instance and not the one already recorded.** `CLAUDE.md` carries a sibling
+under the consistency-check rule — *pin `/usr/bin/grep`, not `grep`, in any script computing a
+reported count* — but that instance is about the **wrong binary** answering. This one is about
+**cwd drift making both operands vanish**, which no binary pin reaches and which is invisible to a
+reader of the command text alone: the command is correct, and its environment is not. It is the
+first recorded instance of the class arising from **tool-session state** rather than from the script.
+
+**Provenance and grade.** Self-observed, n = 1, and it was caught by **reading the output** rather
+than by any gate — then disclosed rather than quietly re-run, which is the only reason it is
+available to record. It sits at the same altitude as the other self-observed apparatus defects in
+this arc: a floor, undenominated, citable as *"one instance, this mechanism, this date."*

@@ -1,6 +1,6 @@
 ---
 name: repo-blind-reviewer
-description: Repo-blind plan/ruling reviewer (amnesiac_institution_v0_6.md §9.4). Reviews plans, clarification questions, and ruling presentations from OUTSIDE the repository - it has no tools by design. Spawn with the OQ text and plan verbatim in the prompt; must run on a different model than the spawning session.
+description: TOOL-blind plan/ruling reviewer (amnesiac_institution_v0_6.md §9.4). WebSearch only, no repo tools - but CONTEXT-SIGHTED per OQ-334: it receives CLAUDE.md, MEMORY.md and gitStatus by harness injection, which no tool restriction touches. Jurisdictions: cold-reader simulation and framing accuracy ONLY. NEVER cite it as an outside-the-framing check, and never route the method papers through it. Spawn with the OQ text and plan verbatim; must run on a different model than the spawning session.
 tools: WebSearch
 model: opus
 ---

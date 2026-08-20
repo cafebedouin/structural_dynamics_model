@@ -103,11 +103,17 @@ defects | rulings N | fresh-pass finds: N | post-impl gaps: (left blank; the exe
 hazard at its quietest. The columns are chosen so cost stays visible and cappable, and so the two
 self-feeding terms (`findings closed/opened`, `fixer-introduced defects`) are legible.
 
-**Two grammars live in this file.** A run row starts with a date; a shakedown row starts with the
-literal `shakedown:` and has no columns. Say so in RUNS.md's own header when creating it, or a later
-reader parsing by column hits a row it cannot classify. **`run-id` is `<date>-<n>`, `n` from 1 per
-day** — `date | target` collides when two runs hit one target in a day, and that pair is how the
-post-implementation session finds the line it must annotate.
+**One grammar lives in THIS file: run rows, each starting with a date.** `run-id` is `<date>-<n>`,
+`n` from 1 per day — `date | target` collides when two runs hit one target in a day, and that pair is
+how the post-implementation session finds the line it must annotate.
+
+**A second grammar exists but NOT here** (corrected 2026-08-20; as first written this note warned a
+future parser-writer about a row kind that may never appear in this file). Shakedown rows — prefix
+`shakedown:`, no columns — are written into a **clean-room** `RUNS.md` by the first-use check, which
+creates its own copy outside the repository. They reach the repository only as **audit evidence**,
+never by being appended here: the completed one is at
+`audits/2026-08-20_plan_review_shakedown/evidence/RUNS.md`. So a parser over *this* file may assume
+every row is a run row; a parser over a clean-room copy or an evidence copy may not.
 
 ## The executor prompt (part of the deliverable, not an afterthought)
 
