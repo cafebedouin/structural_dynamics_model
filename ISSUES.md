@@ -15260,6 +15260,33 @@ preferred, which is the failure this whole family is about. And **count the rows
 fired at all**: a row with no incident history is evidence about neither side, and folding it into
 either column would be the absence-satisfies-the-gate shape one level up.
 
+**Two inputs from the OQ-328 close, 2026-08-20 — neither pre-empts this walk.**
+
+1. **Row 19 carries no 11 → 12 obligation, and the reason is not convenience.** The unit-06 leak
+   was landed as §7.4 **prose**, not as a twelfth numbered row, because it is a **catch** and not a
+   self-instance: §7.4's table enumerates defects committed *inside repairs*, and a payload
+   contamination that a control caught is not one. It is the *complementary* datum — evidence the
+   control architecture does catch, just not the instrument-defect class — and carries the running
+   tally (two untracked paths, one real leak, **zero of five instrument defects**). That asymmetry
+   is a direct input to this walk: it is the same split the rule predicts, measured on controls
+   rather than on gate rows. `7.4 numbered rows` stays at **11** and needs no expectation edit.
+
+2. **A candidate self-instance was found in §7.4 itself and is DEFERRED here, deliberately
+   undecided.** §7.4 states its own gate-row population twice with different values — *"twenty-one
+   gate rows"* and, seventeen lines later, *"twenty-two"* — unmarked, undated, live count **26**,
+   inside the very sentence that registers this OQ. A claimed number disagreeing with the artifact
+   it describes is the shape §7.4's instances are made of. **Whether it becomes a twelfth numbered
+   instance is this walk's call, not the landing pass's**, and it was left undecided for a stated
+   reason: `7.4 numbered rows: 11` is itself a **value-checking gate row of exactly the class this
+   rule predicts is blind to apparatus self-instances**, so editing it in response to the instance
+   that tests it would modify a row under test. Marked and dated in the paper with the count carried
+   as-of (`26 as of 2026-08-20`); both original sentences left intact above the correction.
+
+   **Note what this candidate is, for the walk's own bookkeeping:** it was caught by a *person
+   reading the section*, not by any gate — so if it is admitted as instance 12, it lands in the
+   ten-of-eleven column, not the one-caught-by-a-gate column, and the rule's retrodictive record
+   gets one more confirming miss rather than a test.
+
 **What resolution changes.** A surviving rule is a design criterion for new gates — *state an
 invariant or expect to miss this class* — and belongs in `build_discipline.md` as a construction
 rule. A killed rule retires a sentence from §7.4 and returns the eleven instances to being a
@@ -16116,7 +16143,8 @@ publishes — analysis product only; no classification/χ effect.
 **Ω-type:** Ω_E (what the sources say, checkable by reading the crosswalk against the paper; each
 row is a paragraph whose presence or absence is a matter of fact).
 
-**Status:** open
+**Status:** resolved — all eight rows landed 2026-08-20; evidence
+`audits/2026-08-20_oq328_v04_residue/`
 **Priority:** 4
 **Deps:** splits_from OQ-309
 **Origin:** 2026-08-20, at the OQ-309 close. OQ-309's brief was the Appendix B discharge and the
@@ -16168,6 +16196,48 @@ one of those rows. The OQ-309 pass read that checker and classified every row ab
   independence claim alone needs no edit; if the amendment counts as a seventh correction, the
   phrase changes and the expectation must move with it. **The judgment of whether it is a seventh
   correction is the operator's**, not a mechanical consequence.
+
+**RESOLVED 2026-08-20 — all eight landed. Per-row disposition.**
+
+| row | landed at | form | note |
+|---|---|---|---|
+| 9 + 10 | §7.3, after the discrimination ladder | one dated block, **two-row comparison table** | landed together as the graded pair; the value is the *contrast*, and it sits entirely on the decline side |
+| 23 | §7.3, adjacent to 9+10 | dated block | phantom vs real Class B; matcher-control and finding-control are different obligations |
+| 28 (b) | §7.3, at the role rule | dated block | the role rule witnessed on a *grammar*; harmless only by an empirical accident a reuse would not inherit |
+| 8 | §7.3, anchored to *"Ordering is a correctness property here"* | dated block | placed strictly ABOVE the `### 7.4 The recursion` marker so no enumerated example can land inside the numbered-rows window |
+| 11 | §5.4, after the restated-count block | dated block | landed as the **consequence** (P6's promotion basis is a correlated count, against §7.4.1's bar), never as a restatement of §5.3's fact, and never as a seventh correction — `5.4 correction count` unmoved at 1 |
+| 19 | §7.4, after the property paragraph | dated block | stated plainly as a **catch, not a self-instance**; `7.4 numbered rows` unmoved at 11, no 11 → 12 obligation |
+| 22 row A | §6.2 cell + a dated discharge block + Appendix B `6.2` pointer row | tier mark + correction | see below |
+
+**Row 22-A did not close the way it was framed.** It was gated on an enumeration nobody had run —
+eight indices against Wu's class-A criterion. The enumeration returned the zero (0 of 8), so the
+zero is a **tested absence** in §7.8's terms and the row is now `[WITNESSED]`. But it also
+**falsified the row's stated reason**: the cell claims *"this institution has no dev/prod split of
+the relevant kind"*, and there are at least four, all in the project's own always-loaded rules, one
+silent for months (OQ-57 — a wrong-qualified call that **threw** on the suite load path and
+**silently resolved** on the pipeline path, correct-by-accident, for months; plus the worktree
+`outputs/` trap, the `[stack]` MaxEnt soft-fail, and the `Edit|Write`-only PreToolUse matcher). The
+institution has the incidents and has no index for them: **the gap is axis-level, not
+incident-level** — every member of this taxonomy indexes on a layer of the value's journey, Wu's A
+indexes on where the code is running. That is a sharper concession against the paper's interest
+than the one it replaces. Enumeration + classification:
+`audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`; ratchet retest: `A4_ratchet_retest.md`.
+
+**One instruction in the governing plan was REFUSED, and the refusal is a finding about the
+crosswalk's reliability in the other direction.** The plan reported that
+`crosswalk_v04_to_v06.md:69` and this entry's own row-11 table cell quote a phrase — *"the losses
+are independent"* — that returns 0 hits in the paper, and directed both citations be corrected.
+**The phrase is present** at §5.4, split across a hard wrap inside a blockquote; a line-oriented
+grep returns 0 and the wrap-safe normaliser returns 1. Both citations are correct and were left
+untouched. This is **wrap-trap instance 7** (the sixth of the storage-form species a normaliser closes —
+NOT item 31's paraphrase species, which holds number 6; per KNOWN_STATE 2026-08-20), occurring in the plan written to
+discharge item 31's class, with the fix prescribed four sections below the finding that needed it.
+Evidence + two-sided probe control: `audits/2026-08-20_oq328_v04_residue/phantom_quotation_refused.md`.
+
+**Third finding, landed as part of row 19's package.** §7.4 stated its own gate-row population
+**twice with different values** — *"twenty-one gate rows"* and, seventeen lines later, *"twenty-two
+gate rows"* — unmarked, undated, inside the sentence registering OQ-310. Live count **26**. Marked
+and dated in the house form with the count carried as-of, both original sentences left intact.
 
 **What resolution changes.** Eight paragraphs the paper's own manifest says it should carry. None
 is load-bearing for a published claim; the value is that the manifest walk stops having a remainder

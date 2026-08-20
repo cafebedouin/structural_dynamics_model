@@ -57,20 +57,40 @@ ones and dated the corruption.
 
 ## The finding about the plan
 
-The plan diagnoses item 31 as *"the walk's probe published a paraphrase false absence"* and calls
-its own fourth finding *"item 31's error with the sign flipped: a paraphrase false presence."*
-Observed: it is **item 31's error repeated, not flipped** — a third false absence, produced by the
-same class of instrument (a line-scoped probe over wrapped prose), inside the plan written to
-discharge item 31's class. `build_discipline.md` → *False-absence*: *"before any 'absent / can't /
-no X,' owe a positive control."* The plan's finding carried none; its verification section already
-contained the control it needed, four sections below, unapplied to itself.
+The plan calls its own fourth finding *"item 31's error with the sign flipped: a paraphrase false
+presence."* Neither half of that is right, and the project's record already carries the correct
+name for what it is.
+
+Per KNOWN_STATE 2026-08-20 (*a PARAPHRASE false absence is a distinct species from the wrap-trap
+class, and no normaliser fixes it*), false absences on this document sort into two species:
+
+| species | mechanism | does a normaliser fix it? | instances |
+|---|---|---|---|
+| **storage-form (wrap-trap)** | hard wrap, blockquote markers split the phrase | **yes** | 1–5, and **this is 7** |
+| **paraphrase** | the claim is made in other words than the probe's | **no** — it returns the same 0 while raising confidence in it | item 31 |
+
+So this is **wrap-trap instance 7** — the sixth of the *storage-form* species (item 31's paraphrase
+instance already holds the number 6 in the ledger) — the species the normaliser *does* close, missed
+because the probe never ran the normaliser. It is not item 31's error and not its inverse; it is the older,
+already-named, already-solved species, recurring in the plan written to discharge item 31.
+
+That is a sharper indictment than the plan's own framing, because the fix existed and was in the
+same document: the plan's verification section prescribes the wrap-safe normaliser explicitly, on
+the stated grounds that *"the file is hard-wrapped AND blockquoted"*, four sections below the
+finding that needed it.
+
+**Scope rule that applies here, from the same KNOWN_STATE entry:** *an absence verdict licensed by
+keyword hits alone is scoped to the keywords, and the keywords are the author's, not the
+document's.* The plan's `0 hits` was scoped to a line-oriented match, which is narrower still.
 
 **Consequence for Package C row 11 — the sign flips the other way.** The plan's row-11 hazard 1
 says *"The collision may not exist at the wording anyone has read. Do not reproduce the phantom
 quote."* The collision **does** exist at exactly that wording, so row 11's disambiguation is live
 and quotes it as written.
 
-**Prior art:** `build_discipline.md` → *Over-confident moves on the synthesis side* (1) False-absence
-— grepped `False-absence`, `positive control`, hit at `build_discipline.md` (rule present, dated
-2026-06-xx). This is a **RE-DISCOVERY** of that rule's sub-clause (c), the concept→surface mapping
-claim, at a new surface: *the surface is right and the probe's line-scope is wrong*.
+**Prior art:** grepped `build_discipline.md` for `false absence`, `wrap`, `normaliser`, and
+KNOWN_STATE for the same. Hit: *A textual probe's zero is a fact about the probe*
+(`build_discipline.md`, with its disjoint-fix table), and KNOWN_STATE 2026-08-20's correction-key
+entry naming the two species. **This is a RE-DISCOVERY**, and specifically of the *storage-form*
+half — the half that already has a mechanical fix. Recording it as a novel finding would have been
+the second error.

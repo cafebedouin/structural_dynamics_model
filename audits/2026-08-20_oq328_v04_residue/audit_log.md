@@ -52,3 +52,44 @@ A4: ratchet test re-run — `A4_ratchet_retest.md`. §14's clause re-read and ho
 deliberately not edited, because the false clause is at §6.2 and spreading the correction to a
 site that is not wrong is the ruling-lands-at-one-site failure in reverse.
 
+### 2026-08-20 — Package S, and CLOSE
+
+Package S dispositions:
+
+- **Phantom quotation: REFUSED**, not fixed. See the entry above and
+  `phantom_quotation_refused.md`. Filed as **wrap-trap instance 7** at
+  `build_discipline.md` → *A textual probe's zero is a fact about the probe*.
+  **Correction to my own first framing:** I initially numbered it instance 6; the ledger
+  already numbers item 31's paraphrase instance 6, so this is **7**, and the *sixth of the
+  storage-form species*. Corrected at all four sites in one pass.
+- **ISSUES OQ-328** → `resolved`, with the per-row disposition table, row 22-A's split
+  result, and the refusal recorded.
+- **ISSUES OQ-310** → two inputs added (row 19 carries no 11 → 12 obligation; the 21/22
+  contradiction is a *deferred candidate* for its walk, with the note that it was caught by a
+  person and so would land in the ten-of-eleven column, not the gate column).
+- **KNOWN_STATE.md** entry added, tier `correction-key`.
+- **Promotion test, run as its own pass — verdict: NO PROMOTION.** The one candidate is the
+  wrap-trap (a line-oriented probe silently returning 0 on this hard-wrapped, blockquoted
+  document). It fails the test not on silence but on siting: it is already carried at
+  `build_discipline.md:2691` with a seven-instance ledger and a disjoint-fix table, and at
+  `python/amnesiac_carriage_check.py:37` in the normaliser's own header — both sites an editor
+  of this document reaches, and the second is delivered by `known_state_status.py --file`.
+  Promoting it to CLAUDE.md would duplicate a documented rule and defeat the token purpose.
+  Bias to history, per CLAUDE.md.
+- **Router regenerated** (`omega_resolver.py index`) after the ISSUES edits.
+
+Every ISSUES/KNOWN_STATE edit in this pass was made through Bash, which does NOT fire the
+PreToolUse tripwire hook (matcher is `Edit|Write` only). `known_state_status.py --file` was
+therefore run **manually, before** the edits, on both `ISSUES.md` and the paper. It surfaced the
+2026-08-20 paraphrase-vs-wrap-trap correction-key entry, which is what corrected this pass's own
+species classification — the hook's value was realised, and only because the query was dispatched
+by hand.
+
+**CLOSE** 2026-08-20
+`git rev-parse HEAD` at CLOSE: `1e5f3e262e3f23675dae4c83d3516bf45408d2f3`
+
+**Comparison:** OPEN was `8ccace6fbd86c9a2e138a4723265ff0b21a21d98`; CLOSE is `1e5f3e262e3f23675dae4c83d3516bf45408d2f3`. **The
+stamps DIFFER, and every intervening commit is this audit's own** — `28e72378`, `393b4a3d`,
+`db06fc79`, `60e6bac0`, `1e5f3e26`, plus this closing commit. No concurrent writer. Per
+audits/README.md this is a HEAD-stamp pair whose difference is fully attributed, so OQ-297's
+falsifier does **not** fire here: there was no catch, because there was nothing to catch.

@@ -2742,8 +2742,27 @@ The two fixes are disjoint:
 
 | species | mechanism | fix |
 |---|---|---|
-| formatting (1–5) | storage form ≠ reading form | normalise, then assert expected counts at enumerated sites |
+| formatting (1–5, 7) | storage form ≠ reading form | normalise, then assert expected counts at enumerated sites |
 | **paraphrase (6)** | **the claim is present under different words; no string equals it** | **a positive control drawn from the same document — and, for an absence verdict, a read of the section the claim would live in, not only a keyword sweep** |
+
+**A SEVENTH instance, 2026-08-20 — the formatting species again, two days after the species was
+named and its fix published.** A plan for landing the OQ-328 residue reported that two citations
+quoted a phrase absent from the paper — *"the losses are independent"*, **0 hits file-wide** — and
+directed both be corrected. The phrase is present at §5.4, split across a hard wrap inside a
+blockquote: exactly variant 1 + variant 2 of the table above. Line-oriented grep returns 0; the
+wrap-safe normaliser returns 1.
+
+**What makes it worth a line rather than a tally mark.** The plan's own *Verification* section
+prescribes the normaliser, in a command block, on the stated grounds that *"the file is hard-wrapped
+AND blockquoted"* — **four sections below the finding that needed it.** The fix was not missing,
+unknown, or hard; it was present in the same document and not applied to the document's own claim.
+This is instance 5's lesson at the plan level: **the author knew both traps and reached for the
+line-oriented form anyway, because the finding felt like an observation rather than like a probe.**
+A finding is a probe. Caught by a receiver executing the instruction rather than by a reader of it
+(`build_discipline.md` → *The receiver's license to refuse*), and refused rather than complied with,
+because complying would have amended two accurate citations into inaccurate ones and dated the
+corruption. Evidence, with the refusing probe's own two-sided control:
+`audits/2026-08-20_oq328_v04_residue/phantom_quotation_refused.md`.
 
 **What caught it was a positive control, not a re-read.** The re-check that overturned the verdict
 ran its probes alongside a phrase known to be present (`"sixteen texts"`, itself wrapped and

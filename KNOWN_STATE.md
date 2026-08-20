@@ -45,6 +45,65 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — LANDED: OQ-328 resolved, all eight V04 residue rows in the paper — and row A's zero survived enumeration while its stated REASON did not
+**Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, ISSUES.md, audits/2026-08-18_appendix_b_discharge/crosswalk_v04_to_v06.md, docs/technical/swipl_load_path_and_probe_gotchas.md
+**Tier:** correction-key
+
+**All eight rows landed** (`audits/2026-08-20_oq328_v04_residue/`, commits `db06fc79`,
+`60e6bac0`, `1e5f3e26`). Rows 8/9+10/23/28(b) into §7.3, row 11 into §5.4, row 19 into §7.4,
+row 22-A at §6.2 + Appendix B. Carriage check 15/15 throughout; gate GREEN at every package
+boundary; every pinned count unmoved (`5.4 correction count` 1, `7.4 numbered rows` 11,
+`7.4 property restated` 2, `8.2 framing carried` 3).
+
+**How row 22-A's result may be cited — it split.** The zero (*§6.2's row A: no taxonomy member
+expresses Wu's class A*) is now a **tested absence** in §7.8's terms: eight indices enumerated
+against the criterion, 0 of 8 environment-indexed, and the reason is better than the row's own —
+every member of this taxonomy indexes on a **layer of the value's journey**, Wu's A indexes on
+**which machine the journey is running on**, so no member of a layer-indexed set can express an
+environment-indexed class. Cite that (axis-level) rather than *no member* (recognition).
+
+**But the row's stated REASON is falsified and must not be cited.** The cell claims *"this
+institution has no dev/prod split of the relevant kind."* It has at least four, all in the
+project's own always-loaded rules:
+
+1. **OQ-57 — suite load path vs pipeline load path.** A wrong-module-qualified call **threw** on
+   the suite path and **silently resolved** through `json_report.pl`'s user-imports on the
+   pipeline path, producing correct-by-accident drift events **for months**
+   (`swipl_load_path_and_probe_gotchas.md` §1: *"the two paths witnessed opposite behaviors for
+   the same line of code"*). This is Wu's class A almost verbatim, polarity inverted.
+2. **Fresh worktree vs main checkout** — gitignored `outputs/` makes pre-computed-value probes
+   *"read empty/stale and look fine"* (CLAUDE.md, already typed Pattern-6 there).
+3. **`[stack]` REPL vs `run_pipeline`** — MaxEnt unfitted, reads **fail soft** (OQ-66).
+4. **Edit/Write tool channel vs Bash channel** — the `PreToolUse` matcher is `Edit|Write` only.
+
+The institution has the incidents; it has no *index* for them. **The gap is axis-level, not
+incident-level.** Corrected in the paper in the house form, with the against-interest paragraph
+left intact above the correction.
+
+**A correction to the governing plan, refused rather than executed.** The plan reported that
+`crosswalk_v04_to_v06.md:69` and ISSUES OQ-328 quote a phrase absent from the paper — *"the
+losses are independent"*, 0 hits — and directed both citations be fixed. **The phrase is
+present** at §5.4, split across a hard wrap inside a blockquote; line-oriented grep returns 0,
+the wrap-safe normaliser returns 1. **Both citations are correct and were left untouched.**
+This is **wrap-trap instance 7** — the sixth of the *storage-form* species a normaliser closes;
+item 31's *paraphrase* instance holds number 6 (2026-08-20 correction-key entry below draws that line). Notable only for
+where it happened: in the plan written to discharge item 31's class, with the fix prescribed
+four sections below the finding that needed it. Evidence + two-sided probe control:
+`audits/2026-08-20_oq328_v04_residue/phantom_quotation_refused.md`.
+
+**§7.4 stated its own gate-row population twice, with different values.** *"twenty-one gate
+rows"* and, seventeen lines later, *"twenty-two"* — unmarked, undated, inside the sentence
+registering OQ-310, live count **26**. Marked and dated with the count carried as-of; **whether
+it is a twelfth §7.4 self-instance is deferred to OQ-310** and deliberately not decided at the
+landing, because `7.4 numbered rows: 11` is itself a value-checking gate row of exactly the class
+the rule under test predicts is blind to self-instances.
+
+**Row 19 carries no 11 → 12 obligation.** The unit-06 leak was a **catch**, not a self-instance
+— §7.4's table enumerates defects committed inside repairs — so it landed as prose with the
+running tally (two untracked paths, one real leak, **zero of five instrument defects**).
+
+---
+
 ## 2026-08-20 — TRIPWIRE: "no session log exists" is true of the REPO and false of the harness — 110 transcripts sit outside it, and KNOWN_STATE.md is a DAY log
 **Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, KNOWN_STATE.md, ISSUES.md
 **Tier:** tripwire
