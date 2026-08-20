@@ -1,0 +1,29 @@
+# Gate checks  [interpreter: /home/scott/bin/structural_dynamics_model/.venv/bin/python]
+  ✓ python env       python env: GREEN — interpreter .../.venv/bin/python (py3.12.3); 15 third-party import(s) required, 0 missing, 1/1 declared-optional absent, 3/3 hook scripts stdlib-only, 0 unparseable
+  ✓ python env st    python_env_check selftest: OK (12/12 controls)
+  ✓ issues_status    332 parsed, 0 malformed
+  ✓ omega check      0 problems
+  ✓ omega selftest   selftest: all positive controls fired (10/10)
+  ✓ omega index      index --check: fresh (332 rows, 129 active / 203 archive)
+  ✓ spec enums       spec_enum_check: GREEN — 8 enums in sync (selftest 3/3 red-capable)
+  ✓ doc patterns     doc_pattern_check: GREEN — 8 indices, 0 declared collisions — every index compared, nothing exempted (OQ-278 ruled 2026-08-17); names checked CLAUDE.md vs BD headings, spine table index-set only; selftest 7/7
+  ✓ bound selector   bound_selector_check: GREEN — 4458 files, 1 cut-ordered predicate(s) registered, 2 exemption(s), 8 declared path exclusion(s) (.claude, .git, .venv, archives, audits, node_modules, outputs, testsets), selftest 11/11
+  ✓ dispatch head    dispatch_head_check: GREEN — 126 engine files, 49 shape hit(s) all declared (49 declared + 3 must-not-fire), 0 file(s) with read errors, selftest OK
+  ✓ codewalk caller  codewalk_caller_check: GREEN — 53 registry spec(s) (1 latent-B), 99 loaded module(s), 1662 traced goal(s), 52 resolved / 1 unresolved, controls two-sided (fires dr_type/3 bound=20, declines constraint_signature/2 sites=29 bound=0); 1 adjudicated allowlist row(s) (epistemic_access_check/2@['true']); 1 declared load exclusion(s) under evaluate(true) (json_report.pl), 1 row(s) recovered at evaluate(false) as converts-clean-minus-dataflow; declared blind spots: unloaded-modules (walks the [stack] program only; unresolved rows reported, not scored 0); embedded-goal-strings (python/shell literals — the regex arm's territory); runtime-bound selectors (`member(T,Ts), p(C,T)` and helper-predicate output read as free; unification-bound selectors DO resolve, via prolog_codewalk evaluate/2); output-not-last (last argument assumed to be the output, per dispatch_head_check.pl:9-11); selftest OK
+  ✓ displaced cites  pattern_citation_check: GREEN — declared consumers of displaced members — 'bound-probe' (renumbered 3 -> 7): 19 declared citation(s) across 9 files; 'destructive-replace' (vacated): SWEPT CLEAN, 0 remaining; selftest 5/5
+  ✓ module bounds    module_boundary_check: GREEN — 181 engine files, 105 modules, 737 bypass site(s) over 99 predicate(s), all declared in 117 allowlist row(s); arms C/F/G scanned leg(s): testsets, testsets_haiku, testsets_flash, testsets_kimi, testsets_sonnet (40 schema heads over 4205 story files); register 63 declared predicate(s) / 63 schema_shape row(s); 0 stale-row note(s); 1 unwired schema predicate(s) watched (flat_control_of/2); selftest 50/50
+  ✓ claim cites      claim_cite_check: 68 live citation(s), 18 recorded (superseded, not checked), 6 section-only in docs/ + 17 in apparatus (UNPINNABLE, declared class — counted, not checked)
+  ✓ claim cites st     PASS  checker's own fixtures are records, not live citations (no self-fire)
+  ✓ known_state      322 entries parsed, 0 problems
+  ✓ axis boundary    [AXIS-SELFTEST] ALL PASS
+  ✓ audit cites      ERRORS: 0
+  ✓ paper carriage   amnesiac carriage check: GREEN — 15 carriage invariants asserted (expected counts published in the manifest); selftest 6/6, every plant verified to land
+  ✓ audit writeup    audit writeup gate: OK (199 dirs, 31 enforced, 0 problems)
+  ✓ apparatus        apparatus: catch-rate 23L/2l/0n of 25 bits (25 of 74 writeups carry one; forward-only from 2026-08-10) — NO DECLINE EVER RECORDED: readout not yet interpretable (OQ-276); ledger 0 open / 0 closed (informational); channel 33/33; GREEN
+  ✓ gap surfaces     gap surfaces check: 3/3 human surfaces distinguish no_gap vs undetermined (self-test OK)
+  ✓ sunset           sunset check: GREEN — 1 allowlist REVIEW-BY + 1 active ISSUES Sunset tracked, 0 due; selftest 5/5
+  ✓ cli selftest     cli selftest: OK (262 commands across 17 groups)
+  ✓ tripwire hook    SELFTEST GREEN
+  ✓ oq277 freeze     prereg freeze: GREEN — stamp verified; selftest 7/7
+
+GATE: GREEN

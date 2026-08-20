@@ -1,0 +1,6 @@
+# Phase 0 gate, 2026-08-20, HEAD 58039b6a — GREEN, 26 rows.
+# Full run pasted in the session; the two Phase-0 assertions:
+#   /usr/bin/grep -c '^run ' scripts/gate.sh          -> 26
+#   git diff 22a8b5b3 HEAD -- python/amnesiac_carriage_check.py -> EMPTY (expectation set unmoved)
+#   md5(scripts/gate.sh) = 3ad2911661e76dfe9383ec74d94fd1e4
+GATE: GREEN
