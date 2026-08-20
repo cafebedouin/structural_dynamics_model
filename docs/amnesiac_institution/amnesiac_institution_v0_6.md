@@ -1580,7 +1580,7 @@ part.
 
 | Wu's class | This paper's nearest | Assessment |
 |---|---|---|
-| **A** — environment and platform quirks (dev green, prod silent) | *no member* | A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
+| **A** — environment and platform quirks (dev green, prod silent) | *no member* | **[WITNESSED]** (2026-08-20, enumerated — see the correction below, which also retires this cell's second sentence). A genuine gap. This institution has no dev/prod split of the relevant kind; its analogue is regime boundaries and corpus resets, which the trifurcation types as Type A drift (§2.8). A shape one taxonomy expresses and the other cannot. |
 | **B** — design-assumption mismatch; tests mirror the assumption rather than the caller | P1, plus §7.3's tautological-witness rule | **[PROPOSED]** Strong. Wu's fixtures laid out per the same wrong assumption is this paper's *consistency check is not a discrimination check*. |
 | **C** — error swallowing and dilution | P6 | **[PROPOSED]** Strong and near-verbatim: Wu's alert reaching a human with zero actionable bits after three layers each stripped cause is this paper's `grep -v Warning` suppressing a fatal warning for four months. |
 | **D** — chained hallucination and fabrication (*fail-plausible*) | P4 (fabricated default) | **[PROPOSED]** **The strongest convergence in the comparison.** Wu's D3 — a fallback that emitted leftover headings as review content and wrote a success flag unconditionally — is this paper's `[] → 0.0` fallback emitting a value byte-identical to a measured flat gradient (§5.3). Wu's gloss, that a fallback path manufacturing plausible-shaped output is a hallucination implemented in shell, is arrived at independently and says exactly what `CWC:C1@8475dc95` says. |
@@ -1606,6 +1606,49 @@ concession that Wu expresses a defect shape this taxonomy cannot — and this pa
 was running a correction the other way (§11: the correction history revised upward, from three to
 six). Its honest tier is arguably WITNESSED, which under §0's own rule owes an Appendix B manifest
 row. Tracked at ISSUES **OQ-328**.
+
+> **The deferral is discharged, and the enumeration falsified half the row (2026-08-20).** The
+> paragraph above stands as written and is superseded on two points. Row A asserted a zero — *no
+> member* — and §7.8 requires every cited zero be classified before it is cited; nobody had
+> enumerated. Eight indices have now been walked against Wu's class-A criterion
+> (`audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`).
+>
+> **The zero holds, and its reason is better than the one given.** Zero of the eight indexes on
+> environment — but not because the shapes are missing. Every member of this taxonomy indexes on a
+> *layer of the value's journey* (production, identity, value, gating, composition, dispatch,
+> reporting), which is what §5.1 says it is: one mechanism surfacing at seven layers. Wu's A indexes
+> on a different variable — **which machine the journey is running on**. No member of a
+> layer-indexed set can express an environment-indexed class, and that is a checkable statement
+> where *no member* was a recognition. The zero is a **tested absence** in §7.8's terms, and the
+> row's honest tier is **[WITNESSED]**, marked above.
+>
+> **What does not survive is this row's stated reason.** The cell says *"this institution has no
+> dev/prod split of the relevant kind."* It has at least four, all named in the project's own
+> always-loaded rules, and at least one silent for months: a wrong-module-qualified call that
+> **threw** on the suite load path and **silently resolved** on the pipeline path, producing
+> correct-by-accident output for months (OQ-57); a fresh worktree whose gitignored `outputs/` makes
+> pre-computed-value probes *"read empty/stale and look fine"*; a `[stack]` REPL load that leaves
+> MaxEnt unfitted with reads that **fail soft**, so a probe measures nothing while a placeholder
+> makes the nothing look like a result (OQ-66); and a `PreToolUse` matcher scoped to `Edit|Write`,
+> so an edit made through the shell *"produces the same silence as a clean query."* The institution
+> has the incidents; it has no index for them. **The gap is axis-level, not incident-level** — which
+> is a sharper concession against this paper's interest than the one it replaces, and it is why the
+> against-interest reasoning above is kept rather than deleted.
+>
+> **The criterion's own instability, carried with the result.** Wu's class A is VERDICT-INELIGIBLE
+> under the pinned granularity rule — n=1 under his catalog index, n=4 under his dataset index — so
+> the same self-disagreement that retired the RQ2 Wu limb lands on this exact row. The enumeration
+> is against a criterion whose *extension* is unstable; its *intension*, environment-indexed, is
+> not, and the enumeration turns only on the intension.
+>
+> **A named read-site, per §7.8's ratchet repair.** §14 records that RQ2's stated falsifier is now
+> carried by the Advani limb and by this row alone. An undated trigger owes a stated pointer where
+> its plausible reviver will actually be standing, so this row now carries an Appendix B pointer row
+> (§6.2), which is where a reader auditing witnessed claims stands. The falsifying branch fires when
+> **a member of this taxonomy is shown to index on environment rather than on layer** — observed by
+> whoever next walks §5.1's table against an external environment-indexed class, at the Appendix B
+> row that names the enumeration.
+
 
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
 his silent failures were caught by a human reading the system's actual output rather than by tests,
@@ -3232,6 +3275,7 @@ path component, and the census pipes grep into a positional parse.
 | 5.4 | Blinded escape check | 8 drawn, 6 candidate hits, 0 confirmed, calibration arm closed unresolved (k = 0 NO-UNIT across n = 22) | audit record of the escape stratum (`audits/2026-08-10_oq277_rq2_crosscoding/`). **Not re-run: this is a frozen draw, not a command** — re-running would be a new draw, not a re-measurement |
 | 5.4 | Census false-positive rate (the precision direction, measured for the first time) | **13 / 83 numerator members are hygiene-only (15.7%)** | `audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py`. A *hygiene-only* directory is one whose every keyword hit is the contrastive form *"recorded rather than silently dropped"* — the author describing their own reporting discipline, not a defect found. Two-sided control: 5 fire, 8 decline, all lines drawn from the corpus. **This measures ONE precision failure mode**; a second (bare `was never` in ordinary prose) is visible in the raw hits and unmeasured, so 15.7% is a floor |
 | 5.4 | Pooled value — **retained for findability, NOT reportable, and here is why** | 83 / 185 = 44.9% (was 73/174 = 42% at 2026-08-10) | same command. **Why it is not a summary:** it pools a rate that is *non-stationary* over the interval it pools — 36.7% / 57.8% / 80.0% across the three windows above — so the ratio is a mixture whose value tracks the denominator's age distribution as much as the record. Concretely: it rose 42% → 45% between 2026-08-10 and 2026-08-18 on growth alone, with every command unchanged and nothing about the world different. Retained so the movement stays attributable (+11 directories, 10 into the numerator, 0 removed) and so a reader arriving with 42% or 45% in hand has somewhere to land. **A bare "not a summary" marking would be exactly the unqualified label §5.4 spent three narrowings learning to distrust** |
+| 6.2 | Class-A gap — taxonomy members expressing Wu's *environment and platform quirks* | **0 of 8 indices**, on an axis-level reason: all eight index on a layer of the value's journey, Wu's A indexes on where the code is running | the enumeration at `audits/2026-08-20_oq328_v04_residue/A1_classA_enumeration.md`, **as of 2026-08-20**. **This is a pointer, not a command, and is marked as one** — the eight indices are enumerated in §5.1's own table, which is the checkable form. Same species as the 55% Wu self-agreement figure (§14): derived by hand from published material, regenerated by no repository command. It takes a pointer row rather than that precedent's no-row form because §7.8's repair for an undated trigger is a named read-site where its plausible reviver will be standing, and this appendix is that site. Caveat carried: Wu's class A is itself VERDICT-INELIGIBLE (n=1 catalog index / n=4 dataset index), so the criterion's extension is unstable; the enumeration turns on its intension only |
 | 7.4 | Apparatus self-instances | **11** across two independent passes (8 from one ~36h arc, 2 from the 2026-08-18 discharge); **1 caught by a gate** | the sessions' records. **This is a pointer, not a command, and is marked as one**; the eleven are enumerated in §7.4's own table, which is the checkable form. Cross-checked 2026-08-18: the table carries 11 numbered rows. The single gate catch is instance 11, refused by the census frame's `partition_check` |
 | 8.5 | Memory content files before / after | 113 / 53 (114 / 54 incl. the index) | after: `ls <memory>/*.md \| wc -l`; before: `tar tzf memory_pre_prune_backup_20260810.tar.gz \| grep -c '\.md$'` |
 | 8.5 | Deleted / merged | 25 deleted; 45 merged into 10 cluster files + 2 absorptions | **The stated method was a consistency check that cannot fail** — 113 − 25 − 45 + 10 = 53 balances by construction if the terms were derived from one another. Replaced 2026-08-18 by a **name-level set diff** of the backup listing against the current one, which can: 70 names gone (= 25 + 45), 10 names new **and all ten named**, 44 surviving; 114 − 70 + 10 = 54. The figures hold under the discriminating check |
