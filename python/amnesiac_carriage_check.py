@@ -119,7 +119,7 @@ EXPECTATIONS = [
      "§7.4's recursion table enumerates eleven instances — ANY integer row counts, so a "
      "twelfth is caught rather than ignored by a too-narrow alternation",
      lambda raw: len(re.findall(r"(?m)^\| \d+ \| ",
-                                section(raw, "### 7.4 The recursion", "#### 7.4.1 "))), 11),
+                                section(raw, "### 7.4 The recursion", "#### 7.4.1 "))), 12),
     ("7.4 gate catch",
      "exactly one §7.4 instance names a gate as its catcher",
      lambda raw: len(re.findall(r"(?m)^\| 11 \| .*partition_check", raw)), 1),

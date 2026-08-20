@@ -643,9 +643,12 @@ where a compression crosses without its framing.
 **And the workforce is constitutionally better at recognition than at enumeration.** Fluent
 completion over available context is what the substrate does well and cheaply. Counting the
 directory, re-running the command, and comparing a claimed number against the artifact it describes
-is what it does unreliably unless made to. §7.4's central finding — that ten of eleven apparatus
-defects was caught by a gate, and every one was caught by a person or script comparing a claimed
-number against the artifact — is this asymmetry showing up as an operational fact.
+is what it does unreliably unless made to. §7.4's central finding — that only one of twelve
+apparatus defects was caught by a gate, and eleven were caught by a person or script comparing a
+claimed number against the artifact — is this asymmetry showing up as an operational fact.
+(The sentence previously read *"ten of eleven apparatus defects was caught by a gate"*, which was
+both ungrammatical and false: it is a residue of the pre-instance-11 wording *none was caught by a
+gate*, half-edited when instance 11 broke the streak. Corrected 2026-08-20 at OQ-310's close.)
 
 The conclusion, and the reason this is offered as derivation rather than local craft: **in an
 institution of this kind the scarce resource is not storage, compute, or verification depth. It is
@@ -757,7 +760,7 @@ consolidation table with an explicit totals row — and the defect was that the 
 *itself* a compression with its own unstated framing (the totals row disagreed with the table
 beneath it; the drift list reported 12 changed sources when 2 had changed). Declaring Π produces a
 new artifact with a new Π. **The remedy is therefore not self-terminating, and §7.4.1's finding —
-that ten of the eleven were caught by someone comparing a claimed number against the artifact —
+that eleven of the twelve were caught by someone comparing a claimed number against the artifact —
 is the shape of what actually terminates it: not a declaration but a re-derivation.**
 
 So the honest scope of the unification, stated at the altitude the control licenses: **the account
@@ -1681,7 +1684,7 @@ row. Tracked at ISSUES **OQ-328**.
 Three of Wu's cross-cutting findings bear directly on this paper's open questions. Roughly 70% of
 his silent failures were caught by a human reading the system's actual output rather than by tests,
 health checks, or governance audits, all of which stayed green — which is the same shape as §7.4's
-finding that ten of eleven apparatus defects were caught by a person or script rather than a gate. A retrospective audit of 15
+finding that eleven of twelve apparatus defects were caught by a person or script rather than a gate. A retrospective audit of 15
 incidents found a 0% ex-ante prevention rate and an 87% ex-post regression-blocking rate, supporting
 the position that audit is a regression engine rather than a prediction engine — which is the
 strongest available external evidence bearing on this paper's RQ4 and on §10.4's withdrawn
@@ -2016,16 +2019,17 @@ month produced two more, one of which was caught by a gate.**
 | 9 | the same manifest | its summary sentence preserved both a wrong figure *and* its correction, in different grammatical roles | a second reader |
 | 10 | a trial driver written to persist raw responses *before parsing*, so a scorer defect could be repaired without re-spending | the re-scoring step imported the driver to reuse its scorer, executing its module-level entry point — two fresh calls, and the persisted responses overwritten | noticing the response files had changed |
 | 11 | a census re-run built to re-witness the incidence figure | the pass's own audit-index row put the census's keywords into `audits/README.md`, which the positional parse admitted to the numerator as a non-directory | **the frame's `partition_check` integrity line, printing `186 == 185` — a gate** |
+| 12 | §7.4 itself, registering **OQ-310** — the walk built to give this rule its first non-retrodictive witness | the registering sentences state the gate-row population twice, seventeen lines apart, with different values (*"twenty-one"*, *"twenty-two"*), neither matching the artifact (26 at 2026-08-20) | a person reading, 2026-08-20; admitted as an instance at OQ-310's close |
 
-**The property of the set, restated 2026-08-18: ten of the eleven were caught by a person or a
-script comparing a claimed number against the artifact it described** — a diff, a directory listing,
+**The property of the set, restated 2026-08-20 over twelve: eleven of the twelve were caught by a
+person or a script comparing a claimed number against the artifact it described** — a diff, a directory listing,
 a file count, a re-read. Through v0.6 the property was *none was caught by a gate*, over nine
 instances. **Instance 11 breaks it, and the break is worth more than the streak was.** A structural
 integrity line — *the two strata must partition the population exactly* — refused a numerator that
 had silently acquired a member which was not a directory. The count alone would have read as one
 more audit; the partition check is what could not be satisfied. So the honest property is now: **a
 gate catches this class exactly when the gate asserts a structural invariant rather than checking a
-value**, and ten of eleven instances had no such invariant available to violate.
+value**, and eleven of twelve instances had no such invariant available to violate.
 
 > **A catch, recorded so it is not mistaken for a twelfth row (added 2026-08-20).** The property
 > above counts what the eleven instances were caught *by*. Its complement is what the control
@@ -2052,7 +2056,8 @@ value**, and ten of eleven instances had no such invariant available to violate.
 only if it asserts an invariant the defect cannot satisfy; a gate that checks a value against an
 expectation does not.* **Falsifier, either direction: a value-checking gate that catches a
 self-instance, or an invariant-asserting gate that misses one.** This is cheap to attack — the
-repository runs twenty-one gate rows, and most of them check values.
+repository runs twenty-one gate rows, and most of them check values. **Both halves of that
+sentence were wrong when written, and OQ-310 measured how: see the walk's result below.**
 
 **A third witness was already sitting in the pass that produced instances 10 and 11, unnoticed until
 the rule named what to look for.** The V04 manifest's item-count check ran green for a week against
@@ -2061,7 +2066,10 @@ a documented figure it did not match, and the pass's own closing verification bl
 three are **value checks**, and all three missed. The census's `partition_check` is the only
 invariant in the set, and it is the only one that caught anything.
 
-**The rule has zero non-retrodictive witnesses, and one candidate was checked and rejected.** When
+**The rule has zero non-retrodictive witnesses, and one candidate was checked and rejected.**
+*(Written 2026-08-18. Superseded 2026-08-20 by OQ-310, which found one — see* **The walk, and what
+it returned** *below. The paragraph is kept as written because the standard it applies to its
+candidate is the thing OQ-310 had to re-examine.)* When
 the instrument built to replace that verification block was itself found defective — its selftest
 fixtures silently failing to perturb the document they claimed to damage — the catch looked at first
 like a forward confirmation. It is not. The assertion that caught it (*"deleting an expectation must
@@ -2070,12 +2078,53 @@ authored under §7.3's standing two-sided-control discipline **before** this rul
 would have been written identically had the rule never existed. Counting it would be helping
 oneself. So the position is: eleven instances, three retrodicted misses, **no prediction yet tested**
 — and the falsifier above is cheap. The repository runs twenty-two gate rows, most of them value
-checks, and the rule says every one of them is blind to this class. Walking them is a short pass and
+checks, and the rule says every one of them is blind to this class. **That premise is false of the
+artifact, and the walk is what established it — see below.** Walking them is a short pass and
 is registered as ISSUES **OQ-310**; it either hardens the rule or kills it while it is still small
 enough to kill cheaply. In the vocabulary of `CWC:E1@911a4db5` — borrowed for its distinction, not leaned on for its generalization, whose one prediction was run and withdrawn as a test of it — every rescue was a **forced
 enumeration**, and every miss was a **recognition** that passed. The recursion does not terminate in
 a deeper instrument, because a deeper instrument is another claim. It terminates in someone
 counting.
+
+**The walk, and what it returned (OQ-310, executed 2026-08-20,
+`audits/2026-08-20_oq310_gate_row_walk/`).** Neither half of the falsifier fires, and the rule
+gains **one** witness — but the walk also falsified the sentence two paragraphs up.
+
+*The witness.* On 2026-08-19 the `apparatus` gate row went RED on a `WRITEUP.md` whose catch bit
+was written `**Fired:** **latent** — …`: the bit was **present and unparseable**, and the row was,
+in that audit's own words, *"the only thing that noticed."* The catching arm
+(`apparatus_instrument.py:118-127`) partitions *parseable / present-but-unparseable / absent* by
+construction — the loose pattern is the strict pattern's prefix — so a malformed bit cannot satisfy
+it by any route. That is an invariant, not a value check. **The instrument was authored 2026-08-10,
+eight days before this rule existed; the incident occurred one day after it.** The candidate
+rejected above was authored the *same day* as the rule, in the pass that produced it; this one
+cannot have been written to satisfy a rule that did not yet exist. Scoped honestly: it is an
+invariant over the bit's **grammar**, not over its truth — a well-formed bit carrying the wrong
+token still passes. Grade: a natural catch on an unrelated defect, the top of §7.3's ladder.
+
+*The falsification the walk did produce, against this section rather than against the rule.* **The
+population is invariant-dominated, not value-dominated.** Of 26 exit-coded gate rows: **18
+invariant-asserting, 7 mixed, 1 clean value check** — and that one is `amnesiac_carriage_check.py`,
+the checker written for this section, whose own docstring titles it *"an INVARIANT-asserting
+carriage check"* ten lines above describing itself as asserting *"the expected number of hits."*
+So *"most of them check values"* is false of the artifact, in the same section, on the same
+subject, for the third time. The audit-local stratum runs the other way — 117 of 141 printed
+integrity lines are value checks — so the two strata have **opposite** distributions, which
+nothing here anticipated.
+
+*A cell this rule has no room for.* An invariant-asserting instrument **false-fired**: the
+frozen-corpus fingerprint in `audits/2026-08-19_oq242_absence_semantics/` hashes `md5sum`'s output
+lines, which carry path strings, and a relative-versus-absolute mismatch produced a spurious
+*"corpus moved"* reading. The rule is stated over detection — catch or miss — and says nothing
+about an invariant that fires wrongly.
+
+*And the enforcement half, which the walk found by having its prediction come out backwards.* The
+pass pre-registered that if the exit-coded stratum returned nothing and `partition_check` caught
+something, the rule would survive as *legibility rather than enforcement*. The reverse happened:
+the exit-coded stratum produced the witness, while `partition_check` — still a non-exiting `echo`
+— printed `186 == 185` and needed a person to read it. Both are invariants; only one was
+unmissable. **So the rule's operational form is: state an invariant *and exit on it*. The
+invariant is what makes the failure legible; the exit code is what makes it unmissable.**
 
 > **Correction marked (2026-08-20) — this section states its own population twice, with different
 > values, and neither is current.** Seventeen lines apart, the falsifier's cheapness is priced first
@@ -2090,9 +2139,19 @@ counting.
 > population; a claimed count that disagrees with itself and with the artifact it describes is the
 > shape this section's instances are made of, sitting inside the registration of the test built to
 > give the rule its first non-retrodictive witness. Whether it becomes a twelfth numbered instance
-> is **deferred to OQ-310's close and is not decided here.** Deciding it now would edit a row under
-> test in response to the instance that tests it: `7.4 numbered rows: 11` is itself a value-checking
-> gate row, of exactly the class the rule predicts is blind to apparatus self-instances.
+> was **deferred to OQ-310's close** — deciding it earlier would have edited a row under test in
+> response to the instance that tests it, `7.4 numbered rows: 11` being itself a value-checking gate
+> row of exactly the class the rule predicts is blind to apparatus self-instances.
+>
+> **RULED 2026-08-20 at that close: ADMITTED as instance 12.** It passes the pass's frozen screens
+> (it is a defect, not a threshold breach; it is a self-instance, not a substrate one), and the
+> objection that it *"only adds a confirming miss rather than a test"* is about evidential value,
+> not membership — this table enumerates observed instances, and dropping a genuine member because
+> it does not help is the selection this paper warns about. Row 19's unit-06 leak stayed out on the
+> opposite ground and remains out: it is a **catch**, not a self-instance. The forced edit to
+> `7.4 numbered rows` (11 → 12) was landed in its own dated commit **after** OQ-310's classification
+> was frozen and all scoring was complete, with that classification's md5 recorded beside it, so the
+> edit provably could not have moved the result.
 
 
 > **The denominator, stated.** Eight of the eleven come from a **single arc**: one operator, one
