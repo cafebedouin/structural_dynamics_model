@@ -13060,7 +13060,13 @@ actually deliverable.
 **Ω-type:** Ω_C — which document owns the derivation is an authorial ruling with no seat-free fact.
 The *existence* of the duplication is Ω_E and is settled below.
 
-**Status:** open — **BOTH LIMBS DISCHARGED 2026-08-20; one routed-back ruling is all that remains.**
+**Status:** resolved — **BOTH LIMBS DISCHARGED 2026-08-20, and the routed-back ruling is RULED
+(operator, same day): amend `concealment_..._v0_4.md:34`, and the extraction prompt's prohibition
+does not bind the amender.** One declared residue survives the close and is NOT a live limb: if a
+copy of concealment v0.4 has left the repository, the repo copy now diverges from the circulated one
+and owes a header note — **the repo cannot settle that and the operator holds the fact** (below).
+Prior status text, for the record:
+**~~open~~ — BOTH LIMBS DISCHARGED 2026-08-20; one routed-back ruling is all that remains.**
 Pass A closed the derivation fork 2026-08-13/14; **Limb 2** was discharged by the R-A/R-B/R-C ruling
 below (review date 2026-09-14 retired with its reason); **Limb 1** landed the same day —
 `docs/practice/practice_paper_v0_1.md`, canonical per `docs/practice/README.md`, with v0.6 §2.8/§2.9
@@ -13068,7 +13074,8 @@ now the superseded side carrying forward pointers. Deliberately **`open`, not `r
 landing falsified a sentence in an externally-destined document and **only the operator may rule on
 it** (below). `open` is what surfaces it on `[NEXT]`; `resolved` would close the entry over a live
 question, and `mitigated` would hide it — the frontier lying by omission.
-**Deps:** blocked_on_human cwc-v04-line-34-stale-pending-sentence
+**Deps (dropped on close):** was `blocked_on_human cwc-v04-line-34-stale-pending-sentence`; **ruled
+2026-08-20** (operator) — amend. No reciprocal edge existed to sweep.
 **Priority:** 2
 
 **UNBLOCKED 2026-08-17.** `blocked_on OQ-278` cleared — OQ-278 resolved, so **Limb 1's section III
@@ -13206,20 +13213,59 @@ their letters, so the already-sent letter's `§2.9(b)` citation still resolves.
 > the test arm alone each is indistinguishable from the deletion having worked. That is the argument
 > for the arm.
 
-> **ROUTED BACK — THE ONE THING ONLY THE OPERATOR MAY RULE. `blocked_on_human`.**
-> `docs/concealment/concealment_without_a_concealer_v0_4.md:34` describes v0.6 §2.8/§2.9 as
-> declared-temporary ***pending the practice paper***. **Limb 1's landing makes that sentence
-> false**, in an externally-destined document the extraction prompt forbids editing.
+> **RULED 2026-08-20 (operator) — AMEND, and the prohibition does not bind the amender.**
+> `concealment_without_a_concealer_v0_4.md:34` described v0.6 §2.8/§2.9 as declared-temporary
+> ***pending the practice paper***; Limb 1's landing made that sentence false. **Amended.**
 >
-> **The ruling: amend the line, or accept a knowingly-stale sentence in a published artifact.**
-> It was **not** silently repaired — a silent repair leaves the defect in the *design*, where it fires
-> on the next receiver, and the licence-to-refuse says to report at the volume of a completion and
-> route back. The line number drifts; locate by content:
-> `grep -n 'declared-temporary' docs/concealment/concealment_without_a_concealer_v0_4.md`.
+> **Two things narrowed the question more than the routing framing suggested, and both are the
+> ruling's reasons rather than its conclusion.**
+>
+> **(1) The edit is ARRANGEMENT, not content.** V7 had already classified `:34` in the same breath
+> that flagged it — it *"names the destination, not the content"* — which puts it with `:5`, `:27`
+> and `:1158`, the provenance lines, and **outside everything concealment v0.4 is canonical for**.
+> Repointing it touches no claim, no digest, and no reviewed argument. The routing was right; the
+> *altitude* at which it was routed was too high, and V7's own classification was the evidence.
+>
+> **(2) The prohibition is RECEIVER-SCOPED, and this misread has now been caught TWICE.**
+> `EXTRACTION_PROMPT.md` §1b forbids **the receiver** editing concealment v0.4 *while executing the
+> extraction* — a write-lock during a task, not a property of the file. **This is structurally
+> identical to the `:242` "pointer-only edits, which is all v0.6 admits" question this very entry
+> resolved on 2026-08-17**: a task-scoped restriction read as a global freeze, in the same prompt,
+> about the sibling paper. Recorded as a *pair* rather than as two incidents, because **the third
+> occurrence is the one nobody will notice** — a task-scoped restriction is exactly the kind of rule
+> that reads as global when quoted without its task, and both catches so far were made by the
+> operator, not by the instance reading it.
+>
+> **Why accepting the stale sentence was the weaker branch, and not on tidiness grounds.**
+> *"Pending the practice paper"* does not **age** — it becomes **affirmatively false**, telling an
+> external reader the practice paper does not exist. That is a staleness-ladder instance in the
+> document set that teaches the staleness ladder, the same shape as v0.6 §14's underpriced weekend.
+>
+> **DECLARED RESIDUE — the circulation question, which the REPOSITORY CANNOT SETTLE.** If a copy of
+> v0.4 has left, R-A applies to it exactly as it applied to the Wu letter: the repo copy now diverges
+> from the circulated one, and the amendment owes a header note recording that circulated copies
+> carry the pre-landing sentence — riding to the next version bump, not papered over. **Three facts,
+> and the third is the one that matters:**
+> - The circulation **GO ruled 2026-08-19 covers `amnesiac_institution_v0_6.md` only** (OQ-309:
+>   Appendix B + the V04 manifest). **No GO and no send is recorded for concealment v0.4 anywhere.**
+> - OQ-309's *"no recipients"* attestation **forecloses its own reuse in its own text**: *"A fact
+>   about 2026-08-12, not a standing property… if the question returns, it returns **live**, not
+>   pre-ruled moot,"* and it is *"an attestation, not a checked distribution log."* It is also about
+>   a different paper.
+> - **The repository holds no distribution log at all.** Positive control run 2026-08-20: the probe
+>   *does* find a circulation-status line where one exists — `LETTER_2026-08-11_wu.md`'s annotation
+>   header — and that letter is the **only** artifact in the repo carrying one. **So the absence for
+>   v0.4 means the repo has no channel for this fact, not that nothing was sent.** "I didn't find it"
+>   is a fact about the search.
+>
+> A `**Circulation:**` note was therefore added to v0.4's header stating what is *recorded* rather
+> than what is *true*, so the next reader asking "has this gone out / may I edit it" gets an answer
+> or an explicit "unrecorded" instead of re-deriving this paragraph. **That reader is named and the
+> decision is named** — it is the question that blocked this five-minute commit.
 >
 > *Found by the standing check running BEFORE it was written down (Limb 2's V7), not by tripping over
-> it after the fact — which is the only reason it is a ruling now rather than a stale sentence
-> discovered by a reader later.*
+> it after the fact — which is the only reason this was a ruling in time rather than a false sentence
+> discovered by an external reader later.*
 
 **DECLARED RESIDUALS FROM PASS A — none is checkable** (detail: `WRITEUP.md` → *Declared residuals*):
 R1 `COVERAGE_DIFF.md`'s coverage calls are unverified and pre-`C1` — *the re-check verifies the

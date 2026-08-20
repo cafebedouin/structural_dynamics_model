@@ -107,9 +107,17 @@ if fewer, a marker was dropped. `audits/2026-08-13_oq287_defork/checks.sh` row 3
 |---|---|---|
 | §7 (witness calculus), §7.3 (positive controls), §7.5, §7.6, §7.7 | II and V | |
 | §7.4 / §7.4.1 (the recursion) | **IV** | for the count, see §6 — **re-derive it, never copy it** |
-| §7.8 (two shapes found by ruling in bulk) | II and V | *added 2026-08-19, after this map was frozen.* Routed by **INHERITANCE from §7, not by a ruling** — flagged so the operator can override rather than have the call hidden |
+| §7.8 (two shapes found by ruling in bulk) | II and V | *added 2026-08-19, after this map was frozen.* **RULED 2026-08-20** (operator): draws on, by inheritance from §7 |
 | §8 (memory economy), §9 (organizational form), §10 (self-instrumentation) | II and V | |
-| §9.4 (the ruling pass) | II and V | *added 2026-08-19, after this map was frozen.* Routed by **INHERITANCE from §9, not by a ruling** — same flag |
+| §9.4 (the ruling pass) | II and V | *added 2026-08-19, after this map was frozen.* **RULED 2026-08-20** (operator): draws on, by inheritance from §9 |
+
+> **§7.8 and §9.4 are RULED, not flagged (operator, 2026-08-20).** They landed after this map was
+> frozen and were first placed here by inheritance from their parents, carrying an
+> override-me flag. The operator ruled the inheritance correct and **converted the flag to a ruling**,
+> on the reason that V7 settled the parents on five independent lines and both children are
+> practice/apparatus material, which is what *draws on* is for. **An inheritance left flagged is an
+> unruled row that reads as ruled to whoever finds it next** — which is the failure this table's own
+> split exists to prevent, one row down.
 
 **Nothing in 3b becomes superseded, gains a forward pointer, or leaves v0.6.** When you use this
 material, quote v0.6 and cite it as the canonical source — the opposite of the 3a discipline.

@@ -13,13 +13,28 @@ letter's `§2.9(b)` cite is accurate** — it is, and it stays accurate, because
 owner and no gate (declared residual, below).
 **Substrate:** no pipeline run — this pass is entirely on the paper/tracker substrate. Code state:
 `git HEAD 1df6b118`, clean at start.
-**Fired:** live — the standing check was run **before** it was written down, and it flipped a claim:
+**Fired:** live — **two catches, and the first is the one that is hard to manufacture.**
+**(1) A CHECK THAT COULD NOT FAIL, caught by its own two-sided control firing PASS twice.** The
+replacement arms added to `checks.sh` row 3 were written against `$norm` — which is `normalized()`'s
+collapse of the **whole file** to a single line — so both asserted phrases matched *elsewhere* in the
+paper and the arms were **green regardless of what §2.9's marker said**. Stripping the phrase from
+the marker left them PASS; stripping the reversion trigger left them PASS. **This is the declared
+residual's exact shape one level down: a green that reads as verification of a condition the check
+never saw** — and it was invisible to reading, because a whole-file grep and a scoped grep are the
+same three words. Now scoped to the extracted marker block behind a vacuity guard; controls A/B/C
+each discriminate, and the vacuity guard fired on its own first run. *The original
+`at sub-item granularity` arm had the same whole-file scope and was falsifiable only by accident —
+that phrase happened to be unique to the marker.*
+**(2) The standing check was run **before** it was written down, and it flipped a claim:
 `EXTRACTION_PROMPT.md` §3's heading *"what moves, from where"* had produced a wrong-but-reasonable
 reading in an actual receiver (that v0.6 §9 relocates), which propagated into this plan's own V4 as a
 `§9.2` exposure. Five independent lines settle it the other way; **V4's `§9.2` half is withdrawn**.
-Two further live corrections: the sub-item promise stands at **four** v0.6 sites, not the two the
-plan enumerated; and OQ-280, which the plan treats as in flight and gating Step 3, **had already
+Two further live corrections: the sub-item promise stood at **five** v0.6/README sites, not the two
+the plan enumerated; and OQ-280, which the plan treats as in flight and gating Step 3, **had already
 resolved** (`d8bb9522`).
+**Both catches share a property worth stating: each would have CONFIRMED the verdict already being
+carried**, and neither was reachable by re-reading. That is the apparatus paying for itself on the
+occasion that cannot be staged — a control that fires against the direction of the author's belief.
 **Evidence map:**
 - `WRITEUP.md` — this file; the ruling, the withdrawal, and the residuals.
 - `standing_check.sh` — the narrowed standing check, executable so the recipe cannot rot. Witnesses
@@ -145,9 +160,15 @@ OQ-287's body): **promoting the letter out of filed evidence re-instates Limb 2'
 ## 5. The plan's own count went wrong twice, in the step whose purpose is fixing a wrong count
 
 The plan enumerated **two** v0.6 sites promising the sub-item table (the §2.8 and §2.9 markers).
-There are **four**: the two markers, the header block at `:68` (*"the redirect is owed at sub-item
-granularity"*), and the §13 paragraph at `:2642` (*"the redirect table is what keeps this sentence
-true"*). All four are amended in this pass.
+There are **five**: the two markers, the header block at `:68` (*"the redirect is owed at sub-item
+granularity"*), the §13 paragraph at `:2642` (*"the redirect table is what keeps this sentence
+true"*), and `docs/amnesiac_institution/README.md`, found only when the README was opened for an
+unrelated reason. All five are amended.
+
+**The fifth is the instructive one:** four were found by grepping the paper, and the fifth was
+outside the file the grep was scoped to. *An absence verdict licensed by keyword hits alone is scoped
+to the keywords* — and here also **to the paths**, which is the same rule with a different variable
+bound (KNOWN_STATE 2026-08-20, the paraphrase false absence).
 
 Not carelessness — **a hand-maintained summary of a list that a later edit lengthened, with no gate
 between them.** It is the same shape as the `§7.4` nine-versus-eleven drift the plan itself was

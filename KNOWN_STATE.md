@@ -302,12 +302,38 @@ biased the result toward the author's preferred verdict.**
 scratch copy; four anchors absent, eight surviving references dangling.
 Witness: `audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh` + `deletion_test_arm.md`.
 
-**OQ-287 is `open` with `blocked_on_human`, not `resolved`.** Both limbs are discharged, but Limb 1's
-landing **falsified** `concealment_without_a_concealer_v0_4.md:34` (*"declared-temporary pending the
-practice paper"*) in an externally-destined document the extraction forbids editing. **Routed to the
-operator as a ruling — amend, or accept a knowingly-stale sentence — and deliberately not repaired
-silently**, because a silent repair leaves the defect in the design. It surfaces on `[NEXT]` →
-BLOCKED ON YOU.
+**OQ-287 is RESOLVED.** Limb 1's landing falsified `concealment_..._v0_4.md:34` (*"declared-temporary
+pending the practice paper"*); routed to the operator rather than silently repaired, and **RULED the
+same day: amend.** Two reasons worth carrying:
+
+- **The edit was arrangement, not content** — V7 had already classified `:34` as naming *the
+  destination, not the content*, which puts it with the provenance lines and outside everything
+  concealment v0.4 is canonical for. No claim, digest, or reviewed argument is touched.
+- **The prohibition is RECEIVER-SCOPED, and this misread has now been caught TWICE.**
+  `EXTRACTION_PROMPT.md` §1b forbids **the receiver** editing v0.4 *while executing the extraction*
+  — a write-lock during a task, not a property of the file. Structurally identical to the `:242`
+  *"pointer-only edits, which is all v0.6 admits"* misread that OQ-287 resolved on 2026-08-17: same
+  prompt, sibling paper, same shape. **Both catches were made by the operator, not by the instance
+  reading it — so treat a task-scoped restriction quoted without its task as a live hazard; the
+  third occurrence is the one nobody will notice.**
+
+**Accepting the stale sentence was the weaker branch on a substantive ground, not a tidiness one:**
+*"pending the practice paper"* does not age, it becomes **affirmatively false** — it tells an external
+reader the practice paper does not exist.
+
+**THE REPOSITORY CANNOT ANSWER "HAS CONCEALMENT v0.4 GONE OUT," AND A FRESH AGENT WILL THINK IT
+CAN.** Three facts, third one load-bearing: the circulation **GO ruled 2026-08-19 covers
+`amnesiac_institution_v0_6.md` ONLY** (OQ-309 — Appendix B + the V04 manifest), and no GO or send is
+recorded for v0.4 anywhere; OQ-309's *"no recipients"* line **forecloses its own reuse in its own
+text** (*"a fact about 2026-08-12, not a standing property… if the question returns, it returns
+live"*) and is *"an attestation, not a checked distribution log"*, about a different paper; and **the
+repo holds no distribution log at all.** Positive control: the probe *does* find a circulation-status
+line where one exists — `LETTER_2026-08-11_wu.md`'s annotation header — and **that letter is the only
+artifact in the repo carrying one.** So the absence for v0.4 means *no channel exists*, not *nothing
+was sent*. A `**Circulation:**` note was added to v0.4's header recording what is **recorded** rather
+than what is **true**. **Declared residue: if a copy did leave, the repo copy now diverges from the
+circulated one and owes a header note riding to the next version bump** — R-A applied to concealment
+exactly as it was applied to the Wu letter.
 
 **Two plan premises that were stale at execution, reported as observed.** OQ-280 was **already
 resolved** (`d8bb9522`) rather than in flight, so its `blocked_on` edge was deliberately not authored

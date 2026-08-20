@@ -30,9 +30,23 @@ how each claim may be discharged. Historical cases in §7–§8 were verified ag
 > kill condition — moves the digest and fires every citing site, which is the mechanism working, not
 > a false alarm.** Recipe: `audits/2026-08-13_oq287_defork/claim_digest.sh`.
 >
-> **Two limbs of OQ-287 remain open**, so it is `mitigated`, not `resolved`: the practice-paper
-> extraction, and the redirect for v0.6 §2.8/§2.9, which are marked declared-temporary with that
-> paper as their canonical destination.
+> **OQ-287's two limbs are DISCHARGED (2026-08-20).** The practice paper landed at
+> **`../practice/practice_paper_v0_1.md`** (canonical per `../practice/README.md`), and v0.6
+> §2.8/§2.9 are now its superseded side, keeping their numbers and carrying forward pointers to that
+> paper's §III and §V. **This sentence previously read** *"Two limbs of OQ-287 remain open, so it is
+> `mitigated`, not `resolved`: the practice-paper extraction, and the redirect for v0.6 §2.8/§2.9,
+> which are marked declared-temporary with that paper as their canonical destination."* It did not
+> merely age — the landing made it **affirmatively false**, telling an external reader the practice
+> paper does not exist. Amended by operator ruling 2026-08-20 (ISSUES OQ-287).
+>
+> **Circulation of THIS paper: nothing is recorded, and that is a fact about the repository, not
+> about the world.** The circulation GO ruled 2026-08-19 covers
+> `../amnesiac_institution/amnesiac_institution_v0_6.md` only (ISSUES OQ-309); no GO and no send is
+> recorded for this file. The repository holds **no distribution log** — the sole circulation-status
+> channel that exists anywhere in it is the annotation header on one filed letter — so **absence
+> here is not evidence of non-circulation.** If a copy of v0.4 did leave, this amendment makes the
+> repository copy diverge from the circulated one and the divergence is owed a note here, riding to
+> the next version bump rather than being papered over.
 
 ---
 
