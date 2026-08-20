@@ -45,6 +45,95 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — TRIPWIRE: the PreToolUse tripwire hook matches `Edit|Write` ONLY, so every Bash-driven edit bypasses it silently — and auto mode instructs Bash-first editing
+**Files:** .claude/settings.json, python/pretooluse_tripwires.py, ISSUES.md, KNOWN_STATE.md
+**Tier:** tripwire
+
+**Witnessed this session.** `.claude/settings.json`'s PreToolUse matcher is exactly `Edit|Write`.
+Every ISSUES.md and paper edit in the OQ-280 pass was made with `python3` heredocs and `sed` through
+the **Bash** tool, because the session's auto mode instructs *"make file changes with sed, heredocs,
+or short scripts, rather than using the dedicated Read, Edit, or Write tools."* The hook therefore
+never fired once, across four commits touching the repository's two most tripwired files.
+
+**What was missed, concretely.** Simulating the payload the hook would have received shows it was
+holding the exactly-relevant warning, first in its list:
+
+```
+$ echo '{"tool_name":"Edit","tool_input":{"file_path":"ISSUES.md"}}' | python pretooluse_tripwires.py
+KNOWN_STATE.md has 64 standing entries for ISSUES.md…
+  KNOWN_STATE.md:48  [tripwire]  2026-08-20 — TRIPWIRE: minting an OQ at the tail of `ISSUES.md`
+                                  overwrites the footer's opening line, and no gate sees it
+```
+
+That entry was written **the same day**, and OQ-329 was minted at the tail of `ISSUES.md` a few
+hours later without it ever being delivered. The footer survived only because the mint anchored on
+`*Last updated:` and inserted *before* it — the prescribed move, arrived at independently.
+`/usr/bin/grep -c 'Add new items with sequential OQ-NN' ISSUES.md` returns **1**.
+
+**Two-sided control on the instrument, so the miss is not confused with a broken script.** The
+script is fine and discriminates: it FIRES on `ISSUES.md` (64 entries) and on `README.md` (3), and
+DECLINES silently on `LICENSE` (0 entries). The failure is entirely in the **matcher**, one level
+above the code that works.
+
+**Why it is silent, and why it earns a tripwire.** Hook silence is documented in `CLAUDE.md` as
+meaning *"queried, matched nothing"* — a reassuring reading that is exactly wrong here, where the
+truth is *never queried*. An instance editing through Bash gets the same absence of output as an
+instance editing a file with no warnings, and cannot tell the two apart. This is the repository's
+own Pattern 6 (measured-empty vs didn't-look collapsing at a channel boundary), living in the
+apparatus built to prevent it, and reached through a *mode setting* rather than through any code
+change — which is why no gate, sweep or selftest could have caught it.
+
+**Do this instead, until the matcher question is ruled.** When editing `ISSUES.md`, `KNOWN_STATE.md`,
+or any high-traffic engine file **through Bash**, run the query the hook would have run:
+`python3 python/known_state_status.py --file <path>` — before the edit, not after.
+
+**Flagged, NOT done — a genuine ruling, and it is the operator's.** The obvious fix is adding
+`|Bash` to the matcher, and it is wrong as stated: the hook keys on `tool_input.file_path`, which a
+Bash payload does not carry, so the script would need to parse arbitrary shell for target paths —
+a new instrument with its own false-negative surface, on the read side of a warning channel.
+The alternatives (narrow the auto-mode Bash-first instruction for these files; or a PostToolUse
+check that fires when a tripwired file's mtime moved without a delivery) are cheaper but change
+either operator workflow or hook semantics. Recorded rather than chosen.
+
+## 2026-08-20 — LANDED: OQ-280 resolved by amend; the RQ2 retirement carried into the paper at four sites; OQ-294's premise flagged; OQ-329 minted
+**Files:** docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/amnesiac_institution/README.md, ISSUES.md
+**Tier:** landed
+
+Commits `d49a41bb`, `d98e0679`, `d8bb9522`, `6f8c014d`. Gate GREEN at each.
+
+**OQ-280 — amend, phrased historically** (operator ruling). §4.3 takes one marked correction:
+the retrospective classification left no artifact, so §5.1's patterns rest on named exemplars
+(§4.4) and not on a coded corpus; and *"a weekend of work"* is retracted in the same block. The
+correction is historical on a ruling — a coded corpus arriving later is an **addition** to the
+record, not a correction of the correction.
+
+**The re-scoping, which is the part that will look like an error to a future reader.** OQ-280's
+literal 2026-08-10 wording (*"no file assigns a P-label … as a data row"*) was overtaken **one day
+later**: `audits/2026-08-10_oq277_rq2_crosscoding/packets/iii_prime_units/*.json` and
+`.../controls/anchors.json` carry `true_label` fields — **n=10**. They are **not** a counterexample:
+every one records its label as *"Read off, not assigned"* in its own `label_source`, so they derive
+FROM the taxonomy rather than evidencing it. Both paths are named inside the closed entry precisely
+so compression cannot strip them.
+
+**The retirement was ruled 2026-08-12 and the paper carried it NOWHERE for eight days.** Now at
+four sites — §6.2 (its four PROPOSED rows have no named settling experiment, and it is not a
+resource deferral), §14 (a new dated block **beneath** the `[COST CORRECTED]` box, box text intact),
+§4.3, and Appendix D.5. The D.5 colophon was amended against the drafting default on the operator's
+argument: it **instructs** successor drafts rather than describing, so it is the one site a v0.7
+drafter would act on.
+
+**Two plan figures did not reproduce, and the measured ones were used.** The plan said four content
+edits had landed against `README.md`'s *"pointer-only … no content edits"* policy; `git log` shows
+**nine** since `96db0124` (2026-08-14). The plan also predicted a pre-existing `gap surfaces` red;
+the gate was **fully GREEN** at baseline, so nothing red could be attributed away.
+
+**A pasted witness is shaped like a citation.** The OQ-294 flag's sample TSV rows quoted
+`Pattern 3` and turned gate row `displaced cites` RED — two undeclared consumers of the renumbered
+member. Fixed by choosing rows carrying no renumbered index (`d98e0679`), not by declaring an
+artifact excerpt in the consumer manifest. Same shape `claim_cite_check` sentinel-wraps its own
+example for. Recorded against process: the flag was committed on `issues_status` + `omega check`
+alone, and the **full gate** is what caught it.
+
 ## 2026-08-20 — TRIPWIRE: minting an OQ at the tail of `ISSUES.md` overwrites the footer's opening line, and no gate sees it
 **Files:** ISSUES.md, python/issues_status.py, issues/INDEX.md
 **Tier:** tripwire

@@ -141,9 +141,17 @@ activation menu; `PostToolUse` re-runs the `ISSUES.md` grammar gate whenever you
 `PreToolUse` injects the KNOWN_STATE `tripwire`/`correction-key` entries naming any file you are
 about to `Edit`/`Write` (`python/pretooluse_tripwires.py`, selftest in the gate). **Consequence
 when you author a KNOWN_STATE entry: `Tier:` is now a ROUTING decision — a standing warning filed
-as `landed` is never delivered to an editor.** Hook silence means "queried, matched nothing"; a
-query that cannot run says so loudly. To add or change one, edit `.claude/settings.json` and
-commit it with the change it serves.
+as `landed` is never delivered to an editor.** **AND the PreToolUse matcher is `Edit|Write` ONLY
+(2026-08-20), so an edit made through the Bash tool — `sed`, a heredoc, a short script, which is
+what auto mode instructs — NEVER fires the hook and produces the same silence as a clean query.**
+Hook silence therefore means "queried, matched nothing" *only when you actually used Edit/Write*;
+after a Bash-driven edit it means **never queried**, which is indistinguishable at the read site.
+Editing `ISSUES.md`, `KNOWN_STATE.md` or a high-traffic engine file through Bash: run
+`python3 python/known_state_status.py --file <path>` yourself, BEFORE the edit. (A query that
+cannot run still says so loudly; a query never dispatched says nothing at all. Witnessed with a
+two-sided control — the script fires on `ISSUES.md`/`README.md`, declines on `LICENSE`; the hole is
+in the matcher, not the code. Provenance + the unmade matcher ruling: KNOWN_STATE 2026-08-20.) To
+add or change one, edit `.claude/settings.json` and commit it with the change it serves.
 
 **Implementation wiring notes:** `docs/technical/` holds file-level notes on non-obvious wiring,
 operator-precedence bugs, fact-adapter patterns, and query gotchas — things that caused real bugs,
