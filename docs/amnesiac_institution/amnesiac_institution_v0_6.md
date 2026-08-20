@@ -1400,6 +1400,32 @@ failure the dominant failure class. Both are withdrawn.
 > repair would have surfaced that — only asking the number what it ranged over *in time* did. A
 > fourth check was to be assumed to exist. Three more did, and then the form itself failed.
 
+> **The P6 promotion basis is a correlated count, and that sits against §7.4.1's bar (added
+> 2026-08-20).** §5.3 records that the `system_gradient` incident was *"also witnessed at the value
+> and aggregation altitudes (three instances in one day, which is what promoted P6 from notes to a
+> numbered pattern)"*. Read forward against §7.4.1 — where two instances count as a pattern only
+> because they were **drawn from two independent arcs**, and a third from the coining arc is held
+> out as confirmation-shaped — that promotion basis does not clearly clear the bar the paper later
+> installs. Three altitudes of one incident on one day is the correlated shape §7.4.1 declines, not
+> the independent shape it accepts. This is a **consequence**, not a retraction: P6 has since
+> accumulated instances the promotion did not rest on, so the pattern stands and its *founding
+> count* is what is over-read.
+>
+> **The same correlation recurred one level up, in the instruments.** In the OQ-277 arc, three
+> separate instruments could each have calibrated P6 independently — the direction-(i) anchor set,
+> the (iii′) exemplar population, and a direction-(ii) redaction twin — and all three draw on that
+> single incident: disqualified, disqualified, and used role-appropriately as a redacted arm. The
+> residues are therefore **correlated, not additive**, and no amount of accumulating them produces
+> coverage. Any sentence totalling them as independent residues over-counts the evidence against P6
+> coverage while under-stating its concentration.
+>
+> **Not to be read against the triple four paragraphs above.** The frame-limits block states that
+> for the census instrument's three defects *"the losses are independent"*; that is a different
+> triple — three distinct instrument choices losing incidents in three unrelated ways — and its
+> independence claim is unaffected. Two triples, opposite correlation structure, one section.
+> (`audits/2026-08-10_oq277_rq2_crosscoding/verdict_grammar_amendment.md` §O.3.)
+
+
 > **A FOURTH DEFECT, AND IT IS THE INVERSE OF THIS PAPER'S SUBJECT (added 2026-08-12, witnessed,
 > raw text retained).** The three above are defects in *this census's* instrument. This one is in the
 > **instrument class the whole programme uses to witness anything**: the probe that asks a worker to
@@ -1774,6 +1800,47 @@ the plant worked. The grades, strongest first: a decline in the instrument's **o
 **naturally-arising negative** drawn from the population; an **authored decoy**, which shows only
 that authored decoys get rejected — a floor, and it should be reported at that altitude.
 
+> **A worked instance of the ladder, added 2026-08-20 — the two controls in one arc that fired on
+> unplanted material, and why they do not grade the same.** The ladder above is stated and, until
+> now, carried no worked case. The OQ-277 arc produced the pair that shows what the grades cost.
+> `verify_redaction_twins.py` asserts that every OQ id a redaction pair claims to have restored is
+> really present in that arm's coder-facing text; `oq277_build_prereg.py --check` asserts that the
+> frozen pre-registration is byte-identical to a fresh assembly of its sources. Each fired exactly
+> once, on real drift, with nothing in either run constructed to test it.
+>
+> | | `verify_redaction_twins.py` | `oq277_build_prereg.py --check` |
+> |---|---|---|
+> | fire | one, on real material — and it **caught its own author**, an arm written minutes earlier by the instance that had just written the check | one, on real material: an incorporated source had gained two sections and the assembled document still carried the pre-amendment text |
+> | declines | **four**, on four distinct pairs — genuinely different inputs | **three**, all the same comparison re-run |
+> | decline quality | each pair a real near-miss the check had to let pass | one was taken immediately after `--write`, comparing a file against a fresh assembly of the sources that had just produced it — **near-tautological, close to a check that cannot fail** |
+> | net | discrimination evidenced on both sides | **fire side strong, decline side weak** |
+>
+> Both are correctly recorded as having fired on unplanted material. Only the first is entitled to a
+> discrimination claim, and only over the class it covers — **OQ ids**, the machine-checkable subset
+> of the provenance block; the prose claims in the same block stay unwitnessed. The second is
+> entitled to *detects incorporated-source drift, evidenced by one unplanted fire on real drift*, and
+> to nothing wider: it cannot see an assembly that is internally consistent and wrong, nor a source
+> never registered for incorporation. **The pair is the point.** A ladder that graded only the fire
+> would rank these equal; everything that separates them sits on the decline side, which is the half
+> a reader has to be told to look at.
+> (`audits/2026-08-10_oq277_rq2_crosscoding/verdict_grammar_amendment.md` §L.7, §L.8.)
+
+> **A matcher's positive control and a finding's positive control are different obligations (added
+> 2026-08-20).** The same arc produced both signs of one class within days. The string `permission
+> class by default`, sitting in a coder payload, matched the leak-matcher's banned term `Class B` —
+> a **phantom**, a false instance manufactured by a defect in the matcher rather than by
+> contamination in the payload. Days earlier the frame control had found a **real** one: the
+> project's own census instrument fails by positional parsing of tool output whose field index
+> depends on invocation shape, which is that same external class instantiated in the measurement
+> apparatus rather than in the system under study. One mechanism produced an instance of the class;
+> the other found one. **A control establishing that the matcher fires does not establish that what
+> it caught is a member**, and the two obligations are discharged by different evidence — the first
+> by perturbing the matcher, the second by reading the hit. The real instance carried a second cost,
+> declared when it was logged: it contaminates the *reader* rather than the coder, so any sentence
+> about that class must state that its writer held the prior before the matrix existed.
+> (`audits/2026-08-10_oq277_rq2_crosscoding/RECON.md` R6.)
+
+
 Two consequences reached the hard way:
 
 - **The record attaches to the instrument, not to the run.** Cite the discrimination record and show
@@ -1783,6 +1850,21 @@ Two consequences reached the hard way:
   conservative as a *detector* becomes silently decisive as a *selection metric*: the error profile
   belongs to the role. This is `CWC:A2@31548228` stated for instruments: a validation is a compression formed at
   the scope of one role.
+
+> **The role rule witnessed on a grammar rather than a matcher (added 2026-08-20).** The OQ-262
+> severance audit validated a verdict grammar for its main instance and then handed a **narrower
+> form of it** to blind judges: the judge-facing instrument (§J of that audit's pre-registration)
+> omits the structural class `miscoded_asymmetry`, which the main grammar pins as a flag riding
+> alongside a verdict rather than terminating a row. The judges ran a grammar that could not express
+> one of the calls the instrument had been validated to make. It was **harmless there** — recon had
+> witnessed every pair profile symmetric, so the omitted class had nothing to flag — and that is
+> precisely why it is worth recording: the validation crossed the role boundary on the strength of
+> an empirical accident rather than a check, and the accident is what a later reuse would not
+> inherit. Caught by the operator's own pre-launch blinding pass and logged as a writeup obligation;
+> nothing mechanical would have seen it.
+> (`audits/2026-08-09_oq262_coexists_severance/A5_leak_check.md:7`, `WRITEUP.md:132`,
+> `PREREGISTRATION.md` §J.)
+
 - **Version control is an unmined source of un-authored controls.** When a defect is found, the
   commit at it is a naturally-arising *positive* case and the commit before it a naturally-arising
   *negative* — neither authored to be found. The arc's best-graded control was obtained this way: a
@@ -1805,6 +1887,37 @@ broke. Health output is a **qualifier** on findings, never a substitute for them
 whose failure mode is to describe itself is one an operator learns to read past, and reading past a
 check is how it stops being one. Ordering is a correctness property here, not a formatting
 preference.
+
+> **The eighth vacuous check — the first at an INTERFACE rather than in a check's logic (added
+> 2026-08-20).** The seven before it were checks whose *logic* could not return the failure they
+> looked for: a `forall` over an empty table, a prose match for a marker that did not exist, a
+> comparison of a placeholder against itself. The eighth had sound logic. `oq277_lexicon.py --sweep`
+> — the leak gate the whole experiment's blindness rested on — could not consume the single-object
+> unit file that its own prescribed command passed it, dying on `KeyError: 'units'` because
+> `isinstance(data, dict)` is true of a unit as well as of a wrapper. Its matcher was correct, its
+> selftest controls all fired, and on well-formed input the sweep was exactly right.
+>
+> The vacuity sat entirely at the boundary where a caller reads the result. A crash exited `1` and
+> printed no `LEAK` lines; a leak exited `1` and printed one line per hit. **The crash produced the
+> quieter of the two outputs** — so a caller grepping stdout found nothing and recorded a clean
+> sweep, while a caller reading the exit code found `1` and concluded leaks had been reported. Both
+> readings fail in the direction that lets a contaminated packet through. The repair is not to the
+> check but to what it *says*: a distinct exit code for *did not sweep*, and an abort marker printed
+> on **stdout**, because a caller that greps stdout and never reads stderr must still see it. **A
+> check can be correct and still unreadable, and "the instrument is correct" does not answer the
+> question** — auditing a verification stack for vacuity has to cover its interfaces, not only its
+> predicates.
+>
+> Two recurrences landed inside that repair and are recorded rather than smoothed. The first attempt
+> at its negative control went red on an `IndentationError` in the scratch copy and therefore tested
+> nothing; and the repair's selftest, as first written, *aborted* partway through the reverted run
+> instead of reporting a failure — reproducing the crash-versus-result confusion inside the fix for
+> the crash-versus-result confusion. Both were found by execution rather than by reading, which is
+> the same asymmetry the defect itself had: the broken command was reported twice by instances made
+> to *run* it, and never once by a reader of it.
+> (`audits/2026-08-10_oq277_rq2_crosscoding/verdict_grammar_amendment.md` §L.9; repaired at
+> `3e16a1d8` before the freeze.)
+
 
 ### 7.4 The recursion — observed, not hypothetical
 
