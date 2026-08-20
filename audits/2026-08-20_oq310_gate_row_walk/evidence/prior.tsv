@@ -1,0 +1,45 @@
+# OQ-310 Phase 1 PRIOR — pinned 2026-08-20 at HEAD 58039b6a, before Phase 2 verdicts.
+# Source: the approved plan's pre-execution shape pass. Recorded verbatim in scope.
+# NOTE ON GRANULARITY: the plan's prior is stated over the 22 CHECKER FILES and is partly
+# aggregate. Only the items it names individually carry an item-level prior. The rest are
+# covered ONLY by the aggregate bucket counts and are recorded as `unassigned`. Inventing a
+# per-row prior for them would fabricate the prior, so it is not done.
+#
+# AGGREGATE BUCKETS (over 22 checkers, as stated: "roughly"):
+#   clean_invariant  ~9
+#   mixed           ~13
+#   value_leaning    ~2
+#   (buckets sum to ~24 over 22 files; the plan's own word is "roughly")
+#
+item	scope	prior_shape	prior_note
+omega index --check	stratum1 row	undecidable	"stored artifact must equal a fresh derivation" — value-shaped by the letter, invariant-shaped by intent
+oq277 freeze (pre-freeze arm)	stratum1 row	undecidable	same shape as omega index --check
+claim cites (digest pin)	stratum1 row	undecidable	the digest pin is the hard call
+bound selector	stratum1 row	undecidable	assertion is set closure, detector is a regex
+paper carriage	stratum1 row	value_leaning	:2 declares "INVARIANT-asserting"; :171 implements ok = actual == expected against hardcoded ints — docstring-disagrees predicted
+partition_check	stratum2 line	invariant	partition/set-equality; NON-EXITING echo inside a manifest heredoc, read by a person
+python env	stratum1 row	unassigned	
+python env st	stratum1 row	unassigned	
+issues_status	stratum1 row	unassigned	
+omega check	stratum1 row	unassigned	
+omega selftest	stratum1 row	unassigned	
+spec enums	stratum1 row	unassigned	
+doc patterns	stratum1 row	unassigned	
+dispatch head	stratum1 row	unassigned	
+codewalk caller	stratum1 row	unassigned	
+displaced cites	stratum1 row	unassigned	
+module bounds	stratum1 row	unassigned	
+claim cites st	stratum1 row	unassigned	
+known_state	stratum1 row	unassigned	
+axis boundary	stratum1 row	unassigned	
+audit cites	stratum1 row	unassigned	
+audit writeup	stratum1 row	unassigned	
+apparatus	stratum1 row	unassigned	cap arm named in the plan as `if n > FEEDBACK_CAP` = count against a constant, but no shape verdict pinned
+gap surfaces	stratum1 row	unassigned	
+sunset	stratum1 row	unassigned	
+cli selftest	stratum1 row	unassigned	
+tripwire hook	stratum1 row	unassigned	
+#
+# PINNED PREDICTION derived from the buckets, testable at Phase 2:
+#   "Almost nothing is cleanly value-checking" -> value_leaning count should be <= 3 of 26 rows.
+#   "The binary may not partition" -> mixed should be the largest single bucket.

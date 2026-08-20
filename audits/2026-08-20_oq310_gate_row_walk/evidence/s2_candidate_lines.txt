@@ -1,0 +1,228 @@
+audits/2026-02-25_spectral_laplacian/run_audit.py:45:            print(f"    VIOLATION: {v[0]} @ {v[1]}: expected={v[2]:.6f}, actual={v[3]:.6f}")
+audits/2026-02-25_spectral_laplacian/t13_reconciliation.py:364:        print(f"\n  [t13_recon] === Group A: {n_a} constraints ===")
+audits/2026-06-07_stakeholder_layer_migration/a4_role_alignment.py:47:            print(f"PARSE_FAIL {f.name}: {e}", file=sys.stderr)
+audits/2026-06-07_stakeholder_layer_migration/ca1_probe.py:65:print(f"\n  framing-invariant (base==refframe==uid): {inv}")
+audits/2026-06-07_stakeholder_layer_migration/step0_model_omega.py:61:print("\n=== Step 0 result (Sonnet) ===")
+audits/2026-06-07_stakeholder_layer_migration/step2_matched_run.py:33:print("\n=== MATCHED drift distribution (same manifests, same backend+prompt, vary only GEN model) ===")
+audits/2026-06-07_stakeholder_layer_migration/step2_matched_run.py:46:    print(f"\n=== MATCHED GEN-model effect on substantial-share: Haiku {hs:.0%} -> Sonnet {ss:.0%} (Δ {(hs-ss)*100:.0f}pts)")
+audits/2026-06-07_stakeholder_layer_migration/step2_matched_run.py:47:    print(f"=== MATCHED ack-false-share: Haiku {haf:.0%} -> Sonnet {saf:.0%} (Δ {(haf-saf)*100:.0f}pts)")
+audits/2026-06-07_stakeholder_layer_migration/step4_scaffold_leak_witness.py:101:print(f"\nVERDICT: {'PASS — scaffold inert on both axes, probe live' if ok else 'FAIL'}")
+audits/2026-06-07_stakeholder_layer_migration/step4_scaffold_leak_witness.py:87:print("=== scaffold-leak witness ===")
+audits/2026-06-07_stakeholder_layer_migration/step4_scaffold_leak_witness.py:88:print(f"A == B (type axis inert):  {sigA == sigB}")
+audits/2026-06-07_stakeholder_layer_migration/step4_scaffold_leak_witness.py:89:print(f"A == C (tuple axis inert): {sigA == sigC}")
+audits/2026-06-07_stakeholder_layer_migration/step4_scaffold_leak_witness.py:90:print(f"A != PC (probe sees real-tuple movement): {sigA != sigPC}")
+audits/2026-06-07_stakeholder_layer_migration/step4b_gate.py:64:print("\n=== 4b GATE TABLE ===")
+audits/2026-06-07_stakeholder_layer_migration/step4b_gate.py:75:    print("GATE: FAIL -> RENAMED-NOT-ESCAPED (schema escaped; generator re-imposed). STOP.")
+audits/2026-06-07_stakeholder_layer_migration/step4b_gate.py:79:    print("GATE: PASS -> proceed to 4c.")
+audits/2026-06-07_stakeholder_layer_migration/step4c_allpin_control.py:44:        print("  PROBE FAILED (empty) — result void, not a pass")
+audits/2026-06-07_stakeholder_layer_migration/step4c_allpin_control.py:46:        print(f"  identical: {o_ft == o_st}  -> "
+audits/2026-06-07_stakeholder_layer_migration/two_axis_witness.py:77:print(f"  identical: {ob == ov and bool(ob)}  <- observer orbit blind to committer structure (expected)")
+audits/2026-06-07_stakeholder_layer_migration/two_axis_witness.py:81:print(f"  differs: {fb != fv and fb is not None}  <- committer axis IS structure-sensitive classification")
+audits/2026-06-10_oq81_reading_upstream_recon/analyze_ab.py:43:print("=== Metric 1/2: claimed_type per rep ===")
+audits/2026-06-10_oq81_reading_upstream_recon/analyze_ab.py:52:print("\n=== Metric 3: scalars (mean [min..max] per arm) ===")
+audits/2026-06-10_oq81_reading_upstream_recon/analyze_ab.py:61:print("\n=== Metric 4: husk-frame vocabulary + upstream-token leakage ===")
+audits/2026-06-10_oq81_reading_upstream_recon/analyze_ab.py:68:print("\n=== Run health ===")
+audits/2026-06-10_oq92_step3_preregistration/stage_a_schema_witness.py:81:print(f"base story: json/demographic_skill_mismatch.json  seat used: {SEAT}")
+audits/2026-06-11_oq109_phase_b/example_prevalence.py:100:        print("== %s — aggregate prevalence score %.3f (sum of per-feature fractions; lower = cleaner)"
+audits/2026-06-11_oq110_residual_join/backed_e2e_diff.py:52:        print("POSITIVE CONTROL FAILED: planted mutation in %s not flagged" % victim)
+audits/2026-06-11_oq110_residual_join/backed_e2e_diff.py:54:    print("positive control: planted flips+1 in %s/%s flagged (%d mismatch[es]) — comparator fires"
+audits/2026-06-11_oq110_residual_join/backed_e2e_diff.py:59:        print("MISMATCHES: %d" % len(mismatches))
+audits/2026-06-11_oq110_residual_join/pin_aggregate.py:44:        print("HALT: pin enumeration != join inventory")
+audits/2026-06-11_oq110_residual_join/pin_aggregate.py:51:        print("HALT: %d pin classifications FAILED (errored is not a verdict)" % len(fails))
+audits/2026-06-11_oq110_residual_join/pin_aggregate.py:97:    print("enumeration identity: pin set == join inventory (%d flips)" % len(rows))
+audits/2026-06-11_oq33_close/evidence/probe_d_preset_artifact_scan.py:112:        print(f"\nCONTROL PASS: manifest detector fired ({tot_pre}) AND tripwire "
+audits/2026-06-11_oq33_close/evidence/probe_d_preset_artifact_scan.py:115:        print(f"\nCONTROL FAILURE (manifest hits={tot_pre}, tripwire detections="
+audits/2026-06-11_oq33_close/evidence/probe_d_preset_artifact_scan.py:96:    print("=== Probe D: pre-reset artifact scan of live outputs/ ===")
+audits/2026-06-11_oq93_grid_migration/kappa_plausibility_audit.py:185:    print(f"\nBATCH VERDICT: PASS — {len(excluded)}/{n_audited} stories "
+audits/2026-06-11_oq93_grid_migration/rider_b_drift_join_witness.py:102:print("=== old TEMPORAL TRAJECTORY ===")
+audits/2026-06-11_oq93_grid_migration/rider_b_drift_join_witness.py:104:print("=== new TEMPORAL TRAJECTORY ===")
+audits/2026-06-11_oq93_grid_migration/stage_a_schema_witness.py:168:print(f"base story: json/demographic_skill_mismatch.json   old schema ref: {old_ref}")
+audits/2026-06-11_oq93_grid_migration/stage_b_compiler_witness.py:172:    print(f"  MISMATCH {name}: old={a} new={b}")
+audits/2026-06-11_oq98_verdict_join/w_checks.py:20:print("=== W3 A/B: thermal_dissipation_constraint (clean green) ===")
+audits/2026-06-11_oq98_verdict_join/w_checks.py:24:print("=== W4: sidecar verdict vs banner VERDICT line ===")
+audits/2026-06-11_oq98_verdict_join/w_checks.py:35:print("W4:", "PASS" if ok else "FAIL")
+audits/2026-06-11_oq98_verdict_join/w_checks.py:37:print("=== Falsifier 2: zero correction-grade without join alert ===")
+audits/2026-06-11_oq98_verdict_join/w_checks.py:46:print("Falsifier 2:", "PASS (non-vacuous)" if ncorr > 0 and not viol else "FAIL")
+audits/2026-06-12_cohort_zero/pilot_witness.py:79:    print("PILOT WITNESS:", "ALL PASS" if ok else "FAILURES — driver not yet trusted")
+audits/2026-06-12_oq105_alignment_gate/witness_gate.py:55:print(f"W2 live corpus: {len(live)} JSONs, misaligned={w2_fail} -> {'PASS' if w2 else 'FAIL'}")
+audits/2026-06-12_oq105_alignment_gate/witness_gate.py:75:print(f"\nVERDICT: {'ALL WITNESSES PASS' if ok else 'WITNESS FAILURE'}")
+audits/2026-06-13_oq117_within_arm_proxy/collect.py:43:    print(f"=== collected {len(rows)} from {batch_id} -> {sub}/ ===")
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:138:    print(f"\n=== ARM {args.arm} batch {batch.id} ===", file=log, flush=True)
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:146:            print(f"FAIL {cid}: result.type={result.result.type}", file=log, flush=True)
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:155:            print(f"FAIL {cid}: {errors}", file=log, flush=True)
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:165:            print(f"FAIL(validate) {cid}: {verrors}", file=log, flush=True)
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:170:        print(f"OK {cid}", file=log, flush=True)
+audits/2026-06-13_oq117_within_arm_proxy/oq117_spend_driver.py:171:        print(f"OK {cid}")
+audits/2026-06-13_oq117_within_arm_proxy/within_arm_probe.py:20:print("=== OQ-117(b)-CORE WITHIN-ARM PROXY (no new spend) ===")
+audits/2026-06-14_omega_type_diagnostic_poc/deterministic_baseline.py:313:    print(f"SEED CONTROL: {'GREEN' if seed_ok else 'RED'} | "
+audits/2026-06-14_omega_type_diagnostic_poc/score_held.py:41:        print(f"  id{sid:>2} KNOWN_EXTERNAL   exec={jd:6} -> {'PASSED external ✓' if not restated else 'FALSE-RESTATED ✗'}")
+audits/2026-06-14_omega_type_diagnostic_poc/score_held.py:43:        print(f"  id{sid:>2} KNOWN_RESTATEMENT exec={jd:6} -> {'CAUGHT ✓' if restated else 'MISSED false-neg ✗'}")
+audits/2026-06-14_omega_type_diagnostic_poc/score_held.py:45:        print(f"  id{sid:>2} UNDER_DECLARATION exec={jd:6} -> {'routed external ✓' if not restated else 'mis-restated ✗'}")
+audits/2026-06-17_mountain_authoring_sweep/classify_mountains.py:78:        print(f"  POS-CONTROL {'PASS' if ok else 'FAIL'}: {nm} -> bucket={r['bucket']} npersp={r['npersp']} why={r['why']} nonmtn={r['nonmtn']} omega={r['omega_hits'][:2]}")
+audits/2026-06-17_mountain_authoring_sweep/classify_mountains.py:80:    print("=== POSITIVE CONTROL (pre-registered) ===")
+audits/2026-06-17_mountain_authoring_sweep/classify_mountains.py:85:        print("\n!!! POSITIVE CONTROL FAILED — classifier invalid, aborting verdict !!!"); sys.exit(2)
+audits/2026-06-17_mountain_authoring_sweep/classify_mountains.py:92:    print(f"\n=== SWEEP: {len(rows)} distinct engine-declared mountains ===")
+audits/2026-06-18_oq01_rope_bypass_twins/ground_rope_bypass.py:117:    print("\n=== SUMMARY ===")
+audits/2026-06-18_oq01_rope_bypass_twins/ground_rope_bypass.py:91:        print(f"\n=== {corpus} ===")
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:21:echo "=== idempotence ==="
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:24:  echo "PASS: two runs byte-identical (stdout+stderr)"
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:26:  echo "FAIL: runs differ"; diff /tmp/r1.out /tmp/r2.out || true; exit 1
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:29:echo "=== rot-sensitivity ==="
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:37:  echo "FAIL: tracked cited file was flagged"; exit 1
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:39:  echo "PASS: tracked cited file passes (not flagged)"
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:47:  echo "PASS: pass -> gating flag flip witnessed (rot-sensitive)"
+audits/2026-06-18_oq104_citation_checker/controls_run.sh:49:  echo "FAIL: rot NOT detected — checker stopped looking"; exit 1
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:65:    print("== Linter selftest (positive controls) ==")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:67:    print(f"  -> {'PASS' if ok else 'FAIL'}\n")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:69:    print("== Cross-corpus census (rate% = distinct-missing / cs_reading_relation edges) ==")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:81:    print("\n== LIVE defensible (id>=2) set ==")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:86:    print("\n== Durable defensible set: twin-reproducible (haiku INT flash, id>=2) ==")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:90:    print("\n== Cross-lineage missing-set intersections (any in-degree) ==")
+audits/2026-06-20_oq58_cross_corpus_incompleteness/census_driver.py:99:    print("\n== Concrete per-edge witness: jewish_sovereignty_palestine__cultural_zionist_reading ==")
+audits/2026-06-21_maxent_seat_aware/diff_witness.py:104:print("\nWITNESS RESULT:", "PASS" if ok else "REVIEW")
+audits/2026-06-21_maxent_seat_aware/diff_witness.py:51:print("ROUTED SEATS (12) — expected: classical top unchanged; maxent_probs==raw; verdict_join unchanged")
+audits/2026-06-21_maxent_seat_aware/diff_witness.py:78:    print(f"     classical top: {bt} -> {pt} | maxent_probs==raw(post): {p_max==p_raw} | "
+audits/2026-06-21_maxent_seat_aware/diff_witness.py:86:print(f"[movers] routed maxent_probs now == raw (boost removed): {len(routed_maxprobs_now_raw)}/12")
+audits/2026-06-21_maxent_seat_aware/diff_witness.py:87:print(f"[movers] routed seats that WERE boosted in baseline (maxent_probs!=raw): {len(routed_maxprobs_was_boosted)}/12")
+audits/2026-06-21_oq119/oq119_spend_driver.py:117:    print("\n=== all 6 arm×draw runs complete ===")
+audits/2026-06-21_oq119/oq119_spend_driver.py:85:        print("=== OQ-119 three-axis spend — DRY RUN (no API) ===")
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:118:    print("=== OQ-119 join-diff comparator — Phase 1 controls ===")
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:128:        print(f"   {i[:48]:<48}  scalar={r['scalar']}  by_axis={r['by_axis']}  {'OK' if ok else 'FAIL'}")
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:129:    print(f"   NEGATIVE CONTROL: {'PASS' if neg_ok else 'FAIL'}\n")
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:143:        print(f"   POSITIVE CONTROL: {'PASS' if pos_ok else 'FAIL'}\n")
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:184:    print(f"=== COMPARATOR VALIDATED: {'YES' if verdict else 'NO'} "
+audits/2026-06-21_oq119_gate0/oq119_join_diff.py:187:        print(f"=== within-kernel sensitivity floor witnessed at scalar={same_scalar} "
+audits/2026-06-21_oq119_gate0/oq119_spend_driver.py:117:    print("\n=== all 6 arm×draw runs complete ===")
+audits/2026-06-21_oq119_gate0/oq119_spend_driver.py:85:        print("=== OQ-119 three-axis spend — DRY RUN (no API) ===")
+audits/2026-06-21_oq35_field_counterfactual/oq35_field_counterfactual.py:89:        print(f"=== {label} ({cpath}) ===", flush=True)
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:12:echo "==== drl_composition.pl: detect_necessity_inheritance STATIC (dr_type + cs_reading_relation) ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:15:echo "==== cs_kernel_registry.pl: cs_kernel_divergence/compare_kernel_readings STATIC (classify_at_time) ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:18:echo "==== drl_purity_network.pl: constraint_neighbors cs_kernel_id exclusion STATIC ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:28:echo "==== cs_ modules asserting runtime facts (expect none) ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:30:echo "==== drl_ modules asserting runtime facts (expect only fpn_* caches) ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:35:echo "==== ANY cs_ committer read in constraint_bridge.pl (expect none) ===="
+audits/2026-06-23_oq15_crossaxis_witnesses/capture_witnesses.sh:9:echo "==== cs_drift_mismatch.pl: transitive via cs_is_metric_stable -> network_dynamics ===="
+audits/2026-06-27_oq118_reprobe/oq118_reprobe.py:133:    print("=== Probe 3: sigma/seat Fisher partition (replication self-check + content-only) ===")
+audits/2026-06-27_oq118_reprobe/oq118_reprobe.py:143:    print("=== Probe 4: between-story variance sweep (degeneracy positive-control, STABLE side) ===")
+audits/2026-06-27_oq118_reprobe/oq118_reprobe.py:54:    print("=== Probe 1: is `suppression` model-emitted (authored) or computed? ===")
+audits/2026-06-27_oq118_reprobe/oq118_reprobe.py:68:    print("  -> VERDICT: suppression is AUTHORED (in raw draw + required by generation schema).\n")
+audits/2026-06-27_oq118_reprobe/oq118_reprobe.py:73:    print("=== Probe 2: emerges_naturally / requires_active_enforcement / suppression, all draws ===")
+audits/2026-06-27_oq124_oq149_committer_convention_control/reclassify_twins.py:31:        print(f"\n=== classify {corpus} -> {out} (expect model {model}) ===",
+audits/2026-06-27_oq182_trajectory_serialization/battery.py:44:    print(f"run {i:2d}: {'GREEN' if green else 'RED'}  wall={wall:.1f}s "
+audits/2026-06-27_oq182_trajectory_serialization/battery.py:50:print(f"\nBATTERY: {n_green}/{N} GREEN  ->  {'PASS' if n_green == N else 'FAIL'}")
+audits/2026-06-27_oq182_trajectory_serialization/c0_diff.py:46:print(f"\nC0 RE-WITNESS: {'PASS' if ok else 'FAIL'}")
+audits/2026-06-27_oq182_trajectory_serialization/freshness_control.py:36:    print(f"  {k:32s} -> {'FLAGGED stale (PASS)' if was_flagged else 'MISSED (FAIL)'}")
+audits/2026-06-27_oq182_trajectory_serialization/freshness_control.py:38:print(f"\nFRESHNESS CONTROL: {'PASS' if ok else 'FAIL'}")
+audits/2026-07-01_oq197_source_h1_crosstab/twin_crosstab.py:17:    print(f"\n===== {name} =====")
+audits/2026-07-02_oq138_fnl_evidence/extract_fnl_verdicts.py:31:print(f"== {label} ==")
+audits/2026-07-03_oq205_epsilon_census/eps_census_analyze.py:43:    print("CONTROL FAIL: planted value absent from live dump — sweep never saw it. HALT.")
+audits/2026-07-03_oq205_epsilon_census/eps_census_analyze.py:47:    print(f"CONTROL FAIL: plant at {plant} NOT flagged at radii {ctl_fail}. HALT.")
+audits/2026-07-03_oq205_epsilon_census/eps_census_analyze.py:49:print(f"CONTROL PASS: plant at {plant} (snare_epsilon_floor+{PLANT_DELTA}) flagged at all "
+audits/2026-07-03_oq205_epsilon_census/eps_census_analyze.py:60:    print(f"=== {leg}: n={n} with ε, {len(noeps)} no_eps ===")
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:100:    print("\n===== C2 conjunction-cell control =====")
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:110:    print("\n===== C5 kernel_v1 anchor (pool stage: 906 kernel-bearing) =====")
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:132:    print("\n===== coverage gates =====")
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:143:    print("\n===== cross-twin (haiku x flash) =====")
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:57:    print(f"\n===== ARM {name} (loaded={meta['loaded']}, expect {expect_loaded}; "
+audits/2026-07-03_oq87_twins_ca3/analyze_arms.py:60:        print(f"  !! C4 FAIL: loaded {meta['loaded']} != {expect_loaded}")
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py:134:    print("\n## FLAG-NOT-FAIL + EARNED-DENSE control (must flag, must NOT gate)\n")
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py:186:    print(f"  [{'PASS' if seed_flag else 'FAIL'}] positive: SEED arms surface "
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py:193:        print(f"  [{'PASS' if clean_ok else 'FAIL'}] negative: clean human "
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py:201:        print(f"  [{'PASS' if (flagged and below) else 'FAIL'}] flag-not-fail: "
+audits/2026-07-13_oq214_theme_meter/calibrate_theme_meter.py:210:    print(f"\n  OVERALL CONTROLS: {'PASS' if ok else 'FAIL'}")
+audits/2026-07-13_oq219_missing_floor/_run_arms.py:29:            print(f"[{name}] FAILED: {type(e).__name__}: {e}")
+audits/2026-07-13_oq219_missing_floor/_run_arms_ds.py:41:            print(f"[{name}] FAILED: {type(e).__name__}: {e}")
+audits/2026-07-16_oq221_meter_partition/partition_run.py:126:    print("OQ-221 PASS-2 ADJUDICATION RUNS — deterministic conditions, both corpora")
+audits/2026-07-16_oq221_meter_partition/partition_run.py:204:        print("\n!! FALSIFIED PREDICTION(S):")
+audits/2026-07-16_oq221_meter_partition/partition_run.py:213:        print("\n  H1 + H2 PASS — proceeding to novel rows.")
+audits/2026-07-16_oq221_meter_partition/partition_run.py:302:    print("RUN COMPLETE — controls PASS; novel-row outputs above are the witnesses.")
+audits/2026-07-17_oq60_purity_absence/cfloor_bytediff.py:28:    print(f"[{leg}] diff_rows={len(diff_rows)} flips_expected={len(flips)} "
+audits/2026-07-17_oq60_purity_absence/cfloor_witness.py:87:        print(f"  screen: scorable n={n_sc} (pred {pn}) mean={mean:.10f} (pred {pm:.10f}) -> {'OK' if mean_ok else '*** MISMATCH'}")
+audits/2026-07-17_oq60_purity_absence/cfloor_witness.py:90:            print(f"  *** [{leg}] JOIN FAILED — HALT branch")
+audits/2026-07-20_five_leg_twin_comparison/five_leg_twin_comparison.py:67:    print("\n=== A. PER-LEG MARGINALS ===")
+audits/2026-07-20_five_leg_twin_comparison/five_leg_twin_comparison.py:97:    print("\n=== B. PAIRED SAME-SEED (twins) ===")
+audits/2026-07-24_oq61_header_purity_cascade/canon_diff.py:53:print(f"=== {label_a}  vs  {label_b} ===")
+audits/2026-07-24_oq61_header_purity_cascade/q1_decision_rule.py:28:        print("  n_drifting == 0 — decision rule N/A (nothing drifting).")
+audits/2026-07-25_oq216_contract_extractor_redesign/stage2_draw_witness.py:37:            print(f"\n=== {tag} ===")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:33:    print("\n== CONTROL GATE (need >=6/8 exact) ==")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:38:        print(f"  {'PASS' if ok else 'MISS'} {cid}: expected {exp}, got {got}")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:40:    print(f"controls: {hits}/8 -> gate {'PASS' if gate else 'FAIL (coding INCONCLUSIVE per prereg)'}")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:54:    print("\n== H1: channel x decile (2x2 excludes mixed/none_apparent) ==")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:72:    print("\n== statable_party=no as tacit-proxy ==")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:77:    print("\n== R1: hot_topic x decile ==")
+audits/2026-07-27_cross_author_epsilon_probe/coding_analysis.py:85:    print("\n== per-item join (for the record) ==")
+audits/2026-07-27_cross_author_epsilon_probe/epsilon_cross_author.py:68:    print(f"[control] hand-verified pair matches extraction: haiku={ctl[1]} flash={ctl[2]} PASS",
+audits/2026-08-06_oq259_item2_tframework/p2_calibration.py:116:        print(f"== {gname}: {g['source'].name}")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/recheck_predeclared_counts.py:149:        print(f"\n{len(mismatches)} of {len(rows)} stated counts do not reproduce:")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/recheck_predeclared_counts.py:165:        print(f"\nPRE-DECLARATION PREMISE FAILS for {len(empty)} of {len(declared_sel)} pairs:")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/recheck_predeclared_counts.py:169:        print("  does not hold for these. OPERATOR RULING REQUIRED — see")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/recheck_predeclared_counts.py:174:        print("The pairs are used AS DECLARED. The stated counts are corrected in the prereg,")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_controls.py:120:print("\n" + ("ALL CONTROLS PASS" if not fail else f"*** {len(fail)} FAILURES: {fail}"))
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_controls.py:31:    print(f"   {'PASS' if cond else '*** FAIL':>9}  {label}")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_controls.py:36:print("=== OQ-277 CONTROL VERIFICATION (extractor, pre-driver) ===\n")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_prompts.py:148:        print(f"{len(failures)} of {checks} checks FAILED:")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_prompts.py:152:    print(f"ALL {checks} PROMPT CHECKS PASS")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_prompts.py:153:    print("\nNOTE: passing here means the prompts satisfy their PRE-REGISTERED constraints.")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_prompts.py:57:    print(f"        {'PASS' if cond else 'FAIL'}  {label}")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_redaction_twins.py:177:        print(f"{len(failures)} of {checks} checks FAILED:")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_redaction_twins.py:181:    print(f"ALL {checks} TWIN CHECKS PASS")
+audits/2026-08-10_oq277_rq2_crosscoding/controls/verify_redaction_twins.py:61:    print(f"        {'PASS' if cond else 'FAIL'}  {label}")
+audits/2026-08-10_oq277_rq2_crosscoding/frame/control_frame_command.py:113:            print(f"  {name:<22}{str(want):>10}{str(got):>10}   {'ok' if ok else 'FAIL'}")
+audits/2026-08-10_oq277_rq2_crosscoding/frame/control_frame_command.py:175:            print("CONTROL FAILED — the census instrument does not discriminate as "
+audits/2026-08-10_oq277_rq2_crosscoding/frame/control_frame_command.py:180:        print(f"CONTROL PASSED — {len(FIXTURES)} fixtures classified correctly, "
+audits/2026-08-10_oq277_rq2_crosscoding/frame/freeze_frame.sh:53:  echo "partition_check: $(( $(wc -l < "$OUT/incident_bearing_dirs.txt") + $(wc -l < "$OUT/non_census_dirs.txt") )) == $(wc -l < "$OUT/all_dirs.txt")"
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_nonmd_recall.py:27:print("=== CONTROL A (positive): the same grep must reproduce the proxy on the 73 ===")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_nonmd_recall.py:32:print("=== CONTROL B (negative): by construction the 101 must have ZERO .md hits ===")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_nonmd_recall.py:37:print("\n=== RESULT: same patterns, non-.md files only, over the 101 ===")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py:31:print(f"\n=== RESULT ===")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py:41:print("\n=== TWO-SIDED CONTROL (the census must separate cases I already know) ===")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py:48:    print(f"  positive control {d:52s} seeable={hit} {'PASS' if hit else 'FAIL'}")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py:51:    print(f"  negative control {d:52s} unseeable={hit} {'PASS' if hit else 'FAIL'}")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/escape_units/frame_audit_prose_census.py:52:print(f"  control verdict: {'GREEN — the census separates both directions' if ok else 'RED'}")
+audits/2026-08-10_oq277_rq2_crosscoding/packets/judging/draw_primary.py:64:print(f"  known-positive assertion: PASS on all {len(units)} pool members (4/4 fields non-empty)")
+audits/2026-08-13_oq287_defork/checks.sh:361:        print(f"BAD|site '{anchor}' carries no CWC pin (expected {want})"); bad += 1
+audits/2026-08-17_bound_dispatch_hardening/caller_sweep.py:85:    print(f"\n== {name}/{arity} ({deffile}): {len(sites)} bound call site(s)")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:23:    print(f"  {'OK ' if ok else '*** FAIL ***'} {label:62s} {got} {'==' if ok else '!='} {want}")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:28:print("=== sums asserted in WRITEUP.md / FINDINGS_INCIDENTAL.md ===")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:46:print("\n=== percentages asserted (rounded to 1dp) ===")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:55:print("\n=== dedup: incidental findings must be 9 DISTINCT items ===")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:65:print("\n=== cross-document consistency ===")
+audits/2026-08-17_oq285_mode3_measurement_arm/arithmetic_selfcheck.py:76:print("RESULT:", "ALL CHECKS PASS" if not fails else f"{len(fails)} FAILURE(S): {fails}")
+audits/2026-08-18_appendix_b_discharge/frame/control_frame_command.py:113:            print(f"  {name:<22}{str(want):>10}{str(got):>10}   {'ok' if ok else 'FAIL'}")
+audits/2026-08-18_appendix_b_discharge/frame/control_frame_command.py:175:            print("CONTROL FAILED — the census instrument does not discriminate as "
+audits/2026-08-18_appendix_b_discharge/frame/control_frame_command.py:180:        print(f"CONTROL PASSED — {len(FIXTURES)} fixtures classified correctly, "
+audits/2026-08-18_appendix_b_discharge/frame/freeze_frame.sh:105:  echo "partition_check: $(( N_INC + $(wc -l < "$OUT/non_census_dirs.txt") )) == $N_GLOB"
+audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py:103:        print(f"CONTROL FAILED ({bad} of {len(fire)+len(decline)}) — the hygiene proxy does not")
+audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py:106:    print(f"CONTROL PASSED — {len(fire)} fire, {len(decline)} decline, two-sided.")
+audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py:69:        print(f"  {d}  ({n} hit{'s' if n!=1 else ''})")
+audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py:95:        print(f"  FIRE    {'ok  ' if ok else 'FAIL'} {l[:72]}")
+audits/2026-08-18_appendix_b_discharge/frame/precision_probe.py:99:        print(f"  DECLINE {'ok  ' if ok else 'FAIL'} {l[:72]}")
+audits/2026-08-18_appendix_b_discharge/frame/score_only.py:40:print(f"    draw1 without={a}  draw1 with={b}  ->  {'DISCRIMINATES' if a!=b else 'DOES NOT DISCRIMINATE'}")
+audits/2026-08-18_appendix_b_discharge/frame/v04_section7_check.sh:18:echo "count: $COUNT (expected $EXPECT)"
+audits/2026-08-18_appendix_b_discharge/frame/v04_section7_check.sh:22:  echo "PASS — sequential from 1, no repeats, no gaps, count matches."
+audits/2026-08-18_appendix_b_discharge/frame/v04_section7_check.sh:25:echo "FAIL — got [$NUMS], want [$EXPECTED_SEQ] at count $EXPECT."
+audits/2026-08-18_bound_caller_rewitness/partition.py:253:    print(f"  codewalk unresolved: {sum(1 for r in rows if r['codewalk_bound']=='UNRESOLVED')}")
+audits/2026-08-18_classb_conversion_rollout/bisect_batch.py:94:        print("bisect: RED — the reverted tree does not reproduce the baseline; attribution "
+audits/2026-08-18_classb_conversion_rollout/clause_order_census.py:131:        print("clause_order_census: RED — discrimination control failed; no zero in this "
+audits/2026-08-18_classb_conversion_rollout/clause_order_census.py:176:    print(f"clause_order_census: control OK at {CONTROL_PRE_COMMIT} "
+audits/2026-08-18_classb_conversion_rollout/convert.py:478:        print("convert: RED (selftest)")
+audits/2026-08-18_classb_conversion_rollout/convert.py:481:        print("convert: selftest OK (fact->rule, multi-line body, nested-term arg, quoted "
+audits/2026-08-18_classb_conversion_rollout/convert.py:544:        print(f"  FAILED: {p}")
+audits/2026-08-18_classb_conversion_rollout/inputkey_screen.py:114:        print("inputkey_screen: RED — discrimination controls failed")
+audits/2026-08-18_classb_conversion_rollout/inputkey_screen.py:119:    print(f"inputkey_screen: controls OK (fires on the 2 corpus-attributed rows, declines on "
+audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py:138:        print("mode_adjudication: RED — discrimination controls failed")
+audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py:150:    print(f"mode_adjudication: controls OK "
+audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py:155:        print(f"\n  AUTHORED INPUT — template invalid, must be reclassified `input-key`:")
+audits/2026-08-18_classb_conversion_rollout/mode_adjudication.py:159:        print(f"\n  UNDECLARED — no mode line; owed a per-row read (the absence is the finding):")
+audits/2026-08-18_classb_conversion_rollout/reachability.py:75:            print("reachability: RED")
+audits/2026-08-18_classb_conversion_rollout/sixleg.py:165:        print("sixleg diff: RED")
+audits/2026-08-18_classb_conversion_rollout/sixleg.py:79:            print(f"  {name}: RED — {out_name} not written", flush=True)
+audits/2026-08-18_classb_conversion_rollout/sixleg.py:83:            print(f"  {name}: RED — output mtime did not advance "
+audits/2026-08-18_classb_conversion_rollout/sixleg.py:89:            print(f"  {name}: RED — corpus CHANGED during the run "
+audits/2026-08-19_oq302_bound_false_repair/compare_arms.py:39:print(f"Post-commit `result__arm_defect` = NOT_MEASURED on {nm}/{tot} rows (the defect clause is gone from the source).")
+audits/2026-08-19_oq302_bound_false_repair/run_probe.sh:32:  echo "== leg=$LEG  files_on_disk=$NFILE  md5_before=$PRE" >> "$LOG"
+audits/2026-08-19_oq302_bound_false_repair/run_probe.sh:38:  echo "== leg=$LEG  rc=$RC  md5_after=$POST" >> "$LOG"
+audits/2026-08-20_oq287_limb1_extraction/dangle_count.sh:17:echo "== $label"
+audits/2026-08-20_oq287_limb2_discharge/standing_check.sh:145:  echo "== selftest: the arms must DISCRIMINATE, not merely fire"
+audits/2026-08-20_oq287_limb2_discharge/standing_check.sh:164:    echo "  PASS  arm1 noise confirmed: concealment owns a §9 of its own, so bare-number hits there are self-cites"
+audits/2026-08-20_oq287_limb2_discharge/standing_check.sh:76:  echo "== standing check: §${sec} (\"${prose}\") — owner document: ${owner}"
