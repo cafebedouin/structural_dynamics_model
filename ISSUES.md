@@ -17098,6 +17098,102 @@ for **`CWC:A2`/`C1`** (the "Ready" was a compression formed at a framing the art
 the gap was absent from one read and present in the other), and for **practice §V.4**'s enumeration by
 a party positioned outside the artifact's framing. **Altitude: the seat theorem is analytic — refuted
 by exhibit, not confirmed by data — so this INSTANTIATES the mechanism and does not test it.**
+
+**RESOLVED — THE TWO ROUTED RULINGS (operator, 2026-08-20, at the harmonic-launching-spark
+checkpoint, relayed through the no-repo ruling session; only these two were routed here, and they
+are not re-raised):**
+- **Ω_P: DECLINED — the §IV.4 count stays at two.** The third candidate instance ("tools are the
+  channel worth restricting") is held out with the section's own stated reason — admitting it would
+  break a rule the section applies to itself, in the section about applying rules to yourself. The
+  essay (OQ-335) may NAME the case as held-out — describing a fitting third case and why it is not
+  counted is how restraint (§10.3's fifth efficacy) becomes visible — but never count it. No
+  practice-paper edit.
+- **Item (7) decline side: DEFERRAL ACCEPTED, with a read-site and a registration.** Read-site: the
+  monthly consolidation pass (next 2026-09-10) reads the post-impl-gaps column of
+  `.claude/skills/plan-review/RUNS.md`. The decision to look is REGISTERED as of 2026-08-20 — an
+  empty-handed read on 2026-09-10 enters the denominator as a datum, never as a non-event (the
+  §7.8 registration repair). Rows accreting with the column never filled condemns the wiring and
+  reopens item (7); filled rows with N>0 are the decline-side record accruing. The control is not
+  funded — R-C's altitude (recorded at OQ-335) does not require it.
+
+The entry stays open: the deferral above is live until the read-site fires at least once, and the
+Ω_C jurisdiction-split residue remains the charter's standing scope note.
+
+## OQ-335 — "The Blind Reviewer" essay: assert publicly that some checks are available only to a context-starved worker; the rulings that authorize its contents
+
+**Ω-type:** Ω_E — the central mechanism claim carries a named in-world firing condition (below);
+the magnitude question is RQ1 (paper 2 §14), declared open, cited as open.
+
+**Status:** open — minted 2026-08-20 at the harmonic-launching-spark checkpoint, before drafting by
+construction; closes when the essay ships to cafebedouin.org with its per-claim table recorded here.
+**Priority:** 2
+**Deps:** splits_from OQ-334
+**Origin:** 2026-08-20 — §1 of the post-shakedown sequencing plan (the arc's main deliverable). All
+checkpoint rulings resolved by the operator the same day, relayed through the no-repo ruling
+session; recorded here so the drafter reads them from substrate, not from chat.
+**Files:** docs/practice/practice_paper_v0_1.md, docs/README.md, .claude/skills/plan-review/SKILL.md,
+audits/2026-08-20_plan_review_shakedown/evidence/RUNS.md
+
+**Thesis (ruled register):** context is not uniformly good — some checks are available ONLY to a
+worker deliberately starved of context, because context is what lets a worker silently supply the
+missing halves. Denying an instance the substrate does not degrade it; it RELOCATES it into a
+jurisdiction substrate-holding instances structurally cannot occupy. Sharpens v0.6 §9.2's
+"unavailable to any instance" to: unavailable to any instance *inside the work loop*. Working
+title: **The Blind Reviewer**; subtitle carries the claim.
+
+**The rulings (operator, 2026-08-20; the two knobs — thesis altitude cheap to revise, receipt
+integrity not revisable — bold on the first, strict on the second):**
+- **R-A (venue): PUBLIC — cafebedouin.org.** Receipts stay in the repo and are pointed at, never
+  restated. No fourth repo-internal draft (fork surface, v0.6 §II.3).
+- **R1 (register): ASSERTED, split by knob.** The MECHANISM claim is asserted about the world — it
+  is structural (an instance that cannot read the substrate cannot silently supply the missing
+  halves) and does not rest on n=1; the session is the existence witness that the arrangement is
+  runnable, not the support. The MAGNITUDE claim stays open under RQ1. Firing condition, named in
+  the essay body: hand a substrate-holding instance the same presentations; if its amendments land
+  on the same three axes at comparable frequency, the claim is dead — the amendments were in the
+  artifacts, not in the seat.
+- **R5 + R-D + R-E (contaminated arm): OPTION (c), explicit pick — not a default (R-D).** Publish
+  the primed-instrument arm's qualitative claims, sourced by name to the primed instrument's
+  transcribed report, contamination stated IN THE CLAIMING SENTENCE (never a footnote), and NO
+  number from that arm in any form (the two-defects count included). R-E: FOUR contributions.
+  Addendum executed same day: SKILL.md's fixer paragraph carries the same contamination statement
+  — one fact, one framing, both sites.
+- **R-C (item-(7) receipt altitude): existence witness of REACHABILITY, never evidence of
+  discrimination.** The pair differs in history AND instance AND draw — cite it in one sentence
+  naming all three confounds inline. Its value: the reviewer instrument is not a ratchet — the
+  falsifying branch is reachable. Reachability survives confounding; discrimination does not.
+- **R3: MOOT** (Ω_P ruled rather than deferred — resolution at OQ-334). **R-B: CLOSED, no
+  objection** — the pre-instrument receipts (paper 3 §V.1 ritual cost, the 219-call input-gated
+  run, the §10.3 restraint blind spot, the 113→53 prune with 2 errors, the capped channel, OQ-276's
+  refusal to emit a number) predate the reviewer instrument; clean/contaminated is
+  instrument-relative and cannot apply retroactively; each carries its own provenance
+  (self-observed, in-repo, n=1, declared globally). **R4:** recorded in the 2026-08-20 KNOWN_STATE
+  convention entry, not here.
+
+**Four contributions (each → receipt pin → arm; the per-claim table re-derives this at draft time):**
+1. The jurisdictional refinement and its mechanism (assertion; the shakedown arc OQ-334 is the
+   existence witness; arm split N/A — structural claim).
+2. The amendment regularity — shape/record/reviver — discovered by watching what a blind reviewer
+   amends, promoted to a pre-presentation checklist, with the observable before/after when
+   amendments shifted to item-specific content (clean-room arm; pins:
+   `audits/2026-08-20_plan_review_shakedown/evidence/RUNS.md`, SKILL.md Phase 1).
+3. The third function — a check on WHAT REACHES THE DECIDER rather than who decides; distinct from
+   both §9.2 jurisdictions and instance-occupiable, because it requires reading a presentation
+   rather than a history.
+4. The primed-instrument arm, qualitative only, contamination stated (pins: OQ-334 "THE FIXER IS A
+   SOURCE OF ROUNDS" above; SKILL.md fixer paragraph; terms per R5(c)).
+Plus, not contributions but cited: the item-(7) charity receipt at R-C's altitude (pin:
+evidence/RUNS.md item (7)); the §IV.4 third case NAMED as held-out, never counted (Ω_P declined).
+
+**Production path:** drafted OUTSIDE this repo by the operator-designated instance holding these
+rulings (fresh of the arc's working context; NOT context-free — it holds the three papers and its
+own rulings, so its receipt re-derivation is self-verification, stated as such); the
+outside-the-framing check is the operator + cross-vendor relay; the finish is a no-context instance
+holding only the essay text (the standing precedent recorded at OQ-334's tail). Explicitly NOT
+through `repo-blind-reviewer` (OQ-334 worst-use-case bound). The per-claim table (claim → pin →
+arm) is the check artifact; any claim whose only available support would be a comparative run is
+cut or re-registered under RQ1 declared open.
+
 ---
 
 *Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark

@@ -31,4 +31,6 @@ and pressure to close lines is pressure to write whatever bit clears them fastes
 
 ---
 
+- [x] 2026-08-20 — step-0 sole-writer re-check at the harmonic-launching-spark checkpoint: is this session still the only writer → Fired: live — HEAD had moved c81bc4bb→b316c273 (5 commits, the OQ-332/OQ-276 ruling session) with 3 other live claude processes; execution held until operator confirmed sole-writer; registered retroactively — the check ran before the same session's new open-a-line rule reached this instance (closed 2026-08-20)
+- [x] 2026-08-20 — do all Assumed-substrate lines of plan harmonic-launching-spark hold against the repo → Fired: no — every line confirmed at c81bc4bb (papers/commits/OQ-334 content/gate GREEN; the fixer figure's exactly-two records and OQ-293's missing E1 pin match the plan's ⊗ corrections); registered retroactively, same reason as above (closed 2026-08-20)
 - [x] 2026-08-20 — what mechanism routes OQ-276 into the resolver's BLOCKED ON YOU section (Ω_P type line, empty Deps, or something else), and what edit routes it out → Fired: live — omega_resolver.py:406-408: every LEAF OQ whose Ω-type line reads Ω_P routes to blocked_on_human; no waiting-on-condition relator exists, so routing OQ-276 out requires either a resolver change or a type-line reorder, neither free (closed 2026-08-20)
