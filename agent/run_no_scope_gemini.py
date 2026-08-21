@@ -46,6 +46,23 @@ FLASH_TESTSETS = REPO_ROOT / "prolog" / "testsets_flash"
 FLASH_JSON = REPO_ROOT / "json_flash"
 FLASH_LADDER = REPO_ROOT / "prolog" / "beta_processed_flash.txt"
 OUT_DIR = REPO_ROOT / "outputs" / "no_scope_runs_flash"
+PROVENANCE_SOURCE = "no_scope_rebuild_gemini"
+
+
+def apply_leg_suffix(suffix):
+    """--leg-suffix S rebinds every destination to a SIBLING leg (testsets_flash<S>/,
+    json_flash<S>/, beta_processed_flash<S>.txt, outputs/no_scope_runs_flash<S>/) and tags
+    provenance_source no_scope_rebuild_gemini<S>. Used for a same-model REDRAW leg or a
+    regime-contrast leg (--thinking-budget) that must pair with testsets_flash/ by filename
+    while never touching it. The registry is the sibling dir only (runbook §6)."""
+    global FLASH_TESTSETS, FLASH_JSON, FLASH_LADDER, OUT_DIR, PROVENANCE_SOURCE
+    if not suffix:
+        return
+    FLASH_TESTSETS = REPO_ROOT / "prolog" / f"testsets_flash{suffix}"
+    FLASH_JSON = REPO_ROOT / f"json_flash{suffix}"
+    FLASH_LADDER = REPO_ROOT / "prolog" / f"beta_processed_flash{suffix}.txt"
+    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_flash{suffix}"
+    PROVENANCE_SOURCE = f"no_scope_rebuild_gemini{suffix}"
 
 TERMINAL = {"JOB_STATE_SUCCEEDED", "JOB_STATE_FAILED", "JOB_STATE_CANCELLED",
             "JOB_STATE_EXPIRED", "JOB_STATE_PARTIALLY_SUCCEEDED"}
@@ -130,11 +147,16 @@ def create_cache(client, model):
         return None
 
 
+# Thinking budget for THIS run. 0 = disabled (the original flash leg: Haiku ran without
+# extended thinking, so output tokens == story length). A positive budget (--thinking-budget N)
+# turns thinking ON for a regime-contrast leg; Gemini counts thinking tokens inside
+# max_output_tokens, so the cap is widened by the budget. Stamped into provenance either way.
+THINKING_BUDGET = 0
+
+
 def _gen_config(cache_name):
-    # thinking disabled (thinking_budget=0): Haiku ran without extended thinking, so this keeps
-    # the comparison fair and output tokens == story length (no thinking overhead/cost).
-    cfg = {"max_output_tokens": MAX_OUTPUT_TOKENS, "temperature": 0.1,
-           "thinking_config": {"thinking_budget": 0}}
+    cfg = {"max_output_tokens": MAX_OUTPUT_TOKENS + max(THINKING_BUDGET, 0), "temperature": 0.1,
+           "thinking_config": {"thinking_budget": THINKING_BUDGET}}
     if cache_name:
         cfg["cached_content"] = cache_name
     else:
@@ -278,8 +300,8 @@ def run(args):
                 _ShimClient(wrapped), "gemini-batch", FLASH_JSON, FLASH_TESTSETS, FLASH_LADDER,
                 gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
                 overwrite=True, id_map=id_map, token_acc=token_acc,
-                provenance_source="no_scope_rebuild_gemini",
-                sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=0.1,thinking_budget=0")
+                provenance_source=PROVENANCE_SOURCE,
+                sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=0.1,thinking_budget={THINKING_BUDGET}")
             done = load_processed_log(FLASH_LADDER)
             remaining = [s for s in remaining if s["constraint_id"] not in done]
             if not remaining:
@@ -313,7 +335,17 @@ def main():
     ap.add_argument("--poll-interval", type=int, default=POLL_INTERVAL)
     ap.add_argument("--no-cache", action="store_true")
     ap.add_argument("--estimate", action="store_true", help="count tokens + price; no generation")
-    run(ap.parse_args())
+    ap.add_argument("--leg-suffix", default="",
+                    help="write to sibling leg testsets_flash<S>/ (redraw / regime-contrast leg)")
+    ap.add_argument("--thinking-budget", type=int, default=0,
+                    help="Gemini thinking budget (0 = disabled, the original leg's regime)")
+    args = ap.parse_args()
+    global THINKING_BUDGET
+    THINKING_BUDGET = args.thinking_budget
+    apply_leg_suffix(args.leg_suffix)
+    print(f"  leg: {FLASH_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE} "
+          f"| thinking_budget={THINKING_BUDGET}")
+    run(args)
 
 
 if __name__ == "__main__":

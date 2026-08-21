@@ -69,6 +69,24 @@ STEALTH_JSON = REPO_ROOT / "json_stealth"
 STEALTH_LADDER = REPO_ROOT / "prolog" / "beta_processed_stealth.txt"
 OUT_DIR = REPO_ROOT / "outputs" / "no_scope_runs_stealth"
 RESPONSES_DIR = OUT_DIR / "responses"
+PROVENANCE_SOURCE = "no_scope_rebuild_stealth"
+
+
+def apply_leg_suffix(suffix):
+    """--leg-suffix S rebinds every destination to a SIBLING leg (testsets_stealth<S>/,
+    json_stealth<S>/, beta_processed_stealth<S>.txt, outputs/no_scope_runs_stealth<S>/) and
+    tags provenance_source no_scope_rebuild_stealth<S>. Used for a same-model REDRAW leg (the
+    within-model churn floor) that must pair with testsets_stealth/ by filename while never
+    touching it. The uniqueness registry is the sibling dir only (runbook §6)."""
+    global STEALTH_TESTSETS, STEALTH_JSON, STEALTH_LADDER, OUT_DIR, RESPONSES_DIR, PROVENANCE_SOURCE
+    if not suffix:
+        return
+    STEALTH_TESTSETS = REPO_ROOT / "prolog" / f"testsets_stealth{suffix}"
+    STEALTH_JSON = REPO_ROOT / f"json_stealth{suffix}"
+    STEALTH_LADDER = REPO_ROOT / "prolog" / f"beta_processed_stealth{suffix}.txt"
+    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_stealth{suffix}"
+    RESPONSES_DIR = OUT_DIR / "responses"
+    PROVENANCE_SOURCE = f"no_scope_rebuild_stealth{suffix}"
 
 
 def _api_key():
@@ -228,7 +246,7 @@ def run(args):
             _ShimClient(wrapped), "stealth-sync", STEALTH_JSON, STEALTH_TESTSETS, STEALTH_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source="no_scope_rebuild_stealth",
+            provenance_source=PROVENANCE_SOURCE,
             sampling_params=stamp)
         done = load_processed_log(STEALTH_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
@@ -268,7 +286,11 @@ def main():
     ap.add_argument("--temperature", type=float, default=None,
                     help="override the model's default temperature (stamped in provenance)")
     ap.add_argument("--estimate", action="store_true", help="rough token count; no generation")
+    ap.add_argument("--leg-suffix", default="",
+                    help="write to sibling leg testsets_stealth<S>/ (same-model redraw leg)")
     args = ap.parse_args()
+    apply_leg_suffix(args.leg_suffix)
+    print(f"  leg: {STEALTH_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE}")
     run(args)
 
 

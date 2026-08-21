@@ -41,6 +41,7 @@ from pathlib import Path
 # Ensure repo root is on the path when invoked as a script
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+import os
 import anthropic
 
 from agent.llm_call import sampling_overrides
@@ -858,7 +859,9 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         story.pop("_flat_control_of", None)
 
         # lint via temp in flat testsets/ so dirname(dirname) resolves to prolog/
-        tmp_path = TESTSETS_DIR / f".tmp_kernel_{cid}.pl"
+        # pid-suffixed: every leg driver shares this writer AND the seed pool, so two
+        # concurrent post-processing passes can reach the same cid (2026-08-21).
+        tmp_path = TESTSETS_DIR / f".tmp_kernel_{cid}_{os.getpid()}.pl"
         try:
             tmp_path.write_text(pl_content, encoding="utf-8")
             lint_errors = lint_file(str(tmp_path))
