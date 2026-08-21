@@ -1,0 +1,46 @@
+% Library was moved: library(http/json) --> library(json)
+
+side	predicate	resolvable	dynamic	rules	facts	verdict
+retract	config:param/2	resolvable=ok	dynamic=yes	rules=0	facts=184	clean
+retract	constraint_data:base_extractiveness/2	resolvable=ok	dynamic=no	rules=1	facts=0	throws_partial_rule
+retract	drl_core:base_extractiveness/2	resolvable=ok	dynamic=no	rules=2	facts=1	throws_partial_rule
+retract	narrative_ontology:constraint_beneficiary/2	resolvable=ok	dynamic=yes	rules=0	facts=686	clean
+retract	narrative_ontology:constraint_claim/2	resolvable=ok	dynamic=yes	rules=0	facts=258	clean
+retract	narrative_ontology:constraint_metric/3	resolvable=ok	dynamic=yes	rules=0	facts=1290	clean
+retract	narrative_ontology:constraint_victim/2	resolvable=ok	dynamic=yes	rules=0	facts=572	clean
+retract	narrative_ontology:cs_authority_grounding/2	resolvable=ok	dynamic=no	rules=0	facts=183	throws_immutable
+retract	narrative_ontology:fixing_cost_class/2	resolvable=ok	dynamic=yes	rules=0	facts=133	clean
+retract	narrative_ontology:measurement/5	resolvable=ok	dynamic=yes	rules=0	facts=4561	clean
+retract	narrative_ontology:stakeholder_gain_flow/2	resolvable=ok	dynamic=yes	rules=0	facts=135	clean
+retract	constraint_indexing:constraint_classification/3	resolvable=ok	dynamic=yes	rules=8	facts=0	throws_partial_rule
+retract	narrative_ontology:constraint_stakeholder/7	resolvable=ok	dynamic=yes	rules=0	facts=1607	clean
+retract	narrative_ontology:founding_problem_status/2	resolvable=ok	dynamic=yes	rules=0	facts=241	clean
+retract	narrative_ontology:disappearance_verdict/2	resolvable=ok	dynamic=yes	rules=0	facts=242	clean
+assert	constraint_indexing:directionality_override/3	resolvable=ok	dynamic=yes	rules=0	facts=47	clean
+assert	domain_priors:emerges_naturally/1	resolvable=ok	dynamic=no	rules=0	facts=21	throws_immutable
+assert	drl_composition:agent_index/2	resolvable=undefined	dynamic=no	rules=n/a	facts=n/a	throws_unresolvable
+assert	drl_composition:constraint_data/2	resolvable=undefined	dynamic=no	rules=n/a	facts=n/a	throws_unresolvable
+assert	maxent_classifier:maxent_dist/3	resolvable=ok	dynamic=yes	rules=0	facts=0	throws_empty
+assert	narrative_ontology:cs_axiom/3	resolvable=ok	dynamic=no	rules=0	facts=359	throws_immutable
+assert	narrative_ontology:cs_drift_state/3	resolvable=ok	dynamic=yes	rules=0	facts=171	clean
+assert	narrative_ontology:cs_axiom_grounding/3	resolvable=ok	dynamic=yes	rules=0	facts=359	clean
+
+=== TWO-SIDED INSTRUMENT CONTROLS (one pair per check) ===
+ [check 5: dynamism]
+  FIRES   static bim/2      : expected fires, got fires   [OK]
+  DECLINES dynamic cm/3     : expected declines, got declines   [OK]
+ [check 3: rule detector]
+  FIRES   static bim/2      : expected fires, got fires   [OK]
+  DECLINES config:param/2   : expected declines, got declines   [OK]
+ [check 2: resolvability]
+  FIRES   bogus functor     : expected fires, got fires   [OK]
+  FIRES   wrong arity cm/2  : expected fires, got fires   [OK]
+  DECLINES cm/3             : expected declines, got declines   [OK]
+ [check 1: empty snapshot]
+  FIRES   unpopulated dyn   : expected fires, got fires   [OK]
+  DECLINES config corpus_path: expected declines, got declines   [OK]
+ [check 4: shadow at TEMPLATE shape]
+  FIRES   survivor unifies  : expected fires, got declines   [CONTROL BROKEN]
+  DECLINES full retract     : expected fires, got fires   [OK]
+ [binding-leak regression]
+  DECLINES template unbound : expected fires, got fires   [OK]

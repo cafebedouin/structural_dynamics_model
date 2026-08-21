@@ -1,0 +1,32 @@
+=== clause 4 reachability, 4 configurations ===
+DB always: p(a,1), p(a,9), p(b,5)
+
+A) template p(a,_) covering fact p(a,2):
+  clause4 CLEAN for sh:p(a,2) (no survivor at template shape p(a,_12500))
+A done
+
+B) NARROW template p(a,1), fact p(a,2) (fact NOT covered):
+  clause4' would fire (undecidable) on sh:p(a,2)
+B done
+
+C) template p(_,_) covering fact p(a,2):
+  clause4 CLEAN for sh:p(a,2) (no survivor at template shape p(_14128,_14130))
+C done
+
+D) two templates p(b,_) + p(a,_), fact p(a,2):
+  clause4 CLEAN for sh:p(a,2) (no survivor at template shape p(a,_14986))
+D done
+
+
+=== two-sided control ===
+POSITIVE CONTROL (leak present):
+  snapshot under LEAK (template narrowed to p(a,1)): [p(a,1)]
+  survivors at TEMPLATE shape p(a,_2822): [p(a,9),p(a,2)]
+  *** clause4 FIRES: p(a,9) shadows the replacement p(a,2)
+  and once(p(a,X)) selects X=9 -- replacement UNREACHABLE
+
+NEGATIVE (leak fixed):
+  snapshot with NO leak (full template p(a,_12450)): [p(a,1),p(a,9)]
+  survivors (excl. replacement): []
+  clause4 DECLINES: replacement reachable
+  once(p(a,Y)) selects Y=2 -- replacement reachable
