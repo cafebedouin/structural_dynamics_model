@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "animal_moral_status__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "619d9552-bc24-4613-9840-27d39f585a16"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Animal Welfare (Regulated Use) Constraint",
+    "topic_domain": "applied_ethics/animal_studies/legal_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "welfare_organizations",
+      "regulated_animal_industries",
+      "general_public"
+    ],
+    "victims": [
+      "animals_in_regulated_use"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "welfare_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for and define 'humane' standards, lobby for legislation, and monitor compliance. They gain legitimacy and funding by demonstrating progress in reducing animal suffering within existing systems. Their exit is constrained by their mission to improve conditions for animals within the current paradigm."
+    },
+    {
+      "name": "regulated_animal_industries",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate within the framework of permissible animal use, benefiting from public acceptance and legal clarity. They bear the costs of compliance with welfare regulations but gain social license to operate. Exit means abandoning their business model or relocating to less regulated jurisdictions."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the moral comfort of knowing animal suffering is minimized in products they consume, without having to fundamentally alter their consumption patterns. Their engagement is often passive, but collective sentiment can influence policy."
+    },
+    {
+      "name": "animals_in_regulated_use",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the direct subjects of regulated use, experiencing suffering that is minimized but not eliminated. Their interests are represented by welfare organizations, but they have no agency or exit options within the system. The constraint aims to reduce their suffering, but their use is still permissible."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Reject the premise of permissible animal use entirely, arguing that welfare regulations merely make exploitation more palatable. They are excluded from the core conversation of 'regulated use' because their position challenges the foundational assumption of the welfare reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates human behavior to minimize animal suffering within systems of use, providing a framework for industries and consumers to operate with a degree of moral comfort and legal clarity.",
+    "transfer_function": "Transfers moral responsibility and potential guilt from human users to the regulatory framework, while transferring some resources (e.g., compliance costs) from industries to animal welfare measures. Animals bear the residual suffering.",
+    "absent_voices": "Abolitionist advocates are largely absent from the 'regulated use' discussion, as their core premise (no use is permissible) is foreclosed by this reading. They would argue that the constraint legitimizes exploitation rather than ending suffering.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the moral landscape around animal use would become highly contested and unregulated. Industries would face public backlash, welfare organizations would lose their mandate, and animal suffering would likely increase dramatically without any legal or ethical framework to minimize it.",
+    "founding_problem": "Unchecked cruelty and indifference towards animal suffering in human practices, leading to widespread public discomfort and ethical concerns.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Welfare organizations and the general public attest that the problem of animal suffering remains live, requiring ongoing vigilance and regulation. Regulated industries also acknowledge the need for standards to maintain social license. Abolitionist advocates, however, argue the problem is misidentified, and the true problem is use itself."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'welfare reading' of animal moral status: animals are sentient beings whose suffering should be minimized within systems of regulated use, where cruelty is wrong but use is permissible. It focuses on the methods of use, not the use itself. This is one reading of the 'animal_moral_status' kernel, distinct from the 'property_reading' (animals as mere resources) and the 'abolitionist_reading' (all use is exploitation). The constraint aims to reduce suffering, but its core premise allows for continued animal use, leading to a low-to-moderate extractiveness for animals and a coordination function for human society.",
+    "logic_rationale": "Extractiveness is moderate (0.35) because animals still experience suffering and loss of life, even under 'humane' conditions, but the constraint actively works to reduce the most egregious forms of harm. Suppression (0.45) reflects the active enforcement of welfare standards and the suppression of alternatives (e.g., abolitionist views) within the dominant discourse. Theater ratio (0.20) is present as some 'welfare' practices are more performative than genuinely beneficial to animals, but there is also real functional improvement. The claimed type is 'rope' because it genuinely coordinates efforts to reduce suffering, but with a 'tangled_rope' overlay due to the inherent extraction from animals.",
+    "directionality_logic": "Welfare organizations and regulated industries are beneficiaries, as the constraint provides a framework for their operations and legitimacy. The general public also benefits from moral comfort. Animals in regulated use are the primary payers/victims, as they bear the direct costs of the system, even with minimized suffering. Abolitionist advocates are excluded, as their fundamental challenge to the premise of use places them outside the constraint's operational logic.",
+    "perspectival_gap": "From the perspective of welfare organizations and the public, this constraint is a positive force, a 'rope' that coordinates efforts to reduce suffering. From the perspective of the animals, it is a system that, while mitigating harm, still permits their exploitation, making it feel more like a 'tangled_rope' or even a 'snare' of regulated suffering. The engine's per-seat classification will capture this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate (minimizing suffering) remains live, but its scope (within systems of use) is increasingly contested. The classification as a 'rope' with a 'tangled_rope' overlay prevents mislabeling it as pure extraction, acknowledging its genuine coordination function, while also highlighting the inherent extraction from animals and the active enforcement required to maintain the 'use is permissible' premise.",
+    "kernel_context": "This constraint is the 'welfare_reading' of the 'animal_moral_status' kernel. It posits that animals are sentient beings whose suffering should be minimized within systems of regulated use. This reading stands in contrast to the 'property_reading' (animals as mere resources) and the 'abolitionist_reading' (all use is exploitation)."
+  },
+  "omegas": [
+    {
+      "id": "suffering_quantification_ambiguity",
+      "question": "How can 'minimized suffering' be objectively quantified and verified across diverse species and contexts, given the subjective nature of sentience?",
+      "resolution_mechanism": "Development of robust, cross-species behavioral and physiological indicators of stress and well-being, coupled with independent, transparent auditing of animal facilities.",
+      "impact": "If suffering is found to be consistently higher than current 'minimized' thresholds, the extractiveness of the constraint would be re-evaluated upward, potentially shifting its classification towards a Snare. If robust minimization is demonstrated, the Rope classification would be strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in objectively measuring and verifying 'minimized suffering' in animals."
+    },
+    {
+      "id": "use_permissibility_conceptual_boundary",
+      "question": "Is the premise 'use is permissible' a foundational moral truth, or a socially constructed convention that could be revised?",
+      "resolution_mechanism": "Philosophical and ethical discourse, shifts in societal values, and legal precedents that challenge or affirm the moral permissibility of animal use, independent of suffering minimization.",
+      "impact": "If 'use is permissible' is re-framed as a convention, the constraint's legitimacy would be weakened, and its persistence would depend more heavily on active suppression of alternatives. If it is affirmed as a moral truth, the welfare reading's foundation is strengthened.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the moral grounding of 'use is permissible' as a core tenet of the welfare reading."
+    },
+    {
+      "id": "welfare_vs_abolition_framing_conflict",
+      "question": "Does the 'welfare reading' genuinely improve animal lives, or does it primarily serve to assuage human conscience and legitimize continued exploitation, as argued by abolitionists?",
+      "resolution_mechanism": "Longitudinal studies comparing animal welfare outcomes under regulated use versus hypothetical abolitionist scenarios, alongside critical analysis of the psychological and social functions of welfare discourse for human consumers.",
+      "impact": "If the primary function is found to be human moral comfort and legitimization, the theater_ratio would increase significantly, and the constraint's classification would shift towards a Piton or Snare, as its stated coordination function (animal welfare) would be revealed as largely performative.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Conflict between welfare and abolitionist framings regarding the true impact and purpose of regulated animal use."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "property_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_implies_moral_consideration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "human_use_of_animals_is_permissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "minimizing_suffering_within_use",
+    "drift_state": {
+      "moment": "contemporary_animal_rights_discourse",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

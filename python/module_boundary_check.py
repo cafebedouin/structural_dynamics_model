@@ -340,6 +340,10 @@ CORPUS_DIRS = {
     "testsets_kimi":    "Model-named leg (kimi-k2.6).",
     "testsets_sonnet":  "Model-named leg (claude-sonnet-5).",
     "testsets_stealth": "Model-named leg (stealth/ox-alpha via OpenRouter; building 2026-08-21).",
+    "testsets_flash2":  "Same-model REDRAW of testsets_flash (gemini-2.5-flash, thinking off, schema 685ed7cf; 2026-08-21).",
+    "testsets_flash3":  "Second same-commit redraw (gemini-2.5-flash, thinking off; 2026-08-21).",
+    "testsets_flash_think":  "Regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
+    "testsets_flash_think2": "Redraw of the regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",
     "archives":         "Archived corpora and point-in-time probes; per audits/README.md "
                         "point-in-time documents are not retro-edited.",

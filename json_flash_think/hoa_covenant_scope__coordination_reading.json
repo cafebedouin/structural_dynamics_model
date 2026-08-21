@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "b3f24d77-665d-4a74-9e4c-e3099443b0b6"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "HOA Covenant for Shared Infrastructure Coordination",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "all_homeowners"
+    ],
+    "victims": [
+      "free_riders"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "all_homeowners",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefit from well-maintained shared infrastructure (roads, parks, utilities) and a stable community environment. They collectively pay dues to fund these services and participate in governance, but their exit is tied to selling their property."
+    },
+    {
+      "name": "hoa_board",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Elected representatives who administer the covenant, collect dues, manage maintenance contracts, and enforce rules related to shared infrastructure and objective nuisances. Their role is to ensure the collective good of the community."
+    },
+    {
+      "name": "free_riders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Homeowners who benefit from the shared amenities and services but attempt to avoid paying their fair share of dues or complying with basic maintenance rules. They are victims of the enforcement mechanism only insofar as it compels them to contribute to the collective good."
+    },
+    {
+      "name": "local_government",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Oversees HOAs to ensure compliance with local laws and regulations, mediates disputes, and may intervene if the HOA fails to maintain essential infrastructure that impacts public safety or welfare."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To coordinate the maintenance and upkeep of shared infrastructure (e.g., private roads, common green spaces, shared utilities) and to resolve genuine externalities (e.g., noise, waste management) within a residential community.",
+    "transfer_function": "Collects mandatory dues from all homeowners to fund the maintenance, repair, and improvement of shared property and services, ensuring a collective pool of resources for common needs.",
+    "absent_voices": "Homeowners who might prefer to opt out of shared amenities or collective rules entirely, or those who believe they could manage their property more cheaply without collective oversight. They are not part of the conversation because the covenant is a condition of property ownership in the community.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the covenant and its enforcement vanished, shared infrastructure would likely degrade due to a lack of coordinated funding and responsibility. Property values would decline, and disputes over unmanaged externalities would proliferate, leading to a less desirable living environment.",
+    "founding_problem": "Preventing the 'tragedy of the commons' in planned residential developments, ensuring the long-term upkeep of common areas, and maintaining a baseline quality of life and property values through collective action.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Urban planners, real estate developers, and historical records of communities without such mechanisms corroborate the ongoing need for coordinated governance to manage shared assets and prevent decline."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'coordination_reading' of the 'hoa_covenant_scope' kernel. In this reading, the HOA covenant primarily functions as a genuine collective-action mechanism to ensure the maintenance of shared infrastructure and manage objective externalities. It is characterized by low extraction, minimal suppression, and a focus on mutual benefit, consistent with a Rope classification. The enforcement is directed at ensuring fair contribution to shared costs, not at controlling individual behavior beyond what is necessary for collective well-being.",
+    "logic_rationale": "The extractiveness is low (0.15) because the dues are primarily directed towards the actual costs of shared maintenance and administration, with minimal surplus. Suppression is low (0.20) as enforcement is limited to collecting dues and addressing clear nuisances, with alternatives (e.g., selling property) being available, albeit constrained. The theater ratio is low (0.10) because the covenant's activities are genuinely functional, focused on tangible maintenance and problem-solving. The metrics reflect a constraint that largely fulfills its stated coordination purpose.",
+    "directionality_logic": "All homeowners are beneficiaries of the coordinated maintenance, experiencing symmetric costs and benefits. The HOA board acts as the agenda-setter, facilitating this coordination. 'Free-riders' are identified as victims only in the sense that the constraint compels them to contribute to a system from which they benefit, preventing them from externalizing costs onto others. Local government acts as an observer, ensuring legal compliance.",
+    "perspectival_gap": "From the perspective of 'all_homeowners' and the 'hoa_board', this covenant is a beneficial and necessary coordination mechanism. From the perspective of 'free_riders', it might be seen as an extractive imposition, but this reading emphasizes the collective benefit that justifies the cost. The engine's per-seat classification would likely confirm a Rope-like experience for most, with a slightly more 'constrained' experience for those compelled to pay.",
+    "kernel_context": "This constraint is the 'coordination_reading' of the 'hoa_covenant_scope' kernel. It emphasizes the covenant's role in solving collective action problems for shared infrastructure. Sibling readings include 'behavioral_control_reading' (focused on aesthetic uniformity and conformity) and 'extraction_reading' (focused on revenue generation and power consolidation)."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_behavioral_control_ambiguity",
+      "question": "Is the covenant's enforcement genuinely limited to shared infrastructure and objective nuisances, or does it subtly extend to aesthetic uniformity and behavioral conformity?",
+      "resolution_mechanism": "Analysis of HOA board meeting minutes, enforcement records, and homeowner complaints over a multi-year period, specifically tracking the types of violations cited and the rationale provided.",
+      "impact": "If enforcement frequently targets subjective aesthetic or minor behavioral issues, the constraint's effective suppression and theater_ratio would be higher, shifting it towards a 'tangled_rope' or 'snare' classification, aligning more with the 'behavioral_control_reading'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing genuine coordination from subtle behavioral control."
+    },
+    {
+      "id": "cost_justification_ambiguity",
+      "question": "Are the HOA dues and any associated fines strictly proportional to the actual costs of shared maintenance and administration, or do they generate significant surplus revenue?",
+      "resolution_mechanism": "Independent audit of HOA financial records, comparing revenue from dues/fines against actual expenditures for maintenance, repairs, and administrative overhead.",
+      "impact": "If significant surplus revenue is consistently generated and not reinvested into shared assets, the constraint's extractiveness would be higher, potentially shifting it towards an 'extraction_reading' and a 'tangled_rope' or 'snare' classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Verifying the proportionality of HOA costs to services rendered."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "collective_benefit_justifies_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "limited_scope_for_common_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "mutual_benefit_collective_action",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

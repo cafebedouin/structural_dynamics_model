@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "irc_469_material_participation_kernel__strict_gatekeeper_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e3c68aa4-b773-4a51-b27d-a4417e319005"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IRC 469 Material Participation: Strict Gatekeeper Reading",
+    "topic_domain": "tax_law/real_estate_investment/regulatory_interpretation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_treasury",
+      "tax_preparers_and_advisors"
+    ],
+    "victims": [
+      "real_estate_investors",
+      "small_business_owners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_treasury",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Benefits from increased tax revenue due to fewer passive losses offsetting ordinary income. The strict interpretation aligns with its mandate to prevent tax avoidance and maintain fiscal stability."
+    },
+    {
+      "name": "tax_preparers_and_advisors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the complexity and high documentation requirements, leading to increased demand for their services in advising clients on compliance and audit defense. They are incentivized to maintain the high bar."
+    },
+    {
+      "name": "real_estate_investors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the cost of meticulous record-keeping and the potential inability to deduct legitimate losses against other income, increasing their effective tax burden. Their exit options are limited by the need to comply with tax law or exit real estate investment entirely."
+    },
+    {
+      "name": "small_business_owners",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Often struggle to meet the high documentation bar for their active involvement in businesses that might generate passive losses, leading to unexpected tax liabilities. They lack the resources for extensive legal and accounting advice."
+    },
+    {
+      "name": "irs_auditors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforce the material participation rules, often interpreting them strictly during audits. Their performance metrics may incentivize disallowing passive losses, reinforcing the high documentation bar."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate taxpayer behavior by clearly distinguishing between active business income and passive investment income, preventing the use of 'paper losses' from passive activities to shelter active income.",
+    "transfer_function": "Transfers potential tax savings (from deducting passive losses) from real estate investors and small business owners to the U.S. Treasury, while also generating revenue for tax preparers and advisors due to compliance complexity.",
+    "absent_voices": "Advocacy groups for small businesses and real estate investors, who would argue for a more practical and less burdensome definition of material participation, are often outmatched by the institutional power of the Treasury and the IRS.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict material participation rules vanished, there would be a significant shift in tax planning strategies, potentially leading to a surge in passive loss deductions, a decrease in federal tax revenue, and a re-evaluation of investment structures, particularly in real estate.",
+    "founding_problem": "The original problem was widespread tax shelters where wealthy individuals used passive losses from investments (e.g., limited partnerships) to offset active income, eroding the tax base and perceived fairness of the tax system.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The U.S. Treasury and IRS consistently argue that the problem of tax shelters remains live, requiring robust enforcement. Independent tax policy analysts generally corroborate that without such rules, tax avoidance would increase, though they may dispute the stringency of the current interpretation."
+  },
+  "interval": {
+    "start": 1986,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1996,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2016,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'strict gatekeeper' reading of IRC Section 469, which defines 'material participation' for tax purposes. Under this reading, taxpayers must demonstrate verifiable, substantial personal labor in an activity to avoid having losses classified as 'passive,' which are generally not deductible against ordinary income. This interpretation narrows the qualifying population and imposes a high documentation burden, leading to significant compliance friction and increased tax revenue for the government. It is one reading of the broader 'irc_469_material_participation_kernel' which is contested by a 'strategic_shelter_reading'.",
+    "logic_rationale": "The high extractiveness (0.68) reflects the substantial tax liabilities incurred by investors and small business owners who cannot meet the stringent participation and documentation requirements. Suppression (0.75) is high due to the IRS's enforcement power and the lack of viable alternatives to compliance. The theater ratio is low (0.20) because the IRS genuinely enforces these rules, though some of the complexity might be performative. The increasing extractiveness and suppression over time reflect a trend towards stricter enforcement and interpretation since the rule's inception.",
+    "directionality_logic": "The U.S. Treasury and tax advisors are beneficiaries, gaining revenue and business from the strict interpretation. Real estate investors and small business owners are payers, bearing the direct costs of compliance and disallowed losses. IRS auditors act as agenda-setters, actively enforcing the strict interpretation.",
+    "perspectival_gap": "From the perspective of the U.S. Treasury, this is a necessary anti-abuse measure. From the perspective of investors and small business owners, it is an overly burdensome and extractive regulation that penalizes legitimate business activity. The engine's classification will reflect this divergence based on the declared structural positions.",
+    "mandatrophy_analysis": "The constraint's mandate (preventing tax shelters) is still live, but its strict interpretation has arguably expanded beyond its original scope, creating a 'tangled rope' where genuine coordination (preventing abuse) is intertwined with significant extraction from legitimate actors. The high documentation bar, while serving the anti-abuse mandate, also creates a revenue stream for tax advisors and the Treasury, suggesting a hybrid function.",
+    "kernel_context": "This constraint is the 'strict_gatekeeper_reading' of the 'irc_469_material_participation_kernel'. It emphasizes verifiable, substantial personal labor and a high documentation bar, leading to a narrow qualifying population for material participation. This contrasts with the 'strategic_shelter_reading', which views material participation as a more permissive threshold achievable through aggressive hour-counting and grouping elections."
+  },
+  "omegas": [
+    {
+      "id": "documentation_burden_vs_abuse_prevention",
+      "question": "Is the current high documentation bar for material participation genuinely necessary to prevent tax abuse, or does it primarily serve to increase compliance costs and tax revenue?",
+      "resolution_mechanism": "Empirical study comparing tax avoidance rates in regimes with varying documentation requirements for active participation, or a cost-benefit analysis of the current rules.",
+      "impact": "If the burden is disproportionate to abuse prevention, it would suggest the constraint is more extractive than coordinative, pushing its classification closer to a Snare. If it's found necessary, it reinforces the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the functional necessity of the high documentation bar."
+    },
+    {
+      "id": "strict_vs_permissive_interpretation",
+      "question": "Is this constraint a genuine interpretation of legislative intent, or an administrative hardening that benefits the enforcing agency?",
+      "resolution_mechanism": "Judicial review of IRS interpretations against legislative history, or new legislation clarifying the definition of material participation.",
+      "impact": "If found to be an administrative hardening, it would highlight the extractive nature of the IRS's role and potentially shift the constraint towards a Snare. If upheld as consistent with intent, it would reinforce the Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between legislative intent and administrative interpretation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'irc_469_material_participation_kernel'. Its strict interpretation influences tax planning and investment strategies, contrasting with the 'strategic_shelter_reading' which seeks to minimize its impact."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strategic_shelter_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "tax_avoidance_is_a_primary_evil",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "verifiable_labor_is_the_only_true_participation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "anti_abuse_legislative_intent",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

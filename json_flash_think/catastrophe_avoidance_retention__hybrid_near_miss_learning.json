@@ -1,0 +1,327 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_avoidance_retention__hybrid_near_miss_learning",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "22642dba-77d4-49c1-8d21-9f62d5392e0e",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.5,
+    "claimed_type": "rope",
+    "human_readable": "Competence Retention via Hybrid Near-Miss Learning",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "safety_regulators",
+      "public_safety"
+    ],
+    "victims": [
+      "organizational_budgets",
+      "individual_reporters"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Organizations operating in high-consequence environments (e.g., aviation, nuclear power) that actively implement and benefit from distributed learning systems, drills, and incident sharing to maintain operational competence and avoid catastrophic failures. They bear the direct costs of these systems."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governmental bodies that mandate safety standards, incident reporting, and training requirements. They oversee compliance and contribute to the shared knowledge base, benefiting from a safer operating environment."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals who perform high-consequence tasks. They participate in drills, report near-misses, and implement safety protocols. While bearing the burden of training and reporting, they are primary beneficiaries of enhanced safety."
+    },
+    {
+      "name": "safety_consultants_and_trainers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "External experts and firms that provide specialized knowledge, tools, and training for implementing and maintaining hybrid learning systems. They benefit financially from the demand for these services."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Non-governmental organizations and researchers focused on improving public safety in high-risk domains. They benefit from the reduction of catastrophic events and contribute to the discourse on best practices."
+    },
+    {
+      "name": "organizational_budgets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The financial resources allocated within organizations for safety initiatives, training, and incident investigation. These budgets bear the direct costs of maintaining the hybrid learning system."
+    },
+    {
+      "name": "individual_reporters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Frontline personnel who report near-misses and incidents. While essential for learning, they bear the psychological burden and potential career risk if a 'just culture' is not perfectly maintained, making them victims of potential reprisal or blame."
+    },
+    {
+      "name": "catastrophe_as_necessary_selector_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocates for the view that only actual catastrophes provide the necessary selection pressure for competence. Their perspective is excluded from the core design principles of this hybrid learning system, which seeks to avoid catastrophes."
+    },
+    {
+      "name": "simulation_as_proxy_catastrophe_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocates for the view that high-fidelity simulation is functionally equivalent to real catastrophic events for competence maintenance. While simulation is a component of hybrid learning, their view that it is *sufficient* alone is excluded from this constraint's core premise."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To coordinate distributed learning from diverse sources (near-misses, foreign incidents, high-realism drills) across multiple organizations and timeframes, ensuring continuous competence retention and systemic catastrophe avoidance in high-consequence domains.",
+    "transfer_function": "Transfers resources (time, money, data, attention) from individual organizational budgets and operational schedules into shared incident databases, cross-organizational learning networks, and high-fidelity training programs, in exchange for enhanced collective safety and resilience.",
+    "absent_voices": "Proponents of 'catastrophe as necessary selector' and 'simulation as proxy catastrophe' are structurally excluded from the design and primary justification of this hybrid learning approach, as their core premises are either directly contradicted or deemed insufficient by this constraint. They would argue for different resource allocations and learning methodologies.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid learning constraint vanished, high-reliability organizations would lose their primary mechanism for proactive competence retention. Learning would become fragmented, incident data would not be shared effectively, and the frequency and severity of catastrophic failures would likely increase, forcing a reorganization of safety practices around less effective, more reactive methods.",
+    "founding_problem": "High-consequence industries faced recurrent catastrophic failures because neither isolated organizational learning nor infrequent, high-cost real-world disasters provided sufficient, timely, or comprehensive feedback for continuous competence maintenance. Over-reliance on pure simulation also proved inadequate for real-world complexity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The ongoing need for this approach is corroborated by decades of safety research in aviation, nuclear power, and medicine, as well as by independent accident investigation reports and academic studies on high-reliability organizations, which consistently highlight the importance of distributed, multi-modal learning for preventing systemic failures."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the organizational learning paradigm in high-reliability systems, where competence is maintained not by isolated simulation or by waiting for actual catastrophes, but through a hybrid approach of distributed learning from near-misses, foreign incidents, and high-realism drills. It is a reading of the 'catastrophe_avoidance_retention' kernel, emphasizing the necessity of continuous, multi-source learning networks to prevent systemic failures.",
+    "key_agents": [
+      "High_reliability_organizations: Agenda setter / Beneficiary (institutional/constrained)",
+      "Safety_regulators: Agenda setter / Observer (institutional/analytical)",
+      "Frontline_operators: Payer / Beneficiary (moderate/constrained)",
+      "Organizational_budgets: Payer (powerless/trapped)",
+      "Catastrophe_as_necessary_selector_proponents: Excluded (organized/analytical)"
+    ],
+    "logic_rationale": "Base extractiveness is relatively low (0.25) because the primary function is genuine coordination for safety, and the 'extraction' represents the necessary investment in complex learning systems rather than rent-seeking. Suppression (0.40) is moderate, reflecting the need for a 'just culture' to encourage reporting, alongside regulatory mandates for compliance. Theater ratio (0.30) is also moderate; while drills can sometimes become performative, the core intent is genuine learning and adaptation. Accessibility collapse is high (0.80) because the alternative to this robust learning is a higher risk of catastrophic failure, which is unacceptable in these domains. Resistance (0.50) exists due to the significant resource commitment and cultural shifts required for effective implementation.",
+    "perspectival_gap": "High-reliability organizations and safety regulators largely view this as an essential, beneficial coordination mechanism. However, organizational budgets experience it as a continuous cost, and individual reporters may feel pressure or fear reprisal if the 'just culture' is not perfectly upheld. Proponents of alternative learning paradigms (e.g., catastrophe as necessary selector) would view this constraint as an insufficient or even misguided approach, leading to a fundamental divergence in perceived effectiveness and necessity.",
+    "directionality_logic": "High-reliability organizations and safety regulators are beneficiaries, as they gain enhanced safety and legitimacy from the system. Frontline operators are both payers (time, effort, risk of reporting) and beneficiaries (personal safety). Organizational budgets are clear payers. Safety consultants are beneficiaries, profiting from the system's implementation. Individual reporters are victims if the system's 'just culture' fails to protect them. Proponents of alternative views are excluded, as their core premises are not integrated into this constraint's operational logic.",
+    "mandatrophy_analysis": "This constraint actively addresses the risk of mandatrophy by continuously adapting through learning from near-misses and incidents. Its mandate is to prevent catastrophes, and as long as that risk is live (which it is in high-consequence domains), the constraint's function remains vital. The hybrid nature prevents over-reliance on any single, potentially atrophied, learning mechanism.",
+    "kernel_context": "This constraint, 'catastrophe_avoidance_retention__hybrid_near_miss_learning', is one reading of the 'catastrophe_avoidance_retention' kernel. It posits that competence is maintained via distributed learning from near-misses, foreign incidents, and high-realism drills. This contrasts with sibling readings such as 'simulation_as_proxy_catastrophe' (which overemphasizes simulation's sufficiency) and 'catastrophe_as_necessary_selector' (which argues only real disasters drive learning)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint accurately representing the 'hybrid_near_miss_learning' reading of the 'catastrophe_avoidance_retention' kernel, or does it conflate elements of sibling readings?",
+      "resolution_mechanism": "Detailed textual analysis of foundational documents and expert testimony from proponents of each reading to ensure strict adherence to the unique premises of 'hybrid_near_miss_learning'.",
+      "impact": "If conflated, the classification may inaccurately reflect the structural properties unique to this reading, potentially misrepresenting its coordination function or extractive components.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms the precise instantiation of the 'hybrid_near_miss_learning' reading within the 'catastrophe_avoidance_retention' kernel."
+    },
+    {
+      "id": "effectiveness_of_hybrid_learning",
+      "question": "To what extent does the investment in hybrid near-miss learning genuinely prevent catastrophes, versus merely delaying them or shifting risk to unmeasured areas?",
+      "resolution_mechanism": "Longitudinal epidemiological studies of accident rates in industries adopting this approach, compared to control groups or historical baselines, alongside detailed qualitative analysis of 'black swan' events.",
+      "impact": "If effectiveness is lower than assumed, the constraint's 'rope' classification might shift towards 'tangled_rope' or 'snare' due to higher effective extraction (costs without commensurate safety benefits).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the true impact of hybrid learning on catastrophe prevention."
+    },
+    {
+      "id": "just_culture_integrity",
+      "question": "Is the 'just culture' necessary for effective near-miss reporting genuinely maintained, or do individual reporters face subtle or overt reprisal, making them true victims?",
+      "resolution_mechanism": "Anonymous surveys of frontline operators, analysis of incident reporting trends (e.g., underreporting of certain types of incidents), and independent audits of organizational safety culture.",
+      "impact": "If the 'just culture' is compromised, the suppression metric for individual reporters would be higher, increasing their effective extraction and potentially shifting the constraint's classification for that seat towards 'snare'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the integrity of the 'just culture' for incident reporting."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "safety_regulation_compliance",
+      "organizational_risk_management"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'catastrophe_avoidance_retention' kernel. The other readings are 'simulation_as_proxy_catastrophe' and 'catastrophe_as_necessary_selector', each representing a distinct approach to maintaining competence and avoiding systemic failure."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "proactive_safety_culture",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_selector",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "learning_from_failure_is_distributed_and_hybrid",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_is_avoidable_through_proactive_learning",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

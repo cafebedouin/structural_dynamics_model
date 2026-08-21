@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "977d5b51-bb33-4d74-86b1-6550c6c7a5ed"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Occupation Requirement",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "safety_regulators",
+      "training_providers",
+      "competence_assurance_departments",
+      "human_factors_researchers"
+    ],
+    "victims": [
+      "front_line_operators",
+      "organizations_bearing_training_costs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must ensure operational competence to prevent catastrophic failures. They bear significant costs for implementing and maintaining multi-mechanism training programs and audits, but benefit from enhanced safety, reputation, and regulatory compliance."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandate and oversee competence requirements, often pushing for comprehensive, multi-faceted approaches. They benefit from public trust and reduced incident rates, but face political and economic pressure regarding the burden of compliance."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop and deliver the various training components (simulations, refreshers, procedural reinforcement). They directly profit from the continuous demand for diverse training mechanisms, with little incentive to simplify or reduce scope."
+    },
+    {
+      "name": "front_line_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Are the direct targets of continuous training, refreshers, and audits. They invest significant time and effort, often experiencing stress from the constant assessment. While they benefit from maintaining competence for personal safety and career progression, they have limited agency over the training's design or intensity."
+    },
+    {
+      "name": "competence_assurance_departments",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Responsible for designing, implementing, and auditing competence maintenance programs within organizations. Their function is directly tied to the multi-mechanism requirement, benefiting from its complexity and continuous nature, but they also bear the operational burden."
+    },
+    {
+      "name": "organizations_bearing_training_costs",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Allocate substantial budgets to meet the multi-mechanism competence requirements. They face pressure to optimize costs but are constrained by regulatory mandates and the imperative to maintain safety, making exit from the complex training regime difficult."
+    },
+    {
+      "name": "human_factors_researchers",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct research into skill decay, training effectiveness, and optimal competence maintenance strategies. The lack of consensus on optimal configuration fuels their research agenda and funding opportunities, making them beneficiaries of the ongoing complexity."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures a baseline of operational competence across complex, high-risk domains by mandating diverse training and assessment methods, thereby coordinating safety standards and professional readiness.",
+    "transfer_function": "Transfers significant resources (time, money, attention) from front-line operators and organizations to training programs, audit processes, and competence assurance functions, as the price of maintaining perceived safety and regulatory compliance.",
+    "absent_voices": "Operators advocating for simpler, more efficient training methods with proven efficacy, and organizations seeking to reduce training overhead without compromising safety, are often marginalized in discussions dominated by regulators and training providers.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement for continuous multi-mechanism competence occupation vanished, organizations would likely reduce training investments, leading to skill degradation, increased human error, and a rise in incidents across high-reliability domains. The entire safety ecosystem would reorganize around a lower, less regulated standard of competence.",
+    "founding_problem": "Preventing skill decay and ensuring readiness for rare, high-consequence events in complex systems where single training methods proved insufficient or where competence was not continuously maintained.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident investigation reports, independent safety board recommendations, and academic studies on human error and skill retention consistently corroborate the ongoing challenge of maintaining competence in high-risk environments, supporting the 'live' status of the founding problem."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the requirement for continuous, multi-mechanism competence occupation in high-reliability organizations, where competence is maintained through a hybrid approach of simulations, refreshers, procedural reinforcement, and line audits. A key feature is the lack of consensus on the optimal configuration of these mechanisms, leading to perpetual research and adaptation. This constraint is a reading of the 'competence_occupation' kernel, specifically the 'hybrid_occupation' reading, which emphasizes the necessity of diverse, ongoing methods.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it serves a genuine coordination function (maintaining safety and competence) but involves significant, asymmetric extraction. Extractiveness is high (0.7) due to the substantial costs of implementing and managing multiple, often overlapping, training and audit mechanisms, especially in the absence of an 'optimal' configuration. Suppression is high (0.75) because compliance is often mandatory for operators and organizations, with limited alternatives for simpler or cheaper competence maintenance. Theater ratio is moderate (0.4) as some mechanisms may be implemented more for compliance or perceived comprehensiveness than for proven efficacy, given the lack of consensus. The metrics show a trend of increasing extractiveness and suppression over time, reflecting the growing complexity and cost of maintaining competence.",
+    "directionality_logic": "High-reliability organizations, safety regulators, training providers, competence assurance departments, and human factors researchers are beneficiaries, as they either directly profit from the system (training providers, researchers) or gain reputation, compliance, and safety (HROs, regulators, competence departments). Front-line operators and organizations bearing training costs are the primary payers, experiencing the direct burden of time, effort, and financial outlay. The 'identity_locked' exit for operators reflects their professional identity being tied to maintaining competence within this system.",
+    "perspectival_gap": "From the perspective of regulators and training providers, this multi-mechanism approach is a necessary and beneficial coordination to ensure safety. From the perspective of front-line operators and organizations, it is an increasingly burdensome and extractive system, where the costs may outweigh the marginal safety benefits, especially given the lack of consensus on optimal configuration. The engine's per-seat classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'hybrid_occupation' reading of the 'competence_occupation' kernel. This reading asserts that competence requires continuous, multi-mechanism exercise, acknowledging the complexity and lack of a single optimal solution. It stands in contrast to sibling readings like 'simulation_sufficiency' (which claims simulations alone are enough) and 'real_incident_necessity' (which claims only real incidents truly occupy competence)."
+  },
+  "omegas": [
+    {
+      "id": "optimal_configuration_ambiguity",
+      "question": "What is the optimal configuration of multi-mechanism competence occupation, balancing efficacy and cost?",
+      "resolution_mechanism": "Longitudinal, comparative studies across different high-reliability organizations and industries, coupled with advanced human factors research to identify the most effective and efficient combinations of training and assessment.",
+      "impact": "Resolution could lead to a significant reduction in extractiveness and theater ratio if a more efficient, evidence-based configuration is adopted, potentially reclassifying the constraint towards a Rope or Scaffold if the transition is managed.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the most effective and efficient mix of competence maintenance mechanisms."
+    },
+    {
+      "id": "simulation_sufficiency_challenge",
+      "question": "Does advanced simulation-based training alone constitute sufficient exercise to occupy the competence kernel, as claimed by the 'simulation_sufficiency' reading?",
+      "resolution_mechanism": "Empirical validation of simulation-only training regimes against real-world performance and incident rates, compared to hybrid approaches. This would involve rigorous, controlled studies in operational environments.",
+      "impact": "If simulations are proven sufficient, the 'hybrid_occupation' reading's justification for multi-mechanism complexity would be undermined, potentially reducing extractiveness and suppression, and shifting the constraint towards a simpler, less burdensome form.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Challenge to the necessity of multi-mechanism approach by the 'simulation_sufficiency' sibling reading."
+    },
+    {
+      "id": "real_incident_necessity_challenge",
+      "question": "Is it true that only actual catastrophic incidents provide the authentic conditions necessary to fully occupy the competence kernel, as claimed by the 'real_incident_necessity' reading?",
+      "resolution_mechanism": "Analysis of post-incident competence trajectories and comparison with pre-incident training effectiveness. This is difficult to resolve empirically due to ethical and practical constraints, often relying on retrospective analysis and expert judgment.",
+      "impact": "If real incidents are uniquely necessary, the 'hybrid_occupation' reading's claim of continuous exercise being sufficient would be challenged, potentially leading to a re-evaluation of training goals and a shift in focus towards incident response rather than prevention.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Challenge to the sufficiency of continuous exercise by the 'real_incident_necessity' sibling reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one of three readings of the 'competence_occupation' kernel, focusing on the hybrid, multi-mechanism approach. It is linked to 'simulation_sufficiency' and 'real_incident_necessity' as sibling readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_multi_faceted",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_decay_is_continuous",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "continuous_adaptive_competence",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

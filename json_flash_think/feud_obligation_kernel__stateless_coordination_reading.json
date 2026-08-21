@@ -1,0 +1,281 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__stateless_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3e7402b7-4454-4d7b-850a-ae575b6ced60"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Blood-Feud Obligations (Stateless Coordination Reading)",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "feud_participants",
+      "kin_groups"
+    ],
+    "victims": [
+      "defectors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "feud_participants",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals and their immediate kin who engage in the feud system. They receive a form of justice and deterrence against aggression, but also bear the direct costs and risks of participation, including potential injury, death, or property loss. Their participation is often driven by honor and kinship loyalty."
+    },
+    {
+      "name": "kin_groups",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The primary social units responsible for enforcing feud obligations. They benefit from the system's ability to protect their members and maintain their collective honor and standing within the community. They set and administer the norms, and organize retaliatory actions or wergild negotiations. Exit means loss of social standing and protection."
+    },
+    {
+      "name": "defectors",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals or kin groups who fail to uphold their feud obligations, either by not seeking vengeance when required or by refusing to pay wergild. They face severe social sanctions, including honor loss, ostracization, and potential expulsion from their kin network, leaving them vulnerable."
+    },
+    {
+      "name": "external_authorities",
+      "role": "excluded",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Nascent state or religious institutions (e.g., early medieval church, emerging monarchies) that would seek to monopolize legitimate violence and replace feuding with centralized legal systems. They are structurally excluded from the operation of the feud system itself, but their influence grows over time."
+    },
+    {
+      "name": "analytical_historians",
+      "role": "observer",
+      "agent": true,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Scholars who study the historical and anthropological function of blood feuds, analyzing their role in social order and dispute resolution in stateless societies. They observe the system from an external, analytical perspective."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a self-enforcing framework for resolving grievances, deterring aggression, and maintaining social order in societies lacking centralized legal or enforcement capacity, by making violence costly for offenders and their kin.",
+    "transfer_function": "Transfers the burden of justice and enforcement from a non-existent centralized authority to kin groups, and transfers the cost of offense (retaliation, wergild) to the offending kin group, thereby restoring balance and deterring future transgressions.",
+    "absent_voices": "Early state-builders and religious authorities would object, arguing for their own monopoly on legitimate violence and the moral superiority of their legal systems. Victims of excessive or misdirected feuds, or those caught in escalating cycles, might also be unheard, as the system prioritizes kin-group honor over individual suffering.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If blood-feud obligations vanished overnight in a stateless society, the primary mechanism for dispute resolution and deterrence would collapse. This would likely lead to unchecked aggression, pervasive insecurity, and potentially the rapid emergence of alternative, possibly more extractive or brutal, systems to fill the vacuum.",
+    "founding_problem": "The absence of a centralized state or legal system capable of enforcing justice, deterring aggression, and maintaining order, leading to pervasive insecurity and unpunished wrongs within a community.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Anthropological studies of contemporary stateless societies, historical accounts of early medieval Europe, and comparative political science analyses of institutional development corroborate that the problem of stateless order was (and in some contexts, remains) live, and that such mechanisms served a functional role. This corroboration comes from outside the direct participants in the feud system."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.13
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'stateless coordination' reading of the blood-feud kernel. It describes blood-feud obligations as a functional, self-enforcing mechanism for justice and deterrence in societies lacking centralized authority. The system coordinates kin groups to respond to offenses, thereby creating a deterrent effect and a means of dispute resolution. While it involves costs and risks for participants, and sanctions for defectors, its primary function, from this reading, is to provide social order where none would otherwise exist. The metrics reflect a system that is largely functional, with moderate costs of participation and low suppression of alternatives like wergild.",
+    "logic_rationale": "The extractiveness (0.35) reflects the inherent costs and risks of participating in a feud, even when justified, and the sanctions for defectors. Suppression (0.25) is low because alternative dispute resolution mechanisms (like wergild or arbitration) often coexist and are sometimes preferred, indicating that participation is not entirely coerced but rather a choice within a constrained set. Theater ratio is low (0.10) because the system is understood as genuinely functional in its context. The temporal measurements reflect a period of relative stability and functionality for the system, with slight fluctuations in costs and enforcement as external pressures (like emerging states) begin to appear.",
+    "directionality_logic": "Kin groups and feud participants are beneficiaries, as they gain protection and a means of justice, though they also bear costs. Defectors are targets, facing severe social and physical consequences for non-compliance. External authorities are excluded, as their claims to legitimate violence are outside the system's operational logic. The system is 'self-enforcing' through internal social pressure and retaliatory action, rather than external coercion.",
+    "perspectival_gap": "From the perspective of kin groups and participants, the system is a necessary and functional means of survival and justice. From the perspective of defectors, it is a harsh and unforgiving system. External authorities (e.g., early states) would view it as barbaric and inefficient, seeking to replace it with their own, more centralized, forms of justice. The engine's per-seat classification will capture these divergences.",
+    "kernel_context": "This constraint is the 'stateless_coordination_reading' of the 'feud_obligation_kernel'. It frames blood-feud obligations as a functional, self-enforcing mechanism for justice and deterrence in the absence of centralized enforcement. Sibling readings include the 'extraction_cycle_reading' (which views feuds as destructive and extractive) and the 'christianized_pacification_reading' (which condemns feuds on moral and theological grounds)."
+  },
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_ambiguity",
+      "question": "Is the blood-feud system primarily a coordination mechanism providing order, or a destructive extraction cycle that depletes social capital?",
+      "resolution_mechanism": "Comparative historical analysis of long-term societal outcomes in feud-based vs. non-feud-based stateless societies, focusing on demographic stability, economic productivity, and internal conflict rates.",
+      "impact": "If primarily extractive, the constraint's effective extractiveness would be higher, potentially reclassifying it as a Snare or Tangled Rope. If primarily coordination, the current Rope classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between the 'stateless coordination' and 'extraction cycle' readings."
+    },
+    {
+      "id": "effectiveness_vs_cost_balance",
+      "question": "Does the deterrence and justice provided by the feud system genuinely outweigh the social and economic costs (e.g., lives lost, resources diverted, psychological toll) for the participating community?",
+      "resolution_mechanism": "Detailed micro-historical studies and anthropological ethnographies that quantify the direct and indirect costs of feuding against its perceived benefits over extended periods.",
+      "impact": "If costs consistently outweigh benefits, the system's coordination function is undermined, increasing its effective extractiveness and potentially shifting classification towards Tangled Rope or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance between the functional benefits and the inherent costs of the feud system."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the low measured suppression due to genuine availability of alternatives (like wergild), or is it an artifact of the strong internalized social pressure and identity-lock that makes non-participation unthinkable for most kin-group members?",
+      "resolution_mechanism": "Analysis of individual narratives and historical records detailing attempts to opt out of feud obligations and the social consequences. If opting out is rare and severely punished, internalized suppression is higher.",
+      "impact": "If internalized suppression is higher, the constraint's effective suppression is higher than the structural measure suggests, making it more coercive than it appears.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in a kin-based system."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "feud_obligation_kernel__extraction_cycle_reading",
+      "feud_obligation_kernel__christianized_pacification_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'feud_obligation_kernel', which also includes 'extraction_cycle_reading' and 'christianized_pacification_reading'. Each reading offers a distinct structural interpretation of the same historical phenomenon."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_cycle_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christianized_pacification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "retaliation_as_deterrence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "kinship_solidarity_as_enforcement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "stateless_justice_equilibrium",
+    "drift_state": {
+      "moment": "early_medieval_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

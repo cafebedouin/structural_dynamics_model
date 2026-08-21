@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "rome_statute_jurisdiction__sovereigntist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "26a8c4fb-b89c-431b-9514-89706ca41132"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "Rome Statute Jurisdiction (Sovereigntist Reading)",
+    "topic_domain": "international_law/treaty_interpretation/institutional_authority",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "sovereign_states",
+      "non_party_nationals"
+    ],
+    "victims": []
+  },
+  "omegas": [
+    {
+      "id": "sovereignty_as_natural_law_vs_convention",
+      "question": "Is state sovereignty, as the basis for ICC jurisdiction, a natural law-like feature of international relations or a constructed convention?",
+      "resolution_mechanism": "Analysis of historical state practice and philosophical arguments regarding the origins of international legal personality and authority.",
+      "impact": "If a natural law, the constraint is a genuine mountain; if a convention, it is a constructed rope or snare that benefits states, triggering false summit detection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity of sovereignty's ontological status in international law."
+    },
+    {
+      "id": "scope_of_complementarity_principle",
+      "question": "Is the complementarity principle a strict deference to national jurisdiction, or does it imply a balancing act where the ICC can intervene if national systems are unwilling or unable?",
+      "resolution_mechanism": "Judicial decisions by the ICC and national courts in cases where complementarity is invoked, and state party interpretations of their obligations.",
+      "impact": "If strict deference, this sovereigntist reading is reinforced; if a balancing act, the 'hybrid_complementarity_reading' gains ground, potentially increasing ICC effective jurisdiction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Interpretation of the complementarity principle's limits."
+    },
+    {
+      "id": "limits_of_consent_for_international_crimes",
+      "question": "Can the gravity of international crimes (genocide, crimes against humanity, war crimes) truly transcend the requirement of state consent for jurisdiction, as argued by universalist readings?",
+      "resolution_mechanism": "Evolution of customary international law, UN Security Council practice, and the development of universal jurisdiction principles in national legal systems.",
+      "impact": "If consent is transcended, the 'universalist_reading' gains legitimacy, challenging the foundational premise of this sovereigntist reading and potentially reclassifying the constraint as a snare for states resisting universal jurisdiction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether international crimes can override state consent for jurisdiction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'sovereigntist reading' of the Rome Statute's jurisdictional framework, which posits that the International Criminal Court's (ICC) authority is strictly conditional on state consent. From this perspective, the Statute primarily functions to establish a legitimate international court while rigorously upholding the primacy of national sovereignty and jurisdiction. Non-party nationals are immune from ICC jurisdiction unless their state consents or the UN Security Council refers a situation. The constraint is claimed as a Mountain because, from this reading, state consent is an irreducible feature of international law, protecting states from external overreach.",
+    "logic_rationale": "The metrics reflect the sovereigntist interpretation: extractiveness is very low (0.05) because the constraint protects states from the ICC's potential overreach, rather than extracting from them. Suppression is low (0.1) as it primarily suppresses the ICC's ability to act without consent, not the actions of states. Theater ratio is low (0.05) as the consent framework is genuinely applied and respected in practice. Accessibility collapse is high (0.9) because, from this perspective, alternatives to consent-based jurisdiction are largely illegitimate or non-existent in international law. Resistance is low (0.1) as states generally adhere to this framework.",
+    "perspectival_gap": "From the perspective of sovereign states, this framework is a protective mountain, ensuring their autonomy. However, from a universalist perspective, the same framework might be seen as a snare that shields perpetrators of grave crimes by limiting the ICC's reach. The engine's per-seat classification will capture this divergence.",
+    "directionality_logic": "Sovereign states are primary beneficiaries (d=0.0) as the constraint protects their jurisdiction and prevents external intervention without consent. Non-party nationals are also beneficiaries as they are shielded from ICC jurisdiction. The ICC itself is a target (d=1.0) as its jurisdiction is strictly limited by this framework. Universalist advocates are excluded from this framework, as their arguments for broader jurisdiction are rejected by its core tenets.",
+    "kernel_context": "This constraint is the 'sovereigntist_reading' of the 'rome_statute_jurisdiction' kernel. It emphasizes strict state consent and national primacy. Sibling readings include the 'universalist_reading' (which argues for jurisdiction transcending consent) and the 'hybrid_complementarity_reading' (which seeks a balance between sovereignty and international justice)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rome_statute_jurisdiction__universalist_reading",
+      "rome_statute_jurisdiction__hybrid_complementarity_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the Rome Statute's jurisdictional framework. Its ε value differs significantly from universalist or hybrid readings, necessitating separate constraint stories. This reading emphasizes strict state consent as foundational."
+  },
+  "stakeholders": [
+    {
+      "name": "sovereign_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "As parties to the Rome Statute, they define and uphold the limits of ICC jurisdiction, ensuring that their consent is paramount. They benefit from the protection of their national sovereignty and the primary authority of their national courts."
+    },
+    {
+      "name": "icc",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The International Criminal Court operates under the strict jurisdictional limits imposed by the Rome Statute, requiring state consent or UNSC referral. Its ability to investigate and prosecute is constrained by these rules, which it must respect to maintain its legitimacy."
+    },
+    {
+      "name": "non_party_nationals",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Nationals of states not party to the Rome Statute are generally immune from ICC jurisdiction under this reading, unless their state consents or the UN Security Council refers a situation. This provides them with a layer of protection from international prosecution."
+    },
+    {
+      "name": "universalist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "These actors argue for a broader interpretation of ICC jurisdiction, transcending strict state consent, especially for grave international crimes. Their arguments are largely rejected by the sovereigntist reading, and they are excluded from shaping the core jurisdictional framework."
+    },
+    {
+      "name": "international_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and legal experts who analyze the Rome Statute and its interpretations, often engaging in debates about the balance between sovereignty and international justice. They observe the practical application and theoretical underpinnings of the jurisdictional framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To establish a framework for international criminal justice that coordinates state consent, ensuring that the ICC's exercise of jurisdiction respects the foundational principle of state sovereignty.",
+    "transfer_function": "Limits the transfer of sovereign jurisdiction from states to the ICC, ensuring that national courts retain primary authority and that the ICC's power is derived from, and constrained by, state consent.",
+    "absent_voices": "Universalist advocates and human rights organizations who argue for a more expansive interpretation of ICC jurisdiction, potentially transcending state consent for the most heinous crimes, are structurally marginalized by this framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict consent framework vanished, the ICC might assert broader jurisdiction, leading to significant international legal and political upheaval as states would strongly resist perceived infringements on their sovereignty. The entire architecture of international criminal justice would need to be renegotiated.",
+    "founding_problem": "To create a legitimate and effective international criminal court that could prosecute grave international crimes while simultaneously respecting the fundamental principles of state sovereignty and the primacy of national jurisdiction.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "State practice, diplomatic statements, and legal interpretations by national courts consistently corroborate the ongoing importance of state sovereignty in international law. While universalist readings contest the *extent* of this problem, the underlying tension between sovereignty and international justice remains a live issue for many states."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "universalist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_complementarity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_sovereignty_is_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "consent_is_basis_of_jurisdiction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "state_sovereignty_primacy",
+    "drift_state": {
+      "moment": "contemporary_international_justice_discourse",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

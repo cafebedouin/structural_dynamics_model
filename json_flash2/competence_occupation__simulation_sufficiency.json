@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9d114f36-648f-4ac3-ac92-0893ee03670b"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Occupation via Simulation Sufficiency",
+    "topic_domain": "safety_training/competence_maintenance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_industry",
+      "hro_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "safety_auditors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_industry",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develops and sells simulation platforms and training programs. Benefits directly from the widespread adoption of simulation as the primary method for competence maintenance. Actively promotes the 'simulation sufficiency' narrative."
+    },
+    {
+      "name": "hro_management",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from a quantifiable, auditable training compliance metric that reduces perceived risk and liability. Can demonstrate 'due diligence' through simulation records, often at lower cost and risk than real-world exercises. Faces pressure to maintain operational uptime, making real-world drills costly."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Participate in simulation drills, often experiencing a gap between simulated and real-world conditions. Bear the cost of potential skill decay if simulations are truly insufficient, but are identity-locked by professional norms and career paths within the HRO. Their resistance is often expressed as 'workarounds' or informal training."
+    },
+    {
+      "name": "safety_auditors",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are tasked with verifying competence but are often limited to auditing simulation records and compliance metrics, rather than directly assessing real-world skill. Bear the reputational cost if a real incident reveals competence gaps despite high simulation compliance. Their ability to challenge the 'sufficiency' claim is constrained by established regulatory frameworks."
+    },
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Often codify simulation requirements into training mandates, influenced by industry lobbying and the perceived benefits of standardized, auditable training. Their role is to enforce compliance, which reinforces the simulation-sufficiency model."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, repeatable, and safe method for training and assessing operator competence across a high-reliability organization, ensuring a baseline level of skill and regulatory compliance.",
+    "transfer_function": "Transfers training budget from operational departments to the simulation industry, and transfers perceived risk from HRO management to frontline operators and safety auditors, by certifying competence through simulation metrics.",
+    "absent_voices": "Experienced operators who have witnessed real incidents and understand the limitations of simulation, and independent researchers who highlight the 'fidelity gap' between simulation and reality, are often marginalized in policy discussions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in simulation sufficiency vanished, HROs would face a crisis in competence maintenance. Training budgets would need to be reallocated to more costly and risky real-world exercises, regulatory frameworks would need complete overhaul, and the simulation industry would lose its primary market. The entire safety training ecosystem would reorganize.",
+    "founding_problem": "Maintaining high-level competence in complex, high-risk environments without exposing personnel or equipment to actual danger during training, and providing auditable proof of training for regulatory bodies.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "HRO management and the simulation industry attest the problem is live, citing the ongoing need for safe, scalable training. Frontline operators and safety auditors acknowledge the problem but contest the 'sufficiency' of the proposed solution, arguing that the problem of 'real-world readiness' remains unsolved by simulation alone."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the belief and institutional practice that simulation-based drills are sufficient for maintaining competence in high-reliability organizations (HROs). It is a reading of the broader 'competence_occupation' kernel, where the core contest is how competence is genuinely maintained. This 'simulation_sufficiency' reading emphasizes auditable compliance and risk reduction through simulation, often at the expense of real-world readiness. The claimed type is 'tangled_rope' because it offers a genuine coordination function (standardized training) but also involves asymmetric extraction (benefits for simulation industry/management, costs for operators/auditors).",
+    "logic_rationale": "Extractiveness is high because the simulation industry captures significant revenue, and HRO management offloads risk without necessarily ensuring full competence. Suppression is high because regulatory frameworks and institutional inertia make it difficult for operators or auditors to challenge the 'sufficiency' claim or demand more costly real-world training. Theater ratio is moderate and rising, as the focus shifts from genuine skill transfer to compliance with simulation metrics. The increasing extractiveness and suppression over time reflect the hardening of this institutional arrangement.",
+    "directionality_logic": "The simulation industry and HRO management are beneficiaries, gaining revenue and reduced liability respectively. Frontline operators and safety auditors are payers, bearing the costs of potential skill decay and reputational risk. Regulators act as agenda-setters, codifying and enforcing the simulation-sufficiency model, which reinforces the constraint's persistence.",
+    "perspectival_gap": "HRO management and the simulation industry perceive this as a highly efficient and effective coordination mechanism. Frontline operators and safety auditors, however, experience it as an extractive mechanism that prioritizes auditable compliance over genuine, robust competence, leading to a 'fidelity gap' between training and reality.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling coordination as pure extraction by acknowledging the genuine coordination function of standardized, safe training. However, it highlights how the 'sufficiency' claim, when unexamined, allows for the accumulation of extraction and the suppression of alternatives, pushing it towards a tangled_rope classification rather than a pure rope. The founding problem (safe, auditable training) is still live, but the 'sufficiency' of the solution is contested, indicating a potential drift towards mandatrophy if the gap between simulated and real competence widens."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_gap",
+      "question": "What is the actual fidelity gap between simulated conditions and real-world operational demands for critical skills?",
+      "resolution_mechanism": "Independent, blinded empirical studies comparing performance outcomes of simulation-trained vs. real-world-trained operators in high-stress, unexpected scenarios.",
+      "impact": "A large fidelity gap would undermine the 'sufficiency' claim, reclassifying the constraint closer to a snare or piton due to increased theater and extraction from operators. A small gap would reinforce the rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which simulation accurately prepares operators for real-world challenges."
+    },
+    {
+      "id": "competence_kernel_definition",
+      "question": "Is the 'competence kernel' truly occupied by simulation, or does it require exposure to irreducible real-world complexity and consequence?",
+      "resolution_mechanism": "Conceptual analysis and expert consensus from cognitive science and HRO theory, distinguishing between 'procedural fluency' (simulatable) and 'adaptive expertise' (requiring real-world consequence).",
+      "impact": "If adaptive expertise is deemed essential, the 'simulation_sufficiency' reading would be conceptually foreclosed, shifting the constraint towards a snare or piton, as its core claim would be invalidated.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The fundamental nature of competence and whether it can be fully developed in simulation."
+    },
+    {
+      "id": "resource_allocation_priority",
+      "question": "Should training resources prioritize auditable compliance metrics (simulation) or unquantifiable real-world readiness (costly live exercises)?",
+      "resolution_mechanism": "Policy debate and stakeholder negotiation, weighing the benefits of compliance against the risks of unaddressed competence gaps.",
+      "impact": "A shift in priority towards real-world readiness would reduce the extractiveness of the simulation industry and potentially lead to a re-evaluation of regulatory mandates, moving the constraint towards a more balanced rope or even a scaffold if transitional.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Societal and organizational preference for auditable compliance vs. robust, unquantifiable readiness."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_occupation' kernel. The 'simulation_sufficiency' reading emphasizes auditable compliance and risk reduction through simulation, often at the expense of real-world readiness. It is linked to sibling readings 'real_incident_necessity' and 'hybrid_occupation', which offer alternative views on how competence is maintained."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulated_experience_transfers_fully",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "auditable_compliance_equals_competence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "simulation_centric_competence_model",
+    "drift_state": {
+      "moment": "contemporary_operational_reality",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

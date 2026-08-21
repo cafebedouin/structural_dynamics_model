@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__slippery_slope_mechanism",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "d2a6b863-b722-46eb-a9cb-44ad142825e2"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-of-Life Authority: Slippery Slope Mechanism",
+    "topic_domain": "medical_ethics/bioethics/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "healthcare_systems",
+      "some_families"
+    ],
+    "victims": [
+      "incompetent_patients",
+      "non_terminal_patients_with_chronic_suffering"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "healthcare_systems",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers end-of-life protocols, often under pressure to manage resources and patient flow. Benefits from clear, expanded criteria for end-of-life decisions, which can reduce long-term care burdens. Faces legal and ethical challenges if criteria are perceived as too broad."
+    },
+    {
+      "name": "incompetent_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are the primary targets of the slippery slope mechanism. Their end-of-life decisions are made by proxies, and the expanded framework allows for termination of life-sustaining treatment or active euthanasia based on criteria that may not align with their past expressed wishes or best interests, as interpreted by some. They have no direct agency in the decision."
+    },
+    {
+      "name": "non_terminal_patients_with_chronic_suffering",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "May find themselves eligible for end-of-life interventions under expanded criteria, even if their condition is not immediately terminal. While some may seek this, others may feel pressured or find their care options shifting towards life-ending interventions rather than palliative care, due to the expanded framework. Their autonomy is subtly undermined by the broadened scope."
+    },
+    {
+      "name": "some_families",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "May experience relief from the burden of long-term care for severely ill or incompetent relatives, or from witnessing prolonged suffering. The expanded framework provides a legal and ethical pathway for decisions they might otherwise struggle with. However, other families may resist these expanded options."
+    },
+    {
+      "name": "bioethicists_and_advocacy_groups",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Actively debate and monitor the expansion of end-of-life criteria. They analyze policy changes, legal precedents, and empirical outcomes, advocating for either stricter safeguards or broader access, depending on their ethical grounding. Their influence is primarily through discourse and policy recommendations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a framework for making difficult end-of-life decisions, aiming to coordinate medical practice, legal protections, and patient/family wishes in complex situations, particularly when patients lack capacity or face prolonged suffering.",
+    "transfer_function": "Transfers the authority to make life-ending decisions from the individual (in the autonomy reading) to proxies or the medical system, and shifts the criteria for such decisions from terminal illness to broader categories of suffering or incapacity.",
+    "absent_voices": "Patients who become incompetent and whose prior wishes are ambiguous or unrecorded are effectively absent; their 'voice' is interpreted through the expanded framework, which may not align with their true interests. Future generations, who might inherit a system with significantly broadened end-of-life criteria, are also absent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expanded framework for end-of-life decisions vanished, healthcare systems would face immense legal and ethical uncertainty regarding incompetent and non-terminal patients. Decisions would revert to stricter interpretations, potentially leading to prolonged suffering for some and increased burdens on families and care providers, forcing a re-evaluation of existing practices.",
+    "founding_problem": "The original problem was to respect individual autonomy in the face of terminal illness and unbearable suffering, allowing competent adults to make choices about the timing and manner of their death.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents of the slippery slope mechanism argue that the original problem has been 'solved' for competent, terminal patients, but the framework has drifted to address other problems (resource management, chronic suffering) under the guise of autonomy. Opponents (autonomy advocates) argue the original problem is still live and the expansion is a necessary evolution. Bioethicists and legal scholars outside the immediate beneficiaries corroborate the drift in application and the expansion of criteria beyond the original intent."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'slippery slope' argument in end-of-life policy: an initial framework, grounded in individual autonomy for competent, terminal patients, empirically expands its application to include incompetent patients and those with chronic but non-terminal suffering. This expansion is seen as a mechanism that subtly shifts the underlying ethical justification, potentially leading to outcomes that contradict the original intent of respecting individual choice. The constraint is claimed as a Tangled Rope because it still performs a coordination function (managing end-of-life decisions) but with significant, increasing extraction from vulnerable populations.",
+    "logic_rationale": "Extractiveness (0.65) is high because the expanded framework allows for decisions that may not align with the true interests or past wishes of vulnerable patients, effectively extracting their remaining life or agency. Suppression (0.70) is also high, as the institutional and legal structures enforce these expanded criteria, making it difficult for individual patients or their advocates to resist. Theater ratio (0.20) is moderate, reflecting that while the original autonomy justification is still invoked, a growing portion of the framework's operation serves other, less explicit functions like resource management or a broader interpretation of 'suffering.' The increasing trend in extractiveness and suppression over time reflects the observed empirical expansion of these frameworks.",
+    "directionality_logic": "Healthcare systems and some families are beneficiaries, as the expanded framework provides clear pathways for difficult decisions, potentially easing burdens. Incompetent patients and non-terminal patients with chronic suffering are victims, as their agency is diminished or their lives are ended under criteria that have drifted from the original autonomy principle. Bioethicists and advocacy groups act as observers, analyzing and contesting the drift.",
+    "perspectival_gap": "From the perspective of healthcare systems, the expanded framework might appear as a necessary evolution to address complex cases and provide compassionate care, thus a coordination mechanism. From the perspective of vulnerable patients and their advocates, it is an extractive mechanism that leverages an initial coordination principle to justify broader interventions. The engine's classification will highlight this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate has drifted from its original function. While initially intended to empower individual autonomy, the 'slippery slope' mechanism suggests it has become a vehicle for other concerns (e.g., resource allocation, societal comfort with suffering) under the guise of autonomy. This prevents mislabeling it as pure coordination by highlighting the victims of this expanded application.",
+    "kernel_context": "This constraint, 'end_of_life_authority__slippery_slope_mechanism,' is one reading of the 'end_of_life_authority' kernel. It instantiates the concern that initial autonomy-based frameworks empirically expand beyond competent terminal cases to incompetent and non-terminal populations. Sibling readings include 'autonomy_reading' (individual autonomy grounds the right to control death) and 'sanctity_reading' (intrinsic value of human life prohibits intentional life-ending)."
+  },
+  "omegas": [
+    {
+      "id": "empirical_evidence_for_slope",
+      "question": "Is the 'slippery slope' an empirically demonstrable phenomenon (i.e., do expanded end-of-life criteria reliably lead to the inclusion of more vulnerable populations), or is it a theoretical concern?",
+      "resolution_mechanism": "Longitudinal studies comparing jurisdictions with different end-of-life policies, tracking the demographics and conditions of patients receiving interventions over decades.",
+      "impact": "Strong empirical evidence would validate this reading's core premise, strengthening arguments for stricter safeguards. Lack of evidence would weaken this reading, pushing classification closer to the 'autonomy_reading' for those who see the expansion as a natural evolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'slippery slope' is an observed reality or a hypothetical risk."
+    },
+    {
+      "id": "autonomy_vs_sanctity_framing",
+      "question": "To what extent does the expansion of end-of-life criteria, even if framed in terms of autonomy, implicitly serve underlying 'sanctity of life' concerns (e.g., avoiding prolonged suffering at all costs, even if it means ending life prematurely for those who cannot consent)?",
+      "resolution_mechanism": "Qualitative analysis of policy debates and medical discourse, examining the implicit values and justifications used when expanding criteria to vulnerable populations.",
+      "impact": "If the expansion is found to be driven by implicit sanctity concerns, it would highlight a deeper ethical tension, potentially reclassifying the constraint as a more complex Tangled Rope or even Snare, where the autonomy narrative is a cover for other values.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The true ethical grounding of expanded end-of-life criteria."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers, institutional protocols) or internalized (patients/families feeling societal pressure to choose end-of-life options for 'dignity' or to avoid 'burden')?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if pressure persists after legal/institutional barriers are removed, reclassify as partially internalized. Qualitative studies on patient/family decision-making processes.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making true 'choice' more elusive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in end-of-life decisions."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "autonomy_framework_is_vulnerable_to_drift",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "expansion_to_incompetent_patients_is_problematic",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "initial_autonomy_framework_for_competent_terminal",
+    "drift_state": {
+      "moment": "contemporary_policy_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

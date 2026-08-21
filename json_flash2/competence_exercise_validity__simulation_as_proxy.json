@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__simulation_as_proxy",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "d0de5e2e-97da-4bf5-ab52-b8372dcb277e"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Simulation as Valid Competence Exercise (Proxy-Catastrophe Reading)",
+    "topic_domain": "safety_engineering/organizational_learning/competence_retention",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_engineers",
+      "organizational_management",
+      "regulatory_bodies"
+    ],
+    "victims": [
+      "frontline_operators",
+      "public_safety_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_engineers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design and implement simulation protocols, validate competence through simulation metrics, and certify operational readiness based on these results. They benefit from a clear, measurable standard for competence."
+    },
+    {
+      "name": "organizational_management",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Relies on simulation as a cost-effective and controlled method for competence retention, avoiding the disruption and risk of real-world drills. They benefit from regulatory compliance and a perceived robust safety posture without excessive operational overhead."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Accept simulation results as sufficient evidence of competence for licensing and operational approval, provided they meet established standards. They benefit from a standardized, auditable compliance pathway."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Participate in simulations to maintain their certifications, but may experience a gap between simulated and real-world conditions. They bear the cost of potential skill decay or overconfidence if simulations are not sufficiently realistic or challenging."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Bear the diffuse cost of potential safety incidents if simulation-based competence proves insufficient in a real crisis. They advocate for more rigorous, real-world training and testing, but their concerns are often dismissed as alarmist."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, controlled, and repeatable method for assessing and maintaining operational competence across a workforce, ensuring a baseline level of readiness without requiring real-world catastrophic events.",
+    "transfer_function": "Transfers the burden of competence validation from high-risk, high-cost real-world drills to lower-cost, controlled simulation environments, from operational budgets to training budgets, and from direct operational risk to theoretical risk.",
+    "absent_voices": "Those who have experienced real-world catastrophes and understand the limitations of simulation would argue for more rigorous, real-world training. Their voices are often marginalized by the perceived 'efficiency' and 'safety' of simulation-only approaches.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief that simulation counts as valid exercise vanished, organizations would face immense pressure to implement costly and risky real-world drills, or to accept a lower standard of competence. Regulatory bodies would struggle to certify readiness, and the entire safety engineering paradigm would need to be re-evaluated.",
+    "founding_problem": "The high cost, logistical complexity, and inherent danger of conducting frequent, full-scale real-world drills for competence retention, especially in high-risk industries.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety engineers and organizational management attest that the problem of costly real-world drills remains live. Public safety advocates acknowledge the cost problem but contest the sufficiency of simulation as a solution, citing historical incidents where simulated competence failed in reality."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'simulation_as_proxy' reading of the 'competence_exercise_validity' kernel. It describes the belief and practice within safety engineering and organizational learning that simulation is a valid and sufficient method for competence retention, treating drills as 'proxy-catastrophes'. This reading emphasizes the benefits of controlled environments, cost-effectiveness, and measurable outcomes, often downplaying the limitations of simulation compared to real-world experience. The structural delta for this reading is that competence retention is primarily validated through simulation metrics, safety records are seen as proving the adequacy of this approach, and regulatory compliance is considered sufficient.",
+    "logic_rationale": "The extractiveness (0.4) is moderate, reflecting the cost savings and convenience for management and engineers, but also the potential for skill decay for operators and diffuse risk for the public. Suppression (0.6) is present as alternative, more rigorous training methods are often suppressed due to cost and logistical complexity. Theater ratio (0.2) is low, as simulations are generally taken seriously, but there's a performative aspect in presenting simulation results as fully equivalent to real-world competence. Accessibility collapse (0.7) is high because once simulation is accepted, the perceived need for other, more 'costly' alternatives diminishes. Resistance (0.3) is low, as most stakeholders accept simulation as a necessary part of modern safety protocols, though some advocates voice concerns.",
+    "directionality_logic": "Safety engineers, organizational management, and regulatory bodies are beneficiaries, as simulation provides a manageable, auditable, and cost-effective way to meet competence requirements. Frontline operators and public safety advocates are payers, bearing the costs of potential skill gaps or the diffuse risk of an inadequately prepared response to a real crisis.",
+    "perspectival_gap": "Safety engineers and management view this as an efficient, modern approach to safety. Frontline operators and public safety advocates, while acknowledging the benefits, perceive a potential gap between simulated and real competence, leading to a higher perceived cost and risk from their seats. The engine's per-seat classification will reflect these differing experiences.",
+    "kernel_context": "This constraint is the 'simulation_as_proxy' reading of the 'competence_exercise_validity' kernel. It asserts that simulation is a valid and sufficient method for maintaining competence, treating drills as proxy-catastrophes. Sibling readings include 'real_catastrophe_only' (only real events truly test competence) and 'continuous_refresh_hybrid' (simulation is necessary but not sufficient, requiring continuous drill cycles)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_vs_realism",
+      "question": "To what extent does the fidelity of current simulations accurately reflect the complexity, stress, and unpredictability of real-world catastrophic events?",
+      "resolution_mechanism": "Post-incident analysis comparing simulated response metrics to actual crisis outcomes, or independent expert review of simulation design against real-world operational data.",
+      "impact": "If fidelity is low, the 'simulation_as_proxy' reading's claim of valid exercise is undermined, increasing extractiveness (from operators/public) and potentially reclassifying it towards a Snare or Piton due to false assurance. If high, it reinforces the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The gap between simulated and real-world operational conditions."
+    },
+    {
+      "id": "competence_definition_ambiguity",
+      "question": "Is 'competence' defined as the ability to perform tasks in a controlled simulation, or the ability to adapt and innovate under extreme, unforeseen real-world pressure?",
+      "resolution_mechanism": "Conceptual analysis of organizational safety culture documents, expert interviews, and comparison of training objectives with incident response protocols.",
+      "impact": "If competence is narrowly defined by simulation performance, the 'simulation_as_proxy' reading is internally consistent but potentially dangerous. If it requires real-world adaptability, the reading's sufficiency claim is challenged, pushing it towards a Tangled Rope or Snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition of 'competence' in high-stakes environments."
+    },
+    {
+      "id": "mandatrophy_of_real_drills",
+      "question": "Has the original mandate for real-world drills atrophied due to the convenience and perceived safety of simulations, even if the underlying problem of real-world preparedness remains?",
+      "resolution_mechanism": "Historical analysis of training budgets and schedules, comparing pre-simulation era practices with current ones, alongside expert opinion on the necessity of real-world exposure.",
+      "impact": "If real-world drill mandates have atrophied while the need persists, the 'simulation_as_proxy' reading functions as a Piton, maintaining a theatrical competence without genuine function. If the shift was a genuine improvement, it remains a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the mandate for real-world drills has atrophied."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_validity__real_catastrophe_only",
+      "competence_exercise_validity__continuous_refresh_hybrid"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_exercise_validity' kernel. It is linked to sibling readings that offer alternative interpretations of how competence is truly exercised and retained."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "continuous_refresh_hybrid",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_sufficient_for_competence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "drills_as_proxy_catastrophe",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "simulation_validated_competence_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

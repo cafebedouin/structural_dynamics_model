@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__effects_jurisdiction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a514b165-05b4-4e3a-bd54-c3a68d8f7674"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDPR Article 3(2) Extraterritoriality (Effects Jurisdiction Reading)",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_data_subjects",
+      "eu_regulatory_authorities"
+    ],
+    "victims": [
+      "non_eu_data_controllers",
+      "non_eu_data_processors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "eu_data_subjects",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive enhanced privacy protection and rights, even when their data is processed by entities outside the EU, provided those entities target or monitor them. Their ability to enforce these rights is mediated by EU authorities."
+    },
+    {
+      "name": "eu_regulatory_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Are empowered to enforce GDPR rules against non-EU entities that process the data of EU residents, extending their regulatory reach. They issue guidance, conduct investigations, and levy fines, asserting jurisdiction based on the effects within the EU."
+    },
+    {
+      "name": "non_eu_data_controllers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear significant compliance costs to meet GDPR requirements, even if they have no physical presence in the EU, if their activities target or monitor EU residents. Their options are to comply, cease targeting EU residents, or risk substantial fines."
+    },
+    {
+      "name": "non_eu_data_processors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are also subject to GDPR obligations when processing data on behalf of non-EU controllers targeting EU residents. They face similar compliance burdens and risks as controllers, often with less leverage."
+    },
+    {
+      "name": "non_eu_governments",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Often view the extraterritorial application of GDPR as an overreach of EU sovereignty, infringing on their own regulatory authority over entities within their borders. They are excluded from the EU's unilateral assertion of jurisdiction but must contend with its effects on their domestic companies."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a consistent standard for data protection for EU residents, regardless of where their data is processed, ensuring a baseline of privacy rights across borders.",
+    "transfer_function": "Transfers compliance costs and regulatory risk from EU data subjects and EU authorities to non-EU data controllers and processors, in exchange for extended data protection.",
+    "absent_voices": "Non-EU governments, who would argue for a more territorially constrained view of jurisdiction and challenge the EU's unilateral assertion of regulatory authority over their domestic entities.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Article 3(2) vanished, non-EU entities would likely revert to their local data protection standards, leading to a fragmentation of privacy rights for EU residents and a significant reduction in the EU's global regulatory influence. The digital economy would reorganize around more fragmented jurisdictional claims.",
+    "founding_problem": "The internet's borderless nature allowed companies outside the EU to process the data of EU residents without being subject to EU privacy laws, creating a regulatory gap and undermining data subject rights.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "EU institutions and data protection advocates consistently attest that the problem of extraterritorial data processing without adequate protection remains live. While non-EU entities acknowledge the GDPR's reach, they often contest the necessity or proportionality of its extraterritorial application, but do not deny the underlying problem of cross-border data flows."
+  },
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the GDPR's extraterritorial application under Article 3(2), specifically through the 'effects jurisdiction' reading. This interpretation asserts that GDPR applies to non-EU entities if their processing activities target or monitor individuals in the EU, regardless of where the processing takes place. This reading emphasizes the protection of EU data subjects and the regulatory reach of EU authorities, leading to significant compliance burdens for non-EU companies.",
+    "key_agents": [
+      "eu_data_subjects: Primary beneficiary (powerless/constrained)",
+      "eu_regulatory_authorities: Agenda setter (institutional/analytical)",
+      "non_eu_data_controllers: Primary payer (powerful/constrained)",
+      "non_eu_data_processors: Secondary payer (moderate/constrained)",
+      "non_eu_governments: Excluded (institutional/trapped)"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is substantial due to the high compliance costs imposed on non-EU entities, often disproportionate to their direct engagement with the EU market. Suppression (0.75) is high because non-EU entities have limited options to avoid GDPR's reach if they wish to interact with EU residents, and enforcement mechanisms (fines, adequacy decisions) are robust. The theater ratio is low (0.1) as the enforcement is genuinely aimed at compliance, not merely performance. Accessibility collapse is high (0.7) because the 'targeting or monitoring' test is broad, making it difficult for non-EU entities to operate globally without encountering GDPR's scope. Resistance (0.4) is moderate, primarily from non-EU governments and industry groups, but often results in compliance rather than outright defiance due to the high stakes.",
+    "perspectival_gap": "EU regulatory authorities perceive this as a necessary and legitimate extension of protection, a 'rope' ensuring a level playing field for privacy. Non-EU data controllers and processors, however, experience it as a 'snare' or 'tangled rope' due to the significant compliance costs and the perceived overreach of jurisdiction. The engine's computation of per-seat classification will reflect this divergence.",
+    "directionality_logic": "EU data subjects are full beneficiaries (d=0.0) as the constraint directly enhances their rights. EU regulatory authorities are also beneficiaries (d=0.1) as their power and influence are extended. Non-EU data controllers and processors are targets (d=0.9) due to the high compliance costs and limited exit options. Non-EU governments are excluded, bearing indirect costs through their domestic industries without direct participation in the regulatory framework.",
+    "mandatrophy_analysis": "The constraint's mandate (protecting EU data subjects in a global digital economy) remains highly relevant and actively pursued. There is no evidence of mandatrophy; the enforcement is robust and the problem it addresses is ongoing. The classification as a Tangled Rope reflects the genuine coordination function (consistent data protection) intertwined with asymmetric extraction (compliance costs for non-EU entities).",
+    "kernel_context": "This constraint is the 'effects jurisdiction' reading of the GDPR Article 3 scope kernel. It asserts that jurisdiction follows the effects on EU residents, extending protection extraterritorially via a targeting/monitoring test. This reading is distinct from the 'market access' reading (which views GDPR as a condition for doing business in the EU) and the 'territorial sovereignty' reading (which limits jurisdiction to physical presence)."
+  },
+  "omegas": [
+    {
+      "id": "targeting_monitoring_test_ambiguity",
+      "question": "How consistently and broadly is the 'targeting or monitoring' test applied across different EU member states and regulatory authorities?",
+      "resolution_mechanism": "Analysis of enforcement actions and court rulings across multiple jurisdictions over time, identifying patterns of interpretation and application.",
+      "impact": "If application is highly inconsistent, it increases uncertainty and compliance burden for non-EU entities, potentially raising effective extraction. If consistent, it strengthens the legitimacy of the effects jurisdiction claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the practical application of the targeting/monitoring test."
+    },
+    {
+      "id": "proportionality_of_compliance_costs",
+      "question": "Are the compliance costs imposed on non-EU entities proportional to the privacy risks they pose to EU data subjects?",
+      "resolution_mechanism": "Independent economic impact assessments comparing compliance costs with quantified privacy risk reduction and market benefits for EU data subjects.",
+      "impact": "If costs are disproportionate, it strengthens the 'snare' aspect of the Tangled Rope, indicating excessive extraction. If proportional, it reinforces the 'rope' aspect, justifying the costs as necessary for coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compliance costs are proportional to privacy benefits."
+    },
+    {
+      "id": "legitimacy_of_extraterritorial_jurisdiction",
+      "question": "Is the EU's assertion of extraterritorial jurisdiction based on effects a legitimate exercise of regulatory power under international law, or an overreach?",
+      "resolution_mechanism": "International legal scholarship, state practice, and rulings from international tribunals (if applicable) on the limits of extraterritorial jurisdiction.",
+      "impact": "If widely accepted as legitimate, it strengthens the constraint's foundation. If widely contested as overreach, it could undermine long-term enforceability and increase resistance from non-EU governments, potentially shifting the constraint towards a more coercive 'snare' if maintained.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The international legal legitimacy of effects-based extraterritorial jurisdiction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the gdpr_article_3_scope kernel. Other readings include 'market_access_reading' and 'territorial_sovereignty_reading', which offer alternative interpretations of GDPR's extraterritorial reach."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "market_access_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "territorial_sovereignty_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "data_protection_follows_person",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "effects_doctrine_justifies_jurisdiction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "eu_regulatory_autonomy_and_data_subject_rights",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__diplomatic_capital_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "8c9aad63-b5ea-4d4d-a5ff-48fbdb134773"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "EU Council Unanimity (Diplomatic Capital Reading)",
+    "topic_domain": "institutional_design/international_relations/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_member_states"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "eu_member_states",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Each member state holds a veto, forcing extensive negotiation to achieve consensus. This process requires significant diplomatic effort but ensures that decisions have broad buy-in, making them more legitimate and durable. States invest diplomatic capital to build coalitions and find common ground."
+    },
+    {
+      "name": "eu_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Benefit from the enhanced legitimacy and stability of unanimously adopted policies. While the negotiation process can be slow, the resulting policies are less likely to be challenged or undermined by member states, strengthening the overall coherence and effectiveness of the Union."
+    },
+    {
+      "name": "eu_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Benefit from policies that reflect a broad consensus among member states, leading to greater stability and predictability in European governance. The perceived legitimacy of decisions, even if slow to arrive, can foster greater public trust in the EU project."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that all member states, despite their diverse interests, coordinate their policy preferences to reach a common, mutually acceptable position, thereby preventing unilateral action or deep divisions.",
+    "transfer_function": "Transfers diplomatic capital and negotiation effort from individual member states into collective policy legitimacy and durability, reducing the likelihood of future policy reversals or non-compliance.",
+    "absent_voices": "While all member states are present, the voices of smaller states might be less influential in shaping the final consensus compared to larger states, despite their equal veto power. Citizens who desire faster decision-making might feel their preferences are sidelined by the lengthy negotiation process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unanimity requirement vanished, the EU's decision-making process would fundamentally change, likely shifting to qualified majority voting. This would accelerate decisions but potentially reduce buy-in from dissenting states, leading to more frequent challenges, opt-outs, or even exits, fundamentally altering the nature of European integration.",
+    "founding_problem": "The need to ensure that collective decisions in a union of sovereign states are perceived as legitimate and are genuinely supported by all members, preventing the imposition of policies that could undermine national interests or sovereignty.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Many political scientists and international relations scholars, as well as statements from various EU member state governments (especially smaller ones), corroborate that ensuring broad legitimacy and preventing majoritarian overreach remains a live and critical problem for the EU. This perspective is often articulated in academic analyses of EU governance and in diplomatic discourse."
+  },
+  "interval": {
+    "start": 1993,
+    "end": 2023
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1993,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1993,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1993,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story analyzes the EU Council's unanimity requirement from the perspective of 'diplomatic capital,' where unanimity is seen as a necessary coordination cost that forces iterative negotiation, builds consensus, and ultimately strengthens the legitimacy and durability of EU policy. It is one reading of the broader 'eu_council_unanimity' kernel, which also includes 'sovereignty_guarantor_reading' and 'veto_trap_reading'. This reading emphasizes the positive function of the veto in fostering deeper integration through consensus.",
+    "logic_rationale": "The extractiveness is low (0.25) because the 'cost' of unanimity (lengthy negotiation, diplomatic effort) is viewed as an investment that yields a return in policy legitimacy and reduced defection, rather than pure extraction. Suppression is low (0.1) as the mechanism is about empowering all members, not coercing them. Theater ratio is minimal (0.05) because the negotiation process is genuinely functional in building consensus. The claimed type is 'rope' because it's a coordination mechanism where all participants are net beneficiaries of the outcome, despite the high transaction costs.",
+    "perspectival_gap": "Other readings of EU unanimity, such as the 'veto_trap_reading,' would experience this constraint as highly extractive, with significant suppression, as it enables minoritarian blocking and rent-seeking. This 'diplomatic_capital_reading' focuses on the collective benefit of consensus-building, leading to a 'rope' classification, while the 'veto_trap_reading' would likely classify it as a 'snare' or 'tangled_rope' due to the asymmetric power dynamics it can create.",
+    "directionality_logic": "All EU member states are considered agenda-setters and beneficiaries in this reading, as they all possess the veto power and benefit from the enhanced legitimacy of unanimous decisions. There are no direct 'victims' in this framing, as the costs are seen as shared investments in collective governance. EU institutions and citizens are also beneficiaries of the resulting stable and legitimate policies.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the coordination function as pure extraction by highlighting the long-term benefits of consensus-building. While the process can be slow and costly, the 'diplomatic capital' reading argues that these are necessary investments for the EU's unique form of integration. The low extractiveness and high perceived legitimacy distinguish it from a 'snare' or 'piton' where the mandate has atrophied or is merely cover for extraction.",
+    "kernel_context": "This constraint is the 'diplomatic_capital_reading' of the 'eu_council_unanimity' kernel. It emphasizes the role of unanimity in fostering consensus and policy legitimacy. Sibling readings include the 'sovereignty_guarantor_reading' (unanimity as protection against majoritarian coercion) and the 'veto_trap_reading' (unanimity as a vulnerability enabling minoritarian extraction)."
+  },
+  "omegas": [
+    {
+      "id": "legitimacy_vs_efficiency_tradeoff",
+      "question": "At what point do the transaction costs of unanimity (slow decision-making, diplomatic effort) outweigh the benefits of enhanced legitimacy and policy durability?",
+      "resolution_mechanism": "Empirical studies comparing policy implementation rates, compliance levels, and public approval for unanimous vs. QMV decisions, alongside economic analysis of negotiation costs.",
+      "impact": "If costs consistently outweigh benefits, the 'rope' classification would shift towards 'tangled_rope' or 'snare', indicating that the coordination function is being undermined by excessive extraction of time and resources without commensurate legitimacy gains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The optimal balance between decision-making speed and policy legitimacy in the EU context."
+    },
+    {
+      "id": "minority_veto_abuse_potential",
+      "question": "Does the unanimity requirement, even when intended for consensus-building, create structural opportunities for individual member states to extract disproportionate concessions or block essential policies for narrow self-interest?",
+      "resolution_mechanism": "Case studies of specific policy deadlocks and their resolution, analyzing whether the outcomes primarily served collective EU interests or disproportionately benefited a single veto-wielding state.",
+      "impact": "If such 'veto traps' are frequent and demonstrably extractive, this reading's 'rope' classification would be challenged, potentially shifting towards 'tangled_rope' or 'snare', aligning more with the 'veto_trap_reading' of the kernel.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which unanimity enables minoritarian extraction rather than genuine consensus."
+    },
+    {
+      "id": "reading_framing_impact",
+      "question": "Is the 'diplomatic capital' framing a genuine reflection of the constraint's function, or a legitimizing narrative that obscures underlying power dynamics and potential for extraction?",
+      "resolution_mechanism": "Comparative analysis of this reading's claims against the 'sovereignty_guarantor_reading' and 'veto_trap_reading', examining which framing best explains observed policy outcomes and member state behavior over time, particularly during crises.",
+      "impact": "If the 'diplomatic capital' framing is found to systematically understate extraction or power asymmetries, the classification would shift to reflect a more extractive reality, potentially aligning with a 'tangled_rope' or 'snare' type, even if the formal structure remains unchanged.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The influence of the chosen analytical frame on the perceived nature of the unanimity constraint."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__sovereignty_guarantor_reading",
+      "eu_council_unanimity__veto_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'eu_council_unanimity' kernel. This 'diplomatic_capital_reading' focuses on the consensus-building and legitimacy-enhancing aspects, leading to a 'rope' classification, distinct from the 'sovereignty_guarantor_reading' (also a rope, but focused on protection) and the 'veto_trap_reading' (likely a snare, focused on extraction)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "veto_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "consensus_enhances_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "diplomatic_investment_yields_stability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_maastricht_integration_framework",
+    "drift_state": {
+      "moment": "contemporary_multi_crisis_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

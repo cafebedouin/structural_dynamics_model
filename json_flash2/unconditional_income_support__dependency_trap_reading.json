@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9d7cb119-d773-4a5b-b014-3ce000c288fa",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support (Dependency Trap Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middle_upper_class_recipients",
+      "ubi_advocates"
+    ],
+    "victims": [
+      "working_poor",
+      "taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "working_poor",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "These individuals lose access to targeted welfare programs (e.g., housing assistance, food stamps) that provided greater net benefit than the unconditional income amount. They are effectively made worse off by the 'universal' program, trapped by the replacement of more valuable aid."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the net fiscal cost of the program, estimated at $1.4 trillion after offsets. They perceive the program as an inefficient redistribution of their earnings, funding idleness and non-needy recipients, leading to reduced economic output."
+    },
+    {
+      "name": "middle_upper_class_recipients",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income transfers despite not having a demonstrated need, effectively a net subsidy. They benefit from the universality of the program, often without a corresponding reduction in other benefits or a significant increase in their tax burden relative to the transfer received."
+    },
+    {
+      "name": "ubi_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Gain political capital and validation for their policy agenda. The implementation of unconditional income, even if flawed, represents a step towards their long-term goals, reinforcing their ideological position and influence in policy debates."
+    },
+    {
+      "name": "welfare_state_bureaucracy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the unconditional income program, managing its distribution and the phasing out of targeted aid. While some parts of the bureaucracy may shrink, new administrative functions emerge, maintaining institutional power and control over social policy. They enforce the replacement of existing programs."
+    },
+    {
+      "name": "economic_analysts_aei",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Conduct meta-analyses and studies (e.g., AEI) on the economic impacts of unconditional income, highlighting negative effects like reduced employment (-3.2% in large pilots) and fiscal unsustainability. Their analysis provides the empirical basis for the dependency trap reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Simplifies welfare administration by replacing complex, means-tested programs with a single, universal transfer, theoretically reducing bureaucratic overhead and stigma.",
+    "transfer_function": "Moves a fixed income amount from the general tax base to all citizens, while simultaneously shifting resources away from targeted aid programs for the poor.",
+    "absent_voices": "Advocates for targeted, means-tested welfare programs, who would argue for the efficiency and necessity of aid tailored to specific needs, are marginalized by the universalist discourse. The voices of those who lose more in targeted aid than they gain in UBI are often drowned out by the promise of 'universality'.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, the fiscal burden on taxpayers would decrease, and there would be immediate pressure to reinstate or expand targeted welfare programs to address specific needs of the poor. The labor market might see a slight increase in participation, and the political landscape around welfare would shift dramatically.",
+    "founding_problem": "The perceived problems of existing welfare systems: administrative complexity, high overhead, and the 'welfare trap' where earning more leads to losing benefits, disincentivizing work.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The welfare state bureaucracy and UBI advocates attest that the founding problems of complexity and disincentives are still live. However, economic analysts (e.g., AEI) and working poor advocates argue that the unconditional income solution exacerbates new problems (dependency, upward redistribution) while failing to solve the core issues for the truly needy, making the 'solution' worse than the original problem."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the 'dependency trap' reading of unconditional income support. It argues that such programs, while ostensibly universal, function as an incentive-distorting subsidy that rewards idleness, crowds out more effective targeted aid for the truly needy, and results in an upward redistribution of wealth to non-needy recipients. The constraint is framed as a snare, actively extracting from the working poor and taxpayers, while benefiting the middle/upper classes and UBI advocates.",
+    "logic_rationale": "The high extractiveness (0.85) reflects the net negative impact on the working poor (losing more valuable targeted aid) and the significant fiscal burden on taxpayers. Suppression (0.70) is present through the active replacement of existing welfare structures, limiting alternatives for the poor. The theater ratio (0.20) is relatively low, as the program's stated goals of simplicity and dignity are genuinely pursued by some, but the underlying economic effects are seen as perverse by this reading. The increasing extractiveness over time reflects the growing evidence of negative employment impacts and fiscal costs.",
+    "directionality_logic": "The working poor and taxpayers are clear targets (high d), bearing the costs of reduced aid and increased taxes, respectively. Middle/upper-class recipients are beneficiaries (low d), receiving transfers without need. UBI advocates also benefit (low d) from the political validation of their agenda. The welfare state bureaucracy acts as an agenda-setter, enforcing the program's structure and managing the transition from targeted aid.",
+    "perspectival_gap": "From the perspective of the working poor, the constraint is a snare, actively making them worse off. From the perspective of middle/upper-class recipients, it's a net benefit. UBI advocates see it as a step towards a more just society, despite the negative economic data highlighted by observers like AEI. The engine's per-seat classification will reflect these divergent experiences.",
+    "kernel_context": "This constraint is the 'dependency_trap_reading' of the 'unconditional_income_support' kernel. Sibling readings include the 'freedom_floor_reading' (emphasizing autonomy and stigma reduction) and the 'universality_paradox_reading' (focusing on political ambiguity and fiscal convergence)."
+  },
+  "omegas": [
+    {
+      "id": "true_employment_impact",
+      "question": "What is the long-term, causal impact of unconditional income support on labor force participation and economic productivity, disentangled from confounding factors?",
+      "resolution_mechanism": "Large-scale, multi-decade randomized controlled trials across diverse economic contexts, with robust controls for macroeconomic shifts and demographic changes.",
+      "impact": "If employment impacts are negligible or positive, the 'idleness' claim weakens, potentially reclassifying the constraint away from a snare. If negative impacts are confirmed, the snare classification is strengthened.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the precise and causal long-term effects of UBI on employment and productivity."
+    },
+    {
+      "id": "redistribution_direction_ambiguity",
+      "question": "Does unconditional income support, when accounting for all fiscal effects (taxes, lost benefits, transfers), result in net upward or downward redistribution of wealth?",
+      "resolution_mechanism": "Comprehensive, independent fiscal modeling that integrates all direct and indirect economic effects across income quintiles, with transparent assumptions.",
+      "impact": "If net redistribution is found to be downward (pro-poor), the 'redistributes upward to non-needy' claim is challenged, weakening the snare classification. If upward redistribution is confirmed, the snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the true direction of wealth redistribution under unconditional income support."
+    },
+    {
+      "id": "coordination_extraction_boundary_welfare",
+      "question": "Is the simplification of welfare administration (coordination) inherently tied to the replacement of targeted aid (extraction), or can administrative efficiency be achieved without harming the working poor?",
+      "resolution_mechanism": "Policy experiments that implement administrative simplification for targeted aid programs without universal replacement, comparing outcomes for efficiency and recipient well-being.",
+      "impact": "If efficiency can be achieved without replacement, the 'crowds out targeted aid' claim is strengthened as a distinct extractive mechanism, reinforcing the snare. If simplification necessitates replacement, the coordination and extraction functions are more tightly coupled.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether administrative efficiency in welfare requires the replacement of targeted aid, or if these functions are separable."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incentives_drive_labor_supply",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "targeted_aid_is_more_efficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "traditional_welfare_incentive_framework",
+    "drift_state": {
+      "moment": "contemporary_ubi_advocacy_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

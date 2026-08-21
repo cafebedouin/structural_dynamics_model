@@ -1,0 +1,287 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2a0734cb-84a7-4c54-86f4-dd263c00777c"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Exercise Requirement",
+    "topic_domain": "Safety Engineering / Organizational Learning / High-Reliability Organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "public_safety"
+    ],
+    "victims": [
+      "training_departments",
+      "operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These organizations (e.g., airlines, nuclear power plants) establish and enforce the competence standards, benefiting from reduced risk and maintained operational integrity. They bear the ultimate responsibility for safety outcomes."
+    },
+    {
+      "name": "operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Pilots, engineers, and other frontline personnel who must undergo rigorous training, including both simulation and periodic real-world exercises (line operations, audits, actual aircraft time). They bear the direct time and effort costs of maintaining competence."
+    },
+    {
+      "name": "training_departments",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for designing, implementing, and funding the hybrid training programs. They face budget constraints and logistical challenges in integrating real-world anchoring into training curricula, often advocating for more cost-effective simulation-only approaches."
+    },
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governmental bodies (e.g., FAA, NRC) that mandate and audit competence exercise requirements. They enforce compliance and can impose penalties, ensuring organizations adhere to the hybrid model for public safety."
+    },
+    {
+      "name": "public_safety",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "situation": "The ultimate beneficiary of maintained operational competence, as it directly translates to reduced risk of accidents and catastrophic failures. The public has no direct agency in enforcing the constraint but bears the consequences of its failure."
+    },
+    {
+      "name": "simulation_advocates",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Researchers, technology providers, and some organizational leaders who argue that high-fidelity simulation, combined with advanced debriefing techniques, is fully adequate for competence exercise and more cost-effective than real-world anchoring. They are excluded from setting the core requirement but influence its implementation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that operational competence in high-stakes domains is robustly maintained by integrating theoretical knowledge, simulated practice, and periodic exposure to the unpredictable complexities of real-world operations, thereby coordinating safety standards across an organization.",
+    "transfer_function": "Transfers resources (time, budget, personnel effort) from training departments and individual operators towards the implementation and execution of real-world anchoring activities (e.g., line operations, non-jeopardy audits, actual aircraft time), in exchange for verified, resilient operational competence and reduced systemic risk.",
+    "absent_voices": "Advocates for pure simulation-based training are structurally excluded from defining the core requirement, as their position (simulation as adequate) is foreclosed by this reading. They would argue for greater efficiency and cost savings by eliminating real-world anchoring.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid requirement vanished, organizations would likely shift towards cheaper, simulation-only training. This would lead to a gradual but significant erosion of operational competence, particularly in handling emergent, non-simulatable events, eventually resulting in an increase in safety incidents and catastrophic failures.",
+    "founding_problem": "The recognition that purely theoretical or simulated training, while efficient, fails to adequately prepare personnel for the unpredictable complexities, emergent properties, and 'dirty' realities of real-world high-stakes operations, leading to competence decay and an increased risk of catastrophic failures.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Numerous accident investigations, safety reports, and independent studies across high-reliability domains (e.g., aviation, nuclear power, complex medical procedures) consistently corroborate the necessity of real-world experience beyond simulation for maintaining robust operational competence. This is attested by regulatory bodies and independent safety boards."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.23
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the requirement for maintaining operational competence in high-reliability organizations through a hybrid approach: combining foundational simulation-based training with periodic real-world anchoring (e.g., line operations, non-jeopardy audits, actual aircraft time). It is a reading of the broader 'competence_exercise_requirement' kernel, specifically arguing against both pure simulation and reliance on catastrophic events for competence maintenance.",
+    "logic_rationale": "Extractiveness is moderate-high (0.66 at interval end) due to the significant costs (time, resources, logistical complexity) associated with implementing and maintaining real-world anchoring components. Suppression is high (0.76) because the requirement actively mandates this hybrid approach, suppressing cheaper, less robust alternatives like pure simulation. Theater ratio remains low (0.23) as real-world anchoring is difficult to fake and directly tied to observable operational performance. The metrics show a slight increase in extractiveness and suppression over time, reflecting the increasing cost and hardening of enforcement as the standard becomes more entrenched.",
+    "directionality_logic": "High-reliability organizations and public safety are the primary beneficiaries, gaining from robust competence and reduced risk. Training departments and individual operators are the payers, bearing the direct costs and time commitments. Regulators act as agenda-setters and observers, enforcing the standard. Simulation advocates are excluded, as their preferred method is deemed insufficient by this constraint.",
+    "perspectival_gap": "From the perspective of training departments and operators, the constraint can feel highly extractive due to the costs and logistical burdens of real-world anchoring. From the perspective of high-reliability organizations and regulators, it is a necessary, albeit costly, coordination mechanism for ensuring public safety. The engine's per-seat classification will reflect this divergence.",
+    "mandatrophy_analysis": "This hybrid approach directly addresses mandatrophy by ensuring that competence exercise remains anchored in the evolving realities of operational environments, preventing the mandate from atrophying into a purely theoretical or performative exercise. By explicitly requiring real-world exposure, it counters the drift towards simulation-only training that could lead to a disconnect between trained skills and actual operational demands.",
+    "kernel_context": "This constraint, 'competence_exercise_requirement__hybrid_dependency', is one reading of the 'competence_exercise_requirement' kernel. It posits that competence requires a blend of simulation and real-world anchoring. It stands in contrast to the 'simulation_as_adequate_exercise' reading (which claims simulation alone is sufficient) and the 'catastrophe_as_necessary_anchor' reading (which claims only catastrophic events provide true exercise)."
+  },
+  "omegas": [
+    {
+      "id": "optimal_hybrid_balance",
+      "question": "Is the current balance between simulation and real-world anchoring optimal, or does it over- or under-emphasize real-world components relative to cost and risk reduction?",
+      "resolution_mechanism": "Longitudinal studies comparing competence decay rates and incident frequencies across different hybrid ratios, adjusted for operational complexity and cost.",
+      "impact": "If the balance is suboptimal, re-calibration could lead to either reduced costs without compromising safety (if over-emphasized) or increased safety at acceptable cost (if under-emphasized), potentially shifting the constraint's extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the efficiency and effectiveness of the current hybrid training ratio."
+    },
+    {
+      "id": "definition_of_competence",
+      "question": "How is 'competence' defined and measured in this context? Does the definition adequately capture the full range of skills required for high-reliability operations, including adaptive expertise and resilience?",
+      "resolution_mechanism": "Consensus among domain experts, validated by empirical studies of expert performance in both routine and emergent situations, and comparison with definitions from other high-reliability domains.",
+      "impact": "A narrow definition might lead to under-training in critical areas, making the hybrid requirement less effective. A broader definition might necessitate more extensive real-world anchoring, increasing extractiveness but potentially enhancing safety.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Clarifying the scope and measurement of operational competence."
+    },
+    {
+      "id": "real_world_anchoring_feasibility",
+      "question": "To what extent are 'periodic real-world anchoring' activities truly non-jeopardy and scalable, given increasing operational tempo and safety concerns?",
+      "resolution_mechanism": "Operational data analysis, logistical feasibility studies, and pilot programs for new anchoring methods. Assessment of regulatory flexibility for alternative anchoring approaches.",
+      "impact": "If non-jeopardy anchoring becomes increasingly difficult or impossible, the constraint might drift towards either pure simulation (if the 'catastrophe' reading is rejected) or a de facto reliance on incidents, fundamentally altering its nature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Practical limits and scalability of real-world anchoring components."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "safety_culture_maintenance",
+      "regulatory_compliance",
+      "organizational_learning_frameworks"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_real_world_complexity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_is_unacceptable_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "proactive_safety_management",
+    "drift_state": {
+      "moment": "contemporary_cost_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

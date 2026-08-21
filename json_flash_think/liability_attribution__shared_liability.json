@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1147c1c7-e6fc-4eb7-9450-4ebe4f2f894e"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shared Liability for Technology Value Chains",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "end_users",
+      "insurance_providers"
+    ],
+    "victims": [
+      "developers",
+      "deployers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "As creators of technology, they bear a portion of liability proportional to their causal contribution and control. This increases their compliance costs, legal review, and insurance premiums, but also provides a clearer framework for risk management than full, sole liability."
+    },
+    {
+      "name": "deployers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "As operators of technology in specific contexts, they bear a portion of liability proportional to their causal contribution and control. This necessitates investment in risk assessment, operational controls, and insurance, distributing the burden rather than concentrating it solely on them."
+    },
+    {
+      "name": "end_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from increased accountability and clearer avenues for recourse when harms occur due to complex technology. They are less likely to be left without a liable party, improving trust in technology adoption."
+    },
+    {
+      "name": "insurance_providers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefit from the emergence of new markets for liability insurance and indemnification products tailored to distributed risk. They actively shape the terms of these new markets and influence risk management practices across the value chain."
+    },
+    {
+      "name": "regulators_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Define, interpret, and enforce the legal principles of shared liability. They coordinate the distribution of responsibility and adjudicate disputes, ensuring the framework's application aligns with legal theory and public policy goals."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyze the theoretical underpinnings and practical implications of shared liability, contributing to its evolution and critique. They provide the analytical lens through which the constraint's effectiveness and fairness are assessed."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To ensure comprehensive accountability and risk distribution across complex technology value chains by attributing liability based on causal contribution and control, preventing gaps where no single party is fully responsible.",
+    "transfer_function": "Transfers the burden of potential harm and associated legal/insurance costs from end-users to developers and deployers, and then further distributes these costs among developers, deployers, and insurance markets.",
+    "absent_voices": "Future innovators or small startups might find the increased compliance and insurance costs prohibitive, potentially stifling innovation. Their voices are often not fully represented in the initial design of such liability regimes.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If shared liability vanished, the technology industry would face significant uncertainty regarding risk, potentially leading to a return to single-point liability models or widespread gaps in accountability, causing major disruption to legal and insurance markets.",
+    "founding_problem": "The increasing complexity and distributed nature of modern technology systems (e.g., AI, IoT) made it difficult to attribute harm to a single party, leaving victims without clear recourse and creating accountability gaps.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, consumer advocacy groups, and victims of technology-related harms consistently attest to the ongoing challenge of attributing liability in complex systems. Regulatory bodies are actively developing frameworks to address this, corroborating the problem's live status."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the legal and regulatory framework for 'shared liability' in technology value chains, where responsibility for harms is distributed among developers and deployers based on their causal contribution and control. It is one reading of the broader 'liability_attribution' kernel, which also includes 'developer_liability' and 'deployer_liability' as sibling readings. This reading aims to address accountability gaps in complex systems by ensuring multiple parties bear responsibility, fostering a more robust risk management ecosystem.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely coordinates risk distribution and accountability (benefiting end-users and creating new markets for insurance) while simultaneously extracting costs from developers and deployers through increased compliance, legal, and insurance burdens. Extraction (0.65) is moderate-high due to these new costs. Suppression (0.70) is significant as it requires active legal and regulatory enforcement to compel adherence and prevent unilateral attempts to offload liability. Theater ratio (0.15) is low, as the framework is primarily functional, though some performative compliance may exist.",
+    "perspectival_gap": "Developers and deployers experience this as an extractive burden, increasing their operational costs and legal exposure. End-users and insurance providers, however, perceive it as a beneficial coordination mechanism that enhances safety, accountability, and creates new market opportunities. Regulators view it as a necessary tool for effective governance in complex technological domains.",
+    "directionality_logic": "Developers and deployers are the primary targets (payers) as they bear the direct costs of compliance and insurance. End-users are beneficiaries due to improved recourse and safety. Insurance providers are also beneficiaries, profiting from the new risk markets. Regulators and courts act as agenda-setters, defining and enforcing the terms of this shared liability.",
+    "mandatrophy_analysis": "This classification as a Tangled Rope prevents mislabeling it as a pure Snare, acknowledging its genuine coordination function in distributing risk and ensuring accountability. It also avoids mislabeling it as a pure Rope, recognizing the significant extraction imposed on developers and deployers. The 'live' status of the founding problem (accountability gaps in complex tech) suggests it has not yet suffered mandatrophy, though its implementation and costs are subject to ongoing debate."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint accurately identified as the 'shared_liability' reading of the 'liability_attribution' kernel?",
+      "resolution_mechanism": "Analysis of legal texts, regulatory guidance, and judicial precedents to confirm the explicit or implicit adoption of principles of causal contribution and control for liability distribution.",
+      "impact": "If misidentified, the analysis of its structural relationships to sibling readings (developer_liability, deployer_liability) would be flawed, leading to incorrect network and CS structure interpretations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms the specific reading of the liability attribution kernel."
+    },
+    {
+      "id": "structural_delta_validation",
+      "question": "Are the expected structural deltas for this reading (developers/deployers in victim set, increased coordination costs, emergence of insurance markets, distributed opacity burden) empirically observable?",
+      "resolution_mechanism": "Empirical studies on the economic impact of shared liability regimes, analysis of insurance market growth in relevant sectors, and legal case studies on liability allocation.",
+      "impact": "If these deltas are not observed, the 'shared_liability' reading's practical instantiation may be weaker or different than theorized, potentially shifting its effective extractiveness or coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Verifies the real-world manifestation of the reading's predicted structural changes."
+    },
+    {
+      "id": "coordination_cost_justification",
+      "question": "Are the increased coordination costs (e.g., legal review, contractual overhead) genuinely necessary for effective risk distribution, or do they contain an element of rent-seeking by legal/insurance industries?",
+      "resolution_mechanism": "Comparative analysis of transaction costs in different liability regimes and independent audits of legal and insurance service pricing.",
+      "impact": "If a significant portion of coordination costs is found to be rent-seeking, the effective extractiveness of the constraint would be higher than currently estimated, pushing it closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the necessity vs. extractive nature of coordination overhead."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "causal_contribution_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "control_as_liability_basis",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "holistic_risk_distribution",
+    "drift_state": {
+      "moment": "contemporary_legal_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "gain_flow": "insurance_providers",
+  "fixing_cost": "prohibitive"
+}

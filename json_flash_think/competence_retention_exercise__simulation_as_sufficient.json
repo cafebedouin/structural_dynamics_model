@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__simulation_as_sufficient",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "615d1b31-3c5e-48f1-ab31-b008eb2901a7"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "High-Fidelity Simulation as Sufficient Competence Exercise",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "organizations_using_simulations",
+      "frontline_operators",
+      "safety_regulators"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "high_fidelity_simulation_efficacy",
+      "proactive_safety_management"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "organizations_using_simulations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These organizations (e.g., airlines, nuclear power plants, hospitals) rely on high-fidelity simulations to train personnel for rare, high-consequence events, believing it maintains competence without the cost of real catastrophes. They benefit from reduced risk and compliance with safety standards."
+    },
+    {
+      "name": "simulation_developers",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Companies and research institutions that design, build, and maintain high-fidelity simulation environments. They set the technical standards and capabilities for what constitutes 'high-fidelity' and advocate for its sufficiency in competence retention."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Pilots, control room operators, surgeons, and other personnel who undergo simulation training. They benefit from enhanced skills and safety, but pay in terms of time, effort, and the cognitive load of training. They trust the simulation to prepare them for real events."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "secondary_role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies responsible for setting and enforcing safety standards in high-risk industries. They benefit from a verifiable method of competence assurance that reduces public risk. They oversee the quality and efficacy of simulation programs."
+    },
+    {
+      "name": "catastrophe_victims_potential",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The individuals who would suffer harm or death in a real catastrophic event. From the perspective of this constraint, their exclusion from the 'learning process' (i.e., by preventing catastrophes) is the ultimate goal and benefit of effective simulation. They have no voice in the design or validation of the competence system."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, safe, and repeatable method for training and assessing competence in complex, high-stakes operational environments, ensuring consistent skill levels across a workforce.",
+    "transfer_function": "Transfers knowledge, procedural skills, and decision-making capabilities from a controlled, simulated environment to real-world operational contexts, aiming to prevent catastrophic failures.",
+    "absent_voices": "Those who argue that only real-world catastrophes or near-misses provide the necessary learning and visceral experience for true competence retention (e.g., proponents of the 'catastrophe_as_necessary' reading). Their perspective is excluded by the premise of simulation's sufficiency.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in simulation's sufficiency vanished, organizations would lose a primary, cost-effective method for competence retention. This would likely lead to a significant increase in real-world incidents, a breakdown in safety protocols, and a fundamental reorganization of training and risk management strategies, potentially requiring real-world exposure to hazards.",
+    "founding_problem": "How to train for and maintain competence in rare, high-consequence events without incurring the unacceptable costs and risks of experiencing actual failures; how to ensure readiness for scenarios that cannot be safely practiced in reality.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Academic research in human factors, aviation safety boards, nuclear regulatory bodies, and medical simulation literature consistently attest to the ongoing challenge of maintaining high-level competence for rare events and the role of simulation in addressing it. This corroboration comes from outside the direct beneficiaries of simulation sales or operational cost savings."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the reading that high-fidelity simulation is a genuinely sufficient means of exercising and retaining catastrophe-avoidance competence, with cognitive and procedural demands structurally equivalent to real events. It operates within the domain of safety engineering and organizational learning, particularly in high-reliability organizations. From this perspective, simulation is a proactive safety measure that prevents the need for learning from actual catastrophes, thereby benefiting all stakeholders by reducing risk.",
+    "logic_rationale": "The extractiveness is low (0.15) because, from this reading's perspective, simulation is a cost-effective method that *prevents* the much higher costs of real-world failures. Suppression is low (0.10) as it's a training methodology, not a coercive force. Theater ratio is low (0.05) because high-fidelity simulations are assumed to be genuinely functional and effective. Accessibility collapse is high (0.85) for alternatives like 'learning from real catastrophes' because this reading asserts simulation makes such alternatives unnecessary. Resistance is low (0.10) among those who adopt this view, as it aligns with modern safety paradigms.",
+    "perspectival_gap": "While this reading presents simulation as a clear benefit, other perspectives (e.g., 'catastrophe_as_necessary') would argue that simulation, no matter how high-fidelity, cannot fully replicate the stakes and emergent properties of real events, leading to a false sense of security. This divergence is captured by the kernel structure and omega variables.",
+    "directionality_logic": "Organizations, operators, and regulators are all beneficiaries, as simulation aims to prevent harm and maintain safety. Simulation developers act as agenda-setters by defining and promoting the standards of 'sufficiency.' Potential catastrophe victims are 'excluded' in the sense that the system aims to prevent their existence, but they would be the ultimate victims if the simulation's sufficiency proved false.",
+    "kernel_context": "This constraint is the 'simulation_as_sufficient' reading of the 'competence_retention_exercise' kernel. It posits that high-fidelity simulation genuinely exercises competence, contrasting with sibling readings like 'catastrophe_as_necessary' (only real events suffice) and 'near_miss_as_bridge' (near-misses validate training)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_validity",
+      "question": "Is the 'high-fidelity' claim empirically robust, and do the cognitive and procedural demands of simulation truly match those of real catastrophic events?",
+      "resolution_mechanism": "Longitudinal studies comparing simulator performance to real-world incident response, physiological and neurological monitoring during simulation vs. real events, and expert review of simulation design against emergent properties of complex systems.",
+      "impact": "If fidelity is found to be insufficient, the constraint's extractiveness would rise (due to false sense of security and eventual real-world costs), and its classification might shift towards a Snare or Piton, as it would be extracting resources for an ineffective solution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validation of simulation's claimed equivalence to real events."
+    },
+    {
+      "id": "competence_transfer_generalizability",
+      "question": "Does competence demonstrated in a simulated environment reliably transfer to the full range of unpredictable, real-world conditions, including novel failures?",
+      "resolution_mechanism": "Analysis of 'black swan' events and novel failure modes to determine if simulation-trained personnel adapt effectively, or if training induces overconfidence or rigidity.",
+      "impact": "If transfer is limited, the constraint's effectiveness is lower than claimed, potentially leading to higher real-world costs and a reclassification towards a Tangled Rope (coordination with hidden extraction) or Snare (if the cover story is maintained despite evidence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which simulated competence generalizes to real-world unpredictability."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is the 'simulation_as_sufficient' reading of the 'competence_retention_exercise' kernel. What are the structural implications of this specific framing?",
+      "resolution_mechanism": "Comparative analysis with sibling readings ('catastrophe_as_necessary', 'near_miss_as_bridge') to identify how each frames the problem of competence retention and the role of different learning mechanisms.",
+      "impact": "This reading prioritizes proactive prevention and simulation infrastructure. Alternative readings would shift focus to post-incident learning or real-world exposure, leading to different resource allocations and potentially different classifications for the overall competence system.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as one specific reading within a contested kernel."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "near_miss_as_bridge",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_structural_equivalence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophe_avoidance_as_primary_goal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "proactive_safety_paradigm",
+    "drift_state": {
+      "moment": "contemporary_safety_engineering",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

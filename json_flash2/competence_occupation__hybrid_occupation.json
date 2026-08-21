@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1dce1aa5-c927-4949-988d-2f8576c05f0a"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Occupation Model",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulators",
+      "training_providers"
+    ],
+    "victims": [
+      "frontline_operators",
+      "organizational_budgets"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Mandate continuous competence maintenance through diverse mechanisms, often without specifying optimal configurations, leading to a 'more is better' approach. They benefit from perceived safety and compliance."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Profit from the continuous demand for simulations, refresher courses, and audit services. They have an incentive to promote multi-mechanism approaches, even if their efficacy is not fully proven."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bear the direct burden of continuous training, often experiencing fatigue and skepticism about the effectiveness of some methods. Their professional identity is tied to maintaining competence, making exit difficult."
+    },
+    {
+      "name": "organizational_budgets",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Incur significant costs for implementing and maintaining multiple training and audit mechanisms. They seek cost-effective solutions but are constrained by regulatory mandates and the imperative for safety."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the efficacy of different competence maintenance strategies and the optimal configuration of hybrid models. They provide evidence that can influence regulatory policy but do not directly participate in the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the continuous maintenance of critical operational competence across high-reliability organizations by requiring diverse training and verification methods, aiming to prevent skill decay and ensure readiness for rare, high-consequence events.",
+    "transfer_function": "Transfers significant financial resources from organizational budgets to training providers and regulatory compliance efforts, and transfers time and cognitive load from frontline operators to continuous training and auditing activities.",
+    "absent_voices": "Operators who advocate for more targeted, evidence-based training rather than a 'shotgun' approach, and budget holders who would demand clearer ROI on each training mechanism, are often marginalized in favor of broad regulatory compliance and vendor interests.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this multi-mechanism requirement vanished, organizations would likely revert to less frequent, cheaper training methods, potentially leading to skill decay and increased risk of incidents. The entire safety training industry would need to reconfigure, and regulatory frameworks would lose a key pillar.",
+    "founding_problem": "The problem of skill decay in high-consequence, low-frequency events, where operators must maintain readiness for situations they rarely encounter in real-world operations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety incident reports, human factors research, and expert testimony from independent safety boards consistently corroborate the ongoing challenge of competence maintenance for rare events. While the specific 'hybrid' solution is debated, the underlying problem is widely acknowledged by all parties, including those who bear the costs."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the prevailing model for competence maintenance in high-reliability organizations, which mandates a hybrid approach combining simulations, refreshers, procedural reinforcement, and line audits. While the core problem of skill decay is real, there is no consensus on the optimal configuration, leading to an accumulation of mechanisms. This story instantiates the 'hybrid_occupation' reading of the 'competence_occupation' kernel, where multiple mechanisms are deemed necessary, and optimization is an ongoing research problem.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it genuinely addresses a coordination problem (maintaining competence for rare events) but also involves significant asymmetric extraction. Extractiveness is moderate-high (0.65) due to the cumulative cost of multiple, often unoptimized, training mechanisms. Suppression (0.70) is high because regulatory mandates and the imperative for safety leave little room for organizations or operators to opt out or significantly reduce training burdens. Theater ratio (0.40) is moderate, reflecting that while some training is genuinely effective, a portion is maintained for compliance or to satisfy a 'more is better' mentality without clear evidence of marginal utility.",
+    "perspectival_gap": "Safety regulators and training providers experience this as a necessary, if complex, coordination mechanism, benefiting from its operation. Frontline operators and organizational budgets, however, experience it as an extractive burden, paying the costs in time, effort, and financial resources. The engine's per-seat classification will reflect this divergence.",
+    "directionality_logic": "Safety regulators (agenda_setter) and training providers (beneficiary) have low directionality, as they benefit from the system's operation and expansion. Frontline operators and organizational budgets (payers) have high directionality, as they bear the direct costs and burdens. Frontline operators are 'identity_locked' due to their professional commitment to safety, making exit from the system effectively impossible without leaving the profession.",
+    "mandatrophy_analysis": "The constraint's mandate (maintaining competence) is still live, but the 'hybrid' approach itself shows signs of mandatrophy in its lack of optimization and accumulation of mechanisms. The classification as a Tangled Rope, rather than a pure Rope, captures this hybrid nature, preventing mislabeling genuine coordination as pure extraction while acknowledging the extractive elements. The rising theater ratio and extractiveness over time suggest a drift towards less efficient, more performative maintenance.",
+    "kernel_context": "This constraint is the 'hybrid_occupation' reading of the 'competence_occupation' kernel. This reading asserts that competence requires a continuous, multi-mechanism approach (simulation, refresher, procedural reinforcement, line audits) and that there is no single optimal configuration, making training optimization a perpetual research problem. It stands in contrast to the 'simulation_sufficiency' reading (which claims simulations alone are enough) and the 'real_incident_necessity' reading (which claims only real incidents truly occupy the kernel)."
+  },
+  "omegas": [
+    {
+      "id": "optimal_configuration_ambiguity",
+      "question": "What is the optimal configuration and weighting of different competence maintenance mechanisms for specific high-reliability domains?",
+      "resolution_mechanism": "Longitudinal, comparative studies across organizations and domains, correlating specific hybrid configurations with safety outcomes and skill decay rates.",
+      "impact": "Resolution could lead to more targeted, efficient training mandates, reducing extractiveness and theater ratio by eliminating less effective mechanisms, potentially reclassifying the constraint closer to a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the most effective and efficient mix of training and audit mechanisms."
+    },
+    {
+      "id": "simulation_sufficiency_vs_hybrid",
+      "question": "Is simulation-based training, when designed optimally, sufficient to occupy the competence kernel, or is a hybrid approach fundamentally necessary?",
+      "resolution_mechanism": "Empirical evidence from advanced simulation environments demonstrating full competence occupation and transfer to real-world performance, without the need for other mechanisms.",
+      "impact": "If simulation is sufficient, the 'hybrid_occupation' reading would be foreclosed, and the constraint would shift towards a simpler, potentially less extractive 'simulation_sufficiency' model. If not, the hybrid model's necessity is reinforced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity over whether simulations alone can fully address competence decay, or if multiple mechanisms are truly indispensable."
+    },
+    {
+      "id": "real_incident_necessity_challenge",
+      "question": "Does the 'real_incident_necessity' reading (only actual catastrophic incidents provide authentic conditions) pose an insurmountable challenge to the 'hybrid_occupation' reading's claims of full competence occupation?",
+      "resolution_mechanism": "Theoretical and empirical work demonstrating that hybrid mechanisms can effectively replicate the critical cognitive and emotional stressors of real incidents, leading to equivalent competence occupation.",
+      "impact": "If the 'real_incident_necessity' claim is validated, the 'hybrid_occupation' reading's claim of full competence occupation would be severely undermined, potentially reclassifying it as a Piton (theatrical maintenance) or Snare (false promise of safety).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The challenge posed by the 'real_incident_necessity' reading to the efficacy of hybrid training."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "multi_mechanism_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "continuous_optimization_problem",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_skill_decay_discovery_era",
+    "drift_state": {
+      "moment": "contemporary_training_landscape",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

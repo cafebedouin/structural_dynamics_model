@@ -1,0 +1,314 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f011c126-5a0e-400a-a4cb-e22155ffcc76"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.2,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substance Legalization Framework (Liberty Reading)",
+    "topic_domain": "Public Health Policy / Criminal Justice / Political Economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_treasury",
+      "legal_substance_industry",
+      "adult_consumers"
+    ],
+    "victims": [
+      "third_party_citizens",
+      "black_market_actors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "adult_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Gain legal access to substances, exercising individual liberty and benefiting from regulated product safety. They pay taxes on purchases and may bear some indirect costs of regulation."
+    },
+    {
+      "name": "state_treasury",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Establishes and enforces the regulatory framework, collects tax revenue from legal sales, and is responsible for mitigating third-party harms. Benefits directly from increased revenue."
+    },
+    {
+      "name": "legal_substance_industry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Gains legal market access and the ability to operate openly, generating profits. Bears the costs of taxation, licensing, and regulatory compliance."
+    },
+    {
+      "name": "third_party_citizens",
+      "role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the unmitigated costs of externalities (e.g., impaired driving incidents, secondhand exposure, public nuisance) that are not fully captured or prevented by state intervention. Their ability to avoid these harms is limited."
+    },
+    {
+      "name": "black_market_actors",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are displaced from the market by legal competition and face continued criminalization for operating outside the regulated framework. They bear the costs of enforcement actions."
+    },
+    {
+      "name": "public_health_advocates",
+      "role": "observer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the public health outcomes of legalization, focusing on rates of use, addiction, and harm reduction services. They advocate for policy adjustments to minimize negative health impacts."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To establish a regulated market for substances, ensuring product safety, controlling distribution, and generating tax revenue, while upholding individual autonomy and limiting state intervention to preventing third-party harm.",
+    "transfer_function": "Transfers tax revenue from consumers and the legal industry to the state treasury. Transfers profits to the legal substance industry. Transfers unmitigated externality costs (e.g., healthcare, public safety) to third-party citizens.",
+    "absent_voices": "Prohibition advocates would argue for a moral framework that prioritizes abstinence and social order through criminalization. Harm reduction advocates would argue for a more comprehensive public health approach, prioritizing treatment and support over market regulation and taxation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the legalization framework vanished overnight, the market would likely revert to either prohibition (with its associated black market harms) or a chaotic, unregulated free-for-all. This would lead to significant social disruption, loss of tax revenue, and potentially increased public health and safety issues.",
+    "founding_problem": "The harms of prohibition (e.g., black markets, criminalization of users, lack of product quality control, lost tax revenue) and the desire to uphold individual liberty and limit state overreach.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Civil liberties organizations, some economists, and former law enforcement officials corroborate the problems of prohibition and the benefits of a liberty-based approach. Public opinion polls often show significant support for legalization based on these principles."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint a complete and accurate representation of the 'legalization_reading' of the 'substance_control_kernel'?",
+      "resolution_mechanism": "Comparison with other generated readings of the same kernel and expert review of the structural delta.",
+      "impact": "If the reading is incomplete or misrepresents the core tenets, the classification of this specific constraint and its network relationships would be inaccurate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms this constraint as one specific reading of a contested kernel."
+    },
+    {
+      "id": "externality_cost_capture_efficacy",
+      "question": "How effectively does the state's taxation and regulation capture and mitigate the full range of third-party externality costs associated with substance use?",
+      "resolution_mechanism": "Longitudinal empirical studies comparing public health and safety costs with tax revenues and regulatory expenditures in legalized jurisdictions.",
+      "impact": "If externality costs are significantly under-captured, the effective extraction from third-party citizens is higher than estimated, potentially shifting the constraint closer to a Snare for that seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the gap between externality costs and state mitigation/revenue capture."
+    },
+    {
+      "id": "black_market_persistence",
+      "question": "To what extent does a black market for substances persist or adapt within a legalized framework, and what are its associated harms?",
+      "resolution_mechanism": "Empirical analysis of black market activity (e.g., illicit sales, arrests, product seizures) in legalized jurisdictions, comparing pre- and post-legalization trends.",
+      "impact": "Significant black market persistence would indicate higher suppression requirements and continued victimhood for those involved, potentially increasing the overall extractiveness and suppression metrics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Examines the resilience of illicit markets post-legalization."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'legalization_reading' of the 'substance_control_kernel', where substance use is framed as an individual liberty issue. The state's role is limited to preventing direct third-party harm and capturing externality costs through taxation and regulation. This reading aims to dismantle the harms of prohibition by creating a legal, regulated market. The structural delta from prohibition includes users exiting the victim set, third parties entering as victims via unmitigated externalities, the emergence of a legal industry, and the state becoming a revenue collector. The claimed type is 'tangled_rope' because it coordinates a legal market and generates revenue, but also extracts from consumers (taxes) and imposes unmitigated costs on third parties (externalities).",
+    "logic_rationale": "The base extractiveness (0.45) reflects the costs of taxation on consumers and industry, as well as the uncaptured externality costs borne by third parties. Suppression (0.20) is significantly lower than prohibition, focusing on regulating the legal market and enforcing against third-party harms (e.g., DUI), rather than suppressing use itself. The theater ratio (0.15) is low, indicating that the state's actions are largely functional in managing the legal market and public safety. Accessibility collapse (0.35) is moderate, as legal access exists but is still constrained by age limits, licensing, and distribution rules. Resistance (0.20) is lower than under prohibition, primarily from those who oppose legalization on moral grounds or from remnants of the black market.",
+    "perspectival_gap": "Adult consumers largely perceive this as a beneficial framework due to increased liberty and safety, despite paying taxes. Third-party citizens, however, may experience it as extractive if externality costs are not adequately addressed. The state views it as a functional regulatory and revenue-generating mechanism. The engine will compute these divergent classifications based on the declared structural relationships.",
+    "directionality_logic": "The state treasury and legal substance industry are primary beneficiaries, gaining revenue and market access, respectively. Adult consumers are beneficiaries of liberty and safety, but also payers through taxes. Third-party citizens are victims of unmitigated externalities. Black market actors are excluded and victimized by the legal framework's enforcement.",
+    "kernel_context": "This constraint is the 'legalization_reading' of the 'substance_control_kernel'. It contrasts with the 'prohibition_reading' (which criminalizes use) and the 'harm_reduction_reading' (which prioritizes public health interventions over criminal justice or market regulation). This reading emphasizes individual liberty and limited state intervention."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three distinct readings of the 'substance_control_kernel', each with different structural properties and classifications. They are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_autonomy_over_substance_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_intervention_limited_to_third_party_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "liberal_autonomy_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "state_treasury",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

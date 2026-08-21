@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence__lapsed_alternatives_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c46e39c6-ee65-411f-b030-760d05a79aee"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Keyboard Layout Persistence (Lapsed Alternatives Reading)",
+    "topic_domain": "technology_history/industrial_standards",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "keyboard_manufacturers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Must continue to produce QWERTY keyboards due to user demand, incurring retooling costs if they were to switch to an alternative layout. They bear the cost of maintaining the standard but also benefit from a stable market."
+    },
+    {
+      "name": "typists",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Are accustomed to QWERTY and face significant retraining costs and productivity loss if they were to switch to a more 'efficient' layout. Their skill is an investment in the existing standard."
+    },
+    {
+      "name": "alternative_layout_designers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Have designed more efficient keyboard layouts (e.g., Dvorak, Colemak) but cannot achieve critical mass for adoption due to the entrenched QWERTY standard. They are excluded from market relevance by the coordination failure."
+    },
+    {
+      "name": "software_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from a single, universal keyboard standard, simplifying software development and localization. They would face increased complexity if multiple layouts were equally prevalent."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures a universal standard for keyboard input, allowing users to easily switch between devices and software to be developed for a consistent input method.",
+    "transfer_function": "Distributes the costs of maintaining the QWERTY standard (e.g., retraining, suboptimal efficiency) symmetrically across manufacturers and users, while providing the benefit of universal compatibility.",
+    "absent_voices": "Designers and advocates of alternative, potentially more efficient, keyboard layouts are absent from the decision-making process, as their innovations fail to gain traction against the entrenched standard.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If QWERTY vanished overnight, there would be a chaotic period of re-standardization, with significant costs for retraining, retooling, and software adaptation, eventually leading to a new dominant layout or a fragmented market.",
+    "founding_problem": "The need for a standardized, reliable input method for typewriters to prevent jamming and facilitate widespread adoption.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians of technology and ergonomic researchers corroborate that the original jamming problem is long solved by modern technology, and the current persistence is due to path dependence and switching costs, not functional necessity. Keyboard manufacturers and typists, while bearing costs, also benefit from the stability of the existing standard."
+  },
+  "interval": {
+    "start": 1878,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1878,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1920,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1878,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1920,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1878,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1920,
+      "value": 0.0
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout persists as the dominant standard, not due to its inherent efficiency, but because the coordination value of a universal layout outweighs the individual benefits of switching to a more optimal, but non-standard, alternative. This reading emphasizes the collective action problem: no single actor benefits enough to unilaterally switch, and alternatives fail to reach critical mass, leading to their effective 'lapsing' from the market. This is one reading of the 'qwerty_persistence' kernel.",
+    "logic_rationale": "Extractiveness is low (0.15) as the costs are primarily switching costs and suboptimal efficiency, distributed broadly. Suppression is also low (0.2) as there's no active enforcement, but rather a passive suppression of alternatives due to network effects and coordination failure. Theater ratio is negligible (0.05) as the constraint is genuinely functional in its coordination role, even if suboptimal. Accessibility collapse is high (0.7) because viable alternatives exist but are practically inaccessible due to lack of adoption.",
+    "perspectival_gap": "From the perspective of individual typists or manufacturers, the constraint is a 'given' that imposes costs but also provides the benefit of interoperability. From the perspective of alternative layout designers, it's a barrier to innovation. The engine's classification will reflect this symmetric cost/benefit distribution for most participants, leading to a Rope classification.",
+    "directionality_logic": "Keyboard manufacturers and typists are 'payers' in that they bear the costs of the suboptimal layout and switching costs, but they also benefit from the coordination. Software developers are beneficiaries, as they gain from a universal standard. Alternative layout designers are 'excluded' as they cannot overcome the network effects. The lack of a concentrated beneficiary or victim group is key to this reading.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the QWERTY layout as a Snare or Tangled Rope. While it imposes costs, these are primarily coordination costs and switching barriers, not actively extracted rents by a specific beneficiary. The 'dead' founding problem status, combined with a 'world_rearranges' disappearance verdict, indicates a constraint that has outlived its original justification but persists due to path dependence, characteristic of a Rope or Piton. The low extractiveness and theater ratio lean towards Rope in this reading.",
+    "kernel_context": "This constraint is the 'lapsed_alternatives_reading' of the 'qwerty_persistence' kernel. It focuses on the coordination value and network effects that maintain QWERTY's dominance, leading to the effective lapsing of more efficient alternatives. This contrasts with the 'incumbent_preservation_reading', which would emphasize active defense of the standard by beneficiaries with sunk capital investments."
+  },
+  "omegas": [
+    {
+      "id": "active_defense_vs_passive_persistence",
+      "question": "To what extent is QWERTY's persistence due to passive coordination failure and switching costs (this reading), versus active defense by incumbents protecting sunk capital investments (incumbent_preservation_reading)?",
+      "resolution_mechanism": "Detailed historical analysis of lobbying efforts, patent defense, and marketing strategies by major keyboard manufacturers, alongside economic modeling of switching costs versus active rent-seeking.",
+      "impact": "If active defense is significant, the constraint would shift towards a Tangled Rope or Snare, with identifiable beneficiaries actively extracting value. If passive persistence dominates, the Rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishes between coordination failure and active rent-seeking as drivers of persistence."
+    },
+    {
+      "id": "efficiency_gain_threshold",
+      "question": "What is the actual efficiency gain offered by alternative layouts, and at what threshold would this gain overcome switching costs to trigger a market transition?",
+      "resolution_mechanism": "Large-scale ergonomic studies and economic modeling of user adoption curves for alternative layouts, potentially with government or industry subsidies to reduce initial switching costs.",
+      "impact": "A sufficiently high, demonstrable efficiency gain could challenge the 'lapsed alternatives' premise, suggesting that the constraint is more fragile than currently perceived, or that the 'suppression' of alternatives is more active than passive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the potential for alternatives to disrupt the standard."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "incumbent_preservation_reading"
+    ],
+    "dual_formulation_note": "This constraint is the 'lapsed_alternatives_reading' of the 'qwerty_persistence' kernel, focusing on coordination value and network effects. It is linked to the 'incumbent_preservation_reading', which emphasizes active defense by beneficiaries."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "incumbent_preservation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coordination_value_outweighs_individual_efficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "alternatives_fail_to_reach_critical_mass",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "universal_keyboard_standard_by_coordination",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

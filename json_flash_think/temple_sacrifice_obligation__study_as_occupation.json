@@ -1,0 +1,267 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_obligation__study_as_occupation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c814de93-522c-4af4-91c1-c8d7e7ff71bd"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Halakhic Obligation: Study as Vicarious Temple Service",
+    "topic_domain": "religious/halakhic/commitment_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "halakhic_scholars",
+      "observant_jews"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "torah_study_as_ultimate_value",
+      "halakhic_adaptability",
+      "continuity_of_divine_commandment"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a valid reading of the 'temple_sacrifice_obligation' kernel, or is it a distinct, independent constraint?",
+      "resolution_mechanism": "Analysis of historical rabbinic responsa and theological debates regarding the nature of sacrifice and study in the absence of the Temple.",
+      "impact": "If a distinct constraint, its classification would be evaluated independently, potentially altering its relationship to other religious obligations. As a reading, its legitimacy is tied to the kernel's authority.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as the 'study_as_occupation' reading of the 'temple_sacrifice_obligation' kernel, distinguishing it from sibling readings like 'messianic_suspension' and 'study_as_archiving'."
+    },
+    {
+      "id": "fulfillment_vs_substitution_ambiguity",
+      "question": "Does study truly 'fulfill' the obligation of Temple sacrifice, or does it merely serve as a temporary 'substitution' until physical performance is possible?",
+      "resolution_mechanism": "Theological and halakhic analysis of the precise meaning of 'occupation' (עיסוק) in this context, and its equivalence to 'performance' (עשייה).",
+      "impact": "If merely a substitution, the extractiveness might be slightly higher (as the 'true' obligation remains unfulfilled), and the 'rope' classification might weaken towards a 'scaffold' (temporary support). If full fulfillment, the low extractiveness and 'rope' classification are robust.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Clarifies the nature of study's relationship to the original sacrifice obligation."
+    },
+    {
+      "id": "impact_of_temple_rebuilding",
+      "question": "How would the rebuilding of the Temple and the resumption of physical sacrifices impact the validity and status of 'study as occupation' as a means of fulfilling the obligation?",
+      "resolution_mechanism": "Hypothetical halakhic ruling by a Sanhedrin (supreme rabbinic court) in a post-Temple era, or analysis of prophetic texts and eschatological traditions.",
+      "impact": "If physical sacrifice becomes possible, this reading would likely be superseded or relegated to a secondary status, potentially becoming a 'piton' (inertial practice) or 'scaffold' (transitional support) for those unable to perform physical sacrifices. Its current 'rope' function would cease.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Examines the counterfactual scenario of the Temple's restoration and its effect on this interpretive constraint."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 600,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 600,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the halakhic (Jewish legal) interpretation that the study of Temple sacrifice laws constitutes a legitimate fulfillment of the divine obligation in the absence of the physical Temple. This reading emerged and solidified after the destruction of the Second Temple, providing a vital mechanism for religious continuity and identity for observant Jews. It is a core tenet of rabbinic Judaism, allowing adherents to engage with a central commandment that is otherwise impossible to perform.",
+    "key_agents": [
+      "halakhic_scholars: Primary agenda_setter and beneficiary (institutional/arbitrage) — interpret, teach, and embody the fulfillment.",
+      "observant_jews: Primary beneficiary and payer (moderate/constrained) — fulfill the obligation through study, dedicating time and resources.",
+      "messianic_activists: Excluded (organized/constrained) — hold alternative readings that challenge this interpretation.",
+      "archival_scholars: Excluded (institutional/constrained) — hold alternative readings that challenge this interpretation."
+    ],
+    "logic_rationale": "The constraint is classified as a Rope because it solves a genuine collective-action problem (how to fulfill a divine commandment when its physical performance is impossible) with minimal coercive overhead. Participants are net beneficiaries, gaining spiritual fulfillment and maintaining religious identity. Extractiveness is low (0.15) because the 'cost' of study is largely self-imposed and yields direct spiritual benefit. Suppression is low (0.10) as adherence is voluntary and deeply internalized within the community, not externally enforced. Theater ratio is low (0.05) because the act of study is genuinely believed to fulfill the obligation, not merely to perform a ritualistic substitute. Accessibility collapse is high (0.90) because the physical Temple's absence makes the original form of the obligation impossible. Resistance is low (0.05) due to the widespread acceptance of this interpretation within mainstream rabbinic Judaism.",
+    "perspectival_gap": "While the 'study as occupation' reading is widely accepted, alternative readings (e.g., 'messianic_suspension' or 'study_as_archiving') exist. From the perspective of those holding this reading, it is a legitimate and fulfilling path. From the perspective of 'messianic_activists', this reading might be seen as delaying or diminishing the urgency of messianic restoration. From 'archival_scholars', it might be seen as overstating the efficacy of study. The engine computes these divergences from the structural relationships and declared axioms.",
+    "directionality_logic": "Halakhic scholars are beneficiaries and agenda-setters, as they interpret, transmit, and embody this path of fulfillment, deriving authority and purpose from it. Observant Jews are also beneficiaries, as they gain a legitimate means of fulfilling a core religious obligation, though they 'pay' through their dedication to study. There are no direct 'victims' in this reading, as the obligation is considered fulfilled. Alternative readings are 'excluded' from the dominant discourse of this specific interpretation, as their premises are incompatible with its core claim of fulfillment.",
+    "mandatrophy_analysis": "This constraint actively prevents mandatrophy by adapting an ancient obligation to a new reality. The original mandate (Temple sacrifice) became impossible, but the 'study as occupation' interpretation provided a new, viable mandate (study) that maintains the core function of fulfilling the divine commandment. It avoids becoming a piton by genuinely fulfilling a live obligation, rather than merely performing an atrophied function. It avoids being a snare by providing a net benefit to its adherents without coercion or suppressed alternatives within its own framework of fulfillment."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "messianic_suspension",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "study_as_archiving",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "torah_study_is_equivalent_to_action",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "divine_will_accommodates_impossibility",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ],
+    "reference_frame": "halakhic_continuity_through_study",
+    "drift_state": {
+      "moment": "contemporary_rabbinic_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "stakeholders": [
+    {
+      "name": "halakhic_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The rabbinic authorities and scholars who interpret, transmit, and legitimize the doctrine that study fulfills the sacrifice obligation. Their authority and purpose are deeply intertwined with this interpretation, making exit from this framework an identity-altering event."
+    },
+    {
+      "name": "observant_jews",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individuals who adhere to Jewish law and seek to fulfill divine commandments. This interpretation provides them with a legitimate and accessible means to engage with the sacrifice obligation, which is central to their religious identity. Abandoning this interpretation would mean a fundamental shift in their religious practice and self-conception."
+    },
+    {
+      "name": "messianic_activists",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Groups or individuals who prioritize the immediate rebuilding of the Temple and believe the obligation is suspended until then. They are excluded from the interpretive framework of 'study as occupation' because their core premise of suspension directly contradicts the idea of fulfillment through study."
+    },
+    {
+      "name": "archival_scholars",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Scholars who view the study of sacrifice laws primarily as a means of preserving knowledge for a future restoration, without believing it fulfills the obligation in the present. Their position is foreclosed by the 'study as occupation' reading's claim of active fulfillment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a coherent, legitimate, and accessible means for observant Jews to fulfill the divine obligation of Temple service in its physical absence, thereby maintaining continuity of religious practice, identity, and communal purpose across generations.",
+    "transfer_function": "Transfers the spiritual merit, fulfillment, and communal focus of the Temple sacrifice obligation from the physically impossible act to the intellectually and spiritually accessible act of study, from the individual to the collective body of scholars and students.",
+    "absent_voices": "Those who believe the obligation is suspended until the Temple's rebuilding ('messianic_activists') or that study is merely preservation, not fulfillment ('archival_scholars'), would object. They are absent from the interpretive consensus of this reading because their core premises are incompatible with its claim of active fulfillment.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this interpretation vanished overnight, observant Jews would face a profound crisis of religious obligation and identity, lacking a legitimate means to engage with a central commandment. This would lead to widespread theological and practical reorganization, potentially fragmenting religious communities and altering core aspects of Jewish practice.",
+    "founding_problem": "The destruction of the Second Temple (70 CE) rendered the central divine commandment of animal sacrifice impossible to perform, creating a profound crisis of religious obligation, continuity, and identity for observant Jews.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "This reading is corroborated by centuries of rabbinic literature (e.g., Talmudic discussions, Maimonides' Mishneh Torah), legal codes, and the lived practice of millions of observant Jews. Independent historical and sociological analyses of Jewish life post-Temple destruction also attest to its functional role in maintaining religious continuity and identity."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

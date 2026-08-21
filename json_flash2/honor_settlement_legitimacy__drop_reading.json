@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "honor_settlement_legitimacy__drop_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6ead6fa7-aabd-48b6-942a-f8073ff98192"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Persistence of Dueling in Fringe Honor Cultures (Drop Reading)",
+    "topic_domain": "historical_sociology/legal_history/cultural_anthropology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "residual_honor_adherents",
+      "local_authorities_tolerating_duels"
+    ],
+    "victims": [
+      "duel_participants",
+      "families_of_duelists"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "residual_honor_adherents",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals who maintain a strong personal and social identity tied to traditional honor codes, for whom dueling, though legally proscribed, remains a legitimate means of dispute resolution or status defense within their specific social niche. They benefit from the perceived restoration of honor."
+    },
+    {
+      "name": "duel_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals compelled by honor codes to participate in duels, facing physical harm, death, or legal consequences. Their participation is often a last resort to avoid social ostracism or perceived dishonor, making their exit options severely constrained."
+    },
+    {
+      "name": "local_authorities_tolerating_duels",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Local law enforcement or judicial figures who, due to cultural pressures, political expediency, or resource limitations, tacitly allow dueling to persist as a 'private' matter within certain communities, often turning a blind eye to its occurrence or imposing minimal penalties. They benefit from maintaining social order without direct confrontation."
+    },
+    {
+      "name": "families_of_duelists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bear the social stigma, emotional trauma, and economic costs associated with dueling, including loss of life or legal repercussions. Their identity is often tied to the community's honor culture, making it difficult to exit the system or challenge its norms."
+    },
+    {
+      "name": "national_legal_system",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The overarching legal framework that formally prohibits dueling and views it as a criminal act. It struggles to enforce its prohibition uniformly in areas where local honor cultures persist, leading to a gap between de jure and de facto legality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Within specific social niches, it provides a recognized, albeit illegal, mechanism for individuals to settle disputes, restore perceived honor, and maintain social standing according to traditional codes, preventing other forms of violence or social breakdown within that specific cultural context.",
+    "transfer_function": "Transfers the burden of dispute resolution and honor defense onto individuals through physical risk, and transfers social legitimacy to traditional honor codes at the expense of formal legal authority in specific contexts.",
+    "absent_voices": "Victims of dueling (those killed or injured) and their immediate families, who often lack the power or social standing to challenge the honor code directly. Also, proponents of universal legal equality and state monopoly on violence, whose perspectives are marginalized in these specific cultural enclaves.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the cultural acceptance and tacit tolerance of dueling vanished overnight, these fringe honor cultures would face a crisis in how they manage disputes and maintain social status. Individuals would either be forced into the formal legal system, or new, potentially more violent, informal mechanisms would emerge to fill the void, fundamentally altering the social fabric of these communities.",
+    "founding_problem": "The need for individuals to defend their personal and family honor against perceived slights or insults in a society where formal legal recourse was insufficient or culturally inappropriate for such matters.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Adherents of residual honor cultures attest that the problem of honor defense remains live, as formal legal systems often fail to address the deeply personal and social dimensions of honor. Anthropological studies and historical accounts from outside the benefiting parties corroborate the persistence of these honor codes and the perceived inadequacy of external legal frameworks for their adherents."
+  },
+  "interval": {
+    "start": 1850,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1875,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1925,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1875,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1925,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1875,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1925,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'drop reading' of the honor settlement legitimacy kernel, focusing on the persistence of dueling as a fringe practice within specific, identity-locked honor cultures, despite its formal legal proscription. It highlights how dueling, while suppressed, was not entirely eliminated from the normative repertoire of these groups, maintaining a low-level, actively enforced, and moderately extractive function for its adherents. The claimed type is Tangled Rope, reflecting both a coordination function (dispute resolution within the honor code) and asymmetric extraction (physical risk to participants, social costs to families, and erosion of state legal authority).",
+    "logic_rationale": "Extractiveness is moderate (0.4) because while dueling carries high individual risk, its overall social cost within these fringe groups is contained compared to its historical peak. Suppression is high (0.7) because the state actively, though often ineffectively, tries to suppress dueling, and the honor culture itself suppresses alternatives to dueling for its adherents. Theater ratio is low (0.2) as the practice, while fringe, is still functionally meaningful for its participants, not merely performative. Accessibility collapse is moderate (0.6) as formal legal alternatives exist but are culturally inaccessible or unacceptable to honor adherents. Resistance is low (0.3) from within the honor culture, as the practice is upheld by its beneficiaries, but high from the national legal system (not captured in this metric, which focuses on internal resistance).",
+    "directionality_logic": "Residual honor adherents benefit from the perceived restoration of honor and maintenance of their cultural identity (low d). Duel participants and their families bear the direct costs and risks (high d). Local authorities, by tacitly tolerating dueling, benefit from avoiding direct conflict with entrenched cultural norms (low d). The national legal system is an observer, attempting to suppress the practice but not directly benefiting or paying from its persistence.",
+    "perspectival_gap": "From the perspective of residual honor adherents, dueling is a necessary, albeit risky, mechanism for maintaining social order and personal dignity within their cultural framework. From the perspective of the national legal system, it is an illegal and anachronistic practice that undermines the state's monopoly on violence. The engine's classification will reflect this divergence based on the structural positions.",
+    "mandatrophy_analysis": "The constraint's mandate (honor defense) is still 'live' for its adherents, preventing a full mandatrophy classification. However, the 'contested' status of the founding problem, coupled with the persistence of the practice despite legal proscription, suggests a form of cultural inertia where the constraint continues to operate in a niche, even as its broader societal justification has eroded. The classification as Tangled Rope captures this hybrid state, where a coordination function persists for a specific group, but at an extractive cost maintained by active enforcement and identity lock-in.",
+    "kernel_context": "This constraint is the 'drop_reading' of the 'honor_settlement_legitimacy' kernel. This reading posits that dueling, while largely suppressed, persisted as a fringe practice among residual honor culture adherents, indicating that honor culture remained a live option in specific geographic/social niches, and dueling was suppressed but not eliminated from their normative repertoire. Sibling readings include 'contraction_reading' (dueling became cognitively unthinkable) and 'composite_reading' (decline overdetermined by multiple reinforcing mechanisms)."
+  },
+  "omegas": [
+    {
+      "id": "cultural_vs_legal_legitimacy",
+      "question": "To what extent does the cultural legitimacy of dueling within these fringe groups override or coexist with its legal illegitimacy, and what are the mechanisms of this interaction?",
+      "resolution_mechanism": "Detailed ethnographic studies and legal case analyses of specific dueling incidents, examining the outcomes for participants and the responses of local vs. national authorities.",
+      "impact": "If cultural legitimacy strongly overrides legal illegitimacy, the constraint's effective suppression from the state is lower than measured, and its persistence is more deeply rooted in identity. If they coexist in tension, the constraint is more fragile and susceptible to external pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the interplay between cultural acceptance and legal prohibition."
+    },
+    {
+      "id": "identity_lock_strength",
+      "question": "How strong is the 'identity_locked' exit option for residual honor adherents and their families? Is it a genuine internal commitment or a social pressure that could be overcome with sufficient external support?",
+      "resolution_mechanism": "Longitudinal studies of individuals who successfully exited such honor cultures, identifying the catalysts and support structures that enabled their departure.",
+      "impact": "If identity lock is primarily internal, the constraint is more resilient to external suppression. If it's primarily external social pressure, targeted interventions could significantly reduce its persistence and extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The nature and strength of identity-based constraint on participants."
+    },
+    {
+      "id": "reading_framing_divergence",
+      "question": "Is the 'drop_reading' a distinct structural claim, or is it a specific manifestation of the 'composite_reading' where some mechanisms of decline were less effective in certain niches?",
+      "resolution_mechanism": "Comparative historical analysis across multiple honor cultures, testing whether the 'drop' is a unique pattern or a regional variation of broader trends.",
+      "impact": "If a distinct structural claim, it reinforces the idea that honor culture can persist as a live option. If a variation of the composite, it suggests the overall decline mechanisms were more pervasive, with local exceptions.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the 'drop_reading' represents a fundamentally different structural pattern or a localized variant of other decline narratives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "honor_settlement_legitimacy__contraction_reading",
+      "honor_settlement_legitimacy__composite_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'honor_settlement_legitimacy' kernel. The 'drop_reading' emphasizes the persistence of dueling in fringe honor cultures, contrasting with the 'contraction_reading' (cognitive unthinkability) and 'composite_reading' (overdetermined decline). All three are linked to capture the full complexity of the kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "contraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "composite_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "honor_demands_direct_satisfaction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "state_law_insufficient_for_honor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "persistent_honor_code",
+    "drift_state": {
+      "moment": "mid_20th_century",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_for_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "27da9b24-7359-41d9-ae07-f234056c61d2"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Expected Value Dominant Risk Assessment for Energy",
+    "topic_domain": "risk_assessment/energy_policy/public_safety_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nuclear_energy_proponents",
+      "climate_mitigation_advocates"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "nuclear_energy_proponents",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocates for nuclear power, arguing that its expected benefits (low carbon emissions, reliable baseload power) outweigh its expected risks when rare events are properly weighted by probability. This framework makes nuclear energy appear more acceptable."
+    },
+    {
+      "name": "climate_mitigation_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Supports energy policies that prioritize climate benefits, finding the expected-value approach useful for justifying low-carbon energy sources like nuclear, despite their associated risks. They benefit from a framework that emphasizes aggregate benefits."
+    },
+    {
+      "name": "public_safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for setting and enforcing safety standards for energy infrastructure. They adopt this framework to quantify and manage risks, balancing economic and environmental goals with public safety concerns. Their decisions are shaped by this calculus."
+    },
+    {
+      "name": "local_communities_near_facilities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Bear the localized, albeit low-probability, risks associated with energy facilities (e.g., nuclear waste storage, potential accidents). Their concerns about rare, high-consequence events are often downplayed by an expected-value approach, which averages out their specific vulnerability."
+    },
+    {
+      "name": "environmental_justice_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue that expected-value calculations often disproportionately burden marginalized communities with localized risks, even if the aggregate societal benefit is positive. Their focus on equitable distribution of risk is often sidelined by this framework."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, quantitative method for evaluating and comparing risks and benefits across different energy technologies, facilitating policy decisions and regulatory oversight.",
+    "transfer_function": "Transfers the burden of managing low-probability, high-consequence risks (e.g., nuclear waste disposal) to future generations or specific communities, in exchange for immediate climate and energy security benefits.",
+    "absent_voices": "Advocates for catastrophic tail risk and environmental justice are often marginalized in this framework, as their concerns about extreme events and equitable risk distribution are not fully captured by a probability-weighted average.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, energy policy decisions would become significantly more contentious, lacking a common quantitative basis for comparing diverse risks and benefits. Investment in certain energy technologies (e.g., nuclear) would likely stall without a clear method to justify their risks, leading to a re-evaluation of energy portfolios.",
+    "founding_problem": "The need for a rational, consistent method to compare diverse risks and benefits of complex energy systems (e.g., fossil fuels, nuclear, renewables) to inform policy and investment decisions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economists and risk analysts widely corroborate the need for a consistent framework to evaluate complex energy projects. Industry and government bodies also attest to its utility in decision-making, though environmental groups often contest its sufficiency for addressing all risk dimensions."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes a risk assessment framework where the acceptability of energy projects is primarily determined by annual expected costs and climate benefits, with rare, high-consequence events weighted by their probability-consequence product. It is one reading of the broader 'acceptable_risk_for_energy' kernel, emphasizing a utilitarian, aggregate-benefit approach. This framework tends to favor technologies with high expected benefits and low expected costs, even if they carry small probabilities of large-scale harm, as long as those harms are sufficiently discounted by their rarity.",
+    "logic_rationale": "The extractiveness is low (0.3) because the framework itself is a tool for decision-making, not a direct extractor of resources. However, it can enable extraction by justifying projects that impose diffuse or localized risks for broader benefits. Suppression is low (0.2) as the framework doesn't actively suppress dissent, but rather provides a dominant language that can marginalize alternative risk framings. Theater ratio is low (0.1) as the calculations are generally taken seriously, though their completeness and ethical implications are debated. The framework functions as a 'rope' by coordinating diverse stakeholders around a common quantitative language for risk, even if some parties feel their concerns are not fully captured.",
+    "perspectival_gap": "While nuclear energy proponents and climate mitigation advocates see this as a rational, beneficial framework, local communities near facilities and environmental justice advocates often experience it as a mechanism that externalizes their specific, concentrated risks for the benefit of a broader, diffuse population. The framework's 'objectivity' can mask these distributional inequities.",
+    "directionality_logic": "Nuclear energy proponents and climate mitigation advocates are beneficiaries as this framework provides a strong justification for their preferred energy solutions. Public safety regulators are agenda-setters, as they implement and legitimize this approach. Local communities near facilities are payers, as they bear the residual risks that are deemed 'acceptable' by the framework. Environmental justice advocates are excluded, as their concerns about disproportionate risk burdens are not central to this expected-value calculus.",
+    "mandatrophy_analysis": "The constraint's mandate to provide a rational basis for energy risk assessment remains live. The classification as 'rope' prevents mislabeling it as pure extraction, acknowledging its genuine coordination function in a complex domain. However, the omegas highlight the potential for this coordination to become extractive if the framework's limitations (e.g., handling of catastrophic tails, distributional justice) are not critically addressed.",
+    "kernel_context": "This constraint is the 'expected_value_dominant' reading of the 'acceptable_risk_for_energy' kernel. It focuses on annual expected costs and climate benefits, weighting rare events by their probability-consequence product. Sibling readings include 'catastrophic_tail_dominant' (where low-probability high-consequence events dominate) and 'comparative_risk_dominant' (where acceptability is relative to other energy risks)."
+  },
+  "omegas": [
+    {
+      "id": "catastrophic_tail_risk_weighting",
+      "question": "Does the probability × consequence product adequately capture the societal and ethical implications of low-probability, high-consequence (catastrophic tail) events, or should such events be weighted non-linearly?",
+      "resolution_mechanism": "Societal consensus shifts towards a precautionary principle for irreversible harms, or new ethical frameworks gain dominance that assign infinite or disproportionate weight to catastrophic outcomes.",
+      "impact": "If tail risks are weighted non-linearly, the framework would shift towards the 'catastrophic_tail_dominant' reading, making certain energy technologies (e.g., nuclear) less acceptable, and increasing the perceived extractiveness of projects that impose such risks.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The adequacy of expected-value weighting for catastrophic tail risks."
+    },
+    {
+      "id": "distributional_equity_integration",
+      "question": "Can the expected-value framework be modified to explicitly account for the equitable distribution of risks and benefits across different communities and generations, or does its aggregate nature inherently obscure these concerns?",
+      "resolution_mechanism": "Development and adoption of multi-criteria decision analysis tools that integrate equity metrics alongside expected value, or legal mandates requiring explicit distributional impact assessments.",
+      "impact": "If equity concerns are integrated, the framework's perceived extractiveness from vulnerable communities would decrease, and it might shift towards a 'tangled_rope' or even 'rope' for environmental justice advocates, as their concerns would be explicitly addressed rather than excluded.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Integration of distributional equity into aggregate risk assessment."
+    },
+    {
+      "id": "nuclear_waste_disposal_solvability",
+      "question": "Is nuclear waste disposal a solvable engineering challenge with a quantifiable expected cost, or does it represent an intergenerational burden with irreducible uncertainty and ethical implications that defy simple probabilistic weighting?",
+      "resolution_mechanism": "Demonstrated long-term safe disposal solutions with broad public and scientific acceptance, or a fundamental shift in scientific understanding that reveals insurmountable technical barriers.",
+      "impact": "If disposal is deemed an irreducible, unquantifiable burden, nuclear energy would re-enter the 'victim' set for this reading, and the framework's ability to justify nuclear projects would be severely undermined, pushing it towards the 'catastrophic_tail_dominant' reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The nature of nuclear waste disposal as a quantifiable risk or irreducible burden."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'acceptable_risk_for_energy' kernel, focusing on expected value. It is linked to 'catastrophic_tail_dominant' and 'comparative_risk_dominant' readings, which offer alternative frameworks for risk assessment in energy policy."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "comparative_risk_dominant",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "risk_is_quantifiable_by_expected_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "societal_welfare_is_aggregate_utility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "rational_economic_decision_theory",
+    "drift_state": {
+      "moment": "contemporary_ethical_critiques",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

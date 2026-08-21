@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "employment_boundary__substantive_employment_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0335da38-076e-4162-8dcf-a2a05b1fe51c",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substantive Employment Definition for Platform Workers",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_workers",
+      "social_welfare_systems"
+    ],
+    "victims": [
+      "platform_companies"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Currently bear the precarity of independent contractor status (no benefits, no job security). This reading would reclassify them as employees, granting them labor protections and social benefits, but also potentially reducing flexibility or access to work if platforms reduce supply."
+    },
+    {
+      "name": "platform_companies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Currently benefit from classifying workers as independent contractors, avoiding payroll taxes, benefits, and labor law compliance. This reading would impose significant new costs and liabilities, requiring them to restructure their business models and potentially reduce worker supply or increase prices."
+    },
+    {
+      "name": "labor_unions",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Advocate for this substantive definition of employment to extend collective bargaining rights and protections to platform workers. They would gain membership and influence if this reading is adopted."
+    },
+    {
+      "name": "social_welfare_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Currently bear the costs of platform worker precarity (e.g., unemployment benefits, healthcare for uninsured). This reading would shift some of these costs to platform companies via payroll taxes and mandated benefits, stabilizing social safety nets."
+    },
+    {
+      "name": "consumers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefit from low-cost, flexible services provided by platform workers. Reclassification could lead to increased service costs or reduced availability as platforms adjust to new labor costs."
+    },
+    {
+      "name": "formalist_legal_scholars",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Adhere to a definition of employment based strictly on contract terms and direct control, arguing that economic dependence alone is insufficient for employee status. Their arguments are often sidelined in policy debates favoring substantive criteria."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate labor protections and social benefits for platform workers, ensuring they receive the same rights and security as traditional employees, thereby reducing precarity and externalized social costs.",
+    "transfer_function": "Transfers costs (payroll taxes, benefits, compliance) from platform workers and social welfare systems to platform companies, and potentially from platform companies to consumers through higher prices.",
+    "absent_voices": "Formalist legal scholars and some platform users who prioritize flexibility over traditional employment benefits would object, arguing that this definition stifles innovation or imposes unnecessary burdens. Their voices are often marginalized in policy debates driven by worker advocacy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this definition vanished, platform workers would revert to independent contractor status, losing access to employment benefits. Platform companies would continue to externalize labor costs, and social welfare systems would bear the full burden of worker precarity. The labor market for platform work would remain highly precarious.",
+    "founding_problem": "The rise of the platform economy created a large class of workers who, despite economic dependence and algorithmic control, were denied traditional employment protections due to their contractual status as independent contractors.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Labor organizations, social policy researchers, and many platform workers themselves attest that the problem of platform worker precarity is very much alive, citing ongoing struggles for fair wages, benefits, and job security. Platform companies contest this, arguing their model offers unparalleled flexibility."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint defines employment based on economic dependence and algorithmic control, asserting that platform workers are employees regardless of their contract. It is one reading of the 'employment_boundary' kernel. This reading aims to extend labor protections to platform workers, shifting costs to platform companies. The metrics reflect the ongoing struggle for reclassification, with platforms actively resisting enforcement.",
+    "logic_rationale": "The extractiveness (0.65) reflects the costs imposed on platform companies by reclassification, which they resist. Suppression (0.70) is high due to the active legal and lobbying efforts by platforms to maintain the independent contractor model. Theater ratio (0.20) is relatively low, as the debate is direct and functional, not performative. Accessibility collapse (0.40) is moderate, as alternative work arrangements exist, but the core issue of precarity remains. Resistance (0.75) is high, driven by labor unions and worker advocacy groups pushing for this redefinition.",
+    "directionality_logic": "Platform workers and social welfare systems are beneficiaries, gaining protections and cost relief. Platform companies and, indirectly, consumers are payers, bearing increased labor costs. Labor unions act as agenda-setters, actively pushing for this redefinition. Formalist legal scholars are excluded, as their arguments are often dismissed in favor of a substantive approach.",
+    "perspectival_gap": "Platform companies perceive this definition as an extractive imposition on their business model, while platform workers and labor advocates see it as a necessary correction to an extractive system. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'substantive_employment_reading' of the 'employment_boundary' kernel. It contrasts with the 'formalist_employment_reading' (which emphasizes contract form) and the 'hybrid_security_reading' (which seeks a third category of worker status)."
+  },
+  "omegas": [
+    {
+      "id": "economic_dependence_threshold",
+      "question": "What specific threshold of economic dependence or algorithmic control constitutes 'employment' under this reading, and how is it measured?",
+      "resolution_mechanism": "Judicial precedent or legislative guidelines establishing clear, quantifiable criteria for economic dependence and algorithmic control in platform work.",
+      "impact": "Clearer thresholds would reduce ambiguity, making enforcement more consistent and reducing legal challenges. Ambiguity allows platforms to continue resisting reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defines the operational boundary of 'economic dependence' and 'algorithmic control'."
+    },
+    {
+      "id": "platform_business_model_viability",
+      "question": "To what extent would universal reclassification of platform workers as employees fundamentally undermine the viability of current platform business models?",
+      "resolution_mechanism": "Economic impact studies and pilot programs in jurisdictions that have implemented reclassification, analyzing changes in platform operations, worker supply, and consumer prices.",
+      "impact": "If viability is severely undermined, it could lead to job losses or reduced service availability, potentially pushing policy towards a hybrid model. If platforms adapt, it strengthens the case for reclassification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assesses the economic impact of reclassification on platform companies."
+    },
+    {
+      "id": "reading_legitimacy_source",
+      "question": "Is the legitimacy of this substantive reading primarily derived from a moral imperative to protect vulnerable workers, or from an economic imperative to internalize externalized social costs?",
+      "resolution_mechanism": "Analysis of legislative debates, judicial reasoning, and advocacy group statements to identify the dominant normative grounding for this interpretation.",
+      "impact": "If primarily moral, it strengthens the deontological grounding of the axioms. If primarily economic, it highlights the instrumental nature of the reclassification and its susceptibility to cost-benefit analysis.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Examines the normative foundation of the substantive employment reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "employment_boundary__formalist_employment_reading",
+      "employment_boundary__hybrid_security_reading",
+      "gig_worker_benefits_access",
+      "social_security_funding"
+    ],
+    "dual_formulation_note": "This constraint is the 'substantive_employment_reading' of the 'employment_boundary' kernel, which also includes 'formalist_employment_reading' and 'hybrid_security_reading'. Each reading represents a distinct structural claim about the nature of employment for platform workers."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "formalist_employment_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_security_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_dependence_defines_employment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "algorithmic_control_is_supervision",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "substantive_labor_law_tradition",
+    "drift_state": {
+      "moment": "contemporary_platform_economy",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

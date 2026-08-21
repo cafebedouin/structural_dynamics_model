@@ -1,0 +1,455 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__extraction_cycle_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "054c3a05-aaeb-4f14-a7d2-80ae6a96f533"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.78,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Blood-Feud Extraction Cycle",
+    "topic_domain": "legal_anthropology/political_systems/history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "royal_authority"
+    ],
+    "victims": [
+      "feud_participants",
+      "peasantry"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "feud_participants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals and kinship groups bound by honor and custom to avenge wrongs, leading to cycles of violence, resource depletion, and mortality. Exit is perceived as dishonorable and dangerous, leading to social ostracization or further victimization."
+    },
+    {
+      "name": "peasantry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Caught in the crossfire of feuds, suffering property damage, loss of life, and disruption to agricultural production. They have no means to escape the territorial violence and are often forced to support one side or another."
+    },
+    {
+      "name": "royal_authority",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefits from the delegitimization of private violence, which strengthens its claim to a monopoly on violence. This monopoly, in turn, legitimizes its right to tax and govern, enabling territorial consolidation and state-building. Actively seeks to suppress feuds through law and force."
+    },
+    {
+      "name": "ecclesiastical_authorities",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Condemn feuds as sinful and work to promote peace through religious injunctions, truces, and arbitration. Their efforts provide an alternative framework for conflict resolution, but often lack the coercive power to enforce it against entrenched custom."
+    },
+    {
+      "name": "analytical_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Study the historical and sociological dynamics of blood feuds, analyzing their causes, consequences, and role in state formation. They provide the analytical framework for understanding the feud as an extraction cycle."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In the absence of centralized justice, feuds provide a mechanism for aggrieved parties to seek redress and deter future offenses, albeit through destructive means. However, this reading emphasizes the breakdown of coordination into a net-negative cycle.",
+    "transfer_function": "Transfers productive capacity (labor, resources, lives) from feud participants and the peasantry into a cycle of vengeance and destruction. It also transfers legitimacy and power to nascent royal authorities by demonstrating the failure of private justice.",
+    "absent_voices": "The voices of those who suffer most from the feuds – the non-combatant peasantry, women, and children – are largely absent from the customary and legal discourse surrounding feuds. They would advocate for peace and stability above honor.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If blood-feud obligations vanished overnight, the social and political landscape would fundamentally rearrange. Productive capacity would be freed, population growth might accelerate, and centralized state authority would face less resistance in consolidating power and establishing a monopoly on justice.",
+    "founding_problem": "The absence of a reliable, centralized authority to adjudicate disputes and enforce justice, leading individuals and kin groups to resort to self-help mechanisms.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Analytical historians and royal chronicles attest that while the problem of centralized justice was once live, the persistence of feuds in later periods, despite the rise of state institutions, indicates the problem is largely 'dead' in terms of its original justification. The feud persists as a custom, not a functional solution to a live problem, as corroborated by economic data on resource depletion and demographic records of mortality."
+  },
+  "interval": {
+    "start": 1000,
+    "end": 1500
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1300,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1400,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1100,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1300,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1400,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1500,
+      "value": 0.78
+    }
+  ],
+  "coercion_grid": {
+    "t0": 1000,
+    "tn": 1500,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1000,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1000,
+        "value": 0.6
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.65
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1000,
+        "value": 0.75
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.8
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1000,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.4
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1000,
+        "value": 0.8
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1000,
+        "value": 0.7
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1000,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.9
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1000,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.55
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1000,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1000,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.68
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1000,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.8
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1000,
+        "value": 0.5
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1000,
+        "value": 0.4
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1500,
+        "value": 0.35
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1000,
+        "value": 0.3
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1500,
+        "value": 0.25
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1000,
+        "value": 0.2
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1500,
+        "value": 0.15
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1000,
+        "value": 0.5
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1500,
+        "value": 0.6
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint story analyzes blood-feud obligations as a destructive extraction cycle, depleting societal resources and hindering the development of centralized political authority. It is one reading of the 'feud_obligation_kernel', focusing on the negative economic and political consequences rather than its coordination function or moral status. The high extractiveness and suppression reflect the continuous drain on human and material capital, enforced by social custom and the threat of retaliation.",
+    "key_agents": [
+      "feud_participants: Primary target (moderate/identity_locked) — bears extraction, trapped by honor.",
+      "peasantry: Secondary target (powerless/trapped) — bears diffuse costs of instability.",
+      "royal_authority: Primary beneficiary/agenda_setter (institutional/arbitrage) — benefits from the delegitimization of private violence.",
+      "ecclesiastical_authorities: Secondary agenda_setter/observer (institutional/constrained) — attempts to pacify, but often ineffective.",
+      "analytical_historians: Analytical observer (analytical/analytical) — provides the framework for this reading."
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the cycle of vengeance continuously consumes lives, labor, and property without generating equivalent value. Suppression (0.78) is high due to the powerful social and cultural norms that compel participation, making exit (e.g., refusing to avenge a kin's death) extremely difficult and costly (identity_locked). Theater ratio is low (0.1) because the feuds are genuinely destructive, not performative; their function is to inflict harm and maintain honor, not to signal. Accessibility collapse is high (0.7) for individuals and communities trapped in the cycle, as alternatives (like state justice) are either absent or too weak to offer a viable exit. Resistance (0.45) is moderate, primarily from nascent state powers and ecclesiastical authorities, but diffuse and often ineffective at the local level.",
+    "perspectival_gap": "Feud participants often perceive their actions as upholding honor and justice, a necessary (if costly) form of self-help in a stateless society. This reading, however, frames it as a net-negative extraction cycle from an analytical, macro-historical perspective. Royal authority views the feud as an obstacle to be overcome, while ecclesiastical authorities see it as a moral failing. The engine's classification will highlight this divergence, showing the participants as victims of a snare, while the royal authority benefits from its eventual suppression.",
+    "directionality_logic": "Feud participants are targets (high d) as they bear the direct costs of violence and resource depletion, often compelled by identity-locked social norms. The peasantry are also targets (high d) as they suffer collateral damage with no agency. Royal authority is a beneficiary (low d) because the destructive nature of feuds creates a strong societal demand for a centralized monopoly on violence, which the crown can then provide and legitimize its taxation and governance. Ecclesiastical authorities are observers/agenda-setters, attempting to shift the underlying norms.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the feud as a 'rope' (stateless coordination) by emphasizing its destructive, extractive nature and the identifiable victims. While a 'stateless_coordination_reading' might argue for a coordination function, this 'extraction_cycle_reading' highlights that any coordination is overshadowed by the net-negative transfer and suppression. The persistence of feuds even as state alternatives emerge indicates a mandatrophy of its original 'justice' function, becoming a self-perpetuating snare."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_context",
+      "question": "How does this 'extraction_cycle_reading' of the 'feud_obligation_kernel' structurally differ from its sibling readings?",
+      "resolution_mechanism": "Comparative analysis of the beneficiary/victim sets and extractiveness metrics across all readings of the 'feud_obligation_kernel'.",
+      "impact": "This reading places feud participants in the victim set and royal authority in the beneficiary set, leading to a Snare classification. The 'stateless_coordination_reading' would likely show participants as beneficiaries of a Rope, and the 'christianized_pacification_reading' would focus on moral transgression rather than economic extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Clarifies the specific structural interpretation of the feud kernel."
+    },
+    {
+      "id": "coordination_vs_extraction_balance",
+      "question": "To what extent did blood feuds provide a genuine, albeit costly, coordination function (e.g., deterrence, justice) in the absence of state power, versus being a purely extractive cycle?",
+      "resolution_mechanism": "Detailed historical-sociological studies comparing regions with and without feuds, or with different forms of customary justice, to quantify net societal welfare outcomes.",
+      "impact": "If a significant coordination function is proven, the base extractiveness might be slightly lower, potentially shifting the classification closer to a Tangled Rope, acknowledging a dual function. If purely extractive, the Snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the balance between coordination and extraction in feuds."
+    },
+    {
+      "id": "identity_lock_strength",
+      "question": "What is the precise strength of the 'identity_locked' exit option for feud participants? How easily could individuals or groups opt out without complete social ruin?",
+      "resolution_mechanism": "Anthropological case studies of historical or contemporary societies with similar customary justice systems, examining the social costs of non-participation.",
+      "impact": "If the identity lock is weaker than assessed, the suppression metric might be slightly lower, and exit options might shift to 'constrained', potentially altering the effective extraction calculation for participants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the social cost of exiting feud obligations."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "territorial_consolidation_constraint",
+      "state_taxation_legitimacy",
+      "feud_obligation_kernel__stateless_coordination_reading",
+      "feud_obligation_kernel__christianized_pacification_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'feud_obligation_kernel', each focusing on different structural aspects and yielding different classifications. This reading emphasizes the destructive, extractive cycle."
+  },
+  "gain_flow": "royal_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "stateless_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christianized_pacification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feud_depletes_productive_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "feud_prevents_state_consolidation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_state_anarchy",
+    "drift_state": {
+      "moment": "rise_of_centralized_states",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

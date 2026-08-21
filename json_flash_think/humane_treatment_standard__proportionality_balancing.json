@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "humane_treatment_standard__proportionality_balancing",
+    "version": "1.0",
+    "generated_date": "2024-05-20",
+    "status": "ACTIVE",
+    "story_uid": "83968a7a-a84f-4b3f-af5d-523525aacfcb"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Common Article 3 Proportionality Balancing Standard",
+    "topic_domain": "international_humanitarian_law/state_security/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_agencies",
+      "judicial_bodies"
+    ],
+    "victims": [
+      "detainees"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a reading of the 'humane_treatment_standard' kernel, specifically the 'proportionality_balancing' interpretation?",
+      "resolution_mechanism": "Analysis of legal scholarship and judicial precedent confirming the interpretive framework.",
+      "impact": "If not, the classification would need to be re-evaluated against a different kernel or as a standalone constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms this constraint as a specific reading of a contested kernel."
+    },
+    {
+      "id": "sibling_reading_absolute_prohibition_delta",
+      "question": "How would the 'absolute_prohibition' sibling reading structurally differ from this 'proportionality_balancing' reading?",
+      "resolution_mechanism": "Comparative legal analysis of the two interpretive frameworks and their implications for state practice and judicial review.",
+      "impact": "The 'absolute_prohibition' reading would likely result in lower extractiveness from detainees and higher suppression on state security agencies, potentially classifying as a Rope or even a Mountain (if universally accepted as natural law).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural delta if 'absolute_prohibition' reading were adopted."
+    },
+    {
+      "id": "sibling_reading_contextual_necessity_delta",
+      "question": "How would the 'contextual_necessity' sibling reading structurally differ from this 'proportionality_balancing' reading?",
+      "resolution_mechanism": "Comparative legal analysis of the two interpretive frameworks and their implications for state practice and judicial review.",
+      "impact": "The 'contextual_necessity' reading would likely result in significantly higher extractiveness from detainees and lower suppression on state security agencies, potentially classifying as a Snare due to expanded discretion and reduced accountability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural delta if 'contextual_necessity' reading were adopted."
+    },
+    {
+      "id": "proportionality_implementation_fidelity",
+      "question": "To what extent is the 'proportionality balancing' genuinely applied in practice versus being a rhetorical cover for security imperatives?",
+      "resolution_mechanism": "Empirical study of judicial outcomes, interrogation practices, and detainee treatment records across multiple jurisdictions.",
+      "impact": "If fidelity is low, the effective extractiveness is higher, and the constraint leans more towards a Snare, as the coordination story (balancing) becomes cover for extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the gap between the stated principle of proportionality and its actual implementation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the 'proportionality_balancing' reading of Common Article 3 of the Geneva Conventions, which requires states to balance detainee dignity against legitimate security needs. It rejects both absolute prohibitions on certain treatments and unlimited discretion for security forces, instead mandating a case-by-case assessment with judicial oversight. This reading positions courts as gatekeepers, ensuring procedural safeguards and limiting interrogators' discretion to a moderate degree.",
+    "logic_rationale": "The extractiveness (0.65) is substantial because detainees still bear the cost of 'balancing' that may permit treatments short of torture but still degrading, and security agencies benefit from the discretion. Suppression (0.70) is high due to the inherent power imbalance in detention and the difficulty of enforcing standards in opaque environments, despite judicial review. The theater ratio (0.25) is moderate, reflecting genuine judicial oversight but also the performative aspect of legal justifications for practices that push the boundaries of humane treatment. The metrics show a slight increase in extractiveness and suppression over time, reflecting ongoing pressure from security imperatives.",
+    "perspectival_gap": "From the perspective of state security agencies, this standard provides necessary flexibility to protect national interests while maintaining a veneer of legality. From the perspective of detainees and human rights advocates, it represents a compromise that still permits significant infringements on dignity, often with insufficient accountability. Judicial bodies see it as a complex but necessary framework for upholding international law.",
+    "directionality_logic": "State security agencies are beneficiaries (gain discretion, maintain security) and judicial bodies are also beneficiaries (uphold rule of law, exercise authority). Detainees are the primary victims (bear the costs of any permitted infringements on dignity). Human rights advocates and the international legal community act as observers, pushing for stricter interpretations and greater accountability.",
+    "kernel_context": "This constraint is the 'proportionality_balancing' reading of the 'humane_treatment_standard' kernel, which is Common Article 3 of the Geneva Conventions. It stands in contrast to the 'absolute_prohibition' reading (which would ban certain treatments outright) and the 'contextual_necessity' reading (which would grant broad discretion to states based on security needs).",
+    "mandatrophy_analysis": "The constraint's mandate (balancing dignity and security) remains live, preventing mandatrophy. However, the ongoing tension and the slight increase in extractiveness suggest a risk of 'mandate creep,' where security needs gradually overshadow dignity, potentially drifting towards a Snare if the balancing becomes purely rhetorical. The judicial gatekeeping function is crucial in preventing this drift."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolute_prohibition",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "contextual_necessity",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "detainee_dignity_and_security_needs_must_be_balanced",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_review_ensures_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_geneva_conventions_era",
+    "drift_state": {
+      "moment": "contemporary_counter_terrorism_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "stakeholders": [
+    {
+      "name": "state_security_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for national security and intelligence gathering, they seek maximum flexibility in interrogation and detention practices. They benefit from the discretion allowed by the balancing standard but are constrained by judicial oversight."
+    },
+    {
+      "name": "detainees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals held in detention, often without immediate access to legal counsel or external oversight. They bear the direct costs of any treatment deemed 'proportionate' but infringing on their dignity, and have extremely limited means of resistance or exit."
+    },
+    {
+      "name": "human_rights_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Organizations and individuals dedicated to protecting human rights. They monitor state practices, document abuses, and advocate for stricter interpretations of humane treatment, often challenging the proportionality balancing as insufficient."
+    },
+    {
+      "name": "judicial_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and tribunals tasked with interpreting and enforcing international humanitarian law. They act as gatekeepers, reviewing state practices and ensuring proportionality, thereby legitimizing the balancing act while also constraining state power."
+    },
+    {
+      "name": "international_legal_community",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars, practitioners, and institutions involved in the development and interpretation of international law. They contribute to the discourse around Common Article 3, influencing its understanding and application, but lack direct enforcement power."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To provide a legal framework that reconciles the legitimate security needs of states with the fundamental human dignity of detainees, thereby maintaining the viability and legitimacy of international humanitarian law in contexts of armed conflict.",
+    "transfer_function": "Transfers some discretionary power to state security agencies (within judicially defined limits) and transfers the burden of justifying treatment to them. It transfers the risk of degrading treatment to detainees, mitigated by the possibility of legal challenge.",
+    "absent_voices": "Victims of past or ongoing abuses, who are often silenced, lack legal standing, or are unable to access justice mechanisms. Their experiences would highlight the practical failures of proportionality balancing and the persistent extractiveness.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this proportionality balancing standard vanished, states would likely revert to either an unworkable absolute prohibition (which security agencies would resist) or, more likely, to broad, unchecked discretion under 'contextual necessity,' leading to a significant increase in abuses and a severe erosion of international humanitarian law norms.",
+    "founding_problem": "The need to establish minimum standards of humane treatment for persons not taking an active part in hostilities, particularly in non-international armed conflicts, while acknowledging the legitimate security concerns of states and avoiding an absolute prohibition that states would reject.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International legal scholars, human rights organizations, and judicial rulings consistently affirm the ongoing relevance of this balancing act. While state security agencies often push for greater discretion, the international community and legal bodies generally corroborate the continued necessity of a balancing framework to prevent widespread abuses and maintain the integrity of international law."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

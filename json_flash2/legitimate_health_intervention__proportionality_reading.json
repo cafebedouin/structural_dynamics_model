@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "ef0e5e42-bc77-474c-b96e-3faaa1ac568a",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Proportionality Principle for Public Health Interventions",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "general_public",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "individuals_subject_to_intervention"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for implementing public health measures, balancing population protection with individual rights. They must justify interventions based on scientific evidence of threat and proportionality of response."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from reduced disease transmission and protection from severe health threats. Generally accepts interventions deemed proportional to the risk, but may resist those perceived as overly restrictive for minor threats."
+    },
+    {
+      "name": "individuals_subject_to_intervention",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the direct costs of interventions (e.g., vaccination, quarantine, mask mandates), experiencing limitations on their autonomy. Their willingness to comply depends on the perceived severity of the threat and the justification for the intervention."
+    },
+    {
+      "name": "medical_ethics_boards",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review the ethical implications of public health policies, ensuring adherence to principles like proportionality, beneficence, and non-maleficence. They provide guidance but typically lack direct enforcement power."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for the primacy of individual rights and bodily autonomy, often challenging public health measures that they deem disproportionate or overly coercive. Their voice is often heard in legal challenges and public discourse."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public health responses by providing a framework to balance collective safety with individual liberties, ensuring interventions are justified by the threat level and minimize infringement on autonomy.",
+    "transfer_function": "Transfers a degree of individual autonomy to public health authorities in exchange for collective protection from disease, with the extent of transfer determined by the severity and transmissibility of the threat.",
+    "absent_voices": "Those who prioritize absolute individual autonomy regardless of public health risk are often marginalized in policy discussions, as their stance is seen as incompatible with collective action. Similarly, those advocating for maximal public health intervention regardless of individual cost are also excluded from this proportionality framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without a proportionality principle, public health interventions would either become overly coercive (leading to widespread resistance and ethical breaches) or entirely ineffective (due to lack of justified action), causing significant societal disruption and loss of trust in public health institutions.",
+    "founding_problem": "Historically, public health measures often swung between extreme coercion and insufficient response, lacking a consistent ethical framework to guide interventions that respected individual rights while protecting the population.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Medical ethicists, constitutional scholars, and public health historians corroborate the ongoing challenge of balancing these competing values, especially during novel health crises. The principle is continually debated and refined in response to new threats and societal values."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'proportionality' reading of legitimate public health interventions. It asserts that the severity of public health measures (e.g., lockdowns, mandatory vaccinations) must be proportional to the threat posed by a disease, considering both population harm and individual autonomy. The victim set and the degree of extraction (ε) are conditional on disease characteristics like transmissibility and case-fatality rate. This reading seeks a middle ground between prioritizing public health outcomes and individual bodily autonomy.",
+    "logic_rationale": "Extractiveness (0.45) is moderate, reflecting the necessary infringement on individual autonomy for collective good, but limited by the proportionality principle. Suppression (0.30) is also moderate, as interventions require some enforcement but are ideally accepted due to their justified nature. Theater ratio is low (0.10) because the principle demands genuine justification, not performative action. Accessibility collapse (0.40) is moderate, as alternatives to intervention are constrained but not entirely eliminated, and resistance (0.25) is present but generally lower than for perceived disproportionate measures.",
+    "directionality_logic": "Public health authorities are agenda-setters, balancing competing demands. The general public benefits from protection but also bears some costs. Individuals subject to intervention are payers, directly experiencing the autonomy costs. Civil liberties advocates are excluded from the core decision-making but influence the discourse. The proportionality principle aims to keep the directionality for individuals closer to symmetric than to full target, by limiting the scope of extraction.",
+    "perspectival_gap": "This reading attempts to bridge the gap between those prioritizing public health and those prioritizing individual autonomy. From the perspective of public health authorities, it provides a defensible framework for action. From the perspective of individuals, it offers a safeguard against arbitrary or excessive state power. The tension lies in the interpretation of 'proportionality' itself.",
+    "kernel_context": "This constraint is the 'proportionality_reading' of the 'legitimate_health_intervention' kernel. It seeks to balance population harm and individual autonomy, weighting them by disease characteristics. Sibling readings include 'public_health_primary' (prioritizing population outcomes) and 'bodily_autonomy_primary' (prioritizing individual consent)."
+  },
+  "omegas": [
+    {
+      "id": "proportionality_measurement_ambiguity",
+      "question": "How is 'proportionality' objectively measured and agreed upon, especially when balancing quantifiable population harm against qualitative individual autonomy?",
+      "resolution_mechanism": "Development of standardized, multi-criteria decision frameworks for public health ethics, with transparent weighting of different values and public deliberation processes.",
+      "impact": "If a robust, agreed-upon measurement of proportionality emerges, the constraint's legitimacy and acceptance would increase, potentially lowering resistance and suppression requirements. If it remains subjective, the constraint will be perpetually contested.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining and measuring proportionality in practice."
+    },
+    {
+      "id": "disease_characteristics_weighting",
+      "question": "What is the appropriate weighting of disease characteristics (e.g., transmissibility, case-fatality rate, long-term disability) in determining the 'threat level' that justifies intervention severity?",
+      "resolution_mechanism": "Consensus among epidemiologists, public health experts, and ethicists on a transparent, evidence-based scoring system for disease threat levels, subject to periodic review.",
+      "impact": "Clearer weighting would reduce contestation over specific interventions, making the constraint's application more consistent. Disagreement would lead to continued disputes over the legitimacy of measures.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uncertainty in how disease characteristics should quantitatively inform intervention severity."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal mandates, fines) or internalized (social pressure, fear of disease)?",
+      "resolution_mechanism": "Post-intervention compliance trajectory: if compliance persists after legal mandates are lifted, reclassify as partially internalized. Surveys on public attitudes towards interventions.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as individuals self-regulate. If purely structural, resistance may be higher once enforcement wanes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for public health measures."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'legitimate_health_intervention' kernel, focusing on proportionality. It interacts with 'public_health_primary' and 'bodily_autonomy_primary' readings, which emphasize different aspects of legitimacy."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intervention_severity_must_match_threat",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "balancing_population_harm_and_individual_autonomy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ethical_public_health_governance",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

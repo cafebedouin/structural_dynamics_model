@@ -1,0 +1,271 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__behavioral_competence",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6df6d980-d12b-4094-8fee-f9ce36a3cba6"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Stone Land-Use Rule (Behavioral Competence Reading)",
+    "topic_domain": "disaster_anthropology/institutional_memory/land_use_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "community_residents",
+      "institutional_memory_keepers"
+    ],
+    "victims": [],
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "stakeholders": [
+    {
+      "name": "community_residents",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Live safely due to the rule, avoiding recurring natural disasters. They accept the economic costs of not developing the prohibited land, internalizing the rule through shared memory and daily practice."
+    },
+    {
+      "name": "institutional_memory_keepers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Actively transmit the knowledge of past disasters and the rationale for the land-use rule to younger generations. Their role is crucial for the rule's persistence and is tied to their professional or community identity."
+    },
+    {
+      "name": "younger_generations",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Inherit the safety provided by the rule and the associated land-use restrictions. While they benefit, their direct memory of the founding disaster is absent, making them reliant on the institutional memory keepers for understanding the rule's necessity."
+    },
+    {
+      "name": "developers",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Are prevented from developing the economically attractive but hazardous land. They would seek to maximize land value but are constrained by the community's adherence to the rule."
+    },
+    {
+      "name": "commemorative_husk_advocates",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "situation": "Represent the alternative view that the rule has lost its behavioral force and is merely a symbolic gesture, detached from active compliance or hazard mitigation. They observe the rule's persistence but question its functional efficacy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents community members from building in a historically hazardous area, ensuring collective safety from recurring natural disasters by coordinating land-use practices.",
+    "transfer_function": "Transfers the cost of foregone land development opportunities from individuals to the collective benefit of safety and disaster avoidance, ensuring long-term community resilience.",
+    "absent_voices": "Developers who would profit from building on the prohibited land, and those who prioritize short-term economic gain over long-term disaster resilience, are effectively excluded from influencing land-use decisions in this area.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rule and its associated behavioral compliance vanished overnight, the community would eventually re-inhabit the hazardous zone, leading to a recurrence of the disasters the rule was designed to prevent, causing significant loss of life and property.",
+    "founding_problem": "Recurring catastrophic landslides and floods in a specific area, leading to significant loss of life and property, which threatened the long-term viability of the community.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Geological surveys confirm the persistent natural hazard. Historical records of past disasters and oral histories from community elders (outside the direct beneficiaries of current land-use decisions) corroborate the rule's origin and the ongoing threat."
+  },
+  "interval": {
+    "start": 0,
+    "end": 78
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 78,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'Stone Land-Use Rule' as a live prohibition, actively enforced through daily spatial practice and institutional memory, ensuring community safety from recurring natural disasters. This reading emphasizes the rule's functional efficacy and the community's sustained behavioral compliance over 78 years, accepting the economic costs of not developing hazardous land. It is one reading of the 'stone_land_use_rule' kernel, distinct from the 'commemorative_husk' reading which views the rule as a decayed symbol.",
+    "logic_rationale": "The constraint is classified as a Rope due to its genuine coordination function (disaster prevention) and low extractiveness, as the costs are accepted for collective safety. Suppression is low because compliance is largely internalized through shared memory and social norms, rather than active coercion. Theater ratio is very low, indicating high functional integrity. The slight fluctuations in measurements over time reflect the natural ebb and flow of institutional memory and community vigilance, but overall stability in compliance.",
+    "directionality_logic": "Community residents are beneficiaries of safety but also bear the costs of foregone land use, placing them near symmetric. Institutional memory keepers are agenda-setters, benefiting from their valued role in maintaining community resilience. Younger generations are beneficiaries who inherit the safety but also the restrictions, relying on the memory keepers. Developers are excluded, bearing the cost of denied access to valuable land.",
+    "perspectival_gap": "The 'behavioral_competence' reading sees the rule as a vital, active mechanism for survival, where compliance is a testament to collective wisdom. The 'commemorative_husk' reading, by contrast, would perceive the same physical marker as a mere relic, its original function lost to time and its behavioral force decayed. This divergence is rooted in differing interpretations of the community's current relationship to its past and the perceived immediacy of the hazard.",
+    "kernel_context": "This constraint is the 'behavioral_competence' reading of the 'stone_land_use_rule' kernel. This reading posits the rule as a live, behaviorally binding land-use prohibition. Its sibling reading, 'commemorative_husk', views the rule as a memorial artifact whose warning has decayed to a symbolic gesture without behavioral force."
+  },
+  "omegas": [
+    {
+      "id": "commemorative_husk_ambiguity",
+      "question": "Is the 'Stone Land-Use Rule' genuinely a live behavioral prohibition, or has it decayed into a mere commemorative husk without active behavioral force?",
+      "resolution_mechanism": "Empirical observation of land-use decisions in the prohibited zone over time, coupled with ethnographic studies of community members' stated reasons for compliance or non-compliance. If development attempts increase or compliance becomes purely performative, the 'commemorative_husk' reading gains support.",
+      "impact": "If resolved as a 'commemorative_husk', the constraint's extractiveness would be higher (as the costs are borne for no functional benefit), suppression would be lower (as it's not actively enforced), and its classification would shift towards Piton or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between active behavioral compliance and symbolic adherence to the land-use rule."
+    },
+    {
+      "id": "intergenerational_knowledge_decay",
+      "question": "How effectively is the knowledge of the original hazard and the rule's rationale transmitted across generations, particularly as direct memory of the disaster fades?",
+      "resolution_mechanism": "Longitudinal studies of knowledge retention among younger generations, assessing their understanding of the hazard and the rule's purpose, compared to older generations. Analysis of educational practices and storytelling traditions.",
+      "impact": "If knowledge decay is significant, the rule's persistence may become more reliant on passive habit or external enforcement, increasing its effective suppression and potentially shifting its classification towards a Tangled Rope or Piton as its coordination function weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The rate at which the founding knowledge supporting the rule erodes across generations."
+    },
+    {
+      "id": "economic_pressure_threshold",
+      "question": "At what point would increasing economic pressure for land development override the community's behavioral compliance with the rule?",
+      "resolution_mechanism": "Comparative case studies of similar communities facing varying levels of economic development pressure, or agent-based modeling simulating economic incentives against social norms. Observing actual attempts to challenge or circumvent the rule due to economic factors.",
+      "impact": "If economic pressure reaches a critical threshold, the rule's low extractiveness and suppression could rapidly increase as compliance breaks down or requires active, coercive enforcement, potentially reclassifying it as a Snare or Tangled Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The tipping point at which economic incentives overcome ingrained land-use norms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "stone_land_use_rule__commemorative_husk"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'stone_land_use_rule' kernel, focusing on its active behavioral efficacy. The 'commemorative_husk' reading is a sibling that views the rule as a symbolic relic."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "commemorative_husk",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "hazard_is_persistent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "collective_safety_trumps_individual_land_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "community_resilience_through_memory",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

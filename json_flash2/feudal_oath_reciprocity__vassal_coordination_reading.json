@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__vassal_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "fb3df8ed-9e9e-432c-9cb6-f498b6856db9"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Feudal Oath Reciprocity (Vassal Coordination Reading)",
+    "topic_domain": "medieval_political_economy/legal_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vassals",
+      "lords"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "vassals",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Receive protection, land tenure, and legal standing in exchange for military service and counsel. The oath provides a framework for dispute resolution and limits arbitrary demands from their lord, ensuring a degree of stability and predictability in their obligations."
+    },
+    {
+      "name": "lords",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Receive military service, counsel, and loyalty from their vassals, which is essential for maintaining their power and defending their territories. The oath formalizes these relationships, providing a stable base for their authority and a mechanism for enforcing obligations without constant coercion."
+    },
+    {
+      "name": "charter_scribes_and_notaries",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Draft and maintain the written charters that record the specific terms of the feudal oath. Their expertise in legal language and record-keeping ensures the clarity and enforceability of the reciprocal obligations, acting as a neutral party in codifying the agreement."
+    },
+    {
+      "name": "peasantry",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are largely outside the direct reciprocal obligations of the feudal oath, though their labor supports the entire system. They are subject to the authority of both vassals and lords, with little formal recourse within the oath's framework. Their voices are not considered in the drafting or interpretation of the charters."
+    },
+    {
+      "name": "ecclesiastical_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Observe and sometimes mediate disputes related to feudal oaths, emphasizing the spiritual sanctity of the oath and the moral obligations of both parties. They provide a moral and theological framework that underpins the secular legal structure, but do not directly enforce the charter's terms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear, bounded framework for reciprocal obligations between lords and vassals, defining military service, land tenure, and mutual protection, thereby reducing arbitrary demands and fostering stability in a decentralized political landscape.",
+    "transfer_function": "Transfers military service, counsel, and loyalty from vassals to lords, and transfers land tenure, protection, and legal standing from lords to vassals. The charter text fixes the scope and limits of these transfers.",
+    "absent_voices": "The peasantry, who are the ultimate source of wealth and labor, are entirely excluded from the negotiation and formalization of these reciprocal obligations. Their interests are not represented, and their obligations are largely unilateral, not reciprocal.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the feudal oath and its charter-based enforcement vanished, the entire medieval political and social order would collapse into widespread anarchy. Land tenure would become insecure, military service unreliable, and the hierarchical structure of power would dissolve, leading to constant warfare and a complete reorganization of governance.",
+    "founding_problem": "The problem of establishing stable governance, military organization, and land distribution in a post-Roman, decentralized Europe characterized by constant warfare and weak central authority.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historians and legal scholars widely corroborate that the specific problems of early medieval decentralization and insecurity were the founding conditions. While some principles of reciprocal obligation persist, the feudal system itself is no longer a live solution to contemporary governance challenges; its founding problem is dead, but its legacy influences later legal thought."
+  },
+  "interval": {
+    "start": 800,
+    "end": 1200
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 900,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1100,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1200,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 900,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1100,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1200,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 900,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1100,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1200,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the feudal oath from the perspective of vassal coordination, where the oath and its accompanying charter text establish fixed, bounded reciprocal obligations between lords and vassals. It is a reading that emphasizes mutual benefit and the reduction of arbitrary power, rather than pure extraction. The constraint is claimed as a Rope, reflecting its primary function as a coordination mechanism that benefits both parties by providing stability and predictability in a turbulent era. The metrics reflect a low level of extraction, moderate suppression (necessary for any feudal system), and low theatricality, as the charter's terms were generally taken seriously.",
+    "logic_rationale": "The extractiveness is low (0.15) because this reading emphasizes the mutual benefits and bounded nature of obligations, where both lords and vassals gain from the stability provided by the oath. Suppression (0.4) is moderate, reflecting the need for enforcement in a pre-modern legal system, but not the overwhelming coercion of a Snare. Theater ratio (0.1) is low, as the charters were generally functional legal documents, not mere performance. The slight increase in extractiveness and suppression over time reflects the gradual hardening of feudal obligations and the increasing power of lords in some regions, before a slight re-stabilization.",
+    "directionality_logic": "Both vassals and lords are declared as beneficiaries in this reading, as the oath provides a framework that benefits both by defining their roles and reducing uncertainty. The charter scribes and notaries act as agenda-setters by codifying the terms. The peasantry is excluded, bearing the costs of the system without formal reciprocal benefits. Ecclesiastical authorities act as observers, providing moral legitimacy and occasional mediation.",
+    "perspectival_gap": "This 'vassal coordination' reading stands in contrast to other possible readings, such as a 'lord extraction' reading (where the oath is primarily a tool for maximizing lordly power) or an 'ecclesiastical mediation' reading (where the Church's moral authority is the primary constraint on secular power). The engine's classification will highlight how this specific structural interpretation leads to a Rope classification, while other interpretations of the same historical kernel would yield different types."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'vassal coordination' mechanism, or is that a legitimizing narrative for a fundamentally extractive 'lord extraction' system?",
+      "resolution_mechanism": "Comparative historical analysis of charter texts vs. actual practice, focusing on instances of vassal resistance and lordly overreach, and the outcomes of such conflicts. Examination of economic data on surplus extraction from vassals over time.",
+      "impact": "If the 'lord extraction' reading is more accurate, the constraint would reclassify as a Tangled Rope or Snare, with significantly higher extractiveness and suppression, and vassals shifting from beneficiaries to victims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity between coordination and extraction in the feudal oath."
+    },
+    {
+      "id": "ecclesiastical_influence_ambiguity",
+      "question": "To what extent did ecclesiastical authority genuinely limit secular extraction, as opposed to merely providing moral sanction for the existing power structure?",
+      "resolution_mechanism": "Analysis of papal and episcopal interventions in feudal disputes, their effectiveness, and the long-term impact on the balance of power between lords and vassals. Comparison of regions with strong vs. weak ecclesiastical influence.",
+      "impact": "If ecclesiastical influence was a strong, independent constraint, it would suggest a separate, parallel constraint (ecclesiastical_mediation_reading) that influences this one, potentially lowering its effective extractiveness by providing an external check. If weak, this reading's extractiveness would be more accurate as a standalone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of the Church in constraining feudal power dynamics."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'feudal_oath_reciprocity' kernel. Other readings include 'lord_extraction_reading' and 'ecclesiastical_mediation_reading', which emphasize different structural aspects and would yield different classifications."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lord_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocal_obligation_bounded_by_charter",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "mutual_benefit_from_stability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "charter_defined_reciprocity",
+    "drift_state": {
+      "moment": "late_medieval_period",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

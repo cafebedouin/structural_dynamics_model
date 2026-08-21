@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "9ea3f58f-46af-4d16-b7bd-be94100b193a",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support (Freedom Floor Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "precarious_workers",
+      "caregivers",
+      "artists",
+      "abuse_victims",
+      "all_citizens"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives a baseline income that reduces the pressure to accept exploitative labor conditions, enabling better job matching and reducing precarity. This group benefits directly from the autonomy-enhancing aspect."
+    },
+    {
+      "name": "caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives income that values unpaid care work, providing financial stability and recognition for essential social contributions, reducing their economic vulnerability."
+    },
+    {
+      "name": "artists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives income that supports creative pursuits, reducing the need for commercial compromise and fostering cultural production, which often has long-term societal benefits."
+    },
+    {
+      "name": "abuse_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Receives income that provides a financial escape route from abusive relationships, enabling them to leave without facing immediate destitution, thereby enhancing personal safety and autonomy."
+    },
+    {
+      "name": "all_citizens",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from a more resilient economy, reduced social inequality, and a healthier, more engaged populace. The universal nature of the support removes stigma and administrative overhead."
+    },
+    {
+      "name": "government_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the unconditional income program, managing distribution and ensuring compliance. Benefits from simplified welfare administration and reduced social costs associated with poverty and precarity."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Contributes through taxes to fund the unconditional income program. While bearing the direct financial cost, they are also indirect beneficiaries of the societal improvements and economic stability it provides."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a universal economic floor that coordinates individual autonomy with societal stability, enabling individuals to pursue education, caregiving, or entrepreneurship without fear of destitution, and smoothing economic shocks across the population.",
+    "transfer_function": "Transfers a baseline income from the general tax base to all citizens, ensuring a minimum standard of living and decoupling income from traditional labor market participation.",
+    "absent_voices": "Those who believe that any form of unconditional income fosters dependency or distorts market incentives are present in public discourse but are not considered 'excluded' in this reading, as their arguments are actively engaged and debated within the policy-making process.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, many precarious workers, caregivers, artists, and abuse victims would immediately face severe economic hardship, leading to increased poverty, social instability, and a return to coercive labor market dynamics. The social safety net would be severely weakened, and the economy would lose a key shock absorber.",
+    "founding_problem": "The problem of poverty, economic precarity, and the coercive nature of traditional labor markets, where individuals are forced to accept undesirable work due to lack of alternatives, leading to widespread social and economic insecurity.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economists, social scientists, and advocacy groups for labor rights and poverty reduction widely corroborate the persistence of economic precarity and the coercive aspects of the labor market, citing data on stagnant wages, rising cost of living, and the psychological toll of economic insecurity. Pilot programs in various countries also provide empirical corroboration of the problem's live status."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'freedom floor' reading of unconditional income support. It posits that such a system primarily functions to enhance individual autonomy by removing the coercive elements of the labor market, eliminating welfare stigma, and providing a buffer against economic shocks. The reading emphasizes the positive coordination effects and minimal extraction, viewing any costs as necessary investments in societal well-being and individual freedom. This is one reading of the 'unconditional_income_support' kernel, alongside the 'dependency_trap_reading' and 'universality_paradox_reading'.",
+    "logic_rationale": "The extractiveness (0.25) is low because the primary function is seen as a societal investment in autonomy and stability, with costs distributed broadly through taxation. Any 'extraction' is viewed as a necessary cost of coordination, not asymmetric rent-seeking. Suppression (0.1) is minimal as the system aims to reduce, not impose, coercion. Theater ratio (0.05) is low, reflecting a belief that the system's stated goals align closely with its actual operation. The metrics reflect the ideal operation of the system as envisioned by this reading.",
+    "directionality_logic": "Precarious workers, caregivers, artists, and abuse victims are direct beneficiaries, experiencing enhanced autonomy and reduced precarity (low directionality). All citizens are also beneficiaries through improved societal resilience. Government agencies are agenda-setters, managing the system for collective benefit. Taxpayers are payers, but their contribution is framed as an investment with broad societal returns, making their effective directionality closer to symmetric than purely extractive.",
+    "perspectival_gap": "This reading emphasizes the autonomy-enhancing and stigma-reducing aspects, leading to a classification as a Rope. Other readings, such as the 'dependency_trap_reading', would likely classify it as a Snare due to perceived disincentives to work and misallocation of resources, leading to higher extractiveness and suppression metrics from their perspective. The 'universality_paradox_reading' would focus on the political and implementation challenges, potentially leading to a Tangled Rope or Piton classification depending on the specific policy outcomes.",
+    "kernel_context": "This constraint is the 'freedom_floor_reading' of the 'unconditional_income_support' kernel. It contrasts with the 'dependency_trap_reading', which views unconditional income as fostering idleness, and the 'universality_paradox_reading', which focuses on the political and implementation challenges of universal programs."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_effects",
+      "question": "What are the actual long-term effects of unconditional income support on labor supply and participation rates?",
+      "resolution_mechanism": "Longitudinal studies of large-scale unconditional income programs in diverse economic contexts, measuring changes in employment, hours worked, and entrepreneurial activity.",
+      "impact": "If labor supply significantly decreases, it would challenge the 'autonomy-enabling' claim by suggesting a trade-off with productivity, potentially shifting the classification towards a Tangled Rope or Snare from a different perspective. If labor supply remains stable or shifts towards more meaningful work, it would reinforce the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the empirical impact on labor market dynamics."
+    },
+    {
+      "id": "stigma_elimination_efficacy",
+      "question": "Does unconditional income truly eliminate welfare stigma, or does a new form of stigma emerge for recipients?",
+      "resolution_mechanism": "Sociological studies and qualitative research on recipient experiences, public perception, and media representation of unconditional income programs.",
+      "impact": "If significant stigma persists or new forms emerge, it would undermine a key claim of this reading, potentially increasing the perceived 'extraction' (psychological cost) and shifting the classification towards a Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty about the social and psychological effects on recipients."
+    },
+    {
+      "id": "framing_of_cost_as_investment",
+      "question": "Is the cost of unconditional income support genuinely perceived as a societal investment by the broader public, or is it primarily viewed as a transfer payment from taxpayers to beneficiaries?",
+      "resolution_mechanism": "Public opinion surveys, analysis of political discourse, and voting patterns related to taxation and social spending.",
+      "impact": "If the cost is widely perceived as a pure transfer, it could increase perceived extractiveness for taxpayers, potentially shifting their seat's classification towards a Snare, even if the overall constraint remains a Rope. This would highlight a significant perspectival gap.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity in public perception of the program's financial nature."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "autonomy_as_foundational_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "economic_security_as_human_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_scarcity_social_contract",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

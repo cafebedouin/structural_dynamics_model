@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e1bd5925-ed24-46ac-9adc-7155022a7c76"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.85,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "FISA Section 702: Constitutional Floor Reading (Warrant Requirement)",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "us_persons",
+      "fourth_amendment_doctrine"
+    ],
+    "victims": [
+      "executive_branch_agencies"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_persons",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Benefit from robust Fourth Amendment protections, ensuring their communications content is not searched by the government without a probable cause warrant. Their identity as U.S. persons is the basis for this protection, making exit from this status impossible."
+    },
+    {
+      "name": "executive_branch_agencies",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the cost of increased procedural hurdles and reduced operational flexibility due to the warrant requirement for querying U.S. person communications. They argue this impedes foreign intelligence collection and counterterrorism efforts. Their exit options are constrained by legal obligations and national security mandates."
+    },
+    {
+      "name": "fisa_court",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would be responsible for reviewing probable cause warrant applications for U.S. person queries, ensuring constitutional compliance. Their role shifts from overseeing programmatic collection to individualized judicial review. Their options are constrained by their statutory mandate and constitutional role."
+    },
+    {
+      "name": "congress",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversees FISA Section 702 and debates its reauthorization, considering the constitutional implications of warrantless searches. They would need to legislate to align statutory text with this constitutional interpretation."
+    },
+    {
+      "name": "fourth_amendment_doctrine",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The constitutional principle itself is vindicated by this reading, reinforcing the requirement for probable cause and warrants for government searches of private communications. It benefits from a consistent and robust application of its core tenets."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that government surveillance activities targeting U.S. person communications content are coordinated with constitutional protections, specifically the Fourth Amendment's warrant requirement, thereby maintaining the balance between national security and individual liberties.",
+    "transfer_function": "Transfers the burden of justifying a search from post-hoc minimization or foreign intelligence purpose to a pre-query probable cause warrant, from the executive branch to the FISA Court, and ultimately to the protection of U.S. persons' privacy.",
+    "absent_voices": "The executive branch's national security apparatus, particularly intelligence agencies, would argue against this reading, emphasizing the operational costs and potential intelligence gaps created by a warrant requirement. Their perspective is often framed as a necessary trade-off for national security, but this reading prioritizes constitutional limits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constitutional floor reading disappeared, the legal landscape for surveillance would fundamentally shift. Executive agencies would likely revert to broader interpretations of their authority, leading to increased warrantless access to U.S. person communications, and a significant erosion of Fourth Amendment protections. The balance of power between branches and the rights of citizens would be profoundly altered.",
+    "founding_problem": "The Fourth Amendment was established to prevent arbitrary government searches and seizures, a problem rooted in colonial-era abuses of general warrants and writs of assistance. It sought to ensure that government intrusion into private affairs is justified by probable cause and overseen by an independent judiciary.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, civil liberties advocates, and a segment of the judiciary consistently attest that the founding problem of arbitrary government intrusion remains live, particularly in the context of modern surveillance technologies. Historical abuses and ongoing debates over executive power corroborate this persistent concern, independent of the executive branch's claims of operational necessity."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents a 'constitutional floor' reading of FISA Section 702, asserting that the Fourth Amendment mandates a probable cause warrant for any government search of U.S. person communications content, regardless of statutory language or foreign intelligence context. This reading reclassifies 702 database queries as searches triggering the warrant requirement, shifting the framework from a foreign intelligence statute to a criminal procedure question. The claimed type is 'mountain' because it posits an irreducible constitutional limit, but it declares beneficiaries (U.S. persons) and victims (executive agencies) to trigger False Summit Mountain (FSM) evaluation, acknowledging the contestation over its 'naturalness' as a legal interpretation.",
+    "logic_rationale": "The extractiveness (0.25) reflects the 'cost' to executive agencies in terms of operational speed and secrecy, which they perceive as a burden. Suppression (0.15) is low because the constraint is a constitutional principle, not actively enforced coercion against individuals, but rather a limit on government power. Theater ratio (0.05) is minimal, as the principle is about genuine legal compliance. Accessibility collapse (0.85) is high because, if accepted, this reading would largely eliminate warrantless access to U.S. person communications content. Resistance (0.05) is low from the perspective of the constitutional principle itself, as it is a foundational legal tenet, though executive agencies actively resist its application.",
+    "directionality_logic": "U.S. persons are the primary beneficiaries, as their Fourth Amendment rights are robustly protected (d near 0.0). Executive branch agencies are the victims, as their operational flexibility is curtailed by the warrant requirement (d near 1.0). The FISA Court, if it were to implement this reading, would act as an agenda-setter, enforcing the constitutional floor. The Fourth Amendment doctrine itself is a non-agent beneficiary, vindicated by this interpretation.",
+    "perspectival_gap": "Executive agencies view this as an onerous and unnecessary restriction on vital intelligence collection, while civil liberties advocates and some legal scholars see it as a necessary safeguard against government overreach. The 'mountain' claim reflects the view that the Fourth Amendment is a fixed, natural law of the legal system, but the declared beneficiaries and victims highlight the contestation over its application and the 'cost' it imposes on one party.",
+    "kernel_context": "This constraint is the 'constitutional floor' reading of the FISA Section 702 statutory text. It asserts that the Fourth Amendment's warrant requirement applies to U.S. person communications content regardless of the statute's foreign intelligence purpose. Sibling readings include the 'incidental collection' reading (which permits warrantless query of incidentally collected U.S. person data) and the 'foreign target strict' reading (which narrowly defines foreign targeting to exclude U.S. persons)."
+  },
+  "omegas": [
+    {
+      "id": "constitutional_vs_statutory_authority",
+      "question": "Is the Fourth Amendment's warrant requirement an absolute constitutional floor for U.S. person communications content, or can statutory frameworks like FISA Section 702 create exceptions based on foreign intelligence purpose?",
+      "resolution_mechanism": "Supreme Court ruling directly addressing the constitutionality of warrantless U.S. person queries under Section 702, or a constitutional amendment clarifying surveillance powers.",
+      "impact": "If the Supreme Court affirms this reading, it would solidify the warrant requirement as a 'mountain' for U.S. person data, fundamentally altering surveillance practices. If it rejects it, the 'incidental collection' reading would gain stronger legal footing, increasing executive power.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding the supremacy of constitutional warrant requirements over statutory foreign intelligence authorizations."
+    },
+    {
+      "id": "operational_cost_vs_constitutional_compliance",
+      "question": "What is the true operational cost (in terms of intelligence gaps and missed threats) of implementing a probable cause warrant requirement for U.S. person queries under Section 702, versus the cost of constitutional non-compliance?",
+      "resolution_mechanism": "Independent, declassified analysis by a non-governmental body, comparing intelligence outcomes in jurisdictions with stricter warrant requirements, or a pilot program implementing warrants for a subset of queries.",
+      "impact": "If operational costs are demonstrably low, it weakens the executive's argument against warrants. If constitutional non-compliance is shown to have severe long-term impacts on trust and legitimacy, it strengthens the case for warrants. This would shift the 'extractiveness' metric's justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the trade-off between national security operational efficiency and constitutional compliance."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "foreign_target_strict_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fourth_amendment_search_requires_warrant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "us_person_communications_are_private",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "founding_era_fourth_amendment_principles",
+    "drift_state": {
+      "moment": "contemporary_digital_surveillance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

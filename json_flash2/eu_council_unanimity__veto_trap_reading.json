@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__veto_trap_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2b77e04d-98b3-4e5d-aa7d-149464bb974c"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "EU Council Unanimity: Veto Trap Reading",
+    "topic_domain": "institutional_design/international_relations/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "blocking_member_state"
+    ],
+    "victims": [
+      "coalition_majority_member_states",
+      "eu_citizens_affected_by_policy_stasis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "blocking_member_state",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "A single EU member state that uses its unanimity veto power to block proposed legislation, not to protect its sovereignty, but to extract concessions or opt-outs from the majority. Benefits directly from the value transferred through these concessions."
+    },
+    {
+      "name": "coalition_majority_member_states",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The group of member states that support a proposed policy but are forced to make concessions to a blocking state to advance the legislation. They bear the cost of policy dilution or delayed implementation."
+    },
+    {
+      "name": "eu_citizens_affected_by_policy_stasis",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Citizens across the EU who are negatively impacted by the inability of the Council to pass necessary legislation due to veto threats, leading to policy stasis or suboptimal outcomes. They bear diffuse costs without direct recourse."
+    },
+    {
+      "name": "eu_institutions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The European Commission and Parliament, which propose and debate legislation, but are ultimately constrained by the Council's unanimity rule. They observe the extraction but have limited power to directly overcome it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The unanimity rule nominally ensures that all member states are aligned on critical decisions, fostering collective ownership and preventing policies that deeply harm any single state's core interests.",
+    "transfer_function": "Transfers policy influence and material concessions from the coalition majority to the blocking minority, in exchange for allowing legislation to proceed. This can manifest as opt-outs, financial benefits, or watering down of policy ambition.",
+    "absent_voices": "EU citizens, particularly those in states whose governments are part of the blocking minority but whose populations would benefit from the blocked policy, are absent from the direct negotiation. Their interests are often subordinated to the short-term leverage of their national government.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the unanimity rule vanished overnight, the EU Council's decision-making process would fundamentally change. Legislation would pass more quickly, but potentially at the cost of alienating minority states. The balance of power would shift dramatically, leading to a reorganization of political alliances and negotiation strategies.",
+    "founding_problem": "The unanimity rule was established to protect the sovereign interests of individual member states, ensuring that no state could be forced into a policy against its fundamental will, particularly in sensitive areas like foreign policy or taxation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Blocking member states and some legal scholars attest that the founding problem of protecting sovereignty remains live. However, a majority of member states, EU institutions, and political scientists argue that the rule is now primarily used for minoritarian extraction, indicating the founding problem is either dead or severely distorted from its original intent, supported by empirical studies of veto patterns and policy outcomes."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "kernel_context": "This constraint is the 'veto trap' reading of the 'eu_council_unanimity' kernel. It views the unanimity rule as a structural vulnerability enabling minoritarian extraction. Sibling readings include 'sovereignty_guarantor_reading' (unanimity as protection against majoritarian coercion) and 'diplomatic_capital_reading' (unanimity as a consensus-building requirement)."
+  },
+  "omegas": [
+    {
+      "id": "sovereignty_vs_extraction_intent",
+      "question": "Is a given veto exercised primarily to protect a core sovereign interest (as per the founding problem) or to extract unrelated concessions?",
+      "resolution_mechanism": "Detailed case studies of veto incidents, analyzing the content of concessions granted versus the stated reasons for the veto, and comparing with independent assessments of the 'core' nature of the sovereign interest.",
+      "impact": "If primarily for extraction, the Snare classification is strengthened. If genuinely for core sovereign protection, the constraint might lean towards a Tangled Rope or even a Rope (as a legitimate coordination mechanism for diverse states).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing legitimate sovereignty protection from opportunistic extraction."
+    },
+    {
+      "id": "policy_stasis_causality",
+      "question": "To what extent is policy stasis in the EU Council directly attributable to the unanimity rule, versus other factors like fundamental policy disagreements or lack of political will?",
+      "resolution_mechanism": "Counterfactual analysis comparing policy outcomes in areas under unanimity versus qualified majority voting, controlling for policy complexity and political salience. Expert surveys on the primary drivers of legislative deadlock.",
+      "impact": "If unanimity is a primary driver, the Snare classification is reinforced due to its direct causal role in negative outcomes. If other factors dominate, the extractiveness attributed to the unanimity rule might be overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of policy stasis to the unanimity rule."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "Given the 'veto trap' reading, how do the 'sovereignty guarantor' and 'diplomatic capital' readings structurally differ in their assessment of extractiveness and suppression?",
+      "resolution_mechanism": "Comparative analysis of the three constraint stories (this one and its siblings) to identify specific metric divergences and their underlying structural assumptions about the unanimity rule's function and effects.",
+      "impact": "The divergence highlights the contested nature of the kernel. If the other readings show significantly lower extractiveness, it underscores the 'veto trap' as a critical counter-narrative to more benign interpretations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differences between the 'veto trap' and sibling readings of EU Council unanimity."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "diplomatic_capital_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unanimity_as_minoritarian_leverage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "policy_stasis_as_extracted_value",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "unanimity_as_extraction_mechanism",
+    "drift_state": {
+      "moment": "contemporary_eu_policy_making",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "blocking_member_state",
+  "fixing_cost": "prohibitive"
+}

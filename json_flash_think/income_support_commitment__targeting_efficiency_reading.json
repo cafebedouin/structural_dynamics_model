@@ -1,0 +1,274 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1ff1ea00-11ef-48fc-9c3c-d9b43c2d9624"
+  },
+  "base_properties": {
+    "extractiveness": 0.8,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "Income Support: Targeting Efficiency Reading",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_targeted_program_recipients",
+      "taxpayers_concerned_with_efficiency",
+      "welfare_state_administrators"
+    ],
+    "victims": [
+      "current_targeted_program_recipients",
+      "low_income_households_not_meeting_eligibility",
+      "advocates_for_universal_programs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "welfare_state_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Design, implement, and enforce complex eligibility criteria and means-testing procedures for income support programs. They justify these as necessary for fiscal responsibility and preventing 'waste.' Their power and budgets are tied to the complexity and administration of these targeted systems."
+    },
+    {
+      "name": "taxpayers_concerned_with_efficiency",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from the perception that their tax money is being used 'efficiently' by being directed only to those 'demonstrably in need.' They often advocate for stricter eligibility and against universal programs, believing they reduce overall tax burden and prevent 'freeloading.'"
+    },
+    {
+      "name": "current_targeted_program_recipients",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Receive essential income support, making them nominal beneficiaries. However, they bear the costs of administrative burden, stigma, and the constant threat of losing benefits due to minor changes in circumstances. They are also victims in the sense that this reading's suppression of universal alternatives means they lose out on potentially higher, less conditional support (e.g., the $19,100 loss under UBI replacement in the prompt's example)."
+    },
+    {
+      "name": "low_income_households_not_meeting_eligibility",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are excluded from income support due to strict eligibility criteria, even if they are in significant need. They bear the costs of poverty without the safety net, and their situation is often invisible to the system designed to target 'demonstrated need.'"
+    },
+    {
+      "name": "advocates_for_universal_programs",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Argue for universal basic income or other unconditional support systems, believing they are more effective, less stigmatizing, and provide a true freedom floor. They are often excluded from policy-making discussions dominated by the 'targeting efficiency' paradigm."
+    },
+    {
+      "name": "economic_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the effects of targeted vs. universal income support, evaluating their efficiency, poverty reduction, and social impacts. Their analyses often challenge the assumptions of the 'targeting efficiency' reading but are not always integrated into policy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To allocate limited public resources to individuals and families deemed most in need, based on specific eligibility criteria, thereby preventing perceived 'waste' and ensuring fiscal responsibility.",
+    "transfer_function": "Moves public funds from general taxation to a subset of the population identified through means-testing and other eligibility requirements, as a conditional safety net.",
+    "absent_voices": "Those who are eligible but cannot navigate the bureaucratic hurdles, and advocates for universal programs, would object. They would argue for simpler, less stigmatizing systems that reach all in need without administrative barriers or the creation of poverty traps.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the entire system of targeted income support vanished overnight, millions of vulnerable individuals and families would lose their primary source of income, leading to widespread social crisis, increased poverty, and a massive reorganization of social welfare provision.",
+    "founding_problem": "To provide a safety net for the most vulnerable members of society while minimizing public expenditure, avoiding disincentives to work, and ensuring that support is directed only to those who genuinely cannot support themselves.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents (welfare administrators, some politicians) argue the problem of limited resources and potential work disincentives is still live. Critics (social scientists, poverty advocates, some NGOs) argue that while the problem of vulnerability remains, the 'efficiency' framing has shifted to prioritize fiscal austerity and control over genuine need-meeting, and that the founding problem is now a cover for a system that creates new forms of extraction and exclusion. Legislative hearing testimony and independent academic research from outside the benefiting parties support the shifted-function reading."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'targeting efficiency' reading of the broader 'income support commitment' kernel. It posits that welfare resources should be concentrated on those with demonstrated need, rather than distributed universally. This reading emphasizes fiscal prudence and avoiding perceived 'waste,' often leading to complex means-testing and eligibility requirements. While nominally benefiting recipients, the system's design and enforcement can create significant burdens and exclusions, leading to a high extraction profile, particularly when compared to alternative universal systems.",
+    "logic_rationale": "The high extractiveness (0.8) reflects the significant administrative burden, stigma, and opportunity costs imposed on recipients, as well as the exclusion of many in need. The high suppression (0.75) stems from the active enforcement of complex eligibility rules and the suppression of alternative, simpler universal systems. The moderate theater ratio (0.4) indicates that while some administrative functions are genuine, a substantial portion of activity is performative, designed to demonstrate 'efficiency' and 'fraud prevention' rather than genuinely optimizing support delivery. Accessibility collapse is high (0.7) because for many, the targeted system is the only perceived path to support, despite its barriers. Resistance (0.6) is significant from advocates for universal programs and those struggling with the system.",
+    "directionality_logic": "Welfare state administrators are beneficiaries, gaining power and budget from managing complexity. Taxpayers concerned with efficiency are also beneficiaries, perceiving responsible use of funds. Current targeted program recipients are both nominal beneficiaries (receiving support) and victims (bearing administrative burden, stigma, and the opportunity cost of foregone universal benefits). Low-income households not meeting eligibility are clear victims, excluded from support. Advocates for universal programs are excluded from the policy-making process.",
+    "perspectival_gap": "Administrators and efficiency-minded taxpayers perceive the system as a necessary, efficient allocation of resources. Recipients and excluded households experience it as a burdensome, stigmatizing, and often insufficient system that extracts significant non-monetary costs. The engine's computation of per-seat types will highlight this divergence.",
+    "mandatrophy_analysis": "The 'targeting efficiency' reading risks mandatrophy by shifting focus from the original mandate of poverty alleviation to the secondary goal of 'efficiency' and fiscal control. The persistence of complex, burdensome systems, even as the founding problem of 'waste' becomes contested, suggests the constraint may be maintained more for the benefit of its administrators and the ideological comfort of certain taxpayers than for optimal social outcomes. The high extractiveness and suppression, coupled with contested founding problem status, indicate a potential snare where the coordination story (efficient allocation) serves as cover for extraction (administrative burden, exclusion, opportunity cost)."
+  },
+  "omegas": [
+    {
+      "id": "efficiency_vs_stigma_tradeoff",
+      "question": "Is the administrative efficiency gained by targeting income support outweighed by the social costs of stigma, administrative burden, and exclusion for those in need?",
+      "resolution_mechanism": "Comparative studies of targeted vs. universal programs, measuring not just fiscal cost but also health outcomes, social cohesion, and administrative burden on recipients. Longitudinal studies tracking recipients' experiences.",
+      "impact": "If social costs outweigh efficiency gains, the constraint's effective extractiveness is higher than currently measured, and its coordination function is severely compromised, pushing it further towards a snare. If efficiency gains are demonstrably high and social costs low, it might lean more towards a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trade-off between administrative efficiency and social costs of targeting."
+    },
+    {
+      "id": "true_cost_of_targeting",
+      "question": "Does the administrative overhead of means-testing, enforcement, and fraud prevention in targeted programs actually result in net fiscal savings compared to a simpler, less conditional universal system, or does it create hidden costs?",
+      "resolution_mechanism": "Comprehensive economic analysis comparing the total system costs (including administrative, enforcement, and indirect social costs) of targeted programs against the projected costs of universal basic income or similar universal schemes.",
+      "impact": "If the true costs of targeting are higher than perceived, the 'efficiency' justification for the constraint collapses, revealing a higher degree of extraction and theater, and strengthening its classification as a snare. If targeting is genuinely more cost-effective, the extractiveness might be slightly lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fiscal cost-effectiveness of targeted vs. universal income support."
+    },
+    {
+      "id": "ubiquitous_extraction_from_poor_framing",
+      "question": "Is the 'extraction' from current recipients (e.g., the $19,100 loss under UBI replacement) an inherent feature of this reading's framing of welfare reform, or a contingent outcome of specific policy choices?",
+      "resolution_mechanism": "Conceptual analysis of the 'targeting efficiency' doctrine: does it structurally require that any universal alternative must cannibalize existing targeted programs, or could it theoretically coexist with or be replaced by a UBI that does not create such losses for the poor? This is a question of the reading's internal logic.",
+      "impact": "If the extraction is structurally required by the reading's logic, it reinforces the snare classification by demonstrating how the reading itself generates victims. If it's a contingent policy choice, the reading might be capable of less extractive instantiations, making it a more ambiguous tangled rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural vs. contingent nature of extraction from the poor under this reading."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'income_support_commitment' kernel, focusing on targeting efficiency. It is structurally distinct from the 'freedom_floor_reading' and 'dependency_trap_reading' due to differing core premises regarding distribution and social outcomes."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_scarcity_necessitates_targeting",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universal_distribution_is_wasteful",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_war_welfare_consensus",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "welfare_state_administrators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

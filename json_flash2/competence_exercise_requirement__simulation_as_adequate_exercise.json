@@ -1,0 +1,259 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__simulation_as_adequate_exercise",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "10b8807e-0b0e-4e3a-bae1-fe6e49954436"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Simulation as Adequate Competence Exercise",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "training_organizations",
+      "regulatory_bodies",
+      "organizational_leadership"
+    ],
+    "victims": [
+      "frontline_operators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "training_organizations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Develop and deliver high-fidelity simulation programs, certifying operators based on performance. They benefit from the demand for simulation-based training and the perceived adequacy of their methods."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Accredit simulation programs and certify operators based on compliance with simulation-centric standards. They benefit from a clear, auditable path to competence assurance that avoids the risks and costs of real-world exercise."
+    },
+    {
+      "name": "organizational_leadership",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Manages operational risk and resource allocation. They benefit from the cost-effectiveness and safety of simulation-based competence maintenance, which reduces the need for expensive and risky real-world training. They are incentivized to believe in its adequacy."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Undergo regular high-fidelity simulation and debriefing to maintain their professional certifications. While they benefit from skill maintenance, they bear the cognitive load and potential for skill decay if simulation proves insufficient for real-world demands. Their professional identity is tied to these certifications."
+    },
+    {
+      "name": "safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the efficacy of simulation-based training, comparing outcomes to real-world performance and accident rates. They provide independent analysis of the constraint's actual function and potential limitations."
+    },
+    {
+      "name": "catastrophe_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that simulation, no matter how high-fidelity, cannot fully replicate the stress and unpredictability of real catastrophic events, and that true competence requires exposure to actual (or near-miss) crises. Their perspective is often marginalized in favor of more 'manageable' training paradigms."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the maintenance of high-stakes operational competence across a large workforce by providing a standardized, safe, and repeatable method for skill exercise and assessment.",
+    "transfer_function": "Transfers the responsibility for competence maintenance from real-world operational exposure (with its inherent risks and costs) to a controlled, simulated environment, from operators to training organizations and regulators.",
+    "absent_voices": "Advocates for 'catastrophe as necessary anchor' are often excluded from the core decision-making bodies that define competence standards, as their arguments challenge the cost-effectiveness and safety benefits of simulation-only approaches.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in simulation's adequacy vanished, the entire system for competence maintenance in high-reliability organizations would collapse. Training programs would be deemed insufficient, certifications would be questioned, and a scramble for alternative (likely more costly and risky) real-world exercise methods would ensue, fundamentally reorganizing safety protocols.",
+    "founding_problem": "The high cost and inherent danger of exercising critical operational competences in real-world, high-stakes environments, coupled with the need for standardized, repeatable training.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Training organizations and regulatory bodies consistently attest to the ongoing problem of safe and cost-effective competence exercise. Safety researchers, while questioning the 'adequacy' claim, corroborate the existence of the underlying problem that simulation aims to solve."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the reading that high-fidelity simulation, coupled with thorough debriefing, is sufficient for maintaining operational competence in high-reliability domains. This reading is validated by long periods without catastrophic failures and is supported by regulatory compliance frameworks. It is one reading of the broader 'competence exercise requirement' kernel, which is contested by other views that emphasize real-world anchoring or catastrophic events.",
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely solves a coordination problem (safe, standardized competence maintenance) and provides net benefits to most participants, particularly training organizations, regulators, and leadership. Extractiveness (0.35) is moderate, reflecting the cost of high-fidelity simulation and the potential for skill decay if the 'adequacy' claim is overstated. Suppression (0.45) is also moderate, as alternative views on competence exercise are present but often marginalized by the established regulatory and training infrastructure. Theater ratio (0.15) is low, indicating that the simulation function is largely genuine, though there's a small element of performative compliance.",
+    "directionality_logic": "Training organizations, regulatory bodies, and organizational leadership are beneficiaries, as the constraint provides a manageable and auditable path to competence assurance. Frontline operators are payers, bearing the direct costs of training and the potential for a gap between simulated and real-world performance. Safety researchers are observers, and 'catastrophe advocates' are excluded, as their perspective challenges the core premise of this reading.",
+    "perspectival_gap": "While most stakeholders benefit from the efficiency and safety of simulation, frontline operators and safety researchers may perceive a higher degree of extractiveness or a lower degree of adequacy than the agenda-setters. The 'catastrophe advocates' would experience this as a Snare, as their preferred method of competence exercise is actively suppressed.",
+    "kernel_context": "This constraint is the 'simulation_as_adequate_exercise' reading of the 'competence_exercise_requirement' kernel. Sibling readings include 'catastrophe_as_necessary_anchor' (which posits that only real catastrophic events maintain competence) and 'hybrid_dependency' (which argues for a mix of simulation and real-world anchoring)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_adequacy_empirical_gap",
+      "question": "Does high-fidelity simulation truly provide adequate exercise for all critical competences, especially those related to rare, high-consequence events, or is there an irreducible gap between simulated and real-world performance?",
+      "resolution_mechanism": "Longitudinal studies comparing performance in real catastrophic events (or high-fidelity near-misses) with prior simulation performance, controlling for other training variables. Analysis of skill decay rates for competences only exercised in simulation.",
+      "impact": "If a significant gap is found, the constraint's extractiveness and suppression would be re-evaluated upward, as operators are paying for an 'adequate' exercise that is not fully adequate, and alternatives are suppressed. This would shift the classification towards a Tangled Rope or Snare for operators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validation of simulation's adequacy for all critical competences."
+    },
+    {
+      "id": "cost_benefit_framing_ambiguity",
+      "question": "Is the perceived 'adequacy' of simulation primarily driven by its cost-effectiveness and safety benefits (avoiding real-world risks), or by its intrinsic ability to fully develop and maintain competence?",
+      "resolution_mechanism": "Analysis of decision-making processes in regulatory and organizational bodies: how are trade-offs between safety, cost, and perceived competence made? What evidence is prioritized?",
+      "impact": "If cost-effectiveness is the primary driver, the constraint's coordination function is partly a cover for risk/cost avoidance, and its extractiveness (from operators who might prefer more real-world exposure) would be seen as higher. This would support a shift towards Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The underlying rationale for simulation's 'adequacy' claim."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "Given the existence of sibling readings (catastrophe_as_necessary_anchor, hybrid_dependency), is the 'simulation_as_adequate_exercise' reading sustainable in the long term without incorporating elements from its siblings, or will it eventually be superseded or modified?",
+      "resolution_mechanism": "Tracking shifts in regulatory policy, industry best practices, and academic consensus over time. Observing whether 'catastrophe advocates' gain influence or if hybrid models become dominant.",
+      "impact": "If this reading is superseded, the current constraint would be reclassified as a Piton (if it persists by inertia) or its underlying assumptions would be fundamentally challenged, leading to a new constraint structure. This omega documents the contestability of the kernel itself.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The long-term viability and contestability of this specific kernel reading."
+    }
+  ],
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_dependency",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_equals_real_world_efficacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "risk_avoidance_is_primary_competence_exercise_goal",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "scheduled_simulation_cycles",
+    "drift_state": {
+      "moment": "catastrophe_free_decades",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}
