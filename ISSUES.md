@@ -8044,6 +8044,30 @@ part of the problem.
 run-id and DECLINE on a correctly registered one. Both cases are naturally available today — the
 file now holds one retroactively-registered row and one originally-registered row.
 
+**THE BLIND SPOT THIS ARC EXPOSED, and — stated first, because the claim implies the wrong
+remedy without it — THE REMEDY IS A PROCEDURE, NOT AN APPARATUS.**
+
+In the OQ-306 arc a material error survived four gate rows, a full paste-or-untag witness
+discipline, and the executor's own review. It was caught by a post-implementation evaluation. The
+reason is structural: **every mechanism that passed was checking INTERNAL CONSISTENCY, and what
+failed was a JUDGEMENT ABOUT WHICH INSTRUMENT TO TRUST.** The git-tracking series and the live
+census were each internally consistent and each computed correctly; only one was measuring the
+thing being claimed. No consistency check can separate those, because consistency is exactly what
+both have.
+
+**DO NOT file this as "we need a better gate."** That is the reading this entry exists to
+forestall. A check cannot adjudicate between two self-consistent instruments — adding checks
+addresses the category that was already covered and spends effort where the failure was not. The
+remedy that actually worked, twice in that arc, is a **procedure**: when a finding says instrument
+X is untrustworthy for question Q, immediately check whether the work in progress is about to use X
+on Q. Turning a finding around on your own in-flight work is a step someone takes, not a row that
+goes red. What the evaluator pass institutionalises is that step, performed by a party who did not
+form the judgement — which is why it is not redundant with the gate, and why its cost is not
+duplicated coverage.
+
+The apparatus question that IS open here is narrower and is the one this OQ tracks: whether the
+three silent-registration instances share a mechanism or want three local ones.
+
 **Cross-refs:** OQ-306 (parent), OQ-338 (sibling instance), OQ-276 (the apparatus-instrument line).
 
 ---

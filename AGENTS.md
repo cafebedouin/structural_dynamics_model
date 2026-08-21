@@ -576,7 +576,8 @@ band." Convention table: `docs/logic_extensions.md` §2.3.1.
 Per-constraint entries in `pipeline_output.json` / `enriched_pipeline.json` carry BOTH
 `diagnostic_verdict` (raw 12-subsystem synthesis) and `verdict_join` (the joined headline:
 base verdict + severity-floored alerts + grid/measurement provenance + signature grade;
-manifest `schema_version` 2). Any consumer that summarizes a constraint must headline
+introduced at manifest `schema_version` 2; the manifest is at 3 since OQ-306).
+Any consumer that summarizes a constraint must headline
 `verdict_join.verdict`; `diagnostic_verdict.verdict` is a raw input — rendering it as a
 summary recreates the GREEN-over-severe-alerts defect. Producer:
 `diagnostic_summary:verdict_join/3`; serialization: `json_report.pl`; contract:
@@ -1332,7 +1333,11 @@ Every pipeline output JSON carries a `manifest` top-level key:
     "code_commit": "<full SHA>",
     "code_commit_short": "<short SHA>",
     "code_dirty": false,
-    "schema_version": "<version>"
+    "n_stories": "<story members — THE denominator for any per-story rate>",
+    "n_nonstory_members": "<known non-story members, e.g. *_contradictions.pl axiom files>",
+    "nonstory_kinds": "<{kind: count}, sorted>",
+    "n_unclassified": "<unknown + dual_family; 0 on a live leg or the run refuses>",
+    "schema_version": "<version — 3 since OQ-306>"
   },
   ...
 }

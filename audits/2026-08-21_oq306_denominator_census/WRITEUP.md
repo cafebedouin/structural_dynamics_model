@@ -245,10 +245,23 @@ Three times in this work I published a figure I had not derived: the gate as "27
 and "twelve rulings" for thirteen. Each was off by one in the direction of the thing I had just
 added — the tell of incrementing a remembered number instead of counting the output in front of me.
 
-None changed a decision, which is exactly why it is worth recording: this is the residue left when
-the witness discipline is applied to *code* and relaxed for *prose about code*. The pasted gate
-output was always right; the sentence describing it was not. **A number in a summary is a claim and
-owes the same derivation as a number in a report.**
+**All three were wrong in the direction of the thing just added.** That is not random error, it is
+a specific mechanism — incrementing a remembered number rather than counting the output — and it
+makes the defect *detectable*: **a count that moved by exactly the size of your last change is a
+count you did not take.** That test is narrow enough to fire. "Re-derive counts in prose" is not;
+it will be forgotten by the next person, including me.
+
+None of the three changed a decision — but the cost is not measured in wrong decisions. It is
+measured in **downstream work spent reconciling them**: the "28/28 → 27/27" figure sent the operator
+looking for a coverage regression that did not exist, and the diff that disproved it was real work
+spent on an artefact of my own prose. A fourth instance was caught in the same review: I reported
+having written the blind-spot argument into OQ-337 when I had only cross-referenced it, and it was
+false until checked.
+
+This is the residue left when the witness discipline is applied to *code* and relaxed for *prose
+about code*. The pasted gate output was always right; the sentence describing it was not. **A
+number in a summary is a claim and owes the same derivation as a number in a report** — and so does
+a claim about what you already wrote.
 
 ## Declared residue
 
