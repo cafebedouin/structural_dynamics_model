@@ -225,17 +225,51 @@ nothing; there is no analogous silent failure on the assert side. The preflight 
 same correction, since it previously justified both extensions with the `permission_error`
 argument.
 
+## 10. A THIRD outcome of the intent test — *installed-then-drifted* (amendment to R4, 2026-08-21)
+
+**Operator ruling, 2026-08-21.** R4's intent test is a two-way split: the committed artifact
+declares the zero/partial (→ dated retrofit wrapper), or it does not (→ mint an OQ against the
+published finding). The census found a site that is **neither**, and the split has no defined action
+for it.
+
+**The category.** *Installed-then-drifted*: **artifact evidence that the overlay worked, plus
+present-day evidence that the target has since changed.** It is not artifact-declared — nothing
+declares a zero. It is not not-artifact-declared either — **the artifact declares the opposite: that
+it installed.** The throw is a fact about the corpus, not about the probe.
+
+**Its instance: `audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77`.**
+
+| | evidence |
+|---|---|
+| it installed | `AUDIT.md` records the mid-control diff `< AUTHORED_PERSP snare` / `> AUTHORED_PERSP mountain`, produced by `a1_probe.pl:41-43`'s `forall` over `constraint_classification/3` |
+| the target drifted | that predicate now has **0 fact clauses** corpus-wide; 258 live testsets declare it `:- multifile` and none author it |
+| what it does at HEAD | throws `probe_overlay_empty` — verified, and note it is `empty`, **not** `partial`: with `C` bound to a corpus constraint the template cannot unify with the rule heads, which independently re-confirms Phase 1's verdict on this specific site |
+
+**The prescribed action, distinct from both existing branches:**
+
+1. **No retrofit wrapper.** Writing one would encode a present-day corpus fact as a property of the
+   probe — a wrapper asserting "this site expects an empty snapshot" when the site expected, and
+   got, a non-empty one. That is OQ-326's own class moved up a level, the same reason a
+   not-artifact-declared site gets no wrapper.
+2. **No OQ against the finding.** The finding is intact and witnessed; there is nothing to
+   investigate about it.
+3. **A pointer comment at the call site, carrying the install witness.** Same treatment as an
+   OQ-mint minus the OQ. A future reader meets the throw at the call site and needs to learn *there*
+   — not in a WRITEUP they may never open — that this is drift with a June witness in `AUDIT.md`.
+   Landed 2026-08-21.
+
+**Why name it rather than treat it as a one-off.** Every overlay probe in `audits/` is dated, and
+the corpus is a moving denominator (`prolog/testsets/` carries no count, ever). As the corpus
+evolves away from what any given probe overlaid, this outcome recurs by construction — and its two
+failure modes are both silent: wrap it and you fabricate a declaration, OQ it and you spend a
+ruling investigating a finding that is fine.
+
 ---
 
 ## Residues
 
 - **Axis 2 answers "would throw if re-run today", which for historic sites conflates a probe defect
-  with corpus drift.** `a1_probe.pl:77` is the witness: its overlay demonstrably **installed** in
-  June (`AUDIT.md`'s `< snare` / `> mountain` diff), yet today
-  `constraint_indexing:constraint_classification/3` has **0 fact clauses** corpus-wide — 258 live
-  testsets declare it multifile and none author it — so a re-run would throw `probe_overlay_empty`.
-  The site is clean; the corpus moved. **A retrofit wrapper written on today's reading would encode
-  a corpus fact as a probe property.** Not resolvable by re-reading: the June corpus is gone.
+  with corpus drift.** Formalized as a third intent-test outcome — see §10, *installed-then-drifted*.
 - **Per-instance binding risk is not retroactively closable.** A generalized template matching >0
   facts does not prove each runtime instantiation matched. Phase 3 closes this forward only.
 - **Clause 3's naturally-arising positive rests on one predicate.** `boltzmann_invariant_mountain/2`

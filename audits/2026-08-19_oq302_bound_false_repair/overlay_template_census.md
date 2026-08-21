@@ -47,6 +47,17 @@ fully-general form matches no rule clause, no instantiation of it can.
 `boltzmann_invariant_mountain/2` (a known rule) and **DECLINES** `config:param/2` (184 facts, 0
 rules). A census that could not do both would license nothing.
 
+> ⚠ **FIGURES SUPERSEDED — see OQ-341 (2026-08-21).** The result line below does not reconcile
+> with this audit's own `overlay_template_census_raw.txt`, which holds **57** `kind=` matches over
+> **28** files; a 2026-08-21 re-take with this same script is byte-identical to that raw. Reconciled:
+> **56 real call sites over 28 files** (one match is a comment-position phantom — the extractor does
+> not mask comments, a second false-positive shape §1 does not record) and **3 rule-bearing
+> retract-side templates, not 1**. The verdict in §0 — *"no prior audit is voided by the rule-clause
+> mechanism"* — was true of the 44 sites this table covered and is **NO LONGER TRUE of the full 56**:
+> `probe_round0_control.pl:49` is one (OQ-340). This document is point-in-time and is not rewritten;
+> the numbers live on in OQ-341 and
+> `audits/2026-08-21_oq326_overlay_install_witness/WRITEUP.md`.
+
 ## 2. Result — 44 call sites, 27 files, 13 distinct retract-side templates
 
 **12 of 13 are rule-free**, so those overlays are structurally safe:

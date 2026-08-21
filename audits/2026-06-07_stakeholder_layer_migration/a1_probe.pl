@@ -74,6 +74,20 @@ a1_mut_perspective :-
     New = constraint_indexing:constraint_classification(C, mountain,
               context(agent_power(powerless), time_horizon(biographical),
                       exit_options(trapped), spatial_scope(national))),
+    % OQ-326 (2026-08-21) — INSTALLED-THEN-DRIFTED. This call THROWS at HEAD, and
+    % that is CORPUS DRIFT, not a defect in this probe. When it ran (2026-06-07) the
+    % overlay demonstrably INSTALLED: AUDIT.md records the mid-control diff
+    %     < AUTHORED_PERSP snare    context(powerless,biographical,trapped,national)
+    %     > AUTHORED_PERSP mountain context(powerless,biographical,trapped,national)
+    % produced by a1_capture's forall over constraint_classification/3 below.
+    % Today that predicate has ZERO fact clauses corpus-wide — 258 live testsets
+    % declare it :- multifile and none author it — so the snapshot is empty and the
+    % strict harness raises probe_overlay_partial/probe_overlay_empty.
+    % NO retrofit wrapper is written, deliberately: nothing here declares a zero
+    % (the artifact declares the OPPOSITE — that it worked), so a wrapper would
+    % encode a present-day corpus fact as a property of this probe. The finding
+    % stands on its June witness. Re-running requires a corpus that authors
+    % constraint_classification facts; the June corpus is gone.
     probe_harness:with_overlay([Old], [New], a1_capture).
 
 % eps overlay targets narrative_ontology:constraint_metric ONLY. Witnessed

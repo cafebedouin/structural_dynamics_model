@@ -46,6 +46,18 @@ probe :-
         )),
 
     % ---- PC3: contrast — eps-absence blocks dr_type ----
+    % OQ-340 (2026-08-21) — DELIBERATELY NOT MIGRATED; this call THROWS at HEAD.
+    % Both templates below are RULE-BEARING (drl_core:base_extractiveness/2 has 2
+    % rule clauses, constraint_data:base_extractiveness/2 has 1). snapshot/2
+    % collected FACTS only, so this arm retracted nothing of the rule-derived eps
+    % path and ran against the UNMODIFIED program — meaning the PC3 verdict below
+    % ("eps-absence BLOCKS dr_type") may have been reported off a diff that was
+    % never a diff. The Goal only observes and prints; nothing here fails on a
+    % no-op, so the run could not tell the two apart.
+    % No retrofit wrapper: nothing in this artifact DECLARES a partial overlay, so
+    % a wrapper would manufacture greenness after the fact. The fix is to retract
+    % the FACT table the rules read (narrative_ontology:constraint_metric/3), as
+    % a1_probe.pl:87 does, and re-run — see OQ-340.
     probe_harness:with_retracted(
         [drl_core:base_extractiveness(C0, _), constraint_data:base_extractiveness(C0, _)],
         ( maxent_classifier:get_constraint_metrics(C0, E2, S2, Th2),

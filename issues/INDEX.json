@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "297c9bc7c8ecbd615e2420ffbb918f225d6e4ecb",
+    "store_version": "8feaa5b9a362b7c1958c6182433703677fbb951c",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-21T12:41:20"
+    "generated_at": "2026-08-21T18:11:40"
   },
-  "issues_sha": "1247b7a8e5663bc58cc760466b15cd386b24f7fb71a739471246222ee68f1950",
-  "n_entries": 339,
+  "issues_sha": "82ecf678348c28556a3d3272ab644f4336ea61d30802b4e6a740b8fa39893128",
+  "n_entries": 341,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 127,
+    "open": 129,
     "partial": 5
   },
   "active": [
@@ -1883,6 +1883,40 @@
         "OQ-66",
         "OQ-109",
         "OQ-326"
+      ]
+    },
+    {
+      "id": "OQ-340",
+      "status": "open",
+      "priority": 2,
+      "summary": "Did OQ-112 round-3's PC3 contrast arm ever run? It retracts RULE-bearing templates, so its zero diff may be a no-op",
+      "deps": [
+        "splits_from OQ-326"
+      ],
+      "cross_refs": [
+        "OQ-326",
+        "OQ-341"
+      ],
+      "mentioned_in": [
+        "OQ-112",
+        "OQ-326",
+        "OQ-339",
+        "OQ-341"
+      ]
+    },
+    {
+      "id": "OQ-341",
+      "status": "open",
+      "priority": 2,
+      "summary": "The Phase-1 overlay census does not reconcile with its own raw output: ~13 sites dropped between the extractor and the published table",
+      "deps": [
+        "splits_from OQ-326"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-306",
+        "OQ-326",
+        "OQ-340"
       ]
     }
   ],
@@ -4816,7 +4850,9 @@
         "OQ-66",
         "OQ-96",
         "OQ-302",
-        "OQ-339"
+        "OQ-339",
+        "OQ-340",
+        "OQ-341"
       ]
     },
     {

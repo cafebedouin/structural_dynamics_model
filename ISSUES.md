@@ -8184,6 +8184,114 @@ path); OQ-66 (the sibling shape: an engine read that FAILS SOFT and is mapped to
 
 ---
 
+## OQ-340 — Did OQ-112 round-3's PC3 contrast arm ever run? It retracts RULE-bearing templates, so its zero diff may be a no-op
+
+**Ω-type:** Ω_E (mechanically checkable — re-run the arm against a correctly-overlaid program and
+compare).
+
+**Status:** open — minted 2026-08-21 from the OQ-326 Phase-2 census.
+**Priority:** 2
+**Deps:** splits_from OQ-326
+**Files:** `audits/2026-06-23_oq112_round3/probe_round0_control.pl:49`, `prolog/drl_core.pl`,
+`prolog/constraint_data.pl`.
+
+**The question is NOT "this probe throws today."** It is **whether PC3's contrast arm ever
+measured anything.** The site retracts
+
+```prolog
+[drl_core:base_extractiveness(C0, _), constraint_data:base_extractiveness(C0, _)]
+```
+
+and both are **RULE-bearing** (`drl_core:base_extractiveness/2` has 2 rule clauses,
+`constraint_data:base_extractiveness/2` has 1). `snapshot/2` collected facts only, so the overlay
+retracted nothing of the rule-derived path, the arm ran against the **unmodified program**, and the
+probe reported its PC3 verdict — *"eps-absence BLOCKS dr_type"* — off a diff that may never have
+been a diff. The Goal only *observes* and prints; it does not fail on a no-op, so nothing in the
+run distinguished a genuine block from a no-op (Axis 1 = **n** in the Phase-2 classification).
+
+**Say it plainly: this is the OQ-326 mechanism landing on a published result, and Phase 1
+concluded it had not happened.** Phase 1's headline was *"no prior audit is voided by the
+rule-clause mechanism"* — true of the 44 sites its published table covered, and **this site was not
+among them** (see OQ-341: the published table does not reconcile with its own raw output, which
+holds 13 more sites). The Phase-2 census evaluated the full 56 and found this one. One voided arm,
+not zero. Cross-ref: `audits/2026-08-21_oq326_overlay_install_witness/WRITEUP.md` §§1, 4.
+
+**Current behaviour, at HEAD** — the strict harness refuses it before mutating:
+
+```
+error(probe_overlay_partial(drl_core:base_extractiveness(ability_ceiling_reading,_),
+                            base_extractiveness(ability_ceiling_reading,_)),
+      probe_harness_install_check)
+```
+
+**Why no wrapper.** OQ-326's rule: a retrofit is legal only when the zero or partial is derivable
+from the committed artifact. Nothing here declares a partial overlay — the probe intends a real
+retraction and does not get one. A wrapper would manufacture greenness after the fact. Left
+throwing, with a pointer comment naming this OQ.
+
+**What resolves it.** (1) Re-run PC3 with an overlay that actually removes the eps path — retract
+the underlying FACT table the rules read (`narrative_ontology:constraint_metric/3`) rather than the
+rule-defined accessors, which is what `a1_probe.pl:87` does correctly. (2) Compare against the
+published PC3 verdict. (3) If it differs, establish what in OQ-112 round 3 depended on it. **Note
+the asymmetry:** if the arm was a no-op, `dr_type` did NOT see an eps-absent program, so a reported
+"BLOCKS" is the outcome a no-op would *also* produce only if `dr_type` fails for an unrelated
+reason — the re-run is the only way to tell, and it is cheap.
+
+**Cross-refs:** OQ-326 (parent), OQ-341 (why this site was outside Phase 1's published table),
+OQ-339 (sibling — the other published finding this census put in question).
+
+---
+
+## OQ-341 — The Phase-1 overlay census does not reconcile with its own raw output: ~13 sites dropped between the extractor and the published table
+
+**Ω-type:** Ω_E (a reconciliation; the raw artifact and the extractor both still exist).
+
+**Status:** open — minted 2026-08-21 from the OQ-326 Phase-2 census.
+**Priority:** 2
+**Deps:** splits_from OQ-326
+**Files:** `audits/2026-08-19_oq302_bound_false_repair/overlay_template_census.md` §§1–2,
+`audits/2026-08-19_oq302_bound_false_repair/overlay_template_census_raw.txt`,
+`audits/2026-08-19_oq302_bound_false_repair/extract_overlay_templates.py`.
+
+**The discrepancy.** The census publishes **44 call sites over 27 files**. Its own
+`overlay_template_census_raw.txt` holds **57** `kind=` matches over **28** files. A 2026-08-21
+re-take with the same script is **byte-identical to that raw** (`diff` clean — a reproduction, and
+a control on the extractor), so the extractor is stable and the gap is between its output and the
+published table. Neither 44 nor 27 reconciles with either reading of the raw: 45 sites carry a
+retract side, 57 are calls, 22 files carry a retract side, 28 files carry a call.
+
+**Why this is an OQ and not a footnote.** A published census that under-reports is a bad witness in
+the direction that matters, and this one is **load-bearing**: OQ-326's Phase 1 concluded *"no prior
+audit is voided by the rule-clause mechanism"* on the strength of that table. Evaluating the full
+56 found one that is (OQ-340). **Nobody knows which direction the error runs**, and
+`extract_overlay_templates.py` is the instrument the project would reach for again — so the
+question is not just "what are the right numbers here" but **whether other censuses built on it
+carry the same gap**.
+
+**A SECOND false-positive shape, unrecorded.** §1 records one way the method can go wrong
+(functor-proximity grep catching **goal-position** predicates — six found, all correctly excluded).
+There is another: **the extractor does not mask comments.** It matched
+`probe_harness:with_retracted` inside the prose header of
+`audits/2026-06-11_oq110_residual_join/backed_semantic_probe.pl:20`, where the text *describes*
+Control C. That one phantom is the whole of the 57 → 56 correction. A re-runner will hit it first,
+and §1 currently tells them there is only one shape to watch for.
+
+**What resolves it.** (1) Recover how 44/27 was derived from a 57-match raw — the arithmetic is not
+in the writeup, and the off-by-one on BOTH axes suggests a systematic exclusion rather than a
+miscount. (2) Add a comment mask to `extract_overlay_templates.py` (a working one exists at
+`audits/2026-08-21_oq326_overlay_install_witness/classify_sites.py`) and record the second
+false-positive shape in §1. (3) Check whether any other audit cites a figure produced by this
+extractor. (4) Amend the census's §2 result line to the reconciled figures with a dated note —
+**the document is point-in-time and is not rewritten**, but a figure cited elsewhere as current
+needs a forward pointer.
+
+**What resolution would change.** Whether the Phase-1 census can be cited at all as a coverage
+claim, and whether *"no prior audit is voided"* was ever true rather than merely true of a subset
+nobody knew was a subset. Cross-ref: Build Discipline *a gating count needs its composition* and
+OQ-306 (the same shape on a denominator).
+
+---
+
 ## OQ-191 — Python toolset physical regrouping (deferred from OQ-163)
 
 **Ω-type:** Ω_E (maintainability — directory layout; trigger-deferred).
@@ -15081,13 +15189,30 @@ fully-general form matches no rule clause, no instantiation of it can. Two-sided
 control, both fired: DETECTS `boltzmann_invariant_mountain/2` (a known rule), DECLINES
 `config:param/2` (184 facts, 0 rules).
 
-**Result: 44 call sites across 27 files; 13 distinct retract-side templates; 12 rule-free.** The
-one rule-bearing template is `constraint_indexing:constraint_classification/3`, used at exactly
-one site — `audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77`. **That site is SAFE,
-checked not assumed:** all 6 rule clauses of that predicate are hard-keyed to the two engine demo
-constraints from `constraint_instances.pl` (`catholic_church_1200`, `property_rights_2025`), and
-the probe's template binds a corpus constraint, so it cannot unify with them. **No prior audit is
-voided by the rule-clause mechanism.**
+**Result AS PUBLISHED: 44 call sites across 27 files; 13 distinct retract-side templates; 12
+rule-free.** ⚠ **THOSE FIGURES DO NOT RECONCILE WITH THEIR OWN RAW ARTIFACT and are superseded —
+see OQ-341.** The reconciled figures, re-derived 2026-08-21 from a re-take that is **byte-identical**
+to the Phase-1 raw output: **56 real call sites over 28 files** (57 extractor matches, one of them a
+comment-position phantom), and **3 rule-bearing retract templates, not 1**
+(`constraint_classification/3` 8 rules, `drl_core:base_extractiveness/2` 2,
+`constraint_data:base_extractiveness/2` 1). Something between the extractor's output and the
+published table dropped ~13 sites; the direction of that error at other call sites of the same
+extractor is unknown, which is why it is an OQ and not a footnote.
+
+The one rule-bearing template Phase 1 DID find is `constraint_indexing:constraint_classification/3`,
+used at exactly one site — `audits/2026-06-07_stakeholder_layer_migration/a1_probe.pl:77`. **That
+site is SAFE, checked not assumed:** all 6 rule clauses of that predicate are hard-keyed to the two
+engine demo constraints from `constraint_instances.pl` (`catholic_church_1200`,
+`property_rights_2025`), and the probe's template binds a corpus constraint, so it cannot unify with
+them. That verdict survives re-checking, and the June install is witnessed in the audit's own
+`AUDIT.md` diff.
+
+**But Phase 1's headline conclusion — "no prior audit is voided by the rule-clause mechanism" — is
+NO LONGER TRUE, and it was already false when written.** The Phase-2 census (2026-08-21) evaluated
+the sites the published table did not cover and found one: `probe_round0_control.pl:49` retracts two
+rule-bearing `base_extractiveness/2` templates as its PC3 contrast arm, so that arm measured the
+unmodified program and reported "eps-absence blocks dr_type" off a zero diff. **The mechanism has
+landed on a published result, once.** Routed to **OQ-340**.
 
 **But the trap is live in the harness's own header.** `probe_harness.pl`'s usage example is
 `with_retracted([constraint_indexing:constraint_classification(_, mountain, context(...))], …)` —
