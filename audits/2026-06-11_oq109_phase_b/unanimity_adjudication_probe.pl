@@ -63,6 +63,15 @@ run :-
     format("~nTEST 2 — seam positive control (synthetic NL story, zero authored cells)~n"),
     config:param(extractiveness_metric_name, EpsName),
     config:param(suppression_metric_name, SuppName),
+    % OQ-339 (2026-08-21) — DELIBERATELY NOT MIGRATED, and this call THROWS at HEAD.
+    % The last fact below targets domain_priors:emerges_naturally/1, which is STATIC,
+    % so assertz raises permission_error from inside apply_overlay/2 — i.e. inside
+    % setup_call_cleanup/3's Setup, so Cleanup never runs and the facts asserted
+    % before it LEAK for the rest of the session. OQ-326's check 5 now refuses this
+    % before any mutation. No retrofit wrapper is written because nothing in this
+    % artifact DECLARES an expected refusal: the site intends to plant a fact and
+    % does not, so a wrapper would manufacture greenness after the fact. The open
+    % question OQ-339 asks first is whether TEST 2 ever ran at all.
     probe_harness:with_asserted(
         [ narrative_ontology:constraint_metric(oq109_seam_nl, EpsName, 0.03),
           narrative_ontology:constraint_metric(oq109_seam_nl, SuppName, 0.04),

@@ -395,6 +395,18 @@ Two ways an in-session override fails, both witnessed building the OQ-22 Hub-1/H
   originally-witnessed OQ-22 starvation regime, χ ceiling 0.15, is no longer reachable through a valid
   config, since it needs `sigmoid_upper < 0.5`.)
 
+> **RESOLVED 2026-08-21 (OQ-326) — READ THIS FIRST.** The silence described below is GONE: the
+> harness now runs six install checks before any mutation and THROWS rather than overlaying
+> nothing (`probe_overlay_unresolvable` / `_partial` / `_empty` / `_shadowed` /
+> `_reach_undecidable` / `_immutable`, in the ruled order 2 → 3 → 1 → 4/4′ → 5). The account below
+> is kept as the mechanism record — it is what the checks are shaped against — but a probe author
+> reading it today will meet a refusal, not a silent no-op. **The standing rule NARROWS, it does
+> not die:** the harness proves the CLAUSES MOVED and that the replacement is reachable at the
+> declared query shape; it does NOT prove the OBSERVABLE changed. So an overlay pair still is not
+> a witness unless the probe asserts, inside the overlay, that the change took effect. Use
+> `with_overlay/4` to paste an install witness alongside that assertion.
+> Census + implementation: `audits/2026-08-21_oq326_overlay_install_witness/`.
+
 - **`with_overlay/3` is FACT-ONLY, and on a RULE clause it fails SILENTLY — the worse sibling of the
   bullet above** (OQ-302, 2026-08-19; `audits/2026-08-19_oq302_bound_false_repair/`). The static-
   predicate case at least *throws*. This one does not. `snapshot/2` collects

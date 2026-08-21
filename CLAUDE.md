@@ -329,18 +329,21 @@ do not fold `trajectory` back into the parallel `tasks` list.
 - In-session overlay probes: use `probe_harness:with_retracted/2` / `with_overlay/3`
   (snapshot-first, verified restore, automatic cache clearing via
   `cache_registry:clear_all_caches/0`) instead of hand-rolled retract/assert — see
-  `swipl_load_path_and_probe_gotchas.md` §§2–4, 7. **But it CANNOT REPORT THAT IT OVERLAID
-  NOTHING, and a rule clause is the common way that happens (OQ-302 → OQ-326, 2026-08-19):**
-  `snapshot/2` collects only `clause(M:T, true)`, so a template matching a RULE retracts nothing
-  and merely WARNS, and your asserted facts land *after* the original clauses — a cut-ordered
-  predicate still dispatches to its first clause and the "counterfactual" arm measures the
-  **unmodified program**. Both arms come back identical with no error, which is indistinguishable
-  from a genuine behaviour-preserving result. An empty snapshot for ANY reason (undefined
-  predicate, wrong arity, unloaded corpus, absent id) does the same. **The harness verifies
-  RESTORE; nothing verifies INSTALL — so an overlay pair is not a witness unless the probe itself
-  asserts, inside the overlay, that the change took effect.** (Static predicates additionally
-  throw on `assertz`; that failure is loud, this one is not.) Substitute idioms and the retroactive
-  census: gotchas §12, OQ-326.
+  `swipl_load_path_and_probe_gotchas.md` §§2–4, 7. **The harness NOW REFUSES rather than
+  silently overlaying nothing (OQ-326 RESOLVED 2026-08-21) — six checks run BEFORE the single
+  mutation point,** in the ruled order 2 → 3 → 1 → 4/4′ → 5: template resolvable, no rule clause
+  matched, per-template snapshot non-empty, replacement reachable at TEMPLATE shape, reachability
+  decidable at all, target dynamic. Checks 2 and 5 have **no escape**; the rest are suppressed
+  only by a dated, greppable wrapper at the call site (`expect_empty` / `allow_partial` /
+  `allow_shadowed` / `reach_undeclared`, each carrying `retrofit(Date,Text)` or `authored(Text)`,
+  each suppressing ITS OWN clause only). Gate row **`probe harness`** keeps the suite enforced.
+  **Two things a new probe author must know.** A bare `with_asserted/2` now THROWS
+  `probe_overlay_reach_undecidable` — an empty template list means no declared query shape, so
+  reachability is undecidable, and the migration is `reach_undeclared`, never `allow_shadowed`.
+  And **structural install is still not semantic effect**: the checks prove the clauses moved and
+  that the replacement is reachable at the declared query shape, NOT that the observable changed —
+  so a probe still owes its own assertion inside the overlay (`oq110`'s Control C is the model).
+  Use `with_overlay/4` to paste an install witness. Detail: gotchas §12, OQ-326.
 - **New Claude API call sites: route through `agent/llm_call.py` `call()` (or reuse its
   `sampling_overrides`).** Sonnet 5/Opus 4.7+ reject non-default `temperature` (loud 400), but
   Sonnet 5 runs ADAPTIVE thinking when the field is omitted — silently spending `max_tokens` on

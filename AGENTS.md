@@ -1141,17 +1141,41 @@ automatic cache clearing via `cache_registry:clear_all_caches/0`) instead of han
 retract/assert. Corpus membership/denominator: enumerate `corpus_loader:corpus_constraint/1`.
 Tests: `cd prolog && swipl -g "[stack], [tests/test_probe_harness], run_tests, halt" -t "halt(1)"`.
 
-**IT CANNOT REPORT THAT IT OVERLAID NOTHING (OQ-302 → OQ-326, 2026-08-19).** `snapshot/2`
-collects `clause(M:Inst, true)` only, so a template matching a RULE retracts nothing and
-`warn_if_rule_clauses/1` merely WARNS; the facts you assert land *after* the original clauses, so a
-cut-ordered predicate still dispatches to its first clause and the "counterfactual" arm measures the
-**unmodified program** — both arms identical, no error, indistinguishable from a genuine
-behaviour-preserving result. An empty snapshot for any other reason (undefined predicate, wrong
-arity, unloaded corpus, absent id) is equally silent. **The harness verifies RESTORE; nothing
-verifies INSTALL** — so an overlay pair is not a witness unless the probe asserts, inside the
-overlay, that the change took effect (`oq110`'s Control C is the model: it asserts the flip
-*disappears* under retraction). Static predicates additionally throw on `assertz`; that failure is
-loud, this one is not.
+**IT NOW REPORTS THAT IT OVERLAID NOTHING (OQ-326 RESOLVED 2026-08-21).** Until 2026-08-21 the
+harness verified RESTORE and nothing verified INSTALL: a template matching a RULE — or an
+undefined predicate, a wrong arity, an unloaded corpus, an absent id — retracted nothing, warned at
+most, and the asserted facts landed *after* the original clauses, so the "counterfactual" arm
+measured the unmodified program and both arms came back identical with no error.
+
+Six checks now run BEFORE the single mutation point (nothing throws past it, because
+`setup_call_cleanup/3` registers Cleanup only once Setup succeeds), in the ruled order
+**2 → 3 → 1 → 4/4′ → 5**:
+
+| # | check | throw | escape |
+|---|---|---|---|
+| 2 | template resolvable | `probe_overlay_unresolvable/2` | none — always a defect |
+| 3 | no RULE clause matched | `probe_overlay_partial/2` | `allow_partial` |
+| 1 | per-template snapshot non-empty | `probe_overlay_empty/1` | `expect_empty` (an empty template LIST stays legal) |
+| 4 | replacement reachable at TEMPLATE shape | `probe_overlay_shadowed/3` | `allow_shadowed` |
+| 4′ | reachability decidable at all | `probe_overlay_reach_undecidable/1` | `reach_undeclared` (uncovered facts only) |
+| 5 | target dynamic | `probe_overlay_immutable/1` | none — always a defect |
+
+Check 2 is TEMPLATES ONLY: `assertz` into an undefined predicate is legal and creates it dynamic,
+which is the ordinary fixture-planting idiom. Check 5 covers BOTH sides but guards on *defined*
+first, for the same reason. Every escape carries `retrofit(Date,Text)` or `authored(Text)` —
+anything else is a type error — suppresses ITS OWN clause only, and no combination clears 2 or 5.
+
+**A bare `with_asserted/2` now throws `probe_overlay_reach_undecidable`**: no template means no
+declared query shape, so reachability has no ground. Migrate with `reach_undeclared`, never
+`allow_shadowed` (that one means "I checked and accept the shadowing"; these sites never had a
+check to accept).
+
+**Still true, and narrowed rather than retired:** structural install is NOT semantic effect. The
+checks prove the clauses moved and that the replacement is reachable at the declared query shape;
+they do not prove the observable changed. A probe still owes its own assertion inside the overlay
+(`oq110`'s Control C is the model: it asserts the flip *disappears* under retraction and fails
+loudly if it survives). `with_overlay/4` returns `overlay_report/4` so that assertion can paste an
+install witness. Gate row: `probe harness`.
 
 Retroactive census (OQ-326 Phase 1, DONE): 44 call sites / 27 files / 13 distinct retract-side
 templates; 12 rule-free, 1 rule-bearing

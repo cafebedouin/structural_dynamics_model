@@ -45,6 +45,87 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-21 — [tripwire] OQ-326 RESOLVED: `probe_harness` now REFUSES instead of overlaying nothing — and a bare `with_asserted/2` throws
+**Files:** prolog/probe_harness.pl, prolog/tests/test_probe_harness.pl, python/probe_harness_gate.py, scripts/gate.sh, docs/technical/swipl_load_path_and_probe_gotchas.md, CLAUDE.md, AGENTS.md, ISSUES.md, prolog/probe_oq190_edge_admission.pl, audits/2026-08-21_oq326_overlay_install_witness/
+**Tier:** tripwire
+
+**The tripwire, for anyone writing or re-running an overlay probe.** `with_overlay/3` verified
+RESTORE and nothing verified INSTALL; it now runs **six checks before the single mutation point**
+in the ruled order **2 → 3 → 1 → 4/4′ → 5** and THROWS rather than silently measuring the
+unmutated program. Three things will surprise a probe author:
+
+1. **A bare `with_asserted/2` now throws `probe_overlay_reach_undecidable`.** An empty template
+   list means there is no declared query shape, so reachability has no ground to be decided on.
+   The migration is `reach_undeclared(retrofit(Date,Text)|authored(Text), M:F)` — **never
+   `allow_shadowed`**, which means "I checked and accept the shadowing"; these sites never had a
+   check to accept. 13 of the 15 committed wrappers are this class.
+2. **Escapes suppress their OWN clause only, and nothing clears checks 2 or 5.** A static
+   rule-bearing target consumes `allow_partial`, then `expect_empty`, and still throws
+   `probe_overlay_immutable`. Escapes NEST (`allow_partial(R1, expect_empty(R2, M:T))`) and a
+   malformed `Reason` is a type error, so the provenance bit cannot be dropped.
+3. **`schema`-style silence is gone but SEMANTIC silence is not.** The checks prove the clauses
+   MOVED and that the replacement is reachable at the declared query shape. They do NOT prove the
+   observable changed. The standing rule NARROWS rather than dying: a probe still owes its own
+   assertion inside the overlay. `with_overlay/4` returns `overlay_report/4` so it can paste one.
+
+**Check 2 is TEMPLATES ONLY, and check 5 guards on DEFINED first — both non-obvious, both ruled.**
+`assertz` into an *undefined* predicate is **legal and creates it dynamic**; that is the ordinary
+fixture-planting idiom and 7 committed sites use it. Extending check 2 to the assert side would
+have thrown "always a defect, no escape" on all 7. Extending check 5 naively does the same thing by
+a different route, because `predicate_property/2` **fails** for an undefined predicate and would
+read *undefined* as *static*. The second was caught by a written blast-radius enumeration BEFORE
+any code existed (`audits/2026-08-21_oq326_overlay_install_witness/BLAST_RADIUS.md`), which is the
+countermeasure the plan installed after four review rounds found the same untraced-amendment shape
+four times.
+
+**A binding leak that made the documented mechanism incomplete.** `warn_if_rule_clauses/1` called
+`clause(M:T, Body)` on the caller's own term inside an if-then-else **condition** with no
+`copy_term`. When the warning fired, the template came back **bound to the rule head**, and
+`snapshot/2` — next, on the same term — collected only facts unifying with that head. So the
+mechanism was not only "retracts nothing"; it **also silently narrowed the retract side**. Replaced
+by `rule_clauses/2` and pinned by a regression test.
+
+**Check 4 is UNREACHABLE — as a consequence of check ORDER, not of the leak.** Check 3 removes rule
+clauses and check 1 removes empty snapshots, so what reaches check 4 is a fact-only predicate whose
+template-matching facts were all snapshotted. Read it as *unreachable GIVEN checks 1 and 3 in the
+ruled order*, **never as "unnecessary"** — reorder and it becomes reachable. Because the property
+depends on decisions elsewhere in the file it is **pinned by a test, not prose**: narrow the
+snapshot artificially and check 4 MUST fire (test `c4_guard_property_fires_on_narrowed_snapshot`).
+That test failing is the named signal that snapshot completeness or check ordering regressed.
+
+**Census corrections that matter when citing Phase 1.** The published *44 sites / 27 files* does not
+reconcile with its own raw artifact (**57 matches over 28 files**, and the 2026-08-21 re-take is
+byte-identical to it). One of the 57 is a **comment-position phantom** — the extractor does not mask
+comments and matched the call inside a prose header — which is a SECOND false-positive shape its
+census §1 does not record. Real figure: **56 sites over 28 files, 20 of which would throw**.
+Rule-bearing retract templates are **3, not 1**.
+
+**A live state-corruption site, now OQ-339.** `unanimity_adjudication_probe.pl:66` asserts into the
+static `domain_priors:emerges_naturally/1`, raising `permission_error` from inside
+`setup_call_cleanup/3`'s Setup — so Cleanup never runs and the facts asserted before it **leak for
+the rest of the session**. Left deliberately throwing with a pointer comment; no wrapper, because
+nothing in the artifact declares an expected refusal. OQ-339's opening question is whether OQ-109
+Phase B's Test 2 seam control **ever ran**.
+
+**Two cautions for re-running any historic probe.** (a) **Evaluate under the load chain the probe
+itself declares** — four of this census's own first-pass verdicts were evaluation-chain artifacts
+(three `cs_authority_grounding/2` sites and one `cs_axiom/3` site are clean because their probes
+declare the field dynamic; `maxent_dist/3` reads `facts=0` only because MaxEnt is unfitted under
+`[stack]`, OQ-66). (b) **"Would throw today" conflates a probe defect with CORPUS DRIFT.**
+`a1_probe.pl:77` demonstrably installed in June (`AUDIT.md` records the `< snare` / `> mountain`
+diff) yet would throw `probe_overlay_empty` today, because
+`constraint_indexing:constraint_classification/3` now has **zero** fact clauses corpus-wide — 258
+live testsets declare it `multifile` and none author it. A retrofit written on today's reading
+would encode a corpus fact as a probe property; none was written.
+
+Gate row **`probe harness`** (`python/probe_harness_gate.py`) parses the EXECUTED test count and is
+RED on zero — a bare `run … swipl …` row exits 0 when the suite loads no tests, which is clause 1
+reappearing one layer up. RED, never skip, when swipl is unavailable (OQ-96). Verified two-sided
+against a deliberately broken test. Cost ~0.25s on a ~50s gate. Commits `2ef0f92e` (census),
+`c8baf01b` (harness), `1e09ec8c` (migration), `297c9bc7` (gate row).
+
+---
+
 ## 2026-08-21 — [tripwire] OQ-306 RESOLVED: `n_constraints` counts MEMBERS not stories, and the non-story stratum can grow with NO COMMIT
 **Files:** python/run_pipeline.py, prolog/json_report.pl, prolog/corpus_loader.pl, python/corpus_census_check.py, python/corpus_census_baseline.json, python/shared/corpus_legs.py, python/module_boundary_check.py, python/audits/twin_comparison.py, scripts/gate.sh, prolog/drl_core.pl, prolog/module_boundary_allowlist.txt, ISSUES.md
 **Tier:** tripwire

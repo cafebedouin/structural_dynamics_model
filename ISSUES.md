@@ -8027,6 +8027,17 @@ cost meter's whole purpose is that a loop living inside planning spends invisibl
 can vanish defeats it precisely when it matters. Two-for-two on observed attempts is not a
 reliability figure worth defending.
 
+**A THIRD append failure, 2026-08-21, and a DIFFERENT mechanism — id COLLISION, not a blocked
+write.** The OQ-326 plan's executor prompt instructed its executor to append a row for run-id
+`2026-08-21-1`, stating as verified substrate (S18) that no such row existed. One did: the row this
+entry's second instance registered retroactively, hours earlier, for a **different target**
+(OQ-306). Executed as written, the ledger would have carried two targets under one id. Caught only
+because the executor re-derived S18 instead of trusting it, and ruled to `2026-08-21-2` with the
+reassignment noted in-row. **This sharpens (1) below:** ids are claimed at EXECUTION time from a
+planner-supplied block with no allocation step and no collision check, so two sessions planning on
+the same date race **structurally**, and the loser discovers it only when appending. A blocked
+write and a claimed id are different failures with the same silent shape.
+
 **This is the THIRD instance in the OQ-306 arc of one shape: pass recorded, nothing enforces it.**
 The siblings are the vacuous gate selftest control (a green line from a comparison that could not
 fail) and the serialization rule (OQ-338). Whether these three warrant a shared mechanism or three
@@ -8110,6 +8121,66 @@ permit when none is. Add a third — it must not deadlock a single legitimate ru
 
 **Cross-refs:** OQ-306 (parent), OQ-337 (sibling instance), OQ-297 (the HEAD-stamp-pair detection
 rule, which is the same detection-vs-prevention split ruled the other way).
+
+---
+
+## OQ-339 — OQ-109 Phase B's seam positive control asserts into a STATIC predicate: did Test 2 ever run?
+
+**Ω-type:** Ω_E (mechanically checkable — the question is whether a measurement happened, and git
+holds the state that answers it).
+
+**Status:** open — minted 2026-08-21 from the OQ-326 Phase-2 census.
+**Priority:** 2
+**Deps:** splits_from OQ-326
+**Files:** `audits/2026-06-11_oq109_phase_b/unanimity_adjudication_probe.pl:66`,
+`audits/2026-06-11_oq109_phase_b/EXAMPLE_INHERITED_SIGNATURES.md`, `prolog/domain_priors.pl`.
+
+**The finding.** `unanimity_adjudication_probe.pl:66` is TEST 2, the *seam positive control* — a
+synthetic natural-law story with zero authored cells, asserted via `with_asserted/2`. Its 7-fact
+list ends with `domain_priors:emerges_naturally(oq109_seam_nl)`. That predicate is **static** (21
+authored facts) and the probe declares nothing dynamic; it loads only `:- [stack]`. Run at HEAD:
+
+```
+THREW: error(permission_error(modify,static_procedure,domain_priors:emerges_naturally/1),
+             context(system:assertz/1,_276))
+--- post-state (cleanup should have removed ALL of these) ---
+  *** LEAKED: constraint_metric(oq109_seam_nl,...) PERSISTS
+  *** LEAKED: constraint_claim(oq109_seam_nl,...) PERSISTS
+```
+
+Witness: `audits/2026-08-21_oq326_overlay_install_witness/evidence_oq109_leak.txt`.
+
+**Two distinct problems, and the second is the bigger one.**
+
+1. *State corruption.* The throw comes from `apply_overlay/2`, which runs inside
+   `setup_call_cleanup/3`'s **Setup** — and Setup throwing means Cleanup never registers. The facts
+   asserted before the failing one persist for the rest of the session, so every later goal runs
+   against a mutated program with no indication. This is exactly the hazard OQ-326's R2 was ruled
+   against, found live at a committed site rather than hypothetically. **OQ-326's check 5 now
+   converts it into a pre-mutation refusal**, so the corruption path is closed going forward; this
+   OQ is about the published finding, not the harness.
+
+2. **Did Test 2 ever run?** — *the opening question, not a footnote.* If
+   `domain_priors:emerges_naturally/1` was static in June too, the seam positive control **threw
+   rather than measured**, and OQ-109 Phase B's published result rests on a measurement that did
+   not happen. That is a materially larger claim than "this probe throws today". Answer it from git
+   before anything else: when did `emerges_naturally/1` acquire its current declaration, and was
+   the probe ever green? A run that threw at fact 7 of 7 would still have printed TEST 2's earlier
+   output, so a transcript showing *some* Test 2 output is **not** evidence it completed.
+
+**Why this is not a wrapper.** OQ-326's rule: a retrofit wrapper is legal only when the zero or
+partial is **derivable from the committed artifact**. Nothing here declares an expected refusal —
+the site intends to plant a fact and does not. Writing `reach_undeclared` over it would manufacture
+a green-looking probe whose greenness was installed after the fact, which is OQ-326's own class
+moved up a level. So the site is left **throwing**, with a pointer comment naming this OQ.
+
+**What resolves it.** (1) The archaeology above. (2) If Test 2 never ran: what, if anything, of
+OQ-109 Phase B's published conclusion depended on it, and does the `EXAMPLE_INHERITED_SIGNATURES.md`
+discount rule cited in CLAUDE.md survive without it. (3) Whether to repair the probe (declare the
+field dynamic, as `probe_seat_test.pl:17-19` does, and re-run) or retire it as a spent control.
+
+**Cross-refs:** OQ-326 (parent — the census that found it, and the check that closes the corruption
+path); OQ-66 (the sibling shape: an engine read that FAILS SOFT and is mapped to a placeholder).
 
 ---
 
@@ -14969,14 +15040,22 @@ is an ***Unwired ≠ worthless*** adjudication — *what unique product does it 
 **Ω-type:** Ω_E (a census plus a mechanical guard; the resolution operation is measurement, then
 a fail-loud change to the harness).
 
-**Status:** open — Phase 1 (the retroactive census) is DONE and reported below; Phases 2–3 open.
+**Status:** resolved — 2026-08-21. All four pre-registered acceptance clauses are implemented and
+enforcing, joined by two the four did not cover (4′ reachability-undecidable, 5 target-mutable);
+gate row `probe harness` keeps the suite enforced. Two call sites are routed OUT rather than folded
+in (OQ-339 and the a1_probe corpus-drift residue below) — they are findings about published audits,
+not about the harness.
 **Priority:** 2
 **Deps:** splits_from OQ-302
 **Origin:** 2026-08-19, fell out of OQ-302 — a preregistered probe specified `with_overlay/3` to
 install a repaired RULE clause, which the harness cannot do and does not error on
 (`audits/2026-08-19_oq302_bound_false_repair/PREREGISTRATION.md` §0a).
-**Files:** `prolog/probe_harness.pl` (`snapshot/2` `:91–100`, `warn_if_rule_clauses/1` `:80–89`),
-`prolog/tests/test_probe_harness.pl`, `docs/technical/swipl_load_path_and_probe_gotchas.md` §12.
+**Files:** `prolog/probe_harness.pl`, `prolog/tests/test_probe_harness.pl`,
+`python/probe_harness_gate.py`, `scripts/gate.sh`,
+`docs/technical/swipl_load_path_and_probe_gotchas.md` §12,
+`audits/2026-08-21_oq326_overlay_install_witness/`.
+(The `:91–100` / `:80–89` line pins carried here until 2026-08-21 were stale by ~18 lines — the
+predicates sat at `:109` and `:98`. `warn_if_rule_clauses/1` no longer exists.)
 
 **The mechanism.** `with_overlay(Templates, Facts, Goal)` snapshots via `clause(M:Inst, true)` —
 **facts only**. A template naming a RULE-defined predicate matches nothing, retracts nothing, and
@@ -15063,6 +15142,97 @@ now overlays a fact table, and the old text is kept beside it, labelled as the c
 the mechanism spelled out. Left unrepaired it would have re-entered the code every time someone
 followed it (the Pattern-7 sub-shape *the spec can prescribe the defect*), which would have made
 the Phase-1 census a snapshot that began decaying the day it was taken.
+
+**PHASE 2 — the census, DONE 2026-08-21.** `audits/2026-08-21_oq326_overlay_install_witness/`.
+**56 real call sites over 28 files; 20 would throw.** Findings that outrank the count:
+
+- **The Phase-1 headline (44 sites / 27 files) does not reconcile with its own raw artifact**,
+  which holds 57 matches over 28 files — and the 2026-08-21 re-take is **byte-identical** to it
+  (a reproduction, and a control on the extractor). One of the 57 is a **comment-position
+  phantom**: `extract_overlay_templates.py` does not mask comments, and matched
+  `probe_harness:with_retracted` inside the prose header of `backed_semantic_probe.pl:20`. That is
+  a SECOND false-positive shape its census §1 does not record (it records only goal-position), and
+  it is the whole of the off-by-one.
+- **Rule-bearing retract templates are 3, not 1**: `constraint_classification/3` (8 rules, and
+  **0 fact clauses on today's corpus**), `drl_core:base_extractiveness/2` (2), and
+  `constraint_data:base_extractiveness/2` (1).
+- **`audits/2026-06-11_oq109_phase_b/unanimity_adjudication_probe.pl:66` does not merely *would*-
+  throw — it throws TODAY and LEAKS.** `assertz` into the static `domain_priors:emerges_naturally/1`
+  raises `permission_error` from inside `apply_overlay/2`, which runs inside
+  `setup_call_cleanup/3`'s **Setup**, so Cleanup never registers and the facts asserted before the
+  failing one persist for the rest of the session. Routed to **OQ-339**.
+- **Four of the census's own first-pass verdicts were EVALUATION-CHAIN ARTIFACTS**, not site
+  properties: three `cs_authority_grounding/2` sites and one `cs_axiom/3` site are clean under the
+  chains their probes declare (`probe_seat_test.pl:17-19` declares the field dynamic before corpus
+  load, and says why), and `maxent_dist/3` reads `facts=0` only because MaxEnt is unfitted under
+  `[stack]` (OQ-66). The "run under the load chain the probe itself declares" rule earned its keep.
+
+**PHASE 3 — the harness change, LANDED 2026-08-21** (`c8baf01b`, `1e09ec8c`, `297c9bc7`).
+Six checks run **before the single mutation point**, in the ruled order **2 → 3 → 1 → 4/4′ → 5**.
+Suite 10 → 47 tests, two-sided per check, all passing; gate row `probe harness` (RED on zero tests
+executed, RED — never skip — when swipl is unavailable), verified two-sided against a deliberately
+broken test. Candidate (a) from below shipped as `with_overlay/4` returning `overlay_report/4`;
+(b) shipped as check 3 with `allow_partial` as its declared opt-out and
+`print_message(warning, …)` **removed** rather than kept alongside; (c) is check 1.
+
+**A defect fixed in the same change, found during planning and re-witnessed at execution:**
+`warn_if_rule_clauses/1` called `clause(M:T, Body)` on the caller's own term inside an
+if-then-else **condition**, with no `copy_term`. When the warning fired, the caller's template came
+back **bound to the rule head**, and `snapshot/2` — called next, on the same term — then collected
+only facts unifying with that head. So the documented mechanism ("retracts nothing") was
+incomplete: the real one **also silently NARROWED the retract side**. Replaced by `rule_clauses/2`,
+which copies throughout and never binds the caller's term; pinned by a regression test.
+
+**Check 4 is currently UNREACHABLE, and that is a fact about check ORDER, not about the leak.**
+Check 3 has already rejected rule clauses and check 1 empty snapshots, so what reaches check 4 is a
+fact-only predicate whose template-matching facts were **all** snapshotted — and nothing
+template-shaped survives. (An earlier draft attributed this to the binding leak; the leak is
+UPSTREAM, one way snapshot completeness failed.) Since the property depends on decisions elsewhere
+in the same file, it is **pinned by a test rather than asserted in prose**: narrow the snapshot
+artificially and check 4 MUST fire. That test failing is the named signal that snapshot
+completeness or check ordering has regressed. Ruled (operator, 2026-08-21): check 4 ships
+**implemented and enforcing** as a standing guard — read "unreachable" as *given checks 1 and 3 in
+the ruled order*, **never as "unnecessary."**
+
+**Two amendments to the plan's own criterion, both ruled 2026-08-21:**
+1. **Check 2 applies to TEMPLATES ONLY.** The plan extended checks 2 and 5 to the assert side on
+   one shared rationale (the verified `permission_error`). That rationale justifies check 5 only:
+   `assertz` into an *undefined* predicate is **legal and creates it dynamic**, which is the
+   ordinary fixture-planting idiom — 7 committed sites use it. Applied to Facts, check 2 would
+   have thrown `probe_overlay_unresolvable` ("always a defect, no escape") on all 7. F7 conflated
+   two checks that shared a code location but not a rationale.
+2. **Check 5 on the assert side guards on DEFINED first**, because `predicate_property/2` *fails*
+   for an undefined predicate and would otherwise read "undefined" as "static" — re-creating,
+   through check 5, the defect that keeping check 2 off the assert side was meant to avoid. Caught
+   by the mandatory blast-radius enumeration BEFORE any code was written
+   (`audits/2026-08-21_oq326_overlay_install_witness/BLAST_RADIUS.md`).
+
+**Discrimination record — naturally-arising, both directions, exit 0:**
+POSITIVE `boltzmann_compliance:boltzmann_invariant_mountain/2` (the OQ-302 preregistration's own
+template — a real defective specification nobody authored to be caught) throws the **clause-3**
+term `probe_overlay_partial`, which pins the ruled precedence: three of its properties
+(rule-bearing, fact-empty, static) each map to a different throw and only the ORDER decides which
+reports. NEGATIVE `a1_probe.pl:87`'s `constraint_metric` overlay declines and installs, reporting
+`overlay_report(1,1,[t(...,1)],[reach(...,checked(...))])`.
+
+**Migration: 15 dated wrappers across 8 files** — 13 `reach_undeclared` (the 4′ class: sites that
+assert with no retract template, throwing by construction, one already-ruled migration) and 2
+`expect_empty` on `probe_oq190_edge_admission.pl`, which is a DIFFERENT class: that probe already
+implements this OQ's distinction by hand (`run_edge/5` routes `PresN =:= 0` to
+`Why = source_absent_on_this_corpus`, with a control arm catching
+`probe_broken_control_also_zero`), so the artifact declares its own zero. The `oq35` null control
+is deliberately NOT migrated: `with_retracted([], ...)` has an empty template list AND no facts,
+which is clean by construction.
+
+**RESIDUE — Axis 2 answers "would throw if re-run TODAY", which for historic sites conflates a
+probe defect with CORPUS DRIFT.** `a1_probe.pl:77` is the witness: its overlay demonstrably
+INSTALLED in June (`AUDIT.md` records the diff `< AUTHORED_PERSP snare` / `> ... mountain`), yet
+today `constraint_indexing:constraint_classification/3` has **zero** fact clauses corpus-wide —
+258 live testsets declare it `multifile` and none author it — so a re-run would throw
+`probe_overlay_empty`. The site is clean; the corpus moved. **A retrofit wrapper written on
+today's reading would encode a corpus fact as a probe property**, so none was written. Not
+resolvable by re-reading: the June corpus is gone. This is a third category the plan's two-way
+intent test does not cover, and it is declared rather than decided.
 
 **What resolution would change.** Whether "clean-vs-edited pair, zero diff" from any
 overlay-based probe is admissible as a witness without an accompanying install assertion. Right

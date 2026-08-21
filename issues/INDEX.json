@@ -1,18 +1,18 @@
 {
   "manifest": {
-    "store_version": "e29a1f77daa2083a2dfd7b333c84b6cfda3e7408",
+    "store_version": "297c9bc7c8ecbd615e2420ffbb918f225d6e4ecb",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-21T11:42:16"
+    "generated_at": "2026-08-21T12:41:20"
   },
-  "issues_sha": "7d9bff1f56e023ac844dac8f1b9ea852fa7437b0de2029058ad800aaddeac259",
-  "n_entries": 338,
+  "issues_sha": "1247b7a8e5663bc58cc760466b15cd386b24f7fb71a739471246222ee68f1950",
+  "n_entries": 339,
   "active_token_set": [
     "investigating",
     "open",
     "partial"
   ],
   "per_status": {
-    "resolved": 169,
+    "resolved": 170,
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
@@ -1714,20 +1714,6 @@
       ]
     },
     {
-      "id": "OQ-326",
-      "status": "open",
-      "priority": 2,
-      "summary": "`probe_harness:with_overlay/3` cannot report that it overlaid NOTHING: a silent-no-op class that voids the arm it was meant to create",
-      "deps": [
-        "splits_from OQ-302"
-      ],
-      "cross_refs": [],
-      "mentioned_in": [
-        "OQ-96",
-        "OQ-302"
-      ]
-    },
-    {
       "id": "OQ-327",
       "status": "open",
       "priority": 3,
@@ -1859,6 +1845,7 @@
       "mentioned_in": [
         "OQ-276",
         "OQ-306",
+        "OQ-326",
         "OQ-338"
       ]
     },
@@ -1879,6 +1866,23 @@
         "OQ-297",
         "OQ-306",
         "OQ-337"
+      ]
+    },
+    {
+      "id": "OQ-339",
+      "status": "open",
+      "priority": 2,
+      "summary": "OQ-109 Phase B's seam positive control asserts into a STATIC predicate: did Test 2 ever run?",
+      "deps": [
+        "splits_from OQ-326"
+      ],
+      "cross_refs": [
+        "OQ-326"
+      ],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-109",
+        "OQ-326"
       ]
     }
   ],
@@ -4797,6 +4801,22 @@
       "cross_refs": [],
       "mentioned_in": [
         "OQ-311"
+      ]
+    },
+    {
+      "id": "OQ-326",
+      "status": "resolved",
+      "priority": 2,
+      "summary": "`probe_harness:with_overlay/3` cannot report that it overlaid NOTHING: a silent-no-op class that voids the arm it was meant to create",
+      "deps": [
+        "splits_from OQ-302"
+      ],
+      "cross_refs": [],
+      "mentioned_in": [
+        "OQ-66",
+        "OQ-96",
+        "OQ-302",
+        "OQ-339"
       ]
     },
     {
