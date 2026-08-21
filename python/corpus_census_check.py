@@ -2,8 +2,11 @@
 """corpus_census_check.py — gate row `corpus census` (OQ-306).
 
 Guards the SHARE OVER TIME of non-story members, which is the thing that
-actually went wrong. The `*_contradictions.pl` stratum grew 5 -> 22 -> 26 -> 27
-inside `manifest.n_constraints` with nothing going red. A *growing* contaminant
+actually went wrong. The `*_contradictions.pl` stratum grew 9 -> 26 on disk
+(live census 2026-07-02 -> filing 2026-08-17; 27 today) inside
+`manifest.n_constraints` with nothing going red. COUNT IT LIVE, NEVER FROM GIT:
+git tracked 4 of those 9, and its tracking series (4 -> 5 -> 22 -> 26) reads like
+growth while recording only when files were COMMITTED. A *growing* contaminant
 does not bias a rate by a constant — it silently rewrites a time series, so
 historical rates stop being comparable to current ones even when each was
 correct when computed. Presence was never the defect; unwatched growth was.

@@ -8003,6 +8003,92 @@ audit_log.md, stratum_series.txt, rb_skew_rederived.txt, load-time timings).
 
 ---
 
+## OQ-337 — Ledger appends that fail SILENTLY: two blocked registrations to `plan-review/RUNS.md`, and nothing notices
+
+**Ω-type:** Ω_E (a mechanism gap — whether a required append happened is checkable).
+
+**Status:** open — minted 2026-08-21 from the OQ-306 close.
+**Priority:** 3
+**Deps:** splits_from OQ-306
+
+**Origin.** `.claude/skills/plan-review/RUNS.md` has had **two** appends fail without anything
+going red. The first is recorded in the file's own head note (the planning session's Phase-3
+append was blocked by plan mode, and the row was written later by the plan's executor from
+supplied values). The second is OQ-306's: the plan's executor prompt referenced run-id
+`2026-08-21-1` **as though already registered**, and it was not — caught only because the plan
+carried a P10 instruction to REPORT an absent row rather than mint one. Registered retroactively
+2026-08-21 by operator ruling, with the unreconstructible columns marked `UNRECORDED` rather than
+estimated.
+
+**Why it is worth an OQ rather than a note.** A registration that fails silently produces exactly
+the state OQ-306 exists to prevent, one level up: **the ledger reads as a complete record of runs
+while a run is missing from it**, and the absence is indistinguishable from "no run happened". The
+cost meter's whole purpose is that a loop living inside planning spends invisibly — an append that
+can vanish defeats it precisely when it matters. Two-for-two on observed attempts is not a
+reliability figure worth defending.
+
+**This is the THIRD instance in the OQ-306 arc of one shape: pass recorded, nothing enforces it.**
+The siblings are the vacuous gate selftest control (a green line from a comparison that could not
+fail) and the serialization rule (OQ-338). Whether these three warrant a shared mechanism or three
+local ones is the open question, not a foregone conclusion.
+
+**What resolves it.** (1) Decide whether the append is the AUTHOR's obligation or the harness's —
+if a session can be blocked from writing, an obligation placed on it is unenforceable by
+construction. (2) If it stays an obligation, give it a checkable consequence: a run-id referenced
+by an executor prompt with no matching row should fail something. (3) Do NOT reach for a gate row
+reflexively — `RUNS.md` lives under `.claude/`, which is machine-local except for
+`settings.json`, so a repo gate cannot see it on a fresh clone. That constraint is the interesting
+part of the problem.
+
+**Control burden.** Any detector owes a two-sided control: it must fire on a referenced-but-absent
+run-id and DECLINE on a correctly registered one. Both cases are naturally available today — the
+file now holds one retroactively-registered row and one originally-registered row.
+
+**Cross-refs:** OQ-306 (parent), OQ-338 (sibling instance), OQ-276 (the apparatus-instrument line).
+
+---
+
+## OQ-338 — The serialization rule has no mechanism: "one pipeline at a time" is prose, and an empty `pgrep` is not a witness
+
+**Ω-type:** Ω_E (a mechanism gap).
+
+**Status:** open — minted 2026-08-21 from the OQ-306 close.
+**Priority:** 3
+**Deps:** splits_from OQ-306
+
+**Origin.** CLAUDE.md carries "Never run two pipelines or topic runs concurrently against the
+shared `prolog/testsets/` + `outputs/` — serialize them." During OQ-306's execution the executor
+violated it anyway, running two `classify_corpus` jobs against the shared
+`pipeline_output.raw.json`.
+
+**The mechanism of the violation is the point, not the violation.** The executor polled
+`pgrep -f "classify_corpus\|run_pipeline\|swipl"`, read an empty result as "the previous run
+finished", and launched a second — but the Python parent had not yet spawned its swipl child.
+**An empty `pgrep` is a fact about when you looked, not about what is running**, and a poll issued
+before the child spawns is byte-identical to a poll issued after it exits. That is the
+didn't-look/measured-empty collapse (Pattern 6) applied to process state, committed while fixing
+the same shape in a corpus denominator.
+
+**Why prose did not prevent it.** The rule is correct, was known, and was cited by the executor in
+the same session. What was missing is that **nothing refuses**. Every subsequent run in that
+session carried an ad-hoc guard (`if pgrep -x swipl; then exit 1`), which worked — but it lives in
+shell history, not in the repo, so it protects exactly one session.
+
+**What resolves it.** A refusal at the point of launch rather than a rule at the point of reading:
+`run_pipeline.py` / `classify_corpus` refuse to start when another instance holds the shared
+artifacts. A lockfile is the obvious shape and carries the obvious hazard — a stale lock after a
+crash is worse than no lock if it cannot be cleared or does not expire. **Note the asymmetry that
+makes this tractable:** the failure is not silent in its EFFECT (racing runs corrupt or lose the
+artifact), only in its ONSET, so a guard that fires at launch does not need to be clever.
+
+**Control burden.** Two-sided and both sides cheap: the guard must refuse while a run is live and
+permit when none is. Add a third — it must not deadlock a single legitimate run against itself.
+
+**Cross-refs:** OQ-306 (parent), OQ-337 (sibling instance), OQ-297 (the HEAD-stamp-pair detection
+rule, which is the same detection-vs-prevention split ruled the other way).
+
+---
+
 ## OQ-191 — Python toolset physical regrouping (deferred from OQ-163)
 
 **Ω-type:** Ω_E (maintainability — directory layout; trigger-deferred).

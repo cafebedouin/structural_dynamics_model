@@ -1,11 +1,11 @@
 {
   "manifest": {
-    "store_version": "cf5686971d06594efe6c8d21327438d8da5ec767",
+    "store_version": "885151b61f891238a830f1c37b9b273a0f789959",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-21T11:29:59"
+    "generated_at": "2026-08-21T11:39:38"
   },
-  "issues_sha": "09e1f53b5a7468ce86c9a6d049576189013d07ed7d0ccf34bd1091483d379ce5",
-  "n_entries": 336,
+  "issues_sha": "6c3e3203e4be3c66681e0ad9830ea3f69b5fc8ac60d912bc7b7c739f3e5c2f87",
+  "n_entries": 338,
   "active_token_set": [
     "investigating",
     "open",
@@ -16,7 +16,7 @@
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 125,
+    "open": 127,
     "partial": 5
   },
   "active": [
@@ -1841,6 +1841,44 @@
       "mentioned_in": [
         "OQ-227",
         "OQ-265"
+      ]
+    },
+    {
+      "id": "OQ-337",
+      "status": "open",
+      "priority": 3,
+      "summary": "Ledger appends that fail SILENTLY: two blocked registrations to `plan-review/RUNS.md`, and nothing notices",
+      "deps": [
+        "splits_from OQ-306"
+      ],
+      "cross_refs": [
+        "OQ-276",
+        "OQ-306",
+        "OQ-338"
+      ],
+      "mentioned_in": [
+        "OQ-276",
+        "OQ-306",
+        "OQ-338"
+      ]
+    },
+    {
+      "id": "OQ-338",
+      "status": "open",
+      "priority": 3,
+      "summary": "The serialization rule has no mechanism: \"one pipeline at a time\" is prose, and an empty `pgrep` is not a witness",
+      "deps": [
+        "splits_from OQ-306"
+      ],
+      "cross_refs": [
+        "OQ-297",
+        "OQ-306",
+        "OQ-337"
+      ],
+      "mentioned_in": [
+        "OQ-297",
+        "OQ-306",
+        "OQ-337"
       ]
     }
   ],

@@ -122,8 +122,9 @@ run "displaced cites" "$PY" python/pattern_citation_check.py --check
 run "module bounds"  "$PY" python/module_boundary_check.py --check
 
 # OQ-306. Guards the SHARE OVER TIME of non-story corpus members, which is the thing that
-# went wrong: the *_contradictions.pl stratum grew 5 -> 22 -> 26 -> 27 inside
-# manifest.n_constraints with nothing going red. A GROWING contaminant does not bias a rate
+# went wrong: the *_contradictions.pl stratum grew 9 -> 26 on disk (live census
+# 2026-07-02 -> filing 2026-08-17; 27 today) inside manifest.n_constraints with
+# nothing going red. Count it LIVE, never from git — git tracked 4 of those 9. A GROWING contaminant does not bias a rate
 # by a constant, it rewrites a time series, so historical rates silently stop being
 # comparable to current ones. Two arms: totality (any `unknown`/`dual_family` member is RED)
 # and a per-leg stratum pin. Re-pinning is executor-licensed but REQUIRES a recorded cause

@@ -51,9 +51,10 @@
 % answer "is this a STORY", and 27 of the members are *_contradictions.pl axiom
 % meta-files carrying no story content — so every rate computed over the member
 % count is off by that stratum's share. The defect is the GROWTH, not the
-% presence: the stratum went 5 -> 22 -> 26 -> 27 (glob-visible flat counts at
-% f724379d / 543e2f9a / 8c34157f / 2026-08-21) with nothing going red, which
-% silently rewrites a time series rather than biasing it by a constant.
+% presence: the stratum went 9 -> 26 on disk (live census 2026-07-02 -> filing
+% 2026-08-17; 27 today) with nothing going red, which silently rewrites a time
+% series rather than biasing it by a constant. COUNT IT LIVE, NEVER FROM GIT —
+% git tracked 4 of those 9, so its tracking series understates (OQ-306 close).
 %
 % These predicates make the distinction queryable. They REPORT; they do not
 % enforce. Enforcement lives at run_pipeline.py's n_unclassified refusal and

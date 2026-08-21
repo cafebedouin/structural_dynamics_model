@@ -222,6 +222,34 @@ guard is a REFUSAL at launch (`if pgrep -x swipl; then exit 1`), which every sub
 
 ---
 
+## Superseded claims in landed commit messages (history is not rewritten)
+
+Two commit messages carry statements this write-up has since corrected. They are annotated here
+rather than rebased, because the record of what was believed when is itself worth keeping:
+
+- **`dbde6fe5` (C4)** — "Both reconstructed strata match `stratum_series.txt` independently."
+  **Circular**, and now known to be worse than circular: both sides derive from the same git
+  reconstruction, and that reconstruction measures TRACKING events, not on-disk state. The natural
+  pair remains a valid test of the pin arm; it is not corroboration of anything.
+- **`cf568697` (C5)** — "All twelve rulings recorded individually." There are **thirteen**
+  (R1–R3 + R-A..R-J). The substrate is correct — the close records all thirteen as distinct
+  bullets — only the message's count is wrong.
+
+Both belong to the same defect as the gate-count error below: **a number asserted rather than
+counted.**
+
+## A count asserted rather than counted
+
+Three times in this work I published a figure I had not derived: the gate as "27/27" then "28/28"
+(it went **26 → 27**; no row was ever removed, and the row SETS across those runs are identical),
+and "twelve rulings" for thirteen. Each was off by one in the direction of the thing I had just
+added — the tell of incrementing a remembered number instead of counting the output in front of me.
+
+None changed a decision, which is exactly why it is worth recording: this is the residue left when
+the witness discipline is applied to *code* and relaxed for *prose about code*. The pasted gate
+output was always right; the sentence describing it was not. **A number in a summary is a claim and
+owes the same derivation as a number in a report.**
+
 ## Declared residue
 
 - **Discrimination is plant-only** for the growth guard, per Finding 2 and the operator's ruling.
