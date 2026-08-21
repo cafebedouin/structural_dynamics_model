@@ -120,6 +120,16 @@ run "displaced cites" "$PY" python/pattern_citation_check.py --check
 # constant fires on both sides. Arms A and C verified red-capable by plant-and-restore on
 # the live tree. Full record + the ruling: python/module_boundary_check.py docstring.
 run "module bounds"  "$PY" python/module_boundary_check.py --check
+
+# OQ-306. Guards the SHARE OVER TIME of non-story corpus members, which is the thing that
+# went wrong: the *_contradictions.pl stratum grew 5 -> 22 -> 26 -> 27 inside
+# manifest.n_constraints with nothing going red. A GROWING contaminant does not bias a rate
+# by a constant, it rewrites a time series, so historical rates silently stop being
+# comparable to current ones. Two arms: totality (any `unknown`/`dual_family` member is RED)
+# and a per-leg stratum pin. Re-pinning is executor-licensed but REQUIRES a recorded cause
+# and authorizer (R-A) — the stratum demonstrably moves with no commit to point at, so that
+# cause field is the only record such a move will ever have.
+run "corpus census" "$PY" python/corpus_census_check.py --check
 run "claim cites"    "$PY" python/claim_cite_check.py --check
 run "claim cites st" "$PY" python/claim_cite_check.py --selftest
 run "known_state"    "$PY" python/known_state_status.py --check

@@ -1,0 +1,28 @@
+{
+  "_comment": "OQ-306 stratum pin. Per-leg counts of KNOWN non-story kinds. Story counts are deliberately NOT pinned (the corpus grows by design). `unknown` and `dual_family` never appear here \u2014 they are arm-1 REDs, not a stratum. Only the `legs` counts are compared; `provenance` is metadata, so editing a cause note can never turn the gate row red. Cause accepts an orchestrator run or topic identifier, not just a commit hash: the stratum moves without commits (see f32fe86b).",
+  "legs": {
+    "testsets": {
+      "axiom_contradiction": 27
+    },
+    "testsets_haiku": {},
+    "testsets_flash": {},
+    "testsets_kimi": {},
+    "testsets_sonnet": {}
+  },
+  "provenance": [
+    {
+      "cause": "initial pin at OQ-306 C4; live-leg stratum stands at 27 after topic run blind_reviewer_jurisdiction_2026 landed blindness_decomposition_kernel_contradictions.pl (commit 2f73ce34 tracked it; the emitting run f32fe86b did NOT, being cid-scoped)",
+      "authorized_by": "operator ruling R-A, 2026-08-21",
+      "previous": {},
+      "new": {
+        "testsets": {
+          "axiom_contradiction": 27
+        },
+        "testsets_haiku": {},
+        "testsets_flash": {},
+        "testsets_kimi": {},
+        "testsets_sonnet": {}
+      }
+    }
+  ]
+}
