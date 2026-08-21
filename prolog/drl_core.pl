@@ -96,8 +96,8 @@ emerges_naturally(C) :- domain_priors:emerges_naturally(C).
 %  value most mountain-shaped (0 =< mountain_suppression_ceiling 0.15), inside the
 %  central classification path. Now the `unknown` sentinel, same as
 %  get_metric_average/3; the number/1 guard clause at classify_from_metrics/6
-%  fails closed on it. Witnessed unreachable on the live corpus (only the two
-%  non-story cs_axiom_contradiction files lack the scalar, and both fail
+%  fails closed on it. Witnessed unreachable on the live corpus (only the
+%  non-story cs_axiom_contradiction files lack the scalar, and they fail
 %  base_extractiveness/2 first) — this kills the dormant reactivation, it does
 %  not change live output. Archive-overlay sweeps: a constraint without the
 %  scalar now classifies to no type (fail) instead of fabricated-0 types.
