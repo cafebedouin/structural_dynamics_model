@@ -1,0 +1,18 @@
+engine commits present: ['bbce40f', 'f0ef08a']  <-- NOT coherent; reclassify
+flash         n= 960 | h1 band3=34% band0=24% null=9% | red=7.7% green=12.0%
+flash2        n= 944 | h1 band3=42% band0=24% null=8% | red=6.8% green=12.5%
+flash3        n= 958 | h1 band3=41% band0=24% null=9% | red=6.5% green=11.8%
+flash_think   n= 988 | h1 band3=44% band0=22% null=4% | red=14.3% green=10.4%
+flash_think2  n= 992 | h1 band3=45% band0=20% null=3% | red=13.4% green=9.9%
+
+pair                            n             h1_band             verdict           signature         purity_band  claimed_type(auth)       epsilon(auth)
+flash vs flash2               913                72%                 80%                 87%                 55%                 88%                 56% 
+flash vs flash3               926                74%                 79%                 87%                 55%                 88%                 55% 
+flash vs flash_think          945                56%                 65%                 71%                 37%                 69%                 28% 
+flash vs flash_think2         951                55%                 65%                 69%                 38%                 70%                 28% 
+flash2 vs flash3              928                85%                 89%                 93%                 74%                 92%                 81% 
+flash2 vs flash_think         930                59%                 65%                 72%                 47%                 69%                 34% 
+flash2 vs flash_think2        934                60%                 66%                 70%                 50%                 71%                 33% 
+flash3 vs flash_think         943                61%                 67%                 71%                 47%                 69%                 33% 
+flash3 vs flash_think2        950                60%                 67%                 70%                 47%                 70%                 33% 
+flash_think vs flash_think2   978                64%                 71%                 77%                 58%                 76%                 40% 
