@@ -204,6 +204,9 @@ def _wrap_results(batch, id_map, model):
         key = ((resp.metadata or {}).get("key") if getattr(resp, "metadata", None) else None) \
             or (keys[i] if i < len(keys) else f"g{i}")
         if getattr(resp, "error", None):
+            # Print the batch-row error: 2026-08-21 two runs had EVERY row of attempt 2 errored
+            # (272/272 and 451/451) with no text recorded, so the cause was unrecoverable.
+            print(f"  [{id_map.get(key, key)}] batch row error: {str(resp.error)[:200]}")
             out.append(_Result(key, "errored", None))
             continue
         try:
