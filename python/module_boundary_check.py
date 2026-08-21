@@ -339,6 +339,7 @@ CORPUS_DIRS = {
     "testsets_flash":   "Reconciled twin leg.",
     "testsets_kimi":    "Model-named leg (kimi-k2.6).",
     "testsets_sonnet":  "Model-named leg (claude-sonnet-5).",
+    "testsets_stealth": "Model-named leg (stealth/ox-alpha via OpenRouter; building 2026-08-21).",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",
     "archives":         "Archived corpora and point-in-time probes; per audits/README.md "
                         "point-in-time documents are not retro-edited.",
