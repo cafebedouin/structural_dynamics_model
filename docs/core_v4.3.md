@@ -1,5 +1,14 @@
 # Deferential Realism: Core Principles
 
+> **HISTORICAL (2026-08-21).** This was the framework's gateway document; its vocabulary (seven
+> categories, four indices) predates the v8 seat/gauge/orientation ontology and no longer
+> describes the current framework. Kept as lineage — it crossed over from the philosophy repo on
+> 2026-03-27 and later seeded v8 (a byte-identical frozen copy at
+> `docs/v8/foundations/core_v4.3.md` is declared v8 source material; edit neither copy). Current
+> doors, in reading order: [`docs/six_questions.md`](six_questions.md) (the practice),
+> [`blog/2026-08/cheap-confession-v6.md`](../blog/2026-08/cheap-confession-v6.md) (the stance),
+> [`docs/deferential_realism_paper_v8.md`](deferential_realism_paper_v8.md) (the formal statement).
+
 **Version 4.3**
 **Purpose:** Gateway introduction to the Deferential Realism framework
 **Read this first.** If the core framework makes sense, the domain extensions follow naturally.

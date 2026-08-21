@@ -17,6 +17,13 @@ makes the philosophy falsifiable, but the engine is not the point. The philosoph
 — the entry point and canonical vocabulary. Its closing Appendix states the current state of
 the project plainly, with no version history. This README is the repository tour.
 
+**New to the framework?** Two gentler doors precede the paper, in reading order:
+[`docs/six_questions.md`](docs/six_questions.md) — the practice, six questions in plain
+language, no terms of art; then
+[`blog/2026-08/cheap-confession-v6.md`](blog/2026-08/cheap-confession-v6.md) — the stance, and
+why the philosophy needed a measurement engine. Both are vocabulary-free and survive ontology
+revisions; the paper is the formal statement.
+
 ---
 
 ## The Intellectual Arc
