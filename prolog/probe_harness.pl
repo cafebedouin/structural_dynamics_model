@@ -153,7 +153,17 @@
     with_retracted/2,
     with_asserted/2,
     with_overlay/3,
-    with_overlay/4
+    with_overlay/4,
+    % --- exported for the install-witness suite, not for probe authors ---
+    % These three are the internals the guard-property tests must reach:
+    % check 4's unreachability is a consequence of check ORDER plus snapshot
+    % completeness, so pinning it means handing shadow_survivors/3 a
+    % deliberately narrowed snapshot. Exported as ACCESSORS rather than reached
+    % by module-qualified bypass, per the OQ-68 write-ownership ruling
+    % (gate row `module bounds`). A probe should call with_overlay/3 or /4.
+    rule_clauses/2,
+    snapshot_one/2,
+    shadow_survivors/3
 ]).
 
 :- use_module(cache_registry).

@@ -151,6 +151,15 @@ run "sunset"         "$PY" python/sunset_check.py
 run "cli selftest"   "$PY" python/cli.py selftest
 run "tripwire hook"  "$PY" python/pretooluse_tripwires.py --selftest
 # RETIRE WHEN OQ-277 CLOSES (added 2026-08-11, operator ruling; expiry is deliberate).
+# OQ-326. The install-witness suite for probe_harness. NOT a bare `run ... swipl ...`
+# row: that exits 0 when the suite loads zero tests or the file is not found under the
+# load path, which is the acceptance criterion's clause 1 (snapshot non-empty) reappearing
+# one layer up as *test count non-zero*. Guarding the install checks with a row carrying
+# the install-check defect is not acceptable, so the checker parses the executed count and
+# is RED on zero. Also RED — never skip — when swipl is unavailable: an unenforced channel
+# is the filtered channel (OQ-96). Adds ~0.25s to a ~52s gate (0.5%).
+run "probe harness"  "$PY" python/probe_harness_gate.py --check
+
 # Standing detection that OQ-277's FROZEN preregistration has not been altered — a run was
 # made under md5 4118f64e, so if the document changes, the stamp stops naming what is on
 # disk and every result loses its pre-registration. Gated rather than checked on request
