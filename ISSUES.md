@@ -17194,6 +17194,40 @@ through `repo-blind-reviewer` (OQ-334 worst-use-case bound). The per-claim table
 arm) is the check artifact; any claim whose only available support would be a comparative run is
 cut or re-registered under RQ1 declared open.
 
+**DRAFT v0.1 DELIVERED + PIN RESOLUTION RUN (2026-08-20, same day).** The drafting instance
+delivered "The Blind Reviewer" v0.1 with its 30-row per-claim table (both held by the operator,
+outside the repo per R-A; the table declares its own pins unresolved — the drafter has no repo
+access). **This session (repo-holding) resolved the pins: ALL RESOLVE.** Highlights: the five
+OQ-334 paragraph-name pins exist verbatim (this entry, above); the 13-candidates / 7-of-top-8 /
+199-dirs figures are verbatim at the RE-SELECTION paragraph; item-(7)'s waiver detail — the
+essay's ONLY rebuttal to the "fresh readers just try harder" account — is CONFIRMED at
+`audits/2026-08-20_plan_review_shakedown/evidence/RUNS.md` ("flagged... at round 4 and explicitly
+waived as non-blocking"); v0.6 §9.4 carries the eighteen-rulings / shape-record-reviver /
+third-function material nearly verbatim, including the "inside the work loop" refinement.
+Compliance checks all PASS: R5(c) (no primed-arm number anywhere in the essay text, "two defects"
+included), R-C (one sentence, all three confounds, reachability-only), Ω_P (third case named with
+reason, count not incremented), R1 (mechanism asserted, firing condition in body, magnitude open).
+
+**FLAGS AWAITING THE OPERATOR (drafter's A–E + this session's F–G; decisions relayed to the
+drafter, not taken here):** **A** — two as-of premises published without expiry: the
+no-suppression-setting sentence (repo heading is literally "SUPPRESSION — DATED PREMISE, NOT A
+SETTLED FACT"; the gap is REAL, this session confirms) and the git-log burn; one-line as-of
+clauses. **B** — the compresses-into-a-checklist/residue claim: HALF-PINNED, this session finds —
+SKILL.md's "Intended evolution" paragraph carries the compression half by design; mark only the
+residue-interpretation as the drafter's. **C** — zero citations, the cold review's own opening
+criticism. **D (RULING)** — admit today's practice-paper cold read as a fifth evidence line, or
+hold for the next piece (drafter recommends hold; it has no pin, is outside the four
+contributions, and imports a sibling paper's criticisms). **E** — the closing aphorism, kept
+deliberately against the cold review's register criticism. **F (this session)** — the §1 guard
+rail "the essay points at the trio via the front door" is UNIMPLEMENTED in v0.1: the closing note
+says "lives in a repository" but never names or links repo or papers — for a public piece the
+receipts are unreachable without it. **G (minor)** — "deliberately capped file of rules" conflates
+the always-loaded rules file (lean by discipline, uncapped) with the memory feedback channel (the
+33-cap, gate-enforced); one word.
+
+**Still owed before close:** the operator + cross-vendor relay on the essay text; the no-context
+finish; flag dispositions; ship; then this table lands here.
+
 ---
 
 *Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark
