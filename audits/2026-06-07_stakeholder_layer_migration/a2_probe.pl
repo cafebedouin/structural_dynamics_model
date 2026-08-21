@@ -52,6 +52,7 @@ a2_run :-
         [narrative_ontology:constraint_victim(C, _)],
         a2_report(all_victims_removed)),
     probe_harness:with_asserted(
-        [constraint_indexing:directionality_override(C, powerful, 0.9)],
+        [reach_undeclared(retrofit('2026-08-21', "bare with_asserted/2: no template, so no declared query shape (OQ-326 clause 4')"),
+          constraint_indexing:directionality_override(C, powerful, 0.9))],
         a2_report(override_powerful_0_9)),
     a2_report(post_restore_control).

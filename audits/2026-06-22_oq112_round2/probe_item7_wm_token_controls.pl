@@ -52,8 +52,11 @@ run :-
     format("~n=== STATE 1: genuine measured 0.0 ===~n"),
     probe_harness:with_overlay(
         [],
-        [maxent_classifier:maxent_dist(probe_zero, Ctx1,
-            [mountain-1.0, rope-0.0, tangled_rope-0.0, snare-0.0])],
+        [
+         reach_undeclared(retrofit('2026-08-21', "with_overlay/3 with an EMPTY template list: no declared query shape (OQ-326 clause 4')"),
+           maxent_classifier:maxent_dist(probe_zero, Ctx1,
+            [mountain-1.0, rope-0.0, tangled_rope-0.0, snare-0.0]))
+        ],
         ( wm_token(probe_zero, Ctx1, T1), emit_to_string(u1, T1, J1) )),
     format("  token=~q  json=~w   (expect: float, 0.000000)~n", [T1, J1]),
 
@@ -61,8 +64,11 @@ run :-
     format("~n=== STATE 1b: genuine nonzero float ===~n"),
     probe_harness:with_overlay(
         [],
-        [maxent_classifier:maxent_dist(probe_nz, Ctx1,
-            [mountain-0.6, scaffold-0.4])],
+        [
+         reach_undeclared(retrofit('2026-08-21', "with_overlay/3 with an EMPTY template list: no declared query shape (OQ-326 clause 4')"),
+           maxent_classifier:maxent_dist(probe_nz, Ctx1,
+            [mountain-0.6, scaffold-0.4]))
+        ],
         ( wm_token(probe_nz, Ctx1, T1b), emit_to_string(u1, T1b, J1b) )),
     format("  token=~q  json=~w   (expect: float, 0.400000)~n", [T1b, J1b]),
 
@@ -76,7 +82,10 @@ run :-
     format("~n=== STATE 3: errored (producer throws) ===~n"),
     probe_harness:with_overlay(
         [],
-        [maxent_classifier:maxent_dist(probe_err, Ctx1, [mountain-not_a_number])],
+        [
+         reach_undeclared(retrofit('2026-08-21', "with_overlay/3 with an EMPTY template list: no declared query shape (OQ-326 clause 4')"),
+           maxent_classifier:maxent_dist(probe_err, Ctx1, [mountain-not_a_number]))
+        ],
         ( wm_token(probe_err, Ctx1, T3), emit_to_string(u1, T3, J3) )),
     format("  token=~q  json=~w   (expect: errored, \"errored\")~n", [T3, J3]),
 

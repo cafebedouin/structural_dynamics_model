@@ -28,14 +28,20 @@
 
 :- use_module(probe_harness).
 
+oq326_reach_undeclared(F,
+    reach_undeclared(retrofit('2026-08-21',
+        "bare with_asserted/2: no template, so no declared query shape (OQ-326 clause 4')"), F)).
+
 expect_silent(Label, Facts, Goal) :-
-    (   probe_harness:with_asserted(Facts, \+ Goal)
+    maplist(oq326_reach_undeclared, Facts, WFacts),
+    (   probe_harness:with_asserted(WFacts, \+ Goal)
     ->  format("  SILENT [PASS] ~w~n", [Label])
     ;   format("  SILENT [FAIL] ~w   <-- predicate FIRED; off-conjunct did NOT block~n", [Label])
     ).
 
 expect_fired(Label, Facts, Goal) :-
-    (   probe_harness:with_asserted(Facts, Goal)
+    maplist(oq326_reach_undeclared, Facts, WFacts),
+    (   probe_harness:with_asserted(WFacts, Goal)
     ->  format("  FIRED  [PASS] ~w~n", [Label])
     ;   format("  FIRED  [FAIL] ~w   <-- predicate SILENT; sibling-satisfied firing path broken~n", [Label])
     ).

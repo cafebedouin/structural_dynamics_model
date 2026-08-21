@@ -110,11 +110,17 @@ scan(Path) :-
 % Specificity: plant an on-case fact it SHOULD MISS       -> count must NOT change.
 % Both use the SAME bucket predicate as the enumeration.
 
+oq326_reach_undeclared(F,
+    reach_undeclared(retrofit('2026-08-21',
+        "bare with_asserted/2: no template, so no declared query shape (OQ-326 clause 4')"), F)).
+
 control(Pred, PlantSens, PlantSpec) :-
     count_bucket(Pred, Base, _),
-    probe_harness:with_asserted(PlantSens,
+    maplist(oq326_reach_undeclared, PlantSens, WSens),
+    maplist(oq326_reach_undeclared, PlantSpec, WSpec),
+    probe_harness:with_asserted(WSens,
         count_bucket(Pred, Sens, _)),
-    probe_harness:with_asserted(PlantSpec,
+    probe_harness:with_asserted(WSpec,
         count_bucket(Pred, Spec, _)),
     ( Sens =:= Base+1 -> SensV = 'PASS' ; SensV = 'FAIL' ),
     ( Spec =:= Base    -> SpecV = 'PASS' ; SpecV = 'FAIL' ),

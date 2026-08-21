@@ -88,13 +88,24 @@ diff_count(Base, Pert, N) :-
     ord_subtract(Base, Pert, A), ord_subtract(Pert, Base, B),
     length(A, NA), length(B, NB), N is NA + NB.
 
+% OQ-326 (2026-08-21): an EMPTY snapshot is an expected outcome here, and this
+% probe already says so in its own verdict logic — `PresN =:= 0` routes to
+% Adm='n/a', Why=source_absent_on_this_corpus (below). That is the artifact's own
+% declaration that a source may be absent on a given corpus, so the templates
+% carry expect_empty rather than the probe throwing on a case it handles.
+oq326_expect_empty(T,
+    expect_empty(retrofit('2026-08-21',
+        "source may be absent on this corpus; the probe declares that case itself at run_edge/5's PresN =:= 0 -> source_absent_on_this_corpus"), T)).
+
 run_edge(Id, Templates, Grade, ObsName, Stream) :-
     obs(ObsName, Base),
     presence_count(Templates, PresN),
-    ( probe_harness:with_retracted(Templates, probe_oq190_edge_admission:obs(ObsName, Pert)) -> true ; Pert = Base ),
+    maplist(oq326_expect_empty, Templates, WTemplates),
+    ( probe_harness:with_retracted(WTemplates, probe_oq190_edge_admission:obs(ObsName, Pert)) -> true ; Pert = Base ),
     diff_count(Base, Pert, D),
     control(ObsName, CtlT),
-    ( probe_harness:with_retracted(CtlT, probe_oq190_edge_admission:obs(ObsName, Ctl)) -> true ; Ctl = Base ),
+    maplist(oq326_expect_empty, CtlT, WCtlT),
+    ( probe_harness:with_retracted(WCtlT, probe_oq190_edge_admission:obs(ObsName, Ctl)) -> true ; Ctl = Base ),
     diff_count(Base, Ctl, CD),
     (   D > 0
     ->  Adm = yes, Why = treatment_diff(D)

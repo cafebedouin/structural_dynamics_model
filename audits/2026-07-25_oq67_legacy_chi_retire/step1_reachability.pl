@@ -20,14 +20,20 @@ run_leg(Dir) :-
 
     % --- per-process positive controls ---
     ( probe_harness:with_asserted(
-        [drl_composition:constraint_data(oq67_ctl_a,
-            [base_extractiveness(0.9), coord_function(false)])],
+        [
+         reach_undeclared(retrofit('2026-08-21', "bare with_asserted/2: fixture planted into an undefined predicate; no template, so no declared query shape (OQ-326 clause 4')"),
+           drl_composition:constraint_data(oq67_ctl_a,
+            [base_extractiveness(0.9), coord_function(false)]))
+        ],
         ( drl_composition:is_snare(oq67_ctl_a), drl_composition:is_rope(oq67_ctl_a) ))
     -> format("  control C0a PASS (is_snare + is_rope fire in this process)~n")
     ;  format("  control C0a *** FAIL *** — all-fail below is a fact about the probe~n"), fail ),
     ( probe_harness:with_asserted(
-        [drl_composition:constraint_data(oq67_ctl_b,
-            [base_extractiveness(0.40), coord_function(false)])],
+        [
+         reach_undeclared(retrofit('2026-08-21', "bare with_asserted/2: fixture planted into an undefined predicate; no template, so no declared query shape (OQ-326 clause 4')"),
+           drl_composition:constraint_data(oq67_ctl_b,
+            [base_extractiveness(0.40), coord_function(false)]))
+        ],
         drl_composition:is_mountain(oq67_ctl_b))
     -> format("  control C0b PASS (is_mountain fires in this process)~n")
     ;  format("  control C0b *** FAIL *** — all-fail below is a fact about the probe~n"), fail ),

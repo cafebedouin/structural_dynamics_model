@@ -35,9 +35,14 @@ oq186_fixture([
     narrative_ontology:constraint_victim(oq186_b3, oq186_b3_victim)
 ]).
 
+oq326_reach_undeclared(F,
+    reach_undeclared(retrofit('2026-08-21',
+        "bare with_asserted/2: no template, so no declared query shape (OQ-326 clause 4')"), F)).
+
 run_oq186_probe :-
     oq186_fixture(Facts),
-    probe_harness:with_asserted(Facts, probe_body).
+    maplist(oq326_reach_undeclared, Facts, WFacts),
+    probe_harness:with_asserted(WFacts, probe_body).
 
 probe_body :-
     constraint_indexing:default_context(Ctx),
