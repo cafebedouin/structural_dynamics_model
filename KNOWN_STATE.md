@@ -45,6 +45,27 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-20 — LANDED: harmonic-launching-spark checkpoint executed — OQ-335 minted, OQ-334's routed rulings resolved, cross-vendor relay convention (R4), plan-review RUNS.md ledger created, SKILL.md contamination statement
+**Files:** ISSUES.md, docs/practice/reviews/README.md, .claude/skills/plan-review/RUNS.md, .claude/skills/plan-review/SKILL.md, audits/INVESTIGATIONS.md
+**Tier:** landed
+
+Commit `d4ac5c0a` + this unit. All checkpoint rulings resolved by the operator 2026-08-20 (relayed
+through the no-repo ruling session): **R1/R3/R5+R-D+R-E/R-A/R-C/R-B recorded verbatim in OQ-335**
+(the essay's tracking OQ, Priority 2, `splits_from OQ-334`); **Ω_P declined and the item-(7)
+deferral accepted (read-site: 2026-09-10 consolidation reads RUNS.md's post-impl-gaps column,
+registered same day)** in OQ-334's entry. **R4 resolution, recorded HERE per the plan:** returned
+cross-vendor reviews of the practice paper land in `docs/practice/reviews/` under
+`<YYYY-MM-DD>_<model>.md`; the per-relay KNOWN_STATE entry is written at SEND time. **First relay
+SENT 2026-08-20** by the operator to a web instance (model recorded at return; packet = the paper +
+the verbatim cold-reader line; no §IV.4 framing — returns are not an instrument for that question).
+`.claude/skills/plan-review/RUNS.md` created (first live run's row, executor-written from
+planning-session-supplied values; post-impl gaps column filled at 7 — the first entry in the
+item-(7) prospective decline-side record). SKILL.md's fixer paragraph now states its counts'
+contamination at the site (R5 addendum). Step-0 fired live mid-checkpoint (concurrent OQ-332/OQ-276
+session landed 5 commits; held for operator clearance) — INVESTIGATIONS.md lines registered. The
+essay itself is drafted OUTSIDE the repo (public venue, cafebedouin.org — ruling R-A) — OQ-335 closes
+when it ships with its per-claim table recorded there.
+
 ## 2026-08-20 — LANDED: OQ-332 ruled (descriptive+dated axis note at both read-sites); OQ-276 routed out of BLOCKED-ON-YOU via the new blocked_on_condition relator + mechanical wake watcher
 **Files:** python/omega_resolver.py, python/apparatus_instrument.py, docs/technical/omega_resolver.md, docs/amnesiac_institution/amnesiac_institution_v0_6.md, docs/technical/build_discipline.md, CLAUDE.md, ISSUES.md, audits/INVESTIGATIONS.md
 **Tier:** landed
