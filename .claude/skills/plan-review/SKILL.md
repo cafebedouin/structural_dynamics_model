@@ -175,6 +175,9 @@ the run's line: `post-impl gaps: N (what)`.
 - **The fixer is a source of rounds, not just the reviewer (witnessed 2026-08-20).** In one measured
   round on a complex plan, 13 of 22 findings closed and **15 new ones opened**, two of them defects
   the revising instance introduced while fixing — including a **fix-label attached to a non-fix**.
+  These counts are transcriptions of the primed reviewer's own report — the instrument that produced
+  them held the shakedown spec in its system prompt (the contaminated arm; OQ-334, R5 ruling
+  2026-08-20) — so read them as a qualitative lesson, never as a clean measurement.
   The loop can feed itself, so **the cap is the only bound on it.** Hit the cap, stop, report.
 - **Intended evolution, named:** Phase 1's checklist graduation is *designed* to erode the reviewer's
   marginal value on shape/record/reviver — that erosion is success, not failure. As it happens,
