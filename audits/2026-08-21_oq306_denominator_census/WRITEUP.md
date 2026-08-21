@@ -16,8 +16,11 @@ share over time. It does **not** restate any existing published rate. The rate-b
 routed to OQ-136 / OQ-202, which own that arithmetic.
 
 **Manifest cite:** `outputs/pipeline_output.json` — `n_constraints 285`, `n_stories 258`,
-`n_nonstory_members 27`, `n_unclassified 0`, `schema_version 3`, `code_commit d7b4d4f8`.
-C1 diff pair: clean side `2026-08-21T14:23:47Z` (`code_dirty: false`) vs edited `T14:30:09Z`.
+`n_nonstory_members 27`, `n_unclassified 0`, `schema_version 3`. **The artifact currently on disk
+carries `code_commit 1a0f87e8` with `code_dirty: true`** and is therefore NOT attributable to a
+commit; regenerate at a clean HEAD before citing it as reconstructible. The C1 diff pair — which IS
+the behaviour-preservation witness — was taken at clean `d7b4d4f8`, `code_dirty: false`:
+clean side `2026-08-21T14:23:47Z` vs edited `T14:30:09Z`.
 
 **Population note, because two numbers appear in this record and are NOT a contradiction:** the live
 leg was **279** at session start and **285** from 04:23 local, when an untagged `c-orchestrator` run
@@ -82,8 +85,11 @@ manifest additions {"n_stories":258,"n_nonstory_members":27,"n_unclassified":0,
 
 **The census zero-guard (N16) is REACHABLE and two-sided:** declines on the intact registry, fires
 on a retracted `corpus_constraint/1` fact — `CENSUS DISCREPANCY: 284 members kinded but 285 files
-loaded`. The two sides are genuinely independent derivations (load-loop success counter vs registry
-enumeration), so it is not a total recomputed from its own parts.
+loaded`. **Scoped honestly after the evaluation:** the two sides are separately DERIVED (load-loop
+success counter vs registry enumeration) but not fully independent — the same loop both increments
+the counter and triggers the registration, so inside `load_all_testsets/0` the demonstrated firing
+state is not reachable without external retraction. It catches registry/loop divergence introduced
+AFTER load; it is not a proof that the loader cannot desynchronise.
 
 **Behaviour preservation.** C1: clean vs edited pipeline, exit 0 both, mtime advanced, corpus md5
 `61697262…` identical across both halves, `per_constraint` md5 `000358d6…` **identical**.
@@ -110,7 +116,7 @@ between C1 and C3, corpus md5 unchanged).
 
 **C4 gate row.**
 ```
---check GREEN — 5 legs, totality holds, stratum {testsets:27, twins:0}, selftest 6 controls
+--check GREEN — 5 legs, totality holds, stratum {testsets:27, twins:0}, selftest 7 controls
 RED 1 (arm totality) : planted unknown-shape member -> RED, names the file
 DECLINE control      : same leg, plant removed      -> GREEN
 RED 2 (arm pin)      : baseline off-by-one, corpus untouched -> RED
@@ -126,15 +132,23 @@ unrelated to the stratum, and "fires at N, declines at N−1" could not be obser
 | `f724379d` (N−1) | 5 | 203 | **GREEN** | both quiet |
 | `543e2f9a` (N) | 22 | 227 | **RED** | `pin` |
 
-Both reconstructed strata match `stratum_series.txt` independently. **Claimed at PLANT-ONLY
-altitude** (operator ruling) — see Finding 2.
+**Claimed at PLANT-ONLY altitude** (operator ruling) — see Finding 2. **And re-scoped after the
+evaluation:** since the git series is a TRACKING series, this pair demonstrates that the pin arm
+detects a change in the tracked count — a real and sufficient test of arm 2 — but it does NOT
+demonstrate detection of on-disk growth, because `543e2f9a` did not grow the corpus. Read it as a
+pin test, not as a growth-detection witness.
 
 **Load-time cost** (`load_all_testsets/0` only, corpus md5-pinned, warm, 3 runs/side): baseline
 median 590.71 ms (spread 2.89) → edited 734.51 ms = **+143.80 ms, +24.3 %** ≈ 0.5 ms/member.
 Two-clause threshold: `delta > spread` TRUE, `delta > max(10 %, 2 s)` FALSE → **no signal**.
 Reported anyway (D1 makes this the measurement site) because the 10 % limb *is* exceeded — only the
 2 s absolute floor keeps a sub-second load under threshold. For **R-G**: 4211 members across five
-legs ≈ **2.1 s** of kinding, against the unsourced 30 s figure.
+legs ≈ **2.1 s** of KINDING. **That is not the number R-G was about.** The ratchet was proposed to
+dodge per-gate swipl LATENCY, and the `corpus census` row costs **~13.3 s** wall standalone, because
+`--check` performs seven corpus LOADS (five legs + the live leg again inside `selftest()` + the
+planted tempdir leg) and the load dominates the kinding. The one-definition ruling is very likely
+still right at 13 s against 30 s, but the recorded justification cited the wrong quantity, and the
+re-measure trigger is stamped to file counts rather than to that cost.
 
 **Full gate GREEN** (28 rows including the new `corpus census`), matching the pre-change baseline
 observed at session start.
@@ -153,11 +167,18 @@ observed at session start.
    UNDERSTATES the stratum**, so a `git ls-tree` reconstruction can materialise a corpus state that
    never existed on disk — a *different* corpus, not a weaker sample. This is why the discrimination
    record above is plant-only. Landed as `2f73ce34`.
-3. **The OQ's "9 → 26" framing figure is wrong — and my first correction to it was wrong too.**
-   The glob-visible flat series is **5 → 22 → 26 → 27**. A first re-measurement over-counted by
-   including `testsets/gfbatch1/` run-tagged files the non-recursive glob never loads. **Both errors
-   are the same class as the defect**: a population measured by the wrong membership rule. The
-   corrected series is sharper evidence — 5 → 22 inside a single day.
+3. **RETRACTED — the OQ's `9 → 26` was RIGHT; my "correction" of it was wrong.** Caught by the
+   post-implementation evaluation. `9` was a LIVE on-disk census
+   (`audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv`: 9 distinct
+   `*_contradictions` cids at n=119) while git tracked 4 — short by exactly 5 on both axes, those 5
+   first tracked at `543e2f9a`. **I used the instrument my own Finding 2 declares unreliable to
+   overturn the reliable one, in the same commit that discovered the unreliability.** And
+   `543e2f9a` is a TRACKING event, not growth: its body says "Git-state change only: disk content
+   unchanged, corpus md5 fingerprints unaffected" — so "5 → 22 in a single day is sharper growth
+   evidence" was inverted, and is withdrawn too. A first re-measurement was ALSO wrong the other
+   way (counting `testsets/gfbatch1/`, which the glob never loads). Three errors, one shape: **a
+   population measured by the wrong membership rule** — the defect of this OQ, committed three
+   times while fixing it. `stratum_series.txt` is retained, RE-LABELLED a tracking series.
 4. **Substrate 10, with the consequence that decided R-E.** `load_warning_gate.py` captures none of
    the proposed stderr lines, for two independent reasons: it runs `swipl -g "[stack], halt"` and
    never loads the corpus, and its regex is `^(Warning|ERROR):`. So no allowlist entry was needed —
@@ -215,6 +236,33 @@ guard is a REFUSAL at launch (`if pgrep -x swipl; then exit 1`), which every sub
   `corpus_member_kind/2` but harmless; rewriting them was not this commit's scope.
 - `golden_file_check.py`'s docstring calls a gitignored baseline "committed" — pre-existing, in a
   file this change only RUNS, so the stale-prose rule leaves it cataloged rather than fixed.
+
+## Post-implementation evaluation (R-D) — 12 gaps, 2 material
+
+A fresh general-purpose subagent re-ran the claimed commands and compared every number against its
+artifact. Raw output: `POST_IMPL_EVALUATION.md`. **It confirmed every re-derivable number**
+(census, twins, R-B skew, load delta 143.09 vs the claimed 143.80 ms, golden md5, corpus md5) and
+found **no mis-kinding and no refusal bypass** — and it caught two material errors and ten smaller
+ones. Dispositions:
+
+| # | Gap | Disposition |
+|---|---|---|
+| 1 | The heading "correction" was itself wrong — `9` was a live census | **FIXED — retracted.** Heading restored, close carries the retraction |
+| 2 | "5 → 22 in a day is sharper growth evidence" is inverted; that commit is a tracking event | **FIXED — withdrawn** in ISSUES, CLAUDE.md, `build_discipline.md`, here |
+| 3 | Correction unpropagated; four surfaces contradicted | **RESOLVED by the retraction** — the previously-contradicting lines were the correct ones |
+| 4 | Two `build_manifest` sites stamp `schema_version: 3` without its keys | **FIXED** — the bump now rides inside `add_member_census_keys`, atomic with the keys |
+| 5 | The gate selftest's pin control was vacuous and inflated the count | **FIXED** — now drives the real comparison; verified by a forcing test (sabotage → RED) |
+| 6 | Gate is 27 rows, not 28 | **FIXED** |
+| 7 | ≥9 `n_constraints` readers undispositioned | **FIXED** in CONSUMERS.md — all provenance echoes, nothing broken, but the sweep over-claimed completeness |
+| 8 | CONSUMERS.md control (e) unsubstantiated | **FIXED** — the claim is withdrawn; the control's only hits were inside an excluded subtree |
+| 9 | Manifest cite doesn't match the on-disk artifact | **FIXED** — cite now states the artifact is dirty and names the clean diff-pair commit |
+| 10 | R-G's 2.1 s understates the row's real 13.3 s cost | **FIXED** — both numbers recorded; the ruling stands, its stated justification did not |
+| 11–12 | "Independent derivations" / "INDEPENDENT enumeration" over-claimed | **FIXED** — both re-scoped to what they actually establish |
+
+**The pattern across gaps 1, 2 and 3 is worth more than the fixes.** All three are the same error:
+using a git-derived population for a census after discovering, in that same commit, that git does
+not track this population. **A finding about an instrument has to be turned around on the work in
+progress, not just written down.**
 
 ## Evidence map
 

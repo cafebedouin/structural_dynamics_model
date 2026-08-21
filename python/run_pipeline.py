@@ -129,7 +129,19 @@ def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:
         #   carries a top-level member_census; the manifest carries n_stories,
         #   n_nonstory_members, nonstory_kinds, n_unclassified. All additive —
         #   the same shape as the 1->2 bump (ce9a26ec).
-        "schema_version": 3,
+        #
+        # STAMPED 2 HERE ON PURPOSE. build_manifest has FOUR call sites and only
+        # two route through inject_manifest (the pipeline_output path and its
+        # orbit sidecar); the other two — commentary_census.json,
+        # reading_reference_census.json — write a manifest directly and never
+        # acquire the OQ-306 keys. Declaring 3 here made those two artifacts
+        # advertise keys they do not carry, so a reader branching on
+        # `schema_version >= 3` got a KeyError or a silent None. The bump to 3
+        # is therefore performed by add_member_census_keys(), ATOMICALLY with
+        # the keys it names — a manifest that did not go through that function
+        # truthfully reports the shape it actually has. Do not re-raise this
+        # literal without moving the keys with it.
+        "schema_version": 2,
     }
     # Stamp corpus_path ONLY for a non-default corpus — keeps the no-arg manifest
     # byte-for-byte unchanged (only difference from a default run is the absence of
@@ -256,6 +268,8 @@ def add_member_census_keys(manifest: dict, document: dict, corpus_dir: Path) -> 
     manifest["nonstory_kinds"] = dict(sorted(nonstory_kinds.items()))
     manifest["n_nonstory_members"] = n_nonstory
     manifest["n_unclassified"] = n_unclassified
+    # The version bump rides WITH the keys, never ahead of them (see build_manifest).
+    manifest["schema_version"] = 3
 
     if n_unclassified:
         bad = sorted(e["id"] for e in entries

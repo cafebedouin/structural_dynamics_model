@@ -1884,13 +1884,37 @@ over `corpus_constraint/1`, fail-closed into `dual_family`/`unknown` rather than
 `story`), `manifest.n_stories` beside `n_constraints`, and gate row **`corpus census`** guarding the
 share over time. Three things learned in the doing that the filing did not contain:
 
-**1. The framing figure was wrong, and the first correction to it was wrong too.** The series is
-**5 → 22 → 26 → 27**, not 9 → 26; "9" appears nowhere. A first re-measurement over-counted by
-including `testsets/gfbatch1/` — run-tagged subdirectories that the non-recursive glob **never
-loads**, so they are not members at all. **Both errors are the same class as the defect**: a
-population measured by the wrong membership rule. The corrected series is *sharper* evidence than
-the filed one — a 5 → 22 jump inside a **single day** is a better instance of "the growth is the
-defect" than a thirteen-month drift.
+**1. The filed figure `9 → 26` was RIGHT, and the executor's "correction" of it was WRONG — by
+misapplying finding 2 below, in the same commit that discovered it.** The executor replaced it with
+a `git ls-tree` series (5 → 22 → 26 → 27) and wrote that into the OQ heading, CLAUDE.md and this
+file. But `9` was a **live on-disk census**:
+`audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv` names 9 distinct
+`*_contradictions` cids at n=119, while git at that date tracked **4** of them (114 members) —
+short by exactly 5 on both axes, and those 5 were first tracked at `543e2f9a`.
+
+**Two lessons, and the second is the transferable one.**
+
+*The evidential hierarchy got inverted.* A reconstruction that the very same commit declares
+unreliable — "a corpus state that never existed on disk" — was used to overturn a dated,
+contemporaneous measurement by the reliable instrument. **When a new finding says instrument X is
+untrustworthy for question Q, the immediate next move is to check whether you are about to use X on
+Q.** Discovering a bias and then applying the biased instrument anyway is not a lapse of care; it is
+the specific failure of not turning a finding around on your own work in progress.
+
+*And a tracking event is not a growth event.* The executor's "a 5 → 22 jump inside a single day is
+sharper evidence of growth" was **inverted**: `543e2f9a`'s own subject is *"track the 20 remaining
+`*_contradictions.pl` testsets (**already glob-loaded**)"* and its body says *"Git-state change
+only: disk content unchanged, corpus md5 fingerprints unaffected."* The files were already members;
+git merely caught up. The executor quoted that exact subject as proof git understates, then read the
+same commit's delta as growth. **A commit-delta over a population measures when things were
+COMMITTED, which is a different variable from when they EXISTED — and the two diverge exactly where
+the commit convention has a hole.**
+
+A first re-measurement was wrong in a third way, worth recording because it is the same class again:
+it over-counted by including `testsets/gfbatch1/`, run-tagged subdirectories the non-recursive glob
+**never loads**, so they are not members at all. Three errors, one shape: **a population measured by
+the wrong membership rule** — which is the defect this entry is about, committed three times while
+fixing it.
 
 **2. The stratum can grow with NO COMMIT — so git history understates it.** A topic run's
 auto-commit is scoped to the run's *cids*; a `*_contradictions.pl` file is not a cid, so the

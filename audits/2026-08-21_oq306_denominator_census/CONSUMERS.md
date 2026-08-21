@@ -27,7 +27,18 @@ justification rather than a control it cannot have.
 | (b) `corpus_constraint` | `python/run_pipeline.py` (the in-Prolog gate string) | 8 hits ✓ |
 | (c) `per_constraint` | `prolog/json_report.pl` (the writer, outside `python/`) | 16 hits ✓ |
 | (d) `_contradictions` | `agent/generate_kernel_corpus.py` | 5 hits ✓ |
-| (e) `schema_version` | `prolog/` (outside `python/`) | hits ✓ |
+| (e) `schema_version` | ~~`prolog/`~~ **NO VALID CONTROL** | see below |
+
+**Control (e) is WITHDRAWN (post-implementation evaluation, 2026-08-21).** It claimed
+`prolog/` as an outside-`python/` control with "hits ✓" and no hit count — the only row in the table
+lacking one. `grep -rn schema_version prolog/` returns 3 hits, **all under `prolog/archives/`, a
+subtree this very document excludes from the sweep**; there are ZERO occurrences in any
+`prolog/*.pl`. So the control either fired inside excluded territory (demonstrating nothing about
+the sweep as run) or was never run. **Sweep (e) is therefore UNCONTROLLED**, and its result is
+reported at that altitude: it found the `twin_comparison.py` breakage, which is a real catch, but
+it carries no evidence that it found *everything*. `schema_version` is a python-side manifest key
+with no Prolog reader, so no valid outside-`python/` control exists — which is itself the honest
+finding, not a gap to paper over.
 
 **Control (a) was CORRECTED at execution.** The plan named
 `audits/oq140_divergence_extract.py`; that file's real path is
@@ -93,6 +104,26 @@ OQ that owns the arithmetic:
   **Two-sided control:** accepts 2 and 3; still REFUSES 1, 4 and `None` — it did not become a
   pass-everything.
 - `python/audits/five_leg_twin_comparison.py` — checked, carries no `schema_version` reference.
+
+### Provenance echoes — enumerated after the evaluation (sweep completeness was over-claimed)
+
+The post-implementation evaluation found **at least nine** `manifest["n_constraints"]` readers with
+no disposition anywhere in this document. **Nothing is broken** — every one is a provenance echo or
+an identity comparison, not a rate denominator — but "consumers swept with per-consumer
+dispositions" over-claimed the sweep's completeness, so they are named here:
+
+`python/audits/schema_sieve.py:118` (compares its own row count against it),
+`python/audits/g_beneficiary_channel_audit.py:195` (prints *"Corpus: N constraints"* — now a
+MISLABEL, since N counts members; harmless but worth fixing if that file is touched),
+`python/container_typology_analysis.py:495`, `python/run_drift_mismatch.py:96`,
+`python/epsilon_authorship_readout.py:148`, `python/tensions_ledger.py:385`,
+`python/audits/audit3_synthesis.py:447`, `python/audits/oq151_dual_gauge_crosstab.py:85`,
+`python/audits/oq88_false_mountain_detector.py:260`.
+
+**The lesson is about the claim, not the sites:** a sweep whose controls all fire still cannot
+support "complete" — controls establish that the instrument reaches, never that the roster is
+closed. This document should have said "the sites that compute RATES are dispositioned", which is
+what was actually done.
 
 ### Cataloged, left as-is
 

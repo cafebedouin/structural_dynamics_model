@@ -57,7 +57,10 @@ the three-way `per_constraint == glob == n_constraints` gate — renaming is reb
 is currently ~9.5 % low and, worse, is not comparable across time (below).
 
 **THE SHAPE WORTH REMEMBERING: the GROWTH was the defect, not the presence.** The stratum went
-**5 → 22 → 26 → 27** (`f724379d` 2026-08-07, `543e2f9a` 08-08, `8c34157f` 08-17, today). A
+**9 → 26** on disk (live census 2026-07-02 → filing 2026-08-17; 27 today). **Count it LIVE, never
+from git** — git tracked 4 of those 9, and its tracking series (4 → 5 → 22 → 26) reads like growth
+while recording only when files were COMMITTED. This close first "corrected" the 9 to that git
+series and was wrong; retracted the same day, see ISSUES OQ-306. A
 *growing* contaminant does not bias a rate by a constant — it silently REWRITES a time series, so
 historical rates stop being comparable to current ones *even when each was correct when computed*.
 Every individual rate stayed well-formed the whole time and nothing went red.

@@ -323,13 +323,40 @@ def selftest() -> tuple[bool, list[str]]:
             fails.append("selftest: planted leg lost its real story members — the "
                          "instrument fires on everything, which discriminates nothing")
 
-    # PLANTED: baseline off-by-one must go RED (arm 2). Pure data, no swipl.
-    checks += 1
-    real = {"testsets": {"axiom_contradiction": len(live.get("axiom_contradiction", []))}}
-    bumped = {"testsets": {"axiom_contradiction":
-                           len(live.get("axiom_contradiction", [])) + 1}}
-    if real == bumped:
-        fails.append("selftest: pin comparison cannot distinguish an off-by-one")
+    # PLANTED: baseline off-by-one must go RED (arm 2).
+    #
+    # This control was VACUOUS until 2026-08-21 (caught by the OQ-306
+    # post-implementation evaluation): it built two dicts guaranteed to differ and
+    # asserted they differed. No value of N could make it fire, it exercised
+    # nothing in check()'s comparison, and it still counted toward the advertised
+    # control total — control count rising while coverage stayed flat, which is
+    # the orphaned-control shape (build_discipline -> "A control must witness that
+    # it is CALLED"). It now drives the REAL comparison path and is two-sided.
+    global BASELINE
+    _saved_baseline = BASELINE
+    try:
+        with tempfile.TemporaryDirectory() as bt:
+            n_live = len(live.get("axiom_contradiction", []))
+            # (a) a CORRECT baseline must produce no [pin] problem
+            BASELINE = Path(bt) / "ok.json"
+            BASELINE.write_text(json.dumps(
+                {"legs": {"testsets": {"axiom_contradiction": n_live}}}))
+            checks += 1
+            _, probs_ok = check(["testsets"])
+            if any(p.startswith("[pin]") for p in probs_ok):
+                fails.append("selftest: correct baseline produced a [pin] problem "
+                             "— the pin arm fires on a matching stratum")
+            # (b) an off-by-one baseline MUST produce one
+            BASELINE = Path(bt) / "off.json"
+            BASELINE.write_text(json.dumps(
+                {"legs": {"testsets": {"axiom_contradiction": n_live + 1}}}))
+            checks += 1
+            _, probs_off = check(["testsets"])
+            if not any(p.startswith("[pin]") for p in probs_off):
+                fails.append("selftest: off-by-one baseline did NOT produce a [pin] "
+                             "problem — the pin arm cannot detect a stratum move")
+    finally:
+        BASELINE = _saved_baseline
 
     return (not fails), fails + [f"({checks} controls)"]
 

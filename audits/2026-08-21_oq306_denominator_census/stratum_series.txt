@@ -1,4 +1,12 @@
-# glob-visible (FLAT testsets/ only) *_contradictions.pl stratum vs member count
+# *_contradictions.pl TRACKING series (NOT a growth series) — flat testsets/ only
+#
+# RE-LABELLED 2026-08-21 after the post-implementation evaluation. This measures WHEN FILES
+# WERE COMMITTED, not when they existed. It systematically UNDERSTATES the on-disk stratum:
+# the live census at 2026-07-02 (audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv)
+# found 9 contradictions members at n=119, while git tracked 4 at n=114. `543e2f9a`'s own subject
+# is "track the 20 remaining *_contradictions.pl testsets (already glob-loaded)" and its body says
+# "Git-state change only: disk content unchanged" -- so its 5->22 delta is git catching up, NOT
+# a one-day growth event. Do NOT cite this file as a growth series.
 # generated 2026-08-21; run-tagged subdirs EXCLUDED (the non-recursive glob does not load them)
 2026-05-25 622d8ece stratum=32 members=214
 2026-05-27 2f9dba49 stratum=32 members=214

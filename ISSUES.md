@@ -7806,7 +7806,7 @@ be dispositioned as premise-identified, not premise-tested.
 
 ---
 
-## OQ-306 — `n_constraints` silently includes non-stories: axiom meta-files inside the denominator, and the stratum GREW (5 → 22 → 26 → 27) while reading stable
+## OQ-306 — `n_constraints` silently includes non-stories: 26 axiom meta-files in the 279 denominator, and the stratum GREW 9 → 26 while reading stable
 
 **Ω-type:** Ω_E (a census — which corpus members are stories) + a small Ω_C tail (whether
 `*_contradictions` artifacts should live in `testsets/` at all is an operator call).
@@ -7815,11 +7815,12 @@ be dispositioned as premise-identified, not premise-tested.
 **Priority:** 1
 **Deps:** splits_from OQ-190
 
-> **HEADING CORRECTED 2026-08-21 at close.** It previously read "26 axiom meta-files in the 279
-> denominator, and the stratum GREW 9 → 26". Both figures were wrong and the body below is left
-> INTACT with them in place; the dated correction, its measurement and its instrument are in the
-> CLOSE section at the end of this entry. The heading is corrected rather than only annotated
-> because a wrong exemplar in a problem statement outlives the fix.
+> **HEADING RESTORED 2026-08-21, same day.** The close first "corrected" this heading to a
+> `git ls-tree` series (5 → 22 → 26 → 27). **That correction was WRONG and is RETRACTED** — `9` was
+> a live on-disk census (`audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv`, 9
+> distinct `*_contradictions` cids at n=119) and git tracked only 4 of them, which is the very
+> understatement the close itself discovered. The original figures stand; `279` is the
+> denominator as filed and is 285 today. Full retraction in the CLOSE section.
 
 **Origin.** OQ-190's Limb-3 precursor found that **26 of the live corpus's 43
 `founding_problem_status` absences are not stories.** Every `prolog/testsets/*_contradictions.pl`
@@ -7874,18 +7875,28 @@ Limb 3 (where this was found), OQ-305.
 `corpus_member_kind/2`), the manifest reports the two populations separately, consumers are swept
 with per-consumer dispositions, and gate row `corpus census` guards the share over time.
 
-**CORRECTION (dated, appended — the body above is left intact).** Two figures in the problem
-statement are wrong, and the heading has been corrected to match:
+**RETRACTED CORRECTION (2026-08-21, same day, after the post-implementation evaluation).**
+This close originally asserted that the OQ's `9 → 26` figure was wrong and replaced it with a
+`git ls-tree` series (5 → 22 → 26 → 27). **That assertion is WITHDRAWN. The filed figure was
+right.**
 
-- **The stratum series is 5 → 22 → 26 → 27, not 9 → 26.** Measured over the GLOB-VISIBLE flat
-  `testsets/*.pl` set at every commit touching the stratum
-  (`audits/2026-08-21_oq306_denominator_census/stratum_series.txt`): `f724379d` 2026-08-07 → 5,
-  `543e2f9a` 2026-08-08 → 22, `8c34157f` 2026-08-17 → 26, `2f73ce34` 2026-08-21 → 27. The "9"
-  does not appear anywhere in the series. A first pass at this measurement was itself wrong in
-  the other direction, counting `testsets/gfbatch1/` run-tagged files that the non-recursive glob
-  never loads — the same trap CLAUDE.md → Corpus Loading warns about.
-  **The correction STRENGTHENS the OQ:** a 5 → 22 jump inside a single day is a sharper instance of
-  "the growth, not the presence, is the defect" than 9 → 26 was.
+- **`9` was a LIVE ON-DISK CENSUS, not an error.**
+  `audits/2026-07-02_oq136_census_bucket_provenance/membership.tsv` — dated, contemporaneous —
+  names **9 distinct `*_contradictions` cids** at n=119. Git at that date tracked **4** of them
+  (114 members): short by exactly 5 on both axes, and those 5 were first tracked at `543e2f9a`.
+  So the on-disk stratum on 2026-07-02 *was* 9, and the git series says 4 for exactly the reason
+  this close discovered — **the commit convention does not track these files.**
+- **The error was self-inflicted and instructive: a reconstruction this very close calls "a corpus
+  state that never existed on disk" was used to overturn the reliable instrument.** When a finding
+  says instrument X is untrustworthy for question Q, the next move is to check whether you are
+  about to use X on Q.
+- **And `543e2f9a` is a TRACKING event, not growth.** Its subject is "track the 20 remaining
+  `*_contradictions.pl` testsets (**already glob-loaded**)" and its body says "Git-state change
+  only: disk content unchanged, corpus md5 fingerprints unaffected." The claim that "a 5 → 22 jump
+  inside a single day is sharper evidence of growth" was inverted, and is withdrawn with it.
+- **What survives, and is the durable finding:** git history systematically UNDERSTATES this
+  stratum, so a retrospective census of it must be taken live, never from `git ls-tree`. The
+  `stratum_series.txt` artifact is retained and RE-LABELLED a *tracking* series.
 - **The denominator was 279 when filed and is 285 now.** Never cite a live-leg literal (operator
   ruling 2026-08-18); the current split is in `manifest.n_stories` / `n_nonstory_members`.
 

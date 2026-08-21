@@ -536,9 +536,11 @@ OQ-306 RESOLVED 2026-08-21).** The sibling of *a gating count needs its composit
 side of the fraction. Corpus membership is by FILENAME (`corpus_loader:corpus_constraint/1`), so
 `manifest.n_constraints` counts anything in `testsets/` — including the `*_contradictions.pl` axiom
 meta-files, which carry one predicate and no story blocks. **The pattern is the GROWTH, not the
-presence:** that stratum went **5 → 22 → 26 → 27** with nothing going red, and a *growing*
-contaminant silently rewrites a time series rather than biasing it constantly — historical rates
-stop being comparable to current ones even when each was correct when computed. It survived because
+presence:** that stratum went **9 → 26** (live on-disk census, 2026-07-02 → 2026-08-17; 27 today)
+with nothing going red, and a *growing* contaminant silently rewrites a time series rather than
+biasing it constantly — historical rates stop being comparable to current ones even when each was
+correct when computed. **Count it live, NEVER from git** — git tracked 4 of those 9, and the
+tracking series (4 → 5 → 22 → 26) reads like growth while recording only when files got committed. It survived because
 four consumers each excluded it *locally* and no single fact said "these are not stories" (Pattern 2
 in its census form: canonicity of the POPULATION is a memory). **Rule: a published or gated
 denominator names a checked membership predicate — a fact-family test, not a filename convention —
