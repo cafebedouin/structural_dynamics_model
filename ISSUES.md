@@ -17230,7 +17230,58 @@ finish; flag dispositions; ship; then this table lands here.
 
 ---
 
-*Last updated: 2026-08-20. Add new items with sequential OQ-NN labels. Mark
+## OQ-336 — The mountain test's negation leg is modal, its binding leg material: does §5.9 need a buildability distinction (modally-open-but-materially-binding constraints)?
+
+**Ω-type:** Ω_C (design choice — whether the framework marks the conceivable-but-not-yet-built
+interval). The buildability variable itself, if fielded, is a DEFERRED Ω_E — world-witnessable
+when a standing negation gets built — and must not be typed Ω_P (self-certification trap,
+Build Discipline synthesis rule 5).
+
+**Status:** open — minted 2026-08-21 from the accordion-arc transcript; first probe rides the
+queued accordion topic run.
+**Priority:** 4
+**Origin:** 2026-08-21 — operator web-session transcript on the accordion's arc (source material
+at `agent/analysis/originals/accordion.md`; that file's closing note declares the run's authoring
+steer — ε grid spanning pre-1950/post-1960 — de-biased to name no expected trajectory). The
+transcript's own kill SURVIVES the mint: no seventh terminal, no "expired mountain" case —
+multiple independent invention is the signature of a region becoming reachable, not an arranged
+demise (no expirer; no beneficiary for `false_natural_law` to bite; concealment-without-a-
+concealer precedent).
+**Files:** docs/deferential_realism_paper_v8.md (§5.9 mountain test); docs/six_questions.md (Q5);
+agent/analysis/originals/accordion.md; prolog/drl_composition.pl (classify_at_time/4)
+
+**The question.** v8 §5.9's mountain test — "no beneficiary, no consistent negation, binding
+every position" — runs its negation leg MODALLY (an otherwise exists in principle; Euclid's was
+exhibited retroactively) while its binding leg is MATERIAL. For physical constraints the two come
+apart for exactly the interval between conceivable and built: the 1880 loudness constraint ("one
+person must mechanically fill a room with sound") was modally open and materially binding at
+every position; amplification BUILT the standing negation ~1950. Corollary 4.1 already covers the
+retrospective reading (the verdict is site-indexed; technological regime is an un-sampled
+parameter like observer position). What has no home is the predictive handle: *what would make
+the standing negation buildable, and is anything approaching that threshold* — a
+buildability-distance variable, answerable in advance in a way "it has stood N years" never is.
+Nearest open neighbor: OQ-265 (drift-terminal endpoint regimes); no blocking edge — workable
+once the fixture lands.
+
+**First step (cheap; rides planned work).** When the accordion topic run lands, probe whether
+existing temporal machinery (`classify_at_time/4`, drift trajectory) already EXPRESSES the shift
+on a story authored across the event. Expresses → documentation amendment only (two sentences in
+six_questions.md Q5's disappearing-overnight diagnostic + a §5.9 note), no engine change. Cannot
+express → that null is the evidence for a fielded distinction (candidate: an authored
+dissolution-event/buildability field feeding gap DIRECTION, per the OQ-227 detectability
+precedent — dissolution events are public and dateable, exactly what `sealed_closure` lacked).
+
+**Also recorded (free result):** "N years is a typical instrument lifespan" is a regime-bound
+statistic in the §9.4 sense — it measures industrial-era sampling plus the resolution limit of
+narrative, never a property of the world (same shape as archive FNL prevalence measuring
+authoring convention).
+
+**What resolution changes:** whether Q5/§5.9 get the modal/material rider; whether a
+buildability/dissolution-event authored field is minted (typed deferred-Ω_E at mint).
+
+---
+
+*Last updated: 2026-08-21. Add new items with sequential OQ-NN labels. Mark
 resolved items with a status change and a resolution note rather than deleting —
 provenance matters.*
 
