@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "f9771058-ab5c-4caa-8893-e29e253e5b47"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulation-Based Competence Maintenance Sufficiency",
+    "topic_domain": "High-Reliability Organizations / Safety Training / Competence Maintenance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_industry",
+      "training_providers",
+      "organizational_leadership"
+    ],
+    "victims": [
+      "frontline_operators",
+      "organizations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_industry",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develops and sells simulation technologies and platforms. Actively promotes the idea that high-fidelity simulation is sufficient for competence maintenance, benefiting directly from increased adoption and investment in simulation solutions."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Deliver simulation-based training programs, often certified by the simulation industry or regulatory bodies. They benefit from the mandate for simulation training and the associated revenue streams."
+    },
+    {
+      "name": "organizational_leadership",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implements simulation-based training programs to meet regulatory compliance, manage perceived risk, and demonstrate commitment to safety. They benefit from a standardized, scalable training solution and the narrative of competence maintenance, even if the actual efficacy is debated."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Undergo mandatory simulation drills to maintain their professional certifications and operational readiness. They bear the direct cost of time and effort, and may experience skill decay or gaps if simulations do not fully replicate real-world conditions, but their professional identity is tied to compliance."
+    },
+    {
+      "name": "organizations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Invest heavily in simulation technology, infrastructure, and training programs. They bear the financial cost of implementation and maintenance, driven by regulatory requirements and the perceived necessity of simulation for competence."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversee and enforce training standards, often incorporating simulation requirements. They observe the outcomes of simulation-based training and can influence its scope and fidelity, but are also influenced by industry lobbying and the perceived efficiency of simulation."
+    },
+    {
+      "name": "critical_safety_researchers",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Conduct independent research into the efficacy and limitations of simulation for competence maintenance. They often highlight gaps between simulated and real-world performance, or advocate for hybrid training models, but their findings may be marginalized in policy discussions dominated by industry interests."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, scalable, and relatively safe method for training and assessing critical operational competence across a large workforce, addressing the logistical and safety challenges of real-world training.",
+    "transfer_function": "Transfers significant financial resources from organizations to the simulation industry and training providers, in exchange for perceived competence maintenance, regulatory compliance, and a reduction in real-world training risks.",
+    "absent_voices": "Researchers and practitioners who emphasize the inherent limitations of simulation, or advocate for real-world experience and hybrid training models, are often excluded from policy-setting bodies that define 'sufficient' competence maintenance. Their concerns are often framed as impractical or overly costly.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in simulation sufficiency vanished overnight, organizations would face a crisis in competence maintenance. They would be forced to rapidly re-evaluate training strategies, likely increasing reliance on costly and risky real-world exercises, leading to significant operational disruption and a complete restructuring of the simulation and training industries.",
+    "founding_problem": "The high cost, inherent risks, and logistical complexities of providing sufficient real-world training for complex, high-consequence tasks, coupled with the need for standardized and measurable competence assessment across large, distributed workforces.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The simulation industry and organizational leadership attest that the founding problems (cost, risk, scalability of real-world training) remain live. However, critical safety researchers and some frontline operators argue that while the original problems persist, the *sufficiency* claim of simulation has become an overreach, and the current arrangement primarily serves the economic interests of the simulation and training providers, rather than optimal competence maintenance. Independent safety boards often issue reports that implicitly or explicitly question the 'sufficiency' claim, supporting the contested status."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'simulation_sufficiency' reading of the 'competence_occupation' kernel. It asserts that simulation-based drills alone are sufficient to maintain critical competence and prevent skill decay in high-reliability organizations. This reading emphasizes the scalability, safety, and cost-effectiveness of simulation, often leading to significant investment in simulation technology and mandatory training programs. The simulation industry emerges as a primary beneficiary, while frontline operators and organizations bear the costs of compliance and potential gaps in real-world readiness.",
+    "logic_rationale": "The constraint is classified as a Tangled Rope because it provides a genuine coordination function (standardized competence maintenance) but also involves significant asymmetric extraction. Extractiveness is high (0.65) due to the substantial financial transfers to the simulation industry and training providers, often exceeding the marginal cost of the service. Suppression is also high (0.70) as alternative training methodologies or critiques of simulation's limitations are often marginalized or actively suppressed in favor of the 'sufficiency' narrative. The theater ratio (0.40) reflects that while some simulation activity is genuinely functional, a growing portion is performative, aimed at regulatory compliance or demonstrating commitment to safety rather than optimizing actual competence.",
+    "directionality_logic": "The simulation industry and training providers are clear beneficiaries and agenda-setters, collecting revenue and shaping the narrative. Organizational leadership also benefits from perceived compliance and risk mitigation. Frontline operators and organizations are payers, bearing the direct costs and potential risks of an over-reliance on simulation. Critical safety researchers are often excluded, as their findings may challenge the core premise of simulation sufficiency.",
+    "perspectival_gap": "From the perspective of the simulation industry and organizational leadership, this constraint is a necessary and efficient coordination mechanism for safety. From the perspective of frontline operators and critical safety researchers, it functions as an extractive mechanism that may compromise actual competence for the benefit of industry and administrative convenience. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'simulation_sufficiency' reading of the 'competence_occupation' kernel. This reading posits that simulation alone is sufficient for competence maintenance. Sibling readings include 'real_incident_necessity' (only real incidents suffice) and 'hybrid_occupation' (competence requires multiple, integrated mechanisms)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_limits",
+      "question": "To what extent can simulation truly replicate the full range of cognitive, emotional, and physical stressors and complexities of real-world high-consequence incidents?",
+      "resolution_mechanism": "Longitudinal studies comparing performance outcomes of simulation-only trained personnel versus those with real-world or hybrid training, particularly in novel or high-stress scenarios.",
+      "impact": "If fidelity limits are substantial and unaddressable by current technology, the 'sufficiency' claim collapses, reclassifying the constraint as a Snare or Piton due to its extractive nature without adequate coordination. If limits are minor, the Tangled Rope classification holds, or shifts towards Rope if extraction is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The empirical limits of simulation's ability to fully occupy the competence kernel."
+    },
+    {
+      "id": "competence_definition_ambiguity",
+      "question": "Is the 'competence kernel' being defined in a way that is amenable to simulation, potentially narrowing the definition of competence itself?",
+      "resolution_mechanism": "Conceptual analysis of competence definitions used by simulation advocates versus those used by critical safety researchers, followed by expert consensus workshops to identify definitional gaps.",
+      "impact": "If the definition is being narrowed to fit simulation capabilities, the constraint's coordination function is compromised, and its extractive elements are amplified, pushing it towards Snare. If the definition remains robust, the Tangled Rope classification is more stable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the definition of competence is being shaped by the available simulation technology."
+    },
+    {
+      "id": "mandatrophy_risk_simulation_sufficiency",
+      "question": "Is the continued emphasis on simulation sufficiency driven by the genuine, evolving needs of competence maintenance, or by the institutional inertia and economic interests of the simulation industry?",
+      "resolution_mechanism": "Independent audits of training program effectiveness and cost-benefit analyses that explicitly account for alternative training methods and the long-term impact on operational safety, conducted by bodies with no financial ties to the simulation industry.",
+      "impact": "If economic interests are the primary driver, the constraint is at high risk of mandatrophy, potentially reclassifying as a Piton if its functional benefits atrophy further, or a Snare if extraction remains high despite functional decay.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assessing if the mandate for simulation sufficiency has outlived its original function."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "safety_certification_standards",
+      "regulatory_compliance_frameworks",
+      "organizational_risk_management"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_fidelity_is_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_is_simulable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "simulation_as_gold_standard_competence_maintenance",
+    "drift_state": {
+      "moment": "contemporary_safety_culture",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

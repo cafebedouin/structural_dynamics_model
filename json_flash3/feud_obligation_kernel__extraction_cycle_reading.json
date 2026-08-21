@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__extraction_cycle_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4eba658c-907c-4830-af35-b2f7f8a944cd"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.9,
+    "claimed_type": "snare",
+    "human_readable": "Blood-Feud Extraction Cycle",
+    "topic_domain": "legal_anthropology/medieval_history/political_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "royal_authority",
+      "feud_leaders"
+    ],
+    "victims": [
+      "feud_participants",
+      "peasantry",
+      "merchants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "feud_participants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bound by kinship and honor to participate in cycles of vengeance, leading to high mortality, injury, and resource depletion. Exit means dishonor, ostracization, or further victimization."
+    },
+    {
+      "name": "peasantry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Suffer collateral damage from feuds: raids, destruction of crops, forced conscription, and general insecurity. Their productive capacity is directly depleted, and they have no effective means of opting out."
+    },
+    {
+      "name": "merchants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Their trade routes are disrupted, goods are seized, and markets are destabilized by ongoing feuds. They bear economic costs and face physical danger, but their mobility offers some (constrained) options for rerouting or temporary withdrawal."
+    },
+    {
+      "name": "royal_authority",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Benefits from the social chaos and economic depletion caused by feuds, as it creates a demand for centralized justice and a monopoly on violence. This legitimizes the expansion of royal power, taxation, and the suppression of local kinship-based enforcement."
+    },
+    {
+      "name": "feud_leaders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "While participating in the cycle, they gain status, honor, and sometimes material wealth through successful raids or intimidation. They are beneficiaries of the system's internal logic, even as it depletes the wider society."
+    },
+    {
+      "name": "ecclesiastical_institutions",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Condemn feuds as un-Christian and work to establish 'Peace of God' movements, offering alternative dispute resolution and moral authority. They observe the destructive cycle and seek to replace it with a divinely sanctioned order."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The constraint, by this reading, does not solve a genuine coordination problem; it is a destructive cycle. Any 'coordination' is internal to the cycle of vengeance, not for societal benefit.",
+    "transfer_function": "Transfers lives, labor, and material wealth from feud participants, peasantry, and merchants to the destructive cycle itself, indirectly benefiting royal authority through legitimization of its monopoly on violence, and directly benefiting feud leaders through status and limited material gains.",
+    "absent_voices": "The victims of the feud (peasantry, merchants) are largely absent from the discourse that perpetuates it. Their voices would highlight the economic and social costs, advocating for peace and centralized justice, but they lack the power to influence the system.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If blood-feud obligations vanished, local economies would recover, populations would stabilize, and royal authority would face less immediate justification for its expansion, leading to a significant rearrangement of social and political structures.",
+    "founding_problem": "The absence of a centralized, legitimate authority to enforce justice and resolve disputes, leading to self-help mechanisms for redress.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Royal chroniclers and ecclesiastical records from outside the immediate feud participants consistently describe the feuds as a destructive force, and their cessation as a sign of societal progress and the strengthening of central authority. The problem of statelessness is largely superseded by the emergence of nascent states."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'extraction cycle' reading of blood-feud obligations, where the system is viewed as a destructive force that depletes societal resources and inadvertently strengthens centralized power by creating a demand for its suppression. It is one reading of the 'feud_obligation_kernel', distinct from 'stateless_coordination_reading' (which sees feuds as a form of justice) and 'christianized_pacification_reading' (which condemns them on moral grounds).",
+    "logic_rationale": "Extractiveness is high (0.85) due to the direct costs in lives, property, and lost productivity. Suppression (0.7) is also high, as the social pressure to participate in feuds, driven by honor and kinship, is immense, effectively suppressing alternatives like peaceful resolution or state-based justice. Resistance is high (0.9) from the victims, but their powerlessness prevents effective change. The theater ratio is low (0.1) because the destructive function is quite real, not performative.",
+    "directionality_logic": "Feud participants, peasantry, and merchants are clear targets (high d) due to the direct costs they bear and their limited exit options. Royal authority and feud leaders are beneficiaries (low d), as the former gains legitimacy and the latter gains status from the ongoing conflict. The system is self-perpetuating through social norms and the absence of effective alternatives.",
+    "perspectival_gap": "From the perspective of feud participants and the general populace, the system is a snare, trapping them in a cycle of violence and depletion. From the perspective of royal authority, it is a problem to be 'solved' by expanding state power, thus legitimizing its own extractive mechanisms. Feud leaders, paradoxically, benefit from the status and power derived from their participation, even as the system harms the wider society.",
+    "mandatrophy_analysis": "The constraint's mandate (to provide justice in a stateless society) has atrophied, as centralized authorities emerge. However, the cycle persists due to entrenched social norms and the benefits it provides to certain actors (feud leaders, royal authority). The classification as a Snare reflects this: the coordination story (justice) is cover for a destructive cycle that benefits specific parties and requires active suppression of alternatives.",
+    "kernel_context": "This constraint is the 'extraction_cycle_reading' of the 'feud_obligation_kernel'. Sibling readings include the 'stateless_coordination_reading', which views feuds as a functional, self-enforcing justice mechanism in stateless societies, and the 'christianized_pacification_reading', which condemns feuds as morally wrong and advocates for ecclesiastical or royal authority as the sole legitimate source of justice."
+  },
+  "omegas": [
+    {
+      "id": "feud_coordination_vs_extraction",
+      "question": "To what extent did blood-feud obligations genuinely provide a coordination function (e.g., deterrence, justice) versus primarily acting as a destructive extraction cycle?",
+      "resolution_mechanism": "Comparative historical analysis of societies with and without feuds, examining long-term demographic and economic trends, and the presence/absence of alternative dispute resolution mechanisms.",
+      "impact": "If a significant coordination function is established, the constraint might shift towards a Tangled Rope or even Rope classification, acknowledging a genuine (albeit costly) societal function. If extraction dominates, the Snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between coordination and extraction in blood-feud systems."
+    },
+    {
+      "id": "royal_authority_beneficiary_ambiguity",
+      "question": "Is royal authority a genuine beneficiary of the feud cycle, or merely an external actor seeking to impose order for broader societal benefit?",
+      "resolution_mechanism": "Analysis of royal fiscal records and land acquisitions during periods of active feuding versus periods of peace, and the rhetoric used to justify royal intervention.",
+      "impact": "If royal authority demonstrably profited from the chaos, its beneficiary status is confirmed. If its interventions were consistently costly and yielded little direct gain, its role might be reclassified as an 'observer' or 'agenda_setter' with a different directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether royal authority's role in feuds is extractive or purely pacifying."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (social pressure to participate in feuds) structural (lack of alternatives, external enforcement of honor codes) or internalized (identity fusion with kinship group, belief in the justice of vengeance)?",
+      "resolution_mechanism": "Ethnographic studies of post-feud societies: if suppression persists after external barriers are removed, reclassify as partially internalized. Historical analysis of individual choices to opt out and their social consequences.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — individuals carry the suppression with them. This would deepen the Snare classification by highlighting the difficulty of exit even if external conditions change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism in blood-feud obligations."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "stateless_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christianized_pacification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feud_depletes_productive_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "feud_prevents_territorial_consolidation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_state_formation_equilibrium",
+    "drift_state": {
+      "moment": "early_state_consolidation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

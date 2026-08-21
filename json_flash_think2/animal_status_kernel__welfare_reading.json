@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "animal_status_kernel__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2765cde6-757a-4dfc-9551-b2dfb9e1b56a"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Welfare Regulatory Framework (Welfare Reading)",
+    "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "animal_agriculture_industry",
+      "pharmaceutical_research",
+      "pet_owners",
+      "consumers_of_animal_products"
+    ],
+    "victims": [
+      "farmed_animals",
+      "research_animals",
+      "wild_animals_affected_by_human_activity"
+    ],
+    "vindicated_propositions": [
+      "sentience_as_moral_basis",
+      "utilitarian_harm_reduction"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "animal_agriculture_industry",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operates within welfare regulations, incurring compliance costs but retaining the right to use animals for profit. Actively lobbies to shape and limit the scope of welfare laws, benefiting from the continued legality of animal use."
+    },
+    {
+      "name": "pharmaceutical_research",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Relies on animal testing for product development, operating under regulations that mandate minimization of pain and suffering. Benefits from the continued permissibility of animal use in research, despite compliance costs."
+    },
+    {
+      "name": "pet_owners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefits from the societal acceptance of pet ownership, which comes with welfare obligations for animal care. Experiences the constraint as a set of responsibilities for their animals' well-being."
+    },
+    {
+      "name": "consumers_of_animal_products",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefits from the continued availability of animal products, with the added assurance that animals were treated according to welfare standards. Bears indirect costs through potentially higher prices for welfare-compliant products."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are used for human purposes (food, fiber) but are afforded legal protections against egregious cruelty and mandates for basic welfare. They bear the cost of continued use, albeit with reduced suffering compared to an unregulated system."
+    },
+    {
+      "name": "research_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are used in scientific experiments under strict protocols to minimize pain and distress. They bear the cost of being subjects in research, with their suffering mitigated by welfare regulations."
+    },
+    {
+      "name": "wild_animals_affected_by_human_activity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are indirectly affected by human activities (e.g., habitat destruction, pollution) where welfare considerations might lead to mitigation efforts, but their fundamental status as non-property is not established. They bear diffuse costs from human expansion."
+    },
+    {
+      "name": "animal_welfare_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lobby for stronger welfare regulations and enforcement, working within the framework that accepts animal use but seeks to minimize suffering. They see the constraint as a tool for incremental progress."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Reject the fundamental premise of animal use and property status, viewing welfare reforms as legitimizing exploitation. They are excluded from the core conversation of the welfare framework because their demands are outside its foundational axioms."
+    },
+    {
+      "name": "property_rights_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lobby against stricter welfare regulations, arguing they infringe on property rights and economic freedom. They seek to minimize the impact of welfare obligations on animal users."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforce animal welfare laws and regulations, balancing industry interests with public expectations of animal protection. They operate within the legal framework that defines animals as property with welfare obligations."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "To coordinate human use of animals (for food, research, companionship) with a societal expectation of minimizing animal suffering, by establishing and enforcing welfare standards.",
+    "transfer_function": "Transfers costs of welfare compliance (e.g., better housing, veterinary care) from animals to industries and consumers, while transferring some protection from suffering to animals. It also transfers moral comfort to consumers who believe animals are treated humanely.",
+    "absent_voices": "Abolitionist advocates are structurally excluded from the core policy-making within this framework, as their premise (no use) is outside its bounds. Animals themselves, as non-agents, are also absent, with their interests represented by advocates and scientific consensus on sentience.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If animal welfare obligations vanished overnight, industries would likely revert to cheaper, more intensive practices, leading to a significant increase in animal suffering. This would trigger widespread public moral outrage, consumer boycotts, and a rapid reorganization of ethical and legal frameworks around animal treatment.",
+    "founding_problem": "Unchecked cruelty to animals causing public moral discomfort, leading to calls for basic protections and a more humane approach to animal use.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Animal welfare scientists, public opinion polls, and reports from regulatory bodies consistently corroborate the ongoing need for welfare standards and the problem of potential cruelty if left unregulated. This is attested by sources outside the direct beneficiaries of animal use."
+  },
+  "interval": {
+    "start": 1970,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.25
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'welfare reading' of the animal status kernel, where animals are recognized as sentient beings whose suffering is morally relevant, but their use by humans is acceptable if regulated to minimize pain. Their property status is retained but constrained by welfare obligations. This reading sits between a pure 'property reading' (animals as mere commodities) and an 'abolitionist reading' (animals as moral persons with rights not to be used). The constraint's claimed type is 'tangled_rope' because it genuinely coordinates human activity with a moral imperative (minimizing suffering) while simultaneously enabling and extracting from the continued use of animals as property. This framework often faces the 'new welfarism' critique from abolitionists, who argue that welfare reforms make the public comfortable with 'happy meat' and thus perpetuate exploitation.",
+    "logic_rationale": "The extractiveness is moderate (0.45) because while welfare regulations impose costs on industries (e.g., for better housing, veterinary care), they ultimately permit the continued, profitable use of animals. Suppression is moderate (0.55) as active enforcement is required to ensure compliance, and alternatives to animal use (e.g., veganism, in-vitro meat) are not suppressed but also not universally adopted or mandated. The theater ratio is low to moderate (0.25) reflecting genuine efforts to improve welfare, but also some performative compliance or 'humane washing' that may not significantly alter animal experience. The measurement series show a gradual increase in extractiveness and suppression over time, reflecting the increasing stringency of welfare standards and the growing societal pressure for animal protection, even within a use-permitting framework.",
+    "directionality_logic": "Animal agriculture, pharmaceutical research, pet owners, and consumers are beneficiaries, as they retain the ability to use animals for profit or companionship, albeit with some compliance costs. Farmed animals, research animals, and wild animals affected by human activity are the primary payers/victims, bearing the cost of continued use and suffering, even if mitigated. Animal welfare advocates and regulatory bodies act as agenda-setters, shaping the rules. Abolitionist advocates are excluded from the core framework as their fundamental premise (no use) is incompatible with the welfare reading's acceptance of regulated use.",
+    "perspectival_gap": "From the perspective of animal industries, the constraint is a burdensome but necessary cost of doing business, allowing them to maintain social license. From animal welfare advocates, it represents incremental progress in reducing suffering. From abolitionist advocates, it is a legitimizing cover for continued exploitation. The engine's per-seat classification will reflect these divergences, with beneficiaries experiencing it as a coordination mechanism and victims/excluded parties experiencing it as extractive.",
+    "kernel_context": "This constraint is the 'welfare_reading' of the 'animal_status_kernel'. This kernel concerns the fundamental moral and legal status of animals. Sibling readings include the 'property_reading' (animals as mere property, moral status derived from ownership) and the 'abolitionist_reading' (animals as moral persons with rights not to be property or used). This welfare reading attempts to bridge the gap by acknowledging sentience and moral relevance while retaining a framework of human use."
+  },
+  "omegas": [
+    {
+      "id": "welfare_efficacy_ambiguity",
+      "question": "Is welfare regulation genuinely reducing animal suffering to a morally acceptable minimum, or is it primarily serving to make human consumers comfortable with continued animal use?",
+      "resolution_mechanism": "Comprehensive, independent ethological studies comparing animal well-being under various welfare regimes, alongside consumer behavior analysis regarding 'humane' labeling.",
+      "impact": "If primarily comfort-driven, the effective extractiveness from animals is higher than measured, and the constraint's coordination function is more theatrical. If genuinely effective, the extractiveness is appropriately mitigated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The true impact of welfare regulations on animal suffering versus human moral comfort."
+    },
+    {
+      "id": "property_status_tension",
+      "question": "Can animals truly be protected by welfare laws and have their suffering recognized as morally relevant while simultaneously retaining their legal status as property?",
+      "resolution_mechanism": "Legal analysis of case law where property rights conflict with welfare obligations, and philosophical inquiry into the coherence of 'property with rights' as a legal concept.",
+      "impact": "If the tension is irreconcilable, the property status fundamentally undermines welfare protections, making the constraint more extractive. If reconcilable, the welfare reading is more robust.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The inherent tension between animal property status and welfare obligations."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression of alternatives (e.g., veganism) structural (economic barriers, lack of infrastructure) or internalized (cultural norms, identity fusion with animal product consumption)?",
+      "resolution_mechanism": "Post-intervention analysis: if structural barriers to alternatives are removed (e.g., subsidies for plant-based foods), does the suppression of alternatives persist due to internalized norms?",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests, as individuals carry the suppression with them. If purely structural, removing barriers would lead to rapid shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for alternatives to animal use."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__property_reading",
+      "animal_status_kernel__abolitionist_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'animal_status_kernel', which is decomposed into three distinct constraint stories: 'property_reading', 'welfare_reading', and 'abolitionist_reading'. Each represents a different structural claim about animal status and human obligations."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "property_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "animal_sentience_morally_relevant",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "human_use_of_animals_permissible_with_minimization_of_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "sentience_based_harm_reduction",
+    "drift_state": {
+      "moment": "contemporary_animal_rights_discourse",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "animal_agriculture_industry",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

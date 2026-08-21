@@ -1,0 +1,251 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_validity__continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e9173a61-54dd-46ea-bb30-d8daa48c833c"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Continuous Competence Refresh via Hybrid Drills",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "frontline_operators",
+      "safety_regulators"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These organizations (e.g., nuclear power, aviation, emergency services) implement and fund continuous drill cycles and hybrid training to maintain operational competence. They benefit from reduced incident rates and sustained public trust, but bear the direct costs of training."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Operators (pilots, control room staff, first responders) directly participate in drills and simulations. They benefit from enhanced skills, confidence, and safety, but must dedicate significant time and effort to continuous training, sometimes at the expense of other duties."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "These bodies (e.g., FAA, NRC) mandate and oversee competence retention programs. They benefit from improved safety records and public confidence in regulated industries. Their role is to ensure compliance and effectiveness of training regimes."
+    },
+    {
+      "name": "training_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Companies and institutions specializing in simulation and drill design, execution, and assessment. They benefit financially from contracts with HROs and contribute expertise to the continuous refresh model."
+    },
+    {
+      "name": "advocates_for_simulation_only",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "These groups argue that high-fidelity simulation is sufficient for competence retention, reducing the need for costly and disruptive live drills. They are excluded from the core decision-making that mandates hybrid approaches."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that complex operational teams and individuals maintain a high level of competence and readiness for rare, high-consequence events through a structured, continuous program of varied exercises.",
+    "transfer_function": "Transfers resources (time, money, personnel) from operational budgets to training and exercise programs, in exchange for sustained competence and reduced risk of catastrophic failure.",
+    "absent_voices": "Advocates for simulation-only approaches are often marginalized, arguing that the 'continuous refresh' model is overly burdensome and that advanced simulation can achieve similar outcomes more efficiently. Their perspective is often dismissed by those committed to hybrid methods.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement for continuous, hybrid competence refresh vanished, organizations would likely revert to less frequent, less comprehensive training, leading to competence decay, increased risk of incidents, and a decline in safety standards across high-reliability sectors.",
+    "founding_problem": "Catastrophic failures in complex systems (e.g., Three Mile Island, Challenger disaster) revealed that one-time training and reliance on theoretical knowledge were insufficient to prevent human error and ensure effective response in high-stress situations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety regulators, accident investigators, and independent academic researchers consistently corroborate that the underlying problem of competence decay and the need for continuous exercise remains live, citing ongoing near-misses and the inherent complexity of modern systems. This is attested from outside the direct beneficiaries of the training industry."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the view that effective competence retention in high-stakes domains requires a continuous, hybrid approach combining simulation with other forms of drill and exercise, rather than relying solely on one-time validation or simulation as a complete proxy for real-world experience. It is a reading of the 'competence_exercise_validity' kernel, emphasizing process-dependence over state-validation.",
+    "logic_rationale": "The extractiveness (0.35) is moderate, reflecting the significant but generally accepted costs of continuous training. Suppression (0.20) is low, as organizations largely adopt this model due to its proven safety benefits, not coercion, though regulatory mandates play a role. Theater ratio (0.10) is low, indicating that the drills are genuinely functional, not merely performative. The slight increase in extractiveness and suppression over time reflects the increasing complexity of systems and the corresponding need for more intensive training, which is a genuine cost of maintaining safety.",
+    "directionality_logic": "High-reliability organizations and safety regulators are primary beneficiaries, gaining safety and legitimacy. Frontline operators also benefit from enhanced competence and safety, though they bear the direct burden of participation. Training providers benefit financially. There are no direct 'victims' in this reading, as the costs are seen as necessary for the collective good of safety. Advocates for simulation-only are 'excluded' as their alternative is not fully adopted.",
+    "perspectival_gap": "While all stakeholders generally agree on the need for competence, the 'continuous refresh' model is experienced differently. HROs bear the financial and logistical burden, operators the time commitment, while regulators and training providers primarily benefit. The core divergence is with those who believe simulation alone is sufficient, seeing the hybrid model as an unnecessary cost.",
+    "kernel_context": "This constraint is the 'continuous_refresh_hybrid' reading of the 'competence_exercise_validity' kernel. It posits that competence is a dynamic process requiring ongoing, varied exercise. Sibling readings include 'simulation_as_proxy' (which claims simulation is sufficient) and 'real_catastrophe_only' (which claims only real events truly test competence)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_sufficiency_threshold",
+      "question": "At what level of fidelity and complexity can simulation become 'sufficient' for competence retention, reducing the need for other drill types?",
+      "resolution_mechanism": "Empirical studies comparing long-term competence decay rates and incident rates between simulation-only and hybrid training groups in specific high-reliability domains.",
+      "impact": "If simulation is proven sufficient at a lower cost, the extractiveness of the 'continuous refresh' model would be re-evaluated as higher than necessary, potentially shifting the constraint towards a Tangled Rope or Snare for the 'payer' seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining the point at which simulation can fully substitute for other forms of competence exercise."
+    },
+    {
+      "id": "process_vs_state_competence",
+      "question": "Is competence fundamentally a dynamic process (requiring continuous exercise) or a measurable state (validated by periodic assessment)?",
+      "resolution_mechanism": "Conceptual analysis and philosophical debate within safety science, informed by cognitive psychology and organizational theory, to clarify the ontological nature of 'competence' in complex adaptive systems.",
+      "impact": "If competence is primarily a state, the 'continuous refresh' model might be seen as over-engineering, increasing its perceived extractiveness. If it is a process, the model's justification is strengthened.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The fundamental nature of competence as a process versus a state."
+    },
+    {
+      "id": "kernel_reading_difference",
+      "question": "What are the precise structural differences between the 'continuous_refresh_hybrid' reading and its siblings ('simulation_as_proxy', 'real_catastrophe_only')?",
+      "resolution_mechanism": "Detailed comparative analysis of the core axioms, beneficiary/victim structures, and proposed enforcement mechanisms of each reading, as instantiated in policy and practice.",
+      "impact": "Clarifying these differences helps to understand why different parties hold different readings and where the fundamental disagreements lie, informing potential pathways for resolution or managed coexistence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural differences between this reading and its siblings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_perishable_and_dynamic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "hybrid_exercise_optimizes_transfer_to_real_world",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_catastrophe_learning_paradigm",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

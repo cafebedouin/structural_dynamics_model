@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "1dd7a128-aa27-4781-8746-44cc0c8f6a0b",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support (Freedom Floor Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "precarious_workers",
+      "caregivers",
+      "artists",
+      "abuse_victims",
+      "all_citizens"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "precarious_workers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives a baseline income that reduces the pressure to accept exploitative labor conditions, enabling better job matching and reducing precarity. This group benefits directly from increased bargaining power."
+    },
+    {
+      "name": "caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives income that values unpaid care work, providing financial stability and recognition for essential social contributions, reducing their dependence on external employment or spousal income."
+    },
+    {
+      "name": "artists",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives income that allows for greater creative freedom and risk-taking, reducing the need to commercialize art prematurely or pursue unrelated work for survival. This fosters cultural production."
+    },
+    {
+      "name": "abuse_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Receives financial independence that enables escape from abusive relationships, removing a key economic barrier to exit and increasing personal safety and autonomy."
+    },
+    {
+      "name": "all_citizens",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from a more resilient economy, reduced social inequality, improved public health outcomes, and a more engaged citizenry. The universality of the program reduces stigma and administrative overhead."
+    },
+    {
+      "name": "government_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administers the unconditional income support program, managing distribution and ensuring compliance. Bears the fiscal cost but benefits from reduced administrative complexity compared to means-tested welfare programs and improved social stability."
+    },
+    {
+      "name": "traditional_welfare_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Would argue that unconditional income support is too broad, potentially diverting funds from targeted programs for the most vulnerable, and that it may not adequately address complex needs beyond income. Their concerns are often marginalized in the push for universality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a baseline economic floor for all citizens, enabling individuals to participate in the labor market and society from a position of greater security and autonomy, rather than coercion. It simplifies welfare administration and reduces the 'poverty trap' of means-tested benefits.",
+    "transfer_function": "Transfers a regular, unconditional income from the national tax base to every citizen, ensuring a basic standard of living and enabling greater freedom in labor and life choices.",
+    "absent_voices": "Critics who fear disincentives to work or argue for more targeted interventions are often excluded from the core 'freedom floor' narrative, which emphasizes universal benefits and autonomy. Their concerns about fiscal sustainability or potential for 'free riders' are not central to this reading.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, millions would immediately lose their economic floor, forcing many back into precarious labor, increasing poverty and inequality, and destabilizing social safety nets. The labor market would revert to its prior coercive dynamics, and social outcomes would degrade.",
+    "founding_problem": "The problem of economic precarity, labor market coercion, welfare stigma, and the administrative complexity of means-tested social support systems.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent economic studies, social science research on labor market dynamics, and testimony from individuals experiencing precarity and welfare stigma corroborate the ongoing nature of these problems. Pilot programs in various countries (e.g., Finland, Kenya) provide empirical evidence of the problem's persistence and the intervention's effects."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'freedom_floor_reading' of unconditional income support. It posits that a universal basic income (UBI) functions as an autonomy-enabling floor, removing coercion from the labor market, eliminating welfare stigma, and protecting against market shocks. The reading emphasizes the positive coordination function of UBI in fostering individual agency and societal resilience. It claims a Rope classification, with beneficiaries including precarious workers, caregivers, artists, and abuse victims, and no identifiable victims, as it's seen as a Pareto improvement.",
+    "logic_rationale": "The extractiveness (0.25) is low, representing the necessary taxation to fund the program, which is viewed as a collective investment rather than extraction from specific victims. Suppression (0.1) is minimal, as the program aims to reduce, not impose, coercive pressures. Theater ratio (0.05) is low, reflecting a direct and functional transfer with little performative overhead. The accessibility collapse (0.2) is low because it expands, rather than restricts, options. Resistance (0.15) is also low, as this reading focuses on the broad societal benefits and widespread support for autonomy.",
+    "directionality_logic": "Precarious workers, caregivers, artists, and abuse victims are primary beneficiaries, experiencing a significant increase in autonomy and reduction in coercive pressure (d near 0.0). All citizens also benefit from a more stable and equitable society. Government agencies act as agenda-setters, managing the program for collective benefit. No specific victim group is identified in this reading, as the funding is drawn from general taxation and framed as a collective investment.",
+    "perspectival_gap": "The 'freedom_floor_reading' emphasizes the autonomy-enhancing aspects, leading to a Rope classification. Sibling readings, such as the 'dependency_trap_reading', would likely classify it as a Snare due to perceived disincentives to work and misallocation of resources, highlighting a significant perspectival gap on the constraint's fundamental nature. The engine's classification will reflect the structural data provided here, which aligns with the freedom-floor perspective.",
+    "kernel_context": "This constraint is the 'freedom_floor_reading' of the 'unconditional_income_support' kernel. Sibling readings include the 'dependency_trap_reading' (viewing UBI as an incentive-distorting subsidy) and the 'universality_paradox_reading' (seeing UBI as a politically ambiguous Trojan horse with incompatible implementation paths)."
+  },
+  "omegas": [
+    {
+      "id": "labor_supply_effects",
+      "question": "What are the actual long-term effects of unconditional income support on labor supply and participation rates?",
+      "resolution_mechanism": "Longitudinal studies of large-scale UBI pilot programs across diverse economic contexts, measuring changes in employment, hours worked, and entrepreneurial activity.",
+      "impact": "If labor supply significantly decreases, it would challenge the 'autonomy-enabling' aspect, potentially shifting the classification towards a 'dependency_trap_reading' (Snare). If effects are minimal or positive (e.g., increased entrepreneurship), it reinforces the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the empirical impact on labor market participation."
+    },
+    {
+      "id": "fiscal_sustainability_and_funding_source",
+      "question": "Is the proposed funding mechanism for unconditional income support fiscally sustainable without creating new forms of extraction or economic distortion?",
+      "resolution_mechanism": "Detailed macroeconomic modeling and real-world implementation data on tax base changes, inflation, and public debt, compared against alternative funding models (e.g., carbon tax, wealth tax).",
+      "impact": "If funding proves unsustainable or requires highly extractive taxation, it could introduce a 'victim' class not accounted for in this reading, pushing towards a Tangled Rope or even Snare classification. If sustainable and non-extractive, it strengthens the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty about the long-term fiscal viability and potential for hidden extraction in funding."
+    },
+    {
+      "id": "coercion_definition_ambiguity",
+      "question": "Is the 'coercion' removed from the labor market by UBI a genuine structural coercion, or is it a natural consequence of economic scarcity and individual choice?",
+      "resolution_mechanism": "Philosophical and economic analysis of 'coercion' in market contexts, distinguishing between structural constraints and voluntary exchange under scarcity. This would involve examining the counterfactuals of a world without UBI.",
+      "impact": "If the 'coercion' is re-framed as non-coercive scarcity, the core justification for UBI as a 'freedom floor' weakens, potentially aligning with the 'dependency_trap_reading' that views UBI as an unnecessary subsidy.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Conceptual ambiguity in the definition of 'coercion' in the labor market context."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This story is one reading of the 'unconditional_income_support' kernel. It focuses on the 'freedom_floor' interpretation, distinct from 'dependency_trap_reading' and 'universality_paradox_reading'."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_autonomy_is_foundational_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unconditional_income_reduces_labor_market_coercion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_industrial_autonomy_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

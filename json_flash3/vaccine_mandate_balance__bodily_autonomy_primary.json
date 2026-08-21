@@ -1,0 +1,238 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "bb7da91c-d83c-41c7-9653-a5c155e33949",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Bodily Autonomy as Primary in Public Health Mandates",
+    "topic_domain": "public_health_ethics/constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "victims": [
+      "unvaccinated_individuals_coerced",
+      "healthcare_workers_mandated",
+      "employees_facing_termination"
+    ],
+    "beneficiaries": [
+      "state_public_health_authorities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "unvaccinated_individuals_coerced",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals who face loss of employment, education, or access to public spaces due to vaccine mandates, despite their assertion of bodily autonomy. They bear the direct costs of non-compliance."
+    },
+    {
+      "name": "state_public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Entities that issue and enforce vaccine mandates, believing they are acting for the collective good. They benefit from increased public health compliance and reduced disease burden, but face legal challenges."
+    },
+    {
+      "name": "healthcare_workers_mandated",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Healthcare professionals who are required to be vaccinated to maintain their employment. Their professional identity and career path make exit difficult, even if they object to the mandate on autonomy grounds."
+    },
+    {
+      "name": "employees_facing_termination",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Workers in various sectors who face job loss if they do not comply with vaccine mandates. Their economic security is directly threatened, limiting their practical exit options."
+    },
+    {
+      "name": "immunocompromised_exposed",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Vulnerable individuals who rely on herd immunity for protection. From this reading's perspective, their exposure risk is an inherent part of a free society where individual liberty is paramount, and they are not considered 'victims' of the constraint itself, but rather of the disease environment."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Organizations and individuals who champion individual rights against state overreach. They actively challenge vaccine mandates in courts and public discourse, aligning with the bodily autonomy primary reading."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "This reading asserts no legitimate coordination function for state-compelled medical intervention, viewing it as an infringement on fundamental rights rather than a coordination problem.",
+    "transfer_function": "Transfers the right to make personal medical decisions from the individual to the state, in exchange for perceived collective health benefits. It also transfers the burden of disease risk from the general population to those who assert autonomy.",
+    "absent_voices": "The collective voice of those who prioritize public health over individual autonomy in extreme circumstances is absent from this reading's core premise, as their concerns are deemed secondary to individual rights.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the principle of inviolable individual consent vanished, the state's power to compel medical interventions would expand dramatically, fundamentally altering the relationship between citizens and government regarding health decisions. This would lead to a complete reorganization of public health policy and individual rights frameworks.",
+    "founding_problem": "The historical problem of state overreach and infringement on individual liberties, particularly concerning personal bodily integrity and medical decisions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars specializing in constitutional rights, civil liberties organizations, and historical precedents of medical ethics (e.g., Nuremberg Code) corroborate the ongoing relevance of protecting individual autonomy against state compulsion, from outside the immediate beneficiary set of state authorities."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story models the 'bodily_autonomy_primary' reading of the 'vaccine_mandate_balance' kernel. It asserts that individual consent to medical intervention is inviolable, and the state cannot compel such intervention, even for collective benefit. From this perspective, vaccine mandates are highly extractive and suppressive, targeting individuals who assert their autonomy. The immunocompromised, while at risk, are not considered victims of the constraint itself, as their risk is framed as an inherent aspect of a free society where individual liberty is paramount.",
+    "logic_rationale": "The high extractiveness (0.85) reflects the profound impact on individual liberty and the imposition of medical procedures against consent. The high suppression (0.90) stems from the severe penalties for non-compliance (job loss, exclusion from public life) and the lack of viable alternatives for those who wish to remain in society. The low theater ratio (0.10) indicates that the enforcement is direct and functional, not performative; the state genuinely intends to compel compliance. The claimed type is 'snare' because the coordination story (collective health) is seen as a cover for extraction of individual rights, maintained through coercion and suppression of alternatives.",
+    "perspectival_gap": "From the perspective of state public health authorities, the mandates might be seen as a 'rope' or 'scaffold' for collective coordination. However, from the 'bodily_autonomy_primary' reading, the same structure is experienced as a 'snare' due to the fundamental violation of individual rights and the coercive mechanisms employed.",
+    "directionality_logic": "Unvaccinated individuals, healthcare workers, and employees facing termination are direct targets (payers) of the constraint, experiencing high directionality (d near 1.0) due to the direct imposition and severe consequences. State public health authorities are beneficiaries (d near 0.0) as they achieve their policy goals through the constraint. Immunocompromised individuals are excluded from the direct beneficiary/victim analysis of this constraint, as their situation is framed as a consequence of the disease environment rather than the mandate itself under this specific reading.",
+    "mandatrophy_analysis": "This classification prevents mislabeling coercive state action as mere 'coordination.' By identifying the constraint as a snare, it highlights the extractive nature of compelling medical interventions against individual will, even if framed as a public good. It emphasizes that the mandate's persistence relies on coercion, not voluntary participation, and that there are clear victims whose autonomy is suppressed.",
+    "kernel_context": "This constraint is the 'bodily_autonomy_primary' reading of the 'vaccine_mandate_balance' kernel. This reading prioritizes individual consent and bodily integrity above collective health benefits, viewing state-compelled medical interventions as fundamentally illegitimate. Sibling readings include 'public_health_primary' (collective good supersedes individual consent) and 'proportionality_reading' (mandates permissible under strict conditions with robust exemptions)."
+  },
+  "omegas": [
+    {
+      "id": "collective_benefit_vs_individual_harm",
+      "question": "Does the collective benefit of vaccine mandates (reduced disease transmission, protection of vulnerable populations) genuinely outweigh the individual harm (infringement on bodily autonomy, economic penalties for non-compliance)?",
+      "resolution_mechanism": "Empirical studies on the efficacy of mandates in achieving public health goals versus documented individual harms, combined with a normative framework for weighing these values.",
+      "impact": "If collective benefit is demonstrably low or individual harm is disproportionately high, the 'snare' classification is strengthened. If the collective benefit is overwhelming and individual harm minimal, this reading's premise would be challenged, potentially shifting the constraint towards a 'tangled_rope' or 'scaffold' from a different perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The balance between public health outcomes and individual rights."
+    },
+    {
+      "id": "natural_right_vs_social_contract",
+      "question": "Is bodily autonomy an absolute, inviolable natural right, or is it a right that can be limited by a social contract for the collective good under specific circumstances?",
+      "resolution_mechanism": "Philosophical and legal debate on the foundations of rights, and the interpretation of constitutional protections in public health emergencies.",
+      "impact": "If autonomy is absolute, the 'snare' classification is robust. If it is context-dependent, the constraint's classification could shift towards a 'tangled_rope' or 'scaffold' if the conditions for limitation are met, as argued by sibling readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The philosophical grounding of bodily autonomy."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression (e.g., job loss, exclusion) primarily structural (external barriers) or internalized (cognitive patterns that persist after barrier removal)?",
+      "resolution_mechanism": "Post-mandate-removal trajectory: if suppression (e.g., self-exclusion from certain activities) persists after the legal/economic mandate is removed, reclassify as partially internalized.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — the target carries the suppression with them after exit, making the snare more insidious.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for vaccine mandates."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'vaccine_mandate_balance' kernel, focusing on individual bodily autonomy. Other readings (public_health_primary, proportionality_reading) offer alternative structural interpretations of the same underlying societal challenge."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_autonomy_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_compulsion_illegitimate_medical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "individual_rights_supremacy",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

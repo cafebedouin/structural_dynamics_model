@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "2fa7962e-5af2-48bc-a496-06e3257531b7"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.7,
+    "claimed_type": "rope",
+    "human_readable": "Bitcoin as Peer-to-Peer Electronic Cash",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "p2p_cash_users",
+      "merchants_accepting_bitcoin"
+    ],
+    "victims": [
+      "small_transactors",
+      "users_seeking_fast_confirmations"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "p2p_cash_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Seek to use Bitcoin for direct, low-cost, censorship-resistant transactions. They benefit from the network's security and immutability but bear the cost of high transaction fees and slow confirmation times, which limit its utility as cash."
+    },
+    {
+      "name": "small_transactors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are effectively priced out of using Bitcoin for everyday transactions due to high and volatile fees. They are victims of the network's current fee market dynamics, which prioritize larger value transfers."
+    },
+    {
+      "name": "merchants_accepting_bitcoin",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from censorship-resistant payment rails and final settlement but face challenges with transaction fees, confirmation times, and price volatility, which can make accepting Bitcoin for goods and services impractical."
+    },
+    {
+      "name": "miners",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Process transactions and secure the network, earning block rewards and transaction fees. From the p2p cash perspective, their economic incentives (maximizing fees) contribute to the constraint's failure to serve as cheap cash."
+    },
+    {
+      "name": "core_developers_p2p_cash_advocates",
+      "role": "agenda_setter",
+      "secondary_role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Advocate for the original vision of Bitcoin as peer-to-peer electronic cash, often pushing for technical solutions like block size increases or layer-2 scaling to reduce fees and improve throughput. They are constrained by network consensus and political dynamics."
+    },
+    {
+      "name": "bitcoin_investors_digital_gold_advocates",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Primarily view Bitcoin as a store of value or 'digital gold,' prioritizing scarcity and immutability over transaction throughput. From the p2p cash perspective, their influence and support for high fees (as a security mechanism) contribute to the constraint's extractive nature for transactors."
+    },
+    {
+      "name": "traditional_payment_processors",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are structurally excluded from the direct peer-to-peer transaction layer of Bitcoin. They would offer competing services but are not part of the Bitcoin protocol's design or governance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decentralized, trustless, and censorship-resistant medium for direct electronic transactions, eliminating the need for financial intermediaries.",
+    "transfer_function": "Facilitates the transfer of value directly between parties, with transaction fees paid to miners for network security and processing.",
+    "absent_voices": "Small transactors and users in developing economies who are priced out by high fees; they would advocate for lower fees and greater transaction capacity to enable Bitcoin's use as everyday cash.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Bitcoin vanished, the global financial system would lose its only truly decentralized, censorship-resistant digital cash system. While other digital payment methods exist, none offer the same properties, leading to a significant rearrangement of how value is transferred outside traditional institutions.",
+    "founding_problem": "The need for 'electronic cash that would allow online payments to be sent directly from one party to another without going through a financial institution,' as articulated in the Bitcoin whitepaper.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The original whitepaper and early forum discussions corroborate the founding problem. However, its 'status' is contested: p2p cash advocates argue it remains a live problem that Bitcoin is failing to solve, while digital gold advocates argue the problem has evolved or is being solved by layer-2 solutions, making the base layer a settlement network."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'p2p_cash_reading' of the Bitcoin whitepaper, which emphasizes Bitcoin's role as a censorship-resistant medium for direct electronic transactions. From this perspective, the current state of Bitcoin, characterized by high transaction fees and limited throughput, represents a significant departure from its founding vision. The constraint is claimed as a 'Rope' based on its ideal function, but the metrics reflect its current, more extractive operation, particularly for small transactors. This divergence is a key measurement of the system.",
+    "logic_rationale": "The 'p2p_cash_reading' views high transaction fees as a form of extraction, hence the high 'extractiveness' score (0.68). 'Suppression' is also high (0.75) because these fees effectively suppress the ability of many users to conduct small, frequent transactions, limiting Bitcoin's accessibility as cash. 'Resistance' is high (0.70) due to ongoing debates and advocacy for scaling solutions. 'Theater_ratio' is low (0.20) because the core function of censorship-resistant value transfer is still active, even if its 'cash' aspect is degraded. The temporal measurements reflect a trend of increasing extractiveness and suppression as transaction fees have risen over time, moving away from the low-cost ideal.",
+    "directionality_logic": "From this reading's perspective, 'p2p_cash_users' are beneficiaries of censorship resistance but payers of high fees. 'Small_transactors' are clear victims, priced out of the system. 'Miners' are agenda-setters who benefit from the fee market. 'Bitcoin_investors_digital_gold_advocates' are considered 'payers' in this context because their support for a high-fee, store-of-value narrative contributes to the extractive environment for cash users.",
+    "perspectival_gap": "The 'p2p_cash_reading' fundamentally clashes with the 'digital_gold_reading' and 'protocol_ossification_reading'. While p2p cash advocates see high fees as a failure, digital gold advocates may see them as a necessary security feature or a sign of Bitcoin's success as a settlement layer. The engine's per-seat classification will highlight this divergence, showing the same protocol operating as a degraded 'Tangled Rope' or 'Snare' for transactors, but potentially a 'Rope' or even 'Mountain' for those focused on its store-of-value properties.",
+    "kernel_context": "This constraint is the 'p2p_cash_reading' of the 'bitcoin_whitepaper' kernel. It emphasizes Bitcoin's original intent as a medium of exchange for direct electronic transactions. Sibling readings include the 'digital_gold_reading' (Bitcoin as a scarce store of value) and the 'protocol_ossification_reading' (prioritizing protocol stability above all else)."
+  },
+  "omegas": [
+    {
+      "id": "block_size_policy_vs_technical_limit",
+      "question": "Is the current block size limit a necessary technical constraint for decentralization and security, or a policy choice that limits Bitcoin's scalability as electronic cash?",
+      "resolution_mechanism": "Empirical analysis of alternative scaling solutions (e.g., larger blocks, layer-2 networks) and their impact on decentralization metrics (e.g., node count, mining centralization).",
+      "impact": "If a policy choice, it strengthens the argument for the constraint being a 'Snare' or 'Tangled Rope' for transactors, as scalability is artificially suppressed. If a technical necessity, it shifts the classification closer to a 'Mountain' for the base layer, with extraction being an unavoidable cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity over block size as a technical vs. policy constraint."
+    },
+    {
+      "id": "censorship_resistance_in_practice",
+      "question": "To what extent does Bitcoin truly achieve censorship resistance for transactions, given potential vulnerabilities at the mining pool, exchange, or internet service provider level?",
+      "resolution_mechanism": "Observation of state-level attempts to censor transactions or block access to the network, and the network's resilience to such attacks.",
+      "impact": "If censorship resistance is found to be significantly compromised, the core 'Rope' function of the p2p cash reading is undermined, potentially reclassifying it as a 'Piton' (theatrical resistance) or 'Snare' (covert control).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Practical limits of Bitcoin's censorship resistance."
+    },
+    {
+      "id": "layer_2_solution_impact",
+      "question": "Do layer-2 scaling solutions (e.g., Lightning Network) genuinely restore Bitcoin's function as peer-to-peer electronic cash, or do they introduce new forms of centralization and intermediation that contradict the original vision?",
+      "resolution_mechanism": "Long-term adoption and decentralization metrics of layer-2 networks, assessing their accessibility, cost, and trust assumptions compared to direct on-chain transactions.",
+      "impact": "If layer-2 solutions effectively restore p2p cash functionality without significant new intermediation, the base layer's 'extractiveness' for transactors might decrease, and the overall classification could shift closer to a 'Rope'. If they introduce new centralizing forces, the 'Snare' or 'Tangled Rope' aspects might simply shift to the layer-2 operators.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Impact of layer-2 solutions on Bitcoin's p2p cash function."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "This is one of three distinct readings of the 'bitcoin_whitepaper' kernel. This 'p2p_cash_reading' focuses on Bitcoin as a medium of exchange, contrasting with the 'digital_gold_reading' (store of value) and 'protocol_ossification_reading' (stability above all). Each reading yields different ε values and stakeholder experiences."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "low_transaction_fees_essential",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "block_size_scalability_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "satoshi_vision_p2p_cash",
+    "drift_state": {
+      "moment": "contemporary_fee_market_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "miners",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

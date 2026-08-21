@@ -1,0 +1,290 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__hybrid_occupation",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c5d6f572-81d6-4fd5-971b-a3302420a37e"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hybrid Competence Occupation Model",
+    "topic_domain": "high_reliability_organizations/safety_training",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "safety_regulators",
+      "public",
+      "simulation_vendors",
+      "procedural_design_experts"
+    ],
+    "victims": [
+      "training_departments",
+      "operational_personnel",
+      "organizations_bearing_costs"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for maintaining high levels of operational safety and competence. They implement and fund the multi-mechanism training, benefiting from reduced risk and regulatory compliance, but bear significant costs."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Oversee and enforce safety standards, advocating for robust competence maintenance. They benefit from improved safety records and public trust, and their mandates drive the complexity of the training requirements."
+    },
+    {
+      "name": "training_departments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bear the direct burden of designing, implementing, and managing complex, multi-mechanism training programs. They face budget constraints and the challenge of integrating diverse methods without clear optimal guidance."
+    },
+    {
+      "name": "operational_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Must continuously engage in various training activities (simulations, refreshers, audits) to maintain their competence and employment. They invest significant time and effort, often without direct input on training design."
+    },
+    {
+      "name": "public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefits from the enhanced safety and reliability of critical services (e.g., aviation, nuclear power, healthcare) that result from maintained operational competence. Their trust is essential for the legitimacy of high-reliability organizations."
+    },
+    {
+      "name": "simulation_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Provide specialized simulation technologies and services, profiting from the continuous demand for multi-mechanism training. They advocate for the inclusion and advancement of simulation in competence occupation models."
+    },
+    {
+      "name": "procedural_design_experts",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Consultants and academics specializing in human factors and procedural reinforcement, who benefit from the ongoing need for expertise in designing and auditing training protocols. They contribute to the complexity of the hybrid model."
+    },
+    {
+      "name": "advocates_for_simpler_training",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals or small groups within organizations who argue for less complex or costly training approaches, often citing budget pressures or perceived inefficiencies. Their voices are typically marginalized in the face of safety mandates and expert consensus on multi-modality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures critical operational competence is continuously maintained across high-stakes, dynamic environments by integrating diverse training methods (simulation, refreshers, procedural reinforcement, line audits), thereby preventing skill decay and reducing the risk of catastrophic failure.",
+    "transfer_function": "Transfers significant resources (financial budget, personnel time, cognitive load) from high-reliability organizations, training departments, and operational personnel to various training vendors, expert consultants, and internal oversight functions, in exchange for maintained competence and reduced systemic risk.",
+    "absent_voices": "Advocates for simpler, more cost-effective, or less frequent training models are often excluded from the discourse, as the prevailing expert consensus and regulatory pressure favor comprehensive, multi-mechanism approaches. Their arguments about efficiency or alternative learning paradigms are typically overridden by safety imperatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement for continuous, multi-mechanism competence occupation vanished overnight, organizations would likely revert to simpler, cheaper, and less frequent training. This would lead to accelerated skill decay, increased human error rates, and a higher probability of catastrophic incidents in high-reliability domains, fundamentally reorganizing the safety landscape.",
+    "founding_problem": "The persistent challenge of maintaining high-stakes operational competence in dynamic, complex environments where single training methods prove insufficient, skill decay is a constant threat, and human error can have catastrophic consequences.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident investigation reports, human factors research, independent safety audits, and regulatory findings consistently highlight the ongoing need for robust, multi-faceted competence maintenance. This corroborates the problem's live status from sources outside the direct beneficiaries of the training industry."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the requirement for high-reliability organizations to maintain operational competence through a continuous, multi-mechanism training regime (simulations, refreshers, procedural reinforcement, line audits), in the absence of a clear consensus on the optimal configuration of these mechanisms. It is one reading of the 'competence_occupation' kernel, emphasizing the hybrid, adaptive nature of competence maintenance. The constraint is claimed as a Rope by its proponents (ensuring safety), but its metrics reflect a Tangled Rope due to the significant, often unoptimized, extraction of resources and the active enforcement required to maintain its complex structure.",
+    "logic_rationale": "The extractiveness (0.68) is driven by the high cost and resource intensity of implementing and managing multiple, diverse training mechanisms without a clear optimal path, leading to potential inefficiencies and over-engineering. Suppression (0.75) is high due to strong regulatory mandates and the perceived necessity of comprehensive safety measures, which limit organizational autonomy in training design. The theater ratio (0.40) reflects that some training activities might be performed more for compliance or to demonstrate 'due diligence' rather than for their proven marginal effectiveness, especially given the lack of consensus on optimal configuration. The increasing trend in all metrics over the interval reflects the growing complexity and cost of competence maintenance as new threats emerge and regulatory expectations rise.",
+    "directionality_logic": "High-reliability organizations and safety regulators act as agenda-setters and beneficiaries, gaining from reduced risk and enhanced public trust, but also bearing significant costs. Training departments and operational personnel are primary payers, investing substantial time and resources. Simulation vendors and procedural design experts are clear beneficiaries, profiting from the demand for their services. The public is a diffuse beneficiary of enhanced safety. Advocates for simpler training are excluded, their perspectives suppressed by the dominant narrative of comprehensive, multi-modal necessity.",
+    "perspectival_gap": "From the perspective of safety regulators and expert consultants, this hybrid model is a necessary, evolving Rope that ensures public safety. From the perspective of training departments and operational personnel, it can feel like a Tangled Rope, where the genuine coordination function is intertwined with substantial, often inefficient, extraction of resources due to the lack of clear optimal guidance and the continuous addition of new requirements.",
+    "kernel_context": "This constraint, 'hybrid_occupation', is one reading of the 'competence_occupation' kernel. It posits that competence requires continuous, multi-mechanism exercise. Sibling readings include 'simulation_sufficiency' (claiming simulation alone is enough) and 'real_incident_necessity' (claiming only actual incidents truly occupy competence)."
+  },
+  "omegas": [
+    {
+      "id": "optimal_configuration_ambiguity",
+      "question": "Is there a truly optimal configuration of multi-mechanism competence occupation, or is the 'lack of consensus' a permanent, irreducible feature of this domain?",
+      "resolution_mechanism": "Longitudinal, comparative studies across diverse high-reliability organizations, coupled with advanced modeling of skill decay and training effectiveness, to identify convergent best practices or fundamental limits to optimization.",
+      "impact": "If an optimal configuration is found, the extractiveness and theater ratio could decrease significantly as resources are allocated more efficiently. If it's irreducible, the current high extraction and theater may be inherent to the problem, shifting the classification towards a more 'natural' (though still costly) state.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the 'lack of consensus' on optimal training configuration is a resolvable problem or an inherent characteristic."
+    },
+    {
+      "id": "cost_benefit_justification",
+      "question": "Is the high cost and complexity of multi-mechanism training justified by the marginal safety gains, or does it represent an over-engineered, diminishing-returns response to risk?",
+      "resolution_mechanism": "Rigorous cost-benefit analysis comparing the financial and human resource investment in hybrid training against quantifiable reductions in incident rates, severity, and long-term societal costs, accounting for counterfactuals.",
+      "impact": "If the cost-benefit ratio is unfavorable, the constraint's extractiveness would be re-evaluated as higher, and its coordination function diminished, potentially shifting it closer to a Snare. If favorable, the current extraction would be seen as a necessary cost of a robust Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluation of whether the high cost of hybrid training yields proportional safety benefits."
+    },
+    {
+      "id": "measurement_validity_fragmentation",
+      "question": "Are the diverse training mechanisms (simulation, audits, refreshers) truly measuring and reinforcing a coherent, unified competence kernel, or are they creating fragmented, performative compliance that does not translate to integrated operational effectiveness?",
+      "resolution_mechanism": "Integrated assessment frameworks that correlate performance across different training modalities with real-world operational outcomes, identifying discrepancies or gaps in competence transfer and integration.",
+      "impact": "If fragmentation is significant, the effective coordination function of the constraint is lower than perceived, increasing its effective extractiveness and theater ratio, as resources are spent on activities that do not genuinely enhance integrated competence. This would push the classification towards a more extractive Tangled Rope or even a Piton.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether multi-mechanism training genuinely integrates competence or leads to fragmented, performative compliance."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "safety_regulatory_compliance",
+      "human_factors_research_funding"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "continuous_competence_maintenance",
+    "drift_state": {
+      "moment": "contemporary_adaptive_safety_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_sufficiency",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_dynamic_and_decays",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "multi_modal_reinforcement_is_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

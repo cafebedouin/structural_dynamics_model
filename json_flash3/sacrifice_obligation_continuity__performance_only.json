@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "sacrifice_obligation_continuity__performance_only",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3c73e34f-bff4-431c-ad84-3d9cbdd2c27e"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.15,
+    "claimed_type": "snare",
+    "human_readable": "Sacrifice Obligation: Performance Only Reading",
+    "topic_domain": "religious_law/ritual_studies/textual_tradition",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "current_generation_adherents"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "current_generation_adherents",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Adherents are bound by an unfulfillable obligation, leading to a state of perpetual guilt or spiritual deficit. Their identity is deeply tied to the tradition, making exit unthinkable, but the core ritual is impossible to perform."
+    },
+    {
+      "name": "rabbinic_scholars",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Interpret and transmit the tradition, emphasizing the literal requirement for physical performance. They maintain the textual tradition and prepare for a future restoration, but cannot alter the core requirement. Their authority is grounded in this interpretive lineage."
+    },
+    {
+      "name": "future_messianic_era",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "The conceptual beneficiary of this reading, as all current efforts are directed towards its eventual realization. It represents the state where the obligation can finally be fulfilled, but it is not an active agent."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the community's focus on the future restoration of the Temple and its rituals, ensuring the continuity of the textual tradition and the readiness for performance.",
+    "transfer_function": "Transfers a sense of unfulfilled obligation and spiritual longing from the current generation of adherents to the conceptual future messianic era, where it is anticipated to be resolved.",
+    "absent_voices": "Those who might argue for a more lenient or symbolic interpretation of the obligation are implicitly excluded by the strict adherence to physical performance. Their voices are present in other readings of the kernel, but not in this one.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the spiritual landscape for adherents would fundamentally shift. The burden of unfulfillable obligation would lift, potentially leading to new forms of religious practice or a re-evaluation of the tradition's core tenets. The focus on future restoration would diminish, and the role of study as mere preparation would be challenged.",
+    "founding_problem": "The destruction of the Temple and the cessation of physical sacrifices, creating a dilemma for adherents regarding the continuity of divine commandments.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem is attested as live by rabbinic scholars and a significant portion of the adherent community, who continue to mourn the Temple's destruction and pray for its restoration. This corroboration comes from within the tradition but is widely held."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.87
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.88
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.89
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.9
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents a reading of the 'sacrifice_obligation_continuity' kernel, specifically the 'performance_only' reading. It asserts that the obligation to perform sacrifices remains strictly tied to physical ritual, which is currently impossible due to the absence of the Temple. Study of the laws is seen as preparation for a future restoration, not as a substitute for actual performance. This places the current generation of adherents in a position of unfulfillable obligation, leading to high extractiveness (spiritual deficit, guilt) and high suppression (no viable alternative for fulfillment).",
+    "logic_rationale": "The extractiveness is high because adherents are perpetually unable to fulfill a core religious duty, leading to spiritual and psychological costs without remedy. Suppression is high because the 'identity_locked' exit option for adherents means they cannot simply abandon the obligation, and no alternative means of fulfillment (like study) is recognized. Theater ratio is low because the constraint is genuinely about an unfulfilled obligation, not a performance masking atrophy. Accessibility collapse is high as there are no recognized alternatives to physical performance. Resistance is low because the impossibility is widely accepted within this reading.",
+    "perspectival_gap": "From the perspective of current_generation_adherents, this constraint is a snare, trapping them in an unfulfillable obligation. From the perspective of rabbinic_scholars, it is a necessary truth of the tradition, a mountain-like reality that must be acknowledged and prepared for, even if it causes hardship.",
+    "directionality_logic": "Current generation adherents are full targets (payer role, identity_locked exit, unfulfillable obligation). Rabbinic scholars, while also bound by the tradition, act as agenda-setters and interpreters, maintaining the framework that defines the obligation, thus having a more moderate directionality. The future messianic era is a conceptual beneficiary, as the entire framework is oriented towards its eventual realization.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a Piton or a Rope. It is not a Piton because the obligation is still very much 'live' and causes significant spiritual extraction, not mere inertial maintenance. It is not a Rope because it fails to coordinate a collective good for the current generation; instead, it imposes an unfulfillable burden. The high extractiveness and suppression, coupled with the unfulfillable nature of the obligation, firmly place it as a Snare from the perspective of the adherents."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint accurately identified as the 'performance_only' reading of the 'sacrifice_obligation_continuity' kernel?",
+      "resolution_mechanism": "Analysis of primary textual sources and interpretive traditions to confirm the specific tenets of this reading and its distinction from sibling readings.",
+      "impact": "If misidentified, the classification of extractiveness and suppression would be inaccurate, potentially leading to a different constraint type or a different understanding of the underlying spiritual burden.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms the specific interpretation of the sacrifice obligation."
+    },
+    {
+      "id": "spiritual_extraction_quantification",
+      "question": "How can the 'spiritual deficit' or 'guilt' experienced by adherents be more precisely quantified as extractiveness?",
+      "resolution_mechanism": "Sociological studies, theological surveys, and qualitative interviews with adherents to measure the psychological and communal impact of the unfulfillable obligation.",
+      "impact": "A more precise quantification could refine the extractiveness score, potentially shifting the severity of the Snare classification, though the core type is unlikely to change given the structural impossibility of fulfillment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the non-material costs of the unfulfillable obligation."
+    },
+    {
+      "id": "suppression_mechanism_internalized",
+      "question": "Is the high suppression primarily structural (absence of Temple) or internalized (identity-locked adherence to the tradition)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: if adherents were to leave the tradition, would the sense of unfulfilled obligation persist? If so, it indicates a strong internalized component.",
+      "impact": "If internalized, the effective suppression is higher than the structural measure suggests, as the target carries the suppression with them after any theoretical 'exit' from the formal constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for spiritual obligations."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_performance",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "messianic_suspension",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "archival_preservation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ritual_requires_physical_performance",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "study_is_preparation_not_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "pre_destruction_temple_ritual",
+    "drift_state": {
+      "moment": "post_destruction_diaspora",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  }
+}

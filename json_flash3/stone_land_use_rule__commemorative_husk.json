@@ -1,0 +1,263 @@
+{
+  "header": {
+    "constraint_id": "stone_land_use_rule__commemorative_husk",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "64ed908c-530d-4792-a437-16683b6155e1"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.1,
+    "theater_ratio": 0.9,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.05,
+    "claimed_type": "piton",
+    "human_readable": "Commemorative Husk Reading of Stone Land-Use Rule",
+    "topic_domain": "disaster_anthropology/institutional_memory/land_use_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "coastal_developers",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Prioritize maximizing buildable area and waterfront access. They treat the stone as a historical marker with no bearing on contemporary land-use decisions, effectively extracting value from previously restricted zones by building on them."
+    },
+    {
+      "name": "local_government_officials",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are nominally responsible for upholding land-use regulations but face pressure from developers and a public that has forgotten the stone's original purpose. They bear the diffuse cost of maintaining a symbolic gesture without enforcing its original intent, and the potential future cost of disaster if the warning is ignored."
+    },
+    {
+      "name": "descendants_of_original_settlers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Hold the historical memory of the stone's original warning and its purpose. They are excluded from contemporary land-use planning processes and their concerns are dismissed as sentimental, but their identity is tied to the land and its history."
+    },
+    {
+      "name": "tourists_and_visitors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Benefit from increased access to waterfront properties and amenities that would otherwise be restricted. They view the stone as an interesting historical curiosity, unaware of its original function as a critical warning."
+    },
+    {
+      "name": "disaster_risk_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Observe the increasing development in hazardous zones and predict future disaster impacts, but have no direct authority to enforce the stone's original land-use prohibition. They analyze the gap between historical warning and current practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "It nominally coordinates a shared understanding of historical memory and cultural heritage, serving as a focal point for local identity.",
+    "transfer_function": "It transfers the symbolic value of historical remembrance to the community, while implicitly transferring the right to develop previously restricted land from the collective memory to private developers.",
+    "absent_voices": "The original intent of the stone, representing the collective wisdom and survival imperative of past generations, is absent from current land-use discourse. The voices of those who experienced the original disaster are no longer heard in decision-making.",
+    "disappearance_verdict": "world_unchanged",
+    "disappearance_rationale": "If the stone vanished overnight, current land-use practices would remain unchanged, as its behavioral force has already atrophied. It would only remove a symbolic artifact, not alter any active regulatory or social constraint.",
+    "founding_problem": "The stone was erected to mark a safe elevation above a historical disaster (e.g., a tsunami or flood), serving as a permanent, unambiguous land-use prohibition to prevent future loss of life.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Historical records, oral traditions from descendants of original settlers, and geological evidence corroborate the stone's original purpose as a disaster warning and land-use rule. Contemporary land-use planners and developers, however, treat it as a mere historical artifact with no current regulatory force."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.9
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'commemorative husk' reading of a historical stone marker, where its original function as a land-use prohibition has decayed into a mere symbolic gesture. The stone, once a critical warning against building in hazardous zones, is now treated as a historical artifact, allowing development to proceed in areas it once forbade. This reading highlights the high extractiveness of convenience and profit from ignoring historical warnings, coupled with high theatricality in maintaining the stone's presence without its behavioral force.",
+    "logic_rationale": "The extractiveness (0.85) is high because the constraint's original purpose (preventing hazardous development) has been completely subverted, allowing developers to build on valuable, but dangerous, land. Suppression (0.1) is low because there is almost no active enforcement of the stone's original rule; its behavioral force has atrophied. The theater ratio (0.9) is very high, as the stone is maintained and perhaps even celebrated, but its functional warning is entirely ignored. Accessibility collapse (0.15) is low because alternatives (building elsewhere) are not collapsed; rather, the constraint itself has collapsed, opening up previously inaccessible areas. Resistance (0.05) is low because the original warning is largely forgotten or dismissed, so there is little active opposition to its decay.",
+    "directionality_logic": "Coastal developers are the primary beneficiaries, gaining access to valuable land. Local government officials bear the diffuse costs of maintaining a defunct rule and the future risk. Descendants of original settlers are excluded, their historical memory ignored. Tourists benefit from new amenities. Disaster risk analysts observe the decay but cannot directly intervene.",
+    "perspectival_gap": "From the perspective of coastal developers, the stone is a non-constraint, allowing them to pursue profitable ventures. From the perspective of descendants of original settlers, it is a critical, ignored warning. The engine's classification as a Piton reflects the atrophied function and performative maintenance, capturing the gap between its original intent and current reality.",
+    "mandatrophy_analysis": "The constraint clearly exhibits mandatrophy: its original mandate (preventing disaster through land-use prohibition) is dead, but the artifact persists as a 'commemorative husk.' The classification as a Piton correctly identifies this decay, preventing it from being mislabeled as a Rope (which would imply active, beneficial coordination) or a Snare (which would imply active, coercive extraction). The persistence is due to institutional inertia and the convenience of ignoring the warning, rather than active enforcement or concentrated benefit from its operation as a rule.",
+    "kernel_context": "This constraint is the 'commemorative_husk' reading of the 'stone_land_use_rule' kernel. This reading posits that the stone's original function as a land-use prohibition has decayed into a mere symbolic gesture, with no behavioral force. The sibling reading, 'behavioral_competence', interprets the stone as a live, active land-use prohibition that still shapes daily spatial practice."
+  },
+  "omegas": [
+    {
+      "id": "original_intent_vs_current_interpretation",
+      "question": "Is the stone's original intent as a land-use prohibition still understood and acknowledged by any significant portion of the local population or governing bodies?",
+      "resolution_mechanism": "Surveys of local residents, interviews with government officials, and analysis of public records and land-use planning documents for explicit references to the stone's original function.",
+      "impact": "If a significant understanding persists, the 'commemorative_husk' reading's low suppression and high theater ratio might be slightly lower, indicating some residual behavioral force or resistance. If not, the current classification is strongly reinforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the collective memory and understanding of the stone's original purpose."
+    },
+    {
+      "id": "future_disaster_risk_acknowledgment",
+      "question": "To what extent do current land-use decisions explicitly acknowledge and mitigate the disaster risks that the stone originally warned against, even if not directly referencing the stone?",
+      "resolution_mechanism": "Review of modern building codes, zoning regulations, and environmental impact assessments for the area, comparing them to the historical disaster profile and the stone's warning elevation.",
+      "impact": "If modern regulations effectively mitigate the risk, the 'extractiveness' of building on hazardous land might be lower, as the 'cost' of ignoring the warning is being addressed by other means. If not, the current high extractiveness is further validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the underlying disaster risk is addressed by other means, or if the decay of the stone's rule leaves the community exposed."
+    },
+    {
+      "id": "framing_of_stone_function",
+      "question": "Is the stone primarily a 'commemorative husk' (this reading) or does it retain some 'behavioral competence' (sibling reading) in shaping land-use decisions?",
+      "resolution_mechanism": "Analysis of land-use permits issued for areas near the stone, comparing them to historical patterns and the stone's implied prohibition. Direct observation of local behavior and development patterns.",
+      "impact": "If the 'behavioral_competence' reading were adopted, the constraint would reclassify as a Mountain or Rope, with significantly lower extractiveness and higher suppression, as its original function would be considered active. This reading's classification as Piton would be foreclosed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The core conceptual ambiguity between the two readings of the stone's function."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'stone_land_use_rule' kernel. It describes the stone as a commemorative husk, where its original behavioral force has atrophied. The sibling reading, 'behavioral_competence', describes the stone as a live land-use prohibition."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "behavioral_competence",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "historical_markers_are_symbolic_not_regulatory",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "economic_development_supersedes_ancient_warnings",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "stone_as_historical_marker",
+    "drift_state": {
+      "moment": "contemporary_development_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

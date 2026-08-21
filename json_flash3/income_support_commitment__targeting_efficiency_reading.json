@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__targeting_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "dc81b149-8d5c-4182-bf2b-3ad5425a39e8"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Targeting Efficiency in Income Support",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_targeted_program_recipients",
+      "taxpayers_averse_to_universal_programs"
+    ],
+    "victims": [
+      "current_targeted_program_recipients",
+      "low_income_workers_above_poverty_line"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "current_targeted_program_recipients",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "These individuals currently receive substantial benefits from targeted programs based on demonstrated need. Under a universal basic income (UBI) system that replaces these programs, they would experience a net loss of income, making them victims of the shift despite being nominal beneficiaries of income support in general. They are trapped by the existing system's benefits and the lack of viable alternatives."
+    },
+    {
+      "name": "taxpayers_averse_to_universal_programs",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "This group benefits from the perception of efficient use of tax dollars, believing that universal programs are wasteful. They support policies that concentrate resources on 'deserving' populations, reducing their perceived tax burden for non-targeted spending."
+    },
+    {
+      "name": "social_policy_administrators",
+      "role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These administrators design and implement targeted welfare programs. Their careers and institutional structures are built around means-testing and program-specific eligibility, making them proponents of the targeting efficiency model. A shift to universal programs would disrupt their institutional power and expertise."
+    },
+    {
+      "name": "advocates_for_universal_basic_income",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These advocates argue for the simplicity, dignity, and broader economic benefits of UBI, which would replace targeted programs. They are excluded from the core policy-making process that prioritizes targeting efficiency, despite their growing public support."
+    },
+    {
+      "name": "low_income_workers_above_poverty_line",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals earn just enough to be ineligible for many targeted programs but still struggle financially. Under a UBI system, they would likely be net beneficiaries, but under the current targeting efficiency model, they are effectively victims, paying taxes that fund programs they cannot access while receiving no direct support."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates social welfare spending by directing resources to individuals and families who demonstrate specific needs, aiming to maximize impact per dollar spent and prevent 'undeserving' recipients.",
+    "transfer_function": "Transfers tax revenue from the general populace to specific, means-tested individuals and families, based on criteria like income, family size, disability, or unemployment status.",
+    "absent_voices": "Advocates for universal basic income and other universal programs are largely excluded from the policy design process, as their proposals fundamentally challenge the premise of targeting efficiency. Their voices would highlight the administrative burden, stigma, and poverty traps created by means-tested programs.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commitment to targeting efficiency vanished overnight, the entire structure of the welfare state would need to be redesigned. Existing targeted programs would lose their justification, leading to a rapid shift towards universal or less conditional forms of support, fundamentally altering how income is distributed and how social safety nets operate.",
+    "founding_problem": "The problem of efficiently allocating limited public resources to alleviate poverty and address specific social needs without creating disincentives to work or perceived waste.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Policy makers and social policy administrators attest that the problem of efficient resource allocation remains live, citing ongoing budget constraints and the need to justify public spending. Critics, however, argue that the 'efficiency' often comes at the cost of accessibility and dignity, and that the problem has evolved beyond simple allocation to include systemic issues of poverty and inequality that targeted programs cannot fully address."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'targeting efficiency' reading of income support, arguing that aid should be concentrated on demonstrated need rather than universally distributed. This reading, when instantiated, creates a system where current targeted program recipients are both beneficiaries (of existing programs) and victims (of the opportunity cost of a UBI that would replace them). The high extractiveness (0.85) reflects the net loss for the poorest under a UBI replacement scenario, where the 'efficiency' of targeting becomes a mechanism for extraction from the most vulnerable to fund a broader, less impactful distribution. The constraint is claimed as a 'snare' because its coordination story (efficient allocation) serves as cover for a system that can trap and disadvantage its nominal beneficiaries when alternatives are considered.",
+    "logic_rationale": "The high extractiveness (0.85) is driven by the scenario where a UBI, funded by cannibalizing existing targeted programs, would result in a net loss for the poorest recipients. This 'efficiency' extracts from the most vulnerable to fund a broader distribution that may not benefit them as much. Suppression (0.7) is high due to the administrative hurdles, stigma, and conditionality inherent in targeted programs, which limit access and create dependency. Theater ratio (0.2) is low because the administrative machinery for means-testing is genuinely complex and functional, though its 'efficiency' is contested. Accessibility collapse (0.6) is moderate; while alternatives like UBI are conceptually available, the political and institutional inertia behind targeted programs makes them difficult to access. Resistance (0.4) is moderate, coming from UBI advocates and some low-income groups who feel excluded or trapped by the current system.",
+    "directionality_logic": "Current targeted program recipients are structurally complex: they are beneficiaries of the existing system (receiving direct aid) but become victims when considering the alternative of a UBI that would offer more net benefit. Taxpayers averse to universal programs are clear beneficiaries, as their preference for 'efficient' spending is met. Social policy administrators are agenda-setters, benefiting from the institutional structures built around targeting. Advocates for UBI are excluded, bearing the cost of their policy being ignored. Low-income workers above the poverty line are victims, paying taxes for programs they don't qualify for.",
+    "perspectival_gap": "From the perspective of social policy administrators and taxpayers averse to universal programs, this constraint is a 'rope' or 'scaffold' – an efficient, necessary mechanism for resource allocation. From the perspective of current targeted program recipients (under a UBI counterfactual) and UBI advocates, it operates as a 'snare' – a system that, despite its stated goals, extracts from the most vulnerable and suppresses more equitable alternatives. The engine's classification will highlight this divergence.",
+    "mandatrophy_analysis": "The constraint's mandate (efficient allocation to need) is still live, but its function is increasingly contested. The classification as a 'snare' prevents mislabeling it as pure coordination by highlighting the hidden extraction from the most vulnerable when a more equitable alternative (UBI) is considered. The 'efficiency' argument, while having a genuine coordination component, is shown to mask significant asymmetric extraction and suppression of alternatives.",
+    "kernel_context": "This constraint is the 'targeting efficiency' reading of the broader 'income_support_commitment' kernel. It posits that income support should be concentrated on demonstrated need, not universally distributed. Sibling readings include 'freedom_floor_reading' (UBI as autonomy enabler) and 'dependency_trap_reading' (UBI as work disincentive)."
+  },
+  "omegas": [
+    {
+      "id": "net_impact_of_ubi_replacement",
+      "question": "What is the precise net financial impact on current targeted program recipients if a UBI were implemented and fully replaced existing targeted programs?",
+      "resolution_mechanism": "Detailed micro-simulation studies modeling various UBI designs and their interaction with existing welfare benefits, accounting for phase-outs and administrative savings.",
+      "impact": "If the net loss for the poorest is consistently high, it strengthens the 'snare' classification by demonstrating clear victims. If a UBI could be designed to be net-beneficial for all, it would weaken the extraction claim of this reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantifying the financial gain/loss for vulnerable populations under UBI replacement."
+    },
+    {
+      "id": "political_feasibility_of_alternatives",
+      "question": "To what extent is the persistence of targeted programs due to genuine belief in their efficiency versus political resistance to universal programs from powerful stakeholders?",
+      "resolution_mechanism": "Analysis of lobbying efforts, public discourse framing, and voting patterns of political parties and interest groups regarding welfare reform proposals.",
+      "impact": "If political resistance is the primary driver, it would increase the 'suppression' metric and reinforce the 'snare' classification by highlighting the active suppression of alternatives for extractive purposes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing genuine policy preference from politically motivated suppression of alternatives."
+    },
+    {
+      "id": "stigma_and_administrative_burden_cost",
+      "question": "How do the non-financial costs of targeted programs (stigma, administrative burden, poverty traps) compare to the 'efficiency' gains?",
+      "resolution_mechanism": "Qualitative sociological studies, recipient surveys, and comparative analysis of administrative overhead in targeted vs. universal systems.",
+      "impact": "High non-financial costs would further justify the 'snare' classification by revealing hidden forms of extraction and suppression that are not captured by financial metrics alone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the hidden costs of means-tested welfare programs."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "resource_scarcity_requires_prioritization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "universal_distribution_is_wasteful",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "efficient_targeted_welfare_state",
+    "drift_state": {
+      "moment": "contemporary_ubi_discourse",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

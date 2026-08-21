@@ -1,0 +1,276 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__harm_threshold_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "dbef62fa-3950-4753-b87e-d1e0e1324272"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Conditional on Absence of Demonstrable Harm to Victims",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "victims_of_harmful_speech",
+      "public_order_authorities"
+    ],
+    "victims": [
+      "speakers_of_potentially_harmful_speech",
+      "advocates_for_broad_speech_rights"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "victims_of_harmful_speech",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals or groups experience direct, demonstrable harm from speech (e.g., incitement to violence, defamation, harassment). They benefit from the constraint by having a mechanism to seek redress or prevent further harm, but their ability to activate this protection is often constrained by legal processes and power imbalances."
+    },
+    {
+      "name": "public_order_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Governmental bodies (courts, police, regulatory agencies) tasked with maintaining public safety and order. They interpret and enforce the harm threshold, benefiting from the ability to restrict speech that threatens social cohesion or individual safety. Their role is to balance speech rights against public welfare."
+    },
+    {
+      "name": "speakers_of_potentially_harmful_speech",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals or groups whose speech is deemed to cause demonstrable harm. They bear the cost of this constraint through censorship, legal penalties, or self-censorship. Their exit options are limited to modifying their speech, challenging legal rulings, or facing consequences."
+    },
+    {
+      "name": "advocates_for_broad_speech_rights",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Organizations and legal scholars who argue for expansive speech protections, often viewing any harm-based restriction as a slippery slope to censorship. They bear the cost by seeing their preferred interpretation of speech rights curtailed and must actively litigate or advocate against the harm threshold."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from a perceived reduction in social friction and protection from extreme forms of harmful speech, contributing to a more civil public discourse. However, they may also experience a chilling effect on certain forms of expression or a reduction in the diversity of viewpoints."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates the boundary between protected expression and actionable harm, providing a framework for adjudicating conflicts between speaker autonomy and victim protection, thereby maintaining public order and individual safety.",
+    "transfer_function": "Transfers the burden of potential harm from victims to speakers, by allowing for the restriction or punishment of speech that crosses a demonstrable harm threshold. It also transfers interpretive authority over speech boundaries to public order authorities.",
+    "absent_voices": "Those who believe that any restriction on speech, even for demonstrable harm, is an unacceptable infringement on fundamental liberty, or that the concept of 'harm' is too easily manipulated to suppress dissent, are often marginalized in the legal and public discourse that defines this threshold.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm threshold vanished, there would be an immediate increase in unprotected harmful speech, leading to greater social friction, potential incitement to violence, and a breakdown in public order. Victims would have no recourse, and public authorities would lose a key tool for maintaining peace, forcing a rapid re-establishment of some form of harm-based limitation.",
+    "founding_problem": "The problem of balancing individual freedom of expression against the collective need for public order and the protection of individuals from direct, tangible harm caused by speech.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal scholars, civil society organizations, and international human rights bodies consistently attest to the ongoing challenge of balancing speech rights and harm prevention, citing numerous contemporary cases where this tension is actively litigated and debated. This corroboration comes from outside the direct beneficiaries of speech restriction."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'harm threshold' reading of speech protection, where the exercise of free speech is conditional on the absence of demonstrable harm to victims. This reading posits a narrower boundary for protected speech compared to absolutist or marketplace readings, prioritizing victim protection and public order. It is one of several competing interpretations of the 'speech_protection_kernel'. The metrics reflect a system that actively enforces these boundaries, leading to substantial extraction from speakers whose expression is deemed harmful, and requiring ongoing suppression to maintain.",
+    "logic_rationale": "Extractiveness (0.65) is substantial because speakers bear the cost of self-censorship or legal penalties, and the definition of 'harm' can expand over time, increasing the scope of unprotected speech. Suppression (0.70) is high due to the active enforcement mechanisms (courts, regulations) required to identify and restrict harmful speech. Theater ratio (0.20) is relatively low, as the enforcement is genuinely aimed at preventing harm, though some performative aspects may exist in high-profile cases. Accessibility collapse (0.40) is moderate, as alternatives (e.g., private platforms, coded language) exist but are constrained. Resistance (0.55) is also moderate, reflecting ongoing legal challenges and advocacy from broad speech rights groups.",
+    "directionality_logic": "Victims of harmful speech and public order authorities are beneficiaries (d near 0.0-0.3), as the constraint provides them with protection and a mechanism for control. Speakers of potentially harmful speech and advocates for broad speech rights are targets (d near 0.7-1.0), bearing the costs of restriction and the narrowing of their expressive freedom. The general public is a diffuse beneficiary, gaining from perceived order but potentially losing expressive diversity.",
+    "perspectival_gap": "From the perspective of victims and public order authorities, this constraint is a necessary 'rope' or 'tangled rope' that coordinates safety and civility. From the perspective of speakers and broad speech rights advocates, it functions more as a 'snare' or 'tangled rope' that extracts expressive freedom and suppresses dissent. The engine's classification will reflect this divergence based on the structural positions.",
+    "kernel_context": "This constraint is the 'harm_threshold_reading' of the 'speech_protection_kernel'. It stands in contrast to the 'absolutist_reading' (which rejects harm as a basis for restriction), the 'marketplace_reading' (which prioritizes truth-discovery through open debate), the 'dignity_reading' (which focuses on structural subordination), and the 'democratic_participation_reading' (which prioritizes political speech)."
+  },
+  "omegas": [
+    {
+      "id": "definition_of_demonstrable_harm",
+      "question": "How is 'demonstrable harm' defined and measured in practice, and is this definition consistently applied or subject to political/social pressures?",
+      "resolution_mechanism": "Empirical analysis of legal precedents and regulatory guidelines across jurisdictions, tracking changes in the scope and application of 'harm' over time and across different types of speech.",
+      "impact": "If 'harm' is broadly and inconsistently applied, the constraint's extractiveness and suppression are higher than measured, functioning more as a 'snare'. If narrowly and consistently applied, it aligns more with a 'tangled rope' or even a 'rope' for its coordination function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity in the definition and application of 'demonstrable harm'."
+    },
+    {
+      "id": "chilling_effect_vs_actual_harm_prevention",
+      "question": "To what extent does the harm threshold primarily prevent actual, direct harm versus creating a 'chilling effect' that suppresses legitimate, but controversial, speech?",
+      "resolution_mechanism": "Sociological studies on self-censorship among speakers, surveys of public perception of speech boundaries, and comparative analysis with jurisdictions having different speech protection regimes.",
+      "impact": "If the chilling effect is dominant, the constraint's suppression is higher and its coordination function is weaker, pushing it towards a 'snare'. If actual harm prevention is dominant, its coordination function is stronger, supporting a 'tangled rope' classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance between preventing harm and chilling legitimate speech."
+    },
+    {
+      "id": "kernel_reading_divergence",
+      "question": "Is this 'harm_threshold_reading' genuinely distinct from other readings of the 'speech_protection_kernel' (e.g., 'dignity_reading'), or do they converge in practice?",
+      "resolution_mechanism": "Comparative legal analysis of case outcomes and legislative intent across different readings, identifying instances where the application of one reading would lead to a different outcome than another.",
+      "impact": "If the readings converge in practice, the distinctiveness of this constraint as a separate reading is reduced, suggesting a need for re-decomposition or re-evaluation of the kernel's structure. If they diverge, it reinforces the validity of this as a distinct constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinction between this reading and other kernel readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "marketplace_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "democratic_participation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speech_causes_demonstrable_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "protection_from_harm_outweighs_absolute_speech",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "balancing_rights_framework",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

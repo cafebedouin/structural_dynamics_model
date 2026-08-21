@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__minority_extraction",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "45778ca5-c00b-40c8-8209-2f1b991ffe2d"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Dual-Class Governance as Minority Extraction",
+    "topic_domain": "corporate_governance/securities_law/organizational_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founding_shareholders",
+      "controlled_company_boards"
+    ],
+    "victims": [
+      "minority_shareholders",
+      "public_investors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "founding_shareholders",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold super-voting shares, maintaining control disproportionate to their economic interest. They set the company's strategic direction, appoint board members, and are insulated from public shareholder pressure. They benefit from the ability to extract private benefits of control and pursue long-term visions without fear of hostile takeover or short-term market demands."
+    },
+    {
+      "name": "minority_shareholders",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Own Class A shares with limited or no voting rights, bearing full economic risk without proportional governance influence. They are exposed to potential expropriation of value by controlling shareholders and have limited recourse against management decisions that may not align with their interests. Their exit options are selling shares at a discount or engaging in costly, often futile, litigation."
+    },
+    {
+      "name": "public_investors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "A broad category of institutional and retail investors who hold non-voting or low-voting shares. They provide capital but lack the power to influence governance, relying on market mechanisms and regulatory oversight for protection. They face the risk of value transfer to controlling shareholders and are often forced to accept lower valuations for their shares due to the governance discount."
+    },
+    {
+      "name": "controlled_company_boards",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Composed largely of appointees loyal to the controlling shareholders, they often prioritize the interests of the super-voting class over minority shareholders. They benefit from stable tenure and the ability to implement the controlling shareholders' vision, even if it conflicts with broader shareholder value maximization."
+    },
+    {
+      "name": "securities_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Tasked with protecting investors and ensuring fair markets. They observe dual-class structures for potential abuses but are often constrained by existing legal frameworks that permit such arrangements. Their actions are typically reactive, focusing on disclosure and anti-fraud, rather than proactive governance reform."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Allows companies to raise public capital while retaining founder control, theoretically enabling long-term strategic planning free from short-term market pressures.",
+    "transfer_function": "Transfers governance value (control rights, decision-making power, ability to extract private benefits) from public and minority shareholders to founding/controlling shareholders, in exchange for capital.",
+    "absent_voices": "Advocates for 'one share, one vote' principles, institutional investors with strong governance mandates, and academic researchers highlighting the governance discount in dual-class firms are present in public discourse but lack direct power to alter the constraint's structure within existing legal frameworks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If dual-class structures were abolished overnight, companies would either have to cede control to public markets, seek alternative private funding, or face significant governance restructuring. Share prices of existing dual-class firms would likely re-rate, and the balance of power in corporate decision-making would fundamentally shift.",
+    "founding_problem": "Founders of innovative companies needed to raise significant capital from public markets without losing control of their long-term vision to short-term investor demands or hostile takeovers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Founders and their advocates consistently attest that the problem of short-termism and hostile takeovers remains live, especially for companies with long development cycles or mission-driven objectives. Critics (minority shareholders, governance advocates) acknowledge the historical problem but argue that the current structure has become a mechanism for entrenchment and extraction, rather than pure stewardship."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models dual-class share structures from the perspective of minority shareholder extraction. It asserts that the disproportionate control held by founding shareholders, enabled by super-voting shares, constitutes a transfer of governance value from public investors. The constraint is actively enforced through corporate charters, securities law exemptions for 'controlled companies,' and board appointments. The claimed type is 'snare' because the coordination story (founder stewardship) is seen as cover for asymmetric extraction, with identifiable victims (minority shareholders) whose exit options are suppressed.",
+    "logic_rationale": "Extractiveness is high (0.85) because minority shareholders bear full economic risk without proportional governance rights, leading to a 'governance discount' on their shares and potential expropriation of value. Suppression (0.75) is significant due to legal frameworks that permit dual-class structures, limited shareholder remedies, and the difficulty of organizing dispersed minority shareholders. Theater ratio (0.20) is low because the mechanism is highly functional in achieving its extractive goal; the 'stewardship' narrative is a justification, not a performance masking atrophy. The increasing extractiveness and suppression over time reflect the hardening of these structures and the growing awareness of their costs to minority shareholders.",
+    "directionality_logic": "Founding shareholders and controlled company boards are clear beneficiaries (d near 0.0) as they retain control and can extract private benefits. Minority shareholders and public investors are targets (d near 1.0) as they provide capital but lack voice and bear the costs of disproportionate control. Securities regulators are observers (d near 0.5) with an analytical perspective, attempting to balance market efficiency with investor protection.",
+    "perspectival_gap": "The founding shareholders perceive this as a 'rope' or even a 'mountain' (natural right to control one's creation), enabling long-term value creation. Minority shareholders, however, experience it as a 'snare' due to the asymmetric power and value transfer. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'minority_extraction' reading of the 'dual_class_legitimacy' kernel. It stands in contrast to the 'founder_stewardship' reading, which emphasizes the benefits of concentrated control for long-term vision, and the 'disclosure_consent' reading, which grounds legitimacy in informed investor consent via securities disclosures."
+  },
+  "omegas": [
+    {
+      "id": "governance_discount_quantification",
+      "question": "What is the precise, empirically verifiable 'governance discount' applied to non-voting or low-voting shares in dual-class companies, and how much of this discount is attributable to control extraction versus other factors?",
+      "resolution_mechanism": "Large-scale econometric studies comparing valuations of dual-class and single-class firms, controlling for industry, size, and performance metrics, coupled with event studies around governance changes.",
+      "impact": "A robust quantification of the governance discount directly attributable to control extraction would strengthen the 'snare' classification and provide a basis for regulatory intervention or shareholder activism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical measurement of value transfer due to governance asymmetry."
+    },
+    {
+      "id": "founder_stewardship_vs_extraction",
+      "question": "To what extent does concentrated founder control genuinely enable long-term value creation and mission preservation (stewardship), versus facilitating private benefits of control and entrenchment (extraction)?",
+      "resolution_mechanism": "Longitudinal studies comparing the performance and governance outcomes of dual-class firms with single-class peers over extended periods, analyzing founder tenure, strategic shifts, and related-party transactions.",
+      "impact": "If stewardship benefits are demonstrably minimal or short-lived, the 'snare' classification is reinforced. If significant, sustained stewardship benefits are proven, it would challenge the high extractiveness score and push towards a 'tangled_rope' or even 'rope' classification from a broader societal perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Distinguishing genuine stewardship from self-serving entrenchment."
+    },
+    {
+      "id": "informed_consent_sufficiency",
+      "question": "Is the disclosure regime under which minority shareholders acquire their shares truly sufficient to constitute 'informed consent' to the governance asymmetry, given the complexity of corporate structures and behavioral biases?",
+      "resolution_mechanism": "Behavioral economics studies on investor comprehension of dual-class risks, legal analysis of disclosure effectiveness, and surveys of investor expectations regarding governance rights.",
+      "impact": "If consent is found to be systematically uninformed or coerced, the 'disclosure_consent' reading's legitimacy is undermined, reinforcing the 'minority_extraction' reading's claim of victimhood. If consent is robust, it would challenge the 'snare' classification by shifting responsibility to the investor.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The effectiveness of disclosure in mitigating governance asymmetry."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "corporate_governance_standards",
+      "securities_law_exemptions"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'dual_class_legitimacy' kernel, focusing on the extractive aspects for minority shareholders. It is linked to sibling readings that emphasize founder stewardship and disclosure-based consent."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "founder_stewardship",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "disclosure_consent",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "governance_proportional_to_risk_and_capital",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "control_disproportionate_to_economic_interest_is_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "one_share_one_vote_principle",
+    "drift_state": {
+      "moment": "contemporary_tech_ipo_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "59bdada3-24e8-40d6-aef7-41d0d07dd27c",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Competence Exercise Requirement: Hybrid Dependency Reading",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pilots",
+      "air_traffic_controllers",
+      "maintenance_crews",
+      "airline_operators",
+      "regulators",
+      "traveling_public"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "pilots",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Benefit from a robust training and exercise regime that maintains their skills and confidence. They are identity-locked to the profession, making adherence to competence standards non-negotiable for career progression and safety."
+    },
+    {
+      "name": "air_traffic_controllers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Rely on continuous training and periodic real-world exposure to maintain their critical decision-making skills in complex, high-stakes environments. Their professional identity is tied to maintaining safety and efficiency."
+    },
+    {
+      "name": "maintenance_crews",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Require hands-on experience with actual aircraft and systems, alongside simulation, to develop and maintain the tactile and diagnostic skills necessary for safety-critical repairs. Their role is essential for operational integrity."
+    },
+    {
+      "name": "airline_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Responsible for implementing and funding the hybrid training programs. They benefit from a competent workforce and reduced accident risk, but bear the costs of real-world anchoring exercises. Their reputation and financial viability depend on safety."
+    },
+    {
+      "name": "regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Define and enforce the standards for competence exercise, balancing safety requirements with operational feasibility. They act as the ultimate arbiter of what constitutes adequate training and real-world anchoring."
+    },
+    {
+      "name": "traveling_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are the ultimate beneficiaries of a highly competent and well-exercised aviation workforce, experiencing the safety and reliability that results from this constraint. Their exit options are limited to choosing alternative modes of transport or not traveling."
+    },
+    {
+      "name": "simulation_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the requirement for simulation-based training, as they provide the necessary technology and services. They have an interest in advocating for the continued integration of simulation in competence frameworks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that critical safety-related competencies across the aviation ecosystem (pilots, ATC, maintenance) are maintained through a balanced regime of simulation and real-world experience, preventing skill decay and ensuring readiness for unexpected events.",
+    "transfer_function": "Transfers resources (time, money, personnel) from airline operators and regulators to training programs, simulation providers, and line operations for the purpose of competence maintenance. It also transfers risk reduction to the traveling public.",
+    "absent_voices": "Advocates for purely simulation-based training (who might argue for cost savings and reduced operational complexity) are present but their arguments are largely overridden by the safety imperative for real-world anchoring. Those who might advocate for only real-world training are absent due to the ethical and practical impossibility of such a regime.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this hybrid competence requirement vanished, the aviation industry would rapidly degrade. Competence would erode, accident rates would rise, and public trust would collapse, leading to a fundamental reorganization of air travel or its cessation.",
+    "founding_problem": "The inherent danger of aviation operations requires continuous, high-stakes competence. Early training relied solely on real-world flight, which was costly and dangerous. The introduction of simulation improved safety and efficiency, but over-reliance on it led to concerns about 'automation surprise' and loss of 'stick-and-rudder' skills.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Aviation safety boards, accident investigation reports, and expert panels (e.g., NTSB, EASA, ICAO) consistently corroborate the need for both simulation and real-world anchoring, citing incidents where over-reliance on one or the other contributed to safety issues. This is attested by independent safety research and regulatory mandates."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the 'hybrid dependency' reading of competence exercise in high-reliability organizations, particularly aviation. It asserts that while simulation is a necessary foundation for training, it is insufficient on its own. True competence requires periodic anchoring in real-world operations, non-jeopardy audits, or actual aircraft time to prevent skill atrophy and ensure readiness for unforeseen circumstances. This reading acknowledges the ethical and practical impossibility of relying solely on catastrophic events for competence exercise, as proposed by a sibling reading, and rejects the idea that simulation alone is adequate.",
+    "key_agents": [
+      "Pilots: Primary beneficiaries, identity-locked to the profession.",
+      "Air Traffic Controllers: Primary beneficiaries, identity-locked to the profession.",
+      "Maintenance Crews: Primary beneficiaries, identity-locked to the profession.",
+      "Airline Operators: Agenda-setters, bear costs, benefit from safety.",
+      "Regulators: Agenda-setters, define and enforce standards.",
+      "Traveling Public: Ultimate beneficiaries of safety.",
+      "Simulation Providers: Beneficiaries, provide training technology."
+    ],
+    "logic_rationale": "The extractiveness (0.25) is relatively low, representing the necessary costs of maintaining a high-reliability system through a balanced training approach. This includes the expense of simulators, real-world operational time, and audit processes. Suppression (0.4) is moderate; while there are costs, the benefits of safety and competence are widely accepted, and alternatives (pure simulation or pure real-world) are seen as either inadequate or impractical/unethical. Theater ratio (0.1) is low, indicating that most activities are genuinely functional, though some compliance might be performative. The constraint is claimed as a Rope because it genuinely coordinates safety and competence, with widely distributed benefits and costs that are largely accepted as necessary.",
+    "perspectival_gap": "While all stakeholders generally agree on the necessity of competence, the airline operators bear the direct financial costs of implementing the hybrid regime, while the traveling public receives the safety benefits without direct cost. Regulators balance these interests. The identity-locked professionals (pilots, ATC, maintenance) experience the constraint as a necessary part of their professional identity and safety, making their 'exit' from the constraint equivalent to exiting their profession.",
+    "directionality_logic": "Pilots, ATC, maintenance crews, and the traveling public are beneficiaries, as the constraint directly contributes to their safety and professional efficacy. Airline operators and regulators are agenda-setters, bearing the costs of implementation and enforcement while benefiting from a safe and compliant system. There are no direct 'victims' in this reading, as the costs are considered necessary for the collective good of safety. Simulation providers are beneficiaries of the demand for their services.",
+    "mandatrophy_analysis": "This constraint prevents mislabeling by acknowledging the genuine coordination function of a hybrid training regime. It avoids the pitfall of seeing all training costs as 'extraction' when they are, in fact, essential investments in safety. It also avoids the 'false summit' of pure simulation, which might appear cheaper but would lead to degraded competence. The constraint's mandate (maintaining high-reliability competence) is live and continuously validated by operational experience and safety data."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what level of simulation fidelity and scenario complexity does simulation become 'sufficient' for certain competencies, reducing the need for real-world anchoring?",
+      "resolution_mechanism": "Empirical studies correlating simulation fidelity with real-world performance outcomes, and expert consensus from high-reliability organizations.",
+      "impact": "If fidelity thresholds are higher than currently assumed, the 'simulation_as_adequate_exercise' reading gains ground, potentially reducing costs but increasing risk if misjudged. If lower, the 'hybrid_dependency' reading is further strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining the point at which simulation can replace real-world experience for specific skills."
+    },
+    {
+      "id": "real_world_anchoring_cost_benefit",
+      "question": "What is the optimal frequency and intensity of real-world anchoring exercises to maintain competence, balancing cost, risk, and benefit?",
+      "resolution_mechanism": "Longitudinal studies tracking competence decay rates against different real-world exposure schedules, combined with cost-benefit analysis for operators.",
+      "impact": "An optimized schedule could reduce operational costs without compromising safety, strengthening the 'hybrid_dependency' reading's practical viability. Suboptimal schedules could lead to either excessive cost or insufficient competence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balancing the costs and benefits of real-world competence anchoring."
+    },
+    {
+      "id": "kernel_reading_distinction",
+      "question": "Is this constraint a genuine 'hybrid_dependency' or is it a 'simulation_as_adequate_exercise' reading with an overly cautious real-world component, or a 'catastrophe_as_necessary_anchor' reading with an ethically constrained simulation component?",
+      "resolution_mechanism": "Analysis of regulatory and industry discourse, accident reports, and training curricula to identify the dominant underlying assumptions about competence acquisition and maintenance.",
+      "impact": "Reclassification to 'simulation_as_adequate_exercise' would imply that the real-world anchoring is an unnecessary cost. Reclassification to 'catastrophe_as_necessary_anchor' would imply that current measures are insufficient and that only extreme events truly test competence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing the 'hybrid_dependency' reading from its sibling interpretations of competence exercise."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_exercise_requirement' kernel. It is linked to sibling readings 'simulation_as_adequate_exercise' and 'catastrophe_as_necessary_anchor' through the cs_structure.reading_relations."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_multi_modal_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "catastrophic_exercise_is_unethical",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_automation_surprise_hybrid_model",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__extraction_cycle_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "c54bf3ee-8126-4b37-b958-b507383987e6"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.78,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Blood-Feud Extraction Cycle",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "royal_authority"
+    ],
+    "victims": [
+      "feud_participants",
+      "peasantry_farmers"
+    ],
+    "emerges_naturally": false,
+    "has_sunset_clause": false
+  },
+  "stakeholders": [
+    {
+      "name": "feud_participants",
+      "role": "payer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals and families directly involved in feuds, bound by honor and kinship to avenge wrongs. They bear the direct costs of violence (mortality, injury, property destruction) and resource depletion, but also perpetuate the cycle through their actions. Exit is difficult due to social pressure and identity."
+    },
+    {
+      "name": "kinship_groups",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "The collective units that enforce and perpetuate feud obligations through social norms, pressure, and collective action. They benefit from internal cohesion and perceived justice but also bear the collective costs of the feud cycle, including reduced productive capacity and vulnerability to external threats."
+    },
+    {
+      "name": "peasantry_farmers",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The broader population caught in the crossfire of feuds. They suffer indirect costs through disrupted agriculture, forced conscription, and general insecurity, with little power to resist or exit the affected territories. Their productive capacity is directly depleted."
+    },
+    {
+      "name": "royal_authority",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Emerging centralized power structures (kings, princes) that benefit from the breakdown of kinship-based justice. The destructive nature of feuds provides a strong justification for the state's monopoly on violence, allowing it to consolidate power, collect taxes, and impose its own legal system. They actively seek to suppress feuds."
+    },
+    {
+      "name": "ecclesiastical_authorities",
+      "role": "observer",
+      "secondary_role": "agenda_setter",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "Church institutions and clergy who observe the destructive impact of feuds and often advocate for peace, truces, and alternative forms of justice based on Christian doctrine. They seek to replace feud obligations with ecclesiastical law and moral injunctions."
+    },
+    {
+      "name": "stateless_society_members",
+      "role": "excluded",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Members of societies or factions who view blood-feud obligations as a legitimate and necessary form of self-enforcing justice and coordination in the absence of a state. From the perspective of this 'extraction cycle' reading, their arguments for the functional utility of feuds are dismissed or actively suppressed by emerging state powers."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "In the absence of centralized authority, feuds provide a mechanism for perceived justice and deterrence against wrongs, ensuring that transgressions are met with a response, thereby maintaining a form of social order within kinship groups.",
+    "transfer_function": "Feud obligations transfer human lives, productive capacity, and material wealth from feuding kinship groups and the general populace to the cycle of vengeance itself, ultimately consolidating power and legitimacy for emerging royal authorities who offer an alternative.",
+    "absent_voices": "Those who view feuds as a legitimate and self-enforcing coordination mechanism in stateless societies are excluded from the 'extraction cycle' framing, which emphasizes their destructive economic and political consequences. Their perspective would highlight the social functions of feuds that are lost with state pacification.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If blood-feud obligations vanished overnight, the social fabric of many historical and anthropological societies would fundamentally reorganize. Kinship-based justice systems would collapse, leading to either anarchy or a rapid acceleration of centralized state authority to fill the vacuum. Productive capacity would increase, and territorial consolidation would become easier.",
+    "founding_problem": "The absence of a centralized, legitimate authority to adjudicate disputes and enforce justice, leading to a need for kinship groups to self-regulate and deter transgressions.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "While kinship groups might still claim the problem is live, historical and anthropological analyses from outside these groups (e.g., historians studying state formation, comparative political scientists) corroborate that the problem of stateless justice has largely been superseded by the rise of centralized states, rendering the original 'solution' obsolete and destructive."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story analyzes blood-feud obligations as a destructive extraction cycle, focusing on their negative impact on productive capacity and state formation. It is one reading of the 'feud_obligation_kernel', emphasizing the costs borne by participants and the benefits accrued by emerging centralized authorities who offer an alternative. The high extractiveness and suppression reflect the coercive social norms that perpetuate the cycle and the lack of viable alternatives for those caught within it.",
+    "key_agents": [
+      "feud_participants: Primary target (moderate/identity_locked) — bears direct costs, perpetuates cycle",
+      "kinship_groups: Agenda setter/Payer (organized/constrained) — enforce norms, bear collective costs",
+      "peasantry_farmers: Primary victim (powerless/trapped) — bears indirect costs, no exit",
+      "royal_authority: Primary beneficiary/Agenda setter (institutional/arbitrage) — benefits from feud's breakdown, offers alternative",
+      "ecclesiastical_authorities: Observer/Agenda setter (institutional/analytical) — advocate for peace, offer moral alternative",
+      "stateless_society_members: Excluded (organized/constrained) — their 'coordination' argument is excluded by this reading"
+    ],
+    "logic_rationale": "Extractiveness is high (0.85) because the feud cycle continuously depletes human and material resources without generating equivalent value, leading to a net loss for participants and society. Suppression (0.78) is strong due to deeply ingrained social norms, honor codes, and the lack of external enforcement mechanisms, which trap individuals and groups in the cycle. Theater ratio is low (0.10) because the obligations are genuinely enacted and have real, destructive consequences; there is little performative maintenance without functional impact. Accessibility collapse is high (0.70) as alternatives to feud (e.g., state courts, peaceful arbitration) are often unavailable or lack legitimacy in the absence of strong centralized power. Resistance (0.45) is moderate; while individuals may seek to avoid feuds, the social pressure to participate is significant.",
+    "perspectival_gap": "The 'extraction_cycle_reading' emphasizes the destructive economic and political consequences of feuds, positioning participants as victims and emerging states as beneficiaries. This contrasts sharply with the 'stateless_coordination_reading' which views feuds as a functional, self-enforcing mechanism for justice. The engine's per-seat classification will highlight how feud participants experience this as a snare, while royal authority views it as a problem to be 'solved' for its own benefit.",
+    "directionality_logic": "Feud participants and peasantry farmers are clear targets (high d) as they bear the direct and indirect costs of violence and resource depletion. Kinship groups, while perpetuating the cycle, also bear significant costs, placing them closer to the target end. Royal authority is the primary beneficiary (low d) as the destructive nature of feuds legitimizes its claim to a monopoly on violence and enables state-building. Ecclesiastical authorities are observers, seeking to shift the system rather than directly benefiting or paying.",
+    "mandatrophy_analysis": "This classification as a Snare prevents mislabeling the feud as a 'Rope' (pure coordination) or 'Piton' (inertial decay). The high extractiveness and active social enforcement demonstrate it is not a benign coordination mechanism, nor is it merely a vestigial practice. The 'dead' status of the founding problem (lack of centralized justice) combined with the 'world_rearranges' disappearance verdict signals a zombie-like persistence, where the original function is gone but the destructive cycle continues, benefiting new actors (royal authority) by providing a problem for them to solve."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "This constraint is the 'extraction_cycle_reading' of the 'feud_obligation_kernel'. What structural elements would change if a sibling reading were adopted?",
+      "resolution_mechanism": "Analysis of alternative historical or anthropological framings of blood feuds.",
+      "impact": "If the 'stateless_coordination_reading' were adopted, feud participants would shift from victims to beneficiaries of a functional system, and extractiveness would be re-evaluated as coordination cost. If the 'christianized_pacification_reading' were adopted, the primary axis of evaluation would shift from economic/political to moral/theological.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Identifies this constraint as one reading of a contested kernel and outlines structural deltas for sibling readings."
+    },
+    {
+      "id": "feud_functional_utility_ambiguity",
+      "question": "To what extent did blood feuds genuinely provide a functional coordination mechanism for justice and deterrence in stateless societies, rather than being purely extractive?",
+      "resolution_mechanism": "Comparative anthropological studies of societies with and without feuds, assessing long-term stability, dispute resolution efficacy, and resource allocation outcomes.",
+      "impact": "If significant functional utility is established, the base extractiveness for feud participants would be lower, reflecting a genuine coordination cost rather than pure extraction, potentially shifting the classification closer to a Tangled Rope or even a Rope (from the perspective of stateless societies).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the functional utility of feuds in their original context."
+    },
+    {
+      "id": "internalized_suppression_of_exit",
+      "question": "Is the high suppression primarily structural (lack of external alternatives) or internalized (identity-locked by honor codes and kinship obligations)?",
+      "resolution_mechanism": "Sociological studies examining post-pacification communities: if feud-like behaviors or social ostracism persist after state enforcement, it indicates internalized suppression.",
+      "impact": "If internalized, the effective suppression for feud participants is higher than the structural measure suggests, as the 'trap' is carried within their identity and social fabric, making exit even harder.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for feud participants."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "territorial_consolidation_constraint",
+      "state_monopoly_on_violence_legitimacy"
+    ],
+    "dual_formulation_note": "This constraint is the 'extraction_cycle_reading' of the 'feud_obligation_kernel'. It focuses on the destructive economic and political consequences of feuds, contrasting with the 'stateless_coordination_reading' (which emphasizes functional utility) and the 'christianized_pacification_reading' (which emphasizes moral/theological objections)."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "stateless_coordination_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "christianized_pacification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feud_is_net_negative_sum",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "centralized_violence_monopoly_is_efficient",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "pre_state_violence_equilibrium",
+    "drift_state": {
+      "moment": "rise_of_centralized_states",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "royal_authority",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__neutrality_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "4ba8f0a3-8477-4fc8-a1e2-867cf1766d44"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.8,
+    "claimed_type": "rope",
+    "human_readable": "TCP/IP End-to-End Principle: Network Neutrality Reading",
+    "topic_domain": "Technology Governance / Internet Policy / Telecommunications Law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "internet_users",
+      "edge_innovators",
+      "content_providers"
+    ],
+    "victims": [
+      "internet_service_providers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "internet_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefit from open access to all content and applications without discrimination or throttling by their ISP. They bear indirect costs if ISPs pass on compliance costs, but primarily benefit from choice and innovation."
+    },
+    {
+      "name": "edge_innovators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Can launch new services and applications on the internet without needing permission or paying extra fees to ISPs for prioritized access. Their ability to innovate and compete depends on a level playing field."
+    },
+    {
+      "name": "content_providers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Can reach their audience without fear of their content being blocked, throttled, or subjected to fast lanes by ISPs. This ensures fair competition and broad distribution for their services."
+    },
+    {
+      "name": "internet_service_providers",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are prohibited from discriminating against internet traffic based on source, destination, or content. This constrains their ability to optimize revenue through differentiated services or charging content providers for priority access, which they view as a burden."
+    },
+    {
+      "name": "telecom_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Are tasked with defining and enforcing network neutrality rules, often against strong lobbying from ISPs. Their role is to balance innovation, consumer protection, and infrastructure investment."
+    },
+    {
+      "name": "network_engineers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Understand the technical architecture of TCP/IP and the implications of various traffic management practices. They often advocate for the end-to-end principle as fundamental to the internet's design and functionality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures a neutral, non-discriminatory platform for all internet traffic, fostering innovation at the 'edge' of the network and maximizing user choice by preventing ISPs from acting as gatekeepers.",
+    "transfer_function": "Prevents the transfer of value from edge innovators and internet users to internet service providers, which would occur if ISPs could charge for prioritized access or block content.",
+    "absent_voices": "ISPs advocating for prioritization, zero-rating, or other discriminatory practices are often present in policy debates, but their arguments are structurally opposed to this reading's core tenets. They would argue for greater network management flexibility and revenue optimization.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the end-to-end principle and its non-discrimination requirement vanished overnight, ISPs would rapidly implement tiered services, fast lanes, and content blocking, fragmenting the internet, stifling edge innovation, and fundamentally altering the digital economy.",
+    "founding_problem": "Preventing network operators from controlling or discriminating against content and applications, ensuring an open and innovative internet where innovation occurs at the 'edge' rather than being dictated by the 'core' network providers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Internet pioneers, academic researchers, and consumer advocacy groups consistently corroborate the ongoing relevance and necessity of this principle, citing continuous threats from ISPs seeking to monetize traffic discrimination. Legislative hearings and independent technical analyses also support this view."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'neutrality_reading' of the broader 'tcp_ip_interpretation' kernel. It posits that the fundamental design of TCP/IP, particularly the end-to-end principle, inherently requires internet service providers (ISPs) to treat all data packets equally, without discrimination based on content, application, source, or destination. This reading aims to prevent ISPs from leveraging their control over internet access to extract rents from content providers or users through discriminatory practices like throttling, blocking, or paid prioritization. The constraint is actively enforced through regulatory frameworks and public advocacy, constantly challenged by ISPs seeking greater control over traffic management.",
+    "logic_rationale": "The `extractiveness` is low (0.15) because this reading's primary function is to *prevent* extraction by ISPs, ensuring a level playing field. `suppression` is high (0.75) because it actively suppresses ISP business models that rely on discriminatory traffic management, requiring constant regulatory and technical enforcement. `resistance` is also high (0.8) due to continuous lobbying and legal challenges from ISPs. `theater_ratio` is low (0.1) as the principle is genuinely functional, though its enforcement often involves public debate and legal battles. `accessibility_collapse` is low (0.2) because the principle ensures that alternatives (new edge services) are not collapsed by ISP gatekeeping.",
+    "directionality_logic": "Internet users, edge innovators, and content providers are the primary beneficiaries, as they gain from an open, non-discriminatory internet. Internet service providers are the payers, as they bear the cost of foregone revenue from discriminatory practices. Telecom regulators act as agenda-setters, responsible for upholding and enforcing the principle. Network engineers serve as observers, providing technical insights into the principle's implications.",
+    "perspectival_gap": "From the perspective of internet users and edge innovators, this constraint is a vital 'Rope' that coordinates an open and innovative internet. From the perspective of ISPs, it is a 'Snare' that prevents them from optimizing their networks and revenue streams through differentiated services, forcing them to bear costs without commensurate benefits. The engine's computation of per-seat classification will reflect this divergence.",
+    "kernel_context": "This constraint is the 'neutrality_reading' of the 'tcp_ip_interpretation' kernel. Its sibling readings include 'prioritization_reading' (which argues TCP/IP permits differentiated service quality as network management) and 'zero_rating_reading' (which argues TCP/IP allows selective exemptions for sponsored content). This reading emphasizes non-discrimination as a core tenet derived from the internet's architectural design."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_context",
+      "question": "Is this constraint a genuine interpretation of TCP/IP's inherent design, or a policy choice layered onto a flexible technical standard?",
+      "resolution_mechanism": "Consensus among internet architects and engineers regarding the 'end-to-end principle' as a foundational design philosophy, versus legal/economic arguments for network management flexibility.",
+      "impact": "If a genuine interpretation, it strengthens the 'Rope' classification by grounding it in technical necessity. If a policy choice, it highlights the 'enforcement_mechanism' aspect and the contestability of its 'naturalness'.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between technical necessity and policy choice in interpreting TCP/IP."
+    },
+    {
+      "id": "definition_of_discrimination",
+      "question": "What constitutes 'discrimination' in a technically complex and dynamic network environment?",
+      "resolution_mechanism": "Development of clear, measurable technical standards for identifying discriminatory traffic management practices, agreed upon by engineers and regulators.",
+      "impact": "A clear definition would strengthen enforcement and reduce ISP resistance by removing ambiguity. An ambiguous definition allows ISPs to exploit loopholes, increasing effective extraction and reducing the constraint's 'Rope' function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in defining and measuring network discrimination."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression primarily structural (regulatory barriers, legal penalties) or internalized (ISPs accepting the principle as legitimate)?",
+      "resolution_mechanism": "Post-deregulation ISP behavior: if discriminatory practices immediately resume, suppression is structural. If some ISPs voluntarily maintain neutrality, partial internalization is present.",
+      "impact": "If primarily structural, the constraint's persistence depends entirely on active enforcement. If partly internalized, the constraint has a stronger normative grounding beyond pure coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for ISPs."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "internet_innovation_ecosystem",
+      "digital_economy_competition"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'tcp_ip_interpretation' kernel, focusing on non-discrimination. Other readings (prioritization, zero-rating) represent alternative interpretations of TCP/IP's implications for network governance."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prioritization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "network_neutrality_is_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "no_content_discrimination",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "open_internet_design_philosophy",
+    "drift_state": {
+      "moment": "contemporary_regulatory_challenges",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

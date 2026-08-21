@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__deployer_liability",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3b2be99e-c3c3-400f-9a4b-e338b60da002"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deployer Primary Liability for AI Systems",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers",
+      "foundation_model_providers"
+    ],
+    "victims": [
+      "ai_system_deployers",
+      "affected_individuals"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_system_deployers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organizations or entities that integrate and operate AI systems in specific contexts. They bear the primary legal and financial burden for harms caused by the AI, requiring extensive due diligence, risk assessment, and potential insurance. Their control over deployment context is cited as the basis for this liability."
+    },
+    {
+      "name": "ai_developers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Companies or teams that design and build AI models and systems. Under this regime, they are largely shielded from downstream deployment risks, externalizing much of the liability to deployers. They benefit from reduced legal exposure and potentially faster market adoption of their products."
+    },
+    {
+      "name": "foundation_model_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Entities that create and distribute large, general-purpose AI models. This reading of liability significantly reduces their direct responsibility for harms arising from specific applications of their models, shifting the burden to those who deploy them. They benefit from a clearer path to market without extensive downstream liability."
+    },
+    {
+      "name": "affected_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Individuals who suffer harm (e.g., discrimination, privacy violations, economic loss) due to the deployment of AI systems. While they have a legal avenue for redress against deployers, the complexity and power asymmetry often make effective recourse difficult. They bear the initial impact of harm."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies responsible for defining and enforcing AI liability frameworks. They establish the rules that assign primary liability to deployers, often in response to calls for clear accountability in AI governance. They actively enforce compliance and adjudicate disputes."
+    },
+    {
+      "name": "legal_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and experts who analyze the implications of different liability regimes for AI. They critique the fairness, effectiveness, and economic impact of placing primary liability on deployers, often proposing alternative frameworks."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a clear point of accountability for AI-related harms, simplifying legal processes for affected parties by identifying a single primary responsible entity (the deployer) with direct control over the operational context.",
+    "transfer_function": "Transfers the primary legal and financial risk for AI harms from developers and foundation model providers to the entities that deploy and operate AI systems, along with the associated costs of due diligence and compliance.",
+    "absent_voices": "Advocates for a more distributed or developer-centric liability model, who argue that developers hold critical information and design choices that deployers cannot fully audit, are often marginalized in policy discussions favoring deployer-centric approaches. Also, future AI systems with high autonomy might challenge the 'control' premise of deployer liability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If deployer liability vanished, the legal landscape for AI would become highly uncertain, leading to a significant chilling effect on AI adoption as no party would clearly bear responsibility. Developers would face increased pressure to internalize risks, and affected individuals would struggle to find clear avenues for redress, forcing a rapid re-evaluation of liability frameworks.",
+    "founding_problem": "The rapid proliferation of AI systems created a 'liability gap' where it was unclear who was responsible for harms, hindering innovation due to uncertainty and leaving victims without clear recourse.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Regulatory bodies and some legal experts attest that the problem of clear AI liability remains live, and this framework provides a necessary, albeit imperfect, solution. AI developers also corroborate the need for clarity, even if they benefit from this specific attribution. Affected individuals, while critical of the framework's impact, corroborate the existence of the underlying liability gap."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story describes the 'deployer liability' reading of AI liability attribution, where the entity deploying an AI system bears primary responsibility for harms. This framework aims to clarify accountability but shifts significant risk and compliance burden onto deployers, while shielding developers and foundation model providers. The structural delta from other readings is that deployers enter the victim set, developers externalize deployment risk, and the opacity of AI models becomes a due diligence burden for deployers.",
+    "logic_rationale": "Extractiveness is high (0.65) because deployers incur substantial costs for compliance, insurance, and potential damages, while developers benefit from reduced liability. Suppression (0.70) is also high, as deployers have limited options to avoid these burdens if they wish to use AI, and affected individuals face high barriers to effective redress. Theater ratio (0.20) is moderate; while there's genuine effort to establish accountability, some of the 'control' narrative may mask the inherent opacity and complexity of AI systems that deployers cannot fully mitigate.",
+    "directionality_logic": "AI system deployers and affected individuals are the primary targets (payers), bearing the costs and risks. AI developers and foundation model providers are the primary beneficiaries, externalizing much of the liability. Regulatory bodies act as agenda-setters, enforcing this specific attribution model. Legal scholars are observers, analyzing its effects.",
+    "perspectival_gap": "Deployers experience this as a highly extractive and suppressive constraint, forcing them to internalize risks they may not fully control. Developers, conversely, see it as a necessary coordination mechanism that clarifies their role and enables innovation by reducing their direct exposure to downstream harms. Affected individuals experience it as a complex, often insufficient, avenue for redress. The engine's per-seat classification will reflect these divergences.",
+    "kernel_context": "This constraint is the 'deployer_liability' reading of the 'liability_attribution' kernel. It posits that deployers, due to their control over the deployment context, are the most appropriate locus of primary liability. Sibling readings include 'developer_liability' (attributing primary liability to creators of the underlying capability) and 'shared_liability' (distributing liability along the value chain)."
+  },
+  "omegas": [
+    {
+      "id": "control_vs_opacity_ambiguity",
+      "question": "To what extent do deployers genuinely have 'control' over AI systems, given the increasing opacity and complexity of foundation models, and how does this affect their ability to mitigate risks?",
+      "resolution_mechanism": "Empirical studies on deployer-developer information asymmetry and the practical limits of due diligence for black-box AI systems. Legal precedents challenging the 'control' premise in specific harm cases.",
+      "impact": "If deployer control is found to be significantly limited by AI opacity, the constraint's extractiveness on deployers would be re-evaluated as higher (more unfair), potentially shifting the claimed type towards Snare for deployers, and increasing pressure for shared or developer liability models.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity regarding the actual control deployers have over complex AI systems versus the legal attribution of control."
+    },
+    {
+      "id": "innovation_vs_safety_tradeoff",
+      "question": "Does placing primary liability on deployers genuinely foster innovation by clarifying developer risk, or does it stifle AI adoption by making deployment too costly and risky for potential users?",
+      "resolution_mechanism": "Longitudinal economic studies comparing AI adoption rates and innovation metrics in jurisdictions with deployer-centric liability versus those with alternative models. Surveys of deployer and developer sentiment regarding risk perception and investment.",
+      "impact": "If it stifles adoption, the coordination function is undermined, and the constraint's overall benefit to society (beyond developers) would be lower, potentially reclassifying it as a Snare or Tangled Rope with a weaker coordination story. If it fosters innovation without undue burden, the Rope aspect is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The actual impact of deployer liability on AI innovation and adoption versus safety."
+    },
+    {
+      "id": "liability_framing_underdetermination",
+      "question": "Is the 'deployer_liability' framing the most defensible approach to AI liability, or do alternative framings (developer-centric, shared responsibility) offer a more equitable and effective distribution of risk and accountability?",
+      "resolution_mechanism": "Conceptual analysis and comparative legal theory evaluating the normative justifications and practical consequences of different liability models against criteria like fairness, efficiency, and victim redress. Policy debates and legislative outcomes.",
+      "impact": "If an alternative framing gains widespread acceptance, this 'deployer_liability' reading would be re-evaluated as a less optimal or even unjust constraint, potentially shifting its classification towards a Snare from a broader societal perspective, even if it retains a coordination function for developers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The choice of primary liability locus (deployer, developer, or shared) is a contested conceptual framing with significant structural consequences."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'liability_attribution' kernel, focusing on deployer responsibility. It is structurally distinct from 'developer_liability' and 'shared_liability' readings, which attribute responsibility differently."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "control_implies_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "deployment_context_is_primary_risk_factor",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "traditional_product_liability_analogy",
+    "drift_state": {
+      "moment": "contemporary_ai_opacity_challenge",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

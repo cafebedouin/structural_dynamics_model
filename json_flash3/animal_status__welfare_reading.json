@@ -1,0 +1,304 @@
+{
+  "header": {
+    "constraint_id": "animal_status__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6c592bac-cf9d-4313-962a-36c157e7bcd4"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Welfare Constraint (Welfare Reading)",
+    "topic_domain": "applied_ethics/legal_philosophy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "animal_agriculture_industry",
+      "biomedical_researchers",
+      "pet_owners"
+    ],
+    "victims": [
+      "farmed_animals",
+      "laboratory_animals",
+      "companion_animals_subject_to_abuse"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "animal_agriculture_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Benefits from the legal and ethical framework that permits instrumental use of animals for food production, while bearing costs of welfare regulations. Actively lobbies to shape welfare standards to minimize economic impact."
+    },
+    {
+      "name": "biomedical_researchers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Relies on the framework permitting animal experimentation for scientific advancement, subject to ethical review boards and welfare protocols. Benefits from the ability to use animals as models for human disease."
+    },
+    {
+      "name": "pet_owners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Benefits from the legal status of animals as property that can be owned, while being constrained by anti-cruelty laws. Experiences the constraint as a balance between ownership rights and responsibility for animal well-being."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bear the direct costs of instrumental use, including confinement, pain, and premature death, mitigated by welfare standards. Their interests are recognized but subordinated to human interests."
+    },
+    {
+      "name": "laboratory_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Subject to experimental procedures, often involving pain and distress, under protocols designed to minimize suffering. Their existence is entirely instrumental to human research goals."
+    },
+    {
+      "name": "companion_animals_subject_to_abuse",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Experience direct harm from human neglect or cruelty, despite legal protections. Their welfare depends on the enforcement of anti-cruelty laws and the ethical choices of individual owners."
+    },
+    {
+      "name": "animal_welfare_advocates",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work within the existing framework to improve welfare standards and enforce anti-cruelty laws. They are both beneficiaries (of legal recognition of animal interests) and payers (of the effort to push for change within a system that permits use)."
+    },
+    {
+      "name": "abolitionist_activists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Advocate for the complete cessation of animal use, viewing the welfare framework as legitimizing exploitation. They are excluded from the core decision-making processes of the welfare framework itself, as their goals fundamentally challenge its premise."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates human interactions with animals by establishing a baseline of acceptable treatment and defining limits on gratuitous harm, allowing for instrumental use while acknowledging animal sentience.",
+    "transfer_function": "Transfers the right to use animals for human benefit (food, research, companionship) from animals to humans, while transferring a moral obligation to prevent unnecessary suffering from humans to animals.",
+    "absent_voices": "Abolitionist activists are largely excluded from the policy-making bodies that define welfare standards, as their fundamental challenge to animal use is seen as outside the scope of 'welfare' discussions. The animals themselves, of course, have no voice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, the legal and ethical landscape around animal use would collapse. Industries relying on animals would face immediate moral and legal challenges, and the concept of 'humane' treatment would lose its grounding, leading to either unrestricted exploitation or a rapid shift towards abolitionist frameworks.",
+    "founding_problem": "To reconcile human desires for animal products and services with a growing moral recognition of animal sentience and capacity for suffering, preventing extreme cruelty while permitting use.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Animal welfare organizations, ethicists, and a significant portion of the public corroborate that the problem of balancing human interests with animal suffering remains live. The animal agriculture and research industries also attest to the ongoing need for a framework that permits their activities while addressing ethical concerns."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'welfare reading' of animal status, where animals are recognized as sentient beings with interests that constrain, but do not prohibit, human use. It aims to prevent gratuitous harm while permitting instrumental use under welfare protections. The constraint is classified as a Tangled Rope due to its genuine coordination function (balancing human and animal interests) coupled with asymmetric extraction (animals bear the costs of use, humans benefit) and active enforcement of welfare standards.",
+    "logic_rationale": "Extractiveness (0.45) is moderate because while animals are used instrumentally, their suffering is intended to be minimized, and gratuitous harm is prohibited. Suppression (0.6) is significant because the framework actively suppresses alternatives to instrumental use (e.g., full animal liberation) and enforces compliance with welfare standards. Theater ratio (0.2) is low, indicating that while there's some performative aspect to welfare claims, genuine efforts are made to improve animal conditions within the use framework. Resistance (0.7) is high due to ongoing advocacy from animal welfare and abolitionist groups.",
+    "directionality_logic": "Industries and individuals who use animals (animal agriculture, biomedical researchers, pet owners) are beneficiaries, as the constraint legitimizes their activities while imposing manageable costs. Animals themselves (farmed, laboratory, abused companions) are the primary payers, bearing the costs of instrumental use. Animal welfare advocates act as agenda-setters, working to improve conditions within the existing framework. Abolitionist activists are excluded, as their position fundamentally challenges the constraint's premise.",
+    "perspectival_gap": "From the perspective of human beneficiaries, this constraint is a necessary and ethical balance. From the perspective of animals, or abolitionist activists, it is a system of regulated exploitation. The engine's classification will reflect this divergence, showing a more extractive classification for the payer seats.",
+    "kernel_context": "This constraint is the 'welfare reading' of the broader 'animal_status' kernel. It posits that animals are sentient beings whose interests must be considered, but not to the extent of prohibiting all human use. This contrasts with the 'abolitionist_reading' (animals as rights-holders precluding all use) and the 'property_reading' (animals as legal objects with minimal independent standing)."
+  },
+  "omegas": [
+    {
+      "id": "scope_of_sentience",
+      "question": "Which animals are covered by the 'sentient beings with interests' clause, and how is sentience empirically determined?",
+      "resolution_mechanism": "Ongoing scientific research into animal cognition and neurobiology, coupled with legal and ethical consensus-building on the definition and implications of sentience.",
+      "impact": "Expanding the scope of recognized sentience would increase the victim set and potentially raise the measured extractiveness and suppression, pushing the constraint towards a Snare for newly included species. Narrowing it would have the opposite effect.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ambiguity in the empirical and conceptual boundaries of sentience."
+    },
+    {
+      "id": "welfare_vs_rights_framing",
+      "question": "Is the 'welfare' framework inherently capable of protecting animal interests, or does it merely legitimize exploitation by setting a floor for acceptable harm?",
+      "resolution_mechanism": "Longitudinal studies of animal welfare outcomes under current regulations, compared with outcomes under alternative (e.g., rights-based) frameworks, or philosophical analysis of the coherence of 'humane exploitation'.",
+      "impact": "If welfare is found to be inherently insufficient, the constraint's extractiveness would be re-evaluated upward, and its coordination function questioned, potentially reclassifying it closer to a Snare. If effective, it reinforces the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The fundamental ethical efficacy of the welfare framework itself."
+    },
+    {
+      "id": "enforcement_effectiveness_gap",
+      "question": "What is the actual gap between declared welfare standards and their real-world enforcement and compliance?",
+      "resolution_mechanism": "Independent audits of animal facilities, whistleblower reports, and empirical studies of animal health and behavior in regulated environments, compared against official compliance data.",
+      "impact": "A significant gap would increase the effective extractiveness and theater ratio, as the declared coordination function (welfare protection) would be largely performative, pushing the constraint towards a Piton or Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Discrepancy between stated welfare goals and actual outcomes."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status__abolitionist_reading",
+      "animal_status__property_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'animal_status' kernel. It coexists with the abolitionist and property readings, each representing a distinct structural claim about animal moral status and human obligations."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "animal_sentience_entails_moral_consideration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "human_instrumental_use_is_permissible_with_welfare_protections",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "balanced_human_animal_interests",
+    "drift_state": {
+      "moment": "contemporary_ethical_discourse",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

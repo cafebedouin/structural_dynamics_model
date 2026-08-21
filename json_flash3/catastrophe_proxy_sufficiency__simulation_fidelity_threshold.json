@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_proxy_sufficiency__simulation_fidelity_threshold",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "6399c624-9820-4cab-bdb6-6ff898077cdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Catastrophe Proxy Sufficiency: Simulation Fidelity Threshold",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "high_reliability_organizations",
+      "simulation_technology_vendors"
+    ],
+    "victims": []
+  },
+  "stakeholders": [
+    {
+      "name": "high_reliability_organizations",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These organizations (e.g., nuclear power plants, air traffic control) rely on high-fidelity simulations to train personnel and maintain competence for rare, high-consequence events. They benefit from reduced risk and improved safety, but are constrained by the cost and complexity of achieving and maintaining high-fidelity simulation."
+    },
+    {
+      "name": "simulation_technology_vendors",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Develop and sell the advanced simulation systems required to meet the fidelity threshold. They benefit directly from the demand for their specialized technology and expertise, driven by the perceived necessity of high-fidelity training."
+    },
+    {
+      "name": "safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Define and enforce the standards for competence retention, often incorporating requirements for simulation-based training. They interpret the fidelity threshold and its technological implications, influencing investment decisions by HROs."
+    },
+    {
+      "name": "training_personnel",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Are responsible for designing, implementing, and evaluating simulation exercises. They bear the burden of adapting to new technologies and methodologies to ensure the simulations meet the required fidelity, often with limited resources."
+    },
+    {
+      "name": "catastrophe_necessity_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Academics and practitioners who argue that no simulation, regardless of fidelity, can fully replicate the learning from actual catastrophic events. Their perspective is often marginalized in policy discussions focused on technological solutions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates investment in advanced simulation technology and training protocols across high-reliability organizations to maintain operational competence for rare, high-consequence events, thereby reducing systemic risk.",
+    "transfer_function": "Transfers resources (funding, expertise) from high-reliability organizations to simulation technology vendors and internal training departments, in exchange for perceived competence retention and risk reduction.",
+    "absent_voices": "Advocates for the 'catastrophe necessity' reading are often excluded from policy-making bodies, as their arguments challenge the premise of simulation as a sufficient proxy, potentially undermining current regulatory frameworks and technological investments.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in a simulation fidelity threshold vanished, high-reliability organizations would lose a key justification for their training investments. This would likely lead to reduced spending on advanced simulators, a re-evaluation of training methodologies, and potentially a perceived increase in operational risk, forcing a reorganization of safety protocols.",
+    "founding_problem": "How to maintain and test the competence of personnel in high-reliability organizations for extremely rare, high-impact catastrophic events, without experiencing actual catastrophes.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Safety regulators and high-reliability organizations universally attest that the problem of maintaining competence for rare catastrophes is live and ongoing. Simulation technology vendors also corroborate this, as it drives demand for their products. Catastrophe necessity advocates, while disagreeing on the solution, also affirm the problem's existence."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the belief that competence in high-reliability organizations (HROs) can be maintained for rare catastrophic events if simulation training crosses a specific fidelity threshold, where the stress and uncertainty match real-world conditions. The sufficiency of simulation is seen as technology-dependent, not a categorical impossibility. This reading frames the problem as a solvable engineering challenge, driving investment in advanced simulation technologies. It is one reading of the broader 'catastrophe_proxy_sufficiency' kernel.",
+    "logic_rationale": "The constraint is classified as a Rope because it genuinely coordinates efforts to maintain safety and competence in HROs, with identifiable beneficiaries (HROs themselves, and simulation vendors) and relatively low extraction. The extraction (0.25) primarily reflects the cost of high-fidelity technology and the overhead of regulatory compliance. Suppression (0.3) is low because participation is largely voluntary, driven by safety imperatives, though regulatory requirements add some pressure. Theater ratio (0.1) is low, as the simulations are generally functional, not merely performative. Accessibility collapse (0.4) is moderate; alternatives exist (e.g., lower-fidelity training, or accepting higher risk), but they are less desirable. Resistance (0.2) is low, as the core premise is widely accepted within the safety engineering community.",
+    "directionality_logic": "High-reliability organizations are beneficiaries, as they gain enhanced safety and competence. Simulation technology vendors are also beneficiaries, profiting from the demand for their products. Safety regulators act as agenda-setters, defining the standards. Training personnel bear some costs in implementing these complex systems. Catastrophe necessity advocates are excluded, as their view challenges the core premise of this constraint.",
+    "perspectival_gap": "From the perspective of HROs and regulators, this constraint is a necessary and effective coordination mechanism for safety. From the perspective of catastrophe necessity advocates, it represents a potentially dangerous overreliance on technology that cannot fully substitute for real-world experience, leading to a false sense of security. The engine's classification will highlight this divergence.",
+    "kernel_context": "This constraint is the 'simulation_fidelity_threshold' reading of the 'catastrophe_proxy_sufficiency' kernel. It posits that simulation can be a sufficient proxy for real catastrophes if it achieves a certain fidelity. Sibling readings include 'catastrophe_necessity_reading' (only real catastrophes suffice), 'hybrid_degradation_reading' (simulation maintains some competence but not all over time), and 'simulation_as_proxy_catastrophe_reading' (simulation is fully equivalent to catastrophe practice)."
+  },
+  "omegas": [
+    {
+      "id": "fidelity_threshold_objectivity",
+      "question": "Is the 'fidelity threshold' an objectively measurable and universally agreed-upon standard, or is it subject to interpretation and technological limitations?",
+      "resolution_mechanism": "Cross-industry comparative studies and expert consensus panels to establish common metrics and validate their correlation with real-world performance. Analysis of regulatory capture in standard-setting bodies.",
+      "impact": "If subjective, the threshold could be manipulated to benefit vendors or reduce regulatory burden, increasing extractiveness and potentially shifting the classification towards a Tangled Rope. If objective, it reinforces the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the objectivity and measurability of the simulation fidelity threshold."
+    },
+    {
+      "id": "tacit_knowledge_degradation",
+      "question": "Does high-fidelity simulation truly prevent the degradation of tacit knowledge and stress-response capacity over generational timescales, or does it only maintain procedural competence?",
+      "resolution_mechanism": "Longitudinal studies comparing HRO performance across generations with varying levels of real-world catastrophic exposure versus simulation-only training. This would require decades of data.",
+      "impact": "If tacit knowledge degrades despite high-fidelity simulation, the constraint's effectiveness is overstated, and its classification might shift towards a Piton (performing a function it no longer fully achieves) or a Snare (if the false sense of security leads to greater risk).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Uncertainty about simulation's ability to retain all forms of competence, especially tacit knowledge and stress response."
+    },
+    {
+      "id": "technological_determinism_vs_human_factors",
+      "question": "To what extent does the focus on a 'fidelity threshold' overemphasize technological solutions at the expense of human factors, organizational culture, and other non-simulatable aspects of competence?",
+      "resolution_mechanism": "Qualitative research into HRO incident reports, organizational ethnography, and comparative analysis of safety cultures in organizations with similar simulation investments but different safety outcomes.",
+      "impact": "If human factors are systematically neglected due to overreliance on simulation fidelity, the constraint's coordination function is incomplete, and it may contribute to new forms of risk, potentially shifting towards a Tangled Rope or Snare by creating hidden costs.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The conceptual framing of competence retention as primarily a technological problem solvable by simulation fidelity."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'catastrophe_proxy_sufficiency' kernel, focusing on the role of simulation fidelity thresholds. It is linked to other readings of the same kernel, which offer alternative perspectives on the sufficiency of simulation for competence retention."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy_catastrophe_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_necessity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_degradation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_can_replicate_catastrophic_stress",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "competence_is_technology_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "technologically_mediated_competence",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

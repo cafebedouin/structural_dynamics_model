@@ -1,0 +1,293 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__founder_stewardship",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3023296f-8ad4-4894-a1fc-34f16982daa8"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Dual-Class Legitimacy: Founder Stewardship Reading",
+    "topic_domain": "corporate_governance/securities_law/organizational_economics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "founder_ceo",
+      "class_b_shareholders",
+      "class_a_shareholders",
+      "employees"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "long_term_value_creation_theory",
+      "stewardship_theory"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "stewardship_vs_extraction_ambiguity",
+      "question": "Is concentrated founder control primarily a mechanism for long-term stewardship and mission execution, or does it enable extraction from minority shareholders?",
+      "resolution_mechanism": "Empirical analysis of long-term shareholder returns (Class A vs. Class B), founder compensation relative to performance, and governance decisions in dual-class vs. single-class firms over extended periods, controlling for industry and firm age.",
+      "impact": "If primarily stewardship, the constraint is a Rope; if primarily extraction, it is a Snare. This reading assumes stewardship, but the alternative is a live contest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between genuine stewardship and disguised extraction in dual-class structures."
+    },
+    {
+      "id": "long_term_value_definition",
+      "question": "How is 'long-term value' defined and measured in practice, and whose interests does that definition primarily serve?",
+      "resolution_mechanism": "Content analysis of corporate disclosures, founder statements, and board minutes; correlation of 'long-term' initiatives with founder-specific benefits (e.g., control premium, specific strategic directions).",
+      "impact": "If 'long-term value' aligns broadly with all shareholder interests, the stewardship claim holds. If it disproportionately benefits founders or specific strategic paths at the expense of broader market returns, the extraction reading gains force.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The contested definition and beneficiaries of 'long-term value' in founder-led firms."
+    },
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is one reading of the 'dual_class_legitimacy' kernel. The specific reading instantiated here is 'founder_stewardship'. Sibling readings include 'minority_extraction' and 'disclosure_consent'.",
+      "resolution_mechanism": "Not resolvable within this story; this omega documents the kernel context.",
+      "impact": "Different readings lead to different classifications and policy implications for dual-class structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Documents the kernel and reading context for dual-class legitimacy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the 'founder_stewardship' reading of dual-class share structures, where concentrated founder control is seen as a legitimate and beneficial mechanism for all shareholders. From this perspective, the structure enables long-horizon mission execution, protects the company from short-term market pressures, and ultimately drives greater value creation than a single-class structure would. The founder is viewed as a fiduciary steward whose control aligns with the long-term interests of the enterprise and its public shareholders.",
+    "key_agents": [
+      "founder_ceo: Primary agenda-setter and beneficiary (institutional/identity_locked) — bears responsibility for mission, benefits from control.",
+      "class_b_shareholders: Beneficiaries (powerful/identity_locked) — retain voting control, align with founder's long-term vision.",
+      "class_a_shareholders: Beneficiaries (moderate/constrained) — benefit indirectly from mission success and long-term value creation.",
+      "institutional_investors: Payers (organized/constrained) — forgo proportional governance rights in exchange for access to the company's growth potential.",
+      "securities_regulators: Observer (institutional/analytical) — monitor compliance and assess market fairness."
+    ],
+    "logic_rationale": "The low extractiveness (0.25) reflects the view that the control premium is justified by the value created through long-term mission execution, benefiting all shareholders. Suppression (0.4) is moderate, representing the structural dampening of short-term market pressures and activist investor influence, which is seen as a feature, not a bug, from this perspective. Theater ratio (0.1) is low because the governance structure is considered genuinely functional in achieving its stated goals. Accessibility collapse (0.4) is moderate as alternative governance structures exist, but this one is chosen for specific strategic reasons. Resistance (0.2) is low because, from this reading, the structure is legitimate and accepted by many long-term investors.",
+    "perspectival_gap": "While this story presents the founder stewardship perspective, it acknowledges that other readings (e.g., minority extraction) exist and would yield different classifications. The engine's per-seat classification will reflect the differing experiences of shareholders based on their control rights and exit options, even within this 'beneficial' framing.",
+    "directionality_logic": "The founder_ceo and class_b_shareholders are clear beneficiaries, as they retain control and guide the company's long-term trajectory. Class_a_shareholders and employees are also considered beneficiaries, as their interests are seen as aligned with the long-term mission and value creation enabled by founder control. Institutional_investors are payers in the sense that they accept reduced governance rights in exchange for investment opportunity, but are not 'victims' in this reading, as they are presumed to consent to the terms.",
+    "mandatrophy_analysis": "From the founder stewardship perspective, the dual-class structure's mandate (protecting long-term mission) is very much alive. The classification as a Rope prevents mislabeling this coordination mechanism as pure extraction, recognizing its genuine function in aligning long-term interests and resisting short-termism, even while acknowledging the concentration of control.",
+    "kernel_context": "This constraint is the 'founder_stewardship' reading of the 'dual_class_legitimacy' kernel. It posits that concentrated founder control legitimately serves all shareholders by enabling long-horizon mission execution. Sibling readings, such as 'minority_extraction' and 'disclosure_consent', offer alternative interpretations of the same governance structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__minority_extraction",
+      "dual_class_legitimacy__disclosure_consent"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'dual_class_legitimacy' kernel, focusing on the founder stewardship perspective. It is linked to sibling readings that offer alternative interpretations of dual-class share structures."
+  },
+  "stakeholders": [
+    {
+      "name": "founder_ceo",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The visionary leader who retains disproportionate voting control through Class B shares. They are responsible for setting and executing the long-term mission, believing this structure protects the company from short-term market pressures and enables greater value creation for all shareholders."
+    },
+    {
+      "name": "class_b_shareholders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Typically the founder and early insiders who hold shares with superior voting rights. They benefit from the ability to maintain strategic control and align the company's trajectory with its founding mission, insulated from external pressures."
+    },
+    {
+      "name": "class_a_shareholders",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Public shareholders who hold shares with inferior or no voting rights. From this reading, they benefit indirectly from the long-term value creation and mission stability enabled by founder control, accepting the governance structure as a trade-off for growth potential."
+    },
+    {
+      "name": "institutional_investors",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Large investment funds that invest in dual-class companies, accepting the concentrated control structure. They 'pay' by forgoing proportional governance rights, but do so with the expectation of superior long-term returns driven by founder vision. Their exit is constrained by market liquidity and fiduciary duties."
+    },
+    {
+      "name": "employees",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefit from the stability and clear strategic direction provided by founder control, which can foster a strong corporate culture and long-term career opportunities. Their exit options are tied to the labor market."
+    },
+    {
+      "name": "board_of_directors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Oversees the company's management and strategy. While legally bound to all shareholders, the board in a dual-class structure often aligns closely with the founder's vision, interpreting their role as supporting long-term mission execution."
+    },
+    {
+      "name": "securities_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies tasked with ensuring fair and orderly markets. They observe dual-class structures, assessing their impact on investor protection and market integrity, and can propose rule changes or enforcement actions."
+    }
+  ],
+  "gain_flow": "founder_ceo",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Coordinates long-term strategic vision and capital allocation by insulating the company's mission from short-term market fluctuations and activist pressures, ensuring consistent leadership and direction.",
+    "transfer_function": "Transfers disproportionate voting control and decision-making power from dispersed public shareholders to the founder and early insiders, in exchange for perceived long-term value creation and mission stability.",
+    "absent_voices": "Advocates for 'one-share-one-vote' principles, short-term activist investors, and some governance advisory firms are structurally marginalized or excluded from influencing the core governance structure. They would argue for greater shareholder democracy and accountability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If concentrated founder control vanished overnight, the company would immediately become vulnerable to short-term market pressures, hostile takeovers, and activist campaigns. The long-term mission would likely be compromised, strategic direction would fragment, and the company's unique culture and innovation trajectory could be lost, leading to a significant reorganization of its governance and market strategy.",
+    "founding_problem": "The founding problem was how to raise significant capital for growth while preserving the founder's long-term vision and mission, protecting the company from the pressures of quarterly earnings and short-term market demands.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Founders and many long-term institutional investors attest that the problem of short-term market pressure on long-horizon innovation remains live. Academic research on corporate governance also frequently discusses the tension between short-term market demands and long-term strategic execution, corroborating the persistence of this challenge from outside the immediate beneficiary group."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "minority_extraction",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "disclosure_consent",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "founder_vision_creates_long_term_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "control_stability_enables_mission_execution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "founder_led_innovation_model",
+    "drift_state": {
+      "moment": "contemporary_corporate_governance_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "fa2251a1-72ef-480b-954e-13953b7babeb"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer Primary Liability for AI/ML Systems",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_deployers",
+      "regulatory_bodies"
+    ],
+    "victims": [
+      "ai_developers",
+      "innovation_ecosystem"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the primary legal and financial burden for harms caused by AI systems they create, even when those systems are deployed in contexts beyond their direct control. This includes costs for legal defense, settlements, and increased insurance premiums. Exit means abandoning the field or moving to less regulated jurisdictions."
+    },
+    {
+      "name": "ai_deployers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit from externalized risk, as primary liability shifts to developers. They can deploy AI systems with reduced direct legal exposure, focusing on operational benefits. Their situation is improved by this reading, as they face less pressure to understand or mitigate upstream risks."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce the liability framework, seeking to hold developers accountable for system harms. They benefit from a clear, identifiable party to target for enforcement, simplifying regulatory oversight. Their goal is to ensure public safety and trust in AI, but this reading simplifies their enforcement task."
+    },
+    {
+      "name": "affected_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Potentially benefit from having a clear party (the developer) to seek redress from in case of harm. However, the complexity of AI systems often makes proving causation difficult, and the benefit is contingent on successful litigation."
+    },
+    {
+      "name": "innovation_ecosystem",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Suffers from increased compliance costs, reduced investment in high-risk but potentially transformative AI research, and a chilling effect on new ventures. The burden of liability can stifle innovation, especially for smaller entities. Exit means slower growth or relocation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aims to coordinate accountability for AI harms by assigning a clear primary party responsible for system safety and ethical design, thereby incentivizing responsible development practices.",
+    "transfer_function": "Transfers legal and financial risk, as well as the burden of understanding and mitigating systemic opacity, from AI deployers and the general public to AI developers.",
+    "absent_voices": "Smaller AI startups and academic researchers, who would argue that this liability model disproportionately burdens innovation and fails to account for the distributed nature of AI risk, are often underrepresented in policy discussions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If developer primary liability vanished, the regulatory landscape for AI would immediately shift, with deployers facing increased scrutiny and pressure to internalize risk. Developers might innovate more freely but also with less direct accountability, leading to a scramble for new liability frameworks.",
+    "founding_problem": "The rapid proliferation of AI systems created a 'liability gap' where it was unclear who was responsible for harms caused by autonomous or opaque systems, leading to a lack of accountability and potential public distrust.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Regulatory bodies and some consumer advocacy groups attest that the problem of AI accountability remains live. AI developers and some legal scholars, however, argue that this specific attribution model is an oversimplification that creates new problems rather than solving the original one effectively."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story describes the 'developer_liability' reading of the broader 'liability_attribution' kernel in AI governance. Under this reading, the primary legal and financial responsibility for harms caused by AI systems is attributed to the developers who create the underlying capability. This framework is often advocated by regulatory bodies and deployers seeking to externalize risk, but it places a significant burden on developers, potentially stifling innovation. The constraint is claimed as a 'tangled_rope' because it attempts to coordinate accountability while simultaneously extracting significant costs from developers.",
+    "logic_rationale": "The extractiveness (0.65) reflects the substantial legal costs, insurance burdens, and potential damages developers face. Suppression (0.70) is high due to the regulatory and tort mechanisms that compel developers to accept this liability, with limited options to shift or share the risk. The theater ratio (0.20) is moderate; while there's genuine intent to ensure accountability, some of the enforcement activity serves to maintain the current risk externalization rather than purely improving safety. Accessibility collapse (0.40) is moderate as developers can still operate, but with significantly higher barriers. Resistance (0.55) is present from developer communities and some legal scholars.",
+    "directionality_logic": "AI developers are clear payers/victims, bearing the brunt of the liability. AI deployers are beneficiaries, as their direct liability is reduced. Regulatory bodies act as agenda-setters, enforcing this attribution model. The affected public are indirect beneficiaries, gaining a clearer path to redress, though often a difficult one. The innovation ecosystem is a payer, experiencing a chilling effect.",
+    "perspectival_gap": "From the perspective of AI deployers and regulators, this framework provides a clear, efficient mechanism for accountability (a 'rope' or 'scaffold'). From the perspective of AI developers and the broader innovation ecosystem, it is a highly extractive and suppressive 'snare' or 'tangled_rope' that misattributes risk and stifles progress. The engine's per-seat classification will highlight this divergence."
+  },
+  "omegas": [
+    {
+      "id": "causal_attribution_complexity",
+      "question": "How accurately can primary causation for AI harms be attributed solely to developers, given the complexity of deployment contexts, user interaction, and emergent system behavior?",
+      "resolution_mechanism": "Development of robust, standardized AI auditing tools and methodologies that can trace causal chains through complex AI systems and their operational environments.",
+      "impact": "If attribution to developers is consistently inaccurate or incomplete, the constraint's legitimacy as a coordination mechanism for accountability would collapse, pushing it towards a 'snare' or 'piton' for developers. If attribution is robust, it strengthens the 'tangled_rope' or even 'rope' classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The empirical challenge of isolating developer-specific causation in complex AI systems."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the measured suppression structural (legal barriers, regulatory enforcement) or internalized (developers self-censor innovation due to fear of liability)?",
+      "resolution_mechanism": "Post-policy-change innovation trajectory: if innovation remains stifled after structural liability is reduced, reclassify as partially internalized suppression.",
+      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests — developers carry the suppression with them after policy changes, impacting the innovation ecosystem more severely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs. internalized suppression mechanism for AI developers."
+    },
+    {
+      "id": "reading_framing_legitimacy",
+      "question": "Is the 'developer_liability' reading a legitimate and effective approach to AI accountability, or is it a convenient externalization of risk by deployers and regulators?",
+      "resolution_mechanism": "Comparative analysis of AI safety and innovation outcomes in jurisdictions adopting different liability models (deployer-centric, shared, or developer-centric).",
+      "impact": "If other models prove more effective at promoting safety and innovation, this reading's legitimacy would erode, shifting its classification towards a 'snare' or 'piton' from an 'observer' seat. If it proves uniquely effective, its 'tangled_rope' classification might lean more towards a 'rope'.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The conceptual validity of attributing primary liability to developers."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_ethics_guidelines",
+      "ai_safety_standards"
+    ],
+    "dual_formulation_note": "This constraint is one reading ('developer_liability') of the 'liability_attribution' kernel. Other readings include 'deployer_liability' and 'shared_liability', which attribute primary responsibility differently."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_bears_ultimate_responsibility",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "upstream_control_implies_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "traditional_product_liability_framework",
+    "drift_state": {
+      "moment": "contemporary_ai_governance_debate",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

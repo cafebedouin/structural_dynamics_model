@@ -1,0 +1,300 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__catastrophic_tail_dominant",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "15ea79a0-87bc-4198-ae28-4d4ebf421e23"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.45,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Energy Risk Assessment: Catastrophic Tail Dominance",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "risk_averse_public",
+      "fossil_fuel_industry"
+    ],
+    "victims": [
+      "energy_consumers",
+      "nuclear_industry",
+      "proponents_of_expected_value_risk"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enforce risk assessment frameworks that prioritize avoiding low-probability, high-impact catastrophic events. They gain legitimacy from public safety concerns and manage the political fallout of any perceived catastrophic risk."
+    },
+    {
+      "name": "risk_averse_public",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from the perceived safety of avoiding catastrophic events, particularly nuclear accidents, even if it means higher energy costs or reliance on energy sources with higher aggregate, but distributed, harms. Their fears are directly addressed by this framework."
+    },
+    {
+      "name": "energy_consumers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the costs of energy policies shaped by this risk framework, which can include higher electricity prices, reduced energy independence, or reliance on less efficient or more polluting energy sources if nuclear is suppressed."
+    },
+    {
+      "name": "nuclear_industry",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Faces significant regulatory hurdles, public opposition, and investment challenges due to the emphasis on low-probability catastrophic risks, despite its low aggregate mortality per TWh. Their pathway is actively suppressed."
+    },
+    {
+      "name": "fossil_fuel_industry",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Benefits from the suppression of nuclear energy, as it reduces a major competitor. The distributed, long-term harms of fossil fuels (e.g., air pollution, climate change) are often discounted or framed as reversible within this risk framework."
+    },
+    {
+      "name": "proponents_of_expected_value_risk",
+      "role": "excluded",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advocate for risk assessment based on minimizing aggregate expected harm (e.g., mortality per TWh) across all energy pathways. Their arguments are often marginalized or dismissed in policy debates dominated by catastrophic tail risk aversion."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared framework for energy policy and infrastructure planning by establishing a clear, albeit contested, priority for avoiding low-probability, high-impact catastrophic events, thereby coordinating public and political anxieties.",
+    "transfer_function": "Transfers resources (e.g., higher energy costs, foregone optimal energy mixes, investment in less efficient alternatives) from energy consumers and nuclear energy proponents to a perceived reduction in catastrophic risk and to industries whose risks are discounted (e.g., fossil fuels).",
+    "absent_voices": "Economists and risk analysts advocating for expected value approaches, and populations disproportionately affected by the distributed harms of non-nuclear energy sources (e.g., air pollution, climate change impacts) whose risks are downplayed by this framework.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this risk framework vanished overnight, energy policy would undergo a significant re-evaluation. Nuclear power would likely see a resurgence, fossil fuel reliance would be challenged more directly on aggregate harm, and investment decisions would shift to optimize for overall efficiency and lower total mortality, rather than just avoiding tail risks.",
+    "founding_problem": "Public and political anxieties following highly visible, catastrophic nuclear accidents (e.g., Chernobyl, Fukushima) created a demand for risk frameworks that explicitly prioritized avoiding such events, regardless of their low probability or the higher aggregate harm of alternatives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public opinion polls consistently show high aversion to nuclear risk, media coverage amplifies catastrophic events, and political discourse frequently invokes 'worst-case scenarios' in energy debates. This is corroborated by independent social science research on risk perception and political science analysis of energy policy formation."
+  },
+  "interval": {
+    "start": 2000,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.77
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.84
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2030,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes a dominant approach to energy risk assessment that prioritizes avoiding low-probability, high-impact catastrophic outcomes (e.g., nuclear meltdowns) even if it leads to higher expected aggregate harm (e.g., from fossil fuel emissions). This is one reading of the broader 'acceptable_risk_energy' kernel. The constraint is claimed as a Tangled Rope because it offers a coordination function (addressing public fear of catastrophe) but does so with significant asymmetric extraction (higher costs, suboptimal energy mixes) and active suppression of alternatives (e.g., nuclear pathways).",
+    "logic_rationale": "Extractiveness is high (0.78) because the policy choices driven by this framework often result in higher overall societal costs and harms than alternative risk management strategies. Suppression is very high (0.85) due to the active regulatory and political barriers placed on energy sources with catastrophic tail risks, regardless of their aggregate safety profile. Theater ratio is moderate (0.45) as some of the emphasis on tail risk serves to manage public perception and political agendas, rather than solely reflecting a rational, comprehensive risk assessment. Accessibility collapse is high (0.70) for energy pathways with perceived catastrophic risks, as they are effectively excluded or heavily constrained.",
+    "directionality_logic": "Regulatory bodies (agenda_setter) and the risk-averse public (beneficiary) benefit from this framework by gaining legitimacy and perceived safety, respectively. The fossil fuel industry also benefits by having a major competitor (nuclear) suppressed. Energy consumers and the nuclear industry are the primary payers/victims, bearing higher costs and facing existential challenges. Proponents of expected value risk assessment are excluded, as their analytical framework is not adopted.",
+    "perspectival_gap": "Regulatory bodies and the risk-averse public perceive this as a necessary coordination mechanism for public safety, a 'Rope' that protects society from unacceptable risks. However, energy consumers and the nuclear industry experience it as a 'Snare' or 'Tangled Rope' due to the significant costs, foregone opportunities, and active suppression of alternatives, which they argue leads to higher aggregate harm.",
+    "kernel_context": "This constraint, 'acceptable_risk_energy__catastrophic_tail_dominant', is one reading of the 'acceptable_risk_energy' kernel. It instantiates a framework where avoiding low-probability, high-impact events is paramount. Its sibling readings include 'expected_value_dominant' (minimizing aggregate expected harm) and 'option_value_preserving' (maintaining flexibility under deep uncertainty)."
+  },
+  "omegas": [
+    {
+      "id": "harm_weighting_objectivity",
+      "question": "Is the differential weighting of catastrophic vs. distributed harms in energy policy objectively justified by risk science, or is it primarily a socio-political construct?",
+      "resolution_mechanism": "Cross-cultural comparative studies of risk perception and policy outcomes, combined with expert elicitation on the scientific basis for weighting different types of harm.",
+      "impact": "If primarily a socio-political construct, the 'naturalness' of this constraint is undermined, increasing its perceived extractiveness and suppression. If objectively justified, the coordination function is strengthened.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the weighting of different harm types is objective or constructed."
+    },
+    {
+      "id": "nuclear_suppression_necessity",
+      "question": "Is the high suppression of nuclear energy pathways a necessary consequence of genuinely unmanageable catastrophic risk, or an overreaction driven by public perception and political expediency?",
+      "resolution_mechanism": "Independent, comprehensive risk assessments comparing nuclear to other energy sources on a full lifecycle basis, including waste management and accident probabilities, without pre-weighting catastrophic outcomes.",
+      "impact": "If suppression is an overreaction, the constraint's extractiveness and theater_ratio would be higher, and its classification would lean more towards Snare. If necessary, the coordination function is more robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity of nuclear energy pathway suppression."
+    },
+    {
+      "id": "reversibility_of_distributed_harms",
+      "question": "Are the distributed harms from alternative energy sources (e.g., fossil fuels) truly reversible or manageable in the long term, or are their cumulative impacts underestimated by this framework?",
+      "resolution_mechanism": "Longitudinal epidemiological studies on health impacts of air pollution, and climate modeling with updated feedback loops, to assess the true reversibility and long-term costs of distributed harms.",
+      "impact": "If distributed harms are underestimated and less reversible, the 'higher expected aggregate harm' becomes more salient, increasing the perceived extractiveness of this constraint from the perspective of those bearing those harms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True reversibility and long-term impact of distributed harms."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "energy_infrastructure_investment",
+      "public_health_policy",
+      "climate_change_mitigation_policy"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_chernobyl_fukushima_risk_aversion",
+    "drift_state": {
+      "moment": "contemporary_climate_crisis_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expected_value_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "catastrophic_risk_intolerable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "maximin_principle_applies_to_energy_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

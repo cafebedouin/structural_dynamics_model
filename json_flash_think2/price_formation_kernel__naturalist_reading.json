@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__naturalist_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "61a9ece9-34b0-422f-bfca-828ca3291b9b"
+  },
+  "base_properties": {
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.01,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Price formation as natural equilibrium",
+    "topic_domain": "political_economy/housing_markets/institutional_analysis",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [],
+    "victims": [],
+    "vindicated_propositions": [
+      "free_market_efficiency_doctrine",
+      "supply_demand_equilibrium",
+      "invisible_hand_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.02
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.01
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.01
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'naturalist reading' of price formation, which posits that prices are fundamentally determined by objective scarcity and subjective preferences, operating through a natural, self-organizing equilibrium process. From this perspective, market prices are efficient signals that coordinate resource allocation, and any deviation from these 'natural' prices is a distortion caused by external interference, leading to inefficiency and deadweight loss. This reading asserts that the underlying mechanism of price discovery is akin to a natural law.",
+    "logic_rationale": "The low extractiveness, suppression, and theater ratio reflect the claim that price formation, in its natural state, is not a human construct designed to extract or coerce, but an emergent property of economic interactions. Its high accessibility collapse signifies that alternatives to this fundamental process (e.g., central planning) are inherently inefficient and unsustainable. Low resistance indicates that the 'natural' process itself is not resisted, only its distortions. The claimed type is 'mountain' because this reading asserts the process is an irreducible feature of economic reality.",
+    "directionality_logic": "As a genuine mountain, this constraint has no identifiable beneficiaries or victims in its pure form. The 'benefit' is the efficient allocation of resources for society as a whole, and the 'cost' is the necessity of making choices under scarcity – neither of which is 'collected' or 'imposed' by a specific agent through the constraint itself. Any perceived beneficiaries or victims arise from deviations from this natural process, not from the process itself.",
+    "perspectival_gap": "Other readings (institutional, georgist, financialization) would compute vastly different metrics and classifications, seeing price formation as a constructed, extractive, or distorted process. This divergence is precisely what the kernel framework is designed to measure: the naturalist reading asserts a mountain, while other readings would identify snares or tangled ropes. The engine's computation of per-seat classifications would highlight this gap if stakeholders were present.",
+    "kernel_context": "This constraint is the 'naturalist_reading' of the 'price_formation_kernel'. It posits that prices are natural equilibrium signals. Sibling readings include the 'institutional_reading' (prices are constructed by rules), the 'georgist_reading' (land rent is unearned), and the 'financialization_reading' (prices are driven by credit and asset bubbles)."
+  },
+  "omegas": [
+    {
+      "id": "natural_vs_constructed_price",
+      "question": "Is price formation a natural, emergent equilibrium process, or is it fundamentally constructed and mediated by human institutions and power structures?",
+      "resolution_mechanism": "Comparative analysis of price dynamics in highly deregulated vs. heavily regulated markets, controlling for underlying scarcity and preference, to isolate the impact of institutional design.",
+      "impact": "If price formation is primarily constructed, this constraint would reclassify from Mountain to a form of Snare or Tangled Rope, with identifiable beneficiaries and victims of the construction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural economic law and institutional construct."
+    },
+    {
+      "id": "scarcity_vs_speculation_drivers",
+      "question": "To what extent do observed prices reflect objective scarcity and preference, versus speculative dynamics, credit availability, or asset-price feedback loops?",
+      "resolution_mechanism": "Empirical studies disentangling fundamental value from financialization effects in asset markets, particularly housing.",
+      "impact": "If speculative dynamics are dominant, the 'natural equilibrium' claim is undermined, and the constraint's extractiveness would rise significantly, potentially reclassifying it as a Snare or Tangled Rope driven by financial actors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prices are driven by fundamentals or financialization."
+    },
+    {
+      "id": "land_rent_natural_vs_unearned",
+      "question": "Is land rent a natural reflection of location scarcity and preference, or is it an unearned increment arising from collective action and public investment, distinct from other forms of value?",
+      "resolution_mechanism": "Economic analysis comparing land value appreciation in areas with varying levels of public infrastructure investment and taxation regimes, alongside philosophical inquiry into the nature of property rights.",
+      "impact": "If land rent is deemed unearned, the 'natural equilibrium' claim is challenged, as it implies a structural extraction that the naturalist reading denies, potentially leading to a reclassification towards a Snare or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether land rent is a natural scarcity signal or an unearned increment."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__institutional_reading",
+      "price_formation_kernel__georgist_reading",
+      "price_formation_kernel__financialization_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of four distinct readings of the 'price_formation_kernel', each with different structural properties and classifications. They are linked as a constraint family."
+  },
+  "six_questions": {
+    "coordination_function": "Prices coordinate the allocation of scarce resources by signaling relative value and incentivizing producers to meet demand, and consumers to conserve scarce goods.",
+    "transfer_function": "Prices facilitate the transfer of goods and services from those who value them less to those who value them more, and capital from less productive to more productive uses, reflecting underlying scarcity and preference.",
+    "absent_voices": "From this reading's perspective, there are no 'absent voices' in the natural process of price formation itself. Objections arise from those who misunderstand or seek to interfere with this natural process, not from within it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the natural process of price formation vanished overnight, the economy would collapse into chaos. Without price signals, rational resource allocation would be impossible, leading to widespread shortages, surpluses, and a breakdown of production and distribution.",
+    "founding_problem": "The fundamental problem is the efficient allocation of scarce resources among competing ends, and the coordination of countless individual economic decisions.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Economic theory, supported by historical examples of market failures under price controls or central planning, corroborates that the problem of resource allocation is live and that price signals are the most efficient solution. This is attested by mainstream economists and historical analysis from outside specific benefiting parties."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "self_enforcing",
+    "reference_frame": "perfect_competition_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_mixed_economy",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "institutional_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prices_reflect_objective_scarcity_and_preference",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "unfettered_markets_yield_optimal_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__strong_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "e626a9d2-0eb4-40ee-84b0-1e9e23c7963f"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.8,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Strong Copyleft Scope (Dynamic Linking & Coupling)",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_software_community",
+      "fsf_licensing_enforcers"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "commercial_integrators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_licensing_enforcers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Actively interpret and enforce the GPL, asserting that dynamic linking and other forms of code coupling create derivative works subject to the GPL's copyleft. They initiate legal action or public campaigns to ensure compliance, aiming to expand the pool of free software."
+    },
+    {
+      "name": "free_software_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefits from the strong copyleft interpretation by ensuring that contributions to GPL-licensed projects, even when integrated into larger systems, remain free. This guarantees access to source code and fosters a collaborative development environment, preventing proprietary enclosure."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Face significant costs and restrictions if they wish to integrate GPL-licensed components into their proprietary products. They must either release their entire product under the GPL (a major business model shift) or avoid GPL components, limiting their technical options. They actively lobby against this interpretation."
+    },
+    {
+      "name": "commercial_integrators",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Companies that build systems using a mix of open-source and proprietary components. The strong copyleft interpretation forces them to carefully manage dependencies, often incurring legal review costs or foregoing efficient technical solutions to avoid triggering GPL obligations for their proprietary codebases."
+    },
+    {
+      "name": "open_source_lawyers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Advise clients on GPL compliance, often navigating the contested boundaries of derivative works. They analyze legal precedents, license texts, and community interpretations, playing a critical role in shaping the practical application of the strong copyleft reading."
+    },
+    {
+      "name": "users_of_proprietary_software",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are indirectly affected by the strong copyleft interpretation. They may experience higher prices for proprietary software (if vendors pass on compliance costs) or reduced functionality (if vendors avoid integrating useful GPL components). They have no direct voice in the licensing debate."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ensures that software built upon GPL-licensed components remains free and open, fostering a collaborative ecosystem and preventing proprietary enclosure of shared code, thereby coordinating the collective action problem of maintaining a commons.",
+    "transfer_function": "Transfers the right to distribute proprietary derivatives of GPL-coupled code from proprietary vendors to the free software community, or forces proprietary vendors to release their source code under GPL, effectively transferring control over derivative works.",
+    "absent_voices": "Users of proprietary software who might benefit from easier integration of GPL components into proprietary products (e.g., lower prices, more features) but are not part of the licensing debate. Also, developers who prefer more permissive licenses and find strong copyleft restrictive.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this strong interpretation vanished, proprietary vendors would integrate GPL components more freely without releasing their source, leading to a significant shift in the open-source ecosystem towards more proprietary enclosure and less reciprocal contribution. The free software commons would erode.",
+    "founding_problem": "Preventing proprietary software from 'taking' free software code and enclosing it, thereby undermining the free software movement's goal of universal software freedom and ensuring that all users retain the four essential freedoms (run, study, modify, distribute).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The Free Software Foundation (FSF) and many free software advocates attest that the problem of proprietary enclosure remains live and constantly evolving. Proprietary vendors and some legal scholars contest the scope of the problem, arguing that the strong copyleft interpretation stifles innovation; however, the core problem of ensuring software freedom is widely acknowledged by independent observers."
+  },
+  "interval": {
+    "start": 1989,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1989,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2019,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1989,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2019,
+      "value": 0.83
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.85
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1989,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2019,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint is the 'strong copyleft' reading of the GPL's derivative work scope, asserting that dynamic linking and other forms of code coupling trigger the copyleft requirement. This interpretation is actively enforced by the Free Software Foundation (FSF) and its allies, aiming to ensure that software built upon GPL-licensed components remains free. Sibling readings include 'narrow_scope_reading' (limiting copyleft to direct derivatives) and 'enforcement_vacuum_reading' (where actual constraint depends on enforcement capacity).",
+    "logic_rationale": "The extractiveness is high (0.78) because proprietary vendors face a significant 'cost' of either releasing their source or avoiding GPL components, which is extracted as a guarantee of software freedom for the community. Suppression is very high (0.85) due to the active legal enforcement and the structural barriers it creates for proprietary integration. Theater ratio is low (0.10) because the enforcement actions are genuine and directly serve the stated goal of expanding free software, not merely performing compliance. Accessibility collapse is high (0.80) for proprietary vendors, as their alternatives for integrating GPL code are severely limited. Resistance is also high (0.70) from proprietary vendors and some legal scholars who contest this interpretation.",
+    "directionality_logic": "The FSF and the free software community are clear beneficiaries, gaining guaranteed access to source code and preventing proprietary enclosure. Proprietary software vendors and commercial integrators are the primary targets, bearing the costs of compliance or avoidance. Open source lawyers act as observers, while users of proprietary software are excluded from the debate but indirectly affected.",
+    "perspectival_gap": "From the perspective of the free software community, this is a necessary coordination mechanism to protect software freedom. From the perspective of proprietary vendors, it is an extractive snare that forces them to choose between their business model and valuable open-source components. The engine's classification will reflect this divergence based on the structural data.",
+    "kernel_context": "This constraint is the 'strong copyleft' reading of the GPL's derivative work scope, asserting that dynamic linking and other forms of code coupling trigger the copyleft requirement. Sibling readings include 'narrow_scope_reading' (limiting copyleft to direct derivatives) and 'enforcement_vacuum_reading' (where actual constraint depends on enforcement capacity)."
+  },
+  "omegas": [
+    {
+      "id": "derivative_work_boundary_ambiguity",
+      "question": "What constitutes a 'derivative work' under copyright law, specifically concerning dynamic linking and other forms of code coupling, in a way that is universally accepted by courts?",
+      "resolution_mechanism": "Definitive judicial precedent from a high court, or legislative clarification of copyright law regarding software coupling.",
+      "impact": "If a narrow interpretation is legally upheld, the constraint's effective extractiveness and suppression would decrease for proprietary vendors, potentially reclassifying it towards a Rope or even Piton for the FSF. If the strong interpretation is universally upheld, its Snare-like qualities would be solidified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Legal ambiguity of the derivative work boundary for software coupling."
+    },
+    {
+      "id": "enforcement_capacity_variability",
+      "question": "How does the actual enforcement capacity of the FSF and other strong copyleft advocates vary across jurisdictions and against different types of proprietary actors?",
+      "resolution_mechanism": "Empirical study of GPL enforcement actions, their success rates, and the resources deployed, disaggregated by jurisdiction and target type.",
+      "impact": "If enforcement capacity is highly variable or weak in practice, the 'strong copyleft' reading might function more as an 'enforcement_vacuum_reading' in many contexts, reducing its effective suppression and extractiveness, potentially shifting its classification towards a Piton or even a Rope in those contexts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Variability in the practical enforceability of strong copyleft."
+    },
+    {
+      "id": "innovation_impact_tradeoff",
+      "question": "Does the strong copyleft interpretation genuinely foster overall software innovation by protecting the commons, or does it stifle innovation by creating barriers for proprietary integration and commercialization?",
+      "resolution_mechanism": "Longitudinal economic studies comparing innovation metrics in ecosystems with strong copyleft vs. more permissive licensing, controlling for other factors.",
+      "impact": "If strong copyleft is shown to stifle innovation, its justification as a coordination mechanism would be weakened, potentially reclassifying it as a Snare. If it demonstrably fosters innovation, its coordination function would be strengthened, supporting a Tangled Rope or even Rope classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Trade-off between copyleft enforcement and overall software innovation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_scope_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "enforcement_vacuum_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "software_freedom_requires_reciprocity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "coupling_implies_derivative_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "free_software_ideology",
+    "drift_state": {
+      "moment": "contemporary_software_ecosystem",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "free_software_community",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

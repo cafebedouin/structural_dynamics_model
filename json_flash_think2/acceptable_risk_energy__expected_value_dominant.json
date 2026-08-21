@@ -1,0 +1,283 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "bb34bd49-dd78-43c4-ab32-6e482d09e596"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected Value Dominant Energy Risk Assessment",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "risk_analysts_decision_theorists",
+      "public_health_advocates",
+      "renewable_energy_advocates"
+    ],
+    "victims": [
+      "fossil_fuel_industries",
+      "communities_reliant_on_fossil_fuels",
+      "catastrophic_risk_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "risk_analysts_decision_theorists",
+      "role": "agenda_setter",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Develop and apply the quantitative methodologies for assessing aggregate expected harm, providing the intellectual and technical foundation for this risk framework. They benefit from the framework's adoption as it validates their expertise."
+    },
+    {
+      "name": "public_health_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocate for policies that reduce aggregate expected harm, particularly from air pollution and other chronic health impacts of energy production. This framework aligns with their goals by giving full weight to these harms."
+    },
+    {
+      "name": "renewable_energy_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from a framework that highlights the high expected harm of fossil fuels, making renewable energy sources appear more favorable by comparison due to their lower expected mortality-per-TWh."
+    },
+    {
+      "name": "fossil_fuel_industries",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear significant costs as their operations, particularly coal and oil, are identified as having high expected aggregate harm due to air pollution and mining accidents. This framework drives policy and investment away from them."
+    },
+    {
+      "name": "communities_reliant_on_fossil_fuels",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Experience economic and social disruption as policies guided by this framework lead to the decline of fossil fuel industries, impacting jobs and local economies. Their identity is often tied to these industries."
+    },
+    {
+      "name": "nuclear_power_advocates",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefit from the probabilistic discounting of low-probability, high-consequence accidents (e.g., Chernobyl, Fukushima), which makes nuclear power's expected harm profile competitive. However, they still face public perception challenges not fully captured by this metric."
+    },
+    {
+      "name": "catastrophic_risk_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are marginalized by this framework because it discounts low-probability, high-impact events (like nuclear meltdowns or climate tipping points) by their probability, rather than giving them overriding weight. They would argue for a different decision rule."
+    },
+    {
+      "name": "option_value_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are sidelined by a framework that seeks to identify optimal pathways based on a single metric, as their focus is on maintaining diverse energy options to preserve flexibility under deep uncertainty, even if some options appear suboptimal by expected value."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a standardized, quantitative methodology for comparing and prioritizing risks across diverse energy generation pathways, enabling consistent policy decisions based on aggregate expected harm.",
+    "transfer_function": "Shifts policy preference, investment, and regulatory burden away from energy pathways with high expected aggregate harm (e.g., fossil fuels) towards those with lower expected harm (e.g., renewables, nuclear with probability-discounted tail risks).",
+    "absent_voices": "Advocates for catastrophic risk avoidance (who would prioritize tail risks over aggregate expected value) and those who prioritize maintaining option value under deep uncertainty are structurally excluded, as their core premises are not fully integrated into this framework. Communities whose livelihoods are tied to high-expected-harm industries also lack a voice in the framework's construction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, energy policy decisions would revert to more fragmented, qualitative, and politically driven risk assessments. There would be no consistent, widely accepted quantitative basis for comparing the diverse risks of different energy technologies, leading to less coherent public health and safety outcomes and potentially a resurgence of high-expected-harm pathways.",
+    "founding_problem": "Inconsistent, qualitative, and often politically biased risk assessments across different energy technologies, leading to suboptimal public health and safety outcomes and inefficient resource allocation in the energy sector.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "International scientific bodies (e.g., IPCC, WHO), national academies of science, and independent public health organizations consistently highlight the need for robust, quantitative, and consistent risk assessment in energy policy to protect public health and the environment. This corroboration comes from outside the direct beneficiaries of specific energy pathways."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint defines acceptable risk in energy policy as minimizing aggregate expected harm, primarily using mortality-per-TWh metrics. It is one reading of the broader 'acceptable_risk_energy' kernel, focusing on quantitative, probability-weighted outcomes. This framework, while appearing objective, inherently suppresses alternative risk framings (e.g., catastrophic tail risk, option value) and extracts from energy pathways (like fossil fuels) that score poorly on its chosen metric.",
+    "logic_rationale": "The extractiveness (0.70) is high because the framework imposes significant costs on certain energy pathways by de-legitimizing them based on their expected harm profile, leading to reduced investment and increased regulation. Suppression (0.80) is also high, as it actively marginalizes and excludes alternative risk assessment methodologies and the voices that champion them. The theater ratio (0.10) is low, reflecting that the framework is genuinely applied and its calculations are taken seriously, rather than being a mere performance. Accessibility collapse is high (0.75) because it significantly narrows the range of 'acceptable' energy options. Resistance is moderate (0.60) from those whose interests are harmed.",
+    "directionality_logic": "Risk analysts and public health advocates are beneficiaries, as the framework validates their methods and achieves their goals of reducing aggregate harm. Fossil fuel industries and communities reliant on them are targets, bearing the costs of de-prioritization. Catastrophic risk and option value advocates are excluded, as their core concerns are not given full weight. Nuclear power advocates are complex: they benefit from probability discounting of tail risks but may still face public resistance not captured by the metric.",
+    "perspectival_gap": "From the perspective of risk analysts and public health advocates, this framework is a rational, objective tool for societal benefit. From the perspective of fossil fuel industries or catastrophic risk advocates, it is an extractive and suppressive mechanism that unfairly disadvantages their preferred or prioritized energy pathways. The engine's per-seat classification will reflect these divergences.",
+    "kernel_context": "This constraint instantiates the 'expected_value_dominant' reading of the 'acceptable_risk_energy' kernel. Sibling readings include 'catastrophic_tail_dominant' (which prioritizes avoiding low-probability, high-impact events) and 'option_value_preserving' (which emphasizes maintaining flexibility under deep uncertainty)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine, standalone risk assessment framework, or is it one reading of the 'acceptable_risk_energy' kernel?",
+      "resolution_mechanism": "Analysis of policy debates and academic literature: if competing frameworks are actively discussed as alternatives to this one, it confirms its status as a reading within a contested kernel.",
+      "impact": "If confirmed as a reading, the classification gains context from its relationship to sibling readings, highlighting the contestability of its foundational premises. If standalone, its classification is evaluated in isolation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms this constraint as the 'expected_value_dominant' reading of the 'acceptable_risk_energy' kernel."
+    },
+    {
+      "id": "mortality_data_completeness",
+      "question": "Are the mortality-per-TWh metrics used in this framework truly comprehensive, or do they omit significant categories of harm (e.g., long-term ecological damage, social disruption, non-fatal illnesses)?",
+      "resolution_mechanism": "Epidemiological and ecological studies that quantify a broader range of health and environmental impacts, and their translation into comparable metrics.",
+      "impact": "If significant harms are omitted, the framework's 'expected value' is underestimated for certain pathways, potentially shifting the classification towards higher extraction from affected populations and a stronger Snare component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Completeness of mortality-per-TWh metrics in capturing all relevant harms."
+    },
+    {
+      "id": "ethical_discounting_validity",
+      "question": "Is the ethical premise of probabilistically discounting low-probability, high-consequence events universally valid, or does it conflict with ethical frameworks that prioritize catastrophic avoidance or intergenerational equity?",
+      "resolution_mechanism": "Philosophical and ethical discourse analysis, and public deliberation on acceptable risk principles. This is a preference-based resolution.",
+      "impact": "If the discounting premise is widely rejected, the framework's legitimacy erodes, increasing resistance and potentially reclassifying it as a Snare for those who bear un-discounted catastrophic risks.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Ethical validity of probabilistic discounting in risk assessment."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "rational_decision_theory_framework",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_expected_harm_is_primary_metric",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "probabilistic_discounting_is_valid",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_balance__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a6c3f0d0-5a93-4f86-800b-18a9c9960cd5"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Primary Reading of Vaccine Mandate Balance",
+    "topic_domain": "public_health/ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vulnerable_populations",
+      "public_health_authorities"
+    ],
+    "victims": [
+      "unvaccinated_individuals"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Responsible for protecting population health, they implement and enforce vaccine mandates, viewing them as necessary to achieve herd immunity and prevent severe outcomes in vulnerable groups. They bear the political cost of mandates but gain public health outcomes."
+    },
+    {
+      "name": "vulnerable_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Immunocompromised individuals, the elderly, and those with co-morbidities who cannot be vaccinated or for whom vaccines are less effective. They directly benefit from increased herd immunity, which reduces their lethal exposure risk. Without mandates, they face severe risk."
+    },
+    {
+      "name": "unvaccinated_individuals",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Individuals who, for various reasons (personal belief, medical exemption, distrust), do not wish to be vaccinated. They bear the direct cost of mandates through restrictions on employment, travel, or public access. Their consent is subordinated to collective necessity."
+    },
+    {
+      "name": "healthcare_systems",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Benefit from reduced disease burden, preventing overwhelming surges in hospitalizations and preserving capacity for other medical needs. They are also tasked with administering vaccines and managing compliance."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Argue that vaccine mandates infringe on fundamental bodily autonomy and individual rights, even for public health goals. They are excluded from the core decision-making process of this reading, which prioritizes collective good."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates collective action to achieve herd immunity, protecting vulnerable populations from lethal exposure risk by ensuring a high vaccination rate across the population.",
+    "transfer_function": "Transfers the burden of individual consent and autonomy from unvaccinated individuals to the collective good of public health and the protection of vulnerable groups.",
+    "absent_voices": "Advocates for individual bodily autonomy and civil liberties are largely absent from the core justification of this reading, which frames their concerns as secondary to public health imperatives. They would argue for less coercive measures and greater respect for individual choice.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint (the principle that collective protection supersedes individual consent) disappeared, public health authorities would lose a critical tool for managing epidemics. Voluntary compliance would likely fall, leading to lower herd immunity, increased exposure risk for vulnerable populations, and potentially overwhelmed healthcare systems. The social contract around public health would need to be fundamentally renegotiated.",
+    "founding_problem": "The problem of highly transmissible diseases posing lethal threats to vulnerable populations, where voluntary individual action is insufficient to achieve collective protection.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Epidemiological data, medical consensus, and historical public health outcomes (e.g., polio eradication) corroborate that this problem is live and that collective action is often necessary. Vulnerable populations themselves attest to the ongoing threat they face without such protections."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'public health primary' reading of vaccine mandates, where collective protection is prioritized over individual consent when herd immunity is at risk and vulnerable populations face lethal exposure. It is one reading of the broader 'vaccine_mandate_balance' kernel. The constraint is classified as a Tangled Rope because it genuinely coordinates collective action (herd immunity) but does so through asymmetric extraction (compelling vaccination from individuals). The metrics reflect the high extractiveness and suppression required to enforce such mandates.",
+    "logic_rationale": "Extractiveness is high (0.7) because individuals are compelled to undergo a medical procedure against their will, incurring personal costs (e.g., side effects, perceived loss of autonomy). Suppression is also high (0.8) due to the active enforcement mechanisms (e.g., job loss, travel restrictions) required to ensure compliance. Theater ratio is low (0.1) as the constraint's function is direct and not primarily performative; the mandates are intended to achieve a concrete public health outcome. Accessibility collapse is moderate (0.6) as alternatives to vaccination (e.g., masking, social distancing) exist but are often insufficient to achieve herd immunity, and resistance is high (0.75) due to strong opposition from those whose autonomy is curtailed.",
+    "directionality_logic": "Public health authorities and vulnerable populations are the primary beneficiaries, gaining protection and reduced disease burden. Unvaccinated individuals are the primary victims, bearing the costs of compelled vaccination and restrictions. Healthcare systems also benefit from reduced strain. Civil liberties advocates are excluded, as their arguments for individual autonomy are subordinated in this reading.",
+    "perspectival_gap": "From the perspective of public health authorities and vulnerable populations, this constraint is a necessary coordination mechanism. From the perspective of unvaccinated individuals and civil liberties advocates, it is a coercive snare. The engine's classification will reflect this divergence based on the structural data.",
+    "mandatrophy_analysis": "This constraint is not subject to mandatrophy in this reading, as the founding problem (lethal exposure risk to vulnerable populations) is considered 'live.' The constraint's persistence is justified by the ongoing need for collective protection, not by inertia or theatrical maintenance.",
+    "kernel_context": "This constraint is the 'public_health_primary' reading of the 'vaccine_mandate_balance' kernel. It asserts that collective protection supersedes individual consent when voluntary compliance fails to achieve herd immunity and vulnerable populations face lethal exposure risk. Sibling readings include 'bodily_autonomy_primary' (individual consent is inviolable) and 'proportionality_reading' (mandates permissible only under strict proportionality thresholds)."
+  },
+  "omegas": [
+    {
+      "id": "collective_vs_individual_rights",
+      "question": "Is the subordination of individual consent to collective protection a morally justifiable trade-off, or does it violate fundamental human rights?",
+      "resolution_mechanism": "Philosophical and legal adjudication through constitutional courts and international human rights bodies, weighing competing ethical frameworks.",
+      "impact": "If individual rights are deemed inviolable, the constraint would be reclassified as a Snare from the perspective of the unvaccinated; if collective good is upheld, it remains a Tangled Rope.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The fundamental ethical tension between collective good and individual autonomy in public health."
+    },
+    {
+      "id": "efficacy_of_voluntary_compliance",
+      "question": "At what point does voluntary compliance 'fail' to achieve herd immunity, and is this threshold empirically verifiable?",
+      "resolution_mechanism": "Epidemiological modeling and real-world data on vaccination rates and disease transmission, combined with public health expert consensus on herd immunity thresholds.",
+      "impact": "If voluntary compliance is shown to be sufficient, the justification for mandates weakens, potentially reclassifying the constraint as a Snare (pure extraction) or Piton (unnecessary enforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical threshold for when voluntary compliance fails to achieve public health goals."
+    },
+    {
+      "id": "mandate_necessity_for_vulnerable",
+      "question": "Are vaccine mandates truly necessary to protect vulnerable populations, or are there less restrictive alternatives that achieve similar outcomes?",
+      "resolution_mechanism": "Comparative studies of public health outcomes in jurisdictions with and without mandates, alongside analysis of alternative interventions (e.g., enhanced masking, targeted protections).",
+      "impact": "If less restrictive alternatives are effective, the 'necessity' claim of this reading is weakened, potentially shifting the classification towards a Snare or Piton due to unjustified coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity of mandates for vulnerable populations vs. less restrictive alternatives."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "collective_protection_supersedes_individual_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_has_duty_to_protect_public_health",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "public_health_emergency_powers",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

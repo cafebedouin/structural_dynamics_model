@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "a40132ce-a64f-4583-a071-0d8bf932bbf4"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Harm Reduction Approach to Substance Use",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_agencies",
+      "people_who_use_drugs"
+    ],
+    "victims": [
+      "people_who_use_drugs",
+      "criminal_supply_networks"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer and advocate for harm reduction policies, providing services like needle exchanges, overdose prevention, and safe consumption sites. They benefit from a public health mandate and funding, but are constrained by political will and existing legal frameworks."
+    },
+    {
+      "name": "people_who_use_drugs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Benefit from reduced risk of overdose, disease transmission, and criminalization for personal use. However, they remain subject to paternalistic health interventions and the dangers of a criminalized supply chain, bearing costs through stigma and limited access to safe supply."
+    },
+    {
+      "name": "criminal_supply_networks",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Bear the costs of continued law enforcement efforts against drug production and distribution, even as individual users are decriminalized. They adapt to enforcement pressure, maintaining a dangerous and unregulated supply."
+    },
+    {
+      "name": "law_enforcement",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Shifts focus from individual user arrests to targeting large-scale trafficking and production. They are constrained by evolving public policy and resource allocation, often resisting full decriminalization due to perceived threats to public order."
+    },
+    {
+      "name": "advocacy_groups_for_legalization",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for full legalization and regulation of substances, arguing that harm reduction, while beneficial, does not address the root causes of harm from criminalized supply. They are excluded from the core policy-making process of harm reduction, which maintains a criminalized supply."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates public health efforts to mitigate the negative health and social consequences of substance use, providing services and information to reduce harm for individuals and communities, while navigating existing legal frameworks.",
+    "transfer_function": "Transfers resources (funding, personnel) from criminal justice enforcement of individual use to public health services. It also transfers some risk from individual users to the state (e.g., through safe consumption sites) while maintaining a transfer of profits to criminal supply networks due to continued prohibition on production/distribution.",
+    "absent_voices": "Advocacy groups for full legalization are absent from the core policy-making table, as their proposals for regulated supply chains fundamentally challenge the harm reduction framework's implicit acceptance of continued criminalization of production and distribution.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the harm reduction approach vanished overnight, there would be an immediate surge in overdose deaths, disease transmission, and criminal justice involvement for individual users. Public health infrastructure would collapse, and the social costs of substance use would dramatically increase, forcing a rapid reorganization of state and community responses.",
+    "founding_problem": "The 'War on Drugs' led to escalating rates of overdose, HIV/HCV transmission, and mass incarceration, with disproportionate impacts on marginalized communities, without reducing substance use.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public health data, medical professionals, and international health organizations consistently corroborate the ongoing public health crisis related to substance use, validating the continued need for harm reduction interventions. Law enforcement agencies also acknowledge the limitations of purely punitive approaches."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'harm reduction' reading of the substance control kernel. It frames substance use as a public health issue, prioritizing interventions to reduce negative consequences (e.g., overdose, disease) over criminalizing individual users. While it reduces direct extraction from users by law enforcement, it maintains a degree of paternalistic intervention and leaves the illicit supply chain largely intact, leading to a hybrid coordination/extraction dynamic. The state shifts from purely punitive to a service provider role, but still exerts control over individuals and the market.",
+    "logic_rationale": "The extractiveness (0.45) reflects the reduction in direct criminal penalties for users, but acknowledges the continued costs of a criminalized supply and paternalistic health interventions. Suppression (0.6) is moderate, as individual users face less direct coercion but the illicit market remains suppressed. Theater ratio (0.2) is low, as harm reduction services are genuinely functional, though some 'performance' may exist in balancing public health goals with political pressures to maintain some level of prohibition. Accessibility collapse (0.4) is moderate, as some alternatives (e.g., safe supply) are still constrained, but others (e.g., needle exchanges) are more accessible. Resistance (0.3) is present from both those advocating for full legalization and those resisting any decriminalization.",
+    "directionality_logic": "Public health agencies are beneficiaries (damped extraction) as they gain a clear mandate and resources. People who use drugs are both beneficiaries (reduced criminalization, access to services) and payers (continued stigma, unsafe supply, paternalistic oversight). Criminal supply networks are payers (continued enforcement pressure). Law enforcement is an agenda-setter, shifting its focus but still maintaining control. Advocacy groups for legalization are excluded, as their vision is not fully integrated into this framework.",
+    "perspectival_gap": "From the perspective of public health agencies, this is a necessary and beneficial coordination mechanism. From the perspective of people who use drugs, it's a mixed bag: relief from criminalization but continued control and an unsafe market. From the perspective of legalization advocates, it's a 'tangled rope' that fails to address the fundamental problem of prohibition.",
+    "kernel_context": "This constraint is the 'harm_reduction_reading' of the 'substance_control_kernel'. It contrasts with the 'prohibition_reading' (substance use as moral transgression requiring punishment) and the 'legalization_reading' (substance use as individual liberty issue with minimal state intervention). This reading seeks a middle ground, prioritizing public health outcomes while navigating existing legal and social structures."
+  },
+  "omegas": [
+    {
+      "id": "supply_chain_criminalization_impact",
+      "question": "To what extent does the continued criminalization of the substance supply chain undermine the harm reduction goals for individual users?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with varying degrees of supply chain decriminalization/legalization on overdose rates, purity, and access to safe supply.",
+      "impact": "If criminalization significantly undermines harm reduction, the effective extractiveness on users is higher than measured, and the constraint leans more towards a Snare due to the unaddressed root cause of harm.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of criminalized supply on harm reduction efficacy."
+    },
+    {
+      "id": "paternalism_vs_autonomy",
+      "question": "Is the 'paternalistic health intervention' aspect of harm reduction an acceptable trade-off for reduced criminalization, or does it constitute a new form of control over people who use drugs?",
+      "resolution_mechanism": "Qualitative research on the lived experiences of people who use drugs under harm reduction regimes, focusing on perceived autonomy and agency.",
+      "impact": "If perceived as a new form of control, the effective extractiveness on users is higher, and the constraint's coordination function is weaker, pushing it closer to a Snare or a more extractive Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Balancing state intervention with individual autonomy in harm reduction."
+    },
+    {
+      "id": "political_economy_of_harm_reduction",
+      "question": "Does the harm reduction framework, by not challenging the fundamental prohibitionist paradigm, inadvertently stabilize the political economy of criminalized substances, benefiting certain state actors or criminal enterprises?",
+      "resolution_mechanism": "Political economic analysis of funding flows, institutional power dynamics, and market structures under harm reduction policies, compared to full legalization or strict prohibition.",
+      "impact": "If it stabilizes the criminalized political economy, the constraint's 'beneficiaries' are more diffuse and hidden, and its overall extractiveness is higher, potentially reclassifying it as a Snare from a broader systemic view.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Systemic effects of harm reduction on the political economy of drugs."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is the 'harm_reduction_reading' of the 'substance_control_kernel', which also includes 'prohibition_reading' and 'legalization_reading'. Each reading represents a distinct structural claim about how substance use is governed."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "substance_use_is_health_condition",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "pragmatic_harm_reduction_is_ethical_imperative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "public_health_first_response",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

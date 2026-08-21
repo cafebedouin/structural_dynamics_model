@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "00396df7-5e0c-4edb-89c9-55e6d49f9079",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.6,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Bodily Autonomy as Primary in Health Interventions",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individuals_asserting_autonomy"
+    ],
+    "victims": [
+      "mandate_coerced_individuals",
+      "state_public_health_authorities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "individuals_asserting_autonomy",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "These individuals benefit from the principle that their bodily integrity cannot be violated without informed consent, even if it means foregoing public health measures. Their 'benefit' is the protection of a right, which often comes at the cost of social or economic exclusion if they refuse mandates."
+    },
+    {
+      "name": "mandate_coerced_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Individuals who face direct or indirect coercion (e.g., loss of employment, access to services) if they do not comply with medical interventions. They bear the direct cost of bodily violation or the severe cost of non-compliance. Their identity is locked into their bodily autonomy, making 'exit' from this position a violation of self."
+    },
+    {
+      "name": "state_public_health_authorities",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "These authorities are constrained by the requirement for informed consent, even when they believe population-level health benefits are at stake. They bear the 'cost' of reduced efficacy for public health measures that rely on broad compliance, and face legal challenges if they overstep. They are victims in the sense that their mandate to protect public health is curtailed."
+    },
+    {
+      "name": "medical_professionals",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Bound by ethical codes requiring informed consent, they must navigate the tension between individual autonomy and public health directives. They are the primary enforcers of the consent requirement at the point of care."
+    },
+    {
+      "name": "public_health_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Advocate for policies that prioritize population health outcomes, often viewing individual refusal as an externality. They are excluded from the decision-making process when bodily autonomy is held as an absolute, and would argue for a different balance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates medical practice around a foundational ethical principle, ensuring that all interventions respect individual self-determination and prevent medical paternalism.",
+    "transfer_function": "Transfers the ultimate decision-making authority over one's body from external authorities (state, medical establishment) to the individual, at the potential cost of collective health outcomes.",
+    "absent_voices": "Public health advocates and those who prioritize collective well-being are often excluded from the conversation when bodily autonomy is framed as an absolute, arguing that individual choices have population-level consequences.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this constraint vanished, medical ethics would fundamentally shift, potentially allowing for state-mandated interventions without consent, leading to a complete reorganization of patient rights, public health policy, and the relationship between individuals and the state regarding health.",
+    "founding_problem": "The historical problem of medical paternalism, non-consensual experimentation, and state-sanctioned bodily violations, particularly in vulnerable populations.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Legal precedents (e.g., Nuremberg Code, Belmont Report), patient advocacy groups, and international human rights organizations consistently corroborate the ongoing need to protect individual autonomy against potential state or medical overreach. This is attested by sources outside the direct beneficiaries of the constraint."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the 'bodily_autonomy_primary' reading of the 'legitimate_health_intervention' kernel. It asserts that informed consent is a non-negotiable prerequisite for medical interventions, and that state coercion, regardless of public benefit, constitutes a violation of bodily integrity. This reading places individuals facing mandates into the victim set, and the state (when it coerces) into the extractor role. The metrics reflect a moderate-to-high extractiveness due to the perceived violation of rights, and significant resistance from those who uphold this principle.",
+    "key_agents": [
+      "individuals_asserting_autonomy: Primary beneficiary (moderate/constrained) — benefits from the protection of their right.",
+      "mandate_coerced_individuals: Primary target (powerless/identity_locked) — bears the extraction of bodily violation or severe costs of non-compliance.",
+      "state_public_health_authorities: Primary target (institutional/constrained) — bears the cost of curtailed public health efficacy.",
+      "medical_professionals: Agenda setter (organized/constrained) — enforces the consent requirement.",
+      "public_health_advocates: Excluded (organized/constrained) — would object to this framing."
+    ],
+    "logic_rationale": "The extractiveness is high (0.7) because any coerced intervention is seen as a fundamental violation, regardless of its medical efficacy. Suppression (0.6) is present through the social and economic pressures applied to enforce mandates. Resistance (0.75) is high due to the deeply held nature of bodily autonomy. The claimed type is 'snare' because the coordination story (public health) is seen as a cover for extraction (violation of individual rights) when coercion is applied, and identifiable victims exist.",
+    "perspectival_gap": "From the perspective of mandate-coerced individuals, the constraint operates as a snare, extracting their bodily autonomy. From the perspective of state public health authorities, it operates as a rope, coordinating ethical medical practice, but also as a constraint on their ability to achieve population-level health goals. The engine's per-seat classification will capture this divergence.",
+    "directionality_logic": "Individuals asserting autonomy are beneficiaries (d near 0.0) as the constraint protects their rights. Mandate-coerced individuals are full targets (d near 1.0) as they bear the direct cost of bodily violation or severe consequences for refusal. State public health authorities are also targets (d near 0.8) as their public health mandate is curtailed. Medical professionals are agenda-setters (d near 0.5) balancing ethical duties.",
+    "mandatrophy_analysis": "This classification prevents mislabeling state coercion as mere coordination. By identifying mandate-coerced individuals as victims and the state as an extractor (when it coerces), it highlights the extractive nature of interventions that violate informed consent, even if they claim public benefit. The constraint's mandate (protecting autonomy) is seen as live, but its application in a coercive context reveals a snare-like structure.",
+    "kernel_context": "This constraint is the 'bodily_autonomy_primary' reading of the 'legitimate_health_intervention' kernel. It stands in contrast to sibling readings like 'public_health_primary' (which prioritizes population health) and 'proportionality_reading' (which seeks a balance between individual and collective concerns)."
+  },
+  "omegas": [
+    {
+      "id": "coercion_threshold_ambiguity",
+      "question": "At what point does 'strong encouragement' or 'incentivization' cross the line into 'coercion' that violates bodily integrity?",
+      "resolution_mechanism": "Legal precedent, ethical consensus, and empirical studies on perceived freedom of choice under various pressures. A clear definition of 'undue influence' in medical contexts.",
+      "impact": "If the threshold for coercion is low, more state actions would be classified as extractive snares. If high, more actions would be seen as legitimate coordination, shifting the classification towards a rope or tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity in defining coercion in health interventions."
+    },
+    {
+      "id": "public_benefit_weighting",
+      "question": "Does the magnitude of public health benefit ever justify a limited infringement on individual bodily autonomy, and if so, how is that magnitude measured and balanced?",
+      "resolution_mechanism": "Societal consensus, legislative action, and judicial review establishing a framework for balancing individual rights against collective goods. This is the core contest with the 'public_health_primary' and 'proportionality_reading' siblings.",
+      "impact": "If public benefit is given any weight, the extractiveness of state action might be re-evaluated downward, potentially shifting the constraint towards a tangled rope or even a rope. If it holds no weight, the snare classification is reinforced.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The role of public benefit in justifying autonomy infringements."
+    },
+    {
+      "id": "identity_lock_mechanism",
+      "question": "Is the 'identity_locked' exit option for mandate-coerced individuals primarily due to professional identity (career path dependence), relational identity (self-concept constituted through the relationship), ideological identity (worldview that makes exit unthinkable), or institutional identity (the organization has 'become' its function)?",
+      "resolution_mechanism": "Qualitative sociological studies and individual testimony exploring the specific mechanisms of identity fusion and the perceived costs of non-compliance. This would differentiate the nature of the 'lock'.",
+      "impact": "If the lock is primarily ideological, the resistance to mandates is more fundamental and less amenable to material incentives. If it's professional, economic remedies might be more effective. The classification itself might not change, but the resolution path would.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Specific mechanism binding identity-locked agents."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "informed_consent_non_derogable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "post_nuremberg_ethical_consensus",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

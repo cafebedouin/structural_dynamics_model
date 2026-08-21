@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "dc21e559-750f-4962-9dee-03c9f3003d7c"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.1,
+    "resistance": 0.7,
+    "claimed_type": "rope",
+    "human_readable": "FISA Section 702 Foreign Target Rule (Strict Reading)",
+    "topic_domain": "constitutional_law/national_security/surveillance_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_security_agencies",
+      "us_persons_abroad"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "fourth_amendment_protections",
+      "privacy_rights"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "national_security_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operates the surveillance program, targeting non-U.S. persons abroad for foreign intelligence purposes. Under this strict reading, they are constrained to minimize and make inaccessible any incidentally collected U.S. person data for domestic use, ensuring the program adheres to its statutory limits."
+    },
+    {
+      "name": "us_persons_abroad",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Their communications are protected from warrantless collection and domestic queries, even when communicating with foreign targets. This reading ensures their Fourth Amendment rights are respected, minimizing the risk of incidental collection being used against them."
+    },
+    {
+      "name": "foreign_intelligence_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Their communications are the primary target of the surveillance program, as they are non-U.S. persons located abroad. This reading does not offer them protection, as the statute is designed to collect their intelligence."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Advocates for a strict interpretation of FISA Section 702 to protect privacy and civil liberties. This reading aligns with their goals, as it limits government surveillance over U.S. persons and minimizes domestic use of collected data."
+    },
+    {
+      "name": "congressional_oversight_committees",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Responsible for legislating and overseeing the FISA 702 program. This reading reflects a desired interpretation of the statute, emphasizing the protection of U.S. persons and the minimization of incidental collection."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates national security intelligence collection on foreign targets while attempting to safeguard the privacy rights of U.S. persons, by strictly limiting the scope of collection and use of incidentally acquired data.",
+    "transfer_function": "Transfers the burden of surveillance from U.S. persons (who are protected) to foreign intelligence targets (who are collected upon), while transferring the cost of compliance and minimization to national security agencies.",
+    "absent_voices": "Foreign intelligence targets, who bear the full weight of the surveillance, have no voice in the debate over U.S. statutory interpretation. Their perspective would highlight the complete lack of protection for non-U.S. persons abroad.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this strict reading vanished, national security agencies would likely expand collection and querying practices, leading to increased incidental collection of U.S. person data and broader domestic use, fundamentally altering the balance between security and privacy.",
+    "founding_problem": "The need to collect foreign intelligence on non-U.S. persons abroad without requiring individualized warrants, while simultaneously protecting the Fourth Amendment rights of U.S. persons.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National security agencies attest to the ongoing need for foreign intelligence collection. Civil liberties advocates and congressional oversight committees corroborate the persistent tension between intelligence needs and privacy protections, making the problem live and contested in its resolution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "Is this constraint a genuine 'foreign target strict reading' of FISA Section 702, or is it an aspirational interpretation that diverges from actual practice?",
+      "resolution_mechanism": "Audits of intelligence agency practices, court rulings on minimization procedures, and legislative amendments clarifying statutory intent.",
+      "impact": "If aspirational, the actual extractiveness and suppression are higher, and the constraint might reclassify as a Tangled Rope or Snare, reflecting a gap between stated policy and operational reality. If genuine, the low extractiveness and strong protections hold.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between the strict statutory reading and operational implementation."
+    },
+    {
+      "id": "incidental_collection_definition",
+      "question": "How is 'incidental' collection of U.S. person data defined and measured in practice? Does minimization mean deletion or merely restricted access?",
+      "resolution_mechanism": "Detailed public reporting on minimization procedures, independent technical audits of data handling, and judicial review of specific collection instances.",
+      "impact": "A broad definition of 'incidental' or minimization as mere access restriction would increase effective extraction from U.S. persons, potentially shifting the constraint towards a Snare. Strict definition and deletion would reinforce the Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity in the practical definition and handling of incidentally collected U.S. person data."
+    },
+    {
+      "id": "sibling_reading_impact",
+      "question": "What would be the structural impact if the 'incidental_collection_reading' or 'constitutional_floor_reading' were adopted instead of this strict reading?",
+      "resolution_mechanism": "Legal analysis of court precedents, legislative impact assessments, and comparative analysis of surveillance regimes in other countries.",
+      "impact": "The 'incidental_collection_reading' would significantly increase extractiveness from U.S. persons, likely reclassifying to a Snare. The 'constitutional_floor_reading' would impose a warrant requirement, fundamentally altering the program's operational model and potentially reducing extractiveness to near zero for U.S. persons.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of alternative readings on the constraint's structure and classification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents a strict reading of FISA Section 702's 'foreign target' language, which limits surveillance to non-U.S. persons abroad and mandates minimization of incidentally collected U.S. person data. This reading emphasizes the statutory intent to protect U.S. persons from warrantless surveillance, aligning with Fourth Amendment principles. It is one interpretation within a contested kernel, where other readings permit broader collection and use of U.S. person data. The low extractiveness and suppression reflect the protections afforded to U.S. persons under this specific interpretation.",
+    "logic_rationale": "The extractiveness is low (0.15) because this reading explicitly excludes U.S. persons from being targets and mandates minimization of their data, thus limiting the direct cost to rights-holders. Suppression is also low (0.2) as the constraint's persistence relies on adherence to statutory limits and judicial oversight, rather than active coercion against U.S. persons. Resistance is high (0.7) from civil liberties advocates who actively push for this strict interpretation. The theater ratio is low (0.1) as the stated purpose of protecting U.S. persons is genuinely pursued under this reading.",
+    "directionality_logic": "National security agencies are agenda-setters, operating the program under these strictures. U.S. persons abroad are beneficiaries, as their communications are protected. Foreign intelligence targets are payers, as they are the intended subjects of collection. Civil liberties advocates and congressional oversight committees act as observers and enforcers of this strict reading.",
+    "perspectival_gap": "Under this strict reading, there is less perspectival gap for U.S. persons, as their rights are largely protected. However, foreign intelligence targets would still experience the constraint as highly extractive, a perspective not fully captured by the overall low extractiveness of this reading, which is focused on U.S. person protections.",
+    "kernel_context": "This constraint is the 'foreign_target_strict_reading' of the FISA Section 702 statutory text kernel. It emphasizes that collection is limited to non-U.S. persons abroad, with strict minimization and inaccessibility for domestic use of any incidentally collected U.S. person data. This reading stands in contrast to the 'incidental_collection_reading' which permits broader retention and querying of U.S. person data, and the 'constitutional_floor_reading' which argues for a probable cause warrant requirement for any U.S. person communication search."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_limits_protect_us_persons",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minimization_prevents_domestic_abuse",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "original_statutory_intent",
+    "drift_state": {
+      "moment": "contemporary_interpretive_contests",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

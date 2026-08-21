@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "substance_control_kernel__legalization_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "8ff4d1fd-f477-4a1b-866e-f69619e3b7af"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Substance Control: Legalization Reading (Individual Liberty)",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legal_substance_industry",
+      "state_revenue_agencies",
+      "individual_users"
+    ],
+    "victims": [
+      "third_party_victims_of_externalities"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "individual_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Can legally acquire and use substances, free from criminal penalties, subject to regulations preventing harm to others. They benefit from reduced black market risks and increased product safety."
+    },
+    {
+      "name": "legal_substance_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Operates legally, producing and distributing substances under state regulation. Benefits from access to a legitimate market and protection from black market competition, while paying taxes and complying with safety standards."
+    },
+    {
+      "name": "state_revenue_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Collects tax revenue from the legal substance industry, which is then used to offset externality costs or fund public services. Sets and enforces regulations to prevent third-party harm."
+    },
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Monitors public health outcomes related to substance use, implements public awareness campaigns, and provides treatment services. Operates within the framework of legalization, focusing on harm prevention rather than prohibition."
+    },
+    {
+      "name": "third_party_victims_of_externalities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Suffer harm (e.g., traffic accidents, secondhand exposure, public nuisance) due to others' substance use, despite state intervention to mitigate these effects. Their costs are the uncaptured externalities."
+    },
+    {
+      "name": "black_market_operators",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Are pushed out of the legal market but may persist in gray areas or by supplying substances not covered by legalization. They face reduced demand and increased enforcement pressure compared to a prohibition regime."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates individual liberty with public safety by allowing legal substance use while regulating to prevent third-party harm and capture externality costs through taxation.",
+    "transfer_function": "Transfers tax revenue from the legal substance industry to the state, and transfers the burden of uncaptured externality costs to third-party victims. It also transfers freedom from criminalization to individual users.",
+    "absent_voices": "Advocates for total prohibition would argue that any substance use is a moral harm and that the state should intervene to prevent all use. They are excluded from a framework that prioritizes individual liberty.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this framework vanished, either a prohibition or a completely unregulated free-for-all would emerge. The legal industry would collapse or go underground, state revenue would disappear, and the balance between liberty and public safety would be fundamentally altered.",
+    "founding_problem": "The problem of balancing individual autonomy over personal choices with the state's responsibility to protect its citizens from harm and manage social costs.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Philosophers and legal scholars attest to the enduring nature of the individual liberty vs. public good dilemma. Public health data and economic analyses from independent research bodies corroborate the ongoing challenge of managing externality costs."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'legalization' reading of substance control, where individual liberty is paramount, and state intervention is limited to preventing third-party harm and capturing externality costs. It contrasts with prohibition (moral transgression, state punishment) and harm reduction (health condition, pragmatic intervention). This reading shifts users from victims to beneficiaries and introduces a legal industry and state revenue collection, while creating a new victim class in third parties affected by externalities.",
+    "logic_rationale": "Extractiveness is low (0.25) because the primary goal is not extraction but managing externalities; any 'extraction' is through taxation to cover social costs. Suppression is also low (0.15) as the state's role is regulatory, not punitive, for individual use. Theater ratio is minimal (0.05) as the system is designed to be functional and transparent in its goals. Accessibility collapse is moderate (0.3) as legal alternatives exist, but some substances or unregulated markets may persist. Resistance is low (0.1) as the framework generally aligns with public demand for liberty, though some groups may resist the remaining regulations or the concept of legalization itself.",
+    "directionality_logic": "Individual users and the legal substance industry are primary beneficiaries (low d) as they gain freedom and market access. State revenue and public health agencies are agenda-setters (symmetric d) as they manage the system, collecting revenue and mitigating harm. Third-party victims of externalities are the primary targets (high d) as they bear uncaptured costs. Black market operators are excluded (high d) as the system actively works to displace them.",
+    "perspectival_gap": "From the perspective of individual users and the legal industry, this is a highly beneficial 'rope' that enables freedom and commerce. From the perspective of third-party victims, it may still feel like a 'snare' due to unmitigated externalities. The state aims for a 'rope' classification, balancing interests.",
+    "kernel_context": "This constraint is the 'legalization_reading' of the 'substance_control_kernel'. It posits substance use as an individual liberty issue, with state intervention limited to preventing third-party harm and capturing externality costs. Sibling readings include the 'prohibition_reading' (substance use as moral transgression requiring punishment) and the 'harm_reduction_reading' (substance use as a health condition requiring pragmatic intervention)."
+  },
+  "omegas": [
+    {
+      "id": "externality_cost_capture_completeness",
+      "question": "To what extent does state taxation and regulation truly capture and mitigate all externality costs associated with legal substance use?",
+      "resolution_mechanism": "Comprehensive longitudinal economic and public health studies comparing pre- and post-legalization externality costs, including healthcare, public safety, and environmental impacts.",
+      "impact": "If externality costs are largely uncaptured, the effective extractiveness on third parties is higher, pushing the constraint closer to a 'tangled_rope' or 'snare' for that seat. If fully captured, the 'rope' classification is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the effectiveness of the state's mechanism for internalizing externality costs."
+    },
+    {
+      "id": "black_market_persistence_threshold",
+      "question": "At what level of taxation and regulation does a significant black market for substances persist, undermining the goals of legalization?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with varying tax rates and regulatory burdens on legal substances, measuring the size and activity of illicit markets.",
+      "impact": "If the black market persists significantly, the 'suppression' metric for illicit activity is lower than intended, and the 'beneficiary' status of the legal industry and users is diminished by ongoing risks, potentially shifting the overall classification towards a 'tangled_rope' due to unaddressed coordination failures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Examines the trade-off between state revenue/control and the persistence of illicit markets."
+    },
+    {
+      "id": "framing_of_individual_liberty_vs_collective_good",
+      "question": "Is the prioritization of individual liberty over collective good in substance use a universally accepted principle, or a contested conceptual framing?",
+      "resolution_mechanism": "Analysis of philosophical arguments, legal traditions, and public opinion across diverse cultures and political systems regarding the scope of individual autonomy versus state paternalism or collective welfare.",
+      "impact": "If the individual liberty framing is widely contested, the 'rope' classification is conceptually unstable, as the foundational justification for the constraint is not universally shared, potentially leading to reclassification as a 'tangled_rope' or 'snare' from alternative conceptual seats.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Examines the conceptual grounding of the individual liberty principle in public health policy."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_kernel__prohibition_reading",
+      "substance_control_kernel__harm_reduction_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'substance_control_kernel'. It represents the 'legalization_reading', focusing on individual liberty and externality management. It is linked to the 'prohibition_reading' and 'harm_reduction_reading' as alternative framings of the same underlying kernel."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "individual_autonomy_over_personal_choices",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_intervention_limited_to_third_party_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "liberal_democratic_principles",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

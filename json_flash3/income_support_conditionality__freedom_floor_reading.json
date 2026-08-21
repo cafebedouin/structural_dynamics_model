@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "39393673-cfb2-419e-b5c5-a64c3221b825"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.2,
+    "resistance": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Freedom Floor",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "low_wage_workers",
+      "unemployed_individuals",
+      "caregivers"
+    ],
+    "victims": [
+      "employers_reliant_on_coercive_labor"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "low_wage_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive a baseline income, allowing them to refuse exploitative or unsafe work conditions without immediate destitution. This increases their bargaining power and ability to seek better employment."
+    },
+    {
+      "name": "unemployed_individuals",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Are provided with a safety net that supports their basic needs, reducing the pressure to accept any available job and enabling them to pursue education, training, or entrepreneurial ventures."
+    },
+    {
+      "name": "caregivers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Receive income support that recognizes the value of unpaid care work, providing financial stability and reducing the need to enter the formal labor market out of necessity."
+    },
+    {
+      "name": "employers_reliant_on_coercive_labor",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lose their ability to rely on workers' desperation to fill low-wage, undesirable jobs. They face pressure to improve working conditions and wages to attract and retain employees."
+    },
+    {
+      "name": "advocacy_groups_for_labor_rights",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Champion the implementation and expansion of unconditional income support as a means to empower workers and advance social justice. They actively shape policy debates and public opinion."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the financial cost of the income support program through taxes. Their willingness to support the program depends on perceived benefits to society and economic stability."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates a societal agreement on a basic standard of living, ensuring that all individuals have a floor below which they cannot fall, thereby enabling greater individual agency in labor market participation.",
+    "transfer_function": "Transfers financial resources from the general tax base to individuals, particularly those with low or no income, to provide a basic living standard.",
+    "absent_voices": "The voices of those who would benefit from a more coercive labor market (e.g., certain business lobbies) are often present in policy debates, but their arguments for 'work incentives' are reframed by this reading as attempts to maintain exploitative conditions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished, low-wage workers and unemployed individuals would immediately lose their freedom to refuse coercive work, reverting to a state of heightened economic precarity and reduced bargaining power. The labor market dynamics would shift back towards employer dominance.",
+    "founding_problem": "The problem of widespread poverty, economic insecurity, and the coercive nature of labor markets that force individuals into undesirable work due to lack of alternatives.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Labor economists, social policy researchers, and international human rights organizations corroborate the ongoing existence of these problems, citing data on poverty rates, income inequality, and worker exploitation, independent of the direct beneficiaries of the policy."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.09
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.03
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the 'freedom floor' reading of unconditional income support conditionality. In this reading, the provision of unconditional income support is seen as a mechanism to decommodify labor power, granting individuals the positive freedom to refuse coercive or exploitative work. It shifts the balance of power in the labor market, moving from a system where workers are compelled by necessity to one where they have genuine choice. The constraint itself is the *absence* of coercive conditions, enabled by the income support.",
+    "key_agents": [
+      "low_wage_workers: Primary beneficiary (moderate/mobile) — gains freedom to refuse coercive work",
+      "unemployed_individuals: Primary beneficiary (moderate/mobile) — gains freedom to pursue meaningful work/training",
+      "caregivers: Primary beneficiary (moderate/mobile) — gains recognition and financial stability for unpaid labor",
+      "employers_reliant_on_coercive_labor: Primary victim (powerful/constrained) — loses coercive power over labor",
+      "advocacy_groups_for_labor_rights: Agenda setter (organized/analytical) — champions the policy",
+      "taxpayers: Payer (moderate/constrained) — bears the financial cost of the program"
+    ],
+    "logic_rationale": "The extractiveness is low (0.15) because the system is designed to provide a net benefit to the majority of its participants (workers) by reducing the extraction they face in the labor market. Suppression is also low (0.1) as the constraint's purpose is to *reduce* coercive pressure, not impose it. The theater ratio is minimal (0.05) as the policy's function directly aligns with its stated goal of providing a freedom floor. The metrics reflect a system that genuinely coordinates a social good.",
+    "perspectival_gap": "From the perspective of low-wage workers and unemployed individuals, this constraint is a clear Rope, providing a vital safety net and increasing their agency. For employers reliant on coercive labor, it is a Snare, as it removes their ability to exploit desperation. The analytical observer sees the overall shift in power dynamics.",
+    "directionality_logic": "Low-wage workers, unemployed individuals, and caregivers are beneficiaries (d near 0.0) as the income support directly empowers them. Employers reliant on coercive labor are victims (d near 1.0) as they lose a key mechanism of control. Taxpayers are payers (d near 0.5) as they contribute to the system but also benefit from a more stable and equitable society. Advocacy groups are agenda-setters, pushing for the policy's implementation.",
+    "mandatrophy_analysis": "This reading prevents mislabeling a genuine coordination mechanism (providing a freedom floor) as a Snare or Tangled Rope. The low extractiveness and suppression, coupled with clear beneficiaries and a coordination function, correctly classify it as a Rope. The 'mandate' here is to provide a baseline of security, which remains live and functional.",
+    "kernel_context": "This constraint is the 'freedom floor' reading of the 'income_support_conditionality' kernel. It posits that unconditional income support creates positive freedom by decommodifying labor. This contrasts with the 'dependency trap' reading, which views such support as fostering idleness, and the 'wage subsidy' reading, which sees it as primarily benefiting employers by allowing them to suppress wages."
+  },
+  "omegas": [
+    {
+      "id": "impact_on_labor_supply",
+      "question": "Does unconditional income support significantly reduce overall labor supply, leading to economic contraction, or does it reallocate labor towards more productive and meaningful sectors?",
+      "resolution_mechanism": "Longitudinal studies and comparative analyses of regions/countries implementing unconditional income support programs, tracking labor force participation rates, sectorial shifts, and economic growth metrics.",
+      "impact": "If labor supply significantly contracts without reallocation, the 'freedom floor' reading's positive economic impacts would be challenged, potentially shifting the constraint towards a more 'dependency trap' interpretation. If reallocation occurs, it strengthens the 'freedom floor' claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the aggregate effect of unconditional income support on labor market dynamics and economic productivity."
+    },
+    {
+      "id": "coercion_definition_ambiguity",
+      "question": "Is 'coercive work' an objective category, or is its definition subjective and open to interpretation, potentially leading to moral hazard?",
+      "resolution_mechanism": "Development of objective criteria for 'coercive work' (e.g., below living wage, unsafe conditions, lack of autonomy) through deliberative processes and legal frameworks, or empirical studies on worker perceptions of coercion.",
+      "impact": "If 'coercive work' remains ill-defined, the 'freedom floor' claim could be undermined by accusations of enabling 'laziness' or 'moral hazard', aligning more with the 'dependency trap' reading. Clearer definitions strengthen the claim of positive freedom.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity in the definition of 'coercive work' and its implications for the justification of unconditional income support."
+    },
+    {
+      "id": "sibling_reading_reconciliation",
+      "question": "How does this 'freedom floor' reading reconcile with the 'dependency trap' and 'wage subsidy' readings of income support conditionality?",
+      "resolution_mechanism": "Empirical evidence on labor market outcomes (e.g., worker bargaining power, wage levels, skill development) and policy analysis comparing the actual effects of unconditional income support against the claims of each reading.",
+      "impact": "If evidence strongly supports the 'dependency trap' or 'wage subsidy' readings, this 'freedom floor' reading's validity would be challenged, potentially leading to a reclassification of the underlying policy as a Snare or Tangled Rope from a different perspective. If this reading's claims are robust, it would highlight the ideological nature of the competing readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the 'income_support_conditionality' kernel. The 'dependency_trap_reading' argues that unconditional support undermines work incentives, while the 'wage_subsidy_reading' claims it primarily benefits employers by enabling wage suppression. This omega documents the contestation between these interpretations."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_power_decommodification_is_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "basic_income_enhances_human_agency",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "post_industrial_social_contract",
+    "drift_state": {
+      "moment": "contemporary_neoliberal_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

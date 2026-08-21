@@ -1,0 +1,239 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__continuity_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "713186af-a1fc-48a3-b024-527ca9ba8f1f"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.05,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Medieval Latin as Legitimate Continuation of Classical Latin (Continuity Reading)",
+    "topic_domain": "historical_linguistics/intellectual_history/philology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "medieval_latin_scholars",
+      "historical_linguists"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "medieval_latin_scholars",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Their work is validated by the premise that Medieval Latin is a natural evolution, not a corruption. They benefit from the legitimacy of their object of study and the continuity of the linguistic tradition."
+    },
+    {
+      "name": "historical_linguists",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The continuity reading aligns with principles of organic linguistic change, supporting their theoretical frameworks. They benefit from a coherent historical narrative of Latin's development."
+    },
+    {
+      "name": "classical_philologists_rupture_reading",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Adherents of the 'rupture' reading, who view Medieval Latin as a corruption of a fixed classical standard. They are excluded from the premise of natural continuity and would argue for a prescriptive approach to classical Latin."
+    },
+    {
+      "name": "classical_philologists_hybrid_reading",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Adherents of the 'hybrid' reading, who acknowledge medieval forms for practical use but maintain classical norms for literary domains. They are excluded from the full continuity premise and would argue for domain-specific standards."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a coherent framework for understanding the historical development of Latin, allowing scholars to trace linguistic evolution without imposing anachronistic prescriptive norms.",
+    "transfer_function": "Transfers legitimacy and historical coherence to medieval linguistic forms and texts, from the classical period to the medieval period, by framing changes as natural evolution rather than decline.",
+    "absent_voices": "Scholars who adhere to the 'rupture' reading of Latin's history, viewing medieval usage as a corruption rather than a continuation, would object. They are absent from this reading's foundational premise.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the continuity reading vanished, the entire field of Medieval Latin studies would lose its foundational premise of legitimacy, forcing a re-evaluation of linguistic history and the relationship between classical and post-classical Latin. The coherence of Latin's historical narrative would fragment.",
+    "founding_problem": "To reconcile the observable linguistic changes in Latin during the medieval period with the idea of a continuous, evolving language, rather than a static, 'pure' classical form.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical linguists and many medievalists corroborate that this problem remains central to understanding Latin's history. The debate over continuity vs. rupture is ongoing in philological and historical circles, indicating the problem is not fully resolved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the 'continuity reading' of Latin's historical development, asserting that Medieval Latin is a legitimate, organic continuation of Classical Latin. This reading frames linguistic changes (e.g., vernacular phonology, expanded vocabulary) as natural evolution rather than corruption. It is claimed as a Mountain because it posits a natural linguistic process, but it has beneficiaries (scholars whose work is validated by this premise) which triggers False Summit Mountain (FSM) detection. The metrics reflect low extractiveness and suppression, consistent with a natural process, but the FSM mechanism will flag the presence of beneficiaries on a claimed Mountain.",
+    "logic_rationale": "Extractiveness is low (0.15) because this reading primarily provides an interpretive framework rather than directly extracting resources. Suppression is low (0.2) as it's an academic consensus that doesn't require active coercion, though it implicitly suppresses alternative readings within its own framework. Theater ratio is minimal (0.05) as the claim is largely functional for historical linguistic analysis. The accessibility collapse is high (0.88) because, within this framework, the 'naturalness' of linguistic change is taken as a given, making alternative interpretations of medieval Latin's legitimacy difficult to sustain without challenging the core premise.",
+    "directionality_logic": "Medieval Latin scholars and historical linguists are beneficiaries (d near 0.0) as this reading validates their field and theoretical approaches. Adherents of the 'rupture' and 'hybrid' readings are structurally excluded from this framework's core premise, though they are not 'victims' in the extractive sense, as this constraint does not directly extract from them, but rather defines a different intellectual space.",
+    "perspectival_gap": "The primary 'perspectival gap' is between this reading and the 'rupture' reading, which views medieval Latin as a decline. This constraint, by asserting continuity, implicitly delegitimizes the prescriptive stance of the rupture reading, but does not directly extract from its adherents. The engine will compute the classification for the beneficiaries as Mountain, but the FSM will flag the presence of beneficiaries on a claimed Mountain.",
+    "kernel_context": "This constraint is the 'continuity_reading' of the 'latin_correctness' kernel. It posits that Medieval Latin is a natural, organic evolution from Classical Latin. Sibling readings include the 'rupture_reading' (Medieval Latin is a corruption of a fixed classical standard) and the 'hybrid_reading' (classical norms for literary domains, medieval forms for technical/practical domains)."
+  },
+  "omegas": [
+    {
+      "id": "natural_vs_constructed_continuity",
+      "question": "Is the 'organic linguistic change' truly a natural, inevitable process, or is its interpretation as such a constructed academic consensus that benefits certain scholarly fields?",
+      "resolution_mechanism": "Analysis of historical linguistic debates and the institutionalization of philological disciplines: if the 'naturalness' argument is demonstrably tied to the rise of specific academic power structures, it suggests a constructed element.",
+      "impact": "If constructed, the constraint's 'emerges_naturally' property would be re-evaluated, potentially reclassifying it from Mountain to a more constructed type (e.g., Rope or Tangled Rope) for the beneficiaries, as the 'natural law' would be revealed as a disciplinary convention.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural linguistic process and academic interpretation."
+    },
+    {
+      "id": "legitimacy_of_vernacular_influence",
+      "question": "To what extent does the 'continuity' argument implicitly legitimize vernacular influences on Latin, and how does this impact the perceived 'purity' of the language?",
+      "resolution_mechanism": "Detailed historical analysis of the reception of vernacularisms in Latin texts across different periods and regions, and their impact on the perceived status of Latin.",
+      "impact": "If the continuity reading is found to significantly legitimize vernacular influences, it could be seen as a 'cost' by those who prioritize Latin's classical purity, potentially introducing a victim set for a different reading of this constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Impact of continuity on the perceived purity of Latin."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__rupture_reading",
+      "latin_correctness__hybrid_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'latin_correctness' kernel. This 'continuity_reading' posits Medieval Latin as a natural evolution. The 'rupture_reading' views it as corruption, and the 'hybrid_reading' applies classical norms selectively. All three are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rupture_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linguistic_change_is_organic",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "medieval_latin_is_legitimate_heir",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "natural_linguistic_evolution",
+    "drift_state": {
+      "moment": "contemporary_philological_discourse",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

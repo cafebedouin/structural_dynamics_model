@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "0968d0ca-70f4-46a9-b96c-dce722267d17"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.7,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Unconditional Income Support as Dependency Trap",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bureaucratic_administrators"
+    ],
+    "victims": [
+      "ubi_recipients",
+      "taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ubi_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Individuals receiving unconditional income support. From this reading's perspective, they are trapped in a cycle of idleness, losing skills and motivation, making it harder to re-enter the workforce. The 'benefit' of income is outweighed by the long-term cost of dependency."
+    },
+    {
+      "name": "taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Citizens funding the unconditional income support programs through taxes. They bear the financial burden of supporting a non-productive population, leading to resentment and perceived economic inefficiency."
+    },
+    {
+      "name": "bureaucratic_administrators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Government agencies and personnel responsible for implementing and managing unconditional income support programs. They benefit from the expansion of their mandate, budget, and institutional power, regardless of the program's long-term societal effects."
+    },
+    {
+      "name": "labor_market_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Researchers and economists who study the effects of unconditional income support on employment, wages, and economic growth. They provide data and theoretical frameworks that either support or refute the dependency trap hypothesis."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a basic safety net, ensuring a minimum standard of living for all citizens, ostensibly to reduce poverty and social instability.",
+    "transfer_function": "Transfers financial resources from the general tax base to individuals, without requiring work or job-seeking activities.",
+    "absent_voices": "Advocates for work-first policies and proponents of traditional welfare-to-work programs, who would argue for stricter conditionality and active labor market policies to prevent dependency.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, many recipients would face immediate financial hardship, potentially leading to increased poverty, homelessness, and social unrest. The labor market would also experience a sudden influx of individuals seeking employment, potentially driving down wages in some sectors. The administrative apparatus built around these programs would also need to be dismantled or repurposed.",
+    "founding_problem": "The problem of poverty and economic insecurity, particularly for those unable to participate in the labor market due to disability, caregiving responsibilities, or lack of opportunities.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents of unconditional income support argue the problem is live and requires a universal solution. Critics (including some labor economists and social policy experts outside the administrative beneficiaries) argue that while poverty is real, unconditional support exacerbates other problems like dependency, suggesting the founding problem is being addressed in a counterproductive way."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.83
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story represents the 'dependency trap' reading of unconditional income support. It argues that providing income without work requirements leads to long-term dependency, skill atrophy, and disincentives to work, effectively trapping recipients in a state of idleness and extracting resources from taxpayers. The constraint is framed as a snare, as its purported coordination function (poverty reduction) is undermined by its extractive effects (dependency and taxpayer burden).",
+    "logic_rationale": "The high extractiveness (0.85) reflects the perceived cost to recipients (lost skills, reduced agency) and taxpayers (funding non-productive activity). Suppression (0.70) is due to the 'trap' mechanism: once dependent, exiting the system and re-entering the workforce becomes increasingly difficult due to skill atrophy and loss of motivation. Theater ratio is low (0.10) because the system is seen as genuinely, albeit negatively, effective in its operation, rather than performative. Accessibility collapse (0.60) indicates that while theoretical alternatives (work) exist, the practical barriers to accessing them become significant over time. Resistance (0.40) is moderate, coming from taxpayers and policy critics.",
+    "perspectival_gap": "From the perspective of UBI recipients, the constraint might initially appear as a benefit, but over time, this reading suggests it transforms into a trap. Taxpayers consistently view it as an extractive burden. Bureaucratic administrators, however, perceive it as a legitimate and necessary function, expanding their institutional scope.",
+    "directionality_logic": "UBI recipients are victims (high d) as they are seen to lose agency and skills, becoming dependent. Taxpayers are also victims (high d) as they fund the system without perceived productive returns. Bureaucratic administrators are beneficiaries (low d) due to expanded institutional power and budgets. The 'dependency trap' mechanism itself acts as a form of identity-lock for recipients, making exit difficult.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a 'Rope' (pure coordination) by highlighting the significant, asymmetric extraction from recipients and taxpayers. It emphasizes that while a coordination story (poverty reduction) exists, the actual operation, from this reading's perspective, creates a welfare trap, aligning it with a 'Snare'.",
+    "kernel_context": "This constraint is the 'dependency_trap_reading' of the 'income_support_conditionality' kernel. Sibling readings include 'freedom_floor_reading' (unconditional income as positive freedom) and 'wage_subsidy_reading' (unconditional income as employer subsidy)."
+  },
+  "omegas": [
+    {
+      "id": "dependency_causality",
+      "question": "Is the observed long-term idleness and skill atrophy among UBI recipients primarily caused by the unconditional nature of the income support, or by pre-existing labor market conditions and individual circumstances?",
+      "resolution_mechanism": "Longitudinal studies comparing UBI recipients with control groups in different labor market contexts, controlling for pre-existing conditions and alternative support structures.",
+      "impact": "If primarily caused by UBI, the 'snare' classification is strengthened. If primarily by external factors, the extractiveness attributed to UBI itself would decrease, potentially shifting the classification towards a 'Tangled Rope' or even 'Rope' if the coordination function is re-emphasized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing the causal drivers of dependency and skill atrophy."
+    },
+    {
+      "id": "taxpayer_burden_perception",
+      "question": "To what extent is the 'burden' perceived by taxpayers a direct economic cost versus a normative objection to non-conditional support?",
+      "resolution_mechanism": "Public opinion surveys disaggregating economic concerns from moral/ideological objections to welfare, combined with economic modeling of fiscal impacts.",
+      "impact": "If the burden is primarily normative, the 'extractiveness' from taxpayers might be re-evaluated as a 'preference' rather than a structural economic cost, potentially altering the overall extractiveness score and classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Decomposing the nature of taxpayer 'extraction'."
+    },
+    {
+      "id": "reading_framing_legitimacy",
+      "question": "Is the 'dependency trap' framing a legitimate interpretation of the effects of unconditional income support, or a politically motivated narrative designed to justify conditionality?",
+      "resolution_mechanism": "Analysis of the historical and political context of the 'dependency trap' discourse, its proponents, and its empirical basis, compared against alternative framings.",
+      "impact": "If the framing is found to be primarily political rather than empirically robust, the legitimacy of this reading's high extractiveness and snare classification would be challenged, potentially favoring a different reading of the kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Assessing the political vs. empirical grounding of the dependency trap narrative."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_flexibility",
+      "social_safety_net_design"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "work_as_moral_imperative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "incentives_drive_productivity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "conditional_welfare_state",
+    "drift_state": {
+      "moment": "contemporary_ubi_proposals",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

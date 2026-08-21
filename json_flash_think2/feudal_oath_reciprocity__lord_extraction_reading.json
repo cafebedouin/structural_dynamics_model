@@ -1,0 +1,472 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__lord_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "27254e82-e483-468f-be47-d8e05d8e0132"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.8,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.88,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Oath as Lord's Extraction Mechanism",
+    "topic_domain": "medieval_political_economy/legal_history",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "feudal_lord"
+    ],
+    "victims": [
+      "vassals",
+      "peasantry"
+    ],
+    "vindicated_propositions": [
+      "divine_right_of_lords",
+      "feudal_hierarchy_legitimacy"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "feudal_lord",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Controls vast tracts of land, military forces, and local justice. Sets the terms of vassalage and extracts resources, labor, and military service from those bound by oath. Justifies this through inherited right and the need for defense and order."
+    },
+    {
+      "name": "vassals",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Bound by oaths of fealty, they provide military service, counsel, and financial aid to their lord. They receive land (fiefs) in return, but face increasing demands for resources and service, often beyond the original terms. Exit means forfeiture of land and status, or rebellion."
+    },
+    {
+      "name": "peasantry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Tied to the land and subject to the lord's jurisdiction, they provide labor, agricultural produce, and various dues. They have virtually no legal recourse against excessive demands and face severe penalties for non-compliance or attempted flight. Their existence is defined by the extraction."
+    },
+    {
+      "name": "ecclesiastical_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Interpret oaths and mediate disputes, often advocating for Christian charity and justice. However, their own institutional power and landholdings are often intertwined with the feudal system, limiting their ability to challenge the lord's extractive practices directly."
+    },
+    {
+      "name": "analytical_historian",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "situation": "Analyzes the historical dynamics of power, legitimacy, and extraction within the feudal system, identifying the structural mechanisms that enabled lords to maximize their demands."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provided a decentralized framework for military organization, land tenure, and local governance in an era lacking strong central states, ensuring defense and basic social order.",
+    "transfer_function": "Moves agricultural surplus, labor, military service, and loyalty from vassals and peasantry to the feudal lord, in exchange for protection and the right to hold land.",
+    "absent_voices": "Free peasants (where they existed) who resisted enserfment, urban merchants whose economic interests were often at odds with feudal land-based power, and a more centralized royal authority (in early periods) that would later challenge the lords' autonomy.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the feudal oath system vanished overnight, the entire social, economic, and military structure of medieval society would collapse. Land tenure, military recruitment, and local justice would cease to function, leading to widespread chaos and a rapid re-ordering of power and social relations.",
+    "founding_problem": "The collapse of centralized Roman authority left a power vacuum, necessitating local defense and resource mobilization against external threats (e.g., Viking raids, Magyar incursions) and internal disorder, leading to the emergence of localized power structures.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Modern historians and legal scholars attest that the original problem of decentralized defense is long gone, replaced by nation-states. The lords' descendants or apologists might claim it's still relevant for 'tradition' but lack external corroboration."
+  },
+  "interval": {
+    "start": 800,
+    "end": 1400
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 920,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1040,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1160,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1280,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1400,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 800,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 920,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1040,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1160,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1280,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1400,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 920,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1040,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1160,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1280,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1400,
+      "value": 0.2
+    }
+  ],
+  "coercion_grid": {
+    "t0": 800,
+    "tn": 1400,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 800,
+        "value": 0.9
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 800,
+        "value": 0.7
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 800,
+        "value": 0.85
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 800,
+        "value": 0.8
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 800,
+        "value": 0.85
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 800,
+        "value": 0.75
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 800,
+        "value": 0.8
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 800,
+        "value": 0.78
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 800,
+        "value": 0.8
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 800,
+        "value": 0.7
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 800,
+        "value": 0.75
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 800,
+        "value": 0.72
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 800,
+        "value": 0.1
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 800,
+        "value": 0.15
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 800,
+        "value": 0.05
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 800,
+        "value": 0.08
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 1400,
+        "value": 0.6
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 1400,
+        "value": 0.5
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 1400,
+        "value": 0.55
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 1400,
+        "value": 0.5
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 1400,
+        "value": 0.65
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 1400,
+        "value": 0.6
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 1400,
+        "value": 0.62
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 1400,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 1400,
+        "value": 0.65
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 1400,
+        "value": 0.6
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 1400,
+        "value": 0.62
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 1400,
+        "value": 0.6
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 1400,
+        "value": 0.4
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 1400,
+        "value": 0.45
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 1400,
+        "value": 0.7
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 1400,
+        "value": 0.65
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This constraint story analyzes the feudal oath of reciprocity from the perspective of the 'lord's extraction reading,' where the oath primarily serves as a mechanism for maximal resource and labor extraction by the feudal lord, bounded only by the vassals' and peasantry's capacity to provide service or their threshold for rebellion. It is one reading of the broader 'feudal_oath_reciprocity' kernel, which also includes 'vassal_coordination_reading' and 'ecclesiastical_mediation_reading.' The high extractiveness and suppression reflect the lord's structural power.",
+    "logic_rationale": "Extraction is high (0.85) because the lord's demands were often open-ended, limited more by practical capacity than fixed legal terms. Suppression is also high (0.8) due to the lord's control over justice, military force, and the lack of viable alternatives for vassals and especially the peasantry. Theater ratio is low (0.2) because while the rhetoric of mutual obligation and protection existed, the actual function increasingly became one of one-sided extraction, with the 'reciprocity' becoming a thin justification for power. Accessibility collapse is very high (0.88) as vassals are identity-locked to their fiefs and peasants are trapped by serfdom. Resistance is moderate-high (0.7) reflecting the constant tension and occasional revolts, which were the primary check on lordly power.",
+    "perspectival_gap": "From the feudal lord's perspective, the oath is a legitimate foundation for their authority and the necessary means to maintain order and defense. From the vassals' perspective, it is a burdensome obligation that often exceeds its original intent, while the peasantry experiences it as pure oppression. The engine's per-seat classification will highlight these divergences.",
+    "directionality_logic": "The feudal lord is the clear beneficiary (d=0.0-0.1) as they collect resources and services without bearing equivalent costs. Vassals and peasantry are the primary targets (d=0.8-1.0), bearing the costs of extraction and having severely constrained exit options. Ecclesiastical authorities occupy a more complex position, often mediating but ultimately benefiting from the stability the system provides, placing them closer to symmetric or slight beneficiaries.",
+    "mandatrophy_analysis": "The original mandate of the feudal oath was to provide defense and order in a fragmented post-Roman world. Over time, as centralizing monarchies emerged and external threats diminished, this founding problem became 'dead.' However, the constraint persisted, with the 'reciprocity' narrative becoming a theatrical cover for continued extraction. The system became a 'snare' where the original coordination function atrophied, but the extractive mechanism remained, maintained by active enforcement and suppression.",
+    "kernel_context": "This constraint is the 'lord_extraction_reading' of the 'feudal_oath_reciprocity' kernel. This reading emphasizes the lord's prerogative and the oath as a tool for maximizing their power and resources. Sibling readings include 'vassal_coordination_reading' (focusing on mutual, bounded obligations) and 'ecclesiastical_mediation_reading' (emphasizing moral limits and the sacred nature of the oath)."
+  },
+  "omegas": [
+    {
+      "id": "oath_reciprocity_vs_extraction",
+      "question": "To what extent was the feudal oath genuinely reciprocal, and to what extent was it a cover for one-sided extraction?",
+      "resolution_mechanism": "Detailed analysis of historical charters, legal codes, and chronicles to quantify the balance of obligations and actual enforcement outcomes over time, comparing stated intent with observed practice.",
+      "impact": "If more reciprocal, the constraint might lean towards a Tangled Rope; if predominantly extractive, it reinforces the Snare classification. This reading assumes the latter.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between stated reciprocity and actual extractive function."
+    },
+    {
+      "id": "rebellion_threshold_variability",
+      "question": "What was the actual threshold of extraction or oppression that triggered widespread vassal or peasant rebellion in different regions and periods?",
+      "resolution_mechanism": "Comparative historical analysis of peasant revolts and baronial rebellions, correlating their occurrence with specific increases in taxation, labor demands, or infringements on customary rights.",
+      "impact": "A lower, more consistent rebellion threshold would indicate stronger, albeit violent, checks on lordly power, potentially reducing the effective extractiveness. A higher, more variable threshold would reinforce the 'maximal extraction' claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical variability of the 'rebellion threshold' as a limit on extraction."
+    },
+    {
+      "id": "ecclesiastical_influence_strength",
+      "question": "How effective were ecclesiastical authorities in limiting secular lords' extractive practices through moral suasion, legal intervention, or spiritual threats?",
+      "resolution_mechanism": "Case studies of specific interventions by the Church, analyzing their outcomes in terms of reduced demands, negotiated settlements, or lordly defiance, across different regions and periods.",
+      "impact": "Stronger ecclesiastical influence would suggest a more constrained extractive environment, potentially shifting the classification towards a Tangled Rope or even a degraded Rope. Weak influence reinforces the Snare classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The actual power of the Church to constrain lordly extraction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "vassal_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "lord_absolute_dominion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "vassal_service_unbounded",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "lordly_prerogative_supremacy",
+    "drift_state": {
+      "moment": "late_medieval_period",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

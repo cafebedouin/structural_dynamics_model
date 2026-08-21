@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "13123322-dfdc-492b-99f4-31c2f5602e86",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.4,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Dependency Trap",
+    "topic_domain": "political_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "income_support_recipients_exiting_labor"
+    ],
+    "victims": [
+      "working_taxpayers",
+      "individuals_with_atrophied_skills"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "income_support_recipients_exiting_labor",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Receive unconditional income, allowing them to reduce or cease labor market participation. From this reading's perspective, they become dependent on state support, leading to skill atrophy and reduced self-sufficiency over time."
+    },
+    {
+      "name": "working_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the unconditional income support through their taxes. They bear the cost of supporting non-working individuals, which this reading frames as an unfair transfer from productive to non-productive members of society."
+    },
+    {
+      "name": "individuals_with_atrophied_skills",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are the long-term victims of the system, as their skills degrade due to lack of use, making re-entry into the labor market increasingly difficult. This leads to a deeper, self-reinforcing dependency on state support."
+    },
+    {
+      "name": "social_policy_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Implement and manage the unconditional income support programs. They are responsible for the distribution of funds and the oversight of the system, often balancing competing political mandates."
+    },
+    {
+      "name": "economic_productivity_advocates",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the impact of unconditional income support on labor force participation, skill development, and overall economic output. They often advocate for policies that incentivize work and self-reliance."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a basic safety net, ensuring a minimum standard of living for all citizens, which can reduce poverty and administrative overhead compared to means-tested programs.",
+    "transfer_function": "Transfers financial resources from the general tax base (primarily working taxpayers) to all citizens, including those who choose to reduce or cease labor market participation.",
+    "absent_voices": "Future generations who will inherit a potentially less productive economy and a larger state dependency burden are absent from the current policy debate. Their interests are often represented by long-term economic forecasters and fiscal conservatives.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If unconditional income support vanished overnight, there would be immediate and severe social disruption, a sharp increase in poverty, and a forced re-entry into the labor market for many, regardless of skill or opportunity. The social safety net would collapse, requiring a complete reorganization of welfare provision.",
+    "founding_problem": "The founding problem was to address poverty, reduce administrative complexity of welfare programs, and provide a basic income floor in an era of increasing automation and precarious work.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Proponents of unconditional income support (e.g., social justice advocates, some economists) argue the founding problem of poverty and precarity remains live. Critics (e.g., fiscal conservatives, some labor economists) argue that while poverty is a problem, unconditional income support exacerbates other problems like work disincentives and dependency, suggesting the original solution has created new, more severe problems. Corroboration comes from academic studies on labor market participation and skill development, as well as government budget analyses."
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story analyzes unconditional income support from the 'dependency trap' reading, where it is seen as a mechanism that disincentivizes work, atrophies skills, and increases state dependence. It is framed as a Tangled Rope because it provides a coordination function (basic income floor) but also involves asymmetric extraction (from working taxpayers to non-working recipients, with long-term costs to individuals whose skills atrophy). The metrics reflect a system that, while not overtly coercive, creates a subtle but persistent pull towards non-participation and dependency.",
+    "key_agents": [
+      "income_support_recipients_exiting_labor: Primary beneficiary (powerless/identity_locked) — benefits from income, but becomes dependent.",
+      "working_taxpayers: Primary payer (organized/constrained) — funds the system, bears the cost of non-participation.",
+      "individuals_with_atrophied_skills: Long-term victim (powerless/trapped) — bears the cost of skill degradation.",
+      "social_policy_administrators: Agenda setter (institutional/constrained) — manages the system.",
+      "economic_productivity_advocates: Analytical observer (powerful/analytical) — critiques the system's impact on work."
+    ],
+    "logic_rationale": "The extractiveness (0.65) reflects the transfer of resources from productive labor to non-participation, and the long-term societal cost of reduced human capital. Suppression (0.40) is moderate; it's not overt coercion but a 'soft' suppression through the removal of work incentives and the creation of a comfortable, albeit dependent, alternative. Theater ratio is low (0.10) as the system is genuinely functional in its stated goal of providing income, but its negative externalities are downplayed. Accessibility collapse (0.50) is moderate; alternatives (work) exist but are disincentivized. Resistance (0.30) is present from working taxpayers and economic advocates, but not strong enough to dismantle the system.",
+    "perspectival_gap": "From the perspective of the 'dependency trap' reading, the constraint is extractive and creates victims. However, from the 'freedom floor' reading, the same constraint would be seen as a net benefit, enhancing autonomy and dignity. The engine's per-seat classification will capture this divergence, showing different types for beneficiaries (who experience it as a 'rope' or 'scaffold') versus payers/victims (who experience it as a 'snare' or 'tangled_rope').",
+    "directionality_logic": "Income support recipients who exit the labor market are beneficiaries (d near 0.0) as they receive direct financial support. Working taxpayers are payers (d near 1.0) as they fund the system. Individuals with atrophied skills are also payers/victims (d near 1.0) due to the long-term personal cost. Social policy administrators are agenda setters, balancing the system. Economic productivity advocates are observers, analyzing the system's effects.",
+    "mandatrophy_analysis": "This classification prevents mislabeling the constraint as a pure 'Rope' (as proponents might claim) by highlighting the asymmetric extraction and the creation of long-term dependency. It also avoids mislabeling it as a pure 'Snare' by acknowledging the genuine coordination function of providing a basic income floor. The 'Tangled Rope' classification captures the hybrid nature where a coordination mechanism is intertwined with extractive outcomes and dependency creation."
+  },
+  "omegas": [
+    {
+      "id": "work_disincentive_magnitude",
+      "question": "What is the actual magnitude of the work disincentive effect of unconditional income support, and how does it vary across demographics and economic conditions?",
+      "resolution_mechanism": "Longitudinal studies and randomized control trials (RCTs) on unconditional income programs in diverse economic contexts, measuring labor force participation, hours worked, and skill development.",
+      "impact": "If the work disincentive is empirically found to be negligible, this reading's extractiveness and suppression metrics would be significantly lower, potentially reclassifying it towards a 'Rope'. If the disincentive is substantial, it reinforces the 'Tangled Rope' or even 'Snare' classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical evidence on the extent to which unconditional income support reduces labor market participation."
+    },
+    {
+      "id": "dependency_vs_autonomy_framing",
+      "question": "Is the outcome of reduced labor market participation primarily 'dependency' (as framed by this reading) or 'autonomy' (as framed by the freedom_floor_reading)?",
+      "resolution_mechanism": "Qualitative sociological studies exploring recipients' subjective experiences, choices, and perceived well-being, alongside objective measures of civic engagement and non-market contributions.",
+      "impact": "If recipients overwhelmingly report increased autonomy and meaningful non-market activities, the 'dependency trap' framing weakens, shifting the conceptual basis of extraction. If dependency is the dominant subjective experience, this reading is reinforced.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The conceptual framing of reduced labor market participation as either dependency or autonomy."
+    },
+    {
+      "id": "skill_atrophy_evidence",
+      "question": "What is the empirical evidence for skill atrophy among long-term recipients of unconditional income support, and what are its long-term economic consequences?",
+      "resolution_mechanism": "Longitudinal studies tracking skill levels, educational attainment, and re-employment rates of unconditional income recipients compared to control groups over decades.",
+      "impact": "Strong evidence of significant and irreversible skill atrophy would increase the 'victim' status of individuals and reinforce the 'Tangled Rope' or 'Snare' classification. Lack of such evidence would reduce the perceived long-term harm.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical evidence for skill degradation and its economic impact due to long-term income support."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one reading of the 'income_support_commitment' kernel, focusing on the dependency trap aspect. It is structurally distinct from the 'freedom_floor_reading' and 'targeting_efficiency_reading' of the same kernel, which emphasize different aspects and outcomes."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_market_participation_is_a_social_good",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unconditional_transfers_create_moral_hazard",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "work_ethic_and_self_reliance_framework",
+    "drift_state": {
+      "moment": "contemporary_policy_debate",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

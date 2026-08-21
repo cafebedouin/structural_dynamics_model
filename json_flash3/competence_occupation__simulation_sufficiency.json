@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "competence_occupation__simulation_sufficiency",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "12d609a4-1075-415f-a470-d2379bbcdc50"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Competence Occupation via Simulation Sufficiency",
+    "topic_domain": "safety_training/competence_maintenance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "simulation_industry",
+      "hro_management"
+    ],
+    "victims": [
+      "frontline_operators",
+      "public_safety_advocates"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "simulation_industry",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Develops and sells simulation platforms and services, benefiting directly from the widespread adoption of simulation as the primary method for competence maintenance. Actively promotes the 'sufficiency' narrative."
+    },
+    {
+      "name": "hro_management",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Benefits from a quantifiable, auditable training compliance metric that reduces perceived liability and operational costs compared to more complex, multi-modal training regimes. Supports the simulation-sufficiency claim for its administrative convenience."
+    },
+    {
+      "name": "frontline_operators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Are required to undergo simulation-based training, which may not fully prepare them for the cognitive and emotional demands of real incidents. They bear the risk of skill decay and inadequate preparation, often without a voice in training design."
+    },
+    {
+      "name": "public_safety_advocates",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Bear the diffuse costs of potential safety failures if simulation proves insufficient. They advocate for more robust, real-world training but face resistance from industry and management due to cost and logistical complexity."
+    },
+    {
+      "name": "regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Are tasked with setting and enforcing training standards. They often rely on industry-provided data and face lobbying pressure, leading to a tendency to codify simulation-based training as sufficient without deep independent validation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Standardizes competence maintenance across large, distributed High-Reliability Organizations (HROs) by providing a scalable, measurable, and auditable training method.",
+    "transfer_function": "Transfers training budgets from HROs to the simulation industry, and transfers the burden of skill maintenance from diverse, complex methods to a single, auditable simulation metric, often at the expense of frontline operator preparedness.",
+    "absent_voices": "Experienced operators who have faced real incidents and found simulation inadequate are often marginalized in training policy discussions. Their experiential knowledge would challenge the 'sufficiency' claim.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the belief in simulation sufficiency vanished, HROs would face a crisis in competence maintenance, scrambling to implement more diverse and costly training methods. The simulation industry would lose a significant market, and regulatory bodies would need to redefine compliance.",
+    "founding_problem": "Ensuring consistent, measurable competence across a large workforce in complex, high-risk environments, especially when real incidents are rare and costly to use for training.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "HRO management and the simulation industry attest the problem is live, emphasizing the ongoing need for scalable training. Public safety advocates and some independent researchers corroborate the problem's existence but contest the sufficiency of the proposed solution, arguing for a broader approach to competence occupation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint represents the reading that simulation-based drills are sufficient for competence maintenance in High-Reliability Organizations (HROs). It is a contested claim, with this reading emphasizing the benefits of standardization and measurability, while other readings (real_incident_necessity, hybrid_occupation) argue for more robust or diverse training methods. The constraint operates as a Tangled Rope, providing a coordination function (standardized training) but with significant asymmetric extraction from frontline operators and public safety, benefiting the simulation industry and HRO management.",
+    "key_agents": [
+      "simulation_industry: Agenda setter (institutional/arbitrage) — promotes and benefits from simulation sufficiency.",
+      "hro_management: Beneficiary (institutional/constrained) — benefits from auditable compliance and reduced costs.",
+      "frontline_operators: Payer (moderate/identity_locked) — bears the risk of skill decay from insufficient training.",
+      "public_safety_advocates: Payer (organized/constrained) — bears diffuse costs of potential safety failures.",
+      "regulators: Observer (institutional/analytical) — codifies standards, influenced by industry."
+    ],
+    "logic_rationale": "Extractiveness is high because the cost savings and revenue generation for beneficiaries come at the expense of potentially suboptimal competence for operators. Suppression is high due to regulatory capture and the administrative convenience of simulation, which makes it difficult for alternative training paradigms to gain traction. Theater ratio is moderate and rising, as the 'sufficiency' claim increasingly serves to justify the existing training regime rather than genuinely optimize competence. The increasing extractiveness and suppression over time reflect the hardening of this claim into an institutionalized practice.",
+    "perspectival_gap": "HRO management and the simulation industry perceive this as a highly efficient and effective coordination mechanism, solving a complex training problem. Frontline operators and public safety advocates, however, experience it as an extractive mechanism that prioritizes cost and compliance over genuine preparedness, leading to a divergence in computed constraint types.",
+    "directionality_logic": "The simulation industry and HRO management are clear beneficiaries, with the former actively setting the agenda. Frontline operators are targets, as their professional identity is tied to the HRO, making exit difficult even if they perceive training as inadequate. Public safety advocates bear diffuse costs. Regulators are observers, whose directionality depends on their independence from industry influence.",
+    "mandatrophy_analysis": "The classification as Tangled Rope prevents mislabeling this as a pure Rope (which would ignore the asymmetric extraction and suppression of alternatives) or a Snare (which would ignore the genuine, albeit contested, coordination function of standardized training). The Mandatrophy analysis suggests that while the founding problem (scalable competence maintenance) is live, the 'sufficiency' claim may be leading to a degradation of the actual competence kernel, turning the coordination into a cover for rent-seeking and risk externalization.",
+    "kernel_context": "This constraint is the 'simulation_sufficiency' reading of the 'competence_occupation' kernel. This reading asserts that simulation-based drills alone are enough to maintain operational competence. Sibling readings include 'real_incident_necessity' (only real incidents suffice) and 'hybrid_occupation' (a mix of methods is needed)."
+  },
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what level of fidelity and complexity do simulations genuinely occupy the competence kernel, and is this level consistently achieved in practice?",
+      "resolution_mechanism": "Independent, longitudinal studies comparing performance in high-fidelity simulations to performance in real incidents, controlling for operator experience and incident type.",
+      "impact": "If current simulations fall below a critical fidelity threshold, the 'sufficiency' claim is empirically false, reclassifying the constraint towards Snare due to the false promise of competence. If fidelity is sufficient, it strengthens the Rope aspect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical validation of simulation effectiveness for competence."
+    },
+    {
+      "id": "cost_benefit_externalization",
+      "question": "To what extent are the true costs of potential skill decay (e.g., incident response, reputational damage, loss of life) externalized from HRO management and the simulation industry to frontline operators and the public?",
+      "resolution_mechanism": "Comprehensive economic modeling that internalizes all social costs of incidents into the HRO's and simulation industry's balance sheets.",
+      "impact": "If externalization is high, the extractiveness of the constraint is significantly underestimated, pushing it further towards Snare. If costs are largely internalized, the Tangled Rope classification is more stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of externalized costs of simulation-based training."
+    },
+    {
+      "id": "framing_of_competence_kernel",
+      "question": "Is the 'competence kernel' primarily a set of technical skills (amenable to simulation) or does it include non-technical skills like stress management, improvisation, and ethical decision-making under pressure (less amenable to simulation)?",
+      "resolution_mechanism": "Conceptual analysis and expert consensus from cognitive psychology, human factors engineering, and ethics in high-risk domains.",
+      "impact": "If the kernel is broader than technical skills, the 'simulation_sufficiency' reading is conceptually flawed, weakening its legitimacy and pushing the constraint towards Snare. If it's primarily technical, the reading is strengthened.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Conceptual scope of the 'competence kernel'."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_occupation__real_incident_necessity",
+      "competence_occupation__hybrid_occupation"
+    ],
+    "dual_formulation_note": "This constraint is one reading ('simulation_sufficiency') of the 'competence_occupation' kernel. It is linked to sibling readings 'real_incident_necessity' and 'hybrid_occupation', which offer alternative perspectives on how competence is maintained."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "real_incident_necessity",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_occupation",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "simulation_as_equivalent_experience",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "measurable_compliance_as_competence_proxy",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "standardized_auditable_training",
+    "drift_state": {
+      "moment": "contemporary_cost_pressure_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence_mechanism__beneficiary_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "5027f0be-9b63-404c-a8e4-0091c3614e45",
+    "created_at": "2024-07-30T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.75,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "QWERTY Persistence via Beneficiary Extraction",
+    "topic_domain": "economic_history/technology_studies/path_dependence_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "remington_union_typewriter",
+      "incumbent_typing_schools"
+    ],
+    "victims": [
+      "alternative_keyboard_manufacturers",
+      "new_typing_schools",
+      "typists"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "remington_union_typewriter",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "As the original patent holder and dominant manufacturer, Remington (and later Union Typewriter) actively promoted QWERTY, invested heavily in its ecosystem, and resisted adoption of alternatives to protect their market position and sunk costs in manufacturing and training."
+    },
+    {
+      "name": "incumbent_typing_schools",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Benefited from the stability of QWERTY as the standard, as their training curricula and teacher expertise were tied to it. Adoption of new layouts would have required costly retraining and curriculum redesign, which they actively resisted."
+    },
+    {
+      "name": "alternative_keyboard_manufacturers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Attempted to introduce more efficient keyboard layouts (e.g., Dvorak) but faced insurmountable barriers due to QWERTY's entrenched market share, lack of typist training, and active resistance from incumbents. They bore the costs of R&D and marketing without gaining market access."
+    },
+    {
+      "name": "new_typing_schools",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Those attempting to teach alternative layouts struggled to attract students due to the lack of available keyboards and the perceived necessity of QWERTY for employment. They bore the cost of advocating for change without sufficient market demand."
+    },
+    {
+      "name": "typists",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Learned QWERTY due to its ubiquity and the need for employment, despite potential ergonomic disadvantages or slower typing speeds compared to alternatives. Their skill investment locked them into the layout, making switching costly and impractical."
+    },
+    {
+      "name": "economic_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the historical forces behind QWERTY's dominance, examining evidence of strategic behavior by manufacturers and the role of network effects versus active suppression. Their analysis informs the understanding of path dependence."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Initially, QWERTY provided a standard layout for mechanical typewriters, facilitating training and interoperability across early machines. This function atrophied as alternatives emerged.",
+    "transfer_function": "Transferred market dominance and sustained profits to incumbent manufacturers and typing schools by suppressing competition from alternative, potentially superior, keyboard layouts. It also transferred the cost of suboptimal ergonomics and training to typists.",
+    "absent_voices": "Designers and manufacturers of alternative, more efficient keyboard layouts (e.g., Dvorak) were effectively silenced by market exclusion and the active suppression of their innovations. Typists who experienced ergonomic issues or desired higher speeds also lacked a collective voice to demand change.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If QWERTY vanished overnight, the entire keyboard manufacturing, training, and user ecosystem would be forced to adopt a new standard, likely leading to a more efficient and ergonomically sound layout. This would involve massive retraining and retooling, but ultimately a more optimal outcome for users and new manufacturers.",
+    "founding_problem": "The initial problem was to create a functional and robust keyboard layout for early mechanical typewriters that prevented key jamming and allowed for reasonable typing speeds.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "While QWERTY solved early mechanical problems, modern ergonomic and efficiency studies (from independent researchers and alternative keyboard advocates) demonstrate that the founding problem of optimal typing efficiency is no longer served by QWERTY, and indeed, it creates new problems. The incumbents' claims that QWERTY is 'good enough' are self-serving and not corroborated by external analysis."
+  },
+  "interval": {
+    "start": 1874,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1874,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1910,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1874,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1910,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1874,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1910,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint story analyzes the persistence of the QWERTY keyboard layout as a mechanism of beneficiary extraction. It argues that QWERTY's continued dominance, particularly after the initial mechanical rationale diminished, was actively maintained by incumbent manufacturers and typing schools to protect their investments and market position, rather than being a purely 'natural' outcome of market competition or an unavoidable 'lock-in' from network effects. This reading emphasizes the agency of beneficiaries in suppressing alternatives and extracting value from the established standard.",
+    "logic_rationale": "Extractiveness is high because the continued use of QWERTY, despite the existence of more efficient alternatives, imposed costs on typists (suboptimal performance, ergonomic issues) and suppressed innovation from alternative manufacturers. Suppression is also high, reflecting the active efforts by incumbents to discredit or block competing layouts through marketing, control over training, and lobbying. The theater ratio is low because the 'coordination' function of QWERTY became increasingly a cover for rent-seeking, but there was still a genuine, albeit suboptimal, standard being maintained.",
+    "directionality_logic": "Remington/Union Typewriter and incumbent typing schools are clear beneficiaries, actively shaping the market to their advantage. Alternative keyboard manufacturers and new typing schools are victims, unable to compete effectively. Typists are also victims, locked into a suboptimal standard due to training investments and the lack of viable alternatives. Economic historians act as observers, analyzing the structural dynamics.",
+    "perspectival_gap": "From the perspective of the beneficiaries (incumbent manufacturers and typing schools), QWERTY's persistence is a natural outcome of its adequacy and their legitimate market success. From the perspective of victims (alternative manufacturers, typists), it is a clear case of market manipulation and extraction. This story aligns with the latter, emphasizing the active role of beneficiaries.",
+    "mandatrophy_analysis": "The constraint's original mandate (preventing key jamming on mechanical typewriters) largely became obsolete with electric typewriters and computers. Its persistence is due to the active defense of accumulated investments and market power by beneficiaries, not a live coordination problem. This prevents mislabeling it as a 'rope' (pure coordination) or a 'piton' (inertial decay without active benefit capture).",
+    "kernel_context": "This constraint is the 'beneficiary_extraction_reading' of the 'qwerty_persistence_mechanism' kernel. It posits that QWERTY's dominance was actively maintained by beneficiaries to extract value, contrasting with the 'naturalization_reading' (QWERTY was genuinely adequate) and the 'lock_in_reading' (QWERTY persisted due to path-dependent coordination failure)."
+  },
+  "omegas": [
+    {
+      "id": "active_suppression_vs_network_effects",
+      "question": "To what extent was QWERTY's persistence due to active suppression by beneficiaries versus passive network effects (e.g., typists learning QWERTY because others did)?",
+      "resolution_mechanism": "Detailed historical analysis of marketing campaigns, lobbying efforts, and patent enforcement by incumbent manufacturers, compared against the independent growth of typist communities and training curricula.",
+      "impact": "If active suppression was dominant, the constraint is more clearly a snare. If passive network effects were the primary driver, it leans more towards a tangled rope or even a degraded rope, where extraction is less about active malice and more about coordination failure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing active suppression from passive network effects in QWERTY's persistence."
+    },
+    {
+      "id": "suboptimal_vs_adequate",
+      "question": "Was QWERTY genuinely 'adequate' for its time, or was it suboptimal even in its early stages, with its persistence always being a function of market power?",
+      "resolution_mechanism": "Retrospective ergonomic and efficiency studies comparing QWERTY to contemporary (but suppressed) alternatives under historical conditions, accounting for mechanical limitations.",
+      "impact": "If QWERTY was always suboptimal, the extraction began earlier and was more severe. If it was initially adequate but became suboptimal, the constraint's classification might shift over time from a more benign form to a snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assessing QWERTY's intrinsic adequacy versus its market-driven persistence."
+    },
+    {
+      "id": "kernel_framing_ambiguity",
+      "question": "Is the 'qwerty_persistence_mechanism' best framed as a beneficiary extraction mechanism, a path-dependent lock-in, or a natural outcome of competition?",
+      "resolution_mechanism": "Further historical and economic research, particularly focusing on counterfactual scenarios and the agency of various actors. The choice of framing depends on the weight given to active suppression versus emergent properties.",
+      "impact": "The classification of the constraint (snare, tangled_rope, or rope) depends heavily on this framing. This reading (beneficiary_extraction_reading) leads to a snare classification, while other readings would lead to different types.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Ambiguity in framing the primary mechanism of QWERTY's persistence."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence_mechanism__lock_in_reading",
+      "qwerty_persistence_mechanism__naturalization_reading"
+    ],
+    "dual_formulation_note": "This story is one reading of the 'qwerty_persistence_mechanism' kernel. It focuses on active beneficiary extraction, contrasting with the 'lock_in_reading' (path dependence) and 'naturalization_reading' (inherent adequacy). All three are linked as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lock_in_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "naturalization_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "active_suppression_of_alternatives",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incumbent_market_power_leverage",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "uncontested_market_dominance",
+    "drift_state": {
+      "moment": "post_dvorak_challenge_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=0",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

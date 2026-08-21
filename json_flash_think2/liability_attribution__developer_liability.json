@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "62cae551-b88b-4d89-9bf1-96666e1ffeb1"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Primary Developer Liability for Capability Harms",
+    "topic_domain": "technology_governance/legal_theory/regulatory_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deployers",
+      "end_users_public"
+    ],
+    "victims": [
+      "developers"
+    ],
+    "vindicated_propositions": [
+      "creator_responsibility_principle",
+      "upstream_control_implies_liability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "developers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "As creators of underlying capabilities (e.g., AI models, software libraries), they bear the primary legal and financial burden for harms caused by their creations, even when deployed in contexts they do not control. This includes costs for compliance, insurance, and potential litigation. Exit means abandoning the market or shifting to less impactful, less risky development."
+    },
+    {
+      "name": "deployers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Organizations or individuals who integrate and use the capabilities created by developers. They benefit from externalizing much of the liability risk to developers, simplifying their own compliance and operational risk management. They retain flexibility in choosing which capabilities to deploy and how."
+    },
+    {
+      "name": "regulators_legislators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government bodies responsible for creating and enforcing liability frameworks. They find it simpler to attribute primary liability to developers due to perceived 'upstream' control and the difficulty of tracing complex causal chains in deployment. This simplifies enforcement and provides a clear target for accountability."
+    },
+    {
+      "name": "end_users_public",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals or groups affected by the deployment of technological capabilities. They benefit from a clear party being held accountable for harms, theoretically leading to safer products and recourse. However, they bear indirect costs if developers pass on liability burdens or if innovation is stifled."
+    },
+    {
+      "name": "legal_scholars_ethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze the implications of liability frameworks, often highlighting the complexities of causal attribution in AI systems and the potential for unintended consequences on innovation or fairness. They do not directly benefit or pay but influence the discourse around the constraint."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Ascribes clear responsibility for harms arising from complex technological capabilities, providing a legal and financial target for redress and incentivizing safety measures at the creation stage.",
+    "transfer_function": "Transfers the primary burden of risk, compliance costs, and potential financial penalties for technological harms from deployers and end-users to developers.",
+    "absent_voices": "Smaller independent developers and open-source communities, who would argue that such broad liability stifles innovation, disproportionately impacts those with fewer resources, and misattributes control. They are often excluded from the legislative drafting process due to lack of lobbying power.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If primary developer liability vanished overnight, the legal and economic landscape for technology would immediately shift. Deployers would face significantly increased risk, potentially leading to a slowdown in adoption or a scramble for new insurance models. Developers might innovate more freely but also with less incentive for upstream safety. The entire risk allocation model for AI and advanced software would need to be re-engineered.",
+    "founding_problem": "The increasing complexity and opacity of advanced technological systems (e.g., AI, autonomous systems) made it difficult to attribute responsibility for harms, leading to a perceived accountability gap and a lack of clear incentives for safety.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Regulators and some consumer advocacy groups attest that the problem of accountability for complex tech harms is still live. Legal scholars and industry bodies (outside the direct beneficiaries) corroborate the existence of the problem but often contest whether developer-centric liability is the most effective or equitable solution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint describes the legal and regulatory framework where developers of underlying technological capabilities (e.g., AI models, software components) bear primary liability for harms, regardless of the specific deployment context. This is one reading of the broader 'liability_attribution' kernel, specifically the 'developer_liability' reading. It contrasts with alternative framings that place liability primarily on deployers or distribute it more broadly. The framework is actively enforced through legal and regulatory mechanisms, imposing significant costs and risks on developers.",
+    "logic_rationale": "Extractiveness is high (0.82) because developers incur substantial costs for compliance, insurance, and potential legal defense, effectively subsidizing the risk profiles of deployers. Suppression is also high (0.78) as developers are legally compelled to adhere to these frameworks, with limited options to avoid liability while remaining active in the market. The theater ratio is low (0.15) because the liability is genuinely imposed and enforced, not merely performative. Accessibility collapse is high (0.70) as alternatives to operating under this liability regime (e.g., open-source without liability, or operating in jurisdictions with different rules) are significantly constrained by market pressures and global regulatory trends. Resistance is moderate (0.45) as developers and their associations lobby for changes but largely comply.",
+    "perspectival_gap": "Developers experience this as a snare, where the coordination story (clear accountability) serves as a cover for externalizing risk from deployers. Deployers, conversely, experience it as a beneficial coordination mechanism that clarifies their own risk landscape. Regulators view it as an efficient mechanism for accountability in complex systems.",
+    "directionality_logic": "Developers are the primary targets (victims) as they bear the direct costs and risks. Deployers are beneficiaries, as their risk is externalized. End-users are also beneficiaries, as the framework aims to provide accountability for harms, though they may bear indirect costs. Regulators are agenda-setters, shaping the framework to achieve policy goals.",
+    "kernel_context": "This constraint, 'Primary Developer Liability for Capability Harms,' is the 'developer_liability' reading of the 'liability_attribution' kernel. It posits that creators of underlying technological capabilities are the primary locus of responsibility. Sibling readings include 'deployer_liability' (where the party controlling deployment context is primary) and 'shared_liability' (where responsibility is distributed along the value chain). This reading emphasizes upstream control and creation as the key to accountability."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint truly a distinct reading of the 'liability_attribution' kernel, or merely a policy preference within a broader 'shared_liability' framework?",
+      "resolution_mechanism": "Analysis of legal precedents and legislative intent: if courts consistently prioritize developer liability even when deployer control is evident, it supports a distinct reading.",
+      "impact": "If it's a distinct reading, the classification holds. If it's merely a policy choice within 'shared_liability', the 'shared_liability' constraint would need to be re-evaluated for its true extractiveness and suppression across different actors.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Confirms the distinct identity of this kernel reading."
+    },
+    {
+      "id": "causal_control_vs_attribution",
+      "question": "Does primary developer liability accurately reflect actual causal control over harms, especially in complex AI systems where deployment context is critical?",
+      "resolution_mechanism": "Empirical studies of AI system failures and harm attribution, tracing causal chains from development to deployment and impact.",
+      "impact": "If causal control is often distributed or primarily at the deployment stage, the 'developer_liability' framework's justification weakens, potentially increasing its measured extractiveness and suppression as it misattributes responsibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ambiguity between legal attribution and actual causal control."
+    },
+    {
+      "id": "innovation_impact",
+      "question": "To what extent does primary developer liability stifle innovation, particularly for smaller developers and open-source projects, by imposing prohibitive risk and compliance costs?",
+      "resolution_mechanism": "Economic studies tracking innovation rates, startup formation, and open-source contributions in jurisdictions with strong developer liability versus those with alternative frameworks.",
+      "impact": "If innovation is significantly stifled, the constraint's overall societal cost (beyond direct extraction) is higher, potentially leading to a re-evaluation of its policy efficacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of liability on technological innovation."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the 'liability_attribution' kernel, each representing a distinct structural claim about where primary responsibility lies for harms from complex technologies. They are linked as a constraint family."
+  },
+  "gain_flow": "deployers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_responsibility_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "upstream_control_implies_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "traditional_product_liability_framework",
+    "drift_state": {
+      "moment": "ai_era_complexity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

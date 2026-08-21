@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2024-07-30",
+    "status": "ACTIVE",
+    "story_uid": "3f933e10-8ebd-402c-837e-5a171030d9f6"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.65,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin's Store of Value Priority (Decentralization over On-Chain Capacity)",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "full_node_operators"
+    ],
+    "victims": [
+      "low_value_on_chain_users",
+      "merchants_requiring_cheap_on_chain_settlement"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "full_node_operators",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain the network's security and enforce the protocol rules, including the 1MB block limit. They bear the costs of running nodes but benefit from the network's decentralization and their influence over its direction. Their collective action is essential for this reading's persistence."
+    },
+    {
+      "name": "long_term_holders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from the network's perceived scarcity, security, and censorship resistance, which underpins its store-of-value narrative. They are generally aligned with prioritizing decentralization over on-chain capacity, as it supports their investment thesis."
+    },
+    {
+      "name": "low_value_on_chain_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Are priced off the base layer for everyday transactions due to high and volatile fees, making direct on-chain use impractical for small transfers. Their alternatives are off-chain solutions (with different trust assumptions) or other cryptocurrencies."
+    },
+    {
+      "name": "merchants_requiring_cheap_on_chain_settlement",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Find it difficult to accept small Bitcoin payments directly on-chain due to high fees and confirmation times. They are forced to use off-chain solutions or alternative payment rails, which may introduce new complexities or trust requirements."
+    },
+    {
+      "name": "lightning_network_developers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Their off-chain scaling solution is promoted and becomes more necessary under this constraint. They benefit from the base layer's limited capacity driving users to their technology, even if it introduces new trade-offs."
+    },
+    {
+      "name": "electronic_cash_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that Bitcoin's original purpose was electronic cash for everyday use, which requires high on-chain capacity and low fees. Their proposals for larger blocks or alternative scaling approaches are largely rejected by the dominant 'store of value' interpretation, leaving them with limited influence over the protocol's direction."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a highly decentralized, censorship-resistant, and verifiable global ledger for secure value transfer, prioritizing the long-term security and immutability of the base layer over high transaction throughput.",
+    "transfer_function": "Transfers transaction fees from users (especially those needing on-chain settlement) to miners, incentivizing network security, and indirectly benefits long-term holders through enhanced network robustness and scarcity.",
+    "absent_voices": "Advocates for on-chain scaling and low-fee transactional use (electronic_cash_advocates) are structurally excluded from influencing the core protocol's capacity decisions, as their vision is deemed incompatible with the primary goal of decentralization and verifiability.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the commitment to prioritizing decentralization and full-node verifiability over on-chain capacity vanished, the network would likely undergo significant changes, potentially leading to a different, more centralized, or less secure system. The 'store of value' narrative would collapse, and the entire ecosystem would reorganize around new design principles.",
+    "founding_problem": "How to create a decentralized digital cash system that prevents double-spending without relying on a trusted third party, ensuring censorship resistance and immutability.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Cryptographers, computer scientists, and economists outside the immediate Bitcoin community corroborate the foundational problem of achieving decentralized digital trust. However, the specific prioritization of decentralization over on-chain capacity as the *solution* is a point of ongoing debate and interpretation, not universally corroborated as the sole path."
+  },
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2008,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.1
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates the 'store of value' reading of the Bitcoin whitepaper's purpose, emphasizing decentralization and full-node verifiability as binding constraints, with on-chain capacity subordinated to these goals. This reading stands in contrast to the 'electronic_cash_reading', which prioritizes low-fee transactional use. The persistence of the 1MB block limit and the development of off-chain scaling solutions like the Lightning Network are direct consequences of this interpretation. While providing a highly secure and decentralized base layer, it effectively prices out users requiring low-cost on-chain transactions.",
+    "logic_rationale": "The extractiveness (0.7) is high because the limited on-chain capacity, a direct consequence of prioritizing decentralization, leads to high transaction fees that act as a tax on base-layer usage. Suppression (0.65) is also significant, as the technical and economic realities of the network effectively suppress alternative visions for on-chain scaling and make low-value on-chain transactions impractical. The theater ratio is low (0.1) because the commitment to decentralization and verifiability is genuine and actively maintained by the network's participants, not merely performative. Resistance is moderate (0.55) due to ongoing debates and forks (e.g., Bitcoin Cash) that challenge this interpretation.",
+    "directionality_logic": "Full node operators and long_term_holders are primary beneficiaries, as their interests in network security, decentralization, and value appreciation are prioritized. Low_value_on_chain_users and merchants_requiring_cheap_on_chain_settlement are victims, bearing the costs of high fees and limited access to the base layer. Lightning_network_developers benefit as their solutions become necessary. Electronic_cash_advocates are excluded, as their vision is actively deprioritized by this constraint.",
+    "perspectival_gap": "From the perspective of full node operators and long-term holders, this constraint is a necessary 'rope' for maintaining Bitcoin's core value proposition as a decentralized store of value. From the perspective of low-value users and electronic cash advocates, it operates as a 'snare' or 'tangled rope,' extracting value and suppressing alternative uses that they believe align with the whitepaper's original intent. The engine's computation of per-seat classification will reflect this divergence based on the declared structural relationships and exit options.",
+    "kernel_context": "This constraint instantiates the 'store of value' reading of the Bitcoin whitepaper's purpose, emphasizing decentralization and full-node verifiability as binding constraints, with on-chain capacity subordinated to these goals. This reading stands in contrast to the 'electronic_cash_reading', which prioritizes low-fee transactional use, and exists within a broader context where the authoritative interpretation of Satoshi Nakamoto's original intent is contested ('nakamoto_oracle_opacity')."
+  },
+  "omegas": [
+    {
+      "id": "whitepaper_primary_purpose",
+      "question": "Is the Bitcoin whitepaper's primary purpose 'electronic cash' (prioritizing transactional utility) or 'store of value' (prioritizing decentralization and security)?",
+      "resolution_mechanism": "Historical analysis of Satoshi Nakamoto's early writings and forum posts, combined with a conceptual analysis of the 'cash' vs. 'gold' metaphors in early cryptocurrency discourse. However, a definitive resolution is unlikely due to Satoshi's disappearance.",
+      "impact": "If resolved as 'electronic cash', the current constraint's high extractiveness and suppression would be reclassified as a 'snare' or 'tangled rope' from a more critical perspective. If resolved as 'store of value', the current classification would be reinforced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Ambiguity regarding Bitcoin's foundational telos."
+    },
+    {
+      "id": "decentralization_capacity_tradeoff",
+      "question": "Is the current level of decentralization and full-node verifiability truly dependent on the 1MB block limit, or could it be maintained with higher on-chain capacity through alternative technical solutions?",
+      "resolution_mechanism": "Empirical studies and simulations of network performance under increased block sizes, or the long-term success/failure of alternative protocols that implement larger blocks while maintaining decentralization. This is a complex engineering and economic question.",
+      "impact": "If higher capacity is shown to be compatible with decentralization, the current constraint's extractiveness and suppression would be seen as unnecessary, strengthening arguments for reclassification towards a 'snare' or 'tangled_rope' due to artificial scarcity. If the dependency is confirmed, the current classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the technical trade-off between decentralization and on-chain capacity is absolute or contingent."
+    },
+    {
+      "id": "low_value_user_exclusion_justification",
+      "question": "Is the effective exclusion of low-value on-chain users an unavoidable and justified consequence of prioritizing decentralization, or an extractive side effect that could be mitigated without compromising core principles?",
+      "resolution_mechanism": "Policy debates and community consensus on the acceptable social and economic costs of the current design, potentially informed by philosophical arguments about access to public goods. This involves value judgments.",
+      "impact": "If deemed an unjustified side effect, it would strengthen the 'snare' or 'tangled_rope' classification by highlighting the ethical costs. If deemed unavoidable, it would be accepted as a necessary cost of the 'rope' function.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Ethical justification for pricing out low-value users from the base layer."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "satoshi_vision_decentralized_immutable",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "electronic_cash_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decentralization_maximization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "full_node_verifiability_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "no_scope_rebuild_gemini_think2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "gemini-2.5-flash",
+    "sampling_params": "max_tokens=16384,temperature=0.1,thinking_budget=8192",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
