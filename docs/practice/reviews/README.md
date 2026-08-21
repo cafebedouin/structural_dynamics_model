@@ -7,9 +7,10 @@ KNOWN_STATE entry of that date).
 **Naming rule:** `<YYYY-MM-DD>_<model>.md` — date is the RETURN date; model is the reviewing
 model as reported by its vendor surface.
 
-**State, dated:** as of 2026-08-20, **one relay sent** (operator, to a web instance; model
-recorded at return), **zero returns filed**. An empty directory past that line means
-sent-and-not-yet-returned, not measured-nothing; before it, untested-instrument.
+**State, dated:** as of 2026-08-20, **one relay sent and returned same day** — Claude Opus 5
+(High reasoning), filed as `2026-08-20_opus-5-high.md`. For any later relay: an unreturned send
+means sent-and-not-yet-returned, not measured-nothing — the send-time KNOWN_STATE entry is the
+trace.
 
 **Send-time rule:** the KNOWN_STATE entry for a relay is written at SEND time, not return
 time — a sent-and-never-returned relay must leave a trace.

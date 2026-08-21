@@ -56,8 +56,10 @@ deferral accepted (read-site: 2026-09-10 consolidation reads RUNS.md's post-impl
 registered same day)** in OQ-334's entry. **R4 resolution, recorded HERE per the plan:** returned
 cross-vendor reviews of the practice paper land in `docs/practice/reviews/` under
 `<YYYY-MM-DD>_<model>.md`; the per-relay KNOWN_STATE entry is written at SEND time. **First relay
-SENT 2026-08-20** by the operator to a web instance (model recorded at return; packet = the paper +
-the verbatim cold-reader line; no §IV.4 framing — returns are not an instrument for that question).
+SENT 2026-08-20** by the operator to a no-context incognito web instance and **RETURNED the same
+day — Claude Opus 5, High reasoning; filed as `docs/practice/reviews/2026-08-20_opus-5-high.md`**
+(packet = the paper + the verbatim cold-reader line; no §IV.4 framing — returns are not an
+instrument for that question).
 `.claude/skills/plan-review/RUNS.md` created (first live run's row, executor-written from
 planning-session-supplied values; post-impl gaps column filled at 7 — the first entry in the
 item-(7) prospective decline-side record). SKILL.md's fixer paragraph now states its counts'
