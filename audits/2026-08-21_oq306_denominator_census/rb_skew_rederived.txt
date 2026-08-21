@@ -1,0 +1,23 @@
+# R-B precondition: filename!=subject skew, RE-DERIVED 2026-08-21
+# (the plan requires these be re-derived, not quoted from CLAUDE.md prose)
+#
+# What is measured: does the file carry a constraint_metric/3 head keyed on its OWN
+# basename? That is exactly what corpus_loader:has_story_facts/1 queries. A skewed
+# file HAS a constraint_metric -- just under a different subject atom -- so it kinds
+# `unknown`, not `story`. Measuring "has any constraint_metric at all" is the WRONG
+# instrument here and reports ~0 for every corpus.
+#
+# corpus                              members   ->unknown    rate    CLAUDE.md recalled
+  original_v5                            702         91     13.0%   89/702  (+2, same rate)
+  original_json/testsets                1151        133     11.6%   133/1151 (EXACT)
+  original_v6                           3380          0      0.0%   0 (confirmed)
+  kernel_v1                             1106          0      0.0%   0 (confirmed)
+  testsets (live, stories only)          258          0      0.0%   -- CONTROL, expect 0
+#
+# PATH CORRECTION: the 1151 live in prolog/archives/datasets/original_json/testsets/,
+# not at that directory's top level, which carries 0 flat .pl files.
+#
+# CONSEQUENCE FOR R-B: a hard SystemExit on unkindable members applied everywhere
+# would refuse two archived corpora outright, at ~12-13% unknown each. The plan's
+# recommendation (hard refusal on the five live legs; loud continue with `unknown`
+# named elsewhere) is supported by these numbers.
