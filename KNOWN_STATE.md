@@ -45,6 +45,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-21 — [landed] Four gemini-2.5-flash legs (2 redraws × 2 regimes) + the first within-model regime-vs-redraw read; Flash omits `stakeholders` ~1/3 of draws under the current schema
+**Files:** agent/run_no_scope_gemini.py, agent/run_no_scope_stealth.py, agent/generate_kernel_corpus.py, prolog/testsets_flash2/, prolog/testsets_flash3/, prolog/testsets_flash_think/, prolog/testsets_flash_think2/, json_flash2/, json_flash3/, json_flash_think/, json_flash_think2/, python/module_boundary_check.py, audits/2026-08-21_flash_regime_vs_redraw/, docs/technical/bulk_corpus_generation.md
+**Tier:** landed
+
+Operator-directed spend (Gemini balance) to build the controls the five-leg comparison never had.
+`--leg-suffix S` (gemini + stealth drivers) writes a sibling leg `testsets_<leg>S/` with its own
+json dir, ladder and `no_scope_rebuild_<leg>S` provenance; `--thinking-budget N` (gemini) turns
+thinking on and stamps it. Legs at prompt/schema `685ed7cf`: flash2 944 / flash3 958 (budget 0),
+flash_think 988 / flash_think2 992 (budget 8192); all classify_corpus GREEN on `gemini-2.5-flash`;
+`outputs/pipeline_output.<leg>.json`. Paired same-seed read (`audits/2026-08-21_flash_regime_vs_redraw/`):
+**thinking-off redraw floor h1 85% / verdict 89% / authored ε 81%; thinking-on floor 64 / 71 / 40%;
+off-vs-on 59 / 65 / 34%** — the regime mostly adds draw variance; the replicated marginal shift is
+red-verdict 6.5–6.8% → 13.4–14.3%. Three things a reader must carry:
+1. **`testsets_flash` (June) is NOT a redraw partner for flash2/3** — it predates the 2026-06-19
+   `stakeholders` gate (schema 2e9dff2f vs 685ed7cf); flash-vs-flash2 (h1 72%) is redraw + schema
+   change. Cite flash2 vs flash3 for the floor.
+2. **Flash omits the required `stakeholders` field in ~35% of draws** (sonnet/kimi ≈ 0% under the
+   same schema) — the residue is seed-persistent; two ladder reruns recover ~half each pass, then stop.
+3. **Every leg driver shares `process_batch_results` AND the seed pool**, so concurrent legs could
+   collide on the lint temp file — now `.tmp_kernel_<cid>_<pid>.pl` (`06cb27c1`). Gemini batch
+   attempt 2 errored 100% in both first passes with no text; the driver now prints the row error.
+Cost ≈ $17 × 4 (batch halves). Stealth (OpenRouter `stealth/ox-alpha`) leg #1 in flight at this
+entry; its own entry follows.
+
+---
+
 ## 2026-08-21 — [tripwire] OQ-326 RESOLVED: `probe_harness` now REFUSES instead of overlaying nothing — and a bare `with_asserted/2` throws
 **Files:** prolog/probe_harness.pl, prolog/tests/test_probe_harness.pl, python/probe_harness_gate.py, scripts/gate.sh, docs/technical/swipl_load_path_and_probe_gotchas.md, CLAUDE.md, AGENTS.md, ISSUES.md, prolog/probe_oq190_edge_admission.pl, audits/2026-08-21_oq326_overlay_install_witness/
 **Tier:** tripwire
