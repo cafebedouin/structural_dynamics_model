@@ -7806,15 +7806,20 @@ be dispositioned as premise-identified, not premise-tested.
 
 ---
 
-## OQ-306 — `n_constraints` silently includes non-stories: 26 axiom meta-files in the 279 denominator, and the stratum GREW 9 → 26 while reading stable
+## OQ-306 — `n_constraints` silently includes non-stories: axiom meta-files inside the denominator, and the stratum GREW (5 → 22 → 26 → 27) while reading stable
 
 **Ω-type:** Ω_E (a census — which corpus members are stories) + a small Ω_C tail (whether
 `*_contradictions` artifacts should live in `testsets/` at all is an operator call).
 
-**Status:** open — filed 2026-08-17 from the OQ-190 close, routed OUT of OQ-118 Limb 3 because it is
-larger than the verdict question.
+**Status:** resolved — 2026-08-21: membership is a checked fact (`corpus_loader:corpus_story/1`, `corpus_member_kind/2`), the manifest reports the two populations separately (`n_stories` / `n_nonstory_members`), consumers swept with per-consumer dispositions, gate row `corpus census` guards the share over time. Filed 2026-08-17 from the OQ-190 close, routed OUT of OQ-118 Limb 3 because it is larger than the verdict question.
 **Priority:** 1
 **Deps:** splits_from OQ-190
+
+> **HEADING CORRECTED 2026-08-21 at close.** It previously read "26 axiom meta-files in the 279
+> denominator, and the stratum GREW 9 → 26". Both figures were wrong and the body below is left
+> INTACT with them in place; the dated correction, its measurement and its instrument are in the
+> CLOSE section at the end of this entry. The heading is corrected rather than only annotated
+> because a wrong exemplar in a problem statement outlives the fix.
 
 **Origin.** OQ-190's Limb-3 precursor found that **26 of the live corpus's 43
 `founding_problem_status` absences are not stories.** Every `prolog/testsets/*_contradictions.pl`
@@ -7860,6 +7865,130 @@ ordinary reading file as the DECLINE), so this sits at the top rung — no autho
 **Cross-refs:** OQ-190 (parent), OQ-136 and OQ-202 (the `q6_unmeasured` arithmetic that must be
 restated over a story-only denominator; OQ-202 also owns the provenance-stamping gap), OQ-118
 Limb 3 (where this was found), OQ-305.
+
+---
+
+### CLOSE — 2026-08-21 (C1–C5 executed; rulings R1–R3 and R-A..R-J all answered)
+
+**Status:** resolved — story membership is a checked fact (`corpus_loader:corpus_story/1`,
+`corpus_member_kind/2`), the manifest reports the two populations separately, consumers are swept
+with per-consumer dispositions, and gate row `corpus census` guards the share over time.
+
+**CORRECTION (dated, appended — the body above is left intact).** Two figures in the problem
+statement are wrong, and the heading has been corrected to match:
+
+- **The stratum series is 5 → 22 → 26 → 27, not 9 → 26.** Measured over the GLOB-VISIBLE flat
+  `testsets/*.pl` set at every commit touching the stratum
+  (`audits/2026-08-21_oq306_denominator_census/stratum_series.txt`): `f724379d` 2026-08-07 → 5,
+  `543e2f9a` 2026-08-08 → 22, `8c34157f` 2026-08-17 → 26, `2f73ce34` 2026-08-21 → 27. The "9"
+  does not appear anywhere in the series. A first pass at this measurement was itself wrong in
+  the other direction, counting `testsets/gfbatch1/` run-tagged files that the non-recursive glob
+  never loads — the same trap CLAUDE.md → Corpus Loading warns about.
+  **The correction STRENGTHENS the OQ:** a 5 → 22 jump inside a single day is a sharper instance of
+  "the growth, not the presence, is the defect" than 9 → 26 was.
+- **The denominator was 279 when filed and is 285 now.** Never cite a live-leg literal (operator
+  ruling 2026-08-18); the current split is in `manifest.n_stories` / `n_nonstory_members`.
+
+**A second correction, scoped and instrumented (D7.1).** `six_questions` / `base_properties` appear
+in **zero** `prolog/testsets/*.pl` files (grep sweep 2026-08-20, re-run at close). That is a claim
+about `.pl` FACT-FAMILY MARKERS only — it makes no claim about the concepts' other carriers, and
+the `json/` specification side was **not swept**.
+
+**The finding the execution added, which is worse than the filed shape.** The stratum can grow with
+**no commit at all**. `f32fe86b` (a topic run's auto-commit) committed its 5 story cids and left the
+`*_contradictions.pl` it had just emitted UNTRACKED, because a contradictions file is not a run cid
+and `_step_commit`'s pathspec is cid-scoped. `543e2f9a` and `f724379d` are prior instances
+("track the N remaining `*_contradictions.pl` testsets (already glob-loaded)"). **Consequence: git
+history systematically UNDERSTATES the stratum**, so a `git ls-tree` reconstruction can materialise
+a corpus state that never existed on disk. This is why C4's discrimination record is claimed at
+**plant-only** altitude (below).
+
+**Witnessed live during execution.** An untagged `c-orchestrator` run completed mid-session and took
+the live leg 279 → 285 and the stratum 26 → 27, with nothing going red. R-A's premise is therefore
+observed, not hypothesised.
+
+**Rulings, as ruled (conditions verbatim where they were given).**
+
+- **R1** — `n_constraints` stays the MEMBER count (same-run identity key for 4 consumers, not a
+  semantic count); additive keys `n_stories`, `n_nonstory_members`, `nonstory_kinds`. (a) kinding is
+  TOTAL, an unkinded member is a hard refusal, never default-to-story; (b) `nonstory_kinds` emitted
+  **sorted**; (c) naming debt recorded AT THE EMITTER (`build_manifest`) plus a KNOWN_STATE
+  `Tier: tripwire` entry, not only here.
+- **R2** — contradictions files STAY in `testsets/`, typed by the membership predicate; relocation
+  deferred to the rebuild era, with the deferral armed (see R-E for what "armed" turned out to mean).
+- **R3** — `per_constraint` keeps all members, each entry gains `member_kind`, derived from
+  `corpus_member_kind/2` at emit time. Condition (b) ("golden re-bless as its own read commit") was
+  ruled **PROCESS, not necessity** (R-F): the necessity half is genuinely dissolved by evidence —
+  `golden_file_check.py` projects `per_constraint` to `{id: [4 perspectives]}` and is blind to added
+  keys — but C3 keeps its own read step and its own witness regardless.
+- **R-A** — licensed re-pin with **mandatory recorded cause + `authorized_by`**. Stop-and-ask-on-any-
+  delta is unusable (it fires on ordinary topic runs); bare licensed re-pin is insufficient (the
+  stratum moves without a git trace, so the cause field is the only record that will ever exist).
+  Condition: the cause field accepts an **orchestrator run or topic identifier**, not just a commit
+  hash — a hash-only schema would be filled with "n/a" within a week.
+- **R-B** — hard refusal on the five live legs; loud continue elsewhere, with ids named.
+  **N8 DISCHARGED — the skew figures are now DERIVED, not recalled**
+  (`rb_skew_rederived.txt`): `original_v5` **91/702 (13.0 %)**, `original_json/testsets`
+  **133/1151 (11.6 %)**, `original_v6` 0/3380, `kernel_v1` 0/1106, live leg 0 as control. CLAUDE.md
+  had recalled 89/702 and 133/1151 — the first drifted by 2 at the same rate, the second was exact.
+  Path correction: the 1151 live in `original_json/testsets/`, not that directory's top level.
+- **R-C** — `schema_version` bumped 2 → 3 (precedent `ce9a26ec`, the OQ-98 additive-keys bump, is
+  the same shape). D5 gained the conditional `schema_version` reader sweep with its own positive
+  control; each hit dispositioned, because a reader asserting `== 2` breaks silently otherwise.
+- **R-D** — the executor spawns a fresh general-purpose subagent holding the OQ text, the plan and
+  the diff; its RAW output lands in the audit dir. Stated at its true altitude (N17): the harness
+  injects CLAUDE.md, memory and gitStatus into every subagent (OQ-334), so the evaluator is
+  independent **of the executor's session**, not context-free.
+- **R-E — arm 3 DROPPED; D4 declares TWO arms.** Not "dropped because scoping was hard" — it was
+  never a gate arm to scope: `load_warning_gate.py` runs `swipl -g "[stack], halt"` and never loads
+  the corpus, and its regex is `^(Warning|ERROR):`, which `[corpus] WARNING:` does not match. An
+  unenforced stderr line is the Pattern-6 demotion the design forbids, so the design's own rule
+  selects DROP. The loss is small for an independent reason: arm 3's trigger (live leg, zero
+  `cs_axiom_contradiction` clauses) is a strict SUBSET of arm 2's — files leaving `testsets/` drive
+  the pin to 0, which reddens against a nonzero baseline regardless. Arm 3 was redundant on the
+  shape it covered, not merely unenforceable. The N14 generator-site marker landed; the
+  generator-redirect residue is accepted as DECLARED.
+- **R-F** — process, not necessity (folded into R3 above). C3 keeps a real read obligation: confirm
+  the anchored baseline md5 and id count before running the check.
+- **R-G — ONE definition; the textual ratchet is DROPPED**, removing the canonicity fork this OQ
+  exists to close. The unsourced 30 s threshold is REPLACED, not re-blessed: the measured rate
+  (~0.5 ms/member — +143.8 ms over a 285-member load, 590.71 → 734.51 ms median, 3 runs/side, warm,
+  corpus md5-pinned) is stamped with its date and per-leg file counts, and the re-measure trigger is
+  **growth-based** (any leg exceeding 2× its stamped file count), not a bare wall-clock number
+  nobody will revisit. All five legs ≈ 2.1 s of kinding, against a 30 s figure — not close.
+- **R-H** — registration DECLINED, verbatim site marker landed at `corpus_member_kind/2`. Recorded
+  for completeness: `reading_registry.pl` CAN express the domain
+  (`reading_domain_key(corpus_constraint, [C])` exists), so the decline was a free choice on
+  category grounds, not forced by expressibility.
+- **R-I** — DOCUMENTED hatch, implemented as an explicit downgrade to the EXISTING continue-scope
+  path (`SDM_ALLOW_UNCLASSIFIED_MEMBERS=<who>`), so the override selects an existing branch rather
+  than adding one. It must NAME ITS AUTHORIZER — presence alone is insufficient — and the value is
+  stamped into `manifest.unclassified_refusal_overridden` alongside the ids. A hatch that leaves the
+  artifact indistinguishable from a clean run is the one that gets left on.
+- **R-J** — (a): R-E must be ANSWERED before the close. Ruled on principle — a close whose
+  arming-sufficiency is undetermined is exactly the false-completeness this OQ exists to fix — and
+  it imposed no further wait, since R-E was answered in the same turn.
+
+**Declared residue.**
+- **C4's discrimination record is claimed at PLANT-ONLY altitude.** The natural pair
+  `543e2f9a` (stratum 22) / `f724379d` (stratum 5) was run and both verdicts are reported with the
+  instrument and arm named, but it is NOT claimed as a naturally-arising control: because
+  contradictions files fall outside cid-scoped auto-commit, a `git ls-tree` reconstruction is not a
+  weaker version of the real corpus state, it is a DIFFERENT corpus. The plan's own rule —
+  only-a-reconstruction-achievable takes the honest fallback — selects plant-only.
+- **R-H's justification is now self-supporting**: C4's planted unknown-shape selftest landed, so the
+  catch-all is exercised against an input the live corpus does not supply.
+- No new `design_gaps.md` entry: extensibility of the kind taxonomy is carried by the fail-closed
+  `unknown` / `dual_family` arms, both of which are RED conditions rather than silent absorptions.
+
+**OQ-202 interaction (D7.3).** Provenance stamping for contradictions files SURVIVES as an open
+question — `story_provenance` was REJECTED as the membership discriminator precisely because it is
+OQ-202-mutable, and that constraint is recorded in OQ-202. Stakeholder / founding-problem authoring
+for contradictions files is MOOT under the non-story ruling. `run_pipeline.py`'s provenance-coverage
+gate is routed to OQ-202.
+
+**Evidence:** `audits/2026-08-21_oq306_denominator_census/` (WRITEUP.md, CONSUMERS.md, PLAN.md,
+audit_log.md, stratum_series.txt, rb_skew_rederived.txt, load-time timings).
 
 ---
 

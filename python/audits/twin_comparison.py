@@ -21,7 +21,8 @@ Usage:
         --permute 1000 \
         --outdir audits/2026-06-13_twin_comparison
 
-Validity guards (refuse-to-join): schema_version != 2; any two legs sharing a
+Validity guards (refuse-to-join): schema_version not in JOINABLE_SCHEMA_VERSIONS
+(2, 3 — the OQ-306 bump is additive and join-compatible); any two legs sharing a
 corpus_path; legs differing in code_commit (ALL legs must share one commit).
 """
 import argparse
@@ -582,11 +583,25 @@ def index_by_id(data):
     return {e["id"]: e for e in data.get("per_constraint", [])}
 
 
+# Schema versions this harness can JOIN. Not "the current version" — the set of
+# versions whose per_constraint shape this join actually reads.
+#   2 (OQ-98): verdict_join added as a per-entry sibling.
+#   3 (OQ-306, 2026-08-21): per-entry `member_kind`, top-level `member_census`,
+#     manifest n_stories/n_nonstory_members/nonstory_kinds/n_unclassified. Purely
+#     ADDITIVE — this harness joins on per_constraint[].id and reads no field the
+#     bump touched, so 2 and 3 are join-compatible.
+# Widen this set only after checking the new version against what the join READS;
+# a bare `!= <latest>` would refuse every older artifact, which is the opposite
+# failure and just as wrong.
+JOINABLE_SCHEMA_VERSIONS = (2, 3)
+
+
 def manifest_of(data, label):
     m = data.get("manifest") or {}
-    if m.get("schema_version") != 2:
+    if m.get("schema_version") not in JOINABLE_SCHEMA_VERSIONS:
         raise SystemExit(f"REFUSE: input {label!r} schema_version="
-                         f"{m.get('schema_version')} != 2")
+                         f"{m.get('schema_version')} not in "
+                         f"{JOINABLE_SCHEMA_VERSIONS}")
     return m
 
 

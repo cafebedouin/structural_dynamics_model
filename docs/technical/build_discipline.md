@@ -1877,6 +1877,48 @@ published**, every cross-time comparison of that rate is invalid.
 **Tell in prose:** a rate quoted "over the corpus" when the corpus contains more than one kind of
 thing. Ask *which* population, and whether the manifest reports one number for two.
 
+### RESOLVED 2026-08-21 (OQ-306) — and the execution found a worse shape than the filing did
+
+Membership is now a checked fact: `corpus_loader:corpus_story/1` and `corpus_member_kind/2` (total
+over `corpus_constraint/1`, fail-closed into `dual_family`/`unknown` rather than defaulting to
+`story`), `manifest.n_stories` beside `n_constraints`, and gate row **`corpus census`** guarding the
+share over time. Three things learned in the doing that the filing did not contain:
+
+**1. The framing figure was wrong, and the first correction to it was wrong too.** The series is
+**5 → 22 → 26 → 27**, not 9 → 26; "9" appears nowhere. A first re-measurement over-counted by
+including `testsets/gfbatch1/` — run-tagged subdirectories that the non-recursive glob **never
+loads**, so they are not members at all. **Both errors are the same class as the defect**: a
+population measured by the wrong membership rule. The corrected series is *sharper* evidence than
+the filed one — a 5 → 22 jump inside a **single day** is a better instance of "the growth is the
+defect" than a thirteen-month drift.
+
+**2. The stratum can grow with NO COMMIT — so git history understates it.** A topic run's
+auto-commit is scoped to the run's *cids*; a `*_contradictions.pl` file is not a cid, so the
+emitting commit does not include it (`f32fe86b`, witnessed live mid-session; `543e2f9a` and
+`f724379d` are prior instances, both titled "track the N remaining `*_contradictions.pl` testsets
+(**already glob-loaded**)"). **Consequence for any historical audit of a population:
+`git ls-tree` can materialise a corpus state that never existed on disk.** That is not a weaker
+sample of the real state — it is a *different corpus*, which is why OQ-306's discrimination record
+is claimed at **plant-only** altitude even though the natural pair (`f724379d` GREEN, `543e2f9a`
+RED on the pin arm) ran cleanly. **Generalisation: before using git history as the population for a
+retrospective census, check whether the thing you are counting is something the commit convention
+actually tracks.**
+
+**3. A baseline's cause field must fit the causes that actually occur.** Because the move often has
+no commit, a re-pin schema accepting only a commit hash would be filled with "n/a" within a week.
+The `corpus_census_baseline.json` cause field therefore accepts an orchestrator run or topic
+identifier — for a commitless move it is the only record that will ever exist. **The general form:
+when you require provenance, enumerate the shapes the provenance actually comes in first; a
+provenance field that cannot express the common case trains people to defeat it.**
+
+**Also worth carrying: measuring the wrong property reports ~0 everywhere and looks like good
+news.** Sizing the refusal's blast radius on the archived corpora, "does this file carry any
+`constraint_metric`" returns ~0 unkindable for every corpus — reassuring and wrong. The predicate
+actually asks "does it carry one keyed on its own basename", and a filename≠subject file has one
+under a *different* subject. Correct instrument: `original_v5` 91/702 (13.0 %),
+`original_json/testsets` 133/1151 (11.6 %). **Before trusting a zero, check that the probe asks the
+question the consumer asks.**
+
 ---
 
 ## "Redundant / safe to remove" on a shared edge or field needs a per-consumer reachability witness

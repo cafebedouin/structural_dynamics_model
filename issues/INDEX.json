@@ -1,10 +1,10 @@
 {
   "manifest": {
-    "store_version": "6a69f319324f18d85f3c9af742004ff06b8ad119",
+    "store_version": "dbde6fe5602b6ff1c23a69f63edffd2ea3d07b77",
     "schema_version": "omega-resolver/1",
-    "generated_at": "2026-08-21T01:03:08"
+    "generated_at": "2026-08-21T10:57:34"
   },
-  "issues_sha": "fa3a66a9caba03de43f798e5024ed40d5401ee161c88ad921fcbc747059f871d",
+  "issues_sha": "490416c9964f0bd49e1dc2f55e5eb2507c1d7aed6d74ac1198d25cabf29df60c",
   "n_entries": 336,
   "active_token_set": [
     "investigating",
@@ -12,11 +12,11 @@
     "partial"
   ],
   "per_status": {
-    "resolved": 168,
+    "resolved": 169,
     "mitigated": 18,
     "disposed": 6,
     "future": 13,
-    "open": 126,
+    "open": 125,
     "partial": 5
   },
   "active": [
@@ -1493,27 +1493,6 @@
         "OQ-207",
         "OQ-255",
         "OQ-304"
-      ]
-    },
-    {
-      "id": "OQ-306",
-      "status": "open",
-      "priority": 1,
-      "summary": "`n_constraints` silently includes non-stories: 26 axiom meta-files in the 279 denominator, and the stratum GREW 9 → 26 while reading stable",
-      "deps": [
-        "splits_from OQ-190"
-      ],
-      "cross_refs": [
-        "OQ-136",
-        "OQ-190",
-        "OQ-202"
-      ],
-      "mentioned_in": [
-        "OQ-118",
-        "OQ-136",
-        "OQ-190",
-        "OQ-202",
-        "OQ-305"
       ]
     },
     {
@@ -4698,6 +4677,29 @@
         "OQ-296",
         "OQ-303",
         "OQ-317"
+      ]
+    },
+    {
+      "id": "OQ-306",
+      "status": "resolved",
+      "priority": 1,
+      "summary": "`n_constraints` silently includes non-stories: axiom meta-files inside the denominator, and the stratum GREW (5 → 22 → 26 → 27) while reading stable",
+      "deps": [
+        "splits_from OQ-190"
+      ],
+      "cross_refs": [
+        "OQ-136",
+        "OQ-190",
+        "OQ-202"
+      ],
+      "mentioned_in": [
+        "OQ-98",
+        "OQ-118",
+        "OQ-136",
+        "OQ-190",
+        "OQ-202",
+        "OQ-305",
+        "OQ-334"
       ]
     },
     {

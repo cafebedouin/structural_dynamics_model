@@ -45,6 +45,67 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-08-21 — [tripwire] OQ-306 RESOLVED: `n_constraints` counts MEMBERS not stories, and the non-story stratum can grow with NO COMMIT
+**Files:** python/run_pipeline.py, prolog/json_report.pl, prolog/corpus_loader.pl, python/corpus_census_check.py, python/corpus_census_baseline.json, python/shared/corpus_legs.py, python/module_boundary_check.py, python/audits/twin_comparison.py, scripts/gate.sh, prolog/drl_core.pl, prolog/module_boundary_allowlist.txt, ISSUES.md
+**Tier:** tripwire
+
+**THE TRIPWIRE — `manifest.n_constraints` is a MEMBER count, not a story count.** It counts every
+`prolog/testsets/*.pl`, including the `*_contradictions.pl` axiom meta-files (27 of 285 on
+2026-08-21). It is kept under that name because four consumers use it as a same-run IDENTITY KEY in
+the three-way `per_constraint == glob == n_constraints` gate — renaming is rebuild-era debt.
+**Use `manifest.n_stories` as the denominator of any per-story rate.** A rate over `n_constraints`
+is currently ~9.5 % low and, worse, is not comparable across time (below).
+
+**THE SHAPE WORTH REMEMBERING: the GROWTH was the defect, not the presence.** The stratum went
+**5 → 22 → 26 → 27** (`f724379d` 2026-08-07, `543e2f9a` 08-08, `8c34157f` 08-17, today). A
+*growing* contaminant does not bias a rate by a constant — it silently REWRITES a time series, so
+historical rates stop being comparable to current ones *even when each was correct when computed*.
+Every individual rate stayed well-formed the whole time and nothing went red.
+
+**AND THE STRATUM MOVES WITH NO COMMIT TO POINT AT.** `f32fe86b` (a topic run's auto-commit)
+committed its 5 story cids and left the `*_contradictions.pl` it had just emitted UNTRACKED —
+a contradictions file is not a run cid and `_step_commit`'s pathspec is cid-scoped. `543e2f9a` and
+`f724379d` are prior instances of the same thing ("track the N remaining `*_contradictions.pl`
+testsets (already glob-loaded)"). **Consequence: git history systematically UNDERSTATES the
+stratum, so a `git ls-tree` reconstruction can materialise a corpus state that never existed on
+disk.** This is why the `corpus census` baseline requires a recorded `cause` that accepts an
+ORCHESTRATOR RUN OR TOPIC IDENTIFIER, not just a hash — for a commitless move, that field is the
+only record that will ever exist. It is also why OQ-306's own discrimination record is claimed at
+**plant-only** altitude despite the natural pair running cleanly.
+
+**What landed.** `corpus_loader:corpus_story/1` and `corpus_member_kind/2` (total over
+`corpus_constraint/1`, kinds `story | axiom_contradiction | dual_family | unknown`, fail-closed on
+both of the last two); a `[corpus] census:` stderr line before the existing `Loaded N` line;
+per-entry `member_kind` and a top-level `member_census` in `pipeline_output.json`; manifest keys
+`n_stories`, `n_nonstory_members`, `nonstory_kinds` (sorted), `n_unclassified`;
+**`schema_version` 2 → 3**; gate row `corpus census`.
+
+**Second tripwire — the `schema_version` bump has readers.** `python/audits/twin_comparison.py`
+asserted `!= 2` as a refuse-to-join guard and would have refused every freshly generated output; it
+now carries `JOINABLE_SCHEMA_VERSIONS = (2, 3)`. If you bump the schema again, sweep for readers
+ASSERTING a value and widen deliberately — and do not "fix" such a guard to `!= <latest>`, which
+refuses every older artifact instead (the opposite failure, equally wrong).
+`python/omega_resolver.py`'s `schema_version` is a DIFFERENT schema (`"omega-resolver/1"`, a
+string) — unaffected, do not touch it.
+
+**Refusal scope and its hatch.** Unkindable members are a hard `SystemExit` on the five live legs
+(`python/shared/corpus_legs.py`), a loud continue elsewhere — because archived corpora carry real
+filename≠subject skew, RE-DERIVED 2026-08-21 rather than recalled: `original_v5` **91/702 (13.0 %)**,
+`original_json/testsets` **133/1151 (11.6 %)**, `original_v6` and `kernel_v1` zero. A skewed file HAS
+a `constraint_metric`, just not one keyed on its basename, which is what `has_story_facts/1` queries
+— so "has any constraint_metric" is the WRONG instrument and reports ~0 everywhere.
+Hatch: `SDM_ALLOW_UNCLASSIFIED_MEMBERS=<who>` selects the existing continue path, MUST name its
+authorizer, and stamps `manifest.unclassified_refusal_overridden`.
+
+**Also: the scope test canonicalizes paths BEFORE comparing.** A naive membership test against the
+raw `corpus_path` string silently downgrades an absolute-path live-leg run to continue-scope — the
+permissive direction, and invisible.
+
+Provenance: ISSUES OQ-306 close (rulings R1–R3, R-A..R-J recorded individually);
+`audits/2026-08-21_oq306_denominator_census/`.
+
+---
+
 ## 2026-08-20 — LANDED: harmonic-launching-spark checkpoint executed — OQ-335 minted, OQ-334's routed rulings resolved, cross-vendor relay convention (R4), plan-review RUNS.md ledger created, SKILL.md contamination statement
 **Files:** ISSUES.md, docs/practice/reviews/README.md, .claude/skills/plan-review/RUNS.md, .claude/skills/plan-review/SKILL.md, audits/INVESTIGATIONS.md
 **Tier:** landed
