@@ -146,35 +146,61 @@ The first pass of the check-4 shadow control came back `CONTROL BROKEN` — I ha
 whose expectation and body disagreed. Repairing it produced the finding in §8. Recorded because an
 introduced control is itself a claim, and this one was wrong on first writing.
 
-## 8. Clause 4 is unreachable — and that is a finding about the pre-registered criterion
+## 8. Clause 4 is currently unreachable — a consequence of check ORDER, not of the leak
 
-Under the ruled precedence **2 → 3 → 1 → 4 → 5**, clause 4 (`probe_overlay_shadowed`) cannot fire:
+**Corrected 2026-08-21 (operator).** An earlier draft of this section attributed clause 4's
+unreachability to the binding leak. That is wrong, and the distinction matters because the wrong
+version reads as a fact about one bug when it is a fact about the file's control flow.
 
-- `snapshot/2` collects **every** fact unifying with the template (`findall` over
-  `clause(M:T, true)`), and `apply_overlay/2` retracts all of them ⇒ **no fact clause matching the
-  template survives**.
-- The only surviving clauses that can match the template are **rule** clauses — and clause 3 fires
-  first by ruling.
-- Therefore clause 4's precondition is precisely the condition clause 3 has already rejected.
+The real argument is **check ordering plus snapshot completeness**:
+
+- Clause 4 asks whether a **surviving** clause — current minus snapshot — unifies with the
+  template shape.
+- Under the ruled order **2 → 3 → 1 → 4 → 5**, clause 3 has already rejected any **rule** clause
+  and clause 1 has already rejected an **empty** snapshot. What reaches clause 4 is therefore a
+  **fact-only predicate whose template-matching facts were all snapshotted**.
+- `snapshot/2` collects every fact unifying with the template and `apply_overlay/2` retracts all
+  of them, so **nothing template-shaped survives**. Clause 4 has nothing left to find.
+
+The binding leak sits **upstream**: it was one way snapshot *completeness* failed. Fixing it
+restores completeness — it does not create the unreachability, and completeness could fail again
+by other means.
+
+**So the unreachability is a consequence of R1's ordering.** Reorder the checks, or add a check
+that filters differently, and clause 4 becomes reachable again. That is precisely a property that
+must be **pinned by a test rather than asserted in prose**, because it silently depends on
+decisions made elsewhere in the same file — the shape this plan has now hit five times.
+
+### Disposition (operator ruling, 2026-08-21)
+
+Clause 4 is **implemented as specified and enforcing**; the acceptance criterion is **met, not
+narrowed**. It is documented as a **standing guard with a nameable failure mode**:
+
+> **Property test:** artificially narrow the snapshot (simulate the leak) and clause 4 **must
+> fire**. That test failing is the signal that snapshot completeness or check ordering has
+> regressed.
+
+The two-sided control below is **not sufficient on its own** — its fires-side requires an
+artificially narrowed snapshot, which makes it a **planted fixture**, and a planted fixture
+licenses only *"authored drift gets rejected."* The property test is what gives the guard a real
+discrimination record.
+
+```
+POSITIVE (snapshot artificially narrowed):
+  snapshot narrowed to [p(a,1)]; survivors at template shape [p(a,9),p(a,2)]
+  *** clause4 FIRES: p(a,9) shadows p(a,2)
+  once(p(a,X)) selects X=9  -- replacement UNREACHABLE
+NEGATIVE (snapshot complete):
+  snapshot [p(a,1),p(a,9)]; survivors [] ; clause4 DECLINES
+  once(p(a,Y)) selects Y=2  -- replacement reachable
+```
 
 Tested across four configurations (`evidence_clause4.txt`): every fact is either uncovered (⇒ 4′)
-or covered by a template whose facts were all retracted (⇒ clean). **Never clause 4.**
+or covered by a template whose facts were all retracted (⇒ clean).
 
-**Two-sided control, because an absence owes one.** The test *can* fire — under the binding leak:
-
-```
-POSITIVE (leak present):  snapshot narrowed to [p(a,1)]; survivors at template shape [p(a,9),p(a,2)]
-                          *** clause4 FIRES: p(a,9) shadows p(a,2)
-                          once(p(a,X)) selects X=9  -- replacement UNREACHABLE
-NEGATIVE (leak fixed):    snapshot [p(a,1),p(a,9)]; survivors [] ; clause4 DECLINES
-                          once(p(a,Y)) selects Y=2  -- replacement reachable
-```
-
-So **clause 4's only reachable path is the binding leak that Phase 3 fixes in the same change.**
-Fixing the leak closes it. Implemented literally, clause 4 becomes a check that cannot fail —
-which is the Pattern-5 shape (*a gate passes because its precondition is never met*) installed
-inside the harness built to close Pattern 6. This is the plan's stopping condition #5 and only the
-operator may amend the criterion.
+**Read "currently unreachable" as "unreachable GIVEN clauses 1 and 3 in the ruled order," never as
+"unnecessary."** The dependency is named here so a later reader does not delete a live guard on
+the strength of a scoped observation.
 
 ## 9. Check 2 must not apply to the assert side
 
@@ -190,8 +216,14 @@ assertz into UNDEFINED predicate: OK, created
 That is the ordinary fixture-planting idiom, and 7 committed sites use it —
 `drl_composition:constraint_data/2` (×5, the OQ-67 chi-retirement controls) and
 `agent_index/2` (×2), both undefined until asserted. Executed as written, F7 would throw
-`probe_overlay_unresolvable` — *"always a defect, no escape"* — on all 7. F7's stated rationale
-justifies only its check-5 half; the check-2 half was carried along with it.
+`probe_overlay_unresolvable` — *"always a defect, no escape"* — on all 7.
+
+**Ruled (operator, 2026-08-21): check 5 stays on both sides; check 2 applies to Templates only.**
+Recorded as an amendment to F7, with the reason: **F7 conflated two checks that shared a code
+location but not a rationale.** Check 2 exists because an undefined *template* silently retracts
+nothing; there is no analogous silent failure on the assert side. The preflight comment carries the
+same correction, since it previously justified both extensions with the `permission_error`
+argument.
 
 ---
 
