@@ -195,10 +195,51 @@ run needs (supersedes the 2026-07-18 "sync-only / batch unprovisioned" reading, 
   see the regime caveat (kimi is thinking-on, the Claude twins were generated thinking-off) before
   reading cross-model differences as model-quality; `audits/2026-07-20_five_leg_twin_comparison/`.
 
+## 7c. Stealth (OpenRouter) twin — `stealth/ox-alpha` SYNC, reasoning-inflated (2026-08-21)
+
+`agent/run_no_scope_stealth.py` is the OpenRouter twin (`testsets_stealth/` + `json_stealth/` +
+`beta_processed_stealth.txt`, raw responses under `outputs/no_scope_runs_stealth/responses/`). It
+IMPORTS the kimi driver's shim / prompt builder / `_extract` (one copy, not a fork) and talks
+OpenRouter's OpenAI-compatible `/chat/completions`. What a future run needs:
+
+- **Sync only.** OpenRouter has no `/files` + `/batches`, so there is no −50% batch path and no
+  `--resume-batch`; concurrency is `--workers` (20 used for the full run). The ladder makes any
+  run resumable (`--n 0` picks up every unprocessed seed).
+- **Model facts, disk-verified from `GET /api/v1/models` on 2026-08-21:** price 0/0 (free that
+  week — the driver sums `usage.cost` from every response and prints it, so a price change shows
+  in the artifact, not the price card), ctx 1,048,576, max_completion 131,072, **reasoning
+  MANDATORY** (default effort `max`; `--reasoning-effort low|high|max` overrides and is stamped),
+  temperature supported (default 1; `--temperature` overrides and is stamped). Re-read the model
+  record before a new run — stealth models are pre-release and can be renamed/repriced.
+- **Thinking-model twin, like kimi-k2.6.** Pilot story: input 30,234 / output **32,962** tok, of
+  which ~80% is reasoning (125,771 chars of `message.reasoning` vs 31,185 of story); ~10 min per
+  story at `max` effort. We keep `message.content` only; reasoning arrives in a SEPARATE field and
+  is discarded. Cross-twin comparisons carry the same regime asymmetry as the kimi leg (the Claude
+  twins were generated thinking-off).
+- **Provenance model string is the OpenRouter slug WITH the vendor prefix** (`stealth/ox-alpha`,
+  echoed from the response body), so `classify_corpus('testsets_stealth',
+  'pipeline_output.stealth.json', 'stealth/ox-alpha')` is the certification call (prefix match).
+- **Output is gated, not only input:** every response body is persisted BEFORE parsing, a
+  `finish_reason != "stop"` (truncation) is reported and counted as errored, and a 200 body that
+  carries a provider `error` object is refused. The completion line counts `.pl` files ON DISK and
+  raw responses on disk, not the loop.
+- **Key:** `OPENROUTER_API_KEY` from the env (never in the repo). Preflight without spend:
+  `GET /api/v1/key` (auth), `GET /api/v1/credits` (balance), `GET /api/v1/models` (slug, price,
+  `supported_parameters`, `reasoning.mandatory`).
+- **Pilot 2026-08-21:** `--n 1` → 1/1 OK, `classify_corpus` GREEN (`n_stories` 1, `h1_band` 3),
+  `module_boundary_check` GREEN with the leg registered in `CORPUS_DIRS`. Full 1004-seed run
+  launched the same day (`python3 -u -m agent.run_no_scope_stealth --seeds
+  prolog/kernels/rebuild_2026-06-13/never_generated_seeds.json --n 0 --workers 20`); result in
+  KNOWN_STATE 2026-08-21 (stealth leg entry) once landed. Registration order for a finished leg:
+  `python/module_boundary_check.py` `CORPUS_DIRS` → `python/shared/corpus_legs.py` `LIVE_LEGS` →
+  `python/corpus_census_check.py` `STAMPED_FILE_COUNTS` → `corpus_census_baseline.json` via
+  `--repin --cause … --authorized-by …` (operator-authorized) → the multi-leg harnesses.
+
 ## 8. Pointers
 
 - Drivers: `agent/generate_kernel_corpus.py` (`run_no_scope`), `agent/run_no_scope_gemini.py`,
-  `agent/run_no_scope_kimi.py` (Kimi kimi-k2.6 batch twin — §7b).
+  `agent/run_no_scope_kimi.py` (Kimi kimi-k2.6 batch twin — §7b), `agent/run_no_scope_stealth.py`
+  (OpenRouter stealth/ox-alpha sync twin — §7c).
 - Helpers: `agent/_pilot_ladder_strip.py` (OQ-121 strip + witness), `agent/build_never_generated_seeds.py`.
 - This build's saved records: `prolog/kernels/rebuild_2026-06-13/` (seed pool, reconcile sets,
   per-model failure lists, README).
