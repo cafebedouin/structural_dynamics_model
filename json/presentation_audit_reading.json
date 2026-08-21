@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "presentation_audit_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "af44a13a-0606-40dc-8087-a554f02ba3bf"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Presentation-Label Honesty Check (Evidence/Inference/Judgment Tagging)",
+    "topic_domain": "epistemology_of_evaluation/ai_agent_architecture/research_methodology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "decision_makers_downstream",
+      "research_integrity_of_the_field"
+    ],
+    "victims": [
+      "presentation_assemblers_who_conflate_categories"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "decision_makers_downstream",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives the assembled presentation (a report, a briefing, a model output) and must decide what weight to give each claim. Benefits when evidence, inference, and judgment are visibly and honestly tagged, because that lets them allocate scrutiny correctly; is harmed silently when tags are mislabeled, because the mislabeling is invisible from their seat unless they run the audit themselves."
+    },
+    {
+      "name": "presentation_assembler",
+      "role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Compiles the claims into the final presentation — selects, orders, and labels them. Has full discretion over how a claim is dressed (as observed fact, as derived inference, or as a judgment call) and bears no automatic cost for mislabeling unless an auditor checks. The constraint asks only: is this agent identical to the auditor who will check the labels? If yes, the audit function collapses; if no, it can function."
+    },
+    {
+      "name": "presentation_auditor",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "A distinct seat (a second reviewer, a separate agent, a different pass of the same system operating under a different role) that checks whether each claim's presented epistemic status (evidence/inference/judgment) matches its actual epistemic status. Its only structural requirement is non-identity with the assembler — it need not be blind to substrate or history, and may share both with the assembler, so long as it is not the same seat performing the same act of labeling."
+    },
+    {
+      "name": "presentation_assemblers_who_conflate_categories",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Assemblers who, whether through haste, motivated reasoning, or genuine confusion, present inference or judgment as if it were direct evidence. When a distinct auditor seat exists, this conflation gets caught and corrected — a cost to the assembler's reputation or output that would not be incurred if the assembler audited its own presentation."
+    },
+    {
+      "name": "research_integrity_of_the_field",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "The abstract collective good of a research or evaluation ecosystem in which claims are traceable to their actual epistemic warrant. Not an actor itself; benefits structurally whenever the audit function operates, without collecting anything directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a genuine and narrow problem: claims drift in epistemic status as they move from raw observation through inference to interpretive judgment on their way into a final presentation, and the assembler who did that drifting is poorly positioned to catch their own relabeling. A second, non-identical seat checking labels against actual warrant catches mislabeling that self-audit structurally cannot.",
+    "transfer_function": "Moves scrutiny cost from the downstream decider (who would otherwise have to reverse-engineer each claim's true epistemic status unaided) to the auditor seat, at the price of the assembler occasionally being caught and corrected when they mislabel.",
+    "absent_voices": "The presentation's original data sources and the domain experts whose inferences got incorporated are not present to attest whether the final label (evidence vs. inference vs. judgment) matches what they intended; their voice would clarify true epistemic status but is rarely solicited once the presentation is assembled.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the non-identity requirement disappeared and assemblers were permitted to audit their own presentations, mislabeling would go undetected at a higher rate — not because assemblers are dishonest, but because they cannot occupy a genuinely external checking position relative to their own labeling choices. Decision-makers would lose a cheap proxy for calibrating trust and would have to either trust blindly or independently re-derive epistemic status themselves.",
+    "founding_problem": "Presentations assembled by a single party tend to launder inference and judgment into the rhetorical clothing of evidence, especially under time pressure or incentive to persuade; the founding problem is that self-labeling is not self-correcting.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated by methodology critiques in evaluation science and by AI-agent architecture literature on the necessity of separating generation from verification passes (e.g. critique/generator separation patterns); this attestation comes from methodologists and system architects outside the set of assemblers whose work is subject to audit."
+  },
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the 'blindness_decomposition_kernel' — the family of possible answers to the question 'what must a reviewer be deprived of, or distinct from, in order to check a presentation honestly?' This reading answers: nothing in particular need be withheld from the reviewer (not substrate, not history); what matters structurally is that the checking seat is NOT the same seat that assembled the presentation. The function under audit is narrow and largely orthogonal to the cold-reader framing (which turns on withheld history/substrate) and to the frame-independence framing (which turns on the claim surviving reframing) — this reading isolates the transmission-hygiene failure mode where a claim's epistemic status (evidence, inference, or judgment) gets silently upgraded or downgraded as it moves from source to final presentation, and asks only whether a distinct seat checks the label against the underlying warrant.",
+    "key_agents": [
+      "presentation_assembler: sets labels, moderate power, constrained exit — bears no automatic cost for mislabeling absent audit",
+      "presentation_auditor: distinct seat, checks label against actual warrant — the entire function depends on this seat's non-identity with the assembler, not on any deprivation",
+      "decision_makers_downstream: receives the labeled presentation and allocates trust/scrutiny based on the labels",
+      "presentation_assemblers_who_conflate_categories: bear reputational/output cost when caught mislabeling by the distinct auditor seat"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.12) because, absent capture, this is close to a pure verification function: it costs a second read but transfers no rents anywhere durable — it just prevents a cheap failure mode (self-labeling drift) from propagating. Suppression is low (0.18) because nothing forces adoption of a distinct-seat audit; presentations without one simply carry more undetected mislabeling risk, which is a quality defect rather than a coercively enforced arrangement. Theater ratio is modest and slowly rising (0.18 to 0.22) reflecting a realistic risk that 'audit' seats can become nominal (the same assembler wearing a different hat, checking a box) without genuine independence — this is the one drift worth tracking temporally, since it is the failure mode by which this reading could slide toward tangled_rope if the auditor seat becomes captured or merely ceremonial.",
+    "directionality_logic": "Decision-makers downstream and the field's research integrity are beneficiaries with low d — they gain a cheap, reliable signal without bearing the audit's operating cost directly. The assembler occupies an agenda-setting seat with moderate exit; their directionality is near-symmetric because they both benefit from a functioning field (their work is more trusted if audited) and pay a real cost when caught mislabeling. Assemblers who actually conflate categories are the narrow victim group — they bear the correction cost the audit exists to impose, but this is a cost imposed on error, not on a class of people structurally, which keeps the ε low and the classification well short of extraction.",
+    "mandatrophy_analysis": "The founding problem (self-labeling drift) remains fully live — there is no point at which claims stop needing to travel from evidence through inference to judgment, so the audit function does not become vestigial the way scaffolds or pitons do. The risk this reading names is not obsolescence but capture-by-collapse: the auditor seat ceasing to be genuinely distinct from the assembler (the theater_ratio drift modeled above). As long as non-identity is maintained, mandatrophy does not apply; if the auditor seat re-merges with the assembler seat in practice while retaining the label 'audit,' this reading would need to be re-scored as a piton (function atrophied, only the label persists).",
+    "kernel_context": "This constraint instantiates the 'presentation_audit_reading' of the blindness_decomposition_kernel — one of three distinct answers to 'what must a checking seat lack or differ in?' Sibling readings: cold_reader_reading (the checker must be blind to substrate/history — deprivation is the operative variable) and frame_independence_reading (the checked claim must survive reframing independent of who is checking — the property is in the claim, not the checker). This reading holds that neither substrate-blindness nor frame-independence is the operative variable; the only structural requirement is that the checking seat not be identical to the assembling seat. Substrate or framing knowledge may be fully present in the auditor without compromising the function, which is why this reading authors the lowest ε of the three and reads as a near-universal transmission-hygiene check rather than a coordination-with-extraction structure."
+  },
+  "omegas": [
+    {
+      "id": "non_identity_sufficiency",
+      "question": "Is mere non-identity between assembler and auditor sufficient to catch mislabeling, or does the audit also require some minimal independence of incentive (not just of seat) to be reliable?",
+      "resolution_mechanism": "Compare mislabeling detection rates across (a) distinct-seat-same-incentive audits (e.g. a colleague on the same project reviewing) versus (b) distinct-seat-distinct-incentive audits (e.g. an external reviewer with no stake in the presentation's reception).",
+      "impact": "If incentive independence matters as much as seat non-identity, this reading's claim that 'nothing in particular need be withheld, just a different seat' is incomplete — the kernel would need a fourth reading isolating incentive structure specifically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether seat non-identity alone suffices, or incentive-independence is a hidden second variable."
+    },
+    {
+      "id": "kernel_reading_partition_completeness",
+      "question": "Do the three readings (cold_reader, frame_independence, presentation_audit) jointly exhaust the space of structurally distinct answers to 'what must a checking seat lack or differ in,' or is there a fourth axis (e.g. temporal distance from the original claim) not captured by any of the three?",
+      "resolution_mechanism": "Attempt to construct a checking failure mode that is caught by none of the three readings' mechanisms (non-identity, substrate-blindness, frame-independence) to test for a residual case.",
+      "impact": "If a residual failure mode exists, the kernel_id blindness_decomposition_kernel needs a fourth sibling reading; if not, this reading can be treated as closing the partition alongside its siblings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the three-reading decomposition of the kernel is exhaustive."
+    },
+    {
+      "id": "auditor_seat_capture_detection",
+      "question": "How would one detect, from outside, whether a nominally distinct auditor seat has quietly re-merged with the assembler seat (same person under a different hat, or a rubber-stamp second pass)?",
+      "resolution_mechanism": "Track disagreement rate between assembler-proposed labels and auditor-confirmed labels over time; a disagreement rate trending toward zero without a corresponding improvement in assembler accuracy is evidence of capture.",
+      "impact": "If capture is occurring, the theater_ratio is understated and the constraint is drifting toward piton (function atrophied, audit label retained as performance) rather than remaining a stable low-extraction rope-adjacent check.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Detecting quiet collapse of auditor non-identity into de facto self-audit."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.03
+  },
+  "network": {
+    "affects_constraints": [
+      "cold_reader_reading",
+      "frame_independence_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings decomposing the natural-language concept 'blindness as the operative variable for honest evaluation' (kernel_id: blindness_decomposition_kernel). cold_reader_reading holds that the checker's ignorance of substrate/history is the operative variable. frame_independence_reading holds that the claim's survival under reframing (a property of the claim, not the checker) is operative. presentation_audit_reading (this story) holds that neither is operative — only non-identity between assembler and auditor is structurally required, and substrate/framing knowledge may be freely present in the auditor. The three readings have different ε (this one is lowest, functioning near-mountain/rope), different beneficiary/victim structures, and are linked here rather than merged, per the ε-invariance principle."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "cold_reader_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "frame_independence_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "checker_non_identity_is_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "substrate_and_framing_knowledge_are_immaterial_to_the_check",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "self_audit_as_default_practice",
+    "drift_state": {
+      "moment": "contemporary_multi_agent_evaluation_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "decision_makers_downstream",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "blind_reviewer_jurisdiction_2026_20260820_211650"
+  }
+}

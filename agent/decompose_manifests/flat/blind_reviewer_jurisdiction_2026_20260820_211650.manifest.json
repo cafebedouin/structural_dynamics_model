@@ -1,0 +1,240 @@
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Epistemology of Evaluation / AI Agent Architecture / Research Methodology",
+  "family_id": "blind_reviewer_jurisdiction_2026",
+  "topic_summary": "A researcher builds a tool-restricted LLM sub-agent intended to be a 'blind' reviewer, discovers the platform injects project context through unenumerated channels regardless of tool restrictions, and uses that failure to argue that 'blindness' decomposes into three independent variables — substrate access, project framing, and negotiation history — each gating a different evaluative function. The essay is structured around an unrun experiment (the 'firing condition') and a series of contaminated, confounded, or single-operator observations offered explicitly as hypotheses rather than results.",
+  "extraction_summary": {
+    "entity_count": 7,
+    "claim_count": 9,
+    "tension_count": 4,
+    "mechanism_count": 5,
+    "absence_count": 4,
+    "key_entities": [
+      "The author/operator (single human, sole ruler of decisions)",
+      "The sub-agent reviewer (tool-restricted, stateless per-session LLM instance)",
+      "The harness/platform (injects project rules, memory index, git status into every spawned sub-agent; no opt-out as of Aug 2026)",
+      "The repository substrate (papers, audit directories, issue tracker, session log, rule files)",
+      "The always-loaded rule file (functions as a 'promotion channel' lifting witnessed defects into standing rules)",
+      "The negotiating reviewer (five-round loop instance that waived a known defect at round four)",
+      "The fixer instance (same-kind worker as reviewer, source of new defects in the fix pass)"
+    ],
+    "key_tensions": [
+      "Tool-level restriction (designed blindness) vs platform-level context injection (undesigned sight) — the central discovered fracture",
+      "Detection vs retention of detection — a defect can be found, named, and then rationally waived rather than forgotten",
+      "Compressible jurisdiction (reduces to a checklist) vs residual jurisdiction (resists compilation) — unresolved due to a confound with presenter improvement",
+      "Payload quality vs payload availability — the better an incident, the more likely its lesson is already promoted into universal context, structurally burning the cleanest test material"
+    ],
+    "key_mechanisms": [
+      "Context injection: harness auto-loads project rule file, global rule file, memory index, git status block, agent definitions into every sub-agent spawn",
+      "Promotion channel: the always-loaded rule file lifts witnessed defects into standing rules, anti-correlating payload quality with payload availability",
+      "Waiver dynamic: accumulated agreement in a negotiation history raises the cost of re-raising an already-dispositioned finding",
+      "Checklist compilation: repeated outside-reader amendment patterns (shape/record/reviver) become an internally-runnable rule, shrinking the outside seat's marginal contribution",
+      "Filename-channel leakage: untracked filenames (payload_fire.md / payload_decline.md) disclose the partition of a test space without disclosing content, evading both tool restriction and content-level blinding"
+    ],
+    "key_absences": [
+      "No base rate: the audit apparatus never logs 'caught nothing,' since audits are written only when something is already suspected — an unreachable falsifying branch",
+      "No firing-condition experiment run: the 2x2(x2) cell design (substrate x framing x history, with clean no-amendment controls) is specified but not executed",
+      "No accepted-instruction denominator: five refusals were logged as real defects, but compliant (non-refusing) instructions were never audited, so the refusal hit-rate is unknowable",
+      "No independent test population: clean payloads can only be drawn from incidents not yet promoted into standing context, so performance on high-stakes novel failures is extrapolation"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "blindness_decomposition_kernel",
+      "human_readable": "What a Reviewer's 'Blindness' Actually Consists Of (Contested Kernel)",
+      "structural_delta": "The shared commitment that 'a reviewer should lack something in order to be useful' is read differently depending on which deprivation is taken to be doing the work — substrate, framing, or history — and each reading licenses a different instrument, a different failure mode, and a different set of victims (the thing the reviewer fails to catch).",
+      "primary_observable": "Which column of the substrate/framing/history table a given design holds absent vs present, and which evaluative function (cold-reading fidelity, frame-independence, presentation audit) that configuration can or cannot perform",
+      "epsilon_bin": "mod",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "the_operator_who_gets_to_choose_which_reading_to_build",
+      "victim": "whichever_evaluative_function_the_chosen_reading_cannot_perform",
+      "downstream_of": [],
+      "feeds_into": [
+        "termination_and_falsifiability_of_review_loops"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Kernel: the single contested commitment ('deprivation makes a reviewer useful') sustains multiple individually-holdable, structurally distinct readings; see commitment_system_recognition."
+    },
+    {
+      "claim_id": "termination_and_falsifiability_of_review_loops",
+      "human_readable": "Endogenous Termination and the Unreachable Falsifying Branch",
+      "structural_delta": "A same-kind reviewer/fixer loop has no guaranteed stopping point absent an explicit rule (threshold, monotonic measure, round cap), and separately, an audit apparatus that only writes records when something is suspected can never produce a 'caught nothing' observation — both are structural absences of a stopping/falsifying signal, independent of which blindness-reading is chosen",
+      "primary_observable": "Presence or absence of an explicit acceptance threshold/monotonic measure/round cap in a review-fix loop; presence or absence of any logged null result ('audit found nothing') in the historical record",
+      "epsilon_bin": "high",
+      "hypothesis": "snare",
+      "beneficiary": null,
+      "victim": "whoever_relies_on_the_loop_or_audit_trail_to_signal_completion_or_safety",
+      "downstream_of": [
+        "blindness_decomposition_kernel"
+      ],
+      "feeds_into": [],
+      "centrality_score": 3,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Passes §3 independence: distinct observable (loop/termination dynamics and null-result logging) from the substrate/framing/history table; causally downstream in that any reading of the kernel still needs a stopping rule and still suffers the same missing-denominator problem. High ε — this is close to a universal defect in self-referential verification apparatus, not specific to one reading."
+    },
+    {
+      "claim_id": "promotion_channel_anticorrelation",
+      "human_readable": "The Promotion Channel: Payload Quality Anti-Correlates with Payload Availability",
+      "structural_delta": "A mechanism whose designed function is to lift witnessed defects into standing, always-loaded context structurally and systematically burns the best future test cases for any reviewer downstream of that context — this is a property of the promotion mechanism itself, not of which blindness-reading is instantiated or of loop termination",
+      "primary_observable": "Fraction of top candidate test payloads found already named in always-loaded rule files, memory files, or recent commit subjects (observed: 7 of 8)",
+      "epsilon_bin": "mod",
+      "hypothesis": "piton",
+      "beneficiary": "future_workers_protected_from_repeating_known_incidents",
+      "victim": "the_validity_of_any_test_designed_to_check_whether_the_protection_worked",
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: distinct observable and real independent structure, but lower centrality than the two selected axes; substantially explained as a downstream corollary of the kernel's 'framing' reading (the promotion channel IS project framing) once that reading is generated, and budget favors the higher-centrality termination/falsifiability axis."
+    },
+    {
+      "claim_id": "transmission_audit_of_evidence_to_decision",
+      "human_readable": "Auditing the Grammar of Claims in Transit (Evidence vs Inference vs Judgment)",
+      "structural_delta": "A distinct evaluative function that requires no deprivation at all — only non-identity with the assembler — checking whether a presentation's claims are grammatically marked as evidence, inference, or judgment matching what they actually are, independent of the decider's authority to rule",
+      "primary_observable": "Count of sentences in a decision memo whose evidentiary/inferential/judgmental marking mismatches their epistemic status",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": "the_decider_who_receives_an_honestly_labeled_presentation",
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [],
+      "centrality_score": 0,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: the essay itself flags this as explicitly NOT a blindness result ('needs no particular deprivation... needs to not be the assembler'), marking it outside the kernel's boundary; zero centrality edges to selected axes; genuinely independent but the essay's own framing positions it as a boundary marker rather than a load-bearing structural axis."
+    }
+  ],
+  "generation_sequence": [
+    {
+      "claim_id": "cold_reader_reading",
+      "kernel_id": "blindness_decomposition_kernel",
+      "reading_id": "cold_reader_reading"
+    },
+    {
+      "claim_id": "frame_independence_reading",
+      "kernel_id": "blindness_decomposition_kernel",
+      "reading_id": "frame_independence_reading"
+    },
+    {
+      "claim_id": "presentation_audit_reading",
+      "kernel_id": "blindness_decomposition_kernel",
+      "reading_id": "presentation_audit_reading"
+    },
+    "termination_and_falsifiability_of_review_loops"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "promotion_channel_anticorrelation",
+      "structural_delta": "Promotion mechanisms structurally burn the best test payloads for any downstream reviewer",
+      "hypothesis": "piton",
+      "deferral_reason": "Substantially subsumed by the framing_reading's expansion (the rule file IS the framing being tested for); lower centrality than selected axes"
+    },
+    {
+      "claim_id": "transmission_audit_of_evidence_to_decision",
+      "structural_delta": "Auditing claim-grammar in transit requires non-identity with the assembler, not deprivation",
+      "hypothesis": "rope",
+      "deferral_reason": "Essay explicitly marks this as outside the deprivation thesis; zero graph centrality; retained as omega material"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_firing_condition_unrun",
+      "description": "The essay's own decisive experiment — a full substrate x framing x history cell design with clean no-amendment controls and third-party blind scoring — has not been run. Every reading generated here is therefore a hypothesis about what would differ, not a measured difference. This bounds all three kernel readings simultaneously.",
+      "source": "Explicit author statement: 'None of this has been run... I can tell you the functions differ and I cannot tell you by how much.'"
+    },
+    {
+      "id": "omega_confound_history_instance_draw",
+      "description": "The Section One comparison (five-round negotiated loop vs fresh instance) confounds history, instance identity, and random draw in a single unpartialled comparison. The frame_independence and cold_reader readings both draw on this evidence; neither can currently be credited beyond 'reachability of the decline branch demonstrated.'",
+      "source": "Author's own 'Altitude' paragraph in Section One"
+    },
+    {
+      "id": "omega_checklist_confound",
+      "description": "Whether the outside-seat's jurisdiction contains a genuine incompressible residue (supporting presentation_audit_reading and frame_independence_reading as distinct from a cheaper checklist) is confounded with presenter improvement post-checklist-adoption. The specific control (inside-loop reviewer running the same checklist vs outside reviewer, same presentations) has not been run.",
+      "source": "Section Two, explicit confound admission"
+    },
+    {
+      "id": "omega_missing_base_rate",
+      "description": "The audit apparatus has never logged a 'caught nothing' result because audits are written only when something is already suspected. This affects the termination_and_falsifiability axis directly and undermines confidence in any reading's claimed detection rate.",
+      "source": "Section 'Sorted by what I actually know', Open bullet"
+    },
+    {
+      "id": "omega_declined_third_pattern_instance",
+      "description": "The author identifies a case that fits a previously-documented two-instance pattern (a defensible criterion applied by everyone, never articulated) but deliberately declines to count it as a third instance, on the grounds that a self-confirming pattern search has stopped being falsifiable. This is itself a methodological move relevant to how seriously to weight any of the three kernel readings, but is not itself a reading or axis.",
+      "source": "Section 'And a case I'm deliberately not counting'"
+    },
+    {
+      "id": "omega_transmission_audit_excluded",
+      "description": "The evidence-to-decision transmission audit (Section Three) is explicitly and self-consciously excluded by the author from the deprivation thesis. Deferred as an axis; retained here because it marks the outer boundary of what the kernel's readings can explain — a reviewer function that requires positional non-identity with the assembler, not any of the three deprivations.",
+      "source": "Section Three, 'This is not a blindness result and I want to be plain about that'"
+    }
+  ],
+  "commitment_system_recognition": {
+    "kernel_description": "The shared commitment that a reviewer's usefulness can derive from what it lacks — the assumption, held by the author before the essay's narrative and still held after it, is that 'the reviewer should be deprived of something.' What differs is what deprivation is taken to be doing the load-bearing work.",
+    "authority_description": "The operator's own design intent, checked against what the platform actually delivers (verified byte-accurately against ground truth, e.g., commit subjects) rather than trusted on the reviewer's self-report — authority to adjudicate which reading is instantiated rests on empirical channel-enumeration, not on stipulation.",
+    "drift_status": "partial",
+    "candidate_pattern": "uncertain",
+    "is_contested_kernel": true,
+    "kernel_id": "blindness_decomposition_kernel",
+    "readings": [
+      {
+        "reading_id": "cold_reader_reading",
+        "commitment": "Blindness means absence of negotiation history only; the reviewer should have the project's standing framing (rule files, categories) because that is what the *next real worker* will also have. The target being simulated is not total ignorance but the next worker's actual starting condition.",
+        "authority_grounding": "Fidelity to the system's actual handoff conditions — a simulation is valid only if it matches what a genuine successor instance would receive",
+        "sibling_readings": [
+          "frame_independence_reading",
+          "presentation_audit_reading"
+        ],
+        "expected_structural_delta": "Injected project context is not contamination under this reading — it *raises* fidelity. Victim set is empty or near-empty; this reading's constraint is closest to a rope (coordination device) rather than a snare. What the essay built accidentally serves this reading well."
+      },
+      {
+        "reading_id": "frame_independence_reading",
+        "commitment": "Blindness means absence of the project's framing itself — rule files, categories, the rules that define what counts as a finding — because the rules *are* the frame, and a reader handed the standing rules has already been told what to look for. This reading requires the deepest deprivation of the three.",
+        "authority_grounding": "An external, frame-independent vantage point — legitimacy comes from evaluating the work by criteria not supplied by the work's own authors",
+        "sibling_readings": [
+          "cold_reader_reading",
+          "presentation_audit_reading"
+        ],
+        "expected_structural_delta": "Injected project context is fatal under this reading — the instrument built could not perform this function at all, full stop. Victim is whatever category error or unstated-selection-rule problem only becomes visible from genuinely outside the frame (the essay's own governing example: 'an inventory assembled under an unstated selection rule reads as complete'). Highest ε of the three readings; closest to snare, since the framing quietly forecloses detection while looking like neutral setup."
+      },
+      {
+        "reading_id": "presentation_audit_reading",
+        "commitment": "Blindness (in the substrate/history sense) is not the operative variable at all for this function; what matters is non-identity with the assembler of the presentation, checking whether claims are honestly labeled as evidence/inference/judgment on their way to a decider. Either substrate or framing may be present.",
+        "authority_grounding": "Positional independence from authorship of the artifact under review, not epistemic deprivation",
+        "sibling_readings": [
+          "cold_reader_reading",
+          "frame_independence_reading"
+        ],
+        "expected_structural_delta": "No particular deprivation required; the failure mode it catches (claims acquiring the wrong epistemic clothes in transit) is orthogonal to substrate/framing/history entirely. This reading, if generated, would show the lowest ε and function as a mountain-adjacent check (near-universal transmission hygiene) rather than a rope or snare — included as a reading because it is a genuinely distinct way of answering 'what should the reviewer lack,' with the answer being 'nothing in particular, just a different seat.'"
+      }
+    ],
+    "axiom_contradictions": [
+      {
+        "reading_a": "cold_reader_reading",
+        "reading_b": "frame_independence_reading",
+        "basis": "cold_reader_reading holds that supplying standing project framing to the reviewer is correct and necessary (it raises fidelity to the successor's real starting condition); frame_independence_reading holds that supplying that same framing is the specific and sufficient condition that destroys the check's validity ('a reader handed my standing rules is a reader I have already told what to look for'). No single coherent design criterion can treat injection of the rule file as simultaneously validity-preserving and validity-destroying for the same artifact under review; a framework must pick one governing purpose for the seat, which is exactly the author's own diagnosis of the original design error."
+      }
+    ]
+  },
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 flagged on termination_and_falsifiability_of_review_loops: classified as snare with 'high' epsilon and treated as near-universal, but the essay itself repeatedly emphasizes this is drawn from a single contaminated instrument (Section Four: 'kept as a specimen... carrying no numbers and no weight beyond its shape') and a single-operator eighteen-item session. The generalization from 'this loop, this operator, unrun clean comparison' to 'same-kind reviewer/fixer loops lack endogenous termination' is the author's own hypothesis, explicitly hedged, not an established mountain-grade regularity. Recorded as omega_missing_base_rate and omega_firing_condition_unrun to bound the claim; retained as a selected axis because the essay treats it as structurally distinct and independently important, but downstream generation should preserve the hedge rather than assert the pattern as settled. presentation_audit_reading was considered for exclusion as 'not really part of the kernel' per the essay's own text, but retained as a reading (not a separate axis) because it answers the same kernel question ('what should a reviewer lack to be useful') with a structurally distinct answer ('nothing — a different seat'), which is exactly the kind of individually-holdable, non-collapsing reading §1.3-K requires; excluding it would have understated the kernel's actual reading space rather than correctly triaging it."
+  },
+  "_generation_run_id": "blind_reviewer_jurisdiction_2026_20260820_211650",
+  "_provenance": {
+    "scope_model": "claude-sonnet-5",
+    "scope_prompt_commit": "d179423dc12550308c604592b1d199a951739c4c",
+    "scope_schema_commit": "43ee9613b2ccba5f278157c4cbe534645e1f544e",
+    "persisted_at": "2026-08-20T21:16:54",
+    "axes_ceiling": null,
+    "topic": "# The Blind Reviewer\n\n### What context does to a reviewer's jurisdiction\n\n*Draft v0.3, 2026-08-20. Receipts live in the repository and are pointed at, not restated.*\n\n---\n\nI built a reviewer that couldn't see, and the platform showed me I had blinded it along the wrong\naxis. That failure is the essay — not as a cautionary tale about harnesses, but because it separated\ntwo things I had been treating as one, and the separation turns out to be the useful part.\n\nHere is the short version, before the narrative that produced it.\n\nA reviewer's usefulness can come from what it *lacks*. But \"lacks\" is not one variable. A reviewer\ncan be denied the artifacts, or denied the project's categories, or denied the history of the\nconversation that produced the draft — and these are independent. Restricting one does not restrict\nthe others. My mistake was to build an instrument that varied one and to describe it as though it\nhad varied all three.\n\n| | substrate | project framing | negotiation history |\n|---|---|---|---|\n| **cold-reader simulation** needs | absent or present | **present** — the later reader will have it | **absent** |\n| **outside-the-framing check** needs | absent | **absent** — the rules *are* the frame | absent |\n| **presentation audit** needs | either | either | absent from *this* assembly |\n| what I actually built | absent | **present** (injected) | absent |\n\nRead the last row against the second: the instrument I built could not do the job I most wanted it\nfor, and could do a different job better than I'd designed for. Both facts were invisible until\nsomething varied one column without the others.\n\n---\n\n## How the columns came apart\n\nI do research with language-model instances as the workers. They don't persist — each arrives with\nno memory of the last — and the substrate is a repository rather than a conversation. Over a few\nmonths it has accumulated three papers, a couple hundred audit directories, an issue tracker running\nto a few hundred open questions, a dated session log, and a small file of rules loaded into every\nsession. One human, which is me. The subject of the work is how claims come to look\nbetter-supported than they are, which puts the apparatus under permanent suspicion of being an\ninstance of its own subject.\n\nI wanted a reviewer that couldn't cheat. Not smarter — blinder. I spawned a sub-agent with a\nrestricted tool list: no file reads, no shell, no grep. It would have to work from what it was\nhanded. I wrote this up as making blindness \"structurally enforced rather than depending on\ndiscipline about what gets pasted.\"\n\nThe first-use check tested exactly that. The tool probe returned\n`Error: No such tool available: Read`. Arithmetic on the other side of the control returned correct.\nTwo-sided pass.\n\nThen the reviewer volunteered something I hadn't asked about: its context had arrived pre-loaded\nwith both project rule files, a memory index, and a git status block naming four recent commits. I\nchecked the commit subjects against the log rather than taking its word — all four real, current,\nbyte-accurate, not reconstructible by an agent with only web search. The harness injects project\ncontext into every spawned sub-agent. As of August 2026 there was no setting that turned it off.\n\nBlind in tools. Sighted in context.\n\nI had restricted the channel I happened to think of. The platform delivered through channels nobody\nhad enumerated. The shape of that mistake is one I'd written a paper about: an inventory assembled\nunder an unstated selection rule reads as complete, because every item genuinely belongs. My\ninventory was *access channels*. My unstated rule was *tools are the channel worth restricting*.\n\nWhat made this productive rather than merely embarrassing is that the injection hit one column and\nnot the others. The cold-reader job survived — arguably improved, since the future reader I want to\nsimulate *is* a fresh instance that will have the rule file loaded, so injecting it raises fidelity.\n\"Cold reader\" is a bad name for that target and I'll keep it only because it's the term of art:\nwhat's being simulated is not total ignorance but the *next worker's actual starting condition* — no\nlived history of this session, but whatever standing context the system routinely hands everyone.\nThe outside-the-framing job did not survive at all, because the rule file *is* the framing. A reader\nhanded my standing rules is a reader I have already told what to look for.\n\nOne agent, two jobs, and I had never noticed they were two, because from inside the design they\nlooked like a single property: \"doesn't have the repo.\" That property decomposes.\n\n**So the claim, stated as narrowly as I can state it:**\n\n> Some evaluative functions are available only to a worker denied specific context, because that\n> context is what would let the worker close the gap without noticing it had closed anything.\n\nNote what this does *not* say. It does not say blind reviewers are better reviewers, and it does not\nsay the seat produces superior detection. It says the functions are different, and that a\nconfiguration which supplies context cannot perform the function whose precondition is that\ncontext's absence. That much follows from what the reader has, not from how well the reader reads.\n\n**The firing condition.** I'll name it here so the callback later isn't unmoored. Hold the artifact\nfixed and vary the columns: a reviewer with no substrate and no project framing; one with both but\nno negotiation history; one with all three; one with framing but no substrate. Multiple draws per\ncell, because instance variation is real. Amendments scored by a third party who doesn't know which\ncell produced them. The comparison that matters most is the last against the first — framing held,\nsubstrate varied. If findings don't move across those cells, the seat is doing nothing and\neverything below is a story about careless drafting.\n\nAnd the part I had left out, which is the part that decides whether the experiment is worth running:\n**clean presentations mixed in, where the correct output is no amendment at all.** Without those, a\nreviewer that always finds something scores identically to one that discriminates, and I would have\nbuilt an instrument whose falsifying branch cannot fire — the exact defect this essay spends its\nlast section on. A control demonstrates discrimination, not detection; planting the target only\nshows the thing can fire.\n\n**None of this has been run.** Until it is, I can tell you the functions differ and I cannot tell\nyou by how much.\n\nWhat follows is four observations from different parts of the apparatus. Not independent lines —\none and four both concern iterative review, two and three both concern outside position — and I'd\nrather say so than invite the objection.\n\n---\n\n## One: detection is not retention of detection\n\nA plan went through a genuine five-round review loop — real revisions each round, not a scripted\nwalk to convergence — and the reviewer declared it ready. I handed the converged text to a\nbrand-new instance with no negotiation history. It came back saying another round was needed, with\ntwo findings.\n\nThe first: a sentence defining the comparator set was self-contradictory, using a phrase and a count\nthat denote different sets. **This one is weaker than it looks and I want to say why.** Without the\nsentence in front of you, you cannot distinguish \"the fresh reviewer caught a real inconsistency\"\nfrom \"the fresh reviewer failed to infer an intended shorthand that the negotiating reviewer had\ncorrectly learned.\" Both are consistent with what I've told you. Context causing accommodation and\ncontext causing competence produce the same observation here.\n\nThe second finding does discriminate, and it's the reason this section exists. A file the plan\nleaned on three times had never been added to its substrate list. That gap was found **by the\nnegotiating reviewer itself, at round four** — and explicitly waived as \"non-blocking, carried,\"\nbefore it declared the plan ready.\n\nSo the phenomenon is not that a reviewer failed to see something. It saw it, named it, classified\nit, and then stopped treating it as live. Effort-based explanations don't reach a finding that was\nmade and then released. Neither does the competence account: you cannot correctly-interpret-away a\ndefect you have already written down as a defect.\n\nI called this \"charity\" in an earlier draft and I'm keeping the word as a *description of the\nfunction*, with the flag that it is not a mechanism. I don't know the mechanism. Candidates,\nall live: accumulated agreement raises the bar for re-raising something already dispositioned;\nrecency in the conversation outweighs the distant original text; a fine-tuned disposition to accept\na user's assertion that a matter is settled. These are testable and I haven't tested them. One of\nthem has a cheap repair that doesn't require a fresh instance at all — instruct the *same* reviewer\nto re-read the converged text from scratch, ignoring the history — and if that works, the seat is\nnot the active ingredient. That's worth someone running before they build what I built.\n\n**Altitude.** The two reads differ in history, in instance, and in draw — three confounds in one\ncomparison, unpartialled. I'm not claiming the fresh seat is better. What this establishes is\nnarrower: a fresh-read step whose only possible verdict was \"looks fine\" would be a ritual wearing a\ncheck's costume, and this pair shows the decline branch is reachable. Reachability survives the\nconfounding. Discrimination does not.\n\nThe practical consequence I did take: the fresh-eyes pass became a mandatory production step rather\nthan a validation exercise. It isn't testing whether the loop works. It asks whether the thing being\nhanded over still carries gaps — a property of the deliverable, not of the process.\n\n---\n\n## Two: part of the jurisdiction compiles into a checklist, and I can't tell you how much\n\nBefore any of the agent tooling existed, I ran eighteen held decisions through a session with three\nparties: an instance with repo access assembling evidence and a suggested ruling per item, a second\ninstance following the session but unable to touch the repository, and me ruling.\n\nAcross all eighteen, the reviewing instance's amendments never touched the evidence. Counts, greps,\ncontrols held every time. But the first three rulings were each amended, and each on the same three\naxes:\n\n- **shape** — is the decision living in the right entry? No live rider hung on a closing entry; a\n  general principle recorded as a principle rather than patched in locally.\n- **record** — how will this read cold, later? Stale baselines reconciled; \"zero true positives\"\n  distinguished from \"never tested.\"\n- **reviver** — what does this leave for whoever picks it up? Passive triggers declared, sequencing\n  against other open work recorded, sibling claimants named.\n\nThe regularity was strong enough that we adopted it mid-session: the assembling instance ran\nshape/record/reviver over each item *before* presenting. After that the amendments changed\ncharacter — they stopped falling into the three buckets and became item-specific.\n\nPart of what the outside reader contributed was therefore compressible into a rule, and once\ncompressed could be run from inside the loop. That part was never about the seat. It was a check the\nsender knew how to perform and wasn't performing.\n\nThe residue is what carries the argument, and here I owe you both a number I don't have and a\nconfound I missed until someone else pointed at it.\n\nThe number: I can tell you item-specific amendments kept arriving after the checklist landed. I\ncannot tell you how many, or what fraction of the total, or whether each genuinely resists reduction\nto a rule rather than merely not having been reduced yet.\n\nThe confound is worse, because it survives the number. Adopting the checklist changed what the\n*presenter* did. Better presentations arrive, so the amendments that follow are different — and\n\"different amendments after the checklist\" is exactly what you'd see whether or not the outside seat\nwas supplying anything non-compressible. I read that shift as evidence of a residue. It is equally\nconsistent with the presenter having improved and the reviewer contributing nothing the checklist\ncouldn't have. The control that separates them is specific: an inside-loop reviewer running the same\nchecklist, against an outside reviewer, on the same presentations. If the outside one still produces\nitem-specific amendments the inside one doesn't, the residue is real. That has not been run either,\nand until it is, this section is an observation I have interpreted, not a result.\n\nRead at its honest altitude: one operator, one session, eighteen items, no denominator. It\nestablishes that *some* of the jurisdiction compiles and *some* doesn't. The relative sizes are open,\nand if the residue turned out to be small the right conclusion would be \"write the checklist,\" not\n\"build the seat.\"\n\n---\n\n## Three: checking what reaches the decider\n\nAt one of the eighteen items the ruling was purely mine — whether to circulate a document, which\nturns on audience, timing, and what I'm prepared to defend. Nothing about the evidence settles it.\n\nThe reviewing instance stated its boundary before doing anything: it could check whether the framing\nbeing handed to me was accurate, not whether I should sign. Then it flagged one sentence in the\nassembled presentation as a quality claim wearing a jurisdictional argument's clothes — a sentence\nthat, had it stayed, would have made a judgment call look like a finding on its way into my hands.\n\n**This is not a blindness result and I want to be plain about that.** The reviewer here needs no\nparticular deprivation. It needs to not be the assembler. What it audits is the transmission from\nevidence to decision, and the failure it catches is that a presentation, assembled in good faith,\nquietly acquires the grammar of evidence on the way up. Nobody lies. The claims just put on the\nwrong clothes in transit.\n\nI'm keeping it in an essay about deprivation because it marks the boundary of the thesis. Three of\nthe four observations here are about what a reader lacks. This one is about where a reader sits, and\nit's the cheapest to transplant: if you have anything resembling a decision memo, the check to run\nbefore it lands is whether each of its claims is presented as evidence, inference, or judgment, and\nwhether that matches what it is.\n\n---\n\n## Four: the fixer is a source of rounds\n\n*From a contaminated instrument, kept as a specimen.*\n\nIn one measured round, the fix pass closed most of the reviewer's findings while opening roughly as\nmany new ones — some of them defects the fixing instance itself introduced, including a fix-label\nattached to something that wasn't a fix. **The source is the primed reviewer's own transcribed\nreport, and that instrument was holding its own test specification in its system prompt at the time,\nso this is a contaminated observation carrying no numbers and no weight beyond its shape.**\n\nThe shape suggests a hypothesis worth testing rather than a finding: where the fixer is the same\nkind of worker as the reviewer, fixes generate reviewable changes, and the loop has no *guarantee*\nof endogenous termination absent an explicit stopping rule — an acceptance threshold, a monotonic\nmeasure, a round cap. If you have not set one of those, you have not set a budget; you have set an\nopen-ended one. Whether a clean run would show the same is unknown, and I have no basis for\nguessing.\n\n---\n\n## The channels, and why grepping doesn't reach them\n\nLooking for context arriving through unenumerated routes, I found six. Four are findable: the\nproject rule file, a global rule file, a memory index plus dozens of sibling memory files pulled in\nper-turn on content match, and a live git status block. A fifth was project-scoped agent definitions.\n\nThe sixth is the one worth the price of admission. The git status block includes untracked\nfilenames. Two were `payload_fire.md` and `payload_decline.md`. No content leaked — the payloads\nwere blinded, stripped of dates, identifiers and paths. What leaked was that the test had a fire\nside and a decline side. Two instances noticed independently.\n\nI want to be exact about what that reveals, because it's easy to overstate. The filenames disclose a\n*partition of the test space*, not the semantics of the test — a reviewer learning there are two\npayload classes does not thereby know what it's being asked to do. But a partition is enough to\nchange how a reviewer reads: knowing one of these is meant to be declined is a prior, and it arrives\nbefore the payload does. **An injection channel can leak the shape of a test without leaking any of\nits content**, which puts it out of reach of payload blinding and content-level grepping alike. I\ndon't have a general fix. What worked was moving the run to a path outside the project, which closes\npath-keyed channels structurally rather than by instruction — the difference between not having the\nkey and promising not to use it.\n\nThen the finding I'd most want someone to check against their own setup. I needed payloads the\nreviewer couldn't have seen. Sweeping the audit directories turned up thirteen candidates. **Seven\nof the top eight were burned** — named in the always-loaded rule file, or in a memory file, or in\nrecent commit subjects.\n\nThat isn't luck. The always-loaded file is a *promotion channel*: its function is to lift witnessed\ndefects into standing rules so future workers don't repeat them. So the better an incident was — the\nmore it taught — the likelier its lesson has already been promoted into the context every worker\nreceives, and the worse it serves as a test case. The system exerts a structural pressure toward\nanti-correlation between a payload's quality and its availability. Seven of eight is consistent with\nthat pressure; it doesn't measure the correlation, and I'm not claiming it does.\n\nThe conditions that produce it are specific enough to check for: lessons promoted into universal\ncontext, test cases drawn from the same incident population, lessons retaining identifying detail,\nand no independent test population. Where those hold — and they hold in a lot of places with a\nlessons-learned channel — your best material is in your onboarding doc, and your onboarding doc is\nin everyone's head. The two facts are the same fact. Where they don't hold, you have an escape I\ndon't.\n\nThere's an epistemic consequence I should state rather than leave implied. If clean payloads can\nonly be drawn from incidents that weren't worth promoting, then the instrument gets tested on the\nlow-signal end of its own population, and its performance on novel high-stakes failures is\nextrapolation. I don't have a way around that. It is a real bound on how much any of this can\nvalidate.\n\nI didn't edit the rule file to unburn the test, which was tempting and would have been a bad trade:\ngiving up a live defense against a witnessed failure for a cleaner control on an instrument I hadn't\nshown works.\n\n---\n\n## Sorted by what I actually know\n\nRather than scatter caveats, here is the whole epistemic position in one place.\n\n**Observed.** Tool restriction did not restrict context, and the injected commits verified\nbyte-accurate against ground truth. A fresh read returned two findings on text a five-round loop had\nmarked ready. One of those findings had been made and waived by the negotiating reviewer at round\nfour. Shape/record/reviver captured the first three amendments and stopped capturing them once\nadopted. Test-shape leaked through untracked filenames. Seven of eight top candidate payloads were\nburned. Five reviewer refusals were each a real defect.\n\n**Hypotheses the observations motivate.** That accumulated history makes an already-dispositioned\ndefect cheap to leave alone. That context reallocates scrutiny rather than destroying visibility —\nwhich the waiver fits better than a blindness account does, since nothing was invisible. That\nsame-kind reviewer/fixer loops lack endogenous termination. That the residue of the jurisdiction\nresists compilation.\n\n**Open.** Whether the seat effect exists at any measurable size — the firing condition, unrun.\nWhether context, framing, or history is the operative variable; the case I have varies all three at\nonce. Whether any of this survives a second operator, a different disposition, or a deadline. And\nthere is no rate available anywhere in the record: the apparatus that tracks whether my verification\nmachinery catches anything has never once logged a \"caught nothing,\" because audits get written when\nsomething is already suspected. A falsifier with no decline in its history licenses nothing in\neither direction, so the instrument prints a refusal instead of a number. That refusal is the correct\noutput and it is not a good one.\n\n**And a case I'm deliberately not counting.** The failure I opened with fits a pattern I've\ndocumented twice — a defensible criterion applied by everyone and never articulated — and it arose\nin a different arc, which is the bar I set for admitting a third. I'm still not counting it. A\npattern that keeps finding new members in the arcs where its author is looking has stopped being\nfalsifiable, and the count staying at two is worth more than the count going to three. Naming a\nfitting case and declining to count it is the only way I know to make restraint visible; every other\nkind leaves no artifact at all.\n\n---\n\n## What I'd want someone else to take\n\nFive times during this work the reviewer refused an instruction, and every refusal was a real\ndefect: a room it couldn't reach, a registry that couldn't be refreshed mid-session, a canary its own\nsystem prompt had already named, a pass criterion no run could satisfy, and an instruction\ncontradicting the spec it was meant to follow. All five sat in prompts written by the instance that\nhad, days earlier, documented the rule they violated.\n\nRefusal here is not obstruction. It's an instrumentation event — a recorded mismatch between what\nwas asked and what the task's actual world can satisfy. Five of them, none caught by the sender\nre-reading. For this class of defect, sender re-reading is a weak check: not because self-review\nnever works, but because the failure is one the sender's own context makes hard to see. It's the\nsame seat twice.\n\nThen the part that makes this a worse paragraph than it reads as. *Every refusal was a real defect*\nis not a hit rate, because I logged refusals and did not log acceptances. Refusals are salient;\ncompliance is invisible. Somewhere in the instructions that were accepted without complaint there\nmay be defects nobody has looked for, and the record cannot tell me how many, because the branch\nwhere a reviewer accepts a bad instruction produces no artifact. That is the same unreachable\nfalsifying branch I've been objecting to all essay, sitting in my most quotable paragraph. I'm\nkeeping the observation — five refusals, five real defects, none self-caught — and withdrawing any\nreading of it as a measure of how well the seat performs.\n\nSo, operationally: when you run agents against a substrate you control, **enumerate what arrives,\nnot what you granted.** Permissions are one access surface. Injected rules, memory retrieval,\nrepository state, agent definitions, paths and filenames are others, and only one of those lists is\nwritten down anywhere you can read it. Spawn the thing and ask it what it can see, then check its\nanswer against ground truth — a report and a recall are byte-identical, and so, for that matter, are\na recall and a fabrication.\n\nAnd then the harder thing, which is not a security exercise. If a reviewer's value depends on not\nknowing the project well enough to repair its omissions in imagination, then giving it more context\ndoes not improve the instrument. It changes which instrument you have. The pressure to let it into\nthe room will be constant and will always sound like efficiency — it knows the project now, it's\nslow to get up to speed each time, just give it the context file.\n\nWhich context, though. That is the whole discipline, and it's why I can't end on a line about\nignorance in general. Look back at the table: the cold-reader job *needs* the standing rules, and\nstarving it of them would wreck it. Only the frame-independence job needs them gone. Total ignorance\nis not available anyway — the platform saw to that — and it wouldn't be the goal if it were.\n\nSo: don't give it the context you're testing against. That one, and only that one, is the\ninstrument.\n\n---\n\n*Everything above lives in a repository as dated audit directories with the runs pasted in. The\npieces I'd most like to be wrong about are the ones with no denominator, which is most of them. If\nyou run the firing condition, I'd like to hear what happened — particularly if the substrate-holding\ninstance found the same things, which would mean I've spent a month building a seat that does\nnothing a careful reader wouldn't.*"
+  }
+}

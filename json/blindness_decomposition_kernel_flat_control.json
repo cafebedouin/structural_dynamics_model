@@ -1,0 +1,286 @@
+{
+  "header": {
+    "constraint_id": "blindness_decomposition_kernel_flat_control",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "0584b054-1142-4fd6-919d-b77d71f4c9ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.38,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reviewer-Deprivation-as-Virtue Commitment (Blind Review / Blinded Evaluator Design)",
+    "topic_domain": "epistemology_of_evaluation/ai_agent_architecture/research_methodology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "journal_editors",
+      "benchmark_designers",
+      "senior_authors_with_reputation_capital"
+    ],
+    "victims": [
+      "early_career_authors",
+      "reviewers_denied_context",
+      "novel_work_outside_reviewer_priors"
+    ],
+    "vindicated_propositions": [
+      "impartiality_requires_ignorance_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "journal_editors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and enforce the blinding protocol (author identity stripped, sometimes affiliation, sometimes prior work history) and decide what a reviewer is permitted to know before rendering judgment. They administer the deprivation and can adjust its scope, but bear none of the direct cost when a blinded reviewer misjudges a paper for lack of context."
+    },
+    {
+      "name": "benchmark_designers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "In AI evaluation, design held-out test sets and blind the evaluating model (or human grader) from training data, from the target's identity, or from the scoring rubric's internal weighting, on the theory that not-knowing prevents gaming. They set what is withheld and profit reputationally when their benchmark is cited as rigorous, regardless of whether the withheld information was actually load-bearing for validity."
+    },
+    {
+      "name": "senior_authors_with_reputation_capital",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Benefit doubly from reviewer deprivation: blinding is claimed to protect them from halo-effect suspicion, while their writing style, citation patterns, and topic choice often leak identity anyway, so they retain informal recognition advantages that less-established authors lack. The deprivation regime costs them little because their signal survives blinding through other channels."
+    },
+    {
+      "name": "early_career_authors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Submit work into a review process that strips the very context (mentorship lineage, institutional resources, track record of iterating past failed replications) that would let a reviewer calibrate charitably. They cannot signal trustworthiness through channels senior authors get informally, so the deprivation lands asymmetrically on them; their only recourse is to write in a way that anticipates a maximally uncharitable, context-free reader."
+    },
+    {
+      "name": "reviewers_denied_context",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are the parties actually deprived — of author identity, of the paper's full revision history, of the benchmark's ground truth, of the reason a claim is being made. They must render a judgment under an information constraint someone else designed, and are told the constraint is what makes their judgment trustworthy, even when they suspect the missing information was exactly what they needed to evaluate correctly. They rarely get to say which deprivations were load-bearing and which were arbitrary."
+    },
+    {
+      "name": "novel_work_outside_reviewer_priors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Genuinely novel methods or claims that fall outside a blinded reviewer's trained priors are disproportionately rejected, because the deprivation regime (no author context, no field-history context) removes exactly the information that would let a reviewer distinguish 'unfamiliar and wrong' from 'unfamiliar and right.' This class of work has no seat in the room and cannot advocate for a different deprivation design."
+    },
+    {
+      "name": "methodologists_of_evaluation",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study which specific deprivations (identity blinding, outcome blinding, rubric blinding, training-data holdout) actually track validity improvements versus which are inherited ritual, and can in principle redesign the protocol — but their findings only change practice when editors or designers choose to act on them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A community of authors and reviewers agrees, before any specific case, to withhold some category of information from the evaluator, on the shared premise that an evaluator possessing that information would be more error-prone (biased, corruptible, or gameable) than one lacking it — solving a real problem where full information invites favoritism, halo effects, or reward-hacking.",
+    "transfer_function": "Moves epistemic authority away from context-rich judgment and toward context-poor pattern-matching; moves reputational and career risk from those who could supply mitigating context (mentors, affiliations, track records) onto those without alternative channels to signal trustworthiness; moves design authority over what specifically gets withheld to whoever administers the protocol.",
+    "absent_voices": "Authors and models being evaluated are almost never consulted on which deprivations are load-bearing for the specific judgment being made; novel work furthest from reviewer priors is the least able to object because it has no established community to advocate the missing context was necessary rather than an unfair handicap.",
+    "disappearance_verdict": "contested",
+    "disappearance_rationale": "If reviewer deprivation vanished overnight, some evaluation regimes would become badly gameable (benchmarks with visible ground truth, reviewers who reflexively favor known names) — real coordination function would be lost there. In other regimes the deprivation is inherited ritual with no measurable validity gain, and its removal would simply let reviewers use context they were already informally reconstructing through leaked signals; which regime any given instance is remains disputed by the parties who administer it versus the parties who bear its cost.",
+    "founding_problem": "Evaluators with full information about who or what they are judging are vulnerable to affinity bias, retaliation fear, prestige deference, and — in automated evaluation — to gaming the specific metric or ground truth they can see; some form of information asymmetry was introduced to close that vulnerability.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Editors and benchmark designers (the administering parties) attest the founding problem remains fully live and cite documented halo-effect and reward-hacking studies. Independent methodologists studying blind review efficacy report mixed results — some deprivations show measurable bias reduction, others show no detectable effect and correlate instead with rejection of unfamiliar work; this corroboration comes from outside the beneficiary set but does not resolve which specific deprivations are load-bearing in which specific evaluation."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Across peer review, benchmark design, and AI agent evaluation architectures, a recurring commitment holds that a reviewer or evaluator becomes MORE useful, not less, when deprived of certain information — author identity in double-blind review, ground truth in held-out benchmarks, training data provenance in contamination checks, full context in some 'blinded evaluator' agent designs. This story treats that shared commitment as a single flat constraint, authored from the substrate itself rather than decomposed into the several distinct load-bearing theories of WHY deprivation helps (bias prevention, gaming prevention, halo-effect neutralization, incentive alignment). Those distinct theories are visible here only as perspectival disagreement across stakeholder seats and as omegas — the flat construction deliberately does not split them into separate constraint stories or author cs_structure reading relations, per the construction-perturbation control instructions. The administering seats (editors, benchmark designers) experience the deprivation regime as a coordination mechanism they tune; the deprived seats (reviewers denied context, authors without alternative signaling channels, novel work outside reviewer priors) experience the same regime as an extraction that lands unevenly depending on who has informal channels around the formal blind.",
+    "key_agents": [
+      "journal_editors: administer and design what reviewers are deprived of (institutional/arbitrage)",
+      "benchmark_designers: design held-out and blinded evaluation protocols in AI systems (institutional/arbitrage)",
+      "senior_authors_with_reputation_capital: benefit from the deprivation regime while retaining informal signal channels around it (powerful/mobile)",
+      "early_career_authors: bear the deprivation's cost without compensating informal channels (moderate/constrained)",
+      "reviewers_denied_context: the literally deprived party, told the deprivation is what makes them trustworthy (moderate/constrained)",
+      "novel_work_outside_reviewer_priors: disproportionately misjudged because the deprivation removes exactly the disambiguating context (powerless/trapped)",
+      "methodologists_of_evaluation: analytical observers studying which deprivations are load-bearing (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.42 at interval end) rather than high because a genuine coordination function is present and documented in some domains (real halo-effect and reward-hacking reduction) — this is not a pure extraction story. Suppression is moderate (0.38): the deprivation is actively administered and enforced (protocols audit for identity leakage, benchmarks are refreshed to defeat memorization) but reviewers are not coerced into participating in the sense a snare's victims are coerced; the cost is asymmetric distribution of an otherwise defensible mechanism. Theater ratio rises over the interval (0.22 to 0.40) as the flat construction's central ambiguity plays out empirically: more and more deprivation protocols persist and are defended even as methodologists document that specific deprivations (e.g., stripping affiliation once citation style already leaks it) produce no measurable validity gain — the ritual maintenance of blinding outpaces its demonstrated function. Accessibility collapse (0.5) and resistance (0.55) sit at mid-range because workable alternatives to blind review and blind benchmarking exist and are actively debated (open review, calibrated disclosure, adversarial-only holdouts) — this is not a mountain; the alternatives are suppressed by convention and institutional inertia, not by physical or logical necessity.",
+    "directionality_logic": "Journal editors and benchmark designers sit near the beneficiary end: they administer the deprivation, are not themselves deprived, and collect institutional credit for 'rigor' regardless of whether the specific deprivation they designed is the one doing the epistemic work. Senior authors are declared beneficiaries because their informal signal channels (writing style, topic choice, citation network) survive blinding intact, so the deprivation costs them little while its coordination benefit (protection from the appearance of favoritism) still accrues to them. Early-career authors and novel work outside reviewer priors are declared victims because they lack those informal channels and bear the deprivation's cost without an offsetting advantage — the same formal blind that is symmetric on paper is asymmetric in effect. Reviewers themselves are payers in a different sense: they are the ones literally deprived, asked to render judgment under an information constraint they did not design and often cannot evaluate the wisdom of case by case.",
+    "perspectival_gap": "From the agenda-setter seat (editors, benchmark designers), the deprivation is a defensible, actively-maintained coordination tool: 'reviewers are deprived of X because reviewers who know X have historically been shown to err in direction Y.' From the payer seats (reviewers denied context, early-career authors, novel work), the same structure reads as an extraction that happens to be dressed in methodological language: the deprivation is enforced uniformly but its cost lands where informal compensating channels are absent. The engine should compute divergent seat classifications from these structural facts — the claim (tangled_rope) is authored because BOTH a genuine coordination function AND asymmetric extraction are present simultaneously, not because one cancels the other.",
+    "mandatrophy_analysis": "The founding problem (evaluators corrupted by full information) remains genuinely live in some sub-cases (benchmark contamination is a real, current, worsening problem) and plausibly dead or overstated in others (identity blinding when style already leaks identity). Because the flat construction does not decompose these into separate constraints, the story carries the ambiguity as a single mixed reading rather than resolving it — the founding_problem_status is authored 'contested' rather than 'live' or 'dead' precisely because collapsing the several distinct deprivation-justifications into one constraint prevents a clean verdict. This is the flat construction's known cost: a decomposed treatment would likely find at least one component reading closer to rope (contamination-prevention holdouts) and at least one closer to piton or snare (identity-stripping that no longer tracks any measurable bias reduction) — the flat single-constraint reading instead reports a blended tangled_rope, and the blending itself is the phenomenon under study by the construction-perturbation control."
+  },
+  "omegas": [
+    {
+      "id": "which_deprivation_is_load_bearing",
+      "question": "Of the several distinct things a reviewer or evaluator can be deprived of (author identity, prior work history, ground truth, training data, revision history), which specific deprivations actually reduce judgment error, and which are inherited ritual with no measurable effect?",
+      "resolution_mechanism": "Controlled studies varying one deprivation at a time (e.g. identity-blind vs identity-visible review with outcomes tracked, or benchmark variants that selectively restore one withheld signal) to isolate which withholdings correlate with validity gains versus which correlate only with increased rejection of unfamiliar work.",
+      "impact": "If most measured benefit traces to one or two specific deprivations, the remaining deprivations are closer to theater and the constraint decomposes into a rope (the load-bearing deprivation) and a piton or snare (the inert or harmful ones) rather than remaining a single blended tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether specific deprivations are load-bearing for validity or inherited ritual."
+    },
+    {
+      "id": "informal_leakage_undermines_formal_blind",
+      "question": "To what extent do informal signal channels (writing style, topic, citation network, institutional prestige) already defeat the formal deprivation for senior/established parties, making the blind's cost asymmetric by construction rather than by accident?",
+      "resolution_mechanism": "Studies measuring reviewer accuracy at guessing author identity or model provenance under nominal blinding, cross-referenced with outcome favorability for correctly-guessed high-status submissions.",
+      "impact": "High leakage would confirm the constraint is a tangled_rope with structurally embedded asymmetric extraction rather than a rope experiencing occasional failure; low leakage would support treating current asymmetries as implementation flaws rather than the constraint's core structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informal channels systematically restore the advantage the formal deprivation was meant to remove, and for whom."
+    },
+    {
+      "id": "coordination_vs_extraction_framing_choice",
+      "question": "Is 'the reviewer should be deprived of something' best understood as one continuous commitment with a shifting rationale, or as several structurally distinct commitments that colloquial language collapses into one label ('blind review')?",
+      "resolution_mechanism": "This is the ε-invariance question the flat construction is deliberately not resolving: a decomposed treatment (separate stories per deprivation-type, e.g. identity-blinding vs ground-truth-holdout vs training-data-holdout) would need to be authored and compared against this flat reading to see whether ε and classification are stable across the decomposition or whether they diverge sharply by deprivation-type.",
+      "impact": "If decomposed readings produce widely different ε and different classifications (rope for contamination-holdouts, piton or snare for stylistically-leaky identity-blinding), that confirms the flat construction here is blending genuinely distinct constraints under one label, which is exactly the scenario the ε-invariance principle says should be decomposed rather than authored flat.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the flat single-constraint construction is appropriate or masks a decomposable family."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This is the flat (undecomposed) construction of a commitment that a paired decomposition-set of reading-stories would split by what deprivation is doing the load-bearing work (e.g. bias-prevention reading vs gaming-prevention reading vs incentive-alignment reading). Per the construction-perturbation control instructions, no sibling reading files are authored here and no affects_constraints links to them are declared; this story stands alone as the control condition against which a decomposed treatment of the same substrate would be compared."
+  },
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "blind_reviewer_jurisdiction_2026_20260820_211650"
+  }
+}

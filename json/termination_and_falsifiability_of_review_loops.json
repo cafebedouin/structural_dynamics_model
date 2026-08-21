@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "termination_and_falsifiability_of_review_loops",
+    "version": "1.0",
+    "generated_date": "2026-06-19",
+    "status": "ACTIVE",
+    "story_uid": "b206d77a-984b-4282-a852-fe8f7e8d7536"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.58,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Unbounded Reviewer-Fixer Loop with Suspicion-Gated Audit Trail",
+    "topic_domain": "epistemology/AI_agent_architecture/research_methodology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "loop_operators_who_control_termination",
+      "audit_apparatus_maintainers"
+    ],
+    "victims": [
+      "whoever_relies_on_the_loop_or_audit_trail_to_signal_completion_or_safety"
+    ],
+    "vindicated_propositions": [
+      "review_loops_are_self_correcting",
+      "silence_in_the_audit_log_means_nothing_was_found"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "loop_operators_who_control_termination",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Design and run the reviewer-fixer loop, deciding informally when to stop iterating (satisfaction, deadline, fatigue) rather than against a declared threshold, monotonic measure, or round cap. Because no explicit stopping rule exists, they retain discretion to declare completion whenever convenient, and that discretion is invisible to anyone reading the final report."
+    },
+    {
+      "name": "audit_apparatus_maintainers",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Build and operate the audit system that only writes a record when a reviewer suspects a problem. They collect credibility from the audit trail's apparent thoroughness without needing to prove the system ever positively confirmed absence of a problem — the mechanism cannot produce a 'checked, found nothing' entry, so its silence is structurally indistinguishable from either safety or unmonitored failure, and that ambiguity always resolves in their favor."
+    },
+    {
+      "name": "whoever_relies_on_the_loop_or_audit_trail_to_signal_completion_or_safety",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Downstream decision-makers, users, or successor workers who read 'the loop converged' or 'the audit found nothing flagged' as evidence of quality or safety. They have no way to distinguish a genuinely clean pass from a loop that was stopped arbitrarily or an audit that simply never looked hard enough to generate a record either way. Their exit is constrained: they can demand more review cycles, but cannot demand a falsifiable null result the apparatus is structurally incapable of producing."
+    },
+    {
+      "name": "next_worker_or_successor_instance",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Inherits the loop's output and the audit log's silence as the ground truth for what has already been checked. Has no seat in the decision about when the loop stopped or whether the audit's silence meant anything, and no mechanism to request a positive negative result to distinguish 'verified clean' from 'never verified.'"
+    },
+    {
+      "name": "methodology_reviewers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "External researchers or auditors of the auditing practice itself, who can examine the historical record for the presence or absence of an explicit stopping rule and for any logged 'found nothing' entries. They are positioned to observe the structural gap but hold no power to change the loop's design or the audit apparatus's write policy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "A reviewer-fixer loop genuinely solves a real problem: iterative correction catches errors a single pass would miss, and a suspicion-triggered audit genuinely economizes on recording effort by not logging routine non-events. Both mechanisms have a legitimate coordination core.",
+    "transfer_function": "Moves the burden of proving completion or safety away from the operators (who retain discretion over when to stop and what counts as suspicious) and onto whoever downstream must act on the loop's output or the audit's silence, without the tools to independently verify either.",
+    "absent_voices": "The next worker or successor instance who inherits the output has no voice in defining the stopping rule or the audit's write policy, yet bears the full consequence of an unverifiable 'done' or an unverifiable 'clean.' Methodology reviewers can observe the gap from outside but are not consulted at design time.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If an explicit acceptance threshold, monotonic measure, or round cap were mandated for every review-fix loop, and audit systems were required to log a genuine null result ('checked X, found nothing') rather than only positive detections, the entire practice of treating loop convergence and audit silence as evidence would have to be re-justified from scratch — much current confidence in 'it passed review' and 'the audit was clean' would be revealed as unfounded, forcing new verification infrastructure.",
+    "founding_problem": "Iterative review-fix loops were built to catch and correct errors that single-pass review misses; suspicion-gated audits were built to avoid the cost of exhaustively logging every non-event. Both were reasonable engineering economies given limited resources.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Loop operators and audit maintainers attest the mechanisms still function as intended and that discretion over stopping points is a feature of expert judgment, not a defect. Methodology reviewers and downstream users who have traced specific failures back to arbitrarily-stopped loops or silently-absent audit coverage attest that the structural absence of a stopping/falsifying signal is now doing extractive work — shielding decisions from scrutiny rather than merely economizing on record-keeping. No party outside these two camps has yet produced a definitive resolution."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.62
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint concerns a structural absence shared by two related mechanisms: a same-kind reviewer/fixer loop with no declared stopping rule, and an audit apparatus that can only write positive-detection records, never a 'checked and found nothing' null result. Both absences mean the historical record can never falsify a claim of completion or safety through its own operation — there is no data point that would count as disconfirming 'the loop converged correctly' or 'the audit trail is clean.' This is independent of which blindness-reading (from the linked kernel) one adopts for what the reviewer should lack; the termination/falsifiability gap is a separate structural fact about the loop and the audit mechanism themselves, not about the reviewer's epistemic starting position. The claimed type is snare: the coordination story (iterative correction, economical logging) is real but has become cover for unfalsifiable completion claims that no party downstream can contest without redesigning the mechanism itself.",
+    "key_agents": [
+      "loop_operators_who_control_termination: sets stopping point informally, retains discretion",
+      "audit_apparatus_maintainers: benefits from silence being read as safety",
+      "whoever_relies_on_the_loop_or_audit_trail_to_signal_completion_or_safety: primary victim, cannot distinguish verified-clean from never-verified",
+      "next_worker_or_successor_instance: excluded, inherits unverifiable ground truth",
+      "methodology_reviewers: analytical observer of the structural gap"
+    ],
+    "logic_rationale": "Extractiveness rises over the measured interval (0.42 to 0.68) as reliance on loop convergence and audit silence accumulates without any corresponding tightening of stopping rules or null-result logging — each additional cycle of 'it passed' or 'nothing flagged' compounds unearned confidence rather than resetting it. Theater ratio climbs correspondingly (0.30 to 0.62) because as the underlying verification gap widens, the loop and audit apparatus increasingly perform the appearance of rigor (more rounds, more dashboards, more green checkmarks) without the performance closing the falsifiability gap. Accessibility collapse is moderate (0.5): alternatives exist in principle (mandating explicit thresholds, requiring logged null results) but are not adopted, so the collapse is partial rather than structural necessity. Resistance is low (0.4) precisely because the absence is invisible by construction — there is no observable event that would prompt resistance; you cannot organize against a record that was never written.",
+    "directionality_logic": "Loop operators and audit maintainers sit near the beneficiary end: they retain discretion over stopping points and control what gets logged, and both forms of control accrue credibility to them without corresponding exposure to falsification. Whoever relies on the loop or audit trail for a completion/safety signal sits near the target end: they bear the cost of an unverifiable claim without any mechanism to demand disconfirming evidence. The next worker/successor instance is even more constrained — trapped exit, powerless, inheriting the unfalsifiable record as ground truth with no seat in its construction.",
+    "perspectival_gap": "From the agenda-setter seats, the loop and audit apparatus look like reasonable engineering economy — discretion over stopping points is expert judgment, and suspicion-gated logging avoids drowning signal in noise. From the payer seat, the identical structure looks like an unfalsifiable completion claim: there is no possible observation that would have shown the loop failed to converge properly or the audit missed something, because the record-keeping apparatus was never built to produce that observation. The engine's per-seat computation should reflect this: agenda-setters compute nearer coordination, payers nearer extraction, from the same structural facts.",
+    "mandatrophy_analysis": "The founding problem (economizing on review passes and on log volume) may still be partially live, but the arrangement has drifted from 'economical verification' to 'unfalsifiable verification' — the mandate to catch errors efficiently has outlived the specific mechanism's ability to prove it is doing so. Classifying this as snare rather than rope prevents mislabeling the accumulated extraction as ongoing coordination benefit: the coordination function (iterative correction, efficient logging) is real and was once sufficient, but the absence of a stopping rule and of loggable null results means the mechanism can no longer distinguish its own success from its own failure, which is exactly the condition under which cost should be re-examined rather than assumed."
+  },
+  "omegas": [
+    {
+      "id": "stopping_rule_absence_is_design_or_drift",
+      "question": "Was the absence of an explicit acceptance threshold, monotonic measure, or round cap a deliberate design choice reflecting genuine uncertainty about the right stopping criterion, or is it an unexamined default that has since become load-bearing for operator discretion?",
+      "resolution_mechanism": "Trace the design history of specific review-fix loops: was a stopping rule considered and rejected for a documented reason, or never considered at all? Interview original designers versus current operators.",
+      "impact": "If deliberate and reasoned, the absence is closer to an acceptable coordination cost (rope-adjacent); if unexamined drift, it is closer to extraction that has calcified into snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the missing stopping rule was a considered design decision or unexamined drift."
+    },
+    {
+      "id": "null_result_infeasibility_or_unwillingness",
+      "question": "Is it structurally infeasible for the audit apparatus to log a positive 'checked and found nothing' result, or merely that no one has built the mechanism to do so?",
+      "resolution_mechanism": "Attempt to instrument an audit pass to record explicit null results (what was checked, what criteria were applied, confirmation nothing triggered) and measure whether this is technically and economically feasible at comparable cost to the current suspicion-gated design.",
+      "impact": "If technically infeasible, the constraint has a genuine mountain-like component (a real epistemic limit on evidence of absence); if merely unbuilt, the absence is a constructed extraction mechanism and the snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the audit's inability to log null results is a structural limit or an unbuilt feature."
+    },
+    {
+      "id": "relationship_to_blindness_decomposition_kernel",
+      "question": "How does the termination/falsifiability gap analyzed here interact with the separate blindness_decomposition_kernel readings (cold_reader, frame_independence, presentation_audit), which concern what the reviewer should lack rather than when the loop stops or what the audit logs?",
+      "resolution_mechanism": "Author companion constraint stories for each blindness reading and compare structural deltas; check whether any reading's victim set overlaps with whoever_relies_on_the_loop_or_audit_trail_to_signal_completion_or_safety.",
+      "impact": "If the readings are orthogonal to termination/falsifiability (as the presentation_audit_reading's own framing suggests), this story should remain undecomposed from them; if a reading's deprivation choice actually determines whether a stopping signal or null result is even possible, the stories should be linked via network.affects_constraints rather than treated as independent.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether this termination/falsifiability constraint is structurally independent of the linked blindness-decomposition kernel or entangled with it."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "blindness_decomposition_kernel_cold_reader_reading",
+      "blindness_decomposition_kernel_frame_independence_reading",
+      "blindness_decomposition_kernel_presentation_audit_reading"
+    ],
+    "dual_formulation_note": "This story analyzes a structural absence (no stopping rule, no loggable null result) that is independent of which blindness-reading is adopted for what the reviewer should lack. The blindness_decomposition_kernel readings concern a different axis (deprivation of context/framing/authorship-independence); this story concerns the termination and falsifiability of the review-fix loop and audit apparatus themselves. The two are linked because a design that resolves the blindness question (e.g., adopting frame_independence_reading) does not by itself resolve the termination/falsifiability gap, and vice versa — an operator could fully solve one without touching the other, which is itself diagnostic of two distinct constraints sharing a domain."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-21",
+    "source_essay": "unspecified",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-sonnet-5",
+    "sampling_params": "unspecified",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "blind_reviewer_jurisdiction_2026_20260820_211650"
+  }
+}
