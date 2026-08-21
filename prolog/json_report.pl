@@ -166,6 +166,11 @@ write_pipeline_json(S, Constraints, CorpusSize, MaxEntCtx) :-
     write_per_constraint_array(S, Constraints, MaxEntCtx),
     format(S, '  ],~n', []),
 
+    % Section 1b: member_census (OQ-306)
+    format(S, '  "member_census": ', []),
+    write_member_census(S),
+    format(S, ',~n', []),
+
     % Section 2: diagnostic
     format(S, '  "diagnostic": ', []),
     write_diagnostic_object(S, Constraints, CorpusSize),
@@ -189,6 +194,48 @@ write_pipeline_json(S, Constraints, CorpusSize, MaxEntCtx) :-
     format(S, '}~n', []).
 
 /* ================================================================
+   MEMBER CENSUS (OQ-306)
+   ================================================================ */
+
+%% write_member_census(+Stream)
+%  INDEPENDENT enumeration of corpus_loader:corpus_member_kind/2 over
+%  corpus_constraint/1 — deliberately NOT a tally of the per_constraint entries
+%  just written. A tally of the emitted values would make run_pipeline.py's
+%  cross-boundary identities compare one emission against itself, catching only
+%  serialization faults and nothing about the kinding. R3a's "ONE computation"
+%  means one DEFINITION (the predicate) read twice, not one read.
+%
+%  ALL FOUR kinds are emitted, zeros included. A zero here is AUTHORED, not
+%  absent, so no reader ever needs the forbidden `.get(kind, 0)` idiom and the
+%  python-side identities are total rather than conditional.
+write_member_census(S) :-
+    findall(K, ( corpus_loader:corpus_constraint(C),
+                 corpus_loader:corpus_member_kind(C, K) ), Kinds),
+    census_kind_order(Order),
+    format(S, '{~n', []),
+    write_member_census_rows(S, Order, Kinds),
+    format(S, '  }', []).
+
+%% census_kind_order(-Kinds)
+%  The full kind vocabulary, in a FIXED order. Emitting every kind every run is
+%  what makes a zero readable as "measured zero" rather than "not looked at".
+census_kind_order([story, axiom_contradiction, dual_family, unknown]).
+
+write_member_census_rows(_, [], _).
+write_member_census_rows(S, [K], Kinds) :-
+    !,
+    census_count(Kinds, K, N),
+    format(S, '    "~w": ~w~n', [K, N]).
+write_member_census_rows(S, [K|Rest], Kinds) :-
+    census_count(Kinds, K, N),
+    format(S, '    "~w": ~w,~n', [K, N]),
+    write_member_census_rows(S, Rest, Kinds).
+
+census_count(Kinds, K, N) :-
+    include(==(K), Kinds, Selected),
+    length(Selected, N).
+
+/* ================================================================
    PER-CONSTRAINT ARRAY
    ================================================================ */
 
@@ -208,6 +255,27 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     % id
     format(S, '      "id": ', []),
     write_json_string(S, C),
+    format(S, ',~n', []),
+
+    % member_kind (OQ-306): story | axiom_contradiction | dual_family | unknown.
+    % Derived from corpus_loader:corpus_member_kind/2 at write time — the SAME
+    % definition write_member_census/1 enumerates below (R3a's "ONE computation"
+    % means one DEFINITION read twice, not one read).
+    %
+    % Called WITHOUT a fallback on purpose. corpus_member_kind/2 is total over
+    % corpus_constraint/1 and C comes from exactly that registry, so it cannot
+    % fail; a `( ... -> true ; K = unknown )` guard here would be a fabricated
+    % default (build_discipline Pattern 4) that turns an impossible condition
+    % into a plausible-looking value. If it ever does fail, the entry fails and
+    % the run dies loudly — which is the correct outcome.
+    %
+    % READERS: do NOT write .get("member_kind", "story"). On refusal-scope legs
+    % the value is guaranteed story|axiom_contradiction (run_pipeline.py's
+    % n_unclassified refusal is the arithmetic form of that guarantee), but
+    % artifacts from continue-scope runs are genuinely four-valued.
+    corpus_loader:corpus_member_kind(C, MemberKind),
+    format(S, '      "member_kind": ', []),
+    write_json_string(S, MemberKind),
     format(S, ',~n', []),
 
     % human_readable

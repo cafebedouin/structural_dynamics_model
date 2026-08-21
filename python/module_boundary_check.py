@@ -257,6 +257,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from shared.corpus_legs import LIVE_LEGS  # noqa: E402  (OQ-306: one home for the leg names)
+
 REPO = Path(__file__).resolve().parent.parent
 PROLOG = REPO / "prolog"
 ALLOWLIST = PROLOG / "module_boundary_allowlist.txt"
@@ -341,7 +344,14 @@ CORPUS_DIRS = {
                         "point-in-time documents are not retro-edited.",
 }
 # --check scans ALL five legs since arms F and G landed; --full is retired (see main()).
-ALL_ARM_C_LEGS = ["testsets", "testsets_haiku", "testsets_flash", "testsets_kimi", "testsets_sonnet"]
+#
+# The five names have ONE home since 2026-08-21 (OQ-306 R-B): python/shared/corpus_legs.py.
+# COEXTENSIVE TODAY, DISTINCT IN PRINCIPLE — arm C asks "which legs do I scan for authored
+# schema heads"; LIVE_LEGS asks "which legs does a membership-kinding failure HALT". Reusing
+# the constant keeps the names in sync; it does NOT assert the questions are the same one. If
+# they ever come apart, fork the lists and record why at both sites (a false unification here
+# would be exactly the defect OQ-306 exists to remove, one level up).
+ALL_ARM_C_LEGS = list(LIVE_LEGS)
 DEFAULT_ARM_C_LEGS = ALL_ARM_C_LEGS
 
 

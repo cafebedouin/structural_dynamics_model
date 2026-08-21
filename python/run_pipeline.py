@@ -13,6 +13,7 @@ import contextlib
 import hashlib
 import io
 import json
+import os
 import subprocess
 import sys
 import threading
@@ -73,6 +74,7 @@ def _git_dirty() -> bool:
 # the private name for back-compat with in-file callers.
 from corpus_hash import compute_corpus_hash as _compute_corpus_hash
 from corpus_hash import assert_corpus_current
+from shared.corpus_legs import LIVE_LEGS  # OQ-306: one home for the live-leg names
 
 
 def check_orbits_corpus_hash(orbits_path: Path) -> None:
@@ -104,6 +106,13 @@ def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:
             never be read as the default corpus. The no-arg pipeline passes the
             default and the manifest stays byte-identical (B1 inertness control).
     """
+    # NAMING DEBT, recorded at the emitter (OQ-306 R1c, ruled 2026-08-21).
+    # `n_constraints` counts corpus MEMBERS — stories PLUS non-story meta-files
+    # (today: *_contradictions.pl axiom files). It is NOT a story count and must
+    # not be used as the denominator of a per-story rate; use `n_stories` for
+    # that. The name is kept because four consumers use it as a same-run IDENTITY
+    # KEY in the three-way glob/per_constraint/manifest gate, not as a semantic
+    # count. Renaming is rebuild-era debt — see OQ-306 close.
     n_constraints = len(list(testsets_dir.glob("*.pl"))) if testsets_dir.exists() else 0
     n_sotu = len(list(TESTSETS_SOTU_DIR.glob("*.pl"))) if TESTSETS_SOTU_DIR.exists() else 0
     commit = _git_head_sha()
@@ -115,8 +124,12 @@ def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:
         "code_commit_short": commit[:7] if commit != "unknown" else "unknown",
         "code_dirty": _git_dirty(),
         # 2 (OQ-98): per_constraint entries carry verdict_join (joined headline
-        # verdict + raw inputs) as a sibling of diagnostic_verdict.
-        "schema_version": 2,
+        #   verdict + raw inputs) as a sibling of diagnostic_verdict.
+        # 3 (OQ-306): per_constraint entries carry member_kind; the document
+        #   carries a top-level member_census; the manifest carries n_stories,
+        #   n_nonstory_members, nonstory_kinds, n_unclassified. All additive —
+        #   the same shape as the 1->2 bump (ce9a26ec).
+        "schema_version": 3,
     }
     # Stamp corpus_path ONLY for a non-default corpus — keeps the no-arg manifest
     # byte-for-byte unchanged (only difference from a default run is the absence of
@@ -126,7 +139,162 @@ def build_manifest(run_at: str, testsets_dir: Path = TESTSETS_DIR) -> dict:
     return manifest
 
 
-def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
+def _resolve_corpus_dir(corpus_path) -> Path:
+    """Resolve a corpus_path the way corpus_loader:resolve_corpus_dir/2 does.
+
+    A RELATIVE path anchors against prolog/; an absolute path passes through.
+    Canonicalizing BEFORE comparing matters: a naive `corpus_path in LIVE_LEGS`
+    silently downgrades an absolute-path live-leg run to continue-scope, which
+    is the permissive direction — the run would ship a four-valued artifact
+    where it should have refused.
+    """
+    p = Path(corpus_path)
+    if not p.is_absolute():
+        p = PROLOG_DIR / p
+    try:
+        return p.resolve()
+    except OSError:
+        return p
+
+
+def _is_refusal_scope(corpus_dir: Path) -> bool:
+    """Does a membership-kinding failure HALT this run? (OQ-306 R-B.)
+
+    Hard refusal on the five live legs, where zero unknowns is the standing
+    expectation and a nonzero count is a real finding about the corpus. Loud
+    continue elsewhere: archived corpora carry documented filename!=subject skew
+    (re-derived 2026-08-21 — original_v5 91/702, original_json/testsets
+    133/1151), and refusing there would make legitimate retro-audits impossible.
+    """
+    return corpus_dir in {_resolve_corpus_dir(leg) for leg in LIVE_LEGS}
+
+
+# R-I (ruled 2026-08-21): the refusal gets a DOCUMENTED hatch, not silence — the
+# repo's comparable refusal (corpus_empty) carries `allow_empty_corpus`, and an
+# undocumented hatch is the one the next person invents badly. Two conditions
+# make this hatch safe to leave in the tree:
+#   (1) it selects the EXISTING continue-scope path rather than adding a third
+#       branch, so there is no code path unique to the override; and
+#   (2) it must NAME ITS AUTHORIZER — presence alone is not enough. The value
+#       is stamped into the manifest, so an overridden artifact is never
+#       indistinguishable from a clean one. A hatch that produces a
+#       clean-LOOKING artifact is the one that gets left on forever.
+_UNCLASSIFIED_OVERRIDE_ENV = "SDM_ALLOW_UNCLASSIFIED_MEMBERS"
+
+
+def add_member_census_keys(manifest: dict, document: dict, corpus_dir: Path) -> dict:
+    """Add the OQ-306 additive manifest keys, and refuse per R-B scope.
+
+    Reads `member_census` — the INDEPENDENT Prolog enumeration written by
+    json_report:write_member_census/1 — and the per-entry `member_kind` values.
+    The two sides come from one DEFINITION read twice, which is what makes the
+    cross-boundary identities below able to fail at all.
+    """
+    census = document.get("member_census")
+    if census is None:
+        raise SystemExit(
+            "OQ-306: pipeline output carries no `member_census`. Either the Prolog "
+            "export is older than schema_version 3, or json_report:write_member_census/1 "
+            "did not run. Refusing rather than defaulting — an absent census and an "
+            "all-zero census must not read the same."
+        )
+
+    entries = document.get("per_constraint", [])
+    kinds = [e.get("member_kind") for e in entries]
+    if any(k is None for k in kinds):
+        n_missing = sum(1 for k in kinds if k is None)
+        raise SystemExit(
+            f"OQ-306: {n_missing} per_constraint entr(ies) carry no `member_kind`. "
+            "Refusing — a missing kind must not be defaulted to `story`."
+        )
+
+    n_stories = sum(1 for k in kinds if k == "story")
+    nonstory_kinds = {}
+    for k in kinds:
+        # KNOWN non-story kinds only. `unknown` and `dual_family` are counted
+        # ONLY in n_unclassified and never appear here or in the D3 baseline —
+        # they are not a kind of thing the corpus contains, they are a failure
+        # to determine what it contains.
+        if k not in ("story", "unknown", "dual_family"):
+            nonstory_kinds[k] = nonstory_kinds.get(k, 0) + 1
+    n_nonstory = sum(nonstory_kinds.values())
+    n_unclassified = sum(1 for k in kinds if k in ("unknown", "dual_family"))
+
+    # --- Cross-boundary identities. EVERY one compares a PROLOG-derived number
+    # against a PYTHON-derived one. An identity whose two sides come from the
+    # same loop is a total recomputed from its own parts and cannot fail.
+    if census.get("story") != n_stories:
+        raise SystemExit(
+            f"OQ-306 identity (i) FAILED: member_census.story={census.get('story')} "
+            f"but python counted {n_stories} story entries. The Prolog census and the "
+            "emitted per-entry kinds disagree.")
+    for kind, n in nonstory_kinds.items():
+        if census.get(kind) != n:
+            raise SystemExit(
+                f"OQ-306 identity (ii) FAILED for kind `{kind}`: "
+                f"member_census={census.get(kind)} but python counted {n}.")
+    if n_unclassified != census.get("unknown", 0) + census.get("dual_family", 0):
+        raise SystemExit(
+            f"OQ-306 identity (iii) FAILED: n_unclassified={n_unclassified} but "
+            f"member_census unknown+dual_family="
+            f"{census.get('unknown', 0) + census.get('dual_family', 0)}.")
+
+    # NOT asserted: sum(nonstory_kinds.values()) == n_nonstory. Both sides come
+    # from the same python pass — vacuous by construction. Recorded here with
+    # its reason so a later reader does not "fix" the omission.
+
+    # --- Sum invariant, checked beside the three-way gate.
+    total = n_stories + n_nonstory + n_unclassified
+    if total != manifest["n_constraints"]:
+        raise SystemExit(
+            f"OQ-306 sum invariant FAILED: n_stories({n_stories}) + "
+            f"n_nonstory_members({n_nonstory}) + n_unclassified({n_unclassified}) "
+            f"= {total} != n_constraints({manifest['n_constraints']}).")
+
+    manifest["n_stories"] = n_stories
+    # Keys SORTED — R1b, the operator's word.
+    manifest["nonstory_kinds"] = dict(sorted(nonstory_kinds.items()))
+    manifest["n_nonstory_members"] = n_nonstory
+    manifest["n_unclassified"] = n_unclassified
+
+    if n_unclassified:
+        bad = sorted(e["id"] for e in entries
+                     if e.get("member_kind") in ("unknown", "dual_family"))
+        detail = (
+            f"{n_unclassified} corpus member(s) could not be kinded as story or as a "
+            f"known non-story kind: {', '.join(bad)}"
+        )
+        remediation = (
+            "Remediation: re-key the story to its filename, or verify filename==subject "
+            "(OQ-306/OQ-20). A member satisfying BOTH fact families is `dual_family` and "
+            "is a discovery, not a defaulting bug. A deliberate NEW non-story kind needs a "
+            "kind-taxonomy ruling plus a census-baseline update — it is not a thing to add "
+            "by letting this refusal through."
+        )
+        override = os.environ.get(_UNCLASSIFIED_OVERRIDE_ENV, "").strip()
+        if _is_refusal_scope(corpus_dir) and not override:
+            raise SystemExit(
+                f"OQ-306 REFUSAL ({corpus_dir.name} is a live leg): {detail}\n{remediation}\n"
+                f"If this is deliberate, set {_UNCLASSIFIED_OVERRIDE_ENV}=<who-authorized-it> "
+                "— the value is recorded in the manifest, so the artifact stays "
+                "distinguishable from a clean run."
+            )
+        # Continue-scope (or an authorized override): ship the artifact, four-valued,
+        # with the ids named LOUDLY. Silence here would be the whole defect.
+        scope = "live leg, refusal OVERRIDDEN" if override else "non-refusal-scope corpus"
+        print(f"[pipeline] OQ-306 WARNING ({scope}): {detail}", file=sys.stderr)
+        print(f"[pipeline] {remediation}", file=sys.stderr)
+        if override:
+            manifest["unclassified_refusal_overridden"] = {
+                "authorized_by": override,
+                "n_unclassified": n_unclassified,
+                "ids": bad,
+            }
+    return manifest
+
+
+def inject_manifest(src_path: Path, dst_path: Path, manifest: dict,
+                    corpus_dir: Optional[Path] = None) -> None:
     """Read *src_path* (the Prolog export's raw artifact), prepend manifest as
     first key, write *dst_path* (the canonical manifest-bearing artifact).
 
@@ -137,6 +305,12 @@ def inject_manifest(src_path: Path, dst_path: Path, manifest: dict) -> None:
     """
     with open(src_path, "r", encoding="utf-8") as f:
         data = json.load(f)
+    # OQ-306: derive the membership keys HERE, the single wiring point both the
+    # default pipeline and classify_corpus route through — one call site, so the
+    # keys cannot be present on one path and absent on the other. Mutates
+    # `manifest` in place, which is what classify_corpus's three-way gate then
+    # reads. Raises SystemExit on a kinding failure per R-B scope.
+    add_member_census_keys(manifest, data, corpus_dir or TESTSETS_DIR)
     # manifest goes first; existing keys follow unchanged
     out = {"manifest": manifest}
     out.update(data)
@@ -269,7 +443,7 @@ def classify_corpus(corpus_path: str, output_name: str,
 
     manifest = build_manifest(run_at, corpus_dir)
     out_path = OUTPUTS_DIR / output_name
-    inject_manifest(raw_path, out_path, manifest)
+    inject_manifest(raw_path, out_path, manifest, corpus_dir)
 
     # Seen == classified: glob == per_constraint == manifest.n_constraints. A seen file
     # that failed to classify makes glob-n and per_constraint diverge silently.
