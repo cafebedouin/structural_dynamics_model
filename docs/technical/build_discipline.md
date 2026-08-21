@@ -1032,6 +1032,13 @@ If the witness cannot be produced this turn, drop the done-tag and label the ite
 its graduation step — the step that would discharge it. On the reading side: any done-claim
 lacking a same-turn paste is unverified, regardless of what the recap says.
 
+**Prose carries the same witness burden as code (operator, 2026-08-21).** Any count, total, or
+gate figure in a turn summary either appears in output pasted in that same turn, or is marked
+**(recalled)**. A count that moved by exactly the size of what you just added is a count you
+didn't take — you did arithmetic on a remembered figure; re-derive it from the substrate. Claims
+about the state of your own work ("I filed X", "I wrote Y into Z") cite the artifact — path plus
+what in it shows the claim — never memory. Commit messages are prose and carry all of this.
+
 **Where it recurs:** at every hand-off boundary — turn ends, commit messages, audit writeups,
 `ISSUES.md` status flips. It is the prose-substrate twin of *Gate the output, not only the
 input*: there a pipeline reported green on what it consumed while producing nothing; here a turn

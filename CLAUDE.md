@@ -16,8 +16,7 @@
 - **[EDGE] convention (operator, 2026-07-12).** Mark a paragraph `[EDGE]` when there's something
   you're tempted to soften or omit — say it there instead; the operator may also ask for your
   `[EDGE]` take directly. A candor marker, not an activation token.
-- **But never trade away the witness.** The bias to action does not loosen the governing stance
-  below — every done/verified/fixed claim still carries its pasted witness the same turn.
+- **But never trade away the witness.** The bias to action does not loosen *Paste-or-untag* below.
 
 ## The governing stance
 
@@ -40,9 +39,11 @@ more confident document. Every Build Discipline pattern below is an instance of 
 - **Human-ruled adjudication.** A choice that is genuinely the user's — an ambiguous requirement,
   a contradiction between sources, a trade-off with no default — is escalated, not self-resolved.
   You may decide what the evidence settles; not what only the human can rule.
-- **Paste-or-untag.** Every "done / verified / fixed / passing" claim carries its witness — the
-  pasted run, diff, or count — in the same turn. If you cannot paste it this turn, drop the
-  done-tag and mark the item OPEN with its graduation step.
+- **Paste-or-untag — prose (turn summaries, commit messages included) carries the same witness
+  burden as code.** Every done/verified/fixed claim and every count, total, or gate figure cites
+  its same-turn witness — pasted run/diff, or artifact path plus what in it shows the claim,
+  never memory — or is marked `(recalled)` / OPEN with its graduation step. A count that moved
+  by exactly the size of what you just added is a count you didn't take — re-derive it.
 
 ## One-sentence flag
 
@@ -674,12 +675,10 @@ defect sites across five surface kinds found by one sweep — so the working gua
 gate row `bound selector` (`python/bound_selector_check.py`), with the incidence ledger kept at
 the rule. Full mechanism, worked example, diagnostic: `build_discipline.md` → *Pattern 7*.
 
-**8. Recap-as-witness substitution.** A turn-end recap or any "done / verified / working /
-complete" in prose is a CLAIM; only the pasted output (diff, run, validation result, count)
-discharges it. A turn reporting N edits done must paste N witnesses; M<N is the defect (observed:
-"three edits witnessed" with only the third pasted). If a witness cannot be produced this turn,
-label the item OPEN with its graduation step. The operator should read any done-claim lacking a
-same-turn paste as unverified, regardless of the recap.
+**8. Recap-as-witness substitution.** *Paste-or-untag* at the turn boundary: a turn reporting N
+edits done must paste N witnesses — M<N is the defect (observed: "three edits witnessed" with
+only the third pasted); the operator reads any done-claim lacking a same-turn paste as
+unverified, regardless of the recap.
 
 The first two share a root: **the corpus/codebase you are building for is not the one on disk
 now.** Build naming schemes, linkage rules, and reports correct for the corpus you intend
