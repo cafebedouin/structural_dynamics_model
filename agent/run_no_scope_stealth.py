@@ -260,6 +260,10 @@ def run(args):
     token_acc = {"input_tokens": 0, "output_tokens": 0}
     cost_acc = {"cost": 0.0, "reasoning_tokens": 0}
     stamp = sampling_stamp(args.reasoning_effort, args.temperature)
+    # --run-tag marks a RESCUE / backfill pass inside an existing leg: provenance_source becomes
+    # no_scope_rebuild_<leg>+<tag>, so a mixed-regime leg's composition is greppable from
+    # story_provenance (prompt_commit already differs; this is the human-readable mark).
+    prov_source = f"{PROVENANCE_SOURCE}+{args.run_tag}" if args.run_tag else PROVENANCE_SOURCE
 
     remaining = final_seeds
     for attempt in range(1, 2 if args.from_responses else 4):
@@ -278,7 +282,7 @@ def run(args):
             _ShimClient(wrapped), "stealth-sync", STEALTH_JSON, STEALTH_TESTSETS, STEALTH_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source=PROVENANCE_SOURCE,
+            provenance_source=prov_source,
             sampling_params=stamp)
         done = load_processed_log(STEALTH_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
@@ -323,6 +327,9 @@ def main():
     ap.add_argument("--from-responses", action="store_true",
                     help="no API: re-process this leg's persisted raw responses for the seeds still "
                          "pending on the ladder (offline A/B of repair/validation changes)")
+    ap.add_argument("--run-tag", default="",
+                    help="mark this pass in provenance_source as no_scope_rebuild_<leg>+<tag> "
+                         "(rescue / backfill passes inside an existing leg)")
     ap.add_argument("--leg-name", default="stealth",
                     help="model leg name: testsets_<name>/ (glm, nemotron, ...); pair with --model")
     ap.add_argument("--leg-suffix", default="",
