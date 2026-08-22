@@ -50,6 +50,24 @@ SONNET_TESTSETS = REPO_ROOT / "prolog" / "testsets_sonnet"
 SONNET_JSON = REPO_ROOT / "json_sonnet"
 SONNET_LADDER = REPO_ROOT / "prolog" / "beta_processed_sonnet.txt"
 OUT_DIR = REPO_ROOT / "outputs" / "no_scope_runs_sonnet"
+PROVENANCE_SOURCE = "no_scope_rebuild_sonnet"
+
+
+def apply_leg(name="sonnet", suffix=""):
+    """Rebind destinations to leg <name><suffix>: testsets_<leg>/, json_<leg>/,
+    beta_processed_<leg>.txt, outputs/no_scope_runs_<leg>/, provenance no_scope_rebuild_<leg>.
+    This makes the file the ANTHROPIC leg driver: --leg-name haiku --model
+    claude-haiku-4-5-20251001 --leg-suffix 2 is the haiku redraw floor (2026-08-22); --leg-suffix 2
+    alone is the sonnet floor. Registry = the named dir only (runbook §6)."""
+    global SONNET_TESTSETS, SONNET_JSON, SONNET_LADDER, OUT_DIR, PROVENANCE_SOURCE
+    leg = f"{name}{suffix}"
+    if leg == "sonnet":
+        return
+    SONNET_TESTSETS = REPO_ROOT / "prolog" / f"testsets_{leg}"
+    SONNET_JSON = REPO_ROOT / f"json_{leg}"
+    SONNET_LADDER = REPO_ROOT / "prolog" / f"beta_processed_{leg}.txt"
+    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_{leg}"
+    PROVENANCE_SOURCE = f"no_scope_rebuild_{leg}"
 
 
 def build_sonnet_batch_requests(gen_seeds, model):
@@ -156,7 +174,7 @@ def run(args):
             client, batch.id, SONNET_JSON, SONNET_TESTSETS, SONNET_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source="no_scope_rebuild_sonnet",
+            provenance_source=PROVENANCE_SOURCE,
             sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},thinking=disabled,temperature=api_default")
         done = load_processed_log(SONNET_LADDER)
         remaining = [s for s in remaining if s["constraint_id"] not in done]
@@ -182,9 +200,14 @@ def main():
     ap.add_argument("--seeds", required=True)
     ap.add_argument("--n", type=int, default=0, help="next N unprocessed (0=all)")
     ap.add_argument("--model", default=DEFAULT_MODEL)
+    ap.add_argument("--leg-name", default="sonnet", help="model leg name: testsets_<name>/ (sonnet, haiku, ...)")
+    ap.add_argument("--leg-suffix", default="", help="append for a same-model redraw leg")
     ap.add_argument("--poll-interval", type=int, default=POLL_INTERVAL)
     ap.add_argument("--estimate", action="store_true", help="count tokens + price; no generation")
-    run(ap.parse_args())
+    args = ap.parse_args()
+    apply_leg(args.leg_name, args.leg_suffix)
+    print(f"  leg: {SONNET_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE} | model={args.model}")
+    run(args)
 
 
 if __name__ == "__main__":

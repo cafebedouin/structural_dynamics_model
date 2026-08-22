@@ -31,3 +31,22 @@ Cost (batch halves of the driver's interactive figure): ≈ $17 / $17 / $15 / $1
 - Nothing about other models: k=2 per regime on one model. The stealth (`ox-alpha`, reasoning mandatory) and kimi-k2.6 legs are thinking-on legs with NO off arm; the kimi-off arm is constructible (k2.6 accepts `thinking:{type:disabled}`, INVESTIGATIONS 2026-08-21) and is the next regime pair.
 - Nothing about capability (OQ-228 / GAP-25 stand).
 - flash vs flash2/3 is NOT a redraw floor — it is redraw + schema change (+ possible model-snapshot drift); cite flash2 vs flash3 for the floor.
+
+## Addendum 2026-08-22 — |Δε|, not just exact agreement (operator pushback: "the whole thing rests on ε")
+
+`epsilon_distance.py` → `epsilon_distance_2026-08-22.txt`. Engine ε bands: `tangled_rope` floor
+0.30, `rope` ceiling 0.45, `snare` floor 0.46, `piton` floor 0.10 — adjacent bands ~0.15 apart.
+
+| pair | median |Δε| | p75 | p90 | share ≥0.10 | share ≥0.20 |
+|---|---|---|---|---|---|
+| flash2 vs flash3 (thinking-off floor) | 0.00 | 0.00 | 0.05 | 6% | 2% |
+| flash_think vs flash_think2 (thinking-on floor) | 0.03 | 0.10 | 0.20 | 22% | 10% |
+| flash2 vs flash_think (regime) | 0.05 | 0.13 | 0.23 | 34% | 15% |
+| stealth vs nemotron (cross-model, for scale) | 0.08 | 0.17 | 0.32 | 43% | 21% |
+
+**Correction to this WRITEUP's own verdict language.** "Mostly adds draw variance" described the
+*shape* (no directional move) and under-stated the *size*: thinking-on moves the engine's primary
+input by a band-crossing amount (≥0.10) on about a fifth of seeds, and by ≥0.20 on a tenth, where
+a thinking-off redraw pins ε to the hundredth on 94% of seeds. Since χ = ε·f(d)·σ(S), this is
+instability in the one authored quantity every downstream classification multiplies through —
+not a side effect. Fired: live still (the verdict sharpened against the author).

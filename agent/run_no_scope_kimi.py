@@ -74,6 +74,21 @@ KIMI_TESTSETS = REPO_ROOT / "prolog" / "testsets_kimi"
 KIMI_JSON = REPO_ROOT / "json_kimi"
 KIMI_LADDER = REPO_ROOT / "prolog" / "beta_processed_kimi.txt"
 OUT_DIR = REPO_ROOT / "outputs" / "no_scope_runs_kimi"
+PROVENANCE_SOURCE = "no_scope_rebuild_kimi"
+
+
+def apply_leg_suffix(suffix):
+    """--leg-suffix S rebinds every destination to the sibling leg testsets_kimi<S>/ (+ json,
+    ladder, outputs) and tags provenance no_scope_rebuild_kimi<S> — the same-model REDRAW leg
+    (the kimi within-model floor, 2026-08-22). Registry = the sibling dir only (runbook §6)."""
+    global KIMI_TESTSETS, KIMI_JSON, KIMI_LADDER, OUT_DIR, PROVENANCE_SOURCE
+    if not suffix:
+        return
+    KIMI_TESTSETS = REPO_ROOT / "prolog" / f"testsets_kimi{suffix}"
+    KIMI_JSON = REPO_ROOT / f"json_kimi{suffix}"
+    KIMI_LADDER = REPO_ROOT / "prolog" / f"beta_processed_kimi{suffix}.txt"
+    OUT_DIR = REPO_ROOT / "outputs" / f"no_scope_runs_kimi{suffix}"
+    PROVENANCE_SOURCE = f"no_scope_rebuild_kimi{suffix}"
 
 BATCH_TERMINAL = {"completed", "failed", "expired", "cancelled", "cancelling"}
 
@@ -401,7 +416,7 @@ def run(args):
             _ShimClient(wrapped), "kimi-batch", KIMI_JSON, KIMI_TESTSETS, KIMI_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source="no_scope_rebuild_kimi",
+            provenance_source=PROVENANCE_SOURCE,
             sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
         done = load_processed_log(KIMI_LADDER)
         got = [s for s in final_seeds if s["constraint_id"] in done]
@@ -426,7 +441,7 @@ def run(args):
             _ShimClient(wrapped), "kimi-batch", KIMI_JSON, KIMI_TESTSETS, KIMI_LADDER,
             gen_seeds_by_id=gen_by_id, rejections_path=OUT_DIR / "rejections.json",
             overwrite=True, id_map=id_map, token_acc=token_acc,
-            provenance_source="no_scope_rebuild_kimi",
+            provenance_source=PROVENANCE_SOURCE,
             # we send only max_tokens; temperature + reasoning are the model's own defaults
             # (k3 forces max reasoning, k2.7-code uses its default) — stamp reflects what we set.
             sampling_params=f"max_tokens={MAX_OUTPUT_TOKENS},temperature=model_default,reasoning=model_default")
@@ -460,7 +475,10 @@ def main():
     ap.add_argument("--estimate", action="store_true", help="rough token count; no generation")
     ap.add_argument("--resume-batch", default=None,
                     help="reprocess an already-completed batch id (no generation); pass same --n")
+    ap.add_argument("--leg-suffix", default="", help="sibling leg testsets_kimi<S>/ (same-model redraw)")
     args = ap.parse_args()
+    apply_leg_suffix(args.leg_suffix)
+    print(f"  leg: {KIMI_TESTSETS.relative_to(REPO_ROOT)} | provenance_source={PROVENANCE_SOURCE}")
     if not args.sync and not args.batch:
         args.sync = True  # default to sync for safety on small runs
     run(args)
