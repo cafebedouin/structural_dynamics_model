@@ -1,0 +1,394 @@
+{
+  "header": {
+    "constraint_id": "mandate_legitimacy_scope__public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mls_php",
+    "story_uid": "c6341ae4-eec2-425b-a751-4a7b3f956cf6"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.3,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.68,
+    "resistance": 0.72,
+    "claimed_type": "rope",
+    "human_readable": "Vaccination Mandate Legitimacy — Public-Health-Primary Reading",
+    "topic_domain": "public_health_ethics/constitutional_law/medical_autonomy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "unvaccinated_refusers",
+      "anti_mandate_advocacy_networks"
+    ],
+    "victims": [
+      "immunocompromised_patients",
+      "pre_vaccination_age_infants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "immunocompromised_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Undergoing chemotherapy, transplant immunosuppression, or living with immune-defining conditions that make vaccination ineffective or unsafe. Their protection consists entirely of the vaccination status of the people around them, because their own bodies cannot mount a response. When local coverage slips they absorb the resulting outbreak risk in full: they cannot move through public life without breathing shared air, and shielding at home means giving up work, school, and medical care."
+    },
+    {
+      "name": "pre_vaccination_age_infants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Too young for the recommended vaccine schedule. Their protection consists of maternal antibodies and the vaccination status of everyone they come into contact with. In an outbreak they are typically the first hospitalized and the most likely to die, and they have made no choice about any of it."
+    },
+    {
+      "name": "unvaccinated_refusers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decline vaccination for reasons of conscience, religion, distrust, or calculated risk preference. Under the current permissive arrangement they face no legal consequence in most jurisdictions, continue to move through public spaces, and are shielded by the vaccinated around them whenever coverage stays high. Their own elevated illness risk is the main cost they personally carry."
+    },
+    {
+      "name": "anti_mandate_advocacy_networks",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Organizations, media channels, and political entrepreneurs that fundraise, broadcast, and mobilize around resistance to compulsory vaccination. Donations, audiences, and electoral relevance flow to them in proportion to how salient the mandate fight remains, which depends on the permissive default staying contested rather than settled. Their organizational identity is built on the fight itself."
+    },
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer whatever mandates exist — school-entry checks, emergency workplace rules — track coverage, and recommend schedules. They can propose extending compulsion but lack the political room to do so; after each outbreak they absorb public blame while the exemption statutes that produced the coverage gap remain untouched."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate challenges to mandate laws. Since Jacobson v. Massachusetts (1905) the doctrinal line affirms that compulsion to prevent disease falls within the state police power; recent religious-liberty rulings press toward requiring individualized exemptions, narrowing what a mandate can demand."
+    },
+    {
+      "name": "congregate_care_residents",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Live in nursing homes, group homes, and long-term facilities where a single introduced infection spreads through the whole building. Staff vaccination rates decide their safety. They have no seat in exemption debates, limited ability to relocate, and no way to audit the immunity of the people who bathe and feed them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides community immunity as a public good: converts each person's vaccination decision from a private gamble into a shared pool of protection tall enough to interrupt transmission, solving the free-rider problem that voluntary uptake cannot close at the coverage threshold vulnerable people depend on.",
+    "transfer_function": "Moves disease risk — and the small burden of receiving the vaccine — away from those who cannot bear it (the immunocompromised, infants too young for the schedule) and onto those who can, by making refusal a regulated act with consequences instead of a costless private choice.",
+    "absent_voices": "Congregate-care residents and the not-yet-diagnosed immunosuppressed would object but have no seat; infants appear only through proxies. The visible debate is conducted between refuser communities asserting bodily sovereignty and agencies asserting expertise, while those who cannot be vaccinated speak mainly through hospital admission statistics and the obituaries that follow outbreaks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the principle vanished overnight — if no state could ever cite vulnerable-population protection to justify compulsion — school-entry laws would lose their constitutional footing, coverage would drift below outbreak thresholds in jurisdiction after jurisdiction, endemic measles, pertussis, and influenza cycles would resume, and the immunocompromised and infants would either retreat into permanent shielding or absorb repeated infection; congregate facilities would become periodic epicenters.",
+    "founding_problem": "Late-nineteenth-century cities suffered recurrent smallpox epidemics that voluntary inoculation could not stop, because coverage below the protection threshold let outbreaks chain through the susceptible. The founding problem was whether a self-governing community may compel a minority to accept a small medical burden to avert a large shared catastrophe — answered affirmatively in Jacobson v. Massachusetts (1905).",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: state and federal court dockets from 1905 forward, CDC and WHO surveillance linking coverage dips to resurgence, pediatric-society testimony, and pre-vaccine mortality statistics. The immunocompromised attest the problem from the harmed side, not the benefited side. No party disputes that outbreaks follow coverage collapse; the live dispute is over whether compulsion is a permissible answer."
+  },
+  "interval": {
+    "start": 1905,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1905,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1922,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1939,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1956,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2004,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1905,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1922,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1956,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2004,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1905,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1922,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1939,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1956,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2004,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of a contested kernel: the public_health_primary reading of mandate_legitimacy_scope, whose claim is that state compulsion of vaccination is legitimate when necessary to protect vulnerable populations from serious harm. The eps referent is the standing arrangement under contest — the permissive default in which mandates are absent, hollowed out by exemptions, or politically blocked — assessed by this reading's own lights. In that arrangement the costs of refusal are externalized onto people who cannot vaccinate and cannot exit shared air, which is why eps is high FROM MANDATE ABSENCE. KEY AGENTS (by structural relationship): immunocompromised_patients and pre_vaccination_age_infants bear the arrangement's costs (powerless/trapped); unvaccinated_refusers and anti_mandate_advocacy_networks gain from it (moderate/constrained, organized/identity_locked); public_health_agencies administer what remains (institutional/constrained); constitutional_courts adjudicate legitimacy (institutional/analytical); congregate_care_residents would object but have no seat (powerless/trapped). The claim/metric gap is deliberate and is the datum: claimed_type states what I believe is structurally true of the PRINCIPLE (a necessity-conditioned public-good coordination solution — rope-shaped when operative), while the metrics describe the degraded standing arrangement the story is about. The engine computes per-seat types from the structural data; the divergence between claim and computed type is the measurement, not an error to reconcile.",
+    "key_agents": [
+      "immunocompromised_patients: principal bearer of the standing arrangement's costs (powerless/trapped) — cannot be vaccinated, cannot exit shared air",
+      "pre_vaccination_age_infants: principal bearer (powerless/trapped) — protection entirely external to them",
+      "unvaccinated_refusers: principal gainers under the permissive default (moderate/constrained) — externalize outbreak risk while retaining public life",
+      "anti_mandate_advocacy_networks: organized gainer (organized/identity_locked) — donations, audience, and identity ride on keeping the fight alive",
+      "public_health_agencies: administering seat (institutional/constrained) — runs what mandates remain, proposes more, lacks political room",
+      "constitutional_courts: adjudicating seat (institutional/analytical) — Jacobson lineage affirms police power; recent rulings narrow the mandate form",
+      "congregate_care_residents: absent voice (powerless/trapped) — safety decided by staff coverage, no seat in the debate"
+    ],
+    "logic_rationale": "Extractiveness is high (0.66) because the standing arrangement transfers serious disease risk onto people who did not choose it and cannot purchase protection individually — herd immunity cannot be bought privately, so the vulnerable's alternatives collapse severely once the epidemiology is understood (accessibility_collapse 0.68, high for a non-mountain because collapse is seat-specific, not universal). Suppression is low and FALLING (0.30, matched by the suppression_requirement series) because the arrangement's history is one of enforcement abandonment: active coercive machinery (fines, exclusion, forcible measures) decayed monotonically across the interval. Suppression is a raw structural property and is NOT scaled by power or scope; the vulnerable's bind registers not as active coercion against them but as trapped exit options and collapsed alternatives. Resistance is high (0.72): organized litigation, exemption campaigns, and legislative repeal waves meet the principle wherever it advances. Theater_ratio rises from 0.12 to 0.32 as functional enforcement gives way to performative health-freedom politics and ritual school-entry checks in high-exemption districts — a Goodhart-drift marker. The three series share one ten-point grid (1905-2026). Cyclical note: the fine-grained record oscillates — outbreak, emergency tightening, relaxation, accumulation — and the relaxation phase is where exemption stock accumulates; episodic outbreaks periodically vindicate the principle and then fade, letting opposition rebuild, so the oscillation is load-bearing for the permissive equilibrium rather than noise. The coarse grid captures one full arc (compliance era to erosion era); the ratchet appears as the asymmetric endpoints.",
+    "perspectival_gap": "The seats should compute sharply different types from identical structural data. From the immunocompromised and infant seats the standing arrangement is experienced as a trap with no exit and no purchased alternative — functionally indistinguishable from pure extraction borne by a class that cannot strike, boycott, or move away from shared air; the coalition power that normally rescues powerless classes is unavailable to people whose vulnerability is medical and dispersed. From the refuser seat the same arrangement is ordinary freedom plus a residual self-risk they accepted knowingly. From the agency seat it is responsibility without authority — blame flows in after every outbreak while the levers stay locked. From the advocacy-network seat it is a revenue and identity engine that depends on the fight never being settled. The engine derives these divergences from power, exit, and directionality; nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Beneficiary declarations (unvaccinated_refusers, anti_mandate_advocacy_networks) drive low directionality for those seats; victim declarations (immunocompromised_patients, pre_vaccination_age_infants) drive high directionality near the full-target end, pushed further by trapped exits. Two overrides correct derivations the structural data alone would get wrong: (1) moderate -> 0.15 — refusers carry a secondary payer position (their own elevated illness risk), which would drag the derived d upward, but their structural position in the standing arrangement is beneficiary: they retain public life while externalizing the risk their refusal creates; (2) institutional -> 0.30 — public_health_agencies sit between administration and blame: mildly subsidized (budget, jurisdiction, mandate) yet politically captive, so a mid-low d rather than the fallback. Constitutional_courts share the institutional atom but are near-analytical and barely feed the computation. Scope is national throughout, so the engine's scope amplification applies uniformly.",
+    "mandatrophy_analysis": "The founding problem — recurrent epidemic catastrophe in dense populations when coverage slips — is LIVE, corroborated by every post-2015 outbreak linked to exemption clusters, so the principle itself carries no mandatrophy declaration and the status x verdict pair (live x world_rearranges) raises no zombie flag. The mandatrophy-relevant drift sits one layer down: the enforcement machinery (school-entry checks, exclusion rules) increasingly persists as ritual in high-exemption districts — theater_ratio rising past 0.3 — while the guarantee it symbolizes erodes; if enforcement decay proves irreversible (see omega enforcement_decay_reversibility), that layer drifts toward piton. The classification prevents two mislabelings: reading the coerced refuser as the constraint's victim (the bodily-autonomy move) would erase the actual victim set this reading identifies; reading paper mandates as functioning coordination (a naive rope verdict on the standing arrangement) would miss the extraction the vulnerable currently bear. Claiming rope for the principle while authoring extractive metrics for the arrangement keeps both errors visible."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_of_mandate_legitimacy_scope",
+      "question": "This constraint is the public_health_primary reading of the kernel mandate_legitimacy_scope — what structurally changes if a sibling reading is instantiated instead?",
+      "resolution_mechanism": "Compare victim sets and eps referents across the three sibling stories: bodily_autonomy_primary moves unvaccinated refusers into the victim set and authors eps over the mandate-imposed arrangement; proportionality_reading makes both victim sets conditional on severity, safety, and less-restrictive-alternative findings.",
+      "impact": "Instantiating a sibling flips the eps referent to the opposite arrangement and swaps the victim set; cross-reading comparison is valid only at the kernel level, never by averaging sibling eps values.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this is one of three readings; siblings are separate constraints, not hedges inside this one."
+    },
+    {
+      "id": "disagreement_location_bodily_integrity_vs_imposed_harm",
+      "question": "Where exactly do the readings disagree — on facts, on weights, or on who counts as harmed?",
+      "resolution_mechanism": "Locate the divergence: all readings accept the same epidemiology (coverage thresholds, outbreak mechanics); they disagree on the moral weighting of nonconsensual bodily intrusion versus harm imposed on third parties who cannot consent and cannot protect themselves.",
+      "impact": "If the disagreement is purely axiological, no empirical finding resolves it and the kernel stays permanently contested; to the extent any reading rests on disputed facts such as vaccine safety profiles, targeted evidence could shrink the contest.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The contest's locus: value weighting over a shared factual base, not the epidemiology itself."
+    },
+    {
+      "id": "necessity_standard_operationalization",
+      "question": "What coverage level, disease severity, and outbreak proximity make compulsion 'necessary' rather than merely precautionary?",
+      "resolution_mechanism": "Judicial articulation of the necessity trigger combined with epidemiological threshold studies (e.g., roughly 95 percent coverage for measles interruption); watch whether courts adopt quantitative triggers or defer to agency discretion.",
+      "impact": "A demanding necessity standard shrinks mandate scope and enlarges the exposed victim set; a lax standard expands compulsion and strengthens the bodily-autonomy challenge against it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational content of the 'necessary' condition on which this reading's legitimacy claim turns."
+    },
+    {
+      "id": "enforcement_decay_reversibility",
+      "question": "Is the post-2015 enforcement decay a permanent ratchet, with exemption stock accumulating across each outbreak-relaxation cycle, or does coverage recover after each crisis?",
+      "resolution_mechanism": "Track kindergarten coverage and exemption rates over the coming decade against outbreak timing; persistent failure to recover post-outbreak baselines indicates a ratchet.",
+      "impact": "A permanent ratchet drives theater_ratio upward and pushes school-entry enforcement toward piton drift; recoverable decay keeps the rope classification of the operative principle stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement erosion compounds or self-corrects across outbreak cycles."
+    },
+    {
+      "id": "refuser_identity_fusion_depth",
+      "question": "How deeply are refuser communities fused with refusal as identity, and does that make their exit identity_locked rather than merely constrained?",
+      "resolution_mechanism": "Post-mandate attitude tracking in jurisdictions that removed exemption categories (e.g., California after SB 277): if opposition hardens rather than dissipates once the legal cost lands, fusion is deep.",
+      "impact": "Deep fusion raises the coercive price of any mandate, feeds the resistance metric, and predicts conversion of refusers from incidental gainers into durable organized opposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity-lock depth of the refuser population and its effect on exit options."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bodily_autonomy_primary",
+      "proportionality_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'vaccination mandate legitimacy' covers three structurally distinct constraints (per the eps-invariance principle) and was decomposed into a three-story kernel family. This story (public_health_primary) authors eps over the mandate-absent arrangement, with the immunocompromised and pre-vaccination infants as victims and refusers as gainers. The sibling bodily_autonomy_primary authors eps over the mandate-imposed arrangement, with refusers as victims; the sibling proportionality_reading authors eps conditionally on severity, safety, and alternatives findings. The upstream story (this one) carries the higher-confidence empirical base (threshold epidemiology, outbreak surveillance) and structurally influences the proportionality sibling; the bodily-autonomy sibling is foreclosed rather than influenced, since the two core premises cannot coexist in one framework. Each file links the other two via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "gain_flow": "unvaccinated_refusers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "jacobson_police_power_baseline",
+    "drift_state": {
+      "moment": "contemporary_exemption_proliferation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "necessity_conditioned_compulsion_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "community_immunity_requires_near_universal_uptake",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

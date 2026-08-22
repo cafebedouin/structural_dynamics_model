@@ -1,0 +1,380 @@
+{
+  "header": {
+    "constraint_id": "price_formation_kernel__institutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pfk_institutional",
+    "story_uid": "1563b2f0-9a5c-4237-b821-e7312100a02a"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Construction of Housing Prices (Zoning-Credit-Tax-Platform Apparatus)",
+    "topic_domain": "political_economy/housing_markets/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_homeowners",
+      "mortgage_lenders",
+      "real_estate_intermediaries",
+      "residential_developers"
+    ],
+    "victims": [
+      "renters",
+      "first_time_buyers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "incumbent_homeowners",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "situation": "Own homes whose assessed value tracks the scarcity the permitting system maintains. Vote in local elections at high rates, attend planning hearings, and organize through neighborhood associations to oppose density near their properties. Household balance sheets and retirement plans are denominated in home equity, so proposals that would lower prices register as personal losses. Selling and leaving would realize gains but dissolve the community standing and identity built around the property and its appreciation."
+    },
+    {
+      "name": "municipal_zoning_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Administer comprehensive plans, discretionary review, and permit approval. Councils and planning commissions are elected or appointed from the local population, which skews toward long-tenured homeowners; staff careers depend on avoiding appeals and litigation from well-organized objectors. Upzoning invites recall campaigns and lawsuits; maintaining restrictions draws little organized opposition."
+    },
+    {
+      "name": "banking_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Set capital requirements, underwriting standards, and guarantee parameters such as conforming loan limits that determine who can borrow how much against housing collateral. Standards tighten after crises and loosen under political pressure to broaden ownership; the rules define the credit channel through which household income becomes purchasing power."
+    },
+    {
+      "name": "national_tax_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and administer the tax provisions that shape housing returns: mortgage interest deductibility, capital-gains exclusions on principal residences, property-tax assessment limits, and the tax advantages of owner occupation over tenancy. Each provision is defended by its beneficiaries and revisited only inside broad fiscal negotiations."
+    },
+    {
+      "name": "real_estate_intermediaries",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Broker transactions for commission percentages preserved by longstanding industry norms and enforced through listing-service access rules that their own associations write. Agent licensing and portal gatekeeping add layers between sellers and buyers. Proposals for decoupled fees, flat-fee listings, or open seller access threaten the commission stream and are resisted through licensing boards and association lobbying."
+    },
+    {
+      "name": "mortgage_lenders",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Originate mortgages against appraised values that embed the scarcity premium, earning interest and origination fees on the inflated principal. Securitization moves risk forward to investors, limiting exposure to any single market; the volume-based revenue model rewards larger balances, which higher prices deliver automatically."
+    },
+    {
+      "name": "renters",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Pay monthly amounts set by the same scarcity that raises purchase prices, without accumulating equity. Moving means new deposits, disrupted schooling and commutes, and re-entry into a market whose vacancy rates are kept low by the same supply constraints; staying means absorbing increases bounded only by landlord pricing power. Down-payment savings recede as prices outrun wages."
+    },
+    {
+      "name": "first_time_buyers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enter the market carrying the full capitalized price of decades of accumulated restrictions, financed by mortgage debt sized to that price. The difference between what the previous generation paid for the same housing stock and today's entry price is the transfer they bear. Delaying purchase means paying rents that consume the savings a purchase would require."
+    },
+    {
+      "name": "residential_developers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hold land banks whose value appreciates under scarcity, and build infill projects whose margins depend on the same elevated prices. Permitting delays, impact fees, and discretionary review raise costs and block projects outright; the industry lobbies for individual entitlements while profiting from the scarcity its competitors' blocked projects maintain. Geographic diversification lets capital shift toward friendlier jurisdictions."
+    },
+    {
+      "name": "housing_reform_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organize for upzoning, streamlined permitting, and tenant protections, winning occasional reforms through citywide plan amendments, state preemption laws, and accessory-dwelling legalization. They are outnumbered at the hearings where decisions are actually made, where attendance skews heavily toward opposed homeowners; their victories arrive through legislatures and courts rather than the local processes that administer the rules day to day."
+    },
+    {
+      "name": "priced_out_migrants",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Would move to high-wage metropolitan areas where their earnings potential is highest but cannot clear the entry price of either rent or purchase. They take jobs elsewhere at lower productivity and never appear in any local planning process, because they are not yet residents of the places deciding whether to admit them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The apparatus solves real problems: zoning and review manage land-use externalities and infrastructure load; lending standards and guarantee parameters maintain credit discipline and systemic stability; tax provisions channel investment toward owner-occupied housing and municipal finance; intermediary platforms reduce search and matching costs in the largest purchase most households ever make.",
+    "transfer_function": "Moves housing wealth and future income streams from renters and first-time buyers to incumbent owners, lenders, and intermediaries: scarcity rents flow upward monthly, interest and commissions are taken on every transaction, and regulatory restriction is capitalized into existing owner equity as windfall appreciation.",
+    "absent_voices": "Priced-out migrants never enter any jurisdiction's process because they are not yet residents of the places making admission decisions. Renters are systematically underrepresented at planning hearings, where attendance skews toward opposed homeowners. Future entrants bear the capitalized price as debt but hold no seat anywhere in the apparatus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would collapse the scarcity premium: prices would fall toward replacement cost plus location rent, incumbent equity would compress sharply, lender balance sheets would absorb collateral losses, and intermediary volumes would shrink as transaction values repriced. The rearrangement would be violent precisely because so much household wealth is capitalized into the current structure.",
+    "founding_problem": "Rapid urbanization produced nuisance externalities, unsafe housing stock, speculative land bubbles, and recurrent credit collapses; the apparatus was assembled to order land use, stabilize housing finance, and widen ownership - and, in significant part, to sort neighborhoods by race and class.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Urban economics and housing-finance scholarship corroborate the live portions (externality management, credit-cycle stabilization); fair-housing jurisprudence and official historical commissions attest that the sorting rationale was formally repudiated. Central-bank post-crisis reviews document the credit-stability rationale from outside the beneficiary set. No source outside the benefiting parties attests that current restrictiveness levels track the original functions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Housing prices in developed economies are set inside an institutional apparatus rather than emerging from unmediated exchange: municipal zoning and discretionary permitting constrain supply; lending standards and guarantee parameters shape who can convert income into purchasing power; tax provisions tilt returns toward owner occupation; and intermediary platforms gate and tax every transaction. Each element solves some real coordination problem, and each simultaneously channels a share of housing cost from entrants and tenants to incumbents, lenders, and brokers. The claim and the metrics are independent authored facts: the constraint is CLAIMED as tangled_rope - genuine coordination fused with asymmetric, enforced extraction - while the metrics describe the apparatus's actual operation as this reading assesses it. Epsilon's referent is the standing apparatus itself, never the arrangements a reform program would install.",
+    "key_agents": [
+      "incumbent_homeowners: Primary beneficiary and political enforcer (organized/identity_locked) - collect appreciation and dominate the forums where supply rules are made",
+      "renters: Primary target (powerless/trapped) - pay scarcity rents without accumulating equity",
+      "first_time_buyers: Primary target (powerless/constrained) - absorb the full capitalized price as mortgage debt",
+      "mortgage_lenders: Secondary beneficiary (institutional/arbitrage) - earn on inflated principals and sell risk forward",
+      "real_estate_intermediaries: Secondary beneficiary and rule-writer (organized/constrained) - collect percentage commissions protected by listing-service access rules",
+      "municipal_zoning_authorities: Administrative agenda-setter (institutional/constrained) - run permitting under homeowner political dominance",
+      "banking_regulators and national_tax_authorities: Systemic agenda-setters (institutional/constrained) - set the credit and tax parameters",
+      "residential_developers: Dual-positioned (powerful/mobile) - profit from scarcity on held land, blocked by it on new builds",
+      "housing_reform_advocates and priced_out_migrants: Excluded voices (organized/powerless) - press reform from outside the decision forums, or are locked out before arrival"
+    ],
+    "logic_rationale": "Extraction is authored at 0.68: price-to-income divergence in restrictive markets, interest and commission shares of transaction value, and capitalized windfalls to incumbents are large relative to any defensible service cost, but the apparatus retains real functions (externality management, credit discipline, search-cost reduction), keeping it below pure-extraction levels. Suppression is 0.62 and is a raw structural property, unscaled by power or scope - it reflects the machinery (discretionary review, weaponized appeal rights, listing-service gatekeeping, licensing boards) that blocks alternatives; only extractiveness is scaled downstream. Theater ratio 0.42: hearings, affordability studies, and inclusionary programs increasingly perform consideration while preserving the underlying restriction. Accessibility collapse 0.45: alternatives (reform jurisdictions, missing-middle typologies, cooperative tenure) persist but are costly and localized. Resistance 0.58: sustained reform organizing, litigation, and state preemption campaigns meet the apparatus directly. All three tracked metrics share one six-point grid (t=0..40, step 8). The suppression_requirement series is authored because the story specifically traces enforcement hardening - discretionary review expanded and organized-objector leverage grew over the interval - not merely shifting extraction.",
+    "perspectival_gap": "From the incumbent-homeowner seat the apparatus is experienced as protection: a system they staff, legitimately control, and rely on to safeguard savings and neighborhood character. From the renter and first-time-buyer seats the identical structure operates as a toll: the same hearings read as veto, the same standards read as admission control. The administrative seats experience mandate fulfillment; developers experience the apparatus from both sides at once, as margin on held land and barrier on new builds. Note the coalition asymmetry: renters and first-time buyers together outnumber homeowner blocs in most restrictive metros, but lower turnout, shorter tenure, and hearing-format barriers keep them from converting numbers into agenda power - the engine reads their seats as weak because their coordinated capacity currently is weak.",
+    "directionality_logic": "Beneficiary declarations (incumbent homeowners, mortgage lenders, real estate intermediaries, and secondarily developers) drive those seats toward the beneficiary end of directionality; the homeowner seat sits lowest because its benefit is direct, concentrated, and fused with home equity and neighborhood identity. Victim declarations (renters, first-time buyers) drive those seats toward the target end; trapping (deposit frictions, school and job attachment) and the size of the capitalized entry price push them nearer full-target than mobility alone would. Developers derive near-symmetric directionality from their dual declaration. The excluded seats (reform advocates, priced-out migrants) are deliberately left out of the beneficiary/victim arrays: their exclusion is the finding, recorded at commentary grade, not a directionality input.",
+    "mandatrophy_analysis": "Classifying the apparatus as tangled_rope guards against both symmetrical errors. Reading it as pure extraction would erase the live coordination functions - nuisance and infrastructure management, credit-cycle discipline, transaction-cost reduction - that independent scholarship corroborates. Reading it as pure coordination would erase the enforced, asymmetric transfer that fair-housing history and price-to-income data document. On mandatrophy: part of the founding mandate is dead (racial and class sorting is formally repudiated, though its effects persist in the geography the apparatus froze) and part remains live (externality management, credit stability), so the founding-problem status is contested rather than resolved. The arrangement persists with concentrated, capitalized benefits and diffuse costs - the classic configuration in which a mandate that has outlived part of its function nonetheless survives politically.",
+    "kernel_context": "This constraint is the institutional reading of the price_formation_kernel - the contested question of what fixes housing prices. Sibling readings: the naturalist reading (prices as equilibrium over objective scarcity and preference), the georgist reading (prices split into unearned land rent and earned improvement value), and the financialization reading (prices driven by credit expansion and asset-price feedback loops). This file instantiates only the institutional reading: the apparatus of zoning, lending standards, tax treatment, and intermediary platforms as the constitutive force. Its epsilon refers to the standing apparatus as this reading assesses it, not to the arrangements any sibling would install."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This story instantiates the institutional reading of the price_formation_kernel: prices are constructed by zoning, lending standards, tax treatment, and intermediary platforms. What would each sibling reading change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Cross-reading comparison within the kernel family: the naturalist reading relocates extraction to approximately zero (prices as equilibrium signals over objective scarcity); the georgist reading splits the victim set by separating land rent from improvement value and retargets the remedy at land-value taxation; the financialization reading relocates the driving force to credit expansion and asset-feedback loops. Adjudication proceeds by which causal attribution survives jurisdiction-level natural experiments.",
+      "impact": "Adopting the naturalist reading would collapse this story's beneficiary/victim structure entirely; adopting the georgist reading would preserve the apparatus diagnosis but redirect extraction accounting to land rent alone; adopting the financialization reading would re-weight the credit channel from one lever among four to the primary driver.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the price_formation_kernel; sibling readings relocate the constraining force and reshape the beneficiary/victim sets."
+    },
+    {
+      "id": "jurisdictional_restrictiveness_variance",
+      "question": "The authored epsilon is a corpus-level average over wildly heterogeneous jurisdictions - does the apparatus compute differently in permissive markets (Houston, Tokyo) versus restrictive ones (coastal California, London)?",
+      "resolution_mechanism": "Per-metropolitan recomputation using local permitting density, price-to-income ratios, and land-use governance stringency.",
+      "impact": "In highly restrictive jurisdictions the arrangement computes as substantially more extractive, with the coordination cover thinning; in permissive ones the coordination function dominates and extraction approaches the resource-allocation floor.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extractiveness varies with regulatory restrictiveness; the scalar masks a distribution."
+    },
+    {
+      "id": "coordination_extraction_separability",
+      "question": "Is the apparatus's genuine coordination function (externality management, credit stability, transaction-cost reduction) separable from its exclusionary operation, or does restricting supply inherently generate the extraction?",
+      "resolution_mechanism": "Natural experiments: Minneapolis 2040, Tokyo's national zoning preemption, Houston's absence of use-zoning - if externality management persists while prices normalize, the functions are separable.",
+      "impact": "If separable, the excess extraction is removable by design rather than being the price of coordination; if inseparable, part of the measured extraction is inherent coordination cost and the classification softens toward rope-like readings.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination and extraction components of the apparatus are structurally separable."
+    },
+    {
+      "id": "capitalization_transition_justice",
+      "question": "Decades of the apparatus have capitalized its effects into existing home equity; removing it now converts a flow problem into a stock problem - does transitional liability to recent buyers change the structural classification?",
+      "resolution_mechanism": "Preference-dependent: resolves only through political choice among compensation designs (grandfathering, buyouts, long phase-ins), weighing incumbent windfall preservation against prospective entrant access.",
+      "impact": "With a grandfathered transition the apparatus can unwind without destroying household balance sheets, opening reform trajectories; without it, defensive coalition strength keeps enforcement high and the extraction ratchets.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Capitalized-equity lock-in makes the constraint's persistence partly a distributive-choice question rather than a structural fact."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "price_formation_kernel__naturalist_reading",
+      "price_formation_kernel__georgist_reading",
+      "price_formation_kernel__financialization_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'housing price formation' decomposes into four readings of one kernel (price_formation_kernel): naturalist (equilibrium over objective scarcity), georgist (land rent separated from improvement value), financialization (credit expansion and asset-feedback loops), and this institutional reading (construction by zoning, lending standards, tax treatment, and platforms). Each reading is a separate constraint story with its own epsilon, beneficiary/victim structure, and classification; they are linked here as a constraint family. The naturalist reading carries near-zero extraction and serves as the upstream no-construction baseline the other three argue against; this institutional reading feeds the georgist reading's identification of policy-made land rent and overlaps the financialization reading on the credit-standard channel."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "apparatus_constituted_pricing",
+    "drift_state": {
+      "moment": "contemporary_reform_natural_experiment_era",
+      "direction": "revival_pressure",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "naturalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "georgist_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "financialization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "price_formation_is_institutionally_constructed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "regulatory_scarcity_capitalizes_into_owner_equity",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "incumbent_homeowners",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

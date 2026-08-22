@@ -1,0 +1,372 @@
+{
+  "header": {
+    "constraint_id": "speech_protection_kernel__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3807f2cb-a5bb-454e-b99a-cc95d37d2f18"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.75,
+    "resistance": 0.65,
+    "claimed_type": "rope",
+    "human_readable": "Near-Categorical Speech Protection (Absolutist Reading): Listener Harm Not Grounds for Restriction",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "political_dissidents",
+      "unpopular_minority_speakers",
+      "offensive_speakers",
+      "general_public"
+    ],
+    "victims": [
+      "targets_of_hate_speech",
+      "targets_of_harassing_offensive_speech"
+    ],
+    "vindicated_propositions": [
+      "speaker_autonomy_principle",
+      "censorship_ratchet_thesis",
+      "unqualified_free_speech_command"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 64,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 64,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 64,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.35
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This constraint is one reading of the speech_protection_kernel (the absolutist_reading). What would each sibling reading change structurally if instantiated instead of this one?",
+      "resolution_mechanism": "Author each sibling reading as its own constraint story against the same referent and compare epsilon, victim sets, boundary placement, and per-seat classifications across the family.",
+      "impact": "The harm_threshold and dignity readings would convert this arrangement's uncompensated cost-bearers into declared victims with actionable claims and move the boundary inward, raising epsilon at the same referent; the marketplace and democratic_participation readings would keep a wide boundary but re-ground it, leaving the victim set roughly intact while changing the vindicated propositions.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading indexicality of the speech protection kernel — what each sibling reading would change."
+    },
+    {
+      "id": "disagreement_location",
+      "question": "Where is the family disagreement located — in the empirical ratchet claim (harm exceptions generalize into censorship), in the deontological priority of speaker autonomy, or in the moral status of listener harm itself?",
+      "resolution_mechanism": "Conceptual separation of the reading's two axioms: test the empirically_contingent ratchet axiom against comparative data independently of the deontological autonomy axiom, and ask which strand each sibling's objection actually targets.",
+      "impact": "If the disagreement is located in the empirical strand, comparative evidence could move the boundary and weaken this reading's foreclosure of the conditional readings; if located in the deontological strand, no empirical resolution is available and the readings remain permanently co-live as rival frameworks.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Location of the inter-reading disagreement: empirical ratchet claim versus deontological autonomy core."
+    },
+    {
+      "id": "silencing_externality_status",
+      "question": "Does protected harmful speech functionally silence its targets' own speech (chilling of target-group expression), such that the arrangement transfers expressive liberty from targets to their harassers and some seat does capture gains?",
+      "resolution_mechanism": "Empirical study of target-group speech participation before and after exposure to protected hostile speech, and of community-level participation shifts where hostile speech is moderated.",
+      "impact": "If silencing is substantial, the no-collector accounting fails: the arrangement's beneficiaries would include agents whose gain is others' suppressed speech, effective extraction rises, and per-seat classification pressure shifts toward tangled_rope or snare at the margin; if negligible, the externality reading holds and the low-epsilon authoring stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the uncompensated harm is pure externality or a second-order transfer with a collector — the strongest internal challenge to this reading's accounting."
+    },
+    {
+      "id": "ratchet_axiom_empirical_status",
+      "question": "Does permitting harm-based speech restriction actually ratchet into broad censorship (this reading's empirically contingent axiom), or do peer democracies' harm-based regimes remain bounded over time?",
+      "resolution_mechanism": "Longitudinal comparative constitutional data: the scope of hate-speech and harm-based restrictions in peer jurisdictions across decades — whether restriction categories have generalized or remained bounded.",
+      "impact": "If the ratchet is refuted, the categorical rule loses its consequentialist grounding and rests on the deontological core alone; this reading's foreclosure of the conditional readings weakens, fixing_cost would reassess from prohibitive, and the arrangement's persistence would carry tradition-weight that pressures reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical status of the censorship-ratchet premise underlying categorical protection."
+    },
+    {
+      "id": "categorical_exclusion_boundary",
+      "question": "Where exactly does the narrow set of categorical exclusions sit, and is it stable — could new carve-outs (for misinformation, group harassment, or similar) widen the exclusion set and move the effective boundary inward?",
+      "resolution_mechanism": "Doctrinal tracking of the exclusion set across the interval, and of proposed carve-outs in pending legislation and litigation.",
+      "impact": "Each widening of the exclusions shrinks the uncompensated-harm class (lowering the externality cost) while narrowing speaker protection (raising the cost this reading counts against itself); sustained widening would date a practice_drift transition and erode the near-categorical claim this story authors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of the categorical exclusion set that fixes the protection boundary."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the speech-protection kernel: the absolutist_reading, under which speech protection operates near-categorically and listener harm is rejected as a ground for restriction, save a narrow fixed list of categorical exclusions (incitement, true threats, defamation, obscenity, fraud). The standing arrangement under contest — and therefore the epsilon referent, per the fixed kernel-reading rule — is that near-categorical protection order itself, assessed by this reading's own lights: a constructed constitutional command enforced by judicial review, under which the state is foreclosed from the entire class of harm-based speech restrictions, speakers hold the widest protection boundary in the reading set, and targets of harmful speech bear uncompensated costs that the reading classifies as the accepted price of the boundary rather than as a transfer to anyone. The sibling readings (harm_threshold, marketplace, dignity, democratic_participation) are separate constraint stories sharing the kernel text, linked through the network block; each authors its own epsilon, victim set, and boundary placement. This file authors only the absolutist reading. KEY AGENTS (by structural relationship): - constitutional_courts: agenda-setter/enforcer (institutional/constrained) — draws and polices the categorical boundary through judicial review - legislatures_and_regulators: bound party (institutional/trapped) — foreclosed from harm-based restriction; exit only by constitutional amendment - political_dissidents: primary beneficiary (powerless/constrained) — the paradigm protected class - unpopular_minority_speakers: beneficiary (powerless/constrained) — historically the first silenced under offense standards - offensive_speakers: beneficiary (powerless/constrained) — blasphemers, provocateurs, flag-burners; no narrower reading reaches them - targets_of_hate_speech: cost-bearer without remedy (powerless/trapped) — bears the accepted price; their claim is the one the reading rejects by construction - targets_of_harassing_offensive_speech: cost-bearer without remedy (powerless/trapped) — continuous exposure, no recourse short of the exclusions - general_public: dual seat (moderate/constrained) — beneficiary as listeners and potential speakers, diffuse cost-bearer as exposed audience - international_human_rights_bodies: excluded (institutional/trapped) — would restrict what this arrangement protects - comparative_law_scholars: analytical observer (moderate/analytical) — track the peer-democracy record testing the ratchet axiom",
+    "key_agents": [
+      "constitutional_courts: agenda-setter/enforcer (institutional/constrained) — draws and polices the categorical boundary through judicial review; the arrangement exists only insofar as this seat maintains it",
+      "legislatures_and_regulators: bound party (institutional/trapped) — foreclosed from the entire class of harm-based speech restrictions; exit only via constitutional amendment",
+      "political_dissidents: primary beneficiary (powerless/constrained) — the paradigm protected class; first restricted under any harm standard, fully protected under this one",
+      "unpopular_minority_speakers: beneficiary (powerless/constrained) — collects the same wide boundary; historically the first silenced under offense standards",
+      "offensive_speakers: beneficiary (powerless/constrained) — blasphemers, provocateurs, flag-burners; no narrower reading extends protection to them",
+      "targets_of_hate_speech: cost-bearer without remedy (powerless/trapped) — bears the arrangement's accepted price; their claim to protection is the exact claim the reading rejects",
+      "targets_of_harassing_offensive_speech: cost-bearer without remedy (powerless/trapped) — continuous exposure in digital and physical spaces, no legal recourse short of the categorical exclusions",
+      "general_public: dual seat (moderate/constrained) — beneficiary as listeners and potential speakers, diffuse cost-bearer as the exposed audience",
+      "international_human_rights_bodies: excluded (institutional/trapped) — treaty bodies and peer jurisdictions that would restrict what this arrangement protects; structurally outside the constitutional conversation",
+      "comparative_law_scholars: analytical observer (moderate/analytical) — document the categorical boundary's outlier status and test the ratchet axiom against peer-democracy records"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.15, the series end-state) because the reading's own accounting finds no collector: the arrangement forbids a class of state action rather than transferring value, the state's foreclosed power is received by no seat, and the harm to targets is an uncompensated externality the reading explicitly declines to count as extraction — that declination is the reading's defining move, and it is marked rather than settled by the silencing_externality_status omega. Suppression (0.25) reflects real coercive enforcement — courts strike down enacted laws — aimed at state action the reading counts as the constraint's function rather than a cost. Theater ratio is low (0.10) because the protection is operative: restrictions are actually struck and speakers actually rely on the boundary; the small theatrical component is the gap between categorical rhetoric ('no law means no law') and the carve-out practice the seat actually administers, which is why theater rises slowly across the series. Accessibility collapse (0.75) is assessed from the bound party's seat: once the categorical command is understood, the state's harm-based regulatory alternatives collapse almost completely, with the narrow exclusions and content-neutral regulation surviving as residual option space. Resistance (0.65) is high and constant — legislatures retest the boundary every session, targets litigate, treaty bodies and peer democracies press from outside — which is precisely why the reading holds the rule must be categorical rather than balanced. The claimed type (rope) and the metrics are authored independently: the reading claims a genuine coordination solution to the censorship collective-action problem with net benefit to participants; the engine computes per-seat types from the structural data, and divergence at the payer seats is the datum, not an error. All three measurement series run on one shared grid (0, 16, 32, 48, 64, 80) with every metric authored at every point; the suppression series is authored because the story specifically tracks the enforcement apparatus maturing from weak early-era review to hardened, sustained enforcement, plateauing as the machinery stabilizes.",
+    "perspectival_gap": "The seats should compute differently. From the constitutional_courts seat the arrangement is a workable doctrinal line the seat itself draws and polices. From political_dissidents and unpopular_minority_speakers it is a lifeline: under any harm standard their speech is restricted first, so the categorical refusal is worth more to them than to any other seat. From legislatures_and_regulators it is the removal of an entire regulatory class they are democratically pressed to use — but they are bound by design, which is subjection to a command rather than extraction-victimhood. From targets_of_hate_speech and targets_of_harassing_offensive_speech the same structure is experienced as abandonment: their harm is defined as non-grounds by the very rule that protects everyone else, and their trapped position (no remedy, no exit from the speech environment) places them at the target end of the directionality spectrum. The engine computes this divergence from the role, power, and exit data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Beneficiary declarations (political_dissidents, unpopular_minority_speakers, offensive_speakers, general_public) derive low d for those seats — the arrangement subsidizes their expression. Victim declarations (targets_of_hate_speech, targets_of_harassing_offensive_speech) derive high d, pushed toward the full-target end by trapped exit: no remedy and no exit from the environment where the speech circulates. general_public carries a dual role and lands near symmetric: genuine listening benefit, diffuse exposure cost. legislatures_and_regulators are payers by role and trapped by exit, deriving high d — structurally accurate, since the constraint is aimed at them; the reading's dispute is not with that d but with whether being bound counts as being extracted from. constitutional_courts are declared neither beneficiary nor victim; they administer the boundary and expand their own authority in doing so, sitting near symmetric with a slight beneficiary lean. No directionality overrides are used: the derivation from role declarations plus exit options captures the structure, and the available overrides are keyed by power atom, which could not separate the two institutional seats whose divergence is role-based rather than power-based.",
+    "mandatrophy_analysis": "The founding problem — state and majority weaponization of 'harm' to silence critics (sedition, blasphemy, obscenity prosecutions) — is authored live: every political era generates new harm-based restriction demands, and the cross-faction pattern in legislative records corroborates the problem from outside the speaker beneficiary set. With the mandate live, no mandatrophy arises, and the arrangement's persistence tracks an operative function rather than inertia. The classification guards against two mislabels in opposite directions: against snare, by the receipt surface — the arrangement names cost-bearers but no seat collects, and extraction without a collector is externality, not extraction (the silencing_externality_status omega marks the contingency under which that accounting could fail); against mountain, by emerges_naturally: false — the boundary is a constructed constitutional commitment, not a natural law, however bedrock-like its rhetoric. Piton is excluded by low theater and an operative enforcement function. Should the ratchet axiom be empirically refuted, the mandate becomes contested rather than dead — the arrangement would then persist partly on tradition, and reclassification pressure toward tangled_rope would follow.",
+    "kernel_context": "This constraint is the absolutist_reading of the speech_protection_kernel, instantiated from the fixed constitutional text whose command the reading takes as unqualified — the reference frame is 'no law means no law.' Sibling readings — harm_threshold_reading, marketplace_reading, dignity_reading, democratic_participation_reading — are separate stories sharing the kernel. The structural disagreement across the family is located at a single decision point: whether listener harm can ground restriction. This reading answers no, save a narrow fixed list of categorical exclusions; the conditional readings answer yes under stated conditions; the grounding-plural readings keep a wide boundary but re-ground it. Reading relations use the joint-application diagnostic: this reading and the two conditional readings (harm_threshold, dignity) issue contradictory verdicts on the same speech act and cannot be operationalized within one framework, so they are authored as forecloses; this reading and the two grounding-plural readings (marketplace, democratic_participation) can be jointly held and jointly applied — adjudicative practice routinely stacks the grounds — so they are authored as coexists_with. Drift: the seat's own reference frame (the unqualified command) has been departed from in practice by the accumulating carve-out doctrine — substantial, and openly acknowledged by the authority structure itself, which maintains the exclusions without pretending the text is applied literally."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_protection_kernel__harm_threshold_reading",
+      "speech_protection_kernel__marketplace_reading",
+      "speech_protection_kernel__dignity_reading",
+      "speech_protection_kernel__democratic_participation_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'speech protection' covers structurally distinct claims and decomposes into a five-story constraint family sharing one kernel text: the absolutist reading (this story — widest boundary, autonomy-grounded, listener harm rejected as grounds), the harm-threshold and dignity readings (conditional boundaries that convert this story's cost-bearers into declared victims), and the marketplace and democratic_participation readings (wide boundaries re-grounded in truth-discovery and self-governance). Each member authors its own epsilon, victim set, and type against the same referent. The family's upstream/downstream structure runs from this reading outward: the conditional readings are downstream responses to this reading's uncompensated-harm costs, and this reading's ratchet axiom is the empirical premise their proponents attack. All five files link one another through affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Review every speech restriction against the categorical command, strike down harm-based restrictions, and maintain the narrow list of categorical exclusions. The boundary exists only insofar as this seat keeps drawing and policing it. Revising doctrine from the bench is possible at the margins but binds the seat to precedent and institutional legitimacy."
+    },
+    {
+      "name": "legislatures_and_regulators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Enact speech regulation in response to constituent demand — hate speech, harassment, misinformation, offense. Every harm-based restriction is struck down under the categorical command, foreclosing the entire class of listener-harm grounds. The only exit is constitutional amendment, which the command's supermajority requirements place effectively out of reach."
+    },
+    {
+      "name": "political_dissidents",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Speak against the state and its majorities. They are the paradigm class the categorical rule exists to protect: under any harm standard their speech is restricted first, so the categorical refusal is worth most to them. Leaving the jurisdiction would surrender the protection, and their speech is precisely what makes them targets."
+    },
+    {
+      "name": "unpopular_minority_speakers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Members of minority groups speaking about their own lives and claims; historically the first restricted under harm and offense standards invoked by majorities. They collect the same wide protection boundary, and their exit options are constrained by the same logic as dissidents'."
+    },
+    {
+      "name": "offensive_speakers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Speakers whose expression is profane, blasphemous, or deliberately provocative toward ideas, symbols, and institutions. No narrower protection boundary in the reading set extends to them. Their social standing is low and their legal protection under this arrangement is total."
+    },
+    {
+      "name": "targets_of_hate_speech",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Members of groups targeted by demeaning group-directed expression. The speech is protected under the categorical command; they have no legal remedy, cannot exit the community where the speech circulates, and bear the harm as the arrangement's accepted price. Their claim to protection is the exact claim the reading rejects by construction."
+    },
+    {
+      "name": "targets_of_harassing_offensive_speech",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals subjected to harassing, demeaning, or distressing expression that falls short of the categorical exclusions — not a true threat, not defamation. No remedy is available; exposure is continuous across digital and physical spaces; exit would mean withdrawing from public discourse altogether."
+    },
+    {
+      "name": "general_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hear unfiltered speech and hold the listener's side of the categorical protection — the right to receive expression. Every member is a potential speaker covered by the boundary. They also absorb the diffuse cost of exposure to harmful, false, and offensive expression that no restriction under this arrangement touches."
+    },
+    {
+      "name": "international_human_rights_bodies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Treaty bodies and peer jurisdictions that classify group-directed hateful speech as restrictable. Their norms have no purchase inside the constitutional order, which binds only its own command. They would restrict what this arrangement protects; their exclusion from the constitutional conversation is structural."
+    },
+    {
+      "name": "comparative_law_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document that the categorical boundary is an outlier among peer democracies and track whether harm-based regimes elsewhere remain bounded or generalize over decades — the empirical record on which this reading's ratchet axiom rests."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the censorship collective-action problem: once any faction can invoke 'harm' to restrict speech that offends it, every faction acquires the same weapon, and restriction expands ratchet-like until only official and majority-safe speech remains. The near-categorical rule removes the entire class of harm-based restrictions, stabilizing an equilibrium in which all speakers — including the state's critics — hold the same protection boundary.",
+    "transfer_function": "Moves nothing between parties. The arrangement forbids a class of state action rather than transferring money, work, attention, or status. Its benefits accrue as liberty to speakers diffusely; its costs are uncompensated externalities borne by targets of harmful speech and collected by no seat.",
+    "absent_voices": "Targets of hate speech and harassment would object that their harm is dismissed as non-grounds by construction; they sit inside the polity but outside the constraint's terms — the rule is built so their testimony cannot ground restriction. International human rights bodies and peer democracies that restrict hateful speech are excluded from the constitutional conversation entirely, with no jurisdictional purchase inside the order.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If near-categorical protection vanished overnight, legislatures would enact harm-based restrictions within a session — hate speech, offense, harassment, misinformation — each defined by whichever faction holds power. Speakers would chill toward the safe center, and dissident and minority speech would bear the first restrictions. The speech environment would reorganize around state-drawn harm lines.",
+    "founding_problem": "Governments and majorities historically weaponize 'harm' to silence critics: sedition, blasphemy, obscenity, and subversion prosecutions were the norm. The categorical rule was built to remove the harm justification entirely, so the state could never claim a harm warrant for censorship again.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Historical scholarship on sedition, blasphemy, and obscenity prosecutions attests the founding problem from outside the speaker beneficiary set, and the recurring cross-faction pattern — each governing faction proposing restrictions on its opponents' speech once in power, documented in legislative records across jurisdictions — corroborates that the harm-weaponization problem remains live. The constitutional courts, an agenda-setter seat outside the beneficiary set, restate the problem in every restriction decision. Targets' advocacy groups dispute only the reading's remedy, not the historical problem."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "no_law_means_no_law_baseline",
+    "drift_state": {
+      "moment": "contemporary_doctrinal_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "harm_threshold_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "marketplace_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "democratic_participation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "listener_harm_never_grounds_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "harm_exceptions_ratchet_into_censorship",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

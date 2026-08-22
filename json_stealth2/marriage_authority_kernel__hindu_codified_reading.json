@@ -1,0 +1,368 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority_kernel__hindu_codified_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "70808752-2cfe-4465-ba3f-e39d541566ed"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Codified Hindu Family Law Authority (Hindu Marriage Act 1955, Civil-Court Interpretive Reading)",
+    "topic_domain": "comparative law / constitutional pluralism / religious governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "civil_judiciary",
+      "union_legislature",
+      "hindu_reformist_elites"
+    ],
+    "victims": [
+      "hindu_women",
+      "interfaith_hindu_marriage_parties",
+      "customary_adjudicative_communities"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contingency",
+      "question": "This constraint is one reading of the marriage_authority_kernel (reading_id: hindu_codified_reading); how would instantiating a sibling reading — muslim_shariat_reading, christian_canonical_reading, parsi_communal_reading, or secular_civil_reading — change the victim set, the beneficiary structure, and epsilon?",
+      "resolution_mechanism": "Cross-reading comparison across the five sibling stories: align victim sets, beneficiary seats, and extraction metrics, then test the expected structural delta (this reading moderate on gender equity — better than the shariat reading, worse than the secular reading) as a corpus-level prediction.",
+      "impact": "The victim-set composition and epsilon are reading-indexed, not topic-indexed: a sibling instantiation redistributes who counts as harmed and by how much. Any cross-community comparison of 'personal law extraction' that pools these stories without the reading index is invalid.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading-contingent classification of a contested marriage-authority kernel."
+    },
+    {
+      "id": "extraction_attribution_ambiguity",
+      "question": "Are the gendered costs measured under this arrangement authored by the codified framework itself, or inherited from the customary and scriptural practice the framework displaced but did not erase?",
+      "resolution_mechanism": "Counterfactual comparison against pre-1955 customary adjudication records and against communities where customary marriage routes remain operative alongside the statute; isolate costs that appear only under the codified regime (e.g., Section 9 conjugal-rights decrees) from costs that predate it.",
+      "impact": "If most measured costs are inherited, the constraint sits nearer the rope end (genuine coordination carrying residual custom); if the framework authors or amplifies them, it sits nearer the snare end of the tangled-rope range.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of measured extraction between the codified framework and the custom it displaced."
+    },
+    {
+      "id": "customary_recognition_scope",
+      "question": "How extensively do the statutory customary carve-outs (Section 29(2) customary-divorce recognition and analogous savings clauses) undermine the uniformity claim that legitimates the arrangement?",
+      "resolution_mechanism": "Survey of customary-divorce prevalence and rates of judicial recognition across regions and communities; measure the gap between the claimed uniform coverage and actual plural operation.",
+      "impact": "Wide customary scope converts the uniformity axiom into partial performance, raising theater_ratio for the legitimating claim specifically and supporting drift hypotheses toward piton for the uniformity frame while the adjudicative machinery stays functional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scope of customary exceptions hollowing the uniformity claim."
+    },
+    {
+      "id": "gradualist_promise_viability",
+      "question": "Does the gradualist axiom — codification as a stage toward an eventual uniform civil code under Article 44 — remain a live organizing commitment of this reading, or has it become cover for indefinite deferral?",
+      "resolution_mechanism": "Track legislative action on the uniform civil code and amendment activity across the interval; test whether reform energy continues, stalls, or is redirected into symbolic commission reports.",
+      "impact": "If the promise is cover, the reading's instrumental grounding decays: the arrangement's persistence shifts from transitional justification to inertia plus legitimacy collection, which is mandatrophy-relevant and would push the founding-problem status toward dead.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Viability of the gradualist trajectory claim that distinguishes this reading from both communal and secular siblings."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the marriage_authority_kernel: the claim that marriage and family authority for the Hindu community derives from democratically codified statute (Hindu Marriage Act 1955 and companion acts) as interpreted by civil courts. The standing arrangement under contest — the referent for epsilon — is that codified regime as it actually operates, assessed by this reading's own lights, never the secular code the reading gestures toward. The arrangement has a genuine coordination function: it replaced fragmented, often unenforceable scriptural and customary marriage governance with a single rulebook applied predictably by state courts, guaranteeing monogamy and formal maintenance and divorce rights. It simultaneously carries asymmetric extraction: gendered costs concentrate on women (restricted practical divorce access, Section 9 restitution-of-conjugal-rights decrees, weak maintenance enforcement, property-control gaps), interfaith couples are pushed outside the act's coverage entirely, and the state and reformist elites collect legitimacy from the codification project. The claim/metric gap is deliberate: the reading CLAIMS tangled_rope (both functions are real), and the metrics independently describe moderately extractive, actively enforced operation — the engine computes per-seat classifications from the structural data; nothing here reconciles claim to metrics. Sibling readings of the same kernel are separate constraints with their own victim sets and epsilon values; they appear here only as network links and omega content, never inside this constraint's classification.",
+    "key_agents": [
+      "civil_judiciary: agenda-setting administrator (institutional/constrained) — interprets the code, adjudicates divorce and maintenance, and holds a family-law jurisdiction that depends on the act's continuation",
+      "union_legislature: agenda-setting co-administrator (institutional/constrained) — enacted and amends the code, owns the deferred uniform-code question, constrained by coalition politics",
+      "hindu_women: primary target with partial benefit (organized/trapped) — bear the gendered costs while holding formal monogamy, maintenance, and inheritance claims",
+      "hindu_male_spouses: principal material beneficiary with payer residue (moderate/constrained) — retain household property control and conjugal-rights leverage, bear monogamy and maintenance liability",
+      "hindu_reformist_elites: legitimacy beneficiary (organized/mobile) — the codification vindicated their modernization program; they can redirect advocacy toward the uniform-code campaign",
+      "interfaith_hindu_marriage_parties: excluded boundary cases (powerless/constrained) — outside the act's coverage unless one party converts; their exclusion polices the community boundary",
+      "customary_adjudicative_communities: displaced authorities (organized/regional) — caste and community councils removed from formal adjudication, persisting informally, partially preserved by statutory customary carve-outs",
+      "constitutional_scholars_and_commissions: analytical observer (organized/analytical) — law commissions and feminist jurisprudence documenting the gap between the uniformity claim and plural practice"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.58: substantial but not confiscatory — the arrangement transfers real bargaining power and property control asymmetrically while also delivering enforceable rights that many payers value. Suppression is authored at 0.60 as a raw structural property, unscaled by power or scope (only extractiveness is scaled, by the engine, through directionality and scope): the arrangement suppresses rival adjudicative authorities and channels interfaith couples into costly routes, but it does not suppress exit from marriage itself, which is legally available though socially and economically punishing. Theater_ratio 0.30: the adjudicative machinery does real work at volume, but a growing share of the arrangement's legitimating activity defends the uniformity and gradual-reform claims that practice increasingly contradicts. Accessibility_collapse 0.52: alternatives exist (Special Marriage Act, customary routes) but are socially costly, procedurally exposed, or judicially uncertain, so they collapse only partly. Resistance 0.50: sustained feminist legal scholarship, law-commission debate, and periodic amendment pressure meet an entrenched institutional settlement. The measurement series run on ONE shared time grid (points 0-70, decade steps) with every tracked metric authored at every point. The suppression_requirement series traces a real enforcement-capacity arc, which is why it is tracked at all: high initial enforcement effort to displace customary adjudication, decay through the middle decades as court operation normalized, then renewed intensification as boundary-policing of interfaith marriage and conversion became the active enforcement front. Extractiveness rises through the first three decades as the gap between formal rights and substantive outcomes widens faster than amendments close it, then plateaus; theater rises monotonically as the uniformity and gradualism claims age.",
+    "perspectival_gap": "The seats should compute differently. From the civil_judiciary seat the arrangement is orderly codified governance it competently administers; from the hindu_women seat it is formal rights wrapped around substantive shortfall — divorce accessible in doctrine, punishing in practice; from the hindu_male_spouses seat it is a mild constraint (monogamy, maintenance liability) wrapped around preserved property control; from the hindu_reformist_elites seat it is a completed historical achievement; from the customary_adjudicative_communities seat it is dispossession with partial statutory preservation. Inter-institutionally, judiciary and legislature share the agenda-setter role but experience the constraint differently: courts absorb doctrinal drift through interpretation while the legislature owns the politically frozen amendment path — the same constraint is fluid for one institution and immovable for the other. Identity-lock dynamics appear on two seats: reformist elites are professionally fused with the codification achievement (their legacy is the 1955 moment, making criticism of the arrangement feel like self-repudiation), and customary authorities are institutionally fused with their displaced role (their standing exists as what the courts replaced). If either identity frame broke — elites accepting the arrangement as incomplete, customary bodies seeking formal re-integration — the coalition structure sustaining the current settlement would loosen.",
+    "directionality_logic": "The beneficiary/victim declarations drive the derivation. civil_judiciary, union_legislature, and hindu_reformist_elites sit near the beneficiary end (low d): the arrangement subsidizes their jurisdiction, legitimacy, and vindication respectively, and none bears its costs. hindu_women are declared victims with a secondary beneficiary position: the derivation places them near the target end (high d) — trapped exit amplifies this — while the secondary_role records that monogamy guarantees and formal maintenance claims partially offset, keeping them short of full-target. hindu_male_spouses are declared beneficiaries with a secondary payer position: low d with upward correction from their monogamy and maintenance liabilities. interfaith_hindu_marriage_parties and customary_adjudicative_communities are excluded rather than coordinated: they sit largely outside the transfer itself, but their exclusion is the enforcement object that maintains the community boundary, so they register as targets of the arrangement's boundary-maintenance function rather than as participants in its exchange. No directionality overrides are used: the role declarations plus exit options already encode the dual-positioned seats, and a per-power-atom override would be too coarse to distinguish the organized-power agents (women's collectives, reformist elites, customary councils) who hold genuinely different directionalities.",
+    "mandatrophy_analysis": "The founding problem — fragmented, frequently unenforceable marriage governance with no reliable divorce or maintenance machinery — was substantially solved by the codification, and the solution was real: courts process the docket, rights are enforceable, and the pre-1955 free-for-all did not return. The arrangement therefore cannot be dismissed as pure extraction, and the tangled_rope classification prevents that mislabeling. Equally, the classification prevents the opposite error: reading the surviving gendered cost structure as the necessary price of coordination. The mandatrophy question concentrates in the legitimating frame rather than the machinery: the uniformity claim and the gradualist promise age toward performance while the adjudicative function stays live, which is why theater_ratio rises while extractiveness plateaus. The arrangement is not yet a piton — no seat could change it cheaply, the payer side is mobilized enough to keep the structure contested, and the agenda-setters still collect enough legitimacy to maintain it actively — but the omega on gradualist-promise viability marks the exact seam along which it would decay into one.",
+    "kernel_context": "Kernel: marriage_authority_kernel — the contested question of what source grounds marriage and family law authority. This file instantiates the hindu_codified_reading: authority flows from democratically codified Hindu family law (Hindu Marriage Act 1955 and companion statutes) as interpreted by civil courts. Sibling readings, each a separate constraint with its own epsilon and victim set: muslim_shariat_reading (scriptural authority via personal-law boards and qazis), christian_canonical_reading (canonical law via the Indian Christian Marriage Act 1872), parsi_communal_reading (communal custom via the Parsi Marriage and Divorce Act 1936), and secular_civil_reading (individual constitutional rights via the Special Marriage Act 1954). The disagreement is located in the source-of-authority premise: enacted statute versus scriptural interpretation versus communal custom versus individual right — a difference that redistributes the victim set and the extraction profile rather than merely re-labeling one arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "muslim_shariat_reading",
+      "christian_canonical_reading",
+      "parsi_communal_reading",
+      "secular_civil_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Indian personal law' decomposes, per the epsilon-invariance principle, into five structurally distinct authority arrangements — one per reading of the marriage_authority_kernel — each with its own epsilon, beneficiary/victim structure, and enforcement profile. Pooling them under one label would force a single epsilon onto observables that yield different values (e.g., gender-cost profiles differ sharply between the shariat and codified-Hindu regimes). This story is the template case: the codified-Hindu precedent is repeatedly cited in uniform-civil-code debate as evidence that codification works, which makes this reading an upstream structural influence on the secular_civil_reading's operating environment. All five family members are linked through network.affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "civil_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets the Hindu Marriage Act and companion statutes, adjudicates divorce, maintenance, and custody disputes, and develops binding case law that absorbs doctrinal drift between legislative amendments. Its family-law jurisdiction and professional identity are built on administering this code; ceding jurisdiction back to communal authorities would require legislative action the judiciary does not control."
+    },
+    {
+      "name": "union_legislature",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enacted the 1955 codification and holds the amendment power (used, for example, to liberalize divorce by mutual consent in 1976). It also owns the constitutionally deferred uniform-civil-code directive, which it has left open for decades because touching any community's marriage law carries coalition-breaking electoral cost. Its exit from the current settlement is blocked by the same politics that sustain it."
+    },
+    {
+      "name": "hindu_reformist_elites",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legal professionals and social-reform currents whose twentieth-century program — codify Hindu law, displace scriptural and customary arbiters — was vindicated by the 1955 acts. The codification is their legacy; they collect standing from it and can redirect their advocacy toward the uniform-code campaign if the current settlement loses legitimacy."
+    },
+    {
+      "name": "hindu_women",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the arrangement's gendered costs: divorce legally available but practically slow, stigmatized, and economically punishing; restitution-of-conjugal-rights decrees enforceable against them; maintenance orders chronically under-enforced; household property control remaining predominantly with husbands and in-laws. They also hold the arrangement's formal protections — guaranteed monogamy, statutory maintenance and inheritance claims — and have organized advocacy (feminist litigation, law-reform campaigning) that keeps the settlement contested. Leaving the marriage is legally possible; leaving the arrangement's reach is not, since every marital dispute routes back through the same courts."
+    },
+    {
+      "name": "hindu_male_spouses",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Retain predominant control of household property and family decision-making under the codified regime, and are the disproportionate beneficiaries of conjugal-rights enforcement and of maintenance-order under-enforcement. They bear the arrangement's costs on the other side: compulsory monogamy, alimony and maintenance liability on divorce, and loss of the unilateral divorce latitude customary practice sometimes afforded. Their position inside the arrangement is comfortable enough that they do not agitate to change it."
+    },
+    {
+      "name": "interfaith_hindu_marriage_parties",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Couples in which one partner is not Hindu fall outside the act's coverage entirely: they must either convert (bringing the marriage under this regime) or marry under the Special Marriage Act, whose public notice period exposes them to family and community opposition, sometimes violence. Their exclusion from this arrangement is what polices the community boundary the act administers; they have no seat in shaping the rules that determine their only lawful routes."
+    },
+    {
+      "name": "customary_adjudicative_communities",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Caste councils, khap-style assemblies, and community elders who adjudicated marriage disputes before codification and were displaced from formal authority by the act. They persist informally — regulating marriage choices, sometimes enforcing penalties — and retain partial statutory footholds through customary-divorce savings clauses that courts recognize when proven. Their formal exclusion is settled; their informal operation continues underneath the codified layer."
+    },
+    {
+      "name": "constitutional_scholars_and_commissions",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Law Commission consultations, academic family-law scholarship, and feminist jurisprudence that document the gap between the arrangement's uniformity and reform claims and its plural, gendered operation. They take testimony from every other seat, publish findings, and propose amendments, but hold no enforcement power over the settlement they analyze."
+    }
+  ],
+  "gain_flow": "hindu_male_spouses",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a single codified rulebook for marriage validity, divorce grounds, maintenance, and adoption within the Hindu community, applied predictably by civil courts — solving the fragmentation and unenforceability of pre-1955 plural scriptural and customary governance.",
+    "transfer_function": "Moves adjudicative authority from dispersed customary and scriptural fora to state civil courts; moves marital bargaining power asymmetrically (formal monogamy and maintenance claims toward wives, property control and conjugal-rights leverage toward husbands); moves legitimacy to the state and to the reformist elites whose codification project the arrangement vindicates.",
+    "absent_voices": "Women inside unhappy marriages at the codification moment had little voice — the advisory and drafting processes were dominated by male legislators and jurists. Interfaith couples were never in the conversation: the act's coverage boundary was drawn around them without their participation. Customary communities were not consulted on which of their practices would survive the savings clauses. All three groups would object to current terms if seated, and their objections surface only obliquely, through litigation brought after the fact.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, millions of pending and future marriage, divorce, and maintenance disputes would lose their governing framework; the courts' family-law dockets would collapse into jurisdictional vacuum; customary councils would reclaim adjudicative space unevenly across regions; and interfaith couples' route structure would destabilize. The world would rearrange immediately because a large institutional apparatus and a population-scale set of marital expectations are built on top of the code.",
+    "founding_problem": "Post-independence India inherited fragmented, often unenforceable Hindu marriage governance — plural scriptural interpretations, customary variation, no reliable divorce or maintenance machinery — and the Constituent Assembly committed to codifying it as the first stage of a projected move toward a uniform civil code.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal-historical scholarship and successive Law Commission reports corroborate, from outside the benefiting parties, that the original fragmentation problem was real and is now substantially solved; feminist jurists and commission consultations equally corroborate that the arrangement's operative justification has shifted from solving that problem to maintaining institutional settlement and legitimacy. The benefiting seats (judiciary, legislature, reformist elites) attest the problem is still live in security-of-rights terms. No single external attestation settles the status — hence contested."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "codified_hindu_law_uniformity",
+    "drift_state": {
+      "moment": "contemporary_ucc_debate_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "muslim_shariat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "christian_canonical_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "parsi_communal_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secular_civil_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_supremacy_over_scriptural_interpretation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "gradualist_path_to_uniform_code",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

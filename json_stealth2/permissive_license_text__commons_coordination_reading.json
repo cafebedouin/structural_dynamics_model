@@ -1,0 +1,281 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__commons_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "49db8d23-133a-46d6-8ef4-860808553ae8"
+  },
+  "base_properties": {
+    "extractiveness": 0.09,
+    "suppression": 0.04,
+    "theater_ratio": 0.1,
+    "accessibility_collapse": 0.22,
+    "resistance": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Permissive License Text as Commons Coordination Instrument (Commons Coordination Reading)",
+    "topic_domain": "economic/technological/legal",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "upstream_code_authors",
+      "commercial_implementers",
+      "independent_open_source_developers",
+      "downstream_end_users"
+    ],
+    "vindicated_propositions": [
+      "permissionless_reuse_doctrine",
+      "attribution_preserves_provenance_chain"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Is the permissive license text best modeled as a pure coordination instrument (this reading), or does the same text instantiate extraction under the corporate-moat or reciprocity-failure readings?",
+      "resolution_mechanism": "Cross-reading comparison within the constraint family: measure downstream flow symmetry (contribution-back rates, fix-propagation rates, sponsorship flows) and test which reading's predicted signature matches observed flows.",
+      "impact": "If flows prove strongly asymmetric with no compensating channel, the coordination-rope classification loses support and effective extraction rises toward the sibling readings' estimates; if flows are roughly balanced, this reading's low epsilon stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the permissive_license_text kernel this license text structurally instantiates."
+    },
+    {
+      "id": "commons_flow_symmetry",
+      "question": "Does the permissive ecosystem sustain bidirectional value flow (bug fixes, hardening labor, standards work, sponsorship returning upstream), or is flow effectively unidirectional from the commons to proprietary consumers?",
+      "resolution_mechanism": "Longitudinal contribution telemetry on high-traffic permissive packages; corporate open-source participation surveys; dependency-graph analysis of fix propagation from proprietary forks back upstream.",
+      "impact": "Symmetric flow confirms the rope classification and the no-victim declaration; persistent unidirectional flow implies the commons as a whole bears uncompensated cost, raising effective extraction despite the absence of any named victim seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether value returns upstream at rates consistent with a self-sustaining commons."
+    },
+    {
+      "id": "author_regret_signal",
+      "question": "Do upstream authors' later behaviors (relicensing flips, dual-licensing additions, public regret statements) reveal that ex ante consent understated the cost of unconditional grants?",
+      "resolution_mechanism": "Track relicensing events and maintainer testimony across the interval; distinguish strategic monetization flips from protective reactions to perceived appropriation.",
+      "impact": "A systematic regret pattern would weaken the consent-based axiom and introduce a latent victim set this reading currently declares absent; isolated strategic flips leave the reading intact.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether revealed author preferences contradict the sufficiency of ex ante consent."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Permissive license texts (MIT, BSD, Apache-2.0) are standardized legal instruments that convert copyright's default exclusivity into a standing blanket permission: anyone may copy, modify, redistribute, and sublicense without negotiation, payment, or reciprocal disclosure. This story instantiates ONE reading of the contested kernel permissive_license_text — the commons_coordination_reading, under which the text is a coordination device that maximizes universal implementation freedom by minimizing legal friction. Per the committer frame, this file authors only this reading as a clean, epsilon-invariant constraint: one stable epsilon (0.09), one beneficiary structure (grantors and implementers, no victim set), one type. The sibling readings — corporate_moat_reading (the same text as enabler of uncompensated proprietary derivative building) and copyleft_counterfactual_reading (the same text as a reciprocity failure demanding viral correction) — are separate constraints linked through network.affects_constraints, not folded into this one. Claim and metrics are authored independently: the claimed type (rope) states what this reading holds structurally true, and the metrics state what is descriptively true of the arrangement's actual operation under this reading's own lights.",
+    "key_agents": [
+      "- upstream_code_authors: Grantor/beneficiary ([moderate]/[mobile]) — converts copyright exclusivity into standing blanket permission; retains relicensing control over future versions",
+      "- commercial_implementers: Primary beneficiary ([institutional]/[arbitrage]) — embeds permissive components in proprietary products without negotiation, fees, or reciprocity",
+      "- independent_open_source_developers: Beneficiary ([moderate]/[mobile]) — frictionless reuse in personal and community projects",
+      "- downstream_end_users: Incidental beneficiary ([powerless]/[mobile]) — inherits abundant inexpensive software; bears no direct duties under the license",
+      "- copyleft_project_maintainers: Excluded voice ([organized]/[constrained]) — reciprocity-tradition stewards whose objection lives in a sibling reading, outside this reading's frame",
+      "- licensing_scholars: Analytical observer ([institutional]/[analytical]) — studies license-choice dynamics, flow symmetry, and commons sustainability"
+    ],
+    "logic_rationale": "Extraction is 0.09: the only residual obligations are attribution-notice preservation and (in Apache-2.0) a patent-termination condition on suit — burdens sitting just above the information_standard coordination floor (0.02), with no fee, no reciprocity requirement, and no field-of-use restriction. Suppression is 0.04 and is authored as a raw structural property (unscaled; only extractiveness is scaled by directionality and scope in the engine): nothing is coerced, and proprietary, copyleft, and dual-licensing alternatives remain fully available. Theater ratio is 0.10: the license text performs real legal work every day; the modest ceremonial share reflects the license-proliferation era's vanity licenses and approval rituals, not the core instruments. Accessibility collapse is 0.22: understanding the license collapses no alternatives — the choice architecture stays open, which is the opposite of a natural-law profile. Resistance is 0.15: episodic ideological contestation from reciprocity advocates and occasional corporate hesitancy, but no sustained opposition to the instrument itself. The temporal series run on one shared six-point grid (both metrics authored at every point): base extractiveness declines gently (0.14 to 0.09) with the retirement of the BSD advertising clause, consolidation on shorter texts, and Apache-2.0's explicit patent grant replacing patent uncertainty; theater ratio rises gently (0.06 to 0.10) with proliferation-era ceremony. No cyclical dynamics are present — the trends are monotone and shallow.",
+    "perspectival_gap": "Seat divergence is muted inside this reading because every seated party is a beneficiary: from the commercial implementer seat the arrangement is a pure windfall (rope-like, near-zero d); from the upstream author seat it is a voluntary exchange of exclusivity for adoption, ecosystem gravity, and provenance credit (also low d, with relicensing leverage as exit). The sharpest divergence sits with the excluded seat: from the copyleft maintainer's position the same text reads as a leak in the commons — but that perception belongs to the sibling reading, and this file deliberately does not adjudicate it. The engine computes per-seat classifications from the structural data; the authored claim does not reconcile them.",
+    "directionality_logic": "All four declared beneficiary groups derive low directionality: upstream_code_authors grant voluntarily and retain mobile exit (relicense future versions, dual-license, stop publishing); commercial_implementers hold arbitrage-grade exit (substitute, fork, rewrite) and sit nearest the beneficiary pole; independent_open_source_developers and downstream_end_users bear no duties worth naming. No victims are declared, so no high-d target exists within this reading — and that absence IS the reading's structural signature, and the precise point the copyleft sibling contests. Scope is global, which amplifies effective extraction modestly in the engine's arithmetic, but with epsilon this low the amplification operates on a near-floor base.",
+    "mandatrophy_analysis": "No mandatrophy: the founding problem (transaction costs of reuse under copyright default) is live, and the arrangement still performs its function daily. The classification guards against two mislabels in both directions. First, it prevents reading the near-floor extraction as hidden rent: what little burden exists is the irreducible cost of a standardized legal instrument, consistent with the information_standard Boltzmann floor. Second, it prevents reading the absence of declared victims as proof of universal benefit: the excluded copyleft seat and the flow-symmetry omega keep open exactly the question — whether the commons as an uncounted party bears diffuse cost — that would move this story toward the sibling readings' picture. Receipt-surface placement is consistent: gain_flow='diffuse' (no named seat captures the residual extraction) combined with fixing_cost='cheap' (any grantor can unilaterally relicense future versions; no entrenched administrator defends the arrangement) lands in the transient-neglect cell, not the piton cell — a living rope, not an inertial shell."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "corporate_moat_reading",
+      "copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "Constraint family for the kernel permissive_license_text, decomposed per the epsilon-invariance principle: the colloquial label 'permissive licensing' covers three structurally distinct claims, each with its own epsilon, beneficiary structure, and classification. This file authors the commons_coordination_reading (coordination instrument, epsilon ~0.09, no victim set). corporate_moat_reading authors the claim that the same text enables uncompensated extraction for proprietary derivative products (identifiable victims: uncompensated originators and the commons). copyleft_counterfactual_reading authors the claim that relaxation without reciprocity structurally enables exploitation and that viral reciprocity is the necessary alternative. The readings share one observable (the license text) but evaluate different arrangements under contest, so each warrants a separate story rather than one story with a measurement parameter. Edges here link this reading to both siblings; the upstream/downstream citation pattern runs from this reading outward, since the coordination framing is what corporate adopters cite as legitimacy and what copyleft advocates argue against."
+  },
+  "stakeholders": [
+    {
+      "name": "upstream_code_authors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Write and publish code, attaching a permissive license text that converts their copyright exclusivity into a standing blanket permission for all comers. What flows to them: adoption, ecosystem gravity, provenance credit through preserved attribution notices, hiring pipelines, and de facto standard-setting influence. What flows away: exclusivity — anyone may build proprietary products on their work without payment or reciprocity. Exit looks like retaining copyright, relicensing future versions, dual-licensing, or ceasing publication; past releases remain perpetually granted."
+    },
+    {
+      "name": "commercial_implementers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Embed permissively licensed components in proprietary products and internal infrastructure without negotiation, fees, or reciprocal disclosure obligations. They receive legal certainty from standardized, widely litigated text and can substitute vendors, fork, or rewrite around any component; nothing binds them to a particular supplier or upstream community."
+    },
+    {
+      "name": "independent_open_source_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Reuse permissive libraries in personal and community projects without license-compatibility analysis or obligation tracking. They contribute fixes upstream when inclined and are never compelled to. Switching ecosystems or abandoning a dependency carries no legal residue."
+    },
+    {
+      "name": "downstream_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Inherit abundant, inexpensive software built atop permissive foundations. They bear no direct duties under the license and rarely encounter its text; their benefit arrives mediated entirely through products they download or purchase."
+    },
+    {
+      "name": "copyleft_project_maintainers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Steward reciprocal-licensed commons projects and argue publicly that unconditional grants let proprietary derivatives take from the commons without returning anything, gradually draining the shared infrastructure their projects depend on. They are bound by this arrangement only when they consume permissive dependencies, and their objections are articulated in a separate reading of the same license text; within this reading's frame they hold no seat in the conversation."
+    },
+    {
+      "name": "licensing_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study license-selection dynamics, contribution-flow asymmetry, and commons sustainability across the software ecosystem. They publish analyses that inform corporate open-source policy and foundation stewardship alike, and hold no stake in any particular license outcome."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Pre-clears, in one standardized instrument, the permissions that copyright law otherwise requires negotiating bilaterally for every reuse: copying, modification, redistribution, sublicensing, and (under Apache-2.0) patent assertions. It solves the many-to-many reuse transaction problem once, centrally, instead of per implementing pair.",
+    "transfer_function": "Moves standing legal permission and reusable code from upstream copyright holders to the universal implementer pool without payment, reciprocity, or disclosure obligations; moves a trivial attribution-preservation duty from implementers back toward authors; returns adoption, provenance credit, and ecosystem influence to upstream authors.",
+    "absent_voices": "Reciprocity-tradition maintainers and commons economists would object that unconditional grants permit uncompensated appropriation and gradual enclosure of collectively produced infrastructure; they hold seats in the sibling copyleft reading, not here. Original creators whose work is absorbed into proprietary derivatives without compensation are represented in this frame only by their ex ante consent — no seat speaks for their later, revealed preferences.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If blanket permissive grants vanished overnight, every reuse touching a formerly permissive component would revert to copyright default: bilateral negotiation, license-compatibility audits, and infringement exposure across the software supply chain. Package registries, continuous-integration ecosystems, and product bills of materials would reorganize around licensed-or-rewritten components within months, and the volume of distributed open-source software would contract sharply.",
+    "founding_problem": "Academic and industrial code sharing in the 1980s faced copyright's default exclusivity: disseminating research software beyond the originating institution required bespoke negotiated agreements, chilling the dissemination mandates (notably Berkeley's federally funded distribution obligations) that motivated the work in the first place.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set by software-law historiography of the BSD and MIT license origins, university technology-transfer records showing deliberate adoption of permissive terms to satisfy public-funding dissemination requirements, and package-registry metadata studies identifying negotiation avoidance as the dominant stated motive for permissive selection. Corporate counsel attests the same transaction-cost problem from the consuming side, but corporations are beneficiaries; the historiographic and registry evidence stands independently of them."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "unconditional_reuse_grant_baseline",
+    "drift_state": {
+      "moment": "contemporary_ai_training_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "corporate_moat_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unconditional_grant_maximizes_implementation_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "ex_ante_authorial_consent_settles_downstream_obligation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

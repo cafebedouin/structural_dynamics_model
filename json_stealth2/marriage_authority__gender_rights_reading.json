@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "marriage_authority__gender_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ma_gender_rights",
+    "story_uid": "c4dbedf8-5b91-4f3a-8612-ab0e3a3e12a5"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.82,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Intra-Community Marriage Authority under the Gender-Rights Reading",
+    "topic_domain": "legal pluralism / constitutional law / comparative family law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "communal_religious_authorities",
+      "male_lineage_households",
+      "women_rights_advocates"
+    ],
+    "victims": [
+      "women_within_patriarchal_personal_law"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.82
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This file instantiates the gender_rights_reading of the marriage_authority kernel; is the snare verdict a property of the standing arrangement or of this reading's victim-set and benefit-structure declarations?",
+      "resolution_mechanism": "Generate the four sibling files (communal_autonomy, federalist_millet, secularist, judicial_harmonization) over the shared referent and compare per-seat outputs; divergence localized to victim-set membership and epsilon confirms reading-indexed classification rather than measurement error.",
+      "impact": "If the communal_autonomy file authors the same practices with no victims and low epsilon, the corpus gains a controlled contrast pair; any cross-reading aggregation must weight by reading rather than average, and the snare verdict travels only with this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Classification is indexed to the gender-rights reading of the marriage-authority kernel, not to the topic absolutely."
+    },
+    {
+      "id": "advocate_seat_net_position",
+      "question": "Are women's-rights advocates net collectors from the contest's persistence (standing, funding, mandate rents) or net spenders (litigation costs, backlash exposure, career risk)?",
+      "resolution_mechanism": "Organizational financial records and career-flow data across a settlement episode, e.g. advocacy-sector funding and staffing trajectories after the 2017 unilateral-divorce ruling; if organizations contract after major wins, expenditure dominates collection.",
+      "impact": "Flips the advocate seat between subsidized-beneficiary and constrained-payer; determines whether the contest registers as self-sustaining regardless of outcomes, which bears on the snare-versus-tangled-rope boundary at the advocacy seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net structural position of the advocacy sector relative to the contest it runs."
+    },
+    {
+      "id": "backlash_cost_incidence",
+      "question": "Who absorbs the costs of each judicial strike against a practice — do gatekeeping institutions adapt while ordinary members and unrepresented women pay in tightened informal enforcement?",
+      "resolution_mechanism": "Panel data on informal divorce prevalence, community sanction intensity, and maintenance-compliance rates before and after major rulings.",
+      "impact": "Determines whether the measured extraction decline is a real transfer to women or displacement into less observable channels; if displacement dominates, the falling epsilon trajectory overstates reform and the standing arrangement is more entrenched than authored.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incidence of backlash costs generated by the reform route this reading pursues."
+    },
+    {
+      "id": "informal_enforcement_visibility",
+      "question": "Does the rising suppression series measure genuine enforcement intensification or a visibility artifact as enforcement migrates from legal form into social coercion?",
+      "resolution_mechanism": "Triangulate court records, ethnographic studies, and community surveys on sanction practice across the interval; look for discontinuities at the moments formal instruments were struck down.",
+      "impact": "High: if informal enforcement exceeds the measured curve, the arrangement is more suppressive than the authored scalar shows and the snare verdict strengthens; if the rise is artifactual, suppression is flat and the enforcement-migration narrative is wrong.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the suppression trajectory reflects real coercive intensification or measurement drift."
+    },
+    {
+      "id": "protective_shell_capture",
+      "question": "Is the arrangement's minority-protection function still live for ordinary community members, or has gatekeeping fully captured the protective shell?",
+      "resolution_mechanism": "Compare welfare and autonomy outcomes for members who opt into civil family codes against those who remain under communal norms, controlling for socioeconomic status; genuine protection predicts comparable or better outcomes under communal norms for at least a subgroup.",
+      "impact": "If protection is captured, the coordination story loses its last non-extractive leg and the founding-problem status resolves toward dead; if protection is real for some members, a hybrid coordination-plus-extraction reading gains ground at the story level.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the minority-protection rationale still does protective work or merely licenses gatekeeping."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "communal_religious_authorities",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Run the councils, boards, and clerical offices that solemnize marriages, authorize dissolutions, and settle maintenance and inheritance disputes inside the community. Their jurisdiction and livelihood depend on families bringing these questions to them rather than to civil courts. After each court decision narrowing a practice they issue guidance reaffirming communal norms and mobilize political protection where challenged. Leaving the role would mean surrendering the office's entire reason for existence."
+    },
+    {
+      "name": "male_lineage_households",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "situation": "Heads of extended households who, at marriage-dissolution events, receive the material effects: a husband ending a marriage unilaterally sheds support obligations onto the wife's natal family, and widows and daughters are stepped aside in property division in favor of male heirs. They can settle disputes informally with cash payments that close the question without creating precedent, shifting form whenever formal rules tighten. Their standing inside the community rests on these arrangements continuing."
+    },
+    {
+      "name": "women_within_patriarchal_personal_law",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Live under the community's family norms: they can be divorced at another's will, lose maintenance after a short prescribed period, and inherit little or nothing compared to brothers. Economic life runs through the marital household, so leaving means losing children, income, and community at once. A civil-code route exists on paper but carries severe social and economic costs. Some petition courts with advocates' help; most negotiate privately or endure."
+    },
+    {
+      "name": "women_rights_advocates",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Lawyers, NGO staff, and scholars who locate affected women, prepare constitutional challenges, and argue them through the courts. Their caseload, funding, and public standing depend on the contest staying open; a comprehensive legislative settlement would dissolve their mandate. They spend heavily on each case and absorb accusations of outsidedness; between cases they maintain the coalitions, documentation, and petitioner pipelines that keep the issue alive. Their professional identity is fused with the contest itself."
+    },
+    {
+      "name": "constitutional_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hears the challenges, weighs religious freedom against equality guarantees, and issues the decisions that void specific practices or extend entitlements such as post-divorce maintenance. Each decision expands the court's reach into family life and becomes precedent that lowers the cost of the next case. Bound by precedent, docket discretion, and the political firestorm each major ruling ignites."
+    },
+    {
+      "name": "ordinary_minority_community_members",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Men and women who hold no office and run no household line but carry the reputation costs of every public contest: each court battle casts the community as backward or besieged, tightening scrutiny on everyone. They mostly want workable family arrangements and quiet lives, and they pay a loyalty tax in stigma whichever side wins a given round."
+    },
+    {
+      "name": "national_legislature",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Holds formal power to replace the whole patchwork with a common family code but has not exercised it since the mid-1980s, when an attempt to trim post-divorce maintenance triggered enough backlash to freeze the file. Every party assesses the electoral cost of touching family law and declines; the file stays closed while courts proceed case by case. Absence from the conversation is a choice, not a barrier."
+    },
+    {
+      "name": "international_treaty_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Review the country's family-law record under equality conventions, issue concluding observations urging uniform standards, and receive shadow reports from advocacy groups. Their leverage is reputational; they attend the contest from outside and press periodically without enforcement power of their own."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordinates communal self-governance of family formation: communities maintain jurisdiction over marriage, dissolution, maintenance, and succession, preserving religious continuity and minority boundary-maintenance against a majoritarian family code, with disputes resolved inside community institutions rather than civil ones.",
+    "transfer_function": "Moves security, maintenance, and property entitlements from women at marriage-dissolution events to male lineage households; moves interpretive authority and jurisdictional livelihoods to communal religious officeholders; and, as the contest persists, moves standing, funding, and moral authority to the advocacy sector that prosecutes it.",
+    "absent_voices": "Ordinary community women who live the practices but neither petition nor govern — their consent is presumed by communal elites and urban advocates alike. Divorced women who accepted informal cash settlements rather than litigate are invisible to the case-by-case record. The national legislature, which could speak for comprehensive settlement, has kept the file closed since the mid-1980s rollback. Intra-community dissenting theologians, who could authorize reform from inside, are marginal to both the defense and the challenge.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, divorce, maintenance, and inheritance would reorganize around civil codes; communal councils would lose their family-law jurisdiction and livelihood; lineage households would lose the obligation-shedding and property preference they currently collect; the advocacy sector would lose its mandate; and ordinary members would lose the boundary-maintenance function they partly rely on. Every seated party's position depends on the arrangement continuing in some form.",
+    "founding_problem": "Communal survival under colonial codification and majoritarian pressure: preserving religiously authorized family law as the boundary at which the community reproduces itself, so that family formation, dissolution, and succession remain governed by the community's own norms rather than absorbed into the majority's code.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Communal authorities attest the problem is live, from a self-interested seat. Corroboration from outside the benefiting parties: the constitutional litigation record (the 1985 maintenance ruling and its legislative rollback, the 2001 extension of maintenance liability, the 2017 voiding of unilateral divorce) documents concrete harms and concrete protections independent of communal testimony; treaty-body concluding observations attest the equality deficit from outside the national contest; and intra-community dissenting theologians attest that the gatekept practices lack scriptural consensus, undermining the claim that communal survival requires them. No attesting source is neutral, but the litigation and treaty records sit outside the beneficiary set."
+  },
+  "gain_flow": "male_lineage_households",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_authority__communal_autonomy_reading",
+      "marriage_authority__secularist_reading",
+      "marriage_authority__federalist_millet_reading",
+      "marriage_authority__judicial_harmonization_reading"
+    ],
+    "dual_formulation_note": "The colloquial 'personal law debate' is one label over five structurally distinct claims about the marriage_authority kernel; per the epsilon-invariance principle they are authored as separate linked stories. This file is the gender-rights member: it targets the specific practice bundle (unilateral divorce, maintenance cutoffs, property exclusion) rather than the system-level authority structure, and it authors the only victim set composed of the women living under the practices. Sibling files share the referent (the standing arrangement) and author different reading-indexed values: communal_autonomy expects low epsilon with no victim set, federalist_millet expects a protective-coordination profile, secularist expects a transitional scaffold with a sunset, judicial_harmonization expects a mixed floor-imposition profile. Downstream coupling: rulings authored under this reading become the doctrinal bricks judicial_harmonization lays, and the political shocks to which secularist and federalist positions react; communal_autonomy sits upstream as the arrangement this reading contests."
+  },
+  "commentary": {
+    "narrative_context": "Within religious communities that maintain their own family law, a specific bundle of practices governs how marriages end and what follows: dissolution at one party's will, maintenance that expires after a short prescribed period, and property division that steps women aside for male heirs. The gender-rights reading contests this bundle on grounds of intra-community gender equality and pursues reform through judicial expansion of constitutional equality guarantees — case-by-case nullification of specific practices rather than wholesale codification. This story authors that standing arrangement as the gender-rights reading sees it: the epsilon referent is the existing practice bundle, never the equality-floor regime the reading would put in place. Manifest refinement note: the seed hypothesis named women_rights_advocates as the beneficiary and the community women as victims; analysis relocates the primary collection to male lineage households and communal authorities (who receive the material and jurisdictional flows), while retaining advocates as a genuine but secondary beneficiary seat — their institutional existence is fed by the contest's persistence, not by the arrangement's operation. The claim and the metrics are independent authored facts: claimed_type states this reading's structural assessment; the metrics describe observed operation over 1985-2025 (interval t=0 to t=40).",
+    "key_agents": [
+      "communal_religious_authorities: agenda-setting administrator (organized/identity_locked) — runs the councils and offices that solemnize, dissolve, and settle; jurisdiction depends on the arrangement continuing",
+      "male_lineage_households: primary collector (powerful/arbitrage) — receives obligation-shedding and property preference at dissolution events; shifts form when formal rules tighten",
+      "women_within_patriarchal_personal_law: primary bearer (powerless/trapped) — lives the practices; exit costs span income, children, and community simultaneously",
+      "women_rights_advocates: dual-positioned challenger-collector (organized/identity_locked) — runs the constitutional contest; mandate depends on the contest staying open",
+      "constitutional_judiciary: agenda-setting reviser (institutional/constrained) — converts challenges into practice-level rulings and precedent",
+      "ordinary_minority_community_members: collateral bearers (moderate/constrained) — carry stigma and loyalty costs of each public round",
+      "national_legislature: absent seat (institutional/mobile) — holds replacement power, declined to use it since the 1980s rollback",
+      "international_treaty_bodies: analytical observer (institutional/analytical) — periodic reputational pressure from outside the national contest"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.74: judicial strikes trimmed the edges (unilateral divorce voided in form, maintenance extended past the prescribed period), but the core flows — property exclusion, gatekept settlement, and de facto continuation of instant divorce through informal channels — remain intact, so the reading's assessment stays high with a slow downward drift (0.84 to 0.74 across the interval). Suppression is authored at 0.82 and is a raw structural property, unscaled by power or scope: enforcement migrated from legal form into social coercion as formal instruments fell, and holding the line now requires continuous community-level sanction, which the rising suppression_requirement series tracks. Theater_ratio rises from 0.20 to 0.48: women's cells, consultation boards, and unenforceable contract clauses proliferate as performative responses to each reform shock — a symptom of defensive maintenance, not the classification test. Accessibility_collapse is 0.62: civil-code and migration alternatives exist on paper but collapse substantially under social and economic pressure; this is a constructed arrangement, not a natural law, so the value sits well below mountain range. Resistance is 0.58: sustained litigation and intra-community dissent meet organized counter-mobilization. Coalition check: the classic coalition path for powerless agents is blocked twice over — gatekeepers control the communication and economic channels that intra-class coalition would need, and the cross-class coalition with advocates runs on incentives that diverge (advocate mandate renewal favors contest persistence over settlement), so coalition power remains latent rather than effective. The measurement series run on one shared six-point grid so every tracked metric is authored at every examined time point.",
+    "perspectival_gap": "Four seats should compute differently. From the communal_religious_authorities seat the arrangement is genuine coordination they administer — communal continuity, minority boundary-maintenance — and each judicial strike is illegitimate intrusion; their identity_lock means exit is unthinkable without dissolving the office itself. From the women_within_patriarchal_personal_law seat the same structure operates as enforced extraction with no affordable exit. From the women_rights_advocates seat the structure is an adversary that nonetheless feeds them: every victory narrows the mandate that funds the next case, a parasitic-symbiosis the engine should surface as a beneficiary seat attached to a snare. From the constitutional_judiciary seat the arrangement is a docket of tractable problems — each ruling delivers a remedy, expands precedent, and defers the systemic question. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary and victim declarations drive the derivation. Communal_religious_authorities and male_lineage_households are declared beneficiaries with identity-locked and arbitrage-grade positions respectively, placing them near the beneficiary pole (low d, damped or inverted effective extraction). Women_within_patriarchal_personal_law are the declared victims with trapped exit, placing them near the full-target pole (high d, amplified effective extraction). Women_rights_advocates are declared beneficiaries on the persistence-rent ground, so the derivation places them near the subsidized end; the commentary records the caveat that they simultaneously expend heavily against the arrangement's operation — a same-atom nuance (authorities and advocates both hold the organized power atom) that per-atom directionality overrides cannot express, which is why no override is authored and the nuance lives here and in the omega instead. Constitutional_judiciary, ordinary_minority_community_members, national_legislature, and international_treaty_bodies fall to canonical fallbacks for their power atoms; none is declared in the beneficiary or victim arrays because none collects the arrangement's material flows.",
+    "mandatrophy_analysis": "The founding problem — communal survival through family-law autonomy — is contested rather than dead: communal authorities attest it live, while the litigation record and treaty observations attest that the protective function has been substantially captured by gatekeeping interests. Because status is contested and the disappearance verdict is world_rearranges, the mismatch consumer (dead-status plus rearranges-verdict) does not fire; this is not a zombie arrangement but a live one whose protective shell is partly theatrical. The rising theater series (0.20 to 0.48) marks early decay symptoms inside the snare shell: if gatekeeping ever collapses, expect the defensive apparatus (boards, cells, consultation rituals) to persist as inertial performance before anyone dismantles it — a snare-to-piton drift path worth watching. Mandatrophy is therefore not resolved; the arrangement's mandate is disputed, not outlived. The classification prevents mislabeling in both directions: reading the arrangement as pure coordination (the communal-autonomy move) would erase the victim set; reading the reform route as pure liberation (this reading's own rhetoric) would erase the backlash and mandate-rent flows the measurements register."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "constitutional_equality_floor_across_personal_laws",
+    "drift_state": {
+      "moment": "post_shayara_bano_contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "communal_autonomy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "federalist_millet_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "secularist_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "judicial_harmonization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_equality_supremacy_over_personal_law",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "practice_targeted_nullification_over_system_replacement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

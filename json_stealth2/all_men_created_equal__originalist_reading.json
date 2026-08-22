@@ -1,0 +1,390 @@
+{
+  "header": {
+    "constraint_id": "all_men_created_equal__originalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "0d6d0a47-e33b-4074-8c8a-092ad6686084"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.72,
+    "claimed_type": "snare",
+    "human_readable": "Originalist Reading: Equality Bounded by the Founding Social Taxonomy",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "founding_descendant_class",
+      "slaveholding_plantation_elite",
+      "originalist_legal_movement"
+    ],
+    "victims": [
+      "descendants_of_the_enslaved",
+      "women_outside_founders_taxonomy",
+      "indigenous_nations"
+    ],
+    "vindicated_propositions": [
+      "founder_intent_authority_doctrine",
+      "anti_expansion_judicial_restraint"
+    ]
+  },
+  "interval": {
+    "start": 1790,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1790,
+      "value": 0.86,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1820,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1857,
+      "value": 0.93,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1896,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1954,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1790,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1820,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1857,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1896,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1954,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1790,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1820,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1857,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1896,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1954,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This story instantiates only the originalist reading of the all_men_created_equal kernel; what victim set, beneficiary set, and epsilon would the universalist_reading and textualist_paradox_reading instantiate for the same text?",
+      "resolution_mechanism": "Compile and classify the sibling stories independently, then diff the computed victim/beneficiary sets and effective extraction across the three readings.",
+      "impact": "If the universalist reading computes near-zero extraction from the principle itself (extraction relocating to enforcement failures), the kernel's extractive force is reading-relative rather than text-inherent; if all three compute high extraction, the founding-era record dominates whatever reading is adopted.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this is one of three readings; siblings are separate constraints, not hedges inside this one."
+    },
+    {
+      "id": "intent_evidence_selection",
+      "question": "Whose understanding counts as founders' intent - drafters, ratifiers, enacting coalitions, or general public meaning - and does the selection rule change the taxonomy's boundaries?",
+      "resolution_mechanism": "Systematic comparison of scope outcomes under drafter-intent versus ratifier-intent versus public-meaning corpora, including state ratification conventions elected on broader suffrage bases.",
+      "impact": "Narrower selections concentrate the withheld guarantee on the excluded groups; broader public-meaning selections widen the guaranteed class somewhat without dissolving the bound.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The selection rule for founding intent materially shifts the victim set."
+    },
+    {
+      "id": "amendment_frame_reset",
+      "question": "Does the bounded reading treat Reconstruction-era amendments as resetting the reference frame (1868 intent superseding 1787 intent) or as additions permanently read through the founding frame?",
+      "resolution_mechanism": "Doctrinal analysis of how period-intent method anchors the Fourteenth Amendment: to 1868 understandings (which licensed segregation) or to the 1787 frame.",
+      "impact": "Frame-reset leaves open that the bound loosens across successive amendments; no-reset makes the excluded groups permanent targets regardless of textual change - the difference between a hardening arrangement and a potentially self-correcting one.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the reference frame is frozen at 1787 or resets at each amendment."
+    },
+    {
+      "id": "beneficiary_descent_boundary",
+      "question": "Is the beneficiary class constituted by descent from the founding polity or by present adherence to the bounded reading - do newcomers who embrace the reading join the protected class?",
+      "resolution_mechanism": "Track naturalization-and-adherence cases: whether immigrant adherents of the method receive the same interpretive deference and standing protection as descent-class members.",
+      "impact": "A descent-constituted class makes the arrangement hereditary and hardens the extraction signature; an adherence-constituted class makes membership voluntary and shifts the structure toward coordinated boundary maintenance with willing insiders.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary rule of the protected class: hereditary versus adherent."
+    },
+    {
+      "id": "suppression_structural_internalized",
+      "question": "Is the measured suppression structural (court enforcement, standing doctrine, amendment-threshold barriers) or internalized (civic education transmitting the bounded reading as neutral rule-of-law)?",
+      "resolution_mechanism": "Post-doctrinal-change trajectory: where the governing bench flips, does bounded-application behavior persist in lower courts and civic practice, indicating transmitted rather than enforced maintenance?",
+      "impact": "If substantially internalized, effective suppression exceeds the structural measure and outlasts doctrinal reversal, placing the true suppression component above the authored scalar.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Split between enforced and transmitted suppression mechanisms."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Declaration's equality sentence, as absorbed into the constitutional order, is a contested kernel; this file instantiates the originalist reading - the arrangement under which the guarantee's scope is fixed by the founding generation's social taxonomy and founders' intent governs every subsequent scope question. The standing arrangement under contest is the constitutional order in which equal standing is distributed according to 1787 membership categories, periodically re-bounded through era-intent readings of each later amendment. The reading's own descriptive concessions fix the extraction structure: it concedes exactly who is inside and who is outside, and disputes the evaluation of that structure, not its existence - so epsilon is authored high against the standing arrangement, per the reading's own lights. Per the epsilon-invariance principle, the colloquial label decomposes into three structurally distinct constraints (this reading, the universalist reading, the textualist-paradox reading), each with its own epsilon, victim set, and file; they are linked through network.affects_constraints. Claimed type and metrics are authored independently: snare is the structural claim; the metric values are the descriptive record.",
+    "key_agents": [
+      "founding_descendant_class: primary beneficiary (powerful/arbitrage) - inherits protected standing and interpretive authority",
+      "originalist_judicial_apparatus: agenda setter (institutional/arbitrage) - administers the intent-selection machinery",
+      "descendants_of_the_enslaved: primary target (moderate/constrained) - bears the bounded scope's central cost",
+      "women_outside_founders_taxonomy: target (organized/constrained) - excluded from the founding category, reached only through era-bounded amendments",
+      "indigenous_nations: target (organized/trapped) - outside the compact's taxonomy entirely, territory-locked",
+      "abolitionist_and_suffragist_tradition: excluded voice (organized/identity_locked) - held the universal reading for two centuries, never seated",
+      "constitutional_historians: analytical observer (analytical/analytical) - the archive cuts both ways"
+    ],
+    "logic_rationale": "Epsilon 0.74: the guarantee's protective force is withheld from everyone outside the founding taxonomy and from those whom era-bounded amendment readings continue to exclude, while the insider class's standing is secured as the baseline against which all claims are measured. Suppression 0.62 is raw and unscaled (only extractiveness is scaled by directionality and scope): persistence requires courts to refuse expansionist readings, standing doctrine to screen challengers, and supermajority amendment thresholds to channel all widening through processes the method's administrators influence. Theater 0.38: the scholarly apparatus is real (corpus linguistics, archival reconstruction), but a substantial share of activity is fidelity performance - practitioners themselves concede law-office history is endemic. Accessibility collapse 0.55: within committed circles alternatives collapse into lawlessness rhetoric, but living-constitutional, common-law, and textualist alternatives remain fully available in the broader profession, so collapse is partial and community-relative. Resistance 0.72: two centuries of continuous organized opposition, from the abolitionists through the civil-rights revolution to contemporary critical schools. The measurement series shares one eight-point grid (1790-2024) and is wave-shaped, not monotonic: consolidation (1790-1857), formal breach (1868), theatrical re-consolidation through era-bounded reading of the new text (1896), renewed breach (1954), methodological revival (1980-2024). The oscillation is partly the mechanism itself: each expansion of the guarantee is delivered, then re-bounded by intent-method - intermittent delivery sustains dependence on the method's administrators. Suppression_requirement is tracked because enforcement capacity visibly built and collapsed repeatedly: the fugitive-slave apparatus, Reconstruction enforcement and its gutting, the Jim Crow terror backstop, modern doctrinal policing. Coalition note: the payer seats are moderate and organized rather than powerless, and their coalition has twice broken the arrangement formally (1868, 1954) before re-consolidation - coalition power is real but has not held. Boltzmann note: identity_coordination is declared because the dominant function is boundary maintenance of the equal-citizenship class; the founding-covenant identity framing is partly cover for the withholding it performs, and the type's conservative floor correctly declines to excuse that coupling.",
+    "perspectival_gap": "The agenda-setter and beneficiary seats compute a lawful-fidelity world: from inside the apparatus the arrangement is stability, determinacy, and democratic legitimacy, with the amendment process as the honest path for change. The payer seats compute enforced exclusion: the same determinacy is experienced as a lock, and the same amendment path as a door the method itself keeps barred, because era-bounded readings of each new amendment reproduce the old exclusions. Same-level divergence: women's organizations and tribal nations hold the same power atom but different exit profiles (constrained versus trapped) and different relations to the taxonomy (excluded would-be members of the compact versus peoples placed outside it entirely), so equal nominal power yields different directionalities - hence the organized-power override. The historian seat sees the archive authorize both the bounded and the broad contemporaneous understandings, which is why the dispute persists on evidence rather than resolving.",
+    "directionality_logic": "Beneficiary declarations map to real flows: the descendant class receives secured standing (d near 0.0 - powerful, arbitrage exit); the plantation elite collected direct rents during the slavery era; the legal movement collects authority and career rents (secondary beneficiary, institutional, arbitrage). Payers: descendants of the enslaved (moderate power, constrained exit - high d), women outside the taxonomy (organized, constrained), indigenous nations (organized, trapped). Override rationale: a derivation keyed to power alone would read organized capacity as mitigating and lower d for the two organized payer seats; but the arrangement withholds the guarantee from these groups specifically, organization purchases influence without unlocking exit from the constitutional order, and organized challenge attracts intensified doctrinal policing - so organized-power d is overridden to 0.88. The apparatus sits near the beneficiary end through its secondary beneficiary role; the historian seat is analytical and feeds no directionality.",
+    "mandatrophy_analysis": "The founding problem - a creed capable of binding thirteen states without dissolving the slave economy and the land regime - is contested: the union it preserved consolidated long ago, and the parties dispute whether anything remains for the arrangement to solve beyond inheritance protection. The mismatch consumer reads contested x world_rearranges: no dead-mandate flag fires, because the arrangement still actively rearranges the world daily (it decides justiciability). But the genealogy explains the shape: the coordinative half (a common creed) is spent, while the boundary-maintenance half persists because gains concentrate in the descendant class and fixing is prohibitive - supermajority amendment thresholds, life tenure, and methodological entrenchment. This is why the classification resists both mislabels: not a piton (gains are not diffuse; administration is active, not inertial), and not a rope (the coordination story cannot be separated from the withholding it performs).",
+    "kernel_context": "Kernel: all_men_created_equal - the Declaration's equality sentence as absorbed into the constitutional order. This file instantiates the originalist_reading: the guarantee's scope is fixed by the founding generation's social taxonomy, and founders' intent governs every subsequent scope question. Sibling readings, each a separate constraint file: universalist_reading (the principle is universal and self-expanding regardless of founder intent) and textualist_paradox_reading (the irreconcilability of universal language with restricted application is a performative contradiction built into the founding act). Epsilon differs across the family because the victim sets differ; this file authors only this reading's structure and does not hedge across readings."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "all_men_created_equal__universalist_reading",
+      "all_men_created_equal__textualist_paradox_reading"
+    ],
+    "dual_formulation_note": "The label 'all men are created equal' decomposes into three structurally distinct constraints per the epsilon-invariance principle: the originalist reading (this file - bounded scope, intent-governed, high extraction onto historically excluded groups), the universalist reading (self-expanding principle; extraction relocates to enforcement gaps), and the textualist paradox reading (performative-contradiction diagnosis; a different failure mode entirely). The originalist reading is upstream historically: its two-century dominance produced the bounded-application record that the paradox reading critiques and the universalist reading opposes. Family members link bidirectionally through affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.88
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "founding_descendant_class",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Descendants of the founding settler and planter classes hold standing, wealth, and interpretive authority inherited from the founding settlement. Their equal standing is the settled baseline: their claims are always justiciable, and their position is the reference point against which other claims are measured. They bear none of the arrangement's burdens and can adopt or drop the founding-fidelity framing at will; exiting its benefits is not something they seek."
+    },
+    {
+      "name": "originalist_judicial_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Jurists, law schools, clerkship networks, and movement institutions that administer the reading: they decide which founding-era materials count as evidence of intent, train the next generation of judges in the method, and staff the benches that apply it. Authority, careers, and institutional endowments flow from controlling the method. If they abandoned it tomorrow, nothing binds them personally - they would reposition within the same institutions."
+    },
+    {
+      "name": "descendants_of_the_enslaved",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Their ancestors were counted as property or as non-members by the taxonomy that fixes the guarantee's scope, and redress for that counting runs through amendment-level action or through period-intent readings that reproduce the original exclusions. Formal citizenship came by amendment, but the method reads even that amendment through its own era's bounded understandings. Leaving the constitutional order is not a realistic option; exit means emigration at ruinous personal cost."
+    },
+    {
+      "name": "women_outside_founders_taxonomy",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "They were outside the founding category 'men' and remain outside the guarantee wherever the governing intent is the founders'. Where later amendment text reaches them, its scope is fixed by the ratifying era's understanding, which was itself restrictive. Organized advocacy is substantial - the suffrage movement and its successors are among the oldest continuous constitutional campaigns - but organization purchases influence, not exit: there is no jurisdictional or doctrinal exit from the intent-bound method."
+    },
+    {
+      "name": "indigenous_nations",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "They stand outside the founding social taxonomy altogether: the founding generation treated them as nations to be treaty-subordinated rather than members of the compact. Sovereignty claims are measured against the intents of governments that placed them outside the taxonomy, and the landmark formulations of their status were themselves applications of that measuring. Their homelands sit inside the republic's borders, making physical exit impossible; the arrangement travels with the territory."
+    },
+    {
+      "name": "abolitionist_and_suffragist_tradition",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "From 1776 forward, Black and white abolitionists and later suffragists read the same sentence as a universal promise and demanded inclusion on its face. They were never seated in the founding conversation whose intent now governs, and the method assigns their centuries of interpretive labor no legal weight. Their commitment to the universal reading is constitutive of the tradition itself - abandoning it would dissolve the tradition - so they do not exit; they contest from outside the governing method."
+    },
+    {
+      "name": "constitutional_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "They reconstruct founding-era usage, ratification records, and period understandings from the archive. Their findings sometimes corroborate the bounded reading and sometimes document broader contemporaneous understandings that cut against it. They hold no enforcement power, collect no rents from any outcome, and publish for audiences on every side of the dispute."
+    }
+  ],
+  "gain_flow": "founding_descendant_class",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a determinate, dispute-limiting rule for applying the Declaration's and Constitution's equality language: fix the scope at the founding generation's understanding, so officials and courts share one criterion, and route all widening disputes into the amendment process.",
+    "transfer_function": "Moves the protective force of the equality principle away from those outside the founding taxonomy and their descendants toward those inside it - withholding guaranteed equal standing from the former while securing the latter's inherited position - and moves interpretive authority to whoever controls the reconstruction of founding intent.",
+    "absent_voices": "The abolitionist and suffragist traditions read the same sentence universally from the beginning and were never seated in the conversation whose intent now governs; contemporary communities whose claims the bounded reading renders non-justiciable likewise stand outside it. Their objections are documented in their own publications and in the congressional record of the eras they contested.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the bounded reading vanished overnight, equality claims currently foreclosed as non-justiciable would enter the courts, the descendant class's protected standing would become as contestable as anyone else's, and the interpretive apparatus's authority would collapse into open methodological competition - the distribution of equal standing, the legitimacy chain of judicial review, and the amendment-versus-interpretation division of labor would all reorganize.",
+    "founding_problem": "The founding settlement needed a public creed capable of binding thirteen fractious states while preserving the slave economy and the settlers' land regime: the equality sentence supplied the creed, and the social taxonomy supplied the quiet limit that kept the creed from dissolving the settlement.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the benefiting parties: the founding-era dissenting record itself - antislavery signers' objections, Frederick Douglass's 1852 address, and the Reconstruction framers' statements that the principle outran the founders' practice - attests both the founding problem and its contested status. The beneficiary set attests the opposite (that the creed remains necessary as founded). No disinterested arbiter exists; the corroboration is the documented dissent tradition spanning two centuries."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founding_taxonomic_settlement",
+    "drift_state": {
+      "moment": "post_reconstruction_civil_rights_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "universalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "textualist_paradox_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "founder_intent_fixes_equality_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "period_intent_bounds_amendment_meaning",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

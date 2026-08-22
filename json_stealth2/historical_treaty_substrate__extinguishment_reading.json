@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "historical_treaty_substrate__extinguishment_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "048409c3-4df3-4e0c-8e07-d0abbf3c78ad"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.35,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Historical Treaties as Completed Cession Transactions (Extinguishment Reading)",
+    "topic_domain": "legal/constitutional/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "crown_settler_state",
+      "settler_landholders_resource_industries",
+      "provincial_municipal_governments",
+      "indigenous_treaty_nations"
+    ],
+    "victims": [],
+    "vindicated_propositions": [
+      "extinguishment_doctrine",
+      "settler_state_sole_jurisdiction",
+      "completed_transaction_finality"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 150
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 125,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 125,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 125,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.35,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is one reading (extinguishment_reading) of the historical_treaty_substrate kernel; what structural changes follow if a sibling reading (nation_to_nation_reading or stewardship_reading) becomes operative instead?",
+      "resolution_mechanism": "Adoption events: constitutional entrenchment of an alternative reading, judicial reinterpretation of the treaty texts, or treaty-renewal legislation; then observe whether Indigenous nations re-enter the victim set for territorial jurisdiction and the settler state loses sole-authority status.",
+      "impact": "Under a sibling reading the beneficiary/victim structure inverts: the nations re-enter the victim set for jurisdiction, the settler state's gain becomes contested extraction, epsilon for the same referent rises sharply, and the classification moves from rope toward tangled_rope or snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which kernel reading is instantiated and what a sibling reading would structurally change."
+    },
+    {
+      "id": "consent_validity_at_signing",
+      "question": "Was the Indigenous parties' consent to the cession terms validly obtained — did both parties understand and agree to the same transaction?",
+      "resolution_mechanism": "Archival negotiation records, contemporaneous interpreter and missionary accounts, and admissible Indigenous oral histories of the negotiations; compare written cession clauses against recorded oral undertakings and the negotiating parties' expressed understandings.",
+      "impact": "If consent was substantially impaired, the completed-transaction premise fails on its own terms; epsilon rises sharply even within a transactional frame and the arrangement's legitimacy requires renegotiation rather than continued performance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the founding consent underlying the extinguishment reading was validly obtained."
+    },
+    {
+      "id": "oral_written_understanding_divergence",
+      "question": "Do the written cession clauses or the oral undertakings preserved in Indigenous oral histories govern what was actually transacted?",
+      "resolution_mechanism": "Oral-history evidence now admissible in treaty interpretation; systematic comparison of the written texts against recorded oral promises across the treaty series.",
+      "impact": "If oral undertakings govern, the extinguishment reading's textual foundation collapses and the standing arrangement has been performing the wrong contract for its entire interval; the divergence is extensively documented, so the open question is which record governs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Written-text versus oral-understanding divergence as the basis of the transaction's terms."
+    },
+    {
+      "id": "fixed_consideration_adequacy",
+      "question": "Can a completed-transaction frame coherently tolerate retrospective assessment of whether fixed nineteenth-century consideration remains adequate to the ceded territory's compounded value, or is adequacy foreclosed by finality itself?",
+      "resolution_mechanism": "Comparative contract doctrine on unconscionability and changed circumstances applied to historic transactions; legislative or judicial adoption of a reopening standard for historic settlements.",
+      "impact": "If adequacy is assessable, the standing arrangement accrues unpriced extraction as ceded-territory value compounds past the fixed consideration; if finality forecloses the question, the reading holds but the foreclosure itself becomes the contested extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the completed-exchange frame can absorb a retrospective adequacy challenge to the consideration."
+    },
+    {
+      "id": "finality_vs_suppression_persistence",
+      "question": "Does the settlement persist because both parties continue to benefit from it, or because alternative readings are foreclosed from operative law?",
+      "resolution_mechanism": "Observe the arrangement's stability as exit and voice open: if the operative core survives expanded oral-history admissibility, UNDRIP-style implementation, and modern-treaty precedent without coercive response, persistence is benefit-based; if each opening is met with enforcement (injunctions, justiciability limits), persistence is suppression-based.",
+      "impact": "If suppression-based, the rope claim fails and the arrangement computes as tangled_rope or snare despite this reading's beneficiary structure; if benefit-based, the rope claim is vindicated on this reading's own terms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether persistence reflects mutual benefit or foreclosure of alternatives."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "crown_settler_state",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Executes and administers the completed transactions: surveys and holds reserve boundaries, pays the annuities, exercises exclusive legislative and judicial authority over the ceded territory, and interprets the treaties' meaning through its courts. Receives the ceded territorial jurisdiction and the title certainty that underwrites the entire property regime; pays the defined consideration as the honored terms of the completed exchange. Can restructure the arrangement unilaterally through legislation and modern treaty-making."
+    },
+    {
+      "name": "indigenous_treaty_nations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Hold the consideration side of the completed transactions as this reading records it: defined reserve lands, annual payments, and enumerated harvesting and other rights, delivered and binding. Live entirely within the jurisdiction the transactions vested in the settler state; the settlement's terms are fixed and cannot be renegotiated as of right, and there is no jurisdiction outside the settlement to exit into. Successive generations inherit the arrangement and its constitutive relationship to the land without having been party to its making."
+    },
+    {
+      "name": "settler_courts_treaty_interpreters",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Adjudicate what the completed transactions mean: which rights survive, whether obligations were breached, and whether any sovereignty question remains open. Their interpretive authority rests on the settlement's finality; each ruling either maintains or erodes the completed-transaction frame. They collect no rents from the arrangement, but cannot exit the interpretive role and are bound by the texts and prior rulings."
+    },
+    {
+      "name": "settler_landholders_resource_industries",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Hold fee-simple and resource rights across the ceded territory, derived from the title certainty the completed transactions provide. Farm, log, mine, and build on uncontestable title; can transfer or exit any parcel at market value, and none of their holdings depend on ongoing negotiation with the nations."
+    },
+    {
+      "name": "provincial_municipal_governments",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Tax, regulate, and service the ceded territory under the exclusive jurisdiction the transactions vested. Derive rate base, planning certainty, and administrative clarity from the settlement, and operate daily on the assumption that no competing jurisdiction exists within their boundaries."
+    },
+    {
+      "name": "indigenous_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Press for the treaties to be read as something other than completed cessions — as ongoing relationships or agreements between surviving polities. The settlement's finality defines them out of the conversation: within the extinguishment frame there is nothing to negotiate, so their claims reach the courts only as narrow rights-implementation questions. Organized across many nations; their mobilization is the visible resistance to the settlement's closure."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converted open-ended, violence-prone territorial contestation between expanding settler polities and Indigenous nations into defined, administrable entitlements: fixed reserve boundaries, scheduled payments, enumerated rights, and exclusive allocation of jurisdiction — a solved-once allocation of territory and governing authority.",
+    "transfer_function": "Moves territorial sovereignty, jurisdiction, and the land base from the signatory nations to the settler state; moves defined reserves, annuity payments, and enumerated treaty rights from the settler state to the nations as the recorded consideration.",
+    "absent_voices": "The nations-as-sovereign-polities: this reading's own premise defines them out of the conversation post-cession, so no seat within the frame speaks for continuing sovereignty. Also absent: the generations bound by the transactions without having been party to them, and the dissenting factions within the signatory nations who contested the treaties at signing and whose objections the written record largely omits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the extinguishment settlement were undone overnight — if the completed transactions ceased to ground title and jurisdiction — the property regime of the entire ceded land base would lose its foundation: fee-simple title chains, resource tenures, municipal boundaries, and the state's legislative authority would all stand on reopened sovereignty claims, and every institution named in this story would have to renegotiate its position from zero.",
+    "founding_problem": "Resolving competing sovereignty and land claims between expanding settler polities and Indigenous nations without perpetual war — achieving a definitive transfer of territory and jurisdictional clarity through negotiated instruments.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "The treaty commissioners' reports and the written texts attest the cession framing, but they are the benefiting party's own record. Indigenous oral histories of the same negotiations — now admissible as evidence — attest a different founding problem: sharing of the land under an ongoing relationship, not a completed sale. No source outside the beneficiary set corroborates the completed-cession framing as the mutual founding understanding; that corroborative absence is itself the signal, and it is stated plainly rather than papered over."
+  },
+  "gain_flow": "crown_settler_state",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "historical_treaty_substrate__nation_to_nation_reading",
+      "historical_treaty_substrate__stewardship_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'the historical treaties' covers three structurally distinct constraints — three readings of one kernel (historical_treaty_substrate) — decomposed per the epsilon-invariance principle. This file instantiates the extinguishment_reading only: treaties as completed property transactions, with epsilon authored low from that seat's own lights and an explicitly empty victim set. The sibling stories (nation_to_nation_reading, stewardship_reading) share the referent — the same standing treaty arrangement — and author their own higher epsilon, their own beneficiary/victim structures (in which the nations re-enter the victim set for territorial jurisdiction), and their own classifications. The readings disagree on one located structural element: whether sovereignty was transferred and closed. They are linked here as a constraint family; no reading's data is folded into another's."
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the historical_treaty_substrate kernel: the extinguishment reading, under which the historical treaties are completed property transactions — the signatory nations ceded territorial sovereignty in exchange for defined reserves, annuities, and enumerated rights, and the settler state holds sole legitimate authority over the ceded territory. Per the epsilon-referent rule for kernel readings, extractiveness is authored for the standing arrangement under contest (the operative extinguishment settlement) as THIS reading assesses it: a completed, compensated exchange whose conceded wrongs are breaches of the consideration, not the transaction itself. The sibling readings are separate constraints with their own epsilon, beneficiary/victim structures, and classifications; they are linked through the network, not folded in. Under this reading's structural delta the Indigenous nations sit in the beneficiary set for the narrow treaty rights and outside the victim set entirely — the victims array is authored empty as this reading's explicit structural claim, and the omega variables carry what a sibling reading would change. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled, by the engine, from directionality and scope.",
+    "key_agents": [
+      "crown_settler_state: primary beneficiary and agenda-setter (institutional/arbitrage) — receives ceded jurisdiction, administers the settlement, pays the defined consideration",
+      "indigenous_treaty_nations: beneficiary of the narrow treaty rights (organized/trapped) — hold reserves, annuities, and enumerated rights inside a jurisdiction they do not share and cannot exit",
+      "settler_courts_treaty_interpreters: agenda-setter over meaning (institutional/constrained) — adjudicate what the completed transactions mean; their authority rides on the settlement's finality",
+      "settler_landholders_resource_industries: derivative beneficiary (powerful/mobile) — hold fee-simple and resource title made certain by the cession",
+      "provincial_municipal_governments: beneficiary (institutional/mobile) — tax and govern the ceded territory under exclusive jurisdiction",
+      "indigenous_rights_advocates: excluded seat (organized/constrained) — press alternative readings; the settlement's finality defines them out of the conversation"
+    ],
+    "logic_rationale": "Metrics are authored from this reading's seat for the standing arrangement. Extractiveness 0.2: the reading holds the transaction complete and the consideration delivered; what it concedes as residue — shortchanged reserve surveys, lapsed agricultural and annuity terms, and the compounding gap between fixed nineteenth-century consideration and ceded-territory value — is real but bounded in its frame. Suppression 0.35: the reading justifies finality as the agreed term, yet concedes the arrangement has been actively enforced against those who would reopen it; the scalar records that coercive maintenance without adjudicating its justification. Theater 0.25: annuity payments, reserve administration, and rights adjudication are real functions; the ceremonial share (treaty-day performance, honour-of-the-Crown rhetoric outrunning conduct) is a minority. All three series run on one shared grid — time points 0, 25, 50, 75, 100, 125, 150 of a roughly 1871-to-2020s span in 25-year steps — so every metric is authored at every examined point. The suppression series is deliberately U-shaped: enforcement machinery built to a peak (movement passes, assembly and land-claims fundraising prohibitions), decaying through the mid-century liberalization era, then partially re-intensifying as enforcement of finality against reopening attempts (injunctions, justiciability limits) rather than a return of the historical administrative apparatus. The claimed type is rope — this seat holds the arrangement to be a completed, mutually entered exchange — and is stated independently of the metrics; where the engine's per-seat computation diverges from the claim, that divergence is the measurement the story exists to take.",
+    "perspectival_gap": "The seats should compute differently even within this reading's own data. From the crown_settler_state and settler_courts seats the settlement is a performed contract: obligations defined, consideration flowing, meaning adjudicated — the state's secondary payer role is the honored price of a bargain it struck. From the indigenous_treaty_nations seat the same structure reads differently: the beneficiary declaration damps their derived extraction, but trapped exit, fixed consideration, and inherited terms mean successive generations hold narrow entitlements inside a jurisdiction they never renegotiate — the engine should compute their seat as materially more burdened than the beneficiary label alone suggests. The settler_courts seat is the subtle divergence: the courts collect no rents, but their interpretive authority is constituted by the settlement's finality, giving them a structural stake in the kernel's stability that no beneficiary/victim declaration captures. The excluded advocates seat computes from outside the frame entirely. Inter-institutionally, the same-side institutions (state, courts, provinces) experience the constraint through different benefit channels — territory, interpretive authority, rate base — with correspondingly different stakes in its stability.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: crown_settler_state, settler_landholders_resource_industries, provincial_municipal_governments, and indigenous_treaty_nations are all declared beneficiaries, so all derive damped directionality — that is this reading's structural claim, made deliberately rather than by omission. The victims array is authored empty: the reading holds the cession was compensated and that no party bears uncompensated cost in the standing arrangement. Exit modulation does the residual work the declarations miss — the nations' trapped exit pushes their derived d toward the target end relative to the fully mobile settler beneficiaries, and the state's arbitrage-grade restructuring capacity holds it near the beneficiary end. No directionality overrides are authored: the per-power-atom override mechanism cannot separate the settler_courts seat (institutional, no declared material benefit) from the state and provinces (institutional, declared beneficiaries), so the courts' interpretive-authority stake is left to the structural derivation and flagged here and in the perspectival-gap analysis instead.",
+    "mandatrophy_analysis": "This reading declares the founding problem dead — the territorial contest the treaties were built to solve was, in its frame, resolved by completed transactions — while the disappearance verdict is world_rearranges. That status-dead plus verdict-rearranges mismatch is the honest authoring, not an error to be tuned away: the reading's contribution is to prevent mislabeling a genuine completed exchange as ongoing theft (the inverse of the usual mandatrophy failure), and its blind spot is mislabeling foreclosure as completion — a settlement can be simultaneously a real solved problem at founding and a maintained closure now. The sibling readings carry the correction: nation_to_nation reopens the founding problem as live (consent is ongoing), stewardship reopens it as contested (the transaction never occurred as described). The corpus should read this story's mismatch against its theater and suppression series rather than treating either the rope claim or the genealogy as self-certifying; the founding problem's corroborative absence from outside the beneficiary set is recorded in the six-questions interview and is itself signal.",
+    "kernel_context": "Kernel: historical_treaty_substrate — the persisting commitment constituted by the historical treaty instruments between Indigenous nations and settler states. This file instantiates the extinguishment_reading: treaties as completed property transactions, sovereignty ceded, consideration defined and delivered, settler state sole legitimate authority. Siblings: nation_to_nation_reading (international agreements between sovereign equals requiring ongoing consent) and stewardship_reading (relational pacts for shared territorial stewardship, no cession). The readings disagree on one located structural element — whether sovereignty was transferred and closed — and this story's epsilon, beneficiary/victim structure, claimed type, and axioms are authored from the extinguishment seat alone, with the committer structure routed to the omega variables."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "completed_cession_settlement",
+    "drift_state": {
+      "moment": "post_s35_reconciliation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "nation_to_nation_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "stewardship_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "treaty_cession_complete_and_compensated",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "sovereignty_claims_nonjusticiable_post_cession",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "header": {
+    "constraint_id": "commerce_clause_text__expansive_federal_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-13",
+    "status": "ACTIVE",
+    "story_uid": "eb0a4dfb-8891-44b1-8db8-e5ea550109a6"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.56,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.7,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Aggregate-Effects Reading of the Federal Commerce Power",
+    "topic_domain": "constitutional law/federalism/commerce regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "federal_administrative_agencies",
+      "united_states_congress",
+      "federal_judiciary",
+      "large_interstate_firms",
+      "civil_rights_and_labor_organizations"
+    ],
+    "victims": [
+      "state_governments",
+      "local_governments",
+      "local_economic_actors"
+    ],
+    "vindicated_propositions": [
+      "demand_interdependence_economics",
+      "national_market_uniformity_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 64,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 64,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 64,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.56
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading (expansive_federal_reading) of the kernel commerce_clause_text — what structural facts would change if a sibling reading were adopted instead?",
+      "resolution_mechanism": "No data resolves this; it is the location of the live constitutional dispute. Compare compiled classifications across the sibling files (originalist_narrow_reading, substantial_effects_limited_reading).",
+      "impact": "Under the originalist narrow reading the entire federal regulatory domain built on aggregate effects becomes ultra vires and the beneficiary/victim sets invert; under the substantial effects limited reading the domain survives but with entry costs (nexus, non-pretext) that shrink it. Classification of the same institutional arrangement is reading-relative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; disagreement located in the extension of 'Commerce...among the several States.'"
+    },
+    {
+      "id": "substantiality_threshold",
+      "question": "What quantum of aggregated intrastate effect counts as 'substantial' for commerce jurisdiction?",
+      "resolution_mechanism": "Econometric estimation of cross-border spillovers and demand-interdependence for challenged activity classes; comparative doctrine in jurisdictions with quantified thresholds.",
+      "impact": "A tightened threshold collapses this constraint toward its limited sibling (smaller domain, higher entry costs); a loosened one expands federal reach further and raises effective extraction on subordinated seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold indeterminacy in the aggregate-effects standard."
+    },
+    {
+      "id": "pretext_frequency",
+      "question": "How often are aggregate-effects findings genuine economic judgments versus post hoc cover for regulation aimed at noneconomic ends?",
+      "resolution_mechanism": "Systematic audit of legislative records and findings against independent economic evidence for statutes resting solely on aggregate-effects jurisdiction.",
+      "impact": "High pretext frequency would push the computed classification toward the snare end — coordination story as cover — and strengthen the case for the limited reading's non-pretext requirement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Pretext rate in the reading's operational history (Lopez's central objection)."
+    },
+    {
+      "id": "firm_net_position",
+      "question": "Are large interstate firms net beneficiaries of federal uniformity, or net payers once federal compliance burdens exceed avoided multi-state transaction costs?",
+      "resolution_mechanism": "Compliance-cost studies comparing single-federal-regime costs against counterfactual fifty-state patchwork costs, sector by sector; lobbying-pattern analysis (industries demanding preemption versus demanding deference).",
+      "impact": "If firms are net payers, the corporate seat's directionality rises sharply, weakening the coordination-function half of the tangled-rope reading; if net beneficiaries, current declarations stand.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net position of the corporate seat is mixed ex ante and sector-dependent."
+    },
+    {
+      "id": "live_mandate_vs_rent_preservation",
+      "question": "Does the arrangement persist because genuinely interstate problems require it, or because federal institutions defend accumulated jurisdiction?",
+      "resolution_mechanism": "Natural experiments from delegated state autonomy: state marijuana regimes, Medicaid waivers, the Clean Air Act California waiver — compare outcomes and externality management where federal backstop is relaxed.",
+      "impact": "Comparable state-level performance under waivers indicates a larger inertial/rent component and supports piton-drift monitoring; clear state failure indicates a live mandate sustaining the coordination half.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence driver: live coordination need versus jurisdictional rent defense."
+    },
+    {
+      "id": "cs_framing_underdetermination",
+      "question": "Is the constraint the doctrinal test itself (an interpretive standard courts apply) or the jurisdictional allocation it produces (federal supremacy over a vast economic domain)?",
+      "resolution_mechanism": "Conceptual analysis: the test-framing reads as a rule-standard with low intrinsic extraction; the allocation-framing reads as a structural transfer with the asymmetries declared here. Signals guiding the authored choice: the story's parties, victims, and receipt surface all attach to the allocation, not to the test text.",
+      "impact": "Under the test-framing the constraint computes nearer rope (standard applied in good faith); under the allocation-framing it computes as the tangled_rope authored here. Framing choice is load-bearing for classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Two coherent CS framings of one arrangement with divergent classifications; allocation-framing adopted."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The constraint under story is the doctrinal rule that the federal commerce power reaches any economic activity whose effects, aggregated across many actors, are substantial in national markets — the reading through which Congress regulates labor conditions, farm production, environmental quality, financial markets, and public accommodations wholly inside single states. It instantiates the expansive_federal_reading of the kernel commerce_clause_text; two sibling files instantiate the rival readings, and this file links them via network.affects_constraints per the epsilon-invariance decomposition rule (the colloquial label 'the Commerce Clause' covers three structurally distinct claims with distinct epsilon values and distinct party structures). Structurally the arrangement coordinates — one rulebook for a continental market, dissolving the state-tariff and regulatory-fragmentation problem — while simultaneously transferring regulatory authority upward, with identifiable payers (state and local institutions whose police powers are subordinated, and local constituencies whose divergent conditions are overridden by national aggregates) and identifiable collectors (federal institutions whose jurisdiction, budgets, and dockets expand with each successful application). I therefore CLAIM tangled_rope: genuine coordination function plus asymmetric extraction, held together by active enforcement. The METRICS are authored independently as descriptive estimates of actual operation; where the engine's per-seat computation diverges from this claim, that divergence is the datum. The epsilon referent is the standing arrangement — the existing federal regulatory domain resting on aggregate-effects justification — assessed by this reading's own lights: this reading accepts federal primacy as legitimate, yet honestly registers the continuing, real costs borne by subordinated seats, yielding moderate-high epsilon rather than the near-zero a triumphalist account of its own doctrine would assert.",
+    "key_agents": [
+      "federal_judiciary: primary agenda-setter (institutional power / constrained exit) — defines and maintains the reading; cannot decline the disputes that define it",
+      "united_states_congress: co-agenda-setter and incidental beneficiary (institutional / arbitrage) — legislates within the enlarged space, routing around limits via spending and taxation when convenient",
+      "federal_administrative_agencies: primary beneficiary (institutional / arbitrage) — receive jurisdiction, budgets, and enforcement mandate with each expansion",
+      "large_interstate_firms: dual-positioned beneficiary-payer (powerful / constrained) — buy uniformity, absorb federal compliance costs, lobby for preemption of stricter state law",
+      "civil_rights_and_labor_organizations: coordination-function beneficiary (organized / constrained) — depend on the expansive reading as the vehicle for nationwide protections",
+      "state_governments: primary target (institutional / trapped) — police powers subordinated; union membership forecloses exit",
+      "local_governments: target (moderate / trapped) — ordinances and standards preempted from above",
+      "local_economic_actors: excluded voices bearing diffuse costs (powerless / trapped)",
+      "federalism_scholars: analytical observer — maps the boundary contests without collecting or paying"
+    ],
+    "logic_rationale": "Extractiveness 0.66: substantial and rising across the interval — each doctrinal success converts another activity class into federal jurisdiction, and the transfer is asymmetric (authority moves up; compliance standardization moves sideways onto firms; unfunded obligations move down onto states). Suppression 0.56 is authored as a RAW structural property and is never scaled — the coercive element is judicial boundary-policing and preemption, not participant preference. Theater_ratio 0.30: most federal regulatory activity under this reading is functionally real, but a persistent minority is performative federalism — consultation rituals, advisory bodies, and partnership framing that decorate decisions already taken. Accessibility_collapse 0.70: once the reading is accepted, state-level alternatives in covered domains collapse structurally (preemption removes them regardless of state preference), though genuine residual domains remain, keeping this below mountain-grade closure. Resistance 0.62: sustained — state attorney-general coalitions, Tenth Amendment litigation, the unfunded-mandate revolts of the 1990s, and recurring Court retrenchment attempts. Temporal grid is SHARED across all three tracked metrics at t = {0,16,32,48,64,80}, mapped to 1942 (Wickard), 1958, 1974, 1990 (Lopez pending), 2006 (post-Raich), 2022. The series are CYCLICAL, not monotonic: extractiveness dips at t=48 as the Rehnquist Court's federalism revival (Lopez, Morrison) forces retrenchment, then recovers (Raich); suppression_requirement oscillates in phase — heavy enforcement during establishment and during state-pushback eras, lighter during normalized consensus. The oscillation's driver is alternating federalism-revival waves meeting entrenched federal practice; part of its function is stabilization — periodic symbolic retrenchment operates as a safety valve that legitimizes the overall arrangement (a mild intermittent-concession mechanism), which is why the cycle is documented rather than smoothed away.",
+    "perspectival_gap": "From the federal seats the same structure is the machinery of legitimate national governance: the judiciary experiences it as the disciplined application of a workable standard; Congress as democratic responsiveness to national-scale problems; agencies as mandate fulfillment. From the state and local seats the identical structure is experienced as subordination — rules made by distant majorities, calibrated to aggregates that erase local conditions, enforced through preemption with no reciprocal channel. The sharpest divergence sits among nominally equal actors: state governments and federal agencies both hold institutional power, yet agencies enjoy arbitrage-grade exit (reinterpret, reclassify, migrate missions) while states are constitutionally trapped (no secession, Tenth Amendment remedies rejected); large firms are powerful but merely constrained, able to relocate operations but not to exit the national market their lobbying helped integrate. Exit-option asymmetry, not global standing, generates the seat divergence the engine computes.",
+    "directionality_logic": "Beneficiary declarations map to real collection points: agencies accrue jurisdiction and budgets (lowest d); Congress and the judiciary accrue legislative territory and doctrinal docket respectively (low d, moderated by their administrator roles); firms accrue uniformity gains while paying real compliance costs (dual-positioned, mid-low d); civil-rights and labor organizations accrue the enforceability of nationwide protections (low d). Victim declarations map to the transfer's debit side: state governments bear the largest structural loss — police-power authority ceded without compensation — and, being trapped, sit near the full-target end (highest d); local governments bear preemption of their ordinances; local economic actors bear the diffuse cost of having their conditions overridden by national averages. Scope amplification applies: the arrangement operates at national scope, where verification of genuine aggregate effects is hardest, modestly raising effective extraction on the target seats.",
+    "mandatrophy_analysis": "The tangled_rope classification is what prevents mislabeling in both directions. Reading this as a pure snare would erase why subordinated seats nonetheless acquiesce: states receive federal funds, market integration, and genuine interstate-externality management they could not deliver alone — the coordination half is real and historically was the point. Reading it as a pure rope would erase the extraction layer: unfunded mandates, preemption of stricter local standards, and jurisdiction defended for its own sake by the institutions that hold it. The R5 genealogy sharpens this: the FOUNDING problem (state tariff wars under the Articles) is dead in its original form — no state can erect the barred tariffs — while successor problems (continental externalities) are contested-live. The arrangement persists partly through live function and partly through beneficiary defense and institutional inertia; the founding_problem_status='contested' x disappearance_verdict='world_rearranges' cell correctly reports that the world depends on the arrangement while disputing whether today's version still answers the reason it was built. Mandatrophy is therefore monitored, not declared resolved: the waiver-based natural-experiment omega is the instrument that would detect the drift toward piton if state-level performance under delegated autonomy proves comparable.",
+    "kernel_context": "Kernel: commerce_clause_text — Article I, Section 8's grant of power to 'regulate Commerce...among the several States.' This file instantiates the expansive_federal_reading: interstate commerce encompasses all economic activity with substantial aggregate effects on national markets. Sibling readings: originalist_narrow_reading (commerce limited to trade crossing state borders and the instrumentalities of interstate movement) and substantial_effects_limited_reading (intrastate reach affirmed but conditioned on jurisdictional nexus and non-pretextual economic regulation). The disagreement is located in the extension of the commerce phrase itself: for the same activity — wheat grown for home consumption, guns near a school, an individual insurance mandate — the three readings yield opposite jurisdictional outcomes. Relational structure: this reading FORECLOSES the narrow reading, since the two definitions conflict for the same activities and no single framework can hold both as the meaning of the phrase; this reading INFLUENCES the limited reading, which arose historically as a moderating correction whose traction tracks the expansive doctrine's perceived legitimacy. Drift note: contemporary doctrine retains the aggregate-effects core (Raich) while adding explicit carve-outs the reference frame lacked (noneconomic-activity exclusion, jurisdictional nexus, the NFIB mandate rejection) — practice_drift, substantial, openly acknowledged by the Court itself."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "originalist_narrow_reading",
+      "substantial_effects_limited_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'the Commerce Clause' into three epsilon-invariant stories: originalist_narrow_reading (historically upstream; smallest domain; near-zero extraction on its own terms), this expansive_federal_reading (largest domain; moderate-high extraction with genuine coordination function), and substantial_effects_limited_reading (middle position; inherits the expansive reading's domain concept while importing entry costs). Each story carries its own beneficiaries, victims, and claimed type; the family is linked bidirectionally through affects_constraints. Upstream/downstream structure: the narrow reading supplies the textual baseline the other two depart from; the expansive reading's dominance created the legitimacy conditions under which the limited reading emerged as corrective."
+  },
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Defines and maintains the doctrinal line separating federal from state regulatory authority, drawing the aggregate-effects boundary case by case and policing it through preemption review. Gains docket centrality and institutional weight as the domain enlarges. Cannot decline the disputes that define the boundary; bound by its own precedent chain; its exit is limited to doctrinal adjustment, which it exercises episodically (Lopez, Morrison) before restoring the frame (Raich)."
+    },
+    {
+      "name": "united_states_congress",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enacts statutes justified by aggregate-effects findings, expanding the legislative domain with each accepted reading. Answers to national electoral coalitions rather than to states as such. Holds arbitrage-grade flexibility: where the commerce route narrows, it reroutes through taxing, spending, and enforcement powers, so boundary setbacks redirect rather than restrain it."
+    },
+    {
+      "name": "federal_administrative_agencies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Receive jurisdiction, staffing, budgets, and enforcement mandate with every successful application of the reading; draft the implementing rules; defend their scope in litigation. Can reinterpret mandates, reclassify regulated activity, and migrate between mission areas, giving them the most maneuverable position of any seat in the arrangement."
+    },
+    {
+      "name": "large_interstate_firms",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Buy regulatory uniformity: one federal rulebook replaces fifty-state patchwork compliance, and federal preemption conveniently displaces stricter state standards. Simultaneously absorb federal compliance costs and occasionally litigate against specific statutes. Cannot exit the national market they operate in; relocation of incorporation or headquarters does not escape federal reach."
+    },
+    {
+      "name": "civil_rights_and_labor_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Depend on the expansive reading as the constitutional vehicle for nationwide protections — public-accommodations guarantees, workplace standards, environmental floors — that no state-by-state strategy could secure against interstate undercutting. Under a narrower reading their policy portfolio loses its principal legal foundation."
+    },
+    {
+      "name": "state_governments",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Hold residual police powers that contract whenever the aggregate-effects line moves outward; implement federally designed programs, frequently at their own expense; litigate the boundary through Tenth Amendment and anti-commandeering suits with a poor win record. Union membership is constitutionally irrevocable — no exit exists at any price — so their recourse is confined to litigation, intergovernmental coalitions, and political pressure."
+    },
+    {
+      "name": "local_governments",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Municipal ordinances, land-use rules, and consumer or labor standards are displaced by federal floors and ceilings; their regulatory voice reaches Washington only filtered through state leagues and associations. No exit path exists; their authority is a creation of state law beneath a federal superstructure."
+    },
+    {
+      "name": "local_economic_actors",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Small businesses and residents whose local conditions diverge from national aggregates are governed by rules calibrated to the average, made by institutions remote from them. Their formal participation channel — notice-and-comment in federal rulemaking — is one they rarely use effectively. Would object to the terms of the arrangement if seated, but appear in the process chiefly as regulated subjects."
+    },
+    {
+      "name": "federalism_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Map the boundary contests, document the gap between the founding settlement and current doctrine, and supply the analytical record on which both defenders and critics of the arrangement draw. Collect nothing from the constraint's operation and pay nothing into it."
+    }
+  ],
+  "gain_flow": "federal_administrative_agencies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a single rule-making authority for economic activity whose effects aggregate across state lines — replacing fifty-way regulatory fragmentation and suppressing state-level beggar-thy-neighbor regulation of a continental market.",
+    "transfer_function": "Moves regulatory authority — with the discretion, staffing, budgets, and enforcement resources attached to it — from state legislatures and agencies up to Congress and federal agencies; moves compliance standardization onto firms; moves decisions about local economic conditions from proximate institutions to distant ones.",
+    "absent_voices": "State legislators and municipal officials hold no seat in the adjudication that defines the boundary — they enter only as litigants and amici after the line is drawn. Residents and small enterprises whose conditions diverge from the national aggregate participate, if at all, through notice-and-comment processes they rarely use; their objection to being governed by averages is structurally unrepresented.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reading vanished overnight, the enumerated-power foundation of vast federal statutes — labor standards, environmental regulation, financial oversight, public-accommodations guarantees — evaporates. Congress re-legislates what it can under taxing and spending powers; states reassert police power over the remainder; the national market reorganizes around either a constitutional amendment or a fifty-state patchwork with new interstate frictions. Every named seat's arrangements depend on the current structure.",
+    "founding_problem": "Under the Articles of Confederation, states erected tariffs, discriminated against sister-state goods, and pursued commercial war with one another; the Framers built a national government capable of governing a continental market and preventing interstate trade barriers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Founding-era historians, writing outside any beneficiary set, corroborate the original tariff-war problem and the design intent behind the commerce grant; transport and trade economists corroborate that genuinely interstate externalities exist and have grown with market integration. Against this, state officials and federalism scholars — also outside the benefiting parties — attest that much modern use addresses problems of a kind and scale the founding settlement never contemplated, serving administrative expansion rather than the founding problem. Both attestations come from outside the beneficiary set; the status is contested on independent testimony, not self-assertion."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unlimited_substantial_aggregate_effects_scope",
+    "drift_state": {
+      "moment": "contemporary_post_lopez_doctrine",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "originalist_narrow_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "substantial_effects_limited_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_effects_within_interstate_commerce",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "no_nexus_or_pretext_qualifier_required",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

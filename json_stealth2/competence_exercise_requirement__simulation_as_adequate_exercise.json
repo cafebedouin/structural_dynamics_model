@@ -1,0 +1,346 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__simulation_as_adequate_exercise",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "710e832b-cca2-4f9e-bcac-403be8a39942"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.6,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Simulator-Cycle Proficiency Adequacy Regime (Reading: Simulation as Adequate Exercise)",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aviation_regulators",
+      "airline_operators",
+      "simulation_training_industry",
+      "aviation_insurers"
+    ],
+    "victims": [
+      "flying_public",
+      "line_crews"
+    ],
+    "vindicated_propositions": [
+      "simulation_transfer_validity_hypothesis",
+      "regulatory_compliance_sufficiency_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 22,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 38,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 22,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 38,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 22,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 38,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading of the competence_exercise_requirement kernel: does the simulation_as_adequate_exercise instantiation, rather than the catastrophe_as_necessary_anchor or hybrid_dependency readings, correctly describe what maintains the competence kernel of high-reliability operations?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions and carriers operating under different readings: if carriers maintaining periodic real-world anchoring show materially lower rare-event failure and excursion rates than sim-only peers under matched exposure, the sufficiency premise of this reading fails.",
+      "impact": "If a sibling reading is adopted, the victim set expands (crews and public gain standing to demand anchoring), the training industry's captive demand contracts, and this arrangement migrates from its current hybrid shape toward a transitional support awaiting replacement or toward inertial persistence.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-level contest over which exercise regime constitutes adequate competence maintenance; disagreement located on the sufficiency predicate over simulation."
+    },
+    {
+      "id": "residual_risk_attribution",
+      "question": "Are catastrophe-free decades evidence of simulation adequacy, or the product of confounding safety layers (automation depth, fleet renewal, weather detection, traffic control) plus base rates so low that decades of outcome silence are statistically uninformative?",
+      "resolution_mechanism": "Leading-indicator analysis (near-miss rates, unstable-approach excursions, manual-handling deviations) instead of hull-loss counts; matched comparison of carriers differing in anchoring practice.",
+      "impact": "If attribution fails, the reading's validation loop is self-sealing and effective extraction rises, since the public bears risk under a false warrant; if attribution holds, part of the measured burden is mispriced and epsilon falls.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether outcome silence validates the reading or masks confounded attribution."
+    },
+    {
+      "id": "startle_surprise_gap_materiality",
+      "question": "How large is the competence gap between simulator-trained performance and performance under genuine startle and surprise, and is that gap material to rare-event outcomes?",
+      "resolution_mechanism": "Startle-effect research programs, line-operational flight-training event recordings, observational line audits flown under waiver, and post-incident crew-performance reconstruction.",
+      "impact": "A material gap directly undermines the sufficiency premise and shifts the operative structure toward the hybrid reading's shape; a negligible gap supports the reading and lowers suppression, since alternatives would be genuinely unnecessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Materiality of the startle/surprise deficit that simulation cannot reproduce."
+    },
+    {
+      "id": "functional_vs_performative_cycle_share",
+      "question": "What fraction of mandated simulator-cycle content maintains genuine rare-event competence versus rehearses predictable check profiles taught to the evaluation?",
+      "resolution_mechanism": "Audit of scenario variance across cycles and carriers; correlation of profile-rehearsal share with check-pass rates and with performance during unscheduled operational events.",
+      "impact": "A high performative share pushes theater_ratio further upward and strengthens the inertial-drift hypothesis; a low share supports the coordination-function reading and dampens extraction estimates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Split of simulator-cycle activity between functional rehearsal and compliance performance."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "aviation_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes and enforces the proficiency rules that define what counts as exercised competence. Accepts completed simulator cycles with documented debriefs as satisfying recency-of-experience and type-rating requirements, which replaces the far harder task of judging live operational competence with auditing records. Collects administrative economy and political cover from the arrangement; faces industry pressure on training costs and public pressure after visible accidents; cannot relinquish its certifying role without collapsing the regime it administers."
+    },
+    {
+      "name": "airline_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Schedules the minimum mandated simulator cycles and no more. Money that an older regime spent on real-aircraft handling time, non-jeopardy line audits, and live operational anchoring stays in the training budget or returns to operations. Multi-jurisdictional carriers can shift fleets and registries toward the least demanding proficiency rules, so the floor of the regime is set by the most permissive regulator willing to host them. Bears reputational and liability exposure when a rare event finds a skill gap the simulator never trained."
+    },
+    {
+      "name": "simulation_training_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Manufactures full-flight simulators costing tens of millions of dollars apiece and operates training centers selling recurrent cycle hours. Mandated simulator-based proficiency converts a discretionary purchase into captive recurring demand across an entire industry. Revenue depends on simulator time remaining the certification currency; the industry promotes device-fidelity credits and expanded approved-device lists that enlarge billable device time, and participates in the working groups where proficiency standards are drafted."
+    },
+    {
+      "name": "aviation_insurers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Prices hull and liability risk using auditable simulator-compliance records, because the underlying hazard — actual crew competence under surprise — is unobservable to them. The reading hands them a quantifiable proxy: completed cycles and current certificates discount premiums, lapsed ones raise them. Underwriting practice thereby reinforces the regime, rewarding carriers for cycle completion regardless of what the cycles produced."
+    },
+    {
+      "name": "line_crews",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Fly the recurrent simulator profiles and sign the debrief records. They gain safe rehearsal of emergencies that could never be practiced live, and the simulator is where most first learn engine-out procedures and upset recovery. What they lost relative to earlier regimes is real-aircraft handling time and non-jeopardy line exposure — the slow accumulation of manual skill and composure under genuine surprise. When a rare event finds the gap, legal and moral responsibility lands on the crew, not on the standard that defined their preparation. Their type ratings, recency, and professional standing all run through the simulator system, so questioning its adequacy implicates their own credentials."
+    },
+    {
+      "name": "flying_public",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Boards aircraft on the assumption that crew competence is being actively maintained to some verified standard. Bears whatever residual risk follows from skills that simulation undertrains — startle response, surprise, genuine ambiguity — concentrated in the rare moments that decide outcomes. Has no seat in the working groups where proficiency standards are drafted, no practical way to compare carriers on real competence rather than certificate currency, and no exit from the regime short of not flying."
+    },
+    {
+      "name": "accident_investigation_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Reconstructs rare events after the fact and sees what the routine record cannot: whether crews performed outside the trained envelope, how manual handling degraded, how startle shaped the first seconds. Publishes recommendations — repeated calls for restored manual-flying emphasis after high-profile upsets — that press directly on the adequacy premise but bind no one until rulemaking chooses to act. Observes the structure only through its failures."
+    },
+    {
+      "name": "passenger_representation_bodies",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Consumer and passenger-interest groups occasionally petition rulemaking dockets for stronger evidence that proficiency standards reflect operational reality rather than device time. Rarely resourced to sustain technical participation across multi-year working-group processes dominated by regulators, operators, and the training industry. Their objections tend to surface publicly only after accidents, when the standard under discussion has already been in force for a decade."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a safe, standardized, repeatable environment in which crews rehearse catastrophic and abnormal scenarios that cannot be practiced in live operations without unacceptable risk, and synchronizes crew responses to shared emergency profiles across a fleet and an industry.",
+    "transfer_function": "Moves training-budget allocation toward simulator cycle hours and away from real-aircraft anchoring programs; moves residual rare-event risk onto crews' professional standing and the flying public's persons; moves certification certainty to regulators, premium-setting proxies to insurers, and guaranteed recurring revenue to the training industry.",
+    "absent_voices": "Passengers have no seat in proficiency-standard working groups; passenger representation appears in dockets episodically and under-resourced. Front-line instructors who observe manual-skill decay firsthand report through management chains that filter dissent before it reaches standards committees. Accident investigators speak only after events, when the standard's adequacy has already been tested at public expense.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rule that simulator cycles constitute adequate exercise vanished overnight, certification schedules, training budgets, the training industry's revenue base, and insurance pricing would all reorganize within a planning cycle; carriers would need new evidence of proficiency, real-aircraft anchoring programs would reappear as competitive and regulatory demands, and the meaning of a current certificate would change.",
+    "founding_problem": "Early jet-era training rehearsed emergencies in live aircraft and learned from accidents: crews died acquiring experience, and unrecoverable scenarios could not be practiced at all. The founding problem was how to rehearse the unrehearsable without killing trainees. High-fidelity simulation with structured debriefing answered it decisively.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The founding rehearsal problem is corroborated from outside the benefiting parties by the accident-investigation record itself — the historical sequence of training accidents and the continuing occurrence of scenarios no crew had ever practiced. The extension of the founding problem into a sufficiency claim (that simulation exhausts what competence maintenance requires) is attested almost exclusively from within the benefiting set — regulators, operators, the training industry, and insurer underwriting practice — and no independent body outside that set attests the sufficiency extension; stating that plainly is itself the signal."
+  },
+  "gain_flow": "simulation_training_industry",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "Since the 1980s, full-flight simulators with structured debriefing displaced live-aircraft maneuver training as the basis of recurrent proficiency in commercial aviation and adjacent high-reliability domains. What began as a solution to a genuine problem — rehearsing unrecoverable scenarios without killing trainees — hardened into a certification regime in which completed simulator cycles became the accepted, then the required, then effectively the sole currency of demonstrated competence. Zero-flight-time type ratings, simulator-based recency, and audit frameworks made the reading self-executing: carriers schedule the mandated cycles, regulators audit the records, insurers price off the certificates. Catastrophe-free decades are cited as validation, although outcome silence cannot distinguish simulation adequacy from confounding safety layers or low base rates. This file instantiates ONE reading of the competence_exercise_requirement kernel — simulation_as_adequate_exercise — as a clean, epsilon-invariant constraint; the catastrophe-anchor and hybrid readings are separate stories linked through network.affects_constraints. Claim and metrics are authored independently: the constraint is CLAIMED as tangled_rope (genuine rehearsal coordination fused with asymmetric risk transfer and crowding-out of alternatives), and the metrics describe its actual operation without being tuned to that claim.",
+    "key_agents": [
+      "- aviation_regulators: Agenda-setter (institutional/constrained) — writes proficiency rules, accepts simulator records as competence evidence, collects administrative economy",
+      "- airline_operators: Primary beneficiary (powerful/arbitrage) — captures training-cost avoidance under the adequacy warrant; forum-shops across jurisdictions",
+      "- simulation_training_industry: Concentrated beneficiary (organized/mobile) — mandated cycles are its captive recurring revenue base",
+      "- aviation_insurers: Secondary beneficiary (powerful/mobile) — prices unobservable competence risk off auditable cycle completion",
+      "- line_crews: Payer with incidental benefit (moderate/constrained) — lost real-aircraft anchoring; carries residual blame when gaps manifest; credentialed entirely through the system",
+      "- flying_public: Primary target (powerless/trapped) — bears residual rare-event risk with no seat in rulemaking",
+      "- accident_investigation_bodies: Analytical observer (institutional/analytical) — sees the structure only through post-event reconstruction",
+      "- passenger_representation_bodies: Excluded voice (powerless/trapped) — objects episodically, resourced too thinly to sit in the working groups"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.65: substantial but bounded by the enormous genuine coordination value — no live alternative rehearses unrecoverable events, and the regime did eliminate a class of training deaths. The extraction that remains is the transfer of residual risk from standard-setters to the public and the crowding-out of anchoring practices that would cost operators real money. Suppression is 0.60 and is authored as a raw structural property, unscaled — only extractiveness is scaled by directionality and scope in the engine's computation. Suppression here is regulatory lock-in and budget crowding-out rather than coercive force: once cycle completion is the compliance currency, funding real-aircraft anchoring buys no credit and much criticism. Theater ratio is 0.42 and rising: a growing share of cycle content rehearses predictable check profiles taught to the evaluation rather than the unscripted events that decide outcomes. Accessibility collapse is 0.40 — hybrid alternatives survive at some carriers and in some jurisdictions, but budget pressure collapses them wherever the compliance floor binds. Resistance is 0.55: sustained safety-science critique, union manual-handling campaigns after high-profile upsets, and investigator recommendations, which extracted partial concessions (mandatory upset-prevention-and-recovery training) without displacing the adequacy premise. All three temporal series run on one shared grid (t=0,7,15,22,30,38,45) so every metric is authored at every examined point; the suppression_requirement series is authored deliberately because the story tracks an enforcement ratchet — permissive voluntary adoption, codification of simulator-only recency and zero-flight-time ratings, then audit-hardened compliance machinery — not a static enforcement picture.",
+    "perspectival_gap": "From the regulator and operator seats the arrangement computes as a mature, validated, administrable system: records exist, cycles complete, decades pass without catastrophe, and the machine runs. From the crew and public seats the same structure computes as unverifiable residual risk imposed without consent — the precise hazard (performance under genuine surprise) is the one thing the certification currency never measures. The same nominal institution splits internally: training departments are identity-fused with the simulator regime (their authority, headcount, and budget are the regime), while line operations feel the decay the regime cannot see. Investigators occupy a fourth position — they observe only the tail of the distribution, so every datum they hold is a counterexample the routine record lacks. The engine computes these divergent per-seat classifications from the structural data; the authored claim adjudicates none of them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for aviation_regulators, airline_operators, simulation_training_industry, and aviation_insurers — each collects from the arrangement (administrative economy, cost avoidance, captive demand, underwriting proxies) and none bears its residual risk; the operators' cross-jurisdictional arbitrage pushes them toward the beneficiary pole. Victim declarations drive high directionality for flying_public — powerless, trapped, global scope, bearing the exact risk the regime externalizes — and for line_crews, who are dual-positioned (payer with secondary beneficiary standing) and therefore derive mid-to-high directionality rather than a pole. Scope amplifies: the arrangement operates globally while verification of actual competence occurs nowhere, so the engine scales effective extraction upward for the trapped target seats. No directionality overrides are needed; the beneficiary/victim declarations plus exit options already produce the correct relationships.",
+    "mandatrophy_analysis": "The founding problem — rehearse the unrehearsable without killing trainees — remains live, and the arrangement genuinely solves it; the mandate grew beyond it, extending from rehearsal to a sufficiency claim over all of competence maintenance. The tangled_rope classification prevents two opposite mislabels. Reading the arrangement as pure extraction erases the irreplaceable coordination function: no live alternative lets a crew practice a rejected takeoff at V1 or a dual-engine flameout, and abolishing the regime would kill trainees. Reading it as pure coordination erases the asymmetry: gains concentrate (training budgets, device revenue, underwriting proxies, administrative economy) while risks diffuse (public bodies, crew careers), and the alternatives that would test the sufficiency claim are crowded out by the same rules that certify the currency. The mandatrophy watch-point is forward-looking: if a validated hybrid standard ever displaced the sufficiency premise, the simulator-only mandate would atrophy into inertia — theatrical cycles persisting after the function had moved — which is the trajectory the theater_ratio series is positioned to detect.",
+    "kernel_context": "Kernel: competence_exercise_requirement — what exercise maintains the competence kernel of high-reliability operations. This file instantiates the reading simulation_as_adequate_exercise: scheduled high-fidelity simulation with structured debriefing constitutes adequate exercise; catastrophe-free decades validate the reading; regulatory compliance suffices. Sibling readings, authored as separate constraint stories: catastrophe_as_necessary_anchor (only real catastrophic events or near-misses provide the irreducible exercise) and hybrid_dependency (simulation necessary but insufficient; periodic real-world anchoring required). The disagreement is located on one structural element: the sufficiency predicate over simulation. This reading asserts it; both siblings deny it."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor",
+      "competence_exercise_requirement__hybrid_dependency"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial question 'what keeps high-reliability crews competent?' covers three structurally distinct claims with different epsilon values, different beneficiary sets, and different failure modes, and is therefore modeled as three stories linked by network edges rather than one story with a measurement parameter. This story (simulation_as_adequate_exercise) authors epsilon for the standing arrangement in which simulator cycles are the certification currency. The catastrophe-anchor sibling authors epsilon for an arrangement in which only real events exercise the kernel; the hybrid sibling authors epsilon for a mixed regime. Historical influence runs from the catastrophe-anchor reading (the accident-driven origin of all modern training doctrine) toward this reading, whose adoption was justified partly by citing the impossibility of the anchor it replaced; the hybrid reading emerged as the synthesis position and draws evidentiary support from this reading's accumulating counterexamples. Each story links to the others; none contains the contest inside its own classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_dependency",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scheduled_simulation_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "audited_cycles_equate_demonstrated_competence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "validated_simulation_proficiency_standard",
+    "drift_state": {
+      "moment": "post_upset_accident_inquiry_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

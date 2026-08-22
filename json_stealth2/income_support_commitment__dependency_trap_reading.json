@@ -1,0 +1,345 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "0985195a-2a81-4fbd-acbb-bd09c2f260d0"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.57,
+    "theater_ratio": 0.34,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support — Dependency-Trap Reading",
+    "topic_domain": "political economy / social policy / welfare state theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "nonparticipating_recipients"
+    ],
+    "victims": [
+      "working_taxpayers",
+      "skill_atrophying_recipients"
+    ],
+    "vindicated_propositions": [
+      "social_right_to_income_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.57,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is one reading (dependency_trap_reading) of the income_support_commitment kernel; would instantiating the freedom_floor_reading instead restructure the beneficiary/victim map and collapse measured extraction?",
+      "resolution_mechanism": "Compile the sibling reading-stories (freedom_floor_reading, targeting_efficiency_reading) over the same structural facts and compare computed per-seat classifications; the disagreement resolves only at the reading-selection level, not inside this file.",
+      "impact": "Under the freedom_floor reading, recipients become autonomy-gainers rather than dependents, taxpayers become purchasers of a public good rather than victims, and effective extraction falls toward coordination-cost floors; this file's tangled_rope verdict would not survive the swap.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: reading-contest over the income_support_commitment kernel; this file authors only the dependency-trap instantiation."
+    },
+    {
+      "id": "labor_supply_effect_magnitude",
+      "question": "How large and how durable are the labor-supply reduction and skill-depreciation effects of unconditional transfers on recipients?",
+      "resolution_mechanism": "Long-horizon randomized trials and administrative-panel studies measuring employment, earnings trajectories, and skill proxies under unconditional transfers (multi-year basic-income trials, benefit-spell duration-dependence models).",
+      "impact": "Small transient effects push this reading's epsilon down toward the freedom_floor reading's coordination-cost estimate; large persistent effects push epsilon up and harden the trap structure toward a snare-flavored assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Load-bearing empirical uncertainty inside the dependency-trap reading."
+    },
+    {
+      "id": "trap_design_contingency",
+      "question": "Is the dependence dynamic intrinsic to unconditionality itself, or an artifact of design parameters such as interaction with means-tests, withdrawal rates, and the absence of activation services?",
+      "resolution_mechanism": "Cross-program comparison holding generosity constant: universal dividends without cliffs, unconditional floors wrapped in activation services, and means-tested conditional regimes.",
+      "impact": "If contingent, the arrangement is a parameter-fixable hybrid (reform dissolves the trap while keeping the floor); if intrinsic, the extraction is structural and the freedom_floor reading loses its empirical footing entirely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the trap is intrinsic to unconditionality or to specific design parameters."
+    },
+    {
+      "id": "political_ratchet_operation",
+      "question": "Does the electoral feedback loop this reading posits — recipient constituencies rewarding expansion — actually operate, or do beneficiary coalitions remain too diffuse to drive a ratchet?",
+      "resolution_mechanism": "Roll-call and referendum analysis linking recipient density to expansion votes; historical tracing of program-growth episodes against coalition strength.",
+      "impact": "If the ratchet does not operate, the arrangement's persistence needs another explanation (administrative inertia, crisis-driven expansion), weakening this reading's persistence account and its agenda-setter rent claims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the posited political ratchet is real."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading — the dependency_trap_reading — of the income_support_commitment kernel: the standing statutory and practical commitment to unconditional income support. Per Rule 1, the contest is NOT described inside the constraint: the referent of epsilon is the standing arrangement of unconditional income support as the dependency-trap reading assesses it (never the arrangement this reading would prefer, and never averaged across readings). The reading holds that the arrangement carries a genuine coordination function (an unconditional floor that prevents destitution and stabilizes demand) while simultaneously extracting along two asymmetries: purchasing power moves from productive taxpayers to non-participation, and continued collection erodes recipients' own re-entry capability — the trap. KEY AGENTS (by structural relationship): - nonparticipating_recipients: primary beneficiary (organized/constrained) — collects the transfer with no work condition - skill_atrophying_recipients: concealed target (powerless/trapped) — collects while re-entry options decay - working_taxpayers: primary target (organized/constrained) — finances the transfer - welfare_bureaucracy: administrator-collector (institutional/mobile) - welfare_state_legislators: agenda-setter-collector (institutional/mobile) - working_poor_nonrecipients: excluded voice (powerless/constrained) - labour_economists: analytical observer (analytical/analytical). Sibling readings are separate constraint files linked through network.affects_constraints; their content enters this file only through omega variables and kernel_context.",
+    "key_agents": [
+      "nonparticipating_recipients: primary beneficiary (organized/constrained) — collects the unconditional transfer; job-search intensity declines with collection duration",
+      "skill_atrophying_recipients: concealed target (powerless/trapped) — collects while skills, references, and networks depreciate; the reading's signature vantage",
+      "working_taxpayers: primary target (organized/constrained) — bears the tax levy financing the floor; no opt-out short of emigration",
+      "welfare_bureaucracy: agenda-setter with secondary beneficiary position (institutional/mobile) — staffing and budgets scale with program size",
+      "welfare_state_legislators: agenda-setter with secondary beneficiary position (institutional/mobile) — harvest concentrated electoral support from recipient constituencies",
+      "working_poor_nonrecipients: excluded (powerless/constrained) — equally poor, fully employed, receives nothing; no seat in program governance",
+      "labour_economists: analytical observer (analytical/analytical) — designs pilots and panels measuring labor supply and duration dependence from outside the program budget"
+    ],
+    "logic_rationale": "Claim and metrics are authored independently. CLAIMED TYPE: tangled_rope, because this reading's own structure contains both halves — a real coordination function (unconditional floor, no means-test exclusion, automatic stabilization) AND asymmetric extraction through the same structure (productive-to-non-productive transfer plus capability erosion in the recipient class itself), held in place by active enforcement (compulsory taxation, statutory entitlement, administrative machinery). METRICS, authored descriptively: extractiveness 0.62 — substantial asymmetric transfer, tempered by the real floor function even this reading concedes; suppression 0.57 — participation is formally voluntary, but the taxpayer levy is compulsory and the recipient's exit capacity decays with duration, so the arrangement holds its shape through a mix of legal compulsion and eroded alternatives rather than consent alone; theater_ratio 0.34 — real money moves (the functional core), but a growing share of activity is legitimation: pilots maintained past their evidentiary purpose, activation schemes that measure compliance rather than re-employment; accessibility_collapse 0.45 — work, targeted aid, charity, and migration remain live alternatives, so understanding the arrangement does not collapse the choice set; resistance 0.60 — sustained taxpayer politics, work-requirement legislation, and recurring reform movements. Suppression is authored as a raw structural property and is deliberately NOT reconciled to extractiveness; only extractiveness gets scaled by directionality and scope downstream. The temporal series run on one shared six-point grid (T=0..30) with all three metrics authored at every point; all three rise together — expanding generosity raises the transfer volume (extractiveness), the legitimation apparatus grows faster than evaluated outcomes (theater), and fiscal-political entrenchment raises the cost of exit from the arrangement for taxpayers (suppression_requirement).",
+    "perspectival_gap": "Four seats compute four different constraints from the same statutes. From the working_taxpayer seat the arrangement computes as enforced extraction with no domestic exit. From the nonparticipating_recipient seat it computes as unconditional subsidy — the beneficiary pole, damped extraction, possibly net subsidy once directionality scaling runs. From the institutional seats it computes as an administrable portfolio returning electoral support and staffing scale. From the skill_atrophying seat — the reading's signature vantage — it computes as a floor that pays for the loss of one's own re-entry options: income received, capability destroyed, exit narrowing yearly. The engine derives this divergence from power, exit, and role data; the authored claim does not adjudicate it.",
+    "directionality_logic": "Declarations map to directionality as follows. nonparticipating_recipients sit at the beneficiary pole (declared beneficiary, organized but exit-constrained — leaving means forfeiting the floor). working_taxpayers sit near the target pole (declared victim, compulsory levy, constrained exit). skill_atrophying_recipients are declared victims and carry secondary beneficiary position: the derivation weights the victim declaration, placing them high-d, which matches the reading's claim that their net position is negative — they pay in capability what they receive in cash. OVERRIDE: one explicit entry for the institutional power atom (d=0.22). Rationale: the structural derivation treats agenda-setters as neutral coordinators near the symmetric midpoint, but this reading holds both institutional seats collect concrete rents — legislators harvest concentrated electoral support from recipient constituencies, and the bureaucracy's budgets and career ladders scale with program size — placing both nearer the beneficiary pole than any neutral-coordinator default would. The override corrects the derivation for exactly this reading-specific rent structure; it is not a substitute for the beneficiary/victim declarations, which stand first.",
+    "mandatrophy_analysis": "The founding problem — destitution handled punitively and unreliably by poor-law and charitable systems — retains a live residual (severe material deprivation persists at the margins), so this is not a clean dead-mandate zombie; the mismatch consumer reads founding_problem_status=contested x disappearance_verdict=world_rearranges and no zombie flag fires, but the contested genealogy routes scrutiny to the political-ratchet omega. Classification discipline: calling this a snare would erase the genuine floor function that even this reading concedes — real money prevents real destitution, and no single seat captures all the gains (receipt concentrates on recipients, but the arrangement is not coercion-first); calling it a rope would erase the asymmetric capability extraction the reading places at its center. Tangled_rope preserves both halves and forces the enforcement requirement into the open. Mandatrophy resolution here is the reading's core charge: an arrangement built as a floor has, on this reading, outlived its transitional warrant — permanence where bridge was intended — while its defenders read the same permanence as the founding problem simply continuing.",
+    "kernel_context": "Kernel: income_support_commitment — the standing statutory and practical commitment to unconditional income support. This file instantiates the dependency_trap_reading. Sibling readings, each a separate constraint file: freedom_floor_reading (same transfers read as an autonomy-and-exit-capacity floor; would invert the beneficiary/victim structure — recipients as autonomy-gainers, taxpayers as purchasers of a public good — and collapse epsilon toward coordination-cost levels) and targeting_efficiency_reading (same budget read as misallocated universalism; would replace the beneficiary class with demonstrated-need households and re-key epsilon to administrative leakage rather than dependence). The disagreement is located in the sign and durability of the labor-supply and capability effects of unconditional transfers: this reading asserts negative and persistent effects; freedom_floor asserts positive or negligible ones; targeting_efficiency brackets the question and attacks allocation instead. Relation choices: coexists_with toward freedom_floor (live competing empirical-normative positions held by different factions; neither logically eliminates the other within a single party's framework, though adopting this reading commits a party to rejecting freedom_floor's core premise as an empirical generalization), influences toward targeting_efficiency (dependence evidence is the principal ammunition for targeting arguments — it changes the sibling's legitimacy conditions and resource availability without foreclosing it, and the two are routinely held together by the same parties)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__targeting_efficiency_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the income_support_commitment kernel decomposes into three reading-stories — dependency_trap_reading (this file), freedom_floor_reading, and targeting_efficiency_reading. Same statutory referent, different epsilon: this file authors epsilon 0.62 for the standing arrangement (capability extraction plus taxpayer burden dominate the floor function); freedom_floor authors epsilon near the coordination floor (autonomy purchase dominates); targeting_efficiency authors epsilon keyed to misallocation and leakage rather than dependence. Links run bidirectionally through affects_constraints; no upstream/downstream ordering is asserted — the readings compete rather than compose."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "nonparticipating_recipients",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive an unconditional periodic payment sufficient to cover basic costs, with no work-status condition attached. Some combine the payment with occasional or informal earnings; job-search intensity declines the longer collection continues. Leaving the arrangement means forfeiting the floor entirely, so the practical alternative to collecting is full reliance on market earnings at whatever wage the current labor market offers. As a geographically concentrated constituency they vote at measurable rates and are visibly courted during expansion debates."
+    },
+    {
+      "name": "skill_atrophying_recipients",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Collect the same payment after job loss or early labor market exit and intend to return to work. Each year out of employment narrows their current skills, references, and networks, so the wage offers available on re-entry fall below the ones they left. The payment keeps them housed and fed while their re-entry options deteriorate; stopping collection does not restore the lost attachments. They are spoken for in policy debate chiefly by organizations committed to the program's continuation rather than its reform."
+    },
+    {
+      "name": "working_taxpayers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Pay the payroll and income levies that finance the payment. They cannot decline the levy, and escaping it means leaving jobs, housing, and family networks behind. Their returns from the arrangement are indirect at most — macroeconomic stabilization, less visible destitution — while the direct financial flow runs outward from their households. They organize episodically around reform campaigns and work requirements, with recurring but incomplete political traction."
+    },
+    {
+      "name": "welfare_bureaucracy",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Administers payment processing, identity verification, fraud control, and reporting for the program. Agency staffing, budgets, and career ladders scale with program size and complexity. Staff move between programs and ministries carrying administrative careers with them, and the agency's institutional memory and procedural ownership give it decisive weight in how any reform would actually be implemented."
+    },
+    {
+      "name": "welfare_state_legislators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Vote the program's budget, set payment levels, and decide expansions or consolidations on electoral cycles. Recipient households concentrate geographically and vote at measurable rates, so widening the payment builds identifiable electoral support while trimming it mobilizes opposition without producing visible gratitude. Careers continue through ministerial rotation and lobbying after office, in circles where program scale counts as accomplishment."
+    },
+    {
+      "name": "working_poor_nonrecipients",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work full schedules at low wages and receive nothing from the arrangement beyond what their own taxes indirectly channel to others. They are not organized around this program, hold no seat in its administration, and their objection — that the same public money rewards non-participation while their participation buys them little — reaches policy debate mainly through third parties and advocacy intermediaries."
+    },
+    {
+      "name": "labour_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Design and analyze pilot programs, natural experiments, and longitudinal panels measuring labor supply, skill depreciation, and duration dependence under unconditional transfers. They publish in journals and advise ministries from outside the program's budget, and their findings cut both for and against the arrangement depending on the evidence — which makes them the nearest thing the arrangement has to a disinterested auditor."
+    }
+  ],
+  "gain_flow": "nonparticipating_recipients",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides an income floor that arrives without work or need tests: it solves the coordination problems of income volatility, administrative exclusion from means-tested systems, and poverty gaps at eligibility boundaries, by paying everyone and financing the floor from the general tax base.",
+    "transfer_function": "Moves purchasing power from employed and asset-holding households, via broad taxation, to all resident households regardless of work status; the net flow concentrates on households with little market income, including those that reduce or exit labor supply.",
+    "absent_voices": "Working-poor households that receive nothing are not seated anywhere in the program's governance; future taxpayers who will service the accumulated fiscal commitments are constitutionally absent from every decision that accumulates them; low-wage employers facing thinned labor supply act through industry associations rather than program channels; and skill-atrophying recipients are voiced chiefly by organizations committed to the program's continuation, not its reform.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would strip the income floor from tens of millions of households, flood low-wage labor markets with urgent job-seekers, and overwhelm local charities and municipal relief within weeks, forcing emergency re-legislation; the fiscal side would unwind gradually, but the household side of the world rearranges immediately.",
+    "founding_problem": "Mass industrial destitution that poor-law and charitable systems handled punitively and unreliably: the founding aim was subsistence guaranteed as a matter of right, independent of employer, family, or local parish discretion.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Social and economic historians corroborate the founding problem from outside any benefiting party, using pre-transfer-era mortality and destitution records and poor-law archives. On status: statistical agencies and cross-national poverty research attest that severe material deprivation persists at the margins, supporting a live residual problem; labour-economic studies of benefit duration and reservation wages, published outside the program's budget, attest effects the founders did not target. No source outside the beneficiary coalition attests that the arrangement in its current unconditional form remains the right instrument — that attestation comes only from within it."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "transitional_floor_preserving_work_attachment",
+    "drift_state": {
+      "moment": "post_pandemic_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "targeting_efficiency_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_force_attachment_preserves_capability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "transfer_expansion_ratchet_self_reinforcing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

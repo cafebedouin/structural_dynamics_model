@@ -1,0 +1,386 @@
+{
+  "header": {
+    "constraint_id": "rome_statute_jurisdiction__universalist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "2994aeed-308d-47cd-9143-95ada38e66e1"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.64,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rome Statute Universal-Mandate Reading (Jurisdiction Transcending Consent)",
+    "topic_domain": "international law / treaty interpretation / institutional authority",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "atrocity_victims_and_survivors",
+      "human_rights_advocacy_networks",
+      "icc_officialdom",
+      "host_state_referring_governments",
+      "party_state_governments"
+    ],
+    "victims": [
+      "nonparty_state_officials",
+      "targeted_sitting_leadership",
+      "prosecuted_atrocity_perpetrators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.64
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.47
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of the rome_statute_jurisdiction kernel (universalist_reading). Which structural elements does this reading fix that its siblings vary?",
+      "resolution_mechanism": "Comparative analysis across the three family files: victim sets, directionality structure, and epsilon under each reading.",
+      "impact": "Adopting the sovereigntist_reading shrinks the victim set to consenting-states-only persons and removes non-party official exposure entirely; adopting the hybrid_complementarity_reading restores a sovereign-deference gate that lowers measured extraction. This file's classification holds only for the universalist instantiation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position of this story within the Rome Statute jurisdiction kernel family."
+    },
+    {
+      "id": "consent_architecture_disagreement_site",
+      "question": "Where exactly do the readings diverge inside the treaty text — Articles 12(2)(a)-(b) territoriality and nationality, Article 13(b) Security Council referral, or Article 17 complementarity's admissibility role?",
+      "resolution_mechanism": "Textual and jurisprudential analysis identifying which provisions each reading treats as load-bearing versus peripheral.",
+      "impact": "If non-party-national jurisdiction rests on a minority reading of Article 12(2)(a), the universalist constraint is narrower and less extractive than authored; if it is the settled interpretive mainstream, the full victim structure stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locating the structural site of inter-reading disagreement within the Statute's consent architecture."
+    },
+    {
+      "id": "enforcement_capacity_gap",
+      "question": "Is the universal mandate operative authority or declaratory aspiration, given that the court executes no arrests itself and depends wholly on state cooperation?",
+      "resolution_mechanism": "Track warrant-execution rates by target power level over the coming decade; compare execution rates for weak-state versus great-power indictees.",
+      "impact": "If execution stays near zero for powerful targets, effective extraction concentrates on weak-state defendants and the arrangement drifts toward a selective-extraction profile; robust execution would vindicate the coordination-function reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether claimed universal reach corresponds to enforceable authority."
+    },
+    {
+      "id": "selectivity_structural_or_resource",
+      "question": "Does the de facto concentration of situations and defendants on African and weaker-state actors reflect structural capture by referring and funding states, or contingent resource and access limits?",
+      "resolution_mechanism": "Compare situation-opening rates against atrocity incidence across regions, controlling for referral source and funder composition.",
+      "impact": "Structural capture would sharpen the extraction asymmetry and support a snare-drift hypothesis for this reading; resource contingency would leave the tangled_rope classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of the court's documented case-selection asymmetry."
+    },
+    {
+      "id": "complementarity_gate_character",
+      "question": "Within this reading, does Article 17 complementarity operate as genuine sovereign deference or as a thin admissibility filter controlled by the court itself?",
+      "resolution_mechanism": "Code the court's inability/unwillingness determinations for deference depth: how often are national proceedings accepted as sufficient versus displaced?",
+      "impact": "Genuine deference lowers this reading's effective extraction and moves it toward the hybrid sibling; rubber-stamp behavior confirms the consent-transcending character and sustains the higher extraction measure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Character of the complementarity gate inside the universalist reading."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Under the universalist reading, the Rome Statute establishes a mandate for international criminal justice that transcends state consent: nationals of non-party states fall within the court's reach through territorial triggers (Article 12(2)(a)) and Security Council referrals (Article 13(b)), victims' claims do not depend on their government's ratification, and core-crime accountability overrides sovereign objection. The arrangement this story is about is that mandate as it actually operates — the expanding docket of situations touching non-consenting states (Libya, Comoros, Palestine, Afghanistan, Bangladesh/Myanmar, Ukraine), the warrant diplomacy directed at sitting officials, and the cooperation web that substitutes for the court's absent police power. Epsilon is authored for this standing arrangement, assessed descriptively — not discounted by this reading's endorsement of the mandate, and not measured against the sovereigntist alternative this reading contests. T indexes years since entry into force (T0 = 2002, T24 = 2026). The claim/metrics split is deliberate: the constraint is CLAIMED as tangled_rope from its structure (genuine coordination function plus asymmetric extraction plus active enforcement), while the metrics describe its observed operation independently.\n\nKEY AGENTS (by structural relationship):\n- icc_officialdom: Agenda-setter and principal collecting seat (institutional/identity_locked) — administers the mandate and accrues authority, funding, and caseload from its expansion\n- atrocity_victims_and_survivors: Intended beneficiary (powerless/trapped) — receive whatever accountability the mandate delivers\n- nonparty_state_officials: Primary target (powerful/trapped) — exposed by territorial triggers and council referrals without ever consenting\n- targeted_sitting_leadership: High-visibility target (powerful/trapped) — warrants convert into isolation rather than custody\n- prosecuted_atrocity_perpetrators: Direct coercive target (powerless/trapped) — bear detention, trial, and sentence\n- unsc_permanent_members: Gatekeeper (institutional/arbitrage) — hold referral and deferral veto over the mandate they partly stand outside\n- party_state_governments: Dual beneficiary/payer (organized/constrained) — fund and arm the court while exposing their own nationals\n- host_state_referring_governments: Dual beneficiary/payer (moderate/constrained) — delegate cases they cannot prosecute, at the price of reciprocal exposure\n- human_rights_advocacy_networks: Secondary beneficiary (organized/mobile) — the universal frame anchors their advocacy model\n- sovereigntist_jurists: Excluded voice (moderate/mobile) — object from outside the interpretive community\n- independent_international_law_scholars: Analytical observer (moderate/analytical)",
+    "logic_rationale": "Extractiveness 0.58: the mandate genuinely delivers prosecutions (Lubanga, Ntaganda, Ongwen, al-Mahdi convictions with reparations), but its consent-free reach imposes real costs on actors who never agreed to the rules, and its reach is asymmetric — weakest against the most powerful targets. Suppression 0.64: suppression is authored as a raw structural property and is NOT scaled by power or scope (only extractiveness is scaled, by directionality and spatial scope, in the engine's computation). The coercive surface is steep for individuals — an indicted person has no legal exit, only capture, flight, or death — and moderate for states, which retain withdrawal (Burundi, Philippines) and non-membership at reputational cost. Theater_ratio 0.47: a growing share of activity is performative — symbolic warrants against unreachable officials, universality campaigns, anniversary diplomacy — while the conviction record stays thin relative to the claimed scope; the trajectory (0.22 to 0.47) tracks the widening gap between declared reach and executed arrests. Accessibility_collapse 0.35: alternatives remain visible and usable — national prosecution under complementarity, ad hoc tribunals, hybrid courts, domestic universal-jurisdiction statutes, withdrawal — so understanding the constraint does not close the option space. Resistance 0.70: sustained and organized — sanctions and visa bans against court personnel, criminalization of cooperation, African Union non-cooperation strategy, treaty withdrawals, and coordinated great-power objections; the target coalition (AU, BRICS statements) is the main reason the mandate's expansion has stalled. Identity-lock dynamics: icc_officialdom is authored identity_locked through institutional identity fusion — the organization has become its function, and dissolution or jurisdictional retrenchment is unthinkable from inside; if that frame broke, the Assembly of States Parties could amend or sunset the mandate, and the classification would shift accordingly. All three tracked series share one time grid (T0-T24 at four-year steps) so no metric row borrows another's endpoints.",
+    "perspectival_gap": "The seats compute differently and the engine derives that divergence from the structural data. From the payer seats the arrangement is experienced as pure coercion: an indicted official or a detained defendant receives no coordination dividend, only exposure — their computed type should sit at the extractive extreme. From the victim and advocate seats the same structure is an accountability machine — the closest thing to a rope they have. The dual seats (party states, referring host states) experience both faces simultaneously: a lever aimed at adversaries welded to an exposure borne by their own officials. The P5 seat experiences an instrument with a veto shield — usable against others, defensible against itself. No single seat-level verdict describes the constraint; the tangled_rope claim is the whole-structure summary of exactly this divergence.",
+    "directionality_logic": "Beneficiary declarations drive low directionality: victims, advocacy networks, and the court's own officialdom sit near the subsidized end, with the court's institutional stake making it the seat the gains demonstrably accrue to. Victim declarations drive high directionality: non-party officials, sitting leadership, and prosecuted defendants sit near the full-target end, amplified by trapped exit — an indicted person's d approaches 1.0 regardless of personal power, which is why powerful officials and powerless defendants compute similarly high. Dual-role agents (party states, host states) derive near-symmetric d from offsetting roles and constrained exit. No directionality_overrides are authored: the derivation chain handles the hardest case, the P5 gatekeepers, through exit modulation — their arbitrage-grade veto pulls their effective d well below what their secondary payer role alone would imply, which is precisely the insulation the override mechanism would otherwise have to hand-author.",
+    "mandatrophy_analysis": "The founding problem — post-Cold-War impunity that ad hoc tribunals solved only when Security Council politics permitted — is still live: atrocities in Sudan, Ethiopia, Myanmar, and Ukraine continue to outrun domestic accountability. With founding_problem_status = live and disappearance_verdict = world_rearranges, the mismatch consumer finds no zombie flag, and mandatrophy_resolved is correctly not declared. The classification discipline cuts both ways: calling this a pure snare would erase the real accountability delivered to victims and the genuine collective-action problem solved; calling it a pure rope would erase the consent-free extraction from non-parties and the selective enforcement that spares the powerful. Tangled_rope holds both facts. The live drift risk is theater: if theater_ratio crosses 0.5 while convictions stay flat, the mandate decays toward piton — a universality performed rather than practiced — and the temporal series authored here is the instrument that would date that transition.",
+    "kernel_context": "Kernel: rome_statute_jurisdiction — the Rome Statute's consent/jurisdiction architecture treated as a single persisting commitment that different parties read differently. This file instantiates the universalist_reading: the statute establishes a mandate transcending consent, reaching non-party nationals through territorial triggers and Security Council referrals, with victims defined regardless of their state's ratification. Sibling files: rome_statute_jurisdiction__sovereigntist_reading (strict consent gating; jurisdiction exists only where the territorial state, nationality state, or council has accepted it) and rome_statute_jurisdiction__hybrid_complementarity_reading (universal aspiration balanced by sovereign primacy through the complementarity mechanism). The disagreement is located concretely: whether Articles 12-13 entail jurisdiction over non-consenting states' persons, and whether Article 17 complementarity is a sovereign-primacy guarantee or an admissibility filter the court controls. Those locations are recorded as omegas here; the sibling structures live in their own files."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rome_statute_jurisdiction__sovereigntist_reading",
+      "rome_statute_jurisdiction__hybrid_complementarity_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Rome Statute jurisdiction' decomposes into three structurally distinct constraints per the epsilon-invariance principle: the universalist reading (this file — consent-transcending mandate, epsilon 0.58, victims include non-party officials and sitting leadership), the sovereigntist reading (strictly consent-gated framework, materially lower epsilon, victim set largely empty), and the hybrid complementarity reading (conditional balance, intermediate epsilon). The upstream universalist claim supplies interpretive momentum that the hybrid reading's admissibility practice absorbs; each file links the other two as a constraint family, and each carries its own epsilon, stakeholders, and classification."
+  },
+  "stakeholders": [
+    {
+      "name": "icc_officialdom",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Judges, prosecutors, and registry staff of the International Criminal Court administer the Rome Statute system: they open situations, issue warrants, adjudicate admissibility, and manage the cooperation web with member states. The institution's budget, caseload, and standing grow with each jurisdictional expansion, and its officials' careers are constituted by the mandate they interpret. Dissolution or jurisdictional retrenchment is not a practical option for the institution — ending the project would end the professional world its personnel inhabit."
+    },
+    {
+      "name": "atrocity_victims_and_survivors",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Survivors of massacres, sexual violence, and displacement in situations from northern Uganda to Darfur to Palestine look to the court for accountability their national systems cannot or will not deliver. They participate as witnesses and victims' representatives and receive reparations when cases succeed. Their access runs entirely through the court's reach; no comparable-scale alternative redress exists for them."
+    },
+    {
+      "name": "human_rights_advocacy_networks",
+      "role": "beneficiary",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "NGO coalitions and campaign organizations document atrocities, lobby governments to join and cooperate, and press the prosecutor to open new situations. The universal framing of the mandate anchors their advocacy model and funding case. Their personnel move freely between organizations and capitals and bear none of the mandate's coercive costs."
+    },
+    {
+      "name": "host_state_referring_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Governments of states where atrocities occurred — Uganda, the Democratic Republic of the Congo, Mali, and others — referred their own territories to the court, delegating cases against armed groups they could not defeat in court or in battle. The same delegation exposes their own officials and forces to scrutiny, and several such governments have turned publicly hostile when the court's attention rotated toward them."
+    },
+    {
+      "name": "party_state_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "The roughly 125 ratifying states fund the court through assessed contributions, execute arrest warrants on their territory, and hold a standing instrument they can aim at adversaries' officials. Ratification also exposes their own nationals to investigation, which is why some military powers negotiated protections and why withdrawal — taken by Burundi and the Philippines — remains a live although costly option."
+    },
+    {
+      "name": "unsc_permanent_members",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "agent": true,
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "The five permanent Security Council members hold referral power (exercised for Darfur and Libya) and deferral power over any situation. Three of the five are not parties to the statute, yet their officials fall within the court's reach through council referrals and territorial triggers. Their veto lets them direct the mandate at others while shielding themselves and their allies from it."
+    },
+    {
+      "name": "nonparty_state_officials",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Officials and military personnel of states that never joined the statute — American, Israeli, Russian, Ethiopian, and others — become investigable when crimes occur on the territory of a party state or through a council referral. They exercised no vote over the rules that expose them, their own government's courts cannot shield them once a warrant issues, and their options reduce to litigation, diplomatic pressure, retaliation against the court, and avoidance of party-state travel."
+    },
+    {
+      "name": "targeted_sitting_leadership",
+      "role": "payer",
+      "agent": true,
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Sitting heads of state and government facing warrants — Omar al-Bashir historically; more recently leaders indicted over Ukraine and the Palestinian territories — lose the practical ability to travel widely, host summits, and bank internationally, and face strengthened domestic opponents who cite the indictment. Arrest depends on other states' willingness, so the sanction usually arrives as isolation rather than custody."
+    },
+    {
+      "name": "prosecuted_atrocity_perpetrators",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Individual defendants surrendered or arrested — militia commanders, rebel leaders, former conscripts risen to command — bear the court's direct coercive force: multi-year detention in The Hague, trial, and sentences served in member-state prisons. They had no role in designing the tribunal that judges them and no appellate forum above it."
+    },
+    {
+      "name": "sovereigntist_jurists",
+      "role": "excluded",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Legal scholars and practitioners committed to the consent-based architecture of the Vienna Convention argue that prosecuting non-party nationals without consent violates pacta tertiis and corrodes the treaty system's foundations. Their objections circulate in journals, advisory opinions, and government memoranda, but they hold no seat in the Assembly of States Parties or the court's chambers."
+    },
+    {
+      "name": "independent_international_law_scholars",
+      "role": "observer",
+      "agent": true,
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic analysts of international criminal law track the court's jurisdictional rulings, cooperation record, and case selection, publishing assessments of whether its practice matches its statutory premises. They take no side in the dispute and bear none of its costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a permanent, pre-agreed adjudicative machinery for atrocity crimes: common legal definitions, a standing prosecutor, and a pooled evidentiary record, so accountability does not have to be renegotiated ad hoc after each conflict. Complementarity channels cases to national systems first, with the court as backstop where states are unable or unwilling to act.",
+    "transfer_function": "Moves adjudicative authority and coercive exposure — indictment, arrest, detention — from national control to a supranational court; moves assessed contributions and diplomatic capital from member states to the court's institutions; moves reputational and mobility costs onto indicted officials and their patrons.",
+    "absent_voices": "Non-party great-power governments (the United States, Russia, China, India) and sovereigntist international lawyers would object that territorial-trigger jurisdiction over non-consenting states' nationals contradicts pacta tertiis and the Vienna Convention's consent architecture. They sit outside the Assembly of States Parties and the court's interpretive community — addressed by warrants and diplomatic notes rather than seated in the norm's construction.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the universal mandate vanished overnight, every pending situation resting on territorial triggers or council referrals — Palestine, Afghanistan, Bangladesh/Myanmar, Ukraine, Libya — would lose its legal basis; indicted officials would regain unrestricted travel; victim communities would lose their only supranational recourse; and accountability would revert to ad hoc tribunals requiring fresh Security Council politics for each conflict, which the Yugoslav and Rwandan precedents show arrive late, selectively, or never.",
+    "founding_problem": "Post-Cold-War impunity: the Yugoslavia and Rwanda tribunals demonstrated that case-by-case Security Council politics produce slow, selective, geographically arbitrary accountability. The 1998 Rome Conference sought a permanent standing court so that genocide, war crimes, and crimes against humanity would meet law rather than negotiated amnesty wherever domestic systems fail.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside the benefiting parties: two Security Council referrals (Darfur 2005, Libya 2011) were carried by votes including non-party states; successive General Assembly resolutions and independent commissions of inquiry request court engagement; and several objecting governments acknowledge the impunity problem itself while disputing the consent-free remedy — corroborating the founding problem, though not this reading's particular resolution of it."
+  },
+  "gain_flow": "icc_officialdom",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sovereigntist_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_complementarity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "core_crimes_transcend_sovereign_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "territorial_trigger_binds_nonparty_nationals",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "rome_universal_accountability_consensus",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

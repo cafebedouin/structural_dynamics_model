@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__strict_invariance_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp_strict_invariance",
+    "story_uid": "4e799ae9-4b5c-4f8d-9e50-e00ae30fdf72"
+  },
+  "base_properties": {
+    "extractiveness": 0.06,
+    "suppression": 0.18,
+    "theater_ratio": 0.04,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Specification — Strict Invariance Reading (Exact State Machine Replication)",
+    "topic_domain": "technological/standards_coordination",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "tcp_stack_implementers",
+      "internet_application_developers",
+      "end_users_of_reliable_transport"
+    ],
+    "victims": [
+      "spec_guarantee_dependent_implementations"
+    ],
+    "vindicated_propositions": [
+      "exact_replication_preserves_interoperability"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ietf_tcpm_working_group",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintains the specification text: processes errata, judges proposed extensions against the documented state machine, and publishes revisions such as the 2022 consolidation of RFC 793 into RFC 9293. Its standing depends on the text remaining the single reference every implementer cites; it can revise behaviors through standards action but cannot abandon the shared state machine without dissolving its own authority. Its costs are process maintenance; its return is a transport layer that behaves as written."
+    },
+    {
+      "name": "tcp_stack_implementers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Write and maintain kernel and library TCP implementations that replicate the documented state machine exactly. They receive universal interoperability with every other conformant stack and with the deployed application base. They bear the cost of exact replication, including legacy behaviors kept for wire compatibility and security mechanisms layered onto the original text, and they spend heavily diagnosing failures caused by path elements that do not preserve TCP state. Leaving the arrangement means abandoning the installed base their products exist to serve."
+    },
+    {
+      "name": "spec_guarantee_dependent_implementations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Build features that assume the documented state machine holds on every path: TCP Fast Open, multipath operation, explicit congestion notification, deterministic connection teardown, latency-sensitive timing assumptions. When a path element strips options, injects resets, or rewrites sequence state, their features fail nondeterministically and they have no way to see or repair the intervening hop. Their exit is abandoning the feature or tunneling around the path, both of which surrender the guarantee they built on."
+    },
+    {
+      "name": "traffic_engineering_middlebox_operators",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate network appliances — address translators, firewalls, load balancers, inspection systems — whose commercial value lies in inspecting or altering traffic on path. The invariance demand forbids exactly the functions much of this equipment performs, and some deployed behavior rewrites or resets TCP state that endpoints rely on. The functions cannot be relocated off path, and the equipment is embedded in revenue-bearing networks, so the prohibition binds where these operators run."
+    },
+    {
+      "name": "internet_application_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Write applications against the documented reliable byte stream and deploy them to the whole internet without per-destination adaptation. They receive write-once portability across networks and stacks. They bear cost when path behavior diverges from the specification: defensive retransmission logic, disabled features, and support burden for failures they cannot reproduce."
+    },
+    {
+      "name": "end_users_of_reliable_transport",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use applications that depend on connections working identically on every network. They receive uniform transport behavior without configuring or testing anything. They cannot observe protocol state and have no channel into the standards process; when a path breaks a transport guarantee, they experience it as an application failure — a stalled upload, a dropped session — with no recourse beyond retrying or switching networks."
+    },
+    {
+      "name": "network_measurement_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measure deployed path behavior against the specification: option stripping rates, reset injection, state rewriting. They publish divergence measurements that are the main external check on how the documented state machine relates to the network as it operates. They collect nothing from the arrangement and bear none of its costs; their standing depends on neither the specification nor the appliance industry prevailing."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the problem of reliable byte-stream transport between arbitrary hosts that have never been introduced: by fixing one exact state machine that every implementation replicates, it removes the need for per-pair negotiation, capability testing, or per-path adaptation before any two stacks can communicate.",
+    "transfer_function": "Transfers no money, work, attention, or status between parties. It allocates obligation: every implementer and every path element owes exact conformance to the shared state machine, and receives in exchange interoperability with all others. The compliance burden is mutual and nothing is collected — no seat receives what any seat pays.",
+    "absent_voices": "End users would object to silent breakage of the guarantees they implicitly rely on but have no seat; they are represented only through vendors. Small and embedded-stack implementers without IETF participation inherit exact-replication burdens they cannot influence. Appliance operators are commercially present but their preference — latitude to modify path behavior — has no standing in a process whose premise is the invariant text. None of these seats can currently force the specification to reconsider the invariance demand itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the requirement that implementations replicate the specified state machine vanished overnight, the property that any two stacks interoperate by construction would dissolve. Each implementation would drift under its own performance and compatibility pressures, every communicating pair would need discovery or negotiation before reliable transfer, and the application base built on uniform TCP semantics would fail at every divergent boundary. Reassembling the interoperability the invariant provides would mean re-coordinating a globally deployed base — a rearrangement measured in decades.",
+    "founding_problem": "Early packet networks had no shared reliable transport: loss, reordering, duplication, and flow control had to be handled per host pair, and every new stack had to be tested against every peer. The specification was built to end this by fixing one exact state machine — a single written artifact every implementation would replicate, so reliability became a solved, shared property rather than a per-pair negotiation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The working group and the implementer community attest the founding problem from inside the beneficiary set. Outside it: the network measurement literature documents that divergence from the documented state machine — option stripping, reset injection, state rewriting — correlates with connection failure and broken application features; operator operational experience treats middlebox-induced transport failure as a routine diagnostic category; and transports designed since, QUIC among them, again specified an exact state machine rather than relying on per-path latitude, which is behavioral corroboration that the founding problem — non-interoperable transport fails — remains live."
+  },
+  "interval": {
+    "start": 0,
+    "end": 41
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 41,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.02,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 41,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 41,
+      "value": 0.18,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 consolidates the TCP specification into a single documented state machine: connection establishment and teardown, sequence numbering, retransmission, flow control, and exceptional-condition handling, written precisely enough that an implementation which replicates the state machine exactly interoperates with every other implementation everywhere. This story authors that demand as the strict invariance reading takes it: the text binds exactly, and on-path modification of TCP semantics is a violation of it. The standing arrangement the story is about contains endpoint implementations replicating the state machine; a standards process maintaining the text as the single reference; a deployed population of on-path appliances whose commercial functions inspect or alter TCP state and which the invariance demand places outside conformant behavior; and an application-and-user population relying on the guarantees the text makes. The arrangement transfers no resources between seats: its costs are mutual conformance burdens and its benefit — interoperability by construction — accrues to every participant and is collected by no one. Extractiveness for this referent is authored near the coordination floor; the one declared victim group is harmed not by the demand itself but by the gap between the demand and the deployed path.",
+    "key_agents": [
+      "ietf_tcpm_working_group: agenda setter (institutional/constrained) — maintains the invariant text as the single reference and judges every extension against it",
+      "tcp_stack_implementers: primary beneficiary and compliance-cost bearer (powerful/constrained) — replicate the state machine exactly in exchange for universal interoperability",
+      "spec_guarantee_dependent_implementations: primary bearer of the gap between text and path (moderate/trapped) — build on documented guarantees that on-path deviation breaks",
+      "traffic_engineering_middlebox_operators: bound party (organized/constrained) — the invariance demand forbids functions its equipment exists to perform",
+      "internet_application_developers: beneficiary (moderate/constrained) — writes once against the documented byte stream and deploys everywhere",
+      "end_users_of_reliable_transport: diffuse beneficiary (powerless/constrained) — receives uniform transport behavior with no seat in the process",
+      "network_measurement_researchers: analytical observer (analytical/analytical) — documents divergence between the specified and the deployed"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.06, just above the information_standard coordination floor of 0.02: the arrangement transfers nothing between seats, and the excess over the floor is the legacy-accretion tax — mandated obsolete behaviors and security mechanisms layered onto the original text that implementers must replicate exactly without receiving current function for them. Suppression is 0.18: the constraint coerces nothing; its only sanction is interoperability failure, which is the coordination mechanism itself rather than an externally applied penalty. Theater is 0.04: the specification's function is performed continuously and verifiably — conformance is testable, interoperability is observable — with a small ceremonial residue in checkbox implementation of dead features. Accessibility collapse is 0.58: alternative transports exist at the ecosystem level, but none delivers interoperability with the deployed base, so once the requirement is understood the practical alternative set collapses to exact conformance. Resistance is 0.40: the on-path appliance population's commercial functions are what the invariance demand forbids, and its deviation is persistent and large-scale; endpoint implementers by contrast mostly comply. All three measurement series share one grid. Base extractiveness creeps upward with specification accretion between RFC 793 and RFC 9293. The suppression_requirement series is authored because this story specifically tracks enforcement capacity: a small early community could find and remediate deviating implementations; the appliance boom outran any enforcement reach; capacity partially reconstituted in the measurement era as path behavior became documentable and encrypted transports changed the enforcement landscape — an enforcement-decay-then-partial-rebuild trajectory, not a ratchet. The claimed type (rope) is authored from structure — mutual obligation, no transfer, no capturing seat — independently of these metric values.",
+    "perspectival_gap": "The same text is a different arrangement from different seats. From the working group's seat the invariant is the artifact that makes the network possible and its maintenance is stewardship. From the guarantee-dependent implementer's seat the invariant is a promise the deployed path breaks — the text protects them on paper while the path harms them in fact, so their seat computes high directionality against a near-zero-extractiveness constraint. From the appliance operator's seat the invariant is a prohibition aimed at its product's core function. Same-level divergence: TCP stack implementers and guarantee-dependent implementers are both implementers at adjacent power levels, but the OS vendors hold fallback levers — bundled stacks, feature negotiation, direct vendor relationships with network operators — while the guarantee-dependent seat is trapped behind path behavior it cannot observe or negotiate with. Identical nominal activity, different exit, different computed seat.",
+    "directionality_logic": "Beneficiary declarations (stack implementers, application developers, end users) derive low directionality — the constraint subsidizes them with interoperability by construction. The victim declaration (spec_guarantee_dependent_implementations) derives high directionality: in the standing arrangement they bear the costs of the invariant being violated on path, and their exit is trapped behind path behavior they cannot see. The appliance operator seat is the deliberate override: it bears the prohibition's binding — its equipment's functions are what the demand forbids — which the beneficiary/victim arrays do not express, because under this reading nothing it forgoes is collected by anyone; d is overridden to 0.75 to seat that binding honestly, while the near-floor epsilon keeps its effective extraction low. The working group sits near symmetric: it maintains at cost and receives the standard's functioning. Gain flow is authored as diffuse after checking every seat: no seat captures what the arrangement produces or what compliance costs; the interoperability surplus is mutual and the appliance operators' foregone functions accrue to no one.",
+    "mandatrophy_analysis": "The founding problem — per-pair transport negotiation in a multi-vendor network — remains live and is solved by the arrangement, so the mandate has not outlived its function and no mandatrophy is declared; the R5 cell (live status, world_rearranges verdict) is the healthy one. The classification work this story performs is boundary-keeping in both directions. Against mislabeling as pure extraction: the conformance burden is real and asymmetric in experience — the trapped guarantee-dependent seat, the bound appliance seat — but it is obligation, not transfer; no seat receives what any seat pays, which is what keeps this a coordination structure rather than a capture structure even with a declared victim. Against mislabeling as natural law: the invariant feels like a law of the internet ('TCP is TCP'), but it is a written, maintained, and revisable artifact — RFC 793 was revised into RFC 9293 through standards action — so it is authored as constructed coordination with emerges_naturally false. The receipt surface lands in the prohibitive-fixing/diffuse-gain cell, which is piton-adjacent; this constraint is not a piton because its function is emphatically live — theater_ratio 0.04, coordination performed on every connection — and the prohibitive fixing cost reflects the value of what the invariant holds together (a globally deployed base) rather than atrophy of what it does.",
+    "kernel_context": "This constraint is one reading of the rfc9293_tcp_specification kernel — the persisting commitment that the TCP specification organizes the internet's reliable transport. This file instantiates the strict invariance reading: the text specifies an invariant state machine that implementations must replicate exactly, and on-path modification of TCP semantics is a violation rather than protocol evolution. Two sibling readings of the same kernel exist as separate constraints: an optimization latitude reading (the text specifies behavioral outcomes and permits performance latitude within semantic bounds) and a middlebox realism reading (deployed path behavior is the operative protocol and specification authority is subordinate to it). This story's extractiveness is authored for the strict reading's referent only — the standing arrangement of the binding invariant text plus the deployed path — and does not average across readings."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates the strict_invariance_reading of the rfc9293_tcp_specification kernel: the specification text binds as an exact, invariant state machine, and path modification of TCP semantics is a violation. What would the sibling readings change structurally, and where is the disagreement located?",
+      "resolution_mechanism": "Framing commitment rather than data: the optimization latitude reading treats the text as outcome-specifying and admits implementation latitude within semantic bounds, shrinking the conformance-burden cost toward the coordination floor and narrowing the victim set to semantic-boundary crossings; the middlebox realism reading subordinates specification authority to deployed path behavior, relocating the violation claim from the path to the text itself. The disagreement is located in the normative force of the specification text — binding exact replication versus outcome sketch. Empirical evidence (how often latitude-taking breaks interoperability versus improves performance) informs but cannot settle the framing question.",
+      "impact": "Adopting a sibling reading changes epsilon and the victim set: latitude shrinks the exact-replication burden toward the coordination floor; realism reassigns victim status from guarantee-reliant implementations to specification-conformant ones and re-sites the arrangement's costs in the specification's authority claim. This story's epsilon is authored only for the strict reading's referent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the TCP specification kernel; sibling readings would relocate epsilon and the victim set."
+    },
+    {
+      "id": "path_invariant_enforceability",
+      "question": "Is the invariance demand enforceable against on-path elements at all, or does endpoint conformance exhaust its enforceable scope?",
+      "resolution_mechanism": "Measurement: quantify path interference rates over time and observe whether encrypted transports, which remove path visibility, reduce interference or merely displace it to unencrypted flows; any conformance regime that successfully binds path elements would demonstrate enforceability.",
+      "impact": "If path-side enforcement is structurally unavailable, the constraint operates as two constraints — a fully enforced endpoint invariant and an unenforced path invariant — and the guarantee-reliant victim seat is harmed by precisely the unenforced half; per-seat classifications diverge accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the no-modification demand binds path elements in practice or only on paper."
+    },
+    {
+      "id": "legacy_accretion_burden",
+      "question": "How much of the exact-replication burden serves current function versus legacy wire-image compatibility — mandated obsolete behaviors, retained header fields, security mechanisms layered onto the original text?",
+      "resolution_mechanism": "Implementation cost analysis separating conformance effort for legacy behaviors from effort for current-function behaviors; historical tracking of specification accretion between RFC 793 and RFC 9293.",
+      "impact": "If a large share of the burden is legacy-only, base extractiveness is understated and the implementer seat drifts toward a hybrid coordination/extraction reading; if the burden is mostly current-function, the near-floor epsilon stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the growing conformance burden is coordination cost or accreted legacy tax."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__optimization_latitude_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'the TCP specification' covers three structurally distinct claims about the same text, decomposed into a three-story constraint family per the epsilon-invariance principle: (1) this story — the text binds as an exact invariant state machine, epsilon near the coordination floor, victim set limited to implementations relying on strict guarantees; (2) the optimization latitude reading — the text specifies outcomes and permits latitude within semantic bounds, different conformance-burden structure and narrower victim set; (3) the middlebox realism reading — deployed path behavior is the operative protocol, relocating the arrangement's costs into the specification's authority claim itself. Each member carries its own epsilon, beneficiaries, and victims; the upstream member (this reading, highest empirical confidence in the text's binding force) influences the latitude sibling through conformance infrastructure and coexists with the realism sibling as rival authority accounts held by different communities."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.75
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "exact_state_machine_replication",
+    "drift_state": {
+      "moment": "contemporary_deployed_internet",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_machine_text_is_binding_specification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "path_semantic_modification_is_violation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

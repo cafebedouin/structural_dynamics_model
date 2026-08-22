@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "takings_clause_boundary__regulatory_takings_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3966fd60-055a-4c5a-a42c-65cedd9538c1"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.58,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Regulatory Takings Boundary — Severe Value Diminution Reading ('Too Far' Standard)",
+    "topic_domain": "constitutional law/property rights/regulatory theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_development_interests",
+      "small_parcel_owners",
+      "property_rights_legal_movement"
+    ],
+    "victims": [
+      "municipal_governments",
+      "general_taxpayers",
+      "conservation_and_preservation_publics"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is one reading of the takings_clause_boundary kernel; how would the classification and victim set change if the physical_appropriation_reading or categorical_takings_reading sibling were adopted as the operative boundary?",
+      "resolution_mechanism": "Supreme Court consolidation around a sibling framework (e.g., a Cedar Point-style physical-focus majority, or full categorical codification) would be observable in doctrine; track the ratio of per se to balancing dispositions over successive Terms.",
+      "impact": "Under the physical reading the victim set collapses to possession-deprived owners and the arrangement computes far less costly to regulators; under the categorical reading the boundary stabilizes and the uncertainty component of the cost falls; under this reading the expanded victim set and ad hoc boundary persist.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame delta: sibling readings instantiate different constraints with different victim sets and enforcement surfaces."
+    },
+    {
+      "id": "too_far_threshold_coherence",
+      "question": "Does the 'goes too far' standard track a coherent threshold of confiscatory effect, or does it operate as outcome-rationalizing rhetoric applied after the fact?",
+      "resolution_mechanism": "Systematic coding of Penn Central-line outcomes against their stated factor profiles: if outcomes are predictable from the factors, a usable threshold exists; if not, the standard is post-hoc justification.",
+      "impact": "If rhetorical, the authored theater_ratio understates the performative share and the arrangement's persistence depends more heavily on judicial discretion than on any limiting principle; if coherent, the balancing is calibrated protection and the measured costs are largely the price of that calibration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ad hoc boundary is a real threshold or rationalized discretion."
+    },
+    {
+      "id": "deterrence_chill_net_effect",
+      "question": "Does the compensation requirement predominantly deter confiscatory regulation (a protective effect) or chill beneficial land-use, environmental, and preservation regulation (a cost borne by people who were never parties)?",
+      "resolution_mechanism": "Natural experiments from state-level compensation mandates (Oregon Measures 37/49, Arizona Proposition 207): measure regulatory issuance, enforcement activity, and environmental outcomes before and after adoption.",
+      "impact": "If chill dominates, the effective victim set is wider than the declared one and the arrangement sits deeper into extraction; if deterrence dominates, the arrangement sits nearer pure coordination and the declared victims overstate the harm.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net behavioral effect of liability exposure on regulators."
+    },
+    {
+      "id": "cost_incidence_diffusion",
+      "question": "Who ultimately bears the arrangement's costs — the visible budgetary defendants (municipal treasuries, taxpayers) or the invisible regulatory-loss publics whose protections are diluted or abandoned?",
+      "resolution_mechanism": "Fiscal incidence studies tracing judgment and settlement funding, combined with counterfactual analysis of regulations withdrawn or redesigned defensively after liability exposure.",
+      "impact": "If regulatory-loss publics dominate, the declared victim set understates the true one and the costs concentrate on seats with no voice in the process; if budgetary defendants dominate, the costs are at least visible and politically contestable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Real incidence of the arrangement's costs across represented and unrepresented seats."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of a contested kernel. The kernel is the Fifth Amendment Takings Clause ('nor shall private property be taken for public use, without just compensation'); this reading — the regulatory takings reading, announced in Pennsylvania Coal Co. v. Mahon (1922) and operationalized through Penn Central balancing — holds that regulation which goes 'too far' in diminishing economic value crosses the compensable line even though nothing physical is seized. Two sibling readings of the same text are separate constraints in separate files: the physical_appropriation_reading (only direct seizure or permanent physical occupation triggers compensation) and the categorical_takings_reading (per se rules for physical occupation and total economic wipeout, multifactor balancing for everything else). Per the epsilon-invariance principle, this file authors a single stable epsilon for a single referent: the standing arrangement under which governments must pay when regulation severely diminishes private economic value, assessed by this reading's own lights. The siblings have different victim sets, different enforcement surfaces, and different epsilons; they are linked through network.affects_constraints, and the decomposition is documented in the dual-formulation note. The claim/metric gap is deliberate: the arrangement is CLAIMED as tangled_rope from its structure (a genuine protective function bound to real asymmetric costs), while the metrics independently describe its actual operation — the engine measures the divergence.",
+    "key_agents": [
+      "federal_judiciary: Agenda setter (institutional/analytical) — administers the 'too far' standard, owns the boundary, and binds every level of government through precedent",
+      "large_development_interests: Primary beneficiary (powerful/constrained) — captures the overwhelming share of successful compensation claims and deterrent concessions",
+      "small_parcel_owners: Formal beneficiary (moderate/trapped) — protected on paper, rarely able to fund the litigation the protection requires",
+      "municipal_governments: Primary payer (institutional/constrained) — bears liability, defensive regulation redesign, and litigation costs",
+      "general_taxpayers: Diffuse payer (powerless/trapped) — ultimately funds judgments and settlements through municipal budgets",
+      "conservation_and_preservation_publics: Excluded third party (organized/trapped) — lose regulatory protection when liability chills or kills regulations, with no standing in the proceedings",
+      "property_rights_legal_movement: Secondary beneficiary (organized/mobile) — builds dockets, funding, and professional standing around the claim stream",
+      "land_use_law_academy: Analytical observer (analytical/global) — maps coherence, traces genealogy, supplies the critiques and defenses that shape appointment politics"
+    ],
+    "logic_rationale": "Extraction is moderate-to-substantial (0.55 at interval end) because the arrangement's costs are systematically decoupled from regulatory merit: liability attaches to value diminution regardless of whether the regulation served a compelling public purpose, and the deterrent shadow extends far beyond the small fraction of claims that succeed. Suppression (0.58) is a raw structural property, unscaled by power or scope: the arrangement binds as supreme law, legislatures have no exit from it, and the removal of the state-litigation prerequisite in 2019 eliminated the last procedural buffer. Theater is moderate (0.42): the 'too far' formula performs a principled, determinate limit while the actual operation is famously unpredictable case-by-case adjudication — the phrase does rhetorical work the balancing test does not. Accessibility collapse is low-moderate (0.35): ordinary police-power regulation survives untouched (most regulations never approach the line), and governments retain workable design alternatives (variances, nexus findings, phased implementation). Resistance is substantial (0.6): the reading faces persistent scholarly attack from both textualist and progressive directions, recurring dissents calling for abolition of the category, and wide state-level divergence. The three measurement series run on one shared time grid (0/20/40/60/80/100) so every tracked metric is authored at every examined point; trajectories show extraction accumulating and enforcement hardening as the doctrine matured from a marginal caveat into a binding national constraint.",
+    "perspectival_gap": "Four seats should compute materially different types from identical structural data. From the judiciary's administrative seat the arrangement is a functioning governance instrument it built and maintains — coordination all the way down. From the municipal seat it is a liability regime that taxes regulatory ambition and forces defensive design. From the taxpayer seat it is a diffuse unfunded mandate. From the conservation-public seat it is a silent subtraction of protection they never agreed to trade away — they are not even parties to the transactions that cost them. And the two beneficiary seats diverge sharply from each other: well-resourced repeat players convert the arrangement into recoveries and negotiating leverage, while small owners hold a formal protection they mostly cannot access. The engine computes this divergence from power, exit, and role data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Large development interests sit nearest the beneficiary pole: they collect the transfers and wield the deterrent as bargaining power, though their land holdings tie them to the jurisdiction (constrained, not arbitrage exit). Small parcel owners are formally beneficiaries but their realized benefit is thin — litigation costs screen them out — placing them somewhat off the pure-beneficiary pole. The property-rights legal movement collects docket, funding, and status, a genuine but indirect beneficiary with mobile exit. Municipal governments sit near the target pole: they pay judgments, absorb defensive-design costs, and cannot exit constitutional review, though retained discretion over regulation design keeps them short of the full-target extreme. General taxpayers sit near full-target diffusely — they fund everything and decide nothing. Conservation and preservation publics bear real costs (diluted or abandoned protections) despite formal absence from the arrangement; their directionality toward the constraint is high precisely because the constraint operates on regulations that exist for their benefit. The judiciary sits near the beneficiary pole as the administering institution whose authority the arrangement continuously exercises. Suppression is declared as a structural scalar and is not scaled by any context dimension; only extractiveness is scaled, by directionality and scope, in the engine's computation.",
+    "mandatrophy_analysis": "The founding problem — government destroying private economic value through regulation while shifting the cost of public benefits onto isolated owners — remains live: regulatory value destruction continues, and the case stream continues to process it. There is no mandatrophy to resolve and no sunset concept applicable to a constitutional doctrine. The classification discipline matters here in both directions: reading the arrangement as pure coordination (a simple property shield) erases the documented third-party costs — the chilled regulations, the defensive redesign, the unrepresented publics — which is exactly the cover story the beneficiary seats tell. Reading it as pure extraction erases the genuine function — without the compensation backstop, the cheapest way to deliver public benefits would be to single out owners whose land stands in the way, which is the practice the founding cases confronted. The tangled-rope structure holds both facts: coordination and asymmetric extraction through the same liability mechanism, held in place by active judicial enforcement.",
+    "kernel_context": "Kernel: takings_clause_boundary (the Fifth Amendment Takings Clause text). This file instantiates the regulatory_takings_reading: severe economic diminution by regulation can itself cross the compensable line, located case-by-case through multifactor balancing. Sibling readings, each a separate constraint file: physical_appropriation_reading (boundary at possession — only seizure or permanent physical occupation counts) and categorical_takings_reading (fixed per se categories for physical occupation and total wipeout, balancing elsewhere). Where the disagreement is located: in what the clause's protection covers — possession versus economic value — and in whether the boundary is found by rule or by ad hoc judgment. This reading's victim set is the widest of the three (value losers without dispossession); its boundary is the least determinate; its protection extends to harms the physical reading leaves wholly uncompensated."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "takings_clause_boundary__physical_appropriation_reading",
+      "takings_clause_boundary__categorical_takings_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'the Takings Clause': the label conflates three structurally distinct boundary claims with different victim sets, enforcement surfaces, and epsilons. The physical_appropriation_reading is narrow and stable (possession-based, minimal contestation, negligible extraction). The categorical_takings_reading is a hybrid (per se rules plus balancing). This regulatory_takings_reading is the broadest and least determinate (value-diminution-based, ad hoc boundary, expanded victim set). Causal structure runs upstream-downstream: this reading's demonstrated indeterminacy created the legitimacy conditions under which the categorical refinement emerged (the per se categories were built to escape the balancing morass), so the influence edge runs from this reading to the categorical sibling; the physical reading coexists as the textualist alternative held by a different judicial coalition. Each member carries its own epsilon; none averages across the others."
+  },
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Interprets the constitutional text through the 'goes too far' standard, deciding case-by-case whether a regulation crossed the compensable line. Sets precedents that bind every legislature, municipality, and agency in the country. Owns the boundary in the sense that the boundary exists nowhere except in its ongoing application; it cannot resign from the role without the arrangement ceasing to operate."
+    },
+    {
+      "name": "large_development_interests",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Land holders and developers whose projects collide with environmental, zoning, and preservation regulation. They can fund multi-year litigation, expert studies, and appellate campaigns, and they capture the large majority of successful compensation claims and settlements. Their holdings cannot be relocated out of regulatory jurisdiction, so their strategy is litigation and negotiated concession rather than exit; the prospect of a claim functions as leverage in permitting negotiations."
+    },
+    {
+      "name": "small_parcel_owners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Owners of homes and small parcels subject to land-use restrictions. The compensation guarantee formally protects them, but the cost of proving a claim screens most of them out; they benefit mainly through the deterrent effect their better-funded counterparts generate, and occasionally through contingency representation. Their land cannot be moved, and their equity is often their principal asset, so they hold on under whatever restriction applies."
+    },
+    {
+      "name": "municipal_governments",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Cities, counties, and agencies that enact and administer zoning, environmental, and historic-preservation regulation. When a court finds a regulation went too far, they pay the judgment or settle, and they redesign regulations defensively — adding variance procedures, nexus studies, and hardship provisions — to stay clear of the line. They cannot opt out of constitutional review, they carry liability insurance and reserve funds against claims, and the redesign effort diverts staff capacity from the regulations' original purposes."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Ultimately fund compensation judgments, settlements, and the municipal insurance premiums and legal reserves built against them. They have no direct participation in any takings proceeding, learn of the costs only through budget lines, and cannot decline to pay. The costs arrive diffuse and unbundled from any decision they were consulted on."
+    },
+    {
+      "name": "conservation_and_preservation_publics",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Neighbors, conservation constituencies, historic-preservation communities, and future residents who depend on wetland, habitat, coastal, and landmark regulation for environmental and cultural goods. When liability exposure leads a government to weaken, delay, or abandon a regulation, these publics lose the protection — but they have no standing in a takings case, which runs between the owner and the government. They cannot exit their dependence on regulation that may be quietly thinned, and they enter the process only to the extent the government chooses to defend the regulation vigorously."
+    },
+    {
+      "name": "property_rights_legal_movement",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Public-interest law firms, bar networks, and advocacy organizations that build dockets, donor bases, and professional reputations around property-rights claims. They identify and sponsor sympathetic plaintiffs, supply the litigation infrastructure that small owners could not fund alone, and convert favorable rulings into fundraising narratives. If the claim stream narrowed, they would redirect capacity to adjacent legal fields; their commitment to this particular mechanism is strategic rather than immovable."
+    },
+    {
+      "name": "land_use_law_academy",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of property, constitutional law, and land-use regulation who map the doctrine's coherence, reconstruct its genealogy, and propose reforms ranging from abolition of the category to full codification. Their critiques and defenses feed judicial opinion writing and confirmation politics. They hold no material stake in any outcome and bear none of the arrangement's costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Prevents government from delivering public benefits by concentrating their costs on whichever private owners stand in the way, without payment: the compensation requirement forces the public fisc to internalize the price of its regulatory demands, disciplining confiscatory regulation and giving owners a protected floor against targeted value destruction.",
+    "transfer_function": "Moves money — judgments, settlements, and the litigation costs that precede them — from municipal treasuries and ultimately taxpayers to owners who suffer severe regulatory value loss; and moves regulatory discretion from governments to owners through the deterrent shadow the liability regime casts over every land-use decision.",
+    "absent_voices": "Third-party beneficiaries of land-use regulation — neighbors, conservation publics, future residents — would object that compensation liability thins the protections they depend on, and that regulations killed or diluted by liability exposure never appear in any accounting of the arrangement's costs. They are absent because takings litigation is structured owner-versus-government and they lack standing; their interests surface only refracted through whatever vigor the government brings to defending its own regulation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, land-use regulation would expand in the absence of any liability ceiling, development strategy would shift entirely from litigation to legislative lobbying, state courts would begin evolving their own compensation doctrines within a decade, and the practice of singling out obstructive owners to bear public burdens — the practice the founding cases confronted — would re-emerge piecemeal wherever it was locally cheap.",
+    "founding_problem": "Government regulation had begun destroying private economic value wholesale — the founding case involved orders that coal companies leave supporting coal unmined, annihilating its value — while the constitutional compensation guarantee covered only physical seizure. The arrangement was built to extend the compensation principle to regulatory destruction: when regulation goes too far, the owner should not silently bear the cost of a public benefit everyone else enjoys.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The phenomenon is attested outside the beneficiary set: the courts' own factual records in the founding and canonical cases document regulations that destroyed substantial value (support-coal orders, terminal-construction plans, beachfront lot eliminations); multiple state legislatures enacted independent compensation statutes with formal findings citing the same problem; and the academic literature across ideological divisions accepts that regulatory value destruction occurs while disputing where the line sits. No perfectly neutral corroborator exists — the courts attesting the problem also administer the arrangement — but the adverse parties' own litigation concessions and the state statutory findings provide corroboration from seats that gain nothing from the doctrine's expansion."
+  },
+  "gain_flow": "large_development_interests",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "regulatory_value_destruction_in_scope",
+    "drift_state": {
+      "moment": "post_lucas_categorical_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "physical_appropriation_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_takings_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_value_diminution_compensable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "multifactor_balancing_locates_too_far_line",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

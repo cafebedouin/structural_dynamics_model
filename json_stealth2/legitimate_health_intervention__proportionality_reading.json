@@ -1,0 +1,386 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lhi_proportionality",
+    "story_uid": "b588eaea-9823-404f-b11e-0a71df4db3ca"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.55,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Threat-Proportioned Legitimacy Standard for Coercive Health Intervention (Proportionality Reading)",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "general_population",
+      "public_health_agencies",
+      "civil_liberties_organizations"
+    ],
+    "victims": [
+      "mandate_refusing_individuals",
+      "immunocompromised_and_elderly"
+    ],
+    "vindicated_propositions": [
+      "disease_severity_gradient_legitimacy",
+      "least_restrictive_means_doctrine",
+      "necessity_principle_in_public_health"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 34
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.31,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 31,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 34,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 31,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 34,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 31,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 34,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates only the proportionality_reading of the legitimate_health_intervention kernel; how would classification shift under the sibling readings, public_health_primary and bodily_autonomy_primary?",
+      "resolution_mechanism": "Generate the sibling stories and compare computed classifications. The disagreement is located in the weighting premise: whether individual autonomy enters legitimacy independently of aggregate outcomes, and whether threat can ever override consent.",
+      "impact": "Under bodily_autonomy_primary the victim set expands to every coerced individual regardless of disease severity and the arrangement computes as far more extractive; under public_health_primary refusal is redefined as externality and measured extraction drops toward coordination cost. Cross-reading comparison, not within-story metrics, resolves the contest.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; siblings instantiate different victim sets and epsilon bases."
+    },
+    {
+      "id": "epsilon_conditionality_decomposition",
+      "question": "Extractiveness scales with disease characteristics and the victim set differs between a measles-scale threat and a seasonal-flu threat, so is the authored scalar epsilon a stable property of one constraint or an average over several condition-specific constraints?",
+      "resolution_mechanism": "Per the epsilon-invariance principle, decompose into per-regime stories (high-transmissibility/high-fatality regime versus low-severity endemic regime) if engine evaluation shows the scalar unstable across observable regimes, linking the fragments via network.affects_constraints.",
+      "impact": "Decomposed, the high-threat regime carries markedly higher extractiveness concentrated on refusing minorities and the low-threat regime carries extractiveness shifted onto the vulnerable; the unified scalar currently averages these apart.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Conditional constraint structure: whether one story or a family of regime-specific stories is the right unit."
+    },
+    {
+      "id": "threat_assessment_capture",
+      "question": "Do agency threat characterizations that trigger coercive licensing track independent epidemiological estimates, or does the threshold structure reward inflating severity to unlock authority?",
+      "resolution_mechanism": "Retrospective comparison of agency threat declarations against independent serological and excess-mortality reconstructions across multiple episodes.",
+      "impact": "Systematic inflation converts the standard's licensing gate into an authority-rent mechanism and pushes the arrangement toward pure-extraction dynamics; accurate characterization supports the coordination reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the threat inputs driving the weighting are captured by the seat that gains authority from them."
+    },
+    {
+      "id": "residual_risk_allocation_fairness",
+      "question": "In low-threat phases the standard leaves immunocompromised and elderly people bearing residual infection risk: is that burden an unavoidable cost of respecting majority autonomy, or extractive because feasible shielding and support measures went unprovided?",
+      "resolution_mechanism": "Audit what ventilation, sick-leave, antiviral-access, and targeted-shielding measures were feasible and offered during low-threat phases versus what vulnerable people actually received.",
+      "impact": "If feasible protections were skipped, the vulnerable seat's burden is extraction rather than tragedy, raising effective extractiveness and strengthening the case for regime decomposition.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether the low-threat residual risk borne by the vulnerable is legitimate trade-off or dumped cost."
+    },
+    {
+      "id": "emergency_authority_ratchet",
+      "question": "Legal frameworks expanded during acute emergencies tend to persist after the threat recedes: does post-emergency retention reflect functional precaution or inertial accumulation of unused coercive capacity?",
+      "resolution_mechanism": "Track statutory sunset and renewal of emergency health powers across successive episode-free intervals; measure how much retained authority is exercised or reviewed.",
+      "impact": "Persistent unexercised authority raises the theater ratio and signals drift toward performance-maintained arrangements; clean sunsetting supports the coordination reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency-expanded frameworks decay back or ratchet."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the proportionality_reading of the contested kernel legitimate_health_intervention: the claim that a health intervention is legitimate when its severity is proportioned to measured threat, with population harm and individual autonomy both entering the calculation, weighted by disease characteristics such as transmissibility and case fatality. The referent of the authored extractiveness is the standing arrangement this reading is about — proportionality-governed intervention legitimacy as actually administered and reviewed (isolation, quarantine, mandate, and closure decisions passing through agency threat assessment and judicial proportionality review) — assessed by this reading's own lights, which concede real rotating burdens rather than crediting the reading's endorsed ideal. The claim and the metrics are independent authored facts: the constraint is CLAIMED as tangled_rope because it possesses a genuine coordination function (a shared, adjudicable calibration of coercive power) while the same structure imposes asymmetric, rotating costs — refusing minorities bear coercion in high-threat regimes, the immunocompromised and elderly bear residual risk in low-threat ones — sustained by active enforcement. The sibling readings (public_health_primary, bodily_autonomy_primary) are separate stories with their own epsilon values and victim sets, not described here; see the kernel_reading_contestation omega and the network links.\n\nKEY AGENTS (by structural relationship):\n- public_health_agencies: Agenda-setting administrator and conditional beneficiary (institutional/constrained) — converts threat assessments into enforceable authority\n- constitutional_courts: Agenda-setting interpreter of the standard (institutional/constrained)\n- mandate_refusing_individuals: Primary target in high-threat regimes (powerless/constrained) — bears coercion\n- immunocompromised_and_elderly: Primary target in low-threat regimes (powerless/trapped) — bears residual risk\n- general_population: Principal beneficiary (moderate/constrained)\n- civil_liberties_organizations: Secondary beneficiary and litigant (organized/mobile)\n- epidemiological_advisory_bodies: Threat-input supplier, analytical seat with partial capture exposure (institutional/analytical)\n- residents_of_discretionary_jurisdictions: Excluded voice — lacks the standard's protection entirely",
+    "key_agents": [
+      "public_health_agencies: agenda-setting administrator and conditional beneficiary (institutional/constrained)",
+      "constitutional_courts: agenda-setting interpreter of the standard (institutional/constrained)",
+      "mandate_refusing_individuals: primary target in high-threat regimes (powerless/constrained)",
+      "immunocompromised_and_elderly: primary target in low-threat regimes (powerless/trapped)",
+      "general_population: principal beneficiary (moderate/constrained)",
+      "civil_liberties_organizations: secondary beneficiary and litigant (organized/mobile)",
+      "epidemiological_advisory_bodies: threat-input supplier, analytical seat with partial capture exposure (institutional/analytical)",
+      "residents_of_discretionary_jurisdictions: excluded voice lacking the standard's protection"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.42: the standard's burdens are real but conditional and rotating, and the post-emergency period retains ratchet residue (expanded frameworks, normalized review deferral) that keeps the figure above its pre-episode baseline near 0.3. Suppression is authored at 0.55 as a raw structural property, unscaled by scope: enforcement capacity is legal and logistical (employment conditionality, travel rules, isolation orders) rather than internalized belief, and it was partially rolled back after the acute phase while statutory frameworks remained. Theater ratio 0.38: proportionality assessments contain genuine analytic work, but emergency-period practice drifted toward justificatory boilerplate written to ratify decisions already taken. Accessibility collapse 0.55: inside the reading's framework the alternatives (pure official discretion, unconditional consent requirements) collapse as serious contenders, yet they persist as live sibling positions and in jurisdictions without review, so collapse is partial. Resistance 0.6: litigation waves, exemption movements, and scholarly contestation are sustained and occasionally successful. Coalition potential is real for the nominally powerless: refusing individuals organized into movements that moved several jurisdictions to soften mandates, which is why their seat is authored powerless rather than organized — the coalition is episodic, not standing. Identity fusion operates on the administrative seat: professional identity constituted around population protection biases threat characterization toward the coercive-license side, which is flagged in the threat_assessment_capture omega rather than corrected by override. The measurement series share one time grid (t indexes years since 1990; t=31 is the acute emergency year, t=34 the post-rollback present) so no metric borrows another's endpoint; the burden rotation across disease regimes is a slower cycle than the grid samples and is documented structurally rather than temporally.",
+    "perspectival_gap": "The seats compute divergent verdicts from identical structure. From the mandate_refusing seat the standard is an authorization machine: it converts an epidemiological threshold into a warrant operating on their bodies, with constrained exit, so the arrangement reads as enforced extraction. From the immunocompromised seat the same standard reads as licensed abandonment in low-threat seasons — their extraction phase is the mirror image, and their secondary beneficiary role in high-threat phases does not cancel it because the phases alternate rather than compensate. From the general_population seat the arrangement is net protection bought at diffuse tax and compliance cost. The administrative seat experiences the standard as both empowerment and fetter: it receives calibrated authority and accumulates it across episodes while being formally bound to justify each exercise. Courts and advisory bodies sit near the analytical middle, though advisory bodies carry partial capture exposure through ministerial funding and access. Inter-institutionally, agencies and courts hold similar nominal institutional power but different exits: courts cannot refuse cases, agencies cannot refuse missions, but agencies control the threat inputs courts consume — an asymmetry the derivation chain sees only through the capture omega.",
+    "directionality_logic": "Beneficiary declarations drive low directionalities: general_population and civil_liberties_organizations derive near-beneficiary positions, and public_health_agencies derive a low-moderate position from their beneficiary role — tempered by their own subjection to the standard, which is why no directionality override is authored; the residual distortion (the capture incentive) is routed to an omega instead of an override because the derivation is broadly right and only the incentive gradient is in doubt. Victim declarations drive the two payer seats to the target end: mandate_refusing_individuals with constrained exit sit near full-target in high-threat regimes; immunocompromised_and_elderly sit near full-target in low-threat regimes despite their secondary_role beneficiary entry, because their exit from susceptibility is trapped. The rotation between these two target seats across disease regimes is the structural signature the expected delta predicted: the victim set varies with severity, and the scalar epsilon averages across the rotation.",
+    "mandatrophy_analysis": "The founding problem — legitimating necessary health coercion while preventing arbitrary detention and overreach — remains live: every novel pathogen reopens the calibration question, so no mandatrophy is declared. The tangled_rope claim is what prevents mislabeling in both directions: calling the arrangement pure coordination would erase the rotating victims that the bodily_autonomy sibling exists to name; calling it pure extraction would erase the genuine function (the standard demonstrably prevents both arbitrary detention and abandonment-style overreaction, and its absence in discretionary jurisdictions is visibly worse for the unprotected). The zombie pathway is monitored rather than asserted: if emergency-expanded frameworks persist unexercised across episode-free decades while the founding problem fades, the founding_problem_status x disappearance_verdict mismatch fires and the arrangement drifts toward performance-maintained territory. The emergency_authority_ratchet omega is the tripwire.",
+    "kernel_context": "Kernel: legitimate_health_intervention — the standing question of what makes coercive health intervention legitimate. This file instantiates the proportionality_reading: legitimacy as threat-weighted balance of population harm and individual autonomy. Siblings: public_health_primary (legitimacy from measurable morbidity/mortality reduction alone; refusal treated as externality) and bodily_autonomy_primary (consent required regardless of benefit; coercion categorically illegitimate). The disagreement is located in the weighting premise: whether autonomy enters legitimacy independently (this reading says yes, weighted by disease characteristics; public_health_primary says no; bodily_autonomy_primary says autonomy trumps absolutely). This reading forecloses both siblings within any single framework because its dual-weighting premise contradicts each sibling's sole-criterion premise; the readings nonetheless coexist across parties in ongoing dispute."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__public_health_primary",
+      "legitimate_health_intervention__bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'legitimate health intervention' decomposes into three readings of one kernel with materially different epsilon bases and victim sets. This (proportionality) story authors epsilon for the standing proportionality-governed arrangement as this reading's own lights assess it; the public_health_primary story authors epsilon for the same standing arrangement from the outcomes-only seat (lower, since refusal counts as externality), and the bodily_autonomy_primary story authors it from the consent-absolutist seat (higher, since every coerced individual counts as a victim regardless of severity). Upstream/downstream: the proportionality reading draws its threat evidence base from the same epidemiology the public_health reading relies on, while borrowing its autonomy weighting from the bodily_autonomy tradition; each sibling story should link back here."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Run surveillance, declare outbreaks, and impose or lift isolation, quarantine, vaccination mandates, and closure orders. Under this standard each imposition must be justified by measured threat characteristics such as transmissibility and severity, and each imposition hands the agency enforceable authority that tends to persist in legal frameworks after the threat recedes. Exit from this role is not available; the agency is bound to justify its actions by the very standard that empowers it."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Review challenges to health interventions and decide whether the severity of a measure matched the threat that justified it. Their interpretations set precedents that recalibrate what agencies may do. They cannot decline the role when challenged cases arrive, and their authority depends on doctrinal continuity they did not choose."
+    },
+    {
+      "name": "mandate_refusing_individuals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decline vaccination or accept only limited quarantine compliance on conscientious, religious, or medical-grounds objections. When threat assessments cross the threshold that licenses mandates, they face job loss, venue exclusion, fines, or detention. Individual exit options are narrow: relocate, change employment, or litigate at personal cost; an intervention imposed on the body cannot be exited once delivered."
+    },
+    {
+      "name": "immunocompromised_and_elderly",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the residual infection risk left when interventions are judged disproportionate to a circulating threat, as in ordinary respiratory-virus seasons. In high-threat episodes the same standard protects them first, mandating the precautions they cannot procure privately. They cannot exit their susceptibility; shielding measures are partial and depend on other people's compliance."
+    },
+    {
+      "name": "general_population",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receive calibrated protection: coercion when threat justifies it, liberty when it does not. They fund and staff the enforcement apparatus through taxes and compliance, and vote on the governments that appoint agency leadership. Moving between jurisdictions with differing standards is possible but costly."
+    },
+    {
+      "name": "civil_liberties_organizations",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Litigate against overbroad interventions and publish assessments of emergency powers. They gain standing and membership when the standard blocks overreach, and lose relevance when interventions are few. They can redirect attention to other issues when health coercion subsides."
+    },
+    {
+      "name": "epidemiological_advisory_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Supply the transmissibility and case-fatality estimates that drive the weighting. Their committees sit formally inside health ministries; their estimates are cited by agencies seeking to justify impositions and by litigants challenging them. Analytical distance is partial: funding and access run through the same ministries they advise."
+    },
+    {
+      "name": "residents_of_discretionary_jurisdictions",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Live under health authorities that impose isolation or treatment with no proportionality review at all, so detention can be indefinite and unreviewable. They would benefit from adoption of a calibrated standard but have no seat in the jurisdictions where the standard is contested; their situation surfaces mainly in human-rights reporting."
+    }
+  ],
+  "gain_flow": "public_health_agencies",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the calibration problem for coercive public-health power: gives agencies, courts, and publics a shared, adjudicable standard for when isolation, quarantine, mandate, or closure is permissible, so that each episode does not renegotiate the limits of state medical power from scratch.",
+    "transfer_function": "Moves coercive burden and risk along the threat gradient: in high-threat regimes it moves compliance burdens (vaccination, isolation, restricted movement) from the general population onto refusing minorities; in low-threat regimes it leaves infection risk parked on the immunocompromised and elderly; across both it converts threat assessments into enforceable authority held by health agencies.",
+    "absent_voices": "Residents of jurisdictions whose health authorities impose isolation or treatment with no proportionality review at all — they would object that the contest presupposes a protection they lack. Also minority communities with generational reasons to distrust state medicine: their consent interests enter this reading only as one weighted factor among several, never as a veto, and they are seldom seated on the advisory bodies that set the weights.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the proportionality standard vanished overnight, intervention legitimacy would collapse to whichever sibling filled the vacuum: pure official discretion where agencies dominate, with the detention abuses the standard was built to prevent, or near-total consent requirements where autonomy advocates dominate, with preventable spread in high-threat episodes. Courts would lose their health-powers docket, agencies would lose the authorization basis for emergency action, and every novel pathogen would restart the fight from zero.",
+    "founding_problem": "Nineteenth- and twentieth-century health law paired indispensable quarantine powers with arbitrary detention: carriers confined indefinitely without review, interventions imposed by fiat, and later a counter-wave of consent absolutism that left populations exposed. The arrangement was built to make necessary coercion reviewable and proportioned instead of discretionary or forbidden.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Siracusa Principles (1984, drafted by human-rights jurists rather than health agencies) codify threat-proportioned limitation of movement rights; post-war constitutional and bioethics scholarship documents both the detention abuses and the consent backlash; court opinions in multiple jurisdictions independently articulate the proportionality requirement; and historical commissions document the discretionary-era abuses the standard responds to. Health agencies also attest liveness, but the attestation above does not rest on them."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "threat_proportioned_coercive_authority",
+    "drift_state": {
+      "moment": "post_acute_emergency_period",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coercion_requires_threat_proportionality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "autonomy_and_population_harm_jointly_weighted",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "disease_characteristics_set_the_weights",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

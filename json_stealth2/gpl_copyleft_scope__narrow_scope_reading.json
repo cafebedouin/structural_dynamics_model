@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__narrow_scope_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_narrow_scope",
+    "story_uid": "223ff554-3fbc-4396-a246-ba7f3f95ddb8"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.27,
+    "theater_ratio": 0.29,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.32,
+    "claimed_type": "rope",
+    "human_readable": "GPL Section 2(b) Doctrine-Bounded Scope (Narrow Reading)",
+    "topic_domain": "legal/technological (software licensing, intellectual property, open source governance)",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "proprietary_software_firms",
+      "mixed_ecosystem_users"
+    ],
+    "victims": [
+      "direct_derivative_distributors"
+    ],
+    "vindicated_propositions": [
+      "traditional_derivative_work_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "gpl_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Draft and maintain the license text, publish interpretive answers, hold copyrights on key works, and choose which suspected violations to pursue. They can revise the license for future grants and relicense code they control, but their authority exists only because thousands of projects voluntarily adopt the text; stepping back from custodianship would dissolve a role the institution and its community have become. Enforcement capacity is thin relative to the installed base, so pursuit is selective and settlement-driven."
+    },
+    {
+      "name": "proprietary_software_firms",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Ship commercial products that bundle or connect to GPL components while keeping their own source closed, relying on the line that intact GPL code communicating across interfaces is not itself a modified work. They budget compliance spend, negotiate when claims land anyway, and hold credible exits: permissive-licensed substitutes, purchased dual licenses, funded rewrites. Their engineering roadmaps treat the boundary as dependable infrastructure."
+    },
+    {
+      "name": "direct_derivative_distributors",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Distribute altered GPL programs or libraries — patched kernels, extended frameworks — and therefore owe complete corresponding source for their alterations under the same license. They received the underlying code without payment and build standing work on it; unwinding accumulated GPL dependencies mid-product is expensive, so the obligation operates as a standing toll paid in disclosure. Some treat publication as contribution; others comply minimally."
+    },
+    {
+      "name": "mixed_ecosystem_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Obtain working software stacks assembled from GPL cores plus proprietary extensions, typically at zero price. They have no seat in license drafting, interpretation, or enforcement, and learn of boundary disputes only when a component they depend on is relabeled or withdrawn. Switching tools is individually feasible, collectively rare."
+    },
+    {
+      "name": "ip_adjudicators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and copyright offices before which the coupling-versus-modification question would ultimately be settled. Cases presenting it have settled, been dismissed, or been avoided on procedural or standing grounds, leaving the doctrine-bounded default operative in commerce. They observe the arrangement; they have not yet constituted it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Publishes a doctrine-anchored boundary telling integrators which combinations trigger source-sharing: direct modifications of GPL works enter the commons; intact GPL code communicating across API calls, plugin slots, or process boundaries stays outside the obligation. This lets commercial engineering proceed against free components without case-by-case scope negotiation.",
+    "transfer_function": "Moves complete corresponding source for modifications from everyone who distributes altered GPL works to the general public; leaves integration latitude — the ability to couple without sharing — with whoever connects rather than modifies. No money moves; disclosure duties and retention rights do.",
+    "absent_voices": "Upstream authors who selected the GPL to compel sharing beyond literal derivatives have no formal seat once code is released: their remedies are advocacy, license-version changes for future grants, or network-triggered licenses for new code — not participation in how adopted code's boundary is read. Embedded-deployment end users are similarly voiceless. Both would object that the operative line is narrower than licensor intent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the doctrine-bounded reciprocity convention, mixed-source practice splits: integrators either face expanded claims over every coupled build or face eroding sharing norms altogether; procurement, acquisition diligence, and component sourcing all reprice. The current division of labor between commons cores and proprietary edges depends on the boundary staying where doctrine puts it.",
+    "founding_problem": "Prevent proprietors from absorbing free code and its improvements into proprietary products: Section 2(b) was written so that distributed derivatives remain under the GPL, keeping the commons self-replenishing while ordinary reuse continues.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent accounts of pre-copyleft erosion — proprietary forks of early permissively licensed networking releases — and scholarly treatments of copyleft design attest the founding problem was real. Continued corporate compliance expenditure on GPL exposure attests that firms themselves treat it as live; the strongest external evidence is adversarial, since the parties best positioned to deny the problem budget against it. No corroboration comes from parties who profit from weak copyleft."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.27,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_positionality",
+      "question": "This constraint instantiates the narrow_scope_reading of kernel gpl_copyleft_scope; how would the structural picture change under the strong_copyleft_reading sibling, and where exactly do the readings diverge?",
+      "resolution_mechanism": "Definitive appellate treatment of whether dynamic linking, plugin loading, or aggregation constitutes a derivative work; until such a ruling the readings coexist as competing interpretive stances held by different communities.",
+      "impact": "Under the strong reading the beneficiary seats flip toward target (integration latitude becomes infringing conduct), epsilon rises materially, and enforcement intensity becomes load-bearing — plausibly tangled_rope or snare per seat. The disagreement is located entirely at the derivative-work boundary element, not at the license's existence or its reciprocity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested scope kernel; the sibling reading would redraw the victim set."
+    },
+    {
+      "id": "enforcement_capacity_distribution",
+      "question": "Does effective scope track the doctrinal text at all, or only whichever interpretive community holds enforcement capacity in a given ecosystem?",
+      "resolution_mechanism": "Compare realized enforcement outcomes and negotiated compliance across steward-aligned versus industry-dominated ecosystems over the interval.",
+      "impact": "If capacity dominates, this reading's epsilon is an artifact of industry weight: in steward-aligned pockets the same coupling patterns bind. Grounds the influences edge to the enforcement-vacuum sibling.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sibling-driven uncertainty: effective constraint as enforcement-capacity-dependent plurality."
+    },
+    {
+      "id": "marginal_coupling_derivativity",
+      "question": "Where does traditional doctrine actually place specific coupling patterns — static linking, dynamic linking, separate-process communication, plugin architectures — on the derivative-work spectrum?",
+      "resolution_mechanism": "An appellate merits ruling on a squarely presented linking case, or settled doctrinal guidance from a major jurisdiction.",
+      "impact": "Resolves which integrator populations sit inside the obligation; a broader line converts part of the beneficiary seat into payers and lifts extraction; a tighter line shrinks the payer set further.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Object-level boundary question this reading presumes rather than settles."
+    },
+    {
+      "id": "saas_network_use_strain",
+      "question": "Does a distribution-triggered obligation survive the shift to hosted delivery, where modified GPL code is run for customers but never distributed?",
+      "resolution_mechanism": "Track network-triggered license adoption by upstream projects seeking to reach hosted use, and the incidence of hosted deployments of distribution-keyed GPL components.",
+      "impact": "Widespread hosted avoidance would hollow the payer set from below as obligations become routable around; upstream migration to network-triggered terms would change the arrangement's composition for future grants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cloud-era stress on a distribution-keyed boundary."
+    },
+    {
+      "id": "compliance_theater_functionality",
+      "question": "Is industrialized license compliance reducing actual violations, or substituting attestations and scans for conformity?",
+      "resolution_mechanism": "Correlate compliance-program maturity with audited violation incidence and remediation depth across firms.",
+      "impact": "If substitution dominates, the theater_ratio understates drift and the reciprocity core beneath the compliance surface is thinner than it appears.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the growing compliance layer performs or protects."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A mixed-source software economy runs on a boundary line drawn by GPL Section 2(b) as construed under traditional copyright doctrine: works that are direct derivatives of GPL code — modified copies distributed onward — must themselves carry the GPL and ship complete corresponding source; combinations that leave the GPL code intact and communicate across interfaces, plugin slots, or process boundaries fall outside the license's reach, so the combining side keeps its own code closed. This story instantiates that doctrine-bounded reading as the standing arrangement: a reciprocal, bounded source-disclosure obligation on a defined minority of integrators, and preserved integration latitude for everyone else, backed by copyright liability and episodic enforcement, administered through an industrializing compliance layer, and stabilized by tracking doctrine courts already apply elsewhere. Constraint-family note (epsilon deltas over the same kernel text): this file carries the narrow reading at epsilon approximately 0.38; the strong-coupling sibling authors the same text as reaching all coupling forms, with a materially higher epsilon and a redrawn victim set; the enforcement-vacuum sibling authors effective epsilon as a function of which community holds enforcement capacity. The links run through network.affects_constraints.\n\nKEY AGENTS (by structural relationship):\n- proprietary_software_firms: Primary beneficiary (powerful/arbitrage) — integrates GPL components behind the doctrine-bounded line\n- direct_derivative_distributors: Primary target (organized/constrained) — owes source for modifications, holds the reciprocal grant\n- gpl_stewards: Agenda setter (institutional/identity-locked) — drafts, maintains, selectively enforces\n- mixed_ecosystem_users: Diffuse beneficiary (powerless/mobile)\n- ip_adjudicators: Analytical observer (institutional/national) — the unsettled forum",
+    "logic_rationale": "Extraction 0.38: the obligation binds a defined minority (distributors of modified GPL works), is reciprocal (they received the code at zero price), and stops at a doctrine line — extraction is real but bounded, hence moderate. Suppression 0.27 is structural, carried by the copyright-liability backdrop and episodic enforcement rather than continuous coercive machinery; it is a raw property, unscaled by scope or power in the engine's arithmetic. Theater 0.29 and rising: compliance has industrialized (scanning, attestations, audit vendors) faster than enforcement has materialized, so a growing share of boundary-related activity is precautionary performance. Accessibility collapse 0.42: exits persist everywhere — permissive-licensed stacks, dual-licensing offers, funded rewrites — so understanding the constraint does not foreclose alternatives. Resistance 0.32: boundary-testing by integrators, negotiated settlements, and quiet minimal compliance. All three series run on one shared six-point grid; the suppression_requirement series is authored because this story specifically tracks enforcement-capacity history — buildup through the early enforcement-campaign era, then decay as marquee litigation failed to settle the boundary. Claim and metrics are independent authored facts: I claim rope because the arrangement coordinates reuse against reciprocity with bounded asymmetry; the metrics describe its actual moderate, drifting operation, and any divergence between the computed per-seat types and this claim is the measurement the corpus exists to take.",
+    "perspectival_gap": "From the proprietary-firm seat the boundary is load-bearing infrastructure for lawful commerce; from the direct-derivative-distributor seat the same boundary is a standing toll paid in source disclosure; from the steward seat it is a defensive perimeter smaller than the one they meant to build; from the adjudicator seat it is a question successfully avoided. Same structure, four different constraints — the engine computes per-seat classifications from power, exit, and directionality rather than averaging them into one verdict.",
+    "directionality_logic": "Beneficiary and victim declarations drive the derivation. proprietary_software_firms and mixed_ecosystem_users appear only as beneficiaries, and the firms' arbitrage-grade exit pins them near the beneficiary pole. direct_derivative_distributors appear in victims, which the derivation reads toward the target pole amplified by constrained exit — but the same seat holds a secondary beneficiary position: the reciprocal grant of the underlying code they build on. Uncorrected, the derivation would overstate their d; the override (organized -> 0.72) encodes 'paying recipient.' gpl_stewards derive a low d as agenda-setting incidental beneficiaries; their exit lock is institutional identity fusion — the organization has become its custodial function — which is a property of their seat, not of their directionality. Receipt check for gain_flow: the principal extracted good is modification source code, and it lands in the unseated public commons; no named seat captures it, and the monetized leakage (settlements, audit fees) is second-order and likewise unseated — 'diffuse' is authored affirmatively after checking every seat, not defaulted.",
+    "mandatrophy_analysis": "Reading the arrangement as a snare would misdescribe a bounded reciprocal obligation as predation; reading it as frictionless coordination would miss the compliance-industrial drift visible in the theater series. The classification holds both errors out: extraction is real but confined to a set that received the code in exchange, and the founding mandate — keeping the commons self-replenishing — is still served, so no obsolescence flag fires. On the receipt surface, fixing_cost is authored 'prohibitive' because any binding clarification of the boundary reopens the interpretive contest no seat can win unilaterally: stewards cannot bind already-granted distributed copyrights, and adjudicators have declined the merits question. This pairs mechanically with gain_flow 'diffuse' in the receipt grid; the pairing is an honest joint judgment, not a template, and the arrangement is not inertial — its function is live, its theater is a monitored symptom, and what the temporal series watches for is compliance performance substituting for actual reciprocity.",
+    "kernel_context": "Kernel: gpl_copyleft_scope — the scope question over GPL Section 2(b)'s derivative-work reach. This file instantiates the narrow_scope_reading: the license constrains direct derivatives only, with the boundary following traditional copyright doctrine. Siblings: strong_copyleft_reading (every form of code coupling counts as derivative) and enforcement_vacuum_reading (effective scope is set by enforcement capacity, not text). Contest-relative losses — notably licensor intent outrunning the operative boundary — are routed to omega variables rather than seated as victims, because under this reading's own lights no seat extracts from them; seating them would fold a sibling counterfactual into this constraint and break epsilon-invariance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__strong_copyleft_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'GPL scope' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints over one kernel text: this file (narrow, doctrine-bounded reading — bounded reciprocal obligation, rope-shaped profile), gpl_copyleft_scope__strong_copyleft_reading (all coupling counts as derivative — broader captured set, higher epsilon, enforcement-heavy), and gpl_copyleft_scope__enforcement_vacuum_reading (effective constraint determined by enforcement-capacity distribution). The epsilon values differ because they are reading-indexed over the same referent text, not because the text changed; the upstream doctrinal anchor vindicated here is cited by the strong reading as insufficient and by the vacuum reading as indeterminate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "traditional_derivative_work_doctrine",
+    "drift_state": {
+      "moment": "contemporary_cloud_coupling_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "enforcement_vacuum_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "derivative_work_boundary_is_doctrine_bounded",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "non_derivative_coupling_preserves_proprietary_rights",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

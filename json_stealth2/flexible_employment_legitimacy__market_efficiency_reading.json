@@ -1,0 +1,336 @@
+{
+  "header": {
+    "constraint_id": "flexible_employment_legitimacy__market_efficiency_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "740ab715-6a21-4ec6-b888-c07674a2207e"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.18,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Flexible Employment as Legitimate Market-Clearing Mechanism",
+    "topic_domain": "economic/labor/social_policy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "platform_operators",
+      "on_demand_workers",
+      "skilled_freelancers",
+      "on_demand_service_consumers",
+      "businesses_with_volatile_demand",
+      "staffing_intermediaries"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the digital marketplaces and dispatch systems through which flexible work is offered: they set participation terms, publish pay formulas, run matching algorithms, and collect a percentage fee on each completed engagement. Their revenue scales with matched volume. Exit for them means reallocating capital to other lines of business or jurisdictions; nothing binds them to this particular market."
+    },
+    {
+      "name": "on_demand_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Supply driving, delivery, care, and task labor in increments they choose, paid per trip or task after a platform fee. They provide their own tools and cover their own downtime, taxes, and insurance. They can switch apps, work several at once, or return to scheduled employment, though switching involves re-onboarding and income gaps."
+    },
+    {
+      "name": "skilled_freelancers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Sell professional services such as design, writing, software, and consulting project by project through freelance marketplaces and direct client relationships. They set rates within marketplace ranges, maintain profiles and ratings, and typically serve several clients concurrently. Reputational capital travels with them and direct contracting off-platform is common."
+    },
+    {
+      "name": "on_demand_service_consumers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase rides, meals, errands, and services on demand at posted prices. They gain availability and speed without scheduling lead times. Their alternative is doing without, waiting, or using traditional providers at higher prices or lower convenience."
+    },
+    {
+      "name": "businesses_with_volatile_demand",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Retailers, logistics firms, restaurants, and event companies staff peaks with temp agency rosters and on-demand platforms instead of carrying idle payroll between rushes. They convert fixed labor cost into variable cost. Exiting means rebuilding scheduled staffing and accepting slack capacity during troughs."
+    },
+    {
+      "name": "staffing_intermediaries",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Run local temp and placement offices: recruit workers, set assignment pay rates, invoice client firms at a markup, and handle payroll compliance. They collect the spread between bill rate and pay rate. Their books of clients and workers are segment-specific, so exit means leaving the staffing line."
+    },
+    {
+      "name": "labor_standards_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Unions, worker centers, and policy groups that argue for employment-status protections, minimum earnings floors, and collective bargaining rights for flexible workers. They litigate, campaign, and lobby but hold no seat in the arrangement's day-to-day governance, which runs through platform terms of service and bilateral market participation."
+    },
+    {
+      "name": "labor_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Labor departments, tax authorities, and courts that adjudicate whether flexible engagements fall inside or outside employment protections, enforce sectoral rules, and occasionally mandate pay floors or benefit contributions. They observe the arrangement from outside it and act through rulemaking and enforcement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Matches heterogeneous, fluctuating demand for work (rides, deliveries, projects, seasonal shifts) with heterogeneous labor supply in real time, cutting search costs for both sides, letting firms scale staffing to demand, and letting individuals sell time and skills in small increments.",
+    "transfer_function": "Moves payment for each engagement from client firms and consumers to workers, minus a percentage fee retained by platforms and staffing intermediaries; moves scheduling risk, equipment costs, and benefits provision from firms to workers; moves price, rating, and demand information across the pooled market.",
+    "absent_voices": "Labor unions, worker centers, and employment-rights advocates would contest the voluntariness framing and press for employee-status protections and bargaining rights; they sit outside the arrangement's governance, which is conducted through platform terms of service and individual market participation rather than tripartite negotiation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Firms would rebuild scheduled rosters and buffer capacity, workers would queue for standard employment or informal arrangements, response times and prices for on-demand services would shift, and the matching infrastructure's fee streams would disappear; staffing patterns across retail, logistics, and hospitality would reorganize within months.",
+    "founding_problem": "Standard employment tied labor cost to headcount: firms carried idle payroll between demand peaks, and workers with irregular availability, care responsibilities, or niche skills lacked channels to sell labor in small increments. Search costs were high on both sides and demand volatility went unbuffered.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Statistical agencies document persistent demand volatility and growth in alternative work arrangements; academic labor economists across camps concede the matching problem is real while disputing whether current arrangements solve it on fair terms; operations research on peak-load staffing predates and is independent of the platform industry. Attestation does not rest on the beneficiary set alone."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors flexible employment as its market-efficiency reading holds it: a legitimate clearing mechanism in which platform-mediated matching, temp-agency rosters, and freelance marketplaces allocate labor supply to demand at mutually accepted terms. Wage convergence among flexible workers is read as a scarcity signal, dispatch algorithms as neutral coordination instruments, and worker autonomy as maximized relative to scheduled employment. The claim/metric gap is deliberate and bounded: the reading CLAIMS rope (genuine coordination, net-benefiting participants, no suppressed alternatives) while the authored metrics describe low-but-nonzero extraction, modest soft-control growth, and a real, observable resistance record that the reading attributes to transition frictions and classification disputes rather than to extraction. The engine measures that divergence; the claim is not reconciled to the metrics.",
+    "key_agents": [
+      "- platform_operators: Agenda-setting intermediary (institutional/arbitrage) — sets terms, runs matching, collects per-engagement fees",
+      "- on_demand_workers: Participating labor supplier (moderate/constrained) — sells task labor in chosen increments, bears own tooling and downtime",
+      "- skilled_freelancers: Participating labor supplier (moderate/mobile) — sells professional services project-by-project across concurrent clients",
+      "- on_demand_service_consumers: Demand-side beneficiary (organized/constrained) — buys availability and speed at posted prices",
+      "- businesses_with_volatile_demand: Demand-side beneficiary (powerful/mobile) — converts fixed payroll into variable staffing cost",
+      "- staffing_intermediaries: Secondary intermediary (organized/mobile) — recruits, sets assignment rates, collects the bill-rate/pay-rate spread",
+      "- labor_standards_advocates: Excluded critic seat (organized/constrained) — contests terms from outside the arrangement's governance",
+      "- labor_regulators: Analytical observer (institutional/analytical) — adjudicates classification and enforces sectoral rules from outside"
+    ],
+    "logic_rationale": "Extraction is authored low (0.30 at interval end) because this reading prices the platform fee and the staffing spread as compensation for matching, trust, and compliance services, with residual extraction limited to margins above competitive coordination cost and information asymmetries in pay transparency. Suppression is low (0.18) because exit is real: multi-homing across apps, off-platform contracting, and return to scheduled employment are all exercised paths, and no legal compulsion binds anyone into the arrangement. Theater is low-moderate (0.20): autonomy branding and fairness dashboards exist, but the matching function they decorate is operative. Accessibility collapse is moderate (0.40): standard employment, traditional providers, and direct hiring remain reachable, so alternatives persist under friction rather than collapsing. Resistance is the highest metric (0.55) and is authored as a descriptive fact the reading cannot wish away: classification litigation, unionization drives, and minimum-pay ordinances are observable and ongoing; the reading interprets them as disputes over transition costs and legal categories, not as evidence of extraction. The temporal series run on one shared six-point grid so every tracked metric is authored at every examined time point; the gentle rise in suppression_requirement tracks the maturation of platform management infrastructure (background-check regimes, deaction systems, pay-formula administration) as the sector scaled, not any ratcheting of legal coercion.",
+    "perspectival_gap": "Seats should compute differently from identical structural inputs. From the platform_operator seat the arrangement is coordination it built and prices; from the on_demand_worker seat it is income access purchased with volatility and self-funded tooling; from the consumer seat it is cheap availability; from the excluded advocate seat the same fee streams and constrained exits would compute as enforced extraction. Among same-level worker seats, exit options differentiate experience: the skilled freelancer's mobile exit (portable reputation, concurrent clients) yields a materially different constraint than the on-demand worker's constrained exit (asset specificity, re-onboarding gaps), despite nominally equal standing. The engine computes these per-seat classifications from the structural data; the authored claim adjudicates nothing.",
+    "directionality_logic": "Every declared position in this reading is a beneficiary, so derived directionality sits near the beneficiary pole across seats and no victims are declared — the reading's premises support no victim set, and inventing one would import a sibling reading's structure into this constraint. Residual differences in effective extraction arise from exit options and scope: platform_operators combine beneficiary position with arbitrage-grade exit and agenda control (lowest effective extraction), while constrained-exit seats (on_demand_workers, consumers) carry somewhat higher effective extraction than mobile seats despite identical beneficiary declarations. Suppression is authored as a raw structural property and is not scaled; only extractiveness is scaled by directionality and scope in the engine's computation.",
+    "mandatrophy_analysis": "The founding problem — matching volatile demand to heterogeneous supply at low search cost — remains live, so no mandate decay is declared and the arrangement is not drifting toward piton on this reading's account. The theater_ratio series is the early-warning instrument: if autonomy rhetoric decouples from practice (Goodhart drift), theater rises before extraction does, and the reading's rope claim becomes inspectable rather than assumed. The classification discipline cuts both ways: by refusing victim declarations its premises do not support, this reading prevents coordination from being mislabeled as pure extraction; by carrying omegas on algorithmic neutrality, wage-signal interpretation, and the source of participation volition, it preserves exactly the questions whose resolution could flip the computed type toward the sibling readings' profiles.",
+    "kernel_context": "Kernel: flexible_employment_legitimacy. This file instantiates the market_efficiency_reading: flexible employment as a legitimate market-clearing mechanism matching labor supply to demand. Sibling readings, authored as separate constraints over the same standing arrangement: precarity_extraction_reading (the same relations read as structural precarity enabling surplus extraction) and developmental_state_reading (the same relations read as a transitional form requiring state-managed formalization). The disagreement is located in three structural elements: the volitional status of participation, the interpretation of blue-collar wage convergence (scarcity signal versus suppressed wage floor), and the normative standing of algorithmic coordination (neutral instrument versus calibrated leverage)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This story instantiates the market_efficiency_reading of the flexible_employment_legitimacy kernel; do the precarity_extraction_reading and developmental_state_reading instantiate structurally different constraints over the same arrangement?",
+      "resolution_mechanism": "Compile the sibling stories and compare: the precarity reading is expected to author high epsilon with flexible workers declared as victims; the developmental reading is expected to author a sunset-bound transitional form. Divergence in epsilon, victim sets, and computed types across readings locates the kernel's indexicality.",
+      "impact": "Sharp cross-reading divergence confirms the kernel is genuinely indexical: per-seat classifications must be read per reading and never averaged; convergence would suggest the readings collapse into one constraint and the family decomposition is spurious.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one kernel, three readings, potentially three distinct constraints."
+    },
+    {
+      "id": "wage_convergence_signal_or_monopsony",
+      "question": "Does blue-collar wage convergence reflect genuine scarcity pricing arrived at through market clearing, or monopsony wage-setting against a queue of surplus labor?",
+      "resolution_mechanism": "Labor-supply elasticity estimates at the platform level, vacancy-to-applicant ratios in flexible-work segments, and quasi-experiments from platform entry, exit, and pay-formula changes.",
+      "impact": "Monopsony findings would convert the reading's central signal interpretation into evidence of wage suppression, raising epsilon above the authored value and stripping the voluntary-clearing axiom of its empirical support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed wage levels are market signals or exercises of buyer power."
+    },
+    {
+      "id": "algorithmic_dispatch_neutrality",
+      "question": "Are dispatch and pay algorithms neutral matching instruments, or do they embed pay experimentation, surge opacity, and deactivation leverage that tilt terms toward the operator?",
+      "resolution_mechanism": "Algorithmic audits, pay-variation studies across equivalent trips and tasks, and analysis of deactivation and appeal outcomes.",
+      "impact": "Confirmed manipulation would raise both extractiveness and suppression above the authored values and shift computed seat types toward enforced-extraction profiles, weakening the neutral-coordination premise this reading stands on.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination layer is neutral or carries calibrated operator leverage."
+    },
+    {
+      "id": "participation_volition_source",
+      "question": "Is worker participation revealing a preference for flexibility, or the absence of acceptable alternatives — and does the revealed preference persist once local alternatives improve?",
+      "resolution_mechanism": "Panel data on entry and exit motives, post-exit trajectories of workers who return to standard employment, and natural experiments where local labor markets tighten.",
+      "impact": "If participation is alternative-driven, the low authored suppression understates effective lock-in, the voluntariness foundation of the coordination reading erodes, and the sibling readings' classifications gain force; if preference-driven, the low suppression value is validated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus preference-based basis of participation; doubles as the suppression-mechanism ambiguity for this arrangement."
+    },
+    {
+      "id": "steady_state_vs_transitional_status",
+      "question": "Is flexible employment a durable steady-state arrangement, or a transitional form that formalization pressure will eventually absorb into standard employment?",
+      "resolution_mechanism": "Longitudinal shares of alternative work in total employment; whether platform-originated workers accumulate into standard employment over careers or remain in flexible segments.",
+      "impact": "A transitional finding supports sunset-style treatment and strengthens the developmental sibling reading; a steady-state finding stabilizes this reading's rope-type claim and its no-sunset structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the arrangement is an endpoint or a way-station in the organization of work."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "precarity_extraction_reading",
+      "developmental_state_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'flexible employment legitimacy' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints — one per declared reading of the flexible_employment_legitimacy kernel. Each reading authors its own epsilon, beneficiary/victim structure, and claimed type over the same standing arrangement; this market-efficiency story is the low-epsilon, no-victims, rope-claim reference case. The sibling stories link back through their own affects_constraints arrays; cross-reading divergence in computed types is the corpus's indexicality measurement, not an inconsistency to be reconciled."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "voluntary_exchange_clearing_norm",
+    "drift_state": {
+      "moment": "contemporary_algorithmic_management_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "precarity_extraction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "developmental_state_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "voluntary_exchange_confers_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "wage_convergence_is_scarcity_signal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "platform_operators",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

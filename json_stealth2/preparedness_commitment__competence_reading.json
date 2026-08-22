@@ -1,0 +1,319 @@
+{
+  "header": {
+    "constraint_id": "preparedness_commitment__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prep_competence",
+    "story_uid": "6a45bcc2-6990-4bc1-9191-c67582865a11"
+  },
+  "base_properties": {
+    "extractiveness": 0.21,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Standing Drill and Training Regime (Competence Reading)",
+    "topic_domain": "institutional/disaster-preparedness",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "frontline_responders",
+      "protected_communities",
+      "veteran_practitioners",
+      "incoming_recruits",
+      "emergency_response_agency"
+    ],
+    "vindicated_propositions": [
+      "skill_decay_empirical_law",
+      "deliberate_practice_transfer"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "emergency_response_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operates the standing drill calendar, certifies unit readiness, and employs the instructor corps. Receives appropriated training funds and passes them through to instruction, simulation, and exercise delivery. It cannot walk away from its statutory preparedness mandate, and its continuity across leadership turnovers is the vehicle the routines ride on."
+    },
+    {
+      "name": "frontline_responders",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Staff the response units. They spend recurring shift-hours in drills and scenario exercises and carry the schedule and physical costs of that time; the same hours build the competence they rely on when an event overwhelms ordinary operations. Leaving the profession is possible but means abandoning career, seniority, and a working life built inside the service."
+    },
+    {
+      "name": "veteran_practitioners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Senior members who hold the tacit craft — judgment calls, informal cues, habits formed in real incidents — and deliver most of the instruction. Their standing inside the service rests on being the people others learn from; stepping back from teaching would cost them the role that organizes their late careers. Retirement is the one exit, and each retirement removes knowledge the written manuals only partially capture."
+    },
+    {
+      "name": "incoming_recruits",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "New hires who arrive without incident experience and absorb the routines through academy and probationary drilling. They can quit in the early years at comparatively low cost, and their attrition is precisely the turnover the training system exists to absorb."
+    },
+    {
+      "name": "protected_communities",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Residents of the hazard zone who fund the service through taxes and are the intended recipients of response capacity when events strike. Individual households have little leverage over drill design; relocating out of the hazard zone is available but costly and disruptive, so most stay and depend on the system's readiness."
+    },
+    {
+      "name": "budget_authorities",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The legislature and finance ministry that appropriate the training budget. In lean cycles they trim exercises and defer simulator purchases because the returns are invisible until a disaster validates them. They retain the standing ability to defund the arrangement, and recurring fiscal pressure keeps that lever live. Their constituents are among those the capacity protects."
+    },
+    {
+      "name": "mutual_aid_partners",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Neighboring jurisdictions whose units plug into joint responses under mutual-aid compacts. They inherit whatever procedures, terminology, and radio habits the standing drills encode, but sit outside the body that writes the drill program. Incompatible tactics discovered mid-incident is the failure they would raise if they had a seat at the table."
+    },
+    {
+      "name": "preparedness_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic and independent investigators who study whether exercise performance predicts incident performance and whether skills decay on the schedule the training assumes. They publish outside the service's chain of command and hold no operational stake in the answer."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains perishable operational skills and shared decision protocols across continuous personnel turnover, so that rare-event response capacity exists despite years of disuse between events. It solves the collective-action problem that no individual responder would privately sustain the rehearsal burden for capacities only the assembled unit ever uses.",
+    "transfer_function": "Moves shift-hours and attention from routine operations into rehearsal and instruction; moves tacit knowledge from retiring veteran cohorts to incoming recruits; moves appropriated funds from general revenue into simulators, exercise logistics, and instructor time.",
+    "absent_voices": "Mutual-aid partners are structurally outside the drill-program body that writes the procedures they must operate under. Mitigation advocates — engineers and planners who argue hardened infrastructure and land-use policy dominate rehearsed response — are likewise absent from the training calendar's design, and would contest the balance of spend. Protected communities appear as funding taxpayers but not as participants in exercise design.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the drill and training regime vanished overnight, certification ladders, shift-handover protocols, mutual-aid compatibility, and the instructor corps would unravel within a few turnover cycles. The first major event after the break would meet units running on decayed individual skill and unshared procedure; the surrounding arrangements — staffing plans, equipment caches sized to drilled doctrine, inter-jurisdiction compacts — all presuppose the standing regime.",
+    "founding_problem": "Successive disasters exposed that response organizations lose capability between events: veterans retired carrying unwritten craft, replacements arrived unseasoned, and improvised coordination failed at scale. The standing regime was built to convert episodic catastrophe lessons into routine that survives generational turnover.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent accident-investigation boards and the peer-reviewed skill-decay literature attest from outside the service both that the founding problem recurs and that rehearsed units outperform unrehearsed ones in comparable events; actuarial loss data corroborate the same pattern. No credible outside source attests the founding problem is solved — its recurrence between events is exactly what the standing arrangement answers."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A response agency operates a standing regime of mandated drills, scenario exercises, certification gates, and structured instruction, designed to keep rare-event operational capacity alive across continuous generational turnover. This story instantiates ONE reading of the preparedness_commitment kernel — the competence_reading, under which these routines are live exercised knowledge that maintains real capacity. Per the epsilon-referent rule, extractiveness is authored for the standing drill-and-training arrangement itself, assessed by this reading's own lights: the regime's costs are real (drill hours, appropriated budget, instructional overhead) but are the price of the coordination, sitting just above the enforcement-mechanism floor. The sibling readings (husk_reading, hybrid_reading) are separate constraints in separate files with their own epsilon values over the same observable corpus; they are not averaged into this one.\n\nKEY AGENTS (by structural relationship):\n- emergency_response_agency: agenda-setting coordinator (institutional/constrained) — administers the drill calendar, passes through the funding, cannot abandon its statutory mandate\n- frontline_responders: dual-positioned participant (organized/constrained) — bears recurring drill-hour costs and collects the competence those hours build\n- veteran_practitioners: knowledge holders and instructors (moderate/identity_locked) — transmit the tacit craft; their standing is fused with the teaching role\n- incoming_recruits: turnover intake (powerless/mobile) — absorb the transmitted routines; their attrition is what the training system absorbs\n- protected_communities: diffuse intended recipients (powerless/mobile) — fund and are shielded by the capacity\n- budget_authorities: cost-bearing funder (powerful/mobile) — appropriates the budget and retains the defunding lever\n- mutual_aid_partners: excluded interdependent parties (moderate/constrained) — inherit drilled procedure without a seat in its design\n- preparedness_researchers: analytical observers (analytical/analytical) — test whether exercise performance predicts incident performance",
+    "logic_rationale": "Extractiveness is authored low (0.21 at interval end): the regime's costs are dominated by genuine skill-maintenance and instruction delivery, with a thin layer of compliance paperwork accreting over the decades. Suppression is low-moderate (0.25): participation is mandated through certification and employment gates, but the mandate is broadly consented to, informal alternatives are not suppressed, and enforcement is light. As a structural property, suppression is authored unscaled — the engine applies directionality and scope scaling to extractiveness only. Theater ratio is low (0.15): anniversary ceremonies and commemorative exercises exist, but the core drill cycle tests real decision-making under graded scenarios, per this reading's defining claim. Accessibility_collapse is moderate (0.40): decentralized self-training and reduced-frequency regimes remain workable alternatives, so understanding the regime does not foreclose substitutes — it merely makes them worse. Resistance is low-moderate (0.25): drill fatigue, union grievances over hours, and cyclical budget trimming, but no sustained opposition, because the value proposition is accepted between disasters. The measurement series run on one shared time grid (t=0,8,16,24,32,40) with both tracked metrics authored at every point; suppression_requirement is deliberately not serialized because the enforcement picture is static — the scalar covers it. The trajectories show a mature-regime pattern: extraction dipped as the curriculum shed redundancy in its first two decades, then crept upward mildly as documentation and compliance overhead accreted; theater crept upward in parallel as commemorative elements layered onto the functional core. Both creeps are bounded and acknowledged by the regime's own after-action audits — the signature of a contained rather than avoided D5 break.",
+    "perspectival_gap": "The seats should compute differently. From the agency's chair, the regime is a coordination achievement it built and stewards across leadership turnovers. From the responders' chairs, it is a worthwhile but genuinely costly obligation — recurring hours surrendered to rehearsal against a benefit that arrives only in rare events. From the budget authorities' chair, it is a line item whose returns are invisible between disasters, which is why the defunding lever stays live and why extraction ticks upward in lean cycles. From the mutual-aid partners' position outside the room, the same routines look like an externality: procedure written unilaterally that they must operate under mid-incident. Same structure, four different experienced types.",
+    "directionality_logic": "All five declared beneficiaries derive low directionality from the beneficiary declarations: the agency (coordinator-collector), responders, veterans, recruits, and the protected public all sit near the subsidized end. Two overrides correct places where the derivation would misread the structure. First, budget_authorities are the sole powerful seat and would derive a high target-side d from their payer role; but their constituents share the protection benefit and they authorize the spend democratically, so their true position is mildly cost-bearing consent — overridden to 0.40. Second, frontline_responders are the sole organized seat and would derive a near-full-beneficiary d from the beneficiary declaration alone; but they bear the direct recurring time and physical costs in their own bodies, so their true position is dual — overridden to 0.30. The excluded mutual-aid partners sit near symmetric (they neither fund nor collect much directly) but no override is authored because the moderate power atom is shared with veteran_practitioners, whose beneficiary position requires low d; the qualitative symmetry is recorded here instead.",
+    "mandatrophy_analysis": "The founding problem is live: rare events continue, skills continue to decay, turnover continues, and outside investigators corroborate all three. Status=live crossed with disappearance_verdict=world_rearranges is the coherent cell — no zombie flag. The classification resists both characteristic mislabelings. Reading the regime as pure extraction would misprice the irreducible cost of maintaining perishable skill as rent; reading its ceremonial fringe (commemorative exercises, milestone observances) as the whole would mistake a functioning coordination core for theatrical residue. The theater_ratio series is the tripwire in both directions: if commemorative accretion accelerates past functional content, or if drill activity decouples from incident outcomes, the husk_reading's description starts to fit and this file's classification should drift — the omegas below specify what evidence would show it.",
+    "kernel_context": "Kernel: preparedness_commitment — the standing commitment that response organizations maintain drilled, documented readiness routines across generations. This file instantiates the competence_reading: routines as live exercised knowledge that maintains operational capacity, with generational turnover absorbed through effective training and the D5 competence break avoided or contained. Sibling readings, each a separate constraint file: husk_reading (the same routines as memorial performance that feels like retention but lacks operational competence — higher theater, higher epsilon, inertial persistence) and hybrid_reading (a layered account in which memorial elements stabilize commitment while competence elements carry function). The disagreement is located in one structural question: whether drill activity is causally coupled to incident capability. This reading asserts the coupling and authors low epsilon over the shared referent; the sibling files assert weaker or absent coupling and author accordingly."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "This story instantiates the competence_reading of the preparedness_commitment kernel: are the standing routines live exercised knowledge, or would the husk_reading (memorial performance lacking operational competence) or the hybrid_reading (layered stabilization-plus-function) describe the same observable corpus better?",
+      "resolution_mechanism": "Outcome-coupled audit: correlate exercise-fidelity scores with blind-evaluated incident performance across units and decades, and adjudicate which reading the correlation supports.",
+      "impact": "Under the husk_reading the same routines carry high theater and sharply higher epsilon and the classification shifts toward inertial types; under the hybrid_reading intermediate values obtain. This file's authored metrics are valid only within the competence reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which reading of the preparedness kernel the observable routines actually instantiate."
+    },
+    {
+      "id": "drill_to_incident_transfer",
+      "question": "What fraction of drill-hour investment transfers to incident-time performance rather than producing only exercise-context fluency?",
+      "resolution_mechanism": "Post-incident after-action comparisons of trained versus untrained cohorts, plus controlled studies of skill-decay intervals against the training calendar's assumed cadence.",
+      "impact": "Weak transfer would mean part of the regime's cost buys no capacity, raising effective epsilon and shifting weight toward the hybrid reading; strong transfer confirms this reading's low-extraction profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exercise performance converts to incident capability at the rate the competence reading assumes."
+    },
+    {
+      "id": "generational_absorption_capacity",
+      "question": "Can structured instruction absorb tacit-knowledge loss when veteran cohorts retire faster than replacements season, or does a fast-retirement window open a competence break the manuals cannot close?",
+      "resolution_mechanism": "Track unit capability metrics across documented retirement waves and compare against modeled decay curves for unwritten craft.",
+      "impact": "A failed absorption window would temporarily push the arrangement toward husk dynamics and date a type transition; successful absorption across successive waves supports the generational-turnover claim this reading rests on.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the training pipeline scales to the actual pace of veteran cohort loss."
+    },
+    {
+      "id": "participation_suppression_character",
+      "question": "Is the mandated participation held by structural gates (certification, employment condition) or partly by internalized professional identity that would persist if enforcement lapsed?",
+      "resolution_mechanism": "Observe participation during enforcement lapses — administrative shutdowns, labor actions, record-keeping gaps: if drill uptake holds when attendance stops being checked, the internalized component dominates.",
+      "impact": "An internalized majority means the arrangement could persist as ceremony after enforcement decays — the precise precursor the husk_reading predicts; a structural majority ties persistence to active enforcement and keeps the regime's fate coupled to its administration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized character of the participation mandate."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_commitment__husk_reading",
+      "preparedness_commitment__hybrid_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'organizational preparedness' decomposes, per the epsilon-invariance principle, into three structurally distinct claims over one observable routine corpus. This file authors the competence_reading (epsilon 0.21: costs are the price of live coordination). preparedness_commitment__husk_reading authors the same corpus as memorial performance (high theater, high epsilon, inertial persistence). preparedness_commitment__hybrid_reading authors the layered account (intermediate values: memorial stabilizers plus a functional core). The competence reading is upstream: demonstrated drill-to-incident coupling is the evidentiary input that disciplines both siblings' claims, which is why this file's edges run to both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.4
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "live_exercised_knowledge_regime",
+    "drift_state": {
+      "moment": "contemporary_audit_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "routines_are_operationally_load_bearing",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "structured_practice_transmits_competence_across_generations",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ceremonial_residue_is_cost_not_function",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

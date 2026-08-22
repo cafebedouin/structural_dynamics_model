@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__wage_subsidy_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a815e841-887a-443c-afdf-62f7d36d9bd2",
+    "created_at": "2026-06-12T09:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.62,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Employer Wage Subsidy (Wage-Subsidy Reading)",
+    "topic_domain": "political economy/social policy/labor economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_wage_sector_employers"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "general_taxpayers"
+    ],
+    "vindicated_propositions": [
+      "market_wage_flexibility_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "low_wage_sector_employers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Operate businesses staffed heavily by low-wage labor: retail, food service, care work, logistics, warehousing. Set wage offers in labor markets where applicants hold a guaranteed transfer, pricing offers to what applicants will accept given that outside income. Fund trade associations that lobby for transfer generosity and against wage-floor increases. Can relocate facilities, automate roles, or restructure contracting if local labor costs rise."
+    },
+    {
+      "name": "low_wage_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Work hourly jobs in retail, care, food service, and warehousing. Receive the unconditional transfer as part of household income; face wage offers that already price that transfer in. Rent and food costs exceed the transfer alone, so declining a wage offer means hardship, and moving regions or retraining carries costs they mostly cannot finance."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the transfer through income, payroll, and consumption taxes. Have no direct handle on how the money interacts with wage-setting; see the program line in budgets and the poverty statistics it moves. Can vote on governments that set transfer levels, but the chain between their vote and wage outcomes is long and opaque."
+    },
+    {
+      "name": "transfer_administration_agency",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs enrollment, payment, income verification, and fraud controls for the transfer. Publishes take-up and poverty-impact figures. Its budget and headcount scale with the program; it defends program continuity in appropriations cycles and presents outcomes in terms of poverty reduction."
+    },
+    {
+      "name": "non_participating_recipients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People outside the wage relation — unpaid caregivers, people with disabilities, those between jobs — receive the transfer as direct income with no employer on the other side of the transaction to adjust prices against it. For them the grant arrives roughly at face value."
+    },
+    {
+      "name": "sectoral_bargaining_unions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organize for industry-wide wage agreements and wage-floor increases. Were not seated in the fiscal-policy processes where transfer design was settled; their proposals arrive as amendments after parameters are fixed. Represent a shrinking share of the private-sector workforce."
+    },
+    {
+      "name": "fiscal_policy_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Estimate how transfers interact with wage-setting: incidence studies, labor-supply elasticities, monopsony pass-through models. Publish in journals and advise ministries; their estimates are cited by every camp in the policy dispute and settle nothing by themselves."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a subsistence income floor reaching people regardless of employment status, replaces a patchwork of means-tested programs with a single payment, smooths household consumption across job spells, and stabilizes aggregate demand at the bottom of the income distribution.",
+    "transfer_function": "Moves purchasing power from the general tax base to low-income households. Inside wage-setting labor markets, part of that purchasing power is then re-priced: employers can offer lower wages because applicants hold the transfer, so a share of the public money finances employers' reduced wage bills rather than raising workers' total compensation.",
+    "absent_voices": "Sectoral bargaining unions and wage-floor advocates were not seated where transfer parameters were set — fiscal ministries negotiated with employer associations and anti-poverty charities, with bargaining-power alternatives treated as out of scope. Future taxpayers who will carry the fiscal cost had no seat. Both would object that the arrangement's calibration embeds employer wage interests.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the transfer vanished overnight, wage offers in low-wage sectors would have to rise toward subsistence or labor supply in those sectors would contract sharply; millions of household budgets would break immediately; employers would reprice or shrink; the fiscal saving would be contested across rival uses. The low-wage labor market as currently priced depends on the transfer's existence.",
+    "founding_problem": "Guarantee subsistence and reduce extreme poverty through a simple, universal payment — replacing fragmented, stigmatizing, means-tested relief that missed people between programs.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National statistical agencies' poverty and material-deprivation series and charitable-sector demand data (food banks, housing services) attest from outside the beneficiary set that subsistence insecurity persists. Employer associations notably do not attest the founding problem — their testimony concerns labor-cost flexibility, not poverty."
+  },
+  "gain_flow": "low_wage_sector_employers",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "An unconditional income transfer — paid to individuals regardless of work status — operates inside labor markets where employers set wages. This story instantiates ONE reading of the contested kernel income_support_conditionality: the wage-subsidy reading, which holds that because the transfer guarantees a subsistence top-up, employers can offer wages below what subsistence alone would force, and part of the public transfer is capitalized into lower wage offers. On this reading the arrangement coordinates genuine poverty relief (people outside the wage relation receive the grant at face value) while simultaneously routing part of labor's compensation to employers — a hybrid with identifiable coordinated parties and identifiable paying parties. The epsilon referent is the standing arrangement — the transfer as operated — assessed by this reading's own lights; the sibling readings (freedom_floor, dependency_trap) instantiate different constraints with different epsilon values and are linked, not averaged, here.",
+    "key_agents": [
+      "low_wage_sector_employers: Primary beneficiary (organized/arbitrage) — collects suppressed wage bills funded by the public transfer; lobbies to preserve calibration",
+      "low_wage_workers: Primary target (powerless/trapped) — bears the wage adjustment; the transfer arrives pre-netted-out of compensation",
+      "general_taxpayers: Secondary target (moderate/constrained) — funds what wage bills would otherwise carry",
+      "transfer_administration_agency: Agenda setter (institutional/constrained) — administers the machinery and frames outcomes as poverty reduction",
+      "non_participating_recipients: Incidental beneficiary (powerless/trapped) — receives the grant at face value, no wage interaction",
+      "sectoral_bargaining_unions: Excluded voice (organized/constrained) — bargaining-power alternatives kept out of design venues",
+      "fiscal_policy_economists: Analytical observer — produces the incidence estimates every camp cites and none accepts"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.70 because the reading's core mechanism — transfer dollars capitalized into lower wage offers — routes a large share of the public money to employers' margins while the official object of the spending is worker income. Suppression (0.62) is a raw structural property, unscaled by power or scope: the transfer is calibrated below subsistence, so declining a wage offer remains materially unavailable, and the arrangement defuses pressure for employer-funded subsistence. Theater (0.40): the anti-poverty delivery is real — non-participants receive the grant at face value — but a growing share of the program's public justification performs redistribution that the wage-incidence channel quietly reroutes. Accessibility_collapse (0.35) is low because alternatives stay visible and partly live: statutory wage floors, sectoral bargaining, and conditional programs all remain on the table even once the incidence dynamic is understood. Resistance (0.50) reflects sustained employer-lobby opposition to wage floors and union campaigns against the subsidy framing, with some jurisdictions raising minimum wages through the interval. The three metric series share one seven-point grid; trajectories are monotone (no oscillation, so no intermittent-reinforcement mechanism is claimed), and the endpoint values equal the base_properties scalars.",
+    "perspectival_gap": "Seats compute differently from the same structure. From the employer seat the transfer is a stable input that lowers the wage needed to staff a shift — coordination it did not build but readily prices against. From the worker seat the same payment arrives pre-hypothecated: the wage offer already nets it out, so the check feels like poverty relief while the compensation package stays flat. The administration seat experiences the arrangement as delivery logistics and poverty statistics. Non-participating recipients experience the promise kept at face value. The engine computes these divergent per-seat classifications from power, exit, and role data; the divergence between the employer's and the worker's computed types is the perspectival fact this story exists to register. Coalition note: individually powerless workers sit adjacent to organized unions currently excluded from design venues; a successful organizing wave would convert trapped exit into constrained-or-mobile exit and bend the extractiveness series downward — the measurement record would show it before any reclassification.",
+    "directionality_logic": "Employers are declared beneficiaries with arbitrage-grade exit: the derivation places them near the beneficiary pole (low d), so effective extraction inverts toward subsidy for them. Workers are declared victims with trapped exit: near the full-target pole (high d), amplified. Taxpayers are victims with constrained exit: high d, moderately amplified, scaled by national scope. The administration agency sets and runs the arrangement — its seat reads as the coordination operator. Non-participating recipients are beneficiaries with trapped exit: subsidized, near-zero d. Excluded unions and analytical economists contribute no directional pull; the unions matter as the coalition that could restructure everyone else's exit options. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms already produce the correct relationships.",
+    "mandatrophy_analysis": "Authoring this as a hybrid prevents two mislabels. Reading the arrangement as pure coordination ignores the wage-incidence channel that routes part of the transfer to employers; reading it as pure extraction ignores the real floor delivered to non-participants and the genuine consumption-smoothing function. The founding problem — subsistence insecurity — is still live, so no resolved-mandatrophy declaration is made; what has accreted is a second function (externalizing labor-reproduction costs onto the tax base), and that accretion is tracked by the rising base_extractiveness series rather than by a mandate-death claim. The theater series rises in parallel: as the second function grows, more of the program's public presentation defends the first.",
+    "kernel_context": "Kernel: income_support_conditionality — the standing commitment to unconditional income support. This file instantiates the wage_subsidy_reading. Siblings: freedom_floor_reading (the transfer decommodifies labor power; workers gain refusal power; no employer capture) and dependency_trap_reading (the transfer erodes work incentives; dependency and skill atrophy accumulate). Relation choice: both edges are coexists_with — no reading's core premise logically eliminates another's within a single framework, because the dispute is over empirical magnitudes (incidence share, elasticities) and evaluative weight, not over logically incompatible premises; the readings remain simultaneously live positions held by different coalitions. The disagreement is located in the wage-incidence channel, and it is routed to the wage_incidence_share and capture_vs_incidence_framing omegas rather than folded into this constraint's classification."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "Which structural characterization of the unconditional-transfer arrangement is correct: employer-subsidy capture (this reading), decommodification (freedom_floor_reading), or incentive erosion (dependency_trap_reading)?",
+      "resolution_mechanism": "Comparative incidence and labor-supply evidence across transfer reforms; the readings predict different signs and magnitudes on wage adjustment and refusal behavior, so converging estimates select among them.",
+      "impact": "Resolution toward freedom_floor removes employers from the beneficiary set and drops epsilon sharply; resolution toward dependency_trap adds skill-atrophy dynamics and shifts the victim set toward long-term recipients; confirmation of this reading fixes employers as beneficiaries and workers as payers with the current type.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of the income_support_conditionality kernel; sibling readings would restructure the beneficiary/victim sets and the type."
+    },
+    {
+      "id": "wage_incidence_share",
+      "question": "What fraction of the marginal transfer dollar is captured by employers through downward wage adjustment rather than retained by workers?",
+      "resolution_mechanism": "Natural experiments — regional or temporal transfer expansions matched to wage-panel data; monopsony-model estimates of pass-through from outside options to offered wages.",
+      "impact": "Capture below roughly 0.2 collapses this reading toward the freedom_floor constraint; capture above roughly 0.5 pushes the arrangement toward pure extraction with employers as the sole receipt seat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of the employer-capture channel that defines this reading."
+    },
+    {
+      "id": "subsistence_calibration_threshold",
+      "question": "Is the transfer calibrated above or below the subsistence threshold at which refusing a wage offer becomes materially possible?",
+      "resolution_mechanism": "Compare transfer levels against local subsistence baskets and housing costs; observe refusal and search-duration behavior among recipients at different transfer levels.",
+      "impact": "Below the threshold, labor-force attachment stays mandatory and the capture regime holds; above it, the arrangement migrates toward the decommodification structure the freedom_floor reading describes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the transfer's level leaves refusal power real or nominal."
+    },
+    {
+      "id": "capture_vs_incidence_framing",
+      "question": "Is 'employer capture' the correct frame, or is the wage adjustment ordinary tax incidence — statutory recipient differs from economic bearer, with no agent capturing anything?",
+      "resolution_mechanism": "Conceptual analysis against a specified counterfactual: if the counterfactual is 'workers would otherwise command the transfer as wage premium,' capture language is apt; if the counterfactual is 'no transfer at all,' the adjustment is standard equilibrium incidence.",
+      "impact": "Under the incidence framing, epsilon drops toward coordination-cost levels and the constraint reads as rope-like; under the capture framing, the authored epsilon stands. The framing choice changes classification without changing any measured quantity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Framing under-determination: capture versus neutral incidence accounts of the same wage adjustment."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_conditionality__freedom_floor_reading",
+      "income_support_conditionality__dependency_trap_reading",
+      "minimum_wage_legislation"
+    ],
+    "dual_formulation_note": "The colloquial label 'unconditional income support' covers structurally distinct claims yielding different epsilon values: whether the transfer decommodifies labor (freedom_floor_reading), erodes work incentives (dependency_trap_reading), or is capitalized into suppressed wages (this file). Per the epsilon-invariance principle these are separate constraints — separate epsilon, beneficiary/victim structure, and type — linked as one kernel family. This reading sits alongside its siblings citing the same empirical record; the wage-incidence channel is the element on which the family members diverge, and minimum_wage_legislation is coupled because wage floors and transfer calibration jointly determine the capture margin."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transfer_incidence_captured_by_employers",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "public_transfer_externalizes_labor_reproduction_cost",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "unconditional_transfer_low_wage_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_incidence_evidence",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

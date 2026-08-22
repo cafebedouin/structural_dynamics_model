@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__deterrence_instrument",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "04f4c066-1f4e-4610-9eed-44313fab9247"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.7,
+    "theater_ratio": 0.46,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Capital Punishment as Conditional Deterrence Instrument",
+    "topic_domain": "criminal justice/political philosophy/constitutional law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "future_potential_murder_victims",
+      "capital_jurisdiction_state_authorities"
+    ],
+    "victims": [
+      "condemned_capital_defendants",
+      "wrongfully_convicted_capital_defendants",
+      "families_of_the_condemned"
+    ],
+    "vindicated_propositions": [
+      "marginal_deterrence_hypothesis",
+      "rational_actor_deterrence_model"
+    ]
+  },
+  "interval": {
+    "start": 1976,
+    "end": 2024
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.79,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.81,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2024,
+      "value": 0.7,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "marginal_deterrence_efficacy",
+      "question": "Does capital punishment actually prevent homicides at the margin relative to life imprisonment without parole — the empirical premise on which this reading's entire justification rests?",
+      "resolution_mechanism": "Panel-grade synthesis of natural experiments (execution moratoria, highly publicized botched executions, matched state-pair comparisons) meeting the methodological standards the 2012 National Research Council committee specified; randomized designs are unavailable, so identification turns on discontinuity and interrupted-time-series designs.",
+      "impact": "A robust null dissolves the coordination half of the arrangement's hybrid structure and leaves pure extraction on the condemned; a robust positive effect confirms genuine coordination and makes the 'iff' condition satisfiable as stated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the deterrence premise of the conditional justification holds."
+    },
+    {
+      "id": "acceptable_cost_threshold_indeterminacy",
+      "question": "What quantity of wrongful executions, fiscal premium, and condemned-family harm does 'acceptable cost' permit, and who is entitled to set that threshold — the reading's second condition is a value judgment it cannot settle internally?",
+      "resolution_mechanism": "No empirical resolution is available; resolution would require an explicit political specification of the cost ceiling (for example, a statutory innocent-life tradeoff ratio), which no retentionist jurisdiction has enacted.",
+      "impact": "If no threshold can be specified, the 'iff' condition is unfalsifiable as applied and the justification reduces to assertion; a specified threshold converts the reading into a computable and auditable tradeoff.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The cost side of the conditional justification is normatively underdetermined."
+    },
+    {
+      "id": "wrongful_conviction_irreducible_floor",
+      "question": "What fraction of death sentences are wrongful, and is that fraction reducible below any level compatible with continued use?",
+      "resolution_mechanism": "Cumulative death-row exoneration rates adjusted for detection probability as DNA testing and prosecutor-led sentence reviews expand; comparison of error rates across capital and otherwise-comparable non-capital homicide prosecutions.",
+      "impact": "Sets the floor on innocent extraction inside the cost term; an irreducible positive floor means the acceptable-cost clause must openly price innocent executions, which the reading currently avoids stating.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Irreducible wrongful-execution rate bearing on the cost condition."
+    },
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is the deterrence_instrument reading of the state_killing_authority kernel — would the retributive_desert or categorical_abolition readings of the same kernel change the beneficiary/victim structure and the reading-indexed epsilon, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Conceptual: compare the three sibling stories' structural declarations — retributive_desert seats the guilty murderer as the proper object of the arrangement with no future-victim beneficiary; categorical_abolition seats every person as protected and the state as rights-violator; the disagreement is located in the foundational axiom (contingent efficacy versus proportional desert versus categorical bar).",
+      "impact": "Switching readings changes which seats count as beneficiaries (future potential victims enter the set only under this reading), changes the reading-indexed epsilon over the fixed referent, and activates or deactivates the foreclosure relation this reading holds toward categorical_abolition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one kernel, three readings, disagreement located in the foundational axiom."
+    },
+    {
+      "id": "theater_drift_attribution",
+      "question": "Is the rising theater ratio Goodhart drift (signaling and ritual substituting for a deterrence function that was never demonstrated) or adaptive maintenance under supply shock (drug scarcities and secrecy laws forcing improvisation that merely looks theatrical)?",
+      "resolution_mechanism": "Compare ceremonial-intensity indicators across jurisdictions with and without execution-drug supply disruption; if ritual thickening proceeds uniformly regardless of supply conditions, the drift is functional atrophy rather than logistical adaptation.",
+      "impact": "Goodhart attribution supports piton-drift monitoring (function replaced by performance); supply-shock attribution keeps the function nominally intact and locates degradation in enforcement logistics instead.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Attribution of the rising performative share of the arrangement's activity."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "condemned_capital_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Sentenced to death after trial and direct appeal. Every remaining avenue — post-conviction review, clemency petition, commutation — runs through the same courts and executive offices that imposed the sentence, and none can be initiated from outside the system holding them. Execution arrives years or decades after sentencing; their consent, cooperation, or account of their own case plays no role in whether the practice continues."
+    },
+    {
+      "name": "wrongfully_convicted_capital_defendants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People sentenced to death for killings they did not commit, documented by DNA testing, recanted testimony, and investigative journalism. They bear the practice's full severity without the culpability premise that nominally selects its subjects; some are released after decades, others posthumously. Their route out runs through the same appellate machinery that failed them, staffed by institutions with reputations invested in their guilt."
+    },
+    {
+      "name": "families_of_the_condemned",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Parents, children, and spouses of the sentenced. They lose a family member twice — to the decades of death-row waiting and then to the execution itself — while carrying the stigma of association. They cannot exit the relationship and hold no standing in the sentencing or clemency process beyond that of petitioner."
+    },
+    {
+      "name": "future_potential_murder_victims",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The class of people who would be killed by future murderers if the threatened sanction changes no one's behavior. They never appear as identifiable individuals, cannot attest to any life actually saved, and collect only if the preventive premise holds. Their protection is the return the arrangement promises; their silence is structural, since the counterfactual in which they were victims never occurs."
+    },
+    {
+      "name": "survivors_of_homicide_victims",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Family members of people already murdered. Many campaign for the practice's retention and expansion, testify at hearings, and witness executions, collecting a sense that the killing is answered and that others are protected. Community expectation inside bereaved networks binds most to support; a minority break ranks and organize against it, at relational cost."
+    },
+    {
+      "name": "taxpayers_in_retentionist_jurisdictions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the premium the practice carries over its nearest substitute: costlier trials, longer and more numerous appeals, specialized death-row housing, and execution litigation. The premium is documented in state fiscal studies; the promised return — prevented killings — is not observable in any taxpayer's experience. Their lever is the ballot box, exercised rarely and at long intervals."
+    },
+    {
+      "name": "capital_jurisdiction_state_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Legislatures define capital crimes and fund the apparatus; courts impose sentences and review them; corrections departments house the condemned and carry out executions. Officials campaign on the practice, prosecutors build careers on capital cases, and each completed execution reaffirms the claim to ultimate penal authority. Individual agencies cannot stand down unilaterally; abolition happens only when legislatures accept the electoral risk, which in the remaining jurisdictions no governing coalition has."
+    },
+    {
+      "name": "criminological_research_bodies",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Statistical agencies, academic criminologists, and review panels that evaluate whether executions prevent homicides. They publish findings, testify, and are cited selectively by both sides; their conclusions bind no one and their funding does not depend on the answer."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Addresses the collective problem of protecting members from intentional homicide by attaching the state's maximum credible sanction to murder, aiming to raise the expected price of killing above what lesser sanctions achieve and to concentrate societal commitment behind a single calibrated penalty.",
+    "transfer_function": "Moves the condemned person's life, and their family's companionship, to the state's penal objective; moves a documented fiscal premium from taxpayers to the legal apparatus; moves claimed risk reduction to the general population; and moves legitimacy and electoral capital to the officials who maintain the arrangement.",
+    "absent_voices": "The beneficiary class itself is absent by construction: future murder victims whose lives deterrence would save cannot speak, and no one can attest firsthand to being deterred or saved — the arrangement's entire return is counterfactual. The wrongfully executed are permanently silent. The condemned's own account of their case is structurally discounted, since their individual culpability is irrelevant to whether executing them changes third-party behavior. Every voice that could confirm the premise from inside is gone; only statistical proxies remain.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Death rows would be resentenced to the next-highest sanction within months; capital statutes, specialized sentencing hearings, the appellate ladder's capital track, clemency machinery, and execution protocols would be dismantled or repurposed; prosecutor charging strategy and defense-resource allocation would reorganize; the deterrence-research program would lose its object; and the political coalitions organized around the penalty would dissolve or redirect.",
+    "founding_problem": "Once Enlightenment scrutiny and rights-conscious constitutionalism stripped execution of self-evident legitimacy, retentionist legal orders needed a secular, measurable warrant for the state to kill; this reading was constructed to supply one — re-grounding the practice in prevented homicides rather than desert, divine sanction, or sovereign prerogative.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the National Research Council's 2012 committee on deterrence and the death penalty concluded that the existing studies are not informative about whether the practice deters — an external attestation that the founding problem's solution remains unestablished; Beccaria's 1764 engagement with the same efficacy question, from outside any benefiting party, concluded that perpetual imprisonment deters at least as strongly at lower cost; successive state abolition commissions reached parallel findings. Retentionist legislatures attest the problem is live; no source outside the benefiting parties attests that it is solved."
+  },
+  "gain_flow": "capital_jurisdiction_state_authorities",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__retributive_desert",
+      "state_killing_authority__categorical_abolition"
+    ],
+    "dual_formulation_note": "The colloquial label 'capital punishment' decomposes into three structurally distinct constraints sharing one kernel (state_killing_authority): this deterrence_instrument reading (conditional, efficacy-grounded; future potential victims as beneficiaries, the condemned as instrumental cost), the retributive_desert reading (unconditional, desert-grounded; the guilty murderer as the proper object, no future-victim beneficiary), and the categorical_abolition reading (unconditional prohibition; every person protected, the state as rights-violator). Each sibling gets its own reading-indexed epsilon over the same referent — the standing execution regime — because epsilon is a property of the reading while the referent is fixed. This reading holds a foreclosure edge toward categorical_abolition (conditional permissibility and categorical impermissibility cannot coexist in one framework) and a coexistence edge toward retributive_desert (conjunctive hybrid positions are coherent). Historically the retributive reading supplied the practice's legitimacy; this reading now supplies its modern defense, so each pressures the other's operating environment."
+  },
+  "commentary": {
+    "narrative_context": "A retentionist jurisdiction maintains the authority to execute people convicted of capital murder, and this story authors that arrangement as the deterrence_instrument reading of the state-killing kernel: the practice is warranted if and only if it prevents future murders at acceptable cost. Under this reading the beneficiary structure is defined by the conditional itself — future potential murder victims are the class whose lives are the claimed return, the condemned person is the instrumental cost paid to produce that return, and the state's authority is legitimate exactly insofar as the efficacy premise holds. The arrangement requires continuous enforcement machinery: capital statutes, specialized sentencing procedures, decades of appellate review, clemency processes, and execution infrastructure. Family note (epsilon-invariance): this is one of three sibling stories decomposing the colloquial label 'capital punishment'; the siblings — retributive_desert and categorical_abolition — instantiate different constraints over the same kernel, with different beneficiary/victim sets and different reading-indexed epsilon values over the same referent (the standing execution regime). This file links both siblings via network.affects_constraints.\n\nKEY AGENTS (by structural relationship):\n- condemned_capital_defendants: Primary target (powerless/trapped) — bears the arrangement's total cost\n- wrongfully_convicted_capital_defendants: Primary target, innocent subclass (powerless/trapped) — bears the full cost without the culpability premise\n- families_of_the_condemned: Collateral target (powerless/trapped) — lose kin to the process\n- future_potential_murder_victims: Primary beneficiary (powerless/trapped-to-vulnerability) — the claimed return; counterfactual and mute\n- survivors_of_homicide_victims: Incidental beneficiary (organized/constrained) — collect satisfaction and believed protection\n- taxpayers_in_retentionist_jurisdictions: Diffuse cost-bearer (moderate/constrained) — fund the fiscal premium\n- capital_jurisdiction_state_authorities: Agenda setter (institutional/constrained) — administer the arrangement and collect its legitimacy yield\n- criminological_research_bodies: Analytical observer (analytical/analytical) — evaluate the efficacy premise",
+    "logic_rationale": "Extraction is authored high (0.82) because the arrangement's per-application cost is total — the condemned person's life — and the documented wrongful-execution subclass means the cost demonstrably includes people selected by error rather than culpability; lengthening death-row residence draws the cost out over decades. Suppression (0.70) is a raw structural property, unscaled by power or scope: the condemned are physically and legally trapped, every exit route runs through the institutions imposing the sentence, and in retentionist cores the political space for the nearest substitute (life without parole) is actively narrowed by tough-on-crime enforcement politics. Theater (0.46, rising through the series) reflects the growing ceremonial share: witness-limited executions, clemency rituals that almost never commute, and appellate ceremony — the signaling function the deterrence premise needs has thinned even as ritual thickened. Accessibility collapse is LOW (0.30): life imprisonment without parole is a fully workable substitute that already absorbs the function in half the country, so understanding the arrangement does not foreclose alternatives. Resistance is HIGH (0.78): sustained abolition organizing, exoneree-led coalitions, victims'-family opposition networks, European supply pressure on execution drugs, and repeated legislative repeal. Coalition note: the condemned cannot coalition (isolated by design), but families and exonerees did — that coalition is the principal resistance channel. The suppression series dips at 2005 (the moratorium wave) then hardens past its 1995 peak (the drug-supply crisis answered with secrecy statutes and improvised protocols) — enforcement-capacity change is the dynamic the series tracks. Identity-lock operates on two seats: survivor advocacy fuses with grief identity, and the bureaucratic caretakers of the apparatus fuse with its institutional identity; breaking either frame would shift their computed position substantially.",
+    "perspectival_gap": "Four seats inhabit the same statute as four different arrangements. From the condemned seat the practice is total uncompensated cost with zero exit. From the future-victim seat it is pure protection — but a protection no member of that class can ever verify or attest, which makes the seat's subsidy wholly conditional on an empirical premise the seat cannot check. From the state-authority seat it is a coordination instrument it administers and a recurring legitimacy yield. From the taxpayer seat it is a documented fiscal premium purchased against an unobservable return. The engine computes these divergent per-seat classifications from the structural data; the divergence, not any single seat's verdict, is the finding.",
+    "directionality_logic": "Declarations map to directionality as follows. Condemned and wrongfully convicted defendants are declared victims with trapped exit — derivation places them near the full-target end, with trapping amplifying effective extraction to its ceiling. Families of the condemned are declared victims whose trap is relational rather than custodial — high target-side d. Taxpayers bear pure cost with no verifiable benefit stream — moderately high d. Future potential murder victims are declared beneficiaries — derivation places them near the beneficiary end; their trapped exit encodes vulnerability to murder, not extraction, and the beneficiary declaration dominates. Survivors are incidental beneficiaries — low-to-moderate d. State authorities administer the arrangement and collect its legitimacy yield — low d. No directionality overrides are authored: the derivation chain produces the correct structure from the declarations, and the one genuinely ambiguous seat (future victims, trapped-and-benefiting) is handled by declaration priority rather than an override. Receipt note: the arrangement's yields — penal authority, electoral capital, institutional budgets — demonstrably accrue to the state-authority seat, which is why gain_flow names it; fixing_cost is authored 'prohibitive' because in the residual retentionist core the political cost of repeal exceeds any governing coalition's appetite, as the frozen jurisdictional map of the last decade attests.",
+    "mandatrophy_analysis": "Authoring tangled_rope blocks two symmetrical mislabels. Reading the arrangement as pure extraction (the abolitionist totalization) erases the genuine coordination aim the reading is built on — homicide prevention is a real collective-action problem, and the arrangement exists to address it by pricing murder at the state's maximum credible sanction. Reading it as pure coordination (the retentionist totalization) erases the total, asymmetric cost the same structure imposes on the condemned and their families. The hybrid is the honest shape: coordination function and extraction ride one apparatus. On obsolescence: the founding problem — a secular, measurable warrant for state killing — is contested rather than dead, so no zombie flag fires; but the combination of contested founding status, rising theater, and an efficacy premise left undemonstrated by the strongest available external review is the exact precursor profile for drift into performance-maintained persistence. The temporal series is the watch item: if theater crosses 0.5 while the efficacy omega resolves null, the arrangement is coasting on inherited authority.",
+    "kernel_context": "Kernel: state_killing_authority — the persisting commitment that the state may intentionally kill convicted persons as punishment. This file instantiates the deterrence_instrument reading: execution is justified if and only if it prevents future murders at acceptable cost. Sibling readings, authored as separate constraints: retributive_desert (death owed as proportional desert) and categorical_abolition (state killing inherently impermissible). This reading's structural signature: future potential victims enter the beneficiary set, the condemned person is an instrumental cost, and authority is grounded in demonstrated crime-prevention efficacy. Structurally, this reading forecloses categorical_abolition (conditional permissibility contradicts categorical impermissibility in any single framework) and coexists with retributive_desert (conjunctive hybrid positions are coherent)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "efficacy_conditioned_execution_warrant",
+    "drift_state": {
+      "moment": "post_nrc_2012_synthesis",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_desert",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_abolition",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "execution_justified_solely_by_marginal_deterrence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "identified_condemned_life_tradeable_against_statistical_lives_saved",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

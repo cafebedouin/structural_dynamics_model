@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_dominant",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "evd_energy_risk",
+    "story_uid": "ab1cc76b-eb7d-4625-88ed-8680ada6f3be"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.73,
+    "theater_ratio": 0.34,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Expected-Value-Dominant Acceptable-Risk Standard for Energy Pathways",
+    "topic_domain": "economic/political/decision-theoretic",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "downwind_urban_populations",
+      "low_carbon_energy_producers",
+      "cost_benefit_analysis_professionals",
+      "energy_consumers"
+    ],
+    "victims": [
+      "coal_mining_communities",
+      "fossil_fuel_workforce",
+      "nuclear_siting_neighbors"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.73
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "risk_regulatory_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Publish the mortality-per-unit-energy comparisons, set the numerical thresholds that determine which generation pathways may receive permits and finance, and defend the methodology in court when challenged. Their statutory mandates, guidance documents, and judicial deference are all built around the expected-harm accounting; adopting a different decision rule would require legislative redefinition of their authority."
+    },
+    {
+      "name": "cost_benefit_analysis_professionals",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Economists, risk analysts, and consultants whose training, career ladders, publication venues, and consulting markets are constituted by the expected-harm framework. They staff the agencies, peer-review the analyses, and testify in proceedings. Leaving the framework means leaving the profession they were formed in."
+    },
+    {
+      "name": "low_carbon_energy_producers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Nuclear operators and renewable developers whose pathways score lowest on the mortality metric. As fossil generation is ruled out or priced out, permitting priority, investment flows, and subsidy justification move to them. They operate across jurisdictions and can shift capital to wherever the standard is applied most favorably."
+    },
+    {
+      "name": "downwind_urban_populations",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Populations whose air-pollution mortality risk falls as high-emission generation retires. Their gains are large in aggregate but diffuse and unorganized — no seat represents them as such, and they experience the benefit simply as ordinary public health rather than as the output of a decision rule."
+    },
+    {
+      "name": "energy_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Households and industry receiving electricity from the optimized generation mix. They gain from reliability and long-run health improvements but absorb transition costs through rates, taxes, and stranded-asset recovery charges. Exiting the grid is not a practical option for any of them."
+    },
+    {
+      "name": "coal_mining_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Communities whose occupational and environmental mortality is entered into the aggregate calculation at full weight, yet who receive no individual compensation for the deaths the number records. As the pathway they depend on scores worst and is retired, local economies collapse around them; company-town geography, single-industry skills, and depressed property values make relocation largely theoretical."
+    },
+    {
+      "name": "fossil_fuel_workforce",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Miners, plant operators, and oil and gas workers whose livelihoods are phased out as the metric-driven retirement of their sector proceeds. They retain unions and political voice, and have won partial retraining funds, but the organizing principle of the decision rule offers them no seat — they appear in it only as a mortality numerator."
+    },
+    {
+      "name": "nuclear_siting_neighbors",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "People living near reactors who carry a low-probability, high-consequence accident exposure that the expected-harm arithmetic discounts to near zero. They cannot insure against the tail outcome at actuarial terms, evacuation is physically difficult, and property values bind them to the location. The decision rule books their exposure as negligible; they experience it as an uncompensated bet placed on their behalf."
+    },
+    {
+      "name": "precautionary_principle_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Public-interest groups, some academics, and affected-community organizers who argue that low-probability catastrophic outcomes and irreversible harms should dominate the ranking regardless of expected value. They have no formal standing inside the analytical dockets where pathway acceptability is decided; their objections enter only as comments appended to completed analyses."
+    },
+    {
+      "name": "independent_risk_ethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Philosophers and decision theorists outside the regulatory process who examine whether aggregating harms without distributional weights is a defensible way to impose risk on identifiable people. They publish critiques and alternative frameworks but hold no enforcement seat and collect nothing from the arrangement's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single commensurable currency — expected mortality per unit of energy delivered — for comparing risks that are otherwise incommensurable (particulate disease, mining accidents, radiation exposure), enabling regulators, courts, and investors to rank pathways and allocate finite safety resources without ad hoc judgment in each case.",
+    "transfer_function": "Moves regulatory permission, investment capital, and market share away from high-mortality-per-TWh pathways (coal, then oil and gas) toward low-mortality pathways (nuclear, renewables); simultaneously concentrates the residual burdens — occupational death, community collapse, discounted accident exposure — on mining communities, fossil workers, and reactor neighbors, while the corresponding health gains are booked diffusely across whole populations.",
+    "absent_voices": "Precautionary and tail-risk advocates have no procedural seat in the analytical dockets; affected mining communities appear only as aggregated data points, never as parties; reactor neighbors are represented by a probability estimate rather than by themselves. Unanimity inside the framework arises partly because the seats that would object were never admitted to the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the expected-harm standard vanished overnight, every pending permit, subsidy justification, and comparative risk assessment would lose its deciding criterion; courts would have no deference doctrine to apply; capital allocated by mortality rankings would reprice; and the contest between tail-priority and flexibility-preserving decision rules would move from the margins into the empty center of energy regulation.",
+    "founding_problem": "Post-war energy expansion confronted regulators with risks that could not be compared on any common scale — how many coal-miner deaths equal one reactor accident? how should a hypothetical meltdown be weighed against documented respiratory mortality? The framework was built to answer this: render all pathway harms commensurable in expected-mortality terms so that acceptable risk could be computed rather than negotiated.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "National Academies reviews of regulatory risk assessment, appellate court opinions articulating deference to quantified risk analysis, and decision theorists writing from outside the benefiting professions all attest that the comparison problem is real and unresolved. Fossil-sector economists likewise attest the problem is live while disputing the metric — corroboration of the problem does not depend on the framework's own beneficiaries."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_selection",
+      "question": "Which reading of the acceptable-risk kernel should govern energy risk acceptance — aggregate expected-value minimization (this reading), catastrophic-tail priority, or option-value preservation?",
+      "resolution_mechanism": "Statutory amendment of agency mandates, shifts in judicial deference doctrine, or treaty-level adoption of an alternative decision rule; each is an institutional selection point at which the kernel's governing reading is chosen.",
+      "impact": "Under catastrophic_tail_dominant, nuclear siting neighbors move from discounted to full-weight victims and fossil suppression relaxes; under option_value_preserving, the single-metric structure dissolves entirely and pathway diversity becomes the objective. This story's victim set, suppression direction, and classification are all conditional on the expected_value_dominant reading holding.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this constraint is one reading of the acceptable_risk_energy kernel; sibling readings instantiate different constraints with different victim sets."
+    },
+    {
+      "id": "distributional_weight_omission",
+      "question": "Does aggregating harms without distributional weights systematically misallocate acceptable risk onto geographically concentrated, low-power populations?",
+      "resolution_mechanism": "Distributional cost-benefit pilots and compensation experiments: run the same pathway decisions with explicit equity weights and compare which communities bear residual burden.",
+      "impact": "If weighted analysis reverses pathway rankings or reveals uncompensated concentration, measured extraction rises materially and the arrangement drifts toward the snare end of the hybrid range; if rankings are robust to weighting, the coordination reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the metric's neutrality conceals regressive risk imposition."
+    },
+    {
+      "id": "tail_probability_underestimation",
+      "question": "Are the accident probabilities used to discount catastrophic nuclear outcomes accurate, or systematically underestimated by fat-tailed failure modes?",
+      "resolution_mechanism": "Validation of probabilistic risk assessments against operational history — Fukushima demonstrated that station-blackout scenarios rated negligible occurred; systematic comparison of PRA predictions with accumulated reactor-years.",
+      "impact": "If tails are fatter than modeled, the discounting that keeps nuclear siting neighbors near zero in the ledger is an artifact, their true exposure rises, and the reading's central trade-off (full-weight fossil deaths versus discounted nuclear deaths) is mispriced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of the probability discount applied to catastrophic outcomes."
+    },
+    {
+      "id": "energy_poverty_hidden_victim_class",
+      "question": "Does suppressing the fossil pathway raise energy prices enough to increase mortality among energy-poor households, creating a victim class the mortality-per-TWh ledger does not record?",
+      "resolution_mechanism": "Ex-post studies of coal-retirement regions combining price trajectories, household energy expenditure shares, and excess winter mortality; natural experiments from jurisdictions that retired fossil capacity at different speeds.",
+      "impact": "A confirmed energy-poverty mortality channel adds a diffuse victim class invisible to the metric itself, raising effective extraction and complicating the claim that the reading minimizes aggregate harm on its own terms.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the metric's own blind spot generates victims it cannot count."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the acceptable_risk_energy kernel: the expected_value_dominant reading, under which a generation pathway is acceptable when it minimizes aggregate expected harm, measured in deaths per terawatt-hour. Under this reading the fossil pathway's toll — air-pollution mortality and mining deaths — enters the ledger at full weight, while low-probability catastrophic outcomes such as reactor accidents are discounted by their estimated probabilities; the operational consequence is heavy suppression of the fossil pathway and strong comparative legitimation of nuclear and renewable pathways. The kernel itself is contested: catastrophic_tail_dominant and option_value_preserving are sibling readings that instantiate DIFFERENT constraints with different victim sets and different suppression directions, and they are authored as separate stories linked through the network. The claim/metric gap here is deliberate and independent: the constraint is CLAIMED as tangled_rope because it possesses both a genuine coordination function (commensuration of incommensurable risks) and asymmetric extraction (concentrated uncompensated burdens booked against diffuse gains), while the metrics are authored from the constraint's observed operation over five decades — the engine computes per-seat classifications from the structural data and measures any divergence.",
+    "key_agents": [
+      "risk_regulatory_agencies: agenda-setter (institutional/constrained) — administers the metric, sets thresholds, defends methodology in court",
+      "cost_benefit_analysis_professionals: primary beneficiary (organized/identity_locked) — careers and authority constituted by the framework",
+      "low_carbon_energy_producers: primary beneficiary (powerful/mobile) — receives redirected permission and capital as fossil scores worst",
+      "downwind_urban_populations: diffuse beneficiary (moderate/mobile) — health gains booked broadly, unorganized",
+      "coal_mining_communities: primary target (powerless/trapped) — deaths counted at full weight, compensation absent, exit locked",
+      "fossil_fuel_workforce: secondary target (organized/constrained) — livelihoods phased out by metric-driven retirement",
+      "nuclear_siting_neighbors: secondary target (moderate/constrained) — carries tail exposure the arithmetic discounts to near zero",
+      "precautionary_principle_advocates: excluded (organized/trapped) — holds the rival decision rule, no procedural seat",
+      "independent_risk_ethicists: analytical observer (analytical/analytical) — sees the full structure, collects nothing"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.52 at interval end): the framework delivers real coordination value, but its operation transfers concentrated, uncompensated burdens — recorded deaths without redress, collapsed local economies, discounted tail exposure — onto identifiable populations while the gains book diffusely. Suppression is high (0.73) and is authored as a raw structural property, unscaled by power or scope: once the metric ranks a pathway unacceptable, permits, finance, and insurance withdraw together, and the fossil pathway's persistence requires active defense against the standard itself. Theater ratio (0.34) tracks Goodhart drift — analyses increasingly produced to survive judicial review rather than to decide, with conclusions sometimes selected before the computation. Accessibility collapse is moderate (0.60): inside institutional arenas the expected-harm frame has largely foreclosed rivals (precautionary analysis appears only as appended comment), but the sibling readings remain live in legislation, scholarship, and public discourse, so alternatives are suppressed rather than extinguished. Resistance is substantial (0.65): fossil-sector lobbying, community litigation, and precautionary counter-scholarship contest the standard continuously. The temporal series run on one shared grid (t=0..50, six points, all three metrics authored at every point) so the engine samples a complete matrix; the trajectories show extraction accumulating and enforcement machinery hardening as the framework matured from a nuclear-debate instrument into the general grammar of energy risk.",
+    "perspectival_gap": "From the agenda-setter seat (regulatory agencies) the arrangement presents as rational allocation — a hard-won discipline replacing ad hoc fear with arithmetic. From the payer seats the same structure presents as imposed sacrifice: mining communities see their dead entered as data and their towns written off; reactor neighbors see their exposure priced at someone else's probability estimate. The professional seat experiences the framework as identity — competence, method, belonging. These are not disagreements about facts; they are structurally different positions in the same arrangement, and the engine computes the per-seat divergence from the declared power, exit, and role data rather than from this claim.",
+    "directionality_logic": "Beneficiary declarations drive low directionality: low_carbon_energy_producers (mobile exit, direct gain) sit nearest the subsidized end; cost_benefit_analysis_professionals collect professional authority and are identity_locked into the frame; downwind populations gain diffusely with real but partial mobility. Victim declarations drive high directionality: coal_mining_communities combine full-weight harm with trapped exit, placing them nearest the full-target end; fossil_fuel_workforce are constrained but organized; nuclear_siting_neighbors bear a harm the metric itself discounts, so their structural position is worse than their ledger entry suggests — trapped exit pushes their effective extraction up despite the nominal near-zero pricing. Energy_consumers sit near symmetric: genuine service received, transition costs paid through rates. No directionality overrides were needed; the beneficiary/victim declarations plus exit options reproduce the structural relationships.",
+    "mandatrophy_analysis": "The founding problem — rendering incommensurable risks commensurable — remains live: every new pathway (SMRs, hydrogen, storage fires) reintroduces the comparison problem, so status=live combined with disappearance_verdict=world_rearranges produces no zombie flag under the mismatch consumer. Mandatrophy protection runs in both directions here: reading the arrangement as pure coordination (rope) would erase the uncompensated concentration of burden that its aggregation licenses; reading it as pure extraction (snare) would erase the genuine commensuration function that makes any rational risk allocation possible at all. The tangled_rope claim preserves both halves. The piton test fails on the cost side: fixing is prohibitive (thousands of rules, precedents, and treaties rest on the metric), but unlike a piton there IS a concentrated capturer — the low-carbon production complex and the professional class both collect concretely — which places the arrangement firmly in hybrid territory rather than inertial decay.",
+    "kernel_context": "Kernel: acceptable_risk_energy — the question of what level and kind of risk energy production may impose. This file instantiates the expected_value_dominant reading: acceptable risk is whatever minimizes aggregate expected harm on a mortality-per-TWh ledger. Sibling readings, authored as separate constraints: catastrophic_tail_dominant (rank pathways by worst credible outcome; accept higher expected harm to avoid catastrophe — elevates reactor neighbors to full-weight victims, relaxes fossil suppression) and option_value_preserving (maintain multiple pathways under deep uncertainty; distrusts any single point-estimate ranking — dissolves the single-metric structure itself). The disagreement is located in the aggregation rule: whether probability-weighted summation, tail-severity ordering, or flexibility preservation is decisive. This reading is the institutionally entrenched one; the others survive at the margins of its dockets."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_dominant",
+      "acceptable_risk_energy__option_value_preserving"
+    ],
+    "dual_formulation_note": "Constraint family decomposition of the colloquial label 'acceptable risk in energy policy.' The label conflates three structurally distinct decision rules that share a kernel but differ in aggregation principle, victim sets, and suppression direction: expected_value_dominant (this story — full-weight fossil deaths, probability-discounted catastrophes, fossil pathway suppressed), catastrophic_tail_dominant (tail severity ordering — reactor neighbors elevated, fossil suppression relaxed), and option_value_preserving (pathway diversity under deep uncertainty — no single metric governs). Per the epsilon-invariance principle these are separate constraints with separate epsilons, not one constraint viewed from angles. This reading is the upstream member: its institutional entrenchment shapes the operating environment (docket standing, funding, judicial deference) in which the sibling readings are argued, which is why the edges run from this story to both siblings."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "aggregate_expected_harm_minimization",
+    "drift_state": {
+      "moment": "contemporary_deep_uncertainty_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "catastrophic_tail_dominant",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "option_value_preserving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_expected_harm_is_decisive_criterion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "mortality_per_twh_commensurability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "low_carbon_energy_producers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

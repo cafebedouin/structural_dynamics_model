@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "unconditional_income_support__universality_paradox_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uips_universality_paradox",
+    "story_uid": "8e999910-2f63-400d-a611-40df0e07b8ce"
+  },
+  "base_properties": {
+    "extractiveness": 0.36,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Unconditional Income Support as Cross-Ideological Trojan Horse (Universality Paradox Reading)",
+    "topic_domain": "political economy/social policy/welfare state theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "political_entrepreneurs",
+      "policy_designers"
+    ],
+    "victims": [
+      "targeted_program_recipients",
+      "independent_policy_evaluators"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.49
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates one reading — the universality-paradox reading — of the unconditional_income_support kernel. Would the freedom_floor or dependency_trap readings of the same policy vehicles assign different beneficiaries, victims, and extraction levels?",
+      "resolution_mechanism": "Author and compare the sibling stories directly: hold the referent fixed (the same standing vehicles as operated), vary only the reading, and diff the beneficiary/victim sets and epsilon values across the family.",
+      "impact": "If the freedom_floor reading governs, the victim set shrinks toward labor-market coercers and epsilon falls toward coordination cost; if the dependency_trap reading governs, taxpayers become primary victims and recipients flip toward beneficiary, raising epsilon. Classification of the same statute is reading-relative by construction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame position: one of three declared readings of the unconditional-income-support kernel."
+    },
+    {
+      "id": "fiscal_convergence_robustness",
+      "question": "Do distributional outcomes actually converge across implementation paths at equal budget, as the taxing-back literature holds, or do designs diverge materially for realistic populations and behavioral responses?",
+      "resolution_mechanism": "Budget-neutral microsimulation of negative income tax, universal payment with clawback, and expanded refundable credits on the same population and behavioral assumptions, with sensitivity analysis on labor-supply elasticities and take-up rates.",
+      "impact": "If outcomes diverge substantially, the reading's low-extraction premise fails — design choice redistributes materially, epsilon rises, and the vehicle looks more purely extractive; if convergence holds robustly, the visible design debate is confirmed as substantially performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Load-bearing empirical claim of this reading: cross-design fiscal equivalence."
+    },
+    {
+      "id": "strategic_vs_emergent_ambiguity",
+      "question": "Is the vehicle's ambiguity strategically engineered — drafters rejecting precise specification when it was available — or an emergent byproduct of ordinary coalition bargaining?",
+      "resolution_mechanism": "Process-trace the legislative history: locate moments where a precise specification was on the table and rejected, and map who benefited from each rejection.",
+      "impact": "Strategic ambiguity attributes the suppression of coherent evaluation to identifiable agenda setters and strengthens the active-enforcement reading; emergent ambiguity diffuses agency and softens the classification toward friction-bearing coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ambiguity that defines this reading is designed or accidental."
+    },
+    {
+      "id": "universality_cut_causation",
+      "question": "Does universality rhetoric actually cause retrenchment of targeted programs, or do targeted budgets decline for independent fiscal reasons that universality talk merely accompanies?",
+      "resolution_mechanism": "Cross-jurisdiction difference-in-differences on targeted-program budgets surrounding universal-payment adoptions, controlling for fiscal stress and partisan composition.",
+      "impact": "If causation holds, targeted_program_recipients are genuine victims and the asymmetric-extraction half of the structure stands; if not, the victim set narrows to evaluative harms and epsilon falls further toward the pure-transfer floor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the targeted-program harm is caused by the vehicle or merely coincident with it."
+    },
+    {
+      "id": "epistemic_harm_standing",
+      "question": "Can defeated evaluation and degraded ideological clarity ground victimhood for a seat, or is that harm too diffuse and preference-dependent to count structurally?",
+      "resolution_mechanism": "Normative-framework decision: adopt or reject epistemic standing in the classification's harm ontology, then re-derive the victim set from the ruling.",
+      "impact": "If epistemic harms count, independent_policy_evaluators remain victims and suppression includes the agenda-control mechanism; if not, victims reduce to targeted_program_recipients and measured extraction drops accordingly.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the reading's non-material victim (ideological clarity) maps to a countable seat."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "political_entrepreneurs",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Legislators, movement founders, and campaign operatives who carry the proposal across partisan lines. They market the same payment schedule to libertarian audiences as a replacement for bureaucratic welfare, to progressive audiences as a stigma-free floor, and to administrative audiences as a simplification — without committing to any one description. What flows to them: endorsements, donor networks, media ownership of the issue, and agenda control in coalition negotiations. Exit looks like pivoting to adjacent issues; their coalition assets are portable."
+    },
+    {
+      "name": "policy_designers",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Economists and technocratic staff in ministries, budget offices, and think tanks who draft the payment formulas and phase-out schedules. The same schedule can be described as a negative income tax, a demogrant with surtax, or a consolidated refundable credit, and they supply each description on request. What flows to them: advisory influence, publication and career capital, and continued relevance across administrations. They also draft the enabling legislation, so they share in setting the technical agenda. Exit looks like movement between governments, universities, and multilateral institutions."
+    },
+    {
+      "name": "universal_dividend_households",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Households across the income distribution who receive the periodic payment. Lower-income households keep most of it; higher-income households see most of it returned through taxation or reduced credits. The payment arrives without application, means testing, or stigma. What flows to them: cash and simplified dealings with the state. Exit is not meaningful — participation comes through ordinary residence and tax liability."
+    },
+    {
+      "name": "net_contributor_taxpayers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Households and firms above the clawback threshold whose taxes finance the net transfer. Under the convergence finding their net contribution is broadly similar whichever implementation path is chosen, so their material stake in the design debate is limited; their exposure runs to the aggregate tax level rather than to design detail. Exit options are the ordinary ones — relocation and tax planning — realistically available mainly at the top of this group."
+    },
+    {
+      "name": "targeted_program_recipients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Households relying on means-tested programs — disability support, housing vouchers, food assistance — calibrated to assessed need. When universal payments are adopted or proposed, consolidation arguments follow: overlapping targeted programs are folded in, capped, or cut on the grounds that the universal payment now covers the need. Because a flat payment rarely matches an individual household's assessed need, many of these households come out behind. Exit from the situation is limited by the same need that qualified them for the targeted programs."
+    },
+    {
+      "name": "independent_policy_evaluators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Budget offices, statistical agencies, and academic evaluators tasked with scoring who gains and loses. The vehicle's deliberately flexible description defeats stable scoring: each faction quotes the description that flatters its case, and evaluation output is absorbed into whichever narrative is running. Professional effort flows out; what flows back is diminished purchase — findings settle nothing because the object of evaluation keeps changing shape. Exit means leaving public-finance work altogether."
+    },
+    {
+      "name": "comparative_welfare_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic researchers comparing negative income tax experiments, dividend programs, refundable credit expansions, and pilots across jurisdictions. They document that distributional outcomes converge across implementation paths once tax-back schedules are held budget-neutral, and they publish the equivalence results the political debate routes around. They hold no stake in adoption and see the full structure from outside."
+    },
+    {
+      "name": "transparent_targeting_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Anti-poverty lawyers, caseworker associations, and scholars who insist any redistribution name its losers and who defend need-calibrated support. They would force the question the coalition survives by not asking — which design, who loses what — but they are structurally sidelined: their precision threatens every faction's preferred description, so they are consulted late or not at all."
+    },
+    {
+      "name": "minimal_state_purists",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Factional advocates who would accept a payment only as an explicit, dollar-for-dollar replacement for existing programs. They would expose that the vehicle's universal framing permits spending to grow rather than substitute, but their candor breaks the cross-ideological coalition, so they are kept at the edge of the negotiation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a coalition-formation problem: it lets mutually distrustful factions vote for the same fiscal instrument without first resolving their disagreement about what the instrument is for. Constructive ambiguity converts an unsolvable design dispute into a passable bill; the coordination achieved is agreement on the vehicle, not on its purpose.",
+    "transfer_function": "Materially, moves purchasing power from the broad tax base to the bottom of the income distribution through a flat payment with progressive clawback — an amount that varies little across rival implementation paths at equal budget. Institutionally, moves budget share from need-calibrated targeted programs toward the universal vehicle. Politically, moves agenda control and coalition credit to whoever frames the vehicle, and moves evaluative clarity away from everyone.",
+    "absent_voices": "Transparent-targeting advocates and minimal-state purists would each force the design question — who loses, what substitutes for what — and both are structurally sidelined because precision dissolves the coalition. Targeted-program recipients are present as statistics but not as negotiators. Future cohorts bearing the consolidated fiscal structure are absent entirely.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the vehicle vanished overnight, the coalition built on it dissolves: factions revert to incompatible pure proposals — dollar-for-dollar replacement, defended targeted expansion, pure demogrant — most fail, and the fiscal settlement that eventually emerges differs materially. Targeted-program budgets, clawback thresholds, and recipient benefit levels would all rearrange. The parties dispute which settlement is better, not whether the landscape changes.",
+    "founding_problem": "Mid-to-late twentieth century welfare states faced a legitimacy and design crisis: means-tested programs were stigmatized and fragmented, imposed high effective marginal tax rates that trapped recipients, and leaked through take-up gaps — while universal proposals were attacked as wasteful transfers to the non-needy. Reformers sought a single legible instrument that could command support across ideological lines where neither pure targeting nor pure universalism could pass alone.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Poverty researchers and administrative-burden studies outside the sponsoring coalitions continue to document stigma, take-up gaps, and benefit cliffs; recipient advocacy organizations attest the traps from lived experience; budget-office reports attest the fragmentation. None of these corroborating seats benefits from the vehicle's persistence — the corroboration establishes that the founding problems persist, not that the vehicle solves them."
+  },
+  "gain_flow": "political_entrepreneurs",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "unconditional_income_support__freedom_floor_reading",
+      "unconditional_income_support__dependency_trap_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per epsilon-invariance: the colloquial label 'unconditional income support / basic income' covers three structurally distinct claims — autonomy infrastructure (freedom_floor_reading), incentive distortion (dependency_trap_reading), and coalition-sustaining political ambiguity (this file). Each member authors its own epsilon, beneficiary/victim sets, and type over the same referent (the standing vehicles as operated). They are linked here because the upstream empirical result — taxing-back distributional equivalence — feeds this reading's central claim, and this reading's ambiguity critique in turn changes the legitimacy conditions under which the sibling readings are marketed. Orphaning any member would hide the reading-relativity of the classification."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "constructive_ambiguity_coalition_vehicle",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic_transfer_expansion",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_floor_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "implementation_paths_normatively_incompatible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "fiscal_convergence_renders_design_debate_performative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "ambiguity_is_load_bearing_not_incidental",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Unconditional income support — negative income taxes, universal dividends, refundable credits, pilot payments — attracts sponsors from incompatible ideological camps, and this story authors the reading on which that appeal is the point: the vehicle functions as a Trojan horse whose constructive ambiguity lets libertarians, progressives, and administrators each describe the same payment schedule as their own proposal. Taxing-back research finds distributional outcomes converge across implementation paths at equal budget, so the visible design war is substantially performative while the durable products are coalition credit for political entrepreneurs, rhetorical flexibility for policy designers, budget diversion away from need-calibrated targeted programs, and the defeat of stable evaluation. CONSTRAINT FAMILY: this is one of three readings of the kernel unconditional_income_support. The freedom_floor reading authors the same vehicles as autonomy infrastructure (lower epsilon, victims concentrated among labor-market coercers); the dependency_trap reading authors them as incentive-distorting subsidy (higher epsilon, taxpayers as victims, recipients flipped toward beneficiary). Epsilon differs across the family because each reading assesses the same referent — the standing vehicles as operated — by its own lights; this reading's lights emphasize political form over material flow, yielding low-but-nonzero epsilon. The referent is the standing arrangement, never an endorsed alternative: this reading is diagnostic rather than advocative. Claim and metrics are authored independently — the tangled_rope claim states what this reading takes the structure to be; the metrics describe observed operation.",
+    "key_agents": [
+      "political_entrepreneurs: primary beneficiary and agenda setter (organized/mobile) — collects coalition credit by marketing one schedule under incompatible descriptions",
+      "policy_designers: secondary beneficiary (institutional/mobile) — collects advisory influence and career capital by supplying each description on demand",
+      "targeted_program_recipients: primary target (powerless/trapped) — absorbs consolidation and cuts justified by universality talk; flat payments rarely match assessed need",
+      "independent_policy_evaluators: secondary target (moderate/constrained) — scoring is defeated by the vehicle's shifting description",
+      "universal_dividend_households: coordinated participant (organized/constrained) — receives the payment; net position similar across rival designs",
+      "net_contributor_taxpayers: funding seat (moderate/constrained) — finances the net transfer; material stake in design detail limited by convergence",
+      "comparative_welfare_researchers: analytical observer — documents the cross-design equivalence the debate routes around",
+      "transparent_targeting_advocates: excluded — would force the question of who loses; sidelined because precision dissolves the coalition",
+      "minimal_state_purists: excluded — would force the substitution question; kept at the edge of the negotiation"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.36) because the reading's own lights hold that material outcomes converge: at equal budget, rival designs deliver similar net transfers, so the extraction above coordination cost is political rather than fiscal — coalition rents, targeted-budget diversion, and epistemic defeat. Suppression (0.48) is authored as a raw structural property, unscaled by power or scope: the vehicle persists by keeping the design question off the table — procedural gatekeeping, framing capture of evaluation, sidelining of precision advocates — not by participant preference. Theater ratio (0.55) exceeds half because the observable activity (branding wars, pilot hype, duelling white papers) is predominantly framing rather than fiscal-content determination, though the transfer machinery itself is real. Accessibility collapse is low-moderate (0.40): understanding the convergence does not collapse the alternatives — paradoxically it preserves them, since no design dominates and choice among them becomes symbolic. Resistance (0.52) reflects active defense of targeted programs and purist factions on both flanks. The measurement series run on one shared grid (t=0..50) with all three metrics authored at every point; trajectories are monotonic — no oscillation is modeled, and the base_properties values describe the interval-end state. Coalition note: the principal threat to the vehicle's stability is recipient-side coalition formation, which the flat payment's breadth partially pre-empts by giving every income stratum a stake in continuation.",
+    "perspectival_gap": "Seats should compute differently. From the entrepreneur seat the vehicle is a coordination achievement they built and can exit at will — coordination-forward. From the targeted-recipient seat the same structure operates as enforced loss: trapped, need-calibrated benefits traded for a flat payment that under-covers them — extraction-forward. The evaluator seat experiences epistemic extraction: effort in, no settling power out. The researcher seat sees near-equivalent fiscal mathematics — close to neutral structure. The engine derives these divergences from the declared power, exit, and role data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for political_entrepreneurs and policy_designers — the vehicle subsidizes their careers, and their mobile exits dampen any residual cost they bear. universal_dividend_households derive low-to-mid directionality: genuine receipt, diffuse financing. net_contributor_taxpayers derive mid-to-high directionality: they fund the net transfer with constrained exit, though convergence caps their design-specific exposure. targeted_program_recipients derive the highest directionality: trapped exit plus lost need-calibrated benefits. independent_policy_evaluators derive high directionality through the payer declaration with constrained exit — their cost is professional efficacy. No directionality overrides are authored: the derivation chain from declarations, power, and exit produces the correct relationships without correction.",
+    "mandatrophy_analysis": "The founding mandate — solving stigma, benefit cliffs, and fragmentation with one legible instrument — remains live, but the vehicle's operative function has shifted toward coalition maintenance, which the founding problem's persistence corroborates from outside the beneficiary set. The tangled_rope classification blocks two mislabels: a pure-snare reading would miss the real coordination (transfers flow, and stigma-free receipt is real for the universal component); a pure-rope reading would miss the asymmetric extraction (targeted budgets divert, evaluation is defeated, and the gains concentrate on seats with mobile exits). Mandatrophy is not declared resolved because the machine still works — the risk it carries is forward drift toward inertial performance if fiscal convergence ever renders the transfers themselves negligible and only the framing remains; the theater_ratio series is the monitor for that transition.",
+    "kernel_context": "Kernel: unconditional_income_support — the persisting commitment that the state provide income support detached, fully or largely, from work requirements or means tests. This file instantiates the universality_paradox_reading: the vehicles are politically ambiguous Trojan horses whose cross-ideological appeal is load-bearing and whose implementation paths converge fiscally. Siblings: freedom_floor_reading (vehicles as autonomy-enabling floors that remove labor-market coercion) and dependency_trap_reading (vehicles as incentive-distorting subsidies rewarding idleness and redistributing upward). The disagreement is located in what the vehicle fundamentally IS: autonomy infrastructure, distorted incentives, or coalition-sustaining ambiguity. This reading's edges to both siblings are influences rather than coexists_with or forecloses: adopting the ambiguity critique does not logically eliminate either sibling's core premise, but it changes their operating environment — freedom_floor advocates can no longer market the vehicle as clean autonomy-enablement without answering the ambiguity charge, and dependency_trap empirical claims get absorbed into whichever narrative is running. Neither sibling is foreclosed within any single party's framework; both remain live positions that this reading reframes."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

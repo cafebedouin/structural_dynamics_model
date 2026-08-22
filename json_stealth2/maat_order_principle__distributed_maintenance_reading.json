@@ -1,0 +1,361 @@
+{
+  "header": {
+    "constraint_id": "maat_order_principle__distributed_maintenance_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "maat_distributed",
+    "story_uid": "f8f2481c-95ef-4b84-8010-ffd2a62f16df"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.3,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.28,
+    "claimed_type": "rope",
+    "human_readable": "Distributed Maintenance of Ma'at (Station-Conduct Reading)",
+    "topic_domain": "ancient_history/political_philosophy/religious_studies",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "pharaoh",
+      "temple_priesthood",
+      "scribal_officials",
+      "peasant_farmers",
+      "artisan_workmen"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "pharaoh",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Performs, or formally delegates, the daily temple rites that present order to the gods; issues the festival calendar, endows temples, and hears cases at festival tribunals. The tax surplus that feeds the whole apparatus is collected in his name. In this telling he is the most visible keeper of the order, not its sole owner: a failed inundation or a corrupt judge counts as his personal lapse, and the instruction literature imagines a king being corrected. Leaving the office is not a step he can take; the office is what he is."
+    },
+    {
+      "name": "temple_priesthood",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Keeps the daily offering schedule, stages festival processions, consults oracles, and supplies the lector-priests who sit in courts. Collects tithes, first-fruits, and endowment income that compounds into estates which, by the later New Kingdom, rival the crown's. Their word is authoritative inside the temple precincts but competes there with the vizier's judgment and everywhere else with household piety. Departure means losing stipend, station, and burial provision."
+    },
+    {
+      "name": "vizier_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives an installation charge commanding judgment by the order-standard, 'so that the crocodile is not preferred over the fish'; hearing judges wear a small figure of the goddess at the neck while cases are argued. They settle disputes, register land, prosecute corrupt officials, and their tomb inscriptions advertise verdicts as career credentials. Advancement and survival run through visible fidelity to the standard they administer."
+    },
+    {
+      "name": "scribal_officials",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Assess and record the grain, labor days, and litigation the whole system runs on, ideally 'with honest measure.' The instruction genre contrasts their soft hands with the farmer's misery, marking how much the station yields them. Literacy travels: a scribe can move between treasury, temple, and estate administrations, the widest internal mobility the system affords."
+    },
+    {
+      "name": "peasant_farmers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Plow, sow, and reap the fields whose yield the theology reads as order made visible; deliver tax grain, answer corvee summons for canals, tombs, and temples, and attend the festivals that renew the bond. Their conduct is the bulk of what the doctrine calls maintenance, and they receive the ordered world it promises, but the assessment lands on them first, and in a bad year their contribution is subtracted from survival rather than added to abundance."
+    },
+    {
+      "name": "artisan_workmen",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "The royal-tomb crews of the Theban west bank: cut, paint, and furnish eternity for the court while living on state rations in a purpose-built village. When rations fail in Year 29 of Ramesses III they lay down tools and sit at the mortuary temple until grain arrives, the earliest recorded strike, arguing that the provisioning half of the bargain had lapsed. Organized, lettered enough to petition and litigate, but bound to the village and the works."
+    },
+    {
+      "name": "bondservants_captives",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "War captives and debt-servants whose assigned place is bondage; the teaching reaches them only as 'keep the conduct of the station you occupy.' They would testify that a doctrine of station-conduct blesses the chain as readily as the plow. They appear in the surviving record chiefly as price lines and property inventories, not as speakers."
+    },
+    {
+      "name": "wisdom_text_scribes",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Compose and copy the instruction books, Ptahhotep, Amenemope, the Satire of Trades, that specify what each station's proper conduct is, and praise the order-principle as 'a great thing, its effectiveness everlasting.' The same scribal culture transmits the harpers' songs that mock the efficacy economy and the Dialogue in which a man argues with his own soul; analysis and doubt share a workshop."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the collective-action problem of sustaining social and cosmic order across a riverine civilization without a coercive post at every node: each actor's internalized station-conduct (honest weights, timely plowing, just verdicts, correct ritual, fed neighbors) aggregates into maintained order, on which the inundation, the harvest, and access to the afterlife are all held to depend.",
+    "transfer_function": "Moves labor, grain, taxes, ritual service, and truthful testimony from every station upward into the maintenance apparatus of temples, courts, and royal works, and moves legitimacy, festival life, juridical protection, and afterlife assurance back down to every station; the nominal exchange is symmetric, the material collection skews toward temple and palace.",
+    "absent_voices": "Bondservants and war captives, whose assigned station is bondage, would object that station-conduct consecrates their subjugation; provincial poor taxed past subsistence in lean years would object that maintenance rhetoric outbids survival; skeptics of the harpers'-song type would deny the efficacy economy outright. Where they are: almost entirely outside the literate record, which the top few percent of the society authored; their objections survive only obliquely, in satire, in strike transcripts, and in the silences of property lists.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight, courts would lose their decision standard (judges literally wore the goddess at the neck), oaths would lose their force, the festival and offering economies would stop, tax and corvee would lose their justifying frame, funerary practice would become incoherent, and the workmen's strike weapon, the appeal to a lapsed bargain, would dissolve. Nearly every institution on the Nile banks would need to renegotiate its warrant.",
+    "founding_problem": "After the Old Kingdom's collapse dissolved the royal guarantee, how does order survive without a single guarantor? The distributed answer: spread the maintenance burden across every station so that order is produced by aggregate conduct rather than issued from a throne, and make every interpreter of the standard answerable to the standard itself.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Royal inscriptions attest the problem from inside the benefiting circle and are discounted accordingly. Corroboration from outside it: the Turin Strike Papyrus, the workmen's own record, shows subordinates invoking the provisioning half of the bargain against the palace and winning concessions, which corroborates that maintenance obligations were understood to bind upward; the tomb-robbery confessions show officials expecting judgment under the same standard they administered; and modern Egyptology (Assmann, Franke) independently reconstructs the democratization trajectory from coffin texts to commoner heart scarabs. Plainly stated: no fully external ancient attestation exists, since neighboring cultures left almost no record of Egyptian ideological debate, and that absence is itself signal about who could write."
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.19
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Ma'at kernel, the claim that cosmic and social order is sustained by right conduct, admits rival accounts of who maintains the order and who may interpret the standard. This file instantiates exactly one of those accounts, the distributed_maintenance_reading: maintenance is everyone's work from Pharaoh to commoner, each in station; interpretive authority is plural (temples, courts, households, instruction texts); and authority attaches to demonstrated maintenance rather than inherent status. The sibling readings, divine_mandate_reading and reciprocity_reading, are separate constraint files with their own epsilon values, beneficiary structures, and classifications; this story neither averages over them nor hedges against them. The claim/metric independence rule is honored deliberately: claimed_type is authored as rope because the reading's own structural logic is broad-based coordination with accountability running in every direction, while the metrics are authored as the descriptive record shows, including the residue of station-assigned burden and the slow compounding of temple endowments that the reading itself would acknowledge as its imperfection.",
+    "key_agents": [
+      "pharaoh: chief visible maintainer (institutional/identity_locked) — performs or delegates the rites, bears the largest named obligation, cannot leave the office",
+      "temple_priesthood: ritual administrator and accumulating collector (institutional/constrained) — interprets the standard in precinct, compounds endowment income",
+      "vizier_judiciary: judicial administrator (institutional/constrained) — wears the standard at the neck while judging, career indexed to fidelity",
+      "scribal_officials: recording agent (moderate/mobile) — assesses and documents the flows, widest internal exit in the system",
+      "peasant_farmers: mass contributor (powerless/trapped) — their labor is the bulk of maintenance; assessment lands on them first",
+      "artisan_workmen: organized contributor (organized/trapped) — ration-dependent specialists who proved the bargain binds upward by striking",
+      "bondservants_captives: excluded seat (powerless/trapped) — station-conduct addressed to them consecrates bondage; outside the record",
+      "wisdom_text_scribes: analytical seat (moderate/analytical) — articulates the standard and transmits its internal critics"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.22) because under this reading accountability runs to every station including the top, no seat monopolizes interpretation, and the returns (order, juridical protection, afterlife access) are distributed with the burdens; the residue reflects station-assigned obligations that the occupant did not choose and the compounding material skew toward temple estates. Suppression (0.30) is a raw structural property, unscaled by power or scope: sanction is diffuse (oath before the court, judgment theology, social shame, the negative confession) rather than a dedicated coercive machine, and rival practices such as direct personal piety and skeptical songs persist unpunished. Theater_ratio (0.18) is low because ritual and judgment are functional acts within the worldview, with a modest performative surplus that grows as New Kingdom liturgy elaborates. Accessibility_collapse (0.40) is moderate-low: understanding the standard does not eliminate alternatives, since piety movements route around the temples and the harpers' songs circulate inside the very scribal culture that copies the orthodoxy. Resistance (0.28) is real but voiced in the standard's own terms, the Deir el-Medina strike being the paradigm: workers halted the works citing the lapsed provisioning half of the bargain, which is resistance that confirms the frame it contests. The suppression_requirement series is included because the story genuinely traces enforcement-capacity change: central coercive capacity collapsed at the First Intermediate Period onset while the arrangement persisted on distributed maintenance, then judicial machinery partially rebuilt under the Middle Kingdom and stabilized through the Ramesside era. All three tracked series share one time grid (points 0 through 60 by tens) so no metric row is backfilled from another's endpoints.",
+    "perspectival_gap": "The seats should compute differently. From the pharaoh's position the arrangement is legitimation inseparable from an obligation he cannot shed; identity_locked exit means he experiences even low extraction as total, since there is no outside. From the temple_priesthood position it is vocation compounded with revenue, and their constrained exit makes the endowment stream feel earned. From the peasant_farmers' position it is cosmic dignity wrapped around a hard exaction, with trapped exit converting bad-year assessments into survival loss. The artisan_workmen seat computes the arrangement as an enforceable contract, which is exactly what the strike demonstrates. The bondservants_captives seat, excluded from the conversation and absent from the victim roll, would compute the highest extraction of all, since station-conduct addressed to the enslaved consecrates the enslavement; the engine sees their trapped exit and powerless atom even though no declaration names them victims. The scribal_officials seat, mobile and moderately rewarded, computes the mildest load. The engine derives these divergences from the declarations and exit atoms; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiaries are declared broadly (pharaoh, temple_priesthood, scribal_officials, peasant_farmers, artisan_workmen) and no victims are declared, because under this reading's own lights no group is a designated casualty of the arrangement; the burden side is carried instead by the payer roles and the exit atoms. Most seats therefore derive directionality near the beneficiary end. The agenda_setter duties of pharaoh and temple_priesthood pull their derived d slightly up from pure beneficiary, since administering the standard is itself a cost. Trapped exits (peasant_farmers, artisan_workmen, bondservants_captives) push those seats toward the target end despite their beneficiary listings, because the engine weights exit modulation; the scribal_officials' arbitrage-grade internal mobility pulls their d down. No directionality_overrides are authored: the derivation from declarations plus exit atoms already captures the structure, and the one coarse-instrument risk (two institutional seats, pharaoh and temple_priesthood, deriving similar d) is acceptable because both genuinely sit low, differing mainly in accumulation rate rather than direction. On the receipt surface, gain_flow names temple_priesthood: the material flows the arrangement collects (tithes, first-fruits, endowment income) demonstrably accrue there and compound, which is receipt without interpretive monopoly, since authority over the standard remains plural under this reading. fixing_cost is prohibitive: removing the arrangement would mean dismantling the courts, the calendar, the festival economy, the tax warrant, and the funerary system at once, a civilizational rewiring whose cost dwarfs any benefit to the seats positioned to attempt it.",
+    "mandatrophy_analysis": "The founding problem, order without a guarantor after the Old Kingdom collapse, is still live, so nothing here has mandated outlived its function and no mandatrophy resolution is declared. The mandatrophy risk sits in the tail of the measurement series: theater_ratio creeps upward across the interval as temple liturgy elaborates and endowments compound, which is the early signature of maintenance drifting toward performance and collection. The classification discipline cuts both ways: reading this as a snare would erase the genuine coordination that the strike record proves (subordinates could and did enforce the bargain upward), while reading it as frictionless rope would erase the station-legitimation residue that the omegas flag, where 'keep the conduct of your station' quietly consecrates inherited inequality. The rope claim plus honest metrics leaves that residue visible to the engine instead of reconciled away.",
+    "kernel_context": "This constraint is one reading of the kernel maat_order_principle: the distributed_maintenance_reading, in which every actor from Pharaoh to commoner sustains cosmic order through proper conduct in their station and interpretive authority is plural. Its siblings are separate constraint files: divine_mandate_reading, in which Ma'at flows from cosmic divine order through Pharaoh alone and the ruler cannot violate it by definition, and reciprocity_reading, in which Ma'at imposes mutual obligations with the ruler bound to provide justice, stability, and proper resource distribution. Within a single commitment framework this reading's core premise, that the ruler is an accountable maintainer who can lapse, logically rules out the divine mandate's core premise of definitional infallibility, hence the forecloses edge; the reciprocity reading's core premise of mutual obligation is compatible with distributed maintenance and the two persist as competing emphases held by different parties, hence coexists_with. Each sibling instantiates a different constraint with a different epsilon over the same kernel; this file authors only the distributed reading's values over its own referent."
+  },
+  "omegas": [
+    {
+      "id": "reading_relative_epsilon",
+      "question": "Does the low epsilon authored here belong to the underlying Ma'at arrangement itself, or only to the distributed_maintenance_reading's construction of it? This constraint is one reading of kernel maat_order_principle; the disagreement among readings is located in the accountability locus, who maintains the order and who may lapse under the standard.",
+      "resolution_mechanism": "Compile and compare the sibling stories (divine_mandate_reading, reciprocity_reading) over the same historical span: if the same institutions compute as high-extraction under the divine mandate instantiation and low-extraction here, the divergence is reading-indexed rather than arrangement-indexed, which is the expected outcome under the epsilon-referent rule.",
+      "impact": "If the arrangement itself is better modeled by the divine mandate reading, this file's low epsilon is an artifact of the reading's own lights and the effective classification of the lived institutions shifts sharply toward the extractive types; if the distributed reading tracks the operative norm, the low values stand.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether authored epsilon is a property of the arrangement or of the reading instantiating it."
+    },
+    {
+      "id": "station_assignment_legitimacy",
+      "question": "Is 'proper conduct in your station' a neutral division of maintenance labor, or an ideology that consecrates inherited inequality by dressing assigned burdens as cosmic contributions?",
+      "resolution_mechanism": "Comparative mobility evidence: attested cases of cross-station advancement (peasant sons entering scribal schools, military-era promotions), the Satire of Trades' own ambivalence about station assignment, and wage/ration data across stations relative to contribution.",
+      "impact": "If consecration dominates, the effective extraction borne by the lower stations is far higher than the authored 0.22 suggests and the computed classification drifts toward tangled_rope; if the division is genuinely functional, the rope reading stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether station-conduct distributes burdens neutrally or launders hierarchy."
+    },
+    {
+      "id": "democratization_evidence_bias",
+      "question": "Did distributed maintenance actually widen downward across the interval (coffin texts to Book of the Dead to commoner heart scarabs), or does the apparent widening reflect preservation bias favoring later, more durable media?",
+      "resolution_mechanism": "Stratified archaeological comparison of funerary assemblages by class against textual attestation rates per period, controlling for substrate and excavation history.",
+      "impact": "If the widening is artifact, the reading's authority-widening claim is aspirational rather than descriptive, the reference_frame drift assessment weakens, and the low suppression value needs revisiting since the plural-interpreter picture would rest on thin evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the downward spread of maintenance agency is real or a preservation artifact."
+    },
+    {
+      "id": "bottom_up_enforcement_signal",
+      "question": "Do episodes like the Year 29 Deir el-Medina strike show the distributed frame functioning (accountability enforceable from below) or fraying (maintenance breaking down under fiscal stress)?",
+      "resolution_mechanism": "Frequency, duration, and outcome coding of labor actions, petition letters, and oracle appeals across the Ramesside administrative archives, scored for whether invocation of the standard produced redress.",
+      "impact": "Recurring successful invocations confirm the rope reading's durability and low suppression; unanswered or punished invocations would indicate the accountability ran one way in practice, pushing effective extraction and suppression upward for the payer seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subordinate enforcement episodes evidence a working bargain or its collapse."
+    },
+    {
+      "id": "kernel_codification_framing",
+      "question": "Is the Ma'at kernel correctly framed as distributed and under-specified (many texts and practices, no single adjudicator), or as a fixed text centered on the Spell 125 negative confession with credentialed interpreters, which would relocate authority in the priestly line?",
+      "resolution_mechanism": "Survey the transmission history: whether the confession list, the instruction books, and courtroom oath practice behave as variants of one kernel or as a fixed canonical item with authorized expounders; examine variant sequences of the confession across coffins and papyri.",
+      "impact": "Under the fixed-text framing, kernel_codification moves to fixed_text, authority_grounding moves toward lineage, the plurality claim that anchors this reading's low extraction weakens, and the computed classification could shift toward a more extractive type; the current distributed framing is defensible but not forced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative framings of the kernel's codification produce different authority and extraction pictures."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "divine_mandate_reading",
+      "reciprocity_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Ma'at' conflates at least three structurally distinct claims about who maintains cosmic order and who may interpret the standard; per the epsilon-invariance principle these are decomposed into separate constraint stories linked as a family. This file instantiates the distributed_maintenance_reading. The divine_mandate_reading is the upstream Old Kingdom claim from which the others historically descend; the distributed reading emerges downstream in the First Intermediate Period democratization and exerts structural pressure on both siblings, eroding the monopoly claim without resolving the dispute. Each member carries its own epsilon, beneficiaries, and classification; no member hedges across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "distributed_station_conduct",
+    "drift_state": {
+      "moment": "ramesside_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "divine_mandate_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "reciprocity_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "ma_at_maintenance_universally_distributed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "ruler_accountable_to_ma_at_standard",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "station_conduct_sufficiency",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "temple_priesthood",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

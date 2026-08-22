@@ -1,0 +1,376 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__conciliar_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "3e561074-11d5-43a5-9f73-3e1d41e29e2c"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.34,
+    "theater_ratio": 0.43,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Conciliar Reception of Scriptural Authority (Ecumenical Councils and Patristic Consensus)",
+    "topic_domain": "theology/religious_studies/history_of_christianity",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "episcopal_collegiality",
+      "ordained_parish_clergy",
+      "monastic_doctrinal_establishment",
+      "orthodox_laity"
+    ],
+    "victims": [
+      "dissenting_theologians",
+      "local_church_adaptation_movements"
+    ],
+    "vindicated_propositions": [
+      "patristic_consensus_as_hermeneutic_norm",
+      "seven_ecumenical_councils_doctrinal_canon",
+      "apostolic_tradition_living_transmission"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 17
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 17,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 17,
+      "value": 0.43
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 17,
+      "value": 0.34
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This story instantiates one reading (conciliar_reading) of the kernel biblical_authority; how would epsilon, the beneficiary/victim structure, and the computed classification shift under the sibling readings sola_scriptura_reading and tradition_scripture_reading?",
+      "resolution_mechanism": "Compile and compare the sibling stories as separate files; classification is reading-indexed, so cross-reading comparison runs through the network edges between files, never by averaging within one.",
+      "impact": "Under sola_scriptura_reading the clerical mediation largely vanishes (no interpretive office to extract through) while fragmentation risk rises; under tradition_scripture_reading extraction concentrates further in a single magisterial office while fragmentation drops. Neither result transfers to this file; this story's numbers are valid only for the conciliar arrangement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed classification of the biblical-authority kernel."
+    },
+    {
+      "id": "patristic_consensus_construction",
+      "question": "Is 'patristic consensus' a discovered living agreement among the fathers, or a retrospectively curated canon (selected fathers, selected florilegia) assembled to warrant conclusions reached on other grounds?",
+      "resolution_mechanism": "Historiographical study of florilegia construction and citation practice across the doctrinal controversies: whether the cited consensus existed prior to the dispute or was assembled during it.",
+      "impact": "If curated, part of the measured coordination is post-hoc warrant and the theater_ratio is understated; the hermeneutic standard operates as an episcopally curated artifact, pulling the structure toward the snare end of the hybrid range.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Discovered consensus versus curated canon as the operative hermeneutic standard."
+    },
+    {
+      "id": "conciliar_dormancy_drift",
+      "question": "Has the conciliar mechanism atrophied into rhetorical appeal — no universally received ecumenical council since Second Nicaea (787), and the 2016 Council of Crete attended by a minority of autocephalous churches — such that the arrangement persists mainly by inertia and performance at the ecumenical level?",
+      "resolution_mechanism": "Observe whether a future pan-Orthodox council achieves near-universal convocation and reception; track the theater_ratio series against that event.",
+      "impact": "If dormancy persists and theater_ratio crosses 0.5, the structure drifts toward piton at the ecumenical level even while synodal governance remains functional inside the autocephalous churches.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ecumenical-level mechanism dormancy versus living conciliarity."
+    },
+    {
+      "id": "fragmentation_exit_genuineness",
+      "question": "Does autocephalous fragmentation give members genuine exit — transfer between jurisdictions dilutes coercive pressure — or do the jurisdictions converge on the same demands so that exit relocates rather than escapes them?",
+      "resolution_mechanism": "Compare enforcement and adaptation costs across jurisdictions for identical disputes (calendar, remarriage canons, jurisdictional boundaries) for similarly situated believers.",
+      "impact": "Genuine exit lowers effective suppression below the structural measure for mobile members; convergent extraction raises it; the classification of the payer seats shifts accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fragmentation functions as exit or as relocation of the same demands."
+    },
+    {
+      "id": "lay_interpretive_agency",
+      "question": "Does liturgical participation constitute real interpretive agency for the laity inside conciliar reception (a sensus fidelium analogue, as when icon veneration preceded and shaped Nicaea II's definition), or is lay reception purely passive?",
+      "resolution_mechanism": "Study cases where liturgical and devotional practice preceded and shaped doctrinal reception, versus cases where practice followed imposed definition.",
+      "impact": "Real agency lowers the powerless seat's directionality below 0.5; purely passive reception raises it above 0.5; the authored override sits at the midpoint pending resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Lay agency inside conciliar reception."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "episcopal_collegiality",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Bishops meeting in synod, and at rare historical moments in ecumenical council, set the terms on which scripture is authoritatively read: they define dogma, anathematize error, ordain and discipline clergy, and mark the line between apostolic teaching and novelty. Deference, interpretive authority, and material support flow to the episcopal office. A bishop who leaves the church loses the office itself, since the see and the man are bound together in consecration."
+    },
+    {
+      "name": "ordained_parish_clergy",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Priests and deacons celebrate the sacraments, preach, and hand on the faith as received from the bishops and the fathers. Their livelihood and standing depend on remaining in good standing with their bishop. Ordination is understood as permanent, so leaving the altar leaves nothing comparable to return to."
+    },
+    {
+      "name": "monastic_doctrinal_establishment",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Monasteries — Mount Athos above all — preserve and curate the patristic corpus, advise bishops informally, and mobilize opinion against innovations such as calendar change or ecumenical rapprochement. They hold no formal office in synod yet exercise a widely recognized informal veto on doctrinal change; their vows bind them to the life they defend."
+    },
+    {
+      "name": "orthodox_laity",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "The faithful receive the sacraments, keep the fasts and feasts, and inherit a doctrinal settlement they did not negotiate. They hold no seat in synod or council; their voice reaches doctrine indirectly, through liturgical practice and popular devotion. In traditionally Orthodox societies the church is fused with family and nation, so departure costs community, identity, and often livelihood."
+    },
+    {
+      "name": "dissenting_theologians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Academic and monastic theologians whose work presses past the received consensus — on anthropology, ecclesiology, or the limits of the patristic corpus — find publication channels narrowing, invitations withdrawn, and at the limit formal accusation. Some continue inside the bounds, some fall silent, and a few leave for other communions, losing their audience along with their standing."
+    },
+    {
+      "name": "local_church_adaptation_movements",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Parishes and jurisdictions pressing for calendar revision, vernacular liturgy, or pastoral accommodation meet the charge of innovation. The Old Calendarist splits show the price of pressing the point: those who acted lost communion with the churches they sought to reform and became sects in the eyes of the mother churches, forfeiting the very standing from which reform could be argued."
+    },
+    {
+      "name": "historical_critical_scholars",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Historians and textual critics who read the councils and the fathers as products of their imperial context rather than as timeless norms stand outside the frame entirely: their questions — redaction, political theology, manuscript history — are not admitted to the synodal agenda. They publish in university channels the church does not control and would contest the normativity of the consensus if given a seat."
+    },
+    {
+      "name": "church_history_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Comparative historians of doctrine watch how the conciliar claim is maintained across twelve centuries without a functioning ecumenical council: which synods are counted, which fathers are cited, which receptions are remembered and which forgotten. They collect no authority and bear no anathema; they describe."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains doctrinal unity and a shared reading of scripture across many autocephalous churches without a single supreme interpreter: ecumenical councils aggregate dispersed episcopal judgment into binding consensus, patristic consensus supplies a common interpretive standard, and liturgical and calendrical continuity coordinate practice across jurisdictions.",
+    "transfer_function": "Moves interpretive authority and doctrinal decision rights from individuals, local communities, and scholars to the episcopal college acting in council; moves deference, obedience, and material support upward to the clergy; moves doctrinal stability, sacramental access, and insulation from doctrinal novelty downward to the laity.",
+    "absent_voices": "Historical-critical scholars, whose method is ruled outside the frame; lay interpreters, who have no conciliar seat; theologians already anathematized or marginalized, whose objections survive only as condemned positions; the non-Chalcedonian Oriental churches, excluded by the very councils this reading treats as normative; and women, barred from episcopal and nearly all synodal seats.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conciliar-patristic settlement vanished overnight, the autocephalous churches would drift onto independent doctrinal trajectories; the Nicene core would survive as text, but boundary-maintenance would reorganize around national churches, monastic networks, or congregational reading, and the episcopal mediation of sacraments together with the anathema machinery would lose its warrant.",
+    "founding_problem": "The apostolic churches faced rival readings of scripture — Arian, Nestorian, Monophysite — each claiming biblical warrant; the arrangement was built to distinguish authentic apostolic teaching from novelty by gathering the church's dispersed judgment in council and testing doctrine against the consensus of the fathers.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Church historians and canonists outside the benefiting hierarchies attest the founding mechanism's dormancy — academic scholarship records roughly twelve centuries without a universally received council, and the Crete 2016 preparatory process itself documented the absence. The benefiting parties attest continued liveness, citing new doctrinal errors requiring conciliar discernment. The disagreement between these testimonies is the finding; no neutral seat currently adjudicates it."
+  },
+  "gain_flow": "episcopal_collegiality",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__sola_scriptura_reading",
+      "biblical_authority__tradition_scripture_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'biblical authority' decomposes into three structurally distinct constraints, one per reading of the kernel: conciliar reception (this file — moderate extraction through episcopal mediation, moderate fragmentation across autocephalous churches), sola scriptura (separate file — clerical interpretive mediation largely absent, different beneficiary/victim set), and magisterial guardianship (separate file — extraction concentrated in a single office, fragmentation suppressed). The epsilon values differ because the arrangements differ, not because one underlying thing is measured inconsistently; family membership is carried by these network edges, and cross-reading comparison is legitimate only between files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.5
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In the autocephalous Orthodox churches, scripture's authoritative meaning is settled through ecumenical councils and the consensus of the fathers, with tradition understood as a living continuity of liturgy, doctrine, and practice rather than as decrees issued by a supreme teacher. This story models that standing arrangement itself — the conciliar-patristic settlement as it operates — assessed by this reading's own lights; it is one reading of the contested kernel biblical_authority, with the sibling readings instantiated as separate constraint files linked in the network section. KEY AGENTS (by structural relationship): - episcopal_collegiality: agenda-setter and principal collector (institutional/identity_locked) — convenes councils and synods, defines dogma, gathers deference and interpretive authority - ordained_parish_clergy: beneficiary (organized/identity_locked) — mediates sacraments and teaching - monastic_doctrinal_establishment: beneficiary (organized/identity_locked) — curates the patristic corpus, informal doctrinal veto - orthodox_laity: dual beneficiary/payer (powerless/constrained) — receives stability and sacraments, bears exclusion from interpretation and slow-adaptation costs - dissenting_theologians: payer (moderate/constrained) — bear silencing and accusation risk - local_church_adaptation_movements: payer (organized/trapped) — seek liturgical and pastoral adaptation, face schism-level costs - historical_critical_scholars: excluded (moderate/mobile) - church_history_analysts: observer (analytical/analytical)",
+    "logic_rationale": "Time grid: t counts centuries since the First Council of Nicaea (t=0 is 325 CE; t=17 is the present), one shared grid for all three tracked series. Extractiveness is moderate (0.48 at present) and traces a hump: it climbed through the Ottoman millet era (t=12, 0.50), when bishops exercised state-delegated civil power over the faithful, then eased with secularization and settled at the present level — episcopal mediation is real but fragmented across autocephalous churches, none of which commands a single interpreter's leverage. Suppression is the raw structural property and is deliberately unscaled by power or scope; it has fallen from imperial-era coercion (0.68 at t=0, when anathemas were backed by exile and confiscation) to informal social pressure (0.34 now). That enforcement-decay trajectory is the story's central dynamic, which is why the suppression_requirement series is authored despite the static-endpoint picture. Theater ratio rises from 0.10 to 0.43: councils genuinely decided doctrine while they met, but no universally received ecumenical council has met since 787, and appeals to conciliar tradition increasingly decorate synodal business that no ecumenical body ratifies — Crete 2016, attended by a minority of churches, is the visible marker. Accessibility collapse is moderate (0.50): other communions and private reading remain reachable, so understanding the arrangement does not close every alternative. Resistance is substantial (0.55): the Arian-era turmoil, iconoclasm, the Old Calendarist schisms, and the Crete abstentions are all active refusals. The claimed type is authored independently of these metrics: the structure holds a genuine coordination function — dogmatic stability across many jurisdictions without a pope — together with real asymmetric extraction (interpretive monopoly, adaptation costs borne by payers), which is the tangled-rope shape. Coordination type is identity_coordination: the dominant function is maintaining membership boundaries and doctrinal identity across dispersed churches; the type-default floor applies, no override.",
+    "perspectival_gap": "From the episcopal seat the arrangement is the church's own life: councils as the body discerning truth, tradition as breathing continuity — coordination experienced from inside. From the payer seats the same structure is a closed interpretive circuit: those who read differently are anathematized rather than answered, and adaptation requests return as charges of novelty. The excluded scholarly seat sees a curated canon performing warrant-work for conclusions reached elsewhere. Same-power divergence: autocephalous jurisdictions of equal canonical rank experience the arrangement differently by size and diaspora position — large patriarchates can defy coordination attempts (the four churches that abstained from Crete), while small diaspora jurisdictions cannot, so exit by jurisdictional transfer is real for some payers and nominal for others. Inter-institutionally, the monastic establishment holds no office yet can veto what the episcopal agenda-setters propose, so the agenda-setting seat is itself internally divided.",
+    "directionality_logic": "The beneficiary declarations drive the derivation: the episcopal college, parish clergy, and the monastic establishment sit near the beneficiary end (low d), and the two payer groups near the target end (high d). One override is authored: the powerless atom is pinned at d=0.5 because the laity are declared beneficiaries yet carry diffuse costs — no interpretive seat, slow doctrinal adaptation, and identity-fused exit costs in traditionally Orthodox societies — so derivation from the beneficiary declaration alone would misplace them at the subsidy end. The override is keyed to the power atom per the schema; the laity are the story's only powerless seat. Scope amplification applies to the global-scoped seats (episcopal college, laity): verifying doctrinal fidelity across continents is harder, which the engine registers as modestly amplified effective extraction on the target side. Suppression is never scaled by power or scope anywhere in the computation.",
+    "mandatrophy_analysis": "The founding problem — binding discernment of authentic apostolic teaching amid rival scriptural readings — produced a mechanism that worked while empire could convene and enforce. The mechanism has been dormant at the ecumenical level for roughly twelve centuries; what persists is synodal governance inside the autocephalous churches plus the rhetorical appeal to conciliar precedent. Authoring the structure as tangled_rope rather than snare preserves the genuine coordination (dogmatic stability across jurisdictions, sacramental continuity) that a pure-extraction reading would erase; authoring it as anything purer than tangled_rope would erase the episcopal interpretive monopoly and the adaptation costs the payer seats bear. The rising theater series and the contested founding-status interview mark the ecumenical-level mandate as having outlived its function even while the local synodal function remains live — the mandatrophy is partial and level-specific, which is why the founding_problem_status is contested rather than dead. Fixing is prohibitive for whoever could fix it: reconvening a genuinely ecumenical council requires consensus among rival autocephalous jurisdictions currently in canonical rupture, and the cost of failure is schism, which is why the arrangement persists in its present half-functioning form.",
+    "kernel_context": "Kernel: biblical_authority — the question of where scripture's interpretive closure lies. This file instantiates the conciliar_reading: authoritative interpretation is effected through ecumenical councils and patristic consensus, with tradition as living continuity rather than magisterial decree. Sibling readings: sola_scriptura_reading (closure in the text itself, self-interpreting) and tradition_scripture_reading (closure in a magisterial office guarding the deposit of faith). The disagreement is located at the locus of closure: text, office, or conciliar reception. Against the sola reading, this reading's core premise is incompatible within any single framework — if scripture requires conciliar-patristic interpretation for authoritative doctrine, it is not self-interpreting — hence the forecloses edge. With the magisterial reading it coexists historically (Eastern Catholicism holds both simultaneously) and exerts structural pressure on it — Vatican II's collegiality absorbs conciliar themes — hence the influences edge. Epsilon here is authored for the conciliar arrangement itself as this reading assesses it, never for the arrangements the siblings would institute."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "undivided_church_conciliar_consensus",
+    "drift_state": {
+      "moment": "contemporary_post_crete",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sola_scriptura_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "tradition_scripture_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scripture_requires_conciliar_reception",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "tradition_is_living_continuity_not_decree",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "sacraments_are_encountered_mysteries",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

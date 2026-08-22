@@ -1,0 +1,380 @@
+{
+  "header": {
+    "constraint_id": "ai_safety_commitment__near_term_harms_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "near_term_harms",
+    "story_uid": "f7b4865d-7399-4e79-ba6a-32163217e4ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.38,
+    "resistance": 0.57,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Term Harms Reading of the AI Safety Commitment",
+    "topic_domain": "technological/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tech_companies",
+      "responsible_ai_audit_industry",
+      "civil_society_advocacy_orgs"
+    ],
+    "victims": [
+      "marginalized_algorithmic_decision_subjects",
+      "gig_platform_workers",
+      "misinformation_affected_publics"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "tech_companies",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the deployed systems whose outputs produce the documented harms. Run internal responsible-AI teams implementing the prevailing definition of safety work: bias evaluations, content-policy enforcement, model documentation, red-team exercises. Publish safety reports and join voluntary pledges. Gain reputational standing and a defensible position against mandatory rules; bear audit and governance costs that are small relative to avoided liability and preserved deployment freedom. Can reframe, rebrand, or relocate governance programs across jurisdictions at will."
+    },
+    {
+      "name": "responsible_ai_audit_industry",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Firms and consultancies selling bias audits, conformity assessments, and governance tooling to deployers. Revenue scales with the volume of compliance activity the definition generates. Portable across clients and jurisdictions."
+    },
+    {
+      "name": "civil_society_advocacy_orgs",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Nonprofits and research groups that campaigned to place documented harms at the center of what AI safety means. Receive foundation grants earmarked for responsible-AI and algorithmic-accountability work; staff careers and organizational missions are bound up with the frame. Push companies and regulators for stronger transparency, auditing, and labor protections, and defend the definition against dilution."
+    },
+    {
+      "name": "philanthropic_ai_funders",
+      "role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Foundations and donor collaboratives deciding which safety research and advocacy gets funded. Their grant lines encode the definition: portfolios weighted toward harm measurement, auditing, and governance, with little allocated outside it. Can redirect portfolios on board cycles."
+    },
+    {
+      "name": "marginalized_algorithmic_decision_subjects",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People subject to automated decisions in lending, housing, hiring, benefits, and policing who bear discriminatory errors. Cannot opt out of the systems that rank them; learn of harms only after denial or adverse action. Their documented cases supply the evidence base the safety apparatus studies, while remedies arrive slowly or not at all."
+    },
+    {
+      "name": "gig_platform_workers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Workers whose tasks, pay, and continued access to work are governed by algorithmic management systems. Bear wage opacity, unilateral rating penalties, and abrupt account deactivation. Need the income and have limited ability to multi-home or leave platforms; organize where law permits."
+    },
+    {
+      "name": "misinformation_affected_publics",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Communities exposed to synthetic media, coordinated manipulation, and recommendation-amplified falsehoods. Bear persuasion, fraud, and degraded shared information they did not choose and cannot exit; their attention is the medium the harms travel through."
+    },
+    {
+      "name": "ai_ethics_researchers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Researchers staffing harm-measurement, auditing, and governance work inside companies and universities. Draw salaries, datasets, and publication venues from the apparatus; some have faced reassignment or dismissal after publishing findings unfavorable to their employers. Mobility exists but carries reputational and reference risk."
+    },
+    {
+      "name": "existential_risk_researchers",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Researchers focused on catastrophic and extinction-scale outcomes from advanced systems. Their agenda sits outside the prevailing definition's scope; they compete for the same funding, venues, and policy attention and argue the boundary is arbitrary. Mission-committed; few professional exits into the near-term frame."
+    },
+    {
+      "name": "standards_and_regulatory_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Standards institutes and agencies translating the definition into frameworks, audit criteria, and draft rules. Take input from all other seats, commission studies, and can convert voluntary practice into binding obligation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Documented AI harms are dispersed across millions of deployments and technically opaque to individual victims. A shared definition of safety as present-harm prevention lets labs, auditors, regulators, and advocacy groups pool harm taxonomies, benchmarks, incident reporting, and evaluation methods, so mitigation effort accumulates instead of restarting per case.",
+    "transfer_function": "Moves funding, careers, conference space, and regulatory bandwidth toward harm measurement, auditing, and content-governance work, and away from structural-labor and catastrophic-risk framings. Moves reputational legitimacy to deploying companies that adopt the apparatus voluntarily, and moves the burden of proof for remedy onto affected populations, whose documented cases feed the apparatus without guaranteed correction.",
+    "absent_voices": "Existential-risk researchers sit outside the room the definition drew; they would contest the boundary that classes their agenda as not-safety. Labor scholars would object that bias framing individualizes what are labor-relations and market-power problems. Affected community members appear as data sources and consultation subjects far more often than as decision-makers with veto power.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the definition lost its hold overnight, the compliance industry would lose its mandate, corporate governance programs would lose their legitimating script, conference tracks and grant lines would re-sort around whichever rival definition captured the vacuum, and regulatory drafts keyed to harm documentation would stall or be rewritten. The institutional ecology organized by the definition would visibly reorganize.",
+    "founding_problem": "Deployed systems were producing documented, measurable harms — discriminatory decisions, exploitative algorithmic management, industrial-scale misinformation — that neither existing civil-rights enforcement nor the field's early catastrophic-risk discourse treated as the safety agenda. Advocates defined AI safety around these harms to force recognition, measurement, and remedy onto the field's agenda.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: publicly maintained AI-incident databases run by academic consortia, investigative journalism archives, court filings in algorithmic-discrimination litigation, and legislative inquiry transcripts all attest that documented harms continue at scale. Deploying companies — the principal beneficiaries — attest instead that the problem is substantially managed through voluntary programs; that divergence between beneficiary attestation and the external record is itself signal."
+  },
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.58
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the near-term-harms reading of the AI-safety commitment: the claim that safety work means preventing documented, present-day harms from deployed systems — discriminatory decisions, algorithmic labor exploitation, synthetic misinformation. Across 2018-2025 (interval units 0-7) this definition became the institutionally dominant one: corporate responsible-AI programs, a commercial audit industry, dedicated conference tracks, foundation grant lines, and regulatory drafts all encode it. The arrangement has a genuine coordination core — shared harm taxonomies, benchmarks, and incident reporting that no single victim or lab could build alone — and an asymmetric underside: affected populations supply the documented incidents the apparatus runs on while remedies skew symbolic, deploying companies convert accountability pressure into voluntary-compliance legitimacy, and speculative-alignment work sits wholly outside the frame's extraction surface. The claim and the metrics are independent authored facts: claimed_type states the structure I believe true (hybrid coordination/extraction requiring active boundary defense); the metrics describe observed operation without being tuned to any predicted engine verdict.",
+    "key_agents": [
+      "tech_companies: Primary beneficiary and co-agenda-setter (institutional/arbitrage) — converts accountability pressure into voluntary-compliance legitimacy",
+      "marginalized_algorithmic_decision_subjects: Primary target (powerless/trapped) — bears discrimination harms; supplies the documented incidents the apparatus runs on",
+      "gig_platform_workers: Primary target (moderate/constrained) — bears algorithmic-management exploitation",
+      "misinformation_affected_publics: Primary target (powerless/trapped) — bears synthetic-media information harms",
+      "civil_society_advocacy_orgs: Agenda-setter and incidental beneficiary (organized/identity_locked) — champions the definition, draws funding through it",
+      "philanthropic_ai_funders: Agenda-setter (powerful/mobile) — allocates grant money along the definition's boundaries",
+      "ai_ethics_researchers: Dual-positioned payer/beneficiary (moderate/constrained) — staffs the apparatus; bears censorship and career risk",
+      "responsible_ai_audit_industry: Secondary beneficiary (organized/mobile) — collects compliance revenue",
+      "existential_risk_researchers: Excluded voice (organized/identity_locked) — would contest the definitional boundary",
+      "standards_and_regulatory_bodies: Analytical observer (institutional/analytical)"
+    ],
+    "logic_rationale": "Extractiveness 0.62: the referent is the standing arrangement — the institutionalized definition and its compliance apparatus — assessed by this reading's own lights. The harms the reading names remain documented and widespread while the apparatus's remedy output skews symbolic, and the burden falls hardest on those least able to refuse the systems governing them. It is not higher because the apparatus does deliver real measurement infrastructure and some deployment changes. Suppression 0.58 is predominantly structural (funding gates, venue norms, employment consequences for dissenting researchers) with a smaller internalized component (anticipatory self-censorship) — roughly 70/30, informing the suppression-mechanism omega. Theater 0.47: a large share of activity is artifact production (principles pages, model cards, audit reports) whose link to outcome change for affected groups is weak. Accessibility collapse 0.38: alternatives remain workable — structural-labor framing, litigation, and the catastrophic-risk framing all persist; the definition narrows the option space without closing it. Resistance 0.57: sustained contest from the x-risk camp, worker organizing, affected-community activism, and intra-field dissent keeps the boundary actively defended. All three temporal series run on ONE shared grid (annual points 0-7); every tracked metric is authored at every point. Trajectories rise monotonically: enforcement machinery matured (governance headcount, review gates, conformity-assessment demand), capture deepened as voluntary frameworks substituted for binding rules in major jurisdictions, and boundary defense intensified as rival framings gained ground. No oscillation is modeled: incident-pledge-relaxation cycling exists at a shorter wavelength than the annual grid resolves and is noted here rather than fabricated into the series. Coalition check: the payer seats are individually weak but coalition-capable — worker organizations, affected-community litigants, and dissident researchers have repeatedly aligned (data-labor campaigns, whistleblower testimony); combined payer power is the main internal threat to the arrangement's stability, which is why suppression rises alongside extraction.",
+    "perspectival_gap": "From the tech_companies seat the arrangement is legitimate self-governance it built and funds — a manageable coordination cost that buys license to operate. From the payer seats the same apparatus documents their harms without remediating them — extraction wearing a coordination veneer. From the advocacy seats the definition is a hard-won victory perpetually at risk of dilution — fragile coordination needing constant defense. Inter-institutional dynamics: companies (institutional/arbitrage), funders (powerful/mobile), and regulators (institutional/analytical) occupy the same nominal institutional tier but different exit positions, so identical formal pressure lands as negotiable cost for the first, portfolio choice for the second, and mandate question for the third. Same-level lateral dynamics: civil-society advocacy orgs and existential-risk research orgs hold similar organized power with opposed frames; what differentiates them is identity lock — the advocacy orgs' missions are constituted by this definition, the x-risk orgs' by its negation — so neither can cheaply adopt the other's frame. The engine computes these divergent per-seat classifications from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiaries derive low directionality: tech_companies are net collectors (avoided binding regulation and reputational subsidy exceed compliance spend), the audit industry collects revenue proportional to compliance volume, and advocacy orgs draw funding and relevance through the frame while paying co-optation costs. Payers derive high directionality: marginalized decision subjects and misinformation-exposed publics are trapped (no exit from ranked or saturated environments), pushing them toward the full-target end; gig workers and ethics researchers are constrained (income and career dependence limit exit) sitting slightly inside. Funders sit near symmetric — they set the agenda but bear little of the arrangement's cost or benefit directly. No directionality overrides are needed: the beneficiary/victim declarations plus exit options reproduce the true structural relationships without correction.",
+    "mandatrophy_analysis": "The founding problem — the recognition gap for documented harms — remains live, so mandatrophy_resolved stays false and no sunset applies. The tangled-rope classification guards both error directions: a pure-snare label would erase the real mitigation the apparatus delivers (benchmarks, incident reporting, some deployment changes); a pure-rope label would launder the capture dynamic (symbolic remedy, avoided regulation, exclusion of structural framings). The R5 mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges — no dead-problem/zombie flag fires. The rising theater_ratio is the series to watch: if audit activity continues decoupling from remediation, the computed type should drift toward snare, and the audit_remediation_ratio omega is the instrument that would date that transition.",
+    "kernel_context": "This story instantiates one reading — near_term_harms_reading — of the contested kernel ai_safety_commitment (what the AI-safety commitment obligates). Sibling readings, authored as separate constraints, are existential_risk_reading (safety as preventing extinction-level outcomes from misaligned advanced systems) and dual_priority_reading (both agendas as non-competing priorities). Per the epsilon-invariance rule this file authors only the near-term reading's stable epsilon, victim set, and beneficiary structure; the siblings' differing victim sets and extraction profiles belong to their own files, linked through network.affects_constraints. The committer structure — which kernel, which reading, what siblings would change — is carried in the kernel_reading_contestation omega rather than in invented fields."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This constraint is the near_term_harms_reading of the ai_safety_commitment kernel alone; how would the victim set, beneficiary structure, and extraction profile differ if the existential_risk_reading or dual_priority_reading sibling were instantiated instead?",
+      "resolution_mechanism": "Author and compile the sibling stories; compare computed per-seat classifications and effective-extraction profiles across the constraint family.",
+      "impact": "Under the existential-risk sibling the victim set shifts toward speculative humanity-scale harms, deployer compliance burdens invert, and this reading's high-extraction dimensions (transparency, auditing, labor protection) drop to low extraction; under the dual-priority sibling extraction spreads across both profiles simultaneously.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; sibling readings would restructure victims and extraction."
+    },
+    {
+      "id": "accountability_lever_vs_containment",
+      "question": "Does institutionalizing the near-term definition operate as an accountability lever that precedes binding regulation, or as a containment strategy that substitutes voluntary compliance for it?",
+      "resolution_mechanism": "Cross-jurisdiction comparison where the definition fed binding obligations (mandatory bias audits, conformity assessment) versus jurisdictions where voluntary frameworks dominated; track documented-harm rates and deployment changes under each regime.",
+      "impact": "A lever finding supports the coordination half of the tangled-rope reading and a rising coordination value; a containment finding shifts weight toward snare as theater share grows and validates the beneficiary declaration against the companies' own framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the definition's institutional success disciplines deployers or launders legitimacy."
+    },
+    {
+      "id": "audit_remediation_ratio",
+      "question": "What fraction of audit, documentation, and red-teaming activity produces material remediation for affected populations rather than compliance artifacts?",
+      "resolution_mechanism": "Longitudinal linkage of audit findings to deployment changes and to outcome deltas for the affected groups being measured.",
+      "impact": "High remediation lowers theater_ratio and strengthens the rope side; low remediation raises theater_ratio, pushing the computed type toward snare and dating a tangled-rope-to-snare transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Substance-versus-artifact ratio inside the compliance apparatus."
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is the marginalization of rival framings (structural-labor accounts, catastrophic-risk accounts) inside AI-safety institutions structural — funding gates, venue norms, employment risk — or internalized — anticipatory self-censorship and mission fusion?",
+      "resolution_mechanism": "Post-exit trajectory of researchers who left safety roles; funding-decision and reviewer audits comparing framed versus reframed proposals.",
+      "impact": "An internalized component means effective suppression exceeds the structural measure and persists after barrier removal; a purely structural component means reforming gates and venues would release suppressed framings quickly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression of rival framings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "existential_risk_reading",
+      "dual_priority_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'AI safety' decomposes into at least three structurally distinct commitments. This file is the near-term-harms member; existential_risk_reading and dual_priority_reading are siblings. Epsilon differs sharply across members: this reading concentrates extraction on transparency, auditing, and labor-protection dimensions while leaving speculative-alignment work unextracted; the existential-risk reading inverts that profile. Upstream/downstream structure runs through funding and venue competition: whichever reading holds institutional dominance conditions the others' operating environment, which is why this (currently dominant) reading declares influence toward the dual-priority sibling and coexistence with the existential-risk sibling."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "documented_harm_prevention_standard",
+    "drift_state": {
+      "moment": "contemporary_post_frontier_scaling_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "existential_risk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "dual_priority_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "present_harmed_persons_hold_prior_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "evidence_threshold_gates_safety_scope",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "gain_flow": "tech_companies",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "imperial_mandate__bakufu_delegation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-20",
+    "status": "ACTIVE",
+    "story_uid": "5bf398bc-805c-4216-9d52-0da9302384bf"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.8,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Imperial Mandate — Bakufu Delegation Reading (Bifurcated Sovereignty)",
+    "topic_domain": "political philosophy/comparative constitutional systems/east asian history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bakufu_shogunal_regime",
+      "bushi_samurai_class",
+      "kuge_court_nobility"
+    ],
+    "victims": [
+      "imperial_household_line",
+      "peasant_village_communities"
+    ]
+  },
+  "interval": {
+    "start": 1192,
+    "end": 1868
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1192,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1221,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1336,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1467,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1603,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1716,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1868,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1192,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1221,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1336,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1467,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1603,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1716,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1868,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1192,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1221,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1336,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1467,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1603,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1716,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1868,
+      "value": 0.8,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates one reading of the imperial_mandate kernel — the delegation reading, under which the mandate operates through institutional delegation and the emperor's legitimacy-granting function is separable from governing. What would classification change if the sibling loyalist_restoration_reading were instantiated instead?",
+      "resolution_mechanism": "Author the sibling as its own constraint file: under the loyalist reading the same standing arrangement is assessed as usurpation, the imperial household becomes the primary victim rather than a compensated ritual custodian, the coordination function is reframed as cover, and epsilon rises sharply.",
+      "impact": "Under the sibling reading the same historical arrangement computes as far more extractive with an expanded victim set; the divergence between the two files is the measured disagreement of the kernel, not an error in either.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel contest: delegation reading versus loyalist restoration reading of the imperial mandate."
+    },
+    {
+      "id": "mandate_sincerity",
+      "question": "Did the shogunal houses regard the invested mandate as genuinely constitutive of their authority, or maintain it as an instrumentally useful fiction?",
+      "resolution_mechanism": "Close reading of bakufu legal codes, succession-crisis behavior (whether shoguns ever risked material interests to preserve the investiture protocol), and diplomatic correspondence.",
+      "impact": "If instrumental, the arrangement's coordination content is thinner than authored and the theater ratio understates drift toward inertial maintenance; if sincere, the coordination function is robust and the hybrid assessment is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the invested mandate was sincerely constitutive or instrumentally maintained."
+    },
+    {
+      "id": "peasant_extraction_attribution",
+      "question": "How much of the village tax burden is attributable to the delegation arrangement specifically, rather than to any agrarian pre-modern state?",
+      "resolution_mechanism": "Compare effective tax rates and corvee burdens across periods and regimes inside and outside the arrangement's span, controlling for war and harvest shocks.",
+      "impact": "If most extraction is generic to agrarian states, the constraint-specific epsilon is materially lower than authored and the arrangement sits nearer the coordination end; if the warrior stipend system added a distinctive layer, the authored value stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of village extraction to the delegation frame versus generic agrarian statehood."
+    },
+    {
+      "id": "kenmu_counterfactual_stability",
+      "question": "Was the bifurcated arrangement the only workable resolution of the legitimacy-capacity mismatch, or could a stronger direct-ruling throne have held Japan together?",
+      "resolution_mechanism": "Counterfactual analysis of the Kenmu Restoration's failure modes and comparison with contemporaneous polities where sacral kingship did exercise direct rule.",
+      "impact": "If direct rule was viable, the arrangement's coordination claim weakens and its persistence reads as enforcement of a chosen allocation; if not viable, the coordination function is genuine and load-bearing.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual viability of direct imperial rule as the alternative to delegation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "For roughly seven centuries (1192-1868) Japan operated under a bifurcated sovereignty: the imperial throne, holder of sanctified descent, conferred legitimacy through investiture of the shogun, while successive warrior governments (Kamakura, Muromachi, Tokugawa) exercised actual administration. The arrangement solved a real coordination problem — continuous government despite the throne lacking coercive capacity and warrior coalitions lacking sacred sanction — while distributing its goods asymmetrically: the warrior stratum collected governance and revenue, the throne was confined to ritual, and farming villages funded the whole. This file instantiates ONE reading of the contested imperial_mandate kernel — the delegation reading, under which the bifurcation is a legitimate working order. The sibling loyalist_restoration_reading (a separate constraint file) assesses the same standing arrangement as usurpation; this file does not average across readings and authors a single stable epsilon for its own reading's referent.\n\nKEY AGENTS (by structural relationship):\n- bakufu_shogunal_regime: Agenda-setting enforcer (institutional/identity_locked) — administers the arrangement and is itself bound to it, since its authority IS the invested title\n- bushi_samurai_class: Primary beneficiary (organized/trapped) — monopolizes governance and stipends\n- kuge_court_nobility: Preserved junior beneficiary (moderate/identity_locked) — retains rank and ritual office, surrenders political agency\n- imperial_household_line: Primary target among elites (powerless/trapped) — supplies legitimacy, surrenders rule\n- peasant_village_communities: Fiscal target (powerless/trapped) — funds the warrior stratum\n- daimyo_domain_lords: Intermediate beneficiary-payer (organized/constrained)\n- loyalist_restoration_factions: Excluded dissent (organized/trapped)\n- comparative_constitutional_historians: Analytical observer",
+    "logic_rationale": "Extraction 0.68: the arrangement delivered real goods — continuity across three warrior regimes, a standard transfer protocol, and under the Tokugawa two and a half centuries of peace — while confiscating the throne's political agency and layering warrior stipends on village output; the terminal value reflects the end-state in which the frame's delivery had thinned. Suppression 0.80: persistence always depended on actively suppressing the throne's political involvement — from the Jokyu confiscations (1221) through the Kinchu narabini kuge shohatto (1615) and resident supervision of the court — not on participant preference. Theater 0.42: investiture and rite remained load-bearing (every shogun needed the title) but grew formulaic as the court's role narrowed to performance. Accessibility collapse 0.55: direct-rule alternatives were repeatedly imagined and attempted (Jokyu, Genko and Kenmu, sonno joi) yet structurally foreclosed for centuries; exit existed as aspiration, not option. Resistance 0.45: episodic armed challenges and persistent ideological dissent, unsuccessful until the very end. The three metric series share one time grid (seven points spanning 1192-1868). The suppression series deliberately traces enforcement-capacity change: hardening after Jokyu and again under the Tokugawa legal codification, with a mid-interval decay during the Sengoku breakdown when no one actively enforced anything at the court — a V-shape, not noise.",
+    "perspectival_gap": "Seats compute differently from identical structure. From the shogunal seat the arrangement is the legitimate order it administers — the invested title is its authority, and enforcing the frame is defending its own identity. From the imperial seat the same structure is lifelong confinement of a civilizational office to ritual. From the village seat it is a tax schedule. From the court-noble seat it is a gilded cage: rank preserved, agency surrendered. The engine derives these divergent per-seat classifications from the structural data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiaries: the shogunal regime (collects apex revenue and the invested title), the warrior class (monopolizes governance and stipends), and the court nobility (retains rank and ritual office). Victims: the imperial household (political agency confiscated) and village communities (surplus transferred upward). Derived directionalities follow these declarations with exit modulation: the shogunal regime's identity-lock — its authority IS the invested title, and no shogun ever attempted to rule without one — places it deeper in the frame than raw beneficiary status suggests; the villagers' trapped exit places them at the full-target end. One override: kuge_court_nobility is declared beneficiary, which would derive a strongly beneficiary-side d, but their ledger nets near symmetric — preserved status against total surrender of political agency and subjection to bakufu conduct codes — so an override sets d to 0.45 for the moderate power atom they uniquely occupy in this story.",
+    "mandatrophy_analysis": "The tangled_rope claim prevents two opposite mislabels. Reading the arrangement as pure extraction erases its genuine coordination achievement: three regime transitions handled by re-investiture rather than annihilation, and a legitimacy-capacity compromise no contemporary alternative delivered. Reading it as pure coordination erases the asymmetry: the throne's agency was not compensated at any rate it could negotiate, and village surplus funded a stratum whose military function atrophied. On mandatrophy: the founding problem (the legitimacy-capacity mismatch) was arguably still live at the end — but the arrangement's supporting stratum had hollowed, the samurai having become salaried administrators under a long peace, so what collapsed in 1868 was less a solved problem abandoned than a frame whose carriers had changed nature. The contested founding_problem_status paired with world_rearranges records this honestly rather than forcing either a zombie or a triumphalist genealogy.",
+    "kernel_context": "Kernel: imperial_mandate — the commitment that the imperial throne's sanctified descent is the source of legitimate rule in Japan. This file instantiates the bakufu_delegation_reading: the mandate operates through institutional delegation, and the emperor's legitimacy-granting function is separable from the governing function. Sibling: loyalist_restoration_reading, which holds the mandate requires unmediated imperial exercise. The disagreement is located precisely at separability: the two readings' foundational premises are negations, so neither can be held inside the other's framework (declared forecloses), though both were held simultaneously by different parties across the interval, and late accommodations such as kobu gattai managed the contradiction politically without merging the frameworks."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "loyalist_restoration_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'divine mandate of Japan' decomposes into two structurally distinct constraints per the epsilon-invariance principle. This file instantiates the delegation reading: mandate operating through institutional delegation, legitimacy-granting separable from governing, epsilon authored at 0.68 for the standing bifurcated arrangement. The sibling loyalist_restoration_reading instantiates the unmediated-exercise reading: the same standing arrangement assessed as usurpation, the imperial household as primary victim, materially higher epsilon. The upstream/downstream relation runs through shared texts — Kitabatake Chikafusa's Jinno Shotoki argues imperial descent while conceding ministerial exercise of rule, and both readings cite it. Each file keeps a single stable epsilon over the same referent (the standing arrangement); the difference in epsilon belongs to the readings, not to observable selection."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "bakufu_shogunal_regime",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Holds the office of shogun under investiture issued by the emperor, administers the warrior government, issues laws binding the court as well as the domains, and approves imperial successions. Its authority is defined by the title it receives; ruling without that title has never been attempted, and its own law codes describe its power as exercised on the throne's behalf."
+    },
+    {
+      "name": "bushi_samurai_class",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Monopolizes military service, administration, and the right to bear swords; draws hereditary rice stipends assessed on village output. Individual members cannot leave the class without losing legal status and livelihood; the class reproduces itself through hereditary enrollment."
+    },
+    {
+      "name": "kuge_court_nobility",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Staffs the ritual and ceremonial offices around the throne, holds court rank, and receives stipends tied to designated estates. Its families' standing exists only inside the court hierarchy; in exchange they accept exclusion from military and fiscal administration and live under bakufu regulations governing their conduct, dress, and movements."
+    },
+    {
+      "name": "imperial_household_line",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Provides the sanctified descent line from which legitimacy is drawn, performs the rites that invest shoguns, and signs the edicts that authorize warrior governments. Its members' public conduct, marriages, and access to the throne are regulated by bakufu codes; successive emperors who attempted to reclaim direct rule were defeated or exiled."
+    },
+    {
+      "name": "peasant_village_communities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Cultivate the land under a rice-assessment tax system that funds warrior stipends and domain administration; bound to their registered villages, liable for corvee labor, and represented in the arrangement only through domain officials."
+    },
+    {
+      "name": "daimyo_domain_lords",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold semi-autonomous domains under bakufu supremacy confirmed by imperial sanction, administer local justice and taxation, and owe military service, rotating attendance in Edo, and tribute to the shogunate. Their autonomy exists inside the frame; open defiance has meant confiscation."
+    },
+    {
+      "name": "loyalist_restoration_factions",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Scholars, courtiers, and later activist samurai who argue the throne must rule directly and treat warrior government as usurpation. They publish, conspire, and occasionally revolt; across most of the interval they are exiled, imprisoned, or executed, and they hold no seat in any council of the arrangement."
+    },
+    {
+      "name": "comparative_constitutional_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the arrangement as a case of divided sovereignty alongside European regencies and dual monarchies, reconstructing how legitimacy and administration were apportioned and why the division held for seven centuries."
+    }
+  ],
+  "gain_flow": "bakufu_shogunal_regime",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the standing mismatch between sacred legitimacy and coercive-administrative capacity: the throne supplies sanctified authorization it alone can confer, the warrior government supplies governance it alone can execute, and the investiture protocol gives each transfer of power between warrior regimes a standard, repeatable form.",
+    "transfer_function": "Moves sanctified authorization downward (titles, investiture, edicts from throne to shogun); moves rice revenue and labor services upward (villages to warriors to bakufu treasuries); moves day-to-day political decision-making away from the court to warrior councils.",
+    "absent_voices": "Loyalist court factions and Confucian scholars arguing for direct imperial rule sit outside every council; peasant villages are spoken for by domain officials; no seat represents the throne's own preference, which enters the record only when an emperor acts against the frame and is defeated.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "When the arrangement ended in 1868 the whole order rebuilt itself within a generation: domains replaced by prefectures, the warrior class legally dissolved, a conscript army created, the throne recast as active sovereign head of a centralized state, and the court's ritual apparatus repurposed as state religion — nothing downstream kept its prior form.",
+    "founding_problem": "Japan needed continuous government while the throne held sanctity without armies and warrior coalitions held armies without sanctity; the arrangement was built so that each transfer of power could be re-authorized rather than fought to annihilation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Outside the benefiting parties: Ming and Joseon diplomatic records treat the shogun, not the emperor, as Japan's operative sovereign; the Kenmu episode (1333-1336) showed direct imperial rule collapsing without warrior cooperation, as contemporaries such as Kitabatake Chikafusa recorded; modern comparative histories of divided sovereignty attest the legitimacy-capacity mismatch was real. Loyalist partisans dispute that the mismatch ever justified delegation, which is why the status is contested rather than dead."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "delegated_mandate_order",
+    "drift_state": {
+      "moment": "bakumatsu_crisis",
+      "direction": "repudiation_pressure",
+      "magnitude": "severe",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "loyalist_restoration_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_governance_separability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "warrior_stratum_governance_entitlement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

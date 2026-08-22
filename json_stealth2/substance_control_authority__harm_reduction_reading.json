@@ -1,0 +1,399 @@
+{
+  "header": {
+    "constraint_id": "substance_control_authority__harm_reduction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "harm_reduction_reading",
+    "story_uid": "e69381f7-7ee5-4a09-b750-2c420f79ff0f"
+  },
+  "base_properties": {
+    "extractiveness": 0.47,
+    "suppression": 0.41,
+    "theater_ratio": 0.23,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Substance Control Authority - Harm Reduction Reading",
+    "topic_domain": "public_health/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "people_who_use_drugs",
+      "treatment_and_syringe_providers",
+      "pharmaceutical_manufacturers_of_treatment_agents",
+      "illicit_market_operators"
+    ],
+    "victims": [
+      "people_who_use_drugs",
+      "residents_near_service_sites",
+      "victims_of_acquisition_property_crime"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_binding",
+      "question": "This classification binds to one reading of the substance_control_authority kernel; what would the prohibition or legalization sibling readings change in the computed structure?",
+      "resolution_mechanism": "Author and compile the sibling stories (substance_control_authority__prohibition_reading, substance_control_authority__legalization_reading) and compare per-seat classifications and epsilon across the kernel family.",
+      "impact": "Under the prohibition sibling, users move fully into the victim set with criminal-justice burden added on top of health harm; under the legalization sibling the illicit-operator seat dissolves into licensed commerce and the preserved-margin burden disappears. Values authored here are valid only for the harm-reduction structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-index binding: these numbers hold only for the harm-reduction reading of substance control authority."
+    },
+    {
+      "id": "user_harm_attribution",
+      "question": "How much of the health harm users bear is attributable to this arrangement (adulterated criminal supply, uneven service coverage) versus to pharmacology and dependence themselves?",
+      "resolution_mechanism": "Cohort and cross-jurisdiction comparison of health trajectories under user-depenalization regimes that differ in supply-side legal status.",
+      "impact": "If most harm is arrangement-attributable, the user seat sits nearer the target pole and measured excess burden rises; if mostly intrinsic to dependence, the user seat nets toward the beneficiary pole.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Splitting the user's residual victim status between the arrangement and the underlying condition."
+    },
+    {
+      "id": "preserved_illicit_margin",
+      "question": "How large is the seller margin and associated violence that retaining supply-side prohibition preserves, given a buyer base the state no longer prosecutes?",
+      "resolution_mechanism": "Compare jurisdictions combining user depenalization with legal supply against jurisdictions keeping supply criminal while depenalizing users.",
+      "impact": "A large preserved margin means this reading externalizes a major burden onto communities and onto users buying unregulated product, raising effective extraction; a small margin supports the coordination-dominant account.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Size of the burden the kept-illegal supply side imposes under tolerated demand."
+    },
+    {
+      "id": "third_party_risk_tradeoff",
+      "question": "Are the residual third-party costs (acquisition crime, localized disorder around services) an acceptable price of accepting users, or a failure of service adequacy?",
+      "resolution_mechanism": "Not resolvable by data alone: depends on how much unconsented third-party risk a polity will trade for user autonomy and reduced carceral harm.",
+      "impact": "Resolving toward acceptable-price keeps the third-party victim declarations as tradeoff bookkeeping; resolving toward failure converts them into indictment and pushes governing-seat classifications toward extraction-dominant readings.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Value question about imposing residual risks on non-consenting third parties."
+    },
+    {
+      "id": "service_rent_capture",
+      "question": "Do the provider and manufacturer seats convert the mandate into persistent over-collection beyond the cost of service delivered?",
+      "resolution_mechanism": "Unit-cost benchmarking of syringe exchange, naloxone procurement, and prescribing against comparable public health interventions.",
+      "impact": "Confirmed capture drives theater_ratio upward over the interval and pushes funder-seat classifications toward extraction-dominant readings; its absence supports the coordination account.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether service-sector and pharmaceutical seats collect more than coordination cost."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.41
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A jurisdiction withdraws criminal sanction from personal possession of psychoactive drugs and reorganizes its response around public health services: sterile syringe distribution, supervised consumption rooms, widespread naloxone provision, low-threshold medication-assisted treatment, and outbreak surveillance. The supply side remains criminal: trafficking and wholesale import stay felonies, so users buy from an unregulated market whose product no authority tests. The arrangement therefore splits what the older punitive regime treated as a single target population: users exit the criminal-justice victim set while remaining in a health-harm victim set they partly owe to the criminal market the reading chose to keep; third parties such as site neighborhoods and victims of acquisition crime absorb residuals the state now prices as manageable. KEY AGENTS (by structural relationship): users as dual-positioned principals, legislatures as threshold-writers, health authorities and police as administering seats, providers and manufacturers and illicit sellers as collecting seats, taxpayers as near-symmetric funders, residents and crime victims as residual-cost bearers, unserved rural users as excluded, analysts as observers. Sibling readings of the same kernel (prohibition, legalization) are authored as separate constraint stories; see kernel_context and the network links.",
+    "key_agents": [
+      "people_who_use_drugs: dual-positioned principal - primary beneficiary seat and residual target seat (powerless/trapped); exits the criminal victim set while remaining in the health-harm victim set",
+      "legislatures_and_executive_branches: agenda-setter (institutional/mobile) - writes and can rewrite the tolerated-possession threshold and the supply-side felony line",
+      "public_health_authorities: agenda-setter with beneficiary secondary (institutional/constrained) - designs and administers the service portfolio, collects mandate and appropriation",
+      "street_level_police: agenda-setter with beneficiary secondary (institutional/constrained) - enforces the user/supplier boundary daily and retains interdiction budgets",
+      "treatment_and_syringe_providers: beneficiary (organized/constrained) - delivers funded services, depends on annual renewals",
+      "pharmaceutical_manufacturers_of_treatment_agents: beneficiary (powerful/arbitrage) - sells into a deliberately enlarged treatment market",
+      "illicit_market_operators: beneficiary (organized/arbitrage) - stabilized clientele, preserved margin under kept-illegal supply",
+      "taxpayers: near-symmetric contributor (moderate/constrained) - funds the apparatus, recoups part as avoided emergency and carceral cost",
+      "residents_near_service_sites: concentrated-cost bearer (organized/mobile) - lives with the policy's physical footprint",
+      "victims_of_acquisition_property_crime: diffuse-cost bearer (powerless/constrained) - absorbs crime committed to fund purchases",
+      "rural_users_without_service_access: excluded seat (powerless/constrained) - nominally covered by the tolerant regime, practically governed by distance",
+      "epidemiologists_and_policy_analysts: analytical observer - measures the arrangement, holds no vote"
+    ],
+    "logic_rationale": "Claimed type tangled_rope from structure, authored independently of the metric values: the arrangement carries a genuine coordination function (a service network solving outbreak and overdose collective-action problems that private actors and criminal courts demonstrably could not) AND asymmetric residual burden (users remain exposed to adulterated supply because the market stays criminal; site neighborhoods and acquisition-crime victims bear concentrated residuals; provider, manufacturer, and illicit-seller seats collect durable revenue). Metrics describe operation: extractiveness 0.47 - moderate, far below a carceral baseline because user-facing punishment is withdrawn, but non-trivial because the reading leaves the market criminal and thus leaves users buying unregulated product with their own bodies as the quality-control instrument; suppression 0.41 - user-facing coercion largely dismantled while supply-side interdiction, paraphernalia remnants, and federal-local siting conflicts persist; theater_ratio 0.23 - services are functionally real, with slow bureaucratic accretion around pilots, evaluation frameworks, and advisory machinery; accessibility_collapse 0.30 - the rival arrangements (full legalization, restored prohibition) remain politically alive and operating in other jurisdictions, so understanding this constraint does not foreclose its alternatives; resistance 0.55 - sustained neighborhood siting campaigns, recriminalization movements after visible disorder, and intergovernmental conflict. The three measurement series share one grid (t=0 to 24, step 4), every metric authored at every point. Receipt surface: gains disperse across several partial recipients (provider renewals, the enlarged treatment market, the preserved seller margin) with no single capturing seat, so gain_flow is authored as the checked universal diffuse rather than defaulted; fixing_cost is cheap - the authoring legislature can reverse the arrangement by ordinary bill at modest procedural cost, as a recent subnational reversal demonstrated.",
+    "perspectival_gap": "From the health-authority seat the arrangement computes as stewardship it designed and defends with its own outcome data; from the user seat it is ambivalent shelter - tolerance purchased at the price of unregulated supply and self-borne harm; from the site-neighborhood and crime-victim seats it is cost-shifting onto people who never consented; from the provider and manufacturer seats it is durable revenue. The engine derives these divergent per-seat classifications from the declared roles, power atoms, and exit options; nothing in the authored claim adjudicates among them.",
+    "directionality_logic": "Beneficiary declarations map to low-directionality seats: providers, manufacturers, and illicit operators collect directly, with the arbitrage-exited operators sitting nearest the beneficiary pole. Victim declarations map to high-directionality seats: site-adjacent residents and acquisition-crime victims, whose exit is mobile-at-a-price or constrained. people_who_use_drugs appears in both arrays - the expected structural delta made explicit - so its derived directionality should sit mid-scale, pulled target-ward by the trapped exit option and self-borne health harms and beneficiary-ward by free services and decriminalization. No directionality override is authored: overrides key to power atoms, and a second powerless seat (acquisition-crime victims) occupies a genuinely different structural position, so the role-declaration derivation distinguishes the two more safely than a shared-atom override could. Taxpayers derive near-symmetric: payment is broad-based and partly returned as avoided emergency and carceral cost. Suppression is authored as a raw structural property and is not scaled by scope; only extractiveness is scaled, and the national scope of the service network modestly amplifies verification difficulty.",
+    "mandatrophy_analysis": "The founding problem - injection-driven epidemics combined with mass criminalization's demonstrated failure to reduce them - remains live in the synthetic-opioid era, so no mandatrophy is declared. The classification discipline cuts both ways here: reading the arrangement as pure coordination would erase the named residual victim sets and the preserved illicit-market margin; reading it as pure extraction would erase the documented service function and the withdrawal of user-facing punishment; tangled_rope is the type that holds the working service network and the asymmetric residue in one structure. The U-shaped suppression series argues against a degraded-inertial reading: enforcement capacity was actively wound down and then actively rebuilt, not merely performed.",
+    "kernel_context": "This story instantiates the harm_reduction_reading of the substance_control_authority kernel - the state's standing authority over psychoactive substance control. Sibling readings: the prohibition_reading (criminalize use and possession to shield third parties from drug-related crime and disorder) and the legalization_reading (regulate drug markets as lawful commerce with quality and access controls), each authored as a separate constraint story with its own epsilon and victim set. This reading holds: users depenalized and served, supply-side prohibition retained, third-party risks accepted as managed residuals, decriminalization without legalization. The disagreement across readings is located in the user-facing sanction question: this reading withdraws it, the prohibition sibling makes it the central instrument, and the legalization sibling dissolves it into market regulation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "substance_control_authority__prohibition_reading",
+      "substance_control_authority__legalization_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label drug policy decomposes, per the epsilon-invariance principle, into three structurally distinct arrangements of the substance_control_authority kernel. They differ on the user-facing sanction axis and the market-status axis, so their epsilon values and victim sets differ by construction: the prohibition sibling concentrates extraction on users through the criminal process; this harm-reduction reading splits the victim set (users partially, third parties residually) while preserving an illicit-market extraction channel; the legalization sibling removes the illicit channel and replaces it with regulated-commerce frictions. The stories are linked pairwise through affects_constraints; the prohibition reading is historically upstream (the status quo ante that reforms respond to), and this reading exerts downstream structural pressure on the legalization debate by producing the evidence base and infrastructure that market-regulation proposals inherit."
+  },
+  "stakeholders": [
+    {
+      "name": "people_who_use_drugs",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Buys psychoactive substances from an unregulated market and consumes them without facing arrest or prosecution for personal possession. Can carry naloxone, exchange syringes, and enter treatment without a criminal record as a barrier. Still absorbs the health costs of use itself: dependence, infection risk from inconsistent product content, and overdose exposure that no service fully removes. Because selling remains a felony upstream, price, purity, and availability depend on sellers who answer to no regulator. Exit looks like treatment remission, which is achievable but relapse-prone; the label follows many through housing and employment searches."
+    },
+    {
+      "name": "legislatures_and_executive_branches",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Writes the threshold separating tolerated personal possession from prosecuted trafficking, appropriates the annual service budget, and can widen or narrow the decriminalized zone at any session. Responds to election cycles, media episodes, and coroner reports; retains full authority to restore prosecution of users, as one subnational reversal recently demonstrated."
+    },
+    {
+      "name": "public_health_authorities",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Designs and administers the intervention portfolio: syringe distribution, supervised consumption rooms, bulk naloxone purchase, treatment contracting, outbreak surveillance. Receives appropriations and reporting duties; publishes the outcome data that justify renewal. Cannot legalize supply, and must request enforcement cooperation from police forces whose priorities differ."
+    },
+    {
+      "name": "street_level_police",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Decides daily, at the curb, whether the possession threshold holds: seizure discretion, referral to services versus citation, tolerance of known gathering spots. Retains the trafficking interdiction mission and its budgets. Carries the workload ambiguity of guarding a line the health system treats as porous."
+    },
+    {
+      "name": "treatment_and_syringe_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Delivers the funded services: exchanges, supervised rooms, counseling, prescribing. Depends on annual grant renewals and performance metrics; expands or contracts with appropriations. Gains organizational permanence from the arrangement continuing and loses mandate if use declines or politics turns."
+    },
+    {
+      "name": "pharmaceutical_manufacturers_of_treatment_agents",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sells naloxone, buprenorphine, methadone, and related products into a market the arrangement deliberately enlarges. Negotiates prices with public purchasers; patent positions on formulations extend revenue duration. Operates across many jurisdictions, so no single policy reversal threatens the firm."
+    },
+    {
+      "name": "illicit_market_operators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Supplies a customer base the state no longer prosecutes for buying, while the state still seizes shipments and imprisons wholesalers. Demand-side tolerance stabilizes their clientele; supply-side illegality preserves the margin that lawful competition would erode. Moves product through shifting corridors; exit means laundering proceeds into other trades, which the cash flow makes straightforward."
+    },
+    {
+      "name": "taxpayers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Funds the service apparatus through general revenue and receives part of the return as avoided emergency-room, court, and incarceration costs. Has little visibility into unit costs per service contact; encounters the arrangement mainly through budget headlines and street-level anecdotes."
+    },
+    {
+      "name": "residents_near_service_sites",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "situation": "Lives with the concentrated footprint of the policy: queues outside consumption rooms, discarded paraphernalia when disposal fails, occasional incidents - alongside reductions in public injecting and sharps litter once services run well. Can attend zoning hearings, petition councils, and force relocation of sites; can move away at the cost of a housing search."
+    },
+    {
+      "name": "victims_of_acquisition_property_crime",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Absorbs burglaries, thefts, and shoplifting committed to fund purchases wherever dependence outruns income and treatment slots run short. Individual victims rarely organize; recourse is insurance claims, avoidance behavior, or relocation. Their aggregate experience is cited by both sides of the policy argument, but they hold no seat in program governance."
+    },
+    {
+      "name": "rural_users_without_service_access",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Lives in counties where no syringe program, supervised site, or accessible prescriber operates; nominally covered by the tolerant regime but practically governed by distance, with the nearest service hours away. Would press for mobile distribution and telehealth prescribing if seated in program planning."
+    },
+    {
+      "name": "epidemiologists_and_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Measures the arrangement: incidence curves, overdose counts, service reach, cost offsets. Publishes findings that both camps cite selectively. Holds no vote; credibility depends on methodological distance from advocacy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Concentrates public health capacity on a population that will use drugs regardless of sanction: sterile supplies interrupt bloodborne-disease transmission chains, naloxone distribution and supervised consumption reduce overdose deaths, and low-threshold service contact funnels users into treatment - collective-action problems that punitive processing failed to solve and that no single user or neighborhood can solve privately.",
+    "transfer_function": "Moves general revenue into service delivery for people who use drugs, and moves users from court dockets into clinic intake. Leaves the drug market's own financial flows untouched: purchases keep flowing from users to illicit sellers at prohibited-supply premiums. Leaves residual costs - acquisition crime, localized disorder, adulterant injury - with users, site neighborhoods, and crime victims.",
+    "absent_voices": "Victims of acquisition crime and site-adjacent residents rarely hold seats in program governance, which is staffed by health agencies and user-advocacy organizations; recovery-community members who reject the acceptance premise are likewise outside the room; rural users in unserved counties are governed by the arrangement's name without its benefits.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would push users back before magistrates, strand service clients without syringes or naloxone, reopen bloodborne-disease transmission chains, and discard the surveillance data stream - while the illicit supply side, already illegal, would simply regain its arrested-customer flow. The world rearranges around the loss of the service layer, not around the market.",
+    "founding_problem": "Injection-driven HIV and hepatitis C epidemics among people who use drugs, mounting overdose deaths, and the demonstrated failure of mass criminalization to reduce either use or harm - the problem constellation that produced the first decriminalization-plus-services regimes of the 1990s and 2000s.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "WHO, UNAIDS, and national health agencies attest from outside the benefiting parties that injection-driven HIV and hepatitis C transmission remains an open problem; official vital-statistics systems record overdose mortality at or above historical peaks in the synthetic-opioid era; peer-reviewed evaluations in the general medical journals corroborate both the persistence of the founding problems and the partial effectiveness of the service response. No attestation relies solely on the service-delivery sector's own reporting."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "user_acceptance_for_health_engagement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "decriminalize_users_not_markets",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "public_health_stewardship",
+    "drift_state": {
+      "moment": "synthetic_opioid_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

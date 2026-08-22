@@ -1,0 +1,355 @@
+{
+  "header": {
+    "constraint_id": "marriage_sacrament__civic_pastoral_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "17010782-2cf9-47f4-bb10-5d0f3ae7ca4d"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.32,
+    "theater_ratio": 0.42,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pastoral Discernment Regime for Marriage (Civic-Pastoral Reading of the Sacrament)",
+    "topic_domain": "religious doctrine / canon law / political sociology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "divorced_remarried_catholics",
+      "diocesan_pastors",
+      "roman_magisterium"
+    ],
+    "victims": [
+      "traditional_catholics",
+      "abandoned_first_spouses"
+    ],
+    "vindicated_propositions": [
+      "pastoral_gradualism",
+      "internal_forum_discernment"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.29
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.32
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is one reading (civic_pastoral_reading) of the marriage_sacrament kernel; the disagreement with the sibling reading (hierarchical_indissolubility_reading) is located in two structural elements: the modal status of the bond (aspirational ideal vs constitutive reality) and the seat of adjudication (pastoral discernment vs hierarchical tribunal). Does instantiating the sibling relocate the victim set to divorced-and-remarried Catholics and raise epsilon from moderate to high, confirming the two readings as distinct constraints?",
+      "resolution_mechanism": "Author the sibling reading as its own constraint story and compare computed per-seat classifications; the family decomposition is confirmed if the victim set and effective-extraction profile move as the declared structural delta predicts.",
+      "impact": "If confirmed, the two readings are genuinely distinct constraints and cross-reading epsilon comparison is a category error; if not, the kernel is better modeled as one constraint with contested enforcement rather than two readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel-reading delta: whether the sibling reading constitutes a separate constraint with its own victim set and epsilon."
+    },
+    {
+      "id": "secular_accommodation_ambiguity",
+      "question": "Is the pastoral regime an internal development of the tradition's own logic (mercy unfolding from within) or a constructed accommodation to secular divorce norms, purchasing institutional legitimacy at the cost of doctrinal integrity?",
+      "resolution_mechanism": "Compare regime adoption and implementation depth across jurisdictions with different secular divorce regimes; if implementation depth tracks secular-legal pressure rather than internal theological argument, the accommodation reading is supported.",
+      "impact": "If accommodation, part of the burden traditional laity bear is the price of an exchange (doctrinal integrity for secular legitimacy) and the regime's coordination claim weakens toward pure extraction; if internal development, the burden is the cost of a genuine interpretive transition and the coordination function stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the regime is endogenous doctrinal development or exogenous accommodation to secular norms."
+    },
+    {
+      "id": "discernment_reality_ambiguity",
+      "question": "Is the discernment process a real adjudicative practice (structured accompaniment, documented internal-forum records) or theatrical cover for de facto permission, varying by diocese?",
+      "resolution_mechanism": "Diocesan-level audit of implementation: existence of structured accompaniment paths, documented discernment records, variance in admission outcomes across pastors within comparable cases.",
+      "impact": "If largely theatrical, the indissolubility language is maintained performatively while the operative rule is permission, raising theater_ratio further and dating a type transition toward piton dynamics; if real, the regime is a functioning hybrid coordination structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the discernment machinery is functional or performative."
+    },
+    {
+      "id": "relativization_intrinsic_cost_ambiguity",
+      "question": "Is the cost traditional Catholics bear (doctrinal relativization and loss of normative clarity) a burden imposed by this regime specifically, or the intrinsic price any living tradition's development exacts from the partisans of the prior formulation?",
+      "resolution_mechanism": "Counterfactual comparison: price the relativization cost the sibling reading imposes on progressive laity when it governs; if the costs are symmetric across readings (each side pays when the other governs), the cost is contest-structural rather than regime-specific.",
+      "impact": "If intrinsic, the regime's effective extraction drops and its classification moves toward rope; if regime-specific, the tangled_rope classification with traditional Catholics as the paying class stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether traditional-lay relativization is regime-specific extraction or the structural cost of the kernel contest itself."
+    },
+    {
+      "id": "first_spouse_standing_ambiguity",
+      "question": "Is the abandoned first spouse's lack of standing in discernment processes an incidental feature of internal-forum practice, or constitutive of the regime's transfer function (discretion flowing to pastors requires the process to be non-adversarial and therefore to exclude the first spouse)?",
+      "resolution_mechanism": "Compare jurisdictions where first spouses retain formal standing in tribunal process with internal-forum regimes; observe whether pastoral discretion and case throughput depend structurally on the first spouse's absence.",
+      "impact": "If constitutive, the burden on first spouses is structural and their declaration as a paying class is load-bearing for classification; if incidental, their harm is an implementation defect correctable without regime change.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether first-spouse exclusion is structural to the regime or incidental to its implementation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The civic-pastoral reading governs marriage as a pastoral relationship subject to human failure: indissolubility is affirmed as an ideal, and individual cases are resolved through compassionate discernment — pastoral accompaniment, internal-forum process, and a streamlined annulment track — rather than through fixed hierarchical adjudication. The arrangement crystallized across the post-conciliar period (interval 0–60 maps to 1965–2025): the personalist reframing of the mid-1960s, the 2015 streamlining of nullity processes, and the 2016 discernment framework, with implementation deepening unevenly since. This file instantiates ONE reading of the marriage_sacrament kernel; the sibling hierarchical-indissolubility reading (bond constitutive, adjudication hierarchical, paying class = divorced-and-remarried Catholics excluded from communion) is a separate constraint linked via network.affects_constraints, with its own epsilon. Epsilon's referent is the standing pastoral-discernment arrangement itself, assessed by this reading's own lights — not the hierarchical arrangement this reading displaces, and not the fully realized discernment practice it endorses. The claim and the metrics are independent authored facts: claimed_type states the structure I believe true (tangled_rope — genuine coordination holding ideal and mercy in one communion, with asymmetric burden falling on traditional laity); the metrics state what I believe descriptively true of the regime's operation. The engine computes per-seat classifications from the structural data; where computed types diverge from the claim, that divergence is the measurement.",
+    "key_agents": [
+      "roman_magisterium: agenda-setter (institutional/arbitrage) — sets the doctrinal frame, disciplines resistance, collects retention while absorbing authority-erosion costs",
+      "diocesan_pastors: primary beneficiary (organized/constrained) — collect the discretionary adjudicative authority the regime creates; conduct the discernment the regime centers",
+      "divorced_remarried_catholics: beneficiary (organized/constrained) — gain a case-by-case path back to sacramental communion",
+      "traditional_catholics: primary target (organized/identity_locked) — bear doctrinal relativization; their identity depends on doctrinal stability",
+      "abandoned_first_spouses: secondary target (powerless/trapped) — first bonds set aside without standing in the process that re-determines them",
+      "adult_children_of_first_marriages: excluded voice (moderate/constrained) — their family history is adjudicated without a hearing",
+      "canon_law_tribunal_officials: secondary beneficiary (organized/constrained) — administer the streamlined formal track parallel to discernment",
+      "religious_sociologists: analytical observer — document the gap between norm and practice"
+    ],
+    "logic_rationale": "Extraction is moderate (0.48): the regime's transfer is real but diffuse — normative certainty moves away from the laity as a class while discretion accrues to pastors; this is not the concentrated rent of a pure extraction structure but the asymmetric cost of a hybrid. Suppression is low-moderate (0.32) and is authored as a raw structural property (the engine scales only extractiveness): the regime coerces no one into the pastoral reading; it manages dissent inside the institution — declining to adjudicate formal theological corrections, disciplining traditionalist liturgical communities — rather than blocking exit, which remains available at identity cost. Theater is moderate and rising (0.15 to 0.42): as implementation outpaces the case-by-case requirement, the indissolubility ideal is increasingly affirmed in language while suspended in practice, and the regime's own discernment requirement becomes the theatrical element. Accessibility collapse is moderate (0.45): alternatives exist (traditionalist jurisdictions, Eastern churches, plain exit) but each costs the mainstream continuity that traditional identity is constituted by. Resistance is substantial (0.55): organized theological opposition and liturgical-attachment movements, met with management rather than adjudication. All three series run on one shared time grid (t=0–60, i.e., 1965–2025) with every metric authored at every point. Receipt: the gains demonstrably accrue to diocesan_pastors, who collect the discretionary authority the regime's relativization creates. Fixing cost: the seat that could restore the hierarchical discipline (the magisterium) could do so only at prohibitive cost — forfeiting the progressive wing, reversing a decade of implementation, and risking schism — relative to the coherence benefit.",
+    "perspectival_gap": "The payer and beneficiary seats compute different types from the same structure. From diocesan pastors' seat the regime is the machinery of their ministry: discernment is what they do, and the discretion is real authority. From traditional Catholics' seat the same regime is relativization — settled teaching made discretionary and applied unevenly. From divorced-and-remarried Catholics' seat it is return: the difference between permanent exclusion and communion. From the magisterium's seat it is simultaneously gain (retention, the standing of merciful interpreter) and loss (authority eroded by its own inconsistent enforcement). The engine computes these divergences from power, exit, and directionality data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiaries: divorced_remarried_catholics (d near the beneficiary end — the regime subsidizes their communion access), diocesan_pastors (collect the discretion), canon_law_tribunal_officials (retained and expanded function). Targets: traditional_catholics (pay normative clarity; identity_locked exit places them near the full-target end — they cannot arbitrage an identity home), abandoned_first_spouses (pay their bond's status; trapped — no standing in the process that re-determines it). One override: the institutional atom is set to d=0.30. The magisterium is the regime's role-beneficiary, but the structural account has it paying a material self-cost — institutional authority eroded by its own inconsistent enforcement — so the derivation from beneficiary declarations alone (~0.10) would overstate its net position; 0.30 places it between beneficiary and symmetric, matching the retention-gain versus legitimacy-loss structure. gain_flow names diocesan_pastors because the discretion vacated by relativized norms demonstrably lands there, case by case.",
+    "mandatrophy_analysis": "The tangled_rope classification prevents two opposite mislabels. Reading the regime as pure extraction (doctrinal integrity taken from traditional laity) misses its genuine coordination function: holding a strict ideal and mass marital failure in one communion is a real collective problem the hierarchical reading leaves unsolved, and the regime solves it without formally abandoning the ideal. Reading it as pure coordination (compassionate accommodation) misses the asymmetric burden: the clarity traditional Catholics pay was not a cost they consented to, and the discretion pastors collect is not returned to those who paid. Mandatrophy is not resolved: the founding problem — divorced-and-remarried Catholics outside communion — is live, and the regime manages it rather than having outlived it, so no sunset or piton dynamics apply. The drift to watch is theater_ratio, whose steady rise tracks the ideal's progressive theatricalization: the classic signature that precedes mandate atrophy if implementation continues outrunning the discernment requirement the regime names as its own justification.",
+    "kernel_context": "This constraint instantiates the civic_pastoral_reading of the marriage_sacrament kernel: marriage as pastoral relationship subject to human failure, indissolubility as ideal requiring compassionate case-by-case discernment. The sibling reading, hierarchical_indissolubility_reading, holds the bond ontologically constitutive and adjudication hierarchically exclusive; it is a separate constraint file with its own epsilon, its own paying class (divorced-and-remarried Catholics excluded from communion), and its own classification. This file authors only the civic-pastoral reading's structure; the contest between readings is recorded in the omega variables, never averaged into epsilon."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "marriage_sacrament__hierarchical_indissolubility_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Catholic marriage doctrine' decomposes into two structurally distinct constraints per the epsilon-invariance principle: this file (civic_pastoral_reading — indissolubility as ideal with case-by-case discernment; moderate extraction; paying classes = traditional Catholics bearing relativization and first spouses lacking standing) and marriage_sacrament__hierarchical_indissolubility_reading (bond constitutive, hierarchical adjudication; high extraction for divorced-and-remarried Catholics excluded from communion). The hierarchical reading was the standing arrangement for centuries and is upstream: the civic-pastoral reading emerged as its modification and now creates downstream pressure on it — its adoption erodes the hierarchical regime's enforcement conditions and legitimacy — while the hierarchical reading's persistence supplies the organized resistance this regime manages. Measuring 'the marriage constraint' across both readings yields observer-dependent epsilon; each file holds one stable epsilon, and the family link records the dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "roman_magisterium",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sets the doctrinal frame through conciliar teaching and post-conciliar documents, issues implementation guidance for the discernment regime, and disciplines resistance within the institution, including restrictions on traditionalist liturgical communities. Collects continued membership from both progressive and traditional wings and the standing of merciful interpreter; absorbs the cost of authority eroded by uneven enforcement across dioceses. Its exit is reframing: it authored the regime and can reissue, clarify, or reframe it."
+    },
+    {
+      "name": "diocesan_pastors",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Conduct the case-by-case discernment the regime centers: accompanying couples in irregular situations, weighing admission to communion, applying diocesan norms that vary widely. Collects the discretionary adjudicative authority that previously sat with tribunals and fixed rules. Bears the burden of inconsistent norms across dioceses and of parishioners who expect either stricter or looser application than their pastor gives. Exit would mean leaving pastoral office or the institution."
+    },
+    {
+      "name": "divorced_remarried_catholics",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Live in second unions after civil or religious divorce and seek sacramental communion. Under this regime they gain a case-by-case path back to communion — accompaniment, internal-forum discernment, or streamlined annulment of the first bond — where the prior discipline offered none. The path's availability varies by diocese and pastor. Their alternative is permanent exclusion from communion or leaving the church they belong to."
+    },
+    {
+      "name": "traditional_catholics",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Hold the settled doctrine of marital indissolubility as constitutive of their religious identity and liturgical life. Experience the discernment regime as relativization: teaching they understood as fixed made discretionary and applied unevenly across dioceses. Their opposition is organized — formal theological dubia, traditionalist communities, liturgical-attachment movements — and is met with management rather than adjudication. Leaving the mainstream institution would cost them the very continuity they understand themselves to be preserving; some exit to traditionalist jurisdictions at high personal and communal cost."
+    },
+    {
+      "name": "abandoned_first_spouses",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Are the spouses of the first marriages that discernment and streamlined annulment set aside. They hold no formal standing in internal-forum processes conducted about their own bonds: the status of their marriage is re-determined without their participation, testimony, or consent. Many learn of the reclassification only after the fact."
+    },
+    {
+      "name": "adult_children_of_first_marriages",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Are the adult children of unions the regime reclassifies. Their family history is the object the process adjudicates, yet no process consults them; they learn that their parents' marriage has been declared null or set aside as a finished fact. Their objection — that their origin is being re-written without a hearing — has no institutional address."
+    },
+    {
+      "name": "canon_law_tribunal_officials",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Staff the marriage tribunals that administer the formal nullity track running parallel to pastoral discernment. The 2015 streamlining multiplied their caseload and preserved their function inside the regime; their work is the documentary counterpart to the pastors' internal-forum discretion. Exit would mean leaving canonical office."
+    },
+    {
+      "name": "religious_sociologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study marriage, divorce, annulment, and retention patterns across Catholic populations. They document the gap between normative teaching and practice, the variance in implementation across dioceses and countries, and the demographic effects of each discipline. They neither collect from the regime nor bear its costs."
+    }
+  ],
+  "gain_flow": "diocesan_pastors",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Holds a strict communal ideal (marital indissolubility) and a mass reality of marital failure in one communion: the regime provides a case-by-case path — pastoral accompaniment, internal-forum discernment, streamlined annulment — that keeps divorced-and-remarried members in sacramental communion without formally renouncing the ideal. It solves the collective problem the hierarchical reading leaves unsolved: mass exclusion of millions of members versus formal doctrinal abandonment.",
+    "transfer_function": "Moves adjudicative discretion from canonical tribunals and fixed rules to pastors' case-by-case judgment; moves sacramental access to divorced-and-remarried Catholics; moves normative certainty away from the laity as a class (the diffuse cost traditional Catholics bear); moves interpretive legitimacy to the magisterium as the merciful reader of the tradition.",
+    "absent_voices": "Adult children of set-aside first marriages have no seat in any discernment process; abandoned first spouses lack formal standing in internal-forum procedures conducted about their own bonds; Orthodox churches, whose parallel economy practice is implicitly cited by the regime's defenders, are engaged in no consultation; traditionalist theologians were heard (the 2016 dubia) but their formal corrections received no adjudication.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Diocesan norms, tribunal workflows, communion discipline, parish accompaniment programs, and the organized resistance structures of traditionalist communities all presuppose the regime. If it vanished overnight, every divorced-and-remarried Catholic would face an immediate either/or — exclusion from communion or the hierarchical reading's formal process — and the institution would have to adopt one sibling reading explicitly rather than holding the discernment middle.",
+    "founding_problem": "By the late twentieth century, millions of divorced-and-remarried Catholics were living in formal exclusion from sacramental communion: the institution faced mass pastoral abandonment of its members if discipline held, or de facto doctrinal abandonment if communion were admitted. The regime was built to hold both — keep the indissolubility ideal and find a case-by-case path for the excluded.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The problem's reality is corroborated from outside the benefiting parties: secular religious sociologists document the scale of exclusion through attendance and divorce-pattern studies; Orthodox canonists attest the parallel problem in their own communion; traditionalist theologians and the dubia cardinals — opponents of the remedy — attest the pastoral problem was real while disputing the solution. No party disputes that the founding problem existed; the parties dispute whether the regime solves it or dissolves the doctrine it was built to preserve."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "indissolubility_as_pastoral_ideal",
+    "drift_state": {
+      "moment": "post_amoris_implementation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "hierarchical_indissolubility_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "indissolubility_aspirational_not_constitutive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "case_discernment_over_tribunal_rule",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

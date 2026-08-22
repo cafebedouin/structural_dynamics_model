@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "latin_correctness__rupture_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "02db44f1-a65c-432f-8e04-09ed994d24ec"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.58,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Classical Latin as Fixed Textual Standard — Rupture Reading",
+    "topic_domain": "intellectual_history/philology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "classical_philologists",
+      "humanist_educational_establishment",
+      "neo_latin_literary_elite"
+    ],
+    "victims": [
+      "medieval_manuscript_scholars",
+      "scholastic_technical_writers",
+      "vernacular_technical_clerks"
+    ],
+    "vindicated_propositions": [
+      "philological_reconstruction_doctrine",
+      "ciceronian_normativity"
+    ]
+  },
+  "interval": {
+    "start": 1350,
+    "end": 1950
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1350,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1450,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1550,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1850,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1350,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1450,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1550,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1850,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1350,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1450,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1550,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1850,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.58
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This file authors one reading (rupture_reading) of the latin_correctness kernel; would instantiating continuity_reading or hybrid_reading instead yield a structurally different constraint with different epsilon, beneficiary sets, and victim sets?",
+      "resolution_mechanism": "Generate the sibling files and compare computed classifications across the family; all three are linked via network.affects_constraints so contamination and coupling analyses can run across them.",
+      "impact": "Under continuity_reading, epsilon drops sharply (no corruption verdict, no dispossessed medieval seats) and the structure approaches rope; under hybrid_reading, extraction concentrates in literary gatekeeping and the victim set shrinks to technical writers denied prestige venues.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this constraint is the rupture_reading of the latin_correctness kernel, one of three sibling readings."
+    },
+    {
+      "id": "normative_criterion_disagreement_location",
+      "question": "Where exactly do the three readings disagree? The dispute is located in the criterion that fixes correctness: the ancient textual corpus (rupture), living transmission practice (continuity), or a domain partition assigning different criteria to literary versus technical registers (hybrid).",
+      "resolution_mechanism": "Analysis of what each reading treats as defeater evidence: rupture is defeated by demonstration that reconstruction is indeterminate or that divergence is adaptive; continuity is defeated by demonstration that transmission lost determinacy; hybrid is defeated by demonstration that the domain boundary cannot be drawn.",
+      "impact": "The located criterion determines which practices count as violations at all; mislocating it would attribute the extraction to the wrong structural element.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Location of the inter-reading disagreement within the latin_correctness kernel."
+    },
+    {
+      "id": "reconstruction_determinacy",
+      "question": "Is classical usage determinately recoverable from the surviving sources, or does 'the classical standard' embed the reconstructors' own choices at contested points (word choice, syntax, orthography)?",
+      "resolution_mechanism": "Compare independent reconstruction efforts for convergence or divergence: the Ciceronian imitatio controversy, competing editorial practices for the same texts, grammatical disputes resolved by appeal to authority rather than evidence.",
+      "impact": "If reconstruction is substantially indeterminate, the fixed standard is partly manufactured by its administrators, strengthening the capture reading of the classical credential premium; if determinate, the fixity claim stands and the standard's authority rests on firmer ground.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the 'fixed' standard is determinate in the sources or partly constructed by its maintainers."
+    },
+    {
+      "id": "corruption_or_adaptation",
+      "question": "Is medieval divergence from classical usage degradation (loss of classical precision) or adaptation (gain of precision for domains antiquity never addressed — theology, jurisprudence, medicine, administration)?",
+      "resolution_mechanism": "Domain-level expressive adequacy comparison: measure ambiguity rates and term-formation success of scholastic theological and legal Latin against classical Latin attempting the same concepts.",
+      "impact": "If adaptation, the corruption verdict loses its factual warrant; the reading's own empirically-contingent foundational axiom is challenged, and the enforcement apparatus trends toward snare or piton assessment rather than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the corruption verdict tracks a real deficit or misreads ordinary language change as decay."
+    },
+    {
+      "id": "enforcement_decay_endpoint",
+      "question": "Will enforcement continue decaying toward purely editorial and ceremonial maintenance, or stabilize at a residual functional core (textual criticism of ancient texts, selective examination regimes)?",
+      "resolution_mechanism": "Track Latin-requirement statistics, classics enrollment, and editorial norm adoption over coming decades; compare against the 1850 enforcement peak in the measurement series.",
+      "impact": "Continued decay with rising theater_ratio dates a tangled_rope-to-piton transition; stabilization at a functional core supports the tangled_rope reading indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Future trajectory of the standard's enforcement machinery after the 20th-century contraction."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "From Petrarch's generation onward, Italian and then European humanists rebuilt Latin from the ancient sources: manuscripts collated, inscriptions and coins read, Cicero's syntax codified, and a norm pronounced — correct Latin is the Latin of the classical corpus, recovered by specialist reconstruction, and the Latin that grew up after antiquity (scholastic theology, medieval law and medicine, chancery practice) is corruption. This file instantiates the RUPTURE READING of the latin_correctness kernel only: the claim that the standard is fixed in the ancient texts and that post-classical usage is deficient. Per the epsilon-invariance principle, the sibling readings (continuity_reading: medieval Latin as legitimate organic continuation; hybrid_reading: classical norms for literary domains, medieval forms legitimate for technical domains) are separate constraint files with their own epsilon, beneficiaries, and victims, linked through network.affects_constraints. The rupture reading is the most extractive of the three because its verdict is universal: it denies legitimacy to post-classical practice everywhere, converting linguistic difference into deficiency and routing authority, publication, and curricular resources to the reconstruction complex. Assumptions stated: the interval runs from the early humanist polemic (c. 1350) to the mid-20th century contraction of compulsory classical schooling (1950); the standing arrangement under contest is the historical regime in which the ancient corpus functioned as the binding norm, and epsilon is authored for that arrangement as the rupture seat itself encounters it.",
+    "key_agents": [
+      "classical_philologists: agenda setter and principal beneficiary (institutional/identity_locked) — reconstruct the standard from ancient sources, edit the canon, and collect the credential premium their monopoly on reconstruction confers",
+      "humanist_educational_establishment: enforcement arm (institutional/constrained) — runs the schools and examinations through which the standard reaches every educated career",
+      "neo_latin_literary_elite: secondary beneficiary (powerful/arbitrage) — converts classical mastery into patronage and fame, with vernacular markets as an alternative code",
+      "medieval_manuscript_scholars: primary target (moderate/trapped) — their sources and skills are marked corrupt; retraining means abandoning the archives only they can read",
+      "scholastic_technical_writers: organized target (organized/constrained) — theologians, jurists, physicians whose necessary terminology has no classical precedent and whose forms are corrected by classical-trained editors",
+      "vernacular_technical_clerks: diffuse target (powerless/constrained) — chancery and notarial writers whose working Latin is judged debased whenever it surfaces before learned readers",
+      "practical_latin_users: excluded voice (moderate/mobile) — diplomats, merchants, manual-writers who were never consulted and mostly answered by leaving Latin altogether",
+      "modern_historical_linguists: analytical observer (analytical/analytical) — sees classical and medieval Latin as phases of one language's history and can view the whole structure"
+    ],
+    "logic_rationale": "Epsilon is 0.72: the standard transfers scholarly authority, publication access, and curricular resources from every post-classical practice to the reconstruction complex, and the transfer is large because the verdict is universal — all divergence from the ancient corpus counts as fault, so every technical domain that antiquity did not furnish vocabulary for is structurally condemned. The value is authored for the standing arrangement from the rupture seat: the reading grants the standard's legitimacy while its own descriptive concessions (the training burden of an extinct language, the distortion of technical registers forced into classical dress, the dispossessed medieval scholarship) register the magnitude of the movement. It is high but not maximal because part of the standard's operation is genuine service — a stable reference corpus, editorial reliability, four centuries of mutually intelligible learned writing — which the reading itself counts as benefit. Suppression (0.58) is a raw structural property, unscaled by power or scope: it records the enforcement machinery (editorial gatekeeping, curricular requirement, corrective ridicule) as it stands at interval end, decayed from its 19th-century peak but still operative wherever classical norms govern editing and examination. Theater_ratio (0.30): a substantial minority of activity is purity display — Ciceronian competition, denunciation of barbarisms, ceremonial Latinity — while reconstruction and editing remain functional. Accessibility_collapse (0.60): within prestige writing, alternatives collapse once the standard is understood, but exits existed (the vernaculars, the ecclesiastical track), so collapse is partial. Resistance (0.60): sustained — the humanist-scholastic polemics, the universities' institutional counterweight, and the 20th-century rehabilitation of medieval Latin studies. The temporal series run on one shared seven-point grid (1350–1950 at century steps) for all three tracked metrics; the arc is rise-and-decay, not cyclical: extraction and enforcement ratchet up with print, the Jesuit colleges, and the state examination regimes, peak around 1850, then contract as Latin composition dies and medieval studies rehabilitate its object.",
+    "perspectival_gap": "The seats compute differently. From the agenda-setter seat the arrangement is restoration: the standard was always there in the texts, and enforcement merely strips away accretion — nothing is taken from anyone that was rightfully theirs. From the trapped medievalist seat the same arrangement is dispossession: a tradition's legitimacy confiscated by the people who control the definition of legitimacy, with the confiscation described as scholarship. From the arbitrage neo-Latin elite seat it is a market being won. The organized scholastic seats additionally show that coalition matters: because theologians and jurists held chairs and faculties, they mounted real institutional resistance (part of the authored 0.60 resistance), unlike the powerless chancery clerks who absorbed the verdict silently. The engine computes these per-seat classifications from the structural data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiaries derive low directionality: classical_philologists and the educational establishment are subsidized by the standard (their scarce skill is valuable only because the standard demands it), and the neo-Latin elite's arbitrage exit pulls its derived d toward the beneficiary extreme — it can take its prestige elsewhere at low cost. Victims derive high directionality, amplified by exit structure: medieval_manuscript_scholars are trapped (material and training lock them to the devalued layer), scholastic_technical_writers are constrained (they need Latin for international discourse but cannot meet the classical measure without distorting their subject matter), and vernacular_technical_clerks are powerless with constrained exits. Practical_latin_users illustrate the exit boundary of the arrangement: their mobility meant they did not stay to pay — they left the jurisdiction of the standard for the vernaculars, which is why they are authored as excluded voices rather than payers. Continental spatial scope makes compliance verification harder across polities and presses, so the engine scales effective extraction modestly upward from the base epsilon; suppression is passed through unscaled.",
+    "mandatrophy_analysis": "The founding problem was real: after Roman institutions collapsed, written Latin drifted regionally, and by the late Middle Ages the link to the classical corpus was fraying enough to threaten learned communication. The rupture standard solved that problem — and then overshot into a universal corruption verdict whose original object (living drift) has largely vanished now that nobody composes Latin as a working language. Classifying as tangled_rope keeps both facts visible: decomposing to pure rope would hide the dispossessed medieval and technical seats; decomposing to pure snare would erase the genuine coordination the standard performed for four centuries of scholarship. The mandatrophy watch is live: the measurement series is built to catch the turn from enforced standard to theatrically maintained relic — falling suppression_requirement after 1850 alongside sticky theater_ratio is the signature. If enforcement decays to pure ceremony while the corruption verdict persists rhetorically, the structure drifts toward piton; if the verdict is abandoned and only the editorial core remains, it resolves toward rope confined to textual criticism.",
+    "kernel_context": "This story instantiates the rupture_reading of the latin_correctness kernel: the claim that correct Latin is fixed by the ancient textual corpus, recoverable only by specialist reconstruction, and that medieval usage is corruption. Sibling readings — continuity_reading (medieval Latin as the legitimate organic continuation of classical Latin) and hybrid_reading (classical norms governing literary and rhetorical domains while medieval forms remain legitimate for technical and practical domains) — are separate constraint files with their own epsilon and victim structures, joined to this one through network.affects_constraints. The rupture reading is distinguished from its siblings by the universality of its negative verdict: it is the only reading under which the entire post-classical tradition stands condemned."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "latin_correctness__continuity_reading",
+      "latin_correctness__hybrid_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'correct Latin' conflates three structurally distinct claims about what fixes correctness, with materially different epsilon values. Per the epsilon-invariance principle the family decomposes into three stories: rupture_reading (this file — fixed ancient corpus, universal corruption verdict, high epsilon, broad victim set), continuity_reading (organic transmission, negligible extraction, no corruption victims), hybrid_reading (domain-partitioned norms, intermediate extraction concentrated in literary gatekeeping). Structural ordering: the rupture reading achieved institutional dominance first and created the conditions — expulsion of technical registers from prestige venues — under which the hybrid settlement formed; the continuity reading gained ground as historical linguistics matured and supplied the adaptation-over-decay account. Each file links the others via affects_constraints so family-level coupling and contamination analyses can run."
+  },
+  "stakeholders": [
+    {
+      "name": "classical_philologists",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Reconstruct classical usage from manuscripts, inscriptions, and early prints; edit the ancient texts; write the grammars and lexica that define correct form; sit on the editorial boards and examination boards that reject non-classical usage. Their rare skill — knowing what Cicero would have said — commands a premium only so long as ancient usage remains the required measure. Their entire training is organized around the ancient corpus, so leaving the arrangement would mean abandoning the object of a lifetime's formation."
+    },
+    {
+      "name": "humanist_educational_establishment",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs the schools and university arts faculties that teach the classical authors and drill composition to the classical measure, from Renaissance gymnasia through the state lycee and gymnasium curricula of the nineteenth century. Collects enrollment, fees, and state support by certifying classical competence, and administers the examinations through which the standard reaches every educated career. Its staff are themselves products of the curriculum they enforce, and pivoting to another pedagogical foundation would strand that formation."
+    },
+    {
+      "name": "neo_latin_literary_elite",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Composes Latin poetry, orations, and correspondence in classical style for courtly and republic-of-letters audiences; wins patronage, office, and lasting fame by demonstrated mastery. Because the same rhetorical training sells in the vernacular markets too, its members can move between codes and take prestige in either — Petrarch's Italian verse beside his Latin epic is the type case."
+    },
+    {
+      "name": "medieval_manuscript_scholars",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "situation": "Studies charters, scholastic summae, chronicles, and correspondence written in post-classical Latin. Their sources fall outside the sanctioned canon, and their philological skill is rated as imperfect command of the language rather than command of a different historical layer. Retraining into classical specialization would mean abandoning the archives that only they can read, and the reputational discount follows their work wherever it is published."
+    },
+    {
+      "name": "scholastic_technical_writers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "University theologians, jurists, and physicians composing in the technical Latin of their traditions — terminology for transubstantiation, legal obligation, compound medicines — none of which antiquity ever needed. Classical-trained editors correct or ridicule their forms, and reaching prestige venues requires recasting their working language into classical dress that distorts it. They hold chairs and faculties, so unlike the clerks below they can and do mount organized institutional resistance."
+    },
+    {
+      "name": "vernacular_technical_clerks",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Chancery scribes, notaries, and municipal record-keepers whose working Latin mixes post-classical forms with vernacular calques because the business at hand — land transfers, tolls, guild rules — has no classical precedent. They have no seat in the correctness debate, and their products are marked as debased whenever they surface before learned readers. Their horizon is the next filing deadline, not the fate of a language."
+    },
+    {
+      "name": "practical_latin_users",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Diplomats, merchants, and writers of artisans' manuals who use simplified working Latin for contracts, letters, and instructions. Nobody consulted them when the standard was set; their needs — speed, clarity, formulaic safety — never entered the norm-setting conversation. Most answered by drifting into the emerging vernacular languages, which is why they figure here as an absent voice rather than as a paying party."
+    },
+    {
+      "name": "modern_historical_linguists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyzes classical and medieval Latin as successive phases of one language's history, with change driven by ordinary mechanisms rather than decay. Holds no stake in either the classical credential or the medieval rehabilitation beyond disciplinary standing, and can see the whole structure — including what each camp's framing of the dispute conceals from itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a single fixed reference standard for written Latin across centuries and polities: one common corpus against which usage, texts, and editions can be checked, enabling reliable long-distance scholarly communication and stable critical editing of ancient works.",
+    "transfer_function": "Moves scholarly authority, publication access, curricular time, and prestige from practitioners of post-classical Latin — medievalists, scholastic technicians, chancery clerks — toward specialists in classical reconstruction; and moves the linguistic authority of the ancient past into the hands of the present-day gatekeepers who control its recovery.",
+    "absent_voices": "Practical users of working Latin (diplomats, merchants, manual-writers) had no seat in the correctness debate; medieval authors themselves cannot answer the charge of corruption, and their texts were emended and marginalized without their consent; advocates of the vernaculars stood wholly outside the Latin conversation while the standard was being fixed. Their absence made the standard's unanimity cheaper than it looks.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the rupture standard vanished overnight, medieval texts would regain unqualified legitimacy and the medievalist discount would lift; technical Latin would stop being corrected into classical dress; the classical-specialist credential would deflate toward ordinary textual craftsmanship; and school curricula built around classical composition would reorganize. The arrangements of every named seat depend on the standard's standing.",
+    "founding_problem": "After the collapse of Roman institutions, written Latin drifted regionally and innovated without check; by the late Middle Ages usage varied widely across chanceries, universities, and religious orders, and the connection to the classical corpus was fraying. The rupture reading was built to solve this: recover the classical standard from the ancient sources and hold learned usage to it, restoring a stable, authoritative international language of scholarship.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historians of education corroborate the founding drift problem and the humanist response from outside the benefiting parties, as do early printed grammars and school statutes that record the restorative aim independently. Adversarial testimony agrees on the problem while disputing the remedy: medieval Latinists concede the classical corpus's unmatched normative richness while rejecting the corruption verdict, and historical linguists attest that the living-drift problem the standard targeted died with living Latin composition itself. No party outside the classical establishment attests that the founding problem remains live in its original form."
+  },
+  "gain_flow": "classical_philologists",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "classical_canon_fixed_standard",
+    "drift_state": {
+      "moment": "post_medieval_latin_rehabilitation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "classical_corpus_fixes_correctness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "medieval_divergence_is_deficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "correctness_requires_reconstruction_expertise",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

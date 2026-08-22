@@ -1,0 +1,296 @@
+{
+  "header": {
+    "constraint_id": "dual_class_legitimacy__disclosure_consent",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dcl_consent",
+    "story_uid": "97776203-5765-4688-9326-8c5b7409f7f9"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.22,
+    "theater_ratio": 0.24,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Dual-Class Control Legitimized by Securities Act Disclosure and Informed Consent",
+    "topic_domain": "economic/legal/governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "founder_controlling_holders",
+      "class_a_active_investors",
+      "retail_class_a_buyers"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.24
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates only the disclosure_consent reading of the dual_class_legitimacy kernel; which reading governs assessment determines the constraint's epsilon, victim set, and type -- how should evaluation proceed when the sibling readings (founder_stewardship, minority_extraction) assign materially different structural verdicts to the identical arrangement?",
+      "resolution_mechanism": "Cross-reading comparison over the fixed referent: compile all three sibling stories and compare per-seat classifications. The disagreement is located in the legitimacy criterion (disclosed consent vs. stewardship outcome vs. proportional entitlement), not in the facts of the arrangement.",
+      "impact": "Under minority_extraction the same arrangement computes as substantially extractive with named victims; under founder_stewardship as near-benign coordination. This file's low reading-indexed epsilon is valid only inside the consent criterion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a contested kernel; siblings are separate constraints over the same referent."
+    },
+    {
+      "id": "consent_quality_attenuation",
+      "question": "Does S-1 disclosure produce actually-informed consent for the holder classes whose acquiescence the legitimacy claim rests on -- retail buyers and index-mandated funds?",
+      "resolution_mechanism": "Comprehension studies of prospectus readership, order-flow analysis distinguishing informed underwriting allocations from momentum retail demand, and stewardship-policy audits of index managers' voting on dual-class charter amendments.",
+      "impact": "If consent is largely nominal for those classes, this reading's epsilon rises sharply toward the minority_extraction account and the rope claim fails; if consent is substantiated, the low epsilon stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal disclosure yields substantive consent across holder classes."
+    },
+    {
+      "id": "pricing_sufficiency_of_vote_discount",
+      "question": "Is the governance disparity fully priced into Class A valuations at issuance and sustained thereafter, as the reading's compensation logic requires?",
+      "resolution_mechanism": "Event studies of dual-class IPO initial returns and long-run return differentials against matched single-class firms, controlling for industry, vintage, and index-inclusion effects.",
+      "impact": "Full pricing supports the contractual-choice framing; systematic underpricing of entrenchment risk converts the vote differential into an uncompensated transfer and pushes classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether market pricing actually compensates Class A holders for surrendered governance weight."
+    },
+    {
+      "id": "perpetual_binding_without_sunset",
+      "question": "Can one-time consent at IPO legitimately bind governance terms that persist indefinitely, including for future holders who never consented, absent any sunset clause?",
+      "resolution_mechanism": "Comparative doctrine across jurisdictions that mandate time-based sunsets, and longitudinal study of whether sunset-less structures show escalating private-benefit extraction relative to sunset structures.",
+      "impact": "If perpetual binding fails, the reading survives only for sunset structures and the arrangement's legitimacy decays with each holding generation removed from the consent event.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Temporal scope of consent: whether a single disclosed purchase binds perpetual governance disparity."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Modern technology and media IPOs routinely pair public equity sales with super-voting founder stock: Class A shares carry one vote, founder-held Class B shares carry ten, and the ratio is fixed in the charter at listing. This story instantiates the disclosure_consent reading of the dual_class_legitimacy kernel: on this reading the arrangement is neither coordination scheme nor extraction device but a disclosed contractual choice -- the S-1 registration statement states the vote differential plainly, buyers purchase with that knowledge, and the governance disparity is compensated in the price Class A buyers accept. The referent of every metric below is the standing dual-class arrangement itself, assessed by this reading's own lights; the sibling readings (founder_stewardship, minority_extraction) assess the identical arrangement under different legitimacy criteria and are authored as separate constraint files linked through the network section. Reading-indexed epsilon therefore lands low (0.30 at interval end): the reading concedes a residual gap between formal disclosure and actual comprehension, and a growing stratum of holders whose acquiescence is mechanical rather than consensual, but it holds that disclosed, priced, voluntary purchase dissolves the parity objection. Claim and metrics are authored independently: the rope claim is this reading's structural verdict under test, and the engine computes per-seat classifications from the structural data without reference to it.\n\nKEY AGENTS (by structural relationship):\n- founder_controlling_holders: agenda-setting insider seat (powerful/identity_locked) -- drafts the charter, sets the vote ratio, collects the control allocation\n- class_a_active_investors: consenting buyer seat (organized/mobile) -- prices the governance discount, exits freely\n- passive_index_funds: mandate-bound holder seat (institutional/trapped) -- holds mechanically, bears exposure without a consent act\n- retail_class_a_buyers: thin-consent seat (powerless/mobile) -- buys on headline disclosure\n- sec_disclosure_administrators: regime administrator (institutional/constrained) -- polices disclosure adequacy, silent on parity\n- proxy_advisors_and_governance_bodies: analytical opposition seat (organized/analytical)\n- foreign_listing_venues: excluded jurisdictional seat (institutional/constrained)",
+    "key_agents": [
+      "founder_controlling_holders: agenda-setting insider seat (powerful/identity_locked) -- authors the structure and receives its control allocation",
+      "class_a_active_investors: consenting buyer seat (organized/mobile) -- the seat whose priced consent the reading's legitimacy rests on most securely",
+      "passive_index_funds: mandate-bound holder seat (institutional/trapped) -- same power atom as active investors, opposite exit structure",
+      "retail_class_a_buyers: thin-consent seat (powerless/mobile) -- the consent the claim depends on is thinnest here",
+      "sec_disclosure_administrators: administrator of the disclosure machinery the reading leans on",
+      "proxy_advisors_and_governance_bodies: analytical seat generating the arrangement's visible resistance",
+      "foreign_listing_venues: excluded seat -- would condition or refuse dual-class listings but loses issuers to venue competition"
+    ],
+    "logic_rationale": "Extractiveness 0.30: by this reading's lights the arrangement transfers little uncompensated value -- the vote differential is disclosed and discounted -- leaving residual extraction only where consent is thin (retail comprehension, index mechanics) and where pricing lags entrenchment risk; the modest upward drift across the series tracks the growth of sunset-less structures and passive ownership rather than any change in the disclosure machinery itself. Suppression 0.22: entry is voluntary, exit is a keystroke for active holders, and abundant single-class alternatives persist; the residue reflects index-mandate trapping and lockup windows, which the reading treats as ordinary market friction. Suppression is authored as a raw structural property and is left unscaled -- the engine owns any directional or scope scaling of extractiveness only. Theater_ratio 0.24: the disclosure function is real and load-bearing -- risk factors do state the structure -- but risk-factor boilerplate has inflated faster than informational content, so a rising minority of disclosure activity is protective recitation rather than communication. Accessibility_collapse 0.30: understanding the structure does not foreclose alternatives; investors can allocate to single-class firms, and issuers can adopt sunset clauses or roll-off structures. Resistance 0.58: proxy-advisor policies, governance coalitions, and several listing venues have opposed dual-class structures for two decades; the reading deems this resistance misplaced on parity grounds but does not deny it exists. All series run on one shared seven-point grid so every tracked metric is authored at every examined time point; suppression_requirement is deliberately untracked because the enforcement picture is static -- the disclosure regime's intensity is not the dynamic this story traces.",
+    "perspectival_gap": "Seats at nominally similar power compute differently. Two institutional-power holder seats diverge on exit alone: class_a_active_investors hold mobile exit and experience the arrangement as a priced trade, while passive_index_funds hold mandate-trapped exit and experience the same shares as unchosen exposure -- the engine derives sharply different directionality for them from the identical power atom. The founder seat experiences the structure as self-authored and identity-fused: the people who wrote the vote ratio are the people it protects, and relinquishing it reads as abandoning the mission. The administrator seat touches the constraint only at its legitimacy input and takes no position on parity. Coalition note: index funds collectively could wield decisive voting power against the structure, but collective-action costs and client-concentration pressures keep that coalition latent -- relevant if the engine evaluates coalition potential for low-power or trapped seats.",
+    "directionality_logic": "Declared beneficiaries (founder_controlling_holders, class_a_active_investors, retail_class_a_buyers) derive low directionality -- the arrangement subsidizes their positions: founders receive the control allocation they drafted, active buyers receive access they priced, retail receives participation on disclosed terms. passive_index_funds carry role payer with trapped exit, deriving high directionality: they bear governance-risk exposure without a consent act or an exit path. No directionality_overrides are authored: the derivation chain distinguishes every seat this story contains, and the coarse power-atom keying of overrides would mislabel same-power seats -- an institutional-level override would drag the trapped index seat toward neutrality alongside the neutral administrator.",
+    "mandatrophy_analysis": "The founding problem -- the founder's binary between ceding control and forgoing public capital -- remains live for every IPO cohort, so this is not a mandatrophy case: the arrangement's original function still operates. The classification discipline cuts both ways here. Against overreach: calling the arrangement pure extraction erases the real access function -- public capital reaches founder-led firms that would otherwise stay private or list in permissive jurisdictions. Against cover: accepting the consent formula without testing it would launder whatever extraction rides on thin consent -- which is exactly what the consent_quality_attenuation and pricing_sufficiency_of_vote_discount omegas hold open. The rope claim survives only while consent is substantively informed and pricing substantively compensates; the omegas are the tripwires, and the mismatch consumer should read the live founding-problem status against the named-seat gain_flow as the standing tension this family exists to measure.",
+    "kernel_context": "Kernel: dual_class_legitimacy -- whether concentrated founder voting control in public firms is legitimate. This file instantiates the disclosure_consent reading: legitimacy flows from informed consent under Securities Act disclosure, not from control parity. Sibling readings instantiate different constraints over the same referent: founder_stewardship (concentrated control legitimately serves all shareholders through long-horizon mission execution) and minority_extraction (minority holders are entitled to governance proportional to capital and risk borne). The referent -- the standing dual-class arrangement -- is fixed across the family; epsilon is reading-indexed, so this file authors the arrangement as the consent criterion sees it, and the sibling files author their own values over the identical facts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dual_class_legitimacy__founder_stewardship",
+      "dual_class_legitimacy__minority_extraction"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial question 'is dual-class control legitimate?' decomposes under the epsilon-invariance principle into three readings of one kernel, each a separate file over the fixed referent of the standing dual-class arrangement. founder_stewardship authors near-zero epsilon (control serves all holders); this file authors low reading-indexed epsilon (consent plus pricing legitimizes); minority_extraction authors substantially higher epsilon (uncompensated control rents with named victims). The disclosure regime's adequacy record is cited as evidence by the stewardship defense and attacked by the extraction account, so this reading structurally influences both siblings' operating environments without resolving the contest."
+  },
+  "stakeholders": [
+    {
+      "name": "founder_controlling_holders",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Founded the company, retain super-voting Class B shares (typically ten votes per share) written into the charter at IPO, decide whether to include sunset provisions, and nominate a majority of the board indefinitely. They drafted the disclosure and set the vote ratio themselves; their exit would mean selling down or converting their stock, which they experience as abandoning the mission the firm exists to pursue."
+    },
+    {
+      "name": "class_a_active_investors",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Institutional asset managers and hedge funds that buy Class A at the offering or in the aftermarket knowing the vote ratio, underwrite the governance discount into their valuation models, and can sell on any trading day. They receive access to founder-led growth firms that one-share-one-vote compulsion would keep private, and they bear the agency risk they believe they priced."
+    },
+    {
+      "name": "passive_index_funds",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Index-tracking managers must hold every constituent of the indices they track, including dual-class issuers added by index committees. Their holding is mechanical rather than chosen; they cannot sell without breaking their tracking mandate, and their votes are cast by stewardship teams operating under engagement policies rather than through any consent act tied to this structure. They carry the governance-risk exposure of every dual-class constituent."
+    },
+    {
+      "name": "retail_class_a_buyers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Individual investors who buy Class A shares through brokers or brokerage products on the strength of headline prospectus disclosure. Few read the full risk-factor section; their consent is real in form but thin in comprehension. They can sell at will but rarely revisit the governance terms they accepted at purchase."
+    },
+    {
+      "name": "sec_disclosure_administrators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Securities-regulator staff review S-1 registration statements, issue comment letters demanding clearer risk-factor disclosure of the vote differential, and police the adequacy of the disclosure on which this reading's legitimacy rests. They neither set the vote ratio nor opine on whether consent should legitimize it; their mandate ends at disclosure adequacy. Exit looks like career rotation within or out of the agency."
+    },
+    {
+      "name": "proxy_advisors_and_governance_bodies",
+      "role": "observer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Proxy-advisory firms and institutional governance coalitions publish voting policies against dual-class structures, campaign for sunset clauses, and downgrade issuer governance ratings. They collect no rents from the arrangement and bear none of its direct costs; their seat is analytical, and their persistent opposition is the visible resistance the arrangement meets."
+    },
+    {
+      "name": "foreign_listing_venues",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Exchange and regulator counterparts in jurisdictions that long barred dual-class listings watched issuers list elsewhere rather than accept parity conditions, and several eventually admitted dual-class structures under competitive pressure. They would condition or refuse such listings if their objections governed, but venue competition places them outside the effective conversation whenever an issuer can shop jurisdictions."
+    }
+  ],
+  "gain_flow": "founder_controlling_holders",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Dissolves the founder's dilemma at the IPO boundary: founders obtain public growth capital without ceding mission control, and capital obtains access to founder-led firms it would otherwise be denied -- the vote ratio is set ex ante, disclosed in the registration statement, and taken or left by each buyer.",
+    "transfer_function": "Moves voting control from dispersed Class A purchasers to concentrated Class B founders at a ratio the charter fixes (commonly ten-to-one), while moving capital from public markets into the firm; this reading holds the control transfer is compensated by the valuation discount Class A buyers accept at purchase.",
+    "absent_voices": "Future Class A holders who inherit the structure decades after issuance never sat at the consent table; index-mandated holders are present mechanically but absent as consenters; governance coalitions that object are heard but outvoted by the very votes the structure concentrates; jurisdictions that would condition listings lost their seat when issuers began shopping venues.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight abolition would reroute the IPO pipeline: founder-controlled firms would delay listing, list in permissive venues, or adopt fallback control devices such as golden shares, staggered boards, and takeover defenses; index compositions and stewardship agendas would shift; the supply of founder-led public firms would thin until substitute arrangements stabilized.",
+    "founding_problem": "At the public-offering boundary, founders faced a binary: sell control to dispersed holders and expose the mission to short-termism and hostile takeover, or forgo public capital entirely. The arrangement was built to dissolve that binary -- sell the economics, keep the control, and tell every buyer exactly what they are getting.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corporate-law scholarship (the Bebchuk-Kamar-Dammann/Kraakman exchange on dual-class IPOs), securities-regulator rulemaking records from the 1980s one-share-one-vote episode, and exchange consultation papers corroborate from outside the founder set that the founder's dilemma is real and recurring; the same sources dispute whether disclosure plus pricing resolves it, which is the contest this reading sits inside."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "disclosed_consent_transaction_baseline",
+    "drift_state": {
+      "moment": "contemporary_index_ownership_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "founder_stewardship",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "minority_extraction",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "informed_consent_displaces_control_parity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "vote_differential_is_priced_consideration",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

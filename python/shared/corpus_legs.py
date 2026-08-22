@@ -50,6 +50,7 @@ LIVE_LEGS = (
     # 2026-08-22 floors (same-model redraws at prompt e03e2210): sonnet2 1003, haiku2 996.
     "testsets_sonnet2",
     "testsets_haiku2",
+    "testsets_stealth2",   # 2026-08-22, complete 1005 (stealth/ox-alpha redraw at prompt e03e2210)
 )
 
 # NOTE ON module_boundary_check.ALL_ARM_C_LEGS, which now references this

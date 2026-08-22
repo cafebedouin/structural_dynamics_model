@@ -1,0 +1,385 @@
+{
+  "header": {
+    "constraint_id": "biblical_authority__tradition_scripture_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "09b956be-1784-43d7-8633-e29fe33af94c"
+  },
+  "base_properties": {
+    "extractiveness": 0.63,
+    "suppression": 0.42,
+    "theater_ratio": 0.32,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magisterial-Tradition Interpretive Settlement (Tradition-and-Scripture Reading)",
+    "topic_domain": "theology/religious studies/history of Christianity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "magisterium_and_ordained_clergy",
+      "curial_administrative_apparatus",
+      "parish_clergy"
+    ],
+    "victims": [
+      "unordained_laity",
+      "independent_catholic_theologians",
+      "vernacular_scripture_translators"
+    ],
+    "vindicated_propositions": [
+      "deposit_of_faith_doctrine",
+      "apostolic_succession_doctrine",
+      "sacramental_efficacy_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 325,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 325,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 700,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1215,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1545,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1870,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1965,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 325,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 700,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1215,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1545,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1870,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1965,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 325,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 700,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1215,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1545,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1650,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1870,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1965,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint is one reading of the biblical_authority kernel — how would adopting a sibling reading (sola_scriptura or conciliar) change the constraint's beneficiary/victim structure?",
+      "resolution_mechanism": "Generate the sibling stories and compare computed classifications: the sola_scriptura reading removes the standing mediating hierarchy entirely (no continuous adjudicating seat to collect); the conciliar reading replaces continuous magisterial adjudication with episodic council-and-consensus adjudication.",
+      "impact": "Victim sets and epsilon are reading-indexed, not topic-indexed: under the sola_scriptura reading, lay interpretive agency stops being a bearing party and becomes the operative authority; under the conciliar reading, adjudication concentrates intermittently in councils rather than continuously in the magisterium. Cross-reading comparisons that pool these as one constraint are invalid.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: reading-indexed victim sets across the biblical_authority kernel."
+    },
+    {
+      "id": "development_vs_rupture",
+      "question": "Is post-conciliar practice change (religious liberty, ecumenism, liturgical reform, collegiality) legitimate development of the deposit of faith, or departure from it?",
+      "resolution_mechanism": "Apply the tradition's own internal criteria (the Vincentian canon: what has been believed everywhere, always, by all) to specific changed teachings and test whether the continuity narrative survives scrutiny from within the reading's own framework.",
+      "impact": "If rupture, the lineage-based authority claim erodes and traditionalist repudiation pressure grows (authority_erosion drift accelerates); if development, the interpretive layer successfully absorbs drift and the reference frame holds.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the development-of-doctrine framing absorbs or conceals reference-frame drift."
+    },
+    {
+      "id": "mediation_necessity_vs_gatekeeping",
+      "question": "Within the reading's own premises, is clerical mediation structurally necessary for transmitting doctrine and grace, or is the mediating gate separable from the interpretive authority it concentrates?",
+      "resolution_mechanism": "Comparative ecclesiology: examine communities practicing unmediated interpretive access (Quaker meetings, congregational discernment models) for doctrinal-stability outcomes; internally, test whether magisterial rulings track the received deposit or introduce novel positions.",
+      "impact": "If mediation is separable from the authority concentration, part of the measured burden on unordained seats is contingent gatekeeping riding on a genuine function; if inseparable, the concentration is the price of the coordination itself and the hybrid-coordination reading strengthens.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Separability of the anti-fragmentation coordination function from the interpretive monopoly."
+    },
+    {
+      "id": "enforcement_decay_trajectory",
+      "question": "Will spiritual-sanction enforcement continue decaying toward ceremonial maintenance, or re-harden under internal polarization?",
+      "resolution_mechanism": "Track canonical-penalty application rates, communion-denial incidents, doctrinal-congregation interventions against theologians, and diocesan implementation of doctrinal directives across coming decades.",
+      "impact": "Continued decay pushes the arrangement toward inertial maintenance (rising theater_ratio, falling suppression); re-hardening restores active enforcement and raises the burden on dissenting seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of enforcement capacity after the post-conciliar liberalization."
+    },
+    {
+      "id": "lay_coalition_potential",
+      "question": "Could coordinated lay action (withheld donations and attendance, organized reform movements) convert the unordained seat from individually weak to collectively consequential?",
+      "resolution_mechanism": "Observe post-scandal donation and attendance elasticity, the formation and durability of organized lay movements (reform networks and traditionalist counter-mobilization alike), and hierarchical concessions following collective pressure.",
+      "impact": "A viable lay coalition raises resistance beyond the authored 0.65 and forces negotiated rearrangement; absent coalition capacity, the bearing seat stays diffuse and the arrangement persists on current terms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition capacity of the diffuse unordained seat."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "magisterium_and_ordained_clergy",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Defines which readings of Scripture bind all the faithful: issues encyclicals, conciliar decrees, and congregational rulings; ordains and deploys clergy; administers the sacramental system through which the faithful receive grace as the tradition understands it. Holds interpretive finality — no reading contrary to its rulings carries authority — and directs the material support that flows through dioceses. Members enter through lifelong formation and ordination; leaving the office forfeits the authority, community, and identity the office constitutes."
+    },
+    {
+      "name": "curial_administrative_apparatus",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Staffs the congregations, tribunals, and secretariats that draft, review, and enforce doctrinal and disciplinary rulings. Careers, rank, and residence in Rome depend on the continuation of the adjudicating apparatus; individual officials gain stable livelihood and institutional standing. Departure leads to academia, diplomacy, or retirement outside the governing circle."
+    },
+    {
+      "name": "parish_clergy",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Administers sacraments, preaches, and teaches at the local level under obedience to diocesan and Roman superiors. Receives housing, stipend, and community standing from the system administered. Bound by celibacy, assignment mobility, and limits on public doctrinal disagreement; leaving ministry entails laicization, loss of livelihood and community, and for many a collapse of a vocational identity formed since adolescence."
+    },
+    {
+      "name": "unordained_laity",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Receive authoritative teaching, sacraments, and communal life through the clergy. Bear financial support obligations (tithes, offerings, collections) and depend on ordained mediation for access to the means of grace as the tradition defines them. Individual members may attend other churches or none, but exit costs community, family cohesion, and — for the devout — sacramental life itself; most negotiate belief privately rather than exit."
+    },
+    {
+      "name": "independent_catholic_theologians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Teach and publish on Scripture and doctrine, typically in Catholic institutions or religious orders. A mandatum — recognition by the local bishop — is required to teach theology credentially; dissent from definitive rulings risks removal, loss of the mandatum, or silencing, as in documented cases of censured theologians. Vocation, training, and professional community are constituted inside the system studied; exit to secular academia severs the audience and questions that give the work its point."
+    },
+    {
+      "name": "vernacular_scripture_translators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Translate Scripture and liturgical texts into vernacular languages. Approval machinery (nihil obstat, imprimatur, liturgical norms) gates publication and liturgical use; unauthorized translations historically met severe sanction — William Tyndale was executed for his English New Testament. Contemporary translators work within review structures or publish academically outside liturgical use."
+    },
+    {
+      "name": "academic_biblical_scholars_outside_magisterium",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Produce critical editions, philological and historical readings of the biblical texts in universities worldwide. Their readings carry no binding weight in the adjudicated system regardless of scholarly consensus; they are not seated in the adjudicating conversation, and their conclusions enter it only when the magisterium chooses to receive them."
+    },
+    {
+      "name": "historians_of_christianity",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study the arrangement's formation and operation across centuries from outside confessional commitment: document the second-century interpretive conflicts that produced the rule of faith and episcopal succession, trace the enforcement record, and compare fragmentation outcomes across traditions. Hold no stake in the arrangement's persistence or dissolution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Resolves interpretive disputes over a fixed ancient text through a single continuing adjudicating body; maintains doctrinal continuity across generations, languages, and cultures; standardizes sacramental practice; and supplies a common rule of faith that distinguishes received teaching from novel interpretation.",
+    "transfer_function": "Moves interpretive authority upward from all baptized readers to the ordained hierarchy (only magisterial readings bind); moves material support (tithes, offerings, Mass stipends) from the unordained to clergy and the administrative apparatus; moves doctrinal rulings downward from the center to parishes.",
+    "absent_voices": "Lay readers claiming direct interpretive access, non-magisterial biblical scholars (including Catholic theologians without a mandatum), and historically the vernacular translators and reformers. They are absent because the adjudicating body defines which voices count as authorized — the excluded parties' exclusion is maintained by the arrangement itself.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the magisterial-tradition settlement vanished overnight, Christianity would reorganize around competing interpretive authorities — the pattern visible wherever its jurisdiction ended, as Reformation-era Europe produced state churches and denominational proliferation. Sacramental administration, canon law, seminary formation, and curial governance all presuppose it; lay religious practice would fragment among scripture-alone, conciliar, and restorationist forms.",
+    "founding_problem": "Early Christianity faced proliferating interpretations of apostolic writings — gnostic readings, adoptionist and docetic christologies — before a fixed canon existed (late second century). The rule of faith and episcopal succession were constructed to distinguish authentic apostolic teaching from novelty; the present arrangement descends from that solution.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Secular historians of early Christianity (the Bauer school and its successors in contemporary patristics) attest from outside the benefiting parties that the interpretive-conflict problem was real and predated the arrangement's consolidation. The problem's persistence is visible today in denominational fragmentation wherever no single adjudicator operates; even historians within traditions that reject this arrangement concede the second-century crisis of authority. Dispute concerns whether this settlement is the necessary or best solution — not whether the founding problem existed."
+  },
+  "gain_flow": "magisterium_and_ordained_clergy",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "biblical_authority__sola_scriptura_reading",
+      "biblical_authority__conciliar_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'biblical authority' decomposes into three structurally distinct constraints (epsilon-invariance principle): this tradition_scripture_reading (continuous magisterial adjudication; standing hierarchy as beneficiary; unordained interpretive agency as bearing party), the sola_scriptura_reading (no mediating hierarchy; entirely different beneficiary/victim structure), and the conciliar_reading (episodic council-and-patristic-consensus adjudication; extraction intermittent rather than continuous). This reading is upstream of the siblings historically: the Reformation reading arose as a reaction against it, and Vatican I's definition of papal authority changed the legitimacy conditions under which conciliar claims operate inside Catholic space. Each story carries its own epsilon, stakeholders, and classification; they are linked here as a constraint family."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "apostolic_deposit_guardianship",
+    "drift_state": {
+      "moment": "contemporary_post_conciliar_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sola_scriptura_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "conciliar_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "revelation_transmitted_through_teaching_church",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "magisterium_definitive_interpretive_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The arrangement under contest is the magisterial-tradition settlement: Scripture is authoritative for doctrine only as interpreted within Tradition, and a continuing teaching office — pope and bishops in communion, deploying the curia and parish clergy — guards and adjudicates the deposit of faith. Access to authoritative meaning runs through ordination: only magisterial readings bind, sacramental grace is administered through clerical mediation, and doctrinal dissent meets canonical sanction. The settlement solves a real coordination problem — a fixed ancient text read across millennia, languages, and cultures fragments without a continuing adjudicator — while concentrating interpretive authority and material support in a self-perpetuating hierarchy. KEY AGENTS (by structural relationship): magisterium_and_ordained_clergy — agenda-setter (institutional/identity_locked), defines binding interpretation and collects authority plus material support; curial_administrative_apparatus — beneficiary-administrator (institutional/constrained); parish_clergy — dual-positioned local administrators (organized/identity_locked); unordained_laity — primary bearing party (powerless/constrained); independent_catholic_theologians — bearing party with locked professional identity (moderate/identity_locked); vernacular_scripture_translators — bearing party gated by approval machinery, historically martyred (moderate/constrained); academic_biblical_scholars_outside_magisterium — excluded from the adjudicating conversation (organized/mobile); historians_of_christianity — analytical observer documenting the full structure including the founding problem's attestation.",
+    "logic_rationale": "Extractiveness 0.63: interpretive finality is monopolized in the hierarchy and material flows (tithes, offerings, stipends) run steadily to clergy and administration, but the arrangement simultaneously delivers large-scale goods — education, charity, sacramental life, doctrinal stability — so the transfer is not pure rent. Suppression 0.42 reflects the current enforcement picture: spiritual sanctions (interdict, excommunication, denial of communion), the mandatum system, and removal of dissenting teachers, with the coercive machinery far reduced from its mid-seventeenth-century peak (Index of Prohibited Books, Roman Inquisition). Suppression here mixes structural mechanisms (canonical penalties, credential gating, exclusion from teaching posts) with internalized ones (formation in deference to magisterial authority, the framing of lay response as 'reception' rather than judgment); the scalar cannot separate these, and the mixture is noted rather than resolved. Theater_ratio 0.32 requires care: in a sacramental tradition, ceremony IS function — liturgy is not performance standing in for a missing function — so baseline theater is genuinely low. The rising component is different: magisterial output increasingly consists of reiterated teaching whose uptake decays (encyclicals and synodal documents acknowledged but not operative in lay practice), which is performative maintenance of an authority relation whose practical grip is thinning. Accessibility_collapse 0.60: accepting the reading's axiom collapses private-interpretation alternatives within the framework almost completely, yet exit to rival frameworks remained historically available — the Reformation demonstrates that the collapse is partial, framework-relative, not absolute. Resistance 0.65: sustained across the whole interval — conciliarism, the Reformation, Enlightenment critique, the modernist crisis, post-conciliar dissent, and the traditionalist counter-mobilization. Identity-lock dynamics: the clergy seat is locked by ontological-character theology and celibate formation (exit collapses vocational identity); the theologian seat by mandatum-dependence and career-path dependence (exit severs the audience constituting the work). If either lock broke at scale — mass laicization or mass mandatum refusal — enforcement capacity would fall faster than the scalar series suggests. The measurement series run on one shared time grid (eight points, all three metrics authored at every point) tracing a coherent arc: enforcement built up from Nicaea's anathemas through the medieval-inquisitorial machinery to the seventeenth-century peak, then decayed after the loss of temporal power (1870) and collapsed into spiritual-only sanction after Vatican II (1965), with slight re-hardening since.",
+    "perspectival_gap": "The bearing seats and the agenda-setting seat should compute differently. From the magisterium's position the settlement is stewardship of a trust received from the apostles — the mediation is the gift, not the toll. From the unordained laity's position it is gatekeeping of access to meaning and grace, with the gatekeepers' livelihood funded by the gated. Parish clergy occupy both sides at once: administrators collecting a livelihood, themselves bound by obedience they did not set. Independent theologians experience the sharpest divergence — trained to prize critical inquiry inside a system that conditions their credentials on deference. The engine computes these per-seat divergences from the structural data (power, exit, role); the authored claim does not adjudicate between them.",
+    "directionality_logic": "The magisterium sits near the beneficiary end: it collects interpretive finality and material support, controls the rules, and its exit is locked in a way that makes defending the arrangement existential rather than optional. The curia and parish clergy derive low-to-moderate directional values as collectors, with parish clergy pulled back toward the middle by their secondary bearing position (obedience, celibacy, constrained speech). Unordained laity sit near the target end — they bear the transfer and the interpretive dependency, with constrained (not trapped) exit keeping them short of full-target amplification. Independent theologians sit near-full-target, amplified by identity_locked exit: the derivation reads their victim declaration plus locked exit correctly, so no override is needed. Vernacular translators are historical-and-current targets of the approval machinery. Excluded scholars sit outside the extraction surface proper — their exclusion is the enforcement object, not their payment — and the observer seat takes the analytical value. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms produce the correct relationships without correction.",
+    "mandatrophy_analysis": "The classification resists two mislabelings. Reading the settlement as pure predation misses the documented coordination function: the founding problem (interpretive fragmentation of a fixed text) is real, externally corroborated by secular historiography, and visibly recurs wherever the adjudicating function is absent — denominational proliferation is the control condition. Reading it as benign coordination misses the asymmetric structure: a standing hierarchy collects continuously, the bearing seats are diffuse and individually weak, and the enforcement record (executed translators, censured theologians, indexed books) shows the asymmetry was held by force as much as by consent. Tangled_rope holds both facts. The mandate is not atrophied: adjudication and sacramental administration remain operative (theater_ratio 0.32, below inertial thresholds), and the R5 interview returns founding-problem status live with disappearance verdict world_rearranges — the mismatch consumer finds no dead-mandate-plus-world-rearranges flag. The open question is trajectory: if enforcement continues decaying while formal teaching output grows, theater_ratio rises and the arrangement drifts toward inertial maintenance; the enforcement_decay_trajectory omega tracks exactly that fork."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

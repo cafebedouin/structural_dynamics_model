@@ -1,0 +1,325 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "7d93a2cd-8e59-4ed6-abb4-5e72988c019d"
+  },
+  "base_properties": {
+    "extractiveness": 0.07,
+    "suppression": 0.12,
+    "theater_ratio": 0.11,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Tournament Rulebook Orthodoxy (Monopoly Kernel, Text-Authority Reading)",
+    "topic_domain": "game theory / social coordination / institutional design",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "ranked_tournament_players",
+      "rulebook_publisher"
+    ],
+    "vindicated_propositions": [
+      "textual_standardization_enables_skill_comparison"
+    ]
+  },
+  "interval": {
+    "start": 1935,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1935,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1935,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1935,
+      "value": 0.03,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1955,
+      "value": 0.04,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.13,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Does the tournament-orthodoxy framing describe the rulebook's operative function for the population of players, or is it a minority competitive institution's self-description? This story instantiates one reading of the monopoly_rulebook kernel; the extraction_demo_reading and social_scaffold_reading siblings would relocate the disagreement to rent extraction or to mandated communal correction respectively.",
+      "resolution_mechanism": "Participation-weighted measurement: what fraction of total play occurs under exact published text versus negotiated house rules, weighted by player-hours rather than by institutional visibility.",
+      "impact": "If house-rule play dominates aggregate play, this reading describes a niche institution and the population-level account shifts toward the social_scaffold_reading's structure; the orthodoxy would remain accurate only for the ranked subpopulation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this reading's low-extraction coordination account generalizes beyond the ranked subpopulation."
+    },
+    {
+      "id": "competitor_exit_voluntariness",
+      "question": "Is exit from ranked play genuinely costless (mobile), or do sunk rating investment, earned standing, and competitive identity fuse committed players to the standard in ways that function as identity lock?",
+      "resolution_mechanism": "Longitudinal study of lapsed ranked competitors: retention pressure reports, return rates, and whether departure carries perceived identity loss comparable to leaving a profession.",
+      "impact": "If a committed-player subset is identity_locked, effective extraction rises for that seat and the seat's computed classification could shift away from pure voluntary-coordination toward a hybrid with a locked target stratum.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the voluntary-participation premise holds for the most invested competitors."
+    },
+    {
+      "id": "text_immutability_descriptive_status",
+      "question": "Is text authority actually immutable in operation, or does the authority revise substantively through errata, FAQ rulings, and digital-edition patches while presenting revisions as mere clarification?",
+      "resolution_mechanism": "Errata-history audit classifying published revisions as clarificatory versus substantive rule changes, across print and digital editions.",
+      "impact": "Frequent substantive quiet revision would raise theater_ratio, contradict the immutability axiom descriptively, and register as drift from the declared reference frame.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the immutability claim survives contact with the revision record."
+    },
+    {
+      "id": "status_pressure_on_casual_play",
+      "question": "Does the orthodoxy govern only ranked contexts, or does its 'house rules are noise' rhetoric exert status-hierarchy pressure on casual play, imposing a diffuse reputational cost on players who never enter the ranked world?",
+      "resolution_mechanism": "Survey and discourse analysis of casual communities: measured stigma, defensive framing, and abandonment of enjoyed house rules attributable to official-standard prestige.",
+      "impact": "If status pressure is real, casual players bear a thin diffuse cost and a marginal victim set exists that this story declines to declare; the classification would sit nearer a hybrid coordination/extraction boundary at the margin.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of the orthodoxy's normative reach beyond the ranked circuit."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading of the contested monopoly_rulebook kernel: the tournament-orthodoxy reading, under which the published rulebook is the legitimate competitive framework, strategic skill determines outcomes under exact text, house rules are noise obscuring competitive depth, and text authority is immutable for ranking and comparison purposes. The standing arrangement under contest — the rulebook-governed competitive order — is the epsilon referent, assessed by this reading's own lights: it sees a voluntary, low-cost coordination standard that makes skill commensurable across tables, venues, and years. The sibling readings (extraction_demo_reading, social_scaffold_reading) are separate constraint files with their own epsilon values and stakeholder structures; they are linked via network.affects_constraints and discussed only in kernel_context, not imported into this constraint's classification. Assumptions stated: the interval anchors to the 1935 commercial publication of the canonical text; metric values are author judgments from the historical record of organized play; sampling parameters were assumed (see provenance).",
+    "key_agents": [
+      "- ranked_tournament_players: Primary beneficiary (moderate/mobile) — competes under the shared standard, collects comparable rankings and portable standing",
+      "- tournament_sanctioning_bodies: Agenda setter (institutional/mobile) — administers text authority, publishes errata and FAQ rulings, certifies events",
+      "- rulebook_publisher: Secondary beneficiary (institutional/arbitrage) — owns the canonical text, profits from uniform brand consistency",
+      "- casual_house_rule_players: Excluded outsider (powerless/mobile) — plays by negotiated deviations outside the ranked world, dismissed rhetorically but untouched operationally",
+      "- game_theory_analysts: Analytical observer (analytical/analytical) — sees the full structure of the standard and its strategic consequences"
+    ],
+    "logic_rationale": "Extraction is authored very low (0.07 at interval end): the standard's principal demand on participants is learning effort — memorizing exact procedures — which is approximately the price of the comparability good itself, and no material wealth transfers through the arrangement. Suppression is low (0.12): referees and FAQ rulings settle in-event disputes, but participation is voluntary, exit is open, and the standard compels no one outside entered events; suppression is authored as a raw structural property and is not scaled by power or scope — only extractiveness is scaled, by directionality and spatial scope, in the engine's computation. Theater is low (0.11): championship ceremony and official branding have grown with professionalization, but the core function — producing comparable results — remains fully operational. Accessibility_collapse is 0.30: alternatives (house rules, variants, other games) remain fully available outside ranked play; within ranked play the standard is constitutive rather than coercive, since rankings over incomparable rulesets are meaningless by definition. Resistance is 0.20: casual culture ignores rather than fights the orthodoxy, with occasional friction from variant advocates and players chafing at strict text calls. The suppression_requirement series is authored deliberately: the story tracks enforcement-capacity change (informal club refereeing, to formal sanctioning bodies with trained referees, to digitally auto-enforced rules), so a rising-but-absolutely-low trajectory is the honest picture; the scalar base_properties.suppression (0.12) reflects the end-state. All three tracked metrics share one time grid — every metric is authored at every examined time point — so no end-state substitution contaminates earlier rows.",
+    "perspectival_gap": "There is no payer seat; the divergence the engine should compute runs between insider and outsider seats. From the ranked players' and sanctioning bodies' positions the standard is enabling infrastructure — the thing that makes their activity possible and meaningful. From the casual players' position the same orthodoxy exists mainly as rhetoric that ranks their play as noise: they experience its cultural shadow, not its operation, and bear no operational cost. The publisher's seat benefits incidentally without administering. The engine computes per-seat classifications from the structural data; the authored rope claim does not adjudicate these differences.",
+    "directionality_logic": "Declared beneficiaries (ranked_tournament_players, rulebook_publisher) derive low directionality — the standard subsidizes their activity — amplified slightly for the publisher by arbitrage-grade exit (it owns the text and can reprint or rebrand at will). No victims are declared: the expected structural delta is a no-victim-set, voluntary-participation arrangement, and the descriptive record supports it. The sanctioning bodies, as agenda-setting administrators with a genuine secondary beneficiary position, derive low directionality from their beneficiary data. The excluded casual players have no declarable structural relationship — they are outside the arrangement's operation entirely — and the canonical fallback would leave their position ambiguous; the directionality override (powerless -> 0.5) encodes 'unaffected symmetric': neither subsidized nor taxed, costs and benefits both approximately zero. Scope is global for the ranked circuit, which mildly amplifies effective extraction for any target seat — but with no targets declared, the amplification has nothing to act on.",
+    "mandatrophy_analysis": "The founding problem — making competitive results commensurable and disputes decidable — is live for as long as ranked play exists, so no mandate-outlived-function declaration is made and no piton signature is expected. The theater_ratio series is the tripwire for the opposite failure: if competitive play migrates to platforms that auto-enforce rules in software, the human referee and errata apparatus could persist ceremonially after its function atrophied; a rising theater ratio past 0.5 would flag that transition. The classification equally guards against mislabeling in the other direction: critics reading any enforced standard as extraction must confront the absence of a victim set, the openness of exit, and the near-zero material transfer — the structural data that distinguish this rope from an enforced monopoly arrangement wearing a rulebook's clothes.",
+    "kernel_context": "This story instantiates the tournament_orthodoxy_reading of the monopoly_rulebook kernel: the rulebook as the legitimate competitive framework, text authority immutable for ranking and comparison, house rules classified as noise. Sibling readings — extraction_demo_reading (the rulebook as a rent-extraction demonstration whose elimination is the pedagogical point) and social_scaffold_reading (the rulebook as socially unplayable without corrective house rules that inject liquidity and soften the endgame) — are separate constraint files. The disagreement is located in the status of house rules and in what the text's authority is FOR: skill-comparison coordination (this reading), pedagogical demonstration of concentration dynamics (extraction reading), or a scaffold requiring communal correction (scaffold reading). Relation choices: this reading COEXISTS WITH the extraction reading, because a single party can consistently hold both that competition under exact text is fair and that the game's dynamics illustrate concentration — the premises operate at different evaluative levels and neither eliminates the other within one framework. This reading INFLUENCES the scaffold reading: official FAQ rhetoric, sanctioning authority, and the prestige of ranked play raise the justification burden on house-rule defenders without logically eliminating their position — a party may still hold that social play requires correction while accepting text supremacy for ranked purposes."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "extraction_demo_reading",
+      "social_scaffold_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the Monopoly rulebook' covers three structurally distinct claims instantiated by three readings of one kernel. This file (tournament_orthodoxy_reading) authors epsilon ~0.07 for the rulebook-governed competitive order as a voluntary coordination standard. The extraction_demo_reading authors high epsilon over the same standing arrangement, read as rent-concentration demonstration; the social_scaffold_reading authors its own epsilon over the arrangement read as unplayable-without-correction. Per the epsilon-invariance principle these are separate stories with separate beneficiary/victim structures, linked here; the upstream orthodoxy reading influences the downstream scaffold reading's operating environment (official-dismissal rhetoric) without foreclosing it."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "ranked_tournament_players",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Enter events where every table runs the identical published procedure. Their wins and losses accumulate into rankings that mean the same thing across venues and years, letting skill, not table negotiation, determine standing. Their main cost is learning the exact text; leaving the circuit costs nothing but forfeited standings, and many players cycle in and out freely across life stages."
+    },
+    {
+      "name": "tournament_sanctioning_bodies",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publish errata and FAQ rulings, certify events, train referees, and adjudicate disputes by appeal to the text. They decide which interpretations become official and collect prestige, event fees, and institutional continuity from the order they administer. Their authority depends on the community continuing to treat the text as final; they can amend the text but rarely do, preferring clarification to revision."
+    },
+    {
+      "name": "rulebook_publisher",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Owns the game's intellectual property and prints the canonical text. Uniform play protects brand consistency and keeps licensing simple. The publisher profits from sales of the game rather than from the standard's day-to-day operation, and retains full freedom to reprint, rebrand, or license variants at will."
+    },
+    {
+      "name": "casual_house_rule_players",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Play socially with negotiated deviations — bonus payouts on lucky spaces, auction tweaks, shortened endgames. The orthodoxy's public rhetoric ranks their practice as noise obscuring depth, though nothing in the standard's operation touches their tables. They have no seat in rules-committee deliberations and mostly ignore the conversation that defines legitimate competitive play."
+    },
+    {
+      "name": "game_theory_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how the standard shapes strategic depth: which procedures reward calculation, where the text's incentive structure concentrates play, and how reliably rankings track skill. They take no side in the house-rules dispute and bear no costs from the arrangement."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "six_questions": {
+    "coordination_function": "Produces comparable competitive outcomes: a single published standard makes games played at different tables, times, and venues commensurable, so rankings, records, and skill claims share common referents, and in-game disputes have a determinate textual resolution instead of table-by-table negotiation.",
+    "transfer_function": "Moves interpretive authority from individual tables to the canonical text; moves learning effort (exact-procedure memorization) from players into the standard; moves reputational standing through rankings computed on the shared standard. No material wealth transfers through the arrangement itself; entry fees purchase event services, not standing under the rule.",
+    "absent_voices": "Casual house-rule players and variant designers would object that the orthodoxy ranks their play as noise rather than legitimate parallel practice. They sit outside the ranked circuit — in homes, cafes, and online forums — and have no seat in rules-committee deliberations. Variant designers proposing alternate modes are heard only as product proposals to the publisher, never as challenges to text authority inside the competitive apparatus.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If text authority vanished overnight, each event would negotiate its own ruleset; cross-event rankings and historical records would lose comparability; the competitive calendar would fragment into incompatible leagues until new standards emerged. The casual world would continue unchanged — the rearrangement is confined to the competitive apparatus built on the standard, which is precisely the set of arranged interests the stakeholders occupy.",
+    "founding_problem": "Early competitive play faced table-to-table variation: identical skill produced incomparable outcomes, disputes had no resolution authority, and a win at one venue proved nothing at another. The standard was adopted to make competitive results commensurable and disputes decidable by text.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Game historians and archival records of early tournament disputes corroborate the founding problem independently of the benefiting parties, and academic game-studies literature documents pre-standardization incomparability. Casual players do not contest that the problem existed — they contest only its relevance to unranked play. No source attests the problem is solved-and-gone while ranked play continues, which is what a dead-status finding would require."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "canonical_text_supremacy",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_demo_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "social_scaffold_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "text_authority_immutable_for_ranking",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "skill_determines_outcomes_under_exact_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "house_rules_degrade_ranking_comparability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

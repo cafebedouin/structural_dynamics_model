@@ -1,0 +1,364 @@
+{
+  "header": {
+    "constraint_id": "dignified_death__relational_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "04bd96b1-8789-4bb7-9b66-a9b3f1b9b59e",
+    "created_at": "2026-06-12T09:30:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.28,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Relational Autonomy Triad in End-of-Life Decision-Making",
+    "topic_domain": "bioethics/medical_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supported_dying_patients",
+      "patient_family_members",
+      "attending_clinicians",
+      "healthcare_institutions"
+    ],
+    "victims": [
+      "competent_patients_with_overridden_wishes",
+      "socially_isolated_patients"
+    ],
+    "vindicated_propositions": [
+      "relational_autonomy_doctrine",
+      "shared_decision_making_norm"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint is one reading of the dignified_death kernel — the relational_autonomy reading, in which dignity is relationally constituted and decision authority is distributed across the patient-family-clinician triad. What would each sibling reading change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Author the sibling stories (dignified_death__autonomy_primary, dignified_death__sanctity_primary) and compare victim sets, epsilon, and enforcement structure across the kernel. The disagreement with autonomy_primary is located in the locus of final decision authority (individual vs distributed); the disagreement with sanctity_primary is located in whether intentional termination is permissible at all — a prior question this reading's procedure operationalizes but cannot itself settle.",
+      "impact": "If the load-bearing contest is authority allocation, this reading stands or falls as a direct rival to autonomy_primary and the foreclosure edge is the structural fact; if the load-bearing contest is termination permissibility, this reading is downstream procedural bookkeeping over a prior moral verdict and its epsilon should be re-derived relative to that verdict.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which structural element the sibling readings of dignified_death contest, and what this reading presupposes."
+    },
+    {
+      "id": "isolated_patient_structural_status",
+      "question": "Is the socially isolated patient's disadvantage intrinsic to the triadic arrangement (the procedure has no seat for absent relations), or an artifact of under-resourced implementation (professional advocates and ombuds services could fill the empty seat)?",
+      "resolution_mechanism": "Compare institutions that fund professional patient advocates for unrepresented patients against those relying on ad hoc clinician proxy: if supported isolation closes the outcome gap, the disadvantage is implementational; if it persists, it is structural to the triad.",
+      "impact": "If structural, the victim set is permanent and the arrangement's cost to that group is a fixed feature of the reading (pushing the computed type toward tangled_rope); if implementational, the victim set is contingent and the rope classification stabilizes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the isolated-patient victim set is intrinsic to the triad or fixable by implementation."
+    },
+    {
+      "id": "protection_dilution_separability",
+      "question": "The same procedural machinery that shields vulnerable patients from family pressure and clinician paternalism also dilutes competent patients' unilateral authority — is the measured extraction the price of the protection, or separable from it?",
+      "resolution_mechanism": "Case-level analysis separating decisions where the patient's capacity is contested (protection domain) from decisions where capacity is undisputed (dilution domain): if triadic overrides concentrate in the contested domain, the cost tracks protection; if overrides appear in the undisputed domain, the dilution is separable.",
+      "impact": "If the cost tracks protection, epsilon should be read down as coordination overhead; if separable, the dilution component is genuine asymmetric extraction riding on the coordination frame — supporting a tangled_rope reading over the authored rope claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the arrangement's cost to competent patients is separable from its protective function."
+    },
+    {
+      "id": "suppression_mechanism_character",
+      "question": "Is the arrangement's suppression structural (institutional rules that block unilateral decision pending procedure) or internalized (participants have absorbed the norm that solo death decisions are illegitimate, so coercion is rarely needed)?",
+      "resolution_mechanism": "Observe behavior where enforcement lapses: in institutions without active ethics-committee enforcement, do unilateral decisions reappear (structural suppression dominant) or does the norm self-sustain (internalized)?",
+      "impact": "If internalized, measured suppression understates the arrangement's hold — removing the enforcement machinery would not restore unilateral authority; if structural, enforcement decay would rapidly return the pre-procedural equilibrium of family veto and clinician paternalism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural vs internalized character of the arrangement's suppressive force."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "End-of-life medicine in the shared-decision-making era runs on an arrangement this story calls the relational-autonomy triad: dignity at the deathbed is treated as a property of the relational context, and decision authority over withdrawal of treatment, palliation, and contested refusals is distributed across the dying patient, the family, and the clinical team, governed by procedural safeguards — capacity assessment, documented deliberation, mandatory ethics consultation for disputed cases. The arrangement replaced two prior unilateral regimes (clinician paternalism and de facto family veto) and is now the mainstream bioethics position, codified in institutional policy, professional guidelines, and much surrogate-consent law. This file is ONE READING of the dignified_death kernel (see commentary.kernel_context and the kernel_reading_position omega); its epsilon is authored for the standing triadic arrangement as the relational reading itself assesses it — never for the arrangements the sibling readings would put in place. The interval 0-30 maps to roughly 1990-2020, the institutionalization era of shared decision-making, from the post-Cruzan formalization of ethics consultation through the spread of aid-in-dying statutes.",
+    "key_agents": [
+      "supported_dying_patients: protected party (powerless/trapped) — dying patients whose decisions get a structured hearing, capacity assessment, and documented voice inside the triad; they cannot exit the process that governs their own death",
+      "patient_family_members: primary beneficiary (moderate/constrained) — recognized standing, procedural weight for their objections, and a moral burden shared rather than imposed or stolen",
+      "attending_clinicians: secondary beneficiary (institutional/mobile) — clinical judgment integrated into the decision, moral weight distributed across the group, legal position buffered by documented process",
+      "healthcare_institutions: agenda-setter and concentrated beneficiary (institutional/constrained) — write and administer the safeguards; collect the liability shield and absorb family conflicts that would otherwise land on clinicians or courts",
+      "hospital_ethics_committees: procedural administrator (organized/constrained) — convene deliberation, mediate disputes, issue recommendations on contested cases; chartered and restructurable by the institution",
+      "competent_patients_with_overridden_wishes: primary target (powerless/trapped) — undisputed decision-making capacity, diluted final authority; the same procedure that protects others converts their wish into one input among several",
+      "socially_isolated_patients: secondary target (powerless/trapped) — no relational network for the procedure's standing assignments; interests carried by clinician proxy and default institutional policy",
+      "disability_rights_advocates: excluded voice (organized/constrained) — object from outside that capacity assessment and family-weighted deliberation systematically discount disabled self-determination",
+      "academic_bioethicists: analytical observer (analytical/analytical) — author the doctrine the procedure operationalizes, audit case-level outcomes, document the gap between deliberative ideal and bedside practice"
+    ],
+    "logic_rationale": "Extractiveness is 0.38: the arrangement genuinely coordinates — it replaced unilateral override with structured deliberation and gives every present party a hearing — but it systematically dilutes competent patients' final authority and leaves patients without relational networks with weaker advocacy than the procedure's design assumes. Suppression is 0.28: the arrangement blocks unilateral decision pending process, enforced through institutional policy and professional norms rather than heavy coercion; the suppression_requirement series shows the enforcement apparatus maturing over the interval (mandatory consults, documentation standards, legal deference to process) — this is a story about enforcement infrastructure being built, which is why the series is authored rather than left to the scalar. Theater is 0.18 and rising slowly: most ethics consultations resolve live conflicts, but a growing share of procedural activity is documentation produced to demonstrate compliance rather than to decide. Accessibility_collapse is 0.45: alternatives persist and are used — advance directives restore unilateral patient authority, competent refusal of treatment remains legally protected in most jurisdictions, and aid-in-dying statutes in a growing set of jurisdictions route around the triad entirely — but the contested middle of deathbed decision-making is captured by the procedural frame. Resistance is 0.30: disability rights advocates, patient-sovereignty advocates, and conscientious objectors contest the arrangement from outside without displacing it. Claimed type is rope, per the reading's coordination character and the manifest's expected delta; note that the structural data (declared victims plus active enforcement) gives the engine everything it needs to compute tangled_rope — if it does, that divergence is the measurement, not an error. Boltzmann coordination_type is attachment_coordination: the primary function coordinated is the caregiving relationship at the end of life — the triad is a small-group relational mechanism requiring continuous maintenance, with the procedural safeguards as its maintenance machinery; the type default floor (0.08) applies and no override is authored. The attachment framing is not a cover story: family presence and the clinical relationship at the deathbed are coordination goods the arrangement actually produces, and the declared victim set is what keeps that framing honest. The measurement series run on one shared time grid (points 0, 6, 12, 18, 24, 30) with every tracked metric authored at every point.",
+    "perspectival_gap": "The payer and agenda-setter seats compute differently from the same structure. From the institution's seat the triad is legitimacy infrastructure it built and staffs: the same procedure that delays decisions also absorbs the conflicts that would otherwise become litigation. From a competent overridden patient's seat the identical procedure is the machinery that converted their final word into one input among several. Same-level divergence is sharpest between two dying patients in the same hospital: one experiences the deliberative buffer as protection (a family pressing toward a decision they do not want), the other as dilution (a wish the triad will not ratify). What differentiates their situations is not global power — both are powerless, both trapped — but capacity status and relational presence, the two variables the procedure is calibrated to. The engine derives this divergence from the declared beneficiary/victim structure and exit atoms; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Declared beneficiaries (supported patients, families, clinicians, institutions) derive low directionality — the arrangement subsidizes them with standing, burden-sharing, integrated judgment, and the liability shield. Declared victims (overridden competent patients, isolated patients) derive high directionality — they pay in decision authority and advocacy, and both are trapped: a dying patient cannot exit the process that governs their death. The one structural subtlety the derivation handles without overrides: supported dying patients are beneficiaries with trapped exit, which sits them nearer the target end than their beneficiary declaration alone would suggest — the protection is real but they cannot arbitrage away from the arrangement's costs. No directionality_overrides are authored: the beneficiary/victim declarations plus the exit atoms place every seat where the structure puts it.",
+    "mandatrophy_analysis": "The classification discipline prevents two opposite mislabels. Reading the arrangement as pure extraction would erase the coordination function that is really there: the procedure did replace family veto and clinician paternalism with structured deliberation, and the founding problem — unmanaged deathbed conflict — is still live. Reading it as costless coordination would erase the identified victims: competent patients whose authority the procedure dilutes and isolated patients for whom it has no seat. The mandatrophy question for this reading is whether the procedural apparatus still solves the founding problem or has begun to perpetuate itself as liability management; founding_problem_status is live, theater_ratio is still low (0.18), and the mandate is not yet outlived. The early-warning signal in the measurement series is the slow theater rise: if documentation-for-compliance overtakes decision-resolving activity (theater_ratio above 0.5), the arrangement has drifted toward inertial procedural performance and should be re-read as a piton. The rising suppression_requirement series is the second watch item: enforcement machinery that keeps maturing after the norm has normalized would indicate the arrangement holding by administration rather than by agreement.",
+    "kernel_context": "This constraint instantiates the relational_autonomy reading of the dignified_death kernel: dignity is relationally constituted, and legitimate death decisions are those reached through the supported patient-family-clinician triad under procedural safeguards. Sibling readings, authored as separate constraint files: dignified_death__autonomy_primary (dignity resides in self-determination; the suffering individual holds final authority over timing and method of death) and dignified_death__sanctity_primary (dignity resides in life's intrinsic value; intentional termination violates a transcendent moral law regardless of consent). This file generates only the relational reading — no averaging across readings, no hedging of epsilon between them. The relational reading's core premise (no single party holds final authority) is logically incompatible with autonomy_primary's core premise within any single framework, recorded as a foreclosure edge; against sanctity_primary the readings coexist, since one party can hold both the relational process and the impermissibility of termination."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "dignified_death__autonomy_primary",
+      "dignified_death__sanctity_primary"
+    ],
+    "dual_formulation_note": "The dignified_death kernel decomposes into three structurally distinct constraints, linked here and not merged: this relational-autonomy reading (authority distributed across the triad; victims are those the procedure overrides or excludes; moderate epsilon), the autonomy_primary reading (patient holds final authority; a different victim set and enforcement structure), and the sanctity_primary reading (termination impermissible; the suffering denied release are its victims). Each story carries its own epsilon, beneficiaries, and claimed type; this file's epsilon is authored for the standing triadic arrangement as the relational reading itself assesses it. The upstream/downstream structure runs from the doctrinal level (this reading operationalizes relational autonomy doctrine) toward the case-level procedural constraints the siblings would govern differently."
+  },
+  "stakeholders": [
+    {
+      "name": "supported_dying_patients",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are dying patients whose end-of-life decisions proceed through the triadic process with family and clinicians present. The procedure gives their wishes a structured hearing: capacity is assessed, options are explained, their stated preferences are documented and carried into the decision unless formally overridden. What flows to them is decisional support and a record of their voice; what can flow away is final say, when the group's deliberation lands elsewhere. Exit does not exist in the ordinary sense — the process governs decisions about their own death, and they cannot take those decisions outside the institutional frame while in it."
+    },
+    {
+      "name": "patient_family_members",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Sit at the bedside with recognized standing: the procedure requires that they be heard, gives their objections procedural weight, and shares with them a moral burden that unilateral patient authority or clinician authority would place elsewhere. They bear the emotional cost of deliberation and, where the process overrides the patient's wish or their own, live with the outcome. They cannot leave the process while their person is dying inside it; disengagement is possible but carries relational and moral cost."
+    },
+    {
+      "name": "attending_clinicians",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Carry out the medical side of end-of-life care and sit as the third leg of the triad. The procedure integrates their clinical judgment, distributes the moral weight of withdrawal and palliation decisions across the group, and buffers them legally when a contested decision is later questioned. They bear the time cost of deliberation, documentation, and ethics consultation, and the moral distress of cases where the process lands against their judgment. They can change specialties, institutions, or leave practice; in most jurisdictions they cannot be compelled to perform interventions their conscience rejects."
+    },
+    {
+      "name": "healthcare_institutions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Write and administer the policies that constitute the triadic process — when ethics consultation is mandatory, what documentation is required, how disagreement escalates. They collect the liability shield: a documented, procedurally regular decision is far harder to litigate than a unilateral one, and the process absorbs family conflicts that would otherwise land on individual clinicians or the courts. They bear the cost of staffing committees, training staff, and the delay the process adds. They cannot exit the norm while operating in regulated healthcare markets, but they shape it."
+    },
+    {
+      "name": "hospital_ethics_committees",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Run the case-level machinery: convene family meetings, assess capacity disputes, mediate between clinicians and families, issue recommendations on contested withdrawals and refusals. Most consultations resolve live conflicts; a growing share produce documentation that exists to demonstrate the process was followed. Members typically serve part-time alongside clinical duties; the committee can be disbanded or restructured by the institution that charters it."
+    },
+    {
+      "name": "competent_patients_with_overridden_wishes",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are patients with undisputed decision-making capacity whose stated end-of-life wishes are diluted or reversed by the triadic process — a family's objection, a clinician's refusal, an ethics committee's recommendation, each given procedural weight equal to or greater than the patient's own voice. What flows from them is authority they would exercise alone under a patient-sovereignty rule; what flows to them is the assurance that no single actor decided alone. They cannot exit: the process governs the decision, and appeal outside it runs through the same institutional machinery."
+    },
+    {
+      "name": "socially_isolated_patients",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Are dying patients with no family at the bedside and no advocate — estranged, outliving their kin, or institutionalized long-term. The procedure presupposes a relational network: its safeguards are calibrated to conflicts among present parties, and its standing assignments have no seat for absence. In practice their interests are carried by clinicians holding partial proxy authority and by default institutional policy. They cannot exit into a process built for them; the alternative is the default pathway the process was built to replace."
+    },
+    {
+      "name": "disability_rights_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organize outside the clinical encounter to object that procedural distribution of decision authority devalues disabled self-determination — that capacity assessments and family-weighted deliberation systematically discount the wishes of patients with cognitive and physical disabilities. They litigate, submit regulatory comment, and publish, but hold no seat in the triad the procedure constitutes; their access runs through the same institutions whose practice they contest."
+    },
+    {
+      "name": "academic_bioethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Study the arrangement from outside practice: they author the doctrine the procedure operationalizes, audit its case-level outcomes, and document the gap between the deliberative ideal and bedside practice. They hold no decision authority in any individual case; their influence runs through journals, guidelines, and the training of the clinicians and ethicists who do sit in the triad."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "End-of-life decisions bind parties with distinct legitimate stakes — the dying person, those who will live with the loss, and the clinicians whose hands carry the decision out. The arrangement solves the problem of legitimating a decision none of the parties can rightly make alone: it structures who must be heard, what must be documented, and how disagreement is escalated, so that a contested death can proceed without any party's unilateral override.",
+    "transfer_function": "Moves decision authority — and with it moral burden and legal responsibility — from whichever party would otherwise hold it alone (the clinician under paternalism, the family under de facto veto, the patient under sovereignty norms) into the shared procedure; moves recognition and standing to family members and clinicians as decision participants; and, in cases where deliberation overrides a competent patient's stated wish, moves the patient's final authority to the group. It also moves documentation: every contested decision generates a record whose primary downstream holder is the institution's legal position.",
+    "absent_voices": "The socially isolated patient is the clearest absent voice: the procedure presupposes a relational network and has no seat for its absence, so the people with the weakest advocacy are the ones its safeguards were not designed around. Disability rights advocates object from outside that capacity assessment and family-weighted deliberation discount disabled self-determination; patient-sovereignty advocates object that a competent person's wish should not be negotiable; both stand outside the triad the procedure constitutes, with access only through the institutions they are contesting.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the distributed-authority procedure and its safeguards vanished overnight, end-of-life decisions would not stop happening — they would reorganize around the strongest unilateral claimant: families would veto withdrawals they oppose, clinicians would resume paternalist management of dying, and in jurisdictions with aid-in-dying statutes the patient's unilateral request would stand alone without the deliberative buffer. Liability would migrate to whoever acted. The relational network's recognized standing would evaporate, and the documented-voice protections now attached to patient preferences would disappear with the documentation requirement.",
+    "founding_problem": "Unmanaged conflict at the deathbed: families and clinicians overriding patients, patients making unsupported requests in states of crisis, disputes ending in litigation or unilateral action — at the moment when the parties' relationships are most morally loaded and least revisable.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the pre-arrangement litigation record (the Quinlan and Cruzan line and the hospital-ethics movement they triggered) documents the deathbed-conflict problem the arrangement was built to solve; disability rights organizations and patient-sovereignty advocates — both outside the relational network the arrangement benefits — attest the underlying conflict is real while disputing the arrangement's solution; clinical ethics consultation case registries independently record the continuing volume of live conflicts. No source inside the benefiting parties is relied on for the status claim."
+  },
+  "gain_flow": "healthcare_institutions",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "triadic_deliberative_dignity",
+    "drift_state": {
+      "moment": "contemporary_bedside_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "autonomy_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "sanctity_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dignity_is_relationally_constituted",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "decision_authority_must_be_distributed_with_safeguards",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": []
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

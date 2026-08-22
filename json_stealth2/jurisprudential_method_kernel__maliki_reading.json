@@ -1,0 +1,341 @@
+{
+  "header": {
+    "constraint_id": "jurisprudential_method_kernel__maliki_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "01d913f6-7235-4ca0-82d0-b7933e239468"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.5,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Medinan Living Practice ('Amal Ahl al-Madina) as Independent Source of Law",
+    "topic_domain": "religious/legal/institutional-history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "medinan_scholarly_lineage",
+      "maliki_school_jurists"
+    ],
+    "victims": [
+      "hadith_transmission_specialists",
+      "rival_school_jurists"
+    ],
+    "vindicated_propositions": [
+      "continuity_superiority_doctrine",
+      "medinan_custodial_authority_claim"
+    ]
+  },
+  "interval": {
+    "start": 760,
+    "end": 1260
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 760,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 860,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 960,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1060,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1160,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1260,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 760,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 860,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 960,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1060,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1160,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1260,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 760,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 860,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 960,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1060,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1160,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1260,
+      "value": 0.5,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the jurisprudential_method_kernel — the Maliki instantiation. Would instantiating a sibling reading (Hanafi analogical, Shafi'i hierarchical, Hanbali textualist) change the constraint's beneficiary/victim structure and epsilon?",
+      "resolution_mechanism": "Generate the sibling readings as separate stories and compare computed classifications; the disagreement is located in whether unrecorded communal practice carries independent binding force alongside transmitted texts.",
+      "impact": "Under the Shafi'i or Hanbali reading the Medinan lineage loses beneficiary standing and the hadith-specialist seat flips from payer toward beneficiary; epsilon redistributes across the seats accordingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one of four readings of a shared scripture-derived-law kernel."
+    },
+    {
+      "id": "medinan_preservation_fidelity",
+      "question": "Did continuous Medinan practice in fact preserve Prophetic practice faithfully, as the reading's foundational axiom asserts?",
+      "resolution_mechanism": "Systematic comparison of documented Medinan 'amal against early hadith corpora and parallel non-Medinan practice, drawing on isnad-graded reports and the historiography of early Medinan legal development.",
+      "impact": "Confirmed fidelity strengthens the coordination reading and lowers effective extraction; demonstrated drift severs the axiom's empirical warrant and pushes the arrangement toward inertial maintenance of an inherited authority claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical status of the preservation claim underlying the validity of Medinan practice."
+    },
+    {
+      "id": "amal_binding_scope",
+      "question": "Does 'amal claim binding force only within territories where the Medinan method governs courts and teaching, or does it assert authority over the practice of all Muslim communities?",
+      "resolution_mechanism": "Doctrinal analysis of Maliki legal theory on the territorial reach of 'amal, and of how non-Medinan communities' practices were ranked in Maliki responsa and court practice.",
+      "impact": "A jurisdictionally limited claim confines the arrangement's costs to the school's territories; a universal claim extends the affected class to all non-Medinan practice and raises scope-amplified extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Territorial versus universal reach of the practice-based source."
+    },
+    {
+      "id": "amal_warrant_circularity",
+      "question": "Is the warrant for 'amal circular — Medina certifying its own practice as the Prophet's — such that the source-validity claim functions to entrench the lineage's authority rather than track authentic practice?",
+      "resolution_mechanism": "Test whether independent evidence (non-Medinan reports corroborating Medinan practice, companion-era documentation, comparative regional practice) supports the preservation claim without appeal to Medinan self-testimony.",
+      "impact": "If the warrant is substantially circular, the extraction component of the measured epsilon is better read as authority-entrenchment than as the price of coordination, shifting outsider seats toward the full-target end.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Circularity of the self-certifying warrant for Medinan practice."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Within the shared commitment that law derives from the Qur'an and the Prophet's Sunna, the Maliki reading holds that the continuous practice of the Medinan community ('amal ahl al-Madina) is itself a valid source of law — able to confirm, supply, and where necessary override isolated transmitted reports — because Medina's unbroken communal life is held to preserve the Prophet's practice more faithfully than any chain of individual narrators. This file instantiates ONE reading of the jurisprudential_method_kernel; the Hanafi, Shafi'i, and Hanbali readings are separate constraint stories linked through the network section, each with its own epsilon and beneficiary/victim structure. The epsilon referent is the Medinan-practice arrangement itself — the standing arrangement under contest — described as it operates, not as its rivals characterize it. KEY AGENTS (by structural relationship): - medinan_scholarly_lineage: agenda-setting custodian and principal beneficiary (institutional / identity_locked) — administers the practice-based source and collects the authority it generates; - maliki_school_jurists: working beneficiaries (organized / identity_locked) — exercise the method professionally across the school's territories; - hadith_transmission_specialists: principal payers (organized / constrained) — their grading craft authenticates but does not arbitrate where practice overrides reports; - rival_school_jurists: payers (organized / mobile) — non-Medinan methods subordinated wherever the Medinan method governs; - lay_muslim_communities: incidental beneficiaries (moderate / constrained); - zahiri_text_only_critics: excluded objectors (organized / mobile); - comparative_fiqh_historians: analytical observers (analytical / analytical).",
+    "key_agents": [
+      "medinan_scholarly_lineage: agenda-setting custodian and principal beneficiary (institutional / identity_locked)",
+      "maliki_school_jurists: working beneficiaries of the method (organized / identity_locked)",
+      "hadith_transmission_specialists: principal payers whose craft is subordinated (organized / constrained)",
+      "rival_school_jurists: payers holding non-Medinan methods (organized / mobile)",
+      "lay_muslim_communities: incidental beneficiaries receiving stable law (moderate / constrained)",
+      "zahiri_text_only_critics: excluded objectors outside the school's councils (organized / mobile)",
+      "comparative_fiqh_historians: analytical observers (analytical / analytical)"
+    ],
+    "logic_rationale": "Extraction is authored at 0.55 (medium): the arrangement genuinely coordinates — it resolves conflicts between transmitted reports, fills gaps the reports leave, and anchors law in an observably continuous way of life — while simultaneously concentrating interpretive authority in one lineage and subordinating rival claims to equal authenticity, which is the manifest-declared victim class. Suppression is 0.50: enforcement is structural and institutional (control of judgeships, teaching posts, and court procedure within the school's territories; refusal to admit practice-external methods to adjudicative finality) rather than severe or violent, and rival readings remain legally live across the umma, bounding the suppressive force. Theater is low (0.20): 'amal is genuinely operative in fatwa and adjudication throughout the interval, with only a modest late rise as appeals to Medinan precedent become partly formulaic in the mature school. Accessibility collapse is low (0.30): the alternative readings did not collapse — they consolidated into enduring rival schools — so understanding this constraint does not close off exits. Resistance is substantial (0.60): sustained critique from the Shafi'i hierarchical reform, from hadith specialists defending the finality of graded narration, and later from Zahiri literalists. The measurement series share one six-point grid (760–1260 CE): extraction climbs during crystallization and consolidation as school machinery matures, then plateaus; suppression_requirement is tracked because the story specifically traces enforcement build-out — from informal local consensus around a revered teacher to institutionalized school administration — rising 0.30 to 0.50 and flattening; theater creeps upward mildly. The trajectory is monotone, not cyclical: no oscillation mechanism is posited. Identity-lock dynamics: the Medinan lineage's exit is identity_locked in the institutional sense — the lineage has become its function as living witness; if the preservation frame broke publicly, its authority model would need re-grounding in narration-graded textualism, dissolving the school's distinctiveness.",
+    "perspectival_gap": "The payer seats and the custodian seat should compute differently. From the Medinan lineage's position the arrangement is fidelity: continuity is the best available witness to revelation, and administering it is custodianship, not privilege. From the hadith specialist's position the same structure demotes a lifetime of grading work to a subordinate role precisely where it matters most — cases where a sound report conflicts with local practice. From rival jurists' positions it is regional entrenchment of one city's precedent over their methods' equal claims. The engine computes this per-seat divergence from the structural data; the authored claim does not adjudicate it. Suppression here is structural (institutional control of courts and teaching), not internalized — no omega for internalization is required, though the circularity omega captures the epistemic analogue.",
+    "directionality_logic": "The Medinan lineage and Maliki jurists are declared beneficiaries: authority, teaching posts, and adjudicative finality flow to them, placing their derived directionality near the beneficiary end — amplified by identity-locked exit, which removes even voluntary exit as a damping factor. Hadith transmission specialists and rival school jurists are declared victims: the former lose arbitrating force where practice overrides graded reports (constrained exit keeps them near the full-target end), the latter suffer subordination of their claims but retain mobile exit into home regions, damping their effective extraction somewhat. Lay communities sit near symmetric: genuine benefit from stable, visible law, diffuse cost where local practice is ranked below Medinan precedent. The excluded Zahiri critics feed the absence picture rather than directionality. Scope mixes regional (lineage) to global (hadith enterprise), so scope amplification applies unevenly across seats.",
+    "mandatrophy_analysis": "The founding problem — authenticating Prophetic practice amid conflicting reports and divergent regional customs — is authored as contested, not dead: defenders hold it live whenever reports conflict; critics hold isnad criticism superseded it. Because status is contested and the disappearance verdict is world_rearranges, the mismatch consumer finds no dead-mandate-plus-persistence flag; the arrangement persists because the problem's resolution remains disputed, not because administrators cling to a corpse. The tangled_rope classification prevents mislabeling in both directions: the declared beneficiaries and coordination function stop a pure-extraction reading that would erase the real service the method performs for legal stability, while the declared victims and active-enforcement requirement stop a pure-coordination reading that would erase the asymmetric authority concentration the same structure produces."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "jurisprudential_method_kernel__hanafi_reading",
+      "jurisprudential_method_kernel__shafii_reading",
+      "jurisprudential_method_kernel__hanbali_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Islamic jurisprudential method' conflates four structurally distinct claims about how law derives from Qur'an and Sunna. Per the epsilon-invariance principle, each is authored as its own story: this file is the Maliki reading (medium epsilon on custom/practice; Medinan lineage benefits; non-Medinan claims to equal authenticity pay). The Shafi'i reading is downstream in reaction — its four-tier codification was built explicitly against 'amal's independent force — so this story influences it structurally while the Hanafi and Hanbali readings coexist as parallel methodological commitments. Cross-family edges run through the shared hadith-transmission infrastructure: whatever degrades the authority of graded narration reshapes every reading's operating environment."
+  },
+  "stakeholders": [
+    {
+      "name": "medinan_scholarly_lineage",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Teaches, transmits, and adjudicates according to the settled practice of the Medinan community as received from the companions' generation. When transmitted reports conflict or fall silent, the community's continuous practice supplies the ruling. Teaching posts, judicial influence, and custodial authority flow to holders of this lineage; leaving it would mean renouncing the claim that their city's practice is the Prophet's preserved practice — the claim on which their entire standing rests."
+    },
+    {
+      "name": "maliki_school_jurists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "continental",
+      "situation": "Decide cases and write responsa across North Africa, al-Andalus, and later West Africa within the Medinan-practice method. The method lets them resolve conflicts between reports by appealing to continuous communal practice, giving their rulings a stability that purely narration-based methods lack. Their professional standing is bound to the school's methodological identity; moving to another school means retraining and loss of position."
+    },
+    {
+      "name": "hadith_transmission_specialists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Collect, grade, and transmit reports through chains of named narrators. Where the Medinan method lets continuous practice override an apparently sound report, their grading work loses final say: their craft authenticates but does not arbitrate. Their expertise travels across regions, but abandoning transmission work altogether is not a live option for people trained into it from youth."
+    },
+    {
+      "name": "rival_school_jurists",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Jurists of the Kufan analogical tradition, the Shafi'i hierarchical method, and the text-literalist tradition. In territories where the Medinan-practice method governs courts and teaching, their claims that their own methods carry equal authenticity are subordinated, costing them standing and institutional access there. They retain full professional standing in their home regions, which keeps exit realistic and their costs geographically bounded."
+    },
+    {
+      "name": "lay_muslim_communities",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Ordinary believers in Medinan-method territories receive a stable body of law anchored in visible communal practice rather than in contested chains of narration, and can see the practice their law rests on. They also absorb costs where the practices of their own localities are ranked below Medinan precedent in disputed questions."
+    },
+    {
+      "name": "zahiri_text_only_critics",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Literalist critics, most prominently the Zahiri school, hold that only explicit revealed texts bind and that reliance on unrecorded communal practice is unauthorized innovation. They press the objection in writing and public disputation but are not admitted into the Medinan method's internal deliberations; their critiques circulate outside the school's councils."
+    },
+    {
+      "name": "comparative_fiqh_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic historians of Islamic law reconstruct how the Medinan-practice doctrine crystallized, how it interacted with the rise of hadith criticism, and what its authority structure absorbed or displaced. They take no side in the methodological dispute and collect nothing from the arrangement."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a decision procedure for deriving law from revelation when transmitted reports conflict or fail to cover a case: continuous communal practice serves as tie-breaker and gap-filler, anchoring rulings in an observable, continuously witnessed way of life instead of in competing narration chains.",
+    "transfer_function": "Moves interpretive authority and adjudicative finality toward the Medinan scholarly lineage and its school, and moves deference away from narration-graded reports and rival centers' methods; concretely, teaching posts, judgeships, and the power to settle disputed questions concentrate where the lineage teaches.",
+    "absent_voices": "Early Iraqi traditionists and later Zahiri literalists would object that continuous practice can fossilize post-Prophetic accretion and that only graded chains of narration can authenticate; they stood outside the Medinan councils that certified 'amal, so the unanimity surrounding the doctrine was reached without them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If 'amal-as-source vanished overnight, every ruling resting on practice rather than isolated reports would need re-derivation from texts alone, the school's distinctive override mechanism would disappear, and the Medinan lineage's claim to custodial authority would collapse — the jurisprudential order of North Africa and al-Andalus would reorganize around narration-graded methods.",
+    "founding_problem": "After the Prophet's death, Muslims held conflicting reports and divergent regional practices, and no agreed procedure existed to determine which practice was authentically his. The Medinan community's continuous, unbroken way of life was proposed as the answer: a living witness older and broader than any chain of individual narrators.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Al-Shafi'i's Risala and his reported disputations in Egypt attest the authentication problem was live while attacking the Medinan solution from outside the benefiting parties; Ibn Hazm's Zahiri works renew the attack centuries later; modern academic historians of Islamic law corroborate that the status remains disputed rather than settled. Corroboration of both the problem and its contested status therefore comes substantially from outside the beneficiary set."
+  },
+  "gain_flow": "medinan_scholarly_lineage",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "medina_living_witness_of_prophetic_practice",
+    "drift_state": {
+      "moment": "post_critical_historiography",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "hanafi_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shafii_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hanbali_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prophetic_practice_preserved_in_medinan_amal",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "communal_continuity_outweighs_isnad_chains",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

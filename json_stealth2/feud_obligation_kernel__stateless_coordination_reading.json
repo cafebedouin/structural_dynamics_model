@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__stateless_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "feud_coord_reading",
+    "story_uid": "f676b964-d302-4286-b216-fc914b873ebc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.24,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.5,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blood-Feud Obligation as Stateless Coordination (Stateless-Coordination Reading)",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "feud_participating_kin_groups",
+      "aggrieved_lineage_heads",
+      "wergild_arbitrators"
+    ],
+    "victims": [
+      "feud_defectors",
+      "obligated_young_kinmen"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "omegas": [
+    {
+      "id": "kernel_net_function_contestation",
+      "question": "This story is one reading of the feud_obligation_kernel: is the feud's persistence best characterized as functional stateless coordination (this reading), a destructive extraction cycle draining productive capacity (extraction_cycle_reading), or illegitimate violence awaiting divine and royal pacification (christianized_pacification_reading)?",
+      "resolution_mechanism": "Cross-cultural comparison of stateless societies with and without feud institutions, tracking homicide rates, productive investment, and political consolidation; adjudication of which total characterization survives the combined evidence.",
+      "impact": "Resolution reclassifies the whole family: the extraction-cycle reading would move victims to the exploited population and raise epsilon sharply; the pacification reading would relocate legitimacy entirely and recast the feud's operators as wrongdoers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel-level contest over which of three readings characterizes the feud."
+    },
+    {
+      "id": "deterrence_efficacy_question",
+      "question": "Does feud obligation actually reduce predation and homicide relative to comparable stateless settings that lack feud institutions?",
+      "resolution_mechanism": "Comparative homicide and raid-frequency data across segmentary societies with and without feud obligation, and within-society variation where feud was suspended (truce periods, market peaces, assembly-enforced cessations).",
+      "impact": "If no deterrence effect is found, the coordination claim collapses and the arrangement reads as pure sanction politics; measured epsilon would rise toward the snare range.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the feud's deterrent function is real or asserted."
+    },
+    {
+      "id": "defector_sanction_status",
+      "question": "Are the sanctions on defectors — honor loss, oath-breaking stigma, expulsion — the maintenance cost of a cooperation scheme whose benefits they share, or asymmetric treatment imposed on the unwilling?",
+      "resolution_mechanism": "Track defector outcomes against compliant-member outcomes across recorded cases: if defectors forfeit only the scheme's benefits, the sanctions are coordination discipline; if they bear costs beyond benefit-forfeiture, the asymmetry is extractive.",
+      "impact": "Determines whether the defector seat computes as a coordinated contributor or a bearing party, moving the boundary between the coordination and extraction components of the classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Status of defector sanctions: discipline or extraction."
+    },
+    {
+      "id": "wergild_separability",
+      "question": "Is wergild compensation an internal component of the feud institution — the feud's peaceful phase — or a competing alternative dispute mechanism whose operation the feud merely tolerates?",
+      "resolution_mechanism": "Examine settlement sequences in saga and charter material: whether compensation offers gain force only under threat of renewed prosecution (internal) or bind independently of feud capacity (separable).",
+      "impact": "If separable and thriving, suppression of alternatives is lower than measured and accessibility_collapse falls; if internal, the feud system deserves credit for the settlement channel it hosts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wergild sits inside or beside the feud institution."
+    },
+    {
+      "id": "transitional_or_steady_state",
+      "question": "Is the feud a stable equilibrium of stateless order, or a transitional arrangement that centralized enforcement displaces wherever states consolidate?",
+      "resolution_mechanism": "Longitudinal comparison of feud incidence before and after state penetration in the same regions (Iceland after 1262, Norman England, colonial interventions in segmentary societies).",
+      "impact": "If transitional, the arrangement carries an undeclared sunset and drifts toward a support-stage reading; if stable wherever states fail, the coordination claim strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Steady-state institution or stage on the way to state justice."
+    },
+    {
+      "id": "honor_identity_fusion_depth",
+      "question": "How much of obligated members' compliance flows from structural necessity (no protection outside the kin group) versus identity fusion with honor and lineage, which would persist even if structural exits opened?",
+      "resolution_mechanism": "Observe behavior where exit structurally opens — migration to towns, conversion, royal offers of protection: if prosecution duty persists despite safe exit, identity lock dominates.",
+      "impact": "If identity-fused, exit for obligated members is closer to identity lock than mere constraint and the effective burden on that seat is higher than structural data alone suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus identity sources of obligated members' compliance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.31
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 150,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 250,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.18
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In kin-ordered societies without centralized enforcement — the Icelandic Commonwealth (c. 930-1262), the Nuer and Tiv of the ethnographic record, early medieval Europe broadly — blood-feud obligation bound kin groups to prosecute killings and injuries against their members and made every such attack collectively expensive. This file instantiates the stateless_coordination_reading of the feud_obligation_kernel: the feud as a self-enforcing coordination mechanism supplying deterrence and a justice process where no state exists to supply either. Per the committer-frame rules, the sibling readings (extraction_cycle_reading, christianized_pacification_reading) are separate constraint files, not folded into this one; epsilon here refers to the standing feud arrangement as THIS reading assesses it. Claim and metrics are authored independently: the reading's own account contains both a genuine coordination function (deterrence, redress, settlement) and real costs pushed through the same structure (defector sanction, inherited prosecution duties), which is why the claim is tangled_rope rather than rope; the metric values describe the arrangement's observed operation, not the claim.",
+    "key_agents": [
+      "- lineage_heads: Agenda-setting seat (organized/constrained) — declare feuds, muster parties, authorize or refuse settlement; bound by the honor norms they administer",
+      "- feud_participating_kin_groups: Primary beneficiary seat (organized/identity_locked) — receive deterrence and a justice process; membership carries reciprocal prosecution duty",
+      "- aggrieved_lineage_heads: Beneficiary seat (organized/constrained) — hold the grievance; choose prosecution versus compensation",
+      "- wergild_arbitrators: Secondary beneficiary seat (moderate/mobile) — broker and tariff settlements; collect fees and standing from mediation",
+      "- feud_defectors: Primary payer seat (powerless/trapped) — refuse prosecution or settle privately; absorb honor loss, oath-breaking stigma, expulsion",
+      "- obligated_young_kinmen: Payer seat with secondary benefit (moderate/identity_locked) — inherit the fighting and harboring duty; also covered by the protection it produces",
+      "- centralizing_monarchs: Excluded seat (institutional/arbitrage) — build rival royal justice; hold no place in the feud's deliberative world",
+      "- comparative_legal_anthropologists: Analytical observer (analytical/analytical) — reconstruct the arrangement's operation from law codes, sagas, and ethnography"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.38: the arrangement's costs concentrate on identifiable seats (defectors, obligated junior men) while its benefits spread across whole kin groups, but the referent is a working justice arrangement, not a rent-collection machine, so the value sits in the moderate band. Suppression is low (0.24) because the structural delta holds: wergild and arbitration coexist and are used; the residual suppression is honor-norm pressure against compromising too cheaply, not exclusion of alternatives. Theater is low (0.18): prosecutions, raids, and settlements deliver the deterrence and redress they promise; the small performative share is ceremonial challenge-and-answer protocol. Accessibility_collapse (0.40) reflects workable alternatives — compensation, arbitration, migration, outlawry as last resort. Resistance (0.50) is real: defectors, compromisers, and reluctant kin push back continuously. Boltzmann coordination_type is enforcement_mechanism: the feud's dominant function is producing credible enforcement where none exists; its identity dimension is real but derivative. The measurement series share one grid (t=0..300 at 50-year steps). Base_extractiveness humps (0.32 rising to 0.42, easing to 0.38): obligations deepen as they become hereditary rather than contracted, then ease as the wergild channel matures and absorbs disputes. Suppression_requirement is authored as a series because the story tracks enforcement-capacity change: diffuse shame suffices early (0.20), hardened honor ideology requires active policing of compromisers mid-period (peak 0.32), and church and royal pressure erodes enforcement capacity late (0.24). Theater_ratio creeps upward as ceremonial maintenance grows relative to prosecuted cases.",
+    "perspectival_gap": "The payer seats and the beneficiary seats compute differently from identical structural facts. From inside feud_participating_kin_groups the obligation is insurance: the guarantee that a killing will be answered is what keeps members alive and the group intact. From feud_defectors the same obligation is a trap: refusal costs honor and belonging, compliance costs blood. Obligated_young_kinmen straddle the line — they pay the highest physical price and hold a secondary claim on the protection it buys. Wergild_arbitrators sit near-symmetric, gaining fees and standing whichever way a case resolves. Centralizing_monarchs stand outside the derivation entirely: they neither pay nor collect under the arrangement; they propose to replace it. The engine computes these divergences from the structural data; nothing in the authored claim adjudicates them.",
+    "directionality_logic": "Beneficiary declarations drive the beneficiary-end assignments: feud_participating_kin_groups, aggrieved_lineage_heads, and wergild_arbitrators derive low directionality (the arrangement subsidizes them), with arbitrators nearest symmetric because their gain is fee-and-status rather than protection. Victim declarations drive the target end: feud_defectors, trapped with no exit, sit nearest full-target; obligated_young_kinmen, identity-locked but secondarily benefited, sit high but below the defectors. Regional scope applies a modest verification-difficulty amplification to effective extraction across seats. No directionality overrides were needed: role, power, and exit data already separate the seats the derivation would otherwise conflate.",
+    "mandatrophy_analysis": "The founding problem — deterring homicide and providing redress without a state — remains live across the entire interval, so the R5 mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges and finds no zombie flag: the arrangement has not outlived its mandate within this window. The tangled_rope classification does the anti-mislabeling work in both directions: reading the feud as a pure snare would erase the justice and deterrence function that stateless societies demonstrably relied on; reading it as a pure rope would erase the real, concentrated costs borne by defectors and obligated junior men. The late-interval drift (falling suppression_requirement, creeping theater_ratio) is flagged, not resolved: if state consolidation proceeds, the arrangement's trajectory bends toward scaffold-like transitivity or, if enforcement decays faster than function, toward piton-like inertia — the transitional_or_steady_state omega carries that open question.",
+    "kernel_context": "Kernel: feud_obligation_kernel — the persisting commitment that kin groups owe prosecution of wrongs done to their members. This file instantiates the stateless_coordination_reading: the feud as self-enforcing coordination supplying justice and deterrence in the absence of centralized enforcement. Sibling readings: extraction_cycle_reading (the feud as destructive extraction draining productive capacity and blocking territorial consolidation) and christianized_pacification_reading (the feud as violation of divine law, legitimate violence delegated to God and ecclesiastical/royal institutions). The disagreement is located in two places: the net-function assessment (coordination versus destruction) and the locus of legitimate violence (kin self-help versus delegated authority). This reading forecloses the extraction-cycle reading within a single framework — the two are contradictory total characterizations of the same institution — and coexists with the pacification reading, which condemns the feud normatively while conceding its social reality, a combination medieval churchmen in fact held. Epsilon is indexed to this reading's own lights over the fixed referent: the standing feud arrangement, not the pacified order this reading's rivals would install."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feud_obligation_kernel__extraction_cycle_reading",
+      "feud_obligation_kernel__christianized_pacification_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'blood-feud obligations' conflates three structurally distinct claims — a functional characterization (this file: coordination), a distributive characterization (extraction_cycle_reading: depletion), and a normative-legitimacy characterization (christianized_pacification_reading: divine-law violation). Each carries its own epsilon, beneficiary/victim structure, and classification; the files are linked through network.affects_constraints. The upstream empirical question (whether feud deters) conditions the downstream functional claim, which is why this reading links to both siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "lineage_heads",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Senior kinsmen who decide when a killing demands prosecution, muster the feud party, negotiate compensation terms, and authorize or refuse wergild acceptance. Their standing rests on being seen to prosecute firmly and to settle well; refusing both costs them authority inside the kin group. They are bound by the same honor expectations they administer."
+    },
+    {
+      "name": "feud_participating_kin_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Extended kin corporations whose members enjoy the guarantee that an attack on any one of them will be answered by all. Membership carries the reciprocal duty to turn out when the group prosecutes. Leaving the group is not a realistic option: outside it a person holds no protection, no marriage prospects, and no standing."
+    },
+    {
+      "name": "aggrieved_lineage_heads",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Kin leaders whose group has suffered a killing or injury and who therefore hold the grievance that anchors a feud. They choose between prosecuting to satisfaction and accepting compensation; either path restores standing, but an unresolved grievance follows them for life."
+    },
+    {
+      "name": "wergild_arbitrators",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Respected neutrals — elders, chieftains, later churchmen — who broker compensation settlements between feud parties, apply tariff schedules, and host the assemblies where terms are sworn. They collect fees and reputation from successful mediations and depend on both sides remaining within reach of a negotiated outcome."
+    },
+    {
+      "name": "feud_defectors",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Kin members who refuse to prosecute when called, or who accept private compensation without authorization. They lose honor standing, may be sworn against as oath-breakers, and in the extreme case are expelled — which in a kinship-ordered world strips them of every protection they had."
+    },
+    {
+      "name": "obligated_young_kinmen",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Junior male kin who inherit the duty to fight and to harbor fugitives in feuds begun by their fathers and uncles. They bear the blood risk and the outlawry exposure directly, while also enjoying the group protection the same machinery provides. Refusal marks them and their households with cowardice."
+    },
+    {
+      "name": "centralizing_monarchs",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Kings and their officers, alongside church councils, who are building rival justice: royal courts, mandated compensation, and eventually prohibitions of private vengeance. Inside the feud's own deliberative world they hold no seat; their remedy lies in replacing the arrangement wholesale, which they progressively attempt across the period."
+    },
+    {
+      "name": "comparative_legal_anthropologists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Modern analysts of segmentary lineage systems — Nuer, Tiv, saga-age Iceland — who reconstruct how feud obligation performed order-maintenance from the outside, using law codes, sagas, and ethnography. They bear none of its costs and collect none of its protections."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Makes every attack on a kin-group member expensive by guaranteeing a collective armed response, and routes redress through recognized claim, prosecution, and settlement procedures — deterrence and justice produced without a state.",
+    "transfer_function": "Moves security inward (assurance of protection to members), moves wealth between groups at settlement (compensation payments from the liable kin to the aggrieved kin), and moves risk onto the junior men who fight and the defectors who absorb sanction.",
+    "absent_voices": "The dead and injured, whose claim others prosecute in their name; women, whose marriages and labor were mobilized for feud and whose voices rarely entered the assembly; kin who preferred immediate quiet compensation but were outvoted by honor politics; and the royal and ecclesiastical reformers whose abolition program stood wholly outside the feud's deliberative world.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight removal would strip kin groups of their deterrence guarantee and leave defector sanction without structure: predation between groups would spike until some substitute protection emerged, and wergild alone — a tariff without an enforcing threat behind it — would not hold. Settlement, marriage alliance, and assembly politics all presuppose the feud's backing threat.",
+    "founding_problem": "How kin-based societies with no central enforcer deter homicide and theft, and provide redress to wronged groups, when no court or police exists to do either.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside the benefiting parties: church conciliar records and royal charters complain of the feud's prevalence (adversarial witnesses with no stake in its continuation), law codes such as Grágás regulate its procedure in detail, and comparative ethnography documents the independent emergence of feud institutions among the Nuer, the Tiv, and other unconnected stateless societies — a convergence no single beneficiary group orchestrated."
+  },
+  "gain_flow": "feud_participating_kin_groups",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "self_enforcing_deterrence_equilibrium",
+    "drift_state": {
+      "moment": "state_formation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_cycle_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "christianized_pacification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "stateless_deterrence_constitutes_legitimate_justice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "kin_collective_liability_sustains_peace",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

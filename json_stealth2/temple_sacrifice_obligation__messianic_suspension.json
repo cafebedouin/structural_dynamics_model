@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "temple_sacrifice_obligation__messianic_suspension",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tso_msus",
+    "story_uid": "7cd1e13f-bfa2-4f0a-9b70-de9cae468b3a"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.05,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.15,
+    "resistance": 0.1,
+    "claimed_type": "scaffold",
+    "human_readable": "Messianic Suspension of the Sacrificial Obligation",
+    "topic_domain": "religious/halakhic",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "diaspora_jewish_communities",
+      "priestly_lineages"
+    ],
+    "vindicated_propositions": [
+      "obligation_inviolability_doctrine",
+      "messianic_restoration_certainty"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 1955
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1955,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1955,
+      "value": 0.28,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_status_ambiguity",
+      "question": "This constraint instantiates only the messianic_suspension reading of the temple_sacrifice_obligation kernel. Do the sibling readings (study_as_occupation, study_as_archiving) describe the same underlying arrangement with different bookkeeping, or structurally different constraints with different epsilon, beneficiary sets, and failure modes?",
+      "resolution_mechanism": "Comparative analysis of what each reading obligates NOW: if any sibling generates a present-duty (study-as-discharge) or a present-victim set, it is a distinct constraint; if all three converge on 'nothing is owed now,' they are descriptions of one arrangement.",
+      "impact": "If the siblings are distinct constraints, this story's epsilon and stakeholder surface are correct as authored; if they are one arrangement, the corpus should merge them and recompute classification over the union.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings of the sacrifice-obligation kernel are separate constraints or one arrangement described differently."
+    },
+    {
+      "id": "eschatological_sunset_actuality",
+      "question": "The arrangement carries a declared termination condition (restoration of the Temple), but the trigger lies outside every party's control and has stood unmet for the full interval. Does a sunset clause no party can actuate still make the arrangement transitional, or does indefinite deferral convert it de facto into a steady-state coordination regime?",
+      "resolution_mechanism": "Conceptual analysis cross-checked against comparable indefinite-sunset regimes (provisions 'until return of conditions X'): do such regimes behave as bridges (winding-down behavior, preparation for termination) or as permanent fixtures?",
+      "impact": "If the sunset is functionally inert, the transitional justification fails and the arrangement should be read as a steady-state coordination solution rather than a holding pattern; the claimed type and the sunset-flag's weight both change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether an unactuable, indefinitely deferred sunset clause still grounds transitional status."
+    },
+    {
+      "id": "revealed_restoration_expectation",
+      "question": "Do adherents treat restoration as a live expectation that structures present behavior, or as a liturgically affirmed but practically never-expected event?",
+      "resolution_mechanism": "Revealed-preference evidence at political openings: after 1967, when partial access to the Temple Mount became possible, communities overwhelmingly did not move to resume performance and mainstream adjudication reaffirmed the bar; survey and behavioral data on restoration expectation versus practice.",
+      "impact": "Live expectation supports the transitional reading (the arrangement is awaiting activation); dead expectation suggests the deferral has become the terminal state, pushing toward steady-state classification and raising the theater ratio's diagnostic weight.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether restoration expectation is behaviorally live or liturgically nominal."
+    },
+    {
+      "id": "restorationist_cost_attribution",
+      "question": "Restorationist movements bear the arrangement's clearest present cost (denied performance of a duty they hold live). Is that cost imposed BY the suspension regime on parties inside it, or do restorationists stand outside the arrangement by their own doctrinal choice, making their position self-selected rather than borne?",
+      "resolution_mechanism": "Examine whether the mainstream adjudication claims jurisdiction over restorationist practice (rulings addressed to them, refusals framed as binding) or treats them as outside the frame; compare with how the arrangement treats other non-conforming groups.",
+      "impact": "If the cost is imposed, a victim set exists and the arrangement's profile shifts toward hybrid coordination-plus-denial; if self-selected, the no-victim structure stands and the low-extraction profile is confirmed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the restorationist fringe is a victim set of the arrangement or self-excluded from it."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "After the destruction of the Second Temple, the sacrificial commandments remained textually intact while becoming physically impossible to perform. The messianic_suspension reading holds that these obligations are SUSPENDED — not fulfilled, not violated, not dissolved — pending a restoration event that restores both the site and the possibility of valid performance. Under this reading the standing arrangement is a deferral regime: halakhic adjudication rules that nothing is owed now and cannot be done now; the community's practical religion proceeds without sacrificial performance; and the corpus of sacrificial law is kept teachable so that an intact obligation, not a reconstructed one, awaits restoration. Study of the sacrificial orders is, on this reading, neither compliance nor preparation-for-compliance but maintenance of knowledge-in-waiting — the file is kept readable, not acted on.\n\nKEY AGENTS (by structural relationship):\n- halakhic_adjudicators: Administrator of the deferral (institutional / identity_locked) — rules that nothing currently binds, maintains the dormant corpus, defers final adjudication to an event it cannot cause\n- diaspora_jewish_communities: Primary beneficiary (organized / constrained) — relieved of undischargable duties; rehearses restoration liturgically\n- priestly_lineages: Secondary beneficiary (moderate / identity_locked) — hold dormant hereditary service status that survives only inside the deferral\n- restorationist_movements: Principal cost-bearer (powerless / constrained) — denied performance of a duty they hold live\n- academic_historians_of_religion: Analytical observer — sees the full structure from outside the tradition's self-description",
+    "logic_rationale": "Extractiveness is authored very low (0.08 at interval end) because the arrangement collects essentially nothing from anyone: no performance is owed, no payment is taken, and the residual costs (priestly purity discipline, scholarly maintenance of the corpus, liturgical rehearsal) are small and largely self-imposed. Suppression is near-floor (0.05): nothing is coerced, rival readings are taught openly inside the same institutions, and parallel communities run competing answers without interference. Accessibility collapse is low (0.15) because alternatives do NOT close off — the sibling readings, prayer-substitution theologies, and activist restorationism all remain live and practiced, which is precisely why this story is one reading of a contested kernel rather than the kernel itself. Resistance is low (0.10): there is almost nothing here to resist, and the fringe that does resist is small.\n\nThe measurement series run on one shared eight-point grid (both metrics authored at every point). Base extractiveness traces a shallow U: elevated at the destruction-generation (0.12 — acute adjudication of substitutes, coercive episodes over prayer-form disputes, real adjustment costs), flattening to near-zero across the long middle (0.05–0.07), ticking up in the modern era (0.08) as restorationist friction and the political salience of the Temple site raise the deferral's marginal cost. Theater ratio rises monotonically (0.08 to 0.28): as historical distance grows, an increasing share of activity around the suspended corpus is rehearsal-shaped — daily liturgical petitions, fast-day mourning, reconstructed vessels, sacrificial-passages recital. Crucially, on THIS reading that rehearsal is functional rather than vestigial: it is the mechanism by which the suspended obligation is kept salient enough to be resumed rather than quietly forgotten. The ratio is therefore authored honestly as rising but sub-piton, and the commentary defends why the rise does not signal atrophy.\n\nNo suppression_requirement series is authored: the enforcement picture is static and near-zero across the whole interval (there is no enforcement machinery to build up or erode), so the story-level scalar carries that fact, per the static-enforcement rule.",
+    "perspectival_gap": "The seats should compute sharply different types from identical structural data. From the restorationist seat, the arrangement is a denial regime: a duty they hold live is blocked, and the block is administered by the very authority that claims custodianship of the duty — a constraining, costly structure. From the community and priestly seats, the same structure is relief and preservation: duties no one could discharge impose no burden, and a dormant vocation survives intact instead of being dissolved. From the adjudicator seat, it is stewardship: an open file responsibly maintained. The engine derives these divergences from power, exit, and directional position; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: diaspora_jewish_communities and priestly_lineages are declared beneficiaries and derive low directionality (the arrangement subsidizes them — relief and preserved status respectively). restorationist_movements sits as payer on the stakeholder surface: the deferral's one real present cost lands there, giving that seat high directionality despite its small size — which is why no victims[] array is declared at base_properties (the mainstream structure has no victim set) while the payer seat is still honestly named. halakhic_adjudicators receive an explicit override (institutional, d=0.5): they appear in no beneficiary or victim declaration because they administer rather than collect, so the structural derivation would fall back to a generic institutional default; their true position is symmetric — they bear the labor of maintaining the corpus and gain custodial standing in equal small measure. The academic observer is analytical and outside the computation.",
+    "mandatrophy_analysis": "The founding problem — how to remain faithful to commandments that cannot be discharged — is still live: it recurs every generation the Temple stays unbuilt, and the arrangement's daily operations (liturgy, mourning calendar, corpus maintenance) are answers to it, not residues of it. No mandate has outlived its function, so no mandatrophy is declared. The receipt surface nonetheless places this story adjacent to the piton cell (diffuse gains, prohibitive fixing cost), and the analysis must say why that adjacency fails. The piton test is cost-asymmetry plus atrophied function: an administrator who could change a constraint but bears too little of its cost to bother. Here the administrator COULD nominally dissolve the deferral (declaring the obligations inoperative), and the fix is prohibitive — but prohibitive not because of inertia or capture: removal would contradict the arrangement's own constitutive commitment (the obligation must survive intact for restoration), dissolve the priesthood's surviving rationale, orphan the liturgy's central petitions, and split the community between 'binding now' and 'void.' The theater that accumulates serves the deferral function rather than substituting for it. What looks like vestigial drag is the holding pattern doing exactly what the reading says it does.",
+    "kernel_context": "This story instantiates the messianic_suspension reading of the temple_sacrifice_obligation kernel: the sacrificial commandments are suspended — neither fulfilled nor violated — pending messianic restoration. Sibling readings instantiate different constraints from the same kernel: study_as_occupation (study of sacrifice law constitutes legitimate occupation of the obligation in the Temple's absence) and study_as_archiving (study preserves knowledge for future restoration but does not fulfill the obligation). Per the epsilon-referent rule, this story authors epsilon for the standing arrangement under contest — the deferral regime as this reading sees it — not for any arrangement a sibling reading would put in its place."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "temple_sacrifice_obligation__study_as_occupation",
+      "temple_sacrifice_obligation__study_as_archiving"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle. The colloquial label 'what happened to the sacrifice obligation after the Destruction' conflates at least two structurally distinct claims: (a) the STATUS of the obligation now (instantiated here as messianic_suspension: suspended, nothing owed, epsilon near floor, no victim set) and (b) the FUNCTION of study relative to the obligation (instantiated by the two sibling stories: discharge versus archival preservation, each with its own epsilon and stakeholder consequences). The upstream story is this one: the suspension premise is what gives the sibling study-readings their operating environment — if nothing is owed, study cannot be discharge and must be something else. Each family member links to the others via affects_constraints; no single story averages across readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "halakhic_adjudicators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Decisor courts and ordination lineages rule that the sacrificial commandments do not currently bind and cannot validly be performed, and they maintain the interpretive apparatus — the mishnaic orders, Talmudic tractates, and responsa on sacrifice — that would govern them again upon restoration. They cannot cause the restoration themselves; their office consists in keeping the deferred file open and answering adjacent questions (mourning rites, pilgrimage language, priestly dues) as they arise. Their standing rests on continuity of transmission, so abandoning the framework would end the office rather than reform it."
+    },
+    {
+      "name": "diaspora_jewish_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Live full covenantal lives — prayer, festivals, dietary and lifecycle practice — in the Temple's absence. Because the sacrificial commandments are held in suspension, no unperformable duty hangs over them; they rehearse restoration in daily liturgy, mourn the loss on calendrical fasts, and fund the schools and courts that keep the suspended corpus teachable. Leaving the community through assimilation or conversion is possible but carries deep familial and social cost for most members."
+    },
+    {
+      "name": "priestly_lineages",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Families of hereditary priestly descent hold a service role that has lain dormant for the whole interval. They keep selected purity disciplines, maintain genealogical records, and receive customary honors in synagogue ritual whose stated rationale connects to Temple service. Their vocation survives only inside the deferral — dissolution of the suspended obligation would dissolve the role it preserves — and their status is fixed by descent, so exit is not available to them."
+    },
+    {
+      "name": "restorationist_movements",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Small groups, mostly centered in Israel, hold that sacrificial performance is due now and prepare for it: breeding candidate animals, fabricating vessels, petitioning for site access. Rulings on ritual impurity and site sovereignty block performance, and their petitions are repeatedly declined by the adjudicating mainstream. They carry the frustration of a duty they believe is live; standing down is possible, and some factions periodically do."
+    },
+    {
+      "name": "academic_historians_of_religion",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study the post-destruction adaptation comparatively, alongside Samaritan, Karaite, and Christian handling of the same rupture. They take no position inside the adjudication, publish on the mechanics of religious deferral, and observe the full structure from outside the tradition's self-description."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Keeps a covenantal community coherent under a condition it did not choose: central commandments rendered physically unperformable while remaining textually intact. The suspension supplies one uniform answer — the duties are neither void nor counterfeitably performed — so that no member must decide alone whether to abandon, fake, or agonize over them, and communal religious life proceeds on a shared footing.",
+    "transfer_function": "Moves almost nothing material. It holds the obligation in escrow — transferring its discharge from the present generation to a future restored community — transfers interpretive custody of the dormant corpus to the adjudicating class, and converts would-be performance into anticipatory labor: study, liturgy, genealogy, and vessel-crafting that maintain readiness without discharging anything.",
+    "absent_voices": "Restorationist voices sit at the adjudication's margin: they object that performance is due now and are answered rather than seated. Secular Jews, for whom the covenantal frame is not authoritative, are not consulted at all. Samaritan and Karaite communities run parallel answers to the same rupture without participating in this arrangement's adjudication. And no seat can speak for the obligation itself — whether suspension honors or injures the commandments it holds is a question the conversation structurally cannot hear.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the deferral regime vanished overnight, the community would confront the raw problem it solves: either the commandments bind now, and every member stands in recognized violation with no remedy, or they are void, and the liturgy's restoration petitions, the priesthood's surviving rationale, the mourning calendar, and the sacrificial-study curriculum all lose their object at once. Congregations would split between those two answers, priestly honors and purity disciplines would lapse, and the daily liturgy would require rewriting. Arrangements across the community demonstrably depend on the deferral.",
+    "founding_problem": "After the Second Temple's destruction (70 CE), the sacrificial commandments remained textually binding while becoming physically impossible to perform. The founding problem: how can a covenantal community remain faithful to commandments it cannot discharge — without declaring them void, and without counterfeiting their performance?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: Roman-era historians (Tacitus; Josephus writing under Roman patronage) attest the destruction independently of rabbinic tradition; the archaeological record of the burned Temple precinct and the Arch of Titus spoils depiction confirm the loss of the performance site; the site's successive imperial custodianships document the continuing physical impossibility; and the Samaritan community's divergent answer to the identical rupture shows that the problem itself — not merely this solution — is real."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "operative_temple_service_order",
+    "drift_state": {
+      "moment": "contemporary_post_site_access_era",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "study_as_occupation",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "study_as_archiving",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "obligation_persists_through_catastrophe",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "deferred_application_preserves_faithfulness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

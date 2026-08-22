@@ -1,0 +1,376 @@
+{
+  "header": {
+    "constraint_id": "basic_law_interpretive_boundary__parliamentary_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "blib_parliamentary_sovereignty",
+    "story_uid": "a452160e-3eaa-4b2d-bee6-14edd0bdd828",
+    "created_at": "2026-06-12T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.53,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.55,
+    "resistance": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Basic Law Interpretive Boundary — Parliamentary Sovereignty Reading",
+    "topic_domain": "constitutional/legal-political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "knesset_governing_coalitions",
+      "majority_electorate_blocs"
+    ],
+    "victims": [
+      "electoral_minority_groups",
+      "individual_rights_claimants"
+    ],
+    "vindicated_propositions": [
+      "popular_sovereignty_doctrine",
+      "majoritarian_legitimacy_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 1948,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1948,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1992,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1948,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1992,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1948,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1992,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2023,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.53,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_allocation",
+      "question": "Which reading of the basic_law_interpretive_boundary kernel correctly locates the boundary — this parliamentary sovereignty reading, the judicial supremacy reading, or the balanced contestation reading?",
+      "resolution_mechanism": "A settled constituent process, entrenched constitutional text, or durable political settlement that fixes the override question; until then, track enacted override clauses and Court responses.",
+      "impact": "If the judicial supremacy reading prevails, this constraint's beneficiary and victim sets invert: the coalition becomes the target of binding invalidation and rights claimants become subsidized beneficiaries. Classification for every seat recomputes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one reading of a three-reading kernel; sibling readings are separate constraints with different epsilon and victim sets."
+    },
+    {
+      "id": "treaty_carve_out_extent",
+      "question": "How extensively do international treaty obligations actually constrain the sovereign under this reading, given that the reading itself exempts them from override?",
+      "resolution_mechanism": "Track instances where coalition legislation collides with ratified treaty commitments (occupation-related obligations, rights conventions) and whether the Knesset overrides, complies, or reinterprets.",
+      "impact": "Sets the floor of extraction the reading itself acknowledges: a hard treaty constraint keeps epsilon above zero and gives external bodies leverage; a porous carve-out collapses the residual toward the reading's near-zero claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of the one external constraint the parliamentary sovereignty reading concedes."
+    },
+    {
+      "id": "entrenchment_flexibility_valence",
+      "question": "Is simple-majority revisability of Basic Laws a coordination feature (democratic flexibility, error correction) or the primary extraction vector (transient majorities rewriting fundamentals affecting those who cannot block them)?",
+      "resolution_mechanism": "Comparative analysis of weak-form versus strongly entrenched constitutional systems on minority-outcome stability measures across electoral cycles.",
+      "impact": "If flexibility dominates, the coalition seat computes nearer rope; if revision tracks majority convenience at minority expense, the tangled_rope reading hardens toward snare at the payer seats.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Valence of the absence of entrenchment: coordination flexibility versus extraction channel."
+    },
+    {
+      "id": "minority_exit_realism",
+      "question": "Do electoral minority groups possess realistic exit — electoral turnover, coalition realignment, emigration — or is their coded exit option generously overstated?",
+      "resolution_mechanism": "Longitudinal data on coalition formation (how often minority-preferred blocs enter governments), emigration rates among affected populations, and protest-to-policy conversion rates.",
+      "impact": "If exit is thinner than coded, payer-seat directionality moves toward the full-target pole and effective extraction at those seats rises sharply; if turnover is real, the electoral-correction defense of the reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constrained exit accurately describes electoral minorities' alternatives."
+    },
+    {
+      "id": "enforcement_counterfactual_baseline",
+      "question": "Is active enforcement intrinsic to this reading's arrangement, or is the current enforcement demand an artifact of the judicial supremacy reading's consolidation — would the arrangement self-execute under a deferential court as it did before 1995?",
+      "resolution_mechanism": "Compare weak-form review jurisdictions (New Zealand, pre-HRA United Kingdom) where legislative supremacy operates without override machinery against the Israeli enforcement build-up.",
+      "impact": "If enforcement is artifact, requires_active_enforcement is contingent on the sibling contest and the constraint's type is unstable across the kernel dispute; if intrinsic, the tangled_rope classification is robust.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual enforcement need of the arrangement absent a rival reading's consolidation."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Kernel-reading story: this file instantiates the parliamentary_sovereignty_reading of the contested basic_law_interpretive_boundary kernel. The arrangement under classification: the Knesset, as elected sovereign and continuing constituent authority dating to the 1950 Harari compromise, holds ultimate power to interpret and amend the Basic Laws by simple majority, including express power to override judicial review; judicial constitutional pronouncements are advisory pending legislative disposition. The epsilon referent is THIS arrangement, assessed by the reading's own lights: democratic self-rule converts most policy burden into self-government, leaving acknowledged extraction concentrated in the treaty-obligation friction the reading itself exempts from override and in the unentrenched exposure of electoral minorities pending coalition realignment. Per the epsilon-invariance decomposition, the colloquial label 'who decides what the Basic Laws mean' covers three structurally distinct claims; the sibling readings (judicial_supremacy_reading: judicial invalidation binds the Knesset; balanced_contestation_reading: bounded mutual authority) are separate constraint files with their own epsilon, beneficiary structures, and classifications, linked through the network family.\n\nKEY AGENTS (by structural relationship):\n- knesset_governing_coalitions: agenda-setter and primary beneficiary (institutional/arbitrage) — administers the boundary it sits inside\n- majority_electorate_blocs: beneficiaries (organized/mobile) — receive policy alignment without institutional counterweight\n- electoral_minority_groups: primary targets (moderate/constrained) — bear unblockable costs with no institutional recourse\n- individual_rights_claimants: primary targets (powerless/trapped) — lost their only domestic forum\n- supreme_court_justices: excluded seat (institutional/identity_locked) — review function denied, professional identity fused to it\n- opposition_parties: dual-positioned payers (organized/constrained) — bear costs now, may wield identical power later\n- treaty_partner_states_and_bodies: observers of the one external constraint the reading concedes\n- comparative_constitutional_scholars: analytical observers — outside corroboration for the genealogy",
+    "key_agents": [
+      "knesset_governing_coalitions: agenda_setter (institutional/arbitrage) — sets and enforces the interpretive boundary by majority vote",
+      "majority_electorate_blocs: beneficiary (organized/mobile) — policy rents flow to winning coalitions' supporters",
+      "electoral_minority_groups: payer (moderate/constrained) — chronic losers with no institutional veto point",
+      "individual_rights_claimants: payer (powerless/trapped) — the judicial forum is closed by design",
+      "supreme_court_justices: excluded (institutional/identity_locked) — assert review, hold none under this reading",
+      "opposition_parties: payer with secondary beneficiary position (organized/constrained) — position tracks proximity to power",
+      "treaty_partner_states_and_bodies: observer (institutional/analytical) — the conceded external constraint",
+      "comparative_constitutional_scholars: observer (analytical/analytical) — genealogy corroboration from outside the beneficiary set"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.22, reading-indexed: by this reading's own lights the arrangement is substantially non-extractive — costs imposed on losing voters are legitimate democratic outcomes subject to electoral correction — with residual extraction acknowledged only in the treaty carve-out and the accumulating, visible burden on groups that never enter coalitions. Suppression (0.53) is structural, not physical: the arrangement works by closing the judicial alternative forum, not by coercing bodies; the electoral channel remains open, which caps suppression below snare levels. Theater ratio (0.38) rises across the interval because the sovereignty claim increasingly detaches from practice — after 1995 the Knesset legislates in full knowledge that rulings may nullify ordinary legislation, then re-legislates or threatens override, making portions of the sovereignty performance rather than operation; the 2023-2025 dip reflects partial reassertion through the reasonableness-limitation episode. Accessibility collapse (0.55): once the arrangement is understood, the domestic judicial alternative is closed, but electoral turnover, treaty bodies, and extra-parliamentary mobilization persist as partial alternatives. Resistance (0.78) is among the highest recorded for a constitutional allocation: mass protest, reservist refusal threats, business-sector intervention, and unified opposition all met the arrangement's recent consolidation. Suppression is authored as a raw structural property; only extractiveness is scaled by the engine. All three tracked series run on one shared seven-point grid (1948, 1968, 1992, 1995, 2005, 2023, 2025) so no metric row borrows an end-state value from another. The claimed type (tangled_rope) is stated from structural analysis — genuine coordination function (terminal decision point, accountability, avoidance of inter-branch deadlock) plus asymmetric extraction (unentrenched minority exposure through the same simple-majority rule) plus active enforcement (override machinery) — independently of these metric values; where per-seat computed types diverge from the claim, that divergence is the datum.",
+    "perspectival_gap": "The seats should compute sharply different types from identical structural data. From the coalition seat, the arrangement is near-pure coordination it built and can exit by rewriting (arbitrage-grade exit, subsidized directionality) — a rope. From the individual rights claimant seat, the same structure is enforced extraction with no exit — approaching snare. From the electoral minority seat, extraction is real but buffered by the electoral-correction hope, landing at tangled territory. The Court seat experiences the constraint as exclusion of its constitutive function — neither collecting nor paying in the transfer sense, but bearing an identity-level cost the transfer metrics do not capture. Opposition parties straddle: today's payers are tomorrow's potential agenda-setters, which is precisely why they resist entrenchment solutions that would bind their own future majorities.",
+    "directionality_logic": "Beneficiary declarations drive the derivation: knesset_governing_coalitions and majority_electorate_blocs sit near the beneficiary pole (d near 0), with the coalition pushed further toward subsidy by its arbitrage exit — it can amend any Basic Law that inconveniences it. Victims push the opposite way: individual_rights_claimants (trapped, powerless) sit nearest the full-target pole; electoral_minority_groups (constrained, moderate) sit slightly inside them because electoral turnover and emigration preserve thin alternatives. The Court is excluded rather than coordinated — its exclusion is the enforcement object itself, mirroring how rival payment networks function in marketplace constraints. Treaty bodies observe the single carve-out where the reading concedes the sovereign is a target: the directionality of the coalition seat inverts locally on treaty matters, which is why epsilon cannot approach zero even on the reading's own account.",
+    "mandatrophy_analysis": "The classification guards against two symmetrical errors. Labeling the arrangement a snare fails because the coordination function is genuine: democratic decision-making requires a terminal point, and the reading supplies one with real accountability properties — pure-extraction framing would erase the legitimate majoritarian core that distinguishes this from predatory structures. Labeling it a rope fails because the same simple-majority rule that empowers winners strips losers of recourse with no entrenchment floor — asymmetric extraction rides the coordination channel. Tangled rope holds both facts. On obsolescence: the founding problem (authoritative law without an agreed constitution) is largely resolved as a vacuum problem, but the arrangement persists because fixing is prohibitive for the only fixer — no majority entrenches limits on itself. Watch the piton drift path: if enforcement activity continues converting into theater (re-legislation cycles, override threats never executed) while the closure function grows more contested, the constraint migrates toward maintained performance rather than operative sovereignty.",
+    "kernel_context": "This constraint is one reading of the kernel basic_law_interpretive_boundary: the contested commitment fixing where authority over the meaning of Israel's Basic Laws resides. This file instantiates the parliamentary_sovereignty_reading — the Knesset as unconstrained elected sovereign, judiciary advisory, override available, treaty obligations the sole conceded external limit. Sibling readings: judicial_supremacy_reading (Basic Laws as higher-order law, judicial invalidation binding on the Knesset) and balanced_contestation_reading (bounded mutual authority, legislature ultimately sovereign but constrained by international obligations and norms of judicial independence). The disagreement is located in two structural elements: whether judicial rulings bind the sovereign, and whether norms of judicial independence constrain the legislature independently of its will. This reading forecloses the judicial supremacy reading within any single framework — 'no external veto on legislative will' and 'judicial invalidation binds the Knesset' cannot both hold — and exerts structural influence on the balanced reading: each enacted override clause shrinks the operating space of the balanced reading's judicial-authority component without annihilating its framework, since the balanced reading shares this reading's legislative-ultimacy component and survives wherever the norm-constraint conjunct is honored."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "basic_law_interpretive_boundary__judicial_supremacy_reading",
+      "basic_law_interpretive_boundary__balanced_contestation_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the natural-language concept 'who decides what the Basic Laws mean' decomposes into three structurally distinct claims per the epsilon-invariance principle. This story (parliamentary_sovereignty_reading) authors low reading-indexed epsilon (~0.22) for its arrangement — democratic self-rule legitimating majoritarian outcomes, residual extraction confined to treaty friction and unentrenched minority exposure. The judicial_supremacy_reading file authors epsilon for a counter-majoritarian guardianship arrangement with its own beneficiary structure (rights claimants subsidized, coalitions targeted). The balanced_contestation_reading file authors intermediate epsilon for a bounded mutual-authority arrangement. Upstream/downstream: the Harari-compromise genealogy (this reading's lineage) is cited as historical evidence by both siblings, so this story influences the others' legitimacy conditions even where it forecloses one of them logically. All three files cross-link via affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "knesset_governing_coalitions",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Passes ordinary legislation and Basic Law amendments by simple majority, interprets Basic Laws through legislation, and can enact override clauses nullifying adverse rulings. Constrained only by coalition arithmetic and by the treaty commitments the reading itself exempts from override. Any institutional limit that inconveniences a majority can be rewritten by that majority, which is what exit looks like from this seat: rule-changing rather than rule-leaving."
+    },
+    {
+      "name": "majority_electorate_blocs",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Voting blocs whose preferences become law without institutional counterweight when their side wins: draft arrangements, settlement policy, judicial appointment composition, and sectoral funding flow as coalition deliverables. They collect policy alignment without administering the boundary themselves and can shift allegiance between elections, which keeps their position comfortable rather than captive."
+    },
+    {
+      "name": "electoral_minority_groups",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Citizens — Arab citizens, left-liberal constituencies, and other blocs chronically outside coalitions — whose votes rarely translate into governing power. They bear policies no domestic institution lets them block: their remedies are street protest, appeal to treaty bodies, or waiting for coalition realignment that historically seldom arrives. Emigration is the only permanent exit and carries existential cost for those with deep roots in the country."
+    },
+    {
+      "name": "individual_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Litigants whose recourse was the Supreme Court's review of legislation conflicting with Basic Laws. Under this reading their petitions yield advisory opinion at most, confirmable or dismissible by the same majority that produced the legislation. There is no second domestic forum; each case terminates where the coalition's will terminates, and relief arrives only if an unrelated electoral wave rescues them."
+    },
+    {
+      "name": "supreme_court_justices",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Assert authority, consolidated since the mid-1990s, to invalidate legislation violating Basic Laws. Under this reading their rulings bind no one pending legislative disposition — they are reclassified as advisory. Their professional identity is constituted by the review function the reading denies; exit means resignation or accommodation, and they continue issuing rulings the governing coalition publicly labels provisional."
+    },
+    {
+      "name": "opposition_parties",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Blocked from policy now, aware that the same simple-majority machinery will be theirs whenever they next win. Their stance on the boundary tracks proximity to power more than principle: they resist override clauses while excluded and quietly preserve the option of using them in government. Their costs are real but discounted by the expectation of reversal."
+    },
+    {
+      "name": "treaty_partner_states_and_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Counterparties to the conventions the reading itself concedes bind the sovereign. They monitor compliance, issue findings, and attach diplomatic consequences, but cannot legislate domestically. They matter to this story because the treaty carve-out is the one place the reading admits the Knesset is a target rather than a source of authority."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Map the Israeli dispute onto weak-form and strong-form review typologies, document the Harari-compromise genealogy, and testify in hearings. They collect nothing and pay nothing; their function in this story is outside corroboration — the founding problem and its status are attested from seats that do not benefit from the arrangement."
+    }
+  ],
+  "gain_flow": "knesset_governing_coalitions",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides a single terminal decision point for constitutional interpretation: disputed questions of Basic Law meaning are settled by the elected chamber's vote, avoiding inter-branch deadlock, giving voters a clear locus of responsibility, and letting a state without an agreed constitution produce authoritative law continuously.",
+    "transfer_function": "Moves interpretive authority and veto power over fundamental law from courts — and from the minorities who would invoke them — to whichever coalition commands a temporary Knesset majority; concretely, it moves policy outcomes (draft obligations, land policy, rights protections, judicial composition) from losing groups to winning ones, with treaty obligations the sole reverse flow.",
+    "absent_voices": "Permanent electoral minorities would object and are present only as voters who almost never swing coalition formation; future generations would object and are seated nowhere, since simple-majority revisability means no one speaks for them; the judiciary would object and is present but reclassified as advisory. All three objections are registered outside the room — in protest, in treaty findings, in dissenting opinions labeled provisional.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the arrangement vanished overnight — if ultimate interpretive and amendatory authority relocated to the courts or a constituent body — governance would rearrange immediately: governing coalitions would lose unilateral control of their legislative agenda, pending and recent legislation would become vulnerable to invalidation, the treaty-compliance calculus would shift, the 2023-2025 protest and counter-mobilization architecture would lose its object, and every sectoral arrangement currently sustained by majority arithmetic would face an institution with independent veto power.",
+    "founding_problem": "The new state, deadlocked between religious and secular visions of a written constitution, adopted the 1950 Harari compromise: defer constitution-making to the Knesset itself, acting as a continuing constituent authority legislating chapter-by-chapter Basic Laws, with the chamber retaining ultimate interpretive authority over what it had enacted. The founding problem was how to make authoritative fundamental law without an agreed higher-order text, answered by locating all constituent and interpretive authority in the elected chamber.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The vacuum-filling origin is corroborated from outside the beneficiary set: legal-historical scholarship documents the Harari compromise, and the Supreme Court's own 1990s jurisprudence attests that the constitutional vacuum persisted for decades. Whether the problem remains LIVE is attested mainly by the governing coalition itself, which cites the absence of an agreed constitution; opposition legal briefs and academic commentary from outside the benefiting parties overwhelmingly attest the original problem is solved and that the arrangement now functions as majority convenience — that asymmetry in corroboration is itself signal."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false,
+    "reference_frame": "knesset_continuing_constituent_authority",
+    "drift_state": {
+      "moment": "contemporary_judicial_reform_crisis",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "balanced_contestation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constituent_authority_vested_in_elected_chamber",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "no_external_veto_on_legislative_will",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

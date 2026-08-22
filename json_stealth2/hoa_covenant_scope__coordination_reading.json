@@ -1,0 +1,252 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-21",
+    "status": "ACTIVE",
+    "story_uid": "a1f0ffb2-80b8-41f4-a8a2-39ee3917fc39"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "HOA Covenant as Shared-Infrastructure Coordination Compact",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "all_homeowners"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "all_homeowners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Own lots in the recorded subdivision, pay the annual assessment, and receive in return maintained roads, functioning stormwater drainage, and kept common areas. Vote on budgets and board seats at the annual meeting. Leaving means selling the lot, which transfers the covenant obligation to the buyer along with the maintained asset."
+    },
+    {
+      "name": "hoa_board",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Elected volunteer owners who solicit maintenance bids, sign contractor contracts, set the annual budget within the limits stated in the recorded declaration, and pursue delinquent accounts through the lien process the instrument specifies. Serve fixed terms and can be voted out; receive no compensation beyond their own standing as owners."
+    },
+    {
+      "name": "assessment_delinquent_owners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Owners who fall behind on assessments during job loss, illness, or billing disputes. Accumulate late fees and face lien filings on their lots under the collection policy; a small number lose lots to foreclosure. Bear the covenant's enforcement consequences, concentrated in a few households at any given time."
+    },
+    {
+      "name": "municipal_infrastructure_authority",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "situation": "County and city public-works and planning staff who declined to accept the subdivision's private infrastructure into public maintenance, interact with the association on stormwater discharge compliance and emergency access, and watch whether private coordination keeps the roads and drainage off the public maintenance rolls."
+    },
+    {
+      "name": "prospective_homebuyers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "situation": "Households shopping in the area who encounter the declaration at contract and closing. They choose whether to enter the community but take no part in drafting or amending its rules; after purchase they stand in the same position as existing owners."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Pools periodic assessments to fund maintenance, repair, and replacement of genuinely shared assets — private roads, stormwater drainage, common-area landscaping, shared roofs and walls in attached products — that no individual owner can maintain alone, and adjudicates boundary and nuisance disputes between adjacent lots.",
+    "transfer_function": "Moves money: recurring assessments from each lot owner into a common operating and reserve fund, disbursed to maintenance contractors; secondarily moves collection costs (late fees, lien filings) onto owners who withhold their assessed share.",
+    "absent_voices": "Renters occupying homes in the community use the commons and live under the rules but hold no vote; prospective buyers inherit amended covenants they never negotiated; future owners will absorb today's reserve-underfunding decisions. All sit outside the board meeting where scope is actually set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the pooled fund and maintenance schedule, private roads go unrepaired, stormwater systems fail and flood lower lots, common areas degrade, and each owner faces the classic underprovision problem individually — the coordination problem the covenant solves reasserts itself immediately, and lot values adjust downward.",
+    "founding_problem": "Developer-built subdivisions containing infrastructure the municipality refused to accept into public maintenance (private roads, stormwater systems) needed a durable vehicle to fund upkeep and stop cross-lot externalities from degrading the shared asset base after the developer sold out.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "County public-works refusal letters declining to accept the private roads, third-party engineering reserve studies documenting continuing capital needs, and state planned-community statutes all attest, from outside the benefiting parties, that the underlying maintenance-funding problem remains real; no source outside the beneficiary set attests that the problem is solved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story authors the coordination reading of the hoa_covenant_scope kernel as a clean, epsilon-invariant constraint: a recorded declaration under which lot owners pool assessments to maintain genuinely shared infrastructure (private roads, stormwater drainage, common areas) and resolve objective nuisances between adjacent lots. Enforcement is a narrow backstop — late fees and liens against withheld assessments — invoked episodically against a small fraction of households, while the load-bearing structure is the net benefit every owner receives from maintained shared assets. KEY AGENTS (by structural relationship): - all_homeowners: Symmetric primary beneficiary (organized/constrained) — pays assessments, receives maintained shared assets - hoa_board: Agenda-setter (organized/constrained) — administers contracts and budget, captures no personal gain - assessment_delinquent_owners: Episodic cost-bearer (moderate/constrained) — bears fees and lien risk during collection episodes - municipal_infrastructure_authority: Institutional observer (institutional/analytical) — tracks whether private coordination holds - prospective_homebuyers: Excluded voice (moderate/mobile) — inherits the covenant without negotiating it. This file is one member of a three-story constraint family; the sibling readings are separate constraints linked in network.affects_constraints, and the cross-reading comparison lives in commentary.kernel_context and the omega variables, not in this constraint's body.",
+    "logic_rationale": "Extractiveness is low (0.18) because the assessment is calibrated to budgeted maintenance and reserve costs and the proceeds buy services owners cannot cheaply procure individually; the gentle upward drift in the measurement series reflects fee creep and reserve accumulation, not rent design. Suppression is low (0.22) and deliberately NOT scaled here — it is a raw structural property — because the enforcement machinery is a rarely-fired backstop rather than the load-bearing wall: compliance rests on net benefit, which is why requires_active_enforcement is authored false even though lien machinery exists. Theater ratio is low (0.15): budget hearings, bid solicitation, and reserve studies are functional activity; a thin layer of procedural ritual accumulates as boards mature. Accessibility collapse is moderate (0.45): alternatives (municipal absorption of roads, dissolution votes, informal neighbor agreements) remain workable but carry real friction, and post-purchase exit means selling the home. Resistance is low-moderate (0.30): assessment disputes and amendment fights occur but do not threaten the arrangement. The claimed_type (rope) is authored from my structural belief about this reading; the metrics are authored from what I judge descriptively true — the two were composed independently. All temporal series share one grid (t=0,6,12,18,24,30) so every tracked metric is authored at every examined point.",
+    "perspectival_gap": "The seats should compute differently. From the median owner's position the arrangement is a service exchange: money out, maintained assets back, vote included. From the delinquent owner's position the same structure presents as fees compounding on a lot they cannot easily liquidate — the entire coercive surface of the covenant concentrates there. From the board's position it is stewardship under fiduciary constraint. The engine computes these per-seat classifications from the structural data (power, exit, role); this commentary explains why they diverge without adjudicating them.",
+    "directionality_logic": "All homeowners are declared beneficiaries and sit symmetrically near the beneficiary end of directionality — the covenant subsidizes each of them with maintained shared assets in proportion to what they pay in. The board derives near-beneficiary directionality as well: it administers the flow but captures none of it personally, and its members are themselves paying owners. Assessment-delinquent owners are intentionally NOT declared victims: under this reading their cost-bearing is episodic recovery of a genuinely owed share, not structural extraction, so the derivation correctly leaves them near-neutral rather than pushing them to the target end. The municipality and prospective buyers are peripheral seats with negligible directional pull. If the assessment-cost-coverage audit (see omegas) found systematic surpluses, delinquent owners would acquire victim status and the whole directional structure would tilt.",
+    "mandatrophy_analysis": "The founding problem — municipally refused private infrastructure needing a funding vehicle — is still live, so mandatrophy is not resolved and no sunset applies. The classification matters in both directions here: ignoring the coordination function would let the lien machinery masquerade as snare evidence, while ignoring the episodic harm to delinquent households would let the rope label launder real coercive incidents. The assessment-cost-coverage omega is the tripwire: if assessments systematically outrun costs, the mandate persists but the arrangement has begun extracting around it, and the classification should migrate toward tangled_rope with delinquent owners as victims. The slow rise in base_extractiveness across the interval is exactly the signal that omega watches."
+  },
+  "omegas": [
+    {
+      "id": "hoa_kernel_reading_instantiation",
+      "question": "This constraint instantiates the coordination_reading of the hoa_covenant_scope kernel; what structural differences would govern if either sibling reading (behavioral_control_reading, extraction_reading) were the operative constraint instead?",
+      "resolution_mechanism": "Cross-read the three sibling stories' epsilon, victim sets, enforcement scope, and gain_flow: behavioral_control_reading widens enforcement to subjective aesthetics and creates dissenting_owner victims with elevated suppression; extraction_reading concentrates gains in the board and fine apparatus (named-seat gain_flow, snare-flavored profile).",
+      "impact": "If a sibling reading governs, the claimed type shifts (tangled_rope or snare candidates), victim sets appear where this reading declares none, and gain_flow moves from diffuse to a captured seat.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of the hoa_covenant_scope kernel; sibling readings are separate constraints, not parts of this one."
+    },
+    {
+      "id": "enforcement_scope_disagreement_location",
+      "question": "Where exactly do the three readings disagree — is the dispute located in enforcement scope (objective nuisance versus subjective aesthetics versus discretionary fines), in beneficiary symmetry, or in gain concentration?",
+      "resolution_mechanism": "Clause-by-clause textual analysis of recorded declarations and amendment histories, mapped against doctrine on judicial deference to association rulemaking, assigning each contested clause to the reading whose scope it serves.",
+      "impact": "If the dispute lives in enforcement scope, narrowing architectural-review authority collapses the sibling readings back toward this one; if it lives in gain structure, the dispute survives any scope narrowing and the extraction reading remains independently operative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates the inter-reading disagreement in specific structural elements of the instrument."
+    },
+    {
+      "id": "genuine_externality_boundary",
+      "question": "Which restrictions under this reading correct genuine externalities affecting shared assets, and which quietly impose majority taste (lawn standards, paint palettes, parking aesthetics) — and how much of the measured extractiveness is hidden preference extraction?",
+      "resolution_mechanism": "Hedonic pricing studies isolating the market-value effect of specific restriction classes, controlling for community age, location, and housing-stock quality.",
+      "impact": "If taste-only restrictions show no value protection or impose value penalties, effective extraction rises above the authored 0.18 and the rope tilts toward tangled_rope with dissenting owners as victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between externality correction and preference imposition inside the covenant's restriction set."
+    },
+    {
+      "id": "assessment_cost_coverage_audit",
+      "question": "Do assessments track actual maintenance and reserve costs, or do systematic surpluses accumulate as fee creep — and are delinquent owners therefore shirkers being legitimately recovered from, or partial victims of over-assessment?",
+      "resolution_mechanism": "Independent audit comparing multi-year assessment revenue to contracted maintenance spend and third-party reserve-funding requirements.",
+      "impact": "Systematic surplus would raise effective extraction on all owners and recast delinquent owners as victims, migrating the classification toward tangled_rope; tight cost coverage confirms the rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the assessment level is cost-reflective or rent-bearing."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__behavioral_control_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'HOA covenant' decomposes into three structurally distinct claims per the epsilon-invariance principle, forming the hoa_covenant_scope constraint family. This file authors the coordination reading: lowest epsilon (~0.18), symmetric beneficiaries, no declared victims, narrow enforcement. The behavioral_control_reading authors the same instrument as an aesthetic-uniformity regime (higher suppression, dissenting owners as victims); the extraction_reading authors it as a revenue-and-power apparatus (concentrated gains, fine proliferation, selective enforcement). The coordination function is the historical substrate: the assessment and lien machinery built for maintenance is the platform on which behavioral rules and fine schedules were later layered, which is why this story sits upstream of both siblings in the network. Each story carries its own epsilon, stakeholders, and classification; none hedges across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "behavioral_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "assessment_authority_bounded_by_shared_cost",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "use_restrictions_require_demonstrable_externality",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "shared_infrastructure_cost_pooling_compact",
+    "drift_state": {
+      "moment": "contemporary_association_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

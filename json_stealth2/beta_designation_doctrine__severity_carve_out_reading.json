@@ -1,0 +1,413 @@
+{
+  "header": {
+    "constraint_id": "beta_designation_doctrine__severity_carve_out_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "3738cde6-a811-46bc-8cf9-fc1564d39bc5"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.55,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Beta Designation Doctrine — Severity Carve-Out Reading (Critical-Systems Liability Floor)",
+    "topic_domain": "legal/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "critical_system_end_users",
+      "injured_critical_system_claimants",
+      "plaintiffs_bar",
+      "liability_insurers"
+    ],
+    "victims": [
+      "critical_software_vendors",
+      "critical_market_entrants"
+    ],
+    "vindicated_propositions": [
+      "harm_severity_overrides_contractual_allocation",
+      "deployment_decision_internalization"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "critical_software_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build and sell the software that runs hospital records, trading and payment rails, aircraft and industrial controls. Where this rule applies they carry full product-liability exposure for defects in those deployments: the beta label protects them not at all, so they fund pre-release assurance, insurance, and reserve accounts, and they sometimes hold features back until maturity. Escaping the exposure would mean leaving the critical-systems market, which for most of them is their core business."
+    },
+    {
+      "name": "critical_market_entrants",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Startups and smaller firms trying to bring new tools into hospitals, banks, and infrastructure operators. Full liability exposure at their scale is difficult or impossible to insure, so access to these markets effectively requires capital reserves or partnerships they rarely have. Many respond by selling first into non-critical niches and entering critical markets later, if at all."
+    },
+    {
+      "name": "critical_system_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Patients whose care runs on clinical software, customers whose money moves through bank software, passengers flying on aircraft controlled by certified code. They cannot inspect, test, or negotiate the terms of the software their lives and savings depend on, and they cannot opt out of the hospital or the banking system. The rule keeps a floor of recourse available to them when deployed software causes harm."
+    },
+    {
+      "name": "injured_critical_system_claimants",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People already harmed by defective software in a critical setting. Through the preserved liability channel they can pursue compensation from the vendor whose product injured them; recoveries arrive after the harm, case by case, and almost none of them anticipated litigation. They do not organize around or administer the arrangement; they encounter it only as injured parties."
+    },
+    {
+      "name": "plaintiffs_bar",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Law firms and attorneys who take critical-system injury cases on contingency. Every recovery under the preserved liability channel carries a percentage fee to them, so the volume of viable claims shapes their practice economics. They can and do shift into other practice areas when liability channels narrow."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Underwrite errors-and-omissions and product-liability coverage priced against this liability regime. Premium inflows rise with vendor exposure; payout obligations rise with the same events. Their net position sits near break-even plus loading, and they can withdraw from the line entirely if pricing turns adverse."
+    },
+    {
+      "name": "product_safety_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Sector agencies — medical device, banking, aviation authorities — that police software deployment in their domains and increasingly treat vendor testing claims skeptically. They issue guidance, require post-market surveillance, and can block deployments. They operate inside statutory mandates and budgets set elsewhere."
+    },
+    {
+      "name": "liability_courts",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Judges deciding whether a beta disclaimer bars a critical-system injury claim. Under this reading they refuse to enforce such disclaimers in life-safety and financial contexts regardless of how candid the disclosure was. They are bound by precedent and statute, and courts in different jurisdictions reach opposite results on similar facts."
+    },
+    {
+      "name": "product_liability_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Enact and revise the liability statutes the rule lives in — most recently extending product-liability regimes to cover software explicitly. Vendor associations lobby them to preserve contractual freedom; consumer and patient-safety groups lobby for the floor. Reversal is procedurally straightforward and politically expensive."
+    },
+    {
+      "name": "early_adopter_institutions",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hospitals, trading firms, and infrastructure operators that would accept documented risk in exchange for early, cheaper access to promising but unproven tools. The rule closes that bargain: courts will not enforce waivers covering critical-system harm, so the discount-for-risk deal they would offer is unavailable. They press their case in comment letters and pilot programs rather than courtrooms."
+    },
+    {
+      "name": "open_source_maintainers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Volunteer developers and maintainers whose code ends up, sometimes without their knowledge, inside critical commercial systems. They contribute without payment and without negotiating deployment terms; proposals to extend strict liability toward upstream contributors land on them with no revenue to insure against. They argue for safe harbors and are heard, if at all, in standards bodies and legislative comment periods."
+    },
+    {
+      "name": "software_liability_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Legal academics and policy researchers who map how liability doctrines allocate software risk across jurisdictions. They publish comparative analyses of disclaimer enforceability, advise law-reform commissions, and supply the empirical baselines the other seats argue over. They hold no stake in any outcome beyond the argument itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the risk-allocation problem of high-stakes software deployment: individual users of hospital, banking, aviation, and infrastructure software cannot inspect, test, or negotiate liability terms, so the rule assigns residual harm risk to the deploying vendor and preserves a common floor of recourse, making deployment decisions carry their own harm costs.",
+    "transfer_function": "Moves liability-backed compensation from vendors deploying software in critical domains to users harmed by defects, along with the burden of pre-deployment assurance; incidentally moves percentage fees to litigation intermediaries and premium volume to insurers.",
+    "absent_voices": "Early-adopter institutions that would trade documented risk acceptance for cheaper early access, open-source maintainers facing upstream liability exposure with no revenue, and patients who would accept informed risk for faster access to experimental clinical software. They stand outside the courtrooms and legislative hearings where the doctrine is argued, which are dominated by vendor associations on one side and consumer and patient-safety organizations on the other.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Vendor counsel would reinstate beta disclaimers across critical deployments within a quarter; hospitals, banks, and operators would face contract-and-warranty-only recourse after software harm; under-tested releases would reach critical settings faster because the assurance costs the rule compels become optional; and uncompensated harm would migrate to users, their insurers, and public payers.",
+    "founding_problem": "Vendors began shipping visibly unfinished software into hospitals, trading floors, and infrastructure under a beta label and enforcing the label as a disclaimer of responsibility for foreseeable harm, leaving injured users with no recovery path.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: published court opinions refusing to enforce beta disclaimers in medical and financial contexts, regulator incident reporting such as health-IT safety-event databases, and the legislative findings accompanying software-inclusive product-liability reforms. No source outside the benefiting parties attests that the founding problem is resolved."
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.55,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested beta_designation_doctrine kernel: the severity carve-out reading, under which the beta label is categorically unavailable as a liability shield for life-safety, financial, and other critical systems, regardless of how genuine the testing phase or how candid the disclosure. Per the epsilon-invariance principle, the colloquial label 'beta designation' covers three structurally distinct liability allocations, authored as three linked stories: the expansive shield reading (waiver everywhere, indefinite), the narrow warning reading (time-bounded disclosure with base liability preserved), and this severity carve-out. Each has its own epsilon, its own beneficiary/victim structure, and its own classification; this file authors only the carve-out reading and links to its siblings through network edges. EPSILON REFERENT: the standing arrangement under contest is the severity carve-out rule itself, as instantiated where it governs critical-software deployment (court refusals to enforce beta disclaimers in medical, aviation, and financial contexts; software-inclusive product-liability codifications), assessed by this reading's own lights — the pro-safety-floor position — and not scored against either sibling reading or against the reading's endorsed ideal.",
+    "key_agents": [
+      "- critical_software_vendors: Primary target (powerful/constrained) — bears the liability exposure the rule compels in its core market",
+      "- critical_market_entrants: Secondary target (moderate/mobile) — bears exclusion from critical markets they cannot insure into",
+      "- critical_system_end_users: Primary beneficiary (powerless/trapped) — holds the recourse floor and safer-deployment incentives",
+      "- injured_critical_system_claimants: Compensation recipients (powerless/trapped) — receive the transferred recoveries case by case",
+      "- plaintiffs_bar: Fee collector (organized/mobile) — takes a percentage of every preserved recovery",
+      "- liability_insurers: Near-symmetric intermediary (organized/mobile) — collects premiums and bears payouts under the same regime",
+      "- product_safety_regulators, liability_courts, product_liability_legislatures: Agenda-setting seats (institutional/constrained) — administer, adjudicate, and legislate the rule",
+      "- early_adopter_institutions and open_source_maintainers: Excluded voices — would bargain or seek safe harbors but are outside the doctrinal conversation",
+      "- software_liability_scholars: Analytical observer — maps the allocation without holding a stake"
+    ],
+    "logic_rationale": "Claim and metrics are authored independently. CLAIMED TYPE tangled_rope comes from structure: the rule solves a genuine allocation problem (users of critical systems cannot negotiate or assess software risk, so residual harm risk needs a default bearer), AND identifiable parties pay through the same structure (vendors bearing exposure, entrants bearing exclusion), AND the rule holds only through active enforcement (courts must refuse disclaimers; regulators must police labeling; legislatures must sustain statutes). METRICS are authored descriptively. Extractiveness 0.52: under the reading's own lights the vendor-to-claimant transfer is largely corrective — it tracks harm the vendor's product caused — but it carries plainly non-corrective components: non-fault strict-liability exposure, litigation overhead, insurance loading, and the market-exclusion cost borne by entrants, which yields a moderate rather than low epsilon. Suppression 0.55 is a RAW structural property, unscaled by power or scope (only extractiveness is scaled, by directionality and scope, in the engine): the rule forecloses one specific exit — the disclaimer — and backs the foreclosure with active multi-forum enforcement, while leaving vendors substantive alternatives (mature-before-release, insurance, contractual indemnities, non-critical niches). Theater_ratio 0.22: the rule's activity is mostly functional; the residual ceremony sits in conformity paperwork and certification rituals that signal assurance without always producing it. Accessibility_collapse 0.45: alternatives remain workable once the rule is understood, so it is far from a natural-law profile. Resistance 0.55: sustained industry lobbying, amicus campaigns, and jurisdiction shopping meet the rule continuously. MEASUREMENTS run on one shared time grid (points 0-24, roughly 2001-2025, quarterly-century of software-liability jurisprudence): extractiveness creeps up as liability deepens and codifies; theater declines as scattered dicta consolidate into operative doctrine; suppression_requirement rises as enforcement machinery matures — courts hardening, regulators staffing surveillance, statutes absorbing software explicitly. The rising suppression series is authored because the story specifically traces enforcement-capacity buildup, not merely extraction drift.",
+    "perspectival_gap": "The seats should compute very different types from identical structural data. From the vendor seat the rule is a compelled transfer it cannot contract around — high directionality, constrained exit, extractive-heavy experience. From the end-user and claimant seats the same rule is the only thing standing between them and a disclaimer — protective, near-subsidy. From the courts and regulators the rule is ordinary administration of a settled allocation. From the entrants it is a barrier to entry dressed as consumer protection. From plaintiffs_bar it is practice economics. The engine computes this divergence from power, exit, and role data; the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. critical_software_vendors and critical_market_entrants are declared victims and sit near the full-target end — vendors because their exit is constrained (leaving means abandoning their core market), entrants less so because they retain a mobile exit into non-critical niches. critical_system_end_users and injured_critical_system_claimants are declared beneficiaries with trapped exit — the constraint subsidizes them and they cannot arbitrage it. plaintiffs_bar is a beneficiary whose collections scale with the liability flow (low directionality). liability_insurers are dual-positioned: declared beneficiary (premium volume) with a payer secondary role (payout obligations); their true net position is near-symmetric, and the derivation likely understates their directionality — a known limitation accepted here rather than papered over with a coarse power-atom-level override, since any override keyed to 'organized' would also distort plaintiffs_bar. Agenda-setting seats (regulators, courts, legislatures) are neither beneficiaries nor victims; their directionality follows the power-atom fallback. No directionality_overrides are authored: the declared structural data produces the right qualitative ordering, and the one imprecise case (insurers) is documented instead of forced.",
+    "mandatrophy_analysis": "The classification guards against two opposite mislabels. Read without its coordination function, the rule looks like pure extraction from a hated industry — a snare whose victims are vendors; read without its payer structure, it looks like a pure consumer boon — a rope with no costs. The tangled_rope framing keeps both visible: the risk-internalization function is real and load-bearing, and the vendor/entrant payments are real and partly non-corrective. On obsolescence: the founding problem remains live (under-tested software still reaches critical settings, and disclaimer attempts continue), so no mandatrophy is declared. The forward risk is different — if formal verification and simulation mature to the point that pre-release testing genuinely exhausts the failure space, the carve-out's justification decays into ritual while its costs persist; the declining theater series and the corrective-versus-rent omega are the instruments that would catch that transition. The mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges: consistent, no zombie flag.",
+    "kernel_context": "This constraint is the severity_carve_out_reading of the beta_designation_doctrine kernel — the contested question of what legal effect a beta label has. Sibling readings, authored as separate constraint stories: expansive_shield_reading (beta constitutes a comprehensive, indefinitely durable liability waiver in all software contexts) and narrow_warning_reading (beta is a time-bounded testing disclosure with base product liability preserved throughout). The disagreement between the readings is located in a single structural element: whether harm severity can override contractual liability allocation at all. This reading answers yes, categorically, in critical domains; the expansive reading answers no, universally; the narrow-warning reading answers no, but bounds the waiver in time. Each reading instantiates a different constraint with a different epsilon and different victim sets, which is why they are separate files linked by network edges rather than one story with a measurement parameter."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_location",
+      "question": "This constraint is one reading of the beta_designation_doctrine kernel; what exactly would each sibling reading change structurally, and where precisely is the disagreement located?",
+      "resolution_mechanism": "Comparative classification of the three readings as separate stories: expansive_shield_reading concentrates costs on users and drives vendor-side epsilon toward zero; narrow_warning_reading makes protection duration-contingent so post-release defects fall outside it; this reading makes protection domain-contingent. The disagreement is located in whether harm severity can override contractual allocation at all.",
+      "impact": "If the expansive reading prevails, critical-system users lose the recourse floor and this story's beneficiary structure inverts; if the narrow-warning reading prevails, protection becomes a function of release timing rather than harm severity. This story's classification holds only while the severity-override premise is the operative one.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is one of three readings of the beta-designation kernel; siblings are separate constraints."
+    },
+    {
+      "id": "criticality_boundary_underdetermination",
+      "question": "Which systems count as 'life-safety, financial, or other critical,' and who decides the boundary?",
+      "resolution_mechanism": "Accumulation of case law and regulatory enumerations — sectoral classification lists, product-liability annexes, medical-device categorizations — converging on a administrable boundary.",
+      "impact": "A wide boundary extends the liability floor to ordinary business software and raises vendor-side costs across the economy; a narrow boundary confines the rule to avionics-class systems and leaves most deployments shieldable. The effective scope of the extraction the rule performs scales with this boundary.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The categorical trigger of the carve-out is under-determined at its edges."
+    },
+    {
+      "id": "corrective_vs_rent_decomposition",
+      "question": "Is the money moved from vendors to the claimant side corrective (tracking harm actually caused) or rent-generating (litigation overhead, non-fault exposure, and intermediary fees exceeding the value of services rendered)?",
+      "resolution_mechanism": "Actuarial and court-record decomposition of recovery flows: compensation share versus contingency fees, defense costs, and insurance loading, benchmarked against comparable non-software product-liability lines.",
+      "impact": "If the rent share dominates, the arrangement drifts toward enforced transfer with a weakening coordination justification and the computed classification slides toward the extractive pole; if compensation dominates, the coordination reading strengthens and the moderate epsilon is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the vendor-side payment stream is primarily corrective or primarily rent."
+    },
+    {
+      "id": "innovation_path_suppression_tradeoff",
+      "question": "Does closing the beta route in critical domains destroy a valuable controlled-testing pathway, delaying beneficial deployment of improving software in hospitals and finance?",
+      "resolution_mechanism": "Difference-in-difference on deployment rates and adverse-event rates across jurisdictions that adopt or reject severity carve-outs, controlling for sector and firm size.",
+      "impact": "Large chilling effects would shrink the coordination benefit and raise the net-extraction reading of vendor costs; negligible effects would confirm the floor as low-cost protection.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the suppressed beta pathway carried real value the rule destroys."
+    },
+    {
+      "id": "jurisdictional_instantiation_variance",
+      "question": "The reading is instantiated unevenly across forums — courts split by state, the EU codifying software into product liability, sectoral regulators diverging. Which instantiation does the authored epsilon describe?",
+      "resolution_mechanism": "Forum-by-forum sub-stories or scoped variants joined by network edges, each with its own enforcement picture and epsilon.",
+      "impact": "Epsilon and suppression vary materially by forum; a global-scope classification overstates uniformity and misweights enforcement intensity, potentially dating type transitions incorrectly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cross-forum variance in how the severity carve-out actually operates."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "beta_designation_doctrine__expansive_shield_reading",
+      "beta_designation_doctrine__narrow_warning_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'beta designation doctrine' per the epsilon-invariance principle. The single natural-language concept covers three structurally distinct liability allocations with materially different epsilon values and different victim sets: expansive_shield_reading (waiver everywhere; epsilon concentrated on users of all software), narrow_warning_reading (time-bounded disclosure; epsilon duration-dependent), and this severity_carve_out_reading (domain-categorical unavailability; epsilon moderate, borne by critical-domain vendors and entrants). The expansive reading is historically upstream — the older, broader position from which the other two depart — and its decline supplies the revival pressure recorded in this reading's drift_state. All three files link one another through affects_constraints; none is evaluable via another's observables without changing epsilon, which is why they are separate stories rather than one story with a measurement parameter."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "severity_override_safety_floor",
+    "drift_state": {
+      "moment": "contemporary_post_pld_revision",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_shield_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_warning_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_severity_overrides_contractual_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "beta_label_no_defense_in_critical_systems",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "injured_critical_system_claimants",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

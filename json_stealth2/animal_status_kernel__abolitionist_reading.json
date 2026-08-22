@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "animal_status_kernel__abolitionist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "435a162a-5617-43a5-80a7-8a1f2f860479"
+  },
+  "base_properties": {
+    "extractiveness": 0.93,
+    "suppression": 0.82,
+    "theater_ratio": 0.62,
+    "accessibility_collapse": 0.28,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Property Status Regime - Abolitionist Reading",
+    "topic_domain": "moral_philosophy/animal_ethics/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "animal_agribusiness_operators",
+      "biomedical_research_institutions",
+      "companion_animal_owners",
+      "consumers_of_animal_products"
+    ],
+    "victims": [
+      "farmed_animals",
+      "laboratory_animals",
+      "captive_entertainment_animals",
+      "domesticated_companion_animals"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.84
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.86
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.88
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.9
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.92
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.93
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.75
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.8
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.82
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This story instantiates the abolitionist reading of animal_status_kernel; how would the property_reading or welfare_reading sibling change the structural classification of the same standing arrangement?",
+      "resolution_mechanism": "Compile the sibling stories and compare victim-set membership, epsilon, and computed per-seat types across the three readings of the shared kernel.",
+      "impact": "Under property_reading the victim set empties (animals are assets, not victims) and epsilon collapses toward the coordination floor; under welfare_reading the victim set narrows to suffering-salient cases and epsilon lands mid-range. The same arrangement classifies differently per reading - that divergence is the kernel contest itself, not noise.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed classification of the shared animal-status arrangement."
+    },
+    {
+      "id": "welfare_reform_trajectory_effect",
+      "question": "Do incremental welfare reforms delay abolition (by entrenching use and lowering moral dissonance) or advance it (by building inspection infrastructure and shifting norms)?",
+      "resolution_mechanism": "Longitudinal analysis of jurisdictions and firms after major welfare reforms: total animal use, demand elasticity of humane-labeled products, and conversion rates of welfare campaigns into rights-stage policy.",
+      "impact": "If reforms entrench use, the arrangement's coordination surface is purely stabilizing and the extraction-dominant reading strengthens; if they advance abolition, transitional dynamics appear inside the arrangement and the sunset question becomes live.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The live dispute between abolitionist and welfarist strategy over reform effects."
+    },
+    {
+      "id": "personhood_threshold_within_reading",
+      "question": "Does this reading's personhood attribution require only sentience, or further conditions such as autonomy or being a subject of a life - and which animals fall inside the victim set accordingly?",
+      "resolution_mechanism": "Internal doctrinal analysis of the reading's own texts (sentience-only positions versus richer subject-of-a-life criteria) applied to borderline classes: fish, decapods, insects.",
+      "impact": "A narrower threshold shrinks the victim set and lowers effective extraction; a sentience-only threshold maximizes both. The reading's internal boundary, not external criticism, sets the classification's reach.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Victim-set breadth depends on the reading's internal personhood criterion."
+    },
+    {
+      "id": "consumer_participation_mechanism",
+      "question": "Is mass consumer participation held in place by structural factors (price, subsidy, availability, habit infrastructure) or internalized factors (carnist ideology, dissociation)?",
+      "resolution_mechanism": "Natural experiments where structural barriers drop: price parity of alternatives, default-option studies, cultivated-meat approval events - measure how much participation persists when friction is removed.",
+      "impact": "If internalized, dismantling enforcement and subsidy machinery will not rapidly collapse participation and transition projections lengthen; if structural, removal of support collapses participation quickly and the arrangement's persistence reads as enforced rather than chosen.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized maintenance of the demand side."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the abolitionist reading of the animal_status_kernel: animals are moral persons holding a basic right not to be property, property status is itself the injustice, and all use is categorically impermissible regardless of welfare conditions. Per the kernel-reading epsilon rule, the referent of extractiveness is the standing arrangement under contest - the global legal-institutional regime that classifies animals as property and licenses their use - assessed strictly by this reading's lights, under which every use violates a basic right and the victim set is the entire class of owned animals. The claimed type and the metrics are authored independently: the arrangement is claimed as tangled_rope because it demonstrably performs a real coordination function for its human participants (title, transfer, contract, veterinary and commercial standardization) while extracting totally from the animals passing through it under active legal enforcement; the metrics describe that operation as the abolitionist reading finds it. Sibling readings (property_reading, welfare_reading) are separate constraint files linked through network.affects_constraints; their structural deltas are recorded in omega variables rather than averaged into this one.",
+    "key_agents": [
+      "farmed_animals: primary target (powerless/trapped) - bear the arrangement's full cost; tens of billions of individuals annually",
+      "animal_agribusiness_operators: primary beneficiary and de facto agenda setter (institutional/arbitrage) - collects the largest revenue share and writes the standards its facilities are audited against",
+      "consumers_of_animal_products: mass beneficiary with incidental cost-bearing (moderate/mobile) - the demand side that sets the production quota",
+      "biomedical_research_institutions: secondary beneficiary (institutional/constrained) - locked into animal models by validation pathways",
+      "legislators_and_regulators: formal agenda setters with capture exposure (institutional/mobile) - administer the statutes, funded by the operator seat",
+      "abolitionist_advocates: excluded challengers (organized/identity_locked) - press the rights claim from outside the rooms where terms are fixed",
+      "animal_law_scholars: analytical observers (analytical/analytical) - see the full doctrinal structure at once"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.93 because, on this reading, the harm is not a surplus over some fair baseline - the baseline itself (holding persons as owned objects) is the violation, and the scale is expanding: terrestrial animal slaughter has roughly tripled since the interval opened. Suppression is 0.82 and is authored as a raw structural quantity, unscaled by power or scope: for the animal seats it is absolute (no exit, no refusal, no standing), and for human dissenters it operates through facility-recording bans, prosecution of rescuers, and the channelling of dissent into welfare framings that presuppose the property premise. Theater_ratio 0.62 reflects the welfare-certification boom - humane labels, audit industries, corporate pledges - which regulates the manner of use while entrenching its fact; a majority of the arrangement's visible moral activity is reassurance performance, though genuine inspection and amelioration continue. Accessibility_collapse is low (0.28): alternatives (plant-based foods, cultivated meat, non-animal assay panels) persist and multiply, and understanding the arrangement makes them more salient, not less. Resistance 0.58 tracks a growing rights movement, personhood litigation, and scholarly critique. All three temporal series run on one shared six-point grid, and the end-state values equal the scalar properties. Coalition note: the animal seats cannot form coalitions; the only coalition path runs through human proxies, which is why the excluded advocate seat carries structural weight.",
+    "perspectival_gap": "The seats compute differently by construction. From the operator seat the arrangement is ordinary commerce - asset management with a compliance layer - and the welfare apparatus reads as due diligence. From the farmed-animal seat the same structure is the total condition of existence; there is no vantage from which it is partial. From the consumer seat it is background normality, visible only episodically. From the scholar seat the whole doctrinal machine is legible at once. The engine computes per-seat classifications from the structural data; this story's claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary declarations place the operator, research, owner, and consumer seats toward the beneficiary end: revenue, labor, companionship, and products flow to them. Victim declarations place the four animal seats at the full-target end, and their trapped exit status pins them at the extreme, maximizing effective extraction; their global scope widens the verification problem and amplifies it further. Legislators sit dual: they administer the structure and collect campaign support from its largest beneficiaries, so their derived directionality sits nearer the beneficiary end than their neutral office alone would suggest. The advocate seat is excluded rather than seated in the derivation - it opposes the arrangement and remains commentary-grade.",
+    "mandatrophy_analysis": "Mandatrophy here runs through the kernel contest rather than internal decay. The arrangement's founding mandate - governing animals as tradable assets - is neither dead nor plainly live: the benefiting parties attest it as a permanent governance need, while this reading and the wider rights literature attest it as an artifact of the property premise itself, hence contested. The classification discipline prevents two symmetrical errors. First, it blocks the pure-coordination mislabel: the welfare-regulatory surface looks like benign coordination, and the theater-ratio series exists precisely to catch the drift by which reassurance activity substitutes for the protective function. Second, it blocks the referent error of scoring the abolitionist demand instead of the standing arrangement - epsilon stays pointed at what exists. If the founding problem is eventually judged artifactual while the world still rearranges around the arrangement, the status-times-verdict mismatch fires and the arrangement re-reads as maintained by capture; if the problem is judged live, the tangled_rope claim stands with its heavy extraction term.",
+    "kernel_context": "This file is the abolitionist_reading of the animal_status_kernel - the contested question of what animals' moral and legal status is. The kernel is distributed: no single text or tribunal fixes it; it is adjudicated competitively across legal codes, philosophical traditions, and religious frameworks. Sibling readings: property_reading (animals as property; economic value as the only relevant value) and welfare_reading (sentience grounds regulation; property retained but constrained). This instantiation authors the standing arrangement exclusively by abolitionist lights; the siblings are separate files, and the disagreement between readings is located in the status premise itself - personhood versus property - from which each reading's victim set, epsilon, and classification follow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_status_kernel__property_reading",
+      "animal_status_kernel__welfare_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the animal question' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one kernel: the property_reading (epsilon near zero - no victims recognized, ownership rights are the frame), the welfare_reading (mid epsilon - suffering is the metric, property retained), and this abolitionist_reading (epsilon near maximum - the status itself is the violation, all owned animals are victims). Each file authors its own epsilon, victim set, and claimed type over the same standing arrangement; they are linked here because the upstream readings are cited as evidence within the downstream contest, and contamination propagates along those citations."
+  },
+  "stakeholders": [
+    {
+      "name": "animal_agribusiness_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the farms, feedlots, hatcheries, and processing chains that hold and slaughter the vast majority of domesticated animals. Set production standards, fund the lobbying that shapes animal legislation, and draft the welfare-audit templates their own facilities are audited against. Revenue from animal product sales flows to this seat; switching to plant or cultivated product lines is commercially available but currently less profitable, so exit is a portfolio decision rather than an escape."
+    },
+    {
+      "name": "biomedical_research_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Hold and use animals in toxicology, disease modeling, and drug development. Regulatory submission pathways have historically required animal data, locking protocols in place; replacement methods exist for some assays and are advancing, but full substitution would require revalidating decades of accepted methodology. Grant funding and publication incentives reward continued animal work."
+    },
+    {
+      "name": "companion_animal_owners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Acquire, keep, and care for animals as companions under the same property framework that governs livestock. They receive companionship and care relationships; the animals' status as owned objects means their fate - sale, euthanasia, relocation - rests with the owner. Individual exit (relinquishing ownership) is easy; the class-wide practice persists through affection and habit."
+    },
+    {
+      "name": "consumers_of_animal_products",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Buy meat, dairy, eggs, leather, and animal-tested products at prices supported directly by agricultural subsidies and indirectly by externalized environmental and health costs. Individual dietary exit is available and increasingly cheap; aggregate demand nonetheless sets the production quota the rest of the system fills. They also absorb some costs back as chronic-disease burden and ecological degradation."
+    },
+    {
+      "name": "farmed_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are bred into existence as inventory: confined, genetically selected for yield, transported, and slaughtered on schedules set entirely by the operators above them. Tens of billions of individuals per year pass through this position. They cannot exit, refuse, represent themselves, or accumulate; their interests enter human decision-making only as production parameters."
+    },
+    {
+      "name": "laboratory_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are bred for and assigned to experimental protocols - toxicity dosing, surgery, behavioral deprivation - under oversight boards whose members share the property premise. They cannot decline, withdraw, or appeal; protocol approval by humans is the entirety of their procedural existence."
+    },
+    {
+      "name": "captive_entertainment_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are held in zoos, aquaria, circuses, and film production for display and performance. Conditions vary widely; the common feature is lifetime confinement for human viewing. A few jurisdictions have banned specific exhibits, but the class remains globally lawful."
+    },
+    {
+      "name": "domesticated_companion_animals",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Live as owned dependents: their breeding, sale, sterilization, movement, and killing are owner decisions bounded only by cruelty statutes that penalize the manner, not the fact, of ownership. Breeding industries produce them to specification; shelters destroy the surplus."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Campaign for the ending of animal property status itself - through scholarship, personhood litigation, undercover documentation, and boycott. Present in public discourse but largely absent from the legislative and standards committees where terms are fixed; several jurisdictions have responded to their documentation efforts with statutes restricting recording at facilities. Leaving the cause would forfeit the professional and moral identity built around it."
+    },
+    {
+      "name": "legislators_and_regulators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Write and enforce the animal statutes: cruelty floors, transport rules, slaughter-method mandates, research oversight. They receive campaign support and constituency pressure from the operator seat, and their regulatory templates are frequently drafted with industry input. Electoral exit is available; the statutory framework they administer persists across administrations."
+    },
+    {
+      "name": "animal_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Map the doctrinal structure - property classifications, standing rules, welfare-preemption clauses - and publish the comparative analyses that both movements cite. No enforcement or collection role; analytic distance is their position."
+    }
+  ],
+  "gain_flow": "animal_agribusiness_operators",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Property law coordinates human ownership, transfer, breeding, veterinary care, and commercial exchange of animals: clear title, enforceable contracts, standardized transactions across jurisdictions. It solves a real collective-action problem for the human parties who hold, trade, and depend on animals as assets.",
+    "transfer_function": "Moves the bodies, labor, reproductive capacity, and lives of animals - valued as assets - to human owners and industries; moves money from consumers to producers; places the entire moral and physical cost on the animals themselves, who receive nothing and cannot consent.",
+    "absent_voices": "The animals themselves - the primary affected parties - have no voice in any forum that sets the terms; they cannot object, litigate, or vote. Their interests enter only filtered through human representatives, most of whom (industry, regulators, established welfare organizations) accept the property premise. Abolitionist voices exist in academia and activism but are excluded from the legislative and standard-setting rooms where the terms are actually fixed.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the property status of animals and the permission structure for their use vanished overnight, global food systems, biomedical research pipelines, pharmaceutical validation, clothing supply chains, and entertainment sectors would have to reorganize around plant-based and synthetic alternatives; trillions in assets would be repriced; dietary patterns would shift wholesale.",
+    "founding_problem": "The arrangement was built to solve the problem of governing human use of animals as resources: securing ownership, enabling trade, preventing theft, and standardizing the treatment of living assets across jurisdictions - extending the ancient institution of chattel property to sentient beings.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Legal historians outside the benefiting parties corroborate the genealogy (chattel property extended to animals from Roman law through the common law), and animal-law scholars document the doctrine's continuity. No source outside the benefiting parties attests that the founding problem remains a genuine need rather than an artifact of the property premise: abolitionist scholars explicitly deny it, and even welfare-oriented legal scholars concede the property premise is doing the justificatory work. Corroboration exists for the historical existence of the problem, not for its continuing legitimacy."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "animals_as_moral_persons_not_property",
+    "drift_state": {
+      "moment": "contemporary_legal_order",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "property_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "welfare_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentient_beings_have_right_not_to_be_property",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "all_animal_use_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

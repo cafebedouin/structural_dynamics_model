@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "wto_dsb_authority__advisory_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wto_dsb_adv",
+    "story_uid": "03b13d6d-d8a2-48c5-893b-8c6dca90a6c3"
+  },
+  "base_properties": {
+    "extractiveness": 0.41,
+    "suppression": 0.34,
+    "theater_ratio": 0.47,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.27,
+    "claimed_type": "rope",
+    "human_readable": "DSB Advisory Coordination Reading: Panels as Expert Inputs to Negotiated Settlement",
+    "topic_domain": "international law/trade governance/institutional legitimacy",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "major_trading_powers",
+      "small_developing_members"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.23
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.37
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.34
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "Is the WTO dispute settlement arrangement adequately described by this reading — panels as expert advisors whose outputs facilitate negotiated settlement while member states retain ultimate policy discretion — or does one of the sibling readings of kernel wto_dsb_authority describe the same standing arrangement better?",
+      "resolution_mechanism": "Compare member compliance behavior and official statements across the 2019-2025 appellate crisis: if governments treat adopted reports as obligations owed regardless of convenience, the binding_referee_reading's description fits; if they treat them as bargaining inputs weighted by bilateral power, this reading fits.",
+      "impact": "If the binding reading is descriptively right, epsilon for the standing arrangement rises sharply, active enforcement flips true, and the computed type moves toward enforced-extraction categories; this file's low-extraction profile would then describe a superseded configuration rather than the standing arrangement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the DSB-authority kernel describes the standing arrangement."
+    },
+    {
+      "id": "advisory_power_asymmetry_residue",
+      "question": "Does the power-mediated settlement layer introduce asymmetric extraction through the advisory mechanism itself, or is the asymmetry located entirely in the separate bilateral-bargaining game that surrounds it?",
+      "resolution_mechanism": "Compare settlement terms reached on identical or near-identical panel findings across power-differentiated dyads; if weaker members systematically concede more for the same finding, extraction flows through the mechanism rather than around it.",
+      "impact": "If extraction flows through the advisory structure, the constraint decomposes: the information function stays low-extraction while the settlement-conversion layer becomes a separately classified extractive arrangement linked by network edges.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether power asymmetry contaminates the advisory mechanism or sits in the adjacent bargaining game."
+    },
+    {
+      "id": "post_crisis_drift_durability",
+      "question": "Is the post-2019 return of negotiated settlement a durable revival of the advisory character, or a transitional decay awaiting restoration of binding machinery?",
+      "resolution_mechanism": "Track multi-party interim appeal arbitration uptake, the rate at which panel findings are cited as settlement anchors, and member positions in the DSU reform talks through the late 2020s.",
+      "impact": "Determines whether the falling tail of the extractiveness series is a stable endpoint or a trough before renewed compliance pressure; a durable revival supports the rope classification, restoration of binding machinery pushes the arrangement back toward the binding reading's profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of the advisory character's post-crisis revival."
+    },
+    {
+      "id": "kernel_codification_framing",
+      "question": "Is the kernel best framed as the formally codified DSU text (a fixed formal instrument whose readings diverge over interpretation), or as the accumulated practice of dispute settlement (an implicit kernel that is whatever the system does)?",
+      "resolution_mechanism": "Examine whether the sibling readings disagree about the TEXT's meaning or about WHICH PRACTICE is authoritative; textual disagreement supports the formalized framing, practice disagreement supports the implicit framing.",
+      "impact": "Under the implicit framing, authority_grounding shifts from expertise toward practice, and the drift_state reference frame becomes GATT-era practice rather than the consent-based advisory framework, changing the computed drift vector.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative framings of the kernel's codification."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "wto_secretariat",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Services the dispute system: maintains the docket, assists disputing governments in constituting panels, drafts panel reports, and publishes findings. Its staffing, budget line, and professional purpose depend on a steady flow of disputes to administer. Exit for its legal staff means leaving the institution and the professional field built around it."
+    },
+    {
+      "name": "major_trading_powers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "File and receive the largest share of complaints, supply most of the legal talent, and fund a proportional share of the system. An adverse expert finding costs them little they cannot discount: they can slow implementation, reroute the substance through preferential agreements, or fold the finding into a broader bargain. They gain a legitimacy resource they can invoke or set aside as their bargaining position requires."
+    },
+    {
+      "name": "small_developing_members",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Use the process to obtain expert assessment of stronger partners' measures that they could never compel bilaterally. The assessment gives them a documented position and negotiating cover, but converting it into changed behavior on the other side depends on the partner's susceptibility to reputation and market-access pressure rather than on any institutional compulsion. Leaving the system would forfeit their only affordable route to third-party factual findings."
+    },
+    {
+      "name": "mid_sized_exporting_members",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Are the heaviest per-capita users: they bring enough disputes to need the process regularly and pay for it in legal fees, diplomatic attention, and the concessions packaged into settlements. They receive usable settlement anchors in return, and unlike the smallest members they can sometimes shift outcomes through coalitions or market size. When findings cut against them they bargain directly with larger partners instead."
+    },
+    {
+      "name": "domestic_affected_constituencies",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Consumer, labor, environmental, and producer groups inside member countries whose regulatory protections and prices are the substance of the bargains struck. Disputes are framed and settled between governments; these groups have no seat, no notice, and no standing in the process, and learn of trades affecting them after positions have been exchanged."
+    },
+    {
+      "name": "independent_trade_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze panel reports, settlement patterns, and institutional design from outside the process. They document how often findings predict settlements, whose findings get implemented, and how the system's character changes across crises. Their stake is reputational and intellectual rather than material."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts bilateral trade frictions into jointly legible expert assessments that anchor negotiated settlements — lowering the cost of face-saving compromise and reducing misperception about what the facts and legal merits actually are.",
+    "transfer_function": "Moves legal-argument labor, diplomatic attention, and negotiated concession packages among member governments, and moves reputational standing toward positions that survive expert scrutiny; it moves nothing coercively.",
+    "absent_voices": "Domestic constituencies whose regulatory space is the substance of the bargains — consumers, workers, environmental and producer groups — plus operators of preferential-agreement forums who would compete for dispute resolution. They would object that settlements trade away their interests behind closed doors; they are outside the room because the process is constituted as a government-to-government exchange.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the advisory machinery vanished overnight, disputes would revert to raw bilateral power bargaining: small members would lose their only affordable access to credible third-party factual findings, the accumulated body of shared legal argumentation would dissipate within a few dispute cycles, and major powers would lose a legitimacy resource they currently deploy selectively — the settlement economy would reorganize around overt leverage.",
+    "founding_problem": "GATT-era trade frictions had no reliable way to establish facts and legal merit, so every dispute escalated into political confrontation or indefinite stalemate; the arrangement was built to give negotiators a credible, face-saving factual anchor for compromise.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: retired panelists and former appellate jurists writing in academic capacity, the international-law scholarship documenting the settlement-predictive value of findings, and trade-policy press reporting through the 2019-2025 crisis all attest that credible expert anchoring remains the system's working function. Member governments also attest it, but they are beneficiaries, so the evidentiary weight rests on the scholarly and practitioner record."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_dsb_authority__binding_referee_reading",
+      "wto_dsb_authority__judicial_activism_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of kernel wto_dsb_authority. The colloquial label 'WTO dispute settlement' covers three structurally distinct claims with widely separated epsilon values: this advisory-coordination reading (low extraction, no enforcement, coordination-dominant), the binding-referee reading (high extraction, active enforcement, compliance obligations surrendered into covered domains), and the judicial-activism reading (extraction via interpretive drift beyond mandate). Each is a separate story with its own epsilon, beneficiaries, and classification, linked here as a family. The upstream claim (the DSU's formal authorization of panel procedure) is cited as evidence by both downstream readings, so this story's edges point at both siblings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.3
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel wto_dsb_authority: the advisory-coordination reading, on which DSB panels provide expert advisory opinions that facilitate negotiated settlements and member states retain ultimate policy discretion. The standing arrangement under contest — the WTO dispute settlement system — is assessed here by this reading's own lights: as a consent-based expert-input mechanism with low compliance pressure, where enforcement of outcomes depends on bilateral power dynamics rather than institutional authority. Per the epsilon-referent rule, epsilon is authored for THAT standing arrangement as this reading constitutes it, never for the binding arrangement the sibling reading would describe. The sibling readings (binding_referee_reading, judicial_activism_reading) are separate constraints in separate files; the contest between readings is routed to omega variables, not folded into this classification.\n\nKEY AGENTS (by structural relationship):\n- wto_secretariat: Administrator ([organized]/[constrained]) — services panels and drafts reports; institutionally sustained by dispute flow\n- major_trading_powers: Primary beneficiary ([institutional]/[arbitrage]) — converts findings into bargaining leverage at will\n- small_developing_members: Secondary beneficiary ([powerless]/[constrained]) — obtains expert assessment cheaply, cannot compel outcomes\n- mid_sized_exporting_members: Primary payer ([moderate]/[mobile]) — funds the process in fees and concessions, receives settlement anchors\n- domestic_affected_constituencies: Excluded seat ([powerless]/[trapped]) — their regulatory space is the substance traded\n- independent_trade_law_scholars: Analytical observer ([analytical]/[analytical]) — documents the settlement-prediction record",
+    "logic_rationale": "Extractiveness is moderate-low (0.41 at interval end) because the mechanism's costs are procedural — legal labor, diplomatic attention, concessions voluntarily packaged into settlements — with no coercive transfer; the residual above pure coordination cost reflects the binding-era machinery still partially attached to the arrangement. Suppression (0.34) is reputational and procedural, not physical or legal compulsion: states cannot be forced to comply, only made to explain themselves. Theater_ratio (0.47) is elevated and rising: since the 2019 appellate paralysis, a substantial share of system activity is performative — agenda items carried month over month, appeals filed into a void, compliance proceedings referencing a lapsed apex — while the core advisory-and-settlement function continues underneath. Accessibility_collapse (0.42) is low for a coordination mechanism: bilateral bargaining and preferential forums remain fully workable alternatives. Resistance (0.27) is modest: occasional rejection of findings and forum-shopping, against broad voluntary uptake.\n\nThe temporal series runs on one shared six-point grid (every tracked metric authored at every point). It traces a rise-and-partial-retreat: from this reading's vantage, the 1995-2019 period layered compliance machinery (reverse-consensus adoption, appellate review, authorized suspension of concessions) onto the advisory core, which this reading experiences as growing imposition on member discretion — extractiveness and suppression climb together. The 2019 appellate collapse removed the compliance apex; practice reverted toward consultation-and-settlement with partial interim-arbitration patches, so extractiveness and suppression fall back while theater rises (machinery performing without its apex function). Suppression_requirement is authored precisely because enforcement-capacity change IS the dynamic being traced here — build-up, then decay — not a static picture. Despite theater nearing the 0.5 substitution threshold, this is not an atrophied shell: the advisory function is the live function, actively used and defended by its beneficiaries.",
+    "perspectival_gap": "The seats compute differently. From the secretariat's position the arrangement is a functioning service it competently delivers; from the major powers' arbitrage position it is a legitimacy inventory drawn down at will; from the small members' constrained position it is access-without-teeth — real information, no compulsion; from the mid-sized payers' position it is a fair price for usable anchors; from the excluded domestic seat it is a closed door behind which their regulatory environment is traded. The advisory reading's distinctive claim is that this divergence is MUTED — that no governed seat is substantially extracted from — and the authored metrics reflect that claim; the sharpest remaining gap concentrates in the excluded seat, which the reading's own framing places outside the governed set.",
+    "directionality_logic": "Both declared beneficiary groups derive low directionality: major_trading_powers combine beneficiary position with arbitrage-grade exit (they can reroute around any outcome), sitting nearest the beneficiary end; small_developing_members are beneficiaries with constrained exit, slightly less damped but still subsidized by access they could not buy bilaterally. mid_sized_exporting_members carry the payer role with a beneficiary secondary role, placing them near symmetric. The override exists for the organized power atom because the secretariat declares no beneficiary/victim structural data and would otherwise fall to an arbitrary canonical fallback; structurally the institution is sustained by the arrangement it administers, so d is set to 0.3 — near the beneficiary end, reflecting an administrator whose costs (labor, reputational exposure) are real but outweighed by what the arrangement provides it.",
+    "mandatrophy_analysis": "The founding problem — credible, face-saving factual anchoring for negotiation — is live, and the arrangement's function tracks it, so no mandate obsolescence is declared and the status-x-verdict pair (live x world_rearranges) raises no capture-or-zombie flag. The classification discipline matters here in two directions. First, the post-crisis theater spike invites a degraded-shell misreading: an analyst seeing carry-over agendas and void appeals could classify the arrangement as inertia-maintained performance, but the advisory function is the living core, not residue — the theater is the decaying BINDING superstructure, which belongs to the sibling reading's constraint, not this one. Second, the reverse error: attributing the binding era's high extraction to this reading's arrangement would conflate two epsilon-distinct constraints. Keeping the readings separate is what lets the corpus measure the 2019 transition as a real event in the standing arrangement rather than noise in one over-loaded label.",
+    "kernel_context": "Kernel: wto_dsb_authority — the persisting commitment that the WTO dispute settlement body legitimately structures how trade disputes are processed. This file instantiates the advisory_coordination_reading: panels as expert advisors, outputs as negotiation inputs, member policy discretion retained, enforcement delegated to bilateral power dynamics. Siblings: binding_referee_reading (rulings bind; discretion surrendered in covered domains) and judicial_activism_reading (panels exceed mandate via interpretive drift; illegitimate judicial legislation). The disagreement is located in exactly one structural element: the compliance status of panel outputs — whether they obligate. That single element drives every downstream difference: epsilon, enforcement, victim structure, and classification all diverge across the three readings while the referent arrangement stays fixed. Reading relations authored here: this reading FORECLOSES the binding reading (its core premise — discretion retained — directly contradicts the binding premise — discretion surrendered — such that no single framework holds both), and INFLUENCES the activism reading (as the advisory description gains descriptive ground post-2019, the activism reading's target — effective judicial legislation — loses its operating conditions, without being logically eliminated: a party can coherently hold that panels attempt overreach yet cannot bind)."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "consent_based_advisory_settlement_framework",
+    "drift_state": {
+      "moment": "contemporary_post_appellate_crisis",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "binding_referee_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "judicial_activism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_consent_supremacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "expert_findings_as_negotiation_inputs",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

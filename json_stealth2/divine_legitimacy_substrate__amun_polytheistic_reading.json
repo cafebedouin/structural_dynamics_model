@@ -1,0 +1,346 @@
+{
+  "header": {
+    "constraint_id": "divine_legitimacy_substrate__amun_polytheistic_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-15",
+    "status": "ACTIVE",
+    "story_uid": "eb3d19b5-3a24-4dbe-a432-5be136211ddb"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.52,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.4,
+    "resistance": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Priestly Mediation of Divine Legitimacy (Amun-Ra Polytheistic Order)",
+    "topic_domain": "religious/political-economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "amun_priesthood_thebes",
+      "temple_estates_economy",
+      "regional_cult_priesthoods"
+    ],
+    "victims": [
+      "pharaoh",
+      "peasant_laborers",
+      "provincial_tax_assessors"
+    ],
+    "vindicated_propositions": [
+      "maat_cosmic_order_doctrine",
+      "royal_divine_sonship_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 160,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 240,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 320,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 160,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 240,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 320,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 160,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 240,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 320,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.52
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "Is the classification of divine-legitimation-through-priestly-mediation indexical to the amun_polytheistic_reading, or intrinsic to the divine_legitimacy_substrate kernel itself?",
+      "resolution_mechanism": "Compile the two sibling stories and compare computed types: if the atenist reading computes as snare (concentrated crown beneficiary, violently suppressed alternatives) and the folk reading computes as rope or piton, the kernel's classification is reading-relative and any cross-kernel verdict must condition on the reading instantiated.",
+      "impact": "If reading-relative, any verdict about 'Egyptian divine legitimacy' as such is ill-formed without naming the reading; if intrinsic, the three files should converge despite different beneficiary structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether classification travels across sibling readings of the same kernel."
+    },
+    {
+      "id": "priestly_mediation_necessity",
+      "question": "Is priestly mediation a functional requirement of the legitimation problem, or a constructed rent position that a royal bureaucracy could have filled more cheaply?",
+      "resolution_mechanism": "Compare intervals of strong royal control over priestly appointments with intervals of hereditary entrenchment: if validation quality and political stability hold under royal appointees, the hereditary college is a rent position rather than a functional necessity.",
+      "impact": "If constructed, the share of the transfer attributable to mediation-as-service shrinks and the rent component grows, raising effective extraction; if necessary, part of the measured transfer is the price of the coordination itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional necessity versus constructed rent in the mediation office."
+    },
+    {
+      "id": "temple_surplus_capture_rate",
+      "question": "What share of net agricultural surplus did temple estates, above all the Karnak complex, actually capture at the interval's end?",
+      "resolution_mechanism": "Estate survey papyri of the Wilbour class, tax-exemption decrees, and granary accounts permit direct estimation of exempt acreage and collected rents against estimated gross yield.",
+      "impact": "A capture rate above roughly a quarter of net surplus would justify raising epsilon toward 0.7+ and strengthen the accumulation reading of the series; a lower rate supports the bounded-transfer reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical ceiling on temple-economy surplus capture."
+    },
+    {
+      "id": "pharaoh_net_position_temporal",
+      "question": "Does the pharaoh's net position flip from net beneficiary to net payer across the interval, and where is the crossover?",
+      "resolution_mechanism": "Reign-by-reign series of endowment grants and exemptions set against the political value of validations received; the crossover should fall near the long reigns of the later New Kingdom.",
+      "impact": "If the flip is real, the pharaoh seat's directionality is time-varying and the static override (d = 0.58) is an interval-average compromise; per-seat classifications early and late in the interval would differ.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Temporal flip in the crown's net position under the arrangement."
+    },
+    {
+      "id": "local_cult_absorption_valence",
+      "question": "Is the incorporation of regional deities into the Amun-centered cosmos accommodation or absorption by other means?",
+      "resolution_mechanism": "Track provincial temple revenues and festival precedence before and after incorporation episodes: retained local control and revenue indicate accommodation; revenue redirection to Thebes and title subordination indicate absorption.",
+      "impact": "If absorption dominates, the suppression scalar understates the arrangement's suppressive force and the 'accommodates regional variation' feature is partly cover; if accommodation dominates, the moderate suppression reading stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Valence of regional-cult incorporation for the suppression metric."
+    },
+    {
+      "id": "maat_internalization",
+      "question": "How much of observed compliance with temple obligations rests on enforcement machinery versus internalized conviction that the obligations maintain cosmic order?",
+      "resolution_mechanism": "Compliance behavior during enforcement lapses (ration-driven strike waves, work stoppages during administrative breakdown): compliance persisting without enforcement indicates internalization; compliance tracking enforcement presence indicates structural dependence.",
+      "impact": "If internalization carries much of the load, effective suppression exceeds the structural measure and would persist through institutional reform; if enforcement-dominated, reform of the machinery would release the pressure quickly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized share of compliance with temple obligations."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In the Amun-polytheistic settlement, divine legitimacy reaches the throne only through established priestly interpretation: the king acts, and the colleges — above all the oracle of Amun at Karnak — confirm that the god willed it. Around this mediation stands a plural cosmos of regionally rooted deities whose cults are accommodated rather than suppressed, and a temple economy funded by tax-exempt endowments, corvee labor, and offering surpluses. This file instantiates ONE reading of the contested kernel divine_legitimacy_substrate; the atenist_monotheistic_reading (exclusive revelation, all other gods false) and the folk_syncretistic_reading (household pragmatism) are separate constraints with their own epsilon values, linked only through network edges. Per the epsilon-referent rule, epsilon here measures the standing Amun-order arrangement as this reading sees it — never the arrangement a sibling reading would install. Time points are years across the New Kingdom arc: T0 approximates the elevation of Amun under the early Dynasty 18; T400 approximates the late Dynasty 20, when the High Priest of Amun rules Upper Egypt in fact if not in title.\n\nKEY AGENTS (by structural relationship):\n- amun_priesthood_thebes: agenda-setting interpreter (institutional/identity_locked) — confirms royal acts, administers the largest estate\n- temple_estates_economy: primary beneficiary (institutional/constrained) — holds tax-exempt land, herds, labor\n- regional_cult_priesthoods: accommodated secondary beneficiaries (organized/constrained)\n- pharaoh: dual-positioned seat (powerful/trapped) — pays in endowments, receives legitimation\n- peasant_laborers: primary bearers of the surplus burden (powerless/trapped)\n- provincial_tax_assessors: cost-bearing outsiders (moderate/excluded)\n- scribal_recorder_class: analytical observers (moderate/analytical)",
+    "key_agents": [
+      "amun_priesthood_thebes: agenda-setting interpreter (institutional/identity_locked) — issues the validations by which royal acts stand, administers the Karnak estate, collects offering shares; office, lineage, income, and burial provision form one inseparable package",
+      "temple_estates_economy: primary beneficiary (institutional/constrained) — holds tax-exempt farmland, herds, workshops, and labor crews; grows by grant, anchored to cult sites",
+      "regional_cult_priesthoods: accommodated secondary beneficiaries (organized/constrained) — retain local revenues and ritual autonomy under Theban primacy",
+      "pharaoh: dual-positioned seat (powerful/trapped) — pays in endowments, exemptions, and conceded privileges; receives the legitimation that is the throne's only warrant; exit means dissolving kingship itself",
+      "peasant_laborers: primary bearers of the surplus burden (powerless/trapped) — corvee crews, tithes, festival obligations; recourse limited to stoppage and petition",
+      "provincial_tax_assessors: cost-bearing outsiders (moderate/excluded) — absorb quota shortfalls created by each new exemption; memorialize but are never consulted",
+      "scribal_recorder_class: analytical observers (moderate/analytical) — literate archivists who see the full ledger of flows in every direction"
+    ],
+    "logic_rationale": "The claim is tangled_rope because both halves are structurally present and neither is cover for the other: the mediation genuinely solves a coordination problem (one workable theology for a regionally diverse polity, validated succession, an integrated festival calendar), and the same structure moves a large, rising surplus to identifiable collectors. Enforcement is active rather than self-executing — oracle procedure, post-Amarna heresy prosecution, and archive-backed property law all require continuous institutional work, hence requires_active_enforcement. Metrics are authored independently of the claim: epsilon 0.62 reflects a surplus transfer that is heavy but bounded (the arrangement still delivers the legitimation it charges for); suppression 0.52 reflects enforcement that is real but deliberately lighter than a monopolist's, because the plural cosmos accommodates regional variation instead of extinguishing it; theater_ratio 0.30 reflects ritual that is functional within the belief system with a growing ceremonial surplus; accessibility_collapse 0.40 — alternatives (household rites, provincial emphases, private piety) remain reachable, which is precisely what distinguishes this reading from its exclusive sibling; resistance 0.48 — recorded strikes at the tomb-workers' village, memorializing scribes, occasional royal pushback against further grants. The measurement series share one grid (T0-T400 at 80-year steps) so no metric is sampled against another's gaps. Suppression_requirement is tracked because this story's enforcement history is a genuine dynamic — the post-Amarna prosecution machinery and the expanding oracle-state — not a static backdrop; its rise models enforcement infrastructure maturing and hardening across the interval.",
+    "perspectival_gap": "Seats diverge sharply. From the Theban college's chair the arrangement is the cosmos working: validation is service, collections are offering, and the estate's growth is piety made durable. From the peasant chair the same structure is a queue of obligations ending at a granary door. The pharaoh's seat is genuinely split — early in the interval the exchange favors him (cheap validation, willing grants); by T400 he has granted away so much assessable land that the priesthood he validates out-ranks him in Upper Egypt, and the payer half of his role dominates. The engine computes these divergences from the structural data; nothing in the authored claim adjudicates them. Identity-lock note: the Theban college's exit is identity_locked, not merely costly — office, lineage, estate income, and burial provision are one package, and a priest who walks away does not relocate his standing but annihilates it. If that fusion broke (if priestly office became purchasable or portable), the college's directionality would shift toward ordinary beneficiary and its resistance to reform would drop accordingly. Suppression mechanism: the 0.52 scalar mixes structural enforcement (oracle procedure, prosecution, archive-backed property law) with internalized compliance (conviction that obligations maintain maat); the maat_internalization omega carries the split rather than pretending the scalar separates it.",
+    "directionality_logic": "Declarations drive the derivation. The Theban college and the temple estates sit at the beneficiary end (d near 0.05-0.15): they collect and administer. Regional cults sit slightly higher (d approximately 0.2) as accommodated secondary beneficiaries who remit deference and precedence. Peasant laborers derive near the full-target end (d approximately 0.9): powerless, trapped, listed victims. Provincial assessors derive high as well (d approximately 0.75): they bear quota shortfalls with constrained exit. One override is authored: the pharaoh's power atom ('powerful') carries d = 0.58. The raw derivation from his victim listing plus trapped exit would push him toward the full-target end, but that misses the substantial legitimation receipts flowing back to him — he is the arrangement's largest customer as well as its largest payer, and by the interval's end the net position leans toward payer. The override encodes the dual position that the beneficiary/victim arrays alone cannot express. Scope amplification is modest here: the arrangement operates at national scale, where verification of claims is harder and effective extraction scales up somewhat for target-side seats.",
+    "mandatrophy_analysis": "The classification guards against two opposite errors. Reading the arrangement as pure extraction (snare) would erase the coordination function doing real work — validated succession, integrated calendar, regional accommodation — and would predict collapse the record does not show until very late. Reading it as pure coordination (rope) would erase the accumulating transfer visible in the series: extraction climbs from 0.42 to 0.62 across the interval while the founding problem remains live, which is rent accretion on a functioning service, not decay. Mandatrophy is NOT resolved: the founding problem — legitimating authority without purely coercive means — persists throughout, so the arrangement has not outlived its mandate; it has thickened around it. The R5 mismatch consumer should find status=live crossed with verdict=world_rearranges, i.e., no zombie flag; the danger this story flags is accumulation, not obsolescence.",
+    "kernel_context": "Kernel: divine_legitimacy_substrate — the question of where the warrant to rule comes from. This file instantiates the amun_polytheistic_reading: legitimacy flows through established priestly interpretation of a plural cosmos under Amun-Ra's patronage. Siblings: the atenist_monotheistic_reading (sole revelation to the king, all other gods false — historically attempted and violently repudiated) and the folk_syncretistic_reading (household and village pragmatism beneath both elite settlements). The disagreement is located in WHOSE interpretation carries the warrant: colleges mediating a plurality (this reading), the king's unmediated contact with one god (atenist), or no elite mediation at all (folk)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "divine_legitimacy_substrate__atenist_monotheistic_reading",
+      "divine_legitimacy_substrate__folk_syncretistic_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Egyptian divine legitimacy' covers three structurally distinct claims with different epsilon values and different beneficiary sets, decomposed per the epsilon-invariance principle into a three-file family: this file (priestly mediation of a plural cosmos — distributed beneficiaries, moderate bounded transfer), the atenist file (sole royal revelation — concentrated crown beneficiary, high suppression), and the folk file (household pragmatism — diffuse beneficiaries, minimal transfer). Edges run from this file to both siblings: the Amun settlement is the long-lived baseline whose resources and precedence the atenist attempt tried to seize and whose categories folk practice inhabits. This reading is historically upstream of the atenist sibling (the attempt presupposed the establishment it attacked) and structurally upstream of the folk sibling (temple calendars and festival circuits shape household practice conditions)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.58
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "amun_priesthood_thebes",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Administers the oracle of Amun at Karnak, maintains the liturgical calendar, and issues the interpretations by which royal acts are confirmed as willed by the god. High offices pass through a small number of Theban families; a priest who abandons the college forfeits rank, estate income, and burial provision together, and there is no comparable standing elsewhere. Collects offering shares and administers the largest temple estate in the country."
+    },
+    {
+      "name": "temple_estates_economy",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Holds tax-exempt farmland, herds, workshops, and assigned labor crews across the Nile Valley. Receives grain rents, cattle, and offering surpluses; stores and redistributes them as wages to its own dependents. Endowments are anchored to specific cult sites and cannot be moved or converted; the estate grows chiefly through new royal and private grants."
+    },
+    {
+      "name": "regional_cult_priesthoods",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Staff the provincial temples of Ptah at Memphis, Ra at Heliopolis, Osiris at Abydos, Hathor at Dendera, and local forms of Amun. Retain local revenues and day-to-day ritual autonomy while acknowledging Theban primacy in festival precedence and oracle hierarchy. Their accommodation inside the plural cosmos is what keeps provincial cults cooperative; their revenues are smaller and their titles less portable than the Theban college's."
+    },
+    {
+      "name": "pharaoh",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Rules as the god's son and steward of cosmic order, but every major act — accession, campaign, building, appointment — requires confirmation through priestly interpretation and oracle. Funds endowments, exempts temple land from taxation, and concedes judicial privileges; in return receives the legitimation without which the throne has no warrant. Leaving the arrangement would mean renouncing the basis of kingship itself; the one ruler who attempted to replace it with a different theology lost throne, city, and memory."
+    },
+    {
+      "name": "peasant_laborers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Work temple and crown fields, supply corvee crews for building and quarrying, and deliver tithes and festival obligations from village harvests. When grain allocations run short, as at the royal tomb-workers' village, they stop work and petition — the recorded strikes — but have no standing in the forums where obligations are set. Flight from villages is possible but means abandoning land, family tombs, and legal protection."
+    },
+    {
+      "name": "provincial_tax_assessors",
+      "role": "payer",
+      "secondary_role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Crown scribes and mayors responsible for delivering quota revenue to the treasury. Each new temple endowment removes land from the assessable base while the quota stays fixed, so shortfalls land on them personally. They memorialize the crown for relief but have no voice in the king-god negotiations that create the exemptions."
+    },
+    {
+      "name": "scribal_recorder_class",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Trained scribes attached to treasuries, tribunals, and temple archives who copy contracts, oracle records, endowment deeds, and ration lists. They see the full ledger of what flows in every direction and record disputes without deciding them; their analytical position comes from literacy and archival access rather than office."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides one authoritative account of cosmic order (maat) and of the king's place in it; coordinates the festival calendar, succession validation, flood-season ritual timing, and the integration of dozens of regional cults into a single workable theology, so that a large and regionally diverse population can act on shared assumptions about why authority is authority.",
+    "transfer_function": "Moves grain, livestock, labor, and land from the crown treasury and village households to temple estates and priestly colleges; moves legitimation — confirmation that royal acts are divinely willed — from the interpreting priesthoods to the throne.",
+    "absent_voices": "Village cultivators who bear the corvee and tithe burden have no seat where obligation levels are set; provincial revenue officers watching the taxable base shrink under each new endowment memorialize but are never consulted; women serve the cults (the God's Wife of Amun) yet doctrinal interpretation remains a male college's prerogative; any would-be interpreter outside the established colleges — a lay prophet, a foreign cult — is by definition illegitimate.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without priestly validation the throne loses its warrant overnight: succession becomes openly military, temple estates lose their legal basis and unravel into private holdings, the festival calendar that structures the agricultural year lapses, and regional cults drift apart or into conflict. The political economy of the valley reorganizes around whoever can coerce instead of whoever the god confirms.",
+    "founding_problem": "Before secular administrative legitimacy existed, a newly unified river-valley state needed a way to make obedience to distant authority feel like participation in cosmic order rather than submission to men — and needed a stable answer to succession, flood failure, and plague that did not depend on any single king's person.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Non-Theban sources attest it throughout: royal annals from Memphis and Heliopolis invoke the same validation need, administrative papyri record the transfers the arrangement requires, and the tomb-workers' strike minutes at Deir el-Medina show the governed party treating the obligations as real enough to halt work over. What no source outside the Theban college attests is that Amun's primacy specifically was necessary — provincial cult records accept the problem while disputing the monopoly, which corroborates the founding problem and registers dissent about its current administration."
+  },
+  "gain_flow": "amun_priesthood_thebes",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "theban_priestly_mediation_order",
+    "drift_state": {
+      "moment": "late_dynasty_twenty",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "atenist_monotheistic_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "folk_syncretistic_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "plurality_of_gods_under_amun_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "royal_legitimacy_requires_priestly_validation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

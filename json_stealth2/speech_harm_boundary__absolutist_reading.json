@@ -1,0 +1,372 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "0540c40e-e891-4c87-9711-0a5b6895eb28",
+    "created_at": "2026-08-05T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.66,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Near-Absolute Speech Protection with Narrow Categorical Exceptions (Absolutist Reading)",
+    "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dissenting_citizens",
+      "mass_media_corporations",
+      "political_provocateurs",
+      "platform_operators"
+    ],
+    "victims": [
+      "coordinated_harassment_targets",
+      "degraded_minority_communities"
+    ],
+    "vindicated_propositions": [
+      "censorship_ratchet_thesis",
+      "self_governing_deliberation_theory"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This story instantiates only the absolutist reading of the speech_harm_boundary kernel — what changes structurally if a sibling reading is instantiated instead?",
+      "resolution_mechanism": "Author the sibling files (speech_harm_boundary__harm_balancing_reading, speech_harm_boundary__dignity_reading) and compare computed classifications. The disagreement is located in the boundary-setting procedure itself: categorical refusal to weigh harm against protection, versus proportional yield to demonstrated harm, versus dignity-carved exclusion.",
+      "impact": "Sibling readings expand the unprotected category set and add remedy-bearing target seats, raising epsilon and pushing target seats' effective extraction higher. The values in this file are valid only within the absolutist instantiation; averaging across readings would violate epsilon-invariance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: this constraint is one reading of the speech-harm kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "necessity_vs_construction_ambiguity",
+      "question": "Is near-absolute protection a structural necessity of any society that keeps dissent possible (as the reading's rhetoric presents it — a quasi-natural requirement), or a constructed settlement whose shape tracks the interests of concentrated beneficiaries?",
+      "resolution_mechanism": "Comparative constitutional history: measure whether dignity-based and balancing-based jurisdictions exhibit censorship ratchets at rates validating the necessity claim, or whether they sustain dissent while providing target remedies.",
+      "impact": "If the necessity claim fails, the residual burden on targets reads as construct-sustained extraction rather than tragic coordination cost — strengthening extraction assessments and inviting false-summit-style scrutiny of the arrangement's self-presentation as inevitable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the arrangement is a natural requirement of free dissent or a constructed settlement serving identifiable interests."
+    },
+    {
+      "id": "ratchet_instability_empirical_basis",
+      "question": "Does the empirical claim beneath the reading's first foundational axiom hold — that harm-weighing regimes cannot stably bound restriction and always ratchet toward broader censorship?",
+      "resolution_mechanism": "Longitudinal restriction-rate data across categorical versus proportional speech regimes; institutional case studies of balancing systems that stabilized without collapsing into broad prohibition.",
+      "impact": "Demonstrated stabilization anywhere undermines the first axiom, feeding axiom_overriding drift and eventually flipping the engine's foreclosure computation toward the balancing sibling; continued ratchet evidence reinforces the absolutist framework's coherence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical status of the censorship-ratchet premise grounding categorical protection."
+    },
+    {
+      "id": "uncompensated_target_cost_magnitude",
+      "question": "How large and how concentrated are the harm costs borne by targets of protected expression — psychological injury, reputational damage, withdrawal from public participation — relative to the coordination benefit the arrangement delivers to speakers?",
+      "resolution_mechanism": "Survey and epidemiological measurement of participation-chilling and psychological burden among harassment-target populations; distributional analysis of who bears recurring campaign costs.",
+      "impact": "High concentrated costs on powerless seats raise those seats' computed effective extraction sharply and push per-seat classifications toward the extraction pole; diffuse small costs support the coordination framing. Resolves whether the target burden is a tolerable floor or the dominant term.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude and concentration of uncompensated costs borne by targets of protected speech."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "apex_constitutional_court",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Adjudicates every challenge to expressive regulation and every claimed speech interest. Holds the boundary at four narrow unprotected categories and reviews, usually striking down, legislative attempts to regulate harmful-but-unprotected expression. Its prestige, caseload architecture, and accumulated interpretive capital are bound to the settlement it maintains; departing from the line would mean repudiating decades of its own precedent and self-description."
+    },
+    {
+      "name": "mass_media_corporations",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Publish, editorialize, and entertain under near-total protection, with liability confined to a narrow falsity-plus-status channel. Controversial coverage converts directly to audience share. When any jurisdiction tightens expression rules, they can litigate, relocate domiciles, or shift distribution channels across borders."
+    },
+    {
+      "name": "platform_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Host and amplify user expression at planetary scale. The doctrinal shield removes most liability for harmful hosted content, while recommendation systems convert high-arousal expression into advertising revenue. They can adjust incorporation jurisdiction, moderation posture, and lobbying spend; no comparable adjustment is available to the people their amplification exposes."
+    },
+    {
+      "name": "political_provocateurs",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Build audiences and movements through deliberately transgressive expression that carries no legal consequence short of the four categories. Deplatforming or scandal relocates them to new channels rather than ending their reach. Visibility obtained this way cannot be purchased by compliant rivals at the same price."
+    },
+    {
+      "name": "dissenting_citizens",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Ordinary speakers whose criticism, whistle-blowing, and unpopular opinions ride the presumption of protection. The benefit arrives episodically, in the moments when they need it against officials or majorities. The same individuals can become targets of other speakers' protected expression, at which point their position inverts."
+    },
+    {
+      "name": "coordinated_harassment_targets",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals subjected to organized harassment campaigns, coordinated degradation, and sustained personal attacks. Almost none of the conduct reaches the narrow unprotected categories, so no remedy channel opens; courts decline the claims, and platforms decline moderation duties the law does not compel. Exit means withdrawing from public life or absorbing recurring waves of harm."
+    },
+    {
+      "name": "degraded_minority_communities",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Communities routinely subject to demeaning, personhood-denying mass expression that the boundary classifies as protected opinion. Advocacy organizations litigate and legislate and lose under the categorical rule. Members are simultaneously protected speakers drawing on the same presumption, which fragments any unified response and complicates collective exit."
+    },
+    {
+      "name": "target_community_representatives",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Advocates and jurists pressing for standing in boundary-setting deliberation and for remedy channels for the people they represent. They enter the conversation only through amicus submissions, commentary, and losing litigation; they hold no vote in the adjudicating coalition and no seat in the doctrinal conversation that sets the threshold their constituents live under."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study how sibling jurisdictions draw the same line differently — some subordinate expression to dignitary interests, some balance protection against demonstrated harm — and publish comparisons of downstream effects on dissent, targets, and institutional stability. They hold no stake beyond the analysis itself."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a bright-line, low-discretion boundary that binds the state's censoring apparatus: by making nearly all expression presumptively protected and confining exceptions to four fixed categories, it removes case-by-case judgment about permissible speech, shields unpopular dissent and opposition organizing, and gives speakers at every resource level a predictable zone of legal safety.",
+    "transfer_function": "Moves the costs of expressive conflict — psychological injury, reputational damage, social exclusion, and withdrawal from public participation caused by protected offensive speech — onto targets without compensation, while moving communicative reach and immunity from legal consequence to speakers, concentrating usable advantage among high-volume, high-resource speakers and the intermediaries that monetize them.",
+    "absent_voices": "Target community representatives and dignity-tradition jurists would object that remedy channels and expanded unprotected categories are owed to the people harmed by protected expression; they sit outside the adjudicating coalition, entering only as amici, commentators, and losing litigants. Harassed individuals themselves appear before the boundary-setters almost exclusively as anonymized case facts, never as seated voices.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Every speaker's presumption of protection, the media and platform revenue structures built on unrestricted expression, the courts' doctrinal caseload, and dissidents' operational assumptions depend on the line staying where it is. Overnight removal would trigger an immediate litigation surge, preemptive platform takedowns, chilled political speech pending new rules, and renegotiation of the entire expressive economy.",
+    "founding_problem": "The arrangement was built to solve the censorship ratchet: governments under moral panic and incumbent pressure expand speech restriction incrementally until dissent is chilled; the founding problem was how to bind the censor's hands with a line that discretion cannot erode.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Historians of sedition and censorship law — outside the beneficiary set — corroborate that the ratchet pattern the arrangement answers was real and recurrent; press-freedom monitors document continuing state pressure on expression, supporting partial liveness. Against full liveness, comparative constitutional scholarship and target-community litigation records attest that the arrangement now shelters vast volumes of commercial and provocative expression with no plausible censorship-prevention function. No single external seat attests the founding problem as simply solved or simply live; the attestation splits along the same lines as the kernel dispute itself."
+  },
+  "gain_flow": "platform_operators",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_harm_boundary__harm_balancing_reading",
+      "speech_harm_boundary__dignity_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the speech-harm boundary' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints — absolutist, harm-balancing, and dignity readings of the speech_harm_boundary kernel. Each has its own epsilon (this file authors the absolutist reading's own-lights value over the fixed referent of the standing near-absolute arrangement), its own beneficiary/victim structure, and its own boundary-setting procedure. This story links both siblings via affects_constraints; the sibling files link back. Upstream/downstream: the absolutist reading is the most entrenched instantiation and functions as the baseline against which the other two define themselves, so structural pressure flows from this file toward the siblings' operating environment even though, within any single commitment framework, its axioms logically exclude theirs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "bright_line_categorical_settlement",
+    "drift_state": {
+      "moment": "digital_amplification_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "harm_balancing_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dignity_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "harm_weighing_cannot_bound_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "offense_does_not_forfeit_protection",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "target_costs_uncompensated_by_design",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest is a constitutional order in which expressive protection operates near-absolutely: a harm override threshold set extremely high, four narrow categorical exclusions (incitement, true threats, defamation, obscenity), and everything else protected — including expression that inflicts serious psychological, reputational, and participatory harm on identifiable targets, who bear those costs without remedy. This file instantiates ONE reading of the speech_harm_boundary kernel; the harm-balancing and dignity readings are separate constraints (separate files, linked via network.affects_constraints), not positions described inside this one. KEY AGENTS (by structural relationship): apex_constitutional_court — agenda-setter (institutional/identity_locked), administers the boundary and strikes down alternative regimes; mass_media_corporations — concentrated beneficiary (powerful/arbitrage); platform_operators — concentrated beneficiary and principal receiver of the arrangement's gains (institutional/arbitrage); political_provocateurs — beneficiary (moderate/mobile); dissenting_citizens — diffuse coordination beneficiary (moderate/mobile); coordinated_harassment_targets — primary target (powerless/trapped); degraded_minority_communities — target with internal speaker heterogeneity (organized/constrained); target_community_representatives — excluded voice (moderate/constrained); comparative_constitutional_scholars — analytical observer (analytical/analytical). Claim/metric independence is preserved: claimed_type is authored as tangled_rope because the arrangement genuinely coordinates (binding the censor) while genuinely extracting (concentrated gains, uncompensated concentrated costs) — while the reading's own rhetoric presents the arrangement as a necessary and largely benign settlement. That divergence between self-presentation and structure is exactly the datum the corpus exists to take.",
+    "key_agents": [
+      "apex_constitutional_court: agenda-setter (institutional / identity_locked) — administers the boundary, defines the four unprotected categories, strikes down legislative attempts to regulate harmful-but-protected expression",
+      "mass_media_corporations: concentrated beneficiary (powerful / arbitrage) — publishes under near-total protection with liability confined to a narrow channel",
+      "platform_operators: concentrated beneficiary and principal receiver of gains (institutional / arbitrage) — monetizes amplified expression shielded from liability",
+      "political_provocateurs: beneficiary (moderate / mobile) — builds audience and movement through consequence-free transgression",
+      "dissenting_citizens: diffuse coordination beneficiary (moderate / mobile) — ordinary speakers whose dissent rides the presumption of protection",
+      "coordinated_harassment_targets: primary target (powerless / trapped) — bears organized-harassment and degradation costs with no remedy channel",
+      "degraded_minority_communities: target with internal speaker heterogeneity (organized / constrained) — simultaneously protected speakers and bearing communities of demeaning mass expression",
+      "target_community_representatives: excluded voice (moderate / constrained) — presses for standing and remedy channels from outside the adjudicating coalition",
+      "comparative_constitutional_scholars: analytical observer (analytical / analytical) — maps how sibling jurisdictions draw the same boundary differently"
+    ],
+    "logic_rationale": "Epsilon is authored at 0.38, reading-indexed: assessed by the absolutist's own lights, the arrangement is predominantly protective — the narrow categories are conceded limits, the target burden is admitted as a real but non-dominant cost, and the reading does not regard the bulk of the arrangement's operation as anyone's rent. The value is nonetheless nonzero and rising because the reading itself increasingly concedes strain: amplification economics concentrate gains while harassment industrializes the cost side. Suppression (0.62) is a raw structural property, unscaled by power or scope per the framework rule: the arrangement's persistence requires active machinery — courts declining target remedies and striking down every legislative attempt at a lower threshold — which forecloses alternative boundary regimes within this framework (though not abroad, hence accessibility_collapse at 0.48 rather than mountain-grade). Theater (0.20) is modest: the doctrine functions; the ceremonial surplus is free-speech pageantry growing slowly around a working core. Resistance (0.66) reflects sustained, losing opposition: repeated legislative attempts, academic programs, community litigation. The measurement series run on one shared grid (t=0..50 step 10) so every tracked metric is authored at every examined point; all three series end exactly at their base_properties scalars.",
+    "perspectival_gap": "Per-seat classifications diverge sharply. From the payer seats (coordinated_harassment_targets, degraded_minority_communities), the arrangement computes as extraction-heavy: concentrated uncompensated cost, no exit, no remedy, enforcement actively foreclosing relief. From the beneficiary seats it computes as coordination: a settlement that protects their speech, revenue, and reach. The agenda-setter seat computes stewardship of a hard-won settlement it cannot leave without repudiating itself (identity_locked exit — institutional identity fusion: the court has become its interpretive tradition). Same-level lateral dynamics matter here: dissenting_citizens and coordinated_harassment_targets are nominally the same population (ordinary private individuals), differentiated purely by position in a given exchange — speaking versus targeted — which flips their exit options from mobile to trapped despite identical global standing. Inter-institutionally, apex_constitutional_court and platform_operators hold the same institutional power with opposite directionalities: the court enforces the line at escalating legitimacy cost while the platforms arbitrage it across jurisdictions. Victim-class coalition potential is structurally blunted: the degraded communities' members are also beneficiaries as speakers, so the class that would coalition against the arrangement partly staffs it — which is why resistance stays losing rather than decisive.",
+    "directionality_logic": "Beneficiary declarations map to real structure: media corporations, platform operators, and provocateurs collect audience, revenue, and immunity; dissenting citizens collect episodic protection of their own speech. Victim declarations map likewise: harassment targets bear concentrated uncompensated costs with trapped exit; degraded communities bear diffuse chronic costs with constrained exit and internal heterogeneity. The derivation chain places powerful arbitrage beneficiaries near the beneficiary pole, powerless trapped targets near the full-target pole. One explicit override is authored: power_atom organized -> d 0.70. Without it, the victim declaration plus constrained exit drives the organized seat toward full-target d near 0.9, ignoring that community members are simultaneously subsidized speakers drawing on the same protection; the net structural relationship sits nearer 0.70. A second imperfection is documented but not overridden: the court's declared secondary beneficiary role would pull its derived d below its true position, since it chiefly administers and bears enforcement and legitimacy costs; no override is written because the override mechanism keys on power_atom and would also capture platform_operators (same institutional atom, opposite true relationship), producing a worse error than the one it fixes.",
+    "mandatrophy_analysis": "The founding problem — binding the censor's ratchet — is contested rather than dead: censorship pressure persists in new forms, so the arrangement has not outlived its mandate outright; but a large share of what it now protects (commercial provocation, monetized transgression) has no plausible connection to that founding problem. Classifying the arrangement as tangled_rope keeps both halves visible and prevents the two symmetrical mislabels: pure-rope labeling would erase the target extraction entirely (accepting the reading's self-presentation at face value), while snare labeling would erase the genuine anti-censorship service delivered to every eventual dissenter. Mandatrophy risk sits ahead of the story, not behind it: if platform capture consolidates further and target costs keep rising on the authored trajectories, the coordination half thins toward cover-story status and the arrangement drifts toward the snare pole — the temporal series is authored to make that gradient detectable.",
+    "kernel_context": "Kernel: speech_harm_boundary — the single persisting commitment that a polity draws a line between protected expression and unprotected harm. This file instantiates the absolutist_reading: protection near-absolute, harm override threshold extremely high, exceptions confined to four fixed categories. Siblings: harm_balancing_reading (presumptive protection yielding proportionally to demonstrated harm) and dignity_reading (protection subordinate to human dignity, personhood-denying speech categorically unprotected). The disagreement is located in the boundary-setting procedure itself: fixed categorical lines versus weighed demonstration versus dignitary status. Reading_relations are authored as forecloses toward both siblings because the absolutist premises — no weighing of harm against protection, no dignity-based carving — logically exclude both sibling procedures within any single commitment framework; a framework admitting proportional yielding or dignity carving has ceased to instantiate the absolutist reading. All three readings nonetheless coexist as live positions held by different parties in public dispute; foreclosure here is intra-framework logical structure, not real-world displacement. Epsilon in this file is reading-indexed: it assesses the standing near-absolute arrangement by the absolutist's own lights over the fixed referent, never by the siblings' standards and never averaged across readings."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

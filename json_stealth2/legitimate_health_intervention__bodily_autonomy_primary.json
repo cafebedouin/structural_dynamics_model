@@ -1,0 +1,358 @@
+{
+  "header": {
+    "constraint_id": "legitimate_health_intervention__bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-06-14",
+    "status": "ACTIVE",
+    "story_uid": "00520be4-4805-4bd0-9213-50b6fa84f2f2"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consent-Gate Legitimacy for Medical Interventions (Bodily-Autonomy-Primary Reading)",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_health_agencies",
+      "protected_high_risk_groups",
+      "institutional_employers"
+    ],
+    "victims": [
+      "coerced_medical_subjects",
+      "penalized_decliners"
+    ],
+    "vindicated_propositions": [
+      "police_powers_health_doctrine",
+      "population_outcome_legitimacy"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.21,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.29,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.62,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading (bodily_autonomy_primary) of the kernel legitimate_health_intervention — what changes structurally if a sibling reading is adopted instead?",
+      "resolution_mechanism": "Comparative read of the three sibling story files: victim sets, epsilon, and enforcement structure differ by construction. Adoption of public_health_primary removes coerced individuals from the victim set (refusal becomes externality imposition) and drops epsilon toward the low end; adoption of proportionality_reading makes epsilon disease-severity-indexed rather than fixed.",
+      "impact": "Classification of this file is stable only within this reading. Under public_health_primary the state exits the extractor seat and mandate-refusers enter it; under proportionality_reading the victim set contracts to coercion exceeding the proportionality threshold.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one-of-three readings of the legitimacy kernel; sibling adoption rewrites the victim set and epsilon."
+    },
+    {
+      "id": "disagreement_location_side_constraint_vs_weighting",
+      "question": "Is the disagreement between readings located in empirical beliefs about mandate effectiveness, or in the deontological status of bodily integrity (absolute side-constraint versus weighted consideration)?",
+      "resolution_mechanism": "Conceptual analysis: the readings diverge even under identical effectiveness data — public_health_primary and bodily_autonomy_primary can agree on every epidemiological number and still disagree on legitimacy, so the dispute survives full empirical resolution.",
+      "impact": "If located empirically, better evidence could converge the readings; if deontological (as authored), no evidence resolves it and the foreclosure relation to both siblings stands permanently.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Locates the kernel contest in deontology rather than epidemiology."
+    },
+    {
+      "id": "enforcement_severity_epsilon_variance",
+      "question": "How much of the measured epsilon is driven by enforcement severity — termination-level employment leverage versus accommodation-first requirements versus criminalized noncompliance — which varies across jurisdictions and periods?",
+      "resolution_mechanism": "Cross-jurisdiction comparison of penalty schedules against measured refusal rates and welfare losses; within-jurisdiction before/after analysis of enforcement escalation episodes.",
+      "impact": "At termination-level leverage epsilon sits near the authored 0.68; under accommodation-first regimes epsilon falls materially, potentially moving computed seat classifications toward rope territory for affected seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Epsilon varies with enforcement severity across jurisdictions and enforcement episodes."
+    },
+    {
+      "id": "coercion_separability_from_uptake",
+      "question": "Is high intervention uptake achievable through consent-compatible means (access expansion, information campaigns, paid incentives, accommodation) such that the coercive component is separable surplus rather than load-bearing?",
+      "resolution_mechanism": "Natural experiments: jurisdictions achieving comparable uptake voluntarily; incentive-only programs; uptake deltas when mandates convert to testing-and-accommodation regimes.",
+      "impact": "If separable, the coercive layer is extractive surplus riding a coordinable function, sharpening the extraction reading at the margin; if inseparable, part of the measured extraction is the irreducible price of the coordination itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coercion component is separable from the uptake it produces."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A contested kernel — what makes a medical intervention legitimate — decomposes into three structurally distinct readings. This story instantiates the bodily-autonomy-primary reading: informed consent is a necessary condition of legitimacy, and state coercion violates bodily integrity regardless of public benefit. The epsilon referent is the standing arrangement under contest — the actual regime of state-coerced medical intervention (employment-linked mandates, school-entry requirements, emergency treatment powers) — assessed by this reading's own lights, under which every coerced submission is a rights violation and the arrangement reads as substantially extractive. Sibling readings instantiate different constraints: public_health_primary reads refusal as externality imposition and coercion as legitimate when morbidity falls (no coerced-victim set, low epsilon); proportionality_reading weights autonomy against threat severity (epsilon scaling with disease characteristics). Those are separate files linked through network.affects_constraints; their epsilon values differ because their victim sets differ, not because one observable is being measured two ways.\n\nKEY AGENTS (by structural relationship):\n- public_health_agencies: Agenda-setter and primary beneficiary (institutional/mobile) — administers and enforces, collects compliance\n- coerced_medical_subjects: Primary target (moderate/trapped) — submits under penalty\n- penalized_decliners: Secondary target (moderate/constrained) — refuses and absorbs penalties\n- protected_high_risk_groups: Beneficiary (organized/trapped) — collects indirect protection\n- institutional_employers: Secondary beneficiary (powerful/arbitrage) — collects workforce uniformity\n- medical_professional_bodies: Dual-positioned beneficiary and target (organized/identity_locked)\n- civil_liberties_advocates: Excluded voice (organized/mobile)\n- constitutional_courts: Observer (institutional/analytical)",
+    "key_agents": [
+      "public_health_agencies: agenda-setter and primary beneficiary (institutional/mobile) — designs and enforces mandate regimes, collects compliance and outcome metrics",
+      "coerced_medical_subjects: primary target (moderate/trapped) — would decline but submits under employment or access penalty",
+      "penalized_decliners: secondary target (moderate/constrained) — refuses and absorbs job loss, exclusion, and sanction",
+      "protected_high_risk_groups: beneficiary (organized/trapped) — collects indirect protection, cannot exit risk status",
+      "institutional_employers: secondary beneficiary (powerful/arbitrage) — collects workforce uniformity and liability reduction, can relocate or seek carve-outs",
+      "medical_professional_bodies: dual-positioned beneficiary and target (organized/identity_locked) — endorses the framework while their members are its most mandated workforce",
+      "civil_liberties_advocates: excluded voice (organized/mobile) — argues against coercion-based design, heard mainly through after-the-fact litigation",
+      "constitutional_courts: observer (institutional/analytical) — adjudicates the legitimacy line case by case"
+    ],
+    "logic_rationale": "Extraction is high (0.68 at interval end) because, from this reading's seat, each coerced submission transfers decision authority over bodily integrity wholesale to administrative bodies, with the transfer enforced by livelihood and access leverage rather than compensated. Suppression (0.62) is predominantly structural: exit is priced through employment termination, school exclusion, and venue access denial, not through criminalized dissent in most jurisdictions. Theater is moderate-low (0.25): the epidemiological function is real and measurable, but symbolic enforcement activity swells during crisis tails and decays afterward. Accessibility collapse is moderate (0.45): exemptions, testing alternatives, accommodation pathways, and jurisdictional arbitrage persist, but they collapse partially wherever employment or enrollment is directly tied. Resistance is substantial (0.60): sustained litigation, protest movements, exemption campaigns, and electoral backlash meet the arrangement continuously. The temporal series run on one shared grid (points 0, 5, 10, 15, 20, 25) for all three metrics. The suppression_requirement series is authored deliberately because enforcement-capacity change is the dynamic this story tracks: a slow ratchet (0.38 to 0.48) followed by a sharp crisis-era build-up (0.74) and partial post-crisis relaxation (0.62) — note the post-relaxation floor sits well above the pre-crisis baseline, a ratchet signature. Extractiveness accumulates monotonically across the cycle: each enforcement episode leaves the compliance architecture more entrenched, so the cyclical pattern is not noise but a rectifying ratchet — oscillation with an upward-drifting mean.",
+    "perspectival_gap": "The payer seats and the agenda-setter seat compute differently by construction. From the public_health_agencies seat the arrangement is a functioning instrument it built, staffed, and defends — coordination with costs borne elsewhere. From the coerced_medical_subjects seat the identical structure operates as uncompensated seizure of bodily decision authority with no viable exit. Penalized_decliners experience a third variant: purchasable dissent, where the constraint prices rather than forbids refusal. Medical_professional_bodies straddle the line — endorsing the framework that disciplines their own dissenting members. Constitutional_courts see a bounded reasonableness question rather than a rights-absolutes question. The engine computes these per-seat classifications from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation: public_health_agencies (agenda-setter, collects compliance directly) and institutional_employers (arbitrage-grade exit) sit near the beneficiary end of d; protected_high_risk_groups are beneficiaries but trapped in their risk status, pulling their d above a pure beneficiary's. Coerced_medical_subjects are trapped targets — trapped exit pushes them toward the full-target end of d, so effective extraction amplifies for them beyond the base rate. Penalized_decliners are constrained rather than trapped: their dissent is expensive but possible, sitting slightly below the trapped target. Medical_professional_bodies derive beneficiary-side d from their endorsement role, but their identity_locked exit and their members' mandated status place their lived position mid-range — the derivation captures the institutional role, the commentary records the split. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness scales, and the national scope of the enforcement architecture raises effective extraction modestly through verification difficulty.",
+    "mandatrophy_analysis": "The founding problem — recurrent epidemics exposing a collective-action failure in voluntary uptake — is live, so no mandatrophy is declared and the mismatch consumer should find status=live paired with verdict=world_rearranges, producing no zombie flag. The tangled-rope classification guards against both mislabeling errors this domain invites: calling the arrangement a snare erases the genuine coordination function (disease-control externalities) that even this reading acknowledges as descriptive fact — the reading disputes coercion's legitimacy, not the existence of the problem; calling it a rope erases the coerced victim set this reading places at the center. The theater_ratio stays below piton range because the enforcement activity retains functional content; the arrangement is maintained by active enforcement and constituency interest, not inertia.",
+    "kernel_context": "Kernel: legitimate_health_intervention — the standing commitment separating legitimate from illegitimate medical intervention. This file instantiates the bodily_autonomy_primary reading, which treats informed consent as an absolute gate on legitimacy. Siblings: public_health_primary (legitimacy derived from population-level morbidity reduction; refusal read as externality imposition) and proportionality_reading (autonomy and population harm weighed by disease characteristics). The disagreement is located in the deontological status of bodily integrity: side-constraint versus weighted consideration. Because this reading's core premise licenses no exception for public benefit, it forecloses both siblings within any single commitment framework; the siblings persist as separate files with their own victim sets and epsilon values."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legitimate_health_intervention__public_health_primary",
+      "legitimate_health_intervention__proportionality_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'legitimate health intervention' decomposes into three structurally distinct constraints sharing one kernel. This member (bodily_autonomy_primary) carries the widest victim set (all coerced submissions) and fixed high epsilon; public_health_primary carries no coerced-victim set and epsilon indexed to outcome data; proportionality_reading carries a threshold-contingent victim set and severity-indexed epsilon. The upstream/downstream structure runs from public_health_primary (highest empirical confidence in its outcome claims) toward this reading, which it cites as the foil that defines what is being rejected. Each file links the other two via affects_constraints; the epsilon differences reflect different victim sets, not different observables over one constraint."
+  },
+  "stakeholders": [
+    {
+      "name": "public_health_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Design and enforce mandate regimes through employment, education, and access rules; collect compliance data and outcome metrics that justify budget and statutory standing. They can shift instruments — mandate to incentive to education campaign — as political conditions change, and enforcement success compounds their administrative capacity."
+    },
+    {
+      "name": "coerced_medical_subjects",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Individuals who would decline an intervention but submit under penalty — threatened job loss, school exclusion, or benefit denial. They bear the intervention's risks and the loss of decision authority over their own bodies; exiting means forfeiting livelihood or education, which for most is not a real option."
+    },
+    {
+      "name": "penalized_decliners",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Individuals who refuse and absorb the scheduled penalty — terminated jobs, restricted venues and travel, social sanction. Some reorganize life around refusal through remote work or home schooling; the penalty schedule effectively prices their dissent rather than forbidding it, and the price falls hardest on those with the least savings."
+    },
+    {
+      "name": "protected_high_risk_groups",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Immunocompromised people, transplant recipients, and elderly people with comorbidities who rely on population-level uptake for indirect protection they cannot obtain directly. Advocacy organizations speak for them, but individual members cannot exit their risk status and bear residual harm whenever uptake falls."
+    },
+    {
+      "name": "institutional_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hospital systems, large corporations, and universities that gain uniform workforce health status, reduced outbreak liability, and predictable staffing. When compliance costs bite they can relocate operations, negotiate carve-outs, or lobby for exemption categories — exit levers unavailable to their employees."
+    },
+    {
+      "name": "medical_professional_bodies",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Licensing boards and professional associations that endorse mandate frameworks and lend them clinical legitimacy, while their members constitute the most heavily mandated workforce in the economy. Dissenting clinicians face discipline and referral networks close ranks; professional identity is fused with the endorsement, making internal criticism career-costly and exit from the profession unthinkable for most."
+    },
+    {
+      "name": "civil_liberties_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Constitutional litigators and rights organizations who argue against coercion-based design on bodily-integrity and due-process grounds. They are consulted late or not at all during emergency rulemaking, gaining standing chiefly through after-the-fact litigation rather than design-stage voice in the rooms where mandates are drafted."
+    },
+    {
+      "name": "constitutional_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Adjudicate where the legitimacy line falls — reviewing whether specific mandates exceed lawful police powers under reasonableness standards. They shape the constraint's boundaries case by case without administering it, and their rulings feed back into agency drafting practices."
+    },
+    {
+      "name": "bioethics_scholars",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Produce the conceptual vocabulary both sides deploy — autonomy, solidarity, proportionality, the limits of state power over the body. They map the disagreement rather than administer it, and their framing choices determine which considerations count in later judicial and legislative argument."
+    }
+  ],
+  "gain_flow": "public_health_agencies",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Solves the free-rider problem in population-level disease control: individual decisions about accepting medical interventions generate transmission externalities, and coordinated high uptake protects members who cannot be protected directly. Mandates produce uptake at scale and speed that voluntary campaigns may not reach during acute outbreaks.",
+    "transfer_function": "Moves decision authority over one's own medical care from individuals to administrative bodies, enforced through employment, education, and access leverage; moves the intervention's risk-bearing onto coerced individuals while distributing protection benefits across the population and compliance-capacity gains to enforcing institutions.",
+    "absent_voices": "The coerced appear in design processes only as aggregate compliance statistics, not as seated participants; conscientious objectors and disability-rights advocates are largely absent from emergency rulemaking; civil liberties counsel enters after rules are fixed; and future generations who inherit precedent-setting coercion powers have no seat at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the coercive enforcement machinery vanished overnight, uptake would fall among hesitant populations, transmission risk would shift onto the unprotected and the high-risk, institutions would rebuild access rules around testing and accommodation, and the state would lose a demonstrated compliance instrument — the health-policy landscape would reorganize around whatever voluntary-and-incentive architecture replaced it. Whether that rearrangement counts as restoration or harm is precisely what the sibling readings dispute.",
+    "founding_problem": "Recurrent epidemic disease exposed a collective-action failure: voluntary uptake left protective gaps precisely where vulnerability concentrated, and institutions lacked any lawful instrument to secure the uptake levels that indirect protection requires.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Independent academic epidemiology, historical pre-mandate mortality records, and insurer actuarial data attest that the founding problem was and remains real — these sources sit outside the enforcing agencies. What no outside source attests is that coercion is the only or best remaining solution to it; that claim is disputed by voluntary-uptake jurisdictions and by the civil-liberties bar, and the dispute is live in the literature."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "informed_consent_absolute_gate",
+    "drift_state": {
+      "moment": "contemporary_post_emergency_powers_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_integrity_inviolable_without_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "public_benefit_cannot_purchase_intervention_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

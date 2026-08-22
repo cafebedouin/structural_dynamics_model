@@ -1,0 +1,712 @@
+{
+  "header": {
+    "constraint_id": "lausanne_minority_protections__restrictive_reading",
+    "version": "1.0",
+    "generated_date": "2026-07-15",
+    "status": "ACTIVE",
+    "story_uid": "fcc405a5-954b-4e87-9941-c8f013d14f4e"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.72,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Restrictive Reading of the Lausanne Minority Protections (Individual Worship Only)",
+    "topic_domain": "legal/political/religious",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "turkish_state_apparatus",
+      "muslim_majority_institutions"
+    ],
+    "victims": [
+      "ecumenical_patriarchate",
+      "greek_orthodox_foundations",
+      "armenian_apostolic_institutions",
+      "turkish_jewish_community",
+      "orthodox_clergy_candidates",
+      "istanbul_minority_residents"
+    ],
+    "vindicated_propositions": [
+      "domestic_jurisdiction_doctrine",
+      "lausanne_reciprocity_principle"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "turkish_state_apparatus",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Administers the general legal regime under which all foundations, private schools, and religious institutions operate. Determines which parts of the 1923 treaty are implemented domestically, registers and audits minority foundations through the General Directorate of Foundations, sets citizenship and appointment conditions for religious leaders, and receives custody of assets when minority foundations fail its tests. It can reinterpret, relax, or tighten the rules at will and bears none of the costs it imposes."
+    },
+    {
+      "name": "ecumenical_patriarchate",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "The historic center of Orthodox Christianity, resident in Istanbul since before the republic. Recognized domestically only as head of the local Greek minority rather than as an institution with legal personality; its theological academy on Heybeliada has been closed since 1971 under private-school law; candidates for its offices must hold Turkish citizenship; it cannot hold property in its own name. Relocating would sever the see from its city and history; staying means continued inability to form clergy or secure its assets."
+    },
+    {
+      "name": "greek_orthodox_foundations",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Community vakıfs running churches, schools, and charities in Istanbul and on the Princes' Islands. Required in 1936 to declare their assets on state forms; courts later ruled that anything acquired after those declarations reverted to the state, and hundreds of properties were transferred to the Treasury or to state-directed endowments. Partial returns followed a 2008 law and a 2010 European court ruling, but the boards remain subordinate to a directorate they do not control, and their schools face closure as enrollment collapses."
+    },
+    {
+      "name": "armenian_apostolic_institutions",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The Constantinople Armenian Patriarchate and its network of churches, hospitals, and schools. Bore a disproportionate share of the 1942 capital tax, lost merchants and professionals to deportation-labor and emigration, and manages its remaining endowments under the same foundation regime that has invalidated later acquisitions. It has no functioning theological seminary and forms clergy informally or abroad."
+    },
+    {
+      "name": "turkish_jewish_community",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "A small recognized community centered in Istanbul, with synagogues, a chief rabbinate, and schools. Emigration to Israel after 1948 and after each successive crisis shrank its base; communal buildings were consolidated into a foundation under state supervision; its schools operate under the private-school regime with minority-school status that restricts enrollment to registered community members."
+    },
+    {
+      "name": "orthodox_clergy_candidates",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Young Orthodox men who would staff the patriarchate and its parishes. With the Heybeliada academy shut, formation requires study abroad, yet service at home requires Turkish citizenship and completion of obligations that complicate foreign ordination paths. Most who leave for formation do not return, leaving parishes served by aging priests."
+    },
+    {
+      "name": "istanbul_minority_residents",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Individual members of the Greek, Armenian, and Jewish communities. They may attend services, observe holidays, and send children to community schools — the band of rights the state concedes — while the institutions around them lose property, schools, and leadership. Many have emigrated; those who remain navigate a shrinking institutional landscape."
+    },
+    {
+      "name": "muslim_majority_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Mosques, Qur'an schools, and pious foundations administered through state directorates that fund them, appoint their officials, and grant them statutory legal personality. They compete for buildings, students, and charitable income without the disabilities applied to minority counterparts, and state-directed endowments have received transferred minority properties into their portfolio."
+    },
+    {
+      "name": "hellenic_republic",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Neighbor state and treaty signatory that raises minority grievances bilaterally and in European fora. It stands outside the domestic conversation that fixes the treaty's meaning — Ankara holds interpretation to be an internal matter — so its objections register only as diplomatic friction, reciprocal complaints about its own Muslim minority, and litigation support for minority foundations."
+    },
+    {
+      "name": "european_human_rights_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "The Strasbourg court and Council of Europe monitoring organs that hear property and education cases brought by minority foundations. Their judgments have ordered returns and compensation, and accession conditionality produced the 2008 foundation law, but implementation is partial and slow, and they cannot reach the interpretive premise that reserves institutional life to domestic law."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Channels all foundation governance, religious-personnel policy, and minority schooling through a single national legal-administrative framework: one registry of pious foundations, one curriculum inspectorate, one set of citizenship conditions for religious office, and a single point of administrative control over the civil status of every religious institution in the territory.",
+    "transfer_function": "Moves institutional assets (real property, endowment income), personnel authority (who may be ordained, appointed, and teach), and legal recognition from minority religious communities to the state apparatus and, secondarily, to majority-community institutions operating under state supervision.",
+    "absent_voices": "The minority communities appear inside the conversation only as petitioners before courts that apply the restrictive premise as settled. Structurally absent are the pre-1923 institutional leadership whose continuity the expansive reading would restore, the guarantor powers whose supervisory role the treaty text names but whose interpretive authority Ankara rejects, and the departed and deported community members whose properties were liquidated without them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the restrictive arrangement vanished overnight — if institutional autonomy, foundation property, and theological education were suddenly guaranteed — minority institutions would reorganize within years: the Heybeliada academy would reopen, property claims would resurface across the foundation registry, legal personality would be asserted, and clergy pipelines would rebuild. The state's control architecture over religious institutional life would have to be dismantled and rebuilt on a different premise.",
+    "founding_problem": "Securing the new republic's sovereignty over all religious institutional life within its territory: after the Ottoman millet system and the population exchange, minority institutions — above all a patriarchate with universal pretensions and ties to a neighboring state — were classed as potential autonomous power centers aligned with external patrons, and the restrictive reading reserved their property, schools, and leadership formation to general national law.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The state attests the problem is live, citing national unity and the security framing in court rulings and interior-ministry statements. Corroboration from outside the benefiting parties runs the other way: European Court of Human Rights judgments in foundation-property and education cases, European Commission progress reports, and US State Department religious-freedom reports all document that the 1920s threat context has receded while the arrangement persists as institutional foreclosure — external judicial and monitoring bodies attest the protective justification no longer fits the facts, and no source outside the beneficiary set attests that it does."
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.82,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.84,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.83,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.85,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.86,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 70,
+      "value": 0.8,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72,
+      "basis": "observed"
+    }
+  ],
+  "coercion_grid": {
+    "t0": 0,
+    "tn": 100,
+    "points": [
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.7,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.75,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "accessibility_collapse",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.5,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.8,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.5,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.3,
+        "basis": "observed"
+      },
+      {
+        "metric": "stakes_inflation",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.35,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.72,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.6,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "suppression",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.25,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 0,
+        "value": 0.5,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "structural",
+        "time_point": 100,
+        "value": 0.65,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 0,
+        "value": 0.5,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "organizational",
+        "time_point": 100,
+        "value": 0.55,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 0,
+        "value": 0.4,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "class",
+        "time_point": 100,
+        "value": 0.45,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 0,
+        "value": 0.2,
+        "basis": "observed"
+      },
+      {
+        "metric": "resistance",
+        "level": "individual",
+        "time_point": 100,
+        "value": 0.25,
+        "basis": "observed"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "The restrictive reading of the 1923 Treaty of Lausanne holds that Articles 37-45 protect only the individual religious exercise of Turkey's non-Muslim minorities — worship, personal observance, narrowly scoped confessional schooling — while institutional autonomy, foundation property, and clergy formation fall outside the treaty and remain governed by ordinary Turkish law. Operationally this arrangement has meant denial of legal personality to the Ecumenical Patriarchate, closure of its theological academy since 1971, invalidation of foundation property acquired after the 1936 declarations, citizenship conditions on religious office, and a century of asset transfers executed through courts and the General Directorate of Foundations.\n\nCONSTRAINT-FAMILY NOTE: the colloquial label 'Lausanne minority protections' decomposes into three structurally distinct claims (epsilon-invariance decomposition). This story authors the RESTRICTIVE instantiation, whose epsilon (0.74) is indexed to the standing arrangement of institutional subordination as this reading constitutes it. The expansive sibling (lausanne_minority_protections__expansive_reading) reads the same articles as guaranteeing functional continuity of pre-1923 religious governance and would largely empty the victim set; the guarantor sibling (lausanne_minority_protections__guarantor_reading) leaves substantive scope aside and relocates enforcement to international supervision. The three readings share a referent and diverge in epsilon and victim structure, which is why they are separate files linked by network.affects_constraints.\n\nKEY AGENTS (by structural relationship):\n- turkish_state_apparatus: agenda-setter and primary beneficiary (institutional/arbitrage) — administers the general-law regime, captures forfeited assets, controls the interpretive premise\n- ecumenical_patriarchate: primary target (organized/identity_locked) — denied legal personality and clergy formation; exit would dissolve the see\n- greek_orthodox_foundations: primary target (moderate/trapped) — asset seizures under the declaration-invalidation mechanism\n- armenian_apostolic_institutions: target (moderate/trapped)\n- turkish_jewish_community: target (moderate/constrained)\n- orthodox_clergy_candidates: target (powerless/constrained) — educational foreclosure\n- istanbul_minority_residents: dual-positioned (powerless/constrained) — individual worship protected, institutional base eroded\n- muslim_majority_institutions: secondary beneficiary (institutional/mobile) — relative advantage under the same regime\n- hellenic_republic: excluded advocate (institutional/arbitrage) — outside the domestic interpretive conversation\n- european_human_rights_bodies: analytical observer (institutional/analytical)",
+    "key_agents": [
+      "turkish_state_apparatus: agenda-setter and primary beneficiary (institutional/arbitrage) — administers the general-law regime, captures forfeited assets, controls the interpretive premise",
+      "ecumenical_patriarchate: primary target (organized/identity_locked) — denied legal personality and clergy formation; relocation would dissolve the see",
+      "greek_orthodox_foundations: primary target (moderate/trapped) — property losses via the 1936-declaration invalidation mechanism; partial post-2008 restitution",
+      "armenian_apostolic_institutions: target (moderate/trapped) — capital-tax losses, endowment subordination, no seminary",
+      "turkish_jewish_community: target (moderate/constrained) — demographic shrinkage, supervised communal foundation",
+      "orthodox_clergy_candidates: target (powerless/constrained) — formation abroad, citizenship barrier to service",
+      "istanbul_minority_residents: dual-positioned (powerless/constrained) — protected individual worship band, eroding institutional environment",
+      "muslim_majority_institutions: secondary beneficiary (institutional/mobile) — funded, statutorily recognized, advantaged under the same regime",
+      "hellenic_republic: excluded advocate (institutional/arbitrage) — barred from the interpretive conversation, escalates externally",
+      "european_human_rights_bodies: analytical observer (institutional/analytical) — litigation and conditionality, partial remedies"
+    ],
+    "logic_rationale": "Extraction is high (0.74 at interval end) because the transfers are decoupled from any service rendered: property moved to the Treasury and state endowments through a declaratory trap, clergy formation was terminated outright, and legal personality is withheld while equivalent majority institutions receive it by statute. Suppression (0.72) is structural — judicial invalidation, administrative refusal, citizenship gating — not interpersonal coercion; it is the raw unscaled property, and the engine scales only extractiveness by directionality and scope. Theater (0.40) reflects a real civil-administrative function coexisting with performative equality rhetoric ('one law for all') and restitutions staged as resolution while the core premise stands. Accessibility collapse (0.62): within-system alternatives are effectively closed — no pathway to personality or property security exists short of leaving the religious category — while external exit (emigration) exists but destroys the institution, so collapse is high but not mountain-grade. Resistance (0.55): five decades of litigation, EU conditionality, and guarantor diplomacy yield partial concessions without ever touching the interpretive premise. The measurement series run on ONE SHARED GRID (t=0..100 step 10) with all three metrics authored at every point. The arc is rise-peak-partial-relaxation-rehardening, not cyclical: enforcement built through the capital-tax and pogrom-expulsion era, peaked at the academy closure and 1974 rulings, partially demobilized under EU conditionality, and re-tightened recently. suppression_requirement is authored because enforcement-capacity change IS the traced dynamic here. The coercion grid is included because level-differentiated coercion is this reading's very content: individual-level suppression stays low (0.20 to 0.25) while organizational-level suppression climbs (0.55 to 0.72) — the protected individual band and the coerced institutional layer are the same arrangement viewed at two levels. Individual- and class-level grid values are conservative judgments where the documentary record is thinner than at the organizational and structural levels (see omega coercion_grid_level_resolution).",
+    "perspectival_gap": "The agenda-setter seat and the payer seats should compute sharply different types from identical structural data. From the state's position the arrangement is neutral domestic legality it built and defends — general law applied uniformly, with the treaty honored 'within its proper scope.' From the trapped and identity-locked minority seats the same structure operates as enforced dispossession: the declaratory trap, the closed academy, the personality denial. Among same-status minority seats, exit options differentiate experience: the patriarchate is identity-locked (relocation equals dissolution), the foundations are trapped (immovable assets, collapsing constituencies), the Jewish community is constrained-but-mobile-leaning (emigration viable, institutions not portable). Istanbul minority residents are genuinely dual-positioned — near-beneficiaries of the narrow protected band, payers through the erosion of everything around it — so their computed seat should sit near symmetric while their institutions sit near full target.",
+    "directionality_logic": "Beneficiary declarations drive low directionality: the state apparatus collects forfeited assets, personnel control, and the interpretive monopoly, and its arbitrage-grade exit (it writes the rules) anchors it near the full-beneficiary end; muslim_majority_institutions gain relatively under the same regime at low-to-moderate d. Victim declarations drive high directionality: the patriarchate's identity lock and the foundations' trapped assets push them toward the full-target end, amplified by national scope making verification of enforcement harder; clergy candidates and residents bear high d, with residents moderated toward mid-range by the protected individual band. The excluded and observer seats (hellenic_republic, european_human_rights_bodies) neither collect nor pay and carry analytical or arbitrage positions outside the domestic extraction loop. No directionality overrides were needed: the beneficiary/victim declarations plus exit atoms produce the correct spread without correction.",
+    "mandatrophy_analysis": "The arrangement presents as ordinary domestic legality — 'one law for all' — which is precisely the cover story that invites rope misclassification. The mandatrophy lens blocks it three ways. First, the founding problem (containment of externally aligned minority power centers in the 1920s) has substantially receded, yet the arrangement persists: if it were a piton, no concentrated capturer would profit and maintenance would be inertial theater; here the state apparatus demonstrably accrues the gains (gain_flow names that seat) and actively defends the premise, which is capture, not neglect. Second, it is not a scaffold: there is no sunset and no transition logic — the 2008 reforms were framed as completion, not as a bridge to self-government. Third, the partial restitutions must not be read as the arrangement winding down: the receipt surface (named capturer, prohibitive fixing cost) shows a captured constraint that concedes assets tactically while holding the interpretive premise, which keeps it snare-flavored under either cost class. The R5 mismatch check (founding_problem_status contested x disappearance_verdict world_rearranges) flags the arrangement as one whose world depends on it while its own justification is disputed — the signature of a live capture, not a resolved mandate.",
+    "kernel_context": "This story instantiates the restrictive_reading of the lausanne_minority_protections kernel — the Treaty of Lausanne Articles 37-45 as a stabilized commitment text. Sibling readings: expansive_reading (functional continuity of pre-1923 religious governance, including institutional self-administration, property rights, and clergy formation via theological schools) and guarantor_reading (internationally supervised obligations enforceable through guarantor-state diplomacy and European human rights mechanisms). The disagreement with the expansive sibling is located in the scope of Articles 40-42 — whether 'institutions,' 'schools,' and 'charitable establishments' confer corporate rights or merely tolerate individual activity; the disagreement with the guarantor sibling is located in the locus of interpretive and enforcement authority. This file authors only the restrictive instantiation; the siblings are separate constraints with their own epsilon values and victim sets."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_membership",
+      "question": "This constraint is one reading of the lausanne_minority_protections kernel — the restrictive_reading. What would change structurally if a sibling reading were adopted by the interpreting authority?",
+      "resolution_mechanism": "Adoption of a different reading by the operative interpreter (Turkish courts and administration, or a negotiated international protocol): the expansive sibling moves minority institutions out of the victim set and converts the arrangement toward a coordination profile; the guarantor sibling relocates enforcement to international supervision without changing substantive scope.",
+      "impact": "The same treaty text supports a snare profile under this reading and materially different profiles under the siblings; cross-reading comparison is valid only at the kernel level, never by merging the files.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-membership committer structure: this story is the restrictive reading; siblings are expansive_reading and guarantor_reading."
+    },
+    {
+      "id": "treaty_scope_disagreement_location",
+      "question": "Where exactly is the reading-contest located in the treaty text — do Articles 40-42 ('establish, manage and control... charitable, religious and social institutions'; schools; language) confer corporate rights on minority institutions, or only permit individual-level activity?",
+      "resolution_mechanism": "Authoritative interpretation: travaux préparatoires analysis, a treaty-body reading, or a negotiated protocol fixing the scope of Articles 40-42.",
+      "impact": "If the corporate-rights reading prevails, the victim set empties and the arrangement's extraction collapses toward coordination cost; if the individual-only reading prevails, this story's structure stands as authored.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The specific textual locus (Articles 40-42) on which the restrictive and expansive readings diverge."
+    },
+    {
+      "id": "reciprocity_validity",
+      "question": "Does the reciprocity principle — conditioning minority treatment on Greece's treatment of its own Muslim minority — have any legal basis under the Lausanne treaty, or is it a unilateral domestic invention invoked as cover?",
+      "resolution_mechanism": "Comparative treaty-law analysis and drafting history: Lausanne's minority clauses were not drafted as conditional on reciprocal treatment, and the treaty contains no reciprocity reservation; test whether any authoritative source sustains the conditionality claim.",
+      "impact": "If reciprocity is legally baseless, the restrictive reading loses its principal external justification and stands exposed as unilateral domestic preference, strengthening the extraction reading of its persistence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of the reciprocity justification invoked for the restrictive scope."
+    },
+    {
+      "id": "depletion_vs_enforcement",
+      "question": "Is the suppression measured at the interval end sustained by active enforcement machinery, or by prior depletion — a century of emigration that shrank the Istanbul Greek community from over 100,000 to under 2,000 — such that the machinery now guards an emptied field?",
+      "resolution_mechanism": "Counterfactual relaxation analysis: if enforcement ceased entirely, would institutions regenerate (clergy pipeline, school enrollment, property claims)? Demographic reconstruction of the affected communities, 1923-2023.",
+      "impact": "If depletion dominates, the current suppression scalar overstates ongoing coercion and understates completed extraction; the arrangement's present phase is closer to harvesting residue than active repression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether end-state suppression reflects live enforcement or depleted targets."
+    },
+    {
+      "id": "sovereignty_frame_durability",
+      "question": "Will the domestic-jurisdiction frame survive sustained European conditionality and litigation, or is the recent re-tightening the frame's last consolidation?",
+      "resolution_mechanism": "Political-track observation: EU accession status, Council of Europe implementation proceedings, and whether any future government trades the interpretive premise for external alignment.",
+      "impact": "If the frame breaks, the arrangement converts toward the guarantor sibling's enforcement structure and this story's classification becomes historical; if it holds, the snare profile persists indefinitely.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Durability of the domestic-jurisdiction frame under external pressure — a function of political will, not evidence alone."
+    },
+    {
+      "id": "coercion_grid_level_resolution",
+      "question": "How reliably do the individual- and class-level coercion-grid values track lived experience, given that the documentary record concentrates at the organizational and structural levels?",
+      "resolution_mechanism": "Oral-history and community-survey data on everyday religious life among Istanbul minorities across the interval, particularly 1942-1964, to test whether individual-level pressure spiked above the conservative authored values.",
+      "impact": "If individual-level pressure was materially higher than authored, the level gradient flattens and the arrangement looks less like a protected-individual-band bargain and more like uniformly distributed coercion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Uncertainty in the leveled grid's individual and class rows relative to its organizational and structural rows."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "lausanne_minority_protections__expansive_reading",
+      "lausanne_minority_protections__guarantor_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'Lausanne minority protections' (epsilon-invariance principle). The label conflates two structurally distinct axes: substantive scope (do the articles guarantee institutional continuity, or only individual worship?) and enforcement locus (domestic interpretation, or internationally supervised obligation?). This file authors the restrictive instantiation on the scope axis with the domestic locus assumed; the expansive sibling shares the referent but authors a near-zero-extraction institutional-continuity constraint; the guarantor sibling brackets scope and authors an enforcement-locus constraint. Upstream/downstream: the expansive reading is cited as the treaty's evident meaning by advocates, while this restrictive reading is the operative official one — each sibling file documents the epsilon divergence from its own seat. All three files link one another via network.affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_worship_with_domestic_institutional_reserve",
+    "drift_state": {
+      "moment": "contemporary_echr_eu_conditionality_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "guarantor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "worship_rights_exhaust_lausanne_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "minority_institutional_autonomy_threatens_sovereignty",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "turkish_state_apparatus",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

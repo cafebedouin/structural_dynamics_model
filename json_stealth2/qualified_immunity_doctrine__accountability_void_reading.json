@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity_doctrine__accountability_void_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "a5ae7bfb-84be-4d34-b2d1-9424664e3392"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.8,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Qualified Immunity Doctrine — Accountability-Void Reading",
+    "topic_domain": "legal/constitutional/civil_rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "police_unions",
+      "municipal_governments"
+    ],
+    "victims": [
+      "constitutional_violation_victims"
+    ],
+    "vindicated_propositions": [
+      "official_immunity_common_law_tradition",
+      "good_faith_official_conduct_presumption"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 56
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.72,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.78,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 48,
+      "value": 0.84,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 56,
+      "value": 0.88,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 48,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 56,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.64,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.7,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 48,
+      "value": 0.76,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 56,
+      "value": 0.8,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is the accountability_void_reading of the qualified_immunity_doctrine kernel: which structural facts would change if a sibling reading (protective_scaffold_reading, constitutional_fidelity_reading) were instantiated instead?",
+      "resolution_mechanism": "Compile the sibling stories and compare victim-set membership, epsilon_base, and computed per-seat types; convergence on victim presence across readings would indicate the delta is framing rather than structure.",
+      "impact": "Under the scaffold reading the victim set thins (only bad-faith conduct counts as unprotected), epsilon falls toward coordination-cost levels, and the computed type shifts toward rope/scaffold; under the fidelity reading the defect is located in authorization rather than operative transfer, changing which remedies (abolition versus recalibration) follow.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame contest: one kernel, three readings with divergent victim sets and epsilon."
+    },
+    {
+      "id": "deterrence_and_frivolous_suit_empirics",
+      "question": "Does eliminating or narrowing the doctrine measurably increase non-meritorious litigation against officers, and does retaining it measurably reduce officer misconduct?",
+      "resolution_mechanism": "Difference-in-differences across jurisdictions that statutorily replaced the doctrine (Colorado 2020, New Mexico 2021) against matched controls: filing volumes, dismissal rates, settlement values, and misconduct indicators.",
+      "impact": "If filings stay flat and misconduct indicators fall, the filtering justification weakens and the measured transfer stands closer to pure rent; if filings surge, part of the measured transfer is the price of a real filtering function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the doctrine's filtering function is real or cover."
+    },
+    {
+      "id": "chilled_filing_undercount",
+      "question": "How much of the constraint's suppressive force operates upstream of the courtroom — potential claimants who never file because they anticipate dismissal — versus in the doctrinal dismissal rate itself?",
+      "resolution_mechanism": "Compare rights-violation incidence against section-1983 filing rates; attorney screening interviews; natural experiments where local publicity about immunity grants changes filing propensity.",
+      "impact": "If chilling dominates, the scalar suppression understates effective suppression and the victim population is far larger than the docket shows; if dismissal-rate suppression dominates, the measured series already captures the force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus anticipatory (chilled) suppression."
+    },
+    {
+      "id": "clearly_established_indeterminacy",
+      "question": "Is the 'clearly established' standard determinate enough to give officers fair notice — the doctrine's own stated legitimacy condition — or is it applied retrospectively and unevenly across circuits?",
+      "resolution_mechanism": "Inter-circuit variance studies, reversal-rate analysis of immunity denials, and coding of published immunity opinions for reliance on factually distant precedent.",
+      "impact": "If indeterminate, the fair-notice justification fails on the doctrine's own terms and the performative share of enforcement activity rises; if determinate, part of the theater_ratio reflects genuine notice-giving.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the doctrine's internal legitimacy condition holds."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "constitutional_violation_victims",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Experience searches, seizures, arrests, or uses of force that courts may later deem unconstitutional. Their suit against the responsible officer is typically dismissed before discovery because no prior case clearly established the rule; alternative paths — state tort claims, claims against municipalities — carry their own independent thresholds. Once harmed they cannot exit the injury or the governing law; their remedy path is what the arrangement closes."
+    },
+    {
+      "name": "law_enforcement_officers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Patrol and detain under color of law. When a court finds their conduct violated a constitutional right, the doctrine bars damages recovery against them personally unless prior case law clearly forbade the specific act, so personal judgment exposure almost never materializes; departments indemnify in the rare exception. Exit looks ordinary: they may change departments or leave policing without carrying any of the arrangement's costs."
+    },
+    {
+      "name": "police_unions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Negotiate contracts and lobby legislatures on members' behalf. The doctrine shrinks the civil-litigation exposure they would otherwise bargain around, and they defend it publicly and politically. Their stake is collective and representational; they can redirect organizing effort to other issues if the arrangement changed."
+    },
+    {
+      "name": "municipal_governments",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Employ the officers and pay most judgments and settlements through indemnification. The doctrine reduces the population of recoverable claims and the size of settlements, easing budgets and insurance premiums; they also bear residual payout and reputational costs in the cases that survive. They cannot exit the legal order containing the doctrine and would face the underlying claims either way."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Creates, applies, and polices the doctrine: Supreme Court majorities define its scope, appellate panels apply the clearly-established test, and district judges grant dismissal. Judges who deny immunity face summary reversal; precedent binds the bench collectively, so no individual judge can exit the administration of the arrangement."
+    },
+    {
+      "name": "civil_rights_reform_movement",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Litigators, advocacy organizations, and academics who document dismissal patterns and press for statutory replacement. They testify and publish but hold no vote in doctrine formation; their access runs through the same courts that apply the bar."
+    },
+    {
+      "name": "legal_empirical_researchers",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Code outcomes, measure filing and dismissal rates, and publish findings on how the doctrine operates in practice. They collect nothing from it and bear none of its costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Concentrates decisions about officer accountability inside employing institutions and the judiciary: individual officers are spared personal damages exposure, and claims against them are filtered by courts before evidence gathering, leaving discipline to departments and liability to employers.",
+    "transfer_function": "Moves remedy, deterrence, and acknowledgment away from people whose constitutional rights were violated: their claims terminate before discovery, officers' personal assets and careers are insulated from judgment, and dispute resolution shifts from open court to internal departmental process.",
+    "absent_voices": "People whose claims were dismissed on immunity grounds before any merits hearing rarely appear anywhere — their accounts enter the record only as case captions. Communities experiencing recurring unconstitutional policing have no seat in doctrine formation; reform legislators testify but do not decide judge-made doctrine.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Section-1983 dockets would reprice immediately: filings against individual officers would survive motion practice in materially larger numbers, indemnification and insurance markets would absorb new exposure, departments would adjust training and supervision toward avoiding personal-judgment risk, and the pipeline of constitutional-violation claims reaching juries would reopen.",
+    "founding_problem": "Shielding government officials from the burden of defending bad-faith suits while the modern law of constitutional torts was young — articulated in Pierson v. Ray (1967) amid surging civil-rights litigation and hardened in Harlow v. Fitzgerald (1982) to spare officials discovery-driven harassment.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Judicial dissents cataloguing immunity grants for egregious conduct, peer-reviewed empirical studies of section-1983 outcomes, and state legislatures that replaced the doctrine with statutory standards (Colorado 2020, New Mexico 2021) all attest from outside the benefiting parties that the founding problem no longer describes the doctrine's operation; the benefiting parties and the judiciary majority attest it remains live."
+  },
+  "gain_flow": "law_enforcement_officers",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "protective_scaffold_reading",
+      "constitutional_fidelity_reading"
+    ],
+    "dual_formulation_note": "Decomposition per the epsilon-invariance principle: the colloquial label 'qualified immunity' covers three structurally distinct claims with different epsilon, victim sets, and failure modes. This file is the accountability-void member (high epsilon, victims with no remedy path); the protective-scaffold member authors epsilon near coordination cost with a thin victim set; the constitutional-fidelity member locates the defect in authorization rather than magnitude of transfer. Each sibling is a separate file; edges here run to both, and contamination propagation treats a purity shift in this reading as pressure on the scaffold reading's legitimacy conditions."
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of a contested judicial doctrine. Under the accountability-void reading, qualified immunity as currently operated functions as a systematic transfer of remedy away from people whose constitutional rights are violated: because a plaintiff must identify a prior case clearly establishing the rule the officer broke, and because courts may resolve immunity before discovery, conceded violations routinely end without compensation, deterrence, or acknowledgment. The arrangement is maintained by active judicial enforcement — dismissal practice, summary reversal of denials, narrowing of parallel federal remedies — and by the political weight of its beneficiaries. Family note: the colloquial label decomposes into three structurally distinct stories (this accountability-void reading, a protective-scaffold reading, a constitutional-fidelity reading), each a separate file with its own epsilon and stakeholders, linked via network.affects_constraints.\n\nKEY AGENTS (by structural relationship):\n- constitutional_violation_victims: Primary target (powerless/trapped) — bear the closed remedy path\n- law_enforcement_officers: Primary beneficiary (organized/mobile) — personally insulated from damages\n- police_unions: Beneficiary (organized/mobile) — representational defense of the arrangement\n- municipal_governments: Secondary beneficiary (institutional/constrained) — reduced indemnity exposure\n- federal_judiciary: Agenda setter (institutional/constrained) — creates, applies, and polices the doctrine\n- civil_rights_reform_movement: Excluded voice (organized/constrained) — documents and contests without a seat in doctrine formation\n- legal_empirical_researchers: Analytical observer (institutional/analytical) — measures operation",
+    "logic_rationale": "Extraction is authored high (0.88) because the bar operates near-absolutely: claims die before discovery whenever no prior case clearly established the rule, so the remedy value of a conceded violation approaches zero for the victim. Suppression (0.80) is authored as a raw structural property — unscaled by power or scope; only extractiveness is scaled by the engine — and tracks the enforcement machinery: summary dismissal, summary reversal of denials, narrowing of parallel federal remedies. Theater (0.55) reflects the growing share of opinion-writing devoted to ritualized clearly-established analysis and justificatory rhetoric while personal liability remains vanishingly rare behind indemnification. Accessibility collapse (0.62): alternatives persist (municipal-liability claims, state torts, equitable relief) but each carries independent thresholds, so understanding the arrangement collapses most practical exits without eliminating all. Resistance (0.70): five decades of scholarship, repeated federal repeal bills, state statutory replacements, and intra-court dissent; aggregation vehicles (advocacy organizations, class litigation) give otherwise powerless victims partial coalition power, which is why resistance is this high despite a powerless payer seat. The measurement series share one grid — every tracked metric authored at every point 0–56 by 8 — and the trajectories are ratchets, not cycles: the Harlow-era objective standard (grid point 16) steps extraction and enforcement up together, and Pearson-era practice (points 40–48) hardens application further. The suppression_requirement series is authored because the story specifically traces enforcement-capacity hardening, not merely shifting extraction. fixing_cost is authored 'prohibitive': repeal is legislatively trivial in form but has failed repeatedly against concentrated beneficiary opposition, while the benefits of removal accrue diffusely to future victims.",
+    "perspectival_gap": "From the officer and union seats the arrangement presents as settled background law protecting public service; from the victim seat the same doctrine is a closed door encountered at the moment of injury; from the bench it is a doctrine to administer under reversal risk. The engine computes per-seat classifications from power, exit, and declared position; the divergence between the beneficiary seats' subsidized experience and the payer seat's trapped experience is the measurement this corpus exists to take. The authored claim (snare) is the generating seat's structural belief and is deliberately left unreconciled to any predicted per-seat output.",
+    "directionality_logic": "Declarations map to directionality as follows: officers, unions, and municipalities sit at the beneficiary pole (d near 0) — the arrangement subsidizes them with insulation and budget relief; officers' mobile exit pushes them toward arbitrage-grade benefit, while municipalities' constrained exit moderates theirs. Victims sit at the target pole (d near 1), amplified by trapped exit: no remedy path, no exit from the injury or the governing law, national scope raising verification difficulty. The judiciary holds an administrative seat with no declared beneficiary or victim position; its constrained exit (collective precedent commitment) keeps it engaged without making it a collector. No directionality overrides are authored: the derivation chain from beneficiary/victim declarations plus exit options reproduces these relationships without correction.",
+    "mandatrophy_analysis": "The founding-problem interview separates origin from operation. The doctrine was built for a real filtering problem — bad-faith suits against officials during constitutional-tort law's infancy — and this reading attests that problem is at best contested as a description of current operation. Because status is authored 'contested' rather than 'dead', the mismatch consumer (status=dead x verdict=world_rearranges) correctly does not fire the zombie flag on this story alone, but the pairing is flagged for cross-check against the computed theater path. The classification discipline cuts both ways: it blocks the scaffold mislabel (reading a filtering cover story as the whole function) and equally blocks the opposite error of denying that any filtering ever occurred. Resolution here is empirical, not rhetorical: the Colorado and New Mexico statutory replacements supply counterfactual jurisdictions for the deterrence omega.",
+    "kernel_context": "Kernel: qualified_immunity_doctrine. This file instantiates the accountability_void_reading — the doctrine as systematic transfer guaranteeing impunity. Siblings: protective_scaffold_reading (necessary protection enabling vigorous enforcement) and constitutional_fidelity_reading (judicial fabrication lacking constitutional or statutory authorization). Relation choices: to the scaffold reading, coexists_with — the two are rival explanations of the same arrangement held by different factions, and a single party could coherently hold that the doctrine both filters suits and transfers remedy away from victims, so neither premise logically eliminates the other; to the fidelity reading, influences — this reading's accumulating record of documented impunity shifts the legitimacy conditions and political feasibility under which the authorization argument operates, without foreclosing it. Epsilon differs across the family by construction: this reading authors epsilon against the standing arrangement as it operates (high); the scaffold reading authors epsilon near coordination cost; the fidelity reading locates the defect in authorization rather than transfer magnitude."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "section_1983_remedial_baseline",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "protective_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_fidelity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "constitutional_rights_require_remedies",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "impunity_is_systematic_not_incidental",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

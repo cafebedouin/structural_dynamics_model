@@ -1,0 +1,374 @@
+{
+  "header": {
+    "constraint_id": "flexible_employment_legitimacy__precarity_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "68d002b9-4b01-417b-978c-73e1c26a56a4"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.7,
+    "theater_ratio": 0.46,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Flexible Employment as Structural Precarity (Precarity-Extraction Reading)",
+    "topic_domain": "labor_economics/platform_economy/social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "platform_capital_investors",
+      "on_demand_service_consumers"
+    ],
+    "victims": [
+      "gig_platform_workers",
+      "traditional_sector_employees",
+      "social_insurance_systems"
+    ],
+    "vindicated_propositions": [
+      "monopsony_labor_market_power_thesis",
+      "surplus_value_extraction_thesis"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "platform_operators",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Design and operate the apps that set piece rates through dynamic pricing, assign work through dispatch algorithms, and enforce performance through ratings and deactivation. They classify workers as independent contractors, collect a take rate on every transaction, and defend that classification with litigation and ballot campaigns. Their exit is arbitrage: the operating model is portable across jurisdictions, so any single market that reclassifies workers can be abandoned or restructured around."
+    },
+    {
+      "name": "platform_capital_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold equity in platforms whose valuations rest on unit economics that treat labor as a variable cost without fixed obligations. Returns arrive through appreciation and distributions; exposure to any one labor market's regulatory outcome is a portfolio position they can exit by selling."
+    },
+    {
+      "name": "gig_platform_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Log into apps to accept individually dispatched tasks at algorithmically set prices. They supply the vehicle, phone, insurance, and the unpaid time spent waiting and repositioning, and they carry income volatility, injury risk, and retirement savings gaps with no employer contributions. They can switch apps or stop logging in, but the alternatives available to them are mostly the same or worse arrangements, and for many the alternative to logging in is no income at all."
+    },
+    {
+      "name": "traditional_sector_employees",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work under employment contracts in the same sectors — transport, delivery, care, hospitality — where platform competitors operate at lower labor cost. Wage floors, benefit standards, and bargaining gains erode where the platform model sets the reference price. Their unions litigate and lobby for classification parity; individually their exit is into the same labor market being repriced."
+    },
+    {
+      "name": "on_demand_service_consumers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Order rides, meals, and errands at prices below what employment-inclusive cost structures would support, with speed and convenience as the competing dimension. They also carry part of the shifted cost as taxpayers financing in-work benefits and emergency care for uncovered workers, and as recipients of service quality shaped by piece-rate time pressure."
+    },
+    {
+      "name": "social_insurance_systems",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Public unemployment, injury, and pension schemes cover what the classification leaves uncovered: emergency treatment for uninsured workplace injury, means-tested top-ups during earnings dips, and eventual old-age support for workers who contributed nothing. The schemes receive no employer contributions from the platforms that generate the liabilities and cannot decline the mandate; the shortfall lands on their financing or on other taxpayers."
+    },
+    {
+      "name": "labor_regulators_and_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Labor ministries, agencies, and courts adjudicate employment status, run presumption tests, and set minimum earnings and transparency standards. They hear evidence from every other seat and can redraw the classification line — the single rule on which the whole arrangement's cost structure turns."
+    },
+    {
+      "name": "algorithmically_deactivated_workers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Were removed from the apps by automated enforcement — ratings thresholds, fraud flags, or opaque policy violations — and in most jurisdictions have no human appeal and no seat where the rules that removed them are written. They would testify that the flexibility framing ends at the first algorithmic judgment against them."
+    },
+    {
+      "name": "future_retirees_of_gig_workforce",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are today's platform workers at the age when the missing contributions come due. They appear at no current table where classification, take rates, or benefit contributions are set, and would object that today's flexibility premium is being financed out of their old age."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves a real matching problem: spiky, geographically dispersed demand for rides, deliveries, and tasks meets dispersed part-time labor supply; the platforms' dispatch and dynamic-pricing machinery clears that market at low search cost and lets workers fit income around other commitments.",
+    "transfer_function": "Moves money from consumers' per-transaction payments to workers at algorithmically set piece rates minus a platform take rate (commonly 20-35%), while moving risk — vehicle and insurance costs, unpaid waiting time, income volatility, injury, and old-age contributions — from the platforms' books onto workers and public social insurance; the classification converts what would be employer obligations into worker-borne costs.",
+    "absent_voices": "Algorithmically deactivated workers have no seat in the rule-setting or appeals that govern them; future retirees of today's gig workforce bear the contribution gap but appear at no current bargaining table; workers in jurisdictions prohibiting organizing cannot voice collective terms; informal-sector workers displaced by platform entry are unrepresented. They are located outside platform governance, which has no worker representation mechanism, and outside shareholder-controlled corporate decisions.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "On-demand services would reprice to employment-inclusive costs or contract sharply; platform valuations built on labor-cost externalization would reset; millions of workers would need to re-enter traditional employment or unemployment systems; social insurance financing would rebalance in the other direction. The matching function would survive in some form — the cost-shift structure would not.",
+    "founding_problem": "Idle capacity against spiky demand: vehicles, tools, and part-time availability sat unused while demand for rides, deliveries, and tasks fluctuated, and post-2008 labor slack left workers needing supplemental income without fixed-schedule jobs. Flexible employment was built to clear that market without the fixed costs of the employment relationship.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: labor economists across camps — including critics of the platforms — and worker testimony confirm the matching problem is real and that many workers value schedule control; earnings and time-use studies document both the flexibility value and its uncompensated offsets. The contest is over whether the current arrangement distributes the gains of solving the problem, not over whether the problem exists."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.71,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.74,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.39,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.61,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.65,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Platform-mediated flexible employment — ride-hail, delivery, micro-task, and gig contracts classifying workers as independent contractors — read here through the precarity-extraction reading of the flexible_employment_legitimacy kernel. On this reading the arrangement does solve a real matching problem, and that coordination surface is precisely what makes the cost-shift durable: algorithmic dispatch sets piece rates, ratings and deactivation supply discipline without employer obligations, and classification shifts payroll taxes, injury risk, and old-age contributions onto workers and public insurance. The claim is tangled rope: genuine coordination plus asymmetric extraction, actively enforced. Epsilon's referent is the standing flexible-employment arrangement as this reading sees it — never the formalized or fully-priced alternative the reading would prefer. The sibling readings (market_efficiency, developmental_state) are separate constraints with their own epsilon and are linked only at the network level.",
+    "key_agents": [
+      "platform_operators: agenda-setter and primary beneficiary (institutional/arbitrage) — sets piece rates, dispatch, and deactivation rules; collects the take rate",
+      "platform_capital_investors: beneficiary (powerful/arbitrage) — holds valuations premised on labor-cost externalization",
+      "gig_platform_workers: primary target (powerless/constrained) — bears piece-rate volatility, unpaid time, injury and old-age risk",
+      "traditional_sector_employees: secondary target (organized/constrained) — bears erosion of wage floors and standards via platform competition",
+      "on_demand_service_consumers: beneficiary with partial payer position (moderate/mobile) — receives cheap on-demand service, bears socialized cost through taxation",
+      "social_insurance_systems: payer (institutional/trapped) — absorbs the contribution gap as unfunded liabilities",
+      "labor_regulators_and_courts: analytical observer (institutional/analytical) — adjudicates the classification boundary the arrangement stands on",
+      "algorithmically_deactivated_workers: excluded voice — removed by automated enforcement, no seat or appeal",
+      "future_retirees_of_gig_workforce: excluded voice — bears the old-age gap, absent from current bargaining"
+    ],
+    "logic_rationale": "Extraction is authored high (0.75 at interval end): take rates are set unilaterally and decoupled from marginal dispatch cost; unpaid waiting and repositioning time falls outside paid meters; classification avoids employer payroll and benefit obligations worth a substantial share of total compensation. Suppression (0.70) is structural: deactivation and ratings discipline, asymmetric information about true hourly earnings, and well-funded legal defense of the classification boundary — persistence depends on enforcement machinery, not participant preference alone. Theater (0.46) reflects the widening gap between the entrepreneurship narrative ('be your own boss', 'flexibility') and piece-rate control reality; because the coordination function is genuine, theater is moderate rather than dominant. Accessibility collapse (0.50): exit exists — stop logging in, take a job — but the alternatives are largely the same or worse precarity, and for many the alternative is no income. Resistance (0.60): coordinated log-offs and strikes, misclassification litigation, the EU Platform Work Directive, the California AB5/Prop 22 cycle. The measurement series share one time grid (T=0 is roughly 2010, T=15 roughly 2025); suppression_requirement is authored because enforcement capacity visibly built up over the interval — algorithmic management matured, deactivation systems scaled, and classification defense became a standing legal function — so this is an enforcement-intensification trajectory, not a static picture.",
+    "perspectival_gap": "The platform seat computes a coordination structure it built and can defend as market-clearing; the worker seat computes piece rates with discipline and no floor; the investor seat sees a cost structure that is the source of its returns; the social-insurance seat sees liabilities arriving without contributions; the regulator seat sees a classification line it can move. Same arrangement, divergent computed types per seat — the divergence is the measurement the corpus exists to take, not an error to reconcile against the authored claim.",
+    "directionality_logic": "platform_operators and platform_capital_investors sit at the beneficiary end of d: they collect the take rate and its capitalized value, and arbitrage-grade exit keeps them there. gig_platform_workers sit near the full-target end — powerless individually, constrained exit, income source fused with the app. traditional_sector_employees are targets through competitive erosion: organized power, but their exit is into the same repriced labor market. social_insurance_systems are targets with trapped exit — they cannot decline the mandate that makes them the residual claimant on the gaps. on_demand_service_consumers derive a low d from the beneficiary declaration, but the override (moderate power atom to d=0.3) corrects for their secondary payer position: the cost-shift reaches them through tax-financed top-ups and quality externalities, so they are not near-pure beneficiaries.",
+    "mandatrophy_analysis": "The founding problem — clearing spiky demand against idle capacity — is live, so this is not a zombie mandate; the arrangement still performs its coordination function and the world would rearrange around its absence. The mandatrophy risk runs in the other direction: as the matching machinery becomes routine infrastructure, the flexibility narrative grows increasingly theatrical relative to the discipline and cost-shift it licenses — theater_ratio rising from 0.25 to 0.46 over the interval tracks that drift. If dispatch were regulated into commodity infrastructure or the classification boundary fell, the remaining structure would be bare cost-shifting plus algorithmic discipline, and the tangled rope would decompose toward its extractive pole. The classification guards against both mislabels: pure coordination would hide the uncompensated risk transfer; pure extraction would deny the real flexibility value some workers demonstrably receive.",
+    "kernel_context": "This story instantiates the precarity_extraction_reading of the kernel flexible_employment_legitimacy. Sibling readings: market_efficiency_reading (flexible employment as a legitimate market-clearing mechanism) and developmental_state_reading (flexible employment as a transitional form requiring state management toward formalization). All three share one referent — the standing flexible-employment arrangement — but author epsilon from their own lights; this reading authors epsilon high because it counts risk externalization, algorithmic discipline, and contribution gaps as transferred costs rather than coordination overhead. Relation choices: this reading stands in influences to market_efficiency_reading because its regulatory victories (presumption rulings, the EU directive, minimum-earnings standards) change the operating conditions under which the efficiency defense must be argued, without logically eliminating it; it stands in coexists_with to developmental_state_reading because the two are coalition partners in the regulatory camp who disagree on prognosis — transitional versus structural — with neither position ruling the other out within any single party's framework."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the flexible_employment_legitimacy kernel — what structurally changes if a sibling reading is adopted instead?",
+      "resolution_mechanism": "Adoption of a sibling reading re-authors the constraint: the market_efficiency_reading would count risk externalization as a priced market-clearing cost and epsilon collapses toward the resource_allocation coordination floor; the developmental_state_reading would re-author the arrangement as transitional with formalization milestones, moving it scaffold-ward with a declared sunset.",
+      "impact": "The computed classification flips with the reading — tangled_rope here, rope or scaffold under the siblings; cross-reading comparison is valid only at the referent level, never at the epsilon level.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which reading of the kernel this story instantiates and what the sibling readings would change structurally."
+    },
+    {
+      "id": "total_compensation_offset_question",
+      "question": "When total compensation is fully accounted — unpaid time, vehicle and insurance costs, missing employer contributions, income volatility — do platform wage gains offset the transferred risk?",
+      "resolution_mechanism": "Linked administrative and platform data matching worker earnings diaries against benefit entitlements and an employer-obligation counterfactual.",
+      "impact": "If gains fully offset, this reading overstates epsilon and the market_efficiency reading gains ground; if not, the cost-shift is deeper than 0.75 and the snare boundary comes into view.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the wage gains of flexible employment compensate for the risks shifted onto workers."
+    },
+    {
+      "id": "flexibility_preference_vs_necessity",
+      "question": "What share of gig workers would retain the arrangement at employment-equivalent total compensation, versus take it only because the alternatives are worse?",
+      "resolution_mechanism": "Panel surveys combining stated-preference and revealed-preference designs; observed take-up of traditional employment offers at matched total pay.",
+      "impact": "A high voluntary share enlarges the genuine coordination component and moves the classification rope-ward; a low share indicates the flexibility framing functions as cover and moves it snare-ward.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Voluntary-flexibility versus economic-necessity composition of the platform workforce."
+    },
+    {
+      "id": "classification_boundary_reformability",
+      "question": "Can the employment/contractor boundary be redrawn so platforms internalize their obligations without destroying the matching function's flexibility?",
+      "resolution_mechanism": "Natural experiments: Spain's rider law, the EU Platform Work Directive's presumption mechanism, California's AB5 versus Prop 22, UK worker-status rulings.",
+      "impact": "If reformable, the constraint is a tangled rope that can be rebalanced; if every reform either collapses the flexibility value or is litigated into nullity, the structure is snare-ward with the coordination story as cover.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the cost-shift is legally separable from the coordination function."
+    },
+    {
+      "id": "worker_coalition_formation_capacity",
+      "question": "Can dispersed, individually powerless gig workers convert latent coalition capacity — coordinated log-offs, strikes, app-mediated organizing — into sustained bargaining power?",
+      "resolution_mechanism": "Track strike outcomes, union recognition bids, and earnings effects following collective actions across jurisdictions.",
+      "impact": "High coalition capacity raises resistance and can bargain the cost-shift down (rebalancing the tangled rope); persistent failure confirms the powerlessness atom and indicates drift toward the extractive pole.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the powerless-atom victims hold coalition potential that the individual-level power atom misses."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "flexible_employment_legitimacy__market_efficiency_reading",
+      "flexible_employment_legitimacy__developmental_state_reading"
+    ],
+    "dual_formulation_note": "The natural-language label 'flexible employment' decomposes, per the epsilon-invariance principle, into a three-member constraint family over the shared kernel flexible_employment_legitimacy: this story (precarity_extraction_reading, epsilon 0.75, tangled_rope claim), the market_efficiency_reading (epsilon near the coordination floor, rope claim), and the developmental_state_reading (transitional, scaffold claim with formalization sunset). The members share one referent — the standing arrangement — and differ in reading-indexed epsilon, beneficiary/victim structure, and claimed type; the upstream efficiency reading is typically cited as cover by the platforms, which is why this reading's regulatory victories register as structural pressure on it. Each member links the other two via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.3
+    }
+  ],
+  "gain_flow": "platform_operators",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "standard_employment_relationship_baseline",
+    "drift_state": {
+      "moment": "platform_scale_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "market_efficiency_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "developmental_state_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "risk_externalization_constitutes_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "algorithmic_control_without_obligation_is_discipline",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

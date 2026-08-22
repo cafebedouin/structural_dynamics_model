@@ -1,0 +1,390 @@
+% ============================================================================
+% CONSTRAINT STORY: imposition_mechanism_kernel__exogenous_override_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-06-11
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_imposition_mechanism_kernel__exogenous_override_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: imposition_mechanism_kernel__exogenous_override_reading
+ *   human_readable: State-Coerced Norm Imposition — Legitimacy by Monopoly on Violence (Exogenous Override Reading)
+ *   domain: historical sociology / state formation / cultural authority
+ *
+ * SUMMARY:
+ *   This story instantiates the exogenous_override_reading of the
+ *   imposition_mechanism_kernel: the claim that the new norms' binding force
+ *   derived from the state's monopoly on violence rather than prior cultural
+ *   acceptance. The paradigm case anchoring the interval is the Meiji
+ *   state-formation episode (1868-1912): a centralized oligarchy imposed
+ *   compulsory schooling, conscription, calendar and dress edicts, abolition
+ *   of class privilege, and a state-administered cult by coercive
+ *   enforcement, with compliance tracking the reach of policing and household
+ *   registry rather than conviction, and resistance — samurai risings
+ *   culminating in 1877, peasant riots through the 1870s-80s, sectarian
+ *   noncompliance — suppressed rather than accommodated. The epsilon referent
+ *   is the standing imposition arrangement itself, assessed by this reading's
+ *   own lights: the enforcement of norms against a population that has not
+ *   accepted them. It is not the endogenized norm order the state claimed to
+ *   be building, and it is not the sibling readings' arrangements — those are
+ *   separate stories with their own epsilon, linked through
+ *   network.affects_constraints. The claim/metric gap is deliberate: the
+ *   constraint is CLAIMED as tangled_rope from its genuine coordination
+ *   function while the authored metrics describe substantially extractive,
+ *   heavily suppressed operation; the engine measures that divergence.
+ *
+ * KEY AGENTS:
+ *   - reforming_oligarchy: agenda setter (institutional/arbitrage) — designs the norm package, commands enforcement, pays the enforcement bill it also justifies
+ *   - central_state_apparatus: enforcing beneficiary (institutional/identity_locked) — collects compliance, taxes, conscripts, and jurisdiction; grows with every enforcement task
+ *   - governed_peasant_households: primary target (powerless/trapped) — bear taxes, conscription, school costs, and bodily-conformity edicts; exit criminalized via registry
+ *   - displaced_samurai_class: organized target (organized/trapped) — status dissolved by fiat; source of the interval's armed resistance
+ *   - traditional_village_authorities: displaced target (moderate/identity_locked) — normative authority stripped without consultation; excluded from drafting
+ *   - conscientious_dissenters: suppressed target (powerless/trapped) — religious and ideological nonconformists criminalized
+ *   - peripheral_subject_communities: partial-evasion target (powerless/constrained) — comply under observation, revert where monitoring thins
+ *   - historical_sociologists: analytical observer — sees the full structure and the sibling-reading contest
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(imposition_mechanism_kernel__exogenous_override_reading, 0.72).
+domain_priors:suppression_score(imposition_mechanism_kernel__exogenous_override_reading, 0.8).
+domain_priors:theater_ratio(imposition_mechanism_kernel__exogenous_override_reading, 0.4).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__exogenous_override_reading, extractiveness, 0.72).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 0.8).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 0.4).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__exogenous_override_reading, accessibility_collapse, 0.58).
+narrative_ontology:constraint_metric(imposition_mechanism_kernel__exogenous_override_reading, resistance, 0.7).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(imposition_mechanism_kernel__exogenous_override_reading, tangled_rope).
+narrative_ontology:human_readable(imposition_mechanism_kernel__exogenous_override_reading, "State-Coerced Norm Imposition — Legitimacy by Monopoly on Violence (Exogenous Override Reading)").
+narrative_ontology:topic_domain(imposition_mechanism_kernel__exogenous_override_reading, "historical sociology / state formation / cultural authority").
+
+domain_priors:requires_active_enforcement(imposition_mechanism_kernel__exogenous_override_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(imposition_mechanism_kernel__exogenous_override_reading, '90a33ab7-7785-46f1-acea-33e4ee7c64bf').
+narrative_ontology:cs_kernel_codification('90a33ab7-7785-46f1-acea-33e4ee7c64bf', fixed_text).
+narrative_ontology:cs_authority_grounding('90a33ab7-7785-46f1-acea-33e4ee7c64bf', extraction).
+narrative_ontology:cs_interpretation_layer_present('90a33ab7-7785-46f1-acea-33e4ee7c64bf').
+narrative_ontology:cs_reading_relation('90a33ab7-7785-46f1-acea-33e4ee7c64bf', imposition_mechanism_kernel__endogenous_climb_reading, forecloses).
+narrative_ontology:cs_reading_relation('90a33ab7-7785-46f1-acea-33e4ee7c64bf', imposition_mechanism_kernel__hybrid_legitimation_reading, forecloses).
+narrative_ontology:cs_axiom('90a33ab7-7785-46f1-acea-33e4ee7c64bf', foundational, coercion_constitutes_legitimacy).
+narrative_ontology:cs_axiom_status(coercion_constitutes_legitimacy, holdable).
+narrative_ontology:cs_axiom_grounding('90a33ab7-7785-46f1-acea-33e4ee7c64bf', coercion_constitutes_legitimacy, empirically_contingent).
+narrative_ontology:cs_axiom('90a33ab7-7785-46f1-acea-33e4ee7c64bf', secondary, compliance_tracks_monitoring_not_conviction).
+narrative_ontology:cs_axiom_status(compliance_tracks_monitoring_not_conviction, holdable).
+narrative_ontology:cs_axiom_grounding('90a33ab7-7785-46f1-acea-33e4ee7c64bf', compliance_tracks_monitoring_not_conviction, empirically_contingent).
+narrative_ontology:cs_reference_frame('90a33ab7-7785-46f1-acea-33e4ee7c64bf', coercive_imposition_sequence).
+narrative_ontology:cs_drift_state('90a33ab7-7785-46f1-acea-33e4ee7c64bf', post_culturalist_historiography, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('90a33ab7-7785-46f1-acea-33e4ee7c64bf', '').
+narrative_ontology:cs_kernel_id(imposition_mechanism_kernel__exogenous_override_reading, imposition_mechanism_kernel).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__exogenous_override_reading, reforming_oligarchy).
+narrative_ontology:constraint_beneficiary(imposition_mechanism_kernel__exogenous_override_reading, central_state_apparatus).
+narrative_ontology:constraint_victim(imposition_mechanism_kernel__exogenous_override_reading, governed_peasant_households).
+narrative_ontology:constraint_victim(imposition_mechanism_kernel__exogenous_override_reading, displaced_samurai_class).
+narrative_ontology:constraint_victim(imposition_mechanism_kernel__exogenous_override_reading, traditional_village_authorities).
+narrative_ontology:constraint_victim(imposition_mechanism_kernel__exogenous_override_reading, conscientious_dissenters).
+narrative_ontology:constraint_victim(imposition_mechanism_kernel__exogenous_override_reading, peripheral_subject_communities).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% A small circle of former domain leaders who seized the central government in 1868 and set out to remake the population on a fixed timetable: compulsory schooling, conscription, a unified calendar, standardized law and taxation, abolition of class privilege. They write the edicts, appoint the enforcers, and pay the enforcement budget out of the same treasury the edicts refill. Their exit is total — they can amend, suspend, or replace any element of the program — and their own survival came to depend on pushing it through against the armed opposition of the class they dispossessed.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, reforming_oligarchy, agenda_setter,
+    institutional, generational, arbitrage, national).
+narrative_ontology:stakeholder_secondary_role(imposition_mechanism_kernel__exogenous_override_reading, reforming_oligarchy, beneficiary).
+
+% The ministries, police, conscription bureaus, and school inspectorates that carry the edicts into every village. Each new enforcement task adds personnel, budget, and jurisdiction; the apparatus grew from a few thousand officials in 1868 to a standing police and inspectorate network by 1912. It bears the costs of enforcement — patrols, registries, prosecutions — out of appropriations that the enforcement itself justifies. Its leaders cannot abandon the mission without dissolving the offices they have become.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, central_state_apparatus, agenda_setter,
+    institutional, generational, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(imposition_mechanism_kernel__exogenous_override_reading, central_state_apparatus, beneficiary).
+
+% Farming households registered in the state's household registry, liable for land tax in money, for a son conscripted by lot, and for school fees and attendance under compulsory education. Edicts reach into the household: hairstyle, calendar, festival dates, dress. Noncompliance brings fines or prosecution; flight is tracked through the registry; the villages' own assemblies no longer decide these matters.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, governed_peasant_households, payer,
+    powerless, biographical, trapped, national).
+
+% Several hundred thousand hereditary warriors whose stipends were converted to bonds and then taxed away, whose sword-wearing was banned, and whose class legal identity was abolished by decree between 1869 and 1876. Some took government posts; others rose in armed rebellion — largest in 1877 — which the new conscript army crushed. Their standing in the world was dissolved by administrative act, and the old order they were loyal to no longer exists to return to.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, displaced_samurai_class, payer,
+    organized, biographical, trapped, national).
+
+% Village headmen, Buddhist clergy, and shrine keepers who had governed local norm life — festivals, schooling, dispute settlement, moral discipline — for generations. The central edicts strip their functions: schooling moves to state teachers, the calendar to state offices, registration to state registries, and religious life is folded into a state-administered shrine system. They were not consulted in the drafting of any of it; their objection survives in petitions and in the quiet persistence of village practice where inspectors are few.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, traditional_village_authorities, payer,
+    moderate, generational, identity_locked, local).
+narrative_ontology:stakeholder_secondary_role(imposition_mechanism_kernel__exogenous_override_reading, traditional_village_authorities, excluded).
+
+% Christians, adherents of proscribed sects, and critics of the imperial cult and the sacredness of the imperial institution. Prosecution ranges from harassment to imprisonment under lèse-majesté and public-order statutes; open dissent is legally indistinguishable from treason. Some recant under pressure; others keep belief private and pass it to their children.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, conscientious_dissenters, payer,
+    powerless, biographical, trapped, national).
+
+% Island, frontier, and mountain populations — Okinawans, Ainu, remote upland villages — at the thin edge of the monitoring network. Where inspectors, schools, and police are present they comply; where the network thins, old languages, customs, and authorities resume. Their distance buys partial evasion, at the price of periodic campaigns when the center extends its reach.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, peripheral_subject_communities, payer,
+    powerless, generational, constrained, regional).
+
+% Analysts of state formation who study the episode from outside it: they read the edicts, enforcement budgets, rebellion records, and school statistics, and adjudicate between competing accounts of where the new norms' binding force came from. They bear none of its costs and collect none of its proceeds.
+narrative_ontology:constraint_stakeholder(imposition_mechanism_kernel__exogenous_override_reading, historical_sociologists, observer,
+    analytical, generational, analytical, global).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(imposition_mechanism_kernel__exogenous_override_reading, central_state_apparatus).
+narrative_ontology:fixing_cost_class(imposition_mechanism_kernel__exogenous_override_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Rapid standardization of law, schooling, calendar, military obligation, and public behavior across a fragmented population of former domains and villages — solving collective-action problems (universal disarmament, universal literacy, unified market rules) that only simultaneous, centrally enforced adoption can achieve at the speed the modernization program required.
+% TRANSFER_FUNCTION: Moves normative authority and decision power from village institutions, religious bodies, and the former warrior class to the central ministries; moves compliance (taxes, conscripts, school attendance, bodily conformity) from households to the state; the state carries the enforcement budget while dissenters carry the costs of nonconformity.
+% ABSENT_VOICES: The governed were never parties to the arrangement: imposition by definition proceeds without their consent, and the channels through which they could object — petition, armed resistance, open dissent — were criminalized as sedition or lèse-majesté. Traditional village and religious authorities, displaced by the same edicts, were excluded from the drafting process entirely; their objections survive only as rebellion records and suppressed petitions.
+% DISAPPEARANCE_RATIONALE: If the coercive imposition apparatus vanished overnight, the norms lacking cultural roots would decay at the rate of monitoring lapse — school attendance, calendar observance, dress codes, and the sword ban would revert wherever local normative orders survived; the state would lose the conscription and fiscal-administrative reach built on standardized subjects; and the villages' displaced authorities would re-enter norm governance. The arrangement's output depends on continuous enforcement, so its removal rearranges the world it made.
+% FOUNDING_PROBLEM: A newly centralized state facing territorial fragmentation, legal pluralism, and — in its own assessment — civilizational backwardness relative to the imperial powers needed a population that was legible, taxable, conscriptable, and standardized fast enough to revise the unequal treaties and deter colonization.
+% FOUNDING_PROBLEM_CORROBORATION: The fragmentation and treaty-capitulation problems are attested outside the state by the treaty powers' own diplomatic archives and by the fiscal-military collapse of the preceding regime; revisionist agrarian and cultural historians corroborate that those problems were real while disputing that these specific imposed norms were necessary to solve them. The claim that the founding problem remains live rests on the state tradition's own successors; no source outside the benefiting parties attests that.
+narrative_ontology:disappearance_verdict(imposition_mechanism_kernel__exogenous_override_reading, world_rearranges).
+narrative_ontology:founding_problem_status(imposition_mechanism_kernel__exogenous_override_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(imposition_mechanism_kernel__exogenous_override_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth2', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(imposition_mechanism_kernel__exogenous_override_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(imposition_mechanism_kernel__exogenous_override_reading, 0.72, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(imposition_mechanism_kernel__exogenous_override_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(imposition_mechanism_kernel__exogenous_override_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(imposition_mechanism_kernel__exogenous_override_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is high (0.72) because the arrangement moves substantial value — money taxes, conscripted labor, schooling costs, bodily conformity, abolished class standing — from governed to state with no consent mechanism and no exit; the transfer is decoupled from any exchange the payers entered. Suppression is higher still (0.80) because coercion is not incidental to this constraint but IS its mechanism: persistence depends on police, registries, criminalized dissent, and periodic armed suppression, so the suppression figure is load-bearing rather than overhead. Theater (0.40) is moderate and rising: enforcement is real, but a growing share of legitimacy production is ritual — imperial cult, rescript recitation, school ceremonies — performing an acceptance the state does not command; the 1886-1912 rise in the series tracks exactly that ritual apparatus. Accessibility_collapse (0.58) is mid-range: old norms were suppressed, not erased — village practice, household religion, and peripheral languages persist where monitoring thins, so alternatives remain partly available under evasion. Resistance (0.70) is the reading's signature: sustained armed and passive resistance that must be suppressed rather than absent. All three series run on one shared six-point grid; the trajectories are deliberately non-monotonic — the 1894 dip in extractiveness and suppression reflects war mobilization generating partial voluntary compliance, after which the maturing enforcement apparatus re-tightens both. The claim of tangled_rope is authored independently of these metrics: it rests on the genuine coordination function (rapid standardization solved collective-action problems — universal disarmament, unified market rules, mass literacy — that endogenous processes had failed to solve for centuries), not on any tuning toward a predicted engine output.
+ *
+ * PERSPECTIVAL GAP:
+ *   The seats compute differently from the same structure. From the oligarchy's seat the arrangement is state-building it directs: it bears real enforcement costs, and from inside that seat the coordination achievement dominates. From the apparatus's seat it is jurisdiction and career growth — the enforcement mission fused into the offices themselves, which is why the apparatus cannot abandon it. From the trapped payer seats it is bodily coercion without consent: taxes, a conscripted son, school fees, a banned sword, a criminalized belief. The engine computes per-seat classification from the power and exit atoms; the divergence between the agenda-setter seats (coordination they built and pay for) and the trapped payer seats (enforced transfer they cannot decline) is the measurement this story exists to take.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The beneficiary declarations (reforming_oligarchy, central_state_apparatus) drive both seats toward the beneficiary end: the oligarchy designs the transfer and the apparatus collects it. The five victim declarations drive the payer seats toward the target end, with exit atoms modulating within that end: trapped peasants, samurai, and dissenters sit nearest full-target; identity-locked village authorities sit at full-target with no self-concept exit; peripheral communities' constrained exit damps d slightly below the trapped core because geographic monitoring gaps give them partial evasion. The observer seat is analytical. No directionality_overrides are authored: the one candidate — the apparatus, which pays enforcement costs — is net-beneficiary because the enforcement budget funds the apparatus's own growth, so the derivation from declarations plus exit atoms captures the true relationship without correction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The tangled_rope classification prevents two symmetric mislabels. Reading the arrangement as pure snare erases the real coordination function: the standardization genuinely solved collective-action problems (universal disarmament of the domains, a unified legal-market space, mass literacy) that centuries of endogenous norm evolution had not solved, and any account that cannot register that function mispredicts why the arrangement was built and why it held. Reading it as pure rope erases the extraction: the transfer was consent-less, enforced by violence, and resisted at the cost of a civil war. The mandate question is where mandatrophy bites: the founding problems — fragmentation, treaty capitulation — were substantially solved by interval end, yet the arrangement persisted past solution because the enforcement apparatus had become constitutive of the state itself; that pattern (problem solved, arrangement retained, apparatus grown) is exactly what the R5 mismatch check watches for. founding_problem_status is authored 'contested' rather than 'dead' because the corroboration is genuinely divided: outside sources attest the problems were real and largely solved, while the state tradition attests continued liveness.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_commitment,
+    'This constraint is one reading — the exogenous_override_reading — of the imposition_mechanism_kernel; what would the sibling readings (endogenous_climb_reading, hybrid_legitimation_reading) change structurally if the same episodes were classified under them?',
+    'Generate and compile the sibling-reading stories and compare per-seat classifications and epsilon; the disagreement is located in the causal sequence between coercive mandate and cultural acceptance — which precedes and constitutes the other.',
+    'Under endogenous_climb, the governed seats are co-authors rather than targets (d falls, chi falls, classification moves toward rope); under hybrid_legitimation the constraint decomposes into a coercive shell plus a symbolic-legitimation core with separate epsilon values.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_commitment, conceptual, 'Committer structure: which reading of the imposition kernel this constraint instantiates and what the siblings would change.').
+
+omega_variable(
+    legitimation_sequence,
+    'For the covered episodes, did cultural acceptance of the new norms precede and enable the mandates (endogenous), follow them as a downstream effect of enforcement (override), or develop in parallel through symbolic authority transfer (hybrid)?',
+    'Diachronic comparison of acceptance indicators (voluntary school enrollment, unpaid adoption of calendar and dress, petition content) against the dates and enforcement intensity of the mandates.',
+    'The override reading''s classification stands only if compliance tracked enforcement rather than acceptance; an acceptance-first record reclassifies the arrangement toward rope and reassigns epsilon.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(legitimation_sequence, empirical, 'Which causal sequence between mandate and acceptance the historical record supports.').
+
+omega_variable(
+    enforcement_cost_sustainability,
+    'Can an arrangement whose legitimacy derives from coercive capacity sustain its enforcement costs indefinitely, or does monitoring-dependence force eventual endogenization, retrenchment, or fiscal crisis?',
+    'Enforcement expenditure as a share of state budget across the interval and beyond; compliance rates during documented monitoring lapses (war mobilization, administrative turnover, inspector shortages).',
+    'A rising cost-to-surplus ratio would mark the arrangement as transitional — imposition surviving only until norms internalize or the state retrenches; a stable ratio supports a durable tangled_rope or snare classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(enforcement_cost_sustainability, empirical, 'Whether violence-derived legitimacy is fiscally self-sustaining.').
+
+omega_variable(
+    residual_consent_ambiguity,
+    'Does observed compliance reflect coercion alone, or did the state''s concurrent provision of goods (schooling, market access, legal protection, national membership) generate genuine exchange-consent that the override frame cannot register?',
+    'Compare compliance behavior during enforcement lapses against behavior during service withdrawals; examine petition and riot demands for whether participants sought exemption from the norms or better terms within them.',
+    'Substantial exchange-consent would shift the reading toward hybrid_legitimation and lower effective extraction for the complying majority, concentrating epsilon on the dissenting and peripheral seats.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(residual_consent_ambiguity, empirical, 'Coercion versus exchange-consent composition of observed compliance.').
+
+omega_variable(
+    episode_generalization,
+    'Does epsilon measured on the Meiji instantiation of the override mechanism transfer to other state-imposed norm episodes (Atatürk''s reforms, Peter the Great''s edicts, French revolutionary standardization), or does each instantiation need its own story?',
+    'Cross-case comparison of enforcement-cost-to-acceptance ratios and resistance profiles across override episodes.',
+    'Systematic epsilon variation across instantiations would require per-episode decomposition within the family; uniform profiles would license the general-mechanism story this constraint authors.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(episode_generalization, empirical, 'Whether the override mechanism has a stable epsilon across instantiations.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(imposition_mechanism_kernel__exogenous_override_reading, 1868, 1912).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(impo_tr_t1868, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1868, 0.22).
+narrative_ontology:measurement_basis(impo_tr_t1868, observed).
+narrative_ontology:measurement(impo_tr_t1877, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1877, 0.26).
+narrative_ontology:measurement_basis(impo_tr_t1877, observed).
+narrative_ontology:measurement(impo_tr_t1886, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1886, 0.33).
+narrative_ontology:measurement_basis(impo_tr_t1886, observed).
+narrative_ontology:measurement(impo_tr_t1894, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1894, 0.29).
+narrative_ontology:measurement_basis(impo_tr_t1894, observed).
+narrative_ontology:measurement(impo_tr_t1903, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1903, 0.36).
+narrative_ontology:measurement_basis(impo_tr_t1903, observed).
+narrative_ontology:measurement(impo_tr_t1912, imposition_mechanism_kernel__exogenous_override_reading, theater_ratio, 1912, 0.4).
+narrative_ontology:measurement_basis(impo_tr_t1912, observed).
+
+% Extraction over time
+narrative_ontology:measurement(impo_be_t1868, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1868, 0.62).
+narrative_ontology:measurement_basis(impo_be_t1868, observed).
+narrative_ontology:measurement(impo_be_t1877, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1877, 0.7).
+narrative_ontology:measurement_basis(impo_be_t1877, observed).
+narrative_ontology:measurement(impo_be_t1886, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1886, 0.67).
+narrative_ontology:measurement_basis(impo_be_t1886, observed).
+narrative_ontology:measurement(impo_be_t1894, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1894, 0.64).
+narrative_ontology:measurement_basis(impo_be_t1894, observed).
+narrative_ontology:measurement(impo_be_t1903, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1903, 0.69).
+narrative_ontology:measurement_basis(impo_be_t1903, observed).
+narrative_ontology:measurement(impo_be_t1912, imposition_mechanism_kernel__exogenous_override_reading, base_extractiveness, 1912, 0.72).
+narrative_ontology:measurement_basis(impo_be_t1912, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(impo_su_t1868, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1868, 0.55).
+narrative_ontology:measurement_basis(impo_su_t1868, observed).
+narrative_ontology:measurement(impo_su_t1877, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1877, 0.78).
+narrative_ontology:measurement_basis(impo_su_t1877, observed).
+narrative_ontology:measurement(impo_su_t1886, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1886, 0.71).
+narrative_ontology:measurement_basis(impo_su_t1886, observed).
+narrative_ontology:measurement(impo_su_t1894, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1894, 0.62).
+narrative_ontology:measurement_basis(impo_su_t1894, observed).
+narrative_ontology:measurement(impo_su_t1903, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1903, 0.73).
+narrative_ontology:measurement_basis(impo_su_t1903, observed).
+narrative_ontology:measurement(impo_su_t1912, imposition_mechanism_kernel__exogenous_override_reading, suppression_requirement, 1912, 0.8).
+narrative_ontology:measurement_basis(impo_su_t1912, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(imposition_mechanism_kernel__exogenous_override_reading, identity_coordination).
+narrative_ontology:affects_constraint(imposition_mechanism_kernel__exogenous_override_reading, imposition_mechanism_kernel__endogenous_climb_reading).
+narrative_ontology:affects_constraint(imposition_mechanism_kernel__exogenous_override_reading, imposition_mechanism_kernel__hybrid_legitimation_reading).
+
+% DUAL FORMULATION NOTE:
+% The colloquial question 'how did the new norms gain legitimacy' decomposes into three structurally distinct claims — mandate-before-acceptance (this story), acceptance-before-mandate (endogenous_climb_reading), and symbolic-transfer-plus-incentives (hybrid_legitimation_reading) — because each assigns epsilon to a different arrangement: an imposition enforced against a population that has not accepted the norms (high epsilon, this story) is not the constraint an acceptance-first account describes (low epsilon) nor the mixed mechanism the hybrid describes. Each reading is authored as its own epsilon-invariant story; the family links record the kinship and the contested seam, which is the causal sequence between mandate and acceptance.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

@@ -1,0 +1,372 @@
+{
+  "header": {
+    "constraint_id": "fair_use_statutory_exception__market_licensing_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_market_licensing_reading",
+    "measurement_id_prefix": "fumr",
+    "story_uid": "08c8a969-8069-4919-97a3-8a3f38607659"
+  },
+  "base_properties": {
+    "extractiveness": 0.82,
+    "suppression": 0.78,
+    "theater_ratio": 0.34,
+    "accessibility_collapse": 0.52,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fair Use Market-Licensing Reading (Fourth-Factor Dispositiveness)",
+    "topic_domain": "legal/intellectual_property/information_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rights_holder_industries",
+      "collective_licensing_bodies",
+      "the_reading_public"
+    ],
+    "victims": [
+      "secondary_creators",
+      "educational_institutions_and_libraries",
+      "technology_platforms",
+      "unrepresented_takedown_targets"
+    ]
+  },
+  "interval": {
+    "start": 1976,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2012,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2021,
+      "value": 0.74
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2012,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2021,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1976,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2012,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2021,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.78
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_committer_structure",
+      "question": "This constraint is one reading (market_licensing_reading) of the kernel fair_use_statutory_exception (17 U.S.C. Sec. 107 as a stabilized text). What would the sibling readings change structurally, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Comparative classification across the sibling stories: transformative_right_reading and narrow_defense_reading instantiate the same statutory text with different fourth-factor weights. The disagreement is located in (a) whether market harm is DISPOSITIVE or merely one weighted factor, and (b) whether absence of a licensing market is a NECESSARY condition of fair use or merely sufficient. This story fixes (a) dispositive and (b) necessary.",
+      "impact": "Under transformative_right_reading, epsilon drops substantially for transformative uses (the licensable-but-transformative class leaves the target set) and the computed type moves toward rope/scaffold; under narrow_defense_reading, epsilon stays high but the target set is bounded by enumerated purposes, moderating scope-driven amplification. Classification of THIS story is valid only for the market-licensing instantiation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: kernel membership, sibling readings, and the located axis of disagreement."
+    },
+    {
+      "id": "self_referential_market_creation",
+      "question": "Does a licensing market exist independently of this reading, or does the reading create the licensing market it then cites as proof of harm?",
+      "resolution_mechanism": "Natural experiments comparing post-adjudication trajectories: where courts found fair use despite licensability (search indexing, certain archival digitization), did licensing markets nonetheless emerge and thrive? Where courts found infringement (music sampling), did the resulting licensing market reflect pre-existing demand or demand manufactured by liability exposure?",
+      "impact": "If licensing markets are largely reading-created, the causal premise 'any licensable use harms the market for licensed uses' is circular: the harm is an artifact of the rule, and the genuinely pre-existing component of epsilon is far smaller than measured. The reading's justification would collapse from empirical claim to self-fulfilling institution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the market-harm premise is empirically grounded or self-referential."
+    },
+    {
+      "id": "enforcement_visibility_bias",
+      "question": "Do the authored metrics understate the reading's operative force because most of its enforcement occurs below the visible litigation record?",
+      "resolution_mechanism": "Compare published-case outcomes against the volume of takedown notices, settlement demands, and clearance transactions: estimate the ratio of uncontested enforcement events to litigated ones, and survey clearance-culture behavior (permissions sought for uses with strong fair use claims).",
+      "impact": "If the sub-litigation layer dominates, effective suppression and extractiveness are higher than case-law-visible values suggest; the doctrine's practical bite exceeds its doctrinal footprint, and the 2012 dip in the extractiveness series may be a litigation-record artifact rather than a real relaxation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Visibility bias: case law samples only contested instances of the reading's operation."
+    },
+    {
+      "id": "reading_scope_spectrum",
+      "question": "Is the epsilon referent the reading as an operative judicial rule (bounded by Campbell-lineage pushback) or the reading as its maximalist principle (any licensable use barred, fair use null in practice)?",
+      "resolution_mechanism": "Per the epsilon-invariance rule this story fixes ONE referent: the operative interpretive rule including its aspirational pull on clearance practice and licensing-product design. Resolution would come from decomposing the spectrum into separate stories if the bounded-application and maximal-principle versions show stably divergent epsilon.",
+      "impact": "The maximalist-principle version would carry higher epsilon and likely compute as snare; the strictly-bounded-application version would carry lower epsilon and stay tangled_rope. The authored 0.82 sits at the operative-rule end, pulled upward by the principle's effect on behavior that never reaches a courtroom.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Referent selection within the reading's own spectrum of application."
+    },
+    {
+      "id": "trips_three_step_exportability",
+      "question": "Can a market-dispositive fair use reading survive the Berne/TRIPS three-step test (limitations must be confined to certain special cases, not conflict with normal exploitation, not unreasonably prejudice legitimate interests) when exported to other jurisdictions?",
+      "resolution_mechanism": "Track WTO dispute consultation records and national implementation of fair-use-style exceptions: does any trading partner accept a reading under which routine quotation, education, and platform uses fail the 'normal exploitation' step?",
+      "impact": "If the maximal reading fails step-two scrutiny internationally, its scope contracts to the US domestic frame, reducing spatial-scope amplification of effective extraction; if partners adopt it, the reading's extraction scales globally and hardens against domestic reform via trade-pressure feedback.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "International durability of the reading under treaty step-test constraints."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "rights_holder_industries",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Publishers, studios, record labels, and image agencies hold large catalogs and convert previously uncompensated uses into licensed revenue: each precedent treating a licensable use as infringing enlarges the permission-fee base. They shape the rule's application through strategic test-case litigation, model license drafting, and legislative advocacy. Exit is easy in the relevant sense: they can restructure portfolios, move works between exclusive and non-exclusive windows, and shop enforcement across jurisdictions."
+    },
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Interprets the statutory fair use section and decides, case by case, whether the existence of a licensing market defeats an otherwise arguable exemption. The precedent chain from the 1985 news-quotation ruling through the 1994 archival-copying and parody rulings to the 2015 book-search rulings constitutes the operative rule. Individual judges and panels cannot exit the interpretive role: they are bound by statute, precedent, and appellate supervision, and their discretion is exercised inside a doctrine they did not choose."
+    },
+    {
+      "name": "collective_licensing_bodies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Reproduction-rights organizations, performing-rights organizations, and image agencies operate blanket and transactional licensing. Their fee base scales with the breadth of the licensable universe: every use reclassified from exempt to licensable is new billable volume. Their administrative infrastructure lets them redirect effort to adjacent rights-administration markets if demand shifts, so their position is portable even though their revenue depends on the rule."
+    },
+    {
+      "name": "secondary_creators",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Documentary filmmakers, biographers, critics, essayists, and sampling musicians whose working method consists of quoting, excerpting, and incorporating existing works. Under this reading each incorporation routes through clearance or carries infringement risk priced into production budgets and insurance. Leaving the arrangement would mean leaving the genres themselves: a critic who cannot quote, a documentarian who cannot show archival footage. Professional identity and craft practice are fused with reuse, so exit is not realistically available even where it is legally conceivable."
+    },
+    {
+      "name": "educational_institutions_and_libraries",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Universities, schools, and libraries run course packets, electronic reserves, digitization projects, and interlibrary lending, all of which touch licensable works. They face periodic licensing demands and audits and have institutionalized permissions offices to manage exposure. They cannot stop teaching or preserving; partial mitigation exists through open-access and public-domain shifts, but the core mission requires using in-copyright material, so their alternatives are narrowed rather than closed."
+    },
+    {
+      "name": "technology_platforms",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Search engines, user-generated-content hosts, and AI developers index, host, and train on vast quantities of licensable works and face licensing demands scaled to their revenues. Unlike individual creators they can negotiate blanket licenses, assemble licensed catalogs, relocate infrastructure, or absorb fees as operating cost. Their superior outside options mean the same nominal rule lands on them more softly, and several have converted compliance into a moat that smaller entrants cannot afford."
+    },
+    {
+      "name": "the_reading_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Audiences receive the arrangement's promised good: a continuing supply of professionally produced content justified by licensing revenue. They also bear its indirect costs: fees passed through in prices, thinner quotation and remix culture, and works accessible only behind permissions. Individually they can substitute what they consume but have no seat in shaping the rule; their stake is diffuse and their voice reaches the doctrine only filtered through the litigating parties."
+    },
+    {
+      "name": "unrepresented_takedown_targets",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individual uploaders, small bloggers, fan creators, and teachers who receive automated takedown notices or settlement demands for uses the case law might well protect. Almost none litigate: the cost dwarfs the stakes, so they comply, remove, or pay. Because they never appear as parties, the body of precedent defining the reading is written entirely by repeat players on both sides, and the operating reality of the rule for ordinary users is invisible to it."
+    },
+    {
+      "name": "ip_law_scholarship",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "situation": "Academic commentators track the doctrine's movement across circuits and decades, documenting the widening gap between the stated incentive rationale and the observable pattern of licensing expansion onto already-created works. They hold no stake in particular outcomes and their analyses feed both the bench and the benefiting industries without belonging to either.",
+      "spatial_scope": "global"
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies an administrable decision rule where the statutory text is open-ended: creators, rights holders, and courts get a single tractable question (does a licensing market exist or plausibly could?) in place of open-textured transformation analysis, and reuse demand is channeled into organized licensing markets that finance ongoing production and rights administration.",
+    "transfer_function": "Moves money (license fees, settlement payments, clearance budgets) from everyone whose work product touches a licensable work - secondary creators, educators, libraries, platforms - to rights holders and collective licensing bodies; and moves expressive latitude (unpaid quotation, excerpt, remix, archival display) from the user public into paid permission.",
+    "absent_voices": "Unrepresented takedown targets and the diffuse user public are absent: the reading is elaborated in litigation between repeat players (major publishers and labels versus major platforms and institutions), while the individuals who actually experience the rule as automated fee collection settle or comply and never enter the record. Non-market values - cultural participation, memory-institution missions, cumulative creativity - have no litigating seat at all.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reading vanished overnight, clearance departments, permissions budgets, blanket-license fee structures, and takedown-settlement pipelines would lose their doctrinal foundation; secondary creators would resume uncompensated incorporation as of right; licensing bodies would see their transaction volumes contract to genuinely negotiated markets; and pricing and insurance structures built around infringement exposure would reprice. The reuse economy is organized around this rule and would visibly reorganize without it.",
+    "founding_problem": "Two problems at codification: courts needed a tractable metric for an open-ended statutory exemption, and rights holders needed protection against copying technologies (photocopying, then digital distribution) that threatened specific existing markets. The market factor supplied both: administrability for the bench, and a property-consistent boundary for incumbents.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: the 1985 Supreme Court opinion itself grounds the factor in administrability and protection of the specific market for the work, and the legislative history of the 1976 Act frames it as a guide for courts facing new technologies. Legal scholarship across the spectrum attests that these founding problems were real. What NO corroborating source outside the benefiting parties attests is the reading's universal quantifier - that ANY licensable use harms the market for licensed uses; that extrapolation is the reading's own contribution, and the critical scholarship (and the 1994 and 2015 pushback opinions) expressly rejects it."
+  },
+  "gain_flow": "rights_holder_industries",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "transformative_right_reading",
+      "narrow_defense_reading",
+      "dmca_notice_and_takedown"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'fair use' covers one statutory kernel (17 U.S.C. Sec. 107) instantiated as three structurally distinct constraints. This story (market_licensing_reading) carries the highest epsilon of the family: it renders market harm dispositive and market absence necessary. narrow_defense_reading is the conservative upstream baseline (property framing, defense narrowly construed) from which this reading extends; transformative_right_reading is the downstream rival whose operating environment this reading degrades - every licensing market this reading successfully establishes shrinks the space in which transformative claims can be pressed, which is why the edge runs from this story to the sibling. Epsilon differs across the family because the target set differs: all-licensable-uses here, enumerated-purpose uses there, transformative uses in the third. Each member is authored as a separate file with its own stable epsilon per the decomposition rule."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.45
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "market_dispositive_property_framework",
+    "drift_state": {
+      "moment": "contemporary_ai_licensing_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "transformative_right_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "narrow_defense_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "licensable_use_presumptive_market_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "market_absence_necessary_for_fair_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the fair use kernel: the market-licensing reading, under which the existence of any licensing mechanism for a use establishes market harm, market harm is dispositive against the exemption, and fair use survives only where no market exists. The epsilon referent is the standing arrangement under contest - the operative interpretive rule that converts licensable uses into infringing ones - assessed by this reading's own lights, never the transformative arrangement its rivals would install. The claim/metric independence rule is honored deliberately: the reading is CLAIMED as tangled_rope (its proponents sincerely advance a coordination story - administrable rule-making plus incentive finance - and the structure does retain a genuine, if thin, coordination function), while the authored metrics describe heavily extractive, actively enforced operation whose intensity has grown across five decades. Where the engine's per-seat computations diverge from that claim, the divergence is the datum.",
+    "key_agents": [
+      "- rights_holder_industries: Primary beneficiary with agenda-setting reach (institutional/arbitrage) - converts former exemptions into licensed revenue and shapes the rule through test-case litigation",
+      "- federal_judiciary: Agenda setter (institutional/constrained) - administers the interpretive rule; bound by precedent, cannot exit the role",
+      "- collective_licensing_bodies: Secondary beneficiary (organized/arbitrage) - fee base scales with the licensable universe",
+      "- secondary_creators: Primary target (moderate/identity_locked) - craft practice fused with reuse; every incorporation routes through clearance or risk",
+      "- educational_institutions_and_libraries: Target (organized/constrained) - mission-bound exposure, partial open-access mitigation",
+      "- technology_platforms: Target with superior exit (powerful/arbitrage) - absorbs or monetizes compliance; conversion of compliance into barrier-to-entry",
+      "- the_reading_public: Declared beneficiary bearing indirect costs (powerless/mobile) - near-symmetric position, overridden accordingly",
+      "- unrepresented_takedown_targets: Excluded seat (powerless/trapped) - experiences the rule as automated fee collection; absent from the precedent record",
+      "- ip_law_scholarship: Analytical observer (analytical/analytical) - documents the rationale-operation gap"
+    ],
+    "logic_rationale": "Extractiveness is authored high (0.82 at interval end) because the reading's universal quantifier places every quotable, excerptable, trainable, archivable use inside the permission economy, and the fee levels are set by bargaining position rather than marginal cost. Suppression (0.78) is authored as a raw structural property - unscaled by power or scope, per the framework rule - reflecting dependence on active exclusion of the unlicensed alternative: takedown regimes, settlement leverage, and clearance culture, not participant preference, hold the arrangement in place. Theater ratio (0.34) is moderate-low: the adjudicative function still operates (courts do decide real cases), but a growing share of activity is performative compliance - permissions sought for uses with strong exemption claims, insurance and budget line-items that exist to demonstrate diligence. Accessibility collapse (0.52) is mid-range: open licensing, public-domain growth, and the transformative-use rival keep alternatives partly available, but each successful licensing market forecloses the corresponding unlicensed practice. Resistance (0.72) is high and documented: the 1994 parody opinion expressly demoted market harm from 'single most important element,' and the 2015 book-search ruling found exempt a use with an obvious licensing market, on transformation grounds. The measurement series share ONE grid (1976, 1985, 1994, 2003, 2012, 2021, 2026) across all three tracked metrics. The extractiveness series is not monotonic: it peaks locally in 1994 (archival-copying ruling), dips through 2003-2012 as the transformation counter-current wins marquee cases, then resumes climbing as streaming consolidation and AI training-data licensing extend the licensable universe faster than doctrine contracts it. The suppression_requirement series is authored because this story specifically tracks enforcement-capacity change: the interval opens in a world of sparse, expensive litigation and closes in one of automated detection, notice-and-takedown at scale, and industrialized clearance - a genuine ratchet in the machinery needed to hold the arrangement, not merely a shift in extraction. The 2026 endpoints are marked projected: the AI-licensing wave is mid-formation at generation time.",
+    "perspectival_gap": "The seats compute differently by construction. From the rights-holder and licensing-body positions the arrangement is property enforcement they built and staffed: the same structure that reads as extraction from the documentary filmmaker's chair reads as the boundary that makes catalog investment rational from theirs. The judiciary's seat is neither: it administers a rule whose distributive consequences it did not choose, constrained by precedent in both directions. Among targets, exit quality drives divergence: the platform seat's arbitrage-grade options damp its effective burden (and let it convert compliance into a moat against smaller rivals), while the secondary-creator seat's identity lock amplifies theirs - the filmmaker cannot stop being a filmmaker, so the fee is unavoidable in a way the platform's is not. The excluded seat experiences a rule harsher than the case-law record shows, because the record is written only by parties wealthy enough to litigate.",
+    "directionality_logic": "Beneficiary declarations (rights_holder_industries, collective_licensing_bodies) drive those seats toward the subsidy end; victim declarations (secondary_creators, educational_institutions_and_libraries, technology_platforms, unrepresented_takedown_targets) drive them toward the target end, with the engine's exit modulation doing real work: identity_locked secondary creators sit nearer full-target than arbitrage-grade platforms despite both being declared payers. One override is declared: the_reading_public derives a strongly beneficiary-side directionality from its beneficiary listing, but its true structural relationship is near-symmetric - it receives the incentive-system's promised output while carrying price pass-through and a thinned quotation-and-remix commons - so the override sets the powerless seat to d=0.45. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled, by directionality and scope, in the engine's computation.",
+    "mandatrophy_analysis": "The founding problems - adjudicative administrability and protection of specific existing markets - remain live, so the arrangement is not mandatrophy-resolved and no sunset claim is authored. The mandatrophy-relevant risk sits elsewhere: the self-referential market-creation omega. If licensing markets are largely artifacts of the rule itself, the doctrine's adjudicative function atrophies into clearance ritual - courts ratify a permission economy that no longer needs adjudicating - and theater_ratio becomes the leading indicator. The authored series shows theater climbing slowly (0.12 to 0.34) without yet dominating; the piton-drift watch condition is theater exceeding roughly half of activity combined with a dead founding problem, which the current data do not meet. The classification prevents mislabeling in both directions: reading the structure as pure extraction (snare) would erase the genuine administrability function the bench still performs and the sincere incentive rationale a substantial fraction of its adherents hold; reading it as pure coordination (rope) would erase the asymmetric transfer that is its dominant observable output.",
+    "kernel_context": "Kernel: fair_use_statutory_exception - the statutory fair use section treated as a stabilized text whose meaning is carried by an interpretive lineage rather than amended language. This file instantiates the market_licensing_reading: market harm dispositive, market absence necessary. Sibling readings, authored as separate constraints: transformative_right_reading (transformation enables the exemption regardless of licensability) and narrow_defense_reading (affirmative defense narrowly construed to preserve market value). The disagreement is located in two structural elements: the disposiveness of the fourth factor, and whether market absence is a necessary or merely sufficient condition. This reading's core premise directly contradicts the transformative reading's core premise within any single committed framework - hence the foreclosure edge - while it is a strict strengthening of, and compatible with, the narrow-defense reading, which different parties hold alongside it."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

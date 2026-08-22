@@ -1,0 +1,367 @@
+{
+  "header": {
+    "constraint_id": "npt_treaty_1970__withdrawal_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "4ef4685e-6e22-43d2-8a70-9f96ed720d96"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.55,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NPT Article X Withdrawal Right — Sovereignty Reading (Obligations Contingent on Security Environment)",
+    "topic_domain": "international_law/nuclear_nonproliferation/regime_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "threshold_hedging_states",
+      "nuclear_weapon_states"
+    ],
+    "victims": [
+      "compliant_nonnuclear_parties",
+      "regional_neighbors_of_threshold_states",
+      "iaea_verification_system"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 55
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 33,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 33,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 33,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 55,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates one reading of the NPT kernel (npt_treaty_1970) — the withdrawal-sovereignty reading. How would the sibling readings (oligopoly_enforcement_reading, reciprocal_disarmament_reading) redistribute the structural positions declared here?",
+      "resolution_mechanism": "Compile the two sibling stories and compare computed per-seat classifications; convergence and divergence localize where the readings actually disagree.",
+      "impact": "Under the oligopoly reading the compliant non-nuclear seats become protected beneficiaries and the nuclear-weapon seats become violators; under the reciprocal reading the nuclear-weapon seats become debtors and the reserved exit becomes a loophole degrading the bargain. Either sibling would invert parts of this story's victim and beneficiary sets.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one of three live readings of the NPT kernel; sibling readings would reassign who counts as victim."
+    },
+    {
+      "id": "supreme_interest_objectivity",
+      "question": "Does 'extraordinary events jeopardizing supreme interests' admit any objective criterion, or is the trigger inherently self-judged and unfalsifiable?",
+      "resolution_mechanism": "Comparative analysis of every invocation and serious contemplation of exit (the 2003 DPRK notification; states citing supreme interests in safeguards disputes) against contemporaneous, externally observable security indicators.",
+      "impact": "If the trigger is purely subjective, conditionality reduces to unconstrained revocability and effective extraction runs above the authored value; if external criteria discipline invocations, extraction is bounded and the coordination side of the arrangement strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the withdrawal trigger is objectively disciplinable or purely self-judged."
+    },
+    {
+      "id": "option_value_capture_distribution",
+      "question": "Who actually captures the option value generated by the reserved exit — threshold states alone, or also the nuclear-weapon states (doctrinal cover for contingent performance of their own undertakings) and ordinary compliant parties (insurance against worst-case security shifts)?",
+      "resolution_mechanism": "Bargaining-trace analysis of Review Conference outcomes: which concessions and forbearances track credible exit threats specifically, versus generalized insurance demand common to all parties.",
+      "impact": "If the nuclear-weapon states capture the larger share, the arrangement drifts toward captured extraction despite the sovereignty framing; if the value diffuses broadly across parties, the hybrid coordination-plus-transfer reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of the exit option's value across the party spectrum."
+    },
+    {
+      "id": "precedent_ratchet_direction",
+      "question": "Does each successful withdrawal raise the reserved exit's value monotonically (a precedent ratchet), or does backlash eventually install penalty mechanisms that cap it?",
+      "resolution_mechanism": "Track adoption of withdrawal-penalty provisions in successor agreements and UN Security Council practice following each withdrawal episode.",
+      "impact": "A dominant ratchet validates the rising measurement series and pushes the arrangement toward pure extraction; effective backlash reverses the series and restores a coordination-dominated valuation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether withdrawal precedents ratchet the option's value upward or provoke capping backlash."
+    },
+    {
+      "id": "constraint_boundary_framing",
+      "question": "Is the standing arrangement under contest the Article X clause narrowly, or the broader doctrine that treaty obligations are contingent on the security environment wherever a state invokes it?",
+      "resolution_mechanism": "Epsilon-invariance test: author the narrow-clause story and the broad-doctrine story as separate files and compare computed classifications; divergence indicates two constraints, not one measured two ways.",
+      "impact": "The narrow framing confines scope to NPT parties and moderates scope-amplified extraction; the broad framing extends the target set to counterparties of any conditioned obligation and raises effective extraction accordingly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Framing under-determination: clause-level versus doctrine-level boundary of the arrangement."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "threshold_hedging_states",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Maintain complete or near-complete fuel cycles and weaponization latency short of assembly. Invoke the reserved exit in Review Conference debates, lead resistance to proposals that would attach penalties to withdrawal notification, and convert the credibility of a possible exit into diplomatic leverage — concessions, verification forbearance, and security accommodations from compliance-minded counterparts. Their exit path is the option itself: they are positioned to exercise it, and exercising it is the source of their bargaining position."
+    },
+    {
+      "name": "nuclear_weapon_states",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold arsenals outside the treaty's principal renunciation obligations and serve as depositaries receiving withdrawal notifications. They invoke the same conditionality logic the reserved exit embodies to keep their own undertakings (timetabled disarmament commitments) contingent on the security environment, and they sustain the doctrine's legitimacy in depository practice. The reserved exit costs them nothing and supplies doctrinal symmetry: no obligation in the regime binds against a self-judged supreme interest."
+    },
+    {
+      "name": "compliant_nonnuclear_parties",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Accepted full-scope safeguards, foregone enrichment and reprocessing or submitted to intrusive verification, and built alliances and diplomatic standing on demonstrated good faith. Each credible exit elsewhere devalues what their compliance purchases: the assurance that restraint is general. They could notify withdrawal themselves, but doing so would forfeit the standing, market access, and security relationships their compliance accumulated, so they stay and absorb the dilution of the bargain they honored."
+    },
+    {
+      "name": "regional_neighbors_of_threshold_states",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live within missile range of states holding credible withdrawal threats. They bear the security externality of a neighbor's optionality directly and immediately: hedging next door, crisis instability, and the possibility that a notified exit converts overnight into a latent arsenal. They cannot relocate, and their protection depends on regime stability they do not control."
+    },
+    {
+      "name": "iaea_verification_system",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Operates the safeguards whose acceptance the reserved exit made politically possible — states joined partly because verification was not forever. It collects mandate scale and budget from near-universal coverage, but loses sunk verification investment whenever a party exits and inspectors are expelled, and it must administer whatever arrangements the parties leave behind. It cannot refuse the system it is given."
+    },
+    {
+      "name": "un_security_council",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Receives withdrawal notifications as the treaty directs, debates them, and adopts statements urging reconsideration. It possesses no mechanism to condition, delay, or reverse a notified exit; its involvement in the arrangement is formal rather than operative, and its postures record the dispute without resolving it."
+    },
+    {
+      "name": "regional_civilian_populations",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Live under the shadow of arsenals a neighbor's reserved exit could produce. They are represented only indirectly, by governments speaking in Review Conference and Council chambers; they hold no independent standing in any forum where the option's fate is argued, and their exposure is the stakes over which the argument proceeds."
+    },
+    {
+      "name": "regime_theory_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Document withdrawal precedents, model the option value of reserved exits, and trace compliance-incentive erosion across the regime's history. They publish assessments that shape elite discourse but hold no vote in the arrangement and no lever on its operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "The reserved exit solved the accession problem: sovereign states will not accept perpetual, irrevocable renunciation of a survival-relevant option, and reserving a unilateral departure on self-judged supreme interests made near-universal signature possible in 1968 and keeps membership open to states whose security environments shift. Every party's obligations stand, but each party retains the door.",
+    "transfer_function": "Moves bargaining leverage and risk. Exit-capable states convert latent capability into concessions and forbearance extracted from compliance-dependent counterparts; compliant parties transfer assurance-reliance onto a bargain whose value falls with every credible exit threat; a state that exercises the exit transfers its verification burden outward — onto neighbors who inherit the exposure and onto the inspectorate that loses its sunk coverage.",
+    "absent_voices": "Civilian populations within range of a potential withdrawn-state arsenal have no seat; small compliant non-nuclear parties without Review Conference leverage object to optionality devaluing their compliance but are outmaneuvered under consensus rules; verification specialists proposing costly-exit reforms are heard and set aside. The seats that profit from the reserved exit set the agenda under which objections are entertained.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reserved exit vanished overnight, threshold states' bargaining leverage would evaporate, compliance commitments would become credible in a way they currently are not, states contemplating accession would demand new compensation for irrevocability, and the Review Conference agenda would reorganize around the question of what a permanently bound party is owed. The regime's entire incentive architecture depends on the door remaining open.",
+    "founding_problem": "In 1968 the drafters faced the accession problem: how to obtain near-universal renunciation of nuclear weapons from sovereign states whose future security environments were unknowable, when the bedrock norm of the system is that no state irrevocably bets its survival on other states' future conduct. The reserved exit was the price of signature — demanded by non-aligned delegations and granted so that no party would be trapped by its own ratification.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: the Eighteen-Nation Disarmament Committee negotiating record shows non-nuclear delegations demanding the exit reservation as an explicit condition of signature; general treaty-law practice (the fundamental-change doctrine codified in the Vienna Convention) attests that conditioned obligation is the system-wide norm, not an NPT-specific accommodation; and nonparty states publicly attest that no sovereign state signs away strategic options without reserve. None of these sources belongs to the set that captures the option's value."
+  },
+  "gain_flow": "threshold_hedging_states",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "npt_treaty_1970__oligopoly_enforcement_reading",
+      "npt_treaty_1970__reciprocal_disarmament_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'the NPT' conflates three structurally distinct claims, each authored as its own story with its own epsilon, beneficiaries, and victims. This story instantiates the withdrawal-sovereignty reading (Article X as legitimate sovereign reservation; obligations contingent on security environment). The oligopoly-enforcement reading (horizontal proliferation prevention as the binding core) is the historically dominant institutional reading and sits upstream: this reading's successes erode its 'binding' premise without replacing it. The reciprocal-disarmament reading (Article VI as binding, urgent obligation) contests from the disarmament side; this reading's core premise contradicts its core premise such that no single framework holds both. Each member links the others via network.affects_constraints."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "self_enforcing",
+    "reference_frame": "revocable_sovereign_bargain",
+    "drift_state": {
+      "moment": "contemporary_arms_control_breakdown",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "oligopoly_enforcement_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "reciprocal_disarmament_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "supreme_interest_self_judgment_is_final",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "obligations_extend_only_while_security_environment_permits",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Article X of the Non-Proliferation Treaty reserves every party a unilateral exit: three months' notice, triggered by events the party itself judges to jeopardize its supreme interests. This story instantiates the withdrawal-sovereignty reading of that structure — the reserved exit as a legitimate exercise of sovereignty, and treaty obligations as contingent on the security environment rather than absolute. The epsilon referent is the standing arrangement under contest: the NPT regime as it actually operates with the reservation in place, assessed by this reading's own lights. The reading holds the reservation legitimate and credits it with making near-universal accession possible; the structural data nonetheless show the same reservation transferring option value to exit-capable states and diluting the security value of compliance for everyone else. The degradation of the regime-stability norm named in the expected structural delta is carried here by actor seats — compliant parties and exposed neighbors — because norms are not actors and cannot occupy victim slots; the doctrines the arrangement vindicates are listed under vindicated_propositions. The claim and the metrics are independent authored facts: the reading claims a hybrid coordination-plus-transfer structure, and the metrics describe operation that has grown steadily more transfer-heavy since the first exercised exit. Sibling readings are separate stories with separate epsilon values, linked via network.affects_constraints.",
+    "key_agents": [
+      "threshold_hedging_states: primary beneficiary and agenda defender (organized/arbitrage) — collects option value and polices the option's continued availability",
+      "nuclear_weapon_states: doctrinal beneficiary (institutional/arbitrage) — gains symmetry cover for contingent performance of their own undertakings",
+      "compliant_nonnuclear_parties: primary target (moderate/constrained) — absorbs the dilution of the bargain they honored",
+      "regional_neighbors_of_threshold_states: concentrated target (moderate/trapped) — bears the security externality directly",
+      "iaea_verification_system: institutional payer with secondary benefit (institutional/trapped) — loses sunk coverage on exit, gains mandate scale from universality",
+      "un_security_council: formally notified observer (institutional/analytical) — records the dispute without levers on it",
+      "regional_civilian_populations: excluded voice (powerless/trapped) — the stakes of the argument, absent from it",
+      "regime_theory_analysts: analytical observer (analytical/analytical)"
+    ],
+    "logic_rationale": "Extraction (0.60 at interval end) is moderate and rising: the reserved exit began as a dormant insurance clause, acquired value as hedgers accumulated latency, jumped when the 2003 exit demonstrated the playbook, and continues climbing as general arms-control breakdown validates conditionality logic across the regime. Suppression (0.55) reflects the active defense the option requires — penalty proposals must be beaten back at successive Review Conferences, and the suppression_requirement series tracks that enforcement history specifically (flat before 1995, spiking after 2003, elevated since), which is why it is authored at all here. Theater (0.50) has risen with the procedural ritual surrounding exit — notification formalities, Council statements that change nothing, quadrennial reaffirmations — crossing the Goodhart watch-line at interval end while the underlying function remains real. Accessibility collapse (0.45): alternatives (penalty regimes, costly-signaling reforms, irrevocability instruments) remain visible and periodically proposed but are structurally blocked by the seats that profit from optionality. Resistance (0.60) is real and recurring. The series run on one shared eight-point grid (interval years since 1970-entry-into-force: 0=1970, 25=1995 indefinite extension, 33=2003 first exercised exit, 55=present) so every metric is authored at every examined time point; the trajectory is a monotonic ratchet, not a cycle, and the ratchet itself — each successful exit raising the option's price — is part of the transfer mechanism, not noise.",
+    "perspectival_gap": "The payer seats and the beneficiary/agenda seats compute differently from the same text. From the threshold and nuclear-weapon seats the reserved exit is the regime's load-bearing feature: the reason accession happened and the reason their positions remain tenable — a coordination structure they defend. From the compliant-party and exposed-neighbor seats the identical structure operates as a standing devaluation of everything their compliance purchases: assurance priced against a bargain others may leave. The inspectorate experiences both at once — scale from universality, stranding on exit. The Council and the analyst seats see the hybrid without living either side. The engine computes these divergences from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Threshold hedging states are declared beneficiaries with arbitrage-grade exit — the option is their asset — placing them near the full-beneficiary end, amplified by their agenda-setting defense of the option's availability. Nuclear-weapon states are declared beneficiaries with arbitrage exit: the doctrine costs them nothing and insures their contingent posture. Compliant non-nuclear parties are declared targets with constrained exit — they could notify withdrawal but their accumulated compliance investment makes exit ruinous, so they sit near the full-target end. Exposed neighbors are targets with trapped exit: geography, not choice. The inspectorate is dual-positioned (payer with secondary benefit), landing mid-to-high. No directionality overrides are authored: the beneficiary/victim declarations plus exit atoms already differentiate every seat, and the override surface keys on power atoms shared across seats, which would blur distinctions the declarations already draw cleanly.",
+    "mandatrophy_analysis": "The founding problem — sovereign states will not irrevocably bet survival on others' future conduct — remains live, so no mandatrophy is declared and none is resolved. The classification work here is preventive in both directions. Without the declared coordination function (accession-enabling reservation), the arrangement reads as pure extraction: exit threats pricing concessions out of compliance-dependent states, with the 2003 precedent as the smoking gun. Without the declared targets (compliers, neighbors, the inspectorate), it reads as pure coordination: the valve that made the treaty universal. The hybrid claim holds both, and the measurement series arbitrates the balance over time — extraction and theater rising together is the signature of a coordination structure accreting transfer, which is what the data show. The theater trajectory is the early-warning line: if the reservation's function atrophied into pure declaratory maintenance while the option's value kept accruing to hedgers, the hybrid would decay toward the extractive pole with the mandate dead and the form alive.",
+    "kernel_context": "This constraint is one reading of the kernel npt_treaty_1970 — the fixed treaty text whose meaning is contested across three live readings. This story instantiates the withdrawal_sovereignty_reading: Article X as a legitimate sovereign reservation and all treaty obligations as contingent on the security environment. The sibling readings are other constraints, not parts of this one: the oligopoly_enforcement_reading treats the horizontal-renunciation articles as the binding core, and the reciprocal_disarmament_reading treats the disarmament article as a binding obligation with temporal urgency. The disagreement is located in the status of Article X: safety valve that made the bargain possible (this reading), loophole that dissolves bindingness (oligopoly reading), or betrayal of the bargain's reciprocity (reciprocal reading). Structurally, this reading influences the oligopoly reading — every exercised exit erodes the premise that the renunciation articles bind — and forecloses the reciprocal reading: a framework holding that obligations lapse on self-judged supreme interest cannot coherently also hold that the disarmament obligation is owed with urgency regardless of circumstance. The reference frame this reading takes the kernel to be is a revocable sovereign bargain; at the contemporary moment of arms-control breakdown the frame is under substantial revival pressure — deteriorating security environments are cited ever more widely as grounds for contingency — and the invoking states acknowledge and assert this openly."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

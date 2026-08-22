@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "feudal_oath_reciprocity__lord_extraction_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lord_extraction_reading",
+    "story_uid": "1553014c-f85e-427f-a0c7-af637181bf3b"
+  },
+  "base_properties": {
+    "extractiveness": 0.76,
+    "suppression": 0.75,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "Feudal Oath as Authorization for Maximal Seigneurial Demand (Lord Extraction Reading)",
+    "topic_domain": "economic/political/legal-historical",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "seigneurial_lords",
+      "crown_feudal_administration"
+    ],
+    "victims": [
+      "enfeoffed_vassals",
+      "mesne_subvassal_knights",
+      "warded_heirs_and_widows",
+      "demesne_peasantry"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.79
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.76
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "This story instantiates the lord_extraction_reading of the feudal_oath_reciprocity kernel; for a given honor and decade, which reading — this one, vassal_coordination_reading, or ecclesiastical_mediation_reading — describes the operative constraint?",
+      "resolution_mechanism": "Per-honor archival comparison: charter clauses fixing reliefs and services versus recorded exactions exceeding them; court rolls showing whether the lord's court treated charter bounds as enforceable or ignorable.",
+      "impact": "Where the coordination reading is operative, epsilon falls sharply and the computed type moves toward tangled_rope; where this reading is operative, the high-extraction profile stands. Sibling readings are separate constraint files, not hedges folded into this story's numbers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which sibling reading of the feudal-oath kernel is operative for a given tenancy."
+    },
+    {
+      "id": "sibling_delta_quantum_fixity",
+      "question": "What would change structurally if the vassal_coordination_reading were adopted instead: is the obligation quantum fixed by charter text, or set by lordly demand bounded only by vassal service capacity?",
+      "resolution_mechanism": "Statistical comparison of recorded exactions against charter-stated quanta across honors; if exaction distributions cluster at charter bounds the coordination reading governs, if they track lordly need and tenant liquidity this reading governs.",
+      "impact": "Adopting the sibling reading removes the open-endedness of the victim asymmetry: lords become bound parties, classification shifts toward tangled_rope, and the rebellion threshold stops being the operative limiter.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Located disagreement: whether the oath's obligation quantum is text-fixed or capacity-bounded."
+    },
+    {
+      "id": "sibling_delta_sacramental_binding",
+      "question": "What would change if the ecclesiastical_mediation_reading were adopted: does sacramental obligation and charity doctrine impose an effective cap on secular demands, or does it register protest without altering what lords take?",
+      "resolution_mechanism": "Case tracing of excommunication and interdict episodes: did threatened or imposed censures precede measurable reductions in exactions, or did lords settle with Rome while practice at home stayed unchanged?",
+      "impact": "If sacramental binding effectively caps demands, the church seat becomes a co-enforcer and the suppression profile splits between secular coercion and moral sanction, shifting classification toward tangled_rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the ecclesiastical limit on the oath is operative or declaratory."
+    },
+    {
+      "id": "rebellion_threshold_calibration",
+      "question": "Where exactly does the capacity bound sit — the ceiling this reading claims is the only effective limit on demands — and how does it move with harvests, war burdens, and the lord's military position?",
+      "resolution_mechanism": "Reconstruct exaction series around known revolt triggers (the 1173-74 revolt, the 1215 crisis) and test whether demands preceding revolts cluster at a reconstructable fraction of tenant surplus.",
+      "impact": "A stable, estimable threshold supports the high-extraction profile with a sharp bound; a highly volatile threshold suggests demands are bounded by negotiation rather than raw capacity, softening the classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Calibrating the capacity bound this reading treats as the sole limiter."
+    },
+    {
+      "id": "villein_exit_softening",
+      "question": "Does flight to chartered towns soften the demesne peasantry's trapped exit enough to move their directionality below the full-target end?",
+      "resolution_mechanism": "Manor-level records of villein departures, lordly pursuit litigation, and recapture rates versus distance to a chartered town.",
+      "impact": "If flight is materially available, peasant effective extraction is damped and the arrangement's aggregate epsilon sits below the trapped-exit estimate; if pursuit and recapture dominate, the trapped profile stands.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether peasant exit is truly trapped or partially open via town flight."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "seigneurial_lords",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "situation": "Hold honors of manors and castles granted in return for service. Summon tenants to their own courts, pronounce what custom requires, and take reliefs when heirs inherit, profits from the wardship and marriage of tenants' children, aids for knighting sons and marrying daughters, and hospitality dues when they travel. When a tenant resists they distrain his chattels, besiege his house, or sue him in their own court. Their own position is mobile: they can press one estate harder while easing another, marry heirs into other networks, and litigate the same dispute in several jurisdictions."
+    },
+    {
+      "name": "crown_feudal_administration",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Acts as apex lord: takes reliefs and wardships from tenants-in-chief, sells custody of heirs to the highest bidder, levies scutage when it prefers cash to service, and licenses or demolishes private castles. It also hears appeals from lower lords' courts, so it both runs its own demand machinery and sets some of the rules governing everyone else's."
+    },
+    {
+      "name": "enfeoffed_vassals",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Hold land by oath of homage and fealty; owe mounted service, castle guard, and attendance at the lord's court. Beyond the fixed services they face demands — reliefs, aids, tallages — sized by the lord's need and their apparent ability to pay. They resist by withholding service, forming leagues with fellow tenants, appealing to the overlord's court, or rebelling; outright departure means forfeiting the estate that anchors the family's standing, so most fight from inside rather than leave."
+    },
+    {
+      "name": "mesne_subvassal_knights",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Hold single manors or fractions of manors from greater tenants; owe knight service they often commute for cash. They attend their immediate lord's court, pay what it assesses, and have no realistic forum above it short of the crown. Giving up the holding means giving up the family's livelihood and rank, so they absorb demands up to the point of ruin."
+    },
+    {
+      "name": "warded_heirs_and_widows",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Minor heirs fall into the lord's custody, and the income of the estate accrues to the guardian until majority; widows and heiresses are married to whom the lord chooses, or fined for the privilege of choosing themselves. They appear in no court that sets these terms and cannot decline guardianship; their protection is whatever an overlord's writ or a well-placed kinsman obtains."
+    },
+    {
+      "name": "demesne_peasantry",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Work the lord's home farms part of the week, pay tallages set at the lord's will, grind at his mill, bake at his oven, and render boon works at harvest. Legally bound to the soil, they resist by slow work, flight to chartered towns, and occasional revolt; success in flight depends on distance to a town and the reach of the lord's officers."
+    },
+    {
+      "name": "episcopal_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Teach that oaths sworn on relics bind under pain of perjury before God, threaten excommunication and interdict against notorious oppressors, and shelter fugitives on church land. They record grievances in synods and chronicles. Their sanctions arrive slowly and unevenly, and they hold extensive tenures of their own, which makes their position partly that of a fellow landlord."
+    },
+    {
+      "name": "royal_justices",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Itinerant and central courts hear pleas between lords and tenants, gradually treating some tenant protections as enforceable royal law. Their possessory writs give dispossessed tenants a venue outside the lord's own court. They reshape the terms of the arrangement case by case without abolishing it."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Converts scattered armed landholders into a legible hierarchy: annual service periods, castle guard, court attendance, and hereditary succession to tenures are settled once in the homage ceremony instead of renegotiated per campaign, and the lord's court resolves disputes among his tenants.",
+    "transfer_function": "Moves surplus from tenant households up the tenurial ladder to lords and the crown — labor on demesne, cash reliefs at inheritance, aids for the lord's ceremonies, wardship and marriage profits from tenants' children, mill and oven monopolies, hospitality dues — in amounts the lord can press before resistance organizes.",
+    "absent_voices": "Warded heirs and widows have no standing in the court that prices their custody and marriages; the peasantry appears only in its lord's own court; rival lords who might bid for a resisting tenant's homage are barred by the exclusivity of the oath itself. The strongest organized voice — the baronial league — speaks only in crisis, not in the ordinary running of honors.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the oath-bound demand structure vanished overnight, tenures would lose their hereditary glue, military service would need explicit contract or wages, seigneurial court revenue and incident income would collapse, and the landed class would reorganize around salaried retainer and rental contracts over the following generations — the shape of rural power depends on it.",
+    "founding_problem": "After the Carolingian fiscal-military state dissolved, kings could neither pay armored cavalry nor police local order: land granted in return for service sustained defense, succession, and dispute settlement without a salaried bureaucracy.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Royal judicial records and itinerant-justice rolls — outside the seigneurial beneficiary set — attest that tenant protections were being enforced as royal law by the interval's end, indicating the original justification no longer covered observed practice; monastic chronicles, themselves landlords but independent of the magnate beneficiaries, record demands far exceeding any protective return. Lords themselves attest the problem still live. No fully disinterested attestation exists; the closest is the crown's, which is itself a beneficiary at the apex."
+  },
+  "gain_flow": "seigneurial_lords",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "vassal_coordination_reading",
+      "ecclesiastical_mediation_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the feudal oath' conflates three structurally distinct claims about one kernel: what the oath obligates (this file — whatever the lord can press, bounded by vassal capacity), what the charter fixes (vassal_coordination_reading), and what heaven enforces (ecclesiastical_mediation_reading). Each is a separate constraint story with its own epsilon, beneficiaries, and victims; they are linked here because the same homage ceremony is the kernel each reading instantiates, and charter and canon developments feed back into what lords can press."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "full_proprietary_discretion_grant",
+    "drift_state": {
+      "moment": "charter_reaction_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "vassal_coordination_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "ecclesiastical_mediation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "oath_conveys_unquantified_demand_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "charter_bounds_are_prudential_not_constitutive",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates one reading of the feudal_oath_reciprocity kernel: that the oath of homage and fealty functioned, from the lord's seat, as an authorization to demand — reliefs, aids, wardship and marriage profits, tallages, hospitality — up to the point where tenants could bear no more and resisted. On this reading the only effective bound on what moved up the tenurial ladder was vassal service capacity and the rebellion threshold; charter text and sacramental scruple registered limits without setting them. The epsilon referent is the standing oath-governed tenurial arrangement as this reading sees it, not any charter-bound alternative. Per the epsilon-invariance principle, the sibling readings (vassal_coordination_reading, ecclesiastical_mediation_reading) are separate constraint files linked through the network section; their structural deltas are carried in the omega variables rather than averaged into this story's numbers.\n\nKEY AGENTS (by structural relationship):\n- seigneurial_lords: agenda-setting beneficiary (institutional/arbitrage) — pronounces custom, collects reliefs, wardship, aids\n- crown_feudal_administration: apex-lord agenda-setter and collector (institutional/arbitrage)\n- enfeoffed_vassals: primary organized payer (organized/constrained) — bears demands, resists by league and appeal\n- mesne_subvassal_knights: secondary payer (moderate/trapped)\n- warded_heirs_and_widows: captive payer (powerless/trapped)\n- demesne_peasantry: downstream payer (powerless/trapped)\n- episcopal_authorities: external check, partly an interested landlord (institutional/constrained)\n- royal_justices: analytical observer reshaping terms case by case (institutional/analytical)",
+    "key_agents": [
+      "seigneurial_lords: agenda-setting beneficiary (institutional/arbitrage) — pronounces custom, collects reliefs, wardship, aids",
+      "crown_feudal_administration: apex-lord agenda-setter and collector (institutional/arbitrage)",
+      "enfeoffed_vassals: primary organized payer (organized/constrained) — bears demands, resists by league and appeal",
+      "mesne_subvassal_knights: secondary payer (moderate/trapped)",
+      "warded_heirs_and_widows: captive payer (powerless/trapped)",
+      "demesne_peasantry: downstream payer (powerless/trapped)",
+      "episcopal_authorities: external check, partly an interested landlord (institutional/constrained)",
+      "royal_justices: analytical observer reshaping terms case by case (institutional/analytical)"
+    ],
+    "logic_rationale": "Extraction is high (0.76 at interval end) because the demand streams — reliefs taken at inheritance, wardship and marriage sold, aids and tallages assessed in the lord's own court — track the lord's need and the tenant's visible liquidity, not the cost of protection rendered. Suppression (0.75) is the cost of holding the arrangement open-ended: private castles, distraint of chattels, forfeiture proceedings, and the lord's court as sole first-instance forum. Theater (0.38) is moderate: the homage ceremony and invocations of ancient custom still do legal work, but a rising share of ritual legitimates demands with no protective counterpart. Accessibility collapse (0.60): exit routes exist — appeal to the overlord, flight to towns, sale of claims — but every route costs the holder his tenurial anchor, so understanding the arrangement does not dissolve it. Resistance (0.70) is high and organized: withheld service, baronial leagues, the 1215 charter crisis. Coordination type is resource_allocation: the dominant function whose failure would break the arrangement is converting land tenure into sustained military and administrative service. The three measured series share one time grid (points 0-100); the oscillation in extractiveness tracks royal strength — regularization under strong kings, spikes under weak ones — riding an upward ratchet as incident-taking intensified. Base properties are authored at the interval end (t=100), just past the charter reaction's first partial restraint. The claimed type (snare) and the metrics are independently authored: the claim states what this reading holds structurally true; the metrics state what the record descriptively shows.",
+    "perspectival_gap": "From the lord's seat the arrangement is the constitution of ordered society: his court pronounces custom, his protection is real, and the ceremony binds both sides before witnesses — a seat from which the structure computes as burden-bearing coordination. From the trapped seats — warded heirs, villeins, single-manor knights — the same structure is open-ended taking with no forum that sets a bound. Organized vassals sit between: strong enough to force written limits in crisis, too weak to hold them between crises. The engine computes these per-seat classifications from the structural data; the divergence between the lord-seat and payer-seat computations is the measurement this story exists to take.",
+    "directionality_logic": "Seigneurial lords and the crown's incident machinery are declared beneficiaries: they collect the reliefs, wardships, aids, and tallages, and their wide exits (arbitrage across estates and courts) place them near the beneficiary end of d. The four payer groups are declared victims: enfeoffed vassals (organized, constrained exit) sit high on d but somewhat damped by coalition leverage; mesne knights, warded heirs, and the peasantry (trapped exits) sit nearest the full-target end, with the wards and villeins effectively at it. Episcopal authorities and royal justices are observers: neither collected from nor bound by the flows, they shape the constraint's environment without bearing it. Suppression is authored as a raw structural property and is not scaled by power or scope; only extractiveness is scaled by directionality and scope in the engine's computation.",
+    "mandatrophy_analysis": "The founding problem — sustaining armored defense and local order after the collapse of public taxation and salaried administration — was real, and a pure-extraction verdict that erased the coordination layer would misread why tenants ever entered. Equally, a coordination verdict that erased the asymmetry would misread why the arrangement needed castles. Classifying the standing arrangement as a snare keeps both facts: the coordination function is the enabling frame, the open-ended transfer is the operative dynamic. The founding problem's status is contested at interval end: royal courts and growing monetized administration attest its fading, while lords attest continuing raid and war; the mismatch consumer reads that contested status against the world_rearranges verdict, and the charter-reaction measurements show the first forced partial restraint rather than resolution.",
+    "kernel_context": "Kernel: feudal_oath_reciprocity — the homage-and-fealty commitment binding tenant to lord. This file instantiates the lord_extraction_reading: the oath as authorization for maximal demand bounded only by vassal service capacity. Sibling readings, authored as separate constraints: vassal_coordination_reading (oath as fixed, charter-bounded reciprocal obligation) and ecclesiastical_mediation_reading (oath as sacramentally bound and charity-limited). The readings disagree on where the obligation quantum is set — lordly discretion, charter text, or divine sanction — and this file's axioms and drift_state encode this reading's answer: the quantum is whatever the lord's court can press, charter bounds are prudential rather than constitutive, and the substantial practice drift of the charter-reaction era went formally unrecognized by the lords who recast every novelty as ancient custom."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,387 @@
+% ============================================================================
+% CONSTRAINT STORY: temple_sacrifice_commitment__hybrid_preparatory
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-08-05
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_temple_sacrifice_commitment__hybrid_preparatory, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: temple_sacrifice_commitment__hybrid_preparatory
+ *   human_readable: Suspended-Commitment Sacrificial Study Mandate (Hybrid-Preparatory Reading)
+ *   domain: religious/legal/commitment-system
+ *
+ * SUMMARY:
+ *   This story instantiates ONE reading of the temple_sacrifice_commitment
+ *   kernel: the hybrid-preparatory reading, on which post-destruction study
+ *   of sacrificial law maintains the commitment in a suspended state —
+ *   neither full performance nor mere archiving — as preparatory exercise for
+ *   a messianic restoration. The standing arrangement under contest, and
+ *   therefore the ε referent, is the existing study mandate as this reading
+ *   assesses it: a two-millennium institutional economy that draws material
+ *   support and cognitive labor from the community to sustain mastery of
+ *   non-performable law. The claim and the metrics are independent authored
+ *   facts: the constraint is CLAIMED as tangled_rope (genuine coordination
+ *   function plus asymmetric extraction under active enforcement) while the
+ *   metrics describe what the arrangement descriptively does. Sibling
+ *   readings — study_as_exercise, performance_only, symbolic_transformation —
+ *   are separate constraints with their own ε values and are linked via
+ *   network.affects_constraints; the disagreement among them is routed to
+ *   omega variables, not averaged into this file.
+ *
+ * KEY AGENTS:
+ *   - talmudic_academy_scholars: Agenda-setting beneficiary (institutional/identity_locked) — administers the suspension doctrine and collects standing and livelihood from it
+ *   - yeshiva_institutions: Beneficiary (institutional/constrained) — academies whose existence presupposes the mandate
+ *   - diaspora_jewish_communities: Dual-positioned beneficiary-payer (organized/constrained) — funds the system and receives identity continuity from it
+ *   - working_household_supporters: Primary payer (moderate/constrained) — bears the material transfer for study of non-performable law
+ *   - full_time_study_dedicants: Payer with secondary beneficiary position (moderate/identity_locked) — pays in foregone vocational formation, receives maintenance and status
+ *   - restoration_activists: Secondary beneficiary (organized/mobile) — recruits on the credibility the study system maintains
+ *   - karaite_and_reform_dissenters: Excluded voice (organized/mobile) — rejects the suspension frame from outside the conversation
+ *   - comparative_religion_historians: Analytical observer (analytical/analytical) — attests the founding problem from outside the benefiting parties
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(temple_sacrifice_commitment__hybrid_preparatory, 0.58).
+domain_priors:suppression_score(temple_sacrifice_commitment__hybrid_preparatory, 0.48).
+domain_priors:theater_ratio(temple_sacrifice_commitment__hybrid_preparatory, 0.25).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(temple_sacrifice_commitment__hybrid_preparatory, extractiveness, 0.58).
+narrative_ontology:constraint_metric(temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 0.25).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(temple_sacrifice_commitment__hybrid_preparatory, accessibility_collapse, 0.45).
+narrative_ontology:constraint_metric(temple_sacrifice_commitment__hybrid_preparatory, resistance, 0.35).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(temple_sacrifice_commitment__hybrid_preparatory, tangled_rope).
+narrative_ontology:human_readable(temple_sacrifice_commitment__hybrid_preparatory, "Suspended-Commitment Sacrificial Study Mandate (Hybrid-Preparatory Reading)").
+narrative_ontology:topic_domain(temple_sacrifice_commitment__hybrid_preparatory, "religious/legal/commitment-system").
+
+domain_priors:requires_active_enforcement(temple_sacrifice_commitment__hybrid_preparatory).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(temple_sacrifice_commitment__hybrid_preparatory, '9e72ce0a-3d59-48f8-bef6-a991eadf02c8').
+narrative_ontology:cs_kernel_codification('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', fixed_text).
+narrative_ontology:cs_authority_grounding('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', lineage).
+narrative_ontology:cs_interpretation_layer_present('9e72ce0a-3d59-48f8-bef6-a991eadf02c8').
+narrative_ontology:cs_reading_relation('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', temple_sacrifice_commitment__study_as_exercise, coexists_with).
+narrative_ontology:cs_reading_relation('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', temple_sacrifice_commitment__performance_only, forecloses).
+narrative_ontology:cs_axiom('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', foundational, obligation_persists_without_sanctuary).
+narrative_ontology:cs_axiom_status(obligation_persists_without_sanctuary, holdable).
+narrative_ontology:cs_axiom_grounding('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', obligation_persists_without_sanctuary, deontological).
+narrative_ontology:cs_axiom('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', secondary, readiness_for_immediate_resumption_is_required).
+narrative_ontology:cs_axiom_status(readiness_for_immediate_resumption_is_required, holdable).
+narrative_ontology:cs_axiom_grounding('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', readiness_for_immediate_resumption_is_required, instrumental).
+narrative_ontology:cs_reference_frame('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', suspended_preparatory_occupation).
+narrative_ontology:cs_drift_state('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', contemporary_liturgical_accretion_era, gap(practice_drift, minor, true)).
+narrative_ontology:cs_created_at('9e72ce0a-3d59-48f8-bef6-a991eadf02c8', '').
+narrative_ontology:cs_kernel_id(temple_sacrifice_commitment__hybrid_preparatory, temple_sacrifice_commitment).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(temple_sacrifice_commitment__hybrid_preparatory, talmudic_academy_scholars).
+narrative_ontology:constraint_beneficiary(temple_sacrifice_commitment__hybrid_preparatory, yeshiva_institutions).
+narrative_ontology:constraint_beneficiary(temple_sacrifice_commitment__hybrid_preparatory, diaspora_jewish_communities).
+narrative_ontology:constraint_victim(temple_sacrifice_commitment__hybrid_preparatory, working_household_supporters).
+narrative_ontology:constraint_victim(temple_sacrifice_commitment__hybrid_preparatory, full_time_study_dedicants).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_beneficiary(temple_sacrifice_commitment__hybrid_preparatory, full_time_study_dedicants).
+narrative_ontology:constraint_beneficiary(temple_sacrifice_commitment__hybrid_preparatory, restoration_activists).
+narrative_ontology:constraint_victim(temple_sacrifice_commitment__hybrid_preparatory, diaspora_jewish_communities).
+narrative_ontology:constraint_vindicates(temple_sacrifice_commitment__hybrid_preparatory, suspended_obligation_doctrine).
+narrative_ontology:constraint_vindicates(temple_sacrifice_commitment__hybrid_preparatory, messianic_restoration_certainty).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% Author, transmit, and administer the doctrine that systematic study keeps the sacrificial commandments alive in suspension between destruction and restoration. They set the curriculum, certify mastery, rule on what counts as adequate engagement, and define what readiness for resumption requires. Their livelihood, standing, and life structure flow from the mandate they administer; leaving the study world would dissolve the professional-religious identity that constitutes them.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, talmudic_academy_scholars, agenda_setter,
+    institutional, generational, identity_locked, global).
+narrative_ontology:stakeholder_secondary_role(temple_sacrifice_commitment__hybrid_preparatory, talmudic_academy_scholars, beneficiary).
+
+% Academies and kollelim that receive communal funds, endowments, and state subsidies to maintain continuous study of the sacrificial corpus among other subjects. Their institutional existence presupposes the mandate; winding down the preparatory program would mean dissolving staff, student bodies, and buildings organized around it.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, yeshiva_institutions, beneficiary,
+    institutional, generational, constrained, global).
+
+% Fund, staff, and reproduce the study system across two millennia of dispersion. They receive identity continuity, a maintained restoration hope, and the assurance that the covenant remains operable; they also carry the material burden of supporting it. Withdrawing would fracture communal belonging and sever the transmission chain their continuity depends on.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, diaspora_jewish_communities, beneficiary,
+    organized, civilizational, constrained, global).
+narrative_ontology:stakeholder_secondary_role(temple_sacrifice_commitment__hybrid_preparatory, diaspora_jewish_communities, payer).
+
+% Households whose earnings, tithes, donations, and taxes support scholars engaged full-time in mastering rites that cannot currently be performed. They bear the material transfer directly. Withholding support invites communal sanction, and earmarking funds away from the study system is socially legible as a breach of communal obligation.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, working_household_supporters, payer,
+    moderate, biographical, constrained, regional).
+
+% Young men who devote their prime decades to mastering sacrificial law they cannot practice. They receive maintenance stipends, honored status, and a marriage market structured around their learning; they bear the opportunity cost of foregone vocational formation and economic independence. Exit means not only lost subsistence but rupture with family expectations, community standing, and self-conception.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, full_time_study_dedicants, payer,
+    moderate, biographical, identity_locked, regional).
+narrative_ontology:stakeholder_secondary_role(temple_sacrifice_commitment__hybrid_preparatory, full_time_study_dedicants, beneficiary).
+
+% Contemporary movements that draw legitimacy, funding, and purpose from the maintained expectation of restoration, preparing vessels, garments, and priestly lineages for resumed service. The study mandate keeps the restoration horizon practically credible; their activity is parasitic on that credibility in the benign sense that it could not recruit without it.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, restoration_activists, beneficiary,
+    organized, generational, mobile, regional).
+
+% Traditions that reject the suspension frame itself. Karaite communities deny the oral apparatus that sustains the study mandate; Reform theology retired sacrifice as a primitive stage superseded by ethical religion. Both would argue the mandate misreads the commitment, but they stand outside the rabbinic conversation in which the mandate is adjudicated.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, karaite_and_reform_dissenters, excluded,
+    organized, generational, mobile, global).
+
+% Document the post-destruction adaptation as a case of commitment-system maintenance under impossibility, comparing it to parallel strategies in other traditions. They attest the founding problem and its persistence from outside the benefiting parties and take no seat in the arrangement's internal economy.
+narrative_ontology:constraint_stakeholder(temple_sacrifice_commitment__hybrid_preparatory, comparative_religion_historians, observer,
+    analytical, civilizational, analytical, global).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Maintains communal possession of a detailed practical-legal corpus across an indefinite period in which its subject matter cannot be enacted, and coordinates the community around a shared restoration horizon so that the knowledge, personnel pipeline, and interpretive apparatus survive until conditions permit performance.
+% TRANSFER_FUNCTION: Moves material support and cognitive labor from working households and the broader community to full-time scholars and institutions; moves status, meaning, and certifiable mastery to the dedicant class; holds the preserved corpus as knowledge capital in trust against a future restoration.
+% ABSENT_VOICES: Karaite and Reform dissenters would object that the suspension frame itself misreads the commitment, but are structurally outside the rabbinic conversation. Within the tradition, no constituency represents the option of letting the corpus lapse into pure archive; households that privately weigh the opportunity cost of supported study rarely voice it as a challenge to the mandate as such.
+% DISAPPEARANCE_RATIONALE: If the study mandate vanished overnight, the sacrificial corpus would persist only as archived text without a living interpretive community able to operationalize it, the academy-and-kollel economy built around it would dissolve, the restoration hope would lose its practical arm and become purely liturgical, and the communal calendar and identity structure organized around study cycles would reorganize around other centers.
+% FOUNDING_PROBLEM: After the destruction of the Second Temple in 70 CE, a commandment-centered covenantal community faced the loss of its central rite: the sacrificial order was legally binding, practically impossible, and — on the tradition's own terms — temporarily rather than permanently abrogated. The founding problem was how to keep the commitment coherent, teachable, and resumable across an open-ended suspension.
+% FOUNDING_PROBLEM_CORROBORATION: Attested from outside the benefiting parties by academic historians of religion, who document the post-destruction preservation strategy as a deliberate institutional response, and by Karaite chroniclers, who acknowledge the loss-of-sanctuary problem while disputing the rabbinic solution. Comparative evidence from other post-rupture traditions corroborates that the problem class is real. No corroboration exists from the performance_only position for the preparatory framing specifically; that camp attests the problem but denies this reading's answer to it.
+narrative_ontology:disappearance_verdict(temple_sacrifice_commitment__hybrid_preparatory, world_rearranges).
+narrative_ontology:founding_problem_status(temple_sacrifice_commitment__hybrid_preparatory, live).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(temple_sacrifice_commitment__hybrid_preparatory, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth2', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(temple_sacrifice_commitment__hybrid_preparatory, 'none', 1).
+narrative_ontology:epsilon_provenance(temple_sacrifice_commitment__hybrid_preparatory, 0.58, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(temple_sacrifice_commitment__hybrid_preparatory_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(temple_sacrifice_commitment__hybrid_preparatory, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(temple_sacrifice_commitment__hybrid_preparatory_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extraction is moderate (0.58 at interval end) because the arrangement transfers real resources — household income, decades of dedicant labor — toward an output whose benefit is contingent on an unfulfilled restoration, but participation is substantially voluntary and meaning-rich, which dampens raw extraction below snare levels. Suppression (0.48) reflects normative-institutional enforcement: communal sanction, marriage-market structure, and the identity cost of exit, rather than physical coercion. Theater ratio (0.25) is low-to-moderate: most study activity is genuinely oriented toward mastery and preservation, but a growing share takes the form of rapid liturgical recitation of sacrifice passages and devotional gestures whose preparatory function is thin — the seed of the piton signature if restoration never arrives. Accessibility collapse (0.45): alternatives are partly available (the symbolic-transformation settlement, reduced curricula, archival-only preservation) but the traditional framework channels adherents strongly toward the full preparatory program, and historically branded the symbolic-transformation alternative as heresy when proposed from outside. Resistance (0.35): Karaite and Reform rejections, periodic household reluctance, and modern vocational-exit pressure meet the mandate but have not displaced it inside the tradition. The temporal series run on ONE shared eight-point grid (70, 200, 500, 800, 1100, 1400, 1700, 2000) with every tracked metric authored at every point. Base extractiveness rises monotonically — rent-layering onto coordination as the academy economy institutionalized. The suppression_requirement series is authored deliberately: it tracks enforcement-capacity change (early normative exhortation, geonic-era communal taxation, the modern formalized kollel system), a maturing enforcement infrastructure, not merely shifting extraction. Theater rises slowly with liturgical accretion. No cyclical pattern is asserted; the drift is monotonic.
+ *
+ * PERSPECTIVAL GAP:
+ *   The payer seats and the agenda-setting seat should compute differently. From the scholar seat, the arrangement is a coordination structure they personally administer and are subsidized by — it computes rope-flavored, with extraction damped toward subsidy. From the working-household and dedicant seats, the same structure operates as enforced transfer toward non-performable outputs — it computes tangled-rope to snare-flavored depending on how the restoration contingency weighs. The dedicant seat is sharpened by identity_lock: exit is not merely costly but self-dissolving, which pushes effective extraction toward the full-target end beyond what the material flows alone indicate. Coalition potential among supporter households exists in principle — collective earmarking of funds away from the study system — but has historically been suppressed by the same communal-enforcement machinery the suppression metric measures. The engine computes this per-seat divergence from the structural data; the authored claim does not adjudicate it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Scholars sit near the beneficiary pole (d near 0.0-0.15): the constraint subsidizes them and they set its terms. Institutions similarly (d near 0.1). Diaspora communities are genuinely dual (d near 0.45): they receive continuity and pay for it. Working households sit near the target pole (d near 0.8): pure material transfer out, constrained exit. Dedicants sit near the target pole with amplification (d near 0.75): they pay in the constraint's own currency (labor and time), and identity_lock traps them nearer full-target than their stipend receipts alone would suggest. Restoration activists derive d well below 0.5 through indirect benefit. Dissenters are excluded rather than coordinated — their exclusion is enforced at the boundary of the conversation, not by this constraint's internal machinery. Scope is global for the tradition-spanning seats, which modestly amplifies effective extraction for the payer seats through verification difficulty; suppression itself is authored unscaled, as a raw structural property.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The founding problem — keeping a commandment-centered covenant coherent under central-rite impossibility — is still live: the sanctuary has not been rebuilt, the suspension continues, and the arrangement's preparatory justification has not outlived its function. Founding-problem status (live) crossed with disappearance verdict (world_rearranges) produces no capture/zombie mismatch flag, and mandatrophy is accordingly NOT resolved. The tangled_rope classification prevents two symmetrical mislabelings: reading the arrangement as pure rope (continuity coordination with no extraction) ignores the real transfer from households and dedicants toward contingent outputs; reading it as pure snare ignores the genuine coordination good — a living, operationalizable corpus and personnel pipeline — that distinguishes it from rent collection riding on a dead letter. The slow theater-ratio rise is the metric to watch: if restoration recedes further as a practical horizon while recitation becomes the dominant mode, the arrangement drifts toward piton, and this story's measurement series is positioned to detect that transition.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_underdetermination,
+    'Is the hybrid-preparatory characterization correct — that study maintains the commitment in suspension without performing it — or does one of the sibling readings (study-as-performance, archival-only, authorized transformation) correctly characterize what study does to the commitment?',
+    'Not resolvable by data alone: the readings partition on a theological-conceptual claim about obligation under impossibility. Partial resolution comes from internal textual analysis (which strands the tradition itself privileges), from behavioral evidence (whether communities study sacrificial law as if competence were operationally deployable, or as devotional text), and from the restoration test — actual resumption would retroactively vindicate the preparatory reading.',
+    'If study_as_exercise is correct, measured extraction drops sharply (study is the commanded act itself, not preparation for one) and the victim set thins; if performance_only is correct, the arrangement loses its coordination function and drifts toward piton/archive with the scholar economy exposed as pure maintenance cost; if symbolic_transformation is correct, the suspension frame collapses and the constraint reclassifies around the transformed practice.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(kernel_reading_underdetermination, conceptual, 'Which reading of the sacrificial-commitment kernel correctly characterizes study''s structural relation to the obligation.').
+
+omega_variable(
+    restoration_contingency_of_value,
+    'Does the expected value of preparatory readiness justify the ongoing extraction, given that the restoration the preparation targets is epistemically unavailable — and does that justification change if restoration recedes indefinitely?',
+    'No in-world resolution mechanism exists short of restoration occurring or the tradition formally revising the certainty doctrine. Proxy resolution: track whether the tradition''s own authorities treat readiness as decaying (curricular reduction, archival drift) — revealed discount rates — and whether restoration-adjacent recruitment (activist movements, aliyah motivated by rebuild expectation) grows or shrinks.',
+    'If the tradition''s revealed behavior discounts restoration toward zero while maintaining extraction, the preparatory justification becomes cover and the arrangement migrates toward snare; if readiness behavior tracks genuine expectation, the extraction carries a defensible contingent-benefit structure and the tangled_rope classification stabilizes.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(restoration_contingency_of_value, conceptual, 'Whether the uncertain-future-benefit structure legitimizes or undermines the present transfer.').
+
+omega_variable(
+    net_cost_bearer_ambiguity,
+    'Who bears the net cost of the arrangement once meaning, status, stipend income, and identity goods are counted against transferred resources and foregone vocational formation — the supporting households, the dedicants themselves, or no one in net terms?',
+    'Longitudinal outcome data on dedicant cohorts (economic outcomes, reported life satisfaction, exit rates and post-exit adjustment) compared against matched non-dedicant peers, plus household-level analysis of supporter willingness-to-pay under anonymized conditions that remove social-enforcement pressure.',
+    'If dedicants emerge as net beneficiaries, the victim set reduces to households and the asymmetry narrows toward rope; if households are also net-willing payers, the arrangement approaches pure coordination; if both seats show net loss under enforcement-free elicitation, the extraction asymmetry is confirmed and deepens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(net_cost_bearer_ambiguity, empirical, 'Locating the actual net cost-bearing seat beneath the dual beneficiary/payer positions.').
+
+omega_variable(
+    coordination_or_cover_ambiguity,
+    'Is knowledge-preservation-and-readiness the operative coordination function of the study mandate, or is it cover for maintaining a scholar-class economy whose scale exceeds any plausible preservation need?',
+    'Counterfactual comparison: assess whether minimal archival curricula (as exist in communities with reduced study mandates) preserve equivalent operationalizable competence; compare restoration-readiness outcomes across communities differing in study intensity; examine whether marginal study hours correlate with any measurable readiness increment or only with institutional maintenance.',
+    'If a minimal curriculum suffices for readiness, the excess study volume is extraction dressed as preparation and the arrangement slides toward snare with the scholar class as concentrated capturer; if readiness scales with study intensity, the coordination function is genuine and the current classification holds.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_or_cover_ambiguity, conceptual, 'Whether the preservation function is real or a cover story for scholar-class maintenance.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(temple_sacrifice_commitment__hybrid_preparatory, 70, 2000).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t70, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 70, 0.08).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t70, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t200, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 200, 0.11).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t200, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t500, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 500, 0.14).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t500, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t800, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 800, 0.17).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t800, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t1100, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 1100, 0.19).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t1100, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t1400, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 1400, 0.21).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t1400, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t1700, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 1700, 0.23).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t1700, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_tr_t2000, temple_sacrifice_commitment__hybrid_preparatory, theater_ratio, 2000, 0.25).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_tr_t2000, observed).
+
+% Extraction over time
+narrative_ontology:measurement(tsc_hybrid_prep_be_t70, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 70, 0.36).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t70, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t200, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 200, 0.4).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t200, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t500, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 500, 0.44).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t500, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t800, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 800, 0.47).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t800, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t1100, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 1100, 0.5).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t1100, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t1400, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 1400, 0.53).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t1400, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t1700, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 1700, 0.56).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t1700, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_be_t2000, temple_sacrifice_commitment__hybrid_preparatory, base_extractiveness, 2000, 0.58).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_be_t2000, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(tsc_hybrid_prep_su_t70, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 70, 0.28).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t70, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t200, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 200, 0.31).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t200, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t500, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 500, 0.34).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t500, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t800, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 800, 0.38).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t800, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t1100, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 1100, 0.41).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t1100, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t1400, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 1400, 0.43).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t1400, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t1700, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 1700, 0.46).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t1700, observed).
+narrative_ontology:measurement(tsc_hybrid_prep_su_t2000, temple_sacrifice_commitment__hybrid_preparatory, suppression_requirement, 2000, 0.48).
+narrative_ontology:measurement_basis(tsc_hybrid_prep_su_t2000, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(temple_sacrifice_commitment__hybrid_preparatory, identity_coordination).
+narrative_ontology:affects_constraint(temple_sacrifice_commitment__hybrid_preparatory, temple_sacrifice_commitment__study_as_exercise).
+narrative_ontology:affects_constraint(temple_sacrifice_commitment__hybrid_preparatory, temple_sacrifice_commitment__performance_only).
+narrative_ontology:affects_constraint(temple_sacrifice_commitment__hybrid_preparatory, temple_sacrifice_commitment__symbolic_transformation).
+
+% DUAL FORMULATION NOTE:
+% Constraint family: the colloquial notion 'study of sacrifices after the destruction' decomposes into structurally distinct claims about what study does to the commitment, per the epsilon-invariance principle. This file instantiates the hybrid_preparatory reading (moderate epsilon: real transfer toward contingent benefit, real coordination function). The upstream sibling study_as_exercise reports lower epsilon (study is the commanded act itself — extraction reads as commanded-cost, not transfer); the downstream sibling performance_only reports the arrangement as functionless archive (epsilon concentrates in pure maintenance cost with no coordination offset); symbolic_transformation stands adjacent with its own victim set (those who experience the transformation as unauthorized substitution). Each member links to the others via affects_constraints; contamination propagates along the family — e.g., a finding that minimal curricula preserve readiness (coordination_or_cover omega) degrades the hybrid reading's purity and pressures the performance_only reading's archival claim simultaneously.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

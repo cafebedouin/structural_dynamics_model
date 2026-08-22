@@ -1,0 +1,349 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__actuarial_risk_acceptance",
+    "version": "1.0",
+    "generated_date": "2026-08-12",
+    "status": "ACTIVE",
+    "story_uid": "535e9af9-2655-4b32-aea1-bb58f59a3e29"
+  },
+  "base_properties": {
+    "extractiveness": 0.63,
+    "suppression": 0.6,
+    "theater_ratio": 0.5,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Post-Rogers Actuarial Risk-Acceptance Requirement (Documented Failure Probability Plus Recorded Informed Acceptance)",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_planners",
+      "nasa_program_management",
+      "shuttle_contractor_managers",
+      "commercial_crew_operators"
+    ],
+    "victims": [
+      "astronaut_flight_crews",
+      "dissenting_safety_engineers"
+    ],
+    "vindicated_propositions": [
+      "probabilistic_risk_assessment_doctrine",
+      "informed_decision_maker_authorization_principle"
+    ]
+  },
+  "interval": {
+    "start": 1986,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1986,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1991,
+      "value": 0.54,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1997,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.66,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.6,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.63,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1986,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1991,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1997,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.5,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1986,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1991,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1997,
+      "value": 0.57,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2011,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.6,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_allocation",
+      "question": "Which reading of the Rogers findings does the standing flight-readiness regime actually instantiate in operation — quantified acceptance (this reading), absolute engineering thresholds, or compliance documentation?",
+      "resolution_mechanism": "Observe regime behavior when quantified risk exceeds historical baselines: grounding pending redesign indicates the threshold reading governs; document-and-fly indicates this reading; paperwork without recalculation indicates the compliance reading.",
+      "impact": "If the threshold reading governs in practice, this story's epsilon is misattributed and the operative constraint is near-non-extractive; if the compliance reading governs, theater dominates and effective extraction rises.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this constraint is one of three competing readings of the Rogers kernel; which reading governs in operation is unresolved."
+    },
+    {
+      "id": "probability_estimate_calibration",
+      "question": "Are the documented failure probabilities entering acceptance decisions calibrated engineering estimates, or figures negotiated under schedule pressure?",
+      "resolution_mechanism": "Calibration audit comparing pre-flight probabilistic risk assessment estimates against realized failure rates across Shuttle, Station, and commercial crew programs; discovery of review-chain edits to probability figures.",
+      "impact": "If probabilities are negotiated rather than estimated, the documented half of the arrangement is cover and effective extraction rises sharply toward the snare boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Integrity of the quantification the acceptance regime consumes."
+    },
+    {
+      "id": "informed_acceptance_information_asymmetry",
+      "question": "Does acceptance by decision-makers constitute informed acceptance, given what reviewing engineers knew versus what reached the acceptance signature?",
+      "resolution_mechanism": "Communication-chain audits reconstructing the information set available at each acceptance signature; the Columbia-era investigation board reconstruction provides the template.",
+      "impact": "If acceptance is systematically uninformed, the legitimation function fails and the arrangement operates as unilateral risk imposition dressed as consent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the informed-decision-maker element of the arrangement is substantively met."
+    },
+    {
+      "id": "crew_assent_structural_vs_internalized",
+      "question": "Is flight crews' continued acceptance of residual risk free professional assent, or identity-fused inability to refuse — is the suppression acting on crews structural or internalized?",
+      "resolution_mechanism": "Post-career testimony patterns versus in-service statements; comparison with programs where crews hold formal refusal rights; exit interviews.",
+      "impact": "If assent is substantially internalized, the accepted element is compromised — measured extraction understates the burden crews carry, and effective suppression is higher than the structural measure shows because crews carry it with them after any individual exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression-mechanism ambiguity for the crew seat: structural barriers versus internalized mission identity."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "After the 1986 Challenger loss, the Rogers Commission diagnosed a launch-governance failure: known hazards had not been presented to decision-makers as explicit quantified risks, and flights proceeded without anyone formally accepting those risks. This story instantiates ONE reading of those findings — the actuarial risk-acceptance reading — under which the findings establish a risk-quantification requirement: a flight is acceptable when its failure probability is documented and its residual risk is formally accepted by informed decision-makers. The standing arrangement this story is about is the post-Rogers flight-readiness regime built on that reading: probabilistic risk assessments, hazard documentation chains, review boards, and recorded acceptance signatures that together define the conditions under which flight continues. The regime solved a real decision problem and simultaneously built a channel through which residual risk flows to those who do not decide and categorical safety objections are converted into negotiable numbers. KEY AGENTS (by structural relationship):",
+    "key_agents": [
+      "- nasa_program_management: Agenda-setter (institutional/arbitrage) — administers the flight-readiness process, records acceptance, collects schedule continuity and the distributed paper trail",
+      "- mission_planners: Primary beneficiary (organized/mobile) — receives launch cadence enabled by documented acceptance",
+      "- astronaut_flight_crews: Primary target (moderate/identity_locked) — rides the accepted residual risk; assent is presumed by the record, not negotiated",
+      "- dissenting_safety_engineers: Target (moderate/constrained) — categorical objections must be translated into probability estimates to have standing",
+      "- shuttle_contractor_managers: Dual-positioned beneficiary/payer (powerful/constrained) — contract continuation depends on cadence while schedule pressure lands on them",
+      "- aerospace_safety_advisory_panel: Excluded voice (institutional/analytical) — statutory advisor whose written warnings carried no acceptance weight",
+      "- congressional_appropriators: Observer (institutional/analytical) — funds and investigates but holds no acceptance seat",
+      "- commercial_crew_operators: Downstream beneficiary (powerful/arbitrage) — inherits the legitimating template for flying with quantified, accepted risk"
+    ],
+    "logic_rationale": "Extractiveness is 0.63 at interval end: the referent is the standing post-Rogers acceptance regime assessed by this reading's own lights — the reading endorses quantification and informed acceptance as legitimate, yet its own terms register that the arrangement transfers residual risk onto people who hold no acceptance seat and dilutes categorical safety judgment into one weighted input. Suppression is 0.60 and unscaled by construction: it acts procedurally rather than physically — objections that resist quantification lose formal standing, and persistent dissent carries assignment and career risk — so the enforcement machinery must be continuously maintained for the arrangement to hold. Theater is 0.50: the review function is real, but a growing share of activity produces signatures rather than decisions, peaking around the 2003 loss when debris-assessment analysis was conducted to confirm a predetermined answer. Accessibility collapse is 0.42: the rival readings remain operable — the fleet was in fact grounded for 32 months under threshold logic after Challenger, proving the categorical alternative works — so alternatives persist rather than collapsing. Resistance is 0.55: sustained engineer dissent, external board criticism, and the safety-culture literature keep contesting the frame. The three measurement series run on one shared time grid (1986, 1991, 1997, 2003, 2011, 2025) with every metric authored at every point; trajectories show accumulation through 2003, partial correction after the external investigation, and re-accumulation as the template spread to successor programs.",
+    "perspectival_gap": "The seats compute differently from identical documents. From the program-management seat the arrangement is a governed, auditable decision process it built and legitimately administers; from the crew seat it is a record that someone else accepted the risk of riding the vehicle; from the dissenting-engineer seat it is a format that renders categorical judgment illegible. Same signatures, different constraints experienced. The engine computes this per-seat divergence from the structural data — power, exit, and role — and the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary declarations place mission_planners, nasa_program_management, shuttle_contractor_managers, and commercial_crew_operators near the beneficiary end of d; program management sits lowest as the seat that both administers the process and demonstrably accrues its gains (schedule continuity, budget justification, diffused responsibility). Victim declarations place astronaut_flight_crews and dissenting_safety_engineers near the target end; crews' identity_locked exit pushes them toward full-target — they cannot credibly refuse without dissolving the professional identity the acceptance record presumes — while engineers' constrained exit (public dissent at career cost) leaves them slightly short of full target. The advisory panel is excluded rather than coordinated: its exclusion is maintained by the same signature structure that defines the arrangement. Observers take the analytical seat and feed no directionality.",
+    "mandatrophy_analysis": "The classification resists two symmetric mislabels. Calling the arrangement pure coordination ignores the documented transfer of residual risk onto non-deciding parties and the displacement of categorical norms — the exact casualties this reading's own structural delta names. Calling it pure extraction ignores the surviving decision-protocol function that external investigations repeatedly reaffirmed as necessary under irreducible uncertainty. Tangled rope holds both truths: genuine coordination function, asymmetric extraction through the same structure, active enforcement required to maintain the conversion of objection into number. On obsolescence: the founding problem — authorizing flight under irreducible uncertainty with asymmetric information — remains live, so no mandatrophy resolution is declared; the monitored degradation path is the theater series, which tracks the acceptance ritual drifting toward performance of acceptance rather than acceptance itself.",
+    "kernel_context": "Kernel: rogers_commission_findings — the Rogers Commission report as a stabilized commitment about what the Challenger findings require of launch governance. This file instantiates the actuarial_risk_acceptance reading: the findings establish that flight is acceptable when failure probability is documented and residual risk is accepted by informed decision-makers. Sibling readings, authored as separate constraints: engineering_absolute_threshold (the findings mandate cessation of flight until redesign is certified) and management_compliance_narrative (the findings require demonstrated documented risk awareness sufficient to proceed). The disagreement is located in what the findings REQUIRE — a categorical boundary, a quantification-plus-acceptance procedure, or a documentation-of-awareness ritual. Those readings are other files; this story authors only the actuarial reading with its own stable epsilon."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rogers_commission_findings__engineering_absolute_threshold",
+      "rogers_commission_findings__management_compliance_narrative"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the colloquial label 'Rogers Commission findings' into three structurally distinct constraints with different epsilon values: the engineering_absolute_threshold reading (a hard boundary; negligible extraction where operative), this actuarial_risk_acceptance reading (a working protocol that transfers residual risk; moderate-high extraction), and the management_compliance_narrative reading (documentation as cover; high theater). All three cite the same upstream text for incompatible requirements; the epsilon values differ because the referent arrangements differ — what must be shown for flight to proceed — not because of observable selection. Family members are linked via affects_constraints in both directions of citation dependence: the actuarial reading's documentary outputs feed the compliance reading's evidentiary substrate, while the threshold reading stands as the categorical alternative the other two displace."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "documented_probability_acceptance_baseline",
+    "drift_state": {
+      "moment": "contemporary_post_caib_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "engineering_absolute_threshold",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "quantified_informed_acceptance_suffices_for_flight",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "unquantified_objections_lack_decision_standing",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "nasa_program_management",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Runs the flight-readiness review chain: convenes hazard reviews, adjudicates what counts as adequate documentation, and records the acceptance signatures that authorize flight. Collects the direct returns of the process — launch cadence, budget justification, and a distributed paper trail that spreads responsibility across many signatures. Can restructure the process itself, and has historically reshaped review requirements after each accident investigation."
+    },
+    {
+      "name": "mission_planners",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Build manifests and schedules that assume flights proceed once acceptance is recorded. Gains continuity of operations from the arrangement; their plans are the demand side that documented acceptance satisfies. Can shift between programs and agencies when a manifest stalls."
+    },
+    {
+      "name": "astronaut_flight_crews",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Train for and fly the missions whose residual risk the signatures accept. Risk levels are set in reviews they attend as briefees rather than parties; declining a mission carries career and crew-identity costs, and crews have historically flown through publicly stated personal reservations. Their assent is presumed by the acceptance record rather than negotiated."
+    },
+    {
+      "name": "dissenting_safety_engineers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Hold categorical safety judgments formed from hands-on hardware experience. To enter the review they must translate those judgments into probability estimates and mitigation plans; objections that resist quantification lose formal standing. Persistent dissent carries assignment and career risk, as the post-Challenger treatment of engineers who refused to concur illustrated."
+    },
+    {
+      "name": "shuttle_contractor_managers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Operate under contracts whose continuation depends on flight cadence while absorbing schedule pressure from both the agency and their own corporate commitments. They supply the hazard data the reviews consume and sign concurrences that bind their workforces to the accepted risk. Leaving means surrendering the contract base."
+    },
+    {
+      "name": "aerospace_safety_advisory_panel",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Statutorily chartered to advise the agency on safety. Issued repeated written warnings that the acceptance process was degrading, most prominently in the months before the 2003 loss; the warnings entered the record without altering any acceptance decision. Its leverage depends entirely on being heeded by the seats it advises."
+    },
+    {
+      "name": "congressional_appropriators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Fund the programs and hold investigative hearings after failures. They receive testimony about the acceptance process but do not sit in reviews; their instruments are budgets and post-hoc investigation rather than acceptance signatures."
+    },
+    {
+      "name": "commercial_crew_operators",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Certify and fly vehicles under requirements descended from the post-Rogers process. They inherit the legitimating template — quantify, document, obtain informed acceptance — and gain market access by satisfying it. Capital mobility lets them relocate programs or press jurisdictions competitively when requirements bind."
+    }
+  ],
+  "gain_flow": "nasa_program_management",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves the launch-decision problem under irreducible uncertainty: hazards are enumerated once, centrally; failure probabilities are estimated on a common methodology; and a recorded acceptance step converts dispersed technical judgment into a single authorized go/no-go with an audit trail — replacing ad hoc managerial discretion while preventing both unexamined flight and indefinite paralysis.",
+    "transfer_function": "Moves residual operational risk from the institutions that decide (which accept it on paper and diffuse responsibility across signatures) to the people who occupy the hardware — crews above all — and moves open-ended safety objections from engineers into bounded numerical inputs that management weighs against schedule and budget.",
+    "absent_voices": "Crews are briefed on accepted risk but hold no acceptance seat; engineers whose objections cannot be quantified have no format in which to be heard; the statutory safety advisory panel's written warnings entered the record without an acceptance consequence. Each absent voice would insist that acceptance requires the assent of those who bear the risk, not merely the signature of those who impose it.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the documented-probability-and-recorded-acceptance requirement, launch authorization reverts to either categorical engineering vetoes — with frequent groundings whenever uncertainty is unresolved — or unconstrained managerial discretion. The review-board infrastructure, contractor hazard-reporting pipelines, and the audit-trail economy built around acceptance signatures would lose their organizing purpose and reorganize around whichever successor rule prevails.",
+    "founding_problem": "After the 1986 Challenger loss, the Rogers Commission found that known hazards had not been presented to decision-makers as explicit quantified risks and that flights had proceeded without anyone formally accepting those risks. The arrangement was built so that no flight proceeds unless its failure probability is documented and its residual risk is formally accepted by informed decision-makers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: the Columbia Accident Investigation Board — an external investigative body — reaffirmed both that the founding problem is real and that the documented-acceptance mechanism had decayed toward ritual; the statutorily independent Aerospace Safety Advisory Panel attests in writing that the problem remains live; and the academic safety literature on normalization of deviance corroborates the mechanism from outside the agency entirely."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "header": {
+    "constraint_id": "border_control_legitimacy__jurisdictional_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "8a8745a1-b053-4756-ac1d-04f21fdfbed4"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.62,
+    "theater_ratio": 0.41,
+    "accessibility_collapse": 0.45,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Border-Control Legitimacy under the Jurisdictional-Sovereignty Reading",
+    "topic_domain": "political philosophy/international law/migration studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "receiving_state_executives",
+      "immigration_bureaucracies",
+      "licensed_employers",
+      "resident_publics",
+      "smuggling_intermediaries"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "detained_asylum_seekers",
+      "displaced_citizens",
+      "resident_publics"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 28,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 28,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 21,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 28,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.62
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This constraint instantiates the jurisdictional_sovereignty reading of the border_control_legitimacy kernel; how would the sibling readings restructure the same arrangement?",
+      "resolution_mechanism": "Generate the sibling stories (sovereignty_primary, freedom_of_movement_primary) and compare epsilon, victim sets, and enforcement structure across the family.",
+      "impact": "Under sovereignty_primary the victim set collapses to migrants alone and the proportionality limits vanish, raising effective extraction; under freedom_of_movement_primary the allocation function itself becomes suspect and epsilon rises further while the beneficiary set shrinks.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is one reading of a three-reading kernel; sibling files instantiate the others."
+    },
+    {
+      "id": "dual_victim_weighting",
+      "question": "How should the two acknowledged victim sets — excluded migrants and consent-bypassed resident districts — be weighted against each other inside the legitimacy balance?",
+      "resolution_mechanism": "Distributional incidence analysis of enforcement and admission effects combined with deliberative polling in admission-concentrated districts.",
+      "impact": "The weighting decides whether the binding failure reads as under-admission (migrant-side remedy dominates) or over-admission-without-consent (citizen-side remedy dominates), flipping which seat drives reform.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The reading's own balancing criterion leaves the inter-victim tradeoff unresolved."
+    },
+    {
+      "id": "proportionality_review_efficacy",
+      "question": "Do proportionality and necessity tests actually constrain enforcement practice, or do they legitimate it while practice drifts past the reference frame?",
+      "resolution_mechanism": "Compare removal and detention rates before and after landmark rulings; track compliance lag and scheme-reintroduction-after-invalidation patterns.",
+      "impact": "If review is ineffective, the reading's constraining delta is largely performative and effective extraction climbs toward the sovereignty_primary profile; if effective, the tangle stays balanced enough to hold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the judicial constraint layer binds or decorates."
+    },
+    {
+      "id": "consent_operationalization",
+      "question": "What counts as public consent for legitimacy — electoral majorities, deliberative microcosms, or mere absence of organized revolt?",
+      "resolution_mechanism": "Comparative analysis of which operationalization predicts policy stability and compliance across destination jurisdictions.",
+      "impact": "An electoral operationalization licenses majoritarian closure and lowers measured illegitimacy; a deliberative operationalization raises the consent bar and increases the measured illegitimacy of current practice.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The consent term of the balance is underspecified."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Destination states operate a border-control apparatus — visa regimes, asylum procedures, detention, removal, and externalized enforcement — that this reading evaluates through the jurisdictional-sovereignty lens: sovereignty confers authority to regulate rights and obligations within territory, that authority extends to conditioning entry, but it is not an absolute closure power and its exercise is legitimate only when it balances protection obligations, labor needs, and public consent. The epsilon referent is the standing enforcement-heavy arrangement as this reading sees it: substantially costly to those it excludes and detains, and burdenshifting onto residents whose consent is invoked more than consulted, while still performing an allocation function no available alternative provides. Assumptions stated: the interval maps T=0 to circa 1990 (post-Cold War globalization of migration, early externalization experiments) and T=35 to circa 2025; 'displaced citizens' denotes residents of admission-concentrated districts who bear adaptation costs without setting admission policy. This story is one member of a three-story constraint family decomposing the border_control_legitimacy kernel; the siblings author different epsilon over the same referent.\n\nKEY AGENTS (by structural relationship):\n- receiving_state_executives: agenda-setter (institutional/arbitrage) — writes the rules, negotiates externalization, captures discretion and credit\n- immigration_bureaucracies: beneficiary (institutional/constrained) — budgets and powers scale with enforcement volume\n- licensed_employers: beneficiary (powerful/constrained) — purchase rationed, sponsorship-dependent labor\n- resident_publics: beneficiary and payer (organized/constrained) — receive ordered admission, fund enforcement, absorb unconsented change\n- excluded_migrants: primary target (powerless/trapped) — bear denial, limbo, and route risk\n- detained_asylum_seekers: primary target (powerless/trapped) — confinement as the price of claiming\n- displaced_citizens: secondary target (moderate/constrained) — adaptation costs without policy voice\n- human_rights_courts: analytical observer (institutional/analytical) — proportionality review supplies the internal limit\n- refugee_protection_agencies: excluded voice (institutional/constrained) — locked out of the bilateral bargains\n- smuggling_intermediaries: parasitic beneficiary (organized/arbitrage) — revenue scales with restriction",
+    "key_agents": [
+      "receiving_state_executives: agenda-setter (institutional/arbitrage) — sets admission rules, directs enforcement, captures discretion and electoral credit, can shift burdens to other jurisdictions",
+      "immigration_bureaucracies: beneficiary (institutional/constrained) — headcount, budgets, and statutory powers grow with control activity",
+      "licensed_employers: beneficiary (powerful/constrained) — access a rationed workforce whose status depends on continued sponsorship",
+      "resident_publics: beneficiary with payer secondary role (organized/constrained) — receive sequenced admission and planning horizons, pay fiscally and morally, absorb change at uneven speeds",
+      "excluded_migrants: primary target (powerless/trapped) — denial of entry, family separation, procedural limbo, irregular-route risk",
+      "detained_asylum_seekers: primary target (powerless/trapped) — administrative confinement as the condition of pursuing a claim",
+      "displaced_citizens: secondary target (moderate/constrained) — bear localized adaptation costs with no seat in admission policy",
+      "human_rights_courts: analytical observer (institutional/analytical) — enforce proportionality, necessity, and non-refoulement limits",
+      "refugee_protection_agencies: excluded (institutional/constrained) — supervisory mandate without a seat in the operative bilateral deals",
+      "smuggling_intermediaries: parasitic beneficiary (organized/arbitrage) — sell passage around legal channels; revenue scales with restriction"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.66: the arrangement imposes heavy, concentrated costs on excluded and detained migrants and pushes adaptation and fiscal burdens onto residents without their meaningful consent, offset partially by a real allocation function. Suppression at 0.62 reflects detention, carrier sanctions, externalized pushback arrangements, and status-dependence — coercive machinery that is real but judicially bounded. Theater at 0.41 captures the widening gap between humanitarian framing ('safe and orderly routes') and deterrence practice, plus security rhetoric wrapped around labor-rationing functions. Accessibility_collapse at 0.45: alternatives persist (asylum claims, judicial review, regular pathways, origin-side stay options) but have been progressively narrowed, so the structure does not behave like an inevitability. Resistance at 0.58: sustained litigation, advocacy campaigns, irregular-route persistence, and episodic local consent shocks. Claimed type is tangled_rope on structural grounds independent of these scores: a genuine coordination problem (sequencing entry against protection duties, labor demand, and absorptive capacity) is solved through the same machinery that asymmetrically extracts from the excluded and the unconsented, and the arrangement survives only through continuous active enforcement. The three measurement series share one time grid (points 0, 7, 14, 21, 28, 35) so every metric is authored at every examined time point; all series rise over the interval, tracking externalization deals, detention expansion, and the growing rhetorical-practical gap.",
+    "perspectival_gap": "The seats should compute differently. From the executive seat the arrangement is a legitimate balancing act it performs under constraint; from the excluded-migrant and detained-asylum-seeker seats the same structure presents as a barrier with no workable exit; from the displaced-citizen seat it presents as a burden imposed without consultation; from the court seat it presents as a rule-bound process with correctable excesses; from the smuggling seat it presents as a price floor. Same structure, four incompatible experiences — the engine derives this divergence from the declared roles, power atoms, and exit options rather than from any authored verdict.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for the executive, bureaucratic, employer, and smuggling seats: the first three collect discretion, budgets, and labor access; the smuggler collects counter-intuitively, since every lawful-route tightening raises its service price and its arbitrage-grade exit insulates it from the costs it helps inflate. Payer declarations drive high directionality for excluded migrants and detained asylum seekers, whose trapped exit puts them near the full-target end. Resident publics carry both declarations (beneficiary primary, payer secondary): genuine coordination benefits pull them toward symmetry while fiscal, moral, and consent costs pull the other way, landing them mid-range. Displaced citizens, declared payers with constrained exit, sit target-ward but below the trapped seats since their losses are diffuse and partially compensable. No directionality overrides were needed: the beneficiary/victim declarations plus exit options already differentiate every seat, including the institutional trio (executives arbitrage, bureaucracies constrained, courts analytical).",
+    "mandatrophy_analysis": "The founding problem — reconciling territorial jurisdiction with mass displacement and labor demand without outrunning public consent — is live, so this is not a mandate outliving its function. The classification discipline cuts both ways here. Reading the whole apparatus as pure extraction erases the allocation function that no surveyed alternative provides (unilateral open admission dissolves consent; unilateral closure breaches protection duties and starves labor markets); reading it as pure coordination erases the documented dual-victim asymmetry the balance is supposed to prevent. The tangled_rope claim keeps both facts in view. Drift watches: if proportionality review hollows out while enforcement intensifies, the tangle slides toward pure extraction; if enforcement decays into ritual screening behind a maintained facade, it slides toward inertial performance. The rising theater_ratio series is the early indicator for the second slide; the rising suppression_requirement series is the early indicator for the first.",
+    "kernel_context": "Kernel: border_control_legitimacy — what territorial states may legitimately do at their edges. This file instantiates the jurisdictional_sovereignty reading: sovereignty as bounded jurisdictional authority, legitimacy as a balance among protection obligations, labor needs, and public consent. Siblings: sovereignty_primary (absolute exclusion discretion as constitutive of statehood — this reading forecloses it, since bounded and absolute discretion cannot coexist in one framework) and freedom_of_movement_primary (movement as a fundamental human right that sovereignty does not license closing against — this reading coexists with it as a live rival, since a holder of either can reject the other without self-contradiction while both remain live positions across parties). The epsilon authored here is indexed to this reading's lights over the standing enforcement-heavy arrangement; the sibling files will author different epsilon over the same referent, and the family is linked through network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_control_legitimacy__sovereignty_primary",
+      "border_control_legitimacy__freedom_of_movement_primary"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition of the border_control_legitimacy kernel per the epsilon-invariance principle: the colloquial label 'border control legitimacy' conflates three structurally distinct claims about what sovereignty entails at the edge. This story authors the jurisdictional_sovereignty reading (bounded jurisdictional authority, legitimacy as balance, dual victim sets, proportionality-constrained enforcement). The sovereignty_primary sibling authors absolute exclusion discretion (single victim set, unconstrained enforcement, higher epsilon); the freedom_of_movement_primary sibling authors movement-as-fundamental-right (the allocation function itself contested, highest epsilon, smallest beneficiary set). Each member links the others through affects_constraints; upstream/downstream structure runs from the jurisdictional reading outward, since its proportionality concessions are cited as evidence by both siblings."
+  },
+  "stakeholders": [
+    {
+      "name": "receiving_state_executives",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Sets admission rules through legislation and executive action, negotiates externalized-enforcement agreements with transit and origin states, and directs the agencies running visas, asylum processing, detention, and removal. Gains discretionary control over who enters and on what terms, electoral credit from visible control, and bargaining leverage in visa diplomacy; can route enforcement burdens onto other jurisdictions when domestic costs rise."
+    },
+    {
+      "name": "immigration_bureaucracies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Staffs and expands on the control mandate: caseworkers, border guards, detention operators, and asylum adjudicators whose budgets, headcount, and statutory powers grow with the volume of control activity. Careers and institutional identity are built on the mandate; a shrinking enforcement task means reassignment or redundancy."
+    },
+    {
+      "name": "licensed_employers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Accesses a rationed labor supply through sponsored work visas and seasonal schemes calibrated by the state. Gains a workforce whose legal status depends on continued sponsorship, which disciplines turnover and wage demands; lobbies sector by sector to widen or narrow quotas as conditions shift."
+    },
+    {
+      "name": "resident_publics",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Receives sequenced admission, public-goods planning horizons, and nominal protection of wage floors. Also funds detention and removal through taxation, absorbs neighborhood and service-level change at uneven speeds, and finds that major admission shifts are negotiated over its head — consent is invoked rhetorically and consulted episodically at elections, then presented as settled between contests."
+    },
+    {
+      "name": "excluded_migrants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Bears denial of entry, family separation, years in procedural limbo, and the physical risks of irregular routes. Legal status inside the territory is conditional or absent. Leaving the situation means abandoning migration plans that survival, persecution, or family unity may make non-optional; staying means living outside the law's protection."
+    },
+    {
+      "name": "detained_asylum_seekers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Held in administrative detention while claims are processed, sometimes for months or years, under expedited procedures and geographic restrictions. Cannot leave detention without forfeiting the claim and cannot pursue the claim without remaining confined; the choice set is the confinement itself."
+    },
+    {
+      "name": "displaced_citizens",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Lives in the districts where admission concentrates: school places, housing stock, and entry-level labor markets adjust faster than public services do. Bears adaptation costs without any seat in admission policy; objections surface politically as consent shocks after decisions have already been implemented."
+    },
+    {
+      "name": "human_rights_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Reviews enforcement against proportionality and necessity standards, non-refoulement obligations, and family-life protections. Invalidates individual removals and occasionally entire schemes, supplying the arrangement's internal limit without administering any part of it; depends on complainants reaching the courtroom."
+    },
+    {
+      "name": "refugee_protection_agencies",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Holds a supervisory mandate over protection obligations but is locked out of the bilateral enforcement deals that increasingly determine who ever reaches territory. Documents violations, negotiates marginal access, and publishes counts that the operative decision-makers cite selectively."
+    },
+    {
+      "name": "smuggling_intermediaries",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Sells passage around the legal channels. Every tightening of lawful routes raises the price of its service, so revenue scales with restriction itself. Operates outside the arrangement's rules, shifts all enforcement risk onto clients, and relocates along routes faster than enforcement can close them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Sequences and conditions entry so that protection duties are honored, labor demand is matched without collapsing wage floors, and integration proceeds at a rate public institutions can absorb — a collective-action problem spanning origin, transit, and destination jurisdictions that no unilateral actor solves alone.",
+    "transfer_function": "Moves legal status and physical access from a global pool of would-be entrants to those the state selects; moves enforcement costs onto detainees, removees, and taxpayers; moves a rationed, sponsorship-dependent workforce to licensed employers; moves political credit to the executives who administer the gate.",
+    "absent_voices": "Excluded migrants hold no vote in the polities deciding their cases. Refugee protection agencies and origin-state governments sit outside the bilateral enforcement bargains that now set the operative rules. The residents of tomorrow's admission-shifted districts are not yet identifiable participants. Each would object from a different direction: the first at the severity of exclusion, the second at externalization's accountability gap, the third at decisions taken before affected communities existed as constituencies.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the admission-control arrangement vanished overnight, labor supply chains built on sponsored migration would rupture within seasons, asylum systems and the litigation practice around them would lose their object, citizenship and integration pipelines would reorganize, origin-state remittance economies would contract sharply, and smuggling networks would lose their price floor — the surrounding institutional world is arranged around the gate and would rearrange itself around its absence.",
+    "founding_problem": "After the World Wars collapsed the pre-war free-movement order, states had to rebuild the terms on which non-members enter: mass displacement met acute labor shortage, and territorial jurisdictions needed admission rules that honored protection duties without outrunning the consent of the publics funding and absorbing the results.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "UNHCR global displacement reporting and ILO labor-migration reviews attest both halves of the founding problem — protection pressure and labor demand — from outside the benefiting parties; comparative migration-law scholarship corroborates the consent-strain half. No corroborating source attests that the balance is currently struck; the standing disagreement between protection bodies, courts, and executives is itself the signal that the problem remains live."
+  },
+  "gain_flow": "receiving_state_executives",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "balanced_jurisdictional_admission",
+    "drift_state": {
+      "moment": "contemporary_externalization_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "freedom_of_movement_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "border_authority_is_jurisdictional_not_absolute",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "legitimacy_requires_balanced_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "non_refoulement_is_hard_limit",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

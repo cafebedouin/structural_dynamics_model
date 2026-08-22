@@ -1,0 +1,313 @@
+{
+  "header": {
+    "constraint_id": "nicene_creed_authority__liturgical_habituation_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ncr_lit_hab",
+    "story_uid": "3cd8e5ed-dab3-47ff-8acd-8ad977630cdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.07,
+    "suppression": 0.08,
+    "theater_ratio": 0.12,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.18,
+    "claimed_type": "rope",
+    "human_readable": "Nicene Creed as Liturgical Identity Boundary (Habituation Reading)",
+    "topic_domain": "religious/ecclesial",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "liturgical_participants",
+      "denominational_institutions",
+      "ecumenical_bodies"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.09
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.11
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_nicene_authority",
+      "question": "This story instantiates one reading (liturgical_habituation) of the nicene_creed_authority kernel; is the creed's operative authority in contemporary practice better described by this reading or by the strict_orthodox sibling (metaphysical binding backed by sanction)?",
+      "resolution_mechanism": "Comparative congregational ethnography plus sanction-record audit: if deviation from creedal content reliably triggers career, communion, or membership sanction, the strict sibling better describes operative practice and this story's epsilon is understated.",
+      "impact": "If the strict reading better describes actual enforcement, the standing arrangement is substantially more extractive than authored here and the sibling constraint file carries the classification load; this file's rope claim would be functioning as a cover story for the stricter arrangement operating underneath.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the creed-authority kernel describes the arrangement actually in force."
+    },
+    {
+      "id": "assent_independence_testability",
+      "question": "Does identity-marking through recitation actually operate independently of cognitive metaphysical assent, as this reading's core premise holds?",
+      "resolution_mechanism": "Congregational surveys correlating recitation frequency, clause-level belief profiles, and validated belonging measures; natural experiments where jurisdictions drop or restore the creed from regular liturgy.",
+      "impact": "If belonging tracks assent strongly, the decoupling premise fails, the reading collapses toward the symbolic_confessional sibling's territory, and dissenting reciters become coerced performers of convictions they reject — raising epsilon above the 0.10 ceiling this reading authors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the performance-to-belonging channel is genuinely assent-independent."
+    },
+    {
+      "id": "boundary_exclusion_internal_cost",
+      "question": "Does the creed's boundary exclude anyone from WITHIN the arrangement who bears a real cost (which would make the rope mildly tangled), or only outsiders who bear no extraction?",
+      "resolution_mechanism": "Interviews with non-trinitarian Christians raised inside creedal communities and with reciters carrying sustained private doubt, measuring harm attributable to the performance requirement itself rather than to adjacent doctrines.",
+      "impact": "Documented internal harm would require a victims declaration, push epsilon past 0.10, and shift the computed type toward tangled_rope; finding only external exclusion keeps the clean-rope classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the identity boundary imposes costs on insiders or only defines an outside."
+    },
+    {
+      "id": "persistence_without_enforcement",
+      "question": "Why does weekly recitation persist as enforcement capacity decays toward zero — genuine ongoing coordination value, or institutional inertia that will eventually shed the practice?",
+      "resolution_mechanism": "Longitudinal liturgical-practice data across denominations with different enforcement histories; if practice survival is comparable in never-coercive and formerly-coercive bodies, value-based persistence dominates.",
+      "impact": "Inertia-only persistence predicts drift toward theatrical maintenance of a dead function; value-based persistence stabilizes the coordination classification indefinitely.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the practice persists by value or by inertia as coercion fades."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "liturgical_participants",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Attend weekly worship and join the congregation's recitation of the fixed Nicene text. What they receive is membership recognition: the repeated joint performance marks them, and is marked by others, as part of a community spanning centuries and continents. Participation is visible (standing, speaking aloud) but unenforced — a silent attender draws little notice, and leaving a congregation carries social rather than legal cost. Many hold private metaphysical reservations about clauses they nonetheless recite; under the standing arrangement this divergence is tolerated rather than sanctioned."
+    },
+    {
+      "name": "denominational_institutions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Church bodies — dioceses, synods, communions — inherit the creed as a fixed element of authorized liturgy. It hands them a durable self-definition and a continuity claim reaching to the fourth century. Revising or dropping it would fracture internal coalitions and ecumenical relationships, so even the institutions themselves face high exit costs from the arrangement they host."
+    },
+    {
+      "name": "ecumenical_bodies",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Councils and bilateral dialogue commissions use the shared creedal text as common ground between separated churches. Their work depends on the creed remaining a live, jointly performed reference across jurisdictions; they receive a ready-made convergence point at no material cost to member churches."
+    },
+    {
+      "name": "liturgical_authorities",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Bishops, synods, and worship commissions decide whether and how the creed appears in authorized services — which translation, which musical settings, weekly or seasonal placement. They administer the arrangement rather than merely collect from it, and they retain practical freedom to adjust its liturgical position without external veto."
+    },
+    {
+      "name": "nontrinitarian_christians",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Unitarians, Oneness Pentecostals, Latter-day Saints, and Jehovah's Witnesses cannot join the recitation without violating their own theology of God. The boundary the performance draws places them outside full recognition; they maintain their own assemblies instead, and their objection — that the line is drawn in the wrong place — is not voiced inside the liturgy itself."
+    },
+    {
+      "name": "liturgical_reform_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Members inside creedal churches — inclusive-language campaigners, 'no creed but the Bible' evangelicals, Quaker-descended traditions — who would retire, replace, or rewrite the creed. They worship within earshot of the arrangement but sit outside the worship commissions that decide its fate; several such currents founded separate communities historically when reform failed."
+    },
+    {
+      "name": "doctrine_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Scholars of patristics and liturgical history trace how the creed moved from conciliar definition to weekly performance and document the widening gap between recitation and doctrinal literacy. They describe the structure but collect nothing from it and bear none of its costs."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a trans-local, trans-generational communal identity at near-zero administrative cost: one fixed, memorizable, jointly performed text lets congregations that never meet recognize each other as one body, gives newcomers a legible threshold, and gives dispersed members a shared act. It solves the collective-action problem of identity cohesion without any central registry or enforcement staff.",
+    "transfer_function": "Moves almost nothing material. Each participant contributes a few minutes of synchronized speech and bodily presence per week; what flows back is recognition and continuity. The only quasi-transfer is attentional: the rite directs communal attention to a shared summary of commitment, and reputational credit for fidelity flows to visibly faithful reciters.",
+    "absent_voices": "Non-trinitarian Christians stand outside the boundary the performance draws and are not consulted where its liturgical placement is decided; liturgical reform advocates inside creedal churches likewise lack a seat on worship commissions. Both would redraw or retire the boundary; their objections surface in print and parallel assemblies, not in the rooms where the arrangement is administered.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the creed vanished from the liturgy overnight, congregational identity practice would rearrange around substitute markers — baptismal formulas, the Lord's Prayer, hymnody, catechetical tests — and denominational self-definition and ecumenical reference points would shift within a generation. Nothing collapses (the substitutes exist and remain workable), but the specific architecture of Christian boundary-marking reorganizes.",
+    "founding_problem": "The fourth-century Trinitarian controversy: the churches needed a public, testable summary that distinguished Nicene teaching from Arian alternatives, usable in worship and catechesis, so that ordinary believers could recognize and refuse subordinationist teaching.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Conciliar records of Nicaea (325) and Constantinople (381) and the polemical letters of Athanasius attest the founding problem from the disputing parties themselves; modern patristics scholarship, sitting outside any benefiting institution, corroborates the anti-Arian origin independently. No corroborating source outside the beneficiary set attests that the original polemical problem remains live — classical Arianism survives only as scholarly reconstruction — while some systematic theologians attest that recurring trinitarian and christological disputes keep boundary-definition problems returning. Hence 'contested': the founding occasion is historically closed, but whether the class of problem it served is closed is disputed."
+  },
+  "gain_flow": "diffuse",
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_creed_authority__strict_orthodox_reading",
+      "nicene_creed_authority__symbolic_confessional_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the authority of the Nicene Creed' decomposes into three structurally distinct constraints per the epsilon-invariance principle: (a) this file — performative identity habituation independent of assent, epsilon ~0.07, no victims; (b) nicene_creed_authority__strict_orthodox_reading — metaphysical binding with sanctioned heresy, substantially higher epsilon, victims are sanctioned dissenters; (c) nicene_creed_authority__symbolic_confessional_reading — historically contingent witness whose authority derives from communal discernment, intermediate epsilon. Each story carries its own epsilon, beneficiaries, and classification; they are linked here as a constraint family. This reading sits upstream of both siblings in one respect: the weekly performed substrate is the social mechanism through which either a binding regime or a discernment regime would operate."
+  },
+  "commentary": {
+    "narrative_context": "This story instantiates the liturgical_habituation_reading of the nicene_creed_authority kernel: the claim that the creed's operative function in contemporary Christian practice is identity boundary-marking through joint liturgical performance — reciting the same fixed text week after week — and that this function operates independently of whether reciters cognitively assent to the text's metaphysical content. The epsilon referent is the standing arrangement under contest: weekly creedal recitation as actually practiced in creedal churches, assessed by this reading's own lights. On that referent the reading authors very low extraction (0.07): the arrangement transfers no material goods, tolerates private dissent without sanction, and its costs (minutes of participation, mild social-visibility pressure) are dwarfed by the belonging it confers on the same people who bear them. Constraint-family note: the colloquial label 'the creed's authority' decomposes into three structurally distinct constraints — this file (performative habituation, epsilon ~0.07, no victims), the strict_orthodox sibling (metaphysical binding backed by sanction, substantially higher epsilon, victims are sanctioned dissenters), and the symbolic_confessional sibling (contingent witness under communal discernment, intermediate epsilon). Each is a separate story with its own epsilon; they are linked via network.affects_constraints. The claim/metric independence rule applies: claimed_type rope is asserted from the structural reading; the metrics are authored independently as descriptive estimates of the arrangement's actual operation.",
+    "key_agents": [
+      "liturgical_participants: primary beneficiaries (moderate/mobile) — recite weekly, receive membership recognition, bear only participation costs",
+      "denominational_institutions: beneficiaries (institutional/constrained) — inherit the creed as durable self-definition; exit costly even for them",
+      "ecumenical_bodies: beneficiaries (institutional/mobile) — use the shared performed text as a convergence point across separated churches",
+      "liturgical_authorities: agenda_setter (institutional/arbitrage) — decide translation, placement, and frequency; administer without external veto",
+      "nontrinitarian_christians: excluded (organized/constrained) — marked outside the boundary; their objection is unheard inside the liturgy",
+      "liturgical_reform_advocates: excluded (moderate/mobile) — would retire or rewrite the creed; outside the commissions that decide",
+      "doctrine_historians: analytical observer — trace the performance-to-doctrine gap; collect nothing, bear nothing"
+    ],
+    "logic_rationale": "Extraction is very low (0.07) because the arrangement moves no material goods, imposes no sanction for private dissent, and its burdens fall on the same population that receives its benefits. Suppression is minimal (0.08): recitation is socially visible but unenforced, and the enforcement machinery that once existed (established-church compulsion, heresy process) has decayed to near zero — the suppression_requirement series traces that deliberate enforcement-decay trajectory across the interval, which is why it is authored despite the otherwise static picture. Theater_ratio is low (0.12) with a gentle rise: routine-ization (going through the motions) is real and grows as doctrinal literacy declines, but the performance IS the identity-coordination function under this reading, so hollowness-for-some does not convert the practice into proxy activity; the ratio stays far below piton-signaling levels. Accessibility_collapse is low (0.30): once the creed is understood as an identity marker, alternative markers (baptismal formulas, the Lord's Prayer, catechesis, hymnody) remain fully workable, and several communities use them instead. Resistance is modest (0.18): refusal currents (Quaker-descended traditions, creed-skeptical evangelicals, reform advocates) exist and persist but do not threaten the practice. The interval maps integer time points to decade units, 0 = 1925 to 100 = 2025; all tracked metrics share the single grid {0,20,40,60,80,100} so no metric row is backfilled from another's endpoints. Receipt surface: gain_flow is authored as 'diffuse' after checking every named seat — extraction is negligible and no seat captures even that; fixing_cost is omitted because the binary is ill-posed here: the benefit of removal is near-zero (nothing extractive to remove), which dominates any cost-of-removal estimate and would misfile the arrangement into a neglect or piton cell it does not occupy.",
+    "perspectival_gap": "The seats should compute differently. From the participant and institutional seats the arrangement is a benign habit that confers belonging and continuity at trivial cost — a coordination good. From the excluded seats (non-trinitarian Christians, reform advocates) the same performance is a wall: a boundary that allocates recognition and leaves them outside it, administered in rooms they do not enter. The agenda-setter seat experiences the creed as administrable tradition — adjustable in translation and placement without existential stakes. The analytical seat sees a function that transformed rather than died. The engine computes per-seat classifications from the structural data; the divergence between insider-benign and outsider-excluding experience is the perspectival content this story exists to register.",
+    "directionality_logic": "Every declared structural party is a beneficiary, so derived directionality sits near the beneficiary end for all of them and effective extraction is damped toward subsidy — consistent with the near-zero chi this reading expects. No victims are declared because no named actor bears extraction: the excluded agents' cost is non-participation (being outside the recognition the rite distributes), which is a boundary effect, not a transfer extracted from them. Global spatial scope modestly amplifies effective extraction through verification difficulty, but with base epsilon at 0.07 the scaled product remains negligible. Suppression is authored as a raw structural property and is deliberately NOT scaled — the 0.08 reflects residual social-visibility pressure only.",
+    "mandatrophy_analysis": "The founding problem — furnishing a testable anti-Arian boundary summary — is historically resolved; classical Arianism is gone as a live mass movement. A naive mandatrophy read would call the creed a zombie: mandate dead, arrangement persisting. The classification prevents that mislabel in both directions. It is not a piton: theater_ratio is low because the performance is not a hollow shell of a dead function — the function transformed from doctrinal screening to identity habituation, and the successor function is live and genuinely coordinative (scattered congregations do recognize each other through it). It is not a snare: nothing is extracted, no exit is suppressed, and the alternatives competitors propose remain available. The founding_problem_status is authored 'contested' rather than 'dead' precisely because the parties dispute whether the class of boundary-definition problem the creed served is closed; the status-by-verdict combination (contested x world_rearranges) records that dispute rather than asserting either a zombie flag or a clean bill.",
+    "kernel_context": "Kernel: nicene_creed_authority — the persisting commitment that the Nicene-Constantinopolitan Creed carries binding authority for Christian communities. This file instantiates the liturgical_habituation_reading: the creed's authority operates as performative identity-marking through repeated joint recitation, independent of cognitive metaphysical assent. Sibling readings, each a separate constraint file: strict_orthodox_reading (the creed binds all believers to one metaphysical ontology; deviation is sanctionable heresy) and symbolic_confessional_reading (the creed is historically contingent witness; authority derives from community discernment and personal faith). The disagreement is located in WHAT GROUNDS the creed's pull on believers: embodied habit versus metaphysical obligation versus discerned relevance. Relation choices: this reading stands in 'influences' to the strict sibling — it supplies the performative substrate that any enforcement regime presupposes, while its assent-decoupling premise simultaneously erodes the strict binding's legitimacy conditions; and 'coexists_with' the symbolic sibling — both readings remain live across overlapping factions (many mainline practitioners hold elements of both), and neither's core premise logically eliminates the other's."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "shared_performative_identity_marker",
+    "drift_state": {
+      "moment": "contemporary_secularized_liturgies",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_orthodox_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "symbolic_confessional_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "performative_identity_constitutes_membership",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "assent_performance_decoupling",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

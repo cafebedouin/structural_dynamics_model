@@ -1,0 +1,350 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__dignity_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dignity_reading",
+    "story_uid": "92d23d41-52a3-4fc5-b94a-7568b3f8a6a0"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dignity-Reading Speech Boundary: Categorical Exclusion of Personhood-Denying Expression",
+    "topic_domain": "constitutional_law/political_philosophy/communication_ethics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "targeted_minority_groups",
+      "holocaust_memory_communities",
+      "ordinary_citizens"
+    ],
+    "victims": [
+      "identity_harm_speakers",
+      "boundary_case_dissenters"
+    ],
+    "vindicated_propositions": [
+      "militant_democracy_doctrine",
+      "human_dignity_supremacy_principle"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.73
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This story instantiates the dignity_reading of the speech_harm_boundary kernel; what structurally changes if a sibling reading (absolutist_reading, harm_balancing_reading) were adopted instead?",
+      "resolution_mechanism": "Each sibling is authored as its own epsilon-invariant constraint file; comparison across the family resolves the delta. The disagreement is located in whether any categorical (non-balanced) exclusion exists and what grounds it: this reading says yes, grounded in deontological dignity supremacy; the harm_balancing_reading says no category is exempt from proportionality; the absolutist_reading says the override threshold is nearly unreachable.",
+      "impact": "Under the harm_balancing_reading the victim set shrinks to demonstrated-harm cases and speaker burden becomes case-by-case; under the absolutist_reading categorical exclusions vanish and the measured extraction collapses toward the coordination floor. Epsilon, victim sets, and enforcement form all recompute per sibling file.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: one reading of a three-reading kernel; sibling deltas documented here rather than folded into this constraint."
+    },
+    {
+      "id": "categorical_scope_creep",
+      "question": "Does the categorical exclusion remain confined to personhood-denying speech, or does it systematically expand into adjacent political dissent (policy criticism of or toward protected groups, boycott advocacy, insult proceedings against officials)?",
+      "resolution_mechanism": "Longitudinal coding of prosecutions, takedown decisions, and appellate outcomes for boundary cases: classify each contested application as personhood-denial-core or dissent-adjacent, and track the dissent-adjacent share over the interval.",
+      "impact": "A rising dissent-adjacent share indicates the coordination story increasingly covers suppression of ordinary political conflict, drifting the constraint toward pure extraction with dignity language as cover; a stable low share supports the tangled_rope reading with a genuine coordination core.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the dignity floor functions as a principled limit or an expandable warrant."
+    },
+    {
+      "id": "suppression_mechanism_split",
+      "question": "Is the measured suppression structural (criminal liability, platform removal duties, absence of any lawful channel) or internalized (socialization into dignity norms producing self-censorship beyond the formal scope)?",
+      "resolution_mechanism": "Post-exit suppression trajectory: compare self-reported willingness to discuss contested topics in jurisdictions that decriminalized equivalent categories, and survey chilling effects among speakers whose subject matter is lawful but classification-adjacent. Persistence of avoidance after formal repeal indicates internalized carryover.",
+      "impact": "If a substantial share is internalized, effective suppression exceeds the structural measure and would survive formal liberalization; the constraint's footprint on discourse is larger than its statute book, and repeal remedies would under-deliver.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized components of the suppression scalar."
+    },
+    {
+      "id": "dignity_ground_vs_order_ground",
+      "question": "Is the operative warrant for exclusion human dignity (deontological, confining the scope to attacks on personhood) or public order and social peace (consequentialist, admitting any disturbance rationale)?",
+      "resolution_mechanism": "Doctrinal analysis of judicial reasoning: identify whether courts ever sustain an exclusion on order grounds alone, without finding an attack on personhood; track the ratio of dignity-grounded to order-grounded holdings.",
+      "impact": "If order grounds independently suffice, the categorical structure loses its principled limit and any disturbance-justified restriction becomes admissible, widening effective scope and raising long-run extraction; if dignity grounds are necessary, the arrangement retains a constraining principle.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which ground actually drives application, and therefore how wide the exclusion can grow."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This file instantiates ONE reading of the speech_harm_boundary kernel: the dignity_reading, in which speech protection is subordinate to human dignity and personhood-denying expression (Holocaust denial, racist incitement, group defamation) sits categorically outside protection. The standing arrangement under contest, and the epsilon referent, is the actual dignity-based regime as institutionalized in German and wider European practice: a constitutional dignity guarantee ranked above expressive liberty, categorical criminal offenses for incitement and denial, platform takedown duties with short deadlines and fines, and supranational reinforcement through abuse-of-rights doctrines. Assessed by this reading's own lights, the regime confiscates expressive liberty in defined categories from a defined class of speakers and converts it into dignitary security for targeted groups; the reading endorses that trade, and the metrics below describe it without endorsement. The sibling readings (absolutist_reading, harm_balancing_reading) are separate constraints in separate files with their own epsilon, victim sets, and enforcement forms; nothing about them is averaged into this story. Claim/metric independence holds: the claimed type is what I believe structurally true of this arrangement (a genuine coordination function fused with asymmetric extraction under active enforcement), and the metrics are what I believe descriptively true of its operation.",
+    "key_agents": [
+      "militant_democracy_state: agenda-setter (institutional/arbitrage) — writes, enforces, and finances the categorical exclusions; collects fines and legitimation",
+      "targeted_minority_groups: primary beneficiary (moderate/constrained) — the protected objects of the exclusion",
+      "holocaust_memory_communities: beneficiary (organized/constrained) — memory institutions shielded from denial",
+      "ordinary_citizens: beneficiary with diffuse payer side (moderate/constrained) — inhabit the protected environment, fund and chill under it",
+      "identity_harm_speakers: primary target (powerless/trapped) — bear categorical confiscation of expressive liberty with no lawful channel",
+      "boundary_case_dissenters: secondary target (organized/constrained) — political speakers under classification uncertainty; the visible resistance",
+      "platform_operators: compelled enforcer, mixed position (powerful/arbitrage) — bear compliance costs, gain certainty and incumbent advantage",
+      "absolutist_free_speech_advocates: excluded voice (organized/constrained) — hold the rival premise with no institutional seat inside this framework",
+      "comparative_constitutional_scholars: analytical observer (analytical/analytical) — measure the arrangement against its siblings"
+    ],
+    "logic_rationale": "Extractiveness 0.68: the exclusion is categorical, not balanced — within the covered categories there is no hearing at which truth, intent, or context reliably restores protection, and criminal exposure attaches. That is heavy confiscation of expressive liberty from the payer class; it is moderated by the class's narrowness relative to all speakers, which is why this is not higher. Suppression 0.75: structural machinery (criminal law, platform deadlines, fine exposure) leaves no lawful channel inside the jurisdiction, and socialization adds an internalized chilling extension beyond the formal scope. Theater_ratio 0.28: enforcement is predominantly functional (prosecutions occur, takedowns occur at scale); a growing performative share comes from symbolic prosecutions and memorial-affirming proceedings whose deterrent yield is unclear. Accessibility_collapse 0.58: once the constraint is understood, lawful alternatives for the excluded categories collapse almost completely inside the jurisdiction, but coded language, foreign-hosted channels, and private settings persist, so alternatives degrade rather than vanish. Resistance 0.45: constitutional complaints, academic critique, and boundary-case litigation are continuous and organized, contained by broad public support rather than absent. Per the scaling rule, suppression is authored as a raw structural property and is NOT scaled by power or scope; only extractiveness is scaled by the engine through directionality and spatial scope. The measurement series run on one shared grid (points 0-50, roughly mapping the 1970s consolidation of denial and incitement offenses through the platform-enforcement era of the late 2010s and 2020s); all three tracked metrics are authored at every point. Trajectories are monotonic ratchets, not cycles: scope expansions and enforcement infrastructure accumulated stepwise, with no observed relaxation phase, so no cyclical-measurement apparatus applies.",
+    "perspectival_gap": "The seats should compute differently and the divergence is the finding. From the identity_harm_speaker seat the arrangement is categorical silencing: no balancing, no exit, liability without a hearing. From the targeted_minority_group seat the same structure is existential protection: the precondition of participating in public life at all. From the agenda_setter seat it is neither cost nor benefit but constitutive self-definition — the state cannot describe itself without this arrangement. The engine computes per-seat classifications from the structural data; this story authors the data and declines to adjudicate which seat's experience is 'the' constraint.",
+    "directionality_logic": "Beneficiary/victim declarations drive the derivation. The state sits near the beneficiary end: it sets the rules, collects fines, and converts enforcement into legitimation. Targeted minority groups and memory communities are strong beneficiaries with constrained exit — they cannot leave the discourse environment they live in, which anchors them deep on the subsidized side. Ordinary citizens are declared beneficiaries but carry real diffuse costs (tax-funded enforcement, chilling spillover); the derivation will read them lower-cost than they are, a residual imprecision noted here rather than forced with an override, since the override axis (power atom) cannot separate them from other moderate-power beneficiaries. Identity_harm_speakers are full targets: trapped, because no lawful channel exists domestically and relocation does not restore domestic expression. Boundary_case_dissenters are high targets: organized enough to resist, constrained enough to lose. One override is declared: platform_operators derive a near-full-target directionality from their payer role, but their actual position is mixed — they monetize the moderation regime, gain legal certainty, enjoy compliance-cost advantages over smaller rivals, and can arbitrage across jurisdictions — so their d is corrected to 0.58, near symmetric and slightly target-side. The override exists because the derivation chain reads the payer declaration and cannot see the offsetting gains described in the stakeholder situation.",
+    "mandatrophy_analysis": "The founding problem (Weimar: protected speech weaponized to dehumanize and then destroy) is live — corroborated externally by sustained hate-crime statistics and international monitoring — so the mandate has not outlived its function and no mandatrophy resolution is declared. The mismatch consumer reads founding_problem_status=live against disappearance_verdict=world_rearranges: no dead-mandate flag fires. The tangled_rope classification is what prevents both standard mislabels: calling this a pure rope would hide the categorical confiscation borne by the speaker class; calling it a pure snare would erase the genuine coordination function (a pre-committed dignity floor that vulnerable group members do not have to litigate individually) and the broad net-beneficiary population. The arrangement holds because both descriptions are true of the same structure, and the classification keeps both in view. Coalition note: the primary payer class is deliberately uncoalitionable — open organization around the excluded propositions is itself the prohibited act — so powerless payers here cannot aggregate; the coalition-relevant payers are the boundary_case_dissenters, whose press, academic, and litigating capacity is precisely the resistance the resistance metric registers. Identity-lock dynamics: the state's attachment is institutional identity fusion — militant democracy is constitutive of the post-war constitutional self-conception, so exit is unthinkable within the framework rather than merely costly; if that identity frame broke (a generational shift treating the dignity guarantee as historical artifact rather than living commitment), the arrangement would recompute as an ordinary balancing regime and the categorical structure would lose its entrenchment.",
+    "kernel_context": "This constraint is the dignity_reading of the speech_harm_boundary kernel. The kernel is the single persisting question of where speech protection yields to harm; the dignity reading answers it with subordination of expression to a deontological dignity guarantee and categorical, non-balanced exclusions for personhood-denying speech. Sibling readings: the absolutist_reading (protection near-absolute, override threshold extremely high) and the harm_balancing_reading (presumptive protection yielding to demonstrated harm through proportionality). Those siblings are separate constraint files; this story contains only the dignity reading, clean and epsilon-invariant, with the inter-reading structure carried in the kernel_reading_commitment omega and in cs_structure.reading_relations."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolutist_reading",
+      "harm_balancing_reading"
+    ],
+    "dual_formulation_note": "Constraint family decomposition per the epsilon-invariance principle: the colloquial label 'the speech-harm boundary' covers three structurally distinct constraints that must not share one story. The dignity_reading (this file) authors categorical exclusions with high epsilon borne by a defined speaker class; the harm_balancing_reading authors presumptive protection with case-by-case yield and a smaller, demonstrated-harm victim set; the absolutist_reading authors near-unconditional protection with negligible extraction. Each has its own epsilon, beneficiaries, victims, and enforcement form. Upstream/downstream structure: in European practice the dignity reading sits upstream of proportionality review — the categorical floor narrows the domain any balancing regime operates on — hence the influences edge to harm_balancing_reading; the absolutist reading runs as a parallel live position in other jurisdictions, coexisting without logical resolution. Cross-family contamination flows along these edges: scope-creep in this reading pressures the balancing sibling's operating environment, and absolutist jurisprudence supplies the standing critique that fuels this reading's resistance metric."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.58
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "militant_democracy_state",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Writes and enforces the categorical exclusions: criminalizes incitement to hatred and Holocaust denial, orders platforms to remove flagged content on short deadlines, prosecutes violators, and collects administrative fines. Grounds the entire arrangement in a constitutional dignity guarantee the constitution declares unamendable. Gains enforcement authority, fine revenue, and international standing as a state that protects dignity; bears the reputational and litigation costs of defending contested applications. Abandoning the arrangement is not a live option inside its own self-conception."
+    },
+    {
+      "name": "targeted_minority_groups",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Live as the objects the exclusions shield: Jews, Muslims, Roma and Sinti, Black citizens, migrants, and other groups whose personhood the prohibited speech denies. Receive removal of denial and dehumanization from the public sphere they must inhabit. Cannot opt out of the discourse environment, and enforcement does not reliably reach coded variants or private channels, so protection is partial even where categorical on paper."
+    },
+    {
+      "name": "holocaust_memory_communities",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Survivor organizations, memorial sites, and Jewish community institutions. Benefit from criminal protection of historical memory against denial; supply testimony and expertise that enforcement relies on; and carry the recurring burden of re-engaging the history every time a denial case surfaces publicly."
+    },
+    {
+      "name": "ordinary_citizens",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Inhabit the protected discourse environment daily and broadly support it. Pay indirectly: taxes fund prosecution and platform oversight, and the chilling effect reaches past the excluded categories into adjacent political topics where speakers cannot predict how their speech will be classified. Emigration is not a realistic response to discourse norms."
+    },
+    {
+      "name": "identity_harm_speakers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People who wish to assert the denied propositions: Holocaust denial, racial hierarchy, group dehumanization. Face criminal liability with no lawful channel inside the jurisdiction — no balancing hearing, no truth or intent defense that reliably avails — and relocating abroad does not restore domestic expression. Open organization around these propositions is itself the prohibited act, so the class cannot aggregate to defend itself."
+    },
+    {
+      "name": "boundary_case_dissenters",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Journalists, academics, and activists whose criticism targets policies of or toward protected groups — Middle East policy debate, boycott campaigns, sharp official-language critiques. Their speech is lawful until adjudicated otherwise, and adverse findings carry professional, platform, and reputational consequences. They litigate, publish, and contest classifications; they are the visible, organized resistance operating inside the system."
+    },
+    {
+      "name": "platform_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the infrastructure where the regulated speech occurs. Must run around-the-clock takedown pipelines, translate statutory categories into content decisions at scale, and manage fine exposure for under-removal against backlash for over-removal. Gain legal certainty, incumbent advantages from compliance costs smaller rivals cannot carry, and insulation from coordinated boycott pressure. Can arbitrage: geofence obligations by jurisdiction, localize terms of service, and shift liability through intermediaries."
+    },
+    {
+      "name": "absolutist_free_speech_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Hold that expression is protected near-absolutely and that categorical exclusions are the founding error. Inside this jurisdiction their position holds no institutional seat: no major party adopts it, and courts treat it as closed by the dignity guarantee. They argue from outside — comparative commentary, international forums, and scholarship addressed to other jurisdictions' courts — which is where their objection actually circulates."
+    },
+    {
+      "name": "comparative_constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study the arrangement against its siblings in other systems. Map where the categorical floor diverges from proportionality regimes, track boundary-case outcomes over time, and supply the external vantage from which the arrangement's drift is measurable. Neither collect from nor bear the arrangement; their stake is descriptive accuracy."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a shared floor of mutual recognizability in public discourse: a pluralistic society pre-commits, categorically and in advance, that attacks on the personhood of defined groups fall outside protected discourse, so that members of vulnerable groups can participate in public life without first litigating their own standing, and so that dehumanization cannot be used to organize persecution.",
+    "transfer_function": "Confiscates expressive liberty in the excluded categories from speakers, backed by criminal exposure and platform-enforced removal, and converts it into dignitary security for targeted groups; compliance costs move to platform operators and enforcement costs to the public treasury; fine revenue and legitimation accrue to the state.",
+    "absent_voices": "Absolutist free-speech advocates are structurally outside the conversation: the categorical form of the constraint defines their premise as unspeakable within it rather than answering it, so they speak only from comparative and international venues. The speakers themselves hold no seat at all — the framework treats their utterance as the harm, so the person whose liberty is confiscated never appears as a claimant to be heard. Boundary-case dissenters sit half-in: heard only insofar as they can show their speech is not group-directed, which loads the uncertainty onto them.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would visibly rearrange the discourse environment: prohibited categories would re-enter circulation faster than informal norms could absorb them, targeted groups would experience an immediate security change, platforms would face contradictory obligations across jurisdictions, and the legislature would come under immediate pressure to re-legislate in some form — the arrangement's absence would be an event, not a nullity.",
+    "founding_problem": "Weimar: a political movement used legally protected speech to dehumanize Jews and other groups and then to organize their destruction, while the constitutional order lacked any tool to stop the speech stage of the process. The post-war framers concluded that a democracy must be able to defend the human dignity that precedes it, and built categorical dignity protection into the constitutional order as a permanent pre-commitment.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: national criminal-statistics offices record sustained antisemitic and racist incident levels; international monitoring bodies (ECRI, UN CERD reporting cycles) document persistent group-directed hostility in the jurisdiction; and independent historiography attests the Weimar mechanism the arrangement was built against. None of these sources depends on the arrangement's continuation for its standing, and none is a beneficiary of it."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "militant_democracy_dignity_supremacy",
+    "drift_state": {
+      "moment": "contemporary_platform_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_balancing_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "human_dignity_trumps_expression",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "personhood_denial_outside_protection",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "militant_democracy_state",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

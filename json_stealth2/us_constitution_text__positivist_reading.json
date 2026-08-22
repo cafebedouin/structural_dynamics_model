@@ -1,0 +1,404 @@
+{
+  "header": {
+    "constraint_id": "us_constitution_text__positivist_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "c0578318-630b-491a-9e45-e67f66bfc9d1"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.6,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Positivist Validity Criterion for U.S. Constitutional Law (Source-Validity Reading)",
+    "topic_domain": "legal/constitutional/interpretive",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "enacting_legislatures",
+      "article_v_amending_coalitions",
+      "commercial_and_creditor_interests",
+      "legal_profession"
+    ],
+    "victims": [
+      "unenacted_rights_claimants",
+      "politically_excluded_minorities"
+    ]
+  },
+  "interval": {
+    "start": 1870,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1870,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1890,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1910,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1930,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1870,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1890,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1910,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1930,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1870,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1890,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1910,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1930,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1950,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1970,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2026,
+      "value": 0.6
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Is the positivist reading the correct delimitation of this constraint, or do the sibling readings (originalist, living constitutionalist) carve the same interpretive practice so differently that this story's epsilon, beneficiaries, and victims misattribute the structure?",
+      "resolution_mechanism": "Generate the sibling readings as separate stories and compare computed per-seat classifications; divergence in victim sets and epsilon locates where the readings partition the practice differently.",
+      "impact": "If the living-constitutionalist partition is adopted, the victim set shifts toward those harmed by frozen text and epsilon falls; if the originalist partition is adopted, historical-meaning recovery enters the constraint and the victim set shifts toward those disadvantaged by changed circumstances.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the constitutional-text kernel correctly partitions the interpretive practice."
+    },
+    {
+      "id": "transmission_vs_blockage_attribution",
+      "question": "How much of the measured extraction belongs to the validity criterion itself versus to the enacted content it transmits?",
+      "resolution_mechanism": "Counterfactual comparison across jurisdictions or eras holding enacted content constant while varying the validity criterion, plus doctrinal analysis separating harms that required blocking non-enacted remedies from harms the enacted text alone produced.",
+      "impact": "If transmission dominates, epsilon falls toward coordination-cost levels and the classification relaxes toward pure coordination; if blockage dominates, extraction concentrates on the criterion's own work and pressure builds toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Attributing measured extraction between the validity rule and the content it carries."
+    },
+    {
+      "id": "descriptive_normative_ambiguity",
+      "question": "Is the enactment-validity criterion a descriptive social fact (officials simply do treat enactment as conclusive) or a normative commitment that someone chose and actively maintains?",
+      "resolution_mechanism": "Trace official discourse: if courts and scholars present the criterion as inevitable fact while sanctioning deviants, it functions normatively under descriptive cover; check whether any organ ever deliberated and adopted it as policy.",
+      "impact": "If normative, the constraint has identifiable maintainers who could revise it and its suppression is chosen policy; if purely descriptive, there is no author to petition and reform must route through the criterion's own enactment channels.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Descriptive cover over a maintained normative commitment."
+    },
+    {
+      "id": "judicial_identity_lock_mechanism",
+      "question": "Is the judiciary's fidelity to source-validity structural (career, confirmation, precedent obligations) or internalized professional identity that would survive removal of the incentives?",
+      "resolution_mechanism": "Post-exit trajectory: examine judges who move to academic or emeritus seats; if they continue to reason source-validly absent sanction, the lock is internalized; if they immediately reason outcome-validly, it was structural.",
+      "impact": "If internalized, effective suppression exceeds the structural measure — the criterion travels inside its administrators and outlives its enforcement machinery.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized nature of judicial fidelity to the validity criterion."
+    },
+    {
+      "id": "cycle_driver_ambiguity",
+      "question": "What drives the formalist-consolidation, realist-relaxation, proceduralist-revival cycle visible in the measurement series — external political shocks, or intermittent reinforcement internal to the profession?",
+      "resolution_mechanism": "Correlate cycle turning points with external events (depression, war, electoral realignment) versus internal professional events (casebook generations, bar-canon shifts); if turns precede external shocks, the oscillation is internally driven.",
+      "impact": "If internally driven intermittent reinforcement, the oscillation is itself an extraction mechanism — moral reasoning alternately admitted and withdrawn — and the constraint's effective extraction exceeds any single-phase measurement.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Driver of the observed enforcement oscillation across the interval."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel us_constitution_text: the positivist reading, under which constitutional validity derives exclusively from formal enactment procedures — ratified text and validly enacted Article V amendments — and neither moral content nor historical meaning carries independent legal authority. Operatively, the reading is a procedural constraint on American constitutional interpretation: judges administering it must refuse relief grounded solely in unenacted justice claims, while enacting coalitions gain supremacy for their products without owing anyone a moral defense. The arrangement has a genuine coordination function (a shared, publicly checkable validity test that lets authority disputes terminate) and a genuine extraction asymmetry (people outside the enactment channels absorb systematic legal nullity through the same structure that stabilizes insiders). Per the epsilon-invariance principle, the colloquial label 'constitutional interpretation' decomposes into three structurally distinct constraint stories: this file (positivist reading, epsilon ~0.52, victims = unenacted claimants), the originalist reading (adds historical-meaning recovery; different epsilon and victim emphasis), and the living-constitutionalist reading (admits social-evolution authority; different extraction profile). The siblings are separate files linked via network.affects_constraints; their epsilon values differ by a wide margin, which is why they are not merged here. Claim and metrics are authored independently: the claimed type reflects the structure I believe true (real coordination plus real asymmetric extraction under active enforcement), and the metrics reflect the operation I believe descriptively accurate — the engine computes per-seat classifications from the structural data, and any divergence between claim and computed verdict is the datum the corpus exists to collect.",
+    "key_agents": [
+      "federal_judiciary: Agenda-setting administrator (institutional/identity_locked) — applies and enforces the source-validity test; absorbs the professional discipline of foreclosing outcome-based reasoning",
+      "article_v_amending_coalitions: Primary beneficiary (institutional/mobile) — supermajority enactments become supreme law without moral re-justification",
+      "enacting_legislatures: Primary beneficiary (institutional/mobile) — ordinary enactments gain binding force through the validity channel; the seat conferred authority accrues to",
+      "commercial_and_creditor_interests: Secondary beneficiary (powerful/arbitrage) — purchase predictability; can lobby for enactment when rules disfavor them",
+      "legal_profession: Dual-positioned beneficiary/payer (organized/constrained) — clear standards sustain practice; members absorb the daily cost of declaring unenacted claims legally worthless",
+      "unenacted_rights_claimants: Primary target (powerless/trapped) — justice claims without enactment carry zero legal weight",
+      "politically_excluded_minorities: Primary target (powerless/trapped) — locked out of the coalitions whose products alone bind",
+      "social_movements_seeking_enactment: Excluded actor (organized/constrained) — would weigh unenacted claims now; kept out of the rooms where validity is decided",
+      "general_citizenry: Near-symmetric participant (organized/constrained) — receives predictable rule and pays when enacted law cuts against them",
+      "constitutional_scholars: Analytical observer (analytical/analytical) — maps the validity criterion's operation and its costs"
+    ],
+    "logic_rationale": "Extractiveness 0.52: substantial but bounded — much of the harm the arrangement produces is transmitted enacted content attributable to enactment politics, while the criterion's own distinctive work is blocking non-enacted remedies; that blockage is real and falls hardest on the powerless, but it is disciplined by the documentary ease of checking enactment chains. Suppression 0.60: rival validity criteria are excluded inside legal practice through legal education, precedent discipline, and professional sanction, though they remain live outside it — suppression is structural at the courtroom door, partly internalized in professional formation. Theater 0.35: enactment-checking is real work, but a growing share of 'we merely apply the text' rhetoric performs neutrality over interpretive choices the criterion does not itself determine. Accessibility_collapse 0.60: once the criterion is understood, alternative criteria collapse as sources of legal validity inside the system while surviving as political and academic programs. Resistance 0.58: sustained pushback from movements, theorists, and periodically from courts themselves. The measurement series runs on one shared time grid (every tracked metric authored at all nine points) and shows one full cycle: formalist consolidation (1870-1910, rising extraction and enforcement), realist/New Deal/Warren relaxation (1930-1970, trough in all three series), late-century proceduralist revival (1990-2026). Base_properties reflect the interval-end (2026) state. The oscillation is documented rather than smoothed; whether it is externally driven or intermittently reinforcing is carried as an omega.",
+    "perspectival_gap": "The payer seats and the beneficiary/administrator seats compute different types from the same structure. From unenacted_rights_claimants and politically_excluded_minorities, the criterion operates as enforced denial: their strongest claims are legally weightless by construction, and their exit options are trapped, so effective extraction lands near the full-target end. From enacting_legislatures and article_v_amending_coalitions, the same criterion operates as conferred supremacy: their products bind without moral contest, so the structure reads as subsidy. The federal_judiciary sits between — it administers the test and is fused with it professionally, bearing the discipline it imposes. The engine computes this per-seat divergence from the structural data; nothing in the authored claim adjudicates it.",
+    "directionality_logic": "Beneficiary declarations map to enactment-channel insiders: legislatures and amending coalitions receive bindingness, commercial interests purchase predictability and retain arbitrage-grade influence over the channel, and the profession collects a workable practice — all derive low directionality (subsidy-side). Victim declarations map to channel outsiders: unenacted claimants and politically excluded minorities derive high directionality, amplified by trapped exit and generational time horizons. General citizenry sits near symmetric: genuine predictability received, diffuse payment when enacted law injures. No directionality_overrides are authored: the derivation from beneficiary/victim structure plus exit options captures the relationships, and because overrides key on power atoms, an override tuned for the judiciary would misfire across the three other institutional seats sharing that atom. Spatial scope is national, and verification of the criterion's core question ('was this validly enacted?') is documentary and comparatively cheap, which limits scope amplification relative to diffuse-scope constraints.",
+    "mandatrophy_analysis": "The classification guards both error directions. Calling this a pure-coordination arrangement would erase the systematic denial of unenacted claimants — the same structure that terminates authority disputes also renders the politically weak legally invisible. Calling it pure extraction would erase the coordination function — without a shared validity test, every constitutional question reopens as a contest over first principles and no ruling commands allegiance across disagreement. The hybrid classification holds both facts. On obsolescence: the founding problem (making collective commitments binding and knowable without re-deriving their justice each generation) remains live — every legal system needs a validity criterion — so no resolved-mandatrophy declaration is authored and no sunset clause exists. The drift risk to monitor is decay toward inertial performance: if enactment-checking becomes ritual while real decisions migrate to unacknowledged criteria, the theater_ratio series is the tripwire, and its late-interval elevation (0.34-0.38) is worth watching without yet being dispositive.",
+    "kernel_context": "Kernel: us_constitution_text — the persisting commitment that the written Constitution is the supreme law of the United States. This file instantiates the positivist_reading: validity from formal enactment procedures, not moral content or historical meaning. Sibling readings, instantiated in their own files: originalist_reading (meaning fixed at ratification and recovered historically) and living_constitutionalist_reading (meaning evolves with society). This reading's epsilon is authored for the enactment-validity arrangement as positivism itself assesses it — the standing arrangement under contest, never the reading's endorsed alternative. Where the siblings would draw the beneficiary and victim sets differently, that disagreement lives in their files and in the omega variables here, not inside this constraint's classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_constitution_text__originalist_reading",
+      "us_constitution_text__living_constitutionalist_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'constitutional interpretation' conflates three structurally distinct constraints that differ on the source of constitutional authority and therefore on epsilon, beneficiaries, and victims. This file instantiates the positivist reading (validity from enactment procedures; victims are unenacted claimants). The originalist reading adds historical-meaning recovery to source-fixation (different epsilon; victims shift toward those disadvantaged by changed circumstances). The living-constitutionalist reading admits social-evolution authority (different extraction profile; victims shift toward those harmed by frozen text). The three are linked as a family via affects_constraints; each is authored separately because measuring one through another's observable changes epsilon, which marks them as different constraints sharing a kernel, not one constraint viewed from angles."
+  },
+  "stakeholders": [
+    {
+      "name": "federal_judiciary",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Staffs the courts that decide which norms count as constitutional law. Applies the enactment test: a provision binds because it sits in the ratified text or arrived through a valid amendment, and arguments grounded only in moral appeal or unrecorded intention are treated as legally weightless. Members are selected, confirmed, and promoted inside a profession whose training and case law reward fidelity to enacted sources; setting that fidelity aside means abandoning the role's own self-understanding, not merely changing jobs."
+    },
+    {
+      "name": "article_v_amending_coalitions",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "The temporary supermajorities — two-thirds of both houses of Congress plus three-quarters of the states — that can write new supreme law. When assembled, their product binds everyone without needing a moral defense; the rarity of assembly is the price of admission. Between assemblies they fall back on ordinary legislation, so the capacity to act persists even when the amendment route stalls."
+    },
+    {
+      "name": "enacting_legislatures",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Congress and the state legislatures, whose statutes and resolutions acquire legal force by being enacted. Whatever they pass binds without further justification of its wisdom; opponents must defeat it through the same enactment machinery or persuade a court that it conflicts with superior enacted law. The conferred authority accrues to them continuously, session by session."
+    },
+    {
+      "name": "commercial_and_creditor_interests",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Businesses, lenders, and property holders who plan on the assumption that enacted rules will be applied as written; predictability lowers their cost of contracting and lending. When enacted rules cut against them, they can lobby for new enactments, relocate operations, or shop for friendlier jurisdictions — the validity channel responds to organized influence."
+    },
+    {
+      "name": "legal_profession",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Lawyers, judges, and teachers who make their living operating the validity test. Clear source-based standards make advice defensible and outcomes explainable. The same standards require members to tell clients that meritorious moral claims without enactment are legally worthless, and to forgo outcome-based argument in their own advocacy and opinions — a professional cost absorbed daily."
+    },
+    {
+      "name": "general_citizenry",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Everyone subject to the resulting body of law. They receive a legal order they can learn, predict, and hold officials to, and they pay when enacted rules injure them and no unenacted remedy is available. Most have no realistic exit from the jurisdiction's legal order; their protection is participation in the enactment channels or reliance on those who speak for them there."
+    },
+    {
+      "name": "unenacted_rights_claimants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "People with serious claims of injustice — unequal treatment, denied subsistence, unprotected liberty — that have not been written into enacted law. Under the validity test their claims carry no legal weight however strong their moral case; the only door is enactment, which requires the political strength whose absence defines their situation. They wait, sometimes for generations, for a coalition strong enough to write their claims into law."
+    },
+    {
+      "name": "politically_excluded_minorities",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Groups systematically unable to assemble or join the coalitions that produce enacted law — historically disenfranchised populations whose votes, wealth, or representation are insufficient to move Article V or ordinary legislation. For them the validity test converts political weakness into legal invisibility: what cannot be enacted on their behalf does not exist for them, and emigration is the only exit most will never take."
+    },
+    {
+      "name": "social_movements_seeking_enactment",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Organized campaigns pressing to have their claims enacted — marching, litigating test cases, drafting amendments. Inside courtrooms their moral arguments are inadmissible as sources of law, and inside legislatures they face the same supermajority arithmetic that excluded them; they are present in the streets and absent from the rooms where validity is decided."
+    },
+    {
+      "name": "constitutional_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academics and commentators who map how the validity criterion works, where it came from, and what it costs. They publish critiques and reconstructions, train the next cohort of officials, and supply the vocabulary in which the profession debates its own foundations. They hold no enforcement power and collect no conferred authority; their seat is observational."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Supplies a shared, publicly checkable test for what counts as constitutional law: a norm binds if and only if it traces to the ratified text or to an amendment enacted through Article V's supermajority procedure. Disputes over authority resolve by inspecting the enactment chain rather than re-litigating first principles, giving legislators, courts, and citizens a common answer to the question 'by what right does this rule govern?'",
+    "transfer_function": "Moves binding legal authority toward formally enacted instruments and away from moral argument and historical reconstruction: whatever a supermajority enactment produces becomes supreme without further justification, while claims lacking enactment — however widely endorsed as just — carry no legal weight in constitutional adjudication. Decisive voice shifts from claimants to enactors.",
+    "absent_voices": "People whose substantive justice claims lack enactment would object that the criterion converts their exclusion from political power into permanent legal nullity. They are absent from courtrooms, where their moral arguments are inadmissible as sources of law, and from Article V, where supermajority thresholds place amendment beyond their reach. They appear in this story only as the excluded seat and the trapped payer seats.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the enactment-validity criterion vanished overnight, every exercise of constitutional authority would need re-justification from first principles: precedents would lose their transmission chain, legislative products would need fresh moral defense to bind, and the profession would fracture over which successor criterion, if any, governs — the interpretive order would reorganize around some new validity test or fragment along regional and ideological lines.",
+    "founding_problem": "Making collective commitments binding and knowable without depending on each interpreter's private judgment of their justice: the written-ratification design and, later, formalist jurisprudence sought a validity test that any trained official could apply uniformly, so that law could command allegiance by its pedigree rather than by re-deriving its wisdom each generation.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "General jurisprudence across traditions attests the underlying problem from outside the benefiting parties: Hart's analysis of the rule of recognition, comparative constitutional scholarship on amendment rigidity, and the reading's sharpest critics — Dworkinian and critical-theory writers, who dispute the answer rather than the problem — all treat 'what makes a norm legally authoritative' as a real and unresolved coordination question. The attestation is not monopolized by the arrangement's beneficiaries."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "formal_enactment_validity_order",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "originalist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "living_constitutionalist_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "enactment_exclusivity_of_legal_validity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "moral_content_legally_inadmissible",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "enacting_legislatures",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

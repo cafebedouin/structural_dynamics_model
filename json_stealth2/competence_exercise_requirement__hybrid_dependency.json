@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "competence_exercise_requirement__hybrid_dependency",
+    "version": "1.0",
+    "generated_date": "2026-08-04",
+    "status": "ACTIVE",
+    "story_uid": "a41afabf-4400-49c7-9519-a17bfe10c7ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.55,
+    "theater_ratio": 0.27,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Hybrid Competence Exercise Regime (Simulation Foundation Plus Real-World Anchoring)",
+    "topic_domain": "safety_engineering/organizational_learning/high_reliability_organizations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aviation_regulators",
+      "approved_training_organizations",
+      "aviation_insurers",
+      "flying_public"
+    ],
+    "victims": [
+      "regional_and_low_cost_carriers",
+      "line_pilots"
+    ],
+    "vindicated_propositions": [
+      "proficiency_decay_without_exercise_hypothesis",
+      "line_oriented_scenario_transfer_effectiveness",
+      "crew_resource_management_performance_effect"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates the hybrid_dependency reading of the competence_exercise_requirement kernel; how would the computed classification shift if the sibling readings were instantiated at matched structural data?",
+      "resolution_mechanism": "Generate the sibling stories (simulation_as_adequate_exercise, catastrophe_as_necessary_anchor) with their own beneficiary/victim structures and epsilon referents, then compare computed per-seat types across the family.",
+      "impact": "Under the simulation-adequate sibling, the real-aircraft-time component loses its necessity warrant and the regime's cost structure reads increasingly as legacy rent collection, pushing extraction upward and the type toward the snare side. Under the catastrophe-anchor sibling, the entire routine exercise apparatus reads as insufficient performance, pushing theater_ratio past 0.5 and the type toward piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer structure: this constraint is one reading of a contested kernel; sibling readings are separate files."
+    },
+    {
+      "id": "hybrid_necessity_empirical_basis",
+      "question": "Is the dual-component claim (simulation necessary AND real-world anchoring necessary) empirically settled, or does the necessity of real anchoring rest on tradition and post-accident politics?",
+      "resolution_mechanism": "Longitudinal controlled comparison of hybrid-regime cohorts against simulation-heavy cohorts on line-relevant performance measures and documented skill-fade rates, insulated from carrier cost incentives.",
+      "impact": "If simulation alone sustains competence, the real-aircraft mandates are dead-weight cost and the authored epsilon understates extraction; if real anchoring is irreplaceable, the current epsilon already prices the coordination correctly and the rent layer is the only excess.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the hybrid composition claim is an established property of skill maintenance or a constructed bargain."
+    },
+    {
+      "id": "training_rent_layer_magnitude",
+      "question": "How much of the mandated training spend exceeds the competitive price of equivalent instruction and device time?",
+      "resolution_mechanism": "Benchmark certified-device hourly pricing against open-market equivalents in adjacent sectors; analyze the certification barrier's effect on supplier entry and price.",
+      "impact": "Sizes the extraction arm that separates the tangled-rope reading from a near-pure coordination reading; a negligible rent layer would support reclassification toward rope at review.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of the captive-market rent component inside the compliance cost."
+    },
+    {
+      "id": "pilot_identity_lock_depth",
+      "question": "Is line-pilot acquiescence to the recurrent check cycle a revealed preference for maintained licensure, or identity fusion with the checked-out professional self?",
+      "resolution_mechanism": "Attitude trajectories across license lapse, furlough, and retirement; comparison of burden tolerance between pilots inside the cycle and recently exited pilots.",
+      "impact": "If fusion is substantial, the pilot seat's modeled exit mobility overstates real options and effective extraction on that seat runs higher than the structural derivation suggests; if preference-driven, the seat behaves as a conventional constrained payer.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Depth of the identity-lock binding the pilot seat to the exercise cycle."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "aviation_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Writes and enforces the rules specifying what exercise a crew must complete to keep operating: recurrent simulator cycles, line checks, recent-experience minimums, and approval of each operator's training program. Collects fees, staffing, and political legitimacy from administering the system, and answers to legislatures and the public after accidents. Statute obliges the office to hold the oversight role, and post-accident accountability punishes relaxation far more severely than rigor."
+    },
+    {
+      "name": "approved_training_organizations",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Build and operate the certified simulators and training centers that every carrier must purchase time from. Certification standards limit who may supply the mandated device categories, so demand arrives by rule rather than by competitive sale. Revenue scales with mandated hours; the largest firms diversify across airlines, regions, and adjacent markets such as defense and business aviation if any single customer base tightens."
+    },
+    {
+      "name": "aviation_insurers",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Price hull and liability risk for the sector; the documented exercise record of each fleet is a primary input to premium and coverage decisions. Gain when the pooled risk improves. Can reprice annually, restrict terms, or withdraw from poorly evidenced lines of business, which gives them leverage over operator training policy without administering any of it."
+    },
+    {
+      "name": "flying_public",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Receive the safety margin that a maintained crew-competence floor provides, and pay for it indirectly through fares that embed training and compliance costs. Have no individual seat in rulemaking; their interest is mediated entirely by the regulator's statutory mandate and by carrier reputational competition. Can choose carriers or other transport modes but cannot opt out of the system any particular flight operates in."
+    },
+    {
+      "name": "major_network_carriers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Fund the largest share of the mandated spend: device hours, instructor staffing, audit programs, and the scheduling overhead of pulling crews off revenue duties. Receive in return a defensible competence floor, continued insurability, portable credentials for their crews, and protection from competitors who might otherwise cut training spend to win on price. Exit would mean surrendering operating certificates, slots, and hub infrastructure."
+    },
+    {
+      "name": "regional_and_low_cost_carriers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Carry the same per-crew exercise mandate on the thinnest margins in scheduled service. Fixed compliance components, such as audit programs and training-infrastructure access, scale badly below fleet-size thresholds, so the mandate consumes a larger revenue share than for major carriers. Contract training out, consolidate, or exit the market; continuing independent operation at sub-scale compliance cost is not realistically available."
+    },
+    {
+      "name": "line_pilots",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Supply the time and performance the regime runs on: recurrent simulator sessions, line checks flown under observation, audit legs carrying observers in jumpseats, and the record-keeping that keeps licenses current. Bear schedule disruption, preparation load, and, in some jurisdictions, uncompensated training time; unions bargain over compensation and over the jeopardy rules attached to checks. Receive license validity, maintained skill, and the professional standing of holding a current type rating. Leaving the cycle means leaving the profession and the identity built around it."
+    },
+    {
+      "name": "airline_safety_departments",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Run the internal observation and audit programs, aggregate the resulting data, and translate findings into scenario and curriculum changes. Departmental headcount, budget, and standing inside the company track the size of the exercise apparatus, and the department's organizational self-concept is bound to administering it. Their internal leverage depends on the programs continuing."
+    },
+    {
+      "name": "accident_investigators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Reconstruct accidents and serious incidents, including the training, currency, and audit histories of the crews involved, and publish findings that feed back into rulemaking and program design. Hold no financial stake in the regime's budget or continuation. Their reports are the principal outside check on whether mandated exercise maps onto line performance."
+    },
+    {
+      "name": "small_charter_operators",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Operate under the same exercise mandates at the worst cost ratios in the sector while having no seat in the working groups where the standards are drafted. Compliance consumes a larger share of revenue than for any larger carrier class. Selling the certificate or leaving charter operations are the only realistic paths; the mandate itself is not negotiable for them."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a verifiable competence floor under a very large volume of revenue flights: concentrates expensive exercise infrastructure (full-flight simulators, standardized line-oriented scenarios, observation programs) so that no single operator must build its own, prevents competitive erosion of training investment by making the floor universal, and standardizes the evidence of proficiency so that licenses and type ratings carry comparable meaning across carriers and borders.",
+    "transfer_function": "Moves money and time from airline operating budgets and pilot duty days to training organizations, device providers, oversight staffing, and internal audit programs; moves assurance upward from crews through operators to regulators, insurers, and the traveling public; moves operational data downward from line observations back into scenario design.",
+    "absent_voices": "Small charter and nonscheduled operators bear the steepest cost ratios and have no seat in the working groups where exercise standards are drafted. Frontline crews in non-union environments have no bargaining channel over uncompensated training time or check-jeopardy rules. Fare-paying passengers, as indirect cost-bearers, appear only through the regulator's statutory representation of their interest.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Training investment would immediately diverge along carrier economics, with the cheapest operators cutting deepest; insurers would reprice or withdraw from poorly evidenced fleets; license portability would fragment as authorities could no longer trust a common exercise standard; and the competence floor would become heterogeneous within a few command cycles, with the decay invisible until it surfaced as events.",
+    "founding_problem": "Commercial aviation grew faster than any mechanism for keeping distributed crews proficient: proficiency decayed invisibly between checks, classroom instruction did not exercise line-relevant skills such as crew coordination and threat management, and competitive pressure pushed each carrier's training spend toward the minimum it could defend. A sequence of accidents attributed to skill fade and crew-performance failures drove construction of a mandated, recurring, scenario-based exercise regime with line observation layered on top.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Accident investigation boards, which sit outside the benefiting parties, continue to attribute events to skill fade, automation surprise, and training gaps in public findings; actuarial loss data independently shows the risk profile the floor suppresses; peer-reviewed human-factors literature documents decay without exercise. Regulators and the training industry also attest that the problem is live, but the investigative and actuarial sources corroborate it from outside the beneficiary set."
+  },
+  "gain_flow": "approved_training_organizations",
+  "fixing_cost": "prohibitive",
+  "commentary": {
+    "narrative_context": "In commercial aviation, no crew may carry revenue passengers without a current record of prescribed exercise: recurrent full-flight simulator cycles built around line-oriented scenarios, periodic line checks flown under observation, minimum recent-experience requirements, and, layered on top by operators and industry programs, non-jeopardy line audits in which trained observers ride normal flights and record crew performance without consequence to the crew. Aviation regulators administer the arrangement, carriers fund it, certified training organizations deliver it, insurers consume its outputs as priced assurance, and accident investigators audit it retrospectively against outcomes. This file instantiates the hybrid_dependency reading of the competence_exercise_requirement kernel (see kernel_context); the sibling readings are separate constraint files linked through the network section, and this file's epsilon refers solely to the standing mandatory hybrid regime. The claimed type and the metrics are authored independently: the claim states what this reading takes the arrangement structurally to be, and the metrics describe its observed operation.",
+    "key_agents": [
+      "aviation_regulators: agenda setter (institutional/constrained) - specifies the mandated exercise mix, enforces it, collects legitimacy and budget from administration",
+      "approved_training_organizations: primary beneficiary (powerful/arbitrage) - sells mandated device hours behind a certification wall",
+      "major_network_carriers: payer with material return flow (powerful/constrained) - funds the largest share, receives insurability and floor protection",
+      "regional_and_low_cost_carriers: disproportionate payer (moderate/constrained) - same mandate on the thinnest margins",
+      "line_pilots: dual-positioned bearer (organized/identity_locked) - supplies time and performance, receives licensure and skill",
+      "aviation_insurers: beneficiary (powerful/mobile) - prices the risk the regime suppresses",
+      "flying_public: diffuse beneficiary and indirect payer (powerless/mobile) - receives the safety margin, pays through fares",
+      "airline_safety_departments: internal beneficiary (moderate/identity_locked) - administers the observation apparatus its standing depends on",
+      "accident_investigators: analytical observer (institutional/analytical) - attests whether exercise maps to outcomes",
+      "small_charter_operators: excluded voice (moderate/trapped) - bears the worst cost ratios with no seat in standard-setting"
+    ],
+    "logic_rationale": "Base extractiveness of 0.32 prices a real but bounded rent layer: most mandated spend purchases genuine capability in device hours, instructor time, and observation data, but certification standards restrict who may supply the mandated device categories, hour-floor proxies persist after competency-evidence methods arrived, and the oversight apparatus rewards visible activity alongside measured competence. Suppression of 0.55 reflects the legal architecture: no carrier may operate outside the mandated mix, variances are discretionary and slow, and the enforcement machinery of program approval, ramp checks, and certificate action is permanent infrastructure. Per the framework's division of labor, suppression is authored as a raw structural property and is not scaled by power or scope; extractiveness is the quantity the engine scales through directionality and spatial scope. Theater of 0.27 captures partial ritualization, including known check profiles, coached maneuvers, and slide-delivered human-factors modules, set against observation programs that still sample real line operations. Accessibility collapse of 0.48: within any single jurisdiction the mandated mix is fixed, but competency-evidence reform pathways and cross-jurisdiction variance keep alternatives partly reachable. Resistance of 0.35: continuous cost grievance and union bargaining over training compensation, but no serious abolition politics, because post-accident accountability makes opposition to the floor professionally dangerous for anyone in the system. Coordination type is declared as identity_coordination because the regime's primary coordination function is maintaining the meaning of the license boundary: what a current type rating certifies about its holder. The temporal series shares one six-point grid across all tracked metrics. The suppression trajectory models the post-accident ratchet, in which enforcement capacity steps up after salient events and plateaus between them; theater rises with institutionalization and dips late as competency-evidence reforms push back on hour-proxy compliance.",
+    "perspectival_gap": "The seats should classify differently. From the regulator's chair the arrangement is the core function of the office, a floor it is statutorily obliged to hold. From the major-carrier chair it is a bundled purchase: heavy compliance cost wrapped around insurability and protection from undercutting. From the training organization's chair it approaches a pure benefit, demand arriving by rule behind a certification wall. From the line pilot's chair it splits: the license and the skill are personally owned goods the cycle maintains, while the proof-of-competence rituals land as uncompensated burden. From the investigator's chair the operative question is purely empirical, whether mandated exercise maps to line performance, and it is the one question none of the funding seats systematically asks. The engine computes these divergences from the structural data; the authored claim does not adjudicate among them.",
+    "directionality_logic": "Beneficiary declarations place regulators, training organizations, insurers, and the flying public near the subsidized pole: the arrangement delivers them mandate legitimacy, captive demand, priced risk, and safety margin respectively, at little direct cost borne through the structure. Carriers are declared victims but sit well short of the full-target pole: they fund the largest share yet recover part of the transfer as insurability, portable crew credentials, and defense against training-cutting competition, so the derivation should land them mid-range rather than at the target extreme. Line pilots are dual-declared and pinned near symmetric by opposing forces: they pay in time and jeopardy and are paid back in license validity and maintained skill. Their identity lock removes the exit mobility that would otherwise dampen effective extraction on that seat, while their organized power, union bargaining over compensation and jeopardy rules, moderates realized extraction relative to an unorganized seat at the same structural position. Spatial scope amplifies the carrier and pilot seats modestly: the regime operates globally, and verifying exercise quality at global scope is difficult enough that paper compliance substitutes for observed competence at the margins.",
+    "mandatrophy_analysis": "The founding problem, invisible proficiency decay across a distributed fleet under competitive cost pressure, remains live, so the arrangement as a whole has not outlived its mandate and no mandatrophy is declared. The classification work happens at the component level. Reading the whole regime as pure extraction would erase the floor-keeping function that investigative findings and loss data corroborate from outside the beneficiary set; reading it as pure coordination would launder the certification-wall rents and the visible-activity bias that the theater trajectory records. The tangled-rope claim holds both in view: a coordination function that requires active enforcement and carries a persistent, measurable extraction layer. The mismatch consumer's inputs align here, founding_problem_status live with disappearance verdict world_rearranges, so no zombie flag is expected. The component-level risk, hour-floor proxies surviving their own evidence base, is carried by the theater_ratio series rather than by a mandatrophy declaration.",
+    "kernel_context": "Kernel: competence_exercise_requirement, the contested question of what composition of exercise maintains operational competence in high-consequence, low-frequency-failure work. This file instantiates the hybrid_dependency reading: simulation is a necessary foundation but insufficient alone, and competence requires periodic anchoring in real operations through line flying, non-jeopardy line audits, and actual aircraft time. Sibling readings, each a separate constraint file: simulation_as_adequate_exercise, which holds that high-fidelity simulation with structured debriefing constitutes adequate exercise, and catastrophe_as_necessary_anchor, which holds that only real events and near-misses supply the irreducible exercise. Relation choices: this reading coexists_with the simulation-adequate sibling, a live empirical rivalry over sufficiency that no framework resolves by logic; toward the catastrophe-anchor sibling this reading exerts influence rather than foreclosure, because the hybrid regime's data machinery institutionalizes near-miss learning through audit programs and flight-data monitoring, draining the catastrophe-only claim's evidentiary territory without settling whether unique instructive power remains. Reference frame and drift: this reading takes the kernel's legitimate state to be simulation foundation with periodic real anchoring; in the competency-based-training era, practice has shifted measurement from hour proxies toward competency evidence, a minor practice drift that the reading's own institutions acknowledge and drive, leaving the dual-component premise intact."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_exercise_requirement__simulation_as_adequate_exercise",
+      "competence_exercise_requirement__catastrophe_as_necessary_anchor"
+    ],
+    "dual_formulation_note": "Constraint family: competence_exercise_requirement decomposes into three structurally distinct readings because the colloquial question of what keeps crews competent conflates claims with different epsilon values, beneficiary structures, and failure modes. This file (hybrid_dependency) authors epsilon for the standing mandatory hybrid regime as the hybrid reading assesses it. The simulation_as_adequate_exercise sibling authors epsilon for the pure-simulation arrangement it advocates and would treat the real-aircraft component as legacy cost; the catastrophe_as_necessary_anchor sibling authors epsilon for the event-driven learning arrangement and treats routine exercise as insufficient. The hybrid regime's data-collection machinery feeds the evidence base both siblings argue from, so this file links to both, and each family member links to the others via affects_constraints per family rules."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "simulation_foundation_with_periodic_real_anchoring",
+    "drift_state": {
+      "moment": "competency_based_training_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_adequate_exercise",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary_anchor",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dual_component_exercise_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "routine_operations_as_anchoring_source",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

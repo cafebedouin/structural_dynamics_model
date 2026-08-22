@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence__lapsed_alternatives_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "49cdce3e-8a63-4e55-9566-5bf1ce34fb04"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.05,
+    "theater_ratio": 0.15,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.08,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Layout Persistence — Lapsed Alternatives Reading",
+    "topic_domain": "technology_history/industrial_standards/path_dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "individual_typists",
+      "keyboard_manufacturers",
+      "typing_education_providers",
+      "os_platform_vendors"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.15,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest_qwerty_persistence",
+      "question": "This constraint is one reading (lapsed_alternatives_reading) of the kernel qwerty_persistence; the sibling reading (incumbent_preservation_reading) holds that the same persistence is produced by incumbents actively defending capital investments. Which causal structure actually sustains the standing arrangement?",
+      "resolution_mechanism": "Comparative institutional record: search for documented episodes of incumbents blocking alternative-layout adoption (contractual exclusivity, predatory pricing, standards-body capture) versus natural experiments in which alternatives faced no identifiable opposition and still failed to reach critical mass.",
+      "impact": "If the sibling reading is correct, epsilon rises sharply (rent-protection extraction), a victim set appears (alternative-layout producers and the consumers paying an inefficiency premium), and the classification shifts toward tangled_rope or snare; if this reading is correct, the rope classification stands with epsilon set by switching costs alone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which reading of the qwerty_persistence kernel explains the standing arrangement."
+    },
+    {
+      "id": "individual_switching_cost_magnitude",
+      "question": "How large is the actual private cost of individual deviation from the standard — retraining hours, temporary productivity loss, shared-equipment mismatch — relative to the coordination value received?",
+      "resolution_mechanism": "Controlled retraining studies with productivity telemetry and longitudinal tracking of individual converts' output curves; reconcile the conflicting historical estimates (vendor-era retraining claims versus retrospective economic critiques).",
+      "impact": "Sets epsilon directly: trivial costs push epsilon toward the coordination floor and the arrangement toward pure convention; large costs raise epsilon while keeping it symmetric and uncollected.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of the private switching cost that constitutes this reading's entire epsilon."
+    },
+    {
+      "id": "critical_mass_threshold_counterfactual",
+      "question": "Did alternatives lapse because adoption could not reach critical mass, or because latent demand for them was weaker than advocates claim?",
+      "resolution_mechanism": "Track insulated adoption pockets (firms, rehabilitation clinics, programming communities that coordinated internally on alternative layouts): sustained pockets indicate viability at small scale and equilibrium selection; universal decay even in insulated settings indicates hidden costs the coordination account misses.",
+      "impact": "Sustained pockets strengthen the rope reading (alternatives lapse for coordination-arithmetic reasons); universal decay implies unmodeled private costs, raising effective epsilon and complicating the symmetry assumption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-adoption is an equilibrium-selection outcome or preference revelation."
+    },
+    {
+      "id": "cost_symmetry_across_seats",
+      "question": "Are coordination costs truly borne symmetrically, or do some seats — hunt-and-peck typists, multilingual users, assistive-device users, high-volume data-entry workers — bear disproportionate burdens that would constitute a diffuse victim set?",
+      "resolution_mechanism": "Distributional analysis of who retrains, who purchases specialty hardware, and whose error rates or strain injuries track the layout; occupational-health data stratified by typing population.",
+      "impact": "If burdens are systematically asymmetric, a victim set emerges and the classification drifts from rope toward tangled_rope; confirmed symmetry locks the rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Symmetry of the cost burden underlying the empty-victim declaration."
+    },
+    {
+      "id": "explanatory_exclusivity_of_readings",
+      "question": "Are the two readings of the kernel rival explanations (at most one true) or complementary layers (coordination value sets the baseline persistence; incumbent defense explains specific blocked transitions)?",
+      "resolution_mechanism": "Episode-level attribution: classify each historical transition attempt (Dvorak commercialization, government trials, internet-era revivals) as coordination-limited, opposition-limited, or both, and test whether the residual after removing coordination limits correlates with documented incumbent action.",
+      "impact": "If complementary, this story's epsilon covers only the coordination layer and the sibling story covers the residual; each classification stays clean but joint attribution of the arrangement's persistence becomes additive rather than adjudicative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the kernel's readings are rivals or layers."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The QWERTY key arrangement, fixed in the 1870s typewriter era and shipped worldwide on Remington machines, remains the default input layout on virtually every keyboard manufactured today despite repeated ergonomic alternatives — Dvorak (1936), Colemak (2006) — that remain freely available and never reach critical mass. This story instantiates the lapsed_alternatives_reading: the arrangement persists because a single shared layout solves a real coordination problem — skill portability, hardware interchangeability, curricular economy, hiring legibility — and alternatives lapse because each would-be adopter bears the full private switching cost up front while the benefit depends on a collective adoption that never arrives. On this reading no party administers, enforces, or profits from the arrangement; the only charge it levies is the private cost of leaving it. Claimed type and metrics are authored independently: the claim is rope; the metrics describe modest, symmetric, self-borne costs that decline over the interval as software remapping removed the hardware barrier to experimentation.\n\nKEY AGENTS (by structural relationship):\n- individual_typists: mass adherents (powerless/constrained) — receive skill portability; bear switching costs only if they personally deviate\n- keyboard_manufacturers: equipment-side adherents (organized/constrained) — tooling and inventory follow the installed base\n- typing_education_providers: instruction-side adherents (organized/constrained) — teach the layout the labor market expects\n- os_platform_vendors: default reproducers (institutional/mobile) — inherit and re-ship the default; hold technical exit they have no reason to use\n- alternative_layout_communities: would-be coordinators outside the conversation (moderate/constrained) — bear full switching cost, cannot assemble critical mass\n- human_factors_researchers: analytical observer — sees the full structure: live coordination function, lapsed alternatives, no enforcing party",
+    "key_agents": [
+      "individual_typists: mass adherents (powerless/constrained) — receive skill portability; bear switching costs only if they personally deviate",
+      "keyboard_manufacturers: equipment-side adherents (organized/constrained) — tooling and inventory follow the installed base",
+      "typing_education_providers: instruction-side adherents (organized/constrained) — teach the layout the labor market expects",
+      "os_platform_vendors: default reproducers (institutional/mobile) — inherit and re-ship the default; hold technical exit they have no reason to use",
+      "alternative_layout_communities: would-be coordinators outside the conversation (moderate/constrained) — bear full switching cost, cannot assemble critical mass",
+      "human_factors_researchers: analytical observer — sees the full structure: live coordination function, lapsed alternatives, no enforcing party"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.16 at interval end) because the arrangement's entire charge is the private switching cost of deviation — retraining hours, a transient productivity dip, mismatch with shared equipment — and no seat collects it; the series declines from 0.32 to 0.16 as operating-system remapping removed the hardware cost of experimenting, making the persistence of the standard under falling exit costs the constraint's central datum. Suppression is authored near zero (0.05) and is a raw structural property, unscaled by power or scope: no enforcement machinery exists or ever existed; deviation is lawful, unsanctioned, and technically trivial, and the only pressure a deviator feels is the network externality that IS the coordination function. Theater is low throughout (0.08-0.15): typing pedagogy retains some legacy drill ritual and standards documentation describes rather than sustains the layout; the small mid-interval bumps track advocacy-interest cycles (postwar efficiency studies, the internet-era alternative-layout revival) rather than any oscillating extraction mechanism. Accessibility_collapse (0.35) records partial practical collapse only: alternatives remain fully accessible technically — free remapping, purchasable hardware — but sit below critical mass, so the practical alternative set is thin without being closed. Resistance (0.08) reflects marginal, dissipating advocacy rather than organized opposition. Fixing — coordinating a global transition to any alternative — is prohibitive relative to its disputed benefit, and no seat exists with both the mandate and the margin to attempt it; combined with diffuse gains this is the expensive-to-change face of a healthy convention, not an atrophied one, because the coordination function remains live. Both tracked series run on one shared seven-point grid spanning 1936-2026 so every metric is authored at every examined time point; suppression_requirement is deliberately untracked because the enforcement picture is statically empty and is carried by the scalar instead.",
+    "perspectival_gap": "From inside a workplace the layout is experienced as a fact of nature — mountain-like phenomenology on a structurally conventional base — because every neighboring keyboard confirms it. From the alternative-layout advocate's seat the same structure is experienced as a wall: decades of argument produce no movement. Under this reading neither experience indicates an extractor: the first is the phenomenology of a successful convention, the second is the arithmetic of critical mass failing to clear. The engine computes per-seat classifications from power, exit, and role; the divergence between the effortless-compatibility seat and the frustrated-advocate seat is real and requires no beneficiary-victim asymmetry to generate.",
+    "directionality_logic": "Every seated party derives a low d from the beneficiary declarations: typists receive portability worth more than their probabilistic share of switching-cost exposure; manufacturers and educators ride demand concentrations they did not create; platform vendors inherit a default whose reproduction costs them nothing and whose alteration would cost them users. Unseated deviators — the individuals who actually leave — bear d near 1.0, but their costs are self-borne and uncollected, which is precisely what keeps epsilon at the switching-cost floor rather than converting it into anyone's revenue. No directionality overrides are needed: the derivation from beneficiary structure plus exit options reproduces the intended relationships, and the excluded seat (alternative_layout_communities) is commentary-grade by design and drives no correction. Receipt surface: no seat receives the arrangement's charge — the switching costs of deviators accrue to no one — so gain_flow is authored as the affirmative diffuse claim after checking every named seat; manufacturers' and vendors' ordinary commerce in standard-compatible goods is coordination surplus, not extraction receipts.",
+    "mandatrophy_analysis": "The founding problem — pacing operator input against type-bar jamming — is dead: no modern keyboard contains a type bar, a fact attested by mechanical engineering rather than by any beneficiary. The arrangement nonetheless persists by serving a successor function the founders did not intend: inter-user coordination. The R5 mismatch (status=dead x verdict=world_rearranges) raises a zombie flag, and the cross-check is what clears it: theater is low, gain_flow is diffuse with no capturing seat, and the successor function is demonstrably load-bearing — any multinational onboarding pipeline, temp-labor pool, or hardware supply chain exhibits it. Reading the dead founding mandate alone would misclassify a live rope as a piton; reading the live coordination function alone would miss the soft-input erosion recorded in drift_state, whereby voice input and predictive text are gradually decoupling text production from key layout. Mandatrophy here took the form of functional migration, not capture: the mandate died, a new one grew over it, and no one administered either.",
+    "kernel_context": "Kernel: qwerty_persistence — the standing arrangement under contest is the persistence of the QWERTY layout as the global default. This file instantiates the lapsed_alternatives_reading: persistence via coordination value, alternatives lapsing below critical mass, epsilon constituted by private switching costs alone, victim set empty. The sibling file instantiates the incumbent_preservation_reading — persistence via active defense of capital investments by incumbents — with higher reading-indexed epsilon and a non-empty victim set over the same referent. The disagreement is located in the causal structure of persistence (decentralized adoption dynamics versus directed preservation) and is routed to omega variables per the committer-frame rules; nothing in the base properties or stakeholder situations imports the sibling's content."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "incumbent_preservation_reading"
+    ],
+    "dual_formulation_note": "The colloquial claim 'QWERTY persists because of path dependence' conflates two structurally distinct explanations of the same standing arrangement. This story instantiates the lapsed_alternatives_reading: persistence via coordination value, alternatives lapsing below critical mass, epsilon equal to private switching costs only, no beneficiary concentration, no victims. The sibling story (incumbent_preservation_reading) instantiates the incumbent-defense account: persistence via active preservation of capital investments, with correspondingly higher reading-indexed epsilon and a non-empty victim set. Both stories take the SAME referent (the standing arrangement — QWERTY's persistence) and differ only in the reading-indexed assessment of it; they are linked here as a constraint family and must not be merged into one story, since their epsilon values and victim structures are mutually inconsistent."
+  },
+  "stakeholders": [
+    {
+      "name": "individual_typists",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Types on whatever layout the surrounding equipment already uses; the value of their typing skill comes from its portability across jobs, machines, and countries, which only a universally shared layout provides. Leaving personally means weeks of slowed output and a private mismatch with every shared keyboard they touch; staying costs them nothing beyond the layout's disputed ergonomics."
+    },
+    {
+      "name": "keyboard_manufacturers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Tooling, inventory, and product lines are built to the dominant layout because demand concentrates there; producing alternative-layout hardware means carrying slow-moving stock against uncertain orders. They neither set nor defend the default; they follow the installed base."
+    },
+    {
+      "name": "typing_education_providers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Schools, vocational courses, and online tutors teach the layout employers expect, because graduates need portable, recognizable skills. Curriculum follows labor-market demand rather than ergonomic research; switching what they teach would strand students with a minority skill."
+    },
+    {
+      "name": "os_platform_vendors",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Ship the inherited layout as the factory default in firmware, operating systems, and mobile keyboards, and maintain remapping support for alternatives. Changing the default would break user expectation worldwide for no competitive gain, so the default reproduces itself through them; they retain easy technical exit — remapping interfaces exist — but no commercial reason to use it."
+    },
+    {
+      "name": "alternative_layout_communities",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Designers and user communities behind alternative layouts publish ergonomic arguments, free remapping tools, and training material, and have done so for decades. Each convert bears the full private switching cost immediately while the benefit they seek — a larger coordinated user base — accrues only if adoption reaches critical mass, which it never has. They stand outside the rooms where defaults, curricula, and product lines are set; their objection is heard and answered with the coordination argument, not suppressed."
+    },
+    {
+      "name": "human_factors_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study typing ergonomics, retraining costs, and standard-selection dynamics across decades; they see the whole structure — the live coordination function, the lapsed alternatives, the absence of any enforcing party — and publish assessments that neither side of practice much acts on."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains one shared key layout so that typing skill, hardware, instructional material, and hiring expectations remain mutually compatible across users, employers, and equipment makers — a compatibility problem solved once by common adoption instead of negotiated per workplace.",
+    "transfer_function": "Transfers nothing between parties: no payment, work, attention, or status moves through the layout itself. The only cost in the system is the private switching cost a deviator bears when adopting an alternative, and no seat collects it.",
+    "absent_voices": "Alternative-layout designers and their user communities would object that superior layouts are locked out of default status; they are outside the conversation in the specific sense that no forum exists where default-setting happens for them to attend — defaults reproduce through procurement, habit, and curriculum rather than through any decision meeting. Ergonomic-injury clinicians also hold a standing interest that reaches the conversation only episodically.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Typing skill, hardware inventory, school curricula, hiring tests, and software defaults all presuppose the shared layout. Overnight dissolution would force simultaneous re-coordination — every employer, school, and manufacturer choosing and teaching a replacement — with a multi-year transition of incompatible skills and equipment before a successor convention stabilized.",
+    "founding_problem": "The layout was standardized in the 1870s typewriter era, when type bars swinging to a common platen could collide and jam; the arrangement of keys was fixed to pace operator input against the machine's mechanical recovery.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Mechanical-engineering assessments of modern keyboards confirm no type-bar collision constraint exists — the founding mechanism has no contemporary referent; typewriter historiography documents the jamming-era origin independently of any party that benefits from the layout today. No beneficiary-dependent source is needed for the dead-status finding, and none contradicts it."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "decentralized_coordination_equilibrium",
+    "drift_state": {
+      "moment": "contemporary_soft_input_era",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "incumbent_preservation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "adoption_dynamics_select_standards",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "deviation_costs_are_unclaimed",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

@@ -1,0 +1,370 @@
+{
+  "header": {
+    "constraint_id": "vatican_ii_doctrinal_authority__rupture_progressive_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vatican_ii_rp",
+    "story_uid": "65f113fe-9184-4e3e-84ea-2c60c4a26114"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.62,
+    "theater_ratio": 0.38,
+    "accessibility_collapse": 0.48,
+    "resistance": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Spirit-of-the-Council Authorization Regime (Rupture-Progressive Reading of Vatican II)",
+    "topic_domain": "ecclesiology/institutional_history/hermeneutics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "postconciliar_theological_establishment",
+      "national_episcopal_conferences",
+      "ecumenical_dialogue_partners"
+    ],
+    "victims": [
+      "traditionalist_clergy",
+      "preconciliar_liturgical_communities"
+    ]
+  },
+  "interval": {
+    "start": 1962,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1962,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1968,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1975,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1985,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.59
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1962,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1968,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1975,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1985,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.49
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2013,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1962,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1968,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1975,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1985,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.34
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.38
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contestation",
+      "question": "This story instantiates one reading of the vatican_ii_doctrinal_authority kernel. Would the continuity_reading or rupture_traditionalist_reading instantiate a different constraint over the same historical arrangements, with different beneficiary/victim structure and different epsilon?",
+      "resolution_mechanism": "Compile the sibling stories and compare computed classifications over identical structural facts. The disagreement locates in the authorization question: whether post-conciliar change is explication contained in the letter (continuity), legitimate development exceeding the letter (this reading), or error enabled by ambiguous texts (traditionalist).",
+      "impact": "Under the continuity reading the same arrangements compute with far lower epsilon (organic development, thin victim set); under the traditionalist reading they compute as pure extraction with an expanded victim set (the whole pre-conciliar inheritance). This story's tangled_rope verdict is reading-indexed, not topic-absolute.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel-level contest: which reading of Vatican II authority governs the same historical arrangements."
+    },
+    {
+      "id": "spirit_principle_determinacy",
+      "question": "Is the 'spirit of the Council' a determinate hermeneutical principle recoverable from the texts, draft histories, and recorded votes, or an unbounded authorization device that yields whatever the interpreting faction requires?",
+      "resolution_mechanism": "Compare draft histories and recorded conciliar votes against post-conciliar implementation: where implementation contradicts explicit votes or deleted draft material, the spirit-principle operated beyond the letter. Systematic patterns across domains (liturgy, religious liberty, collegiality) would establish determinacy or its absence.",
+      "impact": "If the principle is unbounded, the arrangement's effective reach exceeds any textual cap and epsilon rises toward the pure-extraction boundary; if determinate, part of the measured cost is the price of a legitimate living-teacher function rather than open-ended authorization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determinacy of the spirit-over-letter authorization principle."
+    },
+    {
+      "id": "necessity_of_break_counterfactual",
+      "question": "Was the break with pre-conciliar formulations necessary for the church's engagement with modernity, as this reading asserts, or could continuity-compatible renewal have achieved comparable adaptation at lower cost?",
+      "resolution_mechanism": "Comparative institutional history: Eastern Catholic churches retained inherited forms while adapting to modern conditions; the Anglican ordinariate demonstrates continuity-compatible renewal; counterfactual modeling of reform-without-rupture trajectories using pre-conciliar reform proposals that were already in circulation.",
+      "impact": "If the break was unnecessary, the costs borne by traditionalist seats were gratuitous rather than the price of institutional survival, shifting the verdict toward pure extraction; if necessary, the costs are defensible and the hybrid coordination-plus-cost reading strengthens.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual necessity of the conciliar rupture."
+    },
+    {
+      "id": "enforcement_symmetry_question",
+      "question": "Does the regime's enforcement run only against restoration (a one-way ratchet that forbids return while permitting further change), or also against heterodox excess in the progressive direction, as the post-conciliar treatment of liberation theology suggests?",
+      "resolution_mechanism": "Code canonical interventions, disciplinary measures, and appointment patterns from 1965 to the present by target direction: restorationist versus progressive-heterodox. Measure the asymmetry ratio across the interval.",
+      "impact": "Substantially bidirectional enforcement recasts the arrangement as discipline-bearing coordination rather than directional extraction, lowering effective exposure for mid-power seats and complicating the victim set; strongly asymmetric enforcement confirms the one-way ratchet and raises effective extraction for restoration-oriented seats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Directionality of post-conciliar enforcement machinery."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story models the rupture-progressive reading of Vatican II as an operating arrangement: the claim that the Council constituted a necessary break with pre-conciliar rigidity, and that the 'spirit of the Council' legitimately authorizes ongoing reform beyond the documents' textual limits, with post-conciliar implementation treated as authentic realization of conciliar intent. The arrangement under description is the spirit-based authorization regime as it has actually operated since 1962 — assessed by this reading's own lights, which regard the break as necessary and the costs as largely justified, while still recording that the costs were real and fell unevenly. KEY AGENTS (by structural relationship): papal_magisterium_and_curia: agenda setter (institutional/arbitrage) — administers the hermeneutic and holds the final word on what the spirit permits; postconciliar_theological_establishment: primary beneficiary (institutional/identity_locked) — careers and agenda access ride on the received reading; national_episcopal_conferences: beneficiary and regional administrator (institutional/constrained); ecumenical_dialogue_partners: incidental beneficiary outside the governed system (institutional/mobile); traditionalist_clergy: primary target (organized/constrained); preconciliar_liturgical_communities: target (moderate/trapped); contemplative_religious_orders: target (organized/constrained); dissenting_parish_laity: excluded voice (powerless/trapped); church_historians: analytical observer. The claim and the metrics are independent authored facts: the claimed type states what this reading believes is structurally true; the metrics state what is descriptively true of the regime's operation, including features this reading regrets.",
+    "key_agents": [
+      "papal_magisterium_and_curia: agenda setter (institutional/arbitrage) — declares what the Council's spirit requires, appoints its carriers, disciplines departure",
+      "postconciliar_theological_establishment: primary beneficiary (institutional/identity_locked) — collects careers, chairs, and agenda access from the received reading",
+      "national_episcopal_conferences: beneficiary with secondary administrative role (institutional/constrained) — gained standing relative to Rome, implements the hermeneutic regionally",
+      "ecumenical_dialogue_partners: incidental beneficiary (institutional/mobile) — collects dialogue gains from outside the governed system",
+      "traditionalist_clergy: primary target (organized/constrained) — bears canonical subordination and marginal ministry access",
+      "preconciliar_liturgical_communities: target (moderate/trapped) — lost ordinary access to inherited worship; identity-bound to the old forms",
+      "contemplative_religious_orders: target (organized/constrained) — restructured under obedience, absorbed demographic collapse",
+      "dissenting_parish_laity: excluded voice (powerless/trapped) — objected without ever holding a seat",
+      "church_historians: analytical observer (analytical/analytical) — supplies draft histories and vote records all parties cite selectively"
+    ],
+    "logic_rationale": "Extractiveness is substantial (0.66) because the authorization principle is uncapped by the texts: whatever the letter settles, the spirit can reopen, and the ratchet runs forward only — restoration is treated as betrayal while extension is treated as fidelity. Suppression (0.62) reflects real enforcement machinery — canonical discipline, appointment control, liturgical regulation, marginalization of irregular communities — coexisting with broad voluntary assent among the governed majority; suppression is authored as a raw structural property and is not scaled by power or scope. Theater ratio (0.38) captures the growing share of commemorative, celebratory, and consensus-performance activity (anniversaries, jubilee rhetoric, unity language) relative to substantive renewal work, which was front-loaded in 1965-1975. Accessibility collapse is moderate (0.48): alternatives persist — irregular communities, indult provisions, adjacent jurisdictions — so understanding the regime does not eliminate exit, but every exit carries canonical or social cost. Resistance (0.61) is high and durable: traditionalist movements, liturgical agitation, jurisdictional defiance, and scholarly revisionism have contested the regime for six decades. The measurement series run on one shared time grid (eight points, all three metrics at every point) and trace a CYCLICAL pattern rather than monotonic drift: aggressive implementation (late 1960s-1970s), consolidation and fatigue (1980s-1990s), a retrieval-minded interlude in the early 2000s that relaxed enforcement, then renewed hardening against traditionalist attachment after 2013. Roughly one full cycle is visible. Part of the oscillation functions as intermittent reinforcement: détente phases give restoration-oriented seats credible hope of normalization, and subsequent restriction resets expectations — the cycle itself stabilizes compliance among the payers. Base properties are measured at the 2025 endpoint, on the rising-enforcement phase of the cycle.",
+    "perspectival_gap": "The seats should compute differently. From the agenda-setter seat the arrangement is the church faithfully receiving its own council: the spirit-principle is how a living institution reads a living event, and enforcement is pastoral care for unity. From the payer seats the same structure operates as an unaccountable authorization that overrides settled teaching and inherited worship without consent or compensation, enforced by people who do not bear its costs. The beneficiary seats split further: the theological establishment is identity-locked into defending the reading (its exit would repudiate its life's work), while ecumenical partners enjoy its fruits without being governed by it at all. The engine computes per-seat classifications from the structural data; the divergence between those computations is the measurement this story exists to take, and the authored claim does not adjudicate it.",
+    "directionality_logic": "Beneficiary declarations map to real receipts: the theological establishment collects careers, consultancies, and drafting access; episcopal conferences collect regional authority ceded by the center; ecumenical partners collect dialogue and recognition gains while remaining outside the regime's jurisdiction. Victim declarations map to borne costs: traditionalist clergy bear canonical subordination and blocked ordinary ministry; liturgical communities bear the loss of inherited worship from ordinary parishes; restructured orders bear demographic collapse under obedience. Exit asymmetry drives the derived directionalities: the establishment's identity lock pushes it toward defense of the arrangement despite nominal beneficiary status, while the trapped and constrained exits of the payer seats amplify their effective exposure — a trapped target sits nearer the full-target end than a mobile one. The magisterium seat is nominally the administrator and collects the regime's core product (final interpretive authority), but it also spends authority maintaining the hermeneutic against six decades of resistance; its net position remains beneficiary-side. No directionality overrides are used: the beneficiary/victim declarations plus exit options produce the correct qualitative ordering without correction.",
+    "mandatrophy_analysis": "Authoring this as a hybrid coordination-plus-extraction structure prevents two symmetrical mislabels. The progressive seat experiences the arrangement as pure coordination — necessary renewal solving a real collective problem — and would resist any pure-extraction verdict; the traditionalist seat experiences it as pure extraction and denies any coordination function. The structural data records both truths: a genuine coordination function (a shared framework for engaging modernity that spared the community from relitigating every question) AND asymmetric costs borne by seats that never consented, held in place by active enforcement. The founding-problem interview shows status=live with a world_rearranges disappearance verdict — the mandate has not outlived its function by this reading's lights, so no zombie flag fires; the necessity counterfactual omega keeps the 'was the mandate ever necessary' question open rather than letting the reading's own conviction settle it.",
+    "kernel_context": "Kernel: vatican_ii_doctrinal_authority — the standing question of how the Second Vatican Council's authority binds the church. This file instantiates the rupture_progressive_reading: the Council as necessary break, the 'spirit of the Council' as legitimate authorization for reform beyond the documents' letter, post-conciliar implementation as authentic realization of conciliar intent. Sibling readings: continuity_reading (all development is explication contained in the letter), rupture_traditionalist_reading (the rupture is real but illicit; ambiguities are errors), composite_overdetermination_reading (several convergent structural shifts packaged as one unified reform). The disagreement locates specifically in the authorization question: whether legitimate development can exceed the texts. On that axis this reading's core premise directly contradicts the continuity reading's core premise — no single framework can hold both 'the spirit legitimately authorizes what the letter does not contain' and 'all legitimate development is contained in the letter' — hence the foreclosure edge. Against the traditionalist reading the relation is coexistence: both affirm that real rupture occurred, and they divide on normative evaluation (necessary renewal versus infidelity), a values dispute between live factions with no logical resolution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vatican_ii_doctrinal_authority__continuity_reading",
+      "vatican_ii_doctrinal_authority__rupture_traditionalist_reading",
+      "vatican_ii_doctrinal_authority__composite_overdetermination_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'Vatican II's doctrinal authority' covers four structurally distinct claims and is decomposed into four stories sharing the kernel vatican_ii_doctrinal_authority. Each member has its own epsilon, beneficiary/victim structure, and classification; they are linked here rather than merged because measuring the arrangement through different readings yields different stable epsilon values — the signature of distinct constraints, not one observable-dependent one. The continuity reading functions as the upstream member (the official hermeneutic of the recent past shaped the institutional environment in which both rupture readings operate), exerting structural pressure on this reading without resolving the dispute."
+  },
+  "stakeholders": [
+    {
+      "name": "papal_magisterium_and_curia",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Holds final authority to declare what the Council's spirit requires. Appoints bishops and curial officials who carry the received reading into dioceses, regulates contested questions by decree, and disciplines offices, orders, and teachers whose practice departs from the approved post-conciliar direction. Because the office stands above the texts it interprets, it can also reverse course by decree when the preferred reading shifts, as later liturgical restrictions demonstrated. Collects the regime's core product: the last word on what the Council means."
+    },
+    {
+      "name": "postconciliar_theological_establishment",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Professors, liturgists, periti-turned-advisors, journal editors, and seminary faculty whose careers, publications, and consultancies were built on interpreting and implementing the Council after 1965. Staff synods, draft documents, and train the next generation of clergy in the received reading. Leaving the arrangement would mean repudiating a lifetime of work and forfeiting institutional position, so their professional selves are fused with the reading's authority."
+    },
+    {
+      "name": "national_episcopal_conferences",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Collegial bodies that gained standing relative to Rome through the conciliar settlement. Translate the Council into local liturgical translation policy, catechetical norms, and disciplinary practice; administer the hermeneutic regionally while drawing authority from it. Their acquired autonomy is bound up with the post-conciliar settlement remaining in force, so they defend it while also bearing enforcement burdens where local resistance runs high."
+    },
+    {
+      "name": "ecumenical_dialogue_partners",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Other churches and ecclesial communities whose bilateral dialogues, joint declarations, and mutual recognitions depend on the Catholic partner maintaining the conciliar openness. They are not governed by the hermeneutic: they collect its benefits from outside, and can deepen or freeze relations without bearing any of its internal costs."
+    },
+    {
+      "name": "traditionalist_clergy",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Priests and seminarians formed in, or drawn to, pre-conciliar formation, doctrine, and liturgy. After the transition they serve at the margins — dependent on provisional arrangements or irregular status — barred from ordinary parish ministry in many dioceses, and subject to canonical discipline when their attachment becomes open opposition. Full exit means schism; staying means accepting subordinate status indefinitely."
+    },
+    {
+      "name": "preconciliar_liturgical_communities",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Lay communities attached to the older liturgical forms, devotional life, and catechesis. The transition removed their familiar worship from ordinary parishes within a few years; they now depend on scattered provisions, travel long distances, or affiliate with irregular groups. Their spiritual identity is bound to the inherited forms, so abandoning them is not a neutral option, and the provisions they rely on can be narrowed by decree."
+    },
+    {
+      "name": "contemplative_religious_orders",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Religious congregations whose constitutions, habits, and daily schedules were restructured during implementation. Many lost most of their members in the following decades. Superiors who resisted restructuring faced visitations and replacement; those who complied watched vocations decline regardless. The remaining options are managed decline or costly re-foundation under newer provisions."
+    },
+    {
+      "name": "dissenting_parish_laity",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Ordinary parishioners who experienced the liturgical and catechetical transition as loss but held no seat at any decision point — not at the Council, not in the conferences, not on the liturgical committees. They adapted in silence, drifted from practice, or joined the margins. Their objection registers in the record only as attendance statistics and grumble folklore."
+    },
+    {
+      "name": "church_historians",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Academic historians and sociologists of religion who study the conciliar event, the draft histories, the recorded votes, and the implementation record from outside confessional advocacy. They produce the vote counts, draft comparisons, and attrition data that every party cites selectively, and they bear no costs from the arrangement either way."
+    }
+  ],
+  "gain_flow": "papal_magisterium_and_curia",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Solves a real collective problem: how a global twentieth-century church engages modernity — vernacular participatory liturgy, relations with other Christians, religious liberty in pluralist states, dispersed governance — without relitigating each question locally. The spirit-hermeneutic gives bishops, theologians, and pastors a shared direction of travel and a common vocabulary for implementing change, so the community does not fragment into four thousand local settlements.",
+    "transfer_function": "Moves interpretive authority — and with it institutional power, liturgical practice, and doctrinal certainty — from the fixed pre-conciliar textual corpus and its custodians to the living magisterium and the post-conciliar theological class; moves security, familiarity, and ordinary ministry access away from traditionalist clergy and laity toward the reform project and its carriers.",
+    "absent_voices": "Traditionalist laity and clergy who experienced the transition as loss were nearly absent from the decision surface: only a small minority of council fathers resisted the final texts, no lay seat existed, and the provision machinery was designed after the fact. Radical restorationist voices sit wholly outside the conversation. Most fundamentally, the pre-conciliar magisterium itself cannot object except through texts the hermeneutic subordinates — the injured party in this dispute is largely dead and speaks only in documents the arrangement reinterprets.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the spirit-hermeneutic lost its authority overnight, the post-conciliar settlement would lose its authorization engine: liturgical law, ecumenical commitments, episcopal collegiality, and the standing of thousands of appointees all rest on the received reading of the Council. Either the continuity reading or the traditionalist reading would have to replace it, rearranging appointments, curial structures, liturgical regulation, and the status of pre-conciliar communities. The world does not stay the same because a large apparatus is organized around this reading.",
+    "founding_problem": "The arrangement was built to solve the pre-conciliar impasse: an antimodernist siege posture that had failed to stem attrition, a liturgy many found opaque, the Syllabus's condemnation of religious liberty colliding with thriving pluralist states, and centralized governance smothering local churches. The progressive reading holds that these problems were real, urgent, and unsolvable within the inherited framework.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: secular historians of modern Catholicism document the antimodernist siege, the Syllabus's failed encounter with liberal states, and mid-century attrition; non-Catholic ecumenical partners independently attest that the pre-conciliar posture was a barrier to relations; sociological studies of the period corroborate the disengagement the reform answered. No corroborating source outside the beneficiary set attests that the founding problem is resolved — historians broadly agree the engagement with modernity remains unsettled, which supports the live status."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "council_as_constitutive_new_beginning",
+    "drift_state": {
+      "moment": "contemporary_traditionis_custodes_era",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "continuity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rupture_traditionalist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "spirit_authorizes_beyond_textual_limits",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "theological"
+      },
+      {
+        "atom": "preconciliar_formulations_legitimately_superseded",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

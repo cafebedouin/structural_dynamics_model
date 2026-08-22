@@ -1,0 +1,301 @@
+{
+  "header": {
+    "constraint_id": "statutory_debt_ceiling__coordination_scaffold_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "b6637b91-3171-4278-ad55-ce0081b11932"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.2,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.3,
+    "resistance": 0.35,
+    "claimed_type": "scaffold",
+    "human_readable": "Statutory Debt Ceiling as Procedural Coordination Scaffold (Coordination-Scaffold Reading)",
+    "topic_domain": "constitutional_law/political_economy/fiscal_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "us_treasury",
+      "congressional_fiscal_authorizers",
+      "bond_market_participants",
+      "broad_taxpayers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "congressional_fiscal_authorizers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "House Ways and Means, Senate Finance, and party leadership write and adjust the aggregate borrowing limit by ordinary legislation. The limit gives them a single recurring decision point over total federal debt in place of approval of each issuance. Recent adjustments have sometimes required extended negotiation before enactment; the authority to raise, lower, suspend, or replace the limit remains wholly theirs at all times."
+    },
+    {
+      "name": "us_treasury",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Runs federal borrowing day to day: auction scheduling, instrument mix, maturity structure, and cash management, all inside the legislated aggregate. When outstanding principal approaches the limit it deploys accounting measures — suspending certain investments, declaring debt issuance suspension periods — to keep meeting obligations while awaiting adjustment. It cannot borrow past the limit and cannot decline its payment obligations; its room for maneuver lives entirely inside the boundary Congress sets."
+    },
+    {
+      "name": "bond_market_participants",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Buy and hold Treasury securities in the deepest sovereign debt market in the world. A single aggregate authorization gives them predictable, centralized issuance and standardized instruments; episodic adjustment standoffs add tail risk they price through bill yields and insurance spreads around anticipated deadlines. They can reallocate portfolios globally at low cost."
+    },
+    {
+      "name": "broad_taxpayers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Carry the interest service on the debt the limit authorizes and gain from the lower transaction costs of streamlined, centralized financing. They hold no direct seat in adjustment negotiations; their exposure arrives through appropriations and debt-service lines."
+    },
+    {
+      "name": "payment_dependent_households",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Count on the uninterrupted flow of federal payments — Social Security, military pay, vendor invoices, tax refunds. During adjustment standoffs they carry the risk of delayed or missed payments, though they take no part in the negotiations and have no organized voice in them."
+    },
+    {
+      "name": "gao_fiscal_analysts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audit the borrowing-limit mechanism and have repeatedly recommended replacing the aggregate limit with a prior-approval framework under which debt increases are voted alongside the budget decisions that necessitate them. They publish and testify but hold no vote; their designs await legislative adoption."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the financing collective-action problem: one legislated aggregate boundary replaces hundreds of per-issuance acts, letting Treasury time auctions, choose instruments, and manage maturities continuously while Congress retains a single recurring control point over total debt.",
+    "transfer_function": "In steady state it moves decision rights, not value: day-to-day borrowing discretion passes from Congress to Treasury inside a boundary Congress reserves to itself. Around adjustment votes, small amounts of bargaining leverage and agenda time change hands temporarily; this reading treats that episodic churn as friction cost, not as the arrangement's designed transfer.",
+    "absent_voices": "Payment-dependent households would object — they carry the tail risk of interrupted federal payments during adjustment standoffs and have no organizational seat. Future taxpayers bear the service on what the boundary authorizes and appear only through advocacy proxies. GAO and CBO analysts object from inside the room (testimony, published replacement designs) but hold no vote; rating agencies signal externally without participating.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Treasury's borrowing authority is legally defined relative to the limit; overnight removal would force immediate re-legislation of borrowing authority (unlimited authority or a new mechanism), repricing across the bill market as default-risk expectations reset, and loss of the single recurring control point the appropriating committees plan around. The world rearranges because the arrangement is load-bearing infrastructure, not decoration.",
+    "founding_problem": "Before 1917, Congress approved each federal bond issue individually — hundreds of separate statutes during wartime financing, each with its own terms and floor debate. The aggregate ceiling was built to authorize borrowing in bulk: Congress sets the total, Treasury manages the structure.",
+    "founding_problem_status": "dead",
+    "founding_problem_corroboration": "Corroborated from outside the benefiting parties: GAO reports (2011, 2015) attest both that the pre-1917 per-issue regime was unworkable and that the aggregate limit has outlived its original justification, recommending replacement by a prior-approval framework; fiscal historians of Treasury debt management document the micromanagement burden the 1917 reform removed. No participant in current debates proposes restoring per-issue approval."
+  },
+  "interval": {
+    "start": 1917,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1917,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1939,
+      "value": 0.09
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1953,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1967,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1979,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2011,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1917,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1939,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1953,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1967,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1979,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2011,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.2
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of the contested kernel statutory_debt_ceiling: the coordination-scaffold reading, under which the aggregate statutory debt limit is a procedural coordination device — Congress sets one borrowing boundary by ordinary legislation and the Treasury executes all debt management inside it, sparing both branches the per-issuance micromanagement that governed federal finance before 1917. On this reading the mechanism's adjustments are meant to be routine, its binding force is self-executing rather than apparatus-driven, and no group is systematically targeted by its operation; its costs are friction (adjustment-delay risk, extraordinary-measures overhead, episodic uncertainty premia) rather than designed transfer. CONSTRAINT FAMILY NOTE: the colloquial label 'the debt ceiling' decomposes, per the epsilon-invariance principle, into three linked stories. This reading authors low epsilon (0.22) because it assesses the standing arrangement as functioning delegation; the sibling extraction_snare_reading authors high epsilon over the same referent, reading the identical statute as a weaponized boundary enabling minority extraction under default threat; the sibling constitutional_nullity_reading authors the arrangement as constitutionally void under Fourteenth Amendment Section 4, i.e., as no valid constraint at all. The three files share the kernel and differ in epsilon, beneficiary/victim structure, and type; they are linked through network.affects_constraints rather than merged. Claim/metric independence is preserved: the scaffold claim and the low-but-nonzero metrics are each authored from their own evidence, and any computed divergence belongs to the engine.",
+    "key_agents": [
+      "- congressional_fiscal_authorizers: agenda setter (institutional/mobile) — writes and adjusts the aggregate borrowing boundary by ordinary legislation; holds the repeal option at all times",
+      "- us_treasury: primary beneficiary with secondary payer position (institutional/trapped) — collects operational autonomy, bears execution risk and extraordinary-measures burden inside the limit",
+      "- bond_market_participants: beneficiary (organized/arbitrage) — receives predictable centralized issuance; prices episodic deadline risk and can reallocate globally",
+      "- broad_taxpayers: diffuse beneficiary (powerless/trapped) — gains financing efficiency, bears the debt service the boundary authorizes",
+      "- payment_dependent_households: excluded voice (powerless/trapped) — depend on uninterrupted federal payments, hold no seat in adjustment negotiations",
+      "- gao_fiscal_analysts: analytical observer (institutional/analytical) — audits the mechanism and recommends replacement designs; holds no vote"
+    ],
+    "logic_rationale": "Extractiveness is authored low (0.22 at interval end) because this reading finds no designed transfer: the boundary allocates decision rights rather than moving value, and its measured costs are friction — delay risk around adjustment deadlines, the administrative overhead of extraordinary measures, small uncertainty premia in bill yields. Suppression is low (0.20) and deliberately carried as a scalar only: the enforcement picture is static across the whole interval (the limit binds by operation of law; no enforcement apparatus grows or decays), so no suppression_requirement series is authored. Theater is low with a visible bump at 2011 (performative votes and deadline choreography) that partially recedes afterward. Accessibility collapse is low-moderate (0.30): replacement designs (prior-approval frameworks, Gephardt-rule restoration, outright repeal) remain live and legislatable, so understanding the mechanism does not close the option set. Resistance is moderate (0.35): episodic political friction at adjustment votes plus a durable cross-partisan intellectual current (GAO, CBO-adjacent economists) pressing replacement. All series run on one shared eight-point grid (1917, 1939, 1953, 1967, 1979, 1995, 2011, 2025) with every tracked metric authored at every point. Receipt surface: each named seat was checked for capture of the arrangement's gains — authorizers collect control, Treasury collects autonomy, markets collect predictability, taxpayers collect financing efficiency; the friction component dissipates as market noise and evaporating leverage, so gain_flow is authored 'diffuse' as an affirmative finding, not a default. fixing_cost is authored 'cheap': complete replacement designs exist off the shelf and enactment requires only ordinary legislation; the binding obstacle is blame allocation, not institutional capacity.",
+    "perspectival_gap": "The seats should classify differently and the engine computes that divergence from the structural data. From the authorizing committees' seat the arrangement is a retained control instrument — a single recurring decision point they can rewrite at will (mobile exit, beneficiary-side directionality). From Treasury's seat it is an operating envelope: wide autonomy inside the line, hard truncation at it, with the secondary payer position surfacing as execution risk and extraordinary-measures burden whenever the line nears. From the bond market's seat it is market infrastructure whose occasional deadline drama is a priced nuisance. From payment-dependent households' seat it is an unconsented tail risk attached to checks they depend on — they sit outside the conversation entirely (excluded, not payer: this reading finds no systematic victim class, and their episodic exposure is friction the arrangement imposes without their participation). The GAO seat sees an anachronism awaiting replacement. Same-level divergence is visible between the two institutional seats: authorizers and Treasury hold comparable institutional power, but the authorizers' ability to rewrite the rule and Treasury's inability to decline execution give them opposite effective exit positions.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for all four named beneficiary groups: authorizers (near the beneficiary end — they set and can dissolve the boundary), Treasury (low with upward pressure from its secondary payer position — autonomy received, execution risk borne), bond markets (nearest the beneficiary end — arbitrage-grade exit plus pure coordination gain), and taxpayers (moderately low — real efficiency benefit, partly offset by the service burden on what the boundary authorizes). No victims are declared because this reading identifies no group systematically borne-upon by the arrangement's design; the excluded households feed the absence analysis (absent_voices, Q4) rather than the directionality computation, consistent with the R3 ruling that authored absences are commentary-grade. No directionality overrides are used: the derivation chain from roles, power, and exit options reproduces the relationships described here without correction.",
+    "mandatrophy_analysis": "The founding problem — the unworkable burden of congressional approval for each individual debt issue — is dead, and it was killed by the mechanism itself: the aggregate limit solved per-issuance micromanagement permanently, and no serious proposal revisits it. Yet the arrangement persists and remains load-bearing: Treasury's statutory borrowing authority is defined relative to the limit, and its removal would force immediate re-legislation of borrowing authority. This is the classic scaffold posture — support erected for a construction phase, retained after the structure stands — and it is why the reading expects the R5 mismatch (dead founding problem crossed with world-rearranging dependence) to fire a zombie/transition flag. On this reading that flag is not a refutation but the transition signal scaffolds exist to emit: the GAO prior-approval design is the intended replacement structure, and the mechanism's justification now rests on the transition to it, not on the founding problem. Mandatrophy is therefore declared resolved in base_properties, matching the dead founding-problem status.",
+    "kernel_context": "Kernel: statutory_debt_ceiling — the persisting statutory commitment (Second Liberty Bond Act 1917, 1939 consolidation, now codified at 31 U.S.C. 3101) capping aggregate federal debt subject to limit. This file instantiates the coordination_scaffold_reading: the ceiling as valid, binding procedural coordination that channels Congress's Article I borrowing power through a single aggregate boundary within which Treasury executes autonomously. Sibling readings, kept out of this file's classification per the one-reading-one-epsilon discipline: extraction_snare_reading (the same statute as a weaponized boundary enabling minority extraction under default threat — high epsilon, declared victims, active enforcement) and constitutional_nullity_reading (the ceiling as constitutionally void under Fourteenth Amendment Section 4 — no valid constraint at all). The inter-reading disagreement is located on two distinct axes: function (coordination versus extraction — an empirical dispute compatible with agreed validity) and validity (binding law versus constitutional nullity — a legal dispute that dissolves the mechanism entirely)."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexical_status",
+      "question": "This constraint is one reading (coordination_scaffold_reading) of the kernel statutory_debt_ceiling; which reading a story instantiates determines its entire beneficiary/victim structure and epsilon — what exactly do the sibling readings change?",
+      "resolution_mechanism": "Cross-reading comparison of the three linked family files: extraction_snare_reading declares default-threatened program beneficiaries as victims and posits a capturing legislative minority; constitutional_nullity_reading removes the arrangement's validity altogether. Reading selection is indexed by the committer frame, not recovered from the statute's text.",
+      "impact": "If the snare reading is adopted, this file's low epsilon and empty victim set are replaced by high epsilon with declared victims and active enforcement; if the nullity reading is adopted, the constraint ceases to bind at all and the classification question becomes one about a void instrument.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame provenance: one of three readings of the debt-ceiling kernel; sibling readings alter victim sets, epsilon, and validity."
+    },
+    {
+      "id": "disagreement_axis_function_vs_validity",
+      "question": "Is the inter-reading disagreement located on the mechanism's function (coordination versus extraction, an empirical dispute compatible with agreed validity) or on its constitutional validity (binding law versus Section 4 nullity, a legal dispute that dissolves the mechanism)?",
+      "resolution_mechanism": "Doctrinal analysis separating the two axes: function disputes are resolvable by observing adjustment behavior under counterfactual institutional designs; validity disputes turn on Fourteenth Amendment Section 4 jurisprudence and are resolvable only by adjudication or constitutional clarification.",
+      "impact": "Function-axis disagreement leaves this reading and the snare sibling coexisting as live assessments of one valid instrument; validity-axis disagreement activates the foreclosure edge this file declares toward the nullity sibling, since a validly-operative coordination account cannot coexist with a voidness account in one legal framework.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Locates the kernel contest: function axis (empirical) versus validity axis (legal)."
+    },
+    {
+      "id": "brinkmanship_aberration_or_structure",
+      "question": "Are the 1995-2023 adjustment standoffs aberrant politics incident to the mechanism, or do they reveal a hostage-bearing structure inherent in any aggregate boundary requiring discrete renewal?",
+      "resolution_mechanism": "Comparative institutional evidence: peer systems that abolished ceiling analogues (Denmark) or never had them (the United Kingdom's supply-and-approve cycle) — if they exhibit neither per-issuance micromanagement nor recurrent brinkmanship, the standoffs are contingent politics; if boundary-renewal designs across systems reliably produce deadline hostage dynamics, the structure invites them.",
+      "impact": "An aberration finding stabilizes this reading as the mechanism's true character; a structural finding degrades this reading toward the extraction_snare_reading sibling and would justify re-authoring epsilon upward with declared victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether observed brinkmanship is exogenous pathology or endogenous to boundary-renewal design."
+    },
+    {
+      "id": "extraordinary_measures_interpretive_drift",
+      "question": "Do Treasury's extraordinary-measures interpretations (debt issuance suspension periods, investment suspensions) constitute legitimate interpretation of the statutory authorities, or de facto amendment that lets the interpretive layer absorb what should surface as legislative revision?",
+      "resolution_mechanism": "Legal-historical audit of Treasury legal opinions and GAO review of extraordinary-measures usage: compare the statutory text's grant of authority against the practices built on it, and test whether Congress ratifies or merely tolerates the interpretations.",
+      "impact": "A legitimate-interpretation finding supports the reading's healthy interpretive layer; a de-facto-amendment finding indicates codification strain beneath the scaffold and would push the drift assessment from practice_drift toward codification_collapse.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Status of the interpretive layer that absorbs deadline pressure without surfaced revision."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "extraction_snare_reading",
+      "constitutional_nullity_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the debt ceiling' decomposes into three epsilon-invariant stories sharing the kernel statutory_debt_ceiling. This file (coordination_scaffold_reading) is the upstream member: it authors the arrangement as valid, low-extraction procedural coordination (epsilon approximately 0.22), and its account of routine delegated execution is the baseline against which the downstream siblings define themselves — extraction_snare_reading accepts validity but contests function (weaponized boundary, high epsilon, declared victims), while constitutional_nullity_reading contests validity itself (Section 4 voidness). The upstream reading influences both siblings because its operational account supplies the facts each sibling reinterprets; the relation to the nullity sibling is additionally a foreclosure edge (authored in cs_structure.reading_relations) because a validly-operative coordination framework and a constitutional-voidness framework cannot both hold within one legal commitment."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "aggregate_delegation_routine_adjustment",
+    "drift_state": {
+      "moment": "contemporary_post_2011_brinkmanship_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "extraction_snare_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_nullity_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "aggregate_limit_validly_channels_borrowing_power",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "treasury_executes_autonomously_within_legislated_aggregate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "periodic_adjustment_preserves_accountability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

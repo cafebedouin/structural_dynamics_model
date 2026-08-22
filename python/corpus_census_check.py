@@ -120,6 +120,7 @@ STAMPED_FILE_COUNTS = {
     "testsets_nemotron": 852,   # stamped 2026-08-22 (growing; the 2x trigger tolerates the residue)
     "testsets_sonnet2": 1003,   # stamped 2026-08-22
     "testsets_haiku2": 996,     # stamped 2026-08-22
+    "testsets_stealth2": 1005,  # stamped 2026-08-22
 }
 REMEASURE_GROWTH_FACTOR = 2.0
 

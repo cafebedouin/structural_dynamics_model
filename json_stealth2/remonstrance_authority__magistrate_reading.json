@@ -1,0 +1,354 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__magistrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "378b00e7-270f-49ed-99fc-b76080a184fa"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.84,
+    "theater_ratio": 0.55,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Remonstrance Authority of the French Sovereign Courts (Magistrate Reading)",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parlement_magistracy",
+      "provincial_parlements",
+      "privileged_orders"
+    ],
+    "victims": [
+      "commoner_taxpayers",
+      "parlement_magistracy",
+      "provincial_parlements"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "parlement_magistracy",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Holds venal, effectively hereditary seats on the sovereign courts. Gates every royal edict: registers, delays, or refuses it with written remonstrances invoking the kingdom's fundamental laws. Collects registration fees and judicial dues, and preserves the tax exemptions attached to office and rank. Enforces its position through remonstrance cycles, class unions with the provincial courts, and published arrêts. When the crown compels registration by lit de justice, exiles a court, or (1771) abolishes the courts outright, magistrates lose salary, office value, and public standing — the override episodes are the one channel through which the arrangement costs them, and they are episodic beside four centuries of gate-keeping."
+    },
+    {
+      "name": "french_crown",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Drafts and promulgates edicts, convenes the lit de justice to compel registration, and can restructure or exile courts. Every major fiscal initiative must survive remonstrance cycles or be forced through at rising legitimacy cost. Reign-bound decision-making shortens its horizon even as dynastic debt lengthens the bill. It bears the fiscal rigidity the gate produces — borrowing premia, partial defaults, the 1788 payment stop — and absorbs political blame for outcomes the gate shaped. Its workarounds (new courts, assemblies of notables, provincial assemblies) each carried heavy setup and legitimacy costs, so it routes around the gate rarely and at price."
+    },
+    {
+      "name": "commoner_taxpayers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Bear the taille, gabelle, capitation, vingtième, militia levy, and corvée burdens that reform edicts would have broadened or lightened. They hold no seat in registration: no estate representation inside the gate, no petition standing before the sovereign courts, and remonstrances speak for 'the nation' without them. Emigration or evasion is available only at ruinous cost for most; they learn of edicts after the gate has acted."
+    },
+    {
+      "name": "privileged_orders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Nobility and clergy hold the exemptions from taille and most direct taxes that universal-tax edicts would abolish. They do not operate the gate; they collect its output whenever a fiscal edict dies in remonstrance. Their status identity is constituted by the ordered society of ranks itself, so defending exemption and defending self are the same act, and exit would mean ceasing to be what they are."
+    },
+    {
+      "name": "reform_ministers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Controllers-general and chancellors — Machault, Turgot, Calonne, Brienne, Lamoignon — draft fiscal reform edicts, spend political capital shepherding them through registration, and absorb the outcome: edicts softened or killed in remonstrance, careers ended by dismissal when the crown retreats. Their exit is retirement or disgrace; they cannot relocate the gate or extend their own tenure past the king's patience."
+    },
+    {
+      "name": "provincial_parlements",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "situation": "Thirteen provincial sovereign courts — Toulouse, Rennes, Bordeaux, Rouen, Aix, Besançon and the rest — run the same registration gate for their ressorts, collect comparable fees and office-linked exemptions, and coordinate with the Paris court through class unions and combined remonstrances. Individually weaker than Paris, they are the crown's preferred targets for discipline: repeated exiles (Rennes during the Brittany affair, Bordeaux in 1768) and, in 1771, wholesale abolition and replacement by restructured tribunals."
+    },
+    {
+      "name": "estates_general_forum",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "The kingdom's traditional consultative assembly, unconvoked since 1614. Fiscal reformers pointed to it as the legitimate alternative consent mechanism for taxation; the crown avoided summoning it precisely because its writ would exceed the courts' gate, and the courts had no interest in a rival forum. Its exclusion is what kept registration politics inside the judicial corporations. When finally convoked in 1789 it displaced the arrangement entirely within months."
+    },
+    {
+      "name": "physiocrat_analysts",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Quesnay, Le Trosne, Dupont de Nemours and the Éphémérides circle analyze the gate from outside: they advocate that edicts bind without judicial consent ('legal despotism') and diagnose the remonstrance right as privilege defense in constitutional dress. They publish, advise ministers, and hold no procedural seat; their diagnosis anticipates the rival reading of the same institution."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Gates royal legislation through judicial registration: maintains legal continuity across reigns, records a documented act of consent for each edict, subjects drafts to scrutiny and delay that feed back into drafting, and anchors uniform administration of justice across a legally plural kingdom of customs, pays d'état, and pays d'élections.",
+    "transfer_function": "Moves fiscal discretion and tax incidence: blocks the transfer of tax burden onto privileged wealth, keeping it on commoner taxpayers; moves registration fees, judicial dues, and office-value appreciation to the magistracy; and moves the cost of legislative initiative to the crown, which must buy each edict through remonstrance cycles or forced registration.",
+    "absent_voices": "Commoner taxpayers had no seat anywhere in the registration contest — the Estates-General had not met since 1614, provincial estates were weak or absent in most of the kingdom, and petitions had no standing before the sovereign courts. Rural communities bearing the corvée and gabelle learned of edicts only after the gate had acted. Their absence meant the 'nation' invoked in remonstrances was articulated solely by the corporate bodies doing the remonstrating.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the registration gate vanished overnight, fiscal edicts would bind on promulgation: the Maupeou interlude (1771–74) is the controlled demonstration — with the old courts suppressed, Terray's partial bankruptcy and the free-grain trade edicts registered without remonstrance cycles. Office values would collapse, the magistracy's corporate power and exemptions would become legislatively vulnerable, and the entire fiscal-political settlement of privilege would rearrange around whatever consent mechanism replaced the gate.",
+    "founding_problem": "How can royal legislation bind a legally plural kingdom without appearing arbitrary — recording consent, screening edicts against customary liberties and local law, and maintaining legal continuity across reigns — given that the king legislates alone?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "No seat inside the beneficiary set can settle this. External attestation of the shifted function: Maupeou-era justificatory tracts and the physiocrat literature (Le Trosne, the Éphémérides circle) — both outside the parlementaire beneficiary set — attest that by the 1770s the gate screened chiefly for privilege and office property; crown council memoranda and the memoirs of Turgot and Calonne corroborate from the payer side. Attestation that the founding problem was live earlier rests on sixteenth- and seventeenth-century registration practice and the 1750s remonstrance texts, though the latter are self-interested sources. No disinterested arbiter exists; the strongest external corroboration supports a founding problem substantially transformed by the 1770s, which is why the status is contested rather than live."
+  },
+  "interval": {
+    "start": 1750,
+    "end": 1789
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1756,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1763,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1771,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1776,
+      "value": 0.67
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1783,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1787,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1789,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1750,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1756,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1763,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1771,
+      "value": 0.86
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1776,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1783,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1787,
+      "value": 0.81
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1789,
+      "value": 0.84
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1756,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1763,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1771,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1776,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1783,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1787,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1789,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "In eighteenth-century France, royal edicts acquired binding force only after registration by the sovereign courts (parlements), which could delay and refuse them through written remonstrances invoking the kingdom's 'fundamental laws.' The magistrate reading — the parlementaire self-understanding, elaborated doctrinally in the 1750s–60s — holds this gate to be a fundamental constitutional mechanism preserving ancient liberties against arbitrary royal innovation. This file instantiates THAT reading as a clean, ε-invariant constraint: the referent of ε is the standing registration/remonstrance arrangement itself, assessed by the reading's own lights — never the rival reading's characterization of it. Even on the reading's own terms, the arrangement's operation on fiscal reform edicts is substantially costly to those it governs: blocked reform preserved privileged exemptions and held incidence on commoner taxpayers, while sustaining the magistracy's corporate power, fees, and tax-exempt office property. The crown could override the gate (lit de justice, exile, the Maupeou suppression of 1771) only at mounting legitimacy cost, making enforcement escalation the arrangement's central dynamic. FAMILY NOTE: the colloquial label 'the remonstrance right' covers two structurally distinct claims — this magistrate reading and the sibling crown_reading (remonstrance_authority__crown_reading), which instantiates the same referent arrangement as an illegitimate minoritarian veto. The readings share one referent and diverge on legitimacy attribution and victim identification; ε here is reading-indexed to the magistrate seat, and the sibling authors its own ε over the identical arrangement. Claim/metric independence: the reading CLAIMS a fundamental constitutional mechanism; the authored metrics describe costly, actively enforced, increasingly theatrical operation — that divergence is the datum, not an error to reconcile.",
+    "key_agents": [
+      "parlement_magistracy: Agenda-setting beneficiary (institutional / identity_locked) — runs the registration gate, collects fees and preserved exemptions; conditional victim under crown override",
+      "french_crown: Checked agenda-setter (institutional / constrained) — drafts edicts, compels registration, bears fiscal rigidity and legitimacy costs",
+      "commoner_taxpayers: Primary target (powerless / trapped) — bear the tax incidence the gate preserves; no seat in the process",
+      "privileged_orders: Secondary beneficiary (powerful / identity_locked) — collect preserved exemptions without operating the gate",
+      "reform_ministers: Payer (moderate / constrained) — their edicts die in remonstrance cycles; careers end with them",
+      "provincial_parlements: Coordinating agenda-setter tier (organized / identity_locked) — local gates and class unions; episodic exile victims",
+      "estates_general_forum: Excluded alternative (organized / trapped) — the unconvoked consent mechanism whose absence keeps the contest inside the courts",
+      "physiocrat_analysts: Analytical observer (moderate / analytical) — diagnose the gate as privilege defense from outside; anticipate the crown reading"
+    ],
+    "logic_rationale": "Extractiveness is high (0.78 at interval end) because the gate's principal eighteenth-century operation on money bills was refusal, and the incidence of preserved fiscal inequity fell on people with no seat in the process; the expected structural delta for this reading — high cost on fiscal reform edicts, a beneficiary class of tax-exempt magistracy — is authored directly. Suppression (0.84) is authored as a RAW STRUCTURAL PROPERTY, unscaled: the engine scales only extractiveness, by directionality and scope. Persistence depended on active enforcement — the registration ceremony, remonstrance cycles, class unions — and on the crown's escalating counter-coercion, which peaked with the 1771 suppression of the courts themselves. Theater (0.55) rose across the interval: by the 1780s the constitutional idiom of ancient liberties and national trusteeship was substantially performative covering the defense of office property and exemption schedules, though the judicial screening function remained real. Accessibility collapse (0.58): alternatives existed — forced registration, new courts, assemblies of notables and provincial assemblies, the Estates-General — but each carried heavy legitimacy or financial cost, and venal office property made abolition expensive enough that even the 1771 coup left compensation liabilities. Resistance (0.7): constant crown counter-action, pamphlet wars, ministerial pressure, and finally the revolutionary dissolution of the gate's carriers. CYCLICAL DYNAMICS: the series oscillates around a coercion–capitulation–restoration cycle (buildup 1756–63, rupture 1771, restoration 1776, terminal ratchet 1783–89) — each capitulation restored the gate with added prestige, which encouraged deeper obstruction next round; the oscillation itself functions as intermittent reinforcement, not noise. Base properties are measured at interval end (terminal-crisis phase). COALITION NOTE: commoner taxpayers are individually powerless, but their latent coalition power materialized exactly once — the Estates-General of 1789 — and dissolved the arrangement within months; the gate's stability presupposed keeping that coalition unconvoked.",
+    "perspectival_gap": "The seats compute different arrangements from the same structure. From the payer seats (commoner taxpayers, reform ministers), the gate operates as enforced obstruction whose costs land on the unrepresented. From the magistracy seat, the same gate is custodial coordination — the corporation experiences its own obstruction as constitutional duty, an identity fusion of office-as-property with office-as-vocation that makes exit unthinkable (identity_locked): breaking the frame, as Maupeou briefly broke it in 1771, revealed that cooperation was available all along once the identity frame was shattered and rebuilt around restructured tribunals. From the crown seat, the gate is a legitimacy tax on governance — payable in delay, ceremony, or coercion. INTER-INSTITUTIONAL DYNAMICS: crown and parlements hold nominally comparable institutional power, yet experience the constraint oppositely because their exit options differ — the crown can route around (new courts, notables) at legitimacy cost; the magistracy cannot leave its own office without ceasing to be itself. SAME-LEVEL LATERAL DYNAMICS: the Paris court and the provincial parlements hold the same right at different power levels (institutional vs organized); Paris anchors the class unions and absorbs the decisive confrontations, while provincial courts suffer the crown's preferred disciplinary instrument — exile — making their effective exposure to override systematically higher despite identical formal position.",
+    "directionality_logic": "Declarations map to poles as follows. The magistracy (both tiers) sits at the beneficiary pole: standing collectors of fees, office value, and preserved exemption, running the gate they administer. The privileged orders sit near them: pure collectors of the gate's output. Commoner taxpayers sit at the target pole — trapped exit amplifies their effective position toward full target. Reform ministers sit target-side: they supply the edicts the gate consumes and absorb the career cost. The crown is deliberately NOT declared a victim in this reading: its constraint by the gate is the arrangement's function, not its extraction, and its workarounds keep it near-symmetric with a slight target tilt. The magistracy's dual listing (beneficiary and victim) encodes the override episodes — lit de justice, exile, the 1771 abolition — which are real but episodic against four centuries of gate-keeping; the standing relationship dominates. NO DIRECTIONALITY OVERRIDE is authored, deliberately: overrides key on the power atom, and the only institutional-power agents in this story are the magistracy and the crown, so any override correcting the magistracy's d would simultaneously corrupt the crown's. The ambiguity is routed to the omega variable magistrate_dual_position_weighting instead. Scope: the arrangement operates at national scope, which modestly amplifies effective extraction for targets (verification of edict-level incidence is harder across a kingdom of customs than inside one court's ressort).",
+    "mandatrophy_analysis": "The magistrate reading's framing invites two misclassifications. Read as its proponents framed it — a fundamental law, older than memory, above choice — the gate codes as mountain, and the FSM signature would fire on the declared beneficiaries; read as its opponents framed it — pure veto — it codes as snare, erasing the real screening, consent-recording, and continuity functions the gate performed for centuries. Authoring the full structural data (coordination beneficiaries AND victims AND active enforcement) lets the engine compute tangled_rope: a genuine coordination function carrying asymmetric extraction through the same structure. The mandatrophy question is the R5 mismatch: the founding problem (consent-screening for royal legislation in a legally plural kingdom) progressively died as the fundamental-law vocabulary detached from any enumerable content — by the 1770s the 'ancient constitution' invoked in remonstrances was largely a doctrine elaborated within living memory — while the arrangement persisted on office property, fee income, and corporate identity. Status contested × verdict world_rearranges is exactly the capture/zombie configuration the R5 consumer cross-checks against the computed theater path.",
+    "kernel_context": "Kernel: remonstrance_authority — the registration/remonstrance gate of the French sovereign courts, one persisting institution read differently by its parties. This file instantiates the magistrate_reading: the gate as a fundamental constitutional mechanism preserving ancient liberties against arbitrary innovation, with authority grounded in lineage from the curia regis and an interpretive corps (the magistracy) that absorbs doctrinal drift. The sibling reading, remonstrance_authority__crown_reading, instantiates the same arrangement as an illegitimate minoritarian veto protecting particularist privilege. The two readings share one ε-referent (the standing registration arrangement) and diverge on legitimacy attribution, victim identification, and ε magnitude; the disagreement is located in the legitimacy predicate applied to the gate itself, and it is routed to the omega variable kernel_reading_commitment rather than averaged into this file."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the kernel remonstrance_authority — the magistrate_reading. What structurally changes if the sibling reading (crown_reading) is adopted instead, and where exactly is the disagreement located?",
+      "resolution_mechanism": "Adopting the crown_reading re-keys the same referent arrangement: the crown and the reform program enter the victim set, the magistracy moves from beneficiary to agenda-setting extractor, ε is re-authored upward over the identical referent, and the computed type shifts toward snare. The disagreement is located in the legitimacy predicate applied to the registration gate itself — not in any observable of the gate's operation.",
+      "impact": "Classification flips along the legitimacy axis while the referent arrangement stays fixed; cross-reading comparison of the two files measures how much of the type verdict is reading-indexed versus structural.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this file is the magistrate_reading of kernel remonstrance_authority; the crown_reading is a separate constraint over the same referent."
+    },
+    {
+      "id": "ancient_constitution_continuity",
+      "question": "Is the remonstrance right a genuinely continuous mechanism descending from medieval registration practice, or a juridical construction elaborated in the 1750s–60s (Le Paige's Lettres historiques, Mey's Tractatus) and retrojected onto antiquity?",
+      "resolution_mechanism": "Archival comparison of sixteenth- and seventeenth-century registration practice (register contents, lit de justice frequency, actual delay patterns) against the eighteenth-century doctrinal elaboration that first systematized 'fundamental laws.'",
+      "impact": "If the reference frame is a retrojection, the reading's authority claim loses its lineage warrant and the arrangement weights toward pure extraction; if continuous, more coordination weight survives and the tangled_rope reading strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the magistrate reading's reference frame describes a continuous institution or an invented antiquity."
+    },
+    {
+      "id": "magistrate_dual_position_weighting",
+      "question": "The magistracy appears in both the beneficiary and victim sets — standing collector of fees, office value, and preserved exemption, yet conditional victim under crown override (lit de justice, exile, the 1771 abolition). Which relationship dominates its directionality?",
+      "resolution_mechanism": "Weight the episodes by duration and severity: four centuries of gate-keeping and fee collection against episodic override losses concentrated in 1756–71 and 1787–89. If override-victimhood dominates, the magistracy's d rises toward the target pole and measured asymmetry falls; if standing benefit dominates, d stays near the beneficiary pole.",
+      "impact": "Determines whether the arrangement computes as magistracy-subsidized (low d, amplified asymmetry elsewhere) or as mutually damaging (compressed asymmetry, weaker tangled_rope signal).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How to weight the magistracy's dual beneficiary/victim membership in the directionality derivation."
+    },
+    {
+      "id": "epsilon_incidence_attribution",
+      "question": "How much of the measured ε belongs to the registration gate itself, versus to the wider privilege economy (venal office, guild restriction, provincial franchise) that the gate merely shielded from legislative touch?",
+      "resolution_mechanism": "Counterfactual yield modeling of the killed edicts — Turgot's subvention territoriale, Calonne's universal land tax — against the fiscal outcomes of the Maupeou window when the gate was closed but the wider privilege economy persisted.",
+      "impact": "If most measured ε persists with the gate closed, ε belongs to sibling constraints in the wider privilege family and this story's ε is overstated; if it tracks the gate, the attribution stands and the family boundary drawn here is correct.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Family-decomposition boundary: gate-attributed versus privilege-economy-attributed shares of the measured extraction."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "remonstrance_authority__crown_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial label 'the remonstrance right of the parlements' decomposes, per the ε-invariance principle, into two structurally distinct claims sharing one referent arrangement — this magistrate_reading (gate as fundamental constitutional mechanism; ε reading-indexed to the magistrate seat; victims are commoner taxpayers and episodically the overridden courts) and remonstrance_authority__crown_reading (gate as illegitimate minoritarian veto; its own ε over the identical referent; victims are the crown and the reform program). Neither reading is strictly upstream: each cites the other's explanatory failures as evidence — the crown reading treats the magistrate reading's protective record as proof of captured function, giving this reading downstream structural pressure on the sibling's legitimacy conditions. The two files are linked here; further decomposition of the surrounding privilege economy (venal office property, fiscal exemption regimes) would extend the family."
+  },
+  "gain_flow": "parlement_magistracy",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "ancient_constitution_custodial_check",
+    "drift_state": {
+      "moment": "late_ancien_regime_fiscal_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "crown_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remonstrance_right_is_part_of_fundamental_constitution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "edicts_bind_only_after_free_registration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

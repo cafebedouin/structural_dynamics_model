@@ -1,0 +1,408 @@
+% ============================================================================
+% CONSTRAINT STORY: federation_membership__integration_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-08-12
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_federation_membership__integration_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:constraint_vindicates/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:measurement_basis/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:constraint_stakeholder/7,
+    narrative_ontology:stakeholder_secondary_role/3,
+    narrative_ontology:disappearance_verdict/2,
+    narrative_ontology:founding_problem_status/2,
+    narrative_ontology:stakeholder_gain_flow/2,
+    narrative_ontology:fixing_cost_class/2,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:epsilon_provenance/5,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: federation_membership__integration_reading
+ *   human_readable: Federal Integration Order: Irreversible Membership, Supranational Authority, Free Movement as Constitutional Right (Integration Reading)
+ *   domain: political/economic/migration
+ *
+ * SUMMARY:
+ *   This file instantiates the integration reading of the contested
+ *   federation-membership kernel. The standing arrangement under contest, and
+ *   the referent of epsilon, is the constitutional integration order itself:
+ *   membership treated as irreversible, supranational law as supreme, and
+ *   free movement of persons as an individual right enforceable against every
+ *   member state. The reading's own lights assess that standing arrangement:
+ *   it endorses supranational authority and the constitutional status of
+ *   movement, and it simultaneously registers the arrangement's asymmetric
+ *   operation. The gains of a single continental labor market concentrate on
+ *   mobile citizens and on cross-border recruiting employers; the adjustment
+ *   costs concentrate on immobile workforces and public services in gateway
+ *   regions, and on national majorities whose preferred border instrument the
+ *   arrangement rules out of order. The claim and the metrics are independent
+ *   authored facts: the claimed type is what the structural data supports, a
+ *   genuine coordination function carrying asymmetric, actively enforced
+ *   costs, while the metrics describe the arrangement's actual operation. The
+ *   sibling file, federation_membership__sovereignty_reading, instantiates
+ *   the rival reading of the same kernel with its own epsilon, victim set,
+ *   and classification; the two are linked by network.affects_constraints and
+ *   neither should hedge across the other. KEY AGENTS (by structural
+ *   relationship): - supranational_institutions: agenda-setter
+ *   (institutional/identity_locked) — administers and enforces the
+ *   arrangement; its authority is constituted by the integration
+ *   jurisprudence it built - mobile_union_citizens: primary beneficiary
+ *   (organized/mobile) — hold enforceable movement rights; their mobility is
+ *   the arrangement's operating principle - cross_border_employers: primary
+ *   beneficiary (powerful/arbitrage) — recruit across wage differentials;
+ *   capture the arbitrage surplus - immobile_local_workers: primary target
+ *   (powerless/trapped) — bear wage, rent, and service pressure in gateway
+ *   regions; relocation is the one remedy they lack -
+ *   gateway_region_public_services: secondary target (organized/trapped) —
+ *   absorb arrival at the pace the right delivers it, on lagging budgets -
+ *   national_border_majorities: target of the authority override
+ *   (institutional/constrained) — hold restrictionist preferences the
+ *   arrangement rules out of order - sending_state_governments:
+ *   dual-positioned beneficiary (institutional/constrained) — gain
+ *   remittances, transfers, and labor relief; lose working-age populations -
+ *   national_constitutional_courts: analytical observer with a payer's stake
+ *   (institutional/identity_locked) — adjudicate the arrangement while
+ *   contesting its supremacy claim
+ *
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(federation_membership__integration_reading, 0.68).
+domain_priors:suppression_score(federation_membership__integration_reading, 0.58).
+domain_priors:theater_ratio(federation_membership__integration_reading, 0.25).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(federation_membership__integration_reading, extractiveness, 0.68).
+narrative_ontology:constraint_metric(federation_membership__integration_reading, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(federation_membership__integration_reading, theater_ratio, 0.25).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(federation_membership__integration_reading, accessibility_collapse, 0.6).
+narrative_ontology:constraint_metric(federation_membership__integration_reading, resistance, 0.6).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(federation_membership__integration_reading, tangled_rope).
+narrative_ontology:human_readable(federation_membership__integration_reading, "Federal Integration Order: Irreversible Membership, Supranational Authority, Free Movement as Constitutional Right (Integration Reading)").
+narrative_ontology:topic_domain(federation_membership__integration_reading, "political/economic/migration").
+
+domain_priors:requires_active_enforcement(federation_membership__integration_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(federation_membership__integration_reading, '86368e52-1b39-498d-a368-70c3f7b3f61d').
+narrative_ontology:cs_kernel_codification('86368e52-1b39-498d-a368-70c3f7b3f61d', fixed_text).
+narrative_ontology:cs_authority_grounding('86368e52-1b39-498d-a368-70c3f7b3f61d', lineage).
+narrative_ontology:cs_interpretation_layer_present('86368e52-1b39-498d-a368-70c3f7b3f61d').
+narrative_ontology:cs_reading_relation('86368e52-1b39-498d-a368-70c3f7b3f61d', federation_membership__sovereignty_reading, coexists_with).
+narrative_ontology:cs_axiom('86368e52-1b39-498d-a368-70c3f7b3f61d', foundational, free_movement_individual_right).
+narrative_ontology:cs_axiom_status(free_movement_individual_right, holdable).
+narrative_ontology:cs_axiom_grounding('86368e52-1b39-498d-a368-70c3f7b3f61d', free_movement_individual_right, deontological).
+narrative_ontology:cs_axiom('86368e52-1b39-498d-a368-70c3f7b3f61d', foundational, membership_irreversible_integration).
+narrative_ontology:cs_axiom_status(membership_irreversible_integration, holdable).
+narrative_ontology:cs_axiom_grounding('86368e52-1b39-498d-a368-70c3f7b3f61d', membership_irreversible_integration, conventional).
+narrative_ontology:cs_axiom('86368e52-1b39-498d-a368-70c3f7b3f61d', secondary, national_border_restriction_illegitimate).
+narrative_ontology:cs_axiom_status(national_border_restriction_illegitimate, holdable).
+narrative_ontology:cs_axiom_grounding('86368e52-1b39-498d-a368-70c3f7b3f61d', national_border_restriction_illegitimate, conventional).
+narrative_ontology:cs_reference_frame('86368e52-1b39-498d-a368-70c3f7b3f61d', ever_closer_union_constitutional_order).
+narrative_ontology:cs_drift_state('86368e52-1b39-498d-a368-70c3f7b3f61d', post_brexit_referendum_era, gap(repudiation_pressure, substantial, true)).
+narrative_ontology:cs_created_at('86368e52-1b39-498d-a368-70c3f7b3f61d', '').
+narrative_ontology:cs_kernel_id(federation_membership__integration_reading, federation_membership).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(federation_membership__integration_reading, mobile_union_citizens).
+narrative_ontology:constraint_beneficiary(federation_membership__integration_reading, cross_border_employers).
+narrative_ontology:constraint_beneficiary(federation_membership__integration_reading, sending_state_governments).
+narrative_ontology:constraint_victim(federation_membership__integration_reading, immobile_local_workers).
+narrative_ontology:constraint_victim(federation_membership__integration_reading, gateway_region_public_services).
+narrative_ontology:constraint_victim(federation_membership__integration_reading, national_border_majorities).
+% Derived from stakeholders[] roles (beneficiary->beneficiary, payer->victim;
+% agent-gated; excluded derives nothing; deduped against the authored arrays).
+narrative_ontology:constraint_victim(federation_membership__integration_reading, sending_state_governments).
+narrative_ontology:constraint_victim(federation_membership__integration_reading, national_constitutional_courts).
+narrative_ontology:constraint_vindicates(federation_membership__integration_reading, eu_law_primacy_doctrine).
+narrative_ontology:constraint_vindicates(federation_membership__integration_reading, union_citizenship_doctrine).
+narrative_ontology:constraint_vindicates(federation_membership__integration_reading, ever_closer_union_trajectory).
+
+/* ==========================================================================
+   2b. STAKEHOLDER LAYER (OQ-83; roles from the DECLARED dial-set —
+   see schemas/constraint_story_schema.json $defs/StakeholderRole and the
+   attached residue ledger. Names are per-story and domain-specific; never
+   standardized across readings (OQ-84).
+   ========================================================================== */
+
+% The court and the commission that interpret and enforce the treaties. The court strikes down national measures restricting movement of union citizens and widens the scope of citizenship rights through case law; the commission brings proceedings against member states that deviate. Their legitimacy rests on the constitutional character of the founding treaties, and their own jurisprudence built much of what they administer, so stepping back from it would dissolve the authority they hold. They decide what national migration policy may lawfully do.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, supranational_institutions, agenda_setter,
+    institutional, generational, identity_locked, continental).
+
+% Hold an individual entitlement to live, work, and claim equal treatment in any member state, enforceable in national courts against their own and other governments. Those who move gain access to higher-wage labor markets, and their departure relieves sending-region labor surpluses while their remittances flow home. The entitlement is exercisable only by those with the resources, skills, and health to relocate; those without them hold the same legal status without the same usable right.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, mobile_union_citizens, beneficiary,
+    organized, biographical, mobile, continental).
+
+% Recruit across the union's wage differentials, staff gateway-region operations with incoming labor, and restructure production and services across member states at will. National recruitment barriers that would raise their labor costs are unlawful. They capture the difference between origin-area and destination-area wages on the labor they hire, and they can relocate themselves if any single member state's conditions turn unfavorable.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, cross_border_employers, beneficiary,
+    powerful, biographical, arbitrage, continental).
+
+% Govern states that export working-age labor. They receive remittance inflows, relief from unemployment and welfare rolls, cohesion transfers, and full single-market access. The same outflow hollows their peripheral regions: depopulation, care burdens for those left behind, loss of the youngest cohorts. They hold no instrument to counteract the outflow, since their citizens' departure is a right, and their influence over destination-side policy runs through institutions bound by the same rules.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, sending_state_governments, beneficiary,
+    institutional, generational, constrained, national).
+narrative_ontology:stakeholder_secondary_role(federation_membership__integration_reading, sending_state_governments, payer).
+
+% Work in gateway regions where incoming labor competes in the same low-wage segments: wage stagnation at the bottom of the distribution, rising rents, pressure on the services they rely on. Moving elsewhere is the one remedy they cannot use, because relocation requires exactly the mobility, savings, and portable skills they lack. Their national majorities' preference for restricting entry has no lawful instrument, and their voice reaches the level where the rule is made only filtered through governments that are themselves bound by it.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, immobile_local_workers, payer,
+    powerless, biographical, trapped, regional).
+
+% Schools, health services, and housing authorities in regions of rapid arrival must absorb population change at the pace the right delivers it, under funding formulas that lag years behind. They cannot decline arrivals or prioritize local residents without acting unlawfully, and they absorb the political blame for congestion their budgets did not cause and cannot refuse.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, gateway_region_public_services, payer,
+    organized, biographical, trapped, regional).
+
+% Electoral majorities or pluralities in several member states favor restricting movement. The governments they elect inherit a legal order in which that instrument does not exist: any restriction they attempt is struck down or penalized. They absorb the political backlash for a rule they cannot amend unilaterally, and their formal exit path, treaty withdrawal, exists but at a price the first departing member state's experience made cautionary.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, national_border_majorities, payer,
+    institutional, generational, constrained, national).
+
+% Adjudicate the boundary between national constitutional identity and the supremacy of supranational law. Several have asserted that their own basic law outranks union law while continuing to apply union law in practice, a standing tension between their self-conception as guardians of national constitutional identity and the legal order they operate inside. Their challenges are real, recurring, and so far non-displacing.
+narrative_ontology:constraint_stakeholder(federation_membership__integration_reading, national_constitutional_courts, observer,
+    institutional, generational, identity_locked, national).
+narrative_ontology:stakeholder_secondary_role(federation_membership__integration_reading, national_constitutional_courts, payer).
+
+% --- OQ-92 receipt surface: who RECEIVES the extraction (capture half).
+% 'diffuse' = authored no-capture (piton-side); a seat name = capturer.
+% ABSENT field = not authored, fail-closed. Never synthesized. ---
+narrative_ontology:stakeholder_gain_flow(federation_membership__integration_reading, cross_border_employers).
+narrative_ontology:fixing_cost_class(federation_membership__integration_reading, prohibitive).
+
+% --- Six-questions battery (story-level; texts kept as comments — the
+% engine consumes only the two atoms below; the founding-problem narrative
+% is NEVER consumed as a claim, mismatch-consumer only, OQ-83 R5) ---
+% COORDINATION_FUNCTION: Runs one continental labor market instead of twenty-seven: it removes the mutual border-closure problem that breaks single markets under stress, mutualizes recognition of qualifications, and gives individuals one enforceable status across all member states rather than twenty-seven bilateral permissions.
+% TRANSFER_FUNCTION: Moves labor from lower-wage to higher-wage regions and the wage differential's surplus to recruiting employers; moves border-setting authority from national governments and electorates to supranational institutions; moves adjustment costs onto immobile workforces and gateway-region public services; returns remittances, unemployment relief, and demographic offset to sending regions.
+% ABSENT_VOICES: Immobile workers in gateway regions have no seat where the rule is made: the council of ministers represents member-state governments, not regional labor, and their preferences arrive only filtered through governments bound by the same rules they would change. National border authorities are present as governments, but their instrument is excluded from the lawful agenda. Residents of depopulated sending regions, the elderly and the left-behind, are represented by governments that book their regions' decline as a net aggregate gain.
+% DISAPPEARANCE_RATIONALE: Withdrawal of the arrangement overnight would re-fragment the continental labor market: member states would re-impose entry controls within weeks, cross-border staffing in health, agriculture, construction, and logistics would break, remittance corridors would close, and the supranational authority whose core individual-rights jurisdiction is movement would lose its principal object. Twenty-seven national labor markets and border regimes would re-form from the wreckage.
+% FOUNDING_PROBLEM: After 1945, western European states faced recurring border- and trade-closure races and sought to make interstate war materially impossible by entwining their economies and giving individuals enforceable rights across borders; the single market later added the problem of running one economy without giving every national government a veto over labor movement.
+% FOUNDING_PROBLEM_CORROBORATION: The founding problem's historical reality is attested from outside the arrangement's beneficiary set: the Schuman Declaration's own text, post-war diplomatic history, and comparative federalism scholarship. Its present status is disputed: integration-supporting governments and the supranational institutions attest it remains live, citing single-market functioning and renewed closure pressure under stress; restrictionist parties, several national constitutional courts, and a body of migration economics attest the war-prevention rationale is spent and the arrangement now largely maintains itself. The historical attestation is independent of the beneficiaries; the status attestation is not, and the dispute is the finding.
+narrative_ontology:disappearance_verdict(federation_membership__integration_reading, world_rearranges).
+narrative_ontology:founding_problem_status(federation_membership__integration_reading, contested).
+
+/* ==========================================================================
+   3. PROVENANCE (cohort metadata — schema-required since Phase C)
+   ========================================================================== */
+
+narrative_ontology:story_provenance(federation_membership__integration_reading, 'e03e2210ef39e1af4d109acadf9515e5d2d8b7d7',
+    '685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28', '2026-08-22',
+    'no_scope_rebuild_stealth2', 'agent/example_platform_commission.json',
+    'stealth/ox-alpha', 'max_tokens=65536,temperature=model_default,reasoning=model_default').
+narrative_ontology:story_seed(federation_membership__integration_reading, 'none', 1).
+narrative_ontology:epsilon_provenance(federation_membership__integration_reading, 0.68, 'stealth/ox-alpha', 'none', direct).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(federation_membership__integration_reading_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(federation_membership__integration_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(federation_membership__integration_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness is authored high (0.68 at interval end) because the arrangement's costs concentrate while its gains diffuse asymmetrically: the wage-arbitrage surplus accrues to employers, the rights accrue to those mobile enough to use them, and the wage, rent, and service pressure lands on workers and public systems with no lawful remedy and no exit. Suppression (0.58) is the raw structural force that strikes down national restriction: primacy doctrine, infringement proceedings, and citizenship-rights jurisprudence actively nullify member-state border measures; it is authored unscaled, since suppression is a structural property and the engine alone scales extractiveness by directionality and scope. Theater is low-moderate (0.25): the coordination work is real (single market, qualification recognition, cross-border supply chains), with a modest performative component (subsidiarity rhetoric, unimplemented social-program summits). Accessibility collapse is 0.60: alternatives are largely foreclosed but not fully, since safeguard clauses, opt-outs, and treaty withdrawal leave residual alternatives, and the first departure demonstrated exit is possible at high cost. Resistance is 0.60: the arrangement has absorbed sustained opposition, including a member-state exit, recurring restrictionist electoral surges, and constitutional-court challenges to primacy. The measurement series run on one shared grid (t = 0, 6, 12, 18, 24, 33, spanning 1992 to 2025) so every tracked metric is authored at every examined point; the 2004 eastern enlargement (t12) marks the step-change in displacement-driven extractiveness, and the suppression series hardens across the interval as citizenship-rights jurisprudence and primacy enforcement matured. The enforcement trajectory is the dynamic this story traces, which is why suppression_requirement is authored rather than left to the scalar.
+ *
+ * PERSPECTIVAL GAP:
+ *   The payer seats and the agenda-setter seat compute different arrangements from the same structure. From supranational_institutions the arrangement is the rule of law itself: the court's authority is constituted by enforcing movement rights, so from that seat the arrangement is constitutional order, not a policy choice. From mobile_union_citizens it is an enforceable liberty. From immobile_local_workers it is a rule they never voted on that prices their labor and neighborhoods while their national majorities' preferred remedy is ruled out of order. From national_border_majorities it is a transfer of authority dressed as a rights guarantee. Same-level divergence: mobile and immobile workers hold formally identical citizenship, but the arrangement's rights are exercisable only by those who can move, so exit options differentiate seats at equal nominal status. The engine computes this per-seat divergence from the structural data; the authored claim does not adjudicate it.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The beneficiary declarations (mobile_union_citizens, cross_border_employers, sending_state_governments) derive low directionality for those seats; the victim declarations (immobile_local_workers, gateway_region_public_services, national_border_majorities) derive high directionality. Mobile citizens sit nearer the beneficiary end than employers, because the right is theirs by status while the wage differential's surplus is captured by employers, but both are carried by the arrangement. Immobile workers sit nearest the full-target end: trapped exit, since relocation is exactly the capacity they lack, and no seat at the level where the rule is made. National border majorities are targets of the authority override rather than of the labor flow: their directionality is high but their cost is authority, not wages. Sending-state governments derive low directionality from their beneficiary declaration, with a residual payer position (peripheral hollowing) recorded in the secondary role; that residual may be underweighted by the per-seat computation, and it is noted here rather than overridden, because an override keyed to the institutional power atom would also strike the agenda-setter and the constitutional courts, whose structural relationships differ sharply.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The classification guards against two opposite mislabels. Reading the arrangement as pure coordination, the integration reading's own flattering self-description, would erase the concentrated, uncompensated displacement and the overridden national authority: the costs are real, concentrated, and enforced, not a rounding error of the single market. Reading it as pure extraction would erase the genuine collective-action solution: without a common movement regime, twenty-seven states re-run the border-closure races the founding generation built the arrangement to end, and the single market's labor allocation fails. The hybrid holds both, and the structural declarations (beneficiaries plus victims plus active enforcement) are what let the engine compute that rather than assume it. On the R5 mismatch: founding_problem_status is contested rather than dead, because the single-market rationale remains live even as the war-prevention rationale has aged out of credibility for a generation that takes member-state peace for granted, while disappearance_verdict is world_rearranges because no party disputes that the world would rearrange without the arrangement. A dead-status finding combined with this verdict would flag capture; the contested status is the honest reading of the attestation record.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    kernel_reading_commitment,
+    'This story instantiates the integration_reading of the federation_membership kernel; how would the sibling sovereignty_reading''s instantiation differ structurally, and does the choice of reading change the classification?',
+    'Compare against federation_membership__sovereignty_reading: the sibling authors a different referent (conditional treaty membership, nationally retained border authority), a different beneficiary/victim structure (national polities as beneficiaries of restored authority), and its own reading-indexed epsilon; the engine''s cross-reading comparison locates the disagreement in the normative status of free movement and the revocability of membership.',
+    'If the sovereignty_reading were adopted as the operative frame, part of this reading''s victim set (national border majorities) would convert to beneficiaries of restored authority, border restriction would shift from illegitimate to legitimate, and the enforcement profile and measured suppression of national policy would change substantially.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_commitment, conceptual, 'Committer structure: this constraint is one reading of the federation_membership kernel; the sibling reading instantiates a rival arrangement from the same treaty text.').
+
+omega_variable(
+    displacement_attribution,
+    'How much of the wage pressure, rent inflation, and service congestion borne by gateway-region workforces is attributable to free movement, as opposed to automation, trade exposure, housing-supply policy, and fiscal choices?',
+    'Difference-in-differences around the transition-period expiries for accession-state workers (2011 and 2014), comparing regions and sectors differently exposed to incoming labor against otherwise similar unexposed controls.',
+    'A small attributed share lowers epsilon toward a coordination-cost reading of the arrangement; a large, concentrated share raises epsilon and strengthens the payer seats'' position, moving the per-seat classifications toward the extraction pole.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(displacement_attribution, empirical, 'Attribution of gateway-region labor-market costs to free movement versus confounding structural changes.').
+
+omega_variable(
+    exit_cost_irreversibility,
+    'Is membership genuinely irreversible, or is treaty withdrawal a real option whose cost is merely high, and are exit terms structured to deter (punishment pricing) or priced neutrally?',
+    'Comparative analysis of the first member-state departure: transaction costs, terms offered, and whether the withdrawal process was administered to minimize or maximize the exiting party''s cost.',
+    'If exit is a live option at non-punitive cost, the reading''s irreversibility premise weakens and the arrangement converges toward the sibling''s conditional-treaty frame; if exit is deterred by design, irreversibility is an enforcement product and the constraint''s coercive profile rises.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(exit_cost_irreversibility, empirical, 'Whether the irreversibility premise is structural or a high-but-finite exit price.').
+
+omega_variable(
+    compensation_feasibility,
+    'Is the concentrated loss borne by immobile gateway-region workforces compensable in principle, with aggregate gains exceeding concentrated losses and feasible transfers, or structurally uncompensable?',
+    'Fiscal-flow analysis comparing cohesion funds and adjustment transfers against measured regional displacement costs, plus a political-economy assessment of whether compensating coalitions can actually form.',
+    'If compensable-but-uncompensated, the arrangement holds a genuine coordination function with a distributive defect, supporting the hybrid reading; if uncompensable, the arrangement''s persistence depends on the losers'' continued inability to resist, and it drifts toward the pure-extraction pole.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(compensation_feasibility, empirical, 'Whether displacement losses are a distributive defect or a structural feature of the arrangement.').
+
+omega_variable(
+    identity_lock_mechanism,
+    'What binds member-state elites and the supranational institutions to the arrangement when national electorates turn against movement liberalization: exit-cost deterrence, professional and institutional identity fusion with the integration project, or internalized constitutional common sense?',
+    'Elite interviews and voting records across accession cohorts: whether opposition to movement restriction tracks exit-cost exposure or generational socialization into integration identity.',
+    'If identity fusion dominates, the institutional seats sit nearer identity-locked exit and the arrangement''s entrenchment is deeper than its enforcement budget suggests; if deterrence dominates, stability is a price question and a cheap enough exit would unravel it.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_mechanism, conceptual, 'Mechanism binding institutional seats to the arrangement against electorate drift.').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(federation_membership__integration_reading, 0, 33).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(fede_tr_t0, federation_membership__integration_reading, theater_ratio, 0, 0.15).
+narrative_ontology:measurement_basis(fede_tr_t0, observed).
+narrative_ontology:measurement(fede_tr_t6, federation_membership__integration_reading, theater_ratio, 6, 0.17).
+narrative_ontology:measurement_basis(fede_tr_t6, observed).
+narrative_ontology:measurement(fede_tr_t12, federation_membership__integration_reading, theater_ratio, 12, 0.2).
+narrative_ontology:measurement_basis(fede_tr_t12, observed).
+narrative_ontology:measurement(fede_tr_t18, federation_membership__integration_reading, theater_ratio, 18, 0.22).
+narrative_ontology:measurement_basis(fede_tr_t18, observed).
+narrative_ontology:measurement(fede_tr_t24, federation_membership__integration_reading, theater_ratio, 24, 0.24).
+narrative_ontology:measurement_basis(fede_tr_t24, observed).
+narrative_ontology:measurement(fede_tr_t33, federation_membership__integration_reading, theater_ratio, 33, 0.25).
+narrative_ontology:measurement_basis(fede_tr_t33, observed).
+
+% Extraction over time
+narrative_ontology:measurement(fede_be_t0, federation_membership__integration_reading, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement_basis(fede_be_t0, observed).
+narrative_ontology:measurement(fede_be_t6, federation_membership__integration_reading, base_extractiveness, 6, 0.5).
+narrative_ontology:measurement_basis(fede_be_t6, observed).
+narrative_ontology:measurement(fede_be_t12, federation_membership__integration_reading, base_extractiveness, 12, 0.55).
+narrative_ontology:measurement_basis(fede_be_t12, observed).
+narrative_ontology:measurement(fede_be_t18, federation_membership__integration_reading, base_extractiveness, 18, 0.6).
+narrative_ontology:measurement_basis(fede_be_t18, observed).
+narrative_ontology:measurement(fede_be_t24, federation_membership__integration_reading, base_extractiveness, 24, 0.64).
+narrative_ontology:measurement_basis(fede_be_t24, observed).
+narrative_ontology:measurement(fede_be_t33, federation_membership__integration_reading, base_extractiveness, 33, 0.68).
+narrative_ontology:measurement_basis(fede_be_t33, observed).
+
+% Suppression requirement over time
+narrative_ontology:measurement(fede_su_t0, federation_membership__integration_reading, suppression_requirement, 0, 0.42).
+narrative_ontology:measurement_basis(fede_su_t0, observed).
+narrative_ontology:measurement(fede_su_t6, federation_membership__integration_reading, suppression_requirement, 6, 0.47).
+narrative_ontology:measurement_basis(fede_su_t6, observed).
+narrative_ontology:measurement(fede_su_t12, federation_membership__integration_reading, suppression_requirement, 12, 0.5).
+narrative_ontology:measurement_basis(fede_su_t12, observed).
+narrative_ontology:measurement(fede_su_t18, federation_membership__integration_reading, suppression_requirement, 18, 0.54).
+narrative_ontology:measurement_basis(fede_su_t18, observed).
+narrative_ontology:measurement(fede_su_t24, federation_membership__integration_reading, suppression_requirement, 24, 0.57).
+narrative_ontology:measurement_basis(fede_su_t24, observed).
+narrative_ontology:measurement(fede_su_t33, federation_membership__integration_reading, suppression_requirement, 33, 0.58).
+narrative_ontology:measurement_basis(fede_su_t33, observed).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(federation_membership__integration_reading, resource_allocation).
+narrative_ontology:affects_constraint(federation_membership__integration_reading, federation_membership__sovereignty_reading).
+
+% DUAL FORMULATION NOTE:
+% The colloquial label 'federation membership' conflates two structurally distinct claims about the same treaty framework: (a) the integration reading, instantiated here, under which membership is irreversible integration, supranational authority is legitimate, and free movement is an individual constitutional right; and (b) the sovereignty reading, instantiated in federation_membership__sovereignty_reading, under which membership is a conditional treaty, national border authority is legitimate, and movement is negotiable policy. The two readings share the kernel but not the referent arrangement, so they carry different epsilon values, different victim sets, and different classifications. This file links to its sibling via affects_constraints; neither file should absorb the other's contest into its own metrics.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

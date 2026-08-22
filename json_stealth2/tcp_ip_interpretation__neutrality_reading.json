@@ -1,0 +1,349 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__neutrality_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp_ip_neutrality",
+    "story_uid": "c015e5a8-3c54-428e-8d6f-f275ca8e543e",
+    "created_at": "2026-08-05T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.5,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP End-to-End Non-Discrimination Requirement (Neutrality Reading)",
+    "topic_domain": "technology governance/telecommunications law/internet policy",
+    "requires_active_enforcement": true,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.75,
+    "beneficiaries": [
+      "edge_application_providers",
+      "internet_end_users",
+      "startup_edge_developers"
+    ],
+    "victims": [
+      "broadband_isps"
+    ],
+    "vindicated_propositions": [
+      "end_to_end_design_principle",
+      "permissionless_innovation_hypothesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.75,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.45,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.5,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the tcp_ip_interpretation kernel — the neutrality_reading. What would structurally change if a sibling reading (prioritization_reading, zero_rating_reading) were adopted as the kernel's operative interpretation?",
+      "resolution_mechanism": "Adoption of a sibling reading as governing law — statute, repeal-and-replace rulemaking, or controlling appellate interpretation — observable as an inversion of the constraint's victim/beneficiary sets rather than a re-measurement of this story.",
+      "impact": "Under prioritization_reading, ISPs become beneficiaries of a differentiated-service market and edge providers become payers; under zero_rating_reading, sponsors become beneficiaries and unsponsored content becomes disadvantaged. This story's epsilon, victim set, and classification would not survive — the sibling files instantiate those structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: which kernel reading this story instantiates, and what sibling adoption would change."
+    },
+    {
+      "id": "discrimination_management_boundary",
+      "question": "Where does prohibited content/application-based discrimination end and legitimate reasonable network management begin — and do application-class differentiation (video vs. bulk transfer) and 5G network slicing fall on the prohibition side?",
+      "resolution_mechanism": "Case-by-case adjudication against technical measurement: BEREC guidelines and FCC advisory opinions drawing the boundary, plus traffic analysis of whether differentiation tracks application identity or network state.",
+      "impact": "A wide management zone shrinks the constraint's bite and lowers effective extraction on ISPs; a narrow zone expands both and hardens the ISP seat's experience toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The boundary locus where the kernel's readings actually disagree."
+    },
+    {
+      "id": "isp_compensation_adequacy",
+      "question": "Does subscriber revenue compensate ISPs for carrying edge traffic under neutrality, or does unconstrained edge traffic growth impose uncompensated marginal costs the constraint forces ISPs to absorb?",
+      "resolution_mechanism": "Access-network cost accounting: marginal cost of peak edge traffic versus subscriber revenue, and investment trends under neutral versus differentiated regimes across jurisdictions.",
+      "impact": "If carriage is uncompensated at the margin, the constraint's burden on ISPs is heavier than authored and the ISP seat computes toward pure extraction; if compensated, the coordination component dominates and the tangled_rope claim holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the ISPs' alleged uncompensated carriage burden is real or a rent-seeking frame."
+    },
+    {
+      "id": "fragmented_regime_enforcement",
+      "question": "Post-2017, does the constraint persist as binding law in each jurisdiction (EU, California, litigated federal re-adoption) or as theatrical voluntary pledge — and are pledge-only jurisdictions piton-trending?",
+      "resolution_mechanism": "Enforcement docket analysis: complaints, orders, and penalties under Regulation 2015/2120 and SB 822, versus pledge violations without consequence in pledge-only jurisdictions.",
+      "impact": "If theatrical where unenforced, the constraint is a patchwork — tangled_rope in enforced jurisdictions, piton-trending in pledge-only ones — and per-seat classifications diverge by jurisdiction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Binding core versus theatrical maintenance across the fragmented jurisdictional patchwork."
+    },
+    {
+      "id": "edge_incumbency_feedback",
+      "question": "The constraint was built to protect permissionless edge innovation; its largest beneficiaries are now incumbent platforms with the scale to exploit open access. Does neutrality still function as startup protection, or as an incumbent moat that ISPs cannot toll?",
+      "resolution_mechanism": "Edge traffic-share and startup-formation data under neutral versus differentiated regimes; whether new entrants still reach users without incumbent intermediation.",
+      "impact": "If incumbent-moat, the coordination good concentrates in a few seats and the beneficiary structure shifts — ISPs pay, incumbents collect — moving gain_flow off 'diffuse' and hardening the extraction asymmetry.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the protected edge remains permissionless in practice or has concentrated."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The neutrality reading of the tcp_ip_interpretation kernel holds that TCP/IP's end-to-end architecture embodies a non-discrimination requirement: access providers must carry packets without regard to content or application identity, edge innovators deploy without network permission, and ISP revenue optimization through differentiation is off the table. The constraint binds a fragmented jurisdictional patchwork — EU Regulation 2015/2120, California's SB 822, a re-adopted and litigated federal order in the United States — against two decades of sustained ISP opposition. Per the epsilon-invariance discipline, this file instantiates ONE reading only: the sibling readings (prioritization_reading, zero_rating_reading) are separate constraints with their own epsilon and beneficiary/victim structures, linked through network.affects_constraints and cs_structure.reading_relations. The architectural fact that TCP/IP ships no built-in QoS mechanism is a further distinct constraint — a design fact, not a requirement — and is not classified here. Note the tension this reading itself carries: its rhetoric has mountain form ('the architecture embodies the principle'), while the constraint's actual operation is enforced, contested, and beneficiary-bearing; the claim and the metrics below are authored independently, and the engine measures that divergence.\n\nKEY AGENTS (by structural relationship):\n- broadband_isps: Primary target (institutional/constrained) — bears the constraint's costs; two-decade litigant against every codification\n- edge_application_providers: Primary beneficiary (institutional/constrained) — reach every user through neutral last-mile without termination fees\n- internet_end_users: Beneficiary with diffuse indirect costs (organized/constrained) — open access; limited provider choice\n- startup_edge_developers: Protected beneficiary (powerless/constrained) — deploy without network permission\n- open_internet_regulators: Agenda setter (institutional/constrained) — administer the non-discrimination requirement across a fragmented patchwork\n- zero_rating_sponsors: Excluded voice (institutional/trapped) — would sponsor content; barred by the constraint's operation\n- internet_architecture_community: Analytical observer (analytical/analytical) — custodian of the end-to-end design tradition",
+    "key_agents": [
+      "broadband_isps: Primary target (institutional/constrained) — bears the constraint's costs; sustained litigant",
+      "edge_application_providers: Primary beneficiary (institutional/constrained) — neutral last-mile reach without termination fees",
+      "internet_end_users: Beneficiary with diffuse indirect costs (organized/constrained) — open access, limited provider choice",
+      "startup_edge_developers: Protected beneficiary (powerless/constrained) — permissionless deployment",
+      "open_internet_regulators: Agenda setter (institutional/constrained) — enforcement across a fragmented patchwork",
+      "zero_rating_sponsors: Excluded voice (institutional/trapped) — barred from the transaction the constraint prohibits",
+      "internet_architecture_community: Analytical observer (analytical/analytical) — design-tradition custodian, no enforcement power"
+    ],
+    "logic_rationale": "Extractiveness 0.42: the constraint imposes real, asymmetric burdens on ISPs — compliance machinery, capacity investment it cannot surcharge to edge providers, and the foregone revenue of prioritization and sponsored-data markets — but from this reading's own lights those burdens are legitimate carriage costs compensated by subscriber revenue, not confiscation; the moderate value holds both facts honestly. Suppression 0.50: the constraint holds only through active enforcement — orders, fines, litigation defense — against sustained ISP resistance; it suppresses ISP practices, not user or edge alternatives, and is authored as the raw structural property it is (the engine, not the author, scales extraction by directionality and scope). Theater 0.40: a binding core in enforced jurisdictions coexists with voluntary pledges, transparency-report rituals, and merger-condition promises where enforcement collapsed. Accessibility collapse 0.35: the prioritization and zero-rating alternatives remain live and partially implemented — this constraint does not collapse them. Resistance 0.75: two decades of litigation (Verizon v. FCC, USTelecom v. FCC, Mozilla v. FCC), a complete federal repeal in 2017, and continuous lobbying. The measurement series run on one shared grid (0/4/8/12/16/20) and show a ratchet-and-release cycle — enforcement built to a 2017 peak, released by repeal, partially re-built since — driven by administrative turnover rather than by the constraint's internal dynamics; the oscillation is a side effect of political cycling, not an intermittent-reinforcement mechanism. base_properties values are end-state (T=20).",
+    "perspectival_gap": "The payer seat and the beneficiary seats should compute different types from identical structure. From the ISP seat the arrangement is the removal of a revenue option it never consented to surrender, enforced by regulators it cannot exit; from the edge and user seats the same structure is the protective condition of a permissionless application layer; from the regulator seat it is an administrative mandate whose management-versus-discrimination boundary it must draw case by case. The engine computes this per-seat divergence from the structural data; this story's claim does not adjudicate it.",
+    "directionality_logic": "Edge providers, end users, and startup developers are declared beneficiaries: d sits near the beneficiary end and effective extraction damps or inverts for them. Broadband ISPs are declared victims (role: payer) with constrained exit (sunk plant, licensed spectrum) and national scope: d sits near the full-target end and effective extraction amplifies. Their secondary beneficiary position — the open edge drives subscription demand — is real but does not move them off the target end, because the constraint's costs land on them directly regardless of ecosystem effects. Open internet regulators administer without materially benefiting or paying, sitting near symmetric. Zero-rating sponsors are structurally barred and highly exposed to the constraint's prohibition, but they appear in no beneficiary/victim array, so their directionality rides the derivation fallback; no override is authored because the coarse power-atom override surface cannot distinguish them from other institutional actors. Scope amplification flows through the declared scopes (global edge, national ISPs, continental regulators); suppression is not scope-scaled.",
+    "mandatrophy_analysis": "The founding problem — access-provider gatekeeping — is contested, not dead: ISPs retain both the capability (deep packet inspection, network slicing) and the incentive, but the parties dispute its salience and the 2017 FCC formally found it insufficient to warrant rules. founding_problem_status=contested with disappearance_verdict=world_rearranges is the honest pairing: the world does depend on the arrangement, and whether its reason has expired is precisely what the kernel contest disputes — so the mismatch consumer should see a live dispute, not a zombie flag. The classification prevents two misreadings: calling the constraint a snare (pure extraction on ISPs) erases the genuine coordination good — the permissionless edge — that even ISP-side analyses concede exists; calling it a rope (net beneficiaries all around) erases the ISPs' real, non-consented, asymmetric burden and the enforcement machinery needed to hold it against two decades of their resistance. Tangled rope holds both halves. The mandatrophy risk is jurisdictional rather than global: where enforcement collapsed, the norm persists partly as pledge and ritual — the fragmented_regime_enforcement omega tracks whether those jurisdictions are piton-trending.",
+    "kernel_context": "This constraint is the neutrality_reading of the tcp_ip_interpretation kernel: the claim that TCP/IP's end-to-end design embodies a non-discrimination requirement binding on access providers. Sibling readings from the same kernel: prioritization_reading (differentiated service quality as legitimate network management) and zero_rating_reading (selective sponsored exemptions). From this reading's seat, both siblings' core premises are content/application-identity-based differential treatment, which this reading's foundational axiom forbids — hence the forecloses relations: no single framework can hold 'application-identity-based treatment is impermissible' and 'application-identity-based treatment is legitimate management' as the operative norm of the same network. The disagreement is located exactly at the discrimination/management boundary (see the discrimination_management_boundary omega): whether application-class or payer-based packet treatment is ever 'management.' This file instantiates the neutrality reading only; the siblings are separate stories with their own epsilon, victim sets, and classifications."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__prioritization_reading",
+      "tcp_ip_interpretation__zero_rating_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'network neutrality / what TCP/IP requires' conflates three structurally distinct claims about one kernel (tcp_ip_interpretation). This file instantiates the neutrality reading only: a non-discrimination requirement on ISPs, with edge providers and users as beneficiaries and ISPs as payers. The prioritization reading (differentiated service quality as management) and the zero-rating reading (sponsored exemptions) are separate stories with their own epsilon and inverted payer/beneficiary sets. The readings disagree about one locus: whether application-identity-based packet treatment is ever legitimate management. The architectural fact that TCP/IP ships no QoS mechanism is a further distinct constraint — a design fact, not a requirement — and is not classified here."
+  },
+  "stakeholders": [
+    {
+      "name": "broadband_isps",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Own and operate fixed and mobile access networks; sell subscriber connectivity as their revenue base. The constraint bars them from charging edge providers for prioritized delivery, from exempting sponsored content from metered plans, and from blocking or throttling by application. They have litigated every codification (Verizon v. FCC, USTelecom v. FCC, Mozilla v. FCC), won a federal repeal in 2017, and remain bound by EU regulation, California law, and a re-adopted federal order. Sunk plant and licensed spectrum make exit from the markets they serve impractical; their incidental stake in a rich edge ecosystem — which drives subscription demand — is the benefit side of their dual position."
+    },
+    {
+      "name": "edge_application_providers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deliver content and applications over ISP last-mile infrastructure to end users without paying ISPs for termination or prioritization. Encryption, CDNs, and their own long-haul infrastructure give them leverage in the middle of the network but none at the access layer, where the constraint is what keeps their reach permissionless. They were the constraint's principal advocates in its codification fights."
+    },
+    {
+      "name": "internet_end_users",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Reach any lawful content and run any application without ISP permission or application-based degradation. They pay subscription prices that are the ISPs' compensation for carriage, and bear indirectly whatever compliance and capacity costs ISPs pass through. Most broadband markets offer one or two viable providers, so their exit from any given access arrangement is narrow."
+    },
+    {
+      "name": "startup_edge_developers",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Deploy new applications to the whole addressable market without negotiating with each access network — the permissionless entry the constraint protects. They have no leverage over ISPs and no alternative route to users' screens; their access depends entirely on the constraint holding."
+    },
+    {
+      "name": "open_internet_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "situation": "Administer and enforce the non-discrimination requirement across a fragmented patchwork: EU national regulatory authorities and BEREC under Regulation 2015/2120, California's enforcement of SB 822, and a re-adopted federal order in litigation in the United States. They write the guidance that draws the management/discrimination boundary, hear complaints, and issue orders; their authority flips with political turnover, which is why enforcement intensity oscillates."
+    },
+    {
+      "name": "zero_rating_sponsors",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Platforms and carriers that would fund sponsored-content exemptions — free or zero-rated access to selected services in exchange for sponsorship. The constraint bars the model in every jurisdiction where it binds; they argue their case through the zero-rating reading rather than inside this arrangement, and have no seat in its administration."
+    },
+    {
+      "name": "internet_architecture_community",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "The IETF, ISOC, and the research community that authored and maintains the end-to-end design tradition. They articulate what the architecture embodies, publish the design arguments both sides cite, and hold no enforcement power; their standing rests on competence and lineage, not jurisdiction."
+    }
+  ],
+  "gain_flow": "diffuse",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Keeps the access layer application-agnostic so that any edge innovator can deploy to the whole addressable market without network permission and every user can reach any lawful content — solving the gatekeeping problem that would otherwise make each ISP the toll-taker and arbiter of what the application layer may offer.",
+    "transfer_function": "Constrains ISP revenue optimization: value ISPs could otherwise capture by selling prioritized delivery, sponsored exemptions, or edge termination is left uncollected, and the capacity burden of edge traffic growth remains with subscriber-funded ISP networks rather than being surcharged to edge providers.",
+    "absent_voices": "Sponsored-content sponsors and would-be paid-prioritization purchasers have no seat — the constraint exists to bar their transaction, so they argue through the sibling readings (zero_rating_reading, prioritization_reading) rather than inside this arrangement. ISPs hold seats only as payers; their claim that carriage is uncompensated is heard in litigation and rulemaking comments, not as a co-authoring voice in the constraint's administration.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the non-discrimination requirement vanished overnight, access providers would roll out prioritized tiers and sponsored-data plans within product cycles, edge startups would face termination negotiations before launch, incumbent edge platforms would pay for assured delivery and pass costs on, and the application layer would reorganize around ISP gatekeeping — the open-edge ecosystem this arrangement holds in place would rearrange around paid access.",
+    "founding_problem": "Access-provider gatekeeping at the dawn of consumer broadband: a regional ISP blocked competing VoIP (Madison River, 2005) and a national cable operator throttled peer-to-peer traffic (Comcast, 2007), demonstrating that once capacity constraints and business incentives aligned, access providers could and would discriminate among applications. The constraint was built to keep the access layer from becoming the application layer's gatekeeper.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: the FCC's Madison River consent decree (2005) and Comcast-BitTorrent order (2008) attest the discrimination problem from the enforcement seat; the recitals of EU Regulation 2015/2120 attest it from the legislative seat; ISPs' own transparency disclosures attest the capability from the payer side. The ISPs and the 2017 FCC attest the opposite on salience — that competition and traffic growth dissolved the problem — which is why the status is contested rather than live."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "end_to_end_neutral_transport",
+    "drift_state": {
+      "moment": "contemporary_post_2017_repeal",
+      "direction": "repudiation_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "prioritization_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "zero_rating_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "end_to_end_requires_nondiscrimination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "permissionless_edge_innovation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

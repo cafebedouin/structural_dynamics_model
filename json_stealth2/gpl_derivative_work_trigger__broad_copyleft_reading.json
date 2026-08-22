@@ -1,0 +1,383 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "story_uid": "7cdc2683-bd43-456d-9fb8-464f2c968375"
+  },
+  "base_properties": {
+    "extractiveness": 0.51,
+    "suppression": 0.4,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Broad Copyleft Linking Trigger — Combined-Work Source Disclosure Obligation",
+    "topic_domain": "legal/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gpl_contributor_community",
+      "downstream_source_access_users",
+      "dual_licensing_companies"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "embedded_device_manufacturers"
+    ],
+    "vindicated_propositions": [
+      "copyleft_reciprocity_doctrine",
+      "combined_work_unitarity_doctrine"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "stakeholders": [
+    {
+      "name": "fsf_license_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Drafts and publishes the GPL, maintains the interpretive FAQ stating that linking produces a covered combined work, staffs a legal team defending that position, and revises the license text across versions. Its authority rests on authorship and continuity with the founding text; it can shape future versions but cannot bind unwilling parties to its reading of already-issued grants."
+    },
+    {
+      "name": "gpl_enforcement_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Pursue compliance on behalf of copyright holders, typically negotiating first and litigating when talks fail; the BusyBox suits are the emblematic campaign. Their budgets and staffing depend on a continuing supply of violations, and their charters leave little room to pivot to unrelated work."
+    },
+    {
+      "name": "gpl_contributor_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Thousands of developers maintain kernels, compilers, and libraries under the GPL. The reading assures them that products absorbing their code must return source on the same terms. Leaving for permissively licensed projects is possible, but reputational investment, accumulated expertise, and the codebases themselves anchor them where they are."
+    },
+    {
+      "name": "downstream_source_access_users",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Firms and individuals who acquire products built on GPL components and receive the corresponding source. They can audit, patch, and rebuild without having borne any drafting or compliance burden. Their interest is access; they lose it if the disclosure duty narrows."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build commercial products that statically or dynamically link GPL libraries — toolchains, compression and crypto libraries, UI frameworks. Each linkage forces a choice: publish source, drop the component, buy a commercial exception, or re-architect behind a purchased boundary. Corporate policy manuals treat the exposure as board-level legal risk."
+    },
+    {
+      "name": "embedded_device_manufacturers",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Ship routers, televisions, and appliances running firmware assembled from Linux, glibc, and busybox-class components. Margins are thin, firmware embeds vendor secrets, and full source release is expensive; this segment drew the densest run of enforcement actions and complies unevenly."
+    },
+    {
+      "name": "dual_licensing_companies",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold copyright to widely deployed GPL components and sell commercial exceptions beside the free grant. The broader the set of combinations counted as covered, the larger the customer base for paid exceptions; their revenue tracks the reading's breadth even as they give the underlying code away."
+    },
+    {
+      "name": "permissive_license_advocates",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Maintain BSD- and MIT-licensed alternatives and argue publicly that linking is aggregation rather than derivation. They hold no seat in GPL interpretation or enforcement negotiations, yet their ecosystems are the practical escape route for vendors and their argument the chief intellectual rival."
+    },
+    {
+      "name": "copyright_courts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Hear derivative-work disputes when enforcement reaches litigation, applying the abstraction-filtration-comparison method. Their rulings — and their frequent refusal to reach the linking question — set the practical ceiling on the reading's force. Jurisdictionally national, effectually global."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Keeps code released under the GPL inside the commons as it spreads into combined works: anyone may combine, study, and redistribute, and the combination's source must flow back on the same terms. Solves the free-rider problem that would otherwise let closed products absorb commons infrastructure — kernels, compilers, libraries — without returning anything.",
+    "transfer_function": "Moves source code and modification rights from parties who combine proprietary code with GPL components to the public commons; moves the right to use maintained commons infrastructure to those same parties as the consideration for accepting the terms.",
+    "absent_voices": "Permissive-license advocates hold the aggregation argument but no seat in GPL interpretation or enforcement; end users of noncompliant embedded products rarely know the code inside their devices; foreign courts and legislatures shape the trigger's real-world force without participating in its formulation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the broad linking trigger vanished overnight, proprietary products would absorb GPL components without source flowing back, dual-licensing exception revenue would collapse, contributor assurance against closed absorption would evaporate, and combination practice would reorganize around permissive-style norms — the software commons economy would rearrange around the new default.",
+    "founding_problem": "In the early free-software movement, code that had been shared was being absorbed into proprietary combined works and closed again; the arrangement was built to prevent appropriation of commons code as it propagated into larger products.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroboration from outside the beneficiary set: vendor compliance policies and documented avoidance behavior attest the trigger's perceived legal force; the US appellate abstraction-filtration-comparison lineage supplies the doctrinal frame courts actually apply; academic copyright scholarship treats combination scope as an open, consequential question. No disinterested source certifies the founding problem's current salience — all corroboration is indirect, which is itself signal about how contested the kernel remains."
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.53,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.51,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.18,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.4,
+      "basis": "projected"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_structural_delta",
+      "question": "This constraint instantiates the broad_copyleft_reading of kernel gpl_derivative_work_trigger; how would the sibling readings (narrow_linking_permissive_reading, interface_boundary_reading) change the structural facts if adopted?",
+      "resolution_mechanism": "Authoring the sibling stories and comparing computed classifications; definitive appellate doctrine on whether linking produces a derivative work.",
+      "impact": "Under the narrow reading the victim set shrinks to verbatim modifiers, epsilon drops toward coordination-only levels, and the type pulls toward rope; under the interface-boundary reading extraction concentrates on opaque coupling and clean-API users exit the obligation entirely.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this file is one reading of a contested kernel; sibling readings instantiate different constraints with different epsilon and victim sets."
+    },
+    {
+      "id": "dynamic_linking_derivativeness_uncertainty",
+      "question": "Does runtime dynamic linking, absent literal code copying, produce a derivative work under copyright's abstraction-filtration-comparison test?",
+      "resolution_mechanism": "Appellate application of the abstraction-filtration-comparison method to representative linking scenarios, or legislative clarification of combination scope.",
+      "impact": "Resolves the largest block of vendor-side legal uncertainty; a negative answer collapses most of the measured burden for dynamically linked products and shrinks the effective governed set.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the technical act of dynamic linking meets the legal test for derivation."
+    },
+    {
+      "id": "disclosure_benefit_incidence",
+      "question": "Who actually captures the value of mandated source disclosure — downstream users exercising modification rights, or competitors of the disclosing vendor?",
+      "resolution_mechanism": "Empirical study of reuse of disclosed source in competitor products versus end-user modification and rebuild rates.",
+      "impact": "If competitors are the primary recipients, the beneficiary declaration overstates user-facing benefit and the coordination story weakens toward rent-shifting between firms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incidence of the disclosure mandate's benefits across declared beneficiary groups."
+    },
+    {
+      "id": "enforcement_capacity_trajectory",
+      "question": "Will enforcement capacity continue its post-2016 normalization, or resurge through strategic litigation against high-value targets?",
+      "resolution_mechanism": "Track enforcement filing rates, enforcement-organization funding, and settlement volumes over the coming decade.",
+      "impact": "Rising enforcement raises effective suppressive force and pushes holdout-segment operation toward harder-edged extraction; continued decay leaves the trigger as normative background with the temporal signature of inertial maintenance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Future path of the enforcement machinery that holds the obligation in place."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "narrow_linking_permissive_reading",
+      "interface_boundary_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'the GPL linking trigger' decomposes into three structurally distinct readings of one kernel (gpl_derivative_work_trigger): broad_copyleft_reading (this file — any linking derives; epsilon approximately 0.51, wide victim set spanning all linkers), narrow_linking_permissive_reading (only modifications to GPL code itself derive; epsilon far lower, victims shrink to verbatim modifiers), and interface_boundary_reading (clean API boundaries bar derivation even under tight coupling; epsilon concentrates on opaque-coupling cases). Each is a separate file with its own epsilon, beneficiaries, and victims, per the epsilon-invariance principle. They are linked here because the broad reading is the interpretive baseline against which the other two define themselves, and broad-reading enforcement activity shaped the litigation environment in which the interface-boundary argument matured."
+  },
+  "commentary": {
+    "narrative_context": "Under the broad copyleft reading, any program that links to GPL-covered code — statically or dynamically — becomes a derivative work of the combined whole, and the GPL's source-disclosure terms attach to the entire combination. The reading is the Free Software Foundation's official interpretive position and the working assumption of most enforcement activity. Structurally it does two things at once through one instrument: it preserves the software commons (anyone may combine and redistribute, source returns on the same terms) and it imposes a concentrated, legally enforced cost on parties who mix proprietary and GPL code — publish source, pay for an exception, or engineer around the component. This file instantiates ONE reading of the contested kernel gpl_derivative_work_trigger; the narrow-permissive and interface-boundary siblings are separate constraints with their own epsilon values (far lower for the narrow reading; concentrated on opaque coupling for the interface-boundary reading), authored separately and linked through network.affects_constraints. Epsilon here is authored for this reading's own referent — the linking-trigger arrangement as this reading endorses it — and is not averaged across siblings.\n\nKEY AGENTS (by structural relationship):\n- fsf_license_stewards: Agenda-setting interpreter ([institutional]/[mobile]) — authors the license text and the linking FAQ position; collects interpretive authority\n- gpl_enforcement_organizations: Enforcement arm ([organized]/[constrained]) — negotiates and litigates compliance; depends on a supply of violations\n- gpl_contributor_community: Primary beneficiary ([organized]/[constrained]) — contributions protected from closed absorption\n- downstream_source_access_users: Secondary beneficiary ([moderate]/[mobile]) — receives source without bearing compliance cost\n- proprietary_software_vendors: Primary target ([powerful]/[constrained]) — bears the disclose-or-avoid-or-pay cost\n- embedded_device_manufacturers: Concentrated target ([organized]/[constrained]) — most-litigated segment, thinnest margins\n- dual_licensing_companies: Exception-market beneficiary ([organized]/[arbitrage]) — sells the exemptions the broad reading creates demand for\n- permissive_license_advocates: Excluded rival ([organized]/[mobile]) — holds the aggregation argument, no seat in interpretation\n- copyright_courts: Analytical observer ([institutional]/[analytical]) — adjudicates when litigation forces the question",
+    "logic_rationale": "Extractiveness 0.51: the obligation is real, wide, and legally enforced, but it is entered by accepting a license grant whose condition is stated up front, and the authoring seat endorses the exchange — moderate, not predatory. Suppression 0.40: copyright-backed enforcement is genuine coercion, but exits are priced rather than eliminated (permissive substitutes, dual-license purchase, re-architecting), so the raw structural suppression sits mid-range; per the framework's division of labor, this scalar is unscaled — the engine amplifies or damps only extractiveness via directionality and scope. Theater ratio 0.18: compliance overwhelmingly produces real source releases; a minority of token disclosures and open-washing accounts for the performative share. Accessibility collapse 0.35: once the trigger is understood, alternatives remain visibly open — this is the opposite profile of a natural law. Resistance 0.62: the kernel contest itself is the resistance — a decades-long doctrinal and industrial campaign against exactly this reading. The measurement series run on one shared eight-point grid (every tracked metric authored at every point, t=35 marked projected as a current-year estimate); the suppression_requirement series is authored because this story specifically traces enforcement-capacity change — buildup through the 2004–2016 enforcement era, then partial normalization after community enforcement statements discouraged routine litigation. Trajectories are monotonic-drifting rather than cyclical; no intermittent-reinforcement mechanism is posited.",
+    "perspectival_gap": "The payer seats and the steward seats compute differently from the same structural facts. From the fsf_license_stewards and gpl_contributor_community positions the arrangement is a reciprocity mechanism they built and defend — the disclosure duty is the point, not a defect. From the proprietary_software_vendors and embedded_device_manufacturers positions the same instrument operates as an enforced cost levied on their business models, with the added grievance that the derivativeness determination itself is unsettled doctrine. Same-level lateral differentiation matters here: proprietary vendors (powerful) and embedded manufacturers (organized) hold the identical payer role under identical nominal obligations, but exit quality differs — vendors can re-architect, buy exceptions, or fund permissive replacements, while thin-margin device makers face entangled firmware and comply unevenly, which is why enforcement historically concentrated on them. The copyright_courts seat sees neither coordination nor extraction but an unresolved doctrinal question they frequently decline to reach.",
+    "directionality_logic": "Beneficiary declarations drive low directionality: gpl_contributor_community and downstream_source_access_users sit near the subsidized pole (the arrangement delivers them commons integrity and source access at no compliance cost), and dual_licensing_companies sit near it with an arbitrage twist — the broader the reading, the larger their exception market. Victim declarations drive high directionality: proprietary_software_vendors and embedded_device_manufacturers bear the transfer directly with constrained exits, placing them near the full-target pole. The fsf_license_stewards collect interpretive authority rather than fees, keeping them near the beneficiary end as administrators; gpl_enforcement_organizations are dual-positioned (administer and benefit from violation supply). No directionality overrides were needed: the beneficiary/victim declarations plus exit options reproduce the true relationships without correction.",
+    "mandatrophy_analysis": "The founding problem — appropriation of shared code as it propagates into combined works — remains live, so no mandatrophy resolution is declared and none should be inferred from the modest post-2016 enforcement decline. The classification guards against both symmetrical mislabelings. Read from the vendor seats alone, the trigger looks like pure imposed extraction; declaring the beneficiary structure prevents that error by recording the genuine coordination function the same instrument performs. Read from the steward seats alone, it looks like pure commons coordination; declaring the victims and the enforcement requirement prevents that error by recording the concentrated, coerced cost asymmetry riding on the same structure. The temporal series watches the failure mode specific to this arrangement: if enforcement capacity decays further while the nominal obligation persists, the structure drifts toward inertial maintenance — obligations honored mainly by the already-compliant, enforced against no one — which the theater_ratio and suppression_requirement trajectories are positioned to detect.",
+    "kernel_context": "Kernel: gpl_derivative_work_trigger — the question of when combining code with GPL-covered code creates a derivative work that obligates source disclosure. This file instantiates the broad_copyleft_reading: any linking, static or dynamic, draws the combined whole into the GPL's terms. Siblings: narrow_linking_permissive_reading (linking is aggregation; only modifications to GPL code itself trigger duties) and interface_boundary_reading (clean API boundaries keep even tightly coupled combinations outside derivation). The disagreement is located in the scope of 'derivative work' when works communicate across call or process boundaries rather than by incorporated text. Both sibling relations are authored as coexists_with: adopting this reading logically commits a party to rejecting the siblings' core premises, but no single framework is structurally incapable of hybrid positions (static-derives/dynamic-aggregates is a coherent middle, approximated by LGPL practice), and all three readings remain live positions held by different factions with no logical resolution — the capital-punishment-triplet pattern rather than the personhood-boundary pattern. This story authors epsilon only for its own reading's referent and does not hedge across siblings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founders_intent_reciprocal_commons",
+    "drift_state": {
+      "moment": "contemporary_post_oracle_cloud_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linkage_constitutes_combined_derivation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "reciprocity_extends_to_whole_combined_work",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

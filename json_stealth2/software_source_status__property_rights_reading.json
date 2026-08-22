@@ -1,0 +1,373 @@
+{
+  "header": {
+    "constraint_id": "software_source_status__property_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-20",
+    "status": "ACTIVE",
+    "story_uid": "c230bf34-3eff-4c9c-8a62-f9cf44da8bbc",
+    "created_at": "2026-08-20T12:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.7,
+    "theater_ratio": 0.35,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Proprietary Software Licensing Regime (Property-Rights Reading)",
+    "topic_domain": "economic/legal/technological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "proprietary_software_vendors"
+    ],
+    "victims": [
+      "end_users_of_proprietary_software",
+      "independent_security_researchers",
+      "independent_repair_technicians",
+      "free_software_movement_participants"
+    ],
+    "vindicated_propositions": [
+      "copyright_incentive_doctrine",
+      "lockean_labor_property_theory"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "proprietary_software_vendors",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Publish software as compiled binaries under licenses they draft themselves. Withhold source code, prohibit modification and redistribution, embed technical protection measures, and operate legal teams that pursue infringement and reverse-engineering claims. Collect per-seat license fees and subscription revenue directly. Because they hold the copyrights, they can reprice, relicense, discontinue products, or convert purchase models at will; their exposure to the arrangement runs through market reputation and antitrust scrutiny rather than through any term they did not write."
+    },
+    {
+      "name": "copyright_lawmaking_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Enact and amend the copyright statutes and anti-circumvention provisions that give private license terms their legal force, ratify international treaties harmonizing enforcement, and adjudicate disputes over what counts as infringement, fair use, or permissible research. Respond to lobbying from rights-holding industries and to counter-pressure from libraries, archives, consumer groups, and security professionals. Their commitments span election cycles and treaty obligations rather than any single product market."
+    },
+    {
+      "name": "enterprise_software_buyers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Purchase software at scale under negotiated enterprise agreements. Receive support commitments, indemnification, audit-ready documentation, and a liable counterparty, assurances the open-source channel often lacks. In exchange they accept license-count audits, usage telemetry, renewal leverage against sunk migration costs, and terms forbidding internal modification. Switching vendors after decade-long deployments costs more than renewing, which shapes their bargaining even when terms tighten."
+    },
+    {
+      "name": "end_users_of_proprietary_software",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Accept non-negotiated license terms as a condition of using software needed for work, school, and daily life. Cannot read or change the code they run, cannot legally bypass technical barriers even for interoperability or repair, and inherit vendor decisions about pricing, feature removal, and shutdown of online services their files depend on. Individual recourse is limited to choosing a different product where one exists or petitioning regulators collectively."
+    },
+    {
+      "name": "independent_security_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Probe proprietary systems to find vulnerabilities before attackers do. Testing frequently requires circumventing technical protection measures, which exposes them to legal liability under anti-circumvention statutes regardless of intent. Publish under coordinated-disclosure timelines the vendor sets, or withhold findings. Some shift entirely to open-source targets where no legal barrier attaches."
+    },
+    {
+      "name": "independent_repair_technicians",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Service devices and machines running proprietary firmware and diagnostics. Manufacturers restrict access to diagnostic tools, pair parts to serialized components, and void warranties for unauthorized servicing. Right-to-repair statutes in some jurisdictions have reopened parts of this work; elsewhere the technicians operate under threat of legal action and lost dealer relationships."
+    },
+    {
+      "name": "free_software_movement_participants",
+      "role": "payer",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Develop and maintain openly licensed software and argue publicly that users should control their own computing. They are frequent targets of enforcement: takedown notices, infringement suits over license compliance, and exclusion from proprietary toolchains and certification programs. Their projects run on infrastructure and standards shaped by the proprietary ecosystem, and for many participants the commitment to openness is a defining identity, which makes retreat into proprietary work costly to self-conception."
+    },
+    {
+      "name": "competition_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Investigate bundling, refusal-to-license, and interoperability withholding in software markets. Take testimony from vendors, customers, and the open-source community, commission economic analysis of licensing practices, and can impose remedies such as mandated interfaces or behavioral commitments that would alter how license terms bind downstream actors."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Aligns investment incentives for large-scale software production: exclusive rights assure developers and their financiers a recoverable return, enabling funded development of complex products; standardized license terms also reduce transaction costs in enterprise procurement and give buyers a single liable counterparty.",
+    "transfer_function": "Moves license revenue and subscription fees from software users, both consumers and enterprises, to rights-holding vendors; moves control over modification, redistribution, and repair from users to vendors; and places legal risk of circumvention and infringement onto security researchers, repairers, and competing developers.",
+    "absent_voices": "Future developers who would learn by reading source have no seat in licensing design; end users in low-income regions priced by per-seat licensing are unrepresented; the eventual users of today's archived-but-locked file formats have no advocate at the table, though preservationists raise the point externally. Consumer advocates and library associations speak for some of these seats but hold no vote over license terms.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If proprietary licensing and its enforcement machinery vanished overnight, vendor business models built on per-seat fees and subscriptions would collapse, funded development would reorganize around support contracts, foundations, and public grants, enterprises would lose their indemnification counterparties and rebuild procurement around escrow and insurance, and the repair and security-research fields would lose the legal barriers that currently define their boundaries. The software economy would rearrange around whatever appropriability mechanisms replaced exclusivity.",
+    "founding_problem": "Early software circulated freely alongside hardware; as software became a standalone product, developers faced appropriation without compensation, since copying undermined the ability to fund continued development. Copyright applied to software and restrictive licensing were built to secure a return on software labor.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Attested from outside the benefiting parties: empirical innovation economics documents that some appropriability mechanism materially affects investment in software-class goods, while disputing whether the current form is optimal; and open-source companies that adopted source-available licenses, MongoDB, Elastic, and HashiCorp among them, acted on the conviction that uncompensated reuse was starving their funding model, evidence of a live appropriation problem from parties who are not proprietary-restriction beneficiaries. Historians of the pre-commercial sharing era corroborate the genealogy. No corroborating source claims the problem is dead."
+  },
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1998,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2003,
+      "value": 0.17,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.19,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1998,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2003,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1990,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1998,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2003,
+      "value": 0.55,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2010,
+      "value": 0.62,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.67,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.7,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The standing arrangement under contest: commercial software is distributed as closed binaries under restrictive licenses, source code is withheld, modification and redistribution are prohibited, and the whole structure rests on copyright statute, anti-circumvention law, technical protection measures, and click-through contracts. This file instantiates ONE reading of the software_source_status kernel, the property_rights_reading, under which that arrangement is largely a legitimate exercise of creator ownership and users hold contractual rights only. Per the epsilon referent rule, extractiveness is authored by this reading's own lights over the shared referent; the sibling readings, freedom_imperative, pragmatic_development, and utilitarian_hybrid, are separate constraints with their own epsilon values over the same referent, linked through network.affects_constraints. KEY AGENTS (by structural relationship): - proprietary_software_vendors: agenda-setting beneficiary (institutional/arbitrage) — drafts license terms, collects revenue - copyright_lawmaking_bodies: co-agenda-setter (institutional/arbitrage) — enacts and adjudicates the legal substrate - end_users_of_proprietary_software: primary target (powerless/constrained) — bears restrictions without negotiation - enterprise_software_buyers: dual payer/beneficiary (powerful/constrained) — pays premiums, receives accountability - independent_security_researchers: target (moderate/constrained) — bears legal exposure - independent_repair_technicians: target (moderate/constrained) — barred from servicing work - free_software_movement_participants: organized opposition bearing enforcement costs (organized/identity_locked) - competition_authorities: analytical observer (institutional/analytical).",
+    "logic_rationale": "Extractiveness is authored low (0.20) because this reading assesses the arrangement by its own lights: license restrictions are, for this seat, legitimate exercises of ownership, and the residual 0.20 covers what even this reading concedes, subscription terms that take payment without conveying any durable right, terms imposed without negotiation, and enforcement aimed at interoperability competitors rather than pirates. Suppression is a raw structural property, unscaled by power or scope: 0.70 reflects the per-se legality of anti-circumvention, DRM, code signing, and the SaaS removal of any modifiable artifact, discounted because ecosystem-level exit into open-source alternatives remains available. Theater ratio 0.35: consent rituals around unread license agreements and artist-protection framing over publisher revenue are performative, while enforcement and funding flows underneath are real. Accessibility collapse 0.50: category-level alternatives persist, but within an entrenched ecosystem formats, switching costs, and certification paths collapse them. Resistance 0.70: a forty-year counter-regime, copyleft licensing, right-to-repair legislation, research-exemption advocacy, and sustained litigation defense. The measurement series run on one shared seven-point grid so every tracked metric is authored at every examined time point; the suppression_requirement series is authored because this story specifically traces an enforcement-capacity ratchet, with the 1998 anti-circumvention statute as the visible step. On the receipt surface: gains demonstrably accrue to the vendor seat, which collects the fees and controls the terms, so gain_flow names that seat; fixing is prohibitive for the lawmakers who could fix it, since dismantling software copyright would breach treaty obligations and reprice the asset base of the entire funded-software economy, a cost far exceeding any benefit to the fixer.",
+    "perspectival_gap": "The seats compute differently from the same structure. From the vendor seat the arrangement is coordination it built and maintains, with extraction near the floor of legitimate return. From the end-user seat the same structure operates as non-negotiated restriction with no exit inside the product. The enterprise seat computes mixed: real accountability purchased at real premium, with renewal leverage doing the extracting. Researcher and repairer seats compute a legal-risk imposition that has little to do with the funding story at all. The engine derives these per-seat classifications from the structural data; the divergence between the vendor seat and the user seats is the measurable content of this story.",
+    "directionality_logic": "Vendors sit nearest the beneficiary end: they collect the transfer, wrote the terms, and hold arbitrage-grade exit through relicensing and model shifts. Lawmakers co-administer and could restructure the constraint at will, placing them low on the target axis despite collecting nothing directly. End users derive high directionality from payer status plus constrained exit. Enterprises temper a high payer-derived directionality with the support and indemnity value they receive back, captured by the dual role. Researchers and repairers derive high directionality through legal exposure rather than fee payment. Free-software participants are an unusual seat: they are not consumption-side payers, but they bear concrete enforcement costs and are identity_locked into opposition, which traps them nearer the target end than their organizational power alone would predict. Global spatial scope raises verification difficulty, so the engine scales effective extraction upward modestly for the dispersed user seats.",
+    "mandatrophy_analysis": "The founding problem, securing a return on software labor against appropriation, is still live, corroborated by innovation economics and by the license reversals of open-source firms facing uncompensated cloud reuse, so this is not a resolved-mandatrophy case: status live paired with verdict world_rearranges is internally consistent and raises no zombie flag. The tangled_rope claim prevents mislabeling in both directions: a rope-only reading would erase the identifiable victims, the researchers prosecuted under anti-circumvention law, the repairers locked out, the users bound to terms they never read; a snare reading would erase the genuine funding coordination that even the arrangement's sharpest critics concede financed decades of software people rely on. Both the coordination function and the asymmetric extraction are real and ride the same structure, which is the tangled signature.",
+    "kernel_context": "This constraint is the property_rights_reading of the software_source_status kernel: the claim that software is intellectual property, that creators hold a legitimate right to restrict access and modification, and that users are consumers holding contractual rights only. The sibling readings, freedom_imperative (restriction is injustice), pragmatic_development (openness is superior methodology), and utilitarian_hybrid (licensing should maximize aggregate welfare), are separate constraint files over the same kernel. The disagreement is located in the normative status of restriction itself, entitlement versus injustice versus instrumentality versus welfare-contingency, and in the user's position, contract-bound consumer versus sovereign of their own computing. This file authors only its own reading; the contest lives in the omega variables and in the sibling stories' divergent epsilon values over the shared referent."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "Which reading of the software_source_status kernel governs a given jurisdiction or engineering culture, given that this story instantiates only the property_rights_reading?",
+      "resolution_mechanism": "Track which sibling reading's axioms dominate enacted statute, court doctrine, and procurement norms in a jurisdiction; the sibling stories carry their own epsilon values over the same referent.",
+      "impact": "If a sibling reading gains governing status, the same standing arrangement is re-authored with a different epsilon and victim structure; classification flips at the kernel level, not the metric level.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of the software_source_status kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "epsilon_reading_index_divergence",
+      "question": "Epsilon here is authored low by the property-rights reading's own lights over the fixed referent of the standing proprietary-licensing arrangement, while the freedom_imperative_reading authors high epsilon over the same referent; is the spread being read as data rather than reconciled away?",
+      "resolution_mechanism": "Cross-read the sibling stories' epsilon values against the identical referent; the spread locates the dispute structurally rather than empirically.",
+      "impact": "Averaging the spread into one constraint would destroy the indexical signal; treating it as measurement maps exactly where and how strongly the readings diverge.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Reading-indexed epsilon divergence over a shared referent is the datum, not an inconsistency."
+    },
+    {
+      "id": "natural_right_vs_legislative_grant",
+      "question": "Does this reading ground the creator's controlling right in a pre-political natural right, Lockean labor mixing, or in a legislative grant that legislatures may legitimately amend?",
+      "resolution_mechanism": "Test adherents' response to amendment proposals: if statutory revision is treated as morally authoritative recalibration the grounding is conventional; if statute is treated as merely recognizing a prior right the grounding is deontological.",
+      "impact": "Determines the epistemic type of the foundational axiom and therefore how foreclosure against the freedom_imperative sibling computes; a purely conventional grounding softens the contradiction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Ambiguity between natural-right and legislative-grant grounding inside the property-rights reading itself."
+    },
+    {
+      "id": "incentive_necessity_ambiguity",
+      "question": "Would large-scale funded software development persist at comparable scale without exclusive-rights assurance?",
+      "resolution_mechanism": "Compare development output across regimes: pre-1980 sharing norms, weak-enforcement jurisdictions, and the funded open-source sector supported by foundations, support contracts, and public grants.",
+      "impact": "If output persists robustly without exclusivity, the coordination function thins and the arrangement slides toward pure extraction; if not, the coordination function is load-bearing and the tangled reading holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the coordination function attributed to exclusive rights is causally necessary or post hoc."
+    },
+    {
+      "id": "subscription_quid_pro_quo_strain",
+      "question": "Has the shift from perpetual licenses to subscriptions severed the exchange this reading's own justification requires, payment made without acquisition of any durable right?",
+      "resolution_mechanism": "Compare post-termination access terms and renewal-price trajectories after discontinuation announcements against the reading's own exchange logic of payment for acquired asset.",
+      "impact": "If subscriptions break the internal justification, residual extractiveness rises even by this reading's lights, pressuring recomputation upward without any sibling reading winning the argument.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subscription conversion strains the property-rights reading's internal justification."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_source_status__freedom_imperative_reading",
+      "software_source_status__pragmatic_development_reading",
+      "software_source_status__utilitarian_hybrid_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial debate over whether software should be open or proprietary decomposes, per the epsilon-invariance principle, into four structurally distinct constraints sharing the software_source_status kernel. Each reading authors its own epsilon over the same referent, the standing proprietary-licensing arrangement. This file instantiates the property_rights_reading (low reading-indexed epsilon, tangled_rope structural claim); the freedom_imperative sibling authors high epsilon over the identical referent. The upstream/downstream structure runs through legal machinery: this reading's statutory framework is the instrument the pragmatic_development sibling's copyleft tactics exploit, hence the influences edge."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "creator_exclusive_control_baseline",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "axiom_overriding",
+      "magnitude": "minor",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_imperative_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "pragmatic_development_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "utilitarian_hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creator_exclusive_control_entitlement",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "users_hold_contractual_rights_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "proprietary_software_vendors",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

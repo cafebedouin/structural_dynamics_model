@@ -1,0 +1,280 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__mathematical_definition_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "fe39ad63-c01f-44cf-98ed-8a50bc0487ce"
+  },
+  "base_properties": {
+    "extractiveness": 0.06,
+    "suppression": 0.04,
+    "theater_ratio": 0.07,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.12,
+    "claimed_type": "rope",
+    "human_readable": "Church-Turing Thesis as Stipulative Definition of Effective Computability",
+    "topic_domain": "philosophy_of_mathematics/foundations_of_computation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "mathematical_logicians",
+      "theoretical_computer_scientists",
+      "formal_methods_practitioners"
+    ],
+    "vindicated_propositions": [
+      "lambda_calculus_turing_equivalence",
+      "undecidability_transfer_principle"
+    ]
+  },
+  "interval": {
+    "start": 1936,
+    "end": 2026
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1936,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1956,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1976,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1996,
+      "value": 0.065,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2016,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1936,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1956,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1976,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1996,
+      "value": 0.09,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2016,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.07,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identification",
+      "question": "This constraint is one reading (mathematical_definition_reading) of the church_turing_thesis kernel; the sibling readings physical_claim_reading and epistemological_boundary_reading instantiate different constraints with different epsilon values and party structures. Which identification does the community's actual usage support?",
+      "resolution_mechanism": "Meta-linguistic analysis of how the thesis-sentence is deployed: count contexts where it is invoked as a definition (proofs, textbooks, library documentation) versus as a claim (physics-of-computation papers); whichever identification dominates canonical references resolves the question.",
+      "impact": "If usage shifts toward the physical or epistemological identification, this constraint dissolves into the corresponding sibling file and its near-zero epsilon, beneficiary structure, and rope classification lapse with it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the church_turing_thesis kernel governs: stipulation, physical law, or epistemic boundary."
+    },
+    {
+      "id": "adequacy_criterion_contentfulness",
+      "question": "Does the stipulation's claimed adequacy to the informal notion of 'algorithm' make it answerable to anything beyond convention (Kreisel-style sharpening), or is adequacy itself part of the stipulation?",
+      "resolution_mechanism": "Analyze whether the adequacy criterion could fail - i.e., whether a formalism could be proved equivalent to Turing machines yet rejected as failing to capture effective procedure; if such a case is conceivable and actionable, adequacy carries content.",
+      "impact": "If adequacy is contentful, epsilon rises above the convention floor and the constraint migrates toward the epistemological_boundary_reading's territory; if it is stipulative all the way down, this file stands as authored.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether definitional adequacy smuggles empirical or conceptual content into a supposedly pure stipulation."
+    },
+    {
+      "id": "rival_stipulation_displacement_risk",
+      "question": "Could a rival stipulation of effectiveness (constructive, proof-tied, or oracle-inclusive) displace the canonical definition in curricula and machine-checked libraries?",
+      "resolution_mechanism": "Track curriculum standards, proof-assistant library interfaces, and textbook editions over time for shifts in which effectiveness notion is presented as the default.",
+      "impact": "Displacement would raise resistance and suppression above the authored values and stress the rope classification; continued entrenchment confirms it.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Risk that the canonical stipulation is displaced by a rival effectiveness convention."
+    },
+    {
+      "id": "editorial_pressure_classification",
+      "question": "Is the editorial steering toward canonical usage ordinary house style or the thin edge of enforced conformity?",
+      "resolution_mechanism": "Compare revision-request rates and acceptance outcomes for papers using nonstandard computability terminology against matched controls using standard terminology.",
+      "impact": "A significant differential would raise suppression above 0.04 and warrant re-examination of the voluntary-adoption premise; parity confirms the house-style classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether editorial conformity pressure constitutes meaningful suppression."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates the mathematical-definition reading of the church_turing_thesis kernel: the thesis-sentence is a stipulation fixing what 'effective computability' means, true by convention and carrying no empirical content. Its operation is terminological alignment across mathematics and computer science: once the stipulation is adopted, undecidability and incompleteness results acquire a determinate object, and a theorem proven against Turing machines transfers automatically to lambda calculus, recursive functions, and Post systems through the equivalence theorems. Per the committer-frame rules, the sibling readings (physical_claim_reading, epistemological_boundary_reading) are separate constraints in separate files with their own epsilon values and party structures; nothing about them is averaged into this story. The claim/metric split is deliberate: claimed_type records the structure I believe true (voluntary coordination among net beneficiaries, no suppressed alternatives), while the metrics record descriptive operating values (near-zero residual costs). KEY AGENTS (by structural relationship): - mathematical_logicians: primary beneficiary (organized/mobile) - gain precise, transferable undecidability results; - theoretical_computer_scientists: primary beneficiary (organized/mobile) - canonical baseline for decidability and complexity statements; - formal_methods_practitioners: secondary beneficiary (moderate/constrained) - machine-checked libraries encode the definition; - journal_editors_and_textbook_authors: agenda-setter (institutional/mobile) - administer transmission channels and light conformity norms; - constructive_mathematics_schools: excluded voice (organized/mobile) - maintain parallel effectiveness stipulations outside the default-setting conversation; - philosophers_of_computation: analytical observer (moderate/analytical) - see the full kernel structure.",
+    "logic_rationale": "Epsilon is 0.06: the stipulation imposes only a residual rigidity cost - occasional awkwardness fitting classical phrasing to constructive or physical contexts - and nothing is transferred from anyone to anyone. Suppression is 0.04 and is a raw structural value, unscaled by power or scope: it consists of editorial house-style pressure (revision requests toward canonical usage), not coercion; no exit is blocked, and every named party retains a mobile or merely cost-bearing exit. Theater is 0.07: the definition performs real work in every undecidability proof and every complexity statement; almost nothing about its maintenance is ceremonial. Accessibility_collapse is 0.35: the equivalent formalisms remain fully available (adopting any of them IS adopting this convention), and non-equivalent stipulations survive at the margins in the constructive and hypercomputation literatures. Resistance is 0.12: decades of constructive-school objection and philosophical quibbling, never organized opposition. The two tracked series share one six-point grid (1936-2026); both decline gently as the convention settled from a debated proposal into invisible infrastructure. Suppression_requirement is intentionally not tracked: the enforcement picture is static at house-style intensity throughout, which the scalar already captures. No oscillation is present, so no cyclical machinery is invoked.",
+    "directionality_logic": "All three beneficiary seats derive low directionality (the arrangement subsidizes them with clarity at negligible cost). The agenda-setting seat sits near-symmetric with a slight beneficiary tilt: editors spend a little effort steering usage and receive a stable vocabulary in return. The excluded seat (constructive schools) derives neither subsidy nor charge from THIS convention - they run a parallel stipulation - which is why no victim set is declared and no directionality override is needed: the structural derivation already places every seat correctly. Notably, no seat is trapped or identity_locked; near-universal mobility is precisely why effective extraction stays pinned near the coordination floor despite the definition's ubiquity.",
+    "perspectival_gap": "Seat divergence is muted inside this reading because the arrangement is near-symmetric - that is itself the finding. What divergence exists: the agenda-setter experiences the convention as an administered norm (something steered), beneficiaries experience it as free infrastructure (something used), and the excluded seat experiences it as a closed default-setting conversation (something argued with from outside). The sharp perspectival gaps in this kernel live BETWEEN readings, not within this one: holders of the physical reading experience the same sentence as a bet about nature, and holders of the epistemological reading as a boundary of the provable - those experiences belong to the sibling files.",
+    "mandatrophy_analysis": "The classification risk here runs in both directions. Read as a mountain ('computability simply IS Turing-computability'), the convention's contingency disappears and the stipulation masquerades as natural law - hence emerges_naturally stays false and the beneficiaries are declared openly. Read as a snare (editorial steering as coercion), a house-style preference inflates into suppression - hence suppression is authored at 0.04 with the mechanism named. On mandatrophy proper: the founding problem (making undecidability provable) is live, so no sunset applies and none is declared; this is steady-state coordination, not a transitional arrangement. One receipt-surface caveat is recorded deliberately: gain_flow='diffuse' plus fixing_cost='prohibitive' arithmetically resembles the piton cell, but the piton test fails on both prongs - the function is not atrophied (theater 0.07; the definition does load-bearing work everywhere) and the cost asymmetry points the healthy way (nothing is broken; replacement would cost enormously and buy nothing). The cell collision is a labeling artifact, not a decay signal.",
+    "kernel_context": "Kernel: church_turing_thesis - the sentence associating effective computability with Turing-machine computability. This file instantiates the mathematical_definition_reading: the sentence is a stipulative definition, true by convention, empirically untestable. Siblings: physical_claim_reading (the sentence as a contingent law of nature) and epistemological_boundary_reading (the sentence as the border of formally provable computation). The disagreement is located in the speech-act status assigned to one and the same sentence - stipulation versus empirical law versus epistemic boundary - which is why this reading's relations to both siblings are foreclosure-grade at the level of identification, even though the underlying mathematics is common ground."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__physical_claim_reading",
+      "church_turing_thesis__epistemological_boundary_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Church-Turing thesis' decomposes, per the epsilon-invariance principle, into three structurally distinct constraints sharing one kernel: this file (stipulative definition; epsilon ~0.06; no victims; rope), church_turing_thesis__physical_claim_reading (contingent claim about physical processes; contested epsilon; live empirical stakes), and church_turing_thesis__epistemological_boundary_reading (boundary of provable computation; intermediate epsilon). This reading is upstream in one narrow sense: the definition supplies the fixed referent about which the other two readings dispute, so both siblings cite it while disputing its status. All three files link one another via affects_constraints; measuring epsilon on the union label would average a convention with a bet about nature and produce a value belonging to neither."
+  },
+  "stakeholders": [
+    {
+      "name": "mathematical_logicians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "State and prove undecidability and incompleteness results against a single fixed meaning of 'effectively computable'. Because several formalisms (Turing machines, lambda calculus, recursive functions) have been proved equivalent, a result established for one holds for all; the shared definition is what makes that transfer routine. Adoption is voluntary; a logician who prefers another formalism restates results at no professional cost."
+    },
+    {
+      "name": "theoretical_computer_scientists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Use the fixed meaning as the baseline for decidability and complexity statements - reductions, hardness results, and separations are all phrased against it. The definition costs them nothing to follow and saves them from re-arguing what 'algorithm' means in every paper. Leaving it would mean relabeling their entire result base."
+    },
+    {
+      "name": "formal_methods_practitioners",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Maintain machine-checked libraries (proof assistants, verified-compilation stacks) in which the standard definition is encoded. Switching to a different effectiveness notion would orphan those libraries, so they follow the convention even where a constructive variant would suit their philosophy; the switching cost, not any penalty, is what binds them."
+    },
+    {
+      "name": "journal_editors_and_textbook_authors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Decide which usages appear in the venues and curricula where the definition is transmitted. They ask authors to define terms and gently steer nonstandard uses of 'computable' toward the canonical one; they hold no sanction beyond revision requests, and they themselves gain a stable vocabulary to edit against."
+    },
+    {
+      "name": "constructive_mathematics_schools",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Work with effectiveness notions tied to constructive proof (e.g., Markov algorithms, BISH conventions) and publish their alternatives in their own venues. They have argued for decades that the canonical stipulation bakes in classical assumptions; the argument is heard but has not moved the default-setting channels - introductory curricula and standard references present the classical stipulation without their amendment."
+    },
+    {
+      "name": "philosophers_of_computation",
+      "role": "observer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study what the thesis-sentence is - definition, empirical law, or epistemic boundary - and how the readings relate. They collect nothing and pay nothing under any of the readings; their seat is analytical, and they are the parties most likely to notice if the definitional reading quietly hardens into something stronger."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Fixes one precise referent for 'effectively computable' so that undecidability, incompleteness, and reducibility results can be stated once and applied across every adequate formalism; replaces a family of informal notions (algorithm, effective procedure, mechanical method) with a single canonical term that textbooks, journals, and proof libraries can share.",
+    "transfer_function": "Nothing material moves. The only thing transferred is default status: the stipulated meaning becomes the assumed referent in publications and curricula, and any deviating usage must announce and defend itself. No money, labor, or resources flow to any party under this reading.",
+    "absent_voices": "Constructive-mathematics schools would amend the stipulation (their effectiveness notions are proof-tied) and are present in specialist literature but marginal to the channels where the default is set - introductory curricula, standard references, mainstream editorial practice. Educators in adjacent disciplines inherit the term without ever encountering the debate. Hypercomputation researchers would reserve 'computable' differently for physical processes; their objection targets the sibling physical reading more than this one.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the stipulation vanished overnight, 'computable' would revert to an ambiguous informal term: undecidability theorems would lose a determinate object, cross-formalism citation would break, and proof-library interfaces would reference an undefined notion. The rearrangement would be shallow and self-healing - the community would re-stipulate, almost certainly identically, within months - but during the gap the shared infrastructure of computability statements would not resolve.",
+    "founding_problem": "Before 1936, 'effective method' was informal, and Hilbert's Entscheidungsproblem demanded a provable boundary: to show a problem undecidable, one needed an exact characterization of mechanical procedure so that non-existence of an algorithm could be a theorem rather than an impression.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the beneficiary set: the Hilbert-Ackermann formulation of the Entscheidungsproblem (1928) and the Goedel incompleteness context predate and independently attest the problem; historians of logic confirm the definition was built to answer it. None of these sources benefits from the convention's persistence."
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "stipulative_definition_convention",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "physical_claim_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "epistemological_boundary_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effective_computability_is_stipulative",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "thesis_carries_no_empirical_content",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

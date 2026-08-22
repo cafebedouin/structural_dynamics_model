@@ -1,0 +1,379 @@
+{
+  "header": {
+    "constraint_id": "church_turing_thesis__epistemological_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-10",
+    "status": "ACTIVE",
+    "story_uid": "d0a63c5b-2c4f-4291-864d-5df371251b08"
+  },
+  "base_properties": {
+    "extractiveness": 0.4,
+    "suppression": 0.42,
+    "theater_ratio": 0.2,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Church-Turing Thesis — Epistemological Boundary Reading",
+    "topic_domain": "philosophy_of_mathematics/computation_foundations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "computability_theorists",
+      "constructive_mathematicians",
+      "formal_verification_community"
+    ],
+    "victims": [
+      "non_constructive_computability_claimants",
+      "hypercomputation_researchers"
+    ],
+    "vindicated_propositions": [
+      "turing_machine_canon_of_effective_procedure",
+      "witness_bearing_proof_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "logic_and_cs_journal_editors",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Edit and referee the journals and conferences where computability results appear. A submission claiming that some function is computable is accepted only when the authors exhibit an explicit effective procedure — a Turing machine, a recursive definition, a program — or invoke a formalism the community already recognizes as equivalent. Papers asserting computability by indirect or non-mechanical argument are returned for construction or rejected. Editorial boards rotate person by person, but the reviewing standard persists across venues and across generations of editors, and serving it accrues reputational standing to those who administer it."
+    },
+    {
+      "name": "computability_theorists",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Research the structure of Turing-computable and non-computable functions: degrees of unsolvability, reducibility hierarchies, oracle constructions. The field's subject matter is fixed by the agreed procedural standard — every object studied is defined relative to the machine model. Training, terminology, and open-problem lists all presuppose it; a researcher who abandoned the framework would leave the field's questions behind entirely."
+    },
+    {
+      "name": "constructive_mathematicians",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Develop mathematics in which existence claims carry algorithms or explicit witnesses. The procedural standard for computability vindicates their proof discipline: a constructive proof of computability is automatically admissible, while classical non-constructive argument gains nothing. Their schools, journals, and conference circuits are organized around witness-bearing proof, and their professional identity is bound to the view that assertion without construction is incomplete."
+    },
+    {
+      "name": "formal_verification_community",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Build proof assistants and mechanized libraries — Coq, Lean, Agda — in which computability claims are checked by machine. Their tools implement the procedural standard: a function counts as computable inside the system when a terminating program or realized specification is supplied. Toolchains, curated libraries, and funded projects depend on the standard remaining stable; adopting a rival demarcation would strand existing formalizations."
+    },
+    {
+      "name": "non_constructive_computability_claimants",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Classically trained mathematicians who occasionally establish that a function or set is computable, or that an algorithm exists, using indirect arguments — compactness, choice, counting — without producing a procedure. When they bring such results to logic and computer science venues they are asked to exhibit a method or withdraw the claim. Most can restate the result constructively at the cost of extra work, and much of their output never touches computability at all; the standard imposes extra labor on a narrow slice of their practice."
+    },
+    {
+      "name": "hypercomputation_researchers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Investigate proposed routes to computation beyond the Turing limit: idealized analog devices with unlimited precision, accelerated or Zeno-style machines, relativistic spacetime configurations permitting supertasks, and interpretations of physical theory suggesting non-effective processes. Mainstream logic venues treat their outputs as lying outside formally knowable computation regardless of physical realizability, so publication, citation, and funding concentrate in specialist workshops and sympathetic journals. Their careers and research programs are built on the trans-Turing question; abandoning it would dissolve the program's identity."
+    },
+    {
+      "name": "analog_computing_engineers",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Design and operate physical computing systems — analog simulators, neuromorphic hardware, optical processors — whose behavior is engineered and measured without reference to proof-theoretic standards. They do not participate in the logic-community conversation that fixes what counts as formally knowable computation, and nothing in their workflow requires them to. The verdict on whether their artifacts fall inside that category is decided in venues where they hold no seat."
+    },
+    {
+      "name": "philosophers_of_computation",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Analyze what the thesis claims, what it could not claim, and how its readings diverge; trace the line from Hilbert's program through the 1936 Church and Turing papers to present disputes over physical computation. They publish critiques and reconstructions but administer nothing and collect nothing from the standard's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Fixes a shared, checkable evidential standard for computability claims across mathematics and computer science: to establish that a function is computable, one exhibits an explicit effective procedure in a recognized formalism. This lets results be stated, compared, reused, and mechanically checked across groups that would otherwise rely on incompatible intuitions of what is calculable in principle.",
+    "transfer_function": "Moves epistemic standing — publication, citation, legitimacy as established knowledge — toward claims cashed out in Turing-equivalent procedural terms, and away from claims supported only by indirect or non-mechanical argument; indirectly moves research attention and funding away from trans-Turing programs.",
+    "absent_voices": "Analog and novel-hardware computing engineers, whose systems compute in an engineering sense but who hold no seat in the logic venues where the standard is administered; also physicists proposing spacetime or cosmological super-Turing processes, who encounter the boundary as an externally imposed verdict on their work. Both would object that 'formally knowable' quietly narrows 'computable' to 'provable by our methods.'",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Without the shared procedural standard, computability claims would fragment across rival evidential criteria; formal verification libraries, complexity-theoretic baselines, and the cumulativeness of computability theory would lose their common ground, and claims currently excluded would re-enter the knowable category case by case. Curricula, proof assistants, and venue norms built on the standard would require wholesale renegotiation.",
+    "founding_problem": "In the 1920s and 1930s, Hilbert's program and the Entscheidungsproblem required a precise, mechanical characterization of effective calculability so that questions about computability could be settled by proof rather than informal intuition, and so that the newly invented formalisms — Turing machines, lambda calculus, general recursiveness — could be recognized as capturing one and the same notion.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: historians and philosophers of mathematics attesting the Entscheidungsproblem's role and the 1936 Church and Turing papers confirm the original demarcation problem and its urgency; hypercomputation researchers, though they dispute the standard's current answers, concede the historical problem was real. No serious participant denies the founding problem existed; the live dispute is over whether the boundary answer remains correct at the edges."
+  },
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 75,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.13,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 75,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.2,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.28,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.33,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 60,
+      "value": 0.37,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 75,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The epistemological boundary reading treats the Church-Turing thesis as a rule of evidence: within mathematics and theoretical computer science, a function counts as knowably computable exactly when an explicit effective procedure — a Turing machine or recognized equivalent — can be exhibited for it. Claims of computability established by other means (indirect classical argument, appeal to physical processes) fall outside the boundary of formal knowability, whatever their physical fate. The standard is administered in ordinary refereeing: submissions asserting computability without a procedure are returned or rejected. This story instantiates ONE reading of the contested kernel church_turing_thesis; the mathematical-definition and physical-claim readings are separate stories with their own epsilon values and victim sets (see network.dual_formulation_note). The claimed type and the metrics below are authored independently: the claim records the structure judged true of this reading; the metrics record its observed operation.",
+    "key_agents": [
+      "logic_and_cs_journal_editors: agenda setter (institutional/mobile) — administer the evidential standard through review; rotate personally, persist institutionally",
+      "computability_theorists: primary beneficiary (organized/identity_locked) — field delimited and legitimated by the procedural standard",
+      "constructive_mathematicians: secondary beneficiary (organized/identity_locked) — witness-bearing proof practice vindicated as the admissible route",
+      "formal_verification_community: tertiary beneficiary (organized/constrained) — mechanizes the standard; invested toolchains depend on its stability",
+      "non_constructive_computability_claimants: partial target (powerful/constrained) — bear extra labor on the narrow slice of practice touching computability claims",
+      "hypercomputation_researchers: concentrated target (moderate/identity_locked) — research program placed outside formal knowability regardless of physical realizability",
+      "analog_computing_engineers: excluded party (moderate/trapped) — build computing systems with no seat in the venues that classify them",
+      "philosophers_of_computation: analytical observer (analytical/analytical) — sees the full three-reading structure; administers and collects nothing"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.40 at interval end) rather than high because what is taken is epistemic standing, not resources, and the burden falls on a bounded slice of practice: most mathematics never asserts computability, and classical mathematicians can usually restate claims constructively at real but survivable cost. Suppression (0.42) is a raw structural property, unscaled by power or scope — it reflects venue gatekeeping, funding concentration, and canonization, soft coercion with career consequences rather than physical force; only extractiveness is scaled by directionality and scope in the engine's computation. Theater is low (0.20): the standard does continuous real work — procedures are exhibited, proofs checked, formalizations run — with a growing but minor ritual component (citation of the thesis in introductions as if it were a theorem). Accessibility_collapse (0.50) sits mid-range: alternatives do not vanish — non-constructive mathematics and hypercomputation research continue — but they collapse inside mainstream logic venues, where a computability claim without a procedure is unpublishable. Resistance (0.55) is substantial and persistent: decades of hypercomputation advocacy, pluralism about calculability, and philosophy-of-computation critique. The temporal series run on one shared grid (t = 0,15,30,45,60,75,90 years since 1936) so every tracked metric is authored at every examined point; enforcement capacity (suppression_requirement) rises as the standard moved from voluntary adoption to journal institutionalization to mechanized checking, which is why that series is tracked alongside the other two.",
+    "perspectival_gap": "The payer seats and the beneficiary/agenda-setter seats should compute differently. From inside the proof-theoretic framework — the editors' and beneficiaries' position — the boundary simply is rigor: a shared checkable standard that made results cumulative and machine-checkable. From the payer seats the same structure operates as methodological exile: whole classes of claim are ruled out of the knowable. Identity lock differentiates same-power actors: computability_theorists and constructive_mathematicians (organized, generational) are fused with the framework at the level of field constitution — their questions are defined relative to the machine model, so exit means leaving the field's problems — while the comparably-situated non_constructive_computability_claimants retain constrained exit because the standard touches only a slice of their practice. Hypercomputation_researchers are locked by professional identity: the program's constitutive question is the trans-Turing one, so abandoning the frame dissolves the program. If the identity frames broke — computability theorists adopting plural evidential standards, hypercomputation researchers reframing their work as physics or mathematics of idealizations — the computed types would shift accordingly: the structure would read as nearer pure coordination from the former seat, and the latter would exit the victim set entirely.",
+    "directionality_logic": "Declared beneficiaries (computability_theorists, constructive_mathematicians, formal_verification_community) sit near the subsidized end: the standard ratifies exactly their proof practice and imposes nothing on it. Declared victims derive high directionality: hypercomputation_researchers are concentrated, identity-locked targets near the full-target end; non_constructive_computability_claimants are declared victims but only partial ones. Three overrides correct places the derivation chain cannot reach or would overreach: (1) powerful / 0.65 for the non-constructive claimants — the victim declaration alone would derive near-full targeting, but their actual exposure is a narrow slice of practice with a cheap constructive workaround; (2) institutional / 0.2 for the editors — the agenda-setter seat has no beneficiary/victim declaration, so the canonical fallback would misplace them, yet they demonstrably accrue reputational capital from administering the standard; (3) moderate / 0.7 for the analog_computing_engineers — the excluded seat bears the boundary's cost (their artifacts rendered formally unknowable) without appearing in the victim arrays, so structural derivation has nothing to read. Global spatial scope applies the engine's modest verification-difficulty amplification to extractiveness; suppression passes through unscaled.",
+    "mandatrophy_analysis": "The founding problem — demarcating effective calculability so computability could be settled by proof — is still live: it is exercised in every refereeing decision and every formalization effort, not commemorated. The R5 mismatch consumer therefore reads status=live x verdict=world_rearranges: no capture/zombie flag. The tangled-rope classification prevents two symmetric mislabels. Reading the boundary as pure rope — 'just a shared standard' — erases the named payers and the active enforcement that maintains their exclusion; reading it as pure snare — 'gatekeeping that suppresses dissident computation research' — erases the genuine, heavily-used coordination function that makes results comparable, cumulative, and mechanically checkable, a function no serious participant proposes abolishing outright. The hybrid holds both: real coordination, real extraction, enforcement required to keep the asymmetry in place."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "Which reading of the church_turing_thesis kernel is being assessed — the epistemological boundary (this story), the mathematical definition, or the physical claim?",
+      "resolution_mechanism": "Cross-reading comparison across the three linked stories: classify each reading on its own structural data and compare victim sets, epsilon, and type; divergences locate the indexicality.",
+      "impact": "The definition reading carries near-zero epsilon and no victims (true by convention); the physical reading's epsilon tracks empirical physics and its victims are physical-computation researchers; collapsing the readings into one colloquial label would average incompatible structures and produce a spurious middle classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one reading of a contested kernel; sibling readings instantiate different constraints with different epsilon and victim sets."
+    },
+    {
+      "id": "boundary_edge_stability",
+      "question": "Will the epistemic boundary hold at its edges — against proposed super-Turing physical processes and against non-constructive establishment of computability?",
+      "resolution_mechanism": "Case-by-case adjudication of concrete proposals (precision limits of idealized analog devices, relativistic supertask configurations, non-constructive computability arguments) in mainstream logic venues.",
+      "impact": "An accepted, reproducible super-Turing process would force explicit rescoping of the boundary and intensify enforcement, raising epsilon; continued rejection confirms the current moderate-extraction profile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of the knowability boundary at the hypercomputation and non-constructivity edges."
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the suppression of trans-Turing and non-constructive computability claims structural (venue gatekeeping, funding allocation) or internalized (researchers pre-filter their own questions as illegitimate)?",
+      "resolution_mechanism": "Post-exit trajectory: track researchers who leave trans-Turing programs for mainstream areas — if boundary-respecting self-censorship persists after gatekeeping pressure is removed, part of the suppression is internalized.",
+      "impact": "Internalized suppression raises effective suppression above the structural measure and makes the boundary self-reproducing even if formal enforcement relaxed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized character of boundary enforcement."
+    },
+    {
+      "id": "mechanized_enforcement_constitution",
+      "question": "As proof assistants mechanize the standard, does the boundary become constitutive — identical to what Coq, Lean, and Agda accept — or does the community retain independent authority over the demarcation?",
+      "resolution_mechanism": "Compare cases where mechanized checking and community judgment diverge (accepted-but-unformalized arguments, formalized-but-contested encodings) and observe which side prevails over time.",
+      "impact": "If mechanization becomes constitutive, enforcement locks into toolchains and future drift becomes toolchain drift; if community judgment retains authority, the boundary remains revisable by practice.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether mechanized proof checking replaces or merely implements the community's demarcation authority."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "church_turing_thesis__mathematical_definition_reading",
+      "church_turing_thesis__physical_claim_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'Church-Turing thesis' conflates three structurally distinct claims, decomposed per the epsilon-invariance principle into a linked family. The mathematical_definition_reading is a stipulative convention — near-zero epsilon, no victims, true by definition — and is upstream: its stipulated equivalence of formalisms is what licenses drawing any boundary at the Turing limit. This epistemological_boundary_reading is the methodological gate built on that equivalence: moderate epsilon, victims among non-constructive claimants and hypercomputation researchers, enforced through refereeing. The physical_claim_reading is the empirical claim about physical processes — epsilon contingent on physics, victims among physical-computation researchers — and stands downstream of this reading's structural pressure: by classifying trans-Turing physical speculation as formally unknowable regardless of physical possibility, the boundary reading changes the legitimacy conditions and resource availability of the physical-claim program without foreclosing it. Each story carries its own epsilon, stakeholders, and classification; the links here propagate contamination analysis across the family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "mathematical_definition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "physical_claim_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "procedure_exhibition_licences_computability_knowledge",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "physical_realizability_bracketed_from_knowability",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "epistemic_boundary_of_formal_knowability",
+    "drift_state": {
+      "moment": "contemporary_hypercomputation_debate",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "gain_flow": "computability_theorists",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

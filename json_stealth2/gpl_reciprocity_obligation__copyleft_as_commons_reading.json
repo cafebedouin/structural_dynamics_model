@@ -1,0 +1,374 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_commons",
+    "story_uid": "1c2ba61e-b4bd-4f80-8d1e-2412f1189ba3"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.55,
+    "theater_ratio": 0.14,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Mandatory Reciprocity Obligation (Commons-Defense Reading)",
+    "topic_domain": "economic/legal/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_commons_institution",
+      "gpl_contributors",
+      "downstream_users_derivative_projects"
+    ],
+    "victims": [
+      "proprietary_integration_seekers",
+      "relicensing_exit_maximizers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "software_commons_institution",
+      "role": "beneficiary",
+      "agent": false,
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "The accumulated body of GPL-licensed code together with the normative order that governs contributions to it. Every compliant distribution returns improvements to this pool, and its boundary is maintained by the license terms themselves. It is not an actor: it cannot move, renegotiate, or decline what flows into it, and it persists only insofar as contributors and distributors keep acting within its terms."
+    },
+    {
+      "name": "gpl_contributors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers who publish work under GPL terms. Their contributions cannot be turned into closed products by anyone downstream, and they receive the whole pool's improvements back free of charge. They may stop contributing at any time without penalty; their past work remains in the pool, which costs them nothing they did not already give."
+    },
+    {
+      "name": "downstream_users_derivative_projects",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Projects and end users who take GPL code, modify it, and run it internally or redistribute it under the same terms. They obtain a production-grade shared base at zero license cost and inherit every upstream fix. The only obligation attaches at redistribution: publish corresponding source. Internal use carries no obligations at all."
+    },
+    {
+      "name": "proprietary_integration_seekers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Firms that want to ship closed-source products incorporating GPL components, typically embedded devices, appliances, or enterprise stacks built on GPL infrastructure such as the Linux kernel. Their options are publishing their derivative source, engineering the GPL code out at significant cost, purchasing a commercial exception where one exists, or distributing non-compliantly and carrying litigation risk. The value they want sits inside the pool, so walking away means rebuilding substitutes of uncertain quality."
+    },
+    {
+      "name": "relicensing_exit_maximizers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Developers or founders who contributed code to a GPL project and later want to commercialize it under proprietary terms. Their work is now entangled with other people's contributions and derivative improvements, so the asset they want to sell cannot be cleanly separated from the pool. They can abandon the code, but they cannot reclaim the accumulated value around it."
+    },
+    {
+      "name": "enforcement_organizations",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "The Free Software Foundation, Software Freedom Conservancy, and comparable bodies that hold copyright on portions of the pool, publish license versions and interpretive guidance, and pursue compliance through correspondence and, occasionally, litigation. They set the boundary's practical meaning and decide which violations to pursue. They could reduce or halt enforcement activity at will; doing so would erode the boundary rather than free them from any burden."
+    },
+    {
+      "name": "dual_licensing_copyright_holders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Copyright holders of projects offered under both GPL and a paid commercial license. The GPL side builds the contributor base and forbids closed redistribution, which channels commercial integrators toward purchasing the paid exception. They control both sides of the offer for their own projects and can adjust commercial terms as market conditions change."
+    },
+    {
+      "name": "unexercised_rights_device_owners",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Consumers who bought devices running GPL firmware without receiving the offer of corresponding source. The license grants them rights they overwhelmingly do not know they hold and lack the technical or legal capacity to exercise. They are absent from license-policy debates, which occur among foundations, corporate counsel, and large adopters."
+    },
+    {
+      "name": "ip_courts_legal_scholars",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Courts and academic commentators who adjudicate whether the license is contract, license, or conditional gift, whether its terms are enforceable, and what counts as distribution or derivative work. German decisions have upheld the license's enforceability; US litigation has mostly settled before ruling. They take no side in the policy dispute but determine the boundary's legal reality."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the enclosure problem in collaborative code production: by conditioning redistribution on identical terms, it guarantees that improvements to the shared pool return to the pool, which keeps contribution rational for anyone who fears their work will be captured and closed.",
+    "transfer_function": "Moves option value rather than money in the general case: distributors surrender the possibility of exclusive proprietary exploitation of pooled code, and the surrendered option is converted into guaranteed source access and improvement-return for everyone in the pool. In dual-licensed projects, part of that surrendered option converts into license-fee revenue for the copyright holder.",
+    "absent_voices": "Device owners holding unexercised GPL rights, developers deterred from evaluating GPL code by compliance anxiety and never surveyed, and firms locked out of integration who have no seat in license-policy forums dominated by foundations and large-adopter counsel. Their objections exist but are not voiced where license versions and enforcement priorities are set.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the reciprocity condition vanished overnight, proprietary forks of every major GPL project would appear within months, contribution incentives would restructure around whatever new defense emerged or none, and the current landscape of shared infrastructure would fragment into a permissive-licensed patchwork with capture by whoever moved fastest. Arrangements across the entire free-software economy depend on the boundary holding.",
+    "founding_problem": "In the early 1980s, software that had circulated openly was being closed by employers and vendors, leaving developers unable to cooperate or repair their tools. The GNU project needed a legal instrument that would let code accumulate publicly without any single distributor converting the accumulation into a closed product.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated outside the benefiting parties: the documented pre-GPL record of commons collapse (proprietary Unix fragmentation, the BSD litigation era), the litigation record of attempted capture (BusyBox enforcement actions, Hellwig v. VMware, SFC v. Vizio), and academic commons-governance literature treating defended boundaries as a precondition of sustained shared production. Courts enforcing the terms attest the obligation's operational reality independently of any advocacy organization's self-description."
+  },
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.14
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyleft_as_freedom_reading",
+      "copyleft_as_restriction_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'GPL reciprocity' decomposes into three structurally distinct readings of one kernel: this commons-reading (beneficiary: the commons as institution; targets: exit-maximizers; medium epsilon), the freedom-reading (beneficiary: end-user freedoms; targets: proprietary licensors), and the restriction-reading (the same terms experienced purely as business-model prohibition). Each reading assigns a different beneficiary/victim polarity and therefore a different epsilon over the same license text; they are separate constraint stories linked here, not one story with a measurement parameter. This file instantiates only the commons-reading."
+  },
+  "commentary": {
+    "narrative_context": "Under the commons reading, the GPL's reciprocity condition is an institutional technology for defending a shared code pool against enclosure: anyone who distributes a derivative must offer it under the same terms, so improvements cannot be privately captured. The standing arrangement under assessment is the reciprocity obligation itself as it operates today — binding at redistribution, silent on internal use, enforced by copyright holders and specialized compliance organizations, and increasingly stressed by delivery modes (hosted services, model training) that never 'distribute' in the license's sense. KEY AGENTS (by structural relationship): - software_commons_institution: institutional beneficiary (not an actor; the pool and its normative order) - gpl_contributors: primary beneficiary (moderate/mobile) — contribute under capture protection - downstream_users_derivative_projects: beneficiary (moderate/mobile) — free use, reciprocity only at redistribution - proprietary_integration_seekers: primary target (powerful/constrained) — bear the foreclosed-option cost - relicensing_exit_maximizers: target (moderate/trapped) — cannot reclaim pooled value for private sale - enforcement_organizations: agenda setter (organized/generational) — set and police the boundary - dual_licensing_copyright_holders: secondary beneficiary with a local capture channel (powerful/arbitrage) - unexercised_rights_device_owners: excluded voice (powerless/trapped) - ip_courts_legal_scholars: analytical observer (institutional).",
+    "logic_rationale": "Claim and metrics are authored independently. The claim is tangled_rope because the structure shows all three canonical elements: a genuine coordination function (enclosure prevention keeps contribution rational), asymmetric position (distributors seeking closed derivatives bear a cost no one else bears), and active enforcement (copyright litigation and organized compliance campaigns). Extractiveness ends at 0.55: the burden on exit-maximizers is real and grows with the pool's value, but it is declared in advance, attaches only at voluntary incorporation, and leaves permissive-licensed and original-code alternatives fully available. Suppression (0.55) reflects the enforcement machinery the boundary requires — the license does not self-execute, and every violation must be threatened or sued — while being narrowly targeted at one prohibited act rather than at participation broadly; the suppression_requirement series traces the build-out of that machinery from informal norms (T0) through professionalized enforcement (T20 onward). Theater is low throughout (0.10-0.17): compliance checking and source publication are functional acts, with only ritual residue in unread license headers and fundraising rhetoric. Accessibility_collapse (0.58) is moderate: within a chosen GPL codebase the non-reciprocal path collapses almost entirely, but the meta-alternatives (other licenses, dual-license purchase, engineering around) remain open. Resistance (0.45) is persistent but bounded: corporate preference for permissive licenses, periodic validity challenges, and ecosystem gravity toward MIT/Apache defaults, against mass voluntary adoption. All three series share one eight-point grid so no metric is sampled against another's end-state.",
+    "perspectival_gap": "The payer seats and the beneficiary seats should compute divergent types from identical structural data. From proprietary_integration_seekers the arrangement operates as a wall around assets they helped make valuable, with exit priced at rebuild-or-publish; from gpl_contributors and downstream users it operates as ordinary infrastructure whose only rule is fairness at the gate. The enforcement seat experiences neither extraction nor subsidy but boundary maintenance as a vocation. The engine computes these per-seat classifications from power, exit, and declared position; this story does not adjudicate between them.",
+    "directionality_logic": "Declared beneficiaries sit near the subsidized end: contributors and downstream users receive the pool's value without bearing the reciprocity burden (their exit is mobile — they can leave anytime at no cost), and the commons-as-institution is marked agent=false precisely so a non-actor does not feed the directionality arithmetic. Declared victims sit near the full-target end: integration seekers are constrained (the value they want is inside the pool) and relicensing exit-maximizers are trapped (their desired asset is inseparable from others' contributions), which amplifies their effective extraction beyond what nominal power alone would predict. Enforcement organizations derive their position from the agenda_setter role rather than from either declaration. Dual-licensing holders are the one seat where the derivation needs qualification: they are declared beneficiaries, but their arbitrage exit and their sale of the very option the license forecloses makes them partially captured by the arrangement — see the dual_licensing_capture_exception omega rather than a hard-coded override, since the capture is project-local, not ecosystem-wide.",
+    "mandatrophy_analysis": "The founding problem — preventing enclosure of collectively built software — is live, corroborated by ongoing capture attempts and by the delivery-mode leakage described in the saas_enclosure_frontier omega; mandatrophy is not resolved and no sunset applies. The classification matters here because the arrangement's extraction is its mechanism, not its corruption: reading the burden on exit-maximizers as pure extraction (snare) would erase the coordination function that justifies it, and reading the coordination story at face value (rope) would erase the identifiable parties who pay for a benefit they declined. The live drift risk runs the other way: if hosted-service and training-time capture proceed unchecked because the distribution trigger never fires, the boundary's enforcement becomes performance aimed at yesterday's enclosure vector — theater_ratio climbing while the real action migrates outside the license's reach — which is the recognizable onset of piton dynamics. The temporal series is designed to make that transition detectable."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_indexicality",
+      "question": "Does the commons-reading's beneficiary/victim structure (commons as institution benefits; individual exit-maximizers pay) correctly locate the obligation's structural positions, or do the sibling readings instantiate genuinely different constraints over the same license text?",
+      "resolution_mechanism": "Cross-reading comparison of computed per-seat classifications: generate copyleft_as_freedom_reading and copyleft_as_restriction_reading as separate stories and compare seat-level types and epsilon against this file.",
+      "impact": "If the freedom-reading computes materially different victim sets (end users as beneficiaries of enforced freedoms rather than the institution), the kernel's readings are indexically distinct constraints and corpus-level aggregation over 'GPL' is invalid; if they converge, the readings are rhetorical variants of one structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This story is one reading of kernel gpl_reciprocity_obligation; sibling readings may instantiate different constraints."
+    },
+    {
+      "id": "dual_licensing_capture_exception",
+      "question": "Is the diffuse-receipt verdict stable, given that dual-licensed projects convert the foreclosed proprietary option into fee revenue captured by a single copyright holder?",
+      "resolution_mechanism": "Measure the share of the GPL ecosystem by value under dual-licensing monetization versus pure reciprocity; if monetized capture approaches majority share, re-run the receipt analysis per project class.",
+      "impact": "If dual licensing dominates, gain_flow shifts to dual_licensing_copyright_holders and the arrangement drifts toward price discrimination wearing a commons costume; if it remains marginal, the diffuse verdict stands for the general obligation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether localized capture channels overturn the no-single-capturer finding."
+    },
+    {
+      "id": "entry_voluntariness_vs_ecosystem_trap",
+      "question": "Is the burden on exit-maximizers consensual-at-entry (they chose to incorporate GPL code knowing the terms) or structurally coercive (for critical infrastructure like the kernel, no realistic substitute exists, so incorporation is not meaningfully optional)?",
+      "resolution_mechanism": "Counterfactual substitutability analysis for essential GPL components: cost and feasibility of equivalent permissive-licensed or original replacements at current quality thresholds.",
+      "impact": "If substitutes are unrealizable for core infrastructure, effective coercion rises above what entry-voluntariness suggests and the payer seats' computed extraction amplifies; if substitutes are viable, the burden prices as an accepted license term.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether voluntariness at entry neutralizes the trapped-exit position of integration seekers."
+    },
+    {
+      "id": "commons_vs_contributor_beneficiary_primacy",
+      "question": "Do realized gains accrue to flesh-and-blood contributors and users, or does the institution capture symbolic value while maintenance labor goes unpaid and downstream firms extract uncompensated commercial value?",
+      "resolution_mechanism": "Maintainer-compensation surveys cross-referenced against measured commercial value of GPL-dependent products; compare labor supplied to value retained at each seat.",
+      "impact": "If unpaid labor materially subsidizes commercial users, the beneficiary structure tilts toward the firms and the declared polarity understates extraction from the contributor class; the agent=false marking of the commons would then be masking the real capture question.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the institutional beneficiary designation conceals an uncompensated-labor transfer."
+    },
+    {
+      "id": "saas_enclosure_frontier",
+      "question": "Does the reciprocity boundary hold as software delivery shifts to hosted services and model training, where the distribution trigger never fires?",
+      "resolution_mechanism": "Track AGPL adoption rates, enclosure incidents in GPL-only projects exposed to service delivery, and enforcement outcomes against service-mode use.",
+      "impact": "If service-mode enclosure proceeds unchecked, the constraint's coordination function decays for the growing share of the economy delivered as a service, driving theater_ratio up and initiating piton drift for classic GPL; if AGPL-style patches contain the leak, the boundary remains functional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the distribution-triggered boundary survives delivery-mode migration."
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "defended_commons_boundary",
+    "drift_state": {
+      "moment": "cloud_and_model_training_delivery_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "copyleft_as_freedom_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_as_restriction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandatory_reciprocity_sustains_commons_production",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "improvement_return_is_owed_not_gratuitous",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "copyleft_as_freedom_reading",
+      "copyleft_as_restriction_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

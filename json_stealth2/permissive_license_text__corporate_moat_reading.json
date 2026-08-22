@@ -1,0 +1,326 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__corporate_moat_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "fb931772-0d9a-4d2e-ab0c-d5d2100bf587"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.55,
+    "theater_ratio": 0.26,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Permissive License Text — Corporate Moat Reading",
+    "topic_domain": "economic/technological/legal",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "hyperscale_cloud_operators",
+      "proprietary_software_vendors"
+    ],
+    "victims": [
+      "volunteer_maintainers",
+      "independent_oss_contributors"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "permissive_license_stewards",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Foundations, license-steward bodies, and project leads who selected MIT/BSD/Apache terms and continue to publish, maintain, and publicly defend them. They run trademark programs, approve derivative license variants, and issue statements framing unrestricted reuse as the definition of openness. Their institutions were chartered around these texts; endorsing restrictions would contradict their founding identity. Leaving the position would mean dismantling the institutions themselves."
+    },
+    {
+      "name": "hyperscale_cloud_operators",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Operate the large cloud platforms that sell managed versions of widely-used permissively-licensed databases, orchestration layers, and ML frameworks. They run the code at planetary scale, charge customers for the managed experience, and contribute upstream selectively where a patch serves their own roadmap. Their engineering depth lets them sustain private forks if a project turns hostile, so departing any single project costs them little."
+    },
+    {
+      "name": "proprietary_software_vendors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Ship closed-source products that bundle permissively-licensed components — compilers, libraries, codecs, crypto stacks. The texts impose no fee, no disclosure, and no contribution duty, so component acquisition cost is effectively zero. Substituting a restrictively-licensed component would trigger procurement review and possible rewrite, but the vendor bears none of the upstream upkeep that keeps the components alive."
+    },
+    {
+      "name": "volunteer_maintainers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Individual developers who keep critical packages alive — triaging issues, reviewing patches, cutting releases, responding to security incidents, usually nights and weekends beside day jobs. Most receive little or no money; some pay for hosting out of pocket. Relicensing is rarely available to them: copyright in a mature codebase is scattered across thousands of past contributors, corporate employers hold rights to work-for-hire commits, and the installed base of dependents makes any term change disruptive. Walking away means abandoning users and a project that anchors their reputation and sense of purpose."
+    },
+    {
+      "name": "independent_oss_contributors",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Developers outside corporate employment who send patches, documentation, and bug fixes. They accrue reputation and portfolio value and many enjoy the work, but their labor flows into codebases that firms then productize at no charge. Stepping back costs them community standing and, often, career prospects tied to their contribution history."
+    },
+    {
+      "name": "security_research_community",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Auditors and incident responders who examine widely-deployed open components. After failures like the Log4j and xz episodes they document how few hands and dollars stand behind critical code, and they press for funded-maintenance mandates. They operate outside license governance, which has no seat for them; their findings surface episodically after breaches rather than shaping license policy."
+    },
+    {
+      "name": "competition_regulators",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "National and regional authorities examining cloud-market concentration and, recently, cyber-resilience rules that touch open-source maintenance. They gather evidence from every seat, can compel disclosure, and could reshape the economics through procurement rules or liability regimes, though license terms themselves sit largely outside their current remit."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Eliminates per-use legal negotiation: one standardized grant lets any party — commercial or not — integrate, modify, and redistribute the code without seeking permission, solving the transaction-cost problem that copyright's all-rights-reserved defaults create for cumulative software building.",
+    "transfer_function": "Moves uncompensated labor — maintenance, security response, documentation, release engineering — from volunteer and independent producers into the product lines and managed-service margins of firms that ship the code commercially, with no reciprocal flow of money or code back to the source projects.",
+    "absent_voices": "Burned-out former maintainers who have left the conversation entirely, security researchers who sit outside license governance, and copyleft stewards whose alternative was marginalized in the infrastructure niches where permissive texts became standard. All three would object that upkeep costs are externalized onto unpaid labor; none holds a seat in the forums where license policy is defended.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the permissive texts ceased to bind overnight, the software economy would rearrange violently: every closed product bundling the code and every managed cloud service built on it would become infringing at once; firms would scramble to negotiate, replace, or fork; prices and roadmaps would shift industry-wide; and maintainers would suddenly hold bargaining power they have never had. The world runs on this arrangement — its removal is not absorbable.",
+    "founding_problem": "Copyright's default terms made ordinary software reuse a legal hazard: every integration, redistribution, or commercial embedding required a negotiated permission. Permissive license texts were drafted to delete that friction — to let code circulate, be studied, modified, and sold without bilateral deals.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "From outside the benefiting parties: peer-reviewed maintainer-census and burnout studies, post-incident engineering analyses (Heartbleed, Log4j, xz) authored by security researchers, and methodologically independent funding-gap surveys corroborate that the friction problem is solved while upkeep goes unfunded. Corporate beneficiaries attest the opposite — that the arrangement's justification is intact — and no neutral body adjudicates between them; hence contested."
+  },
+  "gain_flow": "hyperscale_cloud_operators",
+  "fixing_cost": "prohibitive",
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.26
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.39
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A dominant share of the modern software stack — cloud infrastructure, ML frameworks, cryptographic libraries, developer tooling — ships under permissive license texts (MIT, BSD, Apache-2.0) that grant anyone the right to use, modify, embed, and sell the code with no compensation or contribution obligation. This story instantiates the corporate-moat reading of that kernel: the standing arrangement under which firms build proprietary derivative products and paid managed services on commons-produced code while the individuals who maintain the code bear its costs unpaid. Under this reading the arrangement operates as a snare: the genuine coordination achievement (frictionless reuse) functions as the cover story, while the durable operation is a one-way value transfer sustained not by participant net benefit but by structural exit-blocking — relicensing is legally blocked by scattered copyright and work-for-hire assignments, and dependency entrenchment punishes any project that tries. The ε referent is the standing permissive arrangement as this reading assesses it, never the reciprocity regime this reading would prefer. Family decomposition: 'permissive licensing' splits into three readings of one kernel text (see network.dual_formulation_note); this file authors only the moat reading.\n\nKEY AGENTS (by structural relationship):\n- hyperscale_cloud_operators: Primary beneficiary (institutional/arbitrage) — sells managed versions of commons-built systems at planetary scale\n- proprietary_software_vendors: Secondary beneficiary (powerful/arbitrage) — bundles the code into closed products at zero license cost\n- volunteer_maintainers: Primary target (powerless/identity_locked) — performs unpaid upkeep, security response, and release work; cannot relicense\n- independent_oss_contributors: Secondary target (moderate/constrained) — donates patches whose value accrues to productizing firms\n- permissive_license_stewards: Agenda setter (institutional/identity_locked) — publishes and ideologically defends the texts\n- security_research_community: Excluded critic (organized/mobile) — documents the unfunded-maintenance exposure from outside governance\n- competition_regulators: Analytical observer (institutional/analytical) — examines cloud concentration and resilience rules",
+    "key_agents": [
+      "hyperscale_cloud_operators: Primary beneficiary (institutional/arbitrage)",
+      "proprietary_software_vendors: Secondary beneficiary (powerful/arbitrage)",
+      "volunteer_maintainers: Primary target (powerless/identity_locked)",
+      "independent_oss_contributors: Secondary target (moderate/constrained)",
+      "permissive_license_stewards: Agenda setter (institutional/identity_locked)",
+      "security_research_community: Excluded critic (organized/mobile)",
+      "competition_regulators: Analytical observer (institutional/analytical)"
+    ],
+    "logic_rationale": "Claim and metrics are authored independently. claimed_type=snare states this reading's structural verdict: identifiable victims, a coordination story that functions as cover, and persistence that depends on suppressing exits rather than on participant net benefit. The metrics describe the arrangement's actual operation. Extractiveness 0.60 (interval end): heavy but not total — maintainers retain career-capital and ecosystem-health returns, and some corporate spend reaches foundations, so the transfer is large yet partial. Suppression 0.55 is a raw structural property, deliberately unscaled: no coercion enforces the texts (requires_active_enforcement=false); the binding force is exit-blocking — scattered copyright and work-for-hire rights make relicensing practically unavailable, and gift-culture identity makes restriction feel like betrayal. Theater 0.26: sustainability summits, pledge walls, and appreciation branding perform concern while the value flow is untouched; the ratio stays low because the arrangement needs little performance to persist. Accessibility_collapse 0.50: alternatives (copyleft relaunches, dual licensing, patronage models) remain legible but collapse against network effects once a codebase is entrenched. Resistance 0.55: license-change waves, fork movements, funder campaigns, and cyber-resilience lobbying are real and rising. All three series share one six-point grid (T0..T30); suppression_requirement is authored because the story traces a hardening exit-blockade rather than a static enforcement picture — the arrangement's suppressive force grew as corporate entrenchment deepened. Receipt surface: the gains demonstrably accrue to the hyperscaler seat (largest managed-service margins on commons-built systems), and fixing is prohibitive relative to benefit — mid-life relicensing requires locating thousands of copyright holders, surviving corporate fork threats, and rebuilding contributor trust.",
+    "perspectival_gap": "Seats diverge sharply. From the hyperscaler and vendor seats the arrangement computes as benign coordination they fund selectively and could exit cheaply — arbitrage-grade exit pulls their experienced burden toward subsidy. From the maintainer seat the identical structure computes as one-way appropriation with no affordable exit. The steward seat experiences the texts as near-natural law — openness itself — and resists the suggestion that a grant could victimize. The engine computes these per-seat classifications from power, exit, and declared position; the authored snare claim does not adjudicate them.",
+    "directionality_logic": "Declarations drive the derivation. hyperscale_cloud_operators and proprietary_software_vendors sit in beneficiaries with arbitrage exit — nearest the beneficiary end of d, so effective extraction inverts toward subsidy for them. volunteer_maintainers and independent_oss_contributors sit in victims; identity-lock and constrained exit push them toward the full-target end, maximizing their effective extraction. permissive_license_stewards are neither declared beneficiary nor victim; their institutional continuity rides on the texts, placing them mildly on the beneficiary side. Every operating seat holds global scope, which raises verification difficulty and thus amplifies effective extraction for targets. Suppression enters the computation unscaled; only extractiveness is scaled by directionality and scope.",
+    "mandatrophy_analysis": "The founding problem — copyright's all-rights-reserved default making routine reuse legally hazardous — was real and is solved wherever the texts operate. The arrangement nonetheless persists through entrenchment rather than through the founding problem's continued pull, and the parties dispute whether the problem is live (new code, new reuse daily) or dead (the negotiation world is gone; what remains is appropriation infrastructure). Mandatrophy discipline cuts both ways here: it blocks the commons reading from laundering the value transfer as pure coordination cost, and it blocks a lazy piton verdict — theater is low and the extraction is live, so the arrangement is neither mostly performance nor inertial residue. mandatrophy_resolved is therefore left undeclared: the function is still performed daily even as its justificatory story frays.",
+    "kernel_context": "Kernel: permissive_license_text — the standardized grant texts (MIT, BSD, Apache-2.0) that define reuse rights for most of the software commons. This file instantiates the corporate_moat_reading: the text is read as an unconditional grant whose absence of reciprocity terms is precisely what lets proprietary derivatives capture commons value uncompensated. Siblings: commons_coordination_reading reads the same text as maximal-friction-reduction coordination (rope-shaped, ε near coordination cost); copyleft_counterfactual_reading reads the text against a viral-reciprocity counterfactual and locates the harm in the missing reciprocity requirement. This reading shares the copyleft reading's diagnosis but stops short of its prescription; it directly opposes the commons reading's evaluation of the same asymmetry."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story is one reading of the permissive_license_text kernel — the corporate_moat_reading. What would the sibling readings change structurally?",
+      "resolution_mechanism": "Compare compiled classifications across the three sibling stories: commons_coordination_reading (ε near coordination cost, rope-shaped) and copyleft_counterfactual_reading (referent shifted to the reciprocity counterfactual). The disagreement is located in the normative status of the grant's asymmetry: constitutive coordination benefit versus constitutive extraction channel.",
+      "impact": "Adopting the commons reading would drop ε toward ~0.1 and reclassify toward rope; adopting the copyleft reading relocates the referent to a counterfactual arrangement and widens the victim set to all commons participants. This story's snare verdict holds only within the moat reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Indexical position of this story within the permissive_license_text kernel contest."
+    },
+    {
+      "id": "epsilon_referent_fixation",
+      "question": "Does ε measure the standing permissive arrangement as this reading assesses it, rather than the reciprocity regime this reading endorses?",
+      "resolution_mechanism": "Audit that base_properties.extractiveness is authored against the existing MIT/BSD/Apache deployment pattern, not against a hypothetical GPL-style regime the reading would prefer.",
+      "impact": "If the referent slipped to the endorsed alternative, ε would collapse toward zero and the story would become vacuous advocacy; a fixed referent keeps the reading comparable to its siblings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Guards the ε referent against drift toward the reading's endorsed alternative."
+    },
+    {
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is maintainer-side suppression structural (relicensing blocked by scattered copyright, work-for-hire assignments, dependent entrenchment) or internalized (gift-culture guilt and stewardship identity that make restriction unthinkable even where legally feasible)?",
+      "resolution_mechanism": "Post-exit trajectory study: track maintainers who fully leave — do they subsequently support restrictive or dual licensing? Separate relicensing attempts blocked by law from those abandoned for identity reasons.",
+      "impact": "If largely internalized, effective suppression exceeds the structural measure and persists after any legal reform; reform targeting legal barriers alone would under-deliver.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural versus internalized suppression mechanism on the payer side."
+    },
+    {
+      "id": "reciprocity_offset_measurement",
+      "question": "What fraction of the value firms derive from permissively-licensed code returns upstream as contributions, funding, or free infrastructure?",
+      "resolution_mechanism": "Commit-provenance telemetry crossed with disclosed sponsorship and foundation budgets, set against estimated derived revenue from managed services and bundled products.",
+      "impact": "Material offsets would lower ε and could move the computed type toward tangled_rope; negligible offsets confirm the snare reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corporate reciprocity materially offsets the measured value transfer."
+    },
+    {
+      "id": "maintainer_coalition_potential",
+      "question": "Can powerless maintainers convert diffuse grievance into coalition power — foundation bargaining, collective relicensing vehicles, regulatory leverage under cyber-resilience rules?",
+      "resolution_mechanism": "Track the formation and durability of maintainer associations and their measurable effect on license-term negotiations and procurement requirements.",
+      "impact": "Successful coalition would raise resistance, narrow the extraction channel, and could shift the arrangement's dynamics from unilateral appropriation toward negotiated terms.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Coalition-power potential of the powerless payer seats."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__copyleft_counterfactual_reading"
+    ],
+    "dual_formulation_note": "'Permissive licensing' decomposes into three structurally distinct constraints sharing one kernel text, authored separately per the ε-invariance principle: this corporate-moat reading (ε ≈ 0.60, claimed snare — the standing arrangement as an extraction channel), the commons-coordination reading (ε near coordination cost, rope-shaped — the same texts as friction-eliminating coordination), and the copyleft-counterfactual reading (referent relocated to a viral-reciprocity counterfactual). Each file links its siblings via affects_constraints; the upstream commons reading is typically cited as evidence by the downstream moat and copyleft readings, which is why the family edges run from this file to both."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unconditional_grant_without_reciprocity",
+    "drift_state": {
+      "moment": "cloud_extraction_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "uncompensated_proprietary_appropriation_is_exploitation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "supply_erosion_from_uncompensated_burden",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

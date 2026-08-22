@@ -1,0 +1,366 @@
+{
+  "header": {
+    "constraint_id": "humane_treatment_standard__contextual_necessity",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "ac67035a-e990-47c5-a7ba-b19a73ca4b59"
+  },
+  "base_properties": {
+    "extractiveness": 0.74,
+    "suppression": 0.75,
+    "theater_ratio": 0.52,
+    "accessibility_collapse": 0.6,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Contextual-Necessity Reading of the Humane Treatment Standard (Common Article 3)",
+    "topic_domain": "international_humanitarian_law/state_security/human_rights",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "national_security_agencies",
+      "executive_branches"
+    ],
+    "victims": [
+      "designated_high_value_detainees",
+      "conditionally_protected_detainees"
+    ]
+  },
+  "interval": {
+    "start": 1994,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1994,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2002,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2014,
+      "value": 0.71
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1994,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2002,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2014,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1994,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1999,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2002,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2006,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2009,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2014,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2020,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This constraint is one reading of the humane_treatment_standard kernel — the contextual_necessity reading. How would the sibling readings restructure the constraint's victim set, discretion allocation, and enforcement burden?",
+      "resolution_mechanism": "Read against the sibling stories humane_treatment_standard__absolute_prohibition and humane_treatment_standard__proportionality_balancing: the diverging elements are whether the baseline is derogable at all, who decides when it yields, and whether exclusion from protection is categorical or case-determined.",
+      "impact": "Under the absolute reading the lawful exclusion category is empty by design and the arrangement's costs become outright violations; under the proportionality reading discretion migrates from security agencies to adjudicators and the victim set becomes case-determined rather than category-determined. This story's classification holds only for the contextual reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story instantiates one reading of a contested kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "enhanced_interrogation_efficacy",
+      "question": "Is the empirical premise beneath the necessity override true — that enhanced interrogation produces actionable intelligence unobtainable through baseline-compliant methods?",
+      "resolution_mechanism": "Declassified program assessments and cross-examination of the internal record: the Senate study concluded the practices were not effective and that comparable intelligence came from conventional methods; the operating agency disputed this. Independent replication of interrogation-outcome research would resolve it.",
+      "impact": "If the efficacy premise fails, the instrumental grounding of the override collapses and the arrangement's coordination story reduces to cover — pushing the computed type toward the snare end. If it holds, part of the measured cost is the price of the security function the reading exists to protect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the override's instrumental justification survives its own evidentiary record."
+    },
+    {
+      "id": "necessity_threshold_self_certification",
+      "question": "Is the necessity threshold an objective legal standard applied from outside, or a discretion the benefiting agencies effectively certify for themselves?",
+      "resolution_mechanism": "Comparative analysis of threshold application across cases and jurisdictions: who determined that necessity existed, on what evidence, subject to what review, and with what reversal rate.",
+      "impact": "If the threshold is self-certified, the arrangement's asymmetry is deeper than the metrics suggest — the party collecting the benefit also draws the eligibility line for the victim category — supporting higher effective extraction. An externally adjudicated threshold would restore part of the structure to genuine rule-bound coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the override gate is a rule or a discretion."
+    },
+    {
+      "id": "victim_set_expansion_ratchet",
+      "question": "Is the excluded-victim set (high-value targets, unlawful combatants) stable at its declared boundary, or does it ratchet outward under agency discretion?",
+      "resolution_mechanism": "Longitudinal tracking of category membership criteria across the interval: the historical record already shows expansion from a narrow high-value category toward broader unlawful-combatant designations; continued monitoring of designation practice would confirm or bound the ratchet.",
+      "impact": "Outward expansion converts the arrangement from a bounded exception into an open-ended channel — the tangled-rope reading degrades toward snare as the coordinated floor shrinks relative to the extracted population.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary stability of the excluded-victim category."
+    },
+    {
+      "id": "fixing_cost_composition",
+      "question": "Is the cost of fixing this arrangement genuinely prohibitive, or is it political unwillingness by the seats with removal power, priced as cost?",
+      "resolution_mechanism": "Counterfactual comparison with jurisdictions and moments where removal was attempted: executive orders terminating programs, judicial rulings rejecting the override, legislative restrictions — each shows the machinery CAN be changed at bounded cost when the will exists.",
+      "impact": "If the cost is preference rather than structure, the prohibitive rating reflects captured incentives among fixers, and the arrangement is more tractable than its receipt-surface entry suggests — relevant to any remedy analysis downstream.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether prohibitive fixing cost is structural or volitional."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "national_security_agencies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Interprets Common Article 3 for its own operations, issues the legal opinions that define when national security necessity permits departing from baseline treatment, decides which detainees fall outside protected categories, and runs the resulting interrogation programs. Collects the intelligence product, the doctrinal discretion, and the legal cover. When scrutiny rises it can relocate programs, rename techniques, or reframe doctrine — moving between legal frameworks faster than oversight can follow."
+    },
+    {
+      "name": "executive_branches",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Authorizes programs through classified memoranda and appoints the lawyers who write the interpretive opinions. Gains policy flexibility and deniability while bearing episodic costs when programs surface: litigation, diplomatic friction, reputational damage. Its horizon is electoral cycles and historical legacy rather than the decades-scale life of the doctrine it set in motion."
+    },
+    {
+      "name": "interrogation_program_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Carries out the authorized techniques under the legal cover the opinions provide. Receives career advancement, mission identity, and institutional belonging; absorbs personal legal exposure and lasting psychological injury when programs are later repudiated. Leaving the work means abandoning a professional identity built around the mission, and several who left faced ostracism or investigation rather than reintegration."
+    },
+    {
+      "name": "designated_high_value_detainees",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Is classified out of baseline protection at the moment custody becomes harshest — held in undisclosed sites, subjected to the authorized techniques, denied counsel and forum for years. Testimony is often classified or discounted as coerced. There is no exit from the category except release, transfer, or death, and no petition route to the bodies that decide the classification."
+    },
+    {
+      "name": "conditionally_protected_detainees",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "situation": "Holds nominal baseline protection on terms that can be revoked by reclassification. Receives the floor's guarantees — humane confinement, freedom from humiliating treatment — while knowing the same agencies that grant the floor decide who falls outside it. Lives in detention systems where the floor is honored unevenly depending on how salient the case is."
+    },
+    {
+      "name": "icrc_detention_monitors",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Negotiates confidential access to detention facilities and documents treatment deviations in private reports to the detaining power. The access model trades public denunciation for continued entry, so the strongest findings circulate only among the parties monitored. Withdrawing from confidentiality would end access; remaining inside it mutes the objection."
+    },
+    {
+      "name": "human_rights_litigators",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "situation": "Barred from detention sites and often from confirmed client contact. Litigates in foreign and international forums — regional human-rights courts, universal-jurisdiction complaints, United Nations mechanisms — because domestic forums close under state-secrets and standing doctrines. Filings shape the record even where they lose."
+    },
+    {
+      "name": "treaty_supervisory_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Reviews state reports, hears shadow submissions, and issues concluding observations on detention practice. Holds interpretive authority but no enforcement power; findings are contested, delayed, or dismissed by the states whose practice they assess. The seat is analytical: it sees the structure whole but cannot alter it directly."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Provides a shared minimum-treatment floor for detainees in non-international armed conflict — the gap Common Article 3 was written to close — and, under this reading, a decision procedure for reconciling that floor with asserted security necessities.",
+    "transfer_function": "Moves bodily autonomy, procedural rights, and legal personhood from detainees reclassified as security threats to the security apparatus; moves interpretive discretion and legal cover to security agencies and executive branches; moves intelligence product upward to policymakers.",
+    "absent_voices": "The detainees subjected to enhanced techniques have no seat in the interpretive process — their testimony is frequently classified, obtained under coercion, or excluded from court on state-secrets grounds. Independent medical and psychological professionals who examined former detainees were largely absent from the official reviews that shaped the reading. Legislatures in several states deferred to executive legal advisories without hearing detainee-side evidence.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the conditional-override structure vanished overnight, detention and interrogation practice would rearrange around whichever reading filled the vacuum: the absolute reading would criminalize existing programs and force release-or-prosecution decisions across the detainee population; the proportionality reading would transfer gatekeeping to courts. Program infrastructure, intelligence-sharing arrangements among allies, and the legal status of thousands of current detainees all depend on the present reading.",
+    "founding_problem": "Common Article 3 (1949) answered a real gap: the Geneva Conventions' prisoner-of-war regime did not reach non-international armed conflict, leaving detainees in civil wars and insurgencies with no shared minimum standard. The contextual-necessity reading was later built to solve a second problem asserted on top of the first: that absolute standards allegedly bind states facing transnational terrorist networks whose intelligence cannot be obtained through baseline-compliant interrogation.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The 1949 protection gap is corroborated from outside any benefiting party: ICRC preparatory-work scholarship, the near-universal state accession to the Conventions, and the doctrinal consensus that preceded the necessity extension. The necessity-override extension is attested almost exclusively by the benefiting parties themselves — agency legal advisories and executive memoranda. ICRC commentaries, UN Committee Against Torture concluding observations, and regional-court judgments from outside the beneficiary set dispute both its legality and its necessity; retired interrogators and intelligence veterans split on whether the practices were ever operationally required."
+  },
+  "gain_flow": "national_security_agencies",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "humane_treatment_standard__absolute_prohibition",
+      "humane_treatment_standard__proportionality_balancing"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial label 'the humane treatment standard of Common Article 3' covers three structurally distinct claims — non-derogable minimum (absolute_prohibition), conditioned baseline with necessity override (this story), and case-by-case balancing (proportionality_balancing). Each is authored as its own story with its own epsilon, beneficiary/victim structure, and classification; all three share the same referent (the operative conditional-protection arrangement) and author different epsilon by their own lights. This story links both siblings via affects_constraints; the absolute reading is upstream (it is the text's default doctrinal reading and the source the necessity reading must derogate from), and the proportionality reading is downstream of the factual terrain this reading created."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "necessity_conditioned_baseline",
+    "drift_state": {
+      "moment": "contemporary",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "absolute_prohibition",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_balancing",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "security_necessity_overrides_baseline",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "humane_treatment_is_context_dependent",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "commentary": {
+    "narrative_context": "Common Article 3 of the 1949 Geneva Conventions sets minimum humane-treatment guarantees for persons taking no active part in hostilities in non-international armed conflict. The contextual_necessity reading instantiates the arrangement in which that baseline is real but derogable: security agencies define when national security imperatives override it, designate categories of detainees (high-value targets, unlawful combatants) whose protections lapse, and operate interrogation programs behind that designation. This story authors THAT reading as a clean, epsilon-invariant constraint — the sibling readings (absolute_prohibition, proportionality_balancing) are separate files linked through the network, not folded into this one. The epsilon referent is the standing conditional-protection arrangement itself, assessed by this reading's own lights: the baseline is genuine and most detainees in most conflicts receive it, but the override channel concentrates severe costs on a category the benefiting agencies themselves draw. Claim/metric independence is preserved: claimed_type tangled_rope is my structural judgment (a real coordination floor plus asymmetric extraction, held together by active enforcement); the metrics are authored independently as descriptive fact.",
+    "key_agents": [
+      "national_security_agencies: agenda-setter (institutional/arbitrage) — writes the interpretive opinions, draws the exclusion line, collects the intelligence product and the discretion itself",
+      "executive_branches: beneficiary (institutional/arbitrage) — authorizes programs, gains flexibility and deniability, bears episodic exposure",
+      "interrogation_program_operators: dual-positioned beneficiary/payer (organized/identity_locked) — execute the techniques, collect mission identity, absorb liability and injury",
+      "designated_high_value_detainees: primary target (powerless/trapped) — classified out of protection exactly when custody is harshest",
+      "conditionally_protected_detainees: secondary target with residual benefit (powerless/trapped) — hold a revocable floor",
+      "icrc_detention_monitors: observer with constrained voice (institutional/constrained) — confidential access traded against public objection",
+      "human_rights_litigators: excluded challenger (organized/mobile) — shut out of domestic forums, litigates abroad",
+      "treaty_supervisory_bodies: analytical observer (institutional/analytical) — interpretive authority without enforcement power"
+    ],
+    "logic_rationale": "Extractiveness is high (0.74) because the costs concentrate on detainees whose protection lapses precisely when custody is most coercive, and because the eligibility line for that lapse is drawn by the party that collects the benefit — self-certified discretion is the deepest asymmetry in the structure. Suppression (0.75) is authored as a raw structural property and deliberately unscaled: captivity, classification regimes, closed forums, and the isolation-by-design that prevents detainee coalition formation; only extractiveness gets scaled by directionality and scope in the engine's computation, and the commentary keeps that distinction visible. Theater ratio (0.52) reflects a real floor wrapped in growing performance: compliance documentation, confidential-dialogue ritual, and definitional work ('enhanced,' 'not torture') that functions increasingly to defend the override rather than the floor. Accessibility collapse (0.60): the absolute-prohibition alternative remains live internationally, so alternatives are not fully collapsed at the doctrinal level — but within this reading's frame, detainee-side alternatives collapse completely. Resistance (0.58): sustained litigation, treaty-body findings, and regional-court judgments meet the arrangement without defeating it. The temporal series runs on ONE shared grid (1994, 1999, 2002, 2006, 2009, 2014, 2020, 2025) across all three tracked metrics. Suppression_requirement is included because the story specifically tracks enforcement-capacity change: machinery built up sharply 2002-2006 (secrecy architecture, site security, witness control), partially stood down 2009-2014 after program termination and forced disclosure, then re-hardened 2020-2025 (leak prosecutions, classification expansion). The pattern is an enforcement lifecycle, not an oscillating extraction cycle — no intermittent-reinforcement mechanism is claimed.",
+    "perspectival_gap": "The payer seats and the agenda-setter seat compute differently from the same text. From the agencies' position the arrangement is a managed floor with lawful exceptions — coordination they built and staff. From the designated detainees' position the same structure operates as unconditional subjection: the floor vanishes exactly when it would matter, exit is nil, and the classification decision is made by their captors. Conditionally protected detainees sit between — holders of a revocable guarantee, which is experienced as protection whose continuance depends on staying unremarkable. Operators are genuinely dual-positioned: beneficiaries of the discretion and identity the program confers, payers of the exposure and injury it leaves behind. Treaty bodies and the ICRC see the structure whole but from seats with no enforcement purchase. The engine computes these per-seat classifications from the structural data; the authored claim does not adjudicate them.",
+    "directionality_logic": "National security agencies and executive branches sit near the beneficiary pole: the override channel delivers intelligence product, doctrinal discretion, and legal cover to them, and their arbitrage-grade exit (relocating programs, renaming techniques, reframing doctrine) places them nearest the subsidized end. Designated high-value detainees sit at the full-target pole — trapped exit amplifies their effective extraction, and global spatial scope raises verification difficulty, which the engine scales upward. Conditionally protected detainees derive mid-to-high directionality: real floor benefits damp their extraction below the designated category's, but revocability keeps them firmly on the cost-bearing side. Operators mix both flows (benefit of mission identity, cost of exposure), landing near symmetric with identity lock binding them to the arrangement. Monitors and treaty bodies are analytical or constrained observers contributing little directional mass. Inter-institutionally, the same nominal power level divides sharply: agencies hold arbitrage exit while treaty bodies hold only analytical exit — identical institutional standing, opposite structural relationships to the constraint.",
+    "mandatrophy_analysis": "The tangled-rope classification is what prevents mislabeling in both directions. Reading the arrangement as pure rope (the benefiting parties' framing: 'we maintained the baseline throughout') erases the categorical exclusion channel and the self-certified discretion that concentrate its costs. Reading it as pure snare erases the genuine floor that most detainees in most conflicts actually receive and that the 1949 drafting history shows was a real achievement. The R5 interview sharpens this: the founding problem (the non-international-conflict protection gap) is live and corroborated from outside the beneficiary set, but the necessity-override extension built on top of it is contested — its corroboration comes almost entirely from the parties that collect its benefits. Status=contested crossed with verdict=world_rearranges is exactly the configuration the mismatch consumer watches: the arrangement's persistence depends on parties disputing whether its added mandate still serves anything beyond the original floor.",
+    "kernel_context": "Kernel: humane_treatment_standard — the fixed text of Common Article 3, identical in all four 1949 Geneva Conventions, whose brevity and generality make it a contested kernel rather than a settled rule. This file instantiates the contextual_necessity reading: the baseline is authoritative but yields to established national security necessity, with security agencies as the operative interpreters of both the baseline and the override. Sibling readings: absolute_prohibition (the baseline is non-derogable; no circumstances permit departure) and proportionality_balancing (neither absolute prohibition nor unlimited discretion; case-by-case weighing of dignity against security). The disagreement is located in one structural element: whether the baseline is derogable, and if so, who draws the line between protected and unprotected detainees. This reading's reference frame is a necessity-conditioned baseline; its foundational axiom rests on instrumental grounding (efficacy of the override for security ends), which is precisely the element the contemporary evidentiary and jurisprudential record has substantially challenged — hence the axiom_overriding drift state, unacknowledged by the reading's adherents."
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

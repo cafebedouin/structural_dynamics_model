@@ -1,0 +1,362 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "f702_strict",
+    "story_uid": "be53e23c-3785-4d43-9eff-d8a5bbd619b9"
+  },
+  "base_properties": {
+    "extractiveness": 0.16,
+    "suppression": 0.55,
+    "theater_ratio": 0.25,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Section 702 Foreign-Target Strict Reading (Deletion-Grade Minimization Boundary)",
+    "topic_domain": "legal/constitutional/national_security",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "us_persons_incidentally_collected",
+      "civil_liberties_litigators"
+    ],
+    "victims": [
+      "non_us_persons_in_target_aperture",
+      "nsa_sigint_operators",
+      "fbi_domestic_investigators"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "us_persons_incidentally_collected",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Communicate internationally and can appear in section 702 acquisitions when a foreign target sits on the other end of a call or email or is discussed in traffic. Under this reading their incidentally swept content is subject to minimization procedures that purge it from the repository rather than merely fence it off, and it cannot be reached for domestic investigative purposes without leaving the 702 framework entirely. Their practical protection depends on deletion working at scale, and they hold no individual veto over initial acquisition."
+    },
+    {
+      "name": "nsa_sigint_operators",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Run both the collection and the compliance machinery: build selector sets confined to non-U.S. senders with non-U.S. investigative interest, operate deletion-grade minimization pipelines, absorb audit and documentation overhead, and surrender query flexibility. The same arrangement delivers the foreign-intelligence product they exist to produce and supplies a legally defensible foundation that shields the program's political viability; they lose operational latitude and gain a durable authorization."
+    },
+    {
+      "name": "fbi_domestic_investigators",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work criminal and counterintelligence caseloads that sometimes brush against foreign-intelligence holdings. This reading categorically closes the repository to them for domestic-crime purposes: no backdoor queries, and any U.S.-person-touching search requires individualized process obtained outside 702. They carry slower casework and a hard evidentiary wall while retaining audited access for bona fide foreign-intelligence purposes."
+    },
+    {
+      "name": "non_us_persons_in_target_aperture",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Are the people the aperture is built around: non-U.S. senders corresponding from abroad with subjects of foreign-intelligence interest. Their communications enter United States custody on certification-level authorization rather than individualized warrants, without consent, notice, or any U.S.-law remedy. The strict reading narrows who qualifies as a proper target and requires genuine foreign purpose, but extends them no affirmative protection."
+    },
+    {
+      "name": "fisc_minimization_reviewers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Review certifications and targeting and minimization procedures on a recurring cycle, condition approvals, adjudicate government non-compliance, and issue redacted opinions. Their procedural rulings are the operative surface on which the strict boundary is enforced; the depth and skepticism of their docket determine how much of the statutory limit is real."
+    },
+    {
+      "name": "congressional_intelligence_committees",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Author and periodically reauthorize the statute against a hard expiration date. Each reauthorization cycle re-litigates query rules, warrant thresholds, and the scope of minimization, giving them leverage that keeps the agencies negotiating. Their incentives mix oversight prerogative with deference to intelligence equities."
+    },
+    {
+      "name": "civil_liberties_litigators",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Litigate to pin the statute to its strictest available meaning, publish analyses of documented compliance incidents, and press for deletion-grade minimization and warrant requirements on queries. The persistence of the arrangement as a strict boundary is their professional deliverable, and they can shift between courts, oversight testimony, and the reauthorization arena."
+    },
+    {
+      "name": "pclob_oversight_analysts",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audit the program end to end, quantify incidental U.S.-person collection, test whether minimization deletes content or merely gates access, and report findings publicly. They constitute the principal independent check on whether the strict statutory reading describes operational reality."
+    },
+    {
+      "name": "foreign_allied_governments",
+      "role": "excluded",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Watch their nationals collected under a regime they did not consent to and cannot litigate in. They negotiate data-sharing frameworks and lodge diplomatic objections, but no seat in the U.S. authorization process represents them. The arrangement allocates protection by citizenship, and they stand on the unprotected side of that line."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Maintains a single legally authorized foreign-signals-intelligence capability while drawing an enforceable boundary that keeps the resulting repository closed to domestic law-enforcement use. Targeting criteria, minimization procedures, and query rules solve, once and centrally, the collective-action problem of operating mass-capacity collection without letting the same apparatus become a domestic policing instrument.",
+    "transfer_function": "Moves communicative content from non-U.S. persons abroad into government custody with full exposure; moves compliance labor and forgone query capability from the intelligence community; and moves privacy protection and evidentiary separation to U.S. persons, whose incidentally acquired communications are deleted rather than made available for domestic purposes.",
+    "absent_voices": "The collected non-U.S. persons have no seat: no foreign national participates in targeting, and security-clearance amicus participation before the FISA court covers procedure rather than party standing. Allied governments whose nationals are swept in object diplomatically but hold no forum. Criminal defendants lack a guaranteed notice channel when 702-derived information touches their cases. Unanimity around the strict boundary arises among parties who all hold U.S. legal standing; the people bearing the residual extraction were never in the room.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the strict boundary vanished overnight, one of two rearrangements follows: the looser incidental-collection interpretation governs by default, opening the repository to domestic queries and weakening minimization, with U.S.-person exposure jumping sharply; or courts impose a categorical warrant floor instead, pausing large parts of collection pending individualized process. Either way the program's scope, the FBI's case workflows, and the oversight calendar reorganize. The boundary is load-bearing for how all three branches allocate surveillance authority.",
+    "founding_problem": "After the Church Committee exposed warrantless domestic surveillance programs and September 11 exposed the difficulty of acquiring foreign-to-foreign traffic transiting U.S. infrastructure, Congress built section 702 to collect the communications of non-U.S. persons reasonably believed to be abroad without individually naming every target, while statutorily walling Americans off from the resulting apparatus.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The foreign-collection problem is attested live by sources outside the beneficiary set: the Privacy and Civil Liberties Oversight Board's program report documents continuing reliance on 702 for terrorism, cyber, and counterintelligence production; annual transparency filings show tens of thousands of targets; and allied states run parallel statutes for the same underlying problem. Intelligence-community attestations of necessity are interested and discounted; independent corroboration rests with the oversight board's findings and comparative foreign practice. Whether the protective half of the founding design remains live is precisely the dispute among the three readings of the kernel."
+  },
+  "interval": {
+    "start": 0,
+    "end": 18
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.29
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.34
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 18,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This story instantiates ONE reading of a contested kernel: the section 702 statutory text read strictly, such that targeting reaches only communications whose sender and primary investigative interest are both non-U.S. persons located abroad, and incidentally acquired U.S.-person content undergoes deletion-grade minimization that leaves it inaccessible for domestic purposes. KEY AGENTS (by structural relationship): - non_us_persons_in_target_aperture: residual target (powerless/trapped) - collected warrantlessly inside the narrowed aperture with no remedy; - us_persons_incidentally_collected: protected class (moderate/constrained) - incidental capture purged, not queryable domestically; - nsa_sigint_operators: regulated operator and receipt seat (institutional/constrained) - bears compliance costs, receives the collection product; - fbi_domestic_investigators: forgone-capability bearer (institutional/constrained) - barred from domestic-purpose queries; - fisc_minimization_reviewers and congressional_intelligence_committees: administering and authoring seats (institutional/analytical); - civil_liberties_litigators: mission beneficiary (organized/mobile); - pclob_oversight_analysts: analytical observer (institutional/analytical); - foreign_allied_governments: excluded voice (powerful/constrained). The epsilon referent is the standing 702 arrangement as this reading assesses it - low, because rights-holders retain protections - not the arrangement the sibling incidental reading licenses. The claim and the metrics are independently authored facts: claimed_type records the structure I believe true (a coordination boundary with asymmetric residual extraction, actively enforced), while the metric values record what I believe descriptively accurate of the reading's operation; the engine computes per-seat types and any divergence from the claim is the datum.",
+    "key_agents": [
+      "non_us_persons_in_target_aperture: residual target (powerless/trapped) - collected warrantlessly inside the narrowed aperture, no U.S.-law remedy",
+      "us_persons_incidentally_collected: protected class (moderate/constrained) - incidental capture deleted rather than gated, closed to domestic use",
+      "nsa_sigint_operators: dual-positioned operator (institutional/constrained) - pays compliance costs, receives collection product and program legitimacy",
+      "fbi_domestic_investigators: forgone-capability bearer (institutional/constrained) - categorical bar on domestic-crime queries",
+      "fisc_minimization_reviewers: enforcing interpreter (institutional/analytical) - conditions approvals, adjudicates non-compliance",
+      "congressional_intelligence_committees: author and leverage holder (institutional/analytical) - sunset-driven reauthorization",
+      "civil_liberties_litigators: mission beneficiary (organized/mobile) - litigates to hold the strict boundary",
+      "pclob_oversight_analysts: analytical observer (institutional/analytical) - independent audit of minimization reality",
+      "foreign_allied_governments: excluded voice (powerful/constrained) - nationals collected, no forum"
+    ],
+    "logic_rationale": "Extraction is low (0.16) because the reading's core operation protects rights-holders: U.S.-person content is deleted rather than retained-and-queryable, and the aperture itself is narrowed by requiring both a non-U.S. sender and a genuine non-U.S. investigative interest. The residual extraction is real but bounded - the warrantless exposure of non-U.S. persons inside the aperture (constant across all readings) plus deletion that is imperfect at scale in documented compliance incidents. Suppression (0.55) is authored as a raw structural property and is NOT scaled by power or scope in the engine's arithmetic - only extractiveness is scaled. It reflects criminal liability for unauthorized electronic surveillance, court-conditioned procedures, and audit mandates, tempered by the existence of lawful advocacy channels: agencies resist through lobbying and reauthorization politics rather than defiance. Theater ratio (0.25) reflects functioning deletion infrastructure and genuine audits alongside ceremonial elements (certification boilerplate, oversight reporting that lags operations by years). Accessibility collapse (0.35) is low because well-understood substitutes persist: collection under Executive Order 12333 outside the FISA framework entirely, liaison relationships, and compelled-provider mechanisms abroad - understanding the strict 702 boundary does not close the government's alternatives. Resistance (0.55) records sustained institutional pushback from the governed agencies at each reauthorization, with partial successes in loosening rounds. The temporal series shares one grid (t=0,3,6,9,12,15,18) so every metric is authored at every examined point; extraction declines as minimization hardened (ending the upstream about-collection practice and tightening query rules), theater declines as audit infrastructure matured, and the suppression series RISES deliberately - the enforcement machinery maintaining the strict boundary intensified as agency pushback grew, culminating in warrant requirements on U.S.-person-touching queries. This is an enforcement-ratchet trajectory, not decay.",
+    "perspectival_gap": "The payer seats compute differently despite nominally identical institutional standing. From the NSA operator seat the arrangement is a manageable overhead that purchases durability - the same structure that costs them query flexibility delivers the product and shields the program politically, which is why the stakeholder carries a genuine secondary beneficiary role. From the FBI investigator seat the identical text operates as categorical capability denial. From the non-U.S. target seat the arrangement's residue is total exposure: narrowed, perhaps, but warrantless and remediless. From the U.S.-person seat it is protection. Same-level differentiation runs through role and exit, not power: the agencies share institutional rank but differ in what the boundary costs and returns them, and the engine computes these divergences from the structural data rather than from the authored claim. Coalition potential among the powerless is noted but weak here: non-U.S. targets cannot aggregate inside any U.S. forum, which is itself part of why the residual extraction persists.",
+    "directionality_logic": "Declared beneficiaries map to seats near the beneficiary end of d: us_persons_incidentally_collected (protected content, constrained exit but net subsidy from the arrangement) and civil_liberties_litigators (mission-level benefit, mobile exit pushes them toward arbitrage-grade positioning on this specific constraint). Declared victims map toward the target end: non_us_persons_in_target_aperture (powerless and trapped, nearest full-target), fbi_domestic_investigators (institutional but constrained, bearing capability loss), and nsa_sigint_operators. The NSA seat is the deliberate complication: the automatic derivation from victim-declaration-plus-constrained-exit would place them near full target, overstating their experienced extraction, because they also receive the collection product (they are the gain_flow seat) and harvest legitimacy. A directionality_overrides entry could correct this, but overrides key on the power_atom, and five of the nine seats share the institutional atom with sharply different true directionalities - a single institutional override would corrupt the FISC, congressional, and PCLOB placements to fix one. I therefore omitted overrides and left the dual position expressed through the secondary_role and gain_flow surfaces, which the engine reads alongside the victim declaration. Scope amplification applies modestly at the program's global collection scope; the national-scale domestic-access boundary carries less amplification.",
+    "mandatrophy_analysis": "The founding problem - acquiring foreign-to-foreign communications efficiently without turning the apparatus on Americans - remains live, so mandatrophy is not resolved and the constraint is not a piton candidate. Classification discipline cuts both ways here. Reading the arrangement as a pure rope ignores the identifiable parties who pay through it: foreign nationals collected without consent or warrant, and the FBI's forfeited domestic query capability. Reading it as a snare ignores the genuine coordination function - the boundary is what makes mass-capacity foreign collection constitutionally and politically survivable at all, and U.S. persons are net beneficiaries with real, audited protections. Tangled_rope holds both halves. The structural feature that guards against future mandatrophy is the hard sunset clause: reauthorization forces periodic re-examination, which is why theater_ratio declines rather than climbs across the interval. If reauthorization degenerates into auto-extension ritual while the foreign-collection problem evolved away, theater would rise, founding_problem_status would flip toward dead, and piton drift would begin - the measurement series is positioned to catch that transition."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "This story instantiates the foreign_target_strict_reading of kernel fisa_702_statutory_text; which reading is operative determines the entire victim set and classification. What happens structurally if a sibling reading is adopted instead?",
+      "resolution_mechanism": "Authoritative adoption of one reading through FISC precedent, Article III litigation, or codification in a reauthorization act; cross-file comparison with fisa_702_statutory_text__incidental_collection_reading and fisa_702_statutory_text__constitutional_floor_reading.",
+      "impact": "Adopting the incidental reading adds U.S. persons to the victim set and drives extraction sharply upward (retention plus warrantless domestic-purpose query); adopting the constitutional floor inserts a warrant gate that partially supersedes the statutory line and may push the arrangement toward a different type altogether. This file's epsilon is valid only for its own reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: classification is indexed to one reading of a contested statutory kernel."
+    },
+    {
+      "id": "eo_12333_displacement",
+      "question": "Does strict-702 minimization genuinely shrink government access to U.S.-person communications, or does collection displace to Executive Order 12333 channels and foreign liaison arrangements that sit entirely outside the FISA framework?",
+      "resolution_mechanism": "Cross-authority accounting in PCLOB and Inspectors General reporting comparing total U.S.-person exposure across 702, EO 12333, and liaison-sourced holdings over the same period.",
+      "impact": "Substantial displacement means the strict reading's protective achievement is smaller than measured, accessibility_collapse is understated, and part of the apparent extraction decline is relocation rather than reduction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the boundary protects or merely relocates collection."
+    },
+    {
+      "id": "deletion_efficacy_at_scale",
+      "question": "Is deletion-grade minimization technically achievable at upstream collection volumes, or does purging incidental U.S.-person content function aspirationally while gated access does the real work?",
+      "resolution_mechanism": "Technical audits of minimization pipelines against documented over-collection incidents and retention inventories; PCLOB-style testing of whether flagged content is destroyed or archived.",
+      "impact": "If deletion is aspirational, theater_ratio is materially higher than authored, the incidental reading describes operational reality more closely than this reading, and extraction is understated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minimization-as-deletion is real or performative."
+    },
+    {
+      "id": "foreign_national_standing_in_epsilon",
+      "question": "Do non-U.S. persons abroad bear cognizable extraction for classification purposes, or does the indexical seat count only parties with U.S. constitutional standing - given that the framework's beneficiary/victim declarations are what drive effective extraction?",
+      "resolution_mechanism": "Conceptual settlement in the framework's treatment of extraterritorial rights-holders: whether victim declarations covering foreign nationals feed the directionality derivation or fall outside the counted seat set.",
+      "impact": "Excluding foreign nationals drops extraction toward the coordination-cost floor and strengthens a rope reading; including them sustains the tangled_rope reading with the foreign aperture as the extraction leg. This is the largest single lever on this story's classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whose interests register in epsilon for an extraterritorial collection regime."
+    },
+    {
+      "id": "reauthorization_ritual_risk",
+      "question": "Do sunset-driven reauthorization cycles function as genuine congressional leverage that enforces the strict boundary, or are they converging on auto-extension ritual in which the sunset clause persists while scrutiny hollows out?",
+      "resolution_mechanism": "Longitudinal coding of reauthorization cycles: amendment density, floor debate substance, committee report engagement with compliance findings, and vote margins across successive cycles.",
+      "impact": "Ritual convergence would reverse the declining theater_ratio trajectory, decouple the sunset clause from its enforcement function, and begin the drift toward piton that the current measurements do not show.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the sunset clause remains a live enforcement lever."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__constitutional_floor_reading"
+    ],
+    "dual_formulation_note": "Constraint-family decomposition per the epsilon-invariance principle: the colloquial question of what section 702 permits regarding Americans is three structurally distinct claims, not one observable-dependent constraint. This file (foreign_target_strict_reading) authors epsilon for the standing arrangement as the strict reading assesses it - low, because rights-holders retain protections and incidental content is deleted. fisa_702_statutory_text__incidental_collection_reading authors epsilon for the same statutory text under the retention-and-query permission structure - substantially higher, because U.S. persons join the victim set. fisa_702_statutory_text__constitutional_floor_reading authors epsilon for the arrangement under a categorical warrant requirement - highest on the existing practice, since any warrantless query of U.S.-person content registers as violation. The strict reading sits upstream of both: its deletion-grade minimization is cited as evidence in floor-reading disputes (that the statutory line, honored, moots the warrant question), and its tightening pressures what the incidental reading can justify. All three files link each other through affects_constraints; no single story hedges epsilon across readings."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "foreign_intelligence_exclusivity_framework",
+    "drift_state": {
+      "moment": "post_risaa_oversight_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "incidental_collection_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "constitutional_floor_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "statutory_foreign_boundary_marks_warrant_line",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "incidental_us_person_data_deleted_not_gated",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "gain_flow": "nsa_sigint_operators",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

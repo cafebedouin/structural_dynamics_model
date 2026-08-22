@@ -1,0 +1,347 @@
+{
+  "header": {
+    "constraint_id": "income_support_conditionality__freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "freedom_floor",
+    "story_uid": "b29bb37f-da7f-4ccf-962e-0b19ead028f4"
+  },
+  "base_properties": {
+    "extractiveness": 0.44,
+    "suppression": 0.29,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.28,
+    "resistance": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Floor as Decommodification of Labor Power",
+    "topic_domain": "political economy/social policy/labor economics",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "low_wage_workers",
+      "unpaid_caregivers_and_trainees",
+      "labor_unions"
+    ],
+    "victims": [
+      "employers_of_low_wage_labor",
+      "general_taxpayers"
+    ],
+    "vindicated_propositions": [
+      "reservation_wage_mechanism",
+      "decommodification_thesis"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.39
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.27
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.29
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates the freedom_floor_reading of the income_support_conditionality kernel; which reading a consumer adopts determines the entire victim set and computed type — what would change under the sibling readings?",
+      "resolution_mechanism": "Cross-reading compilation: author and compile the dependency_trap_reading and wage_subsidy_reading stories, then diff beneficiary/victim sets, epsilon, and computed types against this story's.",
+      "impact": "Under dependency_trap_reading, recipients become victims and the arrangement computes toward snare; under wage_subsidy_reading, taxpayers become the primary victims and extraction concentrates on the funding side; this story's rope claim holds only within the freedom-floor frame.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer frame: one of three readings of the income-support-conditionality kernel."
+    },
+    {
+      "id": "employer_cost_valence",
+      "question": "Is the employer seat's loss of destitution-backed workplace discipline a cost that belongs in the extraction ledger, or the removal of a prior advantage that the ledger should not count?",
+      "resolution_mechanism": "Adopt an explicit accounting convention and price it: quantify employer-side losses (entry-wage drift, turnover, automation outlays) against the employer share of demand-stabilization and labor-supply-reliability benefits.",
+      "impact": "Counting employer losses as extraction pushes the computed type toward tangled_rope; treating them as correction preserves the rope reading — the classification hinges on this bookkeeping choice, not on new data.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether employer-side losses are extraction or de-extraction."
+    },
+    {
+      "id": "conditionality_creep_risk",
+      "question": "Will the unconditional premise survive contact with fiscal pressure and administrative discretion, or does sanction machinery accrete until the floor is conditional in practice?",
+      "resolution_mechanism": "Longitudinal tracking of sanction rates, exemption criteria, and appointment-compliance requirements against the statutory promise of unconditionality; the suppression_requirement series in this story is the leading indicator.",
+      "impact": "Full convergence to practical conditionality dissolves this reading's constraint into the workfare arrangement the kernel contests, collapsing the freedom-floor classification; partial creep leaves the rope claim intact with degraded margins.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether unconditionality survives administratively."
+    },
+    {
+      "id": "taxpayer_net_incidence",
+      "question": "Is the median taxpayer a net funder of the floor or a net holder of its insurance, once option value, spillover wage effects, and stabilization benefits are counted?",
+      "resolution_mechanism": "Lifetime-incidence microsimulation over the tax and benefit schedule, including transition probabilities onto the floor.",
+      "impact": "Net-funder results sharpen the taxpayer seat toward full target and raise effective extraction; net-insurance results pull the seat toward symmetry and soften it — the derivation chain reads the victim declaration alone and cannot see option value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Taxpayer seat sits between funder and insuree."
+    }
+  ],
+  "stakeholders": [
+    {
+      "name": "low_wage_workers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Work in retail, care, hospitality, and warehouse jobs where pay and conditions are set against each worker's need to accept whatever is offered. The monthly payment arrives regardless of employment status, so turning down a degrading shift or leaving an abusive supervisor no longer means missing rent. Most live close to the payment amount; few have savings that could substitute for it."
+    },
+    {
+      "name": "unpaid_caregivers_and_trainees",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Raise children, care for elderly relatives, or study for credentials while outside or at the edge of the labor market. The payment covers basic costs during periods when market work is impossible or would cost more than it pays. Before the floor existed, these periods were financed by debt or by piecing together whatever work fit around caregiving hours."
+    },
+    {
+      "name": "labor_unions",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Represent members in sectors where the floor has raised the cost of replacing a striking or refusing worker. Strike funds stretch further when members' household basics are secure, and organizers pitch the floor as background security that members hold whether or not the union wins a particular dispute."
+    },
+    {
+      "name": "employers_of_low_wage_labor",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "situation": "Run businesses staffed heavily from the low-wage labor pool. Entry-level wages have drifted upward since the floor arrived, turnover among dissatisfied staff has risen, and the implicit threat of destitution no longer secures attendance or acceptance of inconvenient schedules. Some firms respond with automation and scheduling software; others lobby for repeal or for converting the payment into work-conditioned credits."
+    },
+    {
+      "name": "general_taxpayers",
+      "role": "payer",
+      "secondary_role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Fund the payment through income and consumption taxes. Households above the floor pay in more than they receive in most years, but any of them can fall onto the floor through job loss, illness, or divorce, and most carry the payment as insurance against that fall as much as they experience it as a bill."
+    },
+    {
+      "name": "support_administration",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Runs the payment system: verifies residency and identity, disburses monthly amounts, and operates the compliance machinery that has grown up around the scheme — fraud investigation, address checks, and the sanction schedule applied when recipients miss administrative appointments. Career officials defend the scheme's universality while expanding the paperwork that surrounds it."
+    },
+    {
+      "name": "legislative_authority",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Sets the payment level, the tax rates that fund it, and the eligibility perimeter, and holds the ordinary-legislation power to narrow, condition, or abolish the scheme. Each budget cycle brings proposals from the fiscal-conservative wing to convert the payment into earned credits; each dies against the electoral weight of households on or near the floor."
+    },
+    {
+      "name": "undocumented_informal_workers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Work in agriculture, construction, domestic service, and informal trade under the same subsistence pressures the floor was built to relieve, but legal status bars them from claiming it. They experience the post-floor labor market from beneath it: wages at the very bottom have risen somewhat as covered workers gained refusal power, but their own terms remain set by deportation risk."
+    },
+    {
+      "name": "labor_economists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track reservation wages, quit rates, participation, and price pass-through around the floor's introduction and subsequent adjustments. Their natural-experiment studies supply the numbers every other seat argues with, and their professional disagreements track the same underlying mechanism emphasized from different directions."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Gives every resident a survivable income unconditionally, which converts refusal of a job offer from an individual gamble with destitution into a collectively backed position: each worker's no is credible because no one's subsistence depends on saying yes.",
+    "transfer_function": "Moves tax revenue from the general tax base to households at or below subsistence, and moves bargaining leverage from employers to workers by detaching subsistence from job acceptance.",
+    "absent_voices": "Undocumented and informal-sector workers are subject to the same labor-market pressures the floor relieves but are barred from it by legal status; future taxpayers bear the fiscal consequences without a seat; recipients most exposed to sanction design have thin representation in the administrative consultations that shape the compliance perimeter.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Bottom-quartile wages would fall back toward subsistence tolerance within a few contract cycles, quits and refusals would collapse, caregiving and training spells would be financed by debt or abandoned, and the scheduling and attendance practices the floor priced out would return; the fiscal apparatus would shrink, but the labor market's previous disciplinary equilibrium would reassert itself.",
+    "founding_problem": "Market economies set wages against each worker's fallback, and the fallback for most of history was destitution; individually rational acceptance of whatever terms were offered produced collectively degraded terms, because no worker could credibly refuse alone.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Corroborated from outside the beneficiary set: labor-history scholarship documents subsistence-tolerance wage setting before public income support existed; employer-side testimony and lobbying concede that guaranteed incomes raise reservation wages, attesting the mechanism while disputing its worth; and the scheme's harshest critics build their case on the same behavioral fact this reading celebrates — that recipients can now say no."
+  },
+  "gain_flow": "low_wage_workers",
+  "fixing_cost": "prohibitive",
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dependency_trap_reading",
+      "wage_subsidy_reading"
+    ],
+    "dual_formulation_note": "Constraint family: the colloquial debate over unconditional income support decomposes into three structurally distinct constraints sharing one referent (the standing unconditional-support arrangement) with reading-indexed epsilon — freedom_floor_reading (this story), dependency_trap_reading, and wage_subsidy_reading. Each member links the other two via affects_constraints. The freedom-floor story sits downstream of the reservation-wage empirical literature all three readings cite; its classification is the pivot the sibling readings dispute, so its epsilon is authored for the standing arrangement as this reading assesses it, never for the arrangements the siblings would substitute."
+  },
+  "commentary": {
+    "narrative_context": "A national unconditional income floor pays every resident a subsistence-level amount from general taxation, with no work requirement and no means test beyond residency. Its operative effect runs through the labor market's fallback structure: because subsistence no longer depends on accepting any offered job, workers can refuse degrading terms, leave abusive employers, interrupt employment for care or training, and wait out bad offers; employers consequently face upward wage drift at the entry level and have lost the disciplinary lever that destitution once provided. The scheme is administered by a dedicated agency under a legislature that retains ordinary-legislation power over its level and eligibility perimeter, and its unconditionality is maintained against continuous administrative accretion of compliance machinery.\n\nKEY AGENTS (by structural relationship):\n- low_wage_workers: primary beneficiary (moderate/constrained) — hold the refusal option the floor backs\n- unpaid_caregivers_and_trainees: beneficiary (moderate/constrained) — finance non-market time with the floor\n- labor_unions: secondary beneficiary (organized/constrained) — members' improved fallback strengthens bargaining\n- employers_of_low_wage_labor: primary payer (institutional/arbitrage) — bear wage drift and lost workplace discipline\n- general_taxpayers: payer with insurance stake (moderate/constrained) — fund the floor they may fall onto\n- support_administration: agenda_setter (institutional/constrained) — runs payments and the compliance perimeter\n- legislative_authority: agenda_setter (institutional/mobile) — holds repeal power\n- undocumented_informal_workers: excluded (powerless/trapped) — subject to the old fallback, barred from the floor\n- labor_economists: analytical observer (analytical/analytical) — measure the mechanism",
+    "logic_rationale": "Extraction is authored at 0.44: the fiscal transfer is large and real, employer-side adjustment costs are real, and administrative overhead grows; the freedom-floor frame counts much of the employer-side change as intended correction rather than extraction, which is why the figure sits at moderate rather than high. Suppression is 0.29: compulsory taxation and a growing sanction-and-compliance perimeter coerce, but the floor closes no alternative arrangement — conditional designs remain legislatively available and the floor adds options rather than removing them. Theater is 0.22: delivery is overwhelmingly functional, with performative growth concentrated in compliance rituals (appointment-keeping, address verification) that reproduce the appearance of conditionality inside an unconditional scheme. Accessibility collapse is 0.28: understanding the floor does not foreclose rival policy architectures. Resistance is 0.58: sustained employer and fiscal-conservative opposition, recurring conversion proposals, and framing conflicts meet the scheme every budget cycle. The three measurement series share one seven-point grid (t=0..24) so no metric's row is backfilled from another's endpoint; all three drift upward together, modeling conditionality creep and fiscal drag rather than a cyclical pattern. Suppression is authored as a raw structural property; only extractiveness is scaled by directionality and scope downstream.",
+    "perspectival_gap": "Seats diverge sharply. From the worker and caregiver seats the floor is background security that changed what a refusal means; from the employer seat the same arrangement is a cost structure that removed a management tool; from the taxpayer seat it is simultaneously a bill and an insurance policy, and which description dominates depends on transition risk the static declaration cannot express; from the excluded seat the labor market's old fallback persists intact beneath the floor that relieved everyone else. The administration seat experiences neither benefit nor burden but the compliance perimeter itself. These positions are computed per seat from the structural data; the authored rope claim reflects the reading's coordination-dominant structure and does not adjudicate the seats.",
+    "directionality_logic": "Declarations map to directionality as follows: workers and caregivers sit near the beneficiary end (the floor subsidizes their refusal option; d near 0.1); unions mildly so (organizing leverage; d near 0.25); employers sit near the target end (they bear wage drift and lost disciplinary leverage; d near 0.8) — the reading counts their loss as correction of a prior advantage, but structurally they still bear the arrangement's costs; taxpayers are declared victims and the derivation will read them near full target, yet their true position is near-symmetric because the floor doubles as universal insurance — the derivation chain cannot see option value, and a power-atom override would misapply to the moderate-power worker seat as well, so the ambiguity is recorded as the taxpayer_net_incidence omega instead; the administration seat is near-neutral (runs the machine, collects no rents); excluded informal workers are governed by the labor market but not covered — spillover wage gains reach them thinly, leaving them near the middle with none of the protection.",
+    "mandatrophy_analysis": "The founding problem — destitution-backed wage discipline — is live wherever the floor is absent or eroded, and the arrangement's function is intact, so no mandatrophy declaration is authored. The risk this story watches is the inverse of a dead mandate kept alive theatrically: a live mandate quietly narrowed, where conditionality creep replaces the unconditional function with a conditional one while the statute's language and the scheme's name persist. The theater_ratio and suppression_requirement series are the tripwires: theater above 0.5 or a steepening suppression slope would indicate the freedom-floor function is being performed rather than delivered, at which point the arrangement warrants reclassification under whichever reading its actual operation has come to instantiate. Claiming rope while authoring real payer costs keeps that detection honest: if the engine computes tangled_rope or worse from the seats, the divergence flags the coordination/extraction boundary for review rather than settling it by fiat.",
+    "kernel_context": "Kernel: income_support_conditionality — the contested commitment governing whether income support is given unconditionally. This story instantiates the freedom_floor_reading: the unconditional floor as a decommodification mechanism that backs workers' refusal of coercive employment. Sibling readings, which are separate constraints with their own files: dependency_trap_reading (the same floor read as an incentive-destroying dependency trap — victims become recipients, type trends toward snare) and wage_subsidy_reading (the same floor read as an employer subsidy enabling wage suppression — extraction concentrates on taxpayers funding suppressed wages). The disagreement is located in the incidence and valence of one mechanism: what the floor does to bargaining power between employers and workers. This story authors epsilon for the standing unconditional-support arrangement as the freedom-floor reading assesses it; sibling stories share the referent and author different values."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "universal_decommodification_floor",
+    "drift_state": {
+      "moment": "contemporary_administrative_practice",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "wage_subsidy_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "positive_freedom_requires_material_independence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "destitution_backed_employment_terms_are_coercive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

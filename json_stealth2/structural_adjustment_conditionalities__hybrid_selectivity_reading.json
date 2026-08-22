@@ -1,0 +1,353 @@
+{
+  "header": {
+    "constraint_id": "structural_adjustment_conditionalities__hybrid_selectivity_reading",
+    "version": "1.0",
+    "generated_date": "2026-08-05",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sacond_hybrid",
+    "story_uid": "de009113-74c1-42b1-af72-6ac3c6aa9500"
+  },
+  "base_properties": {
+    "extractiveness": 0.71,
+    "suppression": 0.76,
+    "theater_ratio": 0.4,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Structural Adjustment Conditionalities — Hybrid Selectivity Reading",
+    "topic_domain": "economic/political/international",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "geopolitically_strategic_debtors",
+      "core_private_creditors",
+      "us_treasury_and_g7_shareholders"
+    ],
+    "victims": [
+      "nonstrategic_program_countries",
+      "program_country_households"
+    ]
+  },
+  "interval": {
+    "start": 0,
+    "end": 44
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.69
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 38,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 44,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 38,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 44,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.77
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 32,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 38,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 44,
+      "value": 0.76
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_position",
+      "question": "This story instantiates the hybrid_selectivity_reading of the kernel structural_adjustment_conditionalities. Would instantiating the creditor_coordination_reading or the debtor_extraction_reading instead change the constraint's epsilon, victim set, and computed classification?",
+      "resolution_mechanism": "Author the sibling stories as separate files and compare engine-computed classifications. The disagreement is located in one structural element: whether selective enforcement is incidental imperfection in a coordination device (coordination reading), the universal design principle of an extractive instrument (extraction reading), or the constitutive allocation logic of the arrangement itself (this reading).",
+      "impact": "The coordination reading would move epsilon toward roughly 0.25 and shrink the victim set toward empty; the extraction reading would move epsilon toward roughly 0.85 and generalize victims to all program countries regardless of alignment. This reading fixes victims by geopolitical position and holds epsilon at 0.71.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-frame routing: one of three readings of a contested kernel; sibling readings are separate constraints."
+    },
+    {
+      "id": "waiver_determinants_identifiability",
+      "question": "Can variance in waiver decisions, program interruptions, and enforcement severity be statistically attributed to geopolitical alignment (UN voting coincidence, basing agreements, alliance ties) net of economic fundamentals (debt ratios, reserves, growth)?",
+      "resolution_mechanism": "Panel analysis across the full population of Fund arrangements regressing completion and waiver outcomes on alignment measures with fundamentals controls; matched-pair case studies of economically similar aligned and unaligned program countries.",
+      "impact": "A robust alignment coefficient confirms selectivity as constitutive rather than anecdotal, anchoring the victim set in geopolitical position; a null result would push the arrangement toward uniform-application readings and redistribute measured extraction toward economic circumstance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement selectivity tracks geopolitics above and beyond economic fundamentals."
+    },
+    {
+      "id": "counterfactual_enforcement_severity",
+      "question": "How much of the enforcement severity borne by non-strategic debtors reflects solvency necessity that any lender would impose, versus discretionary harshness that strategically valuable peers are spared?",
+      "resolution_mechanism": "Matched comparisons of adjustment depth, prior-action counts, and waiver frequency between strategic and non-strategic borrowers conditioned on comparable debt-service ratios and reserve positions.",
+      "impact": "Large matched-pair gaps attribute the differential to the arrangement itself rather than to debtor circumstances, raising the extraction share properly chargeable to the constraint; small gaps would locate most measured severity in genuine insolvency.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Separating necessary creditor discipline from discretionary, alignment-indexed harshness."
+    },
+    {
+      "id": "strategic_debtor_net_position",
+      "question": "Are geopolitically strategic debtors net beneficiaries of the arrangement, or does continued waiver-backed financing merely defer and compound their eventual adjustment burden?",
+      "resolution_mechanism": "Longitudinal trajectories of debt-service ratios, cumulative program years, and ultimate adjustment depth for repeat strategic borrowers against counterfactual market-access estimates.",
+      "impact": "If strategic debtors' burdens are deferred rather than dissolved, the beneficiary declaration narrows and the arrangement reads closer to universal extraction with timing variance; if their burdens genuinely dissipate, the selectivity asymmetry is confirmed as a durable two-tier structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether waiver recipients are durably subsidized or merely postponing the same extraction."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Since the debt crisis of the early 1980s, crisis lending to sovereign states has carried policy conditions: fiscal consolidation, subsidy removal, privatization, trade liberalization, and structural benchmarks tying each tranche to verified performance. This story authors the hybrid_selectivity_reading of that arrangement: the discipline is real, the coordination function is real, and the enforcement is allocated by geopolitical position — enforced harshly on states without leverage, waived repeatedly for states whose alignment, basing rights, or conflict geography major shareholders value. The epsilon referent is the standing conditionality regime as this reading sees it: genuinely coordinative in function, selectively extractive in incidence. Time points index years after 1980 (t=0 is the eve of the Mexican default; t=44 is 2024). See kernel_context for the reading structure; the sibling readings are separate constraints, not averaged here.",
+    "key_agents": [
+      "imf_executive_board_and_management: agenda-setter (institutional/arbitrage) — designs programs, sets benchmarks, decides waivers case by case",
+      "us_treasury_and_g7_shareholders: primary beneficiary with agenda-setting power (institutional/arbitrage) — quota dominance and informal veto steer enforcement toward allies",
+      "geopolitically_strategic_debtors: beneficiary (moderate/constrained) — repeat borrowers whose strategic value purchases forbearance",
+      "core_private_creditors: beneficiary (powerful/arbitrage) — adjustment channels foreign exchange to debt service and shields them from restructuring losses",
+      "nonstrategic_program_countries: primary target (moderate/trapped) — bear full-force conditionality with no alternative financing once markets close",
+      "program_country_households: primary target (powerless/trapped) — absorb austerity they never negotiated and cannot exit",
+      "program_country_labor_and_civil_society: excluded voice (organized/trapped) — would renegotiate distributional terms; consulted only after core targets are fixed",
+      "china_and_nonwestern_creditors: excluded voice (institutional/arbitrage) — lend outside the framework that defines comparability",
+      "academic_economists_and_policy_analysts: analytical observer (analytical/analytical) — produce the matched-comparison evidence any adjudication of selectivity would rest on"
+    ],
+    "logic_rationale": "Extractiveness is authored at 0.71: high, because adjustment transfers are large, sustained, and decoupled from creditor concession, but below the extraction reading's estimate because the liquidity and creditor-coordination functions are genuine and debtor governments themselves seek programs. Suppression is 0.76: persistence depends on closing alternatives — market closure triggers program entry, cross-conditionality links every tranche to every target, and Fund presence signals creditworthiness to private lenders — not on participant preference. Theater ratio is 0.40 and rising across the interval: ownership language, participatory PRSP processes, and results-based frameworks perform inclusivity while core macro targets are settled beforehand; the underlying fiscal operations remain real, so theater stays below majority. Accessibility_collapse is 0.58: bond markets, non-Western creditors, and default exist as alternatives but collapse exactly when the arrangement binds. Resistance is 0.62: four decades of austerity riots, electoral turnover against incumbent reformers, selective defaults, and standing reform coalitions. The measurement series share one grid (t = 0, 8, 16, 24, 32, 38, 44). The mid-interval dip in suppression_requirement (t=24) reflects the HIPC/PRSP softening and the commodity-boom window when middle-income countries regained market access; the subsequent re-hardening tracks the post-2008 return of frontier borrowing and pandemic-era programs. The oscillation is driven by global liquidity cycles, not intermittent reinforcement — the two-tier structure itself never closes. Coalition note: the payer seats' obvious escape is coordinated default or a debtor bloc; the architecture anticipates this — sequential treatment, cross-conditionality, and the reputational penalty of default keep coalition formation expensive, which is why trapped exit rather than organized refusal characterizes the target seats.",
+    "perspectival_gap": "The seats should compute divergent types from identical structural data. From the board seat the arrangement is crisis infrastructure it administers under a mandate it reads as even-handed. From the strategic-debtor seat it is purchasable forbearance — an insurance policy priced in alignment. From the non-strategic payer seat it is uncompensated discipline applied with a rigor its sponsors' allies never face. From the household seat it is austerity authored remotely, ratified nowhere it can vote, and escaped nowhere it can go. The engine derives these divergences from power, exit, and role data; the authored claim does not adjudicate them.",
+    "directionality_logic": "Beneficiary declarations drive low directionality for geopolitically_strategic_debtors, core_private_creditors, and us_treasury_and_g7_shareholders; the G7 seat's secondary agenda_setter role and arbitrage exit keep it near the beneficiary pole despite its enforcement labor. Victim declarations drive high directionality for nonstrategic_program_countries and program_country_households, amplified by trapped exit — trapped targets sit nearer the full-target end than mobile ones. The board seat derives near-symmetric with a mild tilt toward institutional self-perpetuation: it bears administrative cost and collects continuity. No directionality_overrides are needed: the same-power institutional seats (G7 treasuries, the board, non-Western creditors) already separate on role and exit, so the structural derivation distinguishes what an override would otherwise have to patch. China_and_nonwestern_creditors sit outside the derivation as an excluded alternative-architecture actor, not a seat inside this arrangement's gain structure.",
+    "mandatrophy_analysis": "The tangled_rope claim is what keeps both halves of this arrangement visible. Authoring it as pure coordination would erase the victims and license the waiver asymmetry as benign flexibility; authoring it as pure extraction would erase the liquidity function and predict abolition that program governments themselves consistently refuse. Declaring beneficiaries preserves the coordination gate, declaring victims plus active enforcement registers the asymmetric extraction, and the two together force the classification to price the coupling. The founding problem (balance-of-payments crisis management) is contested rather than dead — acute financing gaps remain real even as critics document a dependency dynamic the founders never contemplated — so mandatrophy_resolved is deliberately not declared, and the arrangement cannot be filed as a piton performing a vanished function.",
+    "kernel_context": "This story instantiates the hybrid_selectivity_reading of the kernel structural_adjustment_conditionalities. The kernel — the practice of attaching policy conditions to official crisis lending — is read three ways: creditor_coordination_reading (conditions as necessary fiscal-sustainability and market-confidence coordination), debtor_extraction_reading (conditions as uniformly extractive neo-colonial instruments serving creditor profit), and this reading (conditions as real discipline whose enforcement is allocated by geopolitical position). This file authors only the third reading. Its epsilon describes the standing regime as this reading sees it; the siblings are separate constraints with their own epsilon values, victim sets, and classifications, linked through network.affects_constraints. Nothing here hedges or averages across readings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "structural_adjustment_conditionalities__creditor_coordination_reading",
+      "structural_adjustment_conditionalities__debtor_extraction_reading"
+    ],
+    "dual_formulation_note": "The colloquial label 'IMF conditionality' decomposes into three structurally distinct constraints, one per reading of the kernel: coordination-as-designed, extraction-as-experienced, and selectivity-as-operated (this file). Their epsilon values differ widely and must not be reconciled into one number. The coordination reading is upstream — its doctrine supplies the legitimating frame that the other two measure practice against — and this reading documents the doctrine-incidence gap. Each sibling file mirrors this note and links back."
+  },
+  "stakeholders": [
+    {
+      "name": "imf_executive_board_and_management",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Approves loan programs, sets performance criteria and structural benchmarks, conducts reviews, and decides case by case whether missed targets trigger suspension or waiver. Staff design programs under quota-weighted board guidance; management publicly frames conditions as country-owned. Waiver deliberations happen behind closed doors, and the same institution applies markedly different patience to different borrowers."
+    },
+    {
+      "name": "us_treasury_and_g7_shareholders",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold dominant quota shares and, by long-standing convention, an effective veto over major decisions. Treasury departments steer program design informally, most visibly where security interests are engaged: allied governments repeatedly receive financing and waivers despite chronic target misses, while the same shareholders press harder terms on unaligned borrowers. The arrangement converts their financial exposure into alliance-management leverage."
+    },
+    {
+      "name": "geopolitically_strategic_debtors",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "situation": "Host bases, anchor alliances, or border conflicts that major powers value. They enter programs repeatedly, miss targets routinely, and keep receiving disbursements through waivers and augmentations. Financing access persists for them where economically similar unaligned states lose it; the price is policy oversight and a security patronage they cannot easily replace."
+    },
+    {
+      "name": "core_private_creditors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Hold sovereign bonds and syndicated loans to program countries. Adjustment programs channel scarce foreign exchange toward debt service and shield them from restructuring losses; they price official-program presence as implicit protection and can sell exposure before programs turn. They concede little in exchange for the continuity the programs secure."
+    },
+    {
+      "name": "nonstrategic_program_countries",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "States without geopolitical leverage that meet the arrangement's full force: deep fiscal consolidation, privatization under deadline, cross-conditionality binding every tranche to every target. Once markets close and reserves run down, the program is the only financing path; declining it means default, import collapse, and exclusion from the creditworthiness signal the program confers."
+    },
+    {
+      "name": "program_country_households",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Absorb the adjustment directly: removed subsidies, frozen wages, user fees for health and education, public-sector layoffs. They did not negotiate the program, cannot vote on its terms before boards approve them, and cannot exit the currency, the tax net, or the country at any meaningful scale."
+    },
+    {
+      "name": "program_country_labor_and_civil_society",
+      "role": "excluded",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "situation": "Organize strikes and protests against adjustment packages and would renegotiate distributional terms if admitted to program design. Consultation mechanisms exist on paper, but sequencing and core macro targets are settled before participation begins; they bear costs their exclusion keeps off the negotiating table, and their protests register as implementation risk rather than as voice."
+    },
+    {
+      "name": "china_and_nonwestern_creditors",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Lend outside the Paris Club and historically outside official-program geometry. Their rise hands some distressed states a second menu and complicates debt treatments; established institutions want their terms harmonized into the existing architecture, and they resist absorption on terms they did not write."
+    },
+    {
+      "name": "academic_economists_and_policy_analysts",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Study program outcomes, waiver patterns, and distributional effects across four decades of arrangements. They produce the matched comparisons and panel evidence that any serious adjudication of the selectivity question would rest on, and they disagree sharply among themselves about what the record shows."
+    }
+  ],
+  "gain_flow": "core_private_creditors",
+  "fixing_cost": "prohibitive",
+  "six_questions": {
+    "coordination_function": "Provides emergency external financing when private capital exits, and solves the creditor collective-action problem: a senior official lender imposing one negotiated fiscal framework stops individual creditors from racing for exit and gives all of them a common expectation of continued debt service. Programs also supply political cover under which finance ministries implement adjustments no coalition could pass unprompted.",
+    "transfer_function": "Moves foreign exchange and fiscal space from program-country budgets and households toward external debt service; moves policy discretion from elected domestic institutions to program negotiators; and allocates the severity of both transfers by geopolitical alignment rather than by economic need.",
+    "absent_voices": "Program-country legislatures rarely ratify terms before boards approve them; affected households and labor movements are consulted after core targets are fixed; non-Western creditors sit outside the framework that defines comparability of treatment. Each group would contest distributional terms and enforcement symmetry, and their absence is what lets unanimity at the board stand in for consent.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight disappearance would force simultaneous disorderly defaults across program countries, close the last standing financing channel for balance-of-payments crises, and throw crisis resolution onto ad hoc creditor committees and great-power bilateral lending. Sovereign crisis management would rebuild around whichever powers filled the vacuum, with the terms of discipline set by whoever held the replacement leverage.",
+    "founding_problem": "Recurrent balance-of-payments crises and sovereign defaults threatened the postwar trading system; the arrangement was built to lend into crisis while correcting the policies that produced the external gap, returning countries to voluntary market access.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Program-country central banks and finance ministries — outside the beneficiary set — attest that acute financing gaps are real and that emergency liquidity remains necessary. Economic historians corroborate the original Bretton Woods mandate from the archival record. Heterodox and postcolonial economists, also outside the beneficiary set, attest that the founding problem has been overtaken by a dependency-reproducing dynamic the original mandate never contemplated. No attestation settles the status; the standing dispute among non-beneficiary witnesses is itself the finding."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "economically_triggered_uniform_discipline",
+    "drift_state": {
+      "moment": "contemporary_case_record_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "creditor_coordination_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "debtor_extraction_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "enforcement_tracks_geopolitical_alignment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "coordination_costs_fall_on_unaligned_debtors",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

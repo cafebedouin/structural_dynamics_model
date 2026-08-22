@@ -1,0 +1,337 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__developer_liability",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "96a48a97-5952-4e6c-83c9-b675f45addbd"
+  },
+  "base_properties": {
+    "extractiveness": 0.66,
+    "suppression": 0.55,
+    "theater_ratio": 0.3,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Developer-Primary AI Liability Allocation",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "enterprise_deployers",
+      "harmed_end_users",
+      "liability_insurers"
+    ],
+    "victims": [
+      "frontier_model_developers",
+      "small_ai_startups",
+      "open_source_developers"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "ai_regulators",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Draft and amend the statutes and agency rules that fix who answers legally when an AI system causes harm, currently weighting primary responsibility toward the organization that trained and released the underlying model. Consultation processes are dominated by incumbent labs and deployer trade associations. Their own enforcement capacity — investigation staff, technical audit tooling, disclosure verification — is still being built out, which shapes how much of the assigned responsibility is practically collectible."
+    },
+    {
+      "name": "frontier_model_developers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Train and release large general-purpose models sold or licensed to many downstream deployers. Under the prevailing allocation they retain legal exposure for harms that materialize far downstream, in deployment contexts they neither chose nor supervise. They respond with expanded disclosure teams, indemnity negotiations, insurance purchase, and litigation reserves. Their market position depends on continuing to ship, so exit means ceding the frontier to rivals; several also fuse the accepted burden with a public identity as responsible stewards of the technology."
+    },
+    {
+      "name": "small_ai_startups",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Build narrow applications on top of foundation models and sell to early customers. The same primary-responsibility allocation reaches them through contract chains and platform terms, but without the legal departments, insurance budgets, or litigation reserves of incumbents; a single claim can end the company. Their realistic exits are pivoting to a non-AI product or selling before exposure crystallizes."
+    },
+    {
+      "name": "open_source_developers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Publish model weights, training code, and evaluation tooling without payment, for reputation and conviction. Liability theories aimed at capability creators reach their personal assets, and several jurisdictions' proposals would make hobbyist contributors defendants. Their exit is simply stopping — and visible departures of maintainers are already documented where litigation began."
+    },
+    {
+      "name": "enterprise_deployers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Integrate purchased or licensed models into products they control end to end — choosing contexts, users, and safeguards. Because primary responsibility sits upstream, their contractual posture is to demand broad indemnities while resisting reciprocal ones, and their expected liability costs fall accordingly. They still carry exposure for their own negligent operation, which they manage with insurance and usage policies."
+    },
+    {
+      "name": "harmed_end_users",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "People injured by deployed systems — denied credit, misdiagnosed, defamed by chatbots, struck by autonomous vehicles. The allocation gives them a solvent, identifiable defendant with the deepest technical knowledge instead of a thinly capitalized operator. Individually they have little power, and they have no exit from a society saturated with these systems."
+    },
+    {
+      "name": "liability_insurers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "situation": "Underwrite the new exposure, price developer-risk policies, and collect premiums on a risk class that barely existed a decade ago. Actuarial models of opaque-system failure are immature, so margins are wide and exclusions extensive. They can withdraw from lines or reprice annually, and they lobby on the drafting of liability standards."
+    },
+    {
+      "name": "technology_law_scholars",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Track doctrine across jurisdictions, publish comparative analyses of where responsibility actually lands, and testify in consultations. They see the whole allocation structure and its divergences across borders, including the gap between codified provider duties and courtroom practice."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Fixes a default bearer of last resort for harms from opaque learned systems, giving injured parties a solvent, technically informed defendant and concentrating safety incentives at the point of greatest capability knowledge.",
+    "transfer_function": "Moves expected loss — defense costs, settlements, insurance premiums, disclosure-compliance expenditure — from deployers and injured parties onto capability developers; moves compensation probability toward injured parties.",
+    "absent_voices": "Open-source maintainers and startup founders were thinly represented in the consultations that shaped provider-obligation drafts — incumbent labs and deployer associations dominated testimony. Future injured populations are definitionally absent. Deployer-side in-house counsel were heavily present; the developer-periphery seats were not.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the allocation vanished overnight, injured parties would face a compensation vacuum with no solvent defendant, deployers would reprice or uninsured-risk their operations, insurer product lines would collapse or restructure, and developer investment in disclosure and safety documentation would be re-optimized against a different liability surface. The AI supply chain's contractual architecture is built around this allocation and would be renegotiated clause by clause.",
+    "founding_problem": "Opaque AI systems began injuring people through failures no single actor obviously controlled: the operator chose the context, the creator built the capability, and neither plainly 'caused' the harm in classical tort terms. The arrangement was built to close that accountability gap — to guarantee that someone with the capacity to prevent harm at scale answers for it.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Consumer-protection agencies and academic tort scholarship corroborate that the compensation-and-accountability problem remains live, citing unresolved casualty classes and jurisdictional gaps. Deployer trade associations — beneficiaries of the current allocation — attest instead that contractual risk management has largely solved it; that dissent from the benefiting seat is itself structural signal. Corroboration comes from outside the beneficiary set."
+  },
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.66
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.19
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.47
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "A liability-allocation regime is consolidating around the principle that the organization which trains and releases an AI capability bears primary legal responsibility for harms the capability later causes in anyone's deployment. Provider obligations are codified upstream; deployers integrate the capability under their own operational control while contractually steering expected loss upstream; injured parties gain a solvent, technically informed defendant. This file instantiates ONE reading of the contested liability_attribution kernel — the developer_liability reading — as a clean, epsilon-invariant constraint. The epsilon referent is the standing arrangement under contest: the developer-primary allocation itself, assessed by this reading's own lights. Sibling readings (deployer_liability, shared_liability) are separate constraint stories with different victim sets and therefore different epsilon values; they are linked through the network, not folded into this one. The claim/metric relationship is deliberately unreconciled: the structural claim is tangled_rope (genuine coordination function plus asymmetric transfer plus active enforcement), and the metrics are authored independently as descriptive estimates.",
+    "key_agents": [
+      "frontier_model_developers: Primary target (powerful/constrained) — bears liability assigned at creation time for harms surfacing in deployments it does not control",
+      "small_ai_startups: Secondary target (moderate/mobile) — exposed through contract chains without incumbent defenses; exits by pivoting or selling",
+      "open_source_developers: Peripheral target (moderate/mobile) — personal-asset exposure reaches unpaid contributors; exit is stopping",
+      "enterprise_deployers: Primary beneficiary with residual exposure (powerful/constrained) — externalizes expected loss upstream, retains negligence tail",
+      "harmed_end_users: Protected beneficiary (powerless/trapped) — gains a solvent, technically informed defendant",
+      "liability_insurers: Intermediary beneficiary (institutional/arbitrage) — collects premiums on a new risk class",
+      "ai_regulators: Agenda setter (institutional/analytical) — fixes the allocation and is still building enforcement capacity",
+      "technology_law_scholars: Analytical observer — sees cross-jurisdictional divergence between codified duties and courtroom practice"
+    ],
+    "logic_rationale": "Extraction is substantial (0.66 at interval end) because the allocation assigns developers losses that arise substantially from deployment-time decisions they do not make: the transfer is decoupled from their share of causal control over any given incident. Suppression is moderate (0.55) and predominantly structural — legal exposure, mandatory-disclosure machinery, and contract-chain propagation of provider duties — with a smaller internalized component (responsibility norms inside labs that make contesting the burden feel like betraying a stewardship identity; if that identity frame broke, measured resistance would rise sharply). Theater is low-to-moderate (0.30): much compliance artifact (model cards, disclaimers, red-team reports) is increasingly drafted for courtrooms rather than users, but the disclosure and evaluation functions are not yet hollow. Accessibility_collapse is low (0.42) because alternatives persist — contractual indemnity stacking, insurance, jurisdictional selection, offshore development — each carrying friction but none foreclosed. Resistance is elevated (0.62): developer lobbying, litigation strategy, and open-source withdrawal threats are active and documented. The three temporal series share one grid ({0,3,6,9,12,15}); the suppression_requirement series is authored deliberately because this story's traced dynamic is enforcement-capacity buildout — regulators constructing the machinery that makes the assigned responsibility collectible — not merely shifting extraction. Later points are marked projected: the regime's full maturation lies ahead of the observation date.",
+    "perspectival_gap": "The payer and beneficiary seats compute differently by construction. The sharpest divergence is between same-power seats: frontier_model_developers and enterprise_deployers are both powerful, global, and constrained, yet sit at opposite ends of the directionality range — differentiated entirely by role and exit texture, not by power. A second divergence runs within the victim set: small startups and open-source developers share the frontier labs' payer role but hold mobile exit, so the constraint presses on them as a participation tax (exit) rather than a carrying cost (absorb); the engine should compute different per-seat types from the same role declaration. Coalition potential among victims exists on paper (trade associations span the developer class) but is suppressed by heterogeneous exit options: incumbents can absorb, periphery actors exit, so no unified payer bloc forms.",
+    "directionality_logic": "Beneficiary declarations drive low directionality: enterprise_deployers (externalized expected loss, partial offset from their residual negligence tail), harmed_end_users (compensation certainty, no exit), liability_insurers (premium flow, arbitrage-grade exit keeps them nearest the beneficiary end). Victim declarations drive high directionality, amplified by exit position: frontier developers are constrained (cannot stop shipping without ceding the market), pulling them toward the full-target end; startups and open-source developers are mobile, which damps their effective extraction but converts the burden into suppressed participation. No directionality_overrides are authored: overrides key on power atoms, and the 'powerful' atom hosts two seats with opposed structural relationships (frontier developers and enterprise deployers), so any override would mis-specify one of them. The differentiation is carried by role and exit declarations, where it belongs.",
+    "mandatrophy_analysis": "The founding problem is live, so no mandatrophy resolution is declared. The classification guards against both symmetrical errors: reading the deployer windfall as proof of pure extraction ignores the real coordination leg — compensation certainty for injured parties and incentive concentration at the point of capability knowledge, neither of which the deployer-primary or purely proportional alternatives deliver as cleanly; reading developer acquiescence (voluntary safety commitments, published frameworks) as consent ignores the ratchet — voluntary adoption became the baseline that mandatory duties then hardened. The R5 mismatch consumer should find no zombie flag here: founding_problem_status=live with disappearance_verdict=world_rearranges is the coherent cell. The piton test fails on its own terms: a concentrated beneficiary seat (enterprise_deployers) captures the gains, which is snare-family structure riding on a rope, not inertial maintenance.",
+    "kernel_context": "This constraint is the developer_liability reading of the liability_attribution kernel: the contested question of who bears primary legal responsibility for harms from AI capabilities. Sibling readings are deployer_liability (primary responsibility tracks deployment-context control) and shared_liability (joint responsibility apportioned along the value chain by causal contribution and control). This file instantiates only the developer reading, with its own epsilon, victim set, and classification; the siblings are separate stories linked through network.affects_constraints. The disagreement between readings is located in the attribution index itself — creation-time knowledge versus deployment-time control versus contribution-weighted distribution — and is routed to omega variables rather than averaged into this constraint's metrics."
+  },
+  "omegas": [
+    {
+      "id": "kernel_reading_commitment",
+      "question": "This constraint is one reading of the liability_attribution kernel (reading: developer_liability). Would adopting a sibling reading — deployer_liability or shared_liability — relocate the victim set and dissolve this arrangement's beneficiary structure?",
+      "resolution_mechanism": "Legislative enactment or appellate doctrine consolidation choosing among the three allocations; watch for provider-obligation repeal, deployer-duty statutes, or apportionment frameworks replacing primary-bearer defaults.",
+      "impact": "Under deployer_liability, developers exit the victim set and deployers enter it, inverting this story's directionality map. Under shared_liability the concentrated victim/beneficiary split disperses into contribution-weighted shares, collapsing the asymmetric-extraction signature that drives this reading's tangled_rope classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer structure: this story is one of three readings of the liability-attribution kernel; sibling adoption restructures the victim set."
+    },
+    {
+      "id": "control_knowledge_locus_dispute",
+      "question": "Is the inter-reading disagreement located in whether liability should index to deployment-time control (deployer reading) or creation-time knowledge of the capability (developer reading) — and can any single framework rank both considerations?",
+      "resolution_mechanism": "Doctrinal analysis of which factor courts treat as decisive when the two conflict — misuse cases, fine-tuning cases, dual-control incidents; legislative findings statements declaring the ranking.",
+      "impact": "If control dominates, this reading loses its primary-locus claim and converges toward the deployer reading; if knowledge dominates, deployer-side externalization intensifies and this arrangement's extraction deepens.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the kernel contest is located: the attribution index (control vs knowledge), not the magnitude of liability."
+    },
+    {
+      "id": "opacity_administrability",
+      "question": "Can courts actually attribute causation through opaque model internals, or does developer-primary liability become strict liability in fact — punishing without steering?",
+      "resolution_mechanism": "Track disposition patterns in decided cases: do courts find developer-side causation provable, or do they default to settlement and strict-liability reasoning because internals are unexplainable?",
+      "impact": "If administrable, the arrangement retains incentive content and the coordination leg stays strong. If not, it drifts toward pure transfer plus insurance intermediation, pushing effective classification toward the extractive pole.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity makes the developer-liability regime administrable or degenerates into unsteerable strict liability."
+    },
+    {
+      "id": "open_source_chilling_effect",
+      "question": "Does developer-primary liability measurably suppress open-weight release and unpaid contribution?",
+      "resolution_mechanism": "Release-rate and maintainer-retention data before and after liability rulings and disclosure mandates; surveys of departed maintainers citing legal exposure.",
+      "impact": "Strong chilling would show the arrangement persisting partly by suppressing an alternative production mode — raising effective suppression above the structural measure and darkening the classification. Weak chilling supports the coordination reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the liability allocation operates as a participation tax on the open ecosystem."
+    },
+    {
+      "id": "insurance_intermediation_effect",
+      "question": "Does liability insurance preserve the arrangement's incentive function through actuarial pricing, or does pooled coverage sever the developer's marginal exposure, leaving premium flow as the main residue?",
+      "resolution_mechanism": "Compare safety-investment trajectories of insured versus self-insured developers; examine policy exclusions that re-expose marginal behavior; study repricing events after adverse judgments.",
+      "impact": "Moral-hazard dominance would recast the arrangement as premium-transfer infrastructure benefiting insurers and deployers; effective actuarial discipline would support the incentive-coordination framing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether insurance intermediation transmits or severs the liability signal."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__deployer_liability",
+      "liability_attribution__shared_liability"
+    ],
+    "dual_formulation_note": "The colloquial label 'AI liability' decomposes into three structurally distinct constraint stories per the epsilon-invariance principle: developer_liability (this file — victim set: capability creators, concentrated), deployer_liability (victim set: operators, inverted beneficiary structure), and shared_liability (diffuse contribution-weighted burden, no concentrated victim). Their epsilon values differ because their victim sets differ; measuring 'AI liability' as one observable would average across incompatible arrangements. The upstream/downstream structure runs from whichever reading achieves codification first: this reading's provider-duty infrastructure (disclosure mandates, conformity assessment) becomes the scaffolding the shared reading inherits and the deployer reading must negotiate around."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "reference_frame": "creator_accountability_anchor",
+    "drift_state": {
+      "moment": "contemporary_regulatory_codification",
+      "direction": "revival_pressure",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "deployer_liability",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "shared_liability",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "creation_locus_primary_liability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "creator_knowledge_disclosure_duty",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "enterprise_deployers",
+  "fixing_cost": "prohibitive",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

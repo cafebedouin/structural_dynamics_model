@@ -1,0 +1,340 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__public_safety_coordination",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "licensing_public_safety",
+    "story_uid": "f5e7810b-8346-44b4-8064-a3913e12090f"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.22,
+    "accessibility_collapse": 0.5,
+    "resistance": 0.4,
+    "claimed_type": "rope",
+    "human_readable": "Statutory Credential Requirements as Consumer-Harm Prevention (Public-Safety Coordination Reading)",
+    "topic_domain": "economic/political/regulatory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "service_consumers",
+      "licensed_incumbent_practitioners"
+    ],
+    "victims": [
+      "threshold_screened_out_workers"
+    ],
+    "vindicated_propositions": [
+      "minimum_competence_threshold_doctrine",
+      "information_asymmetry_market_failure"
+    ]
+  },
+  "interval": {
+    "start": 1900,
+    "end": 2025
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.3,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1935,
+      "value": 0.34,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.41,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.15,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1935,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.26,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.24,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.23,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.22,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1900,
+      "value": 0.25,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1935,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1960,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1980,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2000,
+      "value": 0.47,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.44,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.42,
+      "basis": "observed"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_underdetermination",
+      "question": "Is the public-safety coordination reading the best explanation of the licensing statutes' persistence, or do the sibling readings (rent_seeking_suppression, graduated_access_filter) fit the same statutory record better?",
+      "resolution_mechanism": "Comparative institutional analysis: correlate each scope expansion and fee increase with contemporaneous harm evidence versus incumbent board composition; run natural experiments from delicensing episodes and universal-recognition adoptions to see which reading predicts the observed outcomes.",
+      "impact": "If the rent-seeking reading fits better, this constraint reclassifies toward tangled_rope or snare with incumbents as capturers and the safety frame as cover; if the public-safety reading fits, the rope classification stands and the siblings remain minority explanations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Committer-frame omega: this file instantiates one reading of the licensing_statute_mandate kernel; the same observable record underdetermines which reading is true."
+    },
+    {
+      "id": "threshold_calibration_vs_harm_evidence",
+      "question": "Are current examination, training-hour, and renewal requirements calibrated to demonstrated harm risk in each occupation, or systematically over-inclusive relative to the harm they prevent?",
+      "resolution_mechanism": "Occupational risk stratification: regress licensure stringency against documented harm rates per occupation, controlling for training substitutes and insurance availability.",
+      "impact": "Over-inclusive thresholds raise measured extraction above the coordination-cost floor and lend partial support to the graduated_access_filter observation without adopting its full frame; well-calibrated thresholds confirm the rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the quality threshold tracks harm or exceeds it."
+    },
+    {
+      "id": "counterfactual_substitute_effectiveness",
+      "question": "How much of the consumer protection the license provides could reputation systems, bonding, warranties, and liability insurance reproduce absent the statutory gate?",
+      "resolution_mechanism": "Cross-jurisdiction comparison of harm rates in the same occupations under licensed versus unlicensed regimes, and platform-era data on rating-and-bonding substitutes.",
+      "impact": "High substitutability would mean the coordination function is not load-bearing, raising effective extraction and weakening the rope justification; low substitutability confirms the threshold solves a problem private signals cannot.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether private-order substitutes could replace the statutory quality signal."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "State credential statutes require practitioners in dozens of occupations to pass examinations, complete approved training, and maintain renewal and continuing-education compliance before serving the public lawfully. This story instantiates ONE reading of that arrangement — the public_safety_coordination reading of the licensing_statute_mandate kernel — under which the statutes solve a real information-asymmetry problem: consumers cannot evaluate competence before purchase, so a shared, state-verifiable quality threshold lets them trust any license holder and gives competent practitioners a portable signal. Per the epsilon-invariance principle, the sibling readings (rent_seeking_suppression, graduated_access_filter) are separate constraint files linked through network.affects_constraints; their epsilon values differ because they assess the same statutes through different structural lenses, and no averaging across readings occurs here. Epsilon's referent throughout is the standing arrangement — the credential statutes as they operate — assessed by this reading's own lights: genuine coordination carrying moderate threshold costs, not the endorsed alternative of pure reputation markets.\n\nKEY AGENTS (by structural relationship):\n- state_legislatures: Agenda setter (institutional/mobile) — enacts, amends, and sunsets credential statutes; holds the fix lever\n- state_licensing_boards: Administrator (institutional/constrained) — runs exams, discipline, and fee collection; funded by the arrangement it polices\n- licensed_incumbent_practitioners: Primary beneficiary (organized/identity_locked) — collects the trust premium and reduced competition; supplies board majorities\n- service_consumers: Intended beneficiary (moderate/mobile) — buys competence assurance at a price premium\n- threshold_screened_out_workers: Primary target (powerless/mobile) — barred from lawful practice by the threshold\n- informal_unlicensed_providers: Excluded actor (powerless/trapped) — serves the shadow market under enforcement risk\n- consumer_safety_researchers: Analytical observer (analytical/analytical) — measures harm and price effects across jurisdictions",
+    "logic_rationale": "Extractiveness is authored at 0.38: this reading sees the price uplift and access restriction that licensing measurably produces, but reads most of it as the cost of maintaining a verified threshold rather than as rent — the number is deliberately not tuned to guarantee a rope verdict, and the engine's per-seat computation may disagree. Suppression is 0.42: the legal bar on unlicensed practice is real coercion, but narrowly targeted at market entry rather than pervasive over conduct. Theater is 0.22: examination and discipline are functional adjudication, with a minority of activity (renewal paperwork, some continuing-education box-checking) performing compliance rather than assuring competence. Accessibility_collapse is 0.50 — workable alternatives persist (self-service, informal providers, substitute goods, relocation to lighter-regime states) even though formal-market entry is legally closed. Resistance is 0.40 — braiding and telehealth litigation, sunset commissions, and universal-recognition reforms are real but episodic, blunted by broad public trust in licensure. The temporal series run on one shared grid (all three metrics at all seven points) so no metric inherits another's end-state value. The suppression_requirement series is included because the story specifically traces enforcement-capacity change: boards were thin complaint bureaus in 1900, professionalized into full investigative and disciplinary machinery by 1980 (continuing-education mandates, fingerprinting, interstate discipline networks), then eased modestly after 2000 as reciprocity and universal-recognition compacts reduced per-state enforcement burden. Extraction peaks at 1980 with the great scope expansion into low-harm occupations and partially retreats thereafter under reform pressure. Suppression is authored as a raw structural property; only extractiveness is scaled by directionality and scope downstream.",
+    "perspectival_gap": "The seats compute differently by construction. From the consumer seat the arrangement is a subsidy: assurance purchased at a tolerable premium, with mobile exit into substitutes keeping the relationship favorable. From the screened-out worker seat the same statute is a hard gate that confiscates a livelihood path, and mobile exit (leaving the trade) is cold comfort. From the incumbent seat the credential is both income floor and professional identity, so the seat defends the arrangement even where its own compliance costs bite. From the board seat the statutes are simply the administrative reality the office executes. The engine derives these divergent per-seat classifications from the declared power, exit, and beneficiary/victim structure; the authored rope claim does not adjudicate among them.",
+    "directionality_logic": "Service consumers are declared beneficiaries with mobile exit, placing them near the beneficiary end of directionality — the constraint subsidizes them with assurance. Licensed incumbents are declared beneficiaries but their identity_locked exit and board seats deepen their stake in maintenance rather than in suffering extraction; they derive low-to-moderate d. Threshold-screened-out workers are declared victims: the gate extracts their market access directly, placing them near the full-target end, with mobile exit damping but not reversing the extraction they bear. Informal providers are excluded rather than coordinated — the enforcement machinery exists to keep them outside, so their exposure is high even though they are not the threshold's designed target. Boards and legislatures administer rather than collect personally; boards' fee revenue is fiduciary, funding the enforcement function itself. No directionality overrides were needed: the beneficiary/victim declarations plus exit options produce the correct qualitative ordering without correction.",
+    "mandatrophy_analysis": "The rope claim guards against two opposite errors. Against the extraction-only error: reading modern scope creep (cosmetology, floristry) as proof that the whole arrangement was always a snare erases the documented pre-licensure harm record that motivated the founding statutes. Against the coordination-only error: treating the founding problem's continued existence as proof the current thresholds still serve it ignores threshold drift away from harm evidence. The R5 interview finds the founding problem LIVE — incompetent practice still causes measurable, corroborated harm — so mandatrophy is not resolved and no sunset is declared. The drift vector to watch is piton-shaped: if harm-evidence tracking lapses entirely while boards continue administering frozen requirements (rising theater, diffuse costs borne by entrants, an administrator that could recalibrate but does not), the arrangement would decay from rope toward piton without any capturer necessary. The theater_ratio series (peaking at 0.26, settling at 0.22) shows no Goodhart crossing of 0.5, consistent with a still-functional coordination core.",
+    "kernel_context": "This file instantiates the public_safety_coordination reading of the licensing_statute_mandate kernel: statutory credential requirements as consumer-harm prevention through minimum competence standards. Sibling readings — rent_seeking_suppression (statutes restrict labor supply and extract rents for incumbents) and graduated_access_filter (differential barriers sort access by class and prior resources) — are separate constraints linked through network.affects_constraints. Reading relations authored here: this reading INFLUENCES rent_seeking_suppression, because the legitimacy the safety frame confers is the operative resource that lets scope, fees, and training-hour requirements expand beyond harm evidence — the safety reading changes the rent-seeking reading's operating environment without resolving their dispute. This reading COEXISTS_WITH graduated_access_filter: the two are rival explanations held by different coalitions (public-health constituencies versus labor-market-access constituencies), and neither premise logically eliminates the other within a single framework. The foundational axiom distinguishing this reading — that ex-ante screening prevents harm private signals cannot — is empirically contingent and therefore falsifiable by the delicensing natural experiments the omegas name."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rent_seeking_suppression",
+      "graduated_access_filter"
+    ],
+    "dual_formulation_note": "The colloquial label 'occupational licensing' decomposes into three structurally distinct claims about the same statutes: harm-prevention coordination (this file, epsilon 0.38), incumbent rent extraction (rent_seeking_suppression, substantially higher epsilon with incumbents as capturers), and class-sorted access filtering (graduated_access_filter, epsilon indexed to regressive barrier incidence). Each member of the family carries its own epsilon, beneficiary/victim structure, and classification; they are linked because each cites the same statutory record as evidence, and the upstream safety frame's legitimacy feeds the downstream readings' explanatory targets."
+  },
+  "stakeholders": [
+    {
+      "name": "state_legislatures",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Enact and amend credential statutes in response to harm incidents, professional association campaigns, and reform pressure. Hold the sunset-review and delicensing levers and can restructure or abolish any threshold at negligible fiscal cost; bear little direct cost from the arrangement either way, which makes their attention dependent on which coalition organizes most effectively."
+    },
+    {
+      "name": "state_licensing_boards",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "situation": "Administer examinations, investigate complaints, discipline licensees, and collect the fees that fund their own operations. Staffed heavily by licensed incumbents appointed from the professions they regulate. Their budgets, staffing, and jurisdictional reach depend on the statutes they enforce, so the arrangement's continuation is also their institutional continuation."
+    },
+    {
+      "name": "licensed_incumbent_practitioners",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "situation": "Hold the credential that gates lawful practice and collect the trust premium and reduced competition the threshold produces. Serve as board majorities, write exam blueprints, and set continuing-education requirements. Their career investment and professional self-conception are bound to the credential, so they defend the arrangement's terms even where its compliance costs fall on them."
+    },
+    {
+      "name": "service_consumers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Rely on the license as a low-cost signal of minimum competence when hiring doctors, electricians, contractors, and cosmetologists, and pay somewhat higher prices as the cost of that assurance. Can substitute do-it-yourself effort, informal providers, or unlicensed alternatives for many lower-stakes services, which bounds how much of the premium they must absorb."
+    },
+    {
+      "name": "threshold_screened_out_workers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Cannot meet or cannot afford the training-hour, examination, apprenticeship, or fee requirements and are therefore barred from lawful paid practice in the occupation. Lose the income and status of the trade and bear the transition cost privately, typically re-entering adjacent unregulated work or retraining. Their exclusion is the threshold operating as designed, whatever its calibration."
+    },
+    {
+      "name": "informal_unlicensed_providers",
+      "role": "excluded",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Provide services outside the legal market under persistent complaint-driven enforcement risk, unable to advertise openly or build formal reputations. Would argue for competency-based assessment or small-operator exemptions if seated in rulemaking, but notice-and-comment processes reach few of them; their exclusion is what the enforcement machinery maintains."
+    },
+    {
+      "name": "consumer_safety_researchers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "situation": "Study harm rates, disciplinary action volumes, and price effects across licensed and unlicensed jurisdictions, publishing the comparisons that inform sunset reviews and reform legislation. Hold no stake in market access and no vote in standard-setting; their findings enter the political process only when a legislature chooses to read them."
+    }
+  ],
+  "gain_flow": "licensed_incumbent_practitioners",
+  "fixing_cost": "cheap",
+  "six_questions": {
+    "coordination_function": "Solves the information-asymmetry problem between service consumers and practitioners: consumers cannot cheaply evaluate competence before purchase, so a shared, state-verifiable quality threshold lets them trust any license holder without individual vetting and gives competent practitioners a portable, credible signal across jurisdictions.",
+    "transfer_function": "Moves lawful market access from workers without the credential to workers holding it; moves compliance costs (tuition, supervised hours, examination and renewal fees) from entrants to boards and public treasuries; and moves a measurable price premium from consumers to license holders as the price of assured minimum competence.",
+    "absent_voices": "Screened-out workers and informal providers are absent from board rulemaking: boards are composed mainly of license holders, and notice-and-comment channels reach few of the excluded. Their objection — that thresholds exceed demonstrated harm risk and price out low-income entrants — enters the record mainly through litigation and academic studies rather than the rooms where standards are written.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "Overnight repeal would force rapid reconstruction: insurers, platforms, and trade associations would build reputation, bonding, and warranty substitutes within months; prices in licensed trades would fall as suppressed supply entered; and some share of consumers would be harmed by genuinely incompetent providers before substitutes matured. The size of that harm share is precisely what the sibling readings dispute, but no party contends the service economy would simply continue unchanged.",
+    "founding_problem": "Late nineteenth- and early twentieth-century markets for medicine, pharmacy, engineering, and the skilled trades were plagued by practitioners whose incompetence caused death, injury, and property loss invisible to buyers until too late — patent-medicine poisoning, unsafe wiring, collapsed structures — and no private signal available at the point of sale could separate competent from incompetent providers.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Public-health agencies and product-safety investigators attest that incompetent practice still causes measurable harm (malpractice payouts, electrical-fire investigations, adverse-event reporting); economic historians corroborate the pre-licensure harm record independently of the professional associations that lobby for licensure. No party outside the beneficiary set attests the problem is fully solved, though reform economists outside the beneficiary set attest that in many low-risk occupations the problem is now smaller than the arrangement's side costs."
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "minimum_competence_consumer_protection",
+    "drift_state": {
+      "moment": "contemporary_deregulation_review_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "rent_seeking_suppression",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "incompetence_harm_preventable_by_ex_ante_screening",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "information_asymmetry_warrants_collective_gatekeeping",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_stealth2",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "stealth/ox-alpha",
+    "sampling_params": "max_tokens=65536,temperature=model_default,reasoning=model_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
