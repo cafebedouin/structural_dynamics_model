@@ -1,0 +1,343 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "8b13ae87-399b-4d49-bfb0-6acb6bf00f6f"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.71,
+    "theater_ratio": 0.48,
+    "accessibility_collapse": 0.58,
+    "resistance": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Censorship-Resistant P2P Cash",
+    "topic_domain": "economic/technological/monetary",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "p2p_cash_proponents",
+      "unbanked_populations"
+    ],
+    "victims": [
+      "high_fee_payers",
+      "excluded_transaction_participants"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "p2p_cash_proponents",
+      "role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers, researchers, and advocates who maintain that Bitcoin's primary purpose is frictionless electronic payment between peers without intermediaries. They argue for block size increases, layer-2 scaling, and protocol changes that prioritize transaction throughput and low fees. They operate nodes, vote on protocol evolution through code contributions and consensus signaling, and articulate the legitimacy frame for Bitcoin as a transaction medium."
+    },
+    {
+      "name": "unbanked_populations",
+      "role": "beneficiary",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Individuals in jurisdictions with capital controls, unstable currencies, or financial exclusion who depend on censorship-resistant payment channels to access global markets and preserve purchasing power. They benefit from Bitcoin's availability outside banking infrastructure but are constrained by rising on-chain transaction fees and technical barriers to participation."
+    },
+    {
+      "name": "high_fee_payers",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users transacting small amounts on-chain during periods of network congestion, paying fees that approach or exceed the transaction value. They bear the cost of the reading's implied fee-market structure, where scarcity of on-chain capacity is allocated by price rather than by protocol guarantee. Their alternatives are delaying transaction, using layer-2 solutions requiring technical sophistication, or abandoning Bitcoin for lower-cost systems."
+    },
+    {
+      "name": "excluded_transaction_participants",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Populations for whom the reading's emphasis on on-chain censorship resistance comes at the cost of practical usability: those without internet access for layer-2 systems, without the cognitive load tolerance for self-custody and fee management, or without the initial capital to front fees to establish themselves on the network. They are excluded not by protocol rule but by the economic structure the reading's fee prioritization instantiates."
+    },
+    {
+      "name": "digital_gold_proponents",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates who read Bitcoin as a scarce store-of-value asset first and transactional medium second. They argue for protocol conservatism (restricted block size) to ensure scarcity and network security. They would object that the p2p cash reading sacrifices the asset's fundamental properties for transaction convenience and thus undermines Bitcoin's real value proposition."
+    },
+    {
+      "name": "miners_and_node_operators",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operators of the consensus infrastructure who collect block rewards and transaction fees. They benefit from the constraint's enforcement (validating transactions, enforcing rules) and collect rents from fee markets during congestion. They also bear the cost of maintaining the network and adapting to protocol disputes about appropriate fee structures and block capacity."
+    },
+    {
+      "name": "regulatory_authorities",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Government agencies, financial regulators, and AML/CFT bodies that view Bitcoin's censorship resistance as a compliance challenge. They observe the constraint's operation from the outside, seeking to impose transaction reporting requirements, exchange controls, or asset seizure capabilities that would undermine the reading's core legitimacy claim."
+    },
+    {
+      "name": "layer_two_developers",
+      "role": "beneficiary",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Developers building layer-2 solutions (Lightning Network, sidechains, state channels) that enable micropayments and high-throughput transaction. They benefit from the on-chain constraint's scarcity (which justifies their layer-2 solutions) while also being harmed by it (reduced on-chain adoption, need to compete for users). They occupy a structurally ambiguous position: the reading requires them as a solution but also commodifies their work."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the double-spend problem in digital cash without a trusted intermediary: participants can verify transaction history and update account balances through distributed consensus, enabling peer-to-peer value transfer without banking infrastructure.",
+    "transfer_function": "Moves purchasing power from coin holders paying transaction fees to miners (block rewards and fee collection), and from high-frequency on-chain transactors to those willing to wait or use layer-2 solutions. In periods of congestion, the constraint moves the ability to transact on-chain from those unable to pay market-clearing fees to those with sufficient capital.",
+    "absent_voices": "Digital gold advocates would argue that on-chain fee pressure is acceptable and even desirable for scarcity. Protocol ossification advocates would argue that frequent scaling changes threaten consensus stability. Regulatory authorities would argue the reading's censorship resistance is a policy failure. None of these are seated at the consensus table where the p2p cash reading's legitimacy is defended.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If Bitcoin ceased functioning as a censorship-resistant transaction medium (through regulatory seizure, protocol collapse, or market displacement), users dependent on capital-control evasion, remittance corridors outside banking, and unmediated value transfer would face sharp friction. The disappearance would not restore banking access in excluded jurisdictions but would eliminate one option for circumventing it.",
+    "founding_problem": "Electronic transactions require either a trusted third party to prevent double-spending or a consensus mechanism to establish transaction order without trusting any single entity. Before Bitcoin, all electronic cash systems depended on centralized payment processors whose existence created censorship and surveillance risks.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The p2p cash reading asserts the founding problem is live and still solved by Bitcoin's operation. The digital gold reading contests that p2p transaction is still the problem Bitcoin best solves (asset scarcity being the real value proposition). Regulatory testimony and economic analysis from authors outside the Bitcoin developer community attest that the founding problem persists in excluded jurisdictions but that Bitcoin's volatility and fee structure make it impractical for routine transaction in those contexts."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.67
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.71
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.71
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Bitcoin whitepaper articulates a vision of peer-to-peer electronic cash that solves double-spending through distributed consensus without trusted intermediaries. This constraint story instantiates one specific reading of that vision: Bitcoin as a censorship-resistant medium of exchange, where the primary legitimacy claim rests on transactional accessibility and low-friction value transfer. This reading prioritizes block size expansion, layer-2 scaling, and protocol evolution that enables high transaction throughput and low fees. The competing readings — digital gold (Bitcoin as scarce store of value) and protocol ossification (change illegitimacy unless near-universal) — are not described here but linked via network relations. The p2p cash reading has a real coordination function (double-spend prevention) but creates asymmetric extraction: users priced out of on-chain transactions during congestion, populations excluded by fee structures, and regulatory pressure demanding payment surveillance all bear costs to sustain the reading's legitimacy claim.",
+    "key_agents": [
+      "p2p_cash_proponents: Developers and researchers defending the transactional reading; control protocol evolution agenda",
+      "unbanked_populations: Beneficiaries of censorship resistance; constrained by fees and technical barriers",
+      "high_fee_payers: Victimized by fee markets; face economic exclusion during congestion",
+      "excluded_transaction_participants: Powerless agents who cannot afford or technically manage on-chain transactions; identity-locked to alternative systems",
+      "digital_gold_proponents: Excluded stakeholders who contest the reading's prioritization of transaction volume over scarcity",
+      "miners_and_node_operators: Dual-positioned beneficiaries (fee collection) and payers (infrastructure costs, consensus disputes)",
+      "regulatory_authorities: Observers seeking to impose transaction reporting that contradicts the reading's censorship-resistance claim",
+      "layer_two_developers: Ambiguously positioned beneficiaries of on-chain scarcity who are simultaneously commodified by it"
+    ],
+    "logic_rationale": "Extractiveness rises from 0.35 to 0.62 as the interval progresses, driven by escalating on-chain fee pressure and increasing evidence that the reading's transaction-throughput promise is being traded for protocol stability and consensus conservatism. The theater_ratio plateaus at 0.48, indicating the constraint maintains genuine coordination (the double-spend solution is real) but with substantial performative overhead: rhetoric about Bitcoin as cash persists even as transaction economics push toward store-of-value behavior. Suppression_requirement rises to 0.71 and stabilizes, reflecting active regulatory pressure to undermine censorship resistance through KYC/AML requirements and transaction surveillance. The measurement series is authored on a shared time grid (every metric at every time point, same interval endpoints). The oscillation in extractiveness from t=16 to t=20 reflects the cyclical dynamics of fee-market pressure: periods of high on-chain congestion (high extraction) alternate with periods of layer-2 adoption growth (extraction moderated by technical solutions), but the baseline extraction remains elevated because the reading's promised accessibility never fully recovers.",
+    "perspectival_gap": "From the p2p cash agenda-setter seat (developers, proponents), the constraint is a genuine coordination mechanism that evolves to solve scaling challenges while preserving censorship resistance — extractiveness is moderate, suppression is external (regulatory), and the reading is empirically vindicated. From the high-fee-payer seat (small transactors), the same constraint operates as enforced extraction: they are priced out of on-chain use, face suppression through fee markets, and experience the reading as a legitimacy cover for scarcity-based rents. The engine computes these divergent types from the structural data: the proponents' mobile exit and agenda-setting role derive toward beneficiary directionality, while the high-fee-payers' trapped/constrained exit and victim designation derive toward target directionality, resulting in computed classifications that diverge substantially from the shared authored metrics.",
+    "directionality_logic": "The p2p_cash_proponents occupy an organized, mobile position with agenda-setting authority: they control which protocol changes are legitimate, articulate the reading's core claim, and benefit from the constraint's operation (no single point of censorship for their transactions). Directionality for this seat is near-beneficiary (d ~0.2). High-fee-payers and excluded-transaction-participants are powerless, constrained/identity-locked, with no voice in consensus: they bear the cost of fee-market allocation and have few exit options that preserve censorship resistance. Directionality for these seats is near-target (d ~0.85). Miners are dual-positioned: they benefit from fee collection but are payers in the sense that they incur infrastructure costs and must invest in network maintenance that the reading's consensus pressure does not directly incentivize. Unbanked populations are beneficiaries (censorship resistance is their core value) but constrained by fees, yielding moderate d (~0.55). The reading_relations in cs_structure establish that digital_gold_reading coexists_with this reading (both are live positions in the Bitcoin ecosystem, held by different organized factions) and protocol_ossification_reading influences this reading (conservative protocol stances reduce the scaling solutions available to the p2p cash reading).",
+    "mandatrophy_analysis": "The founding problem (double-spend in decentralized systems) is live and still solved by Bitcoin's operation. However, the founding_problem_status='contested' because the digital gold reading argues that asset scarcity, not transaction utility, is the solved problem, and the protocol ossification reading argues that consensus stability is the real value Bitcoin preserves. The six_questions mismatch consumer would examine disappearance_verdict='world_rearranges' (yes, Bitcoin's loss would sharply affect excluded populations who depend on it) against founding_problem_status='contested' — the mismatch suggests that while Bitcoin solves a real coordination problem, the p2p cash reading's particular instantiation of that problem may be contested. The theater_ratio holding at ~0.48 indicates substantial real function (the double-spend coordination) with meaningful performative overlay (the 'Bitcoin as cash' narrative persists even as on-chain economics contradict it). This is consistent with tangled_rope: genuine coordination paired with asymmetric extraction that requires active enforcement (suppression_requirement rising to 0.71 as regulatory pressure intensifies and technical barriers to layer-2 adoption grow).",
+    "kernel_context": "This constraint is one reading of the bitcoin_whitepaper kernel. The reading instantiated here is p2p_cash_reading: Bitcoin is a censorship-resistant medium of exchange for direct electronic transactions, prioritizing low transaction fees and high throughput. Sibling readings include digital_gold_reading (Bitcoin as scarce asset, store of value, inflation hedge) and protocol_ossification_reading (Bitcoin protocol changes are illegitimate unless approaching universal consensus; stability is primary virtue). The p2p cash reading's core premise — that transactional accessibility and low fees are the reading's legitimacy anchor — differs structurally from digital gold (which anchors in scarcity) and from protocol ossification (which anchors in stability). The p2p cash reading forecloses extreme protocol conservatism (if transaction throughput is a primary value, indefinite block-size restriction contradicts the core claim) but coexists_with digital_gold (Bitcoin can be both a transactional medium AND a store of value; different parties can hold both readings simultaneously). The protocol_ossification_reading influences the p2p cash reading by constraining available scaling solutions (if protocol change requires near-universal consensus, the speed of transaction-scaling evolution is limited)."
+  },
+  "omegas": [
+    {
+      "id": "fee_market_necessity",
+      "question": "Is the rising fee market a necessary feature of the reading's security model, or an artifact of block-size restrictions that could be relaxed without sacrificing consensus properties?",
+      "resolution_mechanism": "Empirical analysis of on-chain capacity constraints relative to transaction demand, and simulation of security properties under different block-size parameters. Historical comparison with protocol expansions (SegWit, taproot) and their effects on fee pressure.",
+      "impact": "If fee markets are unnecessary (a policy choice to restrict capacity), the reading's extractiveness could be substantially reduced by protocol changes the p2p cash proponents favor, strengthening their legitimacy claim. If fee markets are necessary for security, the extraction becomes a structural cost of the coordination function, and the victim set of excluded transactors is inherent to the reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether on-chain fee pressure is a structural necessity or a policy choice."
+    },
+    {
+      "id": "censorship_resistance_at_cost",
+      "question": "What proportion of the p2p cash reading's value to unbanked populations comes from censorship resistance itself, versus from the ability to transact at all, and what is the tradeoff boundary where fee costs exceed the value of censorship-resistant access?",
+      "resolution_mechanism": "Ethnographic research in jurisdictions with capital controls and financial exclusion; surveys of actual Bitcoin usage patterns and fee tolerance; comparison of Bitcoin adoption with alternative censorship-resistant payment methods (monero, altcoins, informal channels).",
+      "impact": "If censorship resistance carries much more value than low-cost transactability, high fees are an acceptable cost and the victim set is smaller than modeled. If low-cost access is the binding constraint, high fees directly undermine the reading's primary value proposition for unbanked populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative weight of censorship resistance versus transaction cost for the reading's primary beneficiary populations."
+    },
+    {
+      "id": "reading_incompatibility_with_digital_gold",
+      "question": "Can the p2p cash reading and digital_gold_reading genuinely coexist as feature of the same protocol, or does protocol choice (block size, fee policy, scaling approach) force a zero-sum choice between them?",
+      "resolution_mechanism": "Game-theoretic analysis of incentive structures under different protocol parameters; historical analysis of fork disputes (Bitcoin Cash, etc.) showing which protocol features are traded off; examination of whether transaction-friendly parameters undermine scarcity properties or vice versa.",
+      "impact": "If the readings truly coexist (no forced zero-sum), the constraint's legitimacy can be defended across both reading communities simultaneously. If zero-sum, the coexists_with relation should be re-examined as a forecloses relation, and the p2p cash reading's claims about protocol evolution become zero-sum political struggles rather than technical coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the p2p_cash and digital_gold readings are genuinely compatible or structurally foreclosing."
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_internalized",
+      "question": "Is the measured suppression (0.71) primarily structural (external regulatory pressure, technical barriers imposed by others) or internalized (Bitcoin developers and miners have internalized conservative consensus norms that suppress their own transaction-scaling instincts)?",
+      "resolution_mechanism": "Analysis of developer debates, code contributions, and fork proposals showing whether suppression comes from external pressure (government action, exchange delistings) or from internal consensus rules (rough consensus requirements, 'don't fork without broad agreement'). Post-exit trajectory: would suppression persist after regulatory pressure lifted?",
+      "impact": "If suppression is structural (external), the p2p cash reading's extraction comes from regulatory override and could be reduced by jurisdictional choice. If suppression is internalized (developers have adopted conservative norms), the extraction is self-perpetuating and more resistant to external remedy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of transaction-scaling is structural or internalized in the Bitcoin developer community."
+    },
+    {
+      "id": "layer_two_commodification",
+      "question": "Does the layer-2 ecosystem (Lightning Network, sidechains, rollups) genuinely serve the p2p cash reading's goal of low-cost transaction, or does it create a new two-tier system where layer-2 adoption becomes mandatory for most users while on-chain transactions become an exclusive store-of-value feature?",
+      "resolution_mechanism": "Empirical tracking of layer-2 adoption, user experience (complexity, capital lock-up, channel liquidity requirements), and fee structures. Comparison of intended vs. actual accessibility: are layer-2 systems usable for populations with limited internet, low technical literacy, or small transaction amounts?",
+      "impact": "If layer-2 solutions genuinely democratize transaction access, the p2p cash reading's victims (excluded transactors) migrate to a genuinely usable system and extraction decreases. If layer-2 becomes a commodified solution that creates new barriers, the reading's extraction and victim count actually increase while theatrical coverage (theater_ratio) grows higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether layer-2 solutions resolve or redistribute the reading's victim set of excluded transactors."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper kernel admits three structurally distinct readings, each instantiating a different constraint. The p2p_cash_reading (this story) prioritizes transactional accessibility and interprets block-size expansion as legitimate. The digital_gold_reading treats Bitcoin as a scarce store of value and interprets block-size restriction as necessary for scarcity. The protocol_ossification_reading treats protocol stability as the primary virtue and interprets change resistance as the core feature. Each reading has a distinct ε (epsilon), distinct beneficiary/victim structure, and distinct classification. The readings coexist in the Bitcoin ecosystem as holdings of different organized factions; they do not resolve into a single constraint. Each story is authored independently with its own metrics and stakeholders; the network.affects_constraints links record the causal dependencies (p2p cash's emphasis on transaction throughput influences protocol ossification's design space; digital gold's scarcity emphasis influences p2p cash's fee policy tradeoffs)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transactional_accessibility_primary_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "censorship_resistance_requires_low_friction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "bitcoin_as_peer_to_peer_electronic_cash",
+    "drift_state": {
+      "moment": "contemporary_proof_of_work_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "miners_and_node_operators",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "moderate_to_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

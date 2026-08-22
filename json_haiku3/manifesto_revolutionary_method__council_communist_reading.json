@@ -1,0 +1,329 @@
+{
+  "header": {
+    "constraint_id": "manifesto_revolutionary_method__council_communist_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_council_communist_soviets",
+    "story_uid": "1f8c23e6-b8d8-4f9f-a88e-61b63acd645a"
+  },
+  "base_properties": {
+    "extractiveness": 0.25,
+    "suppression": 0.15,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.72,
+    "claimed_type": "rope",
+    "human_readable": "Council Communist Reading: Workers' Soviets as Direct Democratic Authority",
+    "topic_domain": "political_philosophy/revolutionary_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "autonomous_worker_collectives",
+      "federated_workplace_assemblies"
+    ],
+    "victims": [
+      "state_bureaucratic_apparatus",
+      "vanguard_party_officials"
+    ]
+  },
+  "omegas": [
+    {
+      "id": "scale_coordination_feasibility",
+      "question": "Can federated workplace councils coordinate production at the scale of a modern industrial economy without degrading into either hierarchical reconstruction or coordination failure?",
+      "resolution_mechanism": "Historical observation from attempted council implementations (early Soviet Russia 1917-1918, Paris Commune, Yugosalv works councils, Barcelona 1936-1937, Rojava cantons post-2011) measuring: duration of coordination stability, transaction costs of consensus, response speed to supply disruption, degree of re-centralization pressure.",
+      "impact": "If feasible at scale, the reading's core claim (councils as workable authority structure) holds; if scale-dependent failures drive re-centralization, the constraint may degrade into vanguard_rupture_reading's instantiation. If coordination cost is prohibitive but efficiency acceptable at small scale, the reading fragments into local-only validity (constraints the scope, does not refute the reading).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether workers' councils can coordinate industrial-scale production without re-stratification"
+    },
+    {
+      "id": "reading_vs_sibling_foreclosure",
+      "question": "Do the council_communist and vanguard_rupture readings logically foreclose each other, or do they coexist as live strategic options held by different revolutionary factions within the same historical moment?",
+      "resolution_mechanism": "Textual and historical analysis: (a) do the readings share a common foundational premise they diverge on (suggests coexistence — different strategies within shared theory) or do they start from contradictory premises (suggests foreclosure)? (b) Did historical actors holding one reading attempt to refute the other as logically impossible, or did they contest the practical viability / effectiveness? (c) Do the readings map to different class fractions or organizational contexts (coexistence signal) or to universal strategic claims (foreclosure signal)?",
+      "impact": "If foreclosed: one reading's adoption within a framework eliminates the other's logical coherence — framework coherence is the constraint; one reading's political victory would constitute a logical refutation of the other. If coexist: both remain options for different actors / contexts; political defeat does not equal logical refutation — opening for recurrence. Determines the cs_structure.reading_relations atom for vanguard_rupture_reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The logical/strategic structure of the council vs. vanguard contest within revolutionary Marxism"
+    },
+    {
+      "id": "external_suppression_source",
+      "question": "Is the measured suppression of council authority (0.15 internal, but implied high external by 'high external suppression by rival readings') a property of the council constraint itself or a property of surrounding vanguard and state structures that contest it?",
+      "resolution_mechanism": "Distinguish: (a) internal suppression = a council structure's own requirement to enforce compliance (how much coercion the councils themselves deploy to maintain order); (b) external suppression = pressure FROM rival structures (party discipline, state force, rival councils with different authority claims). Measure by observing which enforcement apparatus operates and who operates it.",
+      "impact": "If the suppression is external (rival structures enforce against councils), the constraint's own extractiveness and suppression scores capture only the within-council operation — the full picture requires modeling the rival readings' constraints in parallel. If internal, the councils' authority requires substantial coercion even over their own constituent members. Distribution affects classification: high external/low internal suggests rope under internal view, snare/tangled_rope under external-pressure view.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Locus of suppression: councils' own requirement or external rivalry's pressure"
+    },
+    {
+      "id": "identity_lock_council_participation",
+      "question": "For a worker in a federated council system, is the constraint's persistence dependent on identity-fusion (workers have become constituted as self-governing collectives; exit is identity-dissolving) or on structural coordination benefit (exit is available but costly)?",
+      "resolution_mechanism": "Ethnographic/historical observation: post-exit, do workers retain autonomous decision-making capacity and organizational identity, or does exit dissolve the worker identity itself? Can a worker leave a council without identity rupture? Do councils require continuous buy-in or are they maintained by path dependence after formation?",
+      "impact": "If identity-locked: the constraint's persistence is robust against external pressure but vulnerable to identity-rupturing events (defeat, infiltration, cooptation by vanguard that turns councils into administrative arms). If structurally coordinate-benefit: exit cost is real but the constraint is theoretically replaceable and workers retain autonomous identity outside councils. Affects directionality computation for the worker seat and stability predictions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether council participation is identity-constitutive or coordinatively beneficial"
+    },
+    {
+      "id": "historical_reading_instantiation",
+      "question": "Which historical actors and texts instantiate the council_communist reading as a distinct position, vs. merely adopting council forms as a tactical stage before vanguard centralization or state apparatus takeover?",
+      "resolution_mechanism": "Historiography: identify authors, movements, and organizations that explicitly advocated councils as TERMINAL authority structure (not transitional): council communists (Germany/Netherlands, Pannekoek, Gorter), autonomous Marxists, Italian autonomia, contemporary autonomist traditions. Distinguish from: Leninist use of soviets as revolutionary tool before state centralization; anarcho-syndicalists who rejected councils as state-building; social democrats who treated councils as extended bargaining forums.",
+      "impact": "If the reading is instantiated clearly in identifiable historical tradition, its axioms and reading relations are grounded in actual dispute; if the reading is primarily an analytical reconstruction with minimal historical instantiation, the constraint models a live possibility that was historically minoritarian (affects confidence and status assessments).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historiographical grounding of the council communist reading as a distinct lived position"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.13
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The council communist reading instantiates workers' soviets (workplace assemblies) as terminal authority structures that replace both capitalist state apparatus and vanguard party apparatus. Authority is federated upward from shop-floor assemblies through sectoral and territorial councils, without permanent delegated executives or privileged administrative class. The reading claims low internal extractiveness (0.25 measured): councils coordinate production and conflict resolution through consensus deliberation among equals, with rotating representation and immediate recallability of delegates. Suppression is minimal internally (0.15: conflicts require only the persuasion needed to maintain federation, not coercive machinery). The constraint is contested by two sibling readings instantiating the same kernel (manifesto_revolutionary_method): the vanguard_rupture reading, which argues the party must seize state power as a prerequisite transition stage, and the democratic_gradualism reading, which argues existing democratic institutions can be reformed to worker control. This story generates the council_communist_reading alone, not the contested alternatives.",
+    "key_agents": [
+      "autonomous_worker_collectives: Workplace assemblies with direct control over production decisions; hold authority through continuous participation; face pressure from both state and party to submit to external coordination",
+      "federated_delegates: Rotating representatives from workplace councils sent to sectoral and territorial coordination bodies; must maintain accountability to their base assemblies through recall rights; structurally positioned to resist permanent bureaucratization",
+      "state_bureaucratic_apparatus: Administrative structure maintaining commodity relations and private property; victims of council displacement because councils' authority claims make state enforcement of commodity law unnecessary",
+      "vanguard_party_officials: Communist party apparatus claiming historical mission and theoretical understanding; victims of council displacement because councils' direct democracy bypasses the party's claimed revolutionary leadership",
+      "rival_socialist_reading_holders: Advocates of vanguard party path and electoral gradualism; excluded from council decision-making; would object that councils cannot sustain revolutionary discipline or defend against counter-revolution"
+    ],
+    "logic_rationale": "Base extractiveness is low (0.25) because councils distribute decision authority horizontally among workers; no permanent class of administrators collects rents from production. The measurement series shows slight upward drift (0.18→0.25 over interval 0-10, then stable) reflecting: historical pressure toward delegation and professionalization of council functions, initial idealism giving way to coordination cost absorption, but no dramatic re-stratification into the 0.5+ range typical of snares or tangled ropes. Suppression requirement is similarly low-to-moderate (0.08→0.15) because internal compliance is sustained by participation and consensus, not by dedicated coercive apparatus. Theater ratio is minimal (0.05→0.08) because the functional work of councils (production coordination, conflict resolution, resource distribution) IS the legitimate operation — there is no significant gap between performance for display and actual coordination. Accessibility collapse is moderate (0.35) because while the council reading offers workers real decision authority, the material costs of defection (losing livelihood outside capitalist firms, invasion of the councils by state/party forces) are substantial; alternatives (going back to wage labor, joining vanguard party) are available but costly. Resistance is high (0.72) because council implementation faces continuous pressure from both state police power and party discipline; the measurement endpoint reflects historical cases where councils were crushed by vanguard parties (Russia 1918-1921, Germany 1919) and by counter-revolutionary states (Spain 1937, Hungary 1956). Stub this: the story measures the constraint UNDER THIS READING, not the total field pressure; external suppression from rival readings is modeled as a separate empirical fact, not attributed to the council constraint itself.",
+    "directionality_logic": "Worker collectives are beneficiaries (d near 0.0): they receive authority, participate in decisions affecting their work, and capture the surplus generated. Their exit options are constrained (identity_locked and mobile both apply: they depend on the collective for livelihood, but they could theoretically join rival political movements or accept wage labor) — moderate power but structured as agents of the constraint rather than targets. State bureaucrats and party officials are victims (d near 1.0): they lose the privilege of commanding workers from outside. They are institutional power but face material elimination if councils displace their authority; their time horizon is generational because state/party apparatus renewal requires ongoing recruitment of people willing to manage for capital or vanguard. Federated delegates are structurally near-symmetric (d~0.5): they receive authority and participate, but they also bear the weight of maintaining federation stability and face immediate recall if their decisions diverge from base assembly preference — the constraint both empowers and constrains them. The analytical observer seat (sociologists, historians, political theorists) has arbitrage-grade exit and remains neutral.",
+    "perspectival_gap": "From a worker collective's seat, the council constraint is pure coordination and beneficial autonomy; extraction is nearly zero because workers decide what to do with what they produce. From a state bureaucrat's seat, the same constraint is catastrophic dispossession: the entire administrative apparatus whose authority rested on controlling production decisions is eliminated. From a vanguard party official's seat, councils represent an unwanted rival authority structure that prevents the party from guiding production according to historical understanding; the party experiences the councils as a constraint limiting its power. From the analytical seat, the constraint is a genuine attempt at coordination without hierarchy, but its stability under pressure and its scalability are open empirical questions. The engine should compute these divergences directly from the authored power atoms and roles; I have declared the structural asymmetry in base_properties beneficiaries/victims and stakeholder roles; the engine derives the per-seat directionality.",
+    "mandatrophy_analysis": "The founding problem was: production coordination without either commodity exchange (capitalism) or hierarchical command (statism). This is claimed as the constraint's continued justification — councils solve this problem through federated deliberation. The mandatrophy frame: if councils persist but stop actually coordinating production (become theater), or if they are captured by party cadres who turn them into administrative arms of the vanguard, the original mandate has died but the structure persists. The measurement series at 0.08 theater ratio suggests the internal operation is still mostly functional coordination rather than ritual; if theater_ratio climbed above 0.5, that would indicate mandate drift. Mandatrophy_resolved: declared false because the constraint is continuously contested and justified by reference to its founding problem; if conditions changed and councils became ritualized or party-captured, the classification would shift to piton. Current stance: rope (coordination without extraction), with live questions about scalability and durability.",
+    "kernel_context": "This constraint instantiates the council_communist reading of the manifesto_revolutionary_method kernel. The kernel is the contested claim about how revolutionary transformation should occur. The council communist reading holds that workers' councils (soviets) as direct democratic organs can replace both capitalist state and vanguard party, with power held by federated workplace assemblies. Sibling readings: (1) vanguard_rupture_reading — revolutionary transformation requires organized party seizure of state power; dictatorship of proletariat as transitional state form under party guidance. (2) democratic_gradualism_reading — socialism achievable through democratic electoral majority and gradual institutional reform; working-class power exercised through existing democratic structures. The council reading's core distinguishing claim is that direct worker control through federated councils is the mechanism of revolutionary transformation AND the terminal form of socialist authority, not a transitional stage."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "manifesto_revolutionary_method__vanguard_rupture_reading",
+      "manifesto_revolutionary_method__democratic_gradualism_reading"
+    ],
+    "dual_formulation_note": "The manifesto_revolutionary_method kernel admits three distinct constraint readings. This story (council_communist_reading) models the coordination structure of federated workplace democracy. The vanguard_rupture_reading models the party-mediated state seizure as an alternative revolutionary path. The democratic_gradualism_reading models electoral institutional reform. Each reading has distinct ε (council: 0.25 internal, vanguard: higher, gradualism: lower), distinct beneficiary/victim sets, and distinct typology. All three are linked as members of the same constraint family via affects_constraints."
+  },
+  "stakeholders": [
+    {
+      "name": "autonomous_worker_collectives",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Workplace assemblies of production workers with direct control over production decisions, work allocation, and distribution of output. They participate in sectoral and territorial councils through elected rotating delegates. They benefit from authority and autonomy; they also bear the cost of deliberation and coordination labor. Exit would mean abandoning collective control and returning to wage labor or joining a vanguard party structure."
+    },
+    {
+      "name": "federated_delegates",
+      "role": "agenda_setter",
+      "secondary_role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Elected representatives rotating through sectoral and territorial council coordination roles. They translate base assembly preferences into federation-wide decisions and coordinate inter-sectoral production. They bear the burden of consensus-building and are immediately recallable if decisions diverge from base preference. They set the agenda within the federation but must maintain accountability to assembly mandates."
+    },
+    {
+      "name": "state_bureaucratic_apparatus",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Administrative structures maintaining commodity relations, private property enforcement, and state monopoly on legitimate violence. Under council authority, the state apparatus loses its function: councils coordinate production without commodity markets, enforce collective property rights without private courts, and manage internal conflicts through assembly deliberation rather than police power. The apparatus cannot adapt; it must be replaced."
+    },
+    {
+      "name": "vanguard_party_officials",
+      "role": "payer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Communist party cadres claiming historical understanding and revolutionary leadership. Under council authority, the party's claim to leadership and its function as vanguard are negated: workers decide directly, bypassing the party's mediation. The party cannot adapt to council authority; it must either seize state power and subordinate councils to party discipline, or lose its organizational purpose. The constraint eliminates the party's structural position."
+    },
+    {
+      "name": "rival_political_readings",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Advocates of vanguard party path (Leninism, Maoism) and electoral democratic socialism would argue that councils cannot sustain revolutionary discipline, cannot defend against counter-revolution, and require party guidance. They are structurally excluded from council decision-making by the council reading's own logic (direct democracy admits no privileged vanguard). Their objections would not be heard in council deliberation; they would only become relevant if councils were militarily defeated or politically displaced by a vanguard seizure."
+    },
+    {
+      "name": "analytical_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Historians, political theorists, economists who study the council reading as a lived political project and as a theoretical claim about coordination mechanisms. They assess the council reading's feasibility at scale, its resilience under external pressure, and its relationship to rival readings. They are external to the constraint structure and neither benefit nor pay, but their analysis shapes understanding of the constraint's viability."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Coordination of production, distribution, conflict resolution, and collective decision-making through federated workplace assemblies. Solves the problem of how to organize complex production and distribute resources without either commodity markets (capitalism) or hierarchical command (statism).",
+    "transfer_function": "Transfers authority over production decisions from both state bureaucrats and capitalists (capitalism) and from vanguard party officials (statism) to autonomous worker collectives. No fixed transfer of value or goods; the redistribution is of power and autonomy, not of extracted surplus.",
+    "absent_voices": "Vanguard party officials and state administrators are not present in council deliberation by the council reading's own logic; they are structurally excluded because the reading denies their legitimacy as mediators. They would argue that councils cannot defend revolutionary gains, that direct democracy is inefficient, and that the party must guide production. They are also materially prevented from participation because councils displace their power; their presence would represent a return to hierarchical structure.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If councils disappeared overnight, production would not be commanded by workers but by either capitalist property relations (if capitalism reasserted) or by vanguard party hierarchy (if Leninism reasserted). The entire structure of who makes decisions, who benefits from production, and how conflicts are resolved would reorganize. The world does not return to a baseline; it reorganizes under an alternative authority structure.",
+    "founding_problem": "Production under capitalism requires workers to sell their labor to capitalists who control decisions; production under statism requires workers to obey party-appointed administrators. Both deny workers autonomy and control. The founding problem is: how to organize production collectively, without both commodity exchange and hierarchical command?",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "The council communist reading itself affirms the founding problem is live. Historical advocates (Pannekoek, Gorter, autonomist Marxists, Council Communists of Germany and the Netherlands) attest the problem. Historical counter-testimony: Leninist accounts argue the founding problem is solved through party leadership (not by councils); social-democratic gradualists argue it is solved through electoral democracy and regulatory reform. Independent economic analysis from outside the revolution (modern heterodox economics) contests whether councils can match capitalist efficiency or whether planned federation requires technical cadre (subtle form of party re-emergence). Historiographical consensus: councils in practice faced either military defeat or infiltration by vanguard party cadres; no sustained, large-scale council system proved stable against external pressure or internal pressure toward re-centralization."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "worker_direct_democracy_terminal",
+    "drift_state": {
+      "moment": "post_leninism_failure_consolidation",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "vanguard_rupture_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "democratic_gradualism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "worker_collective_capability_direct_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "federated_coordination_without_reclassification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "terminal_authority_councils_not_transitional",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "gain_flow": "diffuse",
+  "fixing_cost": "prohibitive",
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "manifesto_revolutionary_method__vanguard_rupture_reading",
+      "manifesto_revolutionary_method__democratic_gradualism_reading"
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

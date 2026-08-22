@@ -1,0 +1,334 @@
+{
+  "header": {
+    "constraint_id": "competence_retention_exercise__near_miss_as_bridge",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "88e8ea47-a9ed-4ac3-9b52-d66422f94690"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.22,
+    "theater_ratio": 0.18,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.61,
+    "claimed_type": "rope",
+    "human_readable": "Hybrid Competence Retention: Simulation + Near-Miss Integration",
+    "topic_domain": "safety/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_organization",
+      "competent_workforce"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "safety_organization",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Develops and maintains the hybrid training protocol: designs simulators, establishes near-miss reporting channels, analyzes incident data, and integrates findings back into curriculum. Justifies the protocol as evidence-based competence maintenance. Carries the administrative overhead of near-miss investigation and simulator iteration but collects the organizational benefit of sustained competence and reduced catastrophic risk."
+    },
+    {
+      "name": "competent_workforce",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Participates in both simulator exercises and near-miss investigation debriefs. Maintains procedural competence through repeated simulator drilling. Gains real-world calibration by learning from near-miss cases: understanding what the early signs looked like, how the organization responded, what recovery looked like. Their competence is the constraint's primary product."
+    },
+    {
+      "name": "near_miss_reporters",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Front-line personnel (pilots, surgeons, operators, engineers) who encounter near-misses and are required to report them for investigation and integration into training. They bear the emotional and professional cost of admitting and explaining the incident, the time cost of debriefs, and the identity cost of being known as someone who 'almost failed.' Their professional identity is entangled with the learning system's competence claims."
+    },
+    {
+      "name": "simulator_maintainers",
+      "role": "payer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Technical staff who maintain simulator fidelity and update scenarios based on near-miss findings. Their work is driven by the need for continuous incorporation of real-world data; as near-miss volume rises, their maintenance burden escalates. They have expertise-driven exit options and can move between organizations if the burden becomes unmanageable."
+    },
+    {
+      "name": "catastrophe_traditionalists",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Organizational voices (sometimes entrenched in senior leadership or regulatory bodies) who believe only actual catastrophic events provide genuine learning stakes; they view near-miss-driven training as insufficient and advocate for disaster-based curriculum refresh. They are excluded from the protocol design but retain veto power over funding and policy."
+    },
+    {
+      "name": "pure_simulation_advocates",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Advocates for full-fidelity simulation as sufficient; they argue near-miss investigation and integration are unnecessary overhead and that high-fidelity simulators alone provide genuine competence maintenance. They are excluded from the decision to adopt the hybrid model but would compete for resources if given voice."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "observer",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Audit and certify competence-maintenance protocols. They observe whether the hybrid model achieves stated learning outcomes and whether catastrophic failure rates decline. They can mandate protocol changes or impose reporting requirements that alter the constraint's operation."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the organizational learning problem: how to maintain catastrophe-avoidance competence in systems where real catastrophes are rare, fidelity-testing is dangerous, and muscle-memory atrophy is a silent threat. The hybrid protocol coordinates three knowledge streams — simulator drilling, near-miss data, and rare real incidents — into a single competence signal that the organization can measure and the workforce can trust.",
+    "transfer_function": "Moves organizational attention and front-line effort from catastrophe-response (reactive, traumatic, rare) toward near-miss investigation and simulator-based skill maintenance (proactive, distributed, continuous). Front-line personnel invest emotional and temporal labor in near-miss debriefs; the organization invests administrative and technical capacity in scenario updates. The transfer is from reactive crisis management to sustained competence discipline.",
+    "absent_voices": "Catastrophe-experienced personnel (survivors of prior organizational failures) are partially excluded — their testimony about the inadequacy of non-catastrophic training is sometimes dismissed as survivorship bias or emotional residue rather than valid data. Pure-simulation advocates with high-fidelity sim engineering expertise are excluded from the core decision logic, though they resource it. Workforce subgroups with aversion to transparency (those who fear being identified in near-miss reports) are not present in the design conversation.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the hybrid protocol disappeared overnight — no near-miss integration, simulator updates frozen at current level, reporting channels closed — competence would begin atrophying within months (procedural memory decay is documented at 6–12 month horizons for high-consequence skills); near-miss patterns that would have been caught would escalate to minor incidents and then major ones; the organization would face pressure to either re-institute near-miss investigation or accept elevated catastrophic risk. The constraint's absence would force explicit choice between competence maintenance cost and catastrophic risk tolerance.",
+    "founding_problem": "High-reliability systems (aviation, surgery, nuclear operations) face a paradox: the skills required to prevent catastrophes can only be maintained through repeated practice in realistic conditions, but catastrophes themselves are rare and dangerous. Simulators partially solve this but cannot capture all environmental complexity and psychological authenticity. Near-misses are abundant signals of system-state and human-factor stressors; they offer real-world grounding without catastrophic consequence. The founding problem is: how to keep competence sharp when the real thing is too rare and too dangerous to use as training.",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "Aviation safety data (NASA ASRS, accident investigation boards), surgical morbidity-and-mortality conferences, and nuclear operations experience reports all document that near-miss investigation and simulator integration are associated with sustained competence and reduced serious-incident rates. Personnel from these domains (not beneficiaries of the protocol's adoption, but experiencers of it) attest the problem is live and the hybrid model addresses it. This is corroborated outside the safety-organization beneficiary set by independent safety researchers and regulatory auditors."
+  },
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.17
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.19
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.21
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.22
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint instantiates ONE reading of the contested 'competence_retention_exercise' kernel: near-misses and minor failures supply sufficient real-world feedback to validate and update simulator training without requiring catastrophic events. The reading claims that a hybrid system — combining routine simulator drilling with active near-miss investigation and integration — maintains catastrophe-avoidance competence sustainably. This reading is distinct from siblings that frame competence maintenance either as simulation-sufficient or as catastrophe-necessary. The constraint itself is a ROPE: genuine coordination function (solving the skill-maintenance problem), distributed beneficiaries (organization + workforce), and active enforcement (near-miss reporting and simulator updates must be maintained). The core extraction is modest (0.38) and arises from identity-lock costs borne by near-miss reporters and administrative burden on simulator maintainers, not from asymmetric rent collection.",
+    "key_agents": [
+      "safety_organization: institutional agenda-setter; designs and maintains the hybrid protocol; collects the organizational learning benefit; carries administrative overhead",
+      "competent_workforce: organized beneficiary; gains real-world calibration from near-miss debriefs and procedural fluency from simulator drilling; identity-locked into the transparency requirement",
+      "near_miss_reporters: moderate-power payers; front-line personnel bearing emotional and professional costs of incident admission and investigation; career/identity risk if involved in near-miss",
+      "simulator_maintainers: powerful payers; manage the technical burden of near-miss integration and fidelity iteration; have mobile exit options",
+      "catastrophe_traditionalists: excluded institutional voice advocating disaster-based learning; retain veto power over funding",
+      "pure_simulation_advocates: excluded institutional voice arguing near-miss investigation is wasteful overhead; would compete for resources if included",
+      "regulatory_bodies: observer seats; audit competence outcomes and can mandate protocol changes"
+    ],
+    "logic_rationale": "Extractiveness starts low (0.28) because the constraint delivers genuine coordination benefit: the organization solves a real organizational learning problem, and the workforce gains competence maintenance without catastrophic risk. However, extractiveness rises modestly (0.38 at interval end) as the constraint matures. The rise reflects: (1) administrative burden on simulator maintainers escalates as near-miss volume and integration complexity grow; (2) front-line personnel accumulate identity costs from repeated near-miss involvement; (3) the organization begins using near-miss data for performance evaluation, not just learning, introducing surveillance pressure. Suppression remains low (0.22) because the constraint operates via transparency and voluntary reporting, not coercion — though identity-lock on reporters constitutes structural suppression (the threat of being identified as someone who 'almost failed' deters some reporting). Theater ratio is low (0.18) because both simulator drilling and near-miss investigation perform real functions; the modest theater component is performative safety communication (organizational messaging about competence commitment) layered over genuine learning activity. The measurements track the constraint's maturation: as the system becomes established, administrative burden rises and identity-lock pressures intensify, but the core coordination function remains stable. All metrics are authored on one shared time grid.",
+    "perspectival_gap": "The safety-organization and regulator see 'rope' (coordination solves a real problem, enforcement is reasonable); near-miss reporters see 'tangled rope' (coordination benefit is real but personal costs are high and non-voluntary); catastrophe traditionalists see 'snare' (false security, inadequate reality-testing); pure-simulation advocates see 'inefficient rope' (the near-miss overhead extracts without improving learning). These are not disagreements about metrics — all seats observe the same extractiveness, suppression, and theater metrics — but disagreements about whether the constraint's structure is genuinely coordinative or extractive-under-coordination-cover. The engine distinguishes these seats by their structural position; commentary explains why the same constraint produces divergent type classifications across seats.",
+    "directionality_logic": "The safety_organization is a structural beneficiary (d ≈ 0.2): it sets the protocol, incurs moderate overhead, and collects the core organizational benefit (maintained competence, reduced catastrophic risk). The competent_workforce is symmetric to near-beneficiary (d ≈ 0.35): they gain genuine competence and professional development, but bear modest identity-lock costs and mandatory reporting participation. Near_miss_reporters carry high directionality (d ≈ 0.75): they supply real-world data essential to the coordination function but bear the highest identity and emotional costs; their exit is identity-locked (admitting to a near-miss is entangled with their professional self-concept, and leaving the workforce or organization is the only full exit). Simulator_maintainers are moderate payers (d ≈ 0.55): they contribute technical labor and bear escalating burden, but have mobile exit options and professional-development benefits from the technical work.",
+    "mandatrophy_analysis": "The constraint's founding problem (maintaining catastrophe-avoidance competence when real catastrophes are rare and dangerous) is live and remains so across the 30-year interval. The protocol persists because it solves this problem in an organizationally affordable way: it avoids both the cost of waiting for catastrophes and the hollowness of pure simulation. However, there is an incipient mandatrophy signal: as the protocol matures and near-miss data accumulates, the organization begins using near-miss data for performance evaluation and career-impact assessment, not just learning. This introduces secondary extraction (using learning data as surveillance) that is not intrinsic to the founding problem. The constraint shows no signs of becoming a piton (it is still actively maintained and performs real function), but the theater ratio's rise and the identity-lock's hardening suggest the extraction component is beginning to exceed the coordination cost. Mandatrophy is not yet declared, but the measurement trajectory and emerging surveillance use are amber signals.",
+    "kernel_context": "This constraint instantiates the 'near_miss_as_bridge' reading of the contested 'competence_retention_exercise' kernel. The kernel is the standing question: what provides sufficient feedback to maintain catastrophe-avoidance competence in high-reliability systems? The competing readings are: (1) catastrophe_as_necessary — only actual catastrophic events provide genuine learning stakes; (2) simulation_as_sufficient — high-fidelity simulators alone constitute genuine competence exercise; (3) near_miss_as_bridge — near-miss incidents plus simulator integration form the optimal hybrid. This reading claims that near-misses supply the real-world calibration that simulation alone cannot provide, and that near-misses are more ethically and organizationally sustainable than waiting for catastrophes. Sibling readings disagree on what counts as 'real' feedback: traditionalists require the existential shock of catastrophe; simulation advocates claim fidelity equivalence; this reading positions near-misses as the sweet spot — real enough to matter, frequent enough to sustain competence, survivable enough to enable learning. The omega variables document the irreducible disagreements about what 'sufficient' feedback means and whether near-miss investigation can truly replace catastrophe-based learning in maintaining the deepest organizational competence."
+  },
+  "omegas": [
+    {
+      "id": "fidelity_sufficiency_boundary",
+      "question": "Do near-miss incidents provide psychologically and organizationally sufficient 'reality' to maintain catastrophe-avoidance competence, or is the existential shock and full emotional stakes of catastrophe structurally necessary for genuine learned competence?",
+      "resolution_mechanism": "Longitudinal cohort study comparing competence retention and incident rates in organizations using hybrid (near-miss + simulation) protocols vs. those using catastrophe-based curriculum refresh. Multi-decade follow-up to detect atrophied competence in rare-incident domains.",
+      "impact": "If near-misses suffice, the hybrid model is validated and scaled. If catastrophe-level events are necessary, the constraint is reclassified as simulation-plus-near-miss theater with authentic learning only from true catastrophes — shifting from rope toward snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether near-miss feedback is psychologically and organizationally sufficient for competence maintenance."
+    },
+    {
+      "id": "reporting_suppression_mechanism",
+      "question": "Is the identity-lock on near-miss reporters structural (an unavoidable feature of real-world incident involvement) or internalized (a learned fear of organizational punishment that persists even in psychologically safe reporting environments)?",
+      "resolution_mechanism": "Experimental manipulation of organizational transparency and non-punitive culture around near-miss reporting; measure whether reporting rates and depth change when identity protections are strengthened. Post-exit surveys of reporters to assess whether identity-lock persists after leaving the organization.",
+      "impact": "If identity-lock is purely structural (inherent to being known as someone who had an incident), the suppression metric is accurate as authored. If partially internalized, the true suppression is lower in psychologically safe contexts, and the constraint's nature is more 'rope' than 'tangled_rope'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in near-miss reporting."
+    },
+    {
+      "id": "simulation_adequacy_as_reading",
+      "question": "Is this reading's claim that near-misses are necessary to validate simulators foreclosed by the pure-simulation reading's claim that fidelity-equivalent simulation constitutes complete competence testing?",
+      "resolution_mechanism": "Clarification of what each reading means by 'sufficient': does 'sufficient' mean 'maintains competence to regulatory standard', 'achieves subjective confidence equivalent to real-world experience', or 'prevents catastrophic failure'? If the readings disagree on the goal, they coexist; if they agree on the goal but disagree on the path, one forecloses the other.",
+      "impact": "If readings foreclose each other, the kernel has a logical structure that favors one reading over others. If they coexist, the constraint is contested but structurally stable within the organizational choice space.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural relationship between this reading and the simulation-sufficient reading: logical foreclosure or coexistence."
+    },
+    {
+      "id": "surveillance_creep_in_near_miss_integration",
+      "question": "As near-miss data accumulates and organizational use shifts from pure learning to performance evaluation, does the constraint transition from rope to snare — using the learning system as a surveillance apparatus?",
+      "resolution_mechanism": "Track organizational policy over time: is near-miss involvement used in personnel evaluation, promotion, or disciplinary decisions? Interview near-miss reporters about whether they perceive their data as used for learning or performance assessment. Measure reporting rates as surveillance use increases.",
+      "impact": "If surveillance creep occurs and goes unaddressed, the constraint's extraction component rises and it reclassifies toward snare. If the organization maintains learning-only use boundaries, the rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether near-miss data accumulation leads to surveillance function that undermines the learning mandate."
+    },
+    {
+      "id": "kernel_reading_foreclosure_catastrophe",
+      "question": "Does the 'catastrophe_as_necessary' reading's core claim — that only existential shock of catastrophe produces genuine organizational learning — foreclose this reading's hybrid-model alternative?",
+      "resolution_mechanism": "Logical analysis: can both readings coexist in a single decision-making framework? If an organization adopts the near-miss-hybrid model but preserves psychological space for the catastrophe reading (acknowledging that catastrophes may teach things hybrids cannot), the readings coexist. If the organization fully commits to near-miss-sufficiency and rejects catastrophe learning as unnecessarily risky, this reading forecloses the other.",
+      "impact": "If readings foreclose, one is superior within the safety-organization's institutional commitment; if they coexist, the organization remains contested between two live alternatives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Foreclosure relationship between near-miss-as-bridge and catastrophe-as-necessary readings."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "competence_retention_exercise__simulation_as_sufficient",
+      "competence_retention_exercise__catastrophe_as_necessary"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'competence_retention_exercise' kernel, which decomposes into three structurally distinct claims about how to maintain catastrophe-avoidance competence: (1) simulation_as_sufficient — fidelity-equivalent simulation is complete; (2) catastrophe_as_necessary — only catastrophes teach genuinely; (3) near_miss_as_bridge — near-misses plus simulation is the optimal hybrid. The three readings have different ε values (simulation has near-zero extraction, catastrophe has high extraction due to its human cost, near-miss has moderate extraction from identity-lock and administrative burden). The three readings also have different victim/beneficiary structures and different epistemic bases (fidelity-testing vs. existential-shock vs. real-world-calibration). Each reading is a separate constraint story with its own `cs_structure` fields documenting the kernel context, reading relations, and axioms. This story documents the near-miss-as-bridge reading; the sibling stories document the other two readings. All three are linked via `network.affects_constraints`."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_sufficient",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "catastrophe_as_necessary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "near_miss_provides_sufficient_calibration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "hybrid_system_superior_to_pure_alternatives",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "competence_maintenance_via_real_world_feedback",
+    "drift_state": {
+      "moment": "contemporary_organizational_learning_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "competence_retention_exercise"
+    ]
+  },
+  "gain_flow": "safety_organization",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

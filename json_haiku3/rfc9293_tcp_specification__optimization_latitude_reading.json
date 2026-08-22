@@ -1,0 +1,335 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__optimization_latitude_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-12",
+    "status": "ACTIVE",
+    "story_uid": "c083c12f-f637-484c-9788-ca8607aa2278"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.08,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "RFC 9293 TCP Specification: Outcome-Defined Latitude Reading",
+    "topic_domain": "network_protocol_engineering/internet_standards/distributed_systems",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "high_performance_implementers",
+      "congestion_control_innovators"
+    ],
+    "vindicated_propositions": [
+      "semantic_specification_principle",
+      "implementation_flexibility_doctrine"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "rfc_working_group",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Maintains and evolves RFC 9293 as the authoritative specification of TCP behavior. Decides what outcomes are normative and which details are implementation-permitted. Authors clarifications and errata that resolve ambiguities about permissible optimization latitude."
+    },
+    {
+      "name": "high_performance_implementers",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy congestion-control variants (BBR, DCTCP, CUBIC) and other performance optimizations that preserve the reliable byte stream contract while diverging from the original Reno implementation. Benefit from the latitude because they can innovate without forking the protocol or losing interoperability."
+    },
+    {
+      "name": "conformance_testers",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Test that implementations produce the specified behavioral contract (reliable delivery, congestion adaptation) without mandating specific internal algorithms. They benefit from having a well-defined semantic boundary; they also pay the cost of needing to test behavior rather than code structure, which is harder than line-by-line compliance checking."
+    },
+    {
+      "name": "interoperability_stakeholders",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Internet users, application developers, network operators. Benefit because diverse implementations competing on performance improvements does not break end-to-end connectivity — any TCP sender interoperates with any TCP receiver as long as both honor the semantic contract."
+    },
+    {
+      "name": "strict_invariance_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Argue that latitude in implementation creates protocol fragmentation risk and that all implementations should replicate the same state machine exactly. They are excluded from primary decision-making but maintain technical positions in forum discussions and academic literature arguing for stricter specifications."
+    },
+    {
+      "name": "middlebox_operators",
+      "role": "observer",
+      "power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Deploy packet inspection, traffic shaping, and performance optimization equipment that interacts with TCP at the wire protocol level. They observe and respond to implementation choices but do not set specification policy directly; their constraints flow back to the working group through operational reports and compatibility incidents."
+    },
+    {
+      "name": "legacy_implementations",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Older, conservative TCP stacks that implement only the original algorithm. They would object to aggressive optimization as protocol deviation, but they are not represented in standards bodies and their concern is historical rather than prospective."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Defines a semantic contract (reliable, in-order byte stream delivery with congestion adaptation) that all implementations must achieve, without dictating the internal algorithms or performance optimization choices. This enables heterogeneous implementations to interoperate: a sender using BBR congestion control talks to a receiver using Reno, and the contract holds.",
+    "transfer_function": "Moves authority from implementation prescriptivism to outcome specification: the specification transfers the burden of correctness from the reader (\"replicate this exact state machine\") to the implementer (\"produce this behavioral outcome and prove it\"). This is a gain in information asymmetry for sophisticated implementers who can afford custom optimization; it is a burden shift away from the specification authority.",
+    "absent_voices": "Strict invariance advocates and legacy-stack maintainers are excluded from primary decision-making. They would argue for tighter specification coupling to prevent protocol fragmentation, but they are not in the room when congestion-control variants are approved.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this reading of permissible latitude disappeared and the specification became prescriptive (strict_invariance_reading), TCP development would slow — all new congestion-control algorithms would require protocol extension or IETF exemption rather than implementation autonomy. Without the latitude, high-performance variants (BBR, DCTCP) would either not exist or would exist as protocol extensions (QUIC-like) rather than TCP implementations.",
+    "founding_problem": "Early TCP implementations were limited in performance optimization opportunity because the specification left room for interpretation only in debugging detail; as link speeds and network scale grew, performance constraints emerged that could only be solved by algorithmic innovation in congestion control. The founding problem was: how can the protocol evolve with new congestion-control science without forking TCP or requiring specification revision for every innovation?",
+    "founding_problem_status": "live",
+    "founding_problem_corroboration": "The IETF TCPM working group's adoption of multiple congestion-control algorithms (BBR, CUBIC, DCTCP) as standards-track or informational RFCs confirms the problem persists. Academic literature on congestion control (Mathis, Jacobson, Cardwell lineages) and deployment metrics from major networks (Google, Netflix, AWS) show continuous algorithmic innovation. Independent performance analysis confirms that algorithmic latitude is necessary for modern network conditions."
+  },
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1,
+      "basis": "projected"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.16,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.18,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05,
+      "basis": "projected"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.06,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.07,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.08,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.08,
+      "basis": "projected"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.1,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.11,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.12,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.12,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "RFC 9293 (TCP Specification) is contested as a kernel because it can be read as specifying either (1) a fixed semantic contract with flexible implementation (this reading), (2) an invariant state machine that all implementations must replicate exactly (strict_invariance_reading), or (3) an idealized behavior that deployed TCP has deviated from through middlebox adaptation (middlebox_realism_reading). This story instantiates the optimization_latitude_reading: the specification permits different congestion-control algorithms and performance optimizations as long as they preserve reliable, in-order delivery and maintain interoperability with other TCP implementations. This reading enables algorithmic innovation (BBR, DCTCP, CUBIC) without fragmenting the protocol. The reading is contentious because it transfers specification authority from prescriptive detail to behavioral outcomes, making compliance testing harder and creating space for performance-driven divergence.",
+    "key_agents": [
+      "RFC Working Group (TCPM): maintains specification authority and decides what divergence is permitted",
+      "High-performance implementers (Google, Netflix, Linux kernel): benefit from latitude to deploy novel congestion-control algorithms",
+      "Conformance testers: must verify behavioral contract rather than code structure",
+      "Interoperability stakeholders (Internet users, application developers): benefit from diverse implementations that remain interoperable",
+      "Strict invariance advocates: excluded from decision-making but argue for tighter specification",
+      "Legacy implementations: trapped in the original algorithm, view latitude as protocol fragmentation"
+    ],
+    "logic_rationale": "Extractiveness is low (0.18) because the constraint does not require payment, does not lock in beneficiaries, and does not restrict exit — implementers can adopt the specification or ignore it; the coordination benefit is mutual (reliable byte stream serves all parties). Suppression is very low (0.12) because the constraint persists through shared interest in interoperability, not through active enforcement of compliance (no TCP police); networks route whatever TCP implementations exist as long as they interoperate. Theater is minimal (0.08) because the specification work is substantive (real coordiation problem solved) with little performative overhead. The measurement series shows extractiveness rising slightly in the early interval (early adoption of new congestion-control standards) and then stabilizing once the reading is well-established as the working norm. Suppression requirement rises slightly as compliance testing sophistication increases but remains low because voluntary coordination is the primary mechanism.",
+    "directionality_logic": "High-performance implementers sit near the beneficiary end (d~0.15): they get algorithmic freedom and can innovate without protocol fragmentation risk. The working group sits near symmetric (d~0.5): they maintain the specification (cost) but derive authority and influence from doing so (benefit). Interoperability stakeholders and conformance testers sit slightly beneficiary-ward because they get the coordination without bearing innovation risk. Strict invariance advocates sit target-ward (d~0.75): they pay the cost of being excluded from decisions that permit divergence they view as risky, with no offsetting benefit. The structural asymmetry is that latitude benefits those with optimization capability and hurts those seeking uniformity — the specification choice privileges innovation over uniformity.",
+    "perspectival_gap": "From the working group's seat, this is well-calibrated coordination: permit latitude where it doesn't break the contract, enabling innovation. From strict-invariance advocates' seat, it is a retreat from specification authority and a risk to protocol stability. The engine should compute different types from these positions: beneficiary seats experience Rope (genuine coordination enabling mutual gain), while excluded/target seats experience Tangled Rope (coordination for some serves as constraint on others' control). This gap is the core measurement the engine performs.",
+    "mandatrophy_analysis": "The founding problem (how to evolve TCP congestion control without forking the protocol) remains live and is corroborated by working-group decisions, academic literature, and deployment metrics. The constraint has not undergone mandate drift: the specification remains a specification of behavioral outcomes, not a mandate to replicate implementation detail. There is no mandatrophy signal because the constraint's function and its operation remain aligned.",
+    "kernel_context": "This constraint instantiates the optimization_latitude_reading of the rfc9293_tcp_specification kernel. The kernel is the text of RFC 9293 itself — a stabilized technical standard that different parties read through different frameworks. The optimization_latitude_reading interprets the specification as defining a semantic contract (reliable byte stream) while permitting implementation flexibility for performance optimization. Sibling readings: strict_invariance_reading treats the spec as defining an invariant state machine implementations must replicate exactly; middlebox_realism_reading treats the spec as an idealized description of endpoint behavior that deployed TCP has deviated from through middlebox adaptation. The readings coexist in the IETF standards community; strict_invariance advocates argue for tighter specifications and compliance testing, while optimization_latitude advocates argue for continued algorithm innovation and performance optimization. Neither reading forecloses the other — they represent different priorities held by different coalitions."
+  },
+  "omegas": [
+    {
+      "id": "semantic_contract_sufficiency",
+      "question": "Is the semantic contract (reliable, in-order delivery with congestion responsiveness) sufficient to guarantee interoperability across all permissible optimization variants, or do implementation divergences in corner cases (packet loss patterns, reordering, pathological RTT behavior) create incompatibilities that break the contract?",
+      "resolution_mechanism": "Large-scale interoperability testing across diverse congestion-control algorithms and implementations under controlled adverse conditions (packet loss, reordering, latency jitter). Document any cases where two conformant implementations fail to interoperate.",
+      "impact": "If the semantic contract proves insufficient, latitude must be narrowed — strict_invariance_reading becomes the necessary reading. If the contract holds across all tested variants, latitude is vindicated and optimization_latitude_reading is the stable reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether behavioral specification suffices for interoperability without prescriptive implementation detail."
+    },
+    {
+      "id": "innovation_velocity_dependency",
+      "question": "Does TCP performance innovation fundamentally depend on implementation latitude within the semantic contract, or can all necessary optimization advances be achieved through RFC extensions (like TCP-friendly congestion control RFCs) without modifying core TCP?",
+      "resolution_mechanism": "Historical analysis of congestion-control evolution: compare the rate of algorithm adoption (BBR, DCTCP, CUBIC) under the latitude reading with the rate of TCP extension adoption. If extensions accommodate innovation at comparable velocity, latitude is not essential; if extensions lag significantly, latitude is foundational to innovation.",
+      "impact": "If innovation requires latitude, the optimization_latitude_reading is structurally necessary to the protocol's relevance. If extensions suffice, latitude is a convenience that could be traded for stricter specification without innovation loss.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic innovation depends on core TCP flexibility or can be accommodated through extensions."
+    },
+    {
+      "id": "specification_ambiguity_as_de_facto_latitude",
+      "question": "To what extent does the permissible latitude arise from explicit specification choice versus from ambiguities or underspecified details in RFC 9293 that implementers exploit?",
+      "resolution_mechanism": "Detailed reading of RFC 9293 errata and working-group discussions identifying sections that have been clarified or narrowed over time. Compare errata that tightened specification to errata that explicitly permitted latitude.",
+      "impact": "If latitude is intentional policy (reading choice), it is defensible and stable. If latitude arises from ambiguity, it may be eliminated by clarification without changing the reading. This distinction is critical to the axioms: is optimization_latitude_reading built on a foundational principle (semantic specification) or on accidental gaps?",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether latitude is intentional specification design or de facto result of ambiguity."
+    },
+    {
+      "id": "kernel_reading_coexistence_fragility",
+      "question": "Can the three kernel readings (optimization_latitude, strict_invariance, middlebox_realism) coexist indefinitely as live positions in standards discourse, or do deployment pressures eventually foreclose one reading?",
+      "resolution_mechanism": "Long-term monitoring of IETF discussion patterns, RFC approvals, and deployment metrics. Observe whether any reading accumulates exclusivity or whether practical necessity forces a choice.",
+      "impact": "If readings remain indefinitely coexistent (each adopted by different implementers and networks), the kernel is truly contested and the Rope classification holds. If one reading eventually forecloses others (strict_invariance forces all implementations to conform, or middlebox_realism forces specs to acknowledge deployment reality), the kernel resolves and the readings become historical variants rather than live alternatives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Stability of kernel reading coexistence under deployment pressure."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.05
+  },
+  "network": {
+    "affects_constraints": [
+      "rfc9293_tcp_specification__strict_invariance_reading",
+      "rfc9293_tcp_specification__middlebox_realism_reading",
+      "congestion_control_algorithm_innovation",
+      "tcp_interoperability_constraint"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the contested kernel rfc9293_tcp_specification. The kernel constraint family decomposes into three structurally distinct constraints: (1) optimization_latitude_reading (this file) — specification defines semantic contract, permits algorithmic divergence; (2) strict_invariance_reading — specification mandates invariant state machine that all implementations must replicate; (3) middlebox_realism_reading — specification describes idealized endpoint behavior, real TCP is shaped by deployed middlebox population. Each reading has distinct beneficiary/victim structures and extractiveness profiles. They coexist as live alternatives in IETF discourse but would foreclose each other if global TCP adoption enforced one reading exclusively. Epsilon values differ because the readings instantiate different referents: optimization_latitude ε is the cost of ensuring interoperability while permitting algorithmic freedom; strict_invariance ε is the cost of enforcement-based protocol uniformity; middlebox_realism ε is the cost of gap between spec and practice. Network edges link family members (each reading influences all others) and downstream constraints that depend on which reading is adopted (congestion control innovation, interoperability certification)."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "middlebox_realism_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "semantic_specification_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "implementation_flexibility_doctrine",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "outcome_defined_contract_framework",
+    "drift_state": {
+      "moment": "contemporary_bbr_dctcp_adoption",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  },
+  "gain_flow": "high_performance_implementers",
+  "fixing_cost": "cheap",
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

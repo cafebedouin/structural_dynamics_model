@@ -1,0 +1,369 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__digital_gold_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "story_uid": "0fd2fd4a-2956-4891-9991-fc0b4b4d992f"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.52,
+    "theater_ratio": 0.28,
+    "accessibility_collapse": 0.71,
+    "resistance": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Digital Gold: Scarcity-First Asset Constraint",
+    "topic_domain": "cryptocurrency/monetary-systems/technology-governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_adopters_and_hodlers",
+      "protocol_stability_advocates"
+    ],
+    "victims": [
+      "late_entrant_users",
+      "transaction_fee_payers",
+      "rejected_transaction_volume"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "early_adopters_and_hodlers",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Accumulated Bitcoin in the first 5-8 years when computational difficulty was low and price was negligible (<$1-$100). They benefit from appreciation as institutional adoption accelerated and the digital gold narrative hardened. Their holdings represent 1-2 orders of magnitude gain. They have maximum exit optionality: can sell at any price point, hold across multiple assets, diversify into alternatives. The constraint's persistence is optional for them; they can exit profitably at any time."
+    },
+    {
+      "name": "late_entrant_users",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Individuals and small institutions attempting to acquire or use Bitcoin after 2017, when the asset reached mainstream awareness but price had appreciated 10,000x from its origin. Entry cost is now substantial ($40,000-$60,000 per coin as of 2024). They face multiple cost barriers: acquisition price is high, transaction fees are high (median fee $2-5 per transaction, unacceptable for small payments), and confirmation time is slow (10 minutes average, plus network congestion delays). The digital gold narrative frames these costs as reflective of genuine scarcity and security; late entrants internalize this framing or migrate to alternatives (other cryptocurrencies, fiat savings). Their exit options are constrained by regulatory uncertainty, technical learning curve, and liquidity depth of alternatives."
+    },
+    {
+      "name": "transaction_fee_payers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Users who need Bitcoin for settlement or transfers (merchants converting to fiat, institutional movers between wallets, traders executing strategies). Block space is artificially scarce (1 MB blocks, 10-minute intervals create ~7 transactions per second maximum). Fee markets allocate this scarce space; high-value transactions subsidize the network while low-value transactions become economically unviable. A merchant processing $100 in Bitcoin faces a $10-20 fee (10-20% of transaction value); a retail transaction becomes uneconomical. Exit options: use second-layer networks (Lightning, accepting custodial risk and protocol dependency), convert to stablecoins (accepting counterparty risk), or use alternative payment systems (fiat, credit cards, other cryptocurrencies)."
+    },
+    {
+      "name": "transaction_rejection_queue",
+      "role": "payer",
+      "power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Economic transactions that never reach the blockchain because block space rationing makes inclusion uneconomical or impossible. These are coordinated exchanges (person A wants to send to person B) that would occur without the constraint but are suppressed by the protocol. The digital gold reading treats this suppression as necessary: limited throughput is the cost of decentralization. The suppressed transactions represent coordination value (peer-to-peer settlement without intermediaries) that the constraint deliberately sacrifices.",
+      "agent": false
+    },
+    {
+      "name": "protocol_stability_advocates",
+      "role": "beneficiary",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Institutional investors, hedge funds, and conservative developers who benefit from Bitcoin's stability and brand consistency. They view proposed changes (larger blocks, smart contracts, privacy features) as protocol corruption that threatens the 'digital gold' positioning. Their benefit is legitimacy and institutional adoption anchored on the immutability and scarcity narrative. Exit: shift institutional adoption to alternative assets (Ethereum, commodities, fiat); their analytical exit means they evaluate Bitcoin against alternatives and can recommend others without personal cost."
+    },
+    {
+      "name": "core_developers",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Coordinate protocol development through distributed consensus forums (Bitcoin Core GitHub, mailing lists, Bitcoin Improvement Proposals). The digital gold reading shapes what 'consensus' means: changes that enhance store-of-value (security hardening, privacy, fee efficiency through better transaction formats) find support; changes that increase throughput or enable new use cases face resistance framed as protocol bloat and centralization risk. Their authority derives from perceived technical competence and the social consensus around Bitcoin's purpose. Exit: write alternative code (fork, sidechain, or entirely new project); but their voice and influence are tied to Bitcoin's governance, creating semi-sticky investment in the current reading."
+    },
+    {
+      "name": "bitcoin_maximalists_and_ideologues",
+      "role": "beneficiary",
+      "secondary_role": "agenda_setter",
+      "power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "situation": "Community members whose professional identity, ideological commitment, and social standing fuse with Bitcoin as digital gold. Their identity encompasses the philosophical claim that Bitcoin embodies sound money independent of state control and that any deviation from the original design is corruption. Accepting alternative readings (payment network, protocol flexibility) would require dismantling their worldview, reputational risk, and loss of community standing. They shape community discourse, media narratives, and developer priorities through intellectual leadership and gatekeeping. Exit: ideological defection (publicly renouncing maximalism creates reputational cost and professional isolation within the community)."
+    },
+    {
+      "name": "institutional_investors",
+      "role": "beneficiary",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "situation": "Pension funds, corporate treasuries, sovereign wealth funds, and hedge funds that adopted Bitcoin as a portfolio diversifier and inflation hedge. They benefit from the scarcity narrative, which justifies holding an asset with limited functional utility and extreme volatility. High entry price ($40k-$60k per coin) is acceptable for entities with large capital reserves; they have capital diversification options. Exit: divest from Bitcoin and reallocate to alternatives (commodities, other cryptocurrencies, fiat instruments); their financial constraints allow unconstrained exit."
+    },
+    {
+      "name": "payment_network_operators",
+      "role": "excluded",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "situation": "Layer-2 and alternative-layer operators (Lightning Network, Stacks, Liquid) building scaling solutions. They are not contractually excluded but are structurally deprioritized: development resources and governance attention flow toward mainchain security and store-of-value properties; their requests for mainchain features (larger blocks, faster confirmation, script extensions to enable smart contracts on L2) are evaluated through the digital gold lens and often rejected. Full exclusion from Bitcoin development is contested; partial deprioritization and resource starvation is structural. Exit: build on alternative blockchains (Ethereum, Solana) with more permissive feature sets; but their investment in Bitcoin infrastructure becomes sunk cost if they exit."
+    },
+    {
+      "name": "price_volatility_absorbers",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Merchants and ordinary users who want to use Bitcoin for actual transactions (wage payment, retail sales, service invoicing) face price volatility that makes settlement value unpredictable. A merchant quoting a price in Bitcoin faces price drift of 5-15% intraday; they must hedge through conversion to fiat or stablecoins or absorb variance. The digital gold narrative treats volatility as a byproduct of genuine scarcity and market discovery, not a design flaw; remedies (settlement guarantees, stablecoin integration, faster confirmation) are discouraged as centralization risks. Their costs are structural friction in the constraint's operation, not a problem for the asset reading to solve."
+    },
+    {
+      "name": "academic_and_policy_observers",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "situation": "Economists, technologists, policy analysts, and academic researchers studying Bitcoin's effects on monetary systems, financial inclusion, energy consumption, and wealth distribution. They observe the constraint's operation across multiple readings and measure divergence between the digital gold framing and actual usage patterns. They lack direct power to alter the constraint but influence institutional perception, regulatory response, and academic consensus. Their observations feed into risk assessments and policy recommendations that indirectly shape the constraint's environment."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Establishes a globally accessible, permissionless ledger of ownership claims backed by cryptographic proof-of-work, solving the double-spend problem without a central authority. The scarcity constraint (capped supply, proof-of-work difficulty) enables coordination around a durable store of value with known monetary policy.",
+    "transfer_function": "Transfers value accumulation from late-entrant users and transaction-volume participants to early adopters and holders. The scarcity narrative justifies fees and throughput constraints by reframing them as features (rarity, security) rather than design limitations. Layer-1 block space is allocated by fee market, not use case optimization.",
+    "absent_voices": "Users who need Bitcoin primarily as a medium of exchange (merchants, remittance corridors, low-income populations in high-inflation regions) are structurally excluded from mainchain utility by fees and throughput constraints. They have economic interest in the p2p_cash_reading but are not seated in governance conversations dominated by holders and protocol conservators. Second-layer and alternative-layer scaling advocates are present but deprioritized.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If the digital gold constraint—the scarcity-first design and protocol stability doctrine—were abandoned in favor of the p2p_cash reading (increased throughput, lower fees, feature enhancements), Bitcoin's market positioning would shift. Institutional adoption predicated on 'digital gold' narrative might retreat; payment-layer activity would accelerate. A subset of value that accumulated under the expectation of scarcity maintenance would disperse. The protocol would reorganize around different priorities (transaction finality speed, smart contract capability, supply elasticity). The constraint's disappearance triggers institutional and technical reconfiguration.",
+    "founding_problem": "Centralized payment networks and fiat monetary policy subject money to authority control and censorship. A decentralized, scarce, authority-free ledger of value enables independent store of value, protection from inflation, and resistance to financial censorship.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Early adopters and protocol conservatives (Satoshi Nakamoto whitepaper, core developers, Bitcoin Foundation statements) attest the problem remains live: central bank monetary expansion, financial surveillance, and geopolitical control of payment systems justify scarcity and decentralization. Competing readings dispute the framing: payment-use advocates argue the founding problem was peer-to-peer cash without intermediaries, not necessarily asset scarcity; economists and policy observers attest Bitcoin's actual use case has shifted dramatically from the 2009 problem statement to 2024 institutional asset hedging, and the original problem (censorship of small transactions) is unresolved while new problems (price volatility, energy consumption, wealth concentration) have emerged. No neutral party outside the benefiting constituency confirms the founding problem is still the constraint's primary function."
+  },
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.26
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper describes a peer-to-peer electronic cash system; this constraint captures one reading of what that system has become: a scarce digital asset optimized for store of value and inflation hedging. The digital gold reading prioritizes Bitcoin's monetary properties (fixed supply, predictable issuance, immutability) over its cash properties (speed, cost, accessibility for small transactions). The constraint embeds asymmetry: early adopters benefit from appreciation and institutional adoption; late entrants face high acquisition cost and transaction fees; payment-use cases are deprioritized through protocol design choices that ratify scarcity. The claim/metric gap is intentional: the constraint is CLAIMED as tangled_rope (coordinating a trust-worthy ledger while extracting value through scarcity) while the authored metrics describe substantial extraction with moderate suppression—the engine measures this gap rather than resolving it.",
+    "key_agents": [
+      "early_adopters_and_hodlers: benefit from appreciation and protocol stability (power=organized, exit=arbitrage)",
+      "late_entrant_users: face high acquisition and transaction costs (power=powerless, exit=constrained)",
+      "core_developers: set protocol priorities through consensus governance (power=institutional, exit=analytical)",
+      "bitcoin_maximalists_and_ideologues: defend scarcity narrative and identity-lock to digital gold reading (power=organized, exit=identity_locked)",
+      "transaction_fee_payers: bear costs of artificial block space scarcity (power=moderate, exit=constrained)",
+      "institutional_investors: benefit from scarcity hedge narrative (power=powerful, exit=arbitrage)",
+      "payment_network_operators: deprioritized by digital gold governance (power=organized, exit=trapped, partially)"
+    ],
+    "logic_rationale": "Extractiveness is high (0.68 at interval end) because the protocol's design choices (1 MB block limit, 10-minute block time, capped supply) create artificial scarcity that benefits early holders while suppressing transaction volume and late-entrant access. The constraint's initial extractiveness (0.45) is lower because early Bitcoin had low institutional adoption and price volatility was extreme; as institutional investors adopted the asset and the digital gold narrative solidified (t=4-14), extractiveness increased as the late-entrant victim set enlarged and fees rose. Suppression is moderate (0.52) because the constraint relies on protocol consensus and narrative persuasion rather than explicit coercion—users can exit to alternatives, but the network effects and accumulated institutional positioning make exit costly. Theater rises from 0.15 to 0.28 as the claim of immutability and decentralization becomes increasingly theatrical: the protocol exhibits real decentralization properties, but the governance discourse around 'what Bitcoin is for' concentrates around the holder/maximalist constituencies and marginalizes payment-use arguments. Theater stabilizes at 0.28 as the digital gold narrative becomes institutionally entrenched (institutional investor adoption, corporate treasury holdings, regulatory recognition of Bitcoin as commodity rather than currency) and the theatrical gap between 'decentralized sound money' claims and actual governance concentration becomes normalized.",
+    "directionality_logic": "Early adopters and holders are structural beneficiaries (d near 0.0-0.2): they benefit from appreciation and have maximum exit optionality (arbitrage-grade: can sell at any price, buy alternatives). Late entrants and transaction-volume users are structural targets (d near 0.8-1.0): they face high entry costs, constrained exit (network effects and regulatory uncertainty make migration costly), and bear the costs of the fee market and throughput constraints. Core developers sit asymmetrically (d near 0.5): they coordinate the protocol and benefit from its stability, but they also face responsibility for consensus and pressure from divergent constituencies; their exit is analytical (they could write alternative code, but their authority derives from Bitcoin's governance). Institutional investors are strong beneficiaries (d near 0.1-0.3): they have arbitrage exit and benefit from appreciation narrative. Bitcoin maximalists are identity-locked beneficiaries (d near 0.3-0.5): they benefit from the scarcity narrative but their identity is fused with the constraint, making exit costly despite high directionality toward the beneficiary end.",
+    "perspectival_gap": "The payer seats (late entrants, transaction-volume users) and the beneficiary/agenda-setter seats (early adopters, core developers, maximalists) should compute differently under per-seat classification. From the payer position, the constraint is enforced extraction: high fees, throughput limits, and appreciation scarcity are structural barriers maintained through protocol design and governance control, with no offsetting coordination benefit—the 'ledger of value' was solved in 2009; the constraint persists for wealth concentration. From the beneficiary/developer position, the constraint is genuine tangled coordination: scarcity is essential to the ledger's trust model, throughput limits preserve decentralization (larger blocks require more computational resources, centralizing mining and validation), and the protocol must remain stable to preserve its properties. The engine computes this divergence: the same structure (fixed supply, block-size limit) is experienced as coordination overhead by developers and as extractive scarcity by late entrants. The authored structural data (beneficiary/victim declarations, exit modulation) feeds directionality; the engine produces the per-seat type.",
+    "mandatrophy_analysis": "The founding problem (censorship-resistant value storage independent of state control) and the constraint's current function (institutional asset hedging and wealth concentration) show mandatrophy drift. The founding_problem_status is 'contested': early Bitcoin addressed peer-to-peer transactions for censorship resistance (remittances, cross-border payments without banking intermediaries); institutional Bitcoin addresses portfolio diversification for entities with no censorship risk (pension funds, corporations). The two problems have different victim sets. The tangled_rope classification captures this: genuine coordination (a ledger of value with known supply) rides alongside substantial extraction (late entrants paying for early adopters' appreciation, transaction volume sacrificed to preserve decentralization properties the institutional investors don't need). Mandatrophy would be triggered if the founding problem (censorship resistance for low-value transactions) is dead but the constraint persists for institutional hedging (a different problem not named in the founding). The founding_problem_corroboration reveals no external attestation—only the benefiting parties (maximalists, early adopters) claim the original problem is still live; competing parties attest it has shifted. This split suggests mandatrophy is material, but the determination requires the engine's mismatch consumer to cross-check (founding_problem_status=contested x disappearance_verdict=world_rearranges) against theater ratio and computed piton evidence.",
+    "kernel_context": "This constraint is the digital_gold_reading of the bitcoin_whitepaper kernel. The kernel is the whitepaper's abstract claim: 'a system for electronic transactions without relying on trust in a third party.' Three readings decompose what 'the system' optimizes for: (1) digital_gold_reading (this file) prioritizes scarcity and store-of-value properties; (2) p2p_cash_reading prioritizes transaction speed, cost, and accessibility for medium-of-exchange use; (3) protocol_ossification_reading prioritizes immutability and decentralization properties, treating protocol changes as delegitimacy. Each reading instantiates a different constraint with different victim sets, beneficiary structures, and type classifications. The readings coexist in practice—different parties hold them simultaneously. This reading authors the digital gold instantiation as a tangled_rope: genuine coordination (solving double-spend without intermediaries) layered with asymmetric extraction (late entrants priced out by appreciation, payment use suppressed by throughput limits)."
+  },
+  "omegas": [
+    {
+      "id": "design_necessity_vs_structural_choice",
+      "question": "Are the 1 MB block size and 10-minute block interval structurally necessary to preserve Bitcoin's decentralization properties, or are they engineering choices that could be relaxed without sacrificing decentralization?",
+      "resolution_mechanism": "Empirical testing on sidechains and alternative implementations; economic analysis of validator hardware requirements and geographic distribution under various throughput levels; historical analysis of protocol governance decisions.",
+      "impact": "If the limits are engineering choices, the suppression of transaction volume is extractive (serving the interests of holders and miners, not decentralization requirements). If they are design necessities, the constraint is genuine tangled coordination with real decentralization costs. This determines whether the victim set (late_entrant_users, transaction_fee_payers) are genuinely necessary costs or artificial extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether throughput and block-size constraints are decentralization-necessary or value-concentrating design choices."
+    },
+    {
+      "id": "institutional_adoption_foundational_or_contingent",
+      "question": "Is Bitcoin's institutional adoption (pension funds, corporate treasuries, spot ETFs) a natural result of the digital gold narrative, or a contingent outcome that could be otherwise with different protocol priorities?",
+      "resolution_mechanism": "Counterfactual scenario analysis: if the p2p_cash reading had dominated governance (8 MB blocks, 1-minute confirmation, layer-1 smart contracts), would institutional adoption have followed the same trajectory or shifted to alternative assets? Market surveys of institutional adoption drivers.",
+      "impact": "If institutional adoption follows the digital gold narrative necessarily, the beneficiary set (early_adopters_and_hodlers, institutional_investors) is structural. If contingent, the constraint's beneficiary structure was reinforced by governance choices that deprioritized alternatives, and the extraction is more deliberately enforced than the digital gold reading admits.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether digital gold framing enabled or merely capitalized on institutional adoption demand."
+    },
+    {
+      "id": "price_discovery_legitimacy",
+      "question": "Is the 15-year price appreciation trajectory of Bitcoin a legitimate discovery of its intrinsic scarcity value, or does it reflect information asymmetry and wealth concentration that extracted value from late entrants?",
+      "resolution_mechanism": "Economic analysis of price elasticity and adoption curves; comparison to other scarce digital assets (Ethereum supply cap, other PoW coins); survey data on late-entrant perception of fairness and exit barriers.",
+      "impact": "If legitimate discovery, late entrants chose to enter at high price with knowledge of the constraint; extraction is minimal. If information asymmetry dominates, late entrants faced artificially constrained information about alternatives and alternatives' viability, and the extraction is substantial. This affects whether victims are genuine market participants or trapped participants.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether price appreciation reflects intrinsic value discovery or extractive information asymmetry."
+    },
+    {
+      "id": "reading_coexistence_vs_foreclosure",
+      "question": "Can the digital_gold_reading and the p2p_cash_reading coexist as simultaneous instantiations of the whitepaper kernel, or does the digital gold reading's dominance in protocol governance functionally foreclose the p2p_cash reading?",
+      "resolution_mechanism": "Monitor whether layer-2 scaling solutions (Lightning, Stacks) achieve payment-use viability and institutional adoption independent of mainchain priorities. Track whether protocol upgrade proposals supporting cash-use cases gain governance traction or remain marginalized.",
+      "impact": "Coexistence would place the readings as sibling constraints competing for governance resources. Foreclosure would mean the digital gold reading has achieved structural dominance and the p2p_cash reading persists only in marginal implementations. This determines the reading_relations field: coexists_with or influences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the two readings remain live options or whether digital gold has functionally dominated."
+    },
+    {
+      "id": "maximalist_identity_lock_structural",
+      "question": "Is the identity-lock of Bitcoin maximalists (fusion of professional identity, ideological commitment, and community standing with the digital gold reading) a structural feature of the network, or a contingent social arrangement that could dissolve if core development priorities shifted?",
+      "resolution_mechanism": "Historical comparison to other technology communities where ideological identity shifts (e.g., GNU/Linux licensing debates); survey of maximalists' stated exit costs and commitment irreversibility; analysis of professional incentives for developers and community leaders.",
+      "impact": "If structural, the identity-lock amplifies the digital gold reading's durability and makes alternative readings harder to instantiate—the social cost of switching is prohibitive. If contingent, the constraint could be redesigned if governance priorities shifted and identity investments reallocated. This affects the suppression metric and the agenda-setter power of maximalists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether maximalist identity-lock is structural or contingent to current governance state."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__p2p_cash_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper kernel decomposes into three constraint stories: digital_gold_reading (this file) prioritizes scarcity and value storage; p2p_cash_reading prioritizes transaction speed and censorship-resistant payments; protocol_ossification_reading prioritizes immutability and decentralization as structural properties. Each reading instantiates a different constraint with different ε values (extraction levels), different victim sets, and different type classifications. The digital_gold_reading authors ε=0.68 (substantial extraction through appreciation scarcity and fee suppression); the p2p_cash_reading would author lower ε (the same design is coordinating cash without intermediaries, a genuine public good); the protocol_ossification_reading treats stability as the primary virtue and would author different suppression/theater values. The three are structurally related: digital gold constrains p2p cash by deprioritizing throughput; protocol ossification constrains both by treating protocol changes as delegitimacy; p2p cash advocates would enable protocol evolution that digital gold constrains. Network edges model these relationships: digital_gold affects (influences and partially forecloses) the p2p_cash_reading; both are influenced by protocol_ossification doctrine."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ],
+  "gain_flow": "early_adopters_and_hodlers",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "censorship_resistant_electronic_cash",
+    "drift_state": {
+      "moment": "institutional_adoption_era",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "p2p_cash_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "protocol_ossification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "scarcity_is_primary_virtue",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "institutional_adoption_validates_design",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}

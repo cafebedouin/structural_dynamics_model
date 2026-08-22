@@ -1,0 +1,415 @@
+{
+  "header": {
+    "constraint_id": "animal_moral_status__welfare_reading",
+    "version": "1.0",
+    "generated_date": "2026-06-11",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_animal_moral_status__welfare_reading",
+    "measurement_id_prefix": "animal_welfare",
+    "story_uid": "edb5493a-95bc-4c16-a696-a6550ae41e24"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "accessibility_collapse": 0.62,
+    "resistance": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Welfare Constraint (Sentience + Regulated Use Reading)",
+    "topic_domain": "applied_ethics/legal_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "animal_welfare_organizations",
+      "regulated_use_industries"
+    ],
+    "victims": [
+      "animals_under_regulated_systems",
+      "small_operators_excluded_from_standards"
+    ]
+  },
+  "stakeholders": [
+    {
+      "name": "animal_welfare_organizations",
+      "role": "agenda_setter",
+      "secondary_role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Define and certify 'humane use' standards; conduct inspections and enforcement; collect legitimacy and funding through the welfare frame. Their existence depends on the constraint maintaining the distinction between cruelty (wrong) and regulated use (permissible). They set agendas by writing standards, negotiating with industry, and framing public discourse."
+    },
+    {
+      "name": "regulated_use_industries",
+      "role": "beneficiary",
+      "secondary_role": "payer",
+      "power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "situation": "Operate industrial animal agriculture, biomedical research, entertainment, and other extractive uses under welfare-certified practices. They benefit from the reading because it legitimates their core operation (use is permissible) while shifting the regulatory target from use-itself to method-only. They pay compliance costs (humane housing, veterinary care, reduced stocking density) but avoid the catastrophic cost of abolishing use."
+    },
+    {
+      "name": "animals_under_regulated_systems",
+      "role": "payer",
+      "agent": true,
+      "power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "situation": "Subject to the regulated systems justified by welfare reasoning. They experience confinement, separation from kin, procedures that cause pain (even if minimized), and early death for human benefit. The welfare constraint protects them from the worst forms of suffering but does not stop the use itself. They cannot exit, refuse consent, or seek remedies."
+    },
+    {
+      "name": "small_operators_excluded_from_standards",
+      "role": "payer",
+      "power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "situation": "Small farms, laboratories, and entertainment operators that cannot afford the compliance infrastructure (certified housing, veterinary oversight, documentation systems) required to demonstrate 'humane use.' The welfare constraint de facto pushes them out of the market or into illegality, while large standardized operators with compliance economies of scale consolidate control."
+    },
+    {
+      "name": "abolitionist_advocates",
+      "role": "excluded",
+      "power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "situation": "Argue that the welfare reading is a false resolution that legitimates use by dressing it in minimization language. They contest the foundational premise that regulated use is permissible and would argue for property status abolition. They are structurally excluded from standard-setting bodies and industry negotiations that enforce this reading."
+    },
+    {
+      "name": "property_doctrine_proponents",
+      "role": "excluded",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Legal and philosophical authorities who maintain that animals are property with no independent moral standing. They contest the sentience-based reading and argue the welfare constraint imposes unjustified costs on human use. They are partially excluded from modern regulatory discourse but retain institutional authority in property law and some jurisdictions."
+    },
+    {
+      "name": "consumers_of_animal_products",
+      "role": "beneficiary",
+      "power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "situation": "Benefit from access to meat, dairy, research-enabled medicines, and animal-derived products at market prices. The welfare reading permits them to consume with reduced moral friction: they can purchase 'humane' products and feel that cruelty is being prevented. They typically do not see the constraint as coercive because their preferred outcome (use + some protection) is precisely what it permits."
+    },
+    {
+      "name": "regulatory_bodies",
+      "role": "agenda_setter",
+      "power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Enforce animal welfare standards, audit compliance, and adjudicate violations. They operationalize the welfare reading's distinction between cruelty and regulated use. Their authority and budget depend on the constraint maintaining the permissibility of use while certifying methods."
+    },
+    {
+      "name": "philosophers_and_ethicists",
+      "role": "observer",
+      "power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "situation": "Analyze the coherence and implications of the welfare reading. Some defend it as a pragmatic compromise; others argue it masks structural victimization. They observe the constraint's operation without directly collecting or paying."
+    }
+  ],
+  "six_questions": {
+    "coordination_function": "Solves the coordination problem of defining and enforcing a boundary between acceptable and unacceptable treatment of animals: without welfare standards, individual producers and consumers would make uncoordinated choices; the constraint establishes a shared definition of 'cruelty' and certifies systems that stay within it.",
+    "transfer_function": "Moves legitimacy and moral authority from animals themselves to welfare organizations and regulated industries. Use of animal bodies is transferred from presumed-wrong to permissible-if-certified. Payment flows from regulated industries to welfare organizations (for certification) and to consumers (moral relief/branded reassurance). Suffering is transferred from prevention-as-goal to minimization-within-use.",
+    "absent_voices": "Abolitionist advocates and rights-based philosophers are structurally excluded from standard-setting and industry compliance bodies. They would contest the foundational premise (use is permissible) but are not seated in the constraint's enforcement architecture. Property doctrine proponents are partially excluded from modern discourse but retain institutional authority in law.",
+    "disappearance_verdict": "world_rearranges",
+    "disappearance_rationale": "If this welfare constraint disappeared overnight, the distinction between cruelty and regulated use would collapse. Regulatory bodies would lose enforcement authority; welfare organizations would lose legitimacy and funding; industries would face either complete abolition pressure or unregulated expansion; consumers would lose the moral framework that permits their consumption. The animal ethics landscape would reorganize around competing readings (abolitionist or property-based).",
+    "founding_problem": "Early industrial animal use involved egregious suffering with no external oversight: animals confined in unlivable conditions, subjected to painful procedures without pain relief, killed in ways designed for efficiency rather than minimization of suffering. Public revulsion and moral intuition demanded something better.",
+    "founding_problem_status": "contested",
+    "founding_problem_corroboration": "Welfare organizations and regulated industries attest the problem is live and being addressed through their standards. Abolitionist scholars and animal rights advocates attest the founding problem persists despite welfare framing — suffering is reduced but not eliminated, and the constraint's core function (legitimating use) prevents solving the problem at its root. Historical animal welfare documentation supports reduction in egregious cases; empirical studies of industrial practice show persistent suffering within 'certified humane' systems. The contest is not about whether early conditions were bad (settled) but whether welfare certification solves it (contested)."
+  },
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.49,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.51,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.56,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.59,
+      "basis": "observed"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.32,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.36,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.4,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.43,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.46,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48,
+      "basis": "observed"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.48,
+      "basis": "observed"
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The welfare reading of animal moral status instantiates a constraint that recognizes animals as sentient beings whose suffering should be minimized, but permits their use within regulated systems designed to prevent cruelty. This reading sits between the abolitionist claim (use is inherently wrong) and the property claim (animals have no independent moral standing). The constraint's operation legitimates animal use through welfare certification while extracting compliance costs from regulated industries and diffuse moral costs from the animals themselves. The core claim/metric gap is intentional: the reading claims tangled_rope structure (genuine coordination of safety standards + asymmetric extraction of use-legitimacy), while the authored metrics show moderate extractiveness (0.52) and high theater (0.58) — the engine measures whether the coordination story stands under scrutiny.",
+    "key_agents": [
+      "Animal welfare organizations: set standards, collect legitimacy, coordinate enforcement",
+      "Regulated use industries: pay compliance costs, collect use-legitimacy benefit",
+      "Animals under regulated systems: trapped victims bearing suffering and death",
+      "Abolitionist advocates: structurally excluded, contest permissibility premise",
+      "Regulatory bodies: operationalize welfare/cruelty boundary",
+      "Consumers: benefit from moral permission to use without guilt"
+    ],
+    "logic_rationale": "Extractiveness starts low (0.38) when welfare standards are first implemented and public perception shifts from 'animals suffer badly' to 'animals are now protected.' As time passes and audits reveal persistent suffering within 'certified humane' systems, extractiveness drifts upward (stabilizing at 0.52) — the constraint's primary function becomes increasingly visible as legitimation of use rather than prevention of harm. Theater ratio rises steeply (0.35→0.58 by t=25, plateauing) because welfare certification activity — inspections, audits, certification labels, marketing — becomes disproportionate to the actual reduction in suffering. The suppression requirement rises from 0.32 to 0.48 as abolitionist pressure increases and the constraint must actively suppress the question 'why is use permissible at all?' The plateau at t=25–40 indicates a steady state: the constraint has matured, abolitionist challenges are continuous but contained, and no major shift occurs. Measurements reflect a single shared time grid so every metric is authored at every examined point.",
+    "directionality_logic": "Welfare organizations and regulated industries face low directionality (d near 0.2–0.3, beneficiary end): they shape the rules, collect legitimacy and profit, and can exit if the constraint changes by shifting to different business models. Animals under regulated systems face high directionality (d near 0.9, target end): they are identity-locked into captivity and bear the extraction directly (confinement, pain, death). Consumers sit near symmetric (d ≈ 0.5): they get moral relief and access to cheap animal products, but also bear diffuse cost of knowing suffering persists. Abolitionist advocates face high directionality (d near 0.85) as their core message is actively suppressed by the constraint's framing — their exit is to accept the welfare reading or retreat to marginal status. The per-seat computation should show the payer and agenda-setter seats diverging sharply: the operator seats (welfare orgs, industries, regulators) experience the constraint as low-extractiveness coordination, while the payer seats (animals, abolitionists) experience it as high-extractiveness suppression.",
+    "perspectival_gap": "The welfare reading's primary structural asymmetry is between the regulatory/industry seats and the animal/abolitionist seats. From the agenda-setter and industry perspective, the constraint is genuine coordination: it establishes a shared standard that prevents the worst harms and enables operations to scale predictably. From the animal and abolitionist perspective, the same structure operates as coordinated legitimation of use — the welfare frame converts a moral question ('should we use animals?') into a technical question ('are we doing it humanely?'), which is the core extraction mechanism. The gap is not about metric disagreement but about baseline assumptions: one set of seats accepts that regulated use is permissible (and therefore minimization is good); the other set rejects that premise. The engine computes this as per-seat type divergence from the structural data — the constraint's coordination function is real (all seats agree on the problem of preventing egregious suffering), but the extraction of use-legitimacy flows asymmetrically to the industries and away from alternatives.",
+    "mandatrophy_analysis": "The welfare reading avoids one classic mandatrophy trap (Piton misclassification) by maintaining its founding problem as live and contested: the question 'how much suffering is acceptable in animal use?' remains open, and the constraint's enforcement continues to address it (even if inadequately). However, a secondary mandatrophy signal appears in the theater ratio's rise: as welfare certification becomes increasingly ritualized and divorced from actual suffering reduction, the constraint approaches the Piton threshold. The commentary documents this drift explicitly — theater rising from 0.35 to 0.58 indicates that a growing share of activity is performative rather than functional. The classification lands at tangled_rope rather than piton because: (1) genuine coordination of standards still exists, (2) industries still pay real compliance costs, (3) beneficiaries (welfare orgs) still depend on the constraint for legitimacy. But the omega variable addresses whether the constraint will eventually degrade into pure theater (Piton), with welfare organizations maintaining the apparatus because it collects donations and moral authority, while actual animal suffering persists unchanged.",
+    "kernel_context": "This constraint instantiates the WELFARE READING of the animal_moral_status kernel. The kernel is the contested claim about the moral status of animals and what systems of use are justified. The welfare reading holds: 'Animals are sentient beings whose suffering should be minimized within systems of regulated use; cruelty is wrong, use is permissible.' This reading coexists with two sibling readings instantiated in separate constraint stories: (1) the abolitionist_reading ('Animals are rights-bearing individuals; property status itself is the violation; all use, however humane, perpetuates victimization') and (2) the property_reading ('Animals are property/resources with no independent moral standing; their interests are subordinate to human interests by definition'). The welfare reading forecloses neither sibling logically — all three remain live positions in contemporary discourse — but it influences both by shifting the regulatory and institutional baseline toward certified-use frameworks, which structures how the other readings must position themselves."
+  },
+  "omegas": [
+    {
+      "id": "welfare_certification_sufficiency",
+      "question": "Does welfare certification in practice reduce animal suffering to an acceptable level, or does it legitimize continued use while suffering persists?",
+      "resolution_mechanism": "Long-term empirical study comparing certified vs. non-certified systems, cross-sectional pain/mortality/behavior data from animals in regulated use, and post-exit animal behavior (do rescued animals show post-traumatic patterns consistent with abuse despite 'humane' conditions?).",
+      "impact": "If certification substantially reduces suffering toward acceptable levels, the tangled_rope classification holds and the coordination function is real. If suffering persists at near-baseline levels despite certification, the constraint is reclassifiable as snare (pure extraction masked as coordination), and the ε jumps significantly (0.52 → 0.75+).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare certification achieves actual suffering reduction or legitimates use without harm prevention."
+    },
+    {
+      "id": "permissibility_premise_contestation",
+      "question": "Is the foundational premise that regulated use is permissible held by a genuine constituency, or does it derive its authority primarily from the constraint's own enforcement and industry support?",
+      "resolution_mechanism": "Public opinion research separating responses to 'how should we treat animals in systems we use?' (where welfare-preference is high) from 'should we use animals at all?' (where abolition-preference is rising in some demographics). Polling across jurisdictions with different constraint strengths.",
+      "impact": "If permissibility is held as a genuine live conviction across stakeholder groups, the reading is legitimately coexisting with alternatives. If permissibility is enforced by constraint-machinery rather than widespread conviction, the suppression metric is understated and the reading risks reclassification as snare with high theater-ratio (Piton candidate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the welfare reading's permissibility premise is genuinely held or constraint-enforced."
+    },
+    {
+      "id": "kernel_reading_foreclosure_risk",
+      "question": "Does the welfare reading's institutionalization foreclose the abolitionist reading by making rights-based arguments structurally invisible in regulatory discourse?",
+      "resolution_mechanism": "Track whether abolitionist arguments appear in regulatory hearings, standard-setting bodies, and philosophical journals; measure citation rates and public salience before/after welfare-certification becomes dominant institutional framework.",
+      "impact": "If the welfare reading forecloses abolitionist discourse within regulatory institutions (even if abolitionism survives in philosophy), the reading_relations type should shift from coexists_with to forecloses for the abolitionist sibling. This would mean the readings do not actually coexist at the institutional level — one has suppressed the other from the relevant decision-making spaces.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether welfare institutionalization structurally forecloses abolitionist framing in practice despite theoretical coexistence."
+    },
+    {
+      "id": "identity_lock_in_welfare_organizations",
+      "question": "Are welfare organizations identity-locked into defending the welfare reading, such that a shift toward abolition or property-doctrine would require organizational dissolution?",
+      "resolution_mechanism": "Historical analysis of welfare organizations' responses to abolitionist critiques; tracking of mission-drift and organizational mergers/dissolutions when animal ethics shifts; interviews with leadership about counterfactual scenarios.",
+      "impact": "If welfare organizations are identity-locked, their role as beneficiary and agenda-setter is structurally dependent on the constraint persisting. This amplifies the theater-ratio risk: as actual welfare progress plateaus, the organizations must increase visibility of their activity to justify funding, which increases theater independent of functional need. A high identity-lock would support reclassification toward piton if theater continues rising.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare organizations depend on the welfare reading for institutional identity."
+    },
+    {
+      "id": "small_operator_exclusion_mechanism",
+      "question": "Do welfare standards de facto exclude small operators because compliance is expensive, or could small operators meet standards at proportional cost if they chose?",
+      "resolution_mechanism": "Cost-structure analysis comparing compliance cost per animal between large standardized operations and small farms; tracking of small operator exit rates post-regulation; pilot programs testing scalable welfare standards.",
+      "impact": "If exclusion is a side effect of standardization rather than deliberate design, the constraint's asymmetry favors scale but is not intentionally extractive. If small operators are priced out deliberately by standard-setting, the constraint has a secondary extraction function (consolidating use into large regulated operations) beyond the primary function (minimizing suffering).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether welfare standards create intentional or incidental barriers for small operators."
+    },
+    {
+      "id": "kernel_reading_alternative_framings",
+      "question": "Are there coherent framings of the animal moral status kernel that would produce different ε values or type classifications than the welfare reading instantiates?",
+      "resolution_mechanism": "Thought experiment: an alternative welfare reading that rejects permissibility but accepts regulated-system minimization (e.g., 'regulated use is a temporary evil we minimize while transitioning away') would produce different beneficiary/victim structure and different ε. Map the logical space of readings and identify which produce classification-grade differences.",
+      "impact": "If a coherent alternative welfare-framing exists that produces different ε (e.g., higher suppression due to active transition pressure, lower theater due to honesty about impermanence), the constraint-family may need decomposition. The welfare_reading as authored here assumes permissibility; a 'welfare-with-transition' reading would be a sibling, not an alternative interpretation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the welfare reading's ε-invariance is robust or depends on a specific framing choice."
+    }
+  ],
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_moral_status__abolitionist_reading",
+      "animal_moral_status__property_reading"
+    ],
+    "dual_formulation_note": "The animal_moral_status kernel decomposes into three constraint stories, one per major reading. Each reading produces a different ε-invariant constraint with different beneficiary/victim structure. The welfare_reading (this story) treats animals as sentient and use as permissible-if-regulated. The abolitionist_reading treats use itself as the violation. The property_reading denies independent moral standing. These are not observational variants of one constraint; they are structurally distinct constraints derived from competing interpretations of a single kernel. Network edges link all three; the upstream story (welfare_reading, institutionally dominant) influences both siblings by establishing regulatory baselines; the downstream stories (abolitionist and property) contest those baselines from outside the institutional structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "gain_flow": "regulated_use_industries",
+  "fixing_cost": "prohibitive",
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "sentience_centered_use_constraint",
+    "drift_state": {
+      "moment": "contemporary_abolitionist_pressure_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "abolitionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "property_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "sentience_grounds_moral_consideration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "regulated_use_permissible_with_suffering_minimization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "provenance": {
+    "prompt_commit": "e03e2210ef39e1af4d109acadf9515e5d2d8b7d7",
+    "schema_commit": "685ed7cf90d7b7bdcefb4b3c4e62d9bf2aa6ee28",
+    "generated_date": "2026-08-22",
+    "source_essay": "no_scope_rebuild_haiku3",
+    "one_shot_example": "agent/example_platform_commission.json",
+    "model": "claude-haiku-4-5-20251001",
+    "sampling_params": "max_tokens=16384,thinking=disabled,temperature=api_default",
+    "seeded_from": "none",
+    "draw": 1,
+    "generation_run_id": "none"
+  }
+}
