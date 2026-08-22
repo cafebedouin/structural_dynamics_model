@@ -344,6 +344,7 @@ CORPUS_DIRS = {
     "testsets_flash3":  "Second same-commit redraw (gemini-2.5-flash, thinking off; 2026-08-21).",
     "testsets_flash_think":  "Regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
     "testsets_flash_think2": "Redraw of the regime-contrast leg (gemini-2.5-flash, thinking_budget=8192; 2026-08-21).",
+    "testsets_stealth2": "Same-model REDRAW of testsets_stealth at prompt e03e2210 (redraw + prompt change; 2026-08-22).",
     "testsets_glm":      "Model-named leg (z-ai/glm-5.2:free via OpenRouter, reasoning off; 2026-08-21).",
     "testsets_nemotron": "Model-named leg (nvidia/nemotron-3-ultra-550b-a55b:free via OpenRouter, reasoning off; 2026-08-21).",
     "probsets":         "Probe story packs — data, same shape as a testset leg.",

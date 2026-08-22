@@ -91,6 +91,10 @@ in runbook §9.
   Everything generated from here carries the new `prompt_commit`; the eight legs built
   2026-08-21 are at `685ed7cf`. Rescue passes are tagged `--run-tag rescue1` →
   `provenance_source = no_scope_rebuild_<leg>+rescue1`.
+- **stealth #2 launched 00:50 into `testsets_stealth2/` at prompt `e03e2210`** — so stealth vs stealth2 is
+  redraw + prompt change (the flash-vs-flash2 shape), NOT the pure thinking-on floor; that is
+  stealth2 vs a later stealth3 at the same commit (free). Stealth is outside the free-tier daily cap
+  (0 × 429 over 1,040 requests; nemotron's first 429 at request #1025).
 - **Queued, in order:** (1) stealth residue 36 → `+rescue1` (launched 00:40, free); then OQ-58
   sweep + `classify_corpus('testsets_stealth','pipeline_output.stealth.json','stealth/ox-alpha')`
   + commit. (2) nemotron residue 153 → same command as the run (`--leg-name nemotron --model
