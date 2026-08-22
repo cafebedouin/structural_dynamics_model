@@ -79,6 +79,34 @@ in runbook §9.
 
 ---
 
+## 2026-08-22 — [landed] HANDOFF (supersedes the 2026-08-21 one below): stealth 969 + nemotron 852 committed; prompt regime moved to e03e2210; what is queued
+**Files:** agent/run_no_scope_stealth.py, agent/run_no_scope_gemini.py, python/story_repair.py, prompts/constraint_story_generation_prompt_json.md, prolog/testsets_stealth/, prolog/testsets_nemotron/, prolog/beta_processed_stealth.txt, prolog/beta_processed_nemotron.txt, docs/technical/bulk_corpus_generation.md, python/shared/corpus_legs.py, python/corpus_census_check.py
+**Tier:** landed
+
+- Both OpenRouter drivers were STOPPED on purpose at ~00:25 (stealth after attempt 1 wrote 731,
+  before any attempt-2 response landed; nemotron mid-429-storm) because their in-process
+  `story_repair` was the pre-fix code. `--from-responses` re-processed the persisted draws under
+  the fix: **stealth 731 → 969, nemotron 664 → 852** (commit `4b10a816`), zero API calls.
+- **Prompt is now at `e03e2210`** (runbook §9 item 1 DONE: `payer` named at the "victim" sites).
+  Everything generated from here carries the new `prompt_commit`; the eight legs built
+  2026-08-21 are at `685ed7cf`. Rescue passes are tagged `--run-tag rescue1` →
+  `provenance_source = no_scope_rebuild_<leg>+rescue1`.
+- **Queued, in order:** (1) stealth residue 36 → `+rescue1` (launched 00:40, free); then OQ-58
+  sweep + `classify_corpus('testsets_stealth','pipeline_output.stealth.json','stealth/ox-alpha')`
+  + commit. (2) nemotron residue 153 → same command as the run (`--leg-name nemotron --model
+  nvidia/nemotron-3-ultra-550b-a55b:free --reasoning-effort off --workers 5 --run-tag rescue1`)
+  **after the free-tier daily cap resets** (it 429'd at ~1,150 requests/day). (3) Register both
+  legs: `shared/corpus_legs.LIVE_LEGS`, `corpus_census_check.STAMPED_FILE_COUNTS`, `--repin
+  --cause "stealth+nemotron legs" --authorized-by "operator 2026-08-21/22 chat"`; gate; commit;
+  push. (4) stealth #2 (`--leg-suffix 2`) and nemotron thinking-on (`--leg-suffix _think`, no
+  `--reasoning-effort`) — both free. (5) Flash legs' residues under the new prompt (cents), then
+  the older legs' missing seeds (sonnet 4, haiku 17, flash 34), each `+rescue1`. (6) Operator
+  ruling pending: backfill the June haiku (465) / flash (212) stakeholder-less stories
+  (`+stakeholder_backfill`, ~$20). (7) After backfill: reclassify ALL legs at one commit and run
+  the §9 before/after diff.
+
+---
+
 ## 2026-08-21 — [landed] HANDOFF: two OpenRouter generators IN FLIGHT at session end (stealth #1, nemotron) — resume steps for a cold instance
 **Files:** agent/run_no_scope_stealth.py, prolog/testsets_stealth/, prolog/testsets_nemotron/, json_stealth/, json_nemotron/, prolog/beta_processed_stealth.txt, prolog/beta_processed_nemotron.txt, python/module_boundary_check.py, python/shared/corpus_legs.py, python/corpus_census_check.py, docs/technical/bulk_corpus_generation.md, audits/INVESTIGATIONS.md
 **Tier:** landed
